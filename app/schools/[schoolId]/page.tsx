@@ -14,8 +14,8 @@ interface SchoolPageProps {
 
 export default async function SchoolPage({ params }: SchoolPageProps) {
   const { schoolId } = await params;
-  const school = getSchoolById(schoolId);
-  const programs = getProgramsBySchoolId(schoolId);
+  const school = await getSchoolById(schoolId);
+  const programs = await getProgramsBySchoolId(schoolId);
 
   if (!school) {
     return (

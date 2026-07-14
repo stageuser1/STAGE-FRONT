@@ -17,7 +17,7 @@ interface ProgramPageProps {
 
 export default async function ProgramPage({ params }: ProgramPageProps) {
   const { schoolId, programId } = await params;
-  const program = getProgramById(schoolId, programId);
+  const program = await getProgramById(schoolId, programId);
 
   if (!program) {
     return (

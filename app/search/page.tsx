@@ -49,7 +49,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     degree_level: getDegreeLevel(params.degree_level),
     major_area: params.major_area ?? null,
   };
-  const programs = searchPrograms(query);
+  const programs = await searchPrograms(query);
   const current = {
     keyword: params.keyword,
     country: params.country,

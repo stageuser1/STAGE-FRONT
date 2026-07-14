@@ -4,8 +4,8 @@ import { ProgramCard } from "@/components/ProgramCard";
 import { SearchBar } from "@/components/SearchBar";
 import { getAllPrograms } from "@/lib/data";
 
-export default function HomePage() {
-  const programs = getAllPrograms();
+export default async function HomePage() {
+  const programs = await getAllPrograms();
 
   return (
     <>
