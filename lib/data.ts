@@ -1,3 +1,4 @@
+import { cache } from "react";
 import type {
   ConfidenceLevel,
   CurrencyCode,
@@ -107,13 +108,37 @@ async function directusFetch<T>(path: string): Promise<T> {
   if (process.env.DIRECTUS_TOKEN) {
     headers.Authorization = `Bearer ${process.env.DIRECTUS_TOKEN}`;
   }
-  const res = await fetch(`${base.replace(/\/$/, "")}${path}`, {
-    headers,
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error(`Directus ${res.status} on ${path}`);
-  const json = await res.json();
-  return json.data as T;
+
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    let res: Response;
+    try {
+      res = await fetch(`${base.replace(/\/$/, "")}${path}`, {
+        headers,
+        next: { revalidate: 3600 },
+      });
+    } catch (error) {
+      if (attempt === 1) {
+        const message = error instanceof Error ? error.message : String(error);
+        throw new Error(`Directus request failed on ${path}: ${message}`);
+      }
+      await new Promise((resolve) => setTimeout(resolve, 250));
+      continue;
+    }
+
+    if (res.ok) {
+      const json = await res.json();
+      return json.data as T;
+    }
+
+    const retryable = res.status === 429 || res.status >= 500;
+    if (!retryable || attempt === 1) {
+      throw new Error(`Directus ${res.status} on ${path}`);
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, 250));
+  }
+
+  throw new Error(`Directus request failed on ${path}`);
 }
 
 function relationId(value: unknown): string | null {
@@ -457,7 +482,7 @@ function mapSource(record: DirectusSourceRecord): SourceRecord | null {
   };
 }
 
-async function loadDirectusData(): Promise<DirectusData> {
+const loadDirectusData = cache(async (): Promise<DirectusData> => {
   const [
     directusSchools,
     offerings,
@@ -649,7 +674,7 @@ async function loadDirectusData(): Promise<DirectusData> {
   });
 
   return { schools, programs };
-}
+});
 
 export async function getAllSchools(): Promise<School[]> {
   const { schools } = await loadDirectusData();

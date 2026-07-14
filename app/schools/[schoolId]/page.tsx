@@ -4,7 +4,18 @@ import { EmptyState } from "@/components/EmptyState";
 import { MobileHeader } from "@/components/MobileHeader";
 import { MissingDataNote } from "@/components/MissingDataNote";
 import { ProgramCard } from "@/components/ProgramCard";
-import { getProgramsBySchoolId, getSchoolById } from "@/lib/data";
+import {
+  getAllSchools,
+  getProgramsBySchoolId,
+  getSchoolById,
+} from "@/lib/data";
+
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const schools = await getAllSchools();
+  return schools.map((school) => ({ schoolId: school.id }));
+}
 
 interface SchoolPageProps {
   params: Promise<{
