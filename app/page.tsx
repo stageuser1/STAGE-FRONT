@@ -4,6 +4,8 @@ import { ProgramCard } from "@/components/ProgramCard";
 import { SearchBar } from "@/components/SearchBar";
 import { getAllPrograms } from "@/lib/data";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const programs = await getAllPrograms();
 
