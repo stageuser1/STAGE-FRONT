@@ -2,20 +2,14 @@ import Link from "next/link";
 import { DataStatusBanner } from "@/components/DataStatusBanner";
 import { EmptyState } from "@/components/EmptyState";
 import { MobileHeader } from "@/components/MobileHeader";
-import { MissingDataNote } from "@/components/MissingDataNote";
 import { ProgramCard } from "@/components/ProgramCard";
+import { SchoolProfileCard } from "@/components/reviewer/SchoolProfileCard";
 import {
-  getAllSchools,
   getProgramsBySchoolId,
   getSchoolById,
 } from "@/lib/data";
 
-export const revalidate = 3600;
-
-export async function generateStaticParams() {
-  const schools = await getAllSchools();
-  return schools.map((school) => ({ schoolId: school.id }));
-}
+export const dynamic = "force-dynamic";
 
 interface SchoolPageProps {
   params: Promise<{
@@ -48,44 +42,7 @@ export default async function SchoolPage({ params }: SchoolPageProps) {
     <>
       <MobileHeader backHref="/" />
       <main className="mx-auto min-h-screen w-full max-w-md bg-gray-50 px-4 py-4">
-        <section className="rounded-2xl border border-gray-200 bg-white p-4">
-          <div className="flex items-start justify-between gap-3">
-            <div className="min-w-0">
-              <p className="text-xs font-semibold uppercase tracking-normal text-blue-700">
-                学校信息
-              </p>
-              <h1 className="mt-2 text-xl font-semibold leading-tight text-gray-900">
-                {school.name}
-              </h1>
-              <p className="mt-2 text-sm text-gray-600">
-                {school.country} · {school.city}
-              </p>
-            </div>
-            <span className="shrink-0 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">
-              {programs.length} 个项目
-            </span>
-          </div>
-
-          <div className="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm">
-            <div className="flex items-start justify-between gap-3">
-              <span className="text-gray-600">官方网站</span>
-              <span className="max-w-44 truncate text-right font-semibold">
-                {school.website_url ? (
-                  <a
-                    className="text-blue-700 underline-offset-2 hover:underline"
-                    href={school.website_url}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {school.website_url}
-                  </a>
-                ) : (
-                  <MissingDataNote />
-                )}
-              </span>
-            </div>
-          </div>
-        </section>
+        <SchoolProfileCard programCount={programs.length} school={school} />
 
         <div className="mt-4">
           <DataStatusBanner dataQuality={school.data_quality} />

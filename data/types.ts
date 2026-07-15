@@ -6,6 +6,19 @@ export type WorkflowStatus =
 
 export type ConfidenceLevel = "high" | "medium" | "low";
 
+export type ReviewStatus =
+  | "ai_generated"
+  | "human_checked"
+  | "human_edited"
+  | "needs_update"
+  | string;
+
+export interface DirectusReviewRecord {
+  id: string;
+  review_status: ReviewStatus | null;
+  values: Record<string, string | number | boolean | null>;
+}
+
 export type DegreeLevel =
   | "bachelor"
   | "master"
@@ -30,6 +43,7 @@ export interface School {
   website_url: string | null;
   status: WorkflowStatus;
   data_quality: DataQuality;
+  review_record?: DirectusReviewRecord;
 }
 
 export interface Deadline {
@@ -103,6 +117,11 @@ export interface Program {
   cost_aid: CostAid;
   sources: SourceRecord[];
   data_quality: DataQuality;
+  review_records?: {
+    offering: DirectusReviewRecord;
+    application: DirectusReviewRecord | null;
+    audition: DirectusReviewRecord | null;
+  };
 }
 
 export interface ProgramSearchQuery {

@@ -8,21 +8,31 @@ interface LanguageRequirementBlockProps {
 export function LanguageRequirementBlock({
   requirements,
 }: LanguageRequirementBlockProps) {
+  return (
+    <section className="rounded-2xl border border-gray-200 bg-white p-4">
+      <LanguageRequirementContent requirements={requirements} />
+    </section>
+  );
+}
+
+export function LanguageRequirementContent({
+  requirements,
+}: LanguageRequirementBlockProps) {
   if (!requirements) {
     return (
-      <section className="rounded-2xl border border-gray-200 bg-white p-4">
+      <>
         <h2 className="text-base font-semibold text-gray-900">
           英语要求 English Requirement
         </h2>
         <div className="mt-3">
           <MissingDataNote />
         </div>
-      </section>
+      </>
     );
   }
 
   return (
-    <section className="rounded-2xl border border-gray-200 bg-white p-4">
+    <>
       <div className="flex items-start justify-between gap-3">
         <div>
           <h2 className="text-base font-semibold text-gray-900">
@@ -92,6 +102,6 @@ export function LanguageRequirementBlock({
         </p>
         {requirements.notes ? <p className="mt-1">{requirements.notes}</p> : null}
       </div>
-    </section>
+    </>
   );
 }

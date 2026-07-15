@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ReviewerSessionBar } from "@/components/reviewer/ReviewerSessionBar";
+import { AuthProvider } from "@/lib/directus-auth";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AuthProvider>
+          <ReviewerSessionBar />
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   );
 }

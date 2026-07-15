@@ -21,6 +21,7 @@ interface DirectusSchool {
   city?: string | null;
   country?: string | null;
   official_website?: string | null;
+  review_status?: string | null;
 }
 
 interface DirectusField {
@@ -50,6 +51,7 @@ interface DirectusProgramOffering {
 }
 
 interface DirectusCycleRecord {
+  id: DirectusId;
   program_offering_id?: DirectusId | { id?: DirectusId } | null;
   is_current?: boolean | string | number | null;
   admission_cycle?: string | number | null;
@@ -57,6 +59,7 @@ interface DirectusCycleRecord {
 }
 
 interface DirectusApplicationRequirement extends DirectusCycleRecord {
+  deadline_notes?: string | null;
   application_deadline?: string | null;
   english_language_tests?: unknown;
   toefl_minimum?: string | number | null;
@@ -70,6 +73,7 @@ interface DirectusApplicationRequirement extends DirectusCycleRecord {
 }
 
 interface DirectusAuditionRequirement extends DirectusCycleRecord {
+  prescreening_deadline?: string | null;
   prescreening_required?: boolean | string | number | null;
   audition_required?: boolean | string | number | null;
   repertoire_summary?: string | null;
@@ -114,7 +118,7 @@ async function directusFetch<T>(path: string): Promise<T> {
     try {
       res = await fetch(`${base.replace(/\/$/, "")}${path}`, {
         headers,
-        next: { revalidate: 3600 },
+        cache: "no-store",
       });
     } catch (error) {
       if (attempt === 1) {
@@ -191,10 +195,14 @@ function dateValue(value: unknown): string | null {
 
 function mapReviewStatus(value: unknown): WorkflowStatus {
   switch (textValue(value)?.toLowerCase()) {
+    case "needs_update":
     case "outdated":
       return "draft";
+    case "human_checked":
+    case "human_edited":
     case "verified":
       return "human_reviewed";
+    case "ai_generated":
     case "extracted":
     case "needs review":
     default:
@@ -491,7 +499,7 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
     sourceRecords,
   ] = await Promise.all([
     directusFetch<DirectusSchool[]>(
-      "/items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website",
+      "/items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status",
     ),
     directusFetch<DirectusProgramOffering[]>(
       "/items/program_offerings?limit=-1&fields=*,school_id.id,school_id.slug,school_id.school_name,school_id.city,school_id.country,field_id.slug,field_id.field_name,degree_level_id.slug,degree_level_id.degree_level_name",
@@ -588,9 +596,9 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
         application_url: textValue(offering.application_url),
         deadline: {
           application_deadline: dateValue(application?.application_deadline),
-          prescreening_deadline: null,
+          prescreening_deadline: dateValue(audition?.prescreening_deadline),
           audition_date: null,
-          notes: null,
+          notes: textValue(application?.deadline_notes),
         },
         language_requirements: {
           instruction_language: textValue(application?.instruction_language),
@@ -623,6 +631,58 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
           missing_fields: [],
           review_notes:
             reviewNotes.length > 0 ? reviewNotes.join(" ") : null,
+        },
+        review_records: {
+          offering: {
+            id: programId,
+            review_status: textValue(offering.review_status),
+            values: {
+              official_program_name: programName,
+              duration_years: textValue(offering.duration_years),
+              application_url: textValue(offering.application_url),
+            },
+          },
+          application: application
+            ? {
+                id: String(application.id),
+                review_status: textValue(application.review_status),
+                values: {
+                  application_deadline: dateValue(
+                    application.application_deadline,
+                  ),
+                  deadline_notes: textValue(application.deadline_notes),
+                  toefl_minimum: textValue(application.toefl_minimum),
+                  ielts_minimum: textValue(application.ielts_minimum),
+                  duolingo_minimum: textValue(application.duolingo_minimum),
+                  english_waiver_policy: textValue(
+                    application.english_waiver_policy,
+                  ),
+                  application_fee: textValue(applicationFeeValue),
+                  application_fee_currency:
+                    textValue(applicationFeeCurrency),
+                },
+              }
+            : null,
+          audition: audition
+            ? {
+                id: String(audition.id),
+                review_status: textValue(audition.review_status),
+                values: {
+                  prescreening_required: booleanValue(
+                    audition.prescreening_required,
+                  ),
+                  prescreening_deadline: dateValue(
+                    audition.prescreening_deadline,
+                  ),
+                  audition_required: booleanValue(audition.audition_required),
+                  audition_format: textValue(
+                    audition.audition_format ?? audition.format,
+                  ),
+                  repertoire_summary: textValue(audition.repertoire_summary),
+                  notes: textValue(audition.notes),
+                },
+              }
+            : null,
         },
       },
     ];
@@ -668,6 +728,16 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
           status,
           missing_fields: [],
           review_notes: null,
+        },
+        review_record: {
+          id: String(school.id),
+          review_status: textValue(school.review_status),
+          values: {
+            school_name: textValue(school.school_name),
+            country: textValue(school.country),
+            city: textValue(school.city),
+            official_website: textValue(school.official_website),
+          },
         },
       },
     ];
