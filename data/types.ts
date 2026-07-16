@@ -121,6 +121,7 @@ export interface Program {
     offering: DirectusReviewRecord;
     application: DirectusReviewRecord | null;
     audition: DirectusReviewRecord | null;
+    degree_level_options: Array<{ label: string; value: string }>;
   };
 }
 

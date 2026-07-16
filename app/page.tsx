@@ -1,13 +1,14 @@
-import { FilterChips } from "@/components/FilterChips";
 import { MobileHeader } from "@/components/MobileHeader";
 import { ProgramCard } from "@/components/ProgramCard";
-import { SearchBar } from "@/components/SearchBar";
+import { SearchBar, type SearchFilterOption } from "@/components/SearchBar";
 import { getAllPrograms } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const programs = await getAllPrograms();
+  const countryOptions = uniqueOptions(programs.map((program) => program.country));
+  const majorOptions = uniqueOptions(programs.map((program) => program.major_area));
 
   return (
     <>
@@ -22,15 +23,10 @@ export default async function HomePage() {
               搜索学校、专业、学历
             </h1>
           </div>
-          <SearchBar />
-          <FilterChips
-            chips={[
-              { label: "US", href: "/search?country=US" },
-              { label: "GB", href: "/search?country=GB" },
-              { label: "Bachelor", href: "/search?degree_level=bachelor" },
-              { label: "Master", href: "/search?degree_level=master" },
-              { label: "Voice", href: "/search?major_area=Voice" },
-            ]}
+          <SearchBar
+            countryOptions={countryOptions}
+            degreeOptions={degreeOptions}
+            majorOptions={majorOptions}
           />
         </section>
 
@@ -54,4 +50,18 @@ export default async function HomePage() {
       </main>
     </>
   );
+}
+
+const degreeOptions: SearchFilterOption[] = [
+  { label: "本科", value: "bachelor" },
+  { label: "硕士", value: "master" },
+  { label: "博士", value: "doctorate" },
+  { label: "文凭", value: "diploma" },
+  { label: "证书", value: "certificate" },
+];
+
+function uniqueOptions(values: string[]): SearchFilterOption[] {
+  return [...new Set(values.filter(Boolean))]
+    .sort((left, right) => left.localeCompare(right))
+    .map((value) => ({ label: value, value }));
 }

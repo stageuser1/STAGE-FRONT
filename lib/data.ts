@@ -502,7 +502,7 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
       "/items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status",
     ),
     directusFetch<DirectusProgramOffering[]>(
-      "/items/program_offerings?limit=-1&fields=*,school_id.id,school_id.slug,school_id.school_name,school_id.city,school_id.country,field_id.slug,field_id.field_name,degree_level_id.slug,degree_level_id.degree_level_name",
+      "/items/program_offerings?limit=-1&fields=*,school_id.id,school_id.slug,school_id.school_name,school_id.city,school_id.country,field_id.id,field_id.slug,field_id.field_name,degree_level_id.id,degree_level_id.slug,degree_level_id.degree_level_name",
     ),
     directusFetch<DirectusApplicationRequirement[]>(
       "/items/application_requirements?limit=-1",
@@ -518,6 +518,19 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
   const schoolsByDirectusId = new Map(
     directusSchools.map((school) => [String(school.id), school]),
   );
+  const degreeLevelOptions = [
+    ...new Map(
+      offerings.flatMap((offering) => {
+        const degree = relationObject<DirectusDegreeLevel>(
+          offering.degree_level_id,
+        );
+        const id = relationId(offering.degree_level_id);
+        const label =
+          textValue(degree?.degree_level_name) ?? textValue(degree?.slug);
+        return id && label ? [[id, { label, value: id }] as const] : [];
+      }),
+    ).values(),
+  ].sort((left, right) => left.label.localeCompare(right.label));
 
   const programs = offerings.flatMap<Program>((offering) => {
     const programId = String(offering.id);
@@ -638,6 +651,7 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
             review_status: textValue(offering.review_status),
             values: {
               official_program_name: programName,
+              degree_level_id: relationId(offering.degree_level_id),
               duration_years: textValue(offering.duration_years),
               application_url: textValue(offering.application_url),
             },
@@ -656,6 +670,12 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
                   duolingo_minimum: textValue(application.duolingo_minimum),
                   english_waiver_policy: textValue(
                     application.english_waiver_policy,
+                  ),
+                  english_required: booleanValue(
+                    application.english_required,
+                  ),
+                  instruction_language: textValue(
+                    application.instruction_language,
                   ),
                   application_fee: textValue(applicationFeeValue),
                   application_fee_currency:
@@ -683,6 +703,7 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
                 },
               }
             : null,
+          degree_level_options: degreeLevelOptions,
         },
       },
     ];

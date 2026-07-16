@@ -13,9 +13,12 @@ import { ReviewStatusBadge } from "./ReviewStatusBadge";
 type FormValues = Record<string, string>;
 
 export interface EditableFieldDefinition {
+  collection?: string;
   field: string;
   label: string;
   kind: "text" | "textarea" | "select";
+  name?: string;
+  recordId?: string;
   type?: "text" | "url" | "date";
   inputMode?: "decimal" | "numeric";
   options?: Array<{ label: string; value: string }>;
@@ -68,55 +71,98 @@ export function ReviewerEditableCard({
         recordId: string;
         status: ReviewStatus;
       }>).detail;
-      if (detail.collection === collection && detail.recordId === recordId) {
+      const belongsToCard = fields.some(
+        (definition) =>
+          (definition.collection ?? collection) === detail.collection &&
+          (definition.recordId ?? recordId) === detail.recordId,
+      );
+      if (belongsToCard) {
         setStatus(detail.status);
       }
     }
     window.addEventListener("stage:review-status", syncStatus);
     return () => window.removeEventListener("stage:review-status", syncStatus);
-  }, [collection, recordId]);
+  }, [collection, fields, recordId]);
 
-  function publishStatus(nextStatus: ReviewStatus) {
+  function publishStatus(
+    nextStatus: ReviewStatus,
+    targetCollection = collection,
+    targetRecordId = recordId,
+  ) {
     setStatus(nextStatus);
     window.dispatchEvent(
       new CustomEvent("stage:review-status", {
-        detail: { collection, recordId, status: nextStatus },
+        detail: {
+          collection: targetCollection,
+          recordId: targetRecordId,
+          status: nextStatus,
+        },
       }),
     );
   }
 
-  async function patch(payload: Record<string, unknown>) {
-    return request<Record<string, unknown>>(`/items/${collection}/${recordId}`, {
-      method: "PATCH",
-      body: JSON.stringify(payload),
-    });
+  async function patch(
+    targetCollection: string,
+    targetRecordId: string,
+    payload: Record<string, unknown>,
+  ) {
+    return request<Record<string, unknown>>(
+      `/items/${targetCollection}/${targetRecordId}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(payload),
+      },
+    );
   }
 
   async function save() {
     const changed = fields.filter(
-      (definition) => draft[definition.field] !== values[definition.field],
+      (definition) => {
+        const name = definition.name ?? definition.field;
+        return draft[name] !== values[name];
+      },
     );
     if (changed.length === 0) {
       setEditing(false);
       return;
     }
-    const payload: Record<string, unknown> = { review_status: "human_edited" };
+    const payloads = new Map<string, Record<string, unknown>>();
     changed.forEach((definition) => {
-      const value = draft[definition.field] ?? "";
+      const name = definition.name ?? definition.field;
+      const value = draft[name] ?? "";
+      const targetCollection = definition.collection ?? collection;
+      const targetRecordId = definition.recordId ?? recordId;
+      const targetKey = `${targetCollection}:${targetRecordId}`;
+      const payload = payloads.get(targetKey) ?? {
+        review_status: "human_edited",
+      };
       payload[definition.field] = definition.serialize
         ? definition.serialize(value)
         : value.trim() === ""
           ? null
           : value;
+      payloads.set(targetKey, payload);
     });
 
     setSaving(true);
     setError(null);
     setNotice(null);
     try {
-      await patch(payload);
+      await Promise.all(
+        [...payloads.entries()].map(([targetKey, payload]) => {
+          const separator = targetKey.indexOf(":");
+          const targetCollection = targetKey.slice(0, separator);
+          const targetRecordId = targetKey.slice(separator + 1);
+          return patch(targetCollection, targetRecordId, payload).then(() => {
+            publishStatus(
+              "human_edited",
+              targetCollection,
+              targetRecordId,
+            );
+          });
+        }),
+      );
       setValues(draft);
-      publishStatus("human_edited");
       setEditing(false);
       setNotice("Saved");
     } catch (caught) {
@@ -131,8 +177,24 @@ export function ReviewerEditableCard({
     setError(null);
     setNotice(null);
     try {
-      await patch({ review_status: nextStatus });
-      publishStatus(nextStatus);
+      const targets = new Map<string, { collection: string; recordId: string }>();
+      fields.forEach((definition) => {
+        const targetCollection = definition.collection ?? collection;
+        const targetRecordId = definition.recordId ?? recordId;
+        targets.set(`${targetCollection}:${targetRecordId}`, {
+          collection: targetCollection,
+          recordId: targetRecordId,
+        });
+      });
+      await Promise.all(
+        [...targets.values()].map((target) =>
+          patch(target.collection, target.recordId, {
+            review_status: nextStatus,
+          }).then(() =>
+            publishStatus(nextStatus, target.collection, target.recordId),
+          ),
+        ),
+      );
       setNotice(nextStatus === "human_checked" ? "Verified" : "Flagged");
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
@@ -185,23 +247,24 @@ export function ReviewerEditableCard({
       {isReviewer && editing ? (
         <div className="space-y-4">
           {fields.map((definition) => {
+            const name = definition.name ?? definition.field;
             const common = {
-              id: `${idPrefix}-${definition.field}`,
+              id: `${idPrefix}-${name}`,
               label: definition.label,
-              value: draft[definition.field] ?? "",
+              value: draft[name] ?? "",
               onChange: (value: string) =>
                 setDraft((current) => ({
                   ...current,
-                  [definition.field]: value,
+                  [name]: value,
                 })),
             };
             if (definition.kind === "textarea") {
-              return <EditableTextarea key={definition.field} {...common} />;
+              return <EditableTextarea key={name} {...common} />;
             }
             if (definition.kind === "select") {
               return (
                 <EditableSelect
-                  key={definition.field}
+                  key={name}
                   {...common}
                   options={definition.options ?? []}
                 />
@@ -209,7 +272,7 @@ export function ReviewerEditableCard({
             }
             return (
               <EditableTextField
-                key={definition.field}
+                key={name}
                 {...common}
                 inputMode={definition.inputMode}
                 type={definition.type}

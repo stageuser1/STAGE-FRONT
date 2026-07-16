@@ -8,7 +8,10 @@ import {
   LanguageRequirementContent,
 } from "@/components/LanguageRequirementBlock";
 import { MissingDataNote } from "@/components/MissingDataNote";
-import { ReviewerEditableCard } from "./ReviewerEditableCard";
+import {
+  ReviewerEditableCard,
+  type EditableFieldDefinition,
+} from "./ReviewerEditableCard";
 
 const currencies = ["USD", "GBP", "EUR", "CAD", "RMB"].map((value) => ({
   label: value,
@@ -78,12 +81,17 @@ function languageRequirements(
   });
   return {
     ...program.language_requirements,
+    instruction_language: values.instruction_language || null,
     accepted_tests: acceptedTests,
     english_required:
-      scores.some(([, field]) => Boolean(values[field])) ||
-      Boolean(values.english_waiver_policy)
+      values.english_required === "true"
         ? true
-        : program.language_requirements.english_required,
+        : values.english_required === "false"
+          ? false
+          : scores.some(([, field]) => Boolean(values[field])) ||
+              Boolean(values.english_waiver_policy)
+            ? true
+            : program.language_requirements.english_required,
     waiver_policy: values.english_waiver_policy || null,
   };
 }
@@ -100,24 +108,119 @@ export function ReviewerProgramCards({
     review_status: null,
     values: {
       official_program_name: program.name,
+      degree_level_id: null,
       duration_years: program.duration,
       application_url: program.application_url,
     },
   };
   const application = program.review_records?.application ?? null;
   const audition = program.review_records?.audition ?? null;
+  const degreeLevelOptions =
+    program.review_records?.degree_level_options ?? [];
 
   if (section === "overview") {
-    const englishSummary =
-      program.language_requirements.accepted_tests.length > 0
-        ? program.language_requirements.accepted_tests
-            .map((test) => test.test_name)
-            .join(" / ")
-        : null;
-    const tuition =
-      program.cost_aid.tuition_amount === null
-        ? null
-        : `${program.cost_aid.currency} ${program.cost_aid.tuition_amount.toLocaleString()}`;
+    const keyFields: EditableFieldDefinition[] = [
+      ...(degreeLevelOptions.length > 0
+        ? [
+            {
+              field: "degree_level_id",
+              kind: "select" as const,
+              label: "学历",
+              options: degreeLevelOptions,
+            },
+          ]
+        : []),
+      {
+        field: "duration_years",
+        inputMode: "decimal",
+        kind: "text",
+        label: "学制（年）",
+        serialize: nullableNumber,
+      },
+    ];
+    if (application) {
+      keyFields.push(
+        {
+          collection: "application_requirements",
+          field: "application_deadline",
+          kind: "text",
+          label: "申请截止日期",
+          recordId: application.id,
+          type: "date",
+        },
+        {
+          collection: "application_requirements",
+          field: "english_required",
+          kind: "select",
+          label: "是否要求英语成绩",
+          options: booleanOptions,
+          recordId: application.id,
+          serialize: nullableBoolean,
+        },
+        {
+          collection: "application_requirements",
+          field: "instruction_language",
+          kind: "text",
+          label: "授课语言",
+          recordId: application.id,
+        },
+        {
+          collection: "application_requirements",
+          field: "toefl_minimum",
+          inputMode: "decimal",
+          kind: "text",
+          label: "TOEFL 最低分",
+          recordId: application.id,
+          serialize: nullableNumber,
+        },
+        {
+          collection: "application_requirements",
+          field: "ielts_minimum",
+          inputMode: "decimal",
+          kind: "text",
+          label: "IELTS 最低分",
+          recordId: application.id,
+          serialize: nullableNumber,
+        },
+        {
+          collection: "application_requirements",
+          field: "duolingo_minimum",
+          inputMode: "numeric",
+          kind: "text",
+          label: "Duolingo 最低分",
+          recordId: application.id,
+          serialize: nullableNumber,
+        },
+        {
+          collection: "application_requirements",
+          field: "english_waiver_policy",
+          kind: "textarea",
+          label: "英语豁免政策",
+          recordId: application.id,
+        },
+        {
+          collection: "application_requirements",
+          field: "application_fee_currency",
+          kind: "select",
+          label: "申请费币种",
+          options: currencies,
+          recordId: application.id,
+        },
+        {
+          collection: "application_requirements",
+          field: "application_fee",
+          inputMode: "decimal",
+          kind: "text",
+          label: "申请费",
+          recordId: application.id,
+          serialize: nullableNumber,
+        },
+      );
+    }
+    const keyInitialValues = {
+      ...offering.values,
+      ...(application?.values ?? {}),
+    };
 
     return (
       <>
@@ -129,12 +232,27 @@ export function ReviewerProgramCards({
               kind: "text",
               label: "项目名称",
             },
+            ...(degreeLevelOptions.length > 0
+              ? [
+                  {
+                    field: "degree_level_id",
+                    kind: "select" as const,
+                    label: "学历",
+                    options: degreeLevelOptions,
+                  },
+                ]
+              : []),
           ]}
           initialStatus={offering.review_status}
           initialValues={offering.values}
           recordId={offering.id}
-          renderView={(values) => (
-            <div className="flex items-start justify-between gap-3">
+          renderView={(values) => {
+            const degree =
+              degreeLevelOptions.find(
+                (option) => option.value === values.degree_level_id,
+              )?.label ?? program.degree_level;
+            return (
+              <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-normal text-blue-700">
                   项目概览
@@ -150,44 +268,65 @@ export function ReviewerProgramCards({
                 </p>
               </div>
               <span className="shrink-0 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">
-                {program.degree_level}
+                {degree}
               </span>
             </div>
-          )}
+            );
+          }}
         />
 
         <ReviewerEditableCard
           collection="program_offerings"
-          fields={[
-            {
-              field: "duration_years",
-              inputMode: "decimal",
-              kind: "text",
-              label: "学制（年）",
-              serialize: nullableNumber,
-            },
-          ]}
+          fields={keyFields}
           initialStatus={offering.review_status}
-          initialValues={offering.values}
+          initialValues={keyInitialValues}
           recordId={offering.id}
-          renderView={(values) => (
-            <>
+          renderView={(values) => {
+            const requirements = languageRequirements(program, values);
+            const englishSummary = requirements.accepted_tests.length
+              ? requirements.accepted_tests
+                  .map((test) =>
+                    test.minimum_score
+                      ? `${test.test_name} ${test.minimum_score}`
+                      : test.test_name,
+                  )
+                  .join(" / ")
+              : requirements.english_required === false
+                ? "不要求"
+                : null;
+            const deadline = {
+              ...program.deadline,
+              application_deadline: values.application_deadline || null,
+            };
+            const degree =
+              degreeLevelOptions.find(
+                (option) => option.value === values.degree_level_id,
+              )?.label ?? program.degree_level;
+            const applicationFee = values.application_fee
+              ? `${values.application_fee_currency || ""} ${values.application_fee}`.trim()
+              : null;
+            return (
+              <>
               <h2 className="text-base font-semibold text-gray-900">关键信息</h2>
               <div className="mt-3 grid gap-2 text-sm">
-                <DetailRow label="学历" value={program.degree_level} />
+                <DetailRow label="学历" value={degree} />
                 <DetailRow label="学制" value={values.duration_years || null} />
                 <DetailRow
                   label="截止日期"
-                  value={<DeadlineBadge deadline={program.deadline} />}
+                  value={<DeadlineBadge deadline={deadline} />}
                 />
                 <DetailRow
                   label="英语要求"
                   value={englishSummary ?? <MissingDataNote />}
                 />
-                <DetailRow label="学费" value={tuition ?? <MissingDataNote />} />
+                <DetailRow
+                  label="申请费"
+                  value={applicationFee ?? <MissingDataNote />}
+                />
               </div>
-            </>
-          )}
+              </>
+            );
+          }}
         />
       </>
     );
@@ -205,6 +344,18 @@ export function ReviewerProgramCards({
               label: "申请截止日期",
               type: "date",
             },
+            ...(audition
+              ? [
+                  {
+                    collection: "audition_requirements",
+                    field: "prescreening_deadline",
+                    kind: "text" as const,
+                    label: "预筛选截止日期",
+                    recordId: audition.id,
+                    type: "date" as const,
+                  },
+                ]
+              : []),
             {
               field: "deadline_notes",
               kind: "textarea",
@@ -212,12 +363,17 @@ export function ReviewerProgramCards({
             },
           ]}
           initialStatus={application.review_status}
-          initialValues={application.values}
+          initialValues={{
+            ...application.values,
+            ...(audition?.values ?? {}),
+          }}
           recordId={application.id}
           renderView={(values) => {
             const deadline = {
               ...program.deadline,
               application_deadline: values.application_deadline || null,
+              prescreening_deadline:
+                values.prescreening_deadline || null,
               notes: values.deadline_notes || null,
             };
             return (
@@ -235,11 +391,7 @@ export function ReviewerProgramCards({
                   />
                   <DetailRow
                     label="预筛选 Prescreening"
-                    value={program.deadline.prescreening_deadline}
-                  />
-                  <DetailRow
-                    label="试音 Audition"
-                    value={program.deadline.audition_date}
+                    value={deadline.prescreening_deadline}
                   />
                 </div>
                 {deadline.notes ? (
@@ -259,6 +411,18 @@ export function ReviewerProgramCards({
         <ReviewerEditableCard
           collection="application_requirements"
           fields={[
+            {
+              field: "english_required",
+              kind: "select",
+              label: "是否要求英语成绩",
+              options: booleanOptions,
+              serialize: nullableBoolean,
+            },
+            {
+              field: "instruction_language",
+              kind: "text",
+              label: "授课语言",
+            },
             {
               field: "toefl_minimum",
               inputMode: "decimal",
@@ -350,6 +514,10 @@ export function ReviewerProgramCards({
                   value={boolLabel(values.prescreening_required)}
                 />
                 <DetailRow
+                  label="预筛选截止"
+                  value={values.prescreening_deadline || null}
+                />
+                <DetailRow
                   label="试音"
                   value={boolLabel(values.audition_required)}
                 />
@@ -398,11 +566,9 @@ export function ReviewerProgramCards({
           renderView={(values) => (
             <>
               <h2 className="text-base font-semibold text-gray-900">
-                学费与奖学金 Tuition & Aid
+                申请费 Application Fee
               </h2>
               <div className="mt-3 grid gap-1 text-sm">
-                <DetailRow label="学费" value={null} />
-                <DetailRow label="周期" value={program.cost_aid.tuition_period} />
                 <DetailRow
                   label="申请费"
                   value={
@@ -411,7 +577,6 @@ export function ReviewerProgramCards({
                       : null
                   }
                 />
-                <DetailRow label="奖学金" value={null} />
               </div>
               {program.cost_aid.notes ? (
                 <p className="mt-3 rounded-xl bg-gray-50 px-3 py-2 text-xs leading-5 text-gray-600">
@@ -449,7 +614,6 @@ function StaticDeadlineCard({ program }: { program: Program }) {
           label="预筛选 Prescreening"
           value={program.deadline.prescreening_deadline}
         />
-        <DetailRow label="试音 Audition" value={program.deadline.audition_date} />
       </div>
       {program.deadline.notes ? (
         <p className="mt-3 rounded-xl bg-gray-50 px-3 py-2 text-xs leading-5 text-gray-600">
@@ -470,6 +634,10 @@ function StaticAuditionCard({ program }: { program: Program }) {
         <DetailRow
           label="预筛选"
           value={formatBoolean(program.audition_requirements.prescreening_required)}
+        />
+        <DetailRow
+          label="预筛选截止"
+          value={program.deadline.prescreening_deadline}
         />
         <DetailRow
           label="试音"
@@ -494,11 +662,9 @@ function StaticCostCard({ program }: { program: Program }) {
   return (
     <section className="rounded-2xl border border-gray-200 bg-white p-4">
       <h2 className="text-base font-semibold text-gray-900">
-        学费与奖学金 Tuition & Aid
+        申请费 Application Fee
       </h2>
       <div className="mt-3 grid gap-1 text-sm">
-        <DetailRow label="学费" value={null} />
-        <DetailRow label="周期" value={program.cost_aid.tuition_period} />
         <DetailRow
           label="申请费"
           value={
@@ -507,7 +673,6 @@ function StaticCostCard({ program }: { program: Program }) {
               : `${program.cost_aid.currency} ${program.cost_aid.application_fee}`
           }
         />
-        <DetailRow label="奖学金" value={null} />
       </div>
       {program.cost_aid.notes ? (
         <p className="mt-3 rounded-xl bg-gray-50 px-3 py-2 text-xs leading-5 text-gray-600">
