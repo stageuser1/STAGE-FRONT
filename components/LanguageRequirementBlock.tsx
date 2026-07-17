@@ -38,9 +38,6 @@ export function LanguageRequirementContent({
           <h2 className="text-base font-semibold text-gray-900">
             英语要求 English Requirement
           </h2>
-          <p className="mt-1 text-sm text-gray-600">
-            授课语言: {requirements.instruction_language ?? "暂未收录"}
-          </p>
         </div>
         <span
           className={
@@ -100,7 +97,9 @@ export function LanguageRequirementContent({
         <p>
           豁免政策: {requirements.waiver_policy ?? <MissingDataNote />}
         </p>
-        {requirements.notes ? <p className="mt-1">{requirements.notes}</p> : null}
+        {requirements.notes ? (
+          <p className="mt-1">考试说明: {requirements.notes}</p>
+        ) : null}
       </div>
     </>
   );

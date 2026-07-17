@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useMemo, useState, type ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import type { ReviewStatus } from "@/data/types";
 import { useReviewerAuth } from "@/lib/directus-auth";
 import {
@@ -22,7 +23,7 @@ export interface EditableFieldDefinition {
   type?: "text" | "url" | "date";
   inputMode?: "decimal" | "numeric";
   options?: Array<{ label: string; value: string }>;
-  serialize?: (value: string) => string | number | boolean | null;
+  serialize?: (value: string) => unknown;
 }
 
 interface ReviewerEditableCardProps {
@@ -53,6 +54,7 @@ export function ReviewerEditableCard({
   recordId,
   renderView,
 }: ReviewerEditableCardProps) {
+  const router = useRouter();
   const idPrefix = useId();
   const { isReviewer, request } = useReviewerAuth();
   const initial = useMemo(() => formValues(initialValues), [initialValues]);
@@ -63,6 +65,12 @@ export function ReviewerEditableCard({
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+
+  useEffect(() => {
+    setValues(initial);
+    setDraft(initial);
+    setStatus(initialStatus);
+  }, [initial, initialStatus]);
 
   useEffect(() => {
     function syncStatus(event: Event) {
@@ -126,45 +134,52 @@ export function ReviewerEditableCard({
       setEditing(false);
       return;
     }
-    const payloads = new Map<string, Record<string, unknown>>();
-    changed.forEach((definition) => {
-      const name = definition.name ?? definition.field;
-      const value = draft[name] ?? "";
-      const targetCollection = definition.collection ?? collection;
-      const targetRecordId = definition.recordId ?? recordId;
-      const targetKey = `${targetCollection}:${targetRecordId}`;
-      const payload = payloads.get(targetKey) ?? {
-        review_status: "human_edited",
-      };
-      payload[definition.field] = definition.serialize
-        ? definition.serialize(value)
-        : value.trim() === ""
-          ? null
-          : value;
-      payloads.set(targetKey, payload);
-    });
-
     setSaving(true);
     setError(null);
     setNotice(null);
     try {
-      await Promise.all(
-        [...payloads.entries()].map(([targetKey, payload]) => {
-          const separator = targetKey.indexOf(":");
-          const targetCollection = targetKey.slice(0, separator);
-          const targetRecordId = targetKey.slice(separator + 1);
-          return patch(targetCollection, targetRecordId, payload).then(() => {
-            publishStatus(
-              "human_edited",
-              targetCollection,
-              targetRecordId,
-            );
-          });
-        }),
-      );
-      setValues(draft);
+      const payloads = new Map<string, Record<string, unknown>>();
+      changed.forEach((definition) => {
+        const name = definition.name ?? definition.field;
+        const value = draft[name] ?? "";
+        const targetCollection = definition.collection ?? collection;
+        const targetRecordId = definition.recordId ?? recordId;
+        const targetKey = `${targetCollection}:${targetRecordId}`;
+        const payload = payloads.get(targetKey) ?? {
+          review_status: "human_edited",
+        };
+        payload[definition.field] = definition.serialize
+          ? definition.serialize(value)
+          : value.trim() === ""
+            ? null
+            : value;
+        payloads.set(targetKey, payload);
+      });
+
+      const savedTargets: string[] = [];
+      for (const [targetKey, payload] of payloads.entries()) {
+        const separator = targetKey.indexOf(":");
+        const targetCollection = targetKey.slice(0, separator);
+        const targetRecordId = targetKey.slice(separator + 1);
+        try {
+          await patch(targetCollection, targetRecordId, payload);
+        } catch (caught) {
+          const reason =
+            caught instanceof Error ? caught.message : String(caught);
+          if (savedTargets.length > 0) router.refresh();
+          throw new Error(
+            savedTargets.length > 0
+              ? `Saved ${savedTargets.join(", ")}, but failed to save ${targetCollection} record ${targetRecordId}: ${reason}. The page may be partially saved and has been refreshed.`
+              : `Failed to save ${targetCollection} record ${targetRecordId}: ${reason}`,
+          );
+        }
+        savedTargets.push(`${targetCollection} record ${targetRecordId}`);
+        publishStatus("human_edited", targetCollection, targetRecordId);
+      }
+      setValues({ ...draft });
       setEditing(false);
       setNotice("Saved");
+      router.refresh();
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
     } finally {
@@ -186,16 +201,27 @@ export function ReviewerEditableCard({
           recordId: targetRecordId,
         });
       });
-      await Promise.all(
-        [...targets.values()].map((target) =>
-          patch(target.collection, target.recordId, {
+      const savedTargets: string[] = [];
+      for (const target of targets.values()) {
+        try {
+          await patch(target.collection, target.recordId, {
             review_status: nextStatus,
-          }).then(() =>
-            publishStatus(nextStatus, target.collection, target.recordId),
-          ),
-        ),
-      );
+          });
+        } catch (caught) {
+          const reason =
+            caught instanceof Error ? caught.message : String(caught);
+          if (savedTargets.length > 0) router.refresh();
+          throw new Error(
+            savedTargets.length > 0
+              ? `Updated ${savedTargets.join(", ")}, but failed to update ${target.collection} record ${target.recordId}: ${reason}. The page may be partially updated and has been refreshed.`
+              : `Failed to update ${target.collection} record ${target.recordId}: ${reason}`,
+          );
+        }
+        savedTargets.push(`${target.collection} record ${target.recordId}`);
+        publishStatus(nextStatus, target.collection, target.recordId);
+      }
       setNotice(nextStatus === "human_checked" ? "Verified" : "Flagged");
+      router.refresh();
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
     } finally {

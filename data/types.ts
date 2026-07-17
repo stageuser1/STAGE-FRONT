@@ -87,7 +87,7 @@ export interface AuditionRequirements {
   prescreening_required: boolean | null;
   audition_required: boolean | null;
   repertoire_requirements: string | null;
-  format: "in_person" | "recorded" | "online" | "hybrid" | null;
+  format: string | null;
   notes: string | null;
 }
 
@@ -110,7 +110,10 @@ export interface Program {
   degree_level: DegreeLevel;
   major_area: string;
   duration: string | null;
+  program_url?: string | null;
   application_url: string | null;
+  audition_url?: string | null;
+  international_url?: string | null;
   deadline: Deadline;
   language_requirements: LanguageRequirements;
   audition_requirements: AuditionRequirements;

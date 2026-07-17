@@ -41,12 +41,13 @@ interface DirectusProgramOffering {
   school_id?: DirectusId | DirectusSchool | null;
   field_id?: DirectusId | DirectusField | null;
   degree_level_id?: DirectusId | DirectusDegreeLevel | null;
-  degree_level_name?: string | null;
   official_program_name?: string | null;
   duration_years?: string | number | null;
+  language_of_instruction?: unknown;
+  program_url?: string | null;
   application_url?: string | null;
-  application_fee?: string | number | null;
-  application_fee_currency?: string | null;
+  audition_url?: string | null;
+  international_url?: string | null;
   review_status?: string | null;
 }
 
@@ -66,19 +67,32 @@ interface DirectusApplicationRequirement extends DirectusCycleRecord {
   ielts_minimum?: string | number | null;
   duolingo_minimum?: string | number | null;
   english_waiver_policy?: string | null;
-  english_required?: boolean | string | number | null;
-  instruction_language?: string | null;
+  resume_required?: string | null;
+  essay_required?: string | null;
+  recommendation_letters?: string | number | null;
+  transcript_requirements?: string | null;
+  portfolio_required?: string | null;
+  required_materials?: unknown;
+  international_applicant_notes?: string | null;
+  conditional_notes?: string | null;
+  notes?: string | null;
   application_fee?: string | number | null;
   application_fee_currency?: string | null;
 }
 
 interface DirectusAuditionRequirement extends DirectusCycleRecord {
   prescreening_deadline?: string | null;
-  prescreening_required?: boolean | string | number | null;
-  audition_required?: boolean | string | number | null;
+  Prescreening_required?: string | null;
+  audition_required?: string | null;
   repertoire_summary?: string | null;
+  repertoire_structured?: unknown;
   audition_format?: string | null;
-  format?: string | null;
+  video_requirements?: string | null;
+  file_format_requirements?: string | null;
+  accompaniment_requirements?: string | null;
+  interview_or_callback_requirements?: string | null;
+  special_notes?: string | null;
+  conditional_notes?: string | null;
   notes?: string | null;
 }
 
@@ -168,6 +182,58 @@ function textValue(value: unknown): string | null {
   if (typeof value !== "string" && typeof value !== "number") return null;
   const text = String(value).trim();
   return text === "" ? null : text;
+}
+
+function parsedStructuredValue(value: unknown): unknown {
+  if (typeof value !== "string") return value;
+  const text = value.trim();
+  if (!text.startsWith("[") && !text.startsWith("{")) return value;
+  try {
+    return JSON.parse(text) as unknown;
+  } catch {
+    return value;
+  }
+}
+
+function editorValue(value: unknown): string | null {
+  if (value === null || value === undefined) return null;
+  if (typeof value === "string") return value.trim() === "" ? null : value;
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+  try {
+    return JSON.stringify(value, null, 2);
+  } catch {
+    return null;
+  }
+}
+
+function displayStructuredValue(value: unknown): string | null {
+  const parsed = parsedStructuredValue(value);
+  if (parsed === null || parsed === undefined) return null;
+  if (typeof parsed === "string" || typeof parsed === "number") {
+    return textValue(parsed);
+  }
+  if (typeof parsed === "boolean") return parsed ? "Yes" : "No";
+  if (Array.isArray(parsed)) {
+    const values = parsed
+      .map(displayStructuredValue)
+      .filter((item): item is string => item !== null);
+    return values.length > 0 ? values.join(", ") : null;
+  }
+  if (typeof parsed === "object") {
+    const record = parsed as Record<string, unknown>;
+    for (const key of ["language", "name", "label", "value"]) {
+      const display = displayStructuredValue(record[key]);
+      if (display) return display;
+    }
+    try {
+      return JSON.stringify(parsed);
+    } catch {
+      return null;
+    }
+  }
+  return null;
 }
 
 function numberValue(value: unknown): number | null {
@@ -309,7 +375,6 @@ function mapDegreeLevel(
 
   const heuristicSource = [
     relation?.degree_level_name,
-    offering.degree_level_name,
     name,
   ]
     .filter((item): item is string => typeof item === "string")
@@ -354,6 +419,39 @@ function englishTestNames(value: unknown): string[] {
   return text.split(/[,;|/]/).map((item) => item.trim()).filter(Boolean);
 }
 
+function requirementStatus(value: unknown): boolean | null | undefined {
+  const normalized = textValue(value)?.toLowerCase().replace(/[\s-]+/g, "_");
+  if (
+    normalized === "required" ||
+    normalized === "yes" ||
+    normalized === "true"
+  ) {
+    return true;
+  }
+  if (
+    normalized === "not_required" ||
+    normalized === "no" ||
+    normalized === "false" ||
+    normalized === "none"
+  ) {
+    return false;
+  }
+  if (normalized === "optional" || normalized === "unknown") return null;
+  return undefined;
+}
+
+function structuredStatuses(value: unknown): Array<boolean | null> {
+  const parsed = parsedStructuredValue(value);
+  if (Array.isArray(parsed)) return parsed.flatMap(structuredStatuses);
+  if (parsed && typeof parsed === "object") {
+    return Object.values(parsed as Record<string, unknown>).flatMap(
+      structuredStatuses,
+    );
+  }
+  const status = requirementStatus(parsed);
+  return status === undefined ? [] : [status];
+}
+
 function canonicalTestName(value: string): LanguageTest["test_name"] {
   const name = value.toLowerCase();
   if (name.includes("toefl")) return "TOEFL";
@@ -368,7 +466,9 @@ function mapLanguageTests(
 ): LanguageTest[] {
   if (!requirement) return [];
 
-  const names = englishTestNames(requirement.english_language_tests);
+  const names = englishTestNames(requirement.english_language_tests).filter(
+    (name) => requirementStatus(name) === undefined,
+  );
   if (textValue(requirement.toefl_minimum)) names.push("TOEFL");
   if (textValue(requirement.ielts_minimum)) names.push("IELTS");
   if (textValue(requirement.duolingo_minimum)) names.push("Duolingo");
@@ -396,19 +496,22 @@ function mapLanguageTests(
   return [...tests.values()];
 }
 
-function mapAuditionFormat(
-  value: unknown,
-): Program["audition_requirements"]["format"] {
-  const format = textValue(value)?.toLowerCase().replace(/[ -]+/g, "_");
-  if (
-    format === "in_person" ||
-    format === "recorded" ||
-    format === "online" ||
-    format === "hybrid"
-  ) {
-    return format;
-  }
-  return null;
+function derivedEnglishRequired(
+  requirement: DirectusApplicationRequirement | null,
+  acceptedTests: LanguageTest[],
+): boolean | null {
+  if (!requirement) return null;
+  const statuses = structuredStatuses(requirement.english_language_tests);
+  if (statuses.includes(false)) return false;
+  if (statuses.includes(true)) return true;
+  if (statuses.includes(null)) return null;
+  return acceptedTests.length > 0 || textValue(requirement.english_waiver_policy)
+    ? true
+    : null;
+}
+
+function requirementBoolean(value: unknown): boolean | null {
+  return requirementStatus(value) ?? null;
 }
 
 function mapCurrency(value: unknown): CurrencyCode | null {
@@ -589,11 +692,8 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
         `${omittedForUrl} linked source record(s) were omitted because source_url was missing.`,
       );
     }
-    const applicationFeeValue =
-      application?.application_fee ?? offering.application_fee;
-    const applicationFeeCurrency =
-      application?.application_fee_currency ??
-      offering.application_fee_currency;
+    const applicationFeeValue = application?.application_fee;
+    const applicationFeeCurrency = application?.application_fee_currency;
 
     return [
       {
@@ -606,7 +706,10 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
         degree_level: degreeLevel.degreeLevel,
         major_area: textValue(field?.field_name) ?? programName,
         duration: textValue(offering.duration_years),
+        program_url: textValue(offering.program_url),
         application_url: textValue(offering.application_url),
+        audition_url: textValue(offering.audition_url),
+        international_url: textValue(offering.international_url),
         deadline: {
           application_deadline: dateValue(application?.application_deadline),
           prescreening_deadline: dateValue(audition?.prescreening_deadline),
@@ -614,26 +717,21 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
           notes: textValue(application?.deadline_notes),
         },
         language_requirements: {
-          instruction_language: textValue(application?.instruction_language),
-          english_required:
-            booleanValue(application?.english_required) ??
-            (acceptedTests.length > 0 ||
-            textValue(application?.english_waiver_policy)
-              ? true
-              : null),
+          instruction_language: displayStructuredValue(
+            offering.language_of_instruction,
+          ),
+          english_required: derivedEnglishRequired(application, acceptedTests),
           accepted_tests: acceptedTests,
           waiver_policy: textValue(application?.english_waiver_policy),
-          notes: null,
+          notes: displayStructuredValue(application?.english_language_tests),
         },
         audition_requirements: {
-          prescreening_required: booleanValue(
-            audition?.prescreening_required,
+          prescreening_required: requirementBoolean(
+            audition?.Prescreening_required,
           ),
-          audition_required: booleanValue(audition?.audition_required),
+          audition_required: requirementBoolean(audition?.audition_required),
           repertoire_requirements: textValue(audition?.repertoire_summary),
-          format: mapAuditionFormat(
-            audition?.audition_format ?? audition?.format,
-          ),
+          format: textValue(audition?.audition_format),
           notes: textValue(audition?.notes),
         },
         cost_aid: mapCostAid(applicationFeeValue, applicationFeeCurrency),
@@ -653,7 +751,13 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
               official_program_name: programName,
               degree_level_id: relationId(offering.degree_level_id),
               duration_years: textValue(offering.duration_years),
+              language_of_instruction: editorValue(
+                offering.language_of_instruction,
+              ),
+              program_url: textValue(offering.program_url),
               application_url: textValue(offering.application_url),
+              audition_url: textValue(offering.audition_url),
+              international_url: textValue(offering.international_url),
             },
           },
           application: application
@@ -671,12 +775,28 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
                   english_waiver_policy: textValue(
                     application.english_waiver_policy,
                   ),
-                  english_required: booleanValue(
-                    application.english_required,
+                  english_language_tests: editorValue(
+                    application.english_language_tests,
                   ),
-                  instruction_language: textValue(
-                    application.instruction_language,
+                  resume_required: textValue(application.resume_required),
+                  essay_required: textValue(application.essay_required),
+                  recommendation_letters: textValue(
+                    application.recommendation_letters,
                   ),
+                  transcript_requirements: textValue(
+                    application.transcript_requirements,
+                  ),
+                  portfolio_required: textValue(
+                    application.portfolio_required,
+                  ),
+                  required_materials: editorValue(
+                    application.required_materials,
+                  ),
+                  international_applicant_notes: textValue(
+                    application.international_applicant_notes,
+                  ),
+                  conditional_notes: textValue(application.conditional_notes),
+                  notes: textValue(application.notes),
                   application_fee: textValue(applicationFeeValue),
                   application_fee_currency:
                     textValue(applicationFeeCurrency),
@@ -688,17 +808,27 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
                 id: String(audition.id),
                 review_status: textValue(audition.review_status),
                 values: {
-                  prescreening_required: booleanValue(
-                    audition.prescreening_required,
+                  Prescreening_required: textValue(
+                    audition.Prescreening_required,
                   ),
                   prescreening_deadline: dateValue(
                     audition.prescreening_deadline,
                   ),
-                  audition_required: booleanValue(audition.audition_required),
-                  audition_format: textValue(
-                    audition.audition_format ?? audition.format,
-                  ),
+                  audition_required: textValue(audition.audition_required),
+                  audition_format: textValue(audition.audition_format),
                   repertoire_summary: textValue(audition.repertoire_summary),
+                  video_requirements: textValue(audition.video_requirements),
+                  file_format_requirements: textValue(
+                    audition.file_format_requirements,
+                  ),
+                  accompaniment_requirements: textValue(
+                    audition.accompaniment_requirements,
+                  ),
+                  interview_or_callback_requirements: textValue(
+                    audition.interview_or_callback_requirements,
+                  ),
+                  special_notes: textValue(audition.special_notes),
+                  conditional_notes: textValue(audition.conditional_notes),
                   notes: textValue(audition.notes),
                 },
               }

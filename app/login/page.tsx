@@ -2,8 +2,30 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { useReviewerAuth } from "@/lib/directus-auth";
+
+function reviewerReturnPath(): string {
+  if (typeof window === "undefined") return "/";
+  const requested = new URLSearchParams(window.location.search).get("returnTo");
+  if (requested?.startsWith("/") && !requested.startsWith("//")) {
+    return requested === "/login" ? "/" : requested;
+  }
+  if (document.referrer) {
+    try {
+      const referrer = new URL(document.referrer);
+      if (
+        referrer.origin === window.location.origin &&
+        referrer.pathname !== "/login"
+      ) {
+        return `${referrer.pathname}${referrer.search}${referrer.hash}`;
+      }
+    } catch {
+      // Ignore invalid or cross-origin referrers.
+    }
+  }
+  return "/";
+}
 
 export default function LoginPage() {
   const router = useRouter();
@@ -12,6 +34,11 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [returnTo, setReturnTo] = useState("/");
+
+  useEffect(() => {
+    setReturnTo(reviewerReturnPath());
+  }, []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -19,7 +46,7 @@ export default function LoginPage() {
     setSubmitting(true);
     try {
       await login(email.trim(), password);
-      router.replace("/");
+      router.replace(reviewerReturnPath());
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
     } finally {
@@ -43,7 +70,7 @@ export default function LoginPage() {
             <div className="mt-4 flex gap-3">
               <Link
                 className="rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white"
-                href="/"
+                href={returnTo}
               >
                 Continue
               </Link>
