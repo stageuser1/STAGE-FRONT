@@ -1,9 +1,13 @@
 import { cache } from "react";
 import type {
+  ApplicationSection,
+  AuditionSection,
   ConfidenceLevel,
   CurrencyCode,
+  DegreeInfo,
   DegreeLevel,
   LanguageTest,
+  PrescreenSection,
   Program,
   ProgramSearchQuery,
   School,
@@ -28,12 +32,17 @@ interface DirectusField {
   id?: DirectusId;
   slug?: string | null;
   field_name?: string | null;
+  field_name_zh?: string | null;
+  field_category?: string | null;
 }
 
 interface DirectusDegreeLevel {
   id?: DirectusId;
   slug?: string | null;
   degree_level_name?: string | null;
+  degree_level_name_zh?: string | null;
+  abbreviation?: string | null;
+  degree_category?: string | null;
 }
 
 interface DirectusProgramOffering {
@@ -42,6 +51,10 @@ interface DirectusProgramOffering {
   field_id?: DirectusId | DirectusField | null;
   degree_level_id?: DirectusId | DirectusDegreeLevel | null;
   official_program_name?: string | null;
+  program_name_zh?: string | null;
+  track_or_concentration?: string | null;
+  department?: string | null;
+  card_summary_zh?: string | null;
   duration_years?: string | number | null;
   language_of_instruction?: unknown;
   program_url?: string | null;
@@ -86,6 +99,8 @@ interface DirectusAuditionRequirement extends DirectusCycleRecord {
   audition_required?: string | null;
   repertoire_summary?: string | null;
   repertoire_structured?: unknown;
+  prescreen_repertoire?: string | null;
+  audition_repertoire?: string | null;
   audition_format?: string | null;
   video_requirements?: string | null;
   file_format_requirements?: string | null;
@@ -389,6 +404,127 @@ function mapDegreeLevel(
   };
 }
 
+const degreeZhBySlug: Record<string, string> = {
+  bm: "音乐学士",
+  mm: "音乐硕士",
+  dma: "音乐艺术博士",
+  gd: "研究生文凭",
+  ad: "艺术家文凭",
+};
+
+function mapDegreeInfo(
+  offering: DirectusProgramOffering,
+  fallbackName: string,
+): DegreeInfo {
+  const relation = relationObject<DirectusDegreeLevel>(offering.degree_level_id);
+  const slug = textValue(relation?.slug)?.toLowerCase() ?? null;
+  return {
+    slug,
+    name: textValue(relation?.degree_level_name) ?? fallbackName,
+    name_zh:
+      textValue(relation?.degree_level_name_zh) ??
+      (slug ? degreeZhBySlug[slug] ?? null : null),
+    abbreviation:
+      textValue(relation?.abbreviation) ?? slug?.toUpperCase() ?? null,
+    category: textValue(relation?.degree_category),
+  };
+}
+
+function structuredStringList(value: unknown): string[] {
+  const parsed = parsedStructuredValue(value);
+  if (Array.isArray(parsed)) return parsed.flatMap(structuredStringList);
+  if (parsed && typeof parsed === "object") {
+    return Object.values(parsed as Record<string, unknown>).flatMap(
+      structuredStringList,
+    );
+  }
+  const text = textValue(parsed);
+  return text ? [text] : [];
+}
+
+function repertoireListMarkdown(
+  value: unknown,
+  key: "prescreen" | "audition",
+): string | null {
+  const parsed = parsedStructuredValue(value);
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+    return null;
+  }
+  const items = (parsed as Record<string, unknown>)[key];
+  if (!Array.isArray(items)) return null;
+  const lines = items
+    .map((item) => textValue(item))
+    .filter((item): item is string => item !== null);
+  return lines.length > 0
+    ? lines.map((line, index) => `${index + 1}. ${line}`).join("\n")
+    : null;
+}
+
+function mapApplicationSection(
+  application: DirectusApplicationRequirement | null,
+): ApplicationSection | null {
+  if (!application) return null;
+  return {
+    resume_required: textValue(application.resume_required),
+    essay_required: textValue(application.essay_required),
+    recommendation_letters: textValue(application.recommendation_letters),
+    transcript_requirements: textValue(application.transcript_requirements),
+    portfolio_required: textValue(application.portfolio_required),
+    required_materials: structuredStringList(application.required_materials),
+    international_applicant_notes: textValue(
+      application.international_applicant_notes,
+    ),
+    conditional_notes: textValue(application.conditional_notes),
+    notes: textValue(application.notes),
+    admission_cycle: textValue(application.admission_cycle),
+  };
+}
+
+function mapAuditionSections(audition: DirectusAuditionRequirement | null): {
+  prescreen: PrescreenSection | null;
+  audition: AuditionSection | null;
+} {
+  if (!audition) return { prescreen: null, audition: null };
+
+  const prescreenRepertoire =
+    textValue(audition.prescreen_repertoire) ??
+    repertoireListMarkdown(audition.repertoire_structured, "prescreen");
+  const auditionRepertoire =
+    textValue(audition.audition_repertoire) ??
+    repertoireListMarkdown(audition.repertoire_structured, "audition");
+  const hasSplitRepertoire =
+    prescreenRepertoire !== null || auditionRepertoire !== null;
+
+  return {
+    prescreen: {
+      required: requirementBoolean(audition.Prescreening_required),
+      required_text: textValue(audition.Prescreening_required),
+      deadline: dateValue(audition.prescreening_deadline),
+      video_requirements: textValue(audition.video_requirements),
+      file_format_requirements: textValue(audition.file_format_requirements),
+      repertoire: prescreenRepertoire,
+    },
+    audition: {
+      required: requirementBoolean(audition.audition_required),
+      required_text: textValue(audition.audition_required),
+      format: textValue(audition.audition_format),
+      accompaniment_requirements: textValue(
+        audition.accompaniment_requirements,
+      ),
+      interview_or_callback_requirements: textValue(
+        audition.interview_or_callback_requirements,
+      ),
+      repertoire: auditionRepertoire,
+      special_notes: textValue(audition.special_notes),
+      conditional_notes: textValue(audition.conditional_notes),
+      notes: textValue(audition.notes),
+      legacy_repertoire_summary: hasSplitRepertoire
+        ? null
+        : textValue(audition.repertoire_summary),
+    },
+  };
+}
+
 function englishTestNames(value: unknown): string[] {
   if (Array.isArray(value)) {
     return value.flatMap((item) => {
@@ -605,7 +741,7 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
       "/items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status",
     ),
     directusFetch<DirectusProgramOffering[]>(
-      "/items/program_offerings?limit=-1&fields=*,school_id.id,school_id.slug,school_id.school_name,school_id.city,school_id.country,field_id.id,field_id.slug,field_id.field_name,degree_level_id.id,degree_level_id.slug,degree_level_id.degree_level_name",
+      "/items/program_offerings?limit=-1&fields=*,school_id.id,school_id.slug,school_id.school_name,school_id.city,school_id.country,field_id.id,field_id.slug,field_id.field_name,field_id.field_name_zh,field_id.field_category,degree_level_id.id,degree_level_id.slug,degree_level_id.degree_level_name,degree_level_id.degree_level_name_zh,degree_level_id.abbreviation,degree_level_id.degree_category",
     ),
     directusFetch<DirectusApplicationRequirement[]>(
       "/items/application_requirements?limit=-1",
@@ -666,7 +802,9 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
       .filter((source): source is SourceRecord => source !== null);
     const field = relationObject<DirectusField>(offering.field_id);
     const degreeLevel = mapDegreeLevel(offering, programName);
+    const degree = mapDegreeInfo(offering, programName);
     const acceptedTests = mapLanguageTests(application);
+    const sections = mapAuditionSections(audition);
     const statuses = [mapReviewStatus(offering.review_status)];
     if (application) statuses.push(mapReviewStatus(application.review_status));
     if (audition) statuses.push(mapReviewStatus(audition.review_status));
@@ -703,8 +841,19 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
         country: textValue(school.country) ?? "待核实",
         city: textValue(school.city) ?? "待核实",
         name: programName,
+        name_zh: textValue(offering.program_name_zh),
         degree_level: degreeLevel.degreeLevel,
-        major_area: textValue(field?.field_name) ?? programName,
+        degree,
+        major_area: textValue(field?.field_name) ?? "",
+        major_area_zh: textValue(field?.field_name_zh),
+        specialization:
+          textValue(offering.track_or_concentration) ??
+          textValue(field?.field_name),
+        department: textValue(offering.department),
+        card_summary: textValue(offering.card_summary_zh),
+        application: mapApplicationSection(application),
+        prescreen: sections.prescreen,
+        audition: sections.audition,
         duration: textValue(offering.duration_years),
         program_url: textValue(offering.program_url),
         application_url: textValue(offering.application_url),
@@ -749,6 +898,12 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
             review_status: textValue(offering.review_status),
             values: {
               official_program_name: programName,
+              program_name_zh: textValue(offering.program_name_zh),
+              track_or_concentration: textValue(
+                offering.track_or_concentration,
+              ),
+              department: textValue(offering.department),
+              card_summary_zh: textValue(offering.card_summary_zh),
               degree_level_id: relationId(offering.degree_level_id),
               duration_years: textValue(offering.duration_years),
               language_of_instruction: editorValue(
@@ -817,6 +972,23 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
                   audition_required: textValue(audition.audition_required),
                   audition_format: textValue(audition.audition_format),
                   repertoire_summary: textValue(audition.repertoire_summary),
+                  // Only expose the split repertoire fields for editing when
+                  // the Directus schema actually has them, so saves cannot
+                  // target nonexistent columns.
+                  ...("prescreen_repertoire" in audition
+                    ? {
+                        prescreen_repertoire: textValue(
+                          audition.prescreen_repertoire,
+                        ),
+                      }
+                    : {}),
+                  ...("audition_repertoire" in audition
+                    ? {
+                        audition_repertoire: textValue(
+                          audition.audition_repertoire,
+                        ),
+                      }
+                    : {}),
                   video_requirements: textValue(audition.video_requirements),
                   file_format_requirements: textValue(
                     audition.file_format_requirements,
@@ -845,6 +1017,14 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
     const schoolPrograms = programs.filter(
       (program) => program.school_id === slug,
     );
+    const schoolSources = sourceRecords
+      .filter(
+        (record) =>
+          !relationId(record.program_offering_id) &&
+          relationId(record.school_id) === String(school.id),
+      )
+      .map(mapSource)
+      .filter((source): source is SourceRecord => source !== null);
     const status =
       schoolPrograms.length > 0
         ? weakestStatus(
@@ -873,6 +1053,7 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
         country: textValue(school.country) ?? "待核实",
         city: textValue(school.city) ?? "待核实",
         website_url: textValue(school.official_website),
+        sources: schoolSources,
         status,
         data_quality: {
           confidence,
@@ -938,16 +1119,25 @@ export async function searchPrograms(
   const keyword = query.keyword?.trim().toLowerCase() ?? "";
   const country = query.country?.trim().toLowerCase() ?? "";
   const majorArea = query.major_area?.trim().toLowerCase() ?? "";
+  const degreeSlug = query.degree_slug?.trim().toLowerCase() ?? "";
 
   return programs.filter((program) => {
     const keywordTarget = [
       program.name,
+      program.name_zh,
       program.school_name,
       program.country,
       program.city,
       program.degree_level,
+      program.degree?.name,
+      program.degree?.name_zh,
+      program.degree?.abbreviation,
       program.major_area,
+      program.major_area_zh,
+      program.specialization,
+      program.department,
     ]
+      .filter(Boolean)
       .join(" ")
       .toLowerCase();
 
@@ -956,11 +1146,20 @@ export async function searchPrograms(
       country === "" || program.country.toLowerCase() === country;
     const matchesDegree =
       !query.degree_level || program.degree_level === query.degree_level;
+    const matchesDegreeSlug =
+      degreeSlug === "" ||
+      (program.degree?.slug ?? "").toLowerCase() === degreeSlug;
     const matchesMajorArea =
-      majorArea === "" || program.major_area.toLowerCase() === majorArea;
+      majorArea === "" ||
+      program.major_area.toLowerCase() === majorArea ||
+      (program.major_area_zh ?? "").toLowerCase() === majorArea;
 
     return (
-      matchesKeyword && matchesCountry && matchesDegree && matchesMajorArea
+      matchesKeyword &&
+      matchesCountry &&
+      matchesDegree &&
+      matchesDegreeSlug &&
+      matchesMajorArea
     );
   });
 }

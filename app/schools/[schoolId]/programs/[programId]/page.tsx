@@ -1,9 +1,10 @@
-import { DataStatusBanner } from "@/components/DataStatusBanner";
 import { EmptyState } from "@/components/EmptyState";
-import { MobileHeader } from "@/components/MobileHeader";
+import { MobileHeader, PageShell } from "@/components/MobileHeader";
+import { ProgramDetailSections } from "@/components/program/ProgramDetailSections";
 import { SourceCitationBlock } from "@/components/SourceCitationBlock";
-import { ReviewerProgramCards } from "@/components/reviewer/ReviewerProgramCards";
 import { getProgramById } from "@/lib/data";
+
+export const dynamic = "force-dynamic";
 
 interface ProgramPageProps {
   params: Promise<{
@@ -20,14 +21,15 @@ export default async function ProgramPage({ params }: ProgramPageProps) {
     return (
       <>
         <MobileHeader backHref={`/schools/${schoolId}`} />
-        <main className="mx-auto min-h-screen w-full max-w-md bg-gray-50 px-4 py-5">
+        <PageShell>
           <EmptyState
             actionHref="/search"
             actionLabel="搜索项目"
-            description="这个项目 ID 暂未匹配到本地样例记录。"
+            description="这个项目暂未收录，或链接已失效。"
+            icon="music"
             title="项目未找到"
           />
-        </main>
+        </PageShell>
       </>
     );
   }
@@ -35,18 +37,15 @@ export default async function ProgramPage({ params }: ProgramPageProps) {
   return (
     <>
       <MobileHeader backHref={`/schools/${program.school_id}`} />
-      <main className="mx-auto min-h-screen w-full max-w-md space-y-4 bg-gray-50 px-4 py-4">
-        <ReviewerProgramCards program={program} section="overview" />
-
-        <DataStatusBanner dataQuality={program.data_quality} />
-
-        <ReviewerProgramCards program={program} section="requirements" />
-
-        <SourceCitationBlock
-          dataQuality={program.data_quality}
-          sources={program.sources}
-        />
-      </main>
+      <PageShell width="reading">
+        <div className="space-y-4 md:space-y-5">
+          <ProgramDetailSections program={program} />
+          <SourceCitationBlock
+            dataQuality={program.data_quality}
+            sources={program.sources}
+          />
+        </div>
+      </PageShell>
     </>
   );
 }

@@ -66,11 +66,28 @@ export function ReviewerEditableCard({
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
 
+  const isDirty =
+    editing &&
+    fields.some((definition) => {
+      const name = definition.name ?? definition.field;
+      return (draft[name] ?? "") !== (values[name] ?? "");
+    });
+
   useEffect(() => {
     setValues(initial);
     setDraft(initial);
     setStatus(initialStatus);
   }, [initial, initialStatus]);
+
+  // Leave guard: warn before the tab closes while an edit is unsaved.
+  useEffect(() => {
+    if (!isDirty) return;
+    function warn(event: BeforeUnloadEvent) {
+      event.preventDefault();
+    }
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, [isDirty]);
 
   useEffect(() => {
     function syncStatus(event: Event) {
@@ -230,14 +247,19 @@ export function ReviewerEditableCard({
   }
 
   return (
-    <section className="rounded-2xl border border-gray-200 bg-white p-4">
+    <section className="rounded-xl border border-line bg-white p-4 shadow-card md:p-5">
       {isReviewer ? (
-        <div className="mb-3 flex flex-wrap items-center justify-end gap-2 border-b border-gray-100 pb-3">
+        <div className="mb-3 flex flex-wrap items-center justify-end gap-2 border-b border-line-subtle pb-3">
           <ReviewStatusBadge status={status} />
+          {isDirty ? (
+            <span className="inline-flex h-[22px] items-center rounded-full bg-amber-50 px-2.5 text-xs font-medium text-amber-700">
+              未保存更改
+            </span>
+          ) : null}
           {!editing ? (
           <>
             <button
-              className="rounded-lg border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-700"
+              className="rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-ink-700 hover:bg-ink-50"
               disabled={saving}
               onClick={() => {
                 setDraft(values);
@@ -250,7 +272,7 @@ export function ReviewerEditableCard({
               Edit
             </button>
             <button
-              className="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white disabled:opacity-60"
+              className="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-700 disabled:opacity-60"
               disabled={saving}
               onClick={() => void updateStatus("human_checked")}
               type="button"
@@ -258,7 +280,7 @@ export function ReviewerEditableCard({
               Mark Verified
             </button>
             <button
-              className="rounded-lg bg-amber-100 px-3 py-1.5 text-xs font-semibold text-amber-800 disabled:opacity-60"
+              className="rounded-lg bg-amber-100 px-3 py-1.5 text-xs font-semibold text-amber-800 hover:bg-amber-200 disabled:opacity-60"
               disabled={saving}
               onClick={() => void updateStatus("needs_update")}
               type="button"
@@ -312,9 +334,15 @@ export function ReviewerEditableCard({
           ) : null}
           <div className="flex justify-end gap-2">
             <button
-              className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700"
+              className="rounded-lg border border-line px-4 py-2 text-sm font-semibold text-ink-700 hover:bg-ink-50"
               disabled={saving}
               onClick={() => {
+                if (
+                  isDirty &&
+                  !window.confirm("有未保存的更改，确定要放弃吗？")
+                ) {
+                  return;
+                }
                 setDraft(values);
                 setEditing(false);
                 setError(null);
@@ -324,7 +352,7 @@ export function ReviewerEditableCard({
               Cancel
             </button>
             <button
-              className="rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white disabled:opacity-60"
+              className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 disabled:opacity-60"
               disabled={saving}
               onClick={() => void save()}
               type="button"

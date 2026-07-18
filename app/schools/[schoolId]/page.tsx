@@ -1,13 +1,10 @@
 import Link from "next/link";
-import { DataStatusBanner } from "@/components/DataStatusBanner";
 import { EmptyState } from "@/components/EmptyState";
-import { MobileHeader } from "@/components/MobileHeader";
-import { ProgramCard } from "@/components/ProgramCard";
+import { MobileHeader, PageShell } from "@/components/MobileHeader";
+import { AreaProgramIndex } from "@/components/school/AreaProgramIndex";
+import { SchoolAdmissionsOverview } from "@/components/school/SchoolAdmissionsOverview";
 import { SchoolProfileCard } from "@/components/reviewer/SchoolProfileCard";
-import {
-  getProgramsBySchoolId,
-  getSchoolById,
-} from "@/lib/data";
+import { getProgramsBySchoolId, getSchoolById } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
@@ -26,14 +23,15 @@ export default async function SchoolPage({ params }: SchoolPageProps) {
     return (
       <>
         <MobileHeader backHref="/" />
-        <main className="mx-auto min-h-screen w-full max-w-md bg-gray-50 px-4 py-5">
+        <PageShell>
           <EmptyState
             actionHref="/"
             actionLabel="返回首页"
-            description="这个学校 ID 暂未匹配到本地样例记录。"
+            description="这个学校暂未收录，或链接已失效。"
+            icon="school"
             title="学校未找到"
           />
-        </main>
+        </PageShell>
       </>
     );
   }
@@ -41,39 +39,37 @@ export default async function SchoolPage({ params }: SchoolPageProps) {
   return (
     <>
       <MobileHeader backHref="/" />
-      <main className="mx-auto min-h-screen w-full max-w-md bg-gray-50 px-4 py-4">
+      <PageShell className="space-y-4 md:space-y-5">
         <SchoolProfileCard programCount={programs.length} school={school} />
 
-        <div className="mt-4">
-          <DataStatusBanner dataQuality={school.data_quality} />
-        </div>
+        <SchoolAdmissionsOverview sources={school.sources ?? []} />
 
-        <section className="mt-5">
-          <div className="mb-3 flex items-center justify-between gap-3">
+        <section>
+          <div className="mb-3 flex items-center justify-between gap-3 px-1">
             <div>
-              <h2 className="text-lg font-semibold text-gray-900">已收录项目</h2>
-              <p className="text-sm text-gray-600">
-                共 {programs.length} 个项目
+              <h2 className="text-lg font-semibold text-ink-900">招生项目</h2>
+              <p className="text-sm text-ink-500">
+                按专业方向浏览，共 {programs.length} 个项目
               </p>
             </div>
-            <Link className="text-sm font-semibold text-blue-700" href="/search">
+            <Link
+              className="text-sm font-semibold text-brand-600 hover:text-brand-700"
+              href="/search"
+            >
               搜索项目
             </Link>
           </div>
           {programs.length > 0 ? (
-            <div className="space-y-3">
-              {programs.map((program) => (
-                <ProgramCard key={program.id} program={program} />
-              ))}
-            </div>
+            <AreaProgramIndex programs={programs} />
           ) : (
             <EmptyState
-              description="该学校样例下暂未收录项目。"
+              description="该学校暂未收录招生项目，收录后会在此展示。"
+              icon="music"
               title="暂无项目"
             />
           )}
         </section>
-      </main>
+      </PageShell>
     </>
   );
 }

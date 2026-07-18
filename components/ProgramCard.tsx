@@ -1,126 +1,80 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
 import type { Program } from "@/data/types";
-import { DeadlineBadge } from "./DeadlineBadge";
-import { MissingDataNote } from "./MissingDataNote";
+import { DeadlineChip } from "./ui/DeadlineChip";
+import { Icon } from "./ui/Icon";
+import { WorkflowStatusBadge } from "./ui/StatusBadge";
+import { degreeLabel, formatFee, languageSummary } from "@/lib/format";
 
 interface ProgramCardProps {
   program: Program;
 }
 
-const statusLabel = {
-  draft: "草稿",
-  extracted_awaiting_review: "待核验",
-  human_reviewed: "已核验",
-  published: "已发布",
-};
-
-const statusTone = {
-  draft: "bg-gray-50 text-gray-600",
-  extracted_awaiting_review: "bg-amber-50 text-amber-700",
-  human_reviewed: "bg-emerald-50 text-emerald-700",
-  published: "bg-emerald-50 text-emerald-700",
-};
-
-function formatTuition(program: Program): string | null {
-  const amount = program.cost_aid.tuition_amount;
-
-  if (amount === null) {
-    return null;
-  }
-
-  return `${program.cost_aid.currency} ${amount.toLocaleString()}${
-    program.cost_aid.tuition_period ? ` / ${program.cost_aid.tuition_period}` : ""
-  }`;
-}
-
-function getLanguageSummary(program: Program): string | null {
-  if (program.language_requirements.accepted_tests.length === 0) {
-    return null;
-  }
-
-  return program.language_requirements.accepted_tests
-    .map((test) =>
-      test.minimum_score
-        ? `${test.test_name} ${test.minimum_score}`
-        : test.test_name,
-    )
-    .join(" / ");
-}
-
-function getLastReviewed(program: Program): string | null {
-  return program.sources[0]?.accessed_at ?? null;
-}
-
 export function ProgramCard({ program }: ProgramCardProps) {
-  const tuition = formatTuition(program);
-  const language = getLanguageSummary(program);
-  const lastReviewed = getLastReviewed(program);
+  const language = languageSummary(program);
+  const fee = formatFee(program);
+  const title =
+    program.name_zh ?? program.specialization ?? program.name;
 
   return (
     <Link
-      className="block rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-200 hover:shadow"
+      className="block rounded-xl border border-line bg-white p-4 shadow-card transition hover:border-brand-300 hover:shadow-raised"
       href={`/schools/${program.school_id}/programs/${program.id}`}
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h3 className="text-[17px] font-semibold leading-snug text-gray-900">
-            {program.name}
+          <h3 className="text-base font-semibold leading-6 text-ink-900">
+            {title}
           </h3>
-          <p className="mt-1 text-sm leading-5 text-gray-700">
+          {title !== program.name ? (
+            <p className="mt-0.5 truncate text-xs text-ink-400">
+              {program.name}
+            </p>
+          ) : null}
+          <p className="mt-1.5 text-sm leading-5 text-ink-700">
             {program.school_name}
           </p>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-0.5 text-sm text-ink-500">
             {program.country} · {program.city}
           </p>
         </div>
-        <span className="shrink-0 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">
-          {program.degree_level}
+        <span className="inline-flex h-6 shrink-0 items-center rounded-full bg-brand-600 px-2.5 text-xs font-semibold text-white">
+          {degreeLabel(program.degree)}
         </span>
       </div>
 
-      <div className="mt-3 flex flex-wrap gap-2">
-        <span className="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-medium text-gray-600">
-          {program.major_area}
-        </span>
-        <span
-          className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-            statusTone[program.data_quality.status]
-          }`}
-        >
-          {statusLabel[program.data_quality.status]}
-        </span>
+      <div className="mt-3 flex flex-wrap items-center gap-1.5">
+        {program.major_area ? (
+          <span className="inline-flex h-6 items-center rounded-full bg-ink-50 px-2.5 text-xs text-ink-500">
+            {program.major_area_zh ?? program.major_area}
+          </span>
+        ) : null}
+        <WorkflowStatusBadge status={program.data_quality.status} />
       </div>
 
-      <div className="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-3">
-        <InfoRow label="申请截止" value={<DeadlineBadge deadline={program.deadline} />} />
-        <InfoRow label="英语要求" value={language ?? <MissingDataNote />} />
-        <InfoRow label="学费" value={tuition ?? <MissingDataNote />} />
-      </div>
-
-      <div className="mt-3 flex items-center justify-between gap-3 text-xs">
-        <span className="text-gray-500">
-          最近核验: {lastReviewed ?? <MissingDataNote className="text-xs" />}
-        </span>
-        <span className="font-semibold text-blue-700">查看详情</span>
+      <div className="mt-3 space-y-1.5 border-t border-line-subtle pt-3 text-sm">
+        <div className="flex flex-wrap gap-1.5">
+          <DeadlineChip
+            date={program.deadline.application_deadline}
+            label="申请截止"
+          />
+          {program.deadline.prescreening_deadline ? (
+            <DeadlineChip
+              date={program.deadline.prescreening_deadline}
+              label="预筛选截止"
+            />
+          ) : null}
+        </div>
+        <div className="flex items-center justify-between gap-3 pt-1">
+          <span className="min-w-0 truncate text-xs text-ink-500">
+            {language ? `英语要求 ${language}` : "英语要求暂未收录"}
+            {fee ? ` · 申请费 ${fee}` : ""}
+          </span>
+          <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-brand-600">
+            查看详情
+            <Icon name="arrow-right" size={16} />
+          </span>
+        </div>
       </div>
     </Link>
-  );
-}
-
-function InfoRow({
-  label,
-  value,
-}: {
-  label: string;
-  value: ReactNode;
-}) {
-  return (
-    <div className="flex items-start justify-between gap-3 border-b border-gray-200 py-2 first:pt-0 last:border-b-0 last:pb-0">
-      <span className="text-sm text-gray-600">{label}</span>
-      <span className="max-w-44 text-right text-sm font-semibold text-gray-900">
-        {value}
-      </span>
-    </div>
   );
 }
