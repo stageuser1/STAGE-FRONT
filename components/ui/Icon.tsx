@@ -20,7 +20,9 @@ export type IconName =
   | "alert"
   | "clock"
   | "link"
-  | "user";
+  | "user"
+  | "home"
+  | "filter";
 
 const paths: Record<IconName, ReactNode> = {
   search: (
@@ -115,6 +117,13 @@ const paths: Record<IconName, ReactNode> = {
       <path d="M4.5 20.5a7.5 7.5 0 0 1 15 0" />
     </>
   ),
+  home: (
+    <>
+      <path d="m3 10.5 9-7.5 9 7.5" />
+      <path d="M5.5 9.5V20a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1V9.5" />
+    </>
+  ),
+  filter: <path d="M4 6h16M7 12h10m-7 6h4" />,
 };
 
 interface IconProps extends ComponentPropsWithoutRef<"svg"> {

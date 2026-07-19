@@ -195,7 +195,7 @@ export function ReviewerEditableCard({
       }
       setValues({ ...draft });
       setEditing(false);
-      setNotice("Saved");
+      setNotice("已保存");
       router.refresh();
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
@@ -237,7 +237,9 @@ export function ReviewerEditableCard({
         savedTargets.push(`${target.collection} record ${target.recordId}`);
         publishStatus(nextStatus, target.collection, target.recordId);
       }
-      setNotice(nextStatus === "human_checked" ? "Verified" : "Flagged");
+      setNotice(
+        nextStatus === "human_checked" ? "已标记为已核验" : "已标记为需更新",
+      );
       router.refresh();
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
@@ -246,10 +248,24 @@ export function ReviewerEditableCard({
     }
   }
 
+  // Reviewer frame: dashed brand border marks an editable card at rest,
+  // a solid brand border marks the active edit, and an amber left rule
+  // flags unsaved changes. Public visitors see the plain card.
+  const frame = !isReviewer
+    ? "border border-line"
+    : editing
+      ? `border-2 border-brand-500 shadow-raised ${
+          isDirty ? "border-l-amber-400" : ""
+        }`
+      : "border border-dashed border-brand-300";
+
   return (
-    <section className="rounded-xl border border-line bg-white p-4 shadow-card md:p-5">
+    <section className={`rounded-2xl bg-white p-4 shadow-card md:p-5 ${frame}`}>
       {isReviewer ? (
         <div className="mb-3 flex flex-wrap items-center justify-end gap-2 border-b border-line-subtle pb-3">
+          <span className="mr-auto text-xs font-medium text-brand-600">
+            可编辑
+          </span>
           <ReviewStatusBadge status={status} />
           {isDirty ? (
             <span className="inline-flex h-[22px] items-center rounded-full bg-amber-50 px-2.5 text-xs font-medium text-amber-700">
@@ -269,7 +285,7 @@ export function ReviewerEditableCard({
               }}
               type="button"
             >
-              Edit
+              编辑
             </button>
             <button
               className="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-700 disabled:opacity-60"
@@ -277,15 +293,15 @@ export function ReviewerEditableCard({
               onClick={() => void updateStatus("human_checked")}
               type="button"
             >
-              Mark Verified
+              标记已核验
             </button>
             <button
-              className="rounded-lg bg-amber-100 px-3 py-1.5 text-xs font-semibold text-amber-800 hover:bg-amber-200 disabled:opacity-60"
+              className="rounded-lg bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-100 disabled:opacity-60"
               disabled={saving}
               onClick={() => void updateStatus("needs_update")}
               type="button"
             >
-              Needs Update
+              需更新
             </button>
           </>
           ) : null}
@@ -332,9 +348,9 @@ export function ReviewerEditableCard({
               {error}
             </p>
           ) : null}
-          <div className="flex justify-end gap-2">
+          <div className="sticky bottom-16 -mx-1 flex justify-end gap-2 rounded-xl bg-white/95 px-1 py-2 backdrop-blur md:bottom-4">
             <button
-              className="rounded-lg border border-line px-4 py-2 text-sm font-semibold text-ink-700 hover:bg-ink-50"
+              className="h-10 rounded-xl border border-line px-4 text-sm font-semibold text-ink-700 hover:bg-ink-50"
               disabled={saving}
               onClick={() => {
                 if (
@@ -349,15 +365,15 @@ export function ReviewerEditableCard({
               }}
               type="button"
             >
-              Cancel
+              取消
             </button>
             <button
-              className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 disabled:opacity-60"
+              className="h-10 rounded-xl bg-brand-600 px-5 text-sm font-semibold text-white hover:bg-brand-700 disabled:opacity-60"
               disabled={saving}
               onClick={() => void save()}
               type="button"
             >
-              {saving ? "Saving…" : "Save"}
+              {saving ? "保存中…" : "保存"}
             </button>
           </div>
         </div>

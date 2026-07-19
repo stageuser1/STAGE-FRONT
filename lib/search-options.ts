@@ -1,6 +1,10 @@
 import type { Program } from "@/data/types";
-import type { SearchFilterOption } from "@/components/SearchBar";
 import { degreeOrder } from "@/lib/format";
+
+export interface SearchFilterOption {
+  label: string;
+  value: string;
+}
 
 /**
  * Filter options derived from real records only. Majors come from the

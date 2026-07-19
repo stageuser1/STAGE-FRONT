@@ -1,27 +1,36 @@
 import Link from "next/link";
 import { Icon } from "./ui/Icon";
+import { ReviewerHeaderLink } from "./ReviewerHeaderLink";
 
 interface MobileHeaderProps {
   subtitle?: string;
   backHref?: string;
 }
 
-/** App top bar — mobile-first, widens with the page shell on desktop. */
+const navLinks = [
+  { href: "/", label: "首页" },
+  { href: "/search", label: "搜索" },
+];
+
+/**
+ * App top bar. Mobile: wordmark (or back chevron + wordmark).
+ * ≥768px it gains inline navigation links and the reviewer entry.
+ */
 export function MobileHeader({ subtitle, backHref }: MobileHeaderProps) {
   return (
     <header className="sticky top-0 z-10 border-b border-line bg-white/95 backdrop-blur">
-      <div className="mx-auto flex min-h-12 w-full max-w-md items-center gap-3 px-4 py-2 md:max-w-3xl md:px-6 lg:max-w-5xl">
+      <div className="mx-auto flex min-h-14 w-full max-w-md items-center gap-3 px-4 py-2 md:max-w-3xl md:px-6 lg:max-w-5xl">
         {backHref ? (
           <Link
             aria-label="返回"
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-ink-700 transition hover:bg-ink-100 hover:text-brand-600"
+            className="flex h-11 w-11 -ml-2 shrink-0 items-center justify-center rounded-full text-ink-700 transition hover:bg-ink-100 hover:text-brand-600"
             href={backHref}
           >
-            <Icon name="chevron-left" size={20} />
+            <Icon name="chevron-left" size={22} />
           </Link>
         ) : null}
         <Link className="min-w-0 py-1" href="/">
-          <p className="text-lg font-bold leading-tight text-brand-600">
+          <p className="text-[22px] font-extrabold leading-6 tracking-tight text-brand-600">
             STAGE
           </p>
           {subtitle ? (
@@ -30,6 +39,25 @@ export function MobileHeader({ subtitle, backHref }: MobileHeaderProps) {
             </p>
           ) : null}
         </Link>
+
+        <nav
+          aria-label="主导航"
+          className="ml-6 hidden items-center gap-1 md:flex"
+        >
+          {navLinks.map((link) => (
+            <Link
+              className="flex h-11 items-center rounded-lg px-3 text-sm font-medium text-ink-700 transition hover:bg-brand-50 hover:text-brand-600"
+              href={link.href}
+              key={link.href}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="ml-auto hidden shrink-0 md:block">
+          <ReviewerHeaderLink />
+        </div>
       </div>
     </header>
   );
@@ -52,7 +80,7 @@ export function PageShell({
       : "max-w-md md:max-w-3xl lg:max-w-5xl";
   return (
     <main
-      className={`mx-auto min-h-screen w-full px-4 py-4 md:px-6 md:py-6 ${widthClasses} ${className}`}
+      className={`mx-auto min-h-screen w-full px-4 pb-24 pt-4 md:px-6 md:pb-10 md:pt-6 ${widthClasses} ${className}`}
     >
       {children}
     </main>

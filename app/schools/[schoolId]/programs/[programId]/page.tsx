@@ -37,13 +37,17 @@ export default async function ProgramPage({ params }: ProgramPageProps) {
   return (
     <>
       <MobileHeader backHref={`/schools/${program.school_id}`} />
-      <PageShell width="reading">
-        <div className="space-y-4 md:space-y-5">
-          <ProgramDetailSections program={program} />
-          <SourceCitationBlock
-            dataQuality={program.data_quality}
-            sources={program.sources}
-          />
+      <PageShell>
+        <div className="gap-5 lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
+          <div className="min-w-0">
+            <ProgramDetailSections program={program} />
+          </div>
+          <div className="mt-4 lg:sticky lg:top-20 lg:mt-0">
+            <SourceCitationBlock
+              dataQuality={program.data_quality}
+              sources={program.sources}
+            />
+          </div>
         </div>
       </PageShell>
     </>

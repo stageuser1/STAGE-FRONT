@@ -49,6 +49,15 @@ export function degreeOrder(slug: string | null | undefined): number {
   return index === -1 ? degreeSlugOrder.length : index;
 }
 
+/** Stable in-page anchor id for a music-area section. */
+export function areaAnchorId(name: string): string {
+  const slug = name
+    .toLowerCase()
+    .replace(/[^a-z0-9一-鿿]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return `area-${slug || "other"}`;
+}
+
 export function formatFee(program: Program): string | null {
   const fee = program.cost_aid.application_fee;
   if (fee === null) return null;

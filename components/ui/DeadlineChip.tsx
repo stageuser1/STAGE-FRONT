@@ -24,13 +24,17 @@ export function DeadlineChip({ label, date, className = "" }: DeadlineChipProps)
     );
   }
 
+  // Urgency semantics: red only for imminent deadlines (<30 days);
+  // past dates are muted — an expired deadline is history, not an alarm.
   const days = daysUntil(date);
   const tone =
     days !== null && days < 0
-      ? "bg-red-50 text-red-600"
-      : days !== null && days <= 60
-        ? "bg-amber-50 text-amber-700"
-        : "bg-brand-50 text-brand-700";
+      ? "bg-ink-100 text-ink-500"
+      : days !== null && days < 30
+        ? "bg-red-50 text-red-600"
+        : days !== null && days <= 60
+          ? "bg-amber-50 text-amber-700"
+          : "bg-brand-50 text-brand-700";
 
   return (
     <span

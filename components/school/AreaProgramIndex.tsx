@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Program } from "@/data/types";
-import { degreeOrder } from "@/lib/format";
+import { areaAnchorId, degreeOrder } from "@/lib/format";
 import { Icon } from "@/components/ui/Icon";
 
 interface AreaGroup {
@@ -68,7 +68,11 @@ export function AreaProgramIndex({ programs }: { programs: Program[] }) {
   return (
     <div className="space-y-5">
       {sortedAreas.map((area) => (
-        <section key={area.key}>
+        <section
+          className="scroll-mt-24"
+          id={areaAnchorId(area.name)}
+          key={area.key}
+        >
           <h3 className="flex items-baseline gap-2 px-1">
             <span className="text-[15px] font-semibold text-ink-900">
               {area.nameZh ?? area.name}

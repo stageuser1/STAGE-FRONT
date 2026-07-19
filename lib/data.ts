@@ -112,6 +112,7 @@ interface DirectusAuditionRequirement extends DirectusCycleRecord {
 }
 
 interface DirectusSourceRecord {
+  id?: DirectusId;
   program_offering_id?: DirectusId | { id?: DirectusId } | null;
   school_id?: DirectusId | { id?: DirectusId } | null;
   source_url?: string | null;
@@ -721,6 +722,7 @@ function mapSource(record: DirectusSourceRecord): SourceRecord | null {
   if (!url || !accessedAt) return null;
 
   return {
+    record_id: record.id !== undefined ? String(record.id) : null,
     title: textValue(record.source_title) ?? "Official source",
     url,
     source_type: mapSourceType(record),
@@ -728,6 +730,167 @@ function mapSource(record: DirectusSourceRecord): SourceRecord | null {
     notes: textValue(record.source_quote),
   };
 }
+
+/**
+ * Detail-page enhancement: load the evidence quotes for a small set of
+ * already-mapped source records. Quotes are supplementary content, so a
+ * failed quote fetch never fails the page — it just renders without
+ * blockquotes.
+ */
+async function attachSourceQuotes(
+  sources: SourceRecord[],
+): Promise<SourceRecord[]> {
+  const ids = sources
+    .map((source) => source.record_id)
+    .filter((id): id is string => Boolean(id));
+  if (ids.length === 0) return sources;
+
+  try {
+    const rows = await directusFetch<
+      Array<{ id?: DirectusId; source_quote?: string | null }>
+    >(
+      `/items/source_records?limit=-1&fields=id,source_quote&filter[id][_in]=${ids
+        .map((id) => encodeURIComponent(id))
+        .join(",")}`,
+    );
+    const quotes = new Map(
+      rows.map((row) => [String(row.id), textValue(row.source_quote)]),
+    );
+    return sources.map((source) =>
+      source.record_id && quotes.has(source.record_id)
+        ? { ...source, notes: quotes.get(source.record_id) ?? source.notes }
+        : source,
+    );
+  } catch {
+    return sources;
+  }
+}
+
+/**
+ * Every query names exactly the fields the mappers read. The import
+ * pipeline stores very large blob columns on these collections
+ * (program_payload ~117KB/row, requirement_sections ~89KB/row,
+ * evidence_metadata ~126KB/row) that the frontend never uses; fetching
+ * with `fields=*` drags tens of megabytes through a slow link on every
+ * request and stalls server rendering for minutes.
+ */
+const offeringFields = [
+  "id",
+  "official_program_name",
+  "program_name_zh",
+  "track_or_concentration",
+  "department",
+  "card_summary_zh",
+  "duration_years",
+  "language_of_instruction",
+  "program_url",
+  "application_url",
+  "audition_url",
+  "international_url",
+  "review_status",
+  "school_id.id",
+  "school_id.slug",
+  "school_id.school_name",
+  "school_id.city",
+  "school_id.country",
+  "field_id.id",
+  "field_id.slug",
+  "field_id.field_name",
+  "field_id.field_name_zh",
+  "field_id.field_category",
+  "degree_level_id.id",
+  "degree_level_id.slug",
+  "degree_level_id.degree_level_name",
+  "degree_level_id.degree_level_name_zh",
+  "degree_level_id.abbreviation",
+  "degree_level_id.degree_category",
+].join(",");
+
+const applicationFields = [
+  "id",
+  "program_offering_id",
+  "is_current",
+  "admission_cycle",
+  "review_status",
+  "deadline_notes",
+  "application_deadline",
+  "english_language_tests",
+  "toefl_minimum",
+  "ielts_minimum",
+  "duolingo_minimum",
+  "english_waiver_policy",
+  "resume_required",
+  "essay_required",
+  "recommendation_letters",
+  "transcript_requirements",
+  "portfolio_required",
+  "required_materials",
+  "international_applicant_notes",
+  "conditional_notes",
+  "notes",
+  "application_fee",
+  "application_fee_currency",
+].join(",");
+
+const auditionBaseFields = [
+  "id",
+  "program_offering_id",
+  "is_current",
+  "admission_cycle",
+  "review_status",
+  "prescreening_deadline",
+  "Prescreening_required",
+  "audition_required",
+  "repertoire_summary",
+  "repertoire_structured",
+  "audition_format",
+  "video_requirements",
+  "file_format_requirements",
+  "accompaniment_requirements",
+  "interview_or_callback_requirements",
+  "special_notes",
+  "conditional_notes",
+  "notes",
+].join(",");
+
+/**
+ * The split repertoire columns do not exist in Directus yet. Directus
+ * rejects queries naming unknown fields, so request them opportunistically
+ * and fall back to the base list — the `"field" in record` detection in
+ * the mappers keeps working the day the admin adds the columns.
+ */
+const auditionOptionalFields = ["prescreen_repertoire", "audition_repertoire"];
+
+async function fetchAuditionRequirements(): Promise<
+  DirectusAuditionRequirement[]
+> {
+  try {
+    return await directusFetch<DirectusAuditionRequirement[]>(
+      `/items/audition_requirements?limit=-1&fields=${auditionBaseFields},${auditionOptionalFields.join(",")}`,
+    );
+  } catch {
+    return directusFetch<DirectusAuditionRequirement[]>(
+      `/items/audition_requirements?limit=-1&fields=${auditionBaseFields}`,
+    );
+  }
+}
+
+/**
+ * The bulk load intentionally skips `source_quote`: 5,000+ rows carry
+ * ~2KB quotes each (~6MB). Quotes are only rendered on school and
+ * program detail pages, which fetch them per-record via
+ * attachSourceQuotes below.
+ */
+const sourceRecordFields = [
+  "id",
+  "program_offering_id",
+  "school_id",
+  "source_url",
+  "source_title",
+  "retrieved_date",
+  "confidence_level",
+  "source_type",
+].join(",");
 
 const loadDirectusData = cache(async (): Promise<DirectusData> => {
   const [
@@ -741,16 +904,14 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
       "/items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status",
     ),
     directusFetch<DirectusProgramOffering[]>(
-      "/items/program_offerings?limit=-1&fields=*,school_id.id,school_id.slug,school_id.school_name,school_id.city,school_id.country,field_id.id,field_id.slug,field_id.field_name,field_id.field_name_zh,field_id.field_category,degree_level_id.id,degree_level_id.slug,degree_level_id.degree_level_name,degree_level_id.degree_level_name_zh,degree_level_id.abbreviation,degree_level_id.degree_category",
+      `/items/program_offerings?limit=-1&fields=${offeringFields}`,
     ),
     directusFetch<DirectusApplicationRequirement[]>(
-      "/items/application_requirements?limit=-1",
+      `/items/application_requirements?limit=-1&fields=${applicationFields}`,
     ),
-    directusFetch<DirectusAuditionRequirement[]>(
-      "/items/audition_requirements?limit=-1",
-    ),
+    fetchAuditionRequirements(),
     directusFetch<DirectusSourceRecord[]>(
-      "/items/source_records?limit=-1",
+      `/items/source_records?limit=-1&fields=${sourceRecordFields}`,
     ),
   ]);
 
@@ -1092,7 +1253,12 @@ export async function getSchoolById(
   schoolId: string,
 ): Promise<School | undefined> {
   const { schools } = await loadDirectusData();
-  return schools.find((school) => school.id === schoolId);
+  const school = schools.find((candidate) => candidate.id === schoolId);
+  if (!school) return undefined;
+  return {
+    ...school,
+    sources: await attachSourceQuotes(school.sources ?? []),
+  };
 }
 
 export async function getProgramsBySchoolId(
@@ -1107,9 +1273,15 @@ export async function getProgramById(
   programId: string,
 ): Promise<Program | undefined> {
   const { programs } = await loadDirectusData();
-  return programs.find(
-    (program) => program.school_id === schoolId && program.id === programId,
+  const program = programs.find(
+    (candidate) =>
+      candidate.school_id === schoolId && candidate.id === programId,
   );
+  if (!program) return undefined;
+  return {
+    ...program,
+    sources: await attachSourceQuotes(program.sources),
+  };
 }
 
 export async function searchPrograms(

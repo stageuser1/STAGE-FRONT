@@ -9,6 +9,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: [
+          "Inter",
           "PingFang SC",
           "Noto Sans SC",
           "-apple-system",
@@ -17,16 +18,18 @@ const config: Config = {
           "sans-serif",
         ],
       },
-      // STAGE design tokens (see designer sheets STAGE UI Extension 01–04).
+      // STAGE design tokens — 2026-07 redesign: confident ultramarine brand,
+      // ink-on-white surfaces, verification always visible.
       colors: {
         brand: {
-          DEFAULT: "#2563EB",
-          700: "#1D4ED8",
-          600: "#2563EB",
-          500: "#3B82F6",
-          300: "#93C5FD",
-          100: "#DBEAFE",
-          50: "#EFF6FF",
+          DEFAULT: "#2B46EB",
+          800: "#1B2CA0",
+          700: "#2237C7",
+          600: "#2B46EB",
+          500: "#5068F2",
+          300: "#B9C4FA",
+          100: "#E1E7FE",
+          50: "#EEF1FE",
         },
         ink: {
           900: "#0F172A",
@@ -41,7 +44,7 @@ const config: Config = {
           DEFAULT: "#E2E8F0",
           subtle: "#F1F5F9",
         },
-        page: "#F8FAFC",
+        page: "#F6F7FB",
       },
       boxShadow: {
         card: "0 1px 2px rgba(15,23,42,0.06), 0 4px 12px rgba(15,23,42,0.04)",

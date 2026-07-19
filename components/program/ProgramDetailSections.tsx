@@ -7,6 +7,7 @@ import { FactRow, KeyFact } from "@/components/ui/FactRow";
 import { SectionCard } from "@/components/ui/SectionCard";
 import { WorkflowStatusBadge } from "@/components/ui/StatusBadge";
 import {
+  daysUntil,
   degreeLabel,
   formatDateZh,
   formatDurationZh,
@@ -296,16 +297,30 @@ export function ProgramDetailSections({ program }: { program: Program }) {
 
   /* ---------------------------- key facts ----------------------------- */
 
+  // Deadline urgency: red only when the date is past or <30 days out.
+  const deadlineValue = (date: string | null) => {
+    const formatted = formatDateZh(date);
+    if (!formatted) return null;
+    const days = daysUntil(date);
+    if (days !== null && days < 0) {
+      return <span className="text-ink-400">{formatted}（已过）</span>;
+    }
+    if (days !== null && days < 30) {
+      return <span className="text-red-600">{formatted}</span>;
+    }
+    return formatted;
+  };
+
   const keyFacts = (
     <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
       <KeyFact
         hint={program.application?.admission_cycle}
-        label="申请截止"
-        value={formatDateZh(program.deadline.application_deadline)}
+        label="申请截止（常规）"
+        value={deadlineValue(program.deadline.application_deadline)}
       />
       <KeyFact
         label="预筛选截止"
-        value={formatDateZh(program.deadline.prescreening_deadline)}
+        value={deadlineValue(program.deadline.prescreening_deadline)}
       />
       <KeyFact label="申请费" value={formatFee(program)} />
       <KeyFact label="学制" value={formatDurationZh(program.duration)} />

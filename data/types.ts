@@ -83,6 +83,8 @@ export interface LanguageRequirements {
 }
 
 export interface SourceRecord {
+  /** Directus row id — used to attach evidence quotes on detail pages. */
+  record_id?: string | null;
   title: string;
   url: string;
   source_type: SourceType;
