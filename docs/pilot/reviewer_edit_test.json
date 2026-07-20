@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-19",
+  "route": "/pilot/program/manhattan_school_of_music_cello_bm",
+  "collection": "audition_requirements",
+  "program_offering_ref": "manhattan_school_of_music_cello_bm",
+  "field": "repertoire_summary",
+  "method": "custom reviewer interface using a temporary Directus Reviewer account",
+  "edit_saved": true,
+  "persisted_after_reload": true,
+  "rendered_in_public_repertoire_accordion": true,
+  "original_value_restored_through_interface": true,
+  "restoration_persisted_after_reload": true,
+  "temporary_reviewer_deleted": true,
+  "final_test_marker_present": false,
+  "final_review_status": "Extracted",
+  "application_console_issues": [],
+  "passed": true
+}
