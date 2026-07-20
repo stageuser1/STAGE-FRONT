@@ -2,15 +2,10 @@ import Link from "next/link";
 import { EmptyState } from "@/components/EmptyState";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
 import { AreaProgramIndex } from "@/components/school/AreaProgramIndex";
-import { SchoolAdmissionsOverview } from "@/components/school/SchoolAdmissionsOverview";
-import { SchoolContentSections } from "@/components/school/SchoolContentSections";
-import { SchoolDegreeLegend } from "@/components/school/SchoolDegreeLegend";
 import { SchoolHero } from "@/components/school/SchoolHero";
 import { SchoolQuickFacts } from "@/components/school/SchoolQuickFacts";
 import { SchoolVerificationCard } from "@/components/school/SchoolVerificationCard";
 import { SchoolProfileCard } from "@/components/reviewer/SchoolProfileCard";
-import { FactRow } from "@/components/ui/FactRow";
-import { SectionCard } from "@/components/ui/SectionCard";
 import { getProgramsBySchoolId, getSchoolById } from "@/lib/data";
 import { areaAnchorId } from "@/lib/format";
 import { buildSchoolDetailViewModel } from "@/lib/school-detail";
@@ -63,29 +58,6 @@ export default async function SchoolPage({ params }: SchoolPageProps) {
         </div>
 
         <SchoolQuickFacts facts={detail.quickFacts} />
-
-        {detail.highlights.length > 0 ? (
-          <SectionCard subtitle="Admissions Highlights" title="招生要点">
-            <div className="grid gap-0">
-              {detail.highlights.map((highlight) => (
-                <FactRow
-                  key={highlight.label}
-                  label={highlight.label}
-                  value={highlight.value}
-                />
-              ))}
-            </div>
-            <p className="mt-2 text-xs leading-5 text-ink-400">
-              以上日期汇总自该校已收录项目，各项目要求不同，请以项目页为准。
-            </p>
-          </SectionCard>
-        ) : null}
-
-        <SchoolAdmissionsOverview sources={school.sources ?? []} />
-
-        <SchoolContentSections sections={detail.sections} />
-
-        <SchoolDegreeLegend degrees={detail.degrees} />
 
         <section className="scroll-mt-24" id="programs">
           <div className="mb-3 flex items-center justify-between gap-3 px-1">

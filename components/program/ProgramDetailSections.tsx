@@ -3,7 +3,9 @@
 import type { LanguageRequirements, Program } from "@/data/types";
 import { LanguageRequirementContent } from "@/components/LanguageRequirementBlock";
 import { Icon } from "@/components/ui/Icon";
+import { ExpandableSection } from "@/components/ui/ExpandableSection";
 import { FactRow, KeyFact } from "@/components/ui/FactRow";
+import { ProseBlock } from "@/components/ui/ProseBlock";
 import { SectionCard } from "@/components/ui/SectionCard";
 import { WorkflowStatusBadge } from "@/components/ui/StatusBadge";
 import {
@@ -23,11 +25,19 @@ import {
   AuditionView,
   PrescreenView,
   RepertoireView,
+  requirementStatusZh,
   type ApplicationViewData,
   type AuditionViewData,
   type PrescreenViewData,
   type RepertoireViewData,
 } from "./RequirementViews";
+
+/** Record values come as string|number|boolean|null — flatten to trimmed string. */
+function recordText(value: string | number | boolean | null | undefined): string | null {
+  if (value === null || value === undefined) return null;
+  const text = String(value).trim();
+  return text === "" ? null : text;
+}
 
 type FormValues = Record<string, string>;
 
@@ -274,17 +284,15 @@ export function ProgramDetailSections({ program }: { program: Program }) {
               · {program.country} · {program.city}
             </span>
           </p>
-          {values.card_summary_zh ? (
-            <p className="mt-3 rounded-lg bg-ink-50 px-3.5 py-2.5 text-sm leading-6 text-ink-700">
-              {values.card_summary_zh}
-            </p>
-          ) : null}
         </div>
       )}
     />
   );
 
-  /* ---------------------------- key facts ----------------------------- */
+  /* --------------------------- decision bar ---------------------------
+   * One scannable bar ordered by decision weight: deadline, prescreen,
+   * audition, cost, language, location. Everything longer than a scalar
+   * lives in the expandable sections below. */
 
   // Deadline urgency: red only when the date is past or <30 days out.
   const deadlineValue = (date: string | null) => {
@@ -300,7 +308,52 @@ export function ProgramDetailSections({ program }: { program: Program }) {
     return formatted;
   };
 
-  const keyFacts = (
+  const requirementAtom = (
+    requiredText: string | null,
+    detail: React.ReactNode,
+  ): React.ReactNode => {
+    const status = requirementStatusZh(requiredText);
+    if (!status.known) return detail ?? null;
+    if (status.label === "不需要") return "不需要";
+    return detail ? (
+      <span>
+        {status.label} · {detail}
+      </span>
+    ) : (
+      status.label
+    );
+  };
+
+  const prescreenRequiredText =
+    recordText(audition?.values.prescreening_required) ??
+    program.prescreen?.required_text ??
+    null;
+  const auditionRequiredText =
+    recordText(audition?.values.audition_required) ??
+    program.audition?.required_text ??
+    null;
+  const auditionFormat =
+    recordText(audition?.values.audition_format) ??
+    program.audition?.format ??
+    null;
+  const tuitionAmount = (() => {
+    const raw = recordText(application?.values.tuition_annual);
+    if (raw === null) return null;
+    const parsed = Number(raw);
+    return Number.isFinite(parsed) ? parsed : null;
+  })();
+  const tuitionCurrency = recordText(application?.values.tuition_currency);
+  const scholarshipSignal =
+    recordText(application?.values.scholarships_available) === "Yes";
+  const tuitionLabel =
+    tuitionAmount !== null
+      ? `${tuitionCurrency ?? ""} ${tuitionAmount.toLocaleString()}`.trim() +
+        " /年"
+      : null;
+  const locationLabel =
+    [program.city, program.country].filter(Boolean).join(" · ") || null;
+
+  const decisionBar = (
     <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
       <KeyFact
         hint={program.application?.admission_cycle}
@@ -308,16 +361,29 @@ export function ProgramDetailSections({ program }: { program: Program }) {
         value={deadlineValue(program.deadline.application_deadline)}
       />
       <KeyFact
-        label="预筛选截止"
-        value={deadlineValue(program.deadline.prescreening_deadline)}
+        label="预筛选"
+        value={requirementAtom(
+          prescreenRequiredText,
+          deadlineValue(program.deadline.prescreening_deadline),
+        )}
       />
-      <KeyFact label="申请费" value={formatFee(program)} />
-      <KeyFact label="学制" value={formatDurationZh(program.duration)} />
       <KeyFact
-        label="授课语言"
-        value={program.language_requirements.instruction_language}
+        label="现场试音"
+        value={requirementAtom(auditionRequiredText, auditionFormat)}
       />
-      <KeyFact label="英语要求" value={languageSummary(program)} />
+      <KeyFact
+        hint={
+          tuitionLabel && scholarshipSignal
+            ? "有奖学金 · 明细见下方"
+            : tuitionLabel
+              ? "学费，不含生活费"
+              : null
+        }
+        label="费用"
+        value={tuitionLabel}
+      />
+      <KeyFact label="语言要求" value={languageSummary(program)} />
+      <KeyFact label="地点" value={locationLabel} />
     </div>
   );
 
@@ -409,26 +475,6 @@ export function ProgramDetailSections({ program }: { program: Program }) {
           type: "date",
         },
         { field: "deadline_notes", kind: "textarea", label: "截止日期说明" },
-        {
-          field: "tuition_annual",
-          inputMode: "decimal",
-          kind: "text",
-          label: "Annual tuition",
-          serialize: nullableNumber,
-        },
-        {
-          field: "tuition_currency",
-          kind: "select",
-          label: "Tuition currency",
-          options: ["USD", "GBP", "EUR", "CAD", "CHF", "SEK", "NOK", "DKK", "PLN", "CZK", "HUF", "JPY", "KRW", "CNY", "SGD", "HKD", "AUD", "NZD"].map((value) => ({ label: value, value })),
-        },
-        {
-          field: "scholarships_available",
-          kind: "select",
-          label: "Scholarships available",
-          options: ["Yes", "No", "Unknown"].map((value) => ({ label: value, value })),
-        },
-        { field: "scholarship_note", kind: "textarea", label: "Scholarship note" },
         { field: "conditional_notes", kind: "textarea", label: "条件说明" },
       ]}
       initialStatus={application.review_status}
@@ -465,6 +511,82 @@ export function ProgramDetailSections({ program }: { program: Program }) {
             <div className="mt-2">
               <ApplicationView data={data} />
             </div>
+          </>
+        );
+      }}
+    />
+  ) : null;
+
+  /* ------------------------------- cost -------------------------------- */
+
+  const costCard = application ? (
+    <ReviewerEditableCard
+      collection="application_requirements"
+      fields={[
+        {
+          field: "tuition_annual",
+          inputMode: "decimal",
+          kind: "text",
+          label: "Annual tuition",
+          serialize: nullableNumber,
+        },
+        {
+          field: "tuition_currency",
+          kind: "select",
+          label: "Tuition currency",
+          options: ["USD", "GBP", "EUR", "CAD", "CHF", "SEK", "NOK", "DKK", "PLN", "CZK", "HUF", "JPY", "KRW", "CNY", "SGD", "HKD", "AUD", "NZD"].map((value) => ({ label: value, value })),
+        },
+        {
+          field: "scholarships_available",
+          kind: "select",
+          label: "Scholarships available",
+          options: ["Yes", "No", "Unknown"].map((value) => ({ label: value, value })),
+        },
+        { field: "scholarship_note", kind: "textarea", label: "Scholarship note" },
+      ]}
+      initialStatus={application.review_status}
+      initialValues={application.values}
+      recordId={application.id}
+      renderView={(values) => {
+        const amountRaw = orNull(values.tuition_annual);
+        const amountNumber = amountRaw === null ? null : Number(amountRaw);
+        const amount =
+          amountNumber !== null && Number.isFinite(amountNumber)
+            ? `${orNull(values.tuition_currency) ?? ""} ${amountNumber.toLocaleString()}`.trim()
+            : null;
+        return (
+          <>
+            <h2 className="text-base font-semibold text-ink-900">
+              费用明细{" "}
+              <span className="text-xs font-normal text-ink-400">
+                Cost Breakdown
+              </span>
+            </h2>
+            <div className="mt-2 grid gap-0">
+              <FactRow label="年学费" value={amount} />
+              <FactRow label="申请费" value={formatFee(program)} />
+              <FactRow
+                label="学制"
+                value={formatDurationZh(program.duration)}
+              />
+              <FactRow
+                label="奖学金"
+                value={
+                  { Yes: "有", No: "无" }[
+                    orNull(values.scholarships_available) ?? ""
+                  ] ?? null
+                }
+              />
+            </div>
+            <div className="mt-3 space-y-4">
+              <ProseBlock
+                content={orNull(values.scholarship_note)}
+                label="奖学金说明"
+              />
+            </div>
+            <p className="mt-3 text-xs leading-5 text-ink-400">
+              学费为官网年度标价，不含生活费；实际费用以录取通知为准。
+            </p>
           </>
         );
       }}
@@ -667,31 +789,54 @@ export function ProgramDetailSections({ program }: { program: Program }) {
   return (
     <div className="space-y-4 md:space-y-5">
       {headerCard}
-      <SectionCard>
-        {keyFacts}
-      </SectionCard>
-      {infoCard}
-      {applicationCard ?? (
-        <SectionCard title="申请材料" subtitle="Application Requirements">
-          <p className="text-sm text-ink-400">
-            该项目的申请要求暂未收录，收录后会在此展示。
-          </p>
-        </SectionCard>
-      )}
-      {languageCard}
-      {audition ? (
-        <>
-          {prescreenCard}
-          {auditionCard}
-          {repertoireCard}
-        </>
-      ) : (
-        <SectionCard title="预筛选与试音" subtitle="Prescreening & Audition">
-          <p className="text-sm text-ink-400">
-            该项目的预筛选与试音要求暂未收录，收录后会分为「预筛选」「现场试音」「曲目要求」三个部分展示。
-          </p>
-        </SectionCard>
-      )}
+      <SectionCard>{decisionBar}</SectionCard>
+
+      <div className="space-y-2 md:space-y-3">
+        <ExpandableSection subtitle="Repertoire & Audition" title="曲目与试音">
+          {audition ? (
+            <>
+              {repertoireCard}
+              {prescreenCard}
+              {auditionCard}
+            </>
+          ) : (
+            <SectionCard>
+              <p className="text-sm text-ink-400">
+                该项目的预筛选与试音要求暂未收录，收录后会分为「预筛选」「现场试音」「曲目要求」三个部分展示。
+              </p>
+            </SectionCard>
+          )}
+        </ExpandableSection>
+
+        <ExpandableSection
+          hint={tuitionLabel}
+          subtitle="Cost Breakdown"
+          title="费用明细"
+        >
+          {costCard ?? (
+            <SectionCard>
+              <p className="text-sm text-ink-400">
+                该项目的费用信息暂未收录，收录后会在此展示。
+              </p>
+            </SectionCard>
+          )}
+        </ExpandableSection>
+
+        <ExpandableSection
+          subtitle="Application & Eligibility"
+          title="申请与资格"
+        >
+          {applicationCard ?? (
+            <SectionCard>
+              <p className="text-sm text-ink-400">
+                该项目的申请要求暂未收录，收录后会在此展示。
+              </p>
+            </SectionCard>
+          )}
+          {languageCard}
+          {infoCard}
+        </ExpandableSection>
+      </div>
     </div>
   );
 }
