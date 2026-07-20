@@ -11,6 +11,8 @@ import type {
   Program,
   ProgramSearchQuery,
   School,
+  SchoolDetailSection,
+  SchoolDetailSectionKey,
   SourceRecord,
   SourceType,
   WorkflowStatus,
@@ -26,6 +28,8 @@ interface DirectusSchool {
   country?: string | null;
   official_website?: string | null;
   review_status?: string | null;
+  intro_zh?: string | null;
+  school_detail_sections?: unknown;
 }
 
 interface DirectusField {
@@ -129,6 +133,8 @@ interface DirectusSourceRecord {
   retrieved_date?: string | null;
   confidence_level?: string | null;
   source_type?: string | null;
+  related_field?: string | null;
+  evidence_metadata?: unknown;
 }
 
 interface DirectusData {
@@ -740,7 +746,64 @@ function mapSource(record: DirectusSourceRecord): SourceRecord | null {
     source_type: mapSourceType(record),
     accessed_at: accessedAt,
     notes: textValue(record.source_quote),
+    related_field: textValue(record.related_field),
+    topic_key: sourceTopicKey(record),
   };
+}
+
+function sourceTopicKey(record: DirectusSourceRecord): string | null {
+  const metadata = parsedStructuredValue(record.evidence_metadata);
+  if (metadata && typeof metadata === "object" && !Array.isArray(metadata)) {
+    const topic = textValue((metadata as Record<string, unknown>).topic_key);
+    if (topic) return topic;
+  }
+  return null;
+}
+
+function mapSchoolDetailSections(
+  value: unknown,
+): Partial<Record<SchoolDetailSectionKey, SchoolDetailSection>> {
+  const parsed = parsedStructuredValue(value);
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
+
+  const allowedKeys: SchoolDetailSectionKey[] = [
+    "overview",
+    "international",
+    "tuition",
+    "campus",
+    "policies",
+  ];
+  return Object.fromEntries(
+    allowedKeys.flatMap((key) => {
+      const section = (parsed as Record<string, unknown>)[key];
+      if (!section || typeof section !== "object" || Array.isArray(section)) {
+        return [];
+      }
+      const record = section as Record<string, unknown>;
+      const body = textValue(record.body_zh);
+      const checked = dateValue(record.last_checked_at);
+      if (!body || !checked) return [];
+      const stringArray = (entry: unknown): string[] =>
+        Array.isArray(entry)
+          ? entry
+              .map(textValue)
+              .filter((item): item is string => item !== null)
+          : [];
+      return [
+        [
+          key,
+          {
+            body_zh: body,
+            source_urls: stringArray(record.source_urls),
+            evidence_quotes: stringArray(record.evidence_quotes),
+            last_checked_at: checked,
+            admission_cycle: textValue(record.admission_cycle),
+            academic_year: textValue(record.academic_year),
+          },
+        ],
+      ];
+    }),
+  );
 }
 
 /**
@@ -910,6 +973,8 @@ const sourceRecordFields = [
   "retrieved_date",
   "confidence_level",
   "source_type",
+  "related_field",
+  "evidence_metadata",
 ].join(",");
 
 const loadDirectusData = cache(async (): Promise<DirectusData> => {
@@ -921,7 +986,7 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
     sourceRecords,
   ] = await Promise.all([
     directusFetch<DirectusSchool[]>(
-      "/items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status",
+      "/items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status,intro_zh,school_detail_sections",
     ),
     directusFetch<DirectusProgramOffering[]>(
       `/items/program_offerings?limit=-1&fields=${offeringFields}`,
@@ -1242,6 +1307,8 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
         country: textValue(school.country) ?? "待核实",
         city: textValue(school.city) ?? "待核实",
         website_url: textValue(school.official_website),
+        intro_zh: textValue(school.intro_zh),
+        detail_sections: mapSchoolDetailSections(school.school_detail_sections),
         sources: schoolSources,
         status,
         data_quality: {

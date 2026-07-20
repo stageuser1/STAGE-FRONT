@@ -53,11 +53,29 @@ export interface School {
   country: string;
   city: string;
   website_url: string | null;
+  intro_zh?: string | null;
+  detail_sections?: Partial<Record<SchoolDetailSectionKey, SchoolDetailSection>>;
   status: WorkflowStatus;
   data_quality: DataQuality;
   review_record?: DirectusReviewRecord;
   /** School-level source records (admissions policies, deadlines, fees…). */
   sources?: SourceRecord[];
+}
+
+export type SchoolDetailSectionKey =
+  | "overview"
+  | "international"
+  | "tuition"
+  | "campus"
+  | "policies";
+
+export interface SchoolDetailSection {
+  body_zh: string;
+  source_urls: string[];
+  evidence_quotes: string[];
+  last_checked_at: string;
+  admission_cycle?: string | null;
+  academic_year?: string | null;
 }
 
 export interface Deadline {
@@ -90,6 +108,8 @@ export interface SourceRecord {
   source_type: SourceType;
   accessed_at: string;
   notes: string | null;
+  related_field?: string | null;
+  topic_key?: string | null;
 }
 
 export interface DataQuality {

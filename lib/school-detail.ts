@@ -1,4 +1,10 @@
-import type { DegreeInfo, Program, School } from "@/data/types";
+import type {
+  DegreeInfo,
+  Program,
+  School,
+  SchoolDetailSectionKey,
+  SourceRecord,
+} from "@/data/types";
 import {
   DEMO_CONTENT_LABEL,
   demoContentEnabled,
@@ -16,12 +22,7 @@ import { degreeOrder, formatDateZh } from "@/lib/format";
  * has nothing but a name and a country.
  */
 
-export type SchoolSectionKey =
-  | "overview"
-  | "international"
-  | "tuition"
-  | "campus"
-  | "policies";
+export type SchoolSectionKey = SchoolDetailSectionKey;
 
 export interface SchoolContentSectionVM {
   key: SchoolSectionKey;
@@ -29,6 +30,9 @@ export interface SchoolContentSectionVM {
   titleEn: string;
   /** Real content from a future Directus school field. None exist yet. */
   body: string | null;
+  sourceUrls: string[];
+  lastCheckedAt: string | null;
+  cycleLabel: string | null;
   /** Fixture content — only non-null when demo mode is enabled. */
   demoBody: string | null;
   /** Slim-row label shown when there is nothing to display. */
@@ -66,6 +70,13 @@ export interface SchoolDetailViewModel {
   degrees: DegreeInfo[];
   demoContentLabel: string;
   sourceCount: number;
+}
+
+export interface SchoolAdmissionsTopicVM {
+  key: string;
+  title: string;
+  titleEn: string;
+  sources: SourceRecord[];
 }
 
 const sectionDefinitions: Array<{
@@ -207,9 +218,16 @@ export function buildSchoolDetailViewModel(
       key: definition.key,
       title: definition.title,
       titleEn: definition.titleEn,
-      // No school-level content fields exist in Directus yet; this stays
-      // null until fields like schools.overview_zh are added and mapped.
-      body: null,
+      body:
+        school.detail_sections?.[definition.key]?.body_zh ??
+        (definition.key === "overview" ? school.intro_zh ?? null : null),
+      sourceUrls: school.detail_sections?.[definition.key]?.source_urls ?? [],
+      lastCheckedAt:
+        school.detail_sections?.[definition.key]?.last_checked_at ?? null,
+      cycleLabel:
+        school.detail_sections?.[definition.key]?.academic_year ??
+        school.detail_sections?.[definition.key]?.admission_cycle ??
+        null,
       demoBody: withDemo
         ? demoSchoolSectionBodies[definition.key] ?? null
         : null,
@@ -230,4 +248,92 @@ export function buildSchoolDetailViewModel(
       schoolSources.length +
       programs.reduce((count, program) => count + program.sources.length, 0),
   };
+}
+
+const topicDefinitions: Array<{
+  key: string;
+  title: string;
+  titleEn: string;
+}> = [
+  {
+    key: "deadlines",
+    title: "申请日期与截止时间",
+    titleEn: "Dates & Deadlines",
+  },
+  {
+    key: "international",
+    title: "国际学生申请",
+    titleEn: "International Applicants",
+  },
+  {
+    key: "english",
+    title: "英语语言要求",
+    titleEn: "English Language Requirements",
+  },
+  {
+    key: "transcripts",
+    title: "成绩单与学历认证",
+    titleEn: "Transcripts & Credentials",
+  },
+  {
+    key: "audition",
+    title: "预筛选与试音政策",
+    titleEn: "Prescreening & Auditions",
+  },
+  {
+    key: "aid",
+    title: "奖学金与经济资助",
+    titleEn: "Scholarships & Financial Aid",
+  },
+  { key: "visa", title: "学生签证", titleEn: "Student Visas" },
+  { key: "official", title: "官方招生来源", titleEn: "Official Admission Sources" },
+];
+
+function inferredTopicKey(source: SourceRecord): string {
+  if (source.topic_key) return source.topic_key;
+  const field = source.related_field?.toLowerCase() ?? "";
+  const haystack = `${source.title} ${source.url}`.toLowerCase();
+  if (field.includes("transcript") || field === "required_materials") {
+    return "transcripts";
+  }
+  if (
+    field.includes("english") ||
+    field.includes("duolingo") ||
+    field.includes("toefl") ||
+    field.includes("ielts")
+  ) {
+    return "english";
+  }
+  if (
+    field.includes("audition") ||
+    field.includes("prescreen") ||
+    field.includes("accompaniment") ||
+    field.includes("video")
+  ) {
+    return "audition";
+  }
+  if (field.includes("scholarship") || haystack.includes("financial-aid")) {
+    return "aid";
+  }
+  if (field.includes("deadline") || haystack.includes("dates-deadlines")) {
+    return "deadlines";
+  }
+  if (haystack.includes("international")) return "international";
+  return "official";
+}
+
+export function buildSchoolAdmissionsTopics(
+  sources: SourceRecord[],
+): SchoolAdmissionsTopicVM[] {
+  const grouped = new Map<string, SourceRecord[]>();
+  for (const source of sources) {
+    const key = inferredTopicKey(source);
+    grouped.set(key, [...(grouped.get(key) ?? []), source]);
+  }
+  return topicDefinitions.flatMap((definition) => {
+    const topicSources = grouped.get(definition.key);
+    return topicSources?.length
+      ? [{ ...definition, sources: topicSources }]
+      : [];
+  });
 }

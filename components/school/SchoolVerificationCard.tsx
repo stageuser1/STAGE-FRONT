@@ -20,7 +20,10 @@ export function SchoolVerificationCard({
   lastSourceDate,
 }: SchoolVerificationCardProps) {
   return (
-    <details className="group rounded-xl border border-line bg-white shadow-card">
+    <details
+      className="group scroll-mt-20 rounded-xl border border-line bg-white shadow-card"
+      id="sources-verification"
+    >
       <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 md:px-5 [&::-webkit-details-marker]:hidden">
         <span className="flex min-w-0 items-center gap-2">
           <span className="text-[15px] font-semibold leading-6 text-ink-900">

@@ -14,7 +14,7 @@ export function SchoolDegreeLegend({ degrees }: { degrees: DegreeInfo[] }) {
   );
 
   return (
-    <SectionCard subtitle="Degrees Offered" title="学位设置">
+    <SectionCard id="degrees-offered" subtitle="Degrees Offered" title="学位设置">
       <div className="flex flex-wrap gap-2">
         {degrees.map((degree) => (
           <span

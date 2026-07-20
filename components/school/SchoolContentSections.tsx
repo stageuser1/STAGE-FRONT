@@ -1,7 +1,6 @@
 import type { SchoolContentSectionVM } from "@/lib/school-detail";
-import { FactRow } from "@/components/ui/FactRow";
 import { SectionCard } from "@/components/ui/SectionCard";
-import { PlaceholderBadge } from "@/components/ui/StatusBadge";
+import { Icon } from "@/components/ui/Icon";
 
 interface SchoolContentSectionsProps {
   sections: SchoolContentSectionVM[];
@@ -17,52 +16,54 @@ interface SchoolContentSectionsProps {
 export function SchoolContentSections({
   sections,
 }: SchoolContentSectionsProps) {
-  const filled = sections.filter(
+  const hasContent = sections.some(
     (section) => section.body !== null || section.demoBody !== null,
   );
-  const pending = sections.filter(
-    (section) => section.body === null && section.demoBody === null,
-  );
+  if (!hasContent) return null;
 
   return (
-    <>
-      {filled.map((section) => {
-        const isDemo = section.body === null;
-        return (
-          <SectionCard
-            aside={isDemo ? <PlaceholderBadge /> : undefined}
-            className={
-              isDemo ? "border-dashed !border-violet-200 bg-violet-50/30" : ""
-            }
-            key={section.key}
-            subtitle={section.titleEn}
-            title={section.title}
-          >
-            <p
-              className={`text-sm leading-6 ${
-                isDemo ? "text-violet-900/70" : "text-ink-700"
-              }`}
-            >
-              {section.body ?? section.demoBody}
-            </p>
-          </SectionCard>
-        );
-      })}
-
-      {pending.length > 0 ? (
-        <SectionCard subtitle="More Information" title="更多信息">
-          <div className="grid gap-0">
-            {pending.map((section) => (
-              <FactRow
-                key={section.key}
-                label={section.title}
-                missingLabel={section.placeholder}
-                value={null}
-              />
-            ))}
-          </div>
-        </SectionCard>
-      ) : null}
-    </>
+    <SectionCard id="more-information" subtitle="More Information" title="更多信息">
+      <div className="divide-y divide-line-subtle">
+        {sections.map((section) => {
+          const body = section.body ?? section.demoBody;
+          if (!body) return null;
+          return (
+            <div className="py-4 first:pt-0 last:pb-0" key={section.key}>
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                <h3 className="text-sm font-semibold leading-6 text-ink-900">
+                  {section.title}
+                </h3>
+                <span className="text-xs leading-5 text-ink-400">
+                  {section.titleEn}
+                </span>
+              </div>
+              <p className="mt-1 text-left text-sm leading-7 text-ink-700">
+                {body}
+              </p>
+              {section.sourceUrls.length > 0 ? (
+                <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-400">
+                  {section.sourceUrls.map((url, index) => (
+                    <a
+                      className="inline-flex items-center gap-1 font-medium text-brand-600 underline-offset-2 hover:underline"
+                      href={url}
+                      key={url}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {section.sourceUrls.length > 1
+                        ? `官方来源 ${index + 1}`
+                        : "查看官方来源"}
+                      <Icon name="external" size={12} />
+                    </a>
+                  ))}
+                  {section.cycleLabel ? <span>{section.cycleLabel}</span> : null}
+                  {section.lastCheckedAt ? <span>核验于 {section.lastCheckedAt}</span> : null}
+                </div>
+              ) : null}
+            </div>
+          );
+        })}
+      </div>
+    </SectionCard>
   );
 }
