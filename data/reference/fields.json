@@ -1,0 +1,15 @@
+[
+  { "slug": "cello", "name": "Cello", "aliases": [] },
+  { "slug": "composition", "name": "Composition", "aliases": [] },
+  { "slug": "juilliard_music_area_composition", "name": "Composition", "aliases": ["composition"] },
+  { "slug": "juilliard_music_area_historical_performance", "name": "Historical Performance", "aliases": ["historical_performance"] },
+  { "slug": "juilliard_music_area_instruments", "name": "Instruments", "aliases": ["instruments"] },
+  { "slug": "juilliard_music_area_jazz_studies", "name": "Jazz Studies", "aliases": ["jazz_studies"] },
+  { "slug": "juilliard_music_area_orchestral_conducting", "name": "Orchestral Conducting", "aliases": ["orchestral_conducting"] },
+  { "slug": "juilliard_music_area_string_quartet_studies", "name": "String Quartet Studies", "aliases": ["string_quartet_studies"] },
+  { "slug": "juilliard_music_area_vocal_arts", "name": "Vocal Arts", "aliases": ["vocal_arts"] },
+  { "slug": "opera_studies", "name": "Opera Studies", "aliases": [] },
+  { "slug": "piano", "name": "Piano", "aliases": [] },
+  { "slug": "violin", "name": "Violin", "aliases": [] },
+  { "slug": "voice", "name": "Voice", "aliases": [] }
+]

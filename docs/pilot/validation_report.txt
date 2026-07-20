@@ -1,0 +1,38 @@
+FAIL
+-
+- None
+
+NEEDS ATTENTION
+-
+- school/package :: review_notes :: Found but not seeded because no exact field/degree identity was confirmed in the current seed vocabulary and cap: Musical Theatre, Orchestral Performance, Jazz Arts, brass, Collaborative Piano, Conducting, Contemporary Performance, Guitar, Percussion, woodwinds, Double Bass, Harp, Viola, and non-degree/certificate variants.
+- school/package :: review_notes :: Official program pages were reachable. The application and prescreen dates use the 2026–2027 admission cycle and the official Fall 2026 deadline year; program pages state December 1 without repeating the year.
+- school/package :: review_notes :: The pilot is capped at the first 12 exact matched seeded offerings in stable program_offering_ref order; 11 additional exact matches were intentionally omitted from this pilot package.
+- school/package :: review_notes :: The program-index confirmation window elapsed without a response; the deterministic exact-match fallback was applied.
+
+WARN
+-
+- manhattan_school_of_music_cello_ad: language_of_instruction is null
+- manhattan_school_of_music_cello_bm: language_of_instruction is null
+- manhattan_school_of_music_cello_dma: duration_years is null
+- manhattan_school_of_music_cello_dma: language_of_instruction is null
+- manhattan_school_of_music_cello_mm: language_of_instruction is null
+- manhattan_school_of_music_composition_bm: language_of_instruction is null
+- manhattan_school_of_music_composition_dma: duration_years is null
+- manhattan_school_of_music_composition_dma: language_of_instruction is null
+- manhattan_school_of_music_composition_mm: language_of_instruction is null
+- manhattan_school_of_music_piano_ad: language_of_instruction is null
+- manhattan_school_of_music_piano_bm: language_of_instruction is null
+- manhattan_school_of_music_piano_dma: duration_years is null
+- manhattan_school_of_music_piano_dma: language_of_instruction is null
+- manhattan_school_of_music_piano_mm: language_of_instruction is null
+- manhattan_school_of_music_violin_ad_classical: language_of_instruction is null
+
+SUMMARY
+-
+- Result: PASS
+- Programs: 12
+- application_deadline: 0/12 null/unknown (0.0%)
+- prescreening_required: 0/12 null/unknown (0.0%)
+- tuition_annual: 0/12 null/unknown (0.0%)
+- audition_required: 0/12 null/unknown (0.0%)
+- language_of_instruction: 12/12 null/unknown (100.0%)

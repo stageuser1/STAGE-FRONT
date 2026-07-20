@@ -1,0 +1,73 @@
+{
+  "failures": [],
+  "needs_attention": [
+    {
+      "field": "review_notes",
+      "message": "Found but not seeded because no exact field/degree identity was confirmed in the current seed vocabulary and cap: Musical Theatre, Orchestral Performance, Jazz Arts, brass, Collaborative Piano, Conducting, Contemporary Performance, Guitar, Percussion, woodwinds, Double Bass, Harp, Viola, and non-degree/certificate variants.",
+      "program_offering_ref": null
+    },
+    {
+      "field": "review_notes",
+      "message": "Official program pages were reachable. The application and prescreen dates use the 2026–2027 admission cycle and the official Fall 2026 deadline year; program pages state December 1 without repeating the year.",
+      "program_offering_ref": null
+    },
+    {
+      "field": "review_notes",
+      "message": "The pilot is capped at the first 12 exact matched seeded offerings in stable program_offering_ref order; 11 additional exact matches were intentionally omitted from this pilot package.",
+      "program_offering_ref": null
+    },
+    {
+      "field": "review_notes",
+      "message": "The program-index confirmation window elapsed without a response; the deterministic exact-match fallback was applied.",
+      "program_offering_ref": null
+    }
+  ],
+  "summary": {
+    "decision_bar_nulls": {
+      "application_deadline": {
+        "null_count": 0,
+        "rate": 0.0,
+        "total": 12
+      },
+      "audition_required": {
+        "null_count": 0,
+        "rate": 0.0,
+        "total": 12
+      },
+      "language_of_instruction": {
+        "null_count": 12,
+        "rate": 1.0,
+        "total": 12
+      },
+      "prescreening_required": {
+        "null_count": 0,
+        "rate": 0.0,
+        "total": 12
+      },
+      "tuition_annual": {
+        "null_count": 0,
+        "rate": 0.0,
+        "total": 12
+      }
+    },
+    "program_count": 12
+  },
+  "valid": true,
+  "warnings": [
+    "manhattan_school_of_music_cello_ad: language_of_instruction is null",
+    "manhattan_school_of_music_cello_bm: language_of_instruction is null",
+    "manhattan_school_of_music_cello_dma: duration_years is null",
+    "manhattan_school_of_music_cello_dma: language_of_instruction is null",
+    "manhattan_school_of_music_cello_mm: language_of_instruction is null",
+    "manhattan_school_of_music_composition_bm: language_of_instruction is null",
+    "manhattan_school_of_music_composition_dma: duration_years is null",
+    "manhattan_school_of_music_composition_dma: language_of_instruction is null",
+    "manhattan_school_of_music_composition_mm: language_of_instruction is null",
+    "manhattan_school_of_music_piano_ad: language_of_instruction is null",
+    "manhattan_school_of_music_piano_bm: language_of_instruction is null",
+    "manhattan_school_of_music_piano_dma: duration_years is null",
+    "manhattan_school_of_music_piano_dma: language_of_instruction is null",
+    "manhattan_school_of_music_piano_mm: language_of_instruction is null",
+    "manhattan_school_of_music_violin_ad_classical: language_of_instruction is null"
+  ]
+}

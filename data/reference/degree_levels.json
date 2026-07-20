@@ -1,0 +1,7 @@
+[
+  { "slug": "ad", "name": "Artist Diploma", "abbreviation": "AD" },
+  { "slug": "bm", "name": "Bachelor of Music", "abbreviation": "BM" },
+  { "slug": "dma", "name": "Doctor of Musical Arts", "abbreviation": "DMA" },
+  { "slug": "gd", "name": "Graduate Diploma", "abbreviation": "GD" },
+  { "slug": "mm", "name": "Master of Music", "abbreviation": "MM" }
+]

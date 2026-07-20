@@ -12,3 +12,6 @@ yarn-debug.log*
 yarn-error.log*
 
 tsconfig.tsbuildinfo
+
+__pycache__/
+*.py[cod]

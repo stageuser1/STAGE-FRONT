@@ -1,0 +1,119 @@
+{
+  "schema_version": "stage_music_admissions_v3",
+  "school": {
+    "school_ref": "example_conservatory",
+    "school_name": "Example Conservatory",
+    "city": "Example City",
+    "country": "United States",
+    "school_type": "Conservatory",
+    "official_website": "https://example.edu"
+  },
+  "program_offerings": [
+    {
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "school_ref": "example_conservatory",
+      "field_ref": "piano",
+      "degree_level_ref": "bm",
+      "track_or_concentration": null,
+      "official_program_name": "Bachelor of Music in Piano",
+      "program_url": "https://example.edu/programs/piano-bm",
+      "duration_years": 4,
+      "language_of_instruction": ["English"],
+      "faculty_list": null,
+      "last_checked": "2026-07-19"
+    }
+  ],
+  "application_requirements": [
+    {
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "admission_cycle": "2026-2027",
+      "is_current": true,
+      "application_deadline": "2026-12-01",
+      "deadline_notes": null,
+      "tuition_annual": 10000,
+      "tuition_currency": "USD",
+      "scholarships_available": "Yes",
+      "scholarship_note": null,
+      "english_language_tests": ["TOEFL", "IELTS"],
+      "toefl_minimum": 80,
+      "ielts_minimum": 6.5,
+      "conditional_notes": null
+    }
+  ],
+  "audition_requirements": [
+    {
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "admission_cycle": "2026-2027",
+      "is_current": true,
+      "prescreening_required": "Unknown",
+      "prescreening_deadline": null,
+      "audition_required": "Yes",
+      "audition_format": "Live Only",
+      "repertoire_summary": "Prepare one contrasting work from each of three style periods.",
+      "conditional_notes": null
+    }
+  ],
+  "source_records": [
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://example.edu/admissions/deadlines",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-19",
+      "source_quote": "The application deadline is December 1, 2026.",
+      "related_field": "application_deadline",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://example.edu/admissions/tuition",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-19",
+      "source_quote": "Annual tuition is $10,000.",
+      "related_field": "tuition_annual",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://example.edu/admissions/language-toefl",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-19",
+      "source_quote": "A TOEFL score of at least 80 is required.",
+      "related_field": "toefl_minimum",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://example.edu/admissions/language-ielts",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-19",
+      "source_quote": "An IELTS score of at least 6.5 is required.",
+      "related_field": "ielts_minimum",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": null,
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "source_url": "https://example.edu/programs/piano-bm/audition",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-19",
+      "source_quote": "A live audition is required.",
+      "related_field": "audition_required",
+      "confidence_level": "High"
+    }
+  ],
+  "data_quality": {
+    "overall_confidence": "High",
+    "missing_critical_fields": [],
+    "needs_human_review": true,
+    "review_notes": []
+  },
+  "workflow_status": {
+    "extraction_status": "complete",
+    "review_status": "unreviewed",
+    "ready_for_directus_import": false
+  }
+}
