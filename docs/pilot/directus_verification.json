@@ -1,0 +1,177 @@
+{
+  "endpoint": "http://47.86.26.168:8055",
+  "generated_at": "2026-07-20T04:02:11.268Z",
+  "school": {
+    "id": 2,
+    "slug": "manhattan_school_of_music",
+    "city_ref": 1
+  },
+  "final_row_counts": {
+    "schools": 2,
+    "program_offerings": 187,
+    "application_requirements": 187,
+    "audition_requirements": 336,
+    "source_records": 5115,
+    "countries": 1,
+    "cities": 1
+  },
+  "package_counts": {
+    "programs_expected": 12,
+    "programs_found": 12,
+    "applications_for_pilot_programs": 12,
+    "auditions_for_pilot_programs": 12,
+    "package_source_keys_expected": 78,
+    "package_source_keys_found": 78
+  },
+  "program_checks": [
+    {
+      "program_offering_ref": "manhattan_school_of_music_cello_ad",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_cello_bm",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_cello_dma",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_cello_mm",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_composition_bm",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 6,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_composition_dma",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 9,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_composition_mm",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 6,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_piano_ad",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_piano_bm",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_piano_dma",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_piano_mm",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    },
+    {
+      "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+      "program_found": true,
+      "current_application_count": 1,
+      "current_audition_count": 1,
+      "linked_source_count": 7,
+      "statuses": {
+        "program": "Extracted",
+        "current_application": "Extracted",
+        "current_audition": "Extracted"
+      }
+    }
+  ],
+  "status_distribution": {
+    "Extracted": 114
+  },
+  "verified_records": [],
+  "passed": true
+}

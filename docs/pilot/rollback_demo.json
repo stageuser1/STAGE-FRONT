@@ -1,0 +1,51 @@
+{
+  "operation": "targeted deletion of one source_records row listed as created in import_commit.json, followed by package replay",
+  "journal_target": {
+    "collection": "source_records",
+    "original_id": 5127,
+    "identity": "https://apply.msmnyc.edu/apply/|application_deadline|school:2",
+    "natural_key": "https://apply.msmnyc.edu/apply/|application_deadline|school:2"
+  },
+  "delete_succeeded": true,
+  "restore_counts": {
+    "schools": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    },
+    "program_offerings": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "application_requirements": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "audition_requirements": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "source_records": {
+      "create": 1,
+      "update": 0,
+      "skip": 77
+    },
+    "countries": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    },
+    "cities": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    }
+  },
+  "restored_id": 5128,
+  "restored_natural_key_matches": true,
+  "post_restore_rerun_writes": 0,
+  "passed": true
+}

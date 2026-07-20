@@ -1,0 +1,64 @@
+{
+  "target": {
+    "collection": "application_requirements",
+    "id": 188,
+    "program_offering_ref": "manhattan_school_of_music_composition_bm",
+    "admission_cycle": "2026-2027",
+    "modified_field": "tuition_annual"
+  },
+  "verified_snapshot_sha256": "dcc8c7fc93805ed94ec3c024ef7ce1d397918b93e9a63036f413072e7f730427",
+  "post_import_snapshot_sha256": "dcc8c7fc93805ed94ec3c024ef7ce1d397918b93e9a63036f413072e7f730427",
+  "stored_record_byte_identical": true,
+  "conflict_count": 1,
+  "conflicts": [
+    {
+      "collection": "application_requirements",
+      "identity": "manhattan_school_of_music_composition_bm:2026-2027",
+      "field": "tuition_annual",
+      "stored_value": "60800.00000",
+      "incoming_value": 60801,
+      "source_url": "https://www.msmnyc.edu/wp-content/uploads/2026/05/2627-Academic-Catalog-2026-29-May-2026.pdf",
+      "reason": "review_status is Verified"
+    }
+  ],
+  "import_counts": {
+    "schools": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    },
+    "program_offerings": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "application_requirements": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "audition_requirements": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "source_records": {
+      "create": 0,
+      "update": 0,
+      "skip": 78
+    },
+    "countries": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    },
+    "cities": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    }
+  },
+  "import_journal": [],
+  "status_after_reset": "Extracted",
+  "passed": true
+}

@@ -1,0 +1,1356 @@
+{
+  "mode": "dry-run",
+  "schema_version": "stage_music_admissions_v3",
+  "school_ref": "manhattan_school_of_music",
+  "counts": {
+    "schools": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    },
+    "program_offerings": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "application_requirements": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "audition_requirements": {
+      "create": 0,
+      "update": 0,
+      "skip": 12
+    },
+    "source_records": {
+      "create": 0,
+      "update": 0,
+      "skip": 78
+    },
+    "countries": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    },
+    "cities": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    }
+  },
+  "conflicts": [],
+  "needs_attention": [
+    {
+      "field": "review_notes",
+      "message": "Found but not seeded because no exact field/degree identity was confirmed in the current seed vocabulary and cap: Musical Theatre, Orchestral Performance, Jazz Arts, brass, Collaborative Piano, Conducting, Contemporary Performance, Guitar, Percussion, woodwinds, Double Bass, Harp, Viola, and non-degree/certificate variants.",
+      "program_offering_ref": null
+    },
+    {
+      "field": "review_notes",
+      "message": "Official program pages were reachable. The application and prescreen dates use the 2026–2027 admission cycle and the official Fall 2026 deadline year; program pages state December 1 without repeating the year.",
+      "program_offering_ref": null
+    },
+    {
+      "field": "review_notes",
+      "message": "The pilot is capped at the first 12 exact matched seeded offerings in stable program_offering_ref order; 11 additional exact matches were intentionally omitted from this pilot package.",
+      "program_offering_ref": null
+    },
+    {
+      "field": "review_notes",
+      "message": "The program-index confirmation window elapsed without a response; the deterministic exact-match fallback was applied.",
+      "program_offering_ref": null
+    }
+  ],
+  "journal": [],
+  "package_rows": {
+    "school": {
+      "school_ref": "manhattan_school_of_music",
+      "school_name": "Manhattan School of Music",
+      "city": "New York",
+      "country": "United States",
+      "school_type": "Conservatory",
+      "official_website": "https://www.msmnyc.edu/"
+    },
+    "program_offerings": [
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "cello",
+        "degree_level_ref": "ad",
+        "track_or_concentration": null,
+        "official_program_name": "Cello — Artist Diploma",
+        "program_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "duration_years": 1,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "cello",
+        "degree_level_ref": "bm",
+        "track_or_concentration": null,
+        "official_program_name": "Cello — Bachelor of Music",
+        "program_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "duration_years": 4,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "cello",
+        "degree_level_ref": "dma",
+        "track_or_concentration": null,
+        "official_program_name": "Cello — Doctor of Musical Arts",
+        "program_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "duration_years": null,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "cello",
+        "degree_level_ref": "mm",
+        "track_or_concentration": null,
+        "official_program_name": "Cello — Master of Music",
+        "program_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "duration_years": 2,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "composition",
+        "degree_level_ref": "bm",
+        "track_or_concentration": null,
+        "official_program_name": "Composition — Bachelor of Music",
+        "program_url": "https://www.msmnyc.edu/programs/composition/",
+        "duration_years": 4,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "composition",
+        "degree_level_ref": "dma",
+        "track_or_concentration": null,
+        "official_program_name": "Composition — Doctor of Musical Arts",
+        "program_url": "https://www.msmnyc.edu/programs/composition/",
+        "duration_years": null,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "composition",
+        "degree_level_ref": "mm",
+        "track_or_concentration": null,
+        "official_program_name": "Composition — Master of Music",
+        "program_url": "https://www.msmnyc.edu/programs/composition/",
+        "duration_years": 2,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "piano",
+        "degree_level_ref": "ad",
+        "track_or_concentration": null,
+        "official_program_name": "Piano — Artist Diploma",
+        "program_url": "https://www.msmnyc.edu/programs/piano/",
+        "duration_years": 1,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "piano",
+        "degree_level_ref": "bm",
+        "track_or_concentration": null,
+        "official_program_name": "Piano — Bachelor of Music",
+        "program_url": "https://www.msmnyc.edu/programs/piano/",
+        "duration_years": 4,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "piano",
+        "degree_level_ref": "dma",
+        "track_or_concentration": null,
+        "official_program_name": "Piano — Doctor of Musical Arts",
+        "program_url": "https://www.msmnyc.edu/programs/piano/",
+        "duration_years": null,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "piano",
+        "degree_level_ref": "mm",
+        "track_or_concentration": null,
+        "official_program_name": "Piano — Master of Music",
+        "program_url": "https://www.msmnyc.edu/programs/piano/",
+        "duration_years": 2,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "school_ref": "manhattan_school_of_music",
+        "field_ref": "violin",
+        "degree_level_ref": "ad",
+        "track_or_concentration": "Classical",
+        "official_program_name": "Violin — Artist Diploma (Classical)",
+        "program_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "duration_years": 1,
+        "language_of_instruction": null,
+        "faculty_list": null,
+        "last_checked": "2026-07-19"
+      }
+    ],
+    "application_requirements": [
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "application_deadline": "2025-12-01",
+        "deadline_notes": "Priority application deadline for Fall 2026 admission.",
+        "tuition_annual": 60800,
+        "tuition_currency": "USD",
+        "scholarships_available": "Yes",
+        "scholarship_note": "All full-time students are eligible for institutional scholarships; awards consider performance and financial need.",
+        "english_language_tests": [
+          "Duolingo"
+        ],
+        "toefl_minimum": null,
+        "ielts_minimum": null,
+        "conditional_notes": "International applicants whose first language is not English must submit the Duolingo English Test; TOEFL and IELTS are not accepted alternatives."
+      }
+    ],
+    "audition_requirements": [
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live Only",
+        "repertoire_summary": "Prescreen: two contrasting concerto movements and two contrasting solo Bach movements. Final audition: a complete concerto plus four significant recital works spanning broad stylistic periods, including the 20th or 21st century.",
+        "conditional_notes": "The final audition must be in person."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live or Recorded",
+        "repertoire_summary": "Prescreen: one concerto movement and two contrasting solo Bach movements. Final audition: a concerto movement or approved extended work, two contrasting Bach movements, and one work of the applicant’s choice.",
+        "conditional_notes": "The final audition may be completed in person or by recording."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live Only",
+        "repertoire_summary": "Prescreen: two contrasting concerto movements and two contrasting solo Bach movements. Final audition: a complete concerto plus four significant recital works spanning broad stylistic periods, including the 20th or 21st century.",
+        "conditional_notes": "The final audition must be in person."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live or Recorded",
+        "repertoire_summary": "Prescreen: two contrasting concerto movements and two contrasting solo Bach movements. Final audition: two concerto movements, three Bach movements, a complete sonata, and a complete 20th- or 21st-century work.",
+        "conditional_notes": "The final audition may be completed in person or by recording."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Multiple Rounds",
+        "repertoire_summary": "Prescreen portfolio: three to five original contrasting compositions with scores and recordings. Final round: composition project, faculty interview, and portfolio review.",
+        "conditional_notes": "BM and MM faculty interviews may be in person or by Zoom; the composition audition has prescreen, project, and interview/portfolio stages."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Multiple Rounds",
+        "repertoire_summary": "Prescreen portfolio: three to five original contrasting compositions with scores and recordings. Final round: composition project, an in-person faculty interview, and portfolio review.",
+        "conditional_notes": "DMA applicants must interview in person; the composition audition has prescreen, project, and interview/portfolio stages."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Multiple Rounds",
+        "repertoire_summary": "Prescreen portfolio: three to five original contrasting compositions with scores and recordings. Final round: composition project, faculty interview, and portfolio review.",
+        "conditional_notes": "BM and MM faculty interviews may be in person or by Zoom; the composition audition has prescreen, project, and interview/portfolio stages."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live Only",
+        "repertoire_summary": "Prescreen: a 60–70 minute solo recital representing at least three stylistic periods. Final audition: a 60–75 minute solo recital representing at least three stylistic periods.",
+        "conditional_notes": "The final audition must be in person."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live or Recorded",
+        "repertoire_summary": "Prescreen: at least two contrasting works totaling 15–20 minutes. Final audition: Baroque repertoire, a complete Classical sonata, a 19th-century work, and a 20th- or 21st-century work.",
+        "conditional_notes": "The final audition may be completed in person or by recording."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live Only",
+        "repertoire_summary": "Prescreen: a 60–70 minute solo recital representing at least three stylistic periods. Final audition: a 60–75 minute solo recital representing at least three stylistic periods.",
+        "conditional_notes": "The final audition must be in person."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live or Recorded",
+        "repertoire_summary": "Prescreen: at least two contrasting works totaling 15–20 minutes. Final audition: a 50–65 minute solo recital covering at least three stylistic periods, including the 20th or 21st century.",
+        "conditional_notes": "The final audition may be completed in person or by recording."
+      },
+      {
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "admission_cycle": "2026-2027",
+        "is_current": true,
+        "prescreening_required": "Yes",
+        "prescreening_deadline": "2025-12-01",
+        "audition_required": "Yes",
+        "audition_format": "Live Only",
+        "repertoire_summary": "Prescreen: two contrasting concerto movements, one sonata movement, and one work of the applicant’s choice. Final audition: a complete concerto and four complete recital works spanning broad stylistic periods, including the 20th or 21st century.",
+        "conditional_notes": "The final audition must be in person."
+      }
+    ],
+    "source_records": [
+      {
+        "school_ref": "manhattan_school_of_music",
+        "program_offering_ref": null,
+        "source_url": "https://apply.msmnyc.edu/apply/",
+        "source_type": "Application Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "The Fall 2026 College Application is due on December 1, 2025.",
+        "related_field": "application_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": "manhattan_school_of_music",
+        "program_offering_ref": null,
+        "source_url": "https://www.msmnyc.edu/admission/international-applicants/",
+        "source_type": "English Language Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "english_language_tests",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": "manhattan_school_of_music",
+        "program_offering_ref": null,
+        "source_url": "https://www.msmnyc.edu/admission/international-applicants/",
+        "source_type": "English Language Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "TOEFL and IELTS scores are not accepted as an alternative to the DET requirement.",
+        "related_field": "ielts_minimum",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": "manhattan_school_of_music",
+        "program_offering_ref": null,
+        "source_url": "https://www.msmnyc.edu/admission/international-applicants/",
+        "source_type": "English Language Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Manhattan School of Music has no minimum English test score requirements in order to apply.",
+        "related_field": "toefl_minimum",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": "manhattan_school_of_music",
+        "program_offering_ref": null,
+        "source_url": "https://www.msmnyc.edu/admission/scholarships-financial-aid/types-of-aid/",
+        "source_type": "Application Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "scholarships_available",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": "manhattan_school_of_music",
+        "program_offering_ref": null,
+        "source_url": "https://www.msmnyc.edu/wp-content/uploads/2026/05/2627-Academic-Catalog-2026-29-May-2026.pdf",
+        "source_type": "Deadline/Fee Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Full-time Tuition (12–18 credits): $60,800 per academic year.",
+        "related_field": "tuition_annual",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "DMA & AD programs require an in-person audition.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreening videos are required for all Viola, Violin, and Cello applicants.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_ad",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "In-person and recorded Final Auditions are available.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreening videos are required for all Viola, Violin, and Cello applicants.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_bm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "DMA & AD programs require an in-person audition.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreening videos are required for all Viola, Violin, and Cello applicants.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_dma",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "In-person and recorded Final Auditions are available.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreening videos are required for all Viola, Violin, and Cello applicants.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_cello_mm",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Applicants who pass the prescreening round will be scheduled for an audition.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreening: Scores and Recordings.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_bm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "source_url": "https://www.msmnyc.edu/programs/composition/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Applicants who pass the prescreening round will be scheduled for an audition.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreening: Scores and Recordings.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_dma",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Applicants who pass the prescreening round will be scheduled for an audition.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreening: Scores and Recordings.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_composition_mm",
+        "source_url": "https://www.msmnyc.edu/programs/composition/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "source_url": "https://www.msmnyc.edu/programs/piano/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "DMA & AD programs require an in-person audition.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "All piano applicants must submit a prescreening video.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_ad",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "In-person and recorded Final Auditions are available.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "All piano applicants must submit a prescreening video.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_bm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "source_url": "https://www.msmnyc.edu/programs/piano/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "DMA & AD programs require an in-person audition.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "All piano applicants must submit a prescreening video.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_dma",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "In-person and recorded Final Auditions are available.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "All piano applicants must submit a prescreening video.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_piano_mm",
+        "source_url": "https://www.msmnyc.edu/programs/piano/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/",
+        "source_type": "Official Program Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "official_program_name",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "audition_format",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "DMA & AD programs require an in-person audition.",
+        "related_field": "audition_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreen Deadline: December 1.",
+        "related_field": "prescreening_deadline",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": "Prescreening videos are required for all Viola, Violin, and Cello applicants.",
+        "related_field": "prescreening_required",
+        "confidence_level": "High"
+      },
+      {
+        "school_ref": null,
+        "program_offering_ref": "manhattan_school_of_music_violin_ad_classical",
+        "source_url": "https://www.msmnyc.edu/programs/strings-and-harp/prescreening-audition-procedures/",
+        "source_type": "Audition Requirements Page",
+        "retrieved_date": "2026-07-19",
+        "source_quote": null,
+        "related_field": "repertoire_summary",
+        "confidence_level": "High"
+      }
+    ]
+  }
+}
