@@ -110,6 +110,17 @@ function orNull(value: string | undefined): string | null {
   return value && value.trim() !== "" ? value : null;
 }
 
+/** Keep internal Directus cycle keys out of the user-facing decision bar. */
+function admissionCycleLabel(value: string | null | undefined): string | null {
+  if (!value) return null;
+  const trimmed = value.trim();
+  const fallYear = trimmed.match(/(?:^|_)fall_(20\d{2})(?:_|$)/i)?.[1];
+  if (fallYear) return `${fallYear} 秋季入学`;
+  const academicYear = trimmed.match(/20\d{2}\s*[-–/]\s*20\d{2}/)?.[0];
+  if (academicYear) return academicYear.replace(/\s+/g, "");
+  return /^20\d{2}$/.test(trimmed) ? trimmed : null;
+}
+
 function structuredStrings(value: unknown): string[] {
   if (Array.isArray(value)) return value.flatMap(structuredStrings);
   if (value && typeof value === "object") {
@@ -290,9 +301,9 @@ export function ProgramDetailSections({ program }: { program: Program }) {
   );
 
   /* --------------------------- decision bar ---------------------------
-   * One scannable bar ordered by decision weight: deadline, prescreen,
-   * audition, cost, language, location. Everything longer than a scalar
-   * lives in the expandable sections below. */
+   * One scannable bar ordered by decision weight: audition/prescreen/
+   * repertoire, cost/scholarship, deadline, language, location. Everything
+   * longer than a scalar lives in the expandable sections below. */
 
   // Deadline urgency: red only when the date is past or <30 days out.
   const deadlineValue = (date: string | null) => {
@@ -336,15 +347,36 @@ export function ProgramDetailSections({ program }: { program: Program }) {
     recordText(audition?.values.audition_format) ??
     program.audition?.format ??
     null;
+  const repertoireAvailable = [
+    recordText(audition?.values.prescreen_repertoire),
+    recordText(audition?.values.audition_repertoire),
+    recordText(audition?.values.repertoire_summary),
+    program.prescreen?.repertoire,
+    program.audition?.repertoire,
+    program.audition?.legacy_repertoire_summary,
+    program.audition_requirements.repertoire_requirements,
+  ].some(Boolean);
   const tuitionAmount = (() => {
     const raw = recordText(application?.values.tuition_annual);
-    if (raw === null) return null;
+    if (raw === null) return program.cost_aid.tuition_amount;
     const parsed = Number(raw);
     return Number.isFinite(parsed) ? parsed : null;
   })();
-  const tuitionCurrency = recordText(application?.values.tuition_currency);
-  const scholarshipSignal =
-    recordText(application?.values.scholarships_available) === "Yes";
+  const tuitionCurrency =
+    recordText(application?.values.tuition_currency) ?? program.cost_aid.currency;
+  const scholarshipAvailability =
+    recordText(application?.values.scholarships_available) ??
+    (program.cost_aid.scholarships_available === true
+      ? "Yes"
+      : program.cost_aid.scholarships_available === false
+        ? "No"
+        : null);
+  const scholarshipHint =
+    scholarshipAvailability === "Yes"
+      ? "有奖学金"
+      : scholarshipAvailability === "No"
+        ? "未标注奖学金"
+        : null;
   const tuitionLabel =
     tuitionAmount !== null
       ? `${tuitionCurrency ?? ""} ${tuitionAmount.toLocaleString()}`.trim() +
@@ -353,13 +385,16 @@ export function ProgramDetailSections({ program }: { program: Program }) {
   const locationLabel =
     [program.city, program.country].filter(Boolean).join(" · ") || null;
 
+  const auditionDecision =
+    requirementAtom(auditionRequiredText, auditionFormat) ??
+    (repertoireAvailable ? "曲目已收录" : null);
+
   const decisionBar = (
-    <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
-      <KeyFact
-        hint={program.application?.admission_cycle}
-        label="申请截止（常规）"
-        value={deadlineValue(program.deadline.application_deadline)}
-      />
+    <section
+      aria-label="决策摘要"
+      className="grid grid-cols-2 gap-2 md:grid-cols-3"
+      data-testid="decision-bar"
+    >
       <KeyFact
         label="预筛选"
         value={requirementAtom(
@@ -368,23 +403,33 @@ export function ProgramDetailSections({ program }: { program: Program }) {
         )}
       />
       <KeyFact
-        label="现场试音"
-        value={requirementAtom(auditionRequiredText, auditionFormat)}
+        hint={
+          repertoireAvailable
+            ? auditionDecision === "曲目已收录"
+              ? "试音形式待补充"
+              : "曲目已收录 · 展开查看"
+            : null
+        }
+        label="试音 / 曲目"
+        value={auditionDecision}
       />
       <KeyFact
         hint={
-          tuitionLabel && scholarshipSignal
-            ? "有奖学金 · 明细见下方"
-            : tuitionLabel
-              ? "学费，不含生活费"
-              : null
+          [scholarshipHint, tuitionLabel ? "不含生活费" : null]
+            .filter(Boolean)
+            .join(" · ") || null
         }
         label="费用"
         value={tuitionLabel}
       />
+      <KeyFact
+        hint={admissionCycleLabel(program.application?.admission_cycle)}
+        label="申请截止（常规）"
+        value={deadlineValue(program.deadline.application_deadline)}
+      />
       <KeyFact label="语言要求" value={languageSummary(program)} />
       <KeyFact label="地点" value={locationLabel} />
-    </div>
+    </section>
   );
 
   /* --------------------------- program info --------------------------- */

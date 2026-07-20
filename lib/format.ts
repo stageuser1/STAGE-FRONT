@@ -66,14 +66,20 @@ export function formatFee(program: Program): string | null {
 
 export function languageSummary(program: Program): string | null {
   const tests = program.language_requirements.accepted_tests;
-  if (tests.length > 0) {
-    return tests
+  const namedTests = tests.filter(
+    (test) => test.test_name !== "Other" || Boolean(test.minimum_score),
+  );
+  if (namedTests.length > 0) {
+    return namedTests
       .map((test) =>
         test.minimum_score
           ? `${test.test_name} ${test.minimum_score}`
           : test.test_name,
       )
       .join(" / ");
+  }
+  if (program.language_requirements.english_required === true) {
+    return "需要英语成绩";
   }
   if (program.language_requirements.english_required === false) return "不要求";
   return null;
