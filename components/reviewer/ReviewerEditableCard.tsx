@@ -46,6 +46,14 @@ function formValues(
   );
 }
 
+function currentFormValue(value: unknown): string {
+  if (value === null || value === undefined) return "";
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+  return JSON.stringify(value, null, 2);
+}
+
 export function ReviewerEditableCard({
   collection,
   fields,
@@ -140,6 +148,35 @@ export function ReviewerEditableCard({
     );
   }
 
+  async function assertUnchanged() {
+    const targets = new Map<string, EditableFieldDefinition[]>();
+    fields.forEach((definition) => {
+      const targetCollection = definition.collection ?? collection;
+      const targetRecordId = definition.recordId ?? recordId;
+      const key = `${targetCollection}:${targetRecordId}`;
+      targets.set(key, [...(targets.get(key) ?? []), definition]);
+    });
+    for (const [key, definitions] of targets) {
+      const separator = key.indexOf(":");
+      const targetCollection = key.slice(0, separator);
+      const targetRecordId = key.slice(separator + 1);
+      const requestedFields = [...new Set([
+        ...definitions.map(({ field }) => field),
+        "review_status",
+      ])].join(",");
+      const current = await request<Record<string, unknown>>(
+        `/items/${targetCollection}/${targetRecordId}?fields=${encodeURIComponent(requestedFields)}`,
+      );
+      const changed = definitions.some((definition) => {
+        const name = definition.name ?? definition.field;
+        return currentFormValue(current[definition.field]) !== (values[name] ?? "");
+      }) || currentFormValue(current.review_status) !== (status ?? "");
+      if (changed) {
+        throw new Error("Record changed, re-apply your edit.");
+      }
+    }
+  }
+
   async function save() {
     const changed = fields.filter(
       (definition) => {
@@ -155,6 +192,7 @@ export function ReviewerEditableCard({
     setError(null);
     setNotice(null);
     try {
+      await assertUnchanged();
       const payloads = new Map<string, Record<string, unknown>>();
       changed.forEach((definition) => {
         const name = definition.name ?? definition.field;
@@ -162,9 +200,7 @@ export function ReviewerEditableCard({
         const targetCollection = definition.collection ?? collection;
         const targetRecordId = definition.recordId ?? recordId;
         const targetKey = `${targetCollection}:${targetRecordId}`;
-        const payload = payloads.get(targetKey) ?? {
-          review_status: "human_edited",
-        };
+        const payload = payloads.get(targetKey) ?? {};
         payload[definition.field] = definition.serialize
           ? definition.serialize(value)
           : value.trim() === ""
@@ -191,24 +227,25 @@ export function ReviewerEditableCard({
           );
         }
         savedTargets.push(`${targetCollection} record ${targetRecordId}`);
-        publishStatus("human_edited", targetCollection, targetRecordId);
       }
       setValues({ ...draft });
       setEditing(false);
-      setNotice("已保存");
+      setNotice("Saved.");
       router.refresh();
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
+      router.refresh();
     } finally {
       setSaving(false);
     }
   }
 
-  async function updateStatus(nextStatus: "human_checked" | "needs_update") {
+  async function updateStatus(nextStatus: "Verified" | "Outdated") {
     setSaving(true);
     setError(null);
     setNotice(null);
     try {
+      await assertUnchanged();
       const targets = new Map<string, { collection: string; recordId: string }>();
       fields.forEach((definition) => {
         const targetCollection = definition.collection ?? collection;
@@ -238,11 +275,12 @@ export function ReviewerEditableCard({
         publishStatus(nextStatus, target.collection, target.recordId);
       }
       setNotice(
-        nextStatus === "human_checked" ? "已标记为已核验" : "已标记为需更新",
+        nextStatus === "Verified" ? "Marked Verified." : "Marked Needs Update.",
       );
       router.refresh();
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
+      router.refresh();
     } finally {
       setSaving(false);
     }
@@ -290,18 +328,18 @@ export function ReviewerEditableCard({
             <button
               className="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-700 disabled:opacity-60"
               disabled={saving}
-              onClick={() => void updateStatus("human_checked")}
+              onClick={() => void updateStatus("Verified")}
               type="button"
             >
-              标记已核验
+              Mark Verified
             </button>
             <button
               className="rounded-lg bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-100 disabled:opacity-60"
               disabled={saving}
-              onClick={() => void updateStatus("needs_update")}
+              onClick={() => void updateStatus("Outdated")}
               type="button"
             >
-              需更新
+              Mark Needs Update
             </button>
           </>
           ) : null}

@@ -62,6 +62,9 @@ interface DirectusProgramOffering {
   audition_url?: string | null;
   international_url?: string | null;
   review_status?: string | null;
+  faculty_list?: string | null;
+  last_checked?: string | null;
+  program_offering_ref?: string | null;
 }
 
 interface DirectusCycleRecord {
@@ -91,10 +94,15 @@ interface DirectusApplicationRequirement extends DirectusCycleRecord {
   notes?: string | null;
   application_fee?: string | number | null;
   application_fee_currency?: string | null;
+  tuition_annual?: string | number | null;
+  tuition_currency?: string | null;
+  scholarships_available?: string | null;
+  scholarship_note?: string | null;
 }
 
 interface DirectusAuditionRequirement extends DirectusCycleRecord {
   prescreening_deadline?: string | null;
+  prescreening_required?: string | null;
   Prescreening_required?: string | null;
   audition_required?: string | null;
   repertoire_summary?: string | null;
@@ -498,8 +506,12 @@ function mapAuditionSections(audition: DirectusAuditionRequirement | null): {
 
   return {
     prescreen: {
-      required: requirementBoolean(audition.Prescreening_required),
-      required_text: textValue(audition.Prescreening_required),
+      required: requirementBoolean(
+        audition.prescreening_required ?? audition.Prescreening_required,
+      ),
+      required_text: textValue(
+        audition.prescreening_required ?? audition.Prescreening_required,
+      ),
       deadline: dateValue(audition.prescreening_deadline),
       video_requirements: textValue(audition.video_requirements),
       file_format_requirements: textValue(audition.file_format_requirements),
@@ -776,6 +788,7 @@ async function attachSourceQuotes(
  */
 const offeringFields = [
   "id",
+  "program_offering_ref",
   "official_program_name",
   "program_name_zh",
   "track_or_concentration",
@@ -788,6 +801,8 @@ const offeringFields = [
   "audition_url",
   "international_url",
   "review_status",
+  "faculty_list",
+  "last_checked",
   "school_id.id",
   "school_id.slug",
   "school_id.school_name",
@@ -830,6 +845,10 @@ const applicationFields = [
   "notes",
   "application_fee",
   "application_fee_currency",
+  "tuition_annual",
+  "tuition_currency",
+  "scholarships_available",
+  "scholarship_note",
 ].join(",");
 
 const auditionBaseFields = [
@@ -839,6 +858,7 @@ const auditionBaseFields = [
   "admission_cycle",
   "review_status",
   "prescreening_deadline",
+  "prescreening_required",
   "Prescreening_required",
   "audition_required",
   "repertoire_summary",
@@ -1037,7 +1057,7 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
         },
         audition_requirements: {
           prescreening_required: requirementBoolean(
-            audition?.Prescreening_required,
+            audition?.prescreening_required ?? audition?.Prescreening_required,
           ),
           audition_required: requirementBoolean(audition?.audition_required),
           repertoire_requirements: textValue(audition?.repertoire_summary),
@@ -1071,6 +1091,8 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
                 offering.language_of_instruction,
               ),
               program_url: textValue(offering.program_url),
+              faculty_list: textValue(offering.faculty_list),
+              last_checked: dateValue(offering.last_checked),
               application_url: textValue(offering.application_url),
               audition_url: textValue(offering.audition_url),
               international_url: textValue(offering.international_url),
@@ -1116,6 +1138,12 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
                   application_fee: textValue(applicationFeeValue),
                   application_fee_currency:
                     textValue(applicationFeeCurrency),
+                  tuition_annual: textValue(application.tuition_annual),
+                  tuition_currency: textValue(application.tuition_currency),
+                  scholarships_available: textValue(
+                    application.scholarships_available,
+                  ),
+                  scholarship_note: textValue(application.scholarship_note),
                 },
               }
             : null,
@@ -1124,8 +1152,8 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
                 id: String(audition.id),
                 review_status: textValue(audition.review_status),
                 values: {
-                  Prescreening_required: textValue(
-                    audition.Prescreening_required,
+                  prescreening_required: textValue(
+                    audition.prescreening_required ?? audition.Prescreening_required,
                   ),
                   prescreening_deadline: dateValue(
                     audition.prescreening_deadline,

@@ -83,8 +83,9 @@ async function fetchUser(accessToken: string): Promise<DirectusUser> {
     { headers: { Authorization: `Bearer ${accessToken}` } },
   );
   const user = await responseData<DirectusUser>(response);
-  if (user.role?.name?.trim().toLowerCase() !== "reviewer") {
-    throw new Error("This account does not have the reviewer role");
+  const role = user.role?.name?.trim().toLowerCase();
+  if (role !== "reviewer" && role !== "administrator") {
+    throw new Error("This account does not have reviewer access");
   }
   return user;
 }

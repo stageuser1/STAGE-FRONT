@@ -197,10 +197,6 @@ function languageRequirements(
   };
 }
 
-function hasKey(values: Record<string, unknown>, key: string): boolean {
-  return Object.prototype.hasOwnProperty.call(values, key);
-}
-
 export function ProgramDetailSections({ program }: { program: Program }) {
   const offering = program.review_records?.offering ?? {
     id: program.id,
@@ -231,7 +227,6 @@ export function ProgramDetailSections({ program }: { program: Program }) {
     <ReviewerEditableCard
       collection="program_offerings"
       fields={[
-        { field: "program_name_zh", kind: "text", label: "项目中文名称" },
         {
           field: "official_program_name",
           kind: "text",
@@ -241,12 +236,6 @@ export function ProgramDetailSections({ program }: { program: Program }) {
           field: "track_or_concentration",
           kind: "text",
           label: "专业方向 / Track",
-        },
-        { field: "department", kind: "text", label: "所属院系" },
-        {
-          field: "card_summary_zh",
-          kind: "textarea",
-          label: "项目简介（中文）",
         },
       ]}
       initialStatus={offering.review_status}
@@ -335,48 +324,18 @@ export function ProgramDetailSections({ program }: { program: Program }) {
   /* --------------------------- program info --------------------------- */
 
   const programFields: EditableFieldDefinition[] = [
-    ...(degreeLevelOptions.length > 0
-      ? [
-          {
-            field: "degree_level_id",
-            kind: "select" as const,
-            label: "学位层级",
-            options: degreeLevelOptions,
-            serialize: nullableNumber,
-          },
-        ]
-      : []),
-    {
-      field: "duration_years",
-      inputMode: "decimal" as const,
-      kind: "text" as const,
-      label: "学制（年）",
-      serialize: nullableNumber,
-    },
     {
       field: "language_of_instruction",
       kind: "textarea" as const,
       label: "授课语言 / Instruction Language",
       serialize: parseJsonLike,
     },
-    { field: "program_url", kind: "text" as const, label: "项目官网", type: "url" as const },
     {
-      field: "application_url",
+      field: "last_checked",
       kind: "text" as const,
-      label: "申请链接",
-      type: "url" as const,
-    },
-    {
-      field: "audition_url",
-      kind: "text" as const,
-      label: "试音链接",
-      type: "url" as const,
-    },
-    {
-      field: "international_url",
-      kind: "text" as const,
-      label: "国际生信息链接",
-      type: "url" as const,
+      label: "Last checked",
+      type: "date" as const,
+      serialize: isoDate,
     },
   ];
 
@@ -451,45 +410,26 @@ export function ProgramDetailSections({ program }: { program: Program }) {
         },
         { field: "deadline_notes", kind: "textarea", label: "截止日期说明" },
         {
-          field: "application_fee_currency",
-          kind: "text",
-          label: "申请费币种",
-        },
-        {
-          field: "application_fee",
+          field: "tuition_annual",
           inputMode: "decimal",
           kind: "text",
-          label: "申请费",
-          serialize: nullableNumber,
-        },
-        { field: "resume_required", kind: "text", label: "简历要求" },
-        { field: "essay_required", kind: "text", label: "文书要求" },
-        {
-          field: "recommendation_letters",
-          inputMode: "numeric",
-          kind: "text",
-          label: "推荐信数量",
+          label: "Annual tuition",
           serialize: nullableNumber,
         },
         {
-          field: "transcript_requirements",
-          kind: "textarea",
-          label: "成绩单要求",
-        },
-        { field: "portfolio_required", kind: "text", label: "作品集要求" },
-        {
-          field: "required_materials",
-          kind: "textarea",
-          label: "申请材料清单",
-          serialize: parseJsonLike,
+          field: "tuition_currency",
+          kind: "select",
+          label: "Tuition currency",
+          options: ["USD", "GBP", "EUR", "CAD", "CHF", "SEK", "NOK", "DKK", "PLN", "CZK", "HUF", "JPY", "KRW", "CNY", "SGD", "HKD", "AUD", "NZD"].map((value) => ({ label: value, value })),
         },
         {
-          field: "international_applicant_notes",
-          kind: "textarea",
-          label: "国际申请人说明",
+          field: "scholarships_available",
+          kind: "select",
+          label: "Scholarships available",
+          options: ["Yes", "No", "Unknown"].map((value) => ({ label: value, value })),
         },
+        { field: "scholarship_note", kind: "textarea", label: "Scholarship note" },
         { field: "conditional_notes", kind: "textarea", label: "条件说明" },
-        { field: "notes", kind: "textarea", label: "其他说明" },
       ]}
       initialStatus={application.review_status}
       initialValues={application.values}
@@ -538,12 +478,6 @@ export function ProgramDetailSections({ program }: { program: Program }) {
       collection="application_requirements"
       fields={[
         {
-          field: "english_language_tests",
-          kind: "textarea",
-          label: "英语考试要求 / English Language Tests",
-          serialize: parseJsonLike,
-        },
-        {
           field: "toefl_minimum",
           inputMode: "decimal",
           kind: "text",
@@ -557,14 +491,6 @@ export function ProgramDetailSections({ program }: { program: Program }) {
           label: "IELTS 最低分",
           serialize: nullableNumber,
         },
-        {
-          field: "duolingo_minimum",
-          inputMode: "numeric",
-          kind: "text",
-          label: "Duolingo 最低分",
-          serialize: nullableNumber,
-        },
-        { field: "english_waiver_policy", kind: "textarea", label: "豁免政策" },
       ]}
       initialStatus={application.review_status}
       initialValues={application.values}
@@ -584,9 +510,10 @@ export function ProgramDetailSections({ program }: { program: Program }) {
       collection="audition_requirements"
       fields={[
         {
-          field: "Prescreening_required",
-          kind: "text",
+          field: "prescreening_required",
+          kind: "select",
           label: "是否需要预筛选（Yes / No / Unknown）",
+          options: ["Yes", "No", "Varies", "Unknown"].map((value) => ({ label: value, value })),
         },
         {
           field: "prescreening_deadline",
@@ -595,23 +522,13 @@ export function ProgramDetailSections({ program }: { program: Program }) {
           serialize: isoDate,
           type: "date",
         },
-        {
-          field: "video_requirements",
-          kind: "textarea",
-          label: "视频录制要求",
-        },
-        {
-          field: "file_format_requirements",
-          kind: "textarea",
-          label: "文件格式要求",
-        },
       ]}
       initialStatus={audition.review_status}
       initialValues={audition.values}
       recordId={audition.id}
       renderView={(values) => {
         const data: PrescreenViewData = {
-          required_text: orNull(values.Prescreening_required),
+          required_text: orNull(values.prescreening_required),
           deadline: orNull(values.prescreening_deadline),
           video_requirements: orNull(values.video_requirements),
           file_format_requirements: orNull(values.file_format_requirements),
@@ -641,23 +558,17 @@ export function ProgramDetailSections({ program }: { program: Program }) {
       fields={[
         {
           field: "audition_required",
-          kind: "text",
+          kind: "select",
           label: "是否需要试音（Yes / No / Unknown）",
-        },
-        { field: "audition_format", kind: "text", label: "试音形式" },
-        {
-          field: "accompaniment_requirements",
-          kind: "textarea",
-          label: "伴奏要求",
+          options: ["Yes", "No", "Varies", "Unknown"].map((value) => ({ label: value, value })),
         },
         {
-          field: "interview_or_callback_requirements",
-          kind: "textarea",
-          label: "面试或复试要求",
+          field: "audition_format",
+          kind: "select",
+          label: "试音形式",
+          options: ["Live Only", "Recorded Only", "Live or Recorded", "Regional", "Multiple Rounds", "Unknown"].map((value) => ({ label: value, value })),
         },
-        { field: "special_notes", kind: "textarea", label: "特别说明" },
         { field: "conditional_notes", kind: "textarea", label: "条件说明" },
-        { field: "notes", kind: "textarea", label: "其他说明" },
       ]}
       initialStatus={audition.review_status}
       initialValues={audition.values}
@@ -696,28 +607,10 @@ export function ProgramDetailSections({ program }: { program: Program }) {
   /* ----------------------------- repertoire --------------------------- */
 
   const repertoireFields: EditableFieldDefinition[] = [
-    ...(audition && hasKey(audition.values, "prescreen_repertoire")
-      ? [
-          {
-            field: "prescreen_repertoire",
-            kind: "textarea" as const,
-            label: "预筛选曲目（Markdown）",
-          },
-        ]
-      : []),
-    ...(audition && hasKey(audition.values, "audition_repertoire")
-      ? [
-          {
-            field: "audition_repertoire",
-            kind: "textarea" as const,
-            label: "现场试音曲目（Markdown）",
-          },
-        ]
-      : []),
     {
       field: "repertoire_summary",
       kind: "textarea" as const,
-      label: "曲目要求汇总（旧字段，未拆分内容）",
+      label: "曲目要求汇总",
     },
   ];
 
