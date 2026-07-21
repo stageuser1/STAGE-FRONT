@@ -1,0 +1,269 @@
+{
+  "schema_version": "stage_school_extraction_v4",
+  "school": {
+    "school_ref": "example_conservatory",
+    "school_name": "Example Conservatory of Music",
+    "city": "Example City",
+    "country": "United States",
+    "school_type": "Conservatory",
+    "official_website": "https://www.example-conservatory.edu"
+  },
+  "program_offerings": [
+    {
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "school_ref": "example_conservatory",
+      "field_ref": "piano",
+      "degree_level_ref": "bm",
+      "track_or_concentration": null,
+      "official_program_name": "Bachelor of Music in Piano Performance",
+      "program_url": "https://www.example-conservatory.edu/programs/piano/",
+      "application_url": "https://www.example-conservatory.edu/admissions/apply/",
+      "audition_url": "https://www.example-conservatory.edu/admissions/auditions/piano/",
+      "duration_years": 4,
+      "language_of_instruction": null,
+      "last_checked": "2026-07-20",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "example_conservatory_violin_mm_classical",
+      "school_ref": "example_conservatory",
+      "field_ref": "violin",
+      "degree_level_ref": "mm",
+      "track_or_concentration": "Classical Violin",
+      "official_program_name": "Master of Music in Violin, Classical Track",
+      "program_url": "https://www.example-conservatory.edu/programs/violin/",
+      "application_url": null,
+      "audition_url": null,
+      "duration_years": 2,
+      "language_of_instruction": null,
+      "last_checked": "2026-07-20",
+      "review_status": "Needs Review"
+    }
+  ],
+  "application_requirements": [
+    {
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "admission_cycle": "2027-2028",
+      "is_current": true,
+      "application_deadline": "2026-12-01",
+      "deadline_notes": null,
+      "tuition_annual": 58900,
+      "tuition_currency": "USD",
+      "scholarships_available": "Yes",
+      "scholarship_note": "Merit scholarships considered automatically with the audition; no separate application.",
+      "english_language_tests": ["TOEFL", "IELTS", "Duolingo"],
+      "toefl_minimum": 79,
+      "ielts_minimum": 6.5,
+      "duolingo_minimum": 110,
+      "required_materials": [
+        "Online application",
+        "Recommendation letters",
+        "Essay/Personal statement",
+        "Transcripts",
+        "Prescreen materials"
+      ],
+      "conditional_notes": null,
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "example_conservatory_violin_mm_classical",
+      "admission_cycle": "2027-2028",
+      "is_current": true,
+      "application_deadline": "2026-12-01",
+      "deadline_notes": null,
+      "tuition_annual": null,
+      "tuition_currency": null,
+      "scholarships_available": "Unknown",
+      "scholarship_note": null,
+      "english_language_tests": ["TOEFL", "IELTS"],
+      "toefl_minimum": 89,
+      "ielts_minimum": 7,
+      "duolingo_minimum": null,
+      "required_materials": [
+        "Online application",
+        "Recommendation letters",
+        "Résumé/CV",
+        "Transcripts",
+        "Prescreen materials"
+      ],
+      "conditional_notes": null,
+      "review_status": "Needs Review"
+    }
+  ],
+  "audition_requirements": [
+    {
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "admission_cycle": "2027-2028",
+      "is_current": true,
+      "prescreening_required": "Yes",
+      "prescreening_deadline": "2026-12-01",
+      "audition_required": "Yes",
+      "audition_format": "Live or Recorded",
+      "repertoire_summary": "Prescreen: two contrasting solo works, one by Bach. Live audition: a Bach prelude and fugue; a complete Classical sonata; one substantial Romantic work; one work written after 1950. All repertoire performed from memory.",
+      "repertoire_structured": {
+        "prescreen": [
+          "Two contrasting solo works, one by Bach"
+        ],
+        "audition": [
+          "A Bach prelude and fugue",
+          "A complete Classical sonata",
+          "One substantial Romantic work",
+          "One work written after 1950"
+        ]
+      },
+      "conditional_notes": null,
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "example_conservatory_violin_mm_classical",
+      "admission_cycle": "2027-2028",
+      "is_current": true,
+      "prescreening_required": "Yes",
+      "prescreening_deadline": "2026-12-01",
+      "audition_required": "Yes",
+      "audition_format": "Live Only",
+      "repertoire_summary": "Prescreen: first movement of a standard concerto and two contrasting movements of solo Bach. Audition: a complete concerto, one movement of solo Bach, one virtuosic showpiece, and orchestral excerpts announced each season; approximately 40 minutes of prepared repertoire.",
+      "repertoire_structured": null,
+      "conditional_notes": null,
+      "review_status": "Extracted"
+    }
+  ],
+  "source_records": [
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://www.example-conservatory.edu/admissions/apply/",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "Applications for fall 2027 entry are due December 1, 2026.",
+      "related_field": "application_deadline",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://www.example-conservatory.edu/admissions/apply/",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": null,
+      "related_field": "required_materials",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://www.example-conservatory.edu/admissions/tuition/",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "Undergraduate tuition for the 2027-28 academic year is $58,900.",
+      "related_field": "tuition_annual",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://www.example-conservatory.edu/admissions/international/",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "Undergraduate applicants must earn a TOEFL score of 79, IELTS 6.5, or Duolingo 110; graduate applicants require TOEFL 89 or IELTS 7.0.",
+      "related_field": "toefl_minimum",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": "example_conservatory",
+      "program_offering_ref": null,
+      "source_url": "https://www.example-conservatory.edu/admissions/financial-aid/",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "All admitted undergraduates are automatically considered for merit scholarships at their audition.",
+      "related_field": "scholarships_available",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": null,
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "source_url": "https://www.example-conservatory.edu/admissions/auditions/piano/",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "Prescreening recordings are required of all piano applicants and are due December 1.",
+      "related_field": "prescreening_required",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": null,
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "source_url": "https://www.example-conservatory.edu/admissions/auditions/piano/",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "Invited applicants perform a live audition on campus or by approved recorded submission.",
+      "related_field": "audition_required",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": null,
+      "program_offering_ref": "example_conservatory_piano_bm",
+      "source_url": "https://www.example-conservatory.edu/admissions/auditions/piano/",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "The live audition program must include a Bach prelude and fugue, a complete Classical sonata, a Romantic work, and a work written after 1950, performed from memory.",
+      "related_field": "repertoire_summary",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": null,
+      "program_offering_ref": "example_conservatory_violin_mm_classical",
+      "source_url": "https://www.example-conservatory.edu/admissions/auditions/violin/",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "Violin applicants submit prescreening recordings by December 1; live auditions are required for all finalists.",
+      "related_field": "prescreening_required",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": null,
+      "program_offering_ref": "example_conservatory_violin_mm_classical",
+      "source_url": "https://www.example-conservatory.edu/admissions/auditions/violin/",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "The audition consists of a complete concerto, solo Bach, a virtuosic showpiece, and the season's posted orchestral excerpts.",
+      "related_field": "repertoire_summary",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": null,
+      "program_offering_ref": "example_conservatory_violin_mm_classical",
+      "source_url": "https://www.example-conservatory.edu/admissions/auditions/violin/",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": "All graduate violin auditions take place in person.",
+      "related_field": "audition_required",
+      "confidence_level": "High"
+    },
+    {
+      "school_ref": null,
+      "program_offering_ref": "example_conservatory_violin_mm_classical",
+      "source_url": "https://www.example-conservatory.edu/programs/violin/",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-07-20",
+      "source_quote": null,
+      "related_field": null,
+      "confidence_level": "High"
+    }
+  ],
+  "data_quality": {
+    "overall_confidence": "High",
+    "missing_critical_fields": [
+      "example_conservatory_violin_mm_classical.tuition_annual"
+    ],
+    "needs_human_review": true,
+    "review_notes": [
+      "example_conservatory_violin_mm_classical: graduate tuition is not published on https://www.example-conservatory.edu/admissions/tuition/ (page lists undergraduate rates only); tuition_annual left null.",
+      "found, not seeded: Music Theory Pedagogy (MM) at https://www.example-conservatory.edu/programs/theory-pedagogy/"
+    ]
+  },
+  "workflow_status": {
+    "extraction_status": "complete",
+    "review_status": "unreviewed",
+    "ready_for_directus_import": false
+  }
+}

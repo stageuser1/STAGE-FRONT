@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stage.example/contracts/stage-school-extraction-v4.schema.json",
+  "title": "STAGE school extraction package (V4, reduced decision-support standard)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "school",
+    "program_offerings",
+    "application_requirements",
+    "audition_requirements",
+    "source_records",
+    "data_quality",
+    "workflow_status"
+  ],
+  "properties": {
+    "schema_version": { "const": "stage_school_extraction_v4" },
+    "school": { "$ref": "#/$defs/school" },
+    "program_offerings": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/program" }
+    },
+    "application_requirements": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/application" }
+    },
+    "audition_requirements": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/audition" }
+    },
+    "source_records": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "data_quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overall_confidence", "missing_critical_fields", "needs_human_review", "review_notes"],
+      "properties": {
+        "overall_confidence": { "enum": ["High", "Medium", "Low"] },
+        "missing_critical_fields": { "type": "array", "items": { "type": "string" } },
+        "needs_human_review": { "type": "boolean" },
+        "review_notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "workflow_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["extraction_status", "review_status", "ready_for_directus_import"],
+      "properties": {
+        "extraction_status": { "const": "complete" },
+        "review_status": { "const": "unreviewed" },
+        "ready_for_directus_import": { "const": false }
+      }
+    }
+  },
+  "$defs": {
+    "nullableString": { "type": ["string", "null"] },
+    "nullableNumber": { "type": ["number", "null"] },
+    "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "nullableDate": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "cycle": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{4}$" },
+    "ref": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "nullableRef": { "type": ["string", "null"], "pattern": "^[a-z0-9_]+$" },
+    "recordReviewStatus": { "enum": ["Extracted", "Needs Review"] },
+    "school": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["school_ref", "school_name", "city", "country", "school_type", "official_website"],
+      "properties": {
+        "school_ref": { "$ref": "#/$defs/ref" },
+        "school_name": { "type": "string", "minLength": 1 },
+        "city": { "type": "string", "minLength": 1 },
+        "country": { "type": "string", "minLength": 1 },
+        "school_type": { "enum": ["Conservatory", "University Music School", "Liberal Arts College", "Arts University"] },
+        "official_website": { "type": "string", "minLength": 1 }
+      }
+    },
+    "program": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "program_offering_ref",
+        "school_ref",
+        "field_ref",
+        "degree_level_ref",
+        "track_or_concentration",
+        "official_program_name",
+        "program_url",
+        "last_checked"
+      ],
+      "properties": {
+        "program_offering_ref": { "$ref": "#/$defs/ref" },
+        "school_ref": { "$ref": "#/$defs/ref" },
+        "field_ref": { "$ref": "#/$defs/ref" },
+        "degree_level_ref": { "enum": ["bm", "mm", "dma", "gd", "ad"] },
+        "track_or_concentration": { "$ref": "#/$defs/nullableString" },
+        "official_program_name": { "type": "string", "minLength": 1 },
+        "program_url": { "type": "string", "minLength": 1 },
+        "application_url": { "$ref": "#/$defs/nullableString" },
+        "audition_url": { "$ref": "#/$defs/nullableString" },
+        "duration_years": { "$ref": "#/$defs/nullableNumber" },
+        "language_of_instruction": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "last_checked": { "$ref": "#/$defs/date" },
+        "review_status": { "$ref": "#/$defs/recordReviewStatus" }
+      }
+    },
+    "application": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "program_offering_ref",
+        "admission_cycle",
+        "is_current",
+        "application_deadline",
+        "tuition_annual",
+        "tuition_currency",
+        "scholarships_available",
+        "english_language_tests",
+        "required_materials"
+      ],
+      "properties": {
+        "program_offering_ref": { "$ref": "#/$defs/ref" },
+        "admission_cycle": { "$ref": "#/$defs/cycle" },
+        "is_current": { "type": "boolean" },
+        "application_deadline": { "$ref": "#/$defs/nullableDate" },
+        "deadline_notes": { "$ref": "#/$defs/nullableString" },
+        "tuition_annual": { "$ref": "#/$defs/nullableNumber" },
+        "tuition_currency": {
+          "enum": [null, "USD", "GBP", "EUR", "CAD", "CHF", "SEK", "NOK", "DKK", "PLN", "CZK", "HUF", "JPY", "KRW", "CNY", "SGD", "HKD", "AUD", "NZD"]
+        },
+        "scholarships_available": { "enum": ["Yes", "No", "Unknown"] },
+        "scholarship_note": { "$ref": "#/$defs/nullableString" },
+        "english_language_tests": {
+          "type": ["array", "null"],
+          "items": { "enum": ["TOEFL", "IELTS", "Duolingo", "Cambridge", "PTE", "Other"] }
+        },
+        "toefl_minimum": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 120
+        },
+        "ielts_minimum": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 9,
+          "multipleOf": 0.5
+        },
+        "duolingo_minimum": {
+          "type": ["number", "null"],
+          "minimum": 10,
+          "maximum": 160
+        },
+        "required_materials": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 }
+        },
+        "conditional_notes": { "$ref": "#/$defs/nullableString" },
+        "review_status": { "$ref": "#/$defs/recordReviewStatus" }
+      }
+    },
+    "audition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "program_offering_ref",
+        "admission_cycle",
+        "is_current",
+        "prescreening_required",
+        "prescreening_deadline",
+        "audition_required",
+        "audition_format",
+        "repertoire_summary"
+      ],
+      "properties": {
+        "program_offering_ref": { "$ref": "#/$defs/ref" },
+        "admission_cycle": { "$ref": "#/$defs/cycle" },
+        "is_current": { "type": "boolean" },
+        "prescreening_required": { "enum": ["Yes", "No", "Varies", "Unknown"] },
+        "prescreening_deadline": { "$ref": "#/$defs/nullableDate" },
+        "audition_required": { "enum": ["Yes", "No", "Varies", "Unknown"] },
+        "audition_format": { "enum": ["Live Only", "Recorded Only", "Live or Recorded", "Regional", "Multiple Rounds", "Unknown"] },
+        "repertoire_summary": { "$ref": "#/$defs/nullableString" },
+        "repertoire_structured": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["prescreen", "audition"],
+          "properties": {
+            "prescreen": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+            "audition": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+          }
+        },
+        "conditional_notes": { "$ref": "#/$defs/nullableString" },
+        "review_status": { "$ref": "#/$defs/recordReviewStatus" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["school_ref", "program_offering_ref", "source_url", "source_type", "retrieved_date", "source_quote", "related_field", "confidence_level"],
+      "properties": {
+        "school_ref": { "$ref": "#/$defs/nullableRef" },
+        "program_offering_ref": { "$ref": "#/$defs/nullableRef" },
+        "source_url": { "type": "string", "minLength": 1 },
+        "source_type": {
+          "enum": [
+            "Official Program Page",
+            "Application Requirements Page",
+            "Audition Requirements Page",
+            "International Students Page",
+            "English Language Requirements Page",
+            "Deadline/Fee Page"
+          ]
+        },
+        "retrieved_date": { "$ref": "#/$defs/date" },
+        "source_quote": { "$ref": "#/$defs/nullableString" },
+        "related_field": {
+          "enum": [
+            null,
+            "application_deadline",
+            "tuition_annual",
+            "toefl_minimum",
+            "ielts_minimum",
+            "duolingo_minimum",
+            "english_language_tests",
+            "scholarships_available",
+            "prescreening_required",
+            "prescreening_deadline",
+            "audition_required",
+            "audition_format",
+            "repertoire_summary",
+            "required_materials",
+            "official_program_name",
+            "duration_years",
+            "language_of_instruction"
+          ]
+        },
+        "confidence_level": { "enum": ["High", "Medium", "Low"] }
+      },
+      "anyOf": [
+        { "properties": { "school_ref": { "type": "string" } } },
+        { "properties": { "program_offering_ref": { "type": "string" } } }
+      ]
+    }
+  }
+}

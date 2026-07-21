@@ -1,0 +1,114 @@
+{
+  "mode": "dry-run",
+  "schema_version": "stage_school_extraction_v4",
+  "school_ref": "manhattan_school_of_music",
+  "counts": {
+    "schools": {
+      "create": 0,
+      "update": 0,
+      "skip": 1
+    },
+    "fields": {
+      "create": 0,
+      "update": 0,
+      "skip": 0
+    },
+    "program_offerings": {
+      "create": 0,
+      "update": 0,
+      "skip": 170
+    },
+    "application_requirements": {
+      "create": 0,
+      "update": 0,
+      "skip": 170
+    },
+    "audition_requirements": {
+      "create": 0,
+      "update": 0,
+      "skip": 170
+    },
+    "source_records": {
+      "create": 0,
+      "update": 0,
+      "skip": 941
+    }
+  },
+  "conflicts": [
+    {
+      "collection": "audition_requirements",
+      "identity": "manhattan_school_of_music_violin_bm_pinchas_zukerman_performance_program:2026-2027",
+      "field": "conditional_notes",
+      "stored_value": "A recorded audition does not replace prescreening.",
+      "incoming_value": null,
+      "source_url": null,
+      "reason": "legacy human-reviewed record is protected"
+    },
+    {
+      "collection": "audition_requirements",
+      "identity": "manhattan_school_of_music_violin_bm_pinchas_zukerman_performance_program:2026-2027",
+      "field": "repertoire_summary",
+      "stored_value": "Prescreen: Two movements of an unaccompanied sonata by Bach; First movement of one listed concerto; A virtuoso concert piece at the level of Paganini, Sarasate, Vieuxtemps, Wieniawski, or Ysaÿe. Audition: First and second movements from an unaccompanied sonata by Bach; First movement of one listed concerto; A virtuoso concert piece at the level of Paganini, Sarasate, Vieuxtemps, Wieniawski, or Ysaÿe.",
+      "incoming_value": "Two movements of unaccompanied Bach, the first movement of a listed major concerto, and a virtuoso work.",
+      "source_url": "https://www.msmnyc.edu/programs/jazz-arts/audition-information/",
+      "reason": "legacy human-reviewed record is protected"
+    },
+    {
+      "collection": "audition_requirements",
+      "identity": "manhattan_school_of_music_violin_bm_pinchas_zukerman_performance_program:2026-2027",
+      "field": "review_status",
+      "stored_value": "human_checked",
+      "incoming_value": "Needs Review",
+      "source_url": null,
+      "reason": "legacy human-reviewed record is protected"
+    },
+    {
+      "collection": "program_offerings",
+      "identity": "manhattan_school_of_music_violin_bm_classical",
+      "field": "application_url",
+      "stored_value": "https://apply.msmnyc.edu/apply/",
+      "incoming_value": "https://www.msmnyc.edu/admission/apply-to-msm/",
+      "source_url": null,
+      "reason": "legacy human-reviewed record is protected"
+    },
+    {
+      "collection": "program_offerings",
+      "identity": "manhattan_school_of_music_violin_bm_classical",
+      "field": "language_of_instruction",
+      "stored_value": [],
+      "incoming_value": [
+        "English"
+      ],
+      "source_url": null,
+      "reason": "legacy human-reviewed record is protected"
+    },
+    {
+      "collection": "program_offerings",
+      "identity": "manhattan_school_of_music_violin_bm_classical",
+      "field": "last_checked",
+      "stored_value": null,
+      "incoming_value": "2026-07-21",
+      "source_url": null,
+      "reason": "legacy human-reviewed record is protected"
+    },
+    {
+      "collection": "program_offerings",
+      "identity": "manhattan_school_of_music_violin_bm_classical",
+      "field": "official_program_name",
+      "stored_value": "Classical Violin — Bachelor of Music",
+      "incoming_value": "Bachelor of Music in Classical – Violin",
+      "source_url": "https://www.msmnyc.edu/programs/jazz-arts/",
+      "reason": "legacy human-reviewed record is protected"
+    },
+    {
+      "collection": "program_offerings",
+      "identity": "manhattan_school_of_music_violin_bm_classical",
+      "field": "track_or_concentration",
+      "stored_value": "Classical Violin",
+      "incoming_value": "Classical",
+      "source_url": null,
+      "reason": "legacy human-reviewed record is protected"
+    }
+  ],
+  "journal": []
+}
