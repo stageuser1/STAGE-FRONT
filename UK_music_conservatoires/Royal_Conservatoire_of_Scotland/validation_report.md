@@ -1,0 +1,343 @@
+# programs V4 Validation Report
+
+Generated: 2026-07-21
+
+## Result
+
+**V4 schema and hard rules: PASS**  
+**Hard errors: 0**
+
+## Package counts
+
+| Record type | Count |
+|---|---:|
+| Program offerings | 98 |
+| Current application records | 98 |
+| Current audition records | 98 |
+| Source records | 585 |
+| Decision-critical null fields | 100 |
+
+## Hard-rule coverage
+
+- JSON Schema Draft 2020-12 compatibility
+- Seeded field and degree vocabularies
+- Deterministic refs and duplicate detection
+- One current application and audition record per offering
+- Prohibited/legacy fields and Directus IDs
+- Official-domain and source natural-key checks
+- Required evidence quotes for deadline, tuition, English minimums, prescreen, audition, and repertoire
+- Material-name constraints and explicit critical-null review notes
+
+## Hard failures
+
+- None
+
+## Needs attention
+
+- Degree crosswalk for STAGE review: MA and MMus map to mm; PhD and Doctor of Performing Arts map to dma; Advanced Artist Diploma maps to ad.
+- found, not seeded: BMus Traditional Music; BEd Music; Traditional Music principal studies; accordion; piano for dance; marimba; Performance and Pedagogy as a separately named cross-disciplinary Masters route.
+- royal_conservatoire_of_scotland_bass_trombone_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_bass_trombone_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_bass_trombone_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_bass_trombone_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_bass_trombone_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_bass_trombone_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_bass_trombone_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_bass_trombone_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_bassoon_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_bassoon_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_bassoon_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_bassoon_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_bassoon_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_bassoon_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_bassoon_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_bassoon_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_cello_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_cello_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_cello_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_cello_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_cello_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_cello_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_cello_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_cello_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_clarinet_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_clarinet_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_clarinet_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_clarinet_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_clarinet_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_clarinet_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_clarinet_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_clarinet_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_collaborative_piano_mm_ma_repetiteurship: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-repetiteurship/; tuition_annual left null.
+- royal_conservatoire_of_scotland_collaborative_piano_mm_ma_repetiteurship: tuition_annual is null
+- royal_conservatoire_of_scotland_collaborative_piano_mm_mmus_repetiteurship: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-repetiteurship/; tuition_annual left null.
+- royal_conservatoire_of_scotland_collaborative_piano_mm_mmus_repetiteurship: tuition_annual is null
+- royal_conservatoire_of_scotland_composition_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-composition/; tuition_annual left null.
+- royal_conservatoire_of_scotland_composition_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_composition_mm_ma_composition: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-composition/; tuition_annual left null.
+- royal_conservatoire_of_scotland_composition_mm_ma_composition: tuition_annual is null
+- royal_conservatoire_of_scotland_composition_mm_mmus_composition: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-composition/; tuition_annual left null.
+- royal_conservatoire_of_scotland_composition_mm_mmus_composition: tuition_annual is null
+- royal_conservatoire_of_scotland_contemporary_musical_arts_dma_doctor_of_performing_arts: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/doctor-of-performing-arts/; tuition_annual left null.
+- royal_conservatoire_of_scotland_contemporary_musical_arts_dma_doctor_of_performing_arts: application_deadline is null
+- royal_conservatoire_of_scotland_contemporary_musical_arts_dma_doctor_of_performing_arts: current 2027-entry application deadline was not verified on https://www.rcs.ac.uk/courses/doctor-of-performing-arts/; application_deadline left null.
+- royal_conservatoire_of_scotland_contemporary_musical_arts_dma_doctor_of_performing_arts: tuition_annual is null
+- royal_conservatoire_of_scotland_double_bass_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_double_bass_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_double_bass_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_double_bass_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_double_bass_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_double_bass_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_double_bass_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_double_bass_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_flute_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_flute_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_flute_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_flute_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_flute_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_flute_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_flute_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_flute_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_guitar_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_guitar_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_guitar_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_guitar_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_guitar_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_guitar_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_guitar_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_guitar_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_harp_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_harp_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_harp_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_harp_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_harp_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_harp_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_harp_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_harp_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_harpsichord_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_harpsichord_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_harpsichord_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_harpsichord_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_harpsichord_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_harpsichord_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_harpsichord_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_harpsichord_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_horn_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_horn_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_horn_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_horn_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_horn_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_horn_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_horn_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_horn_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_jazz_performance_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_jazz_performance_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_jazz_performance_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-jazz/; tuition_annual left null.
+- royal_conservatoire_of_scotland_jazz_performance_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_musicology_dma_phd: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/phd-mphil/; tuition_annual left null.
+- royal_conservatoire_of_scotland_musicology_dma_phd: application_deadline is null
+- royal_conservatoire_of_scotland_musicology_dma_phd: current 2027-entry application deadline was not verified on https://www.rcs.ac.uk/courses/phd-mphil/; application_deadline left null.
+- royal_conservatoire_of_scotland_musicology_dma_phd: tuition_annual is null
+- royal_conservatoire_of_scotland_musicology_mm_ma_performance_and_musicology: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance-musicology/; tuition_annual left null.
+- royal_conservatoire_of_scotland_musicology_mm_ma_performance_and_musicology: tuition_annual is null
+- royal_conservatoire_of_scotland_musicology_mm_mmus_performance_and_musicology: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance-musicology/; tuition_annual left null.
+- royal_conservatoire_of_scotland_musicology_mm_mmus_performance_and_musicology: tuition_annual is null
+- royal_conservatoire_of_scotland_oboe_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_oboe_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_oboe_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_oboe_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_oboe_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_oboe_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_oboe_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_oboe_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_opera_studies_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma-opera/; tuition_annual left null.
+- royal_conservatoire_of_scotland_opera_studies_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_orchestral_conducting_mm_ma_conducting: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-conducting/; tuition_annual left null.
+- royal_conservatoire_of_scotland_orchestral_conducting_mm_ma_conducting: tuition_annual is null
+- royal_conservatoire_of_scotland_orchestral_conducting_mm_mmus_conducting: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-conducting/; tuition_annual left null.
+- royal_conservatoire_of_scotland_orchestral_conducting_mm_mmus_conducting: tuition_annual is null
+- royal_conservatoire_of_scotland_organ_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_organ_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_organ_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_organ_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_organ_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_organ_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_organ_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_organ_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_percussion_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_percussion_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_percussion_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_percussion_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_percussion_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_percussion_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_percussion_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_percussion_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_piano_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_piano_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_piano_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_piano_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_piano_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_piano_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_piano_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_piano_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_saxophone_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_saxophone_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_saxophone_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_saxophone_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_saxophone_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_saxophone_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_saxophone_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_saxophone_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_tenor_trombone_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_tenor_trombone_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_tenor_trombone_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_tenor_trombone_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_tenor_trombone_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_tenor_trombone_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_tenor_trombone_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_tenor_trombone_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_trumpet_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_trumpet_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_trumpet_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_trumpet_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_trumpet_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_trumpet_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_trumpet_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_trumpet_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_tuba_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_tuba_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_tuba_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_tuba_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_tuba_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_tuba_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_tuba_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_tuba_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_viola_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_viola_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_viola_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_viola_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_viola_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_viola_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_viola_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_viola_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_violin_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_violin_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_violin_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_violin_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_violin_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_violin_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_violin_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_violin_mm_mmus_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_voice_ad: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/artist-diploma/; tuition_annual left null.
+- royal_conservatoire_of_scotland_voice_ad: tuition_annual is null
+- royal_conservatoire_of_scotland_voice_bm: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/bmus-hons-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_voice_bm: tuition_annual is null
+- royal_conservatoire_of_scotland_voice_mm_ma_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_voice_mm_ma_performance: tuition_annual is null
+- royal_conservatoire_of_scotland_voice_mm_mmus_performance: 2027-28 tuition was not published on https://www.rcs.ac.uk/courses/mmus-ma-performance/; tuition_annual left null.
+- royal_conservatoire_of_scotland_voice_mm_mmus_performance: tuition_annual is null
+
+## Warnings
+
+- royal_conservatoire_of_scotland_bass_trombone_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_bass_trombone_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_bass_trombone_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_bass_trombone_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_bassoon_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_bassoon_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_bassoon_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_bassoon_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_cello_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_cello_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_cello_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_cello_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_clarinet_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_clarinet_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_clarinet_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_clarinet_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_collaborative_piano_mm_ma_repetiteurship: language_of_instruction is null
+- royal_conservatoire_of_scotland_collaborative_piano_mm_mmus_repetiteurship: language_of_instruction is null
+- royal_conservatoire_of_scotland_composition_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_composition_mm_ma_composition: language_of_instruction is null
+- royal_conservatoire_of_scotland_composition_mm_mmus_composition: language_of_instruction is null
+- royal_conservatoire_of_scotland_contemporary_musical_arts_dma_doctor_of_performing_arts: language_of_instruction is null
+- royal_conservatoire_of_scotland_double_bass_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_double_bass_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_double_bass_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_double_bass_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_flute_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_flute_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_flute_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_flute_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_guitar_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_guitar_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_guitar_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_guitar_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_harp_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_harp_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_harp_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_harp_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_harpsichord_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_harpsichord_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_harpsichord_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_harpsichord_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_horn_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_horn_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_horn_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_horn_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_jazz_performance_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_jazz_performance_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_musicology_dma_phd: language_of_instruction is null
+- royal_conservatoire_of_scotland_musicology_mm_ma_performance_and_musicology: language_of_instruction is null
+- royal_conservatoire_of_scotland_musicology_mm_mmus_performance_and_musicology: language_of_instruction is null
+- royal_conservatoire_of_scotland_oboe_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_oboe_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_oboe_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_oboe_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_opera_studies_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_orchestral_conducting_mm_ma_conducting: language_of_instruction is null
+- royal_conservatoire_of_scotland_orchestral_conducting_mm_mmus_conducting: language_of_instruction is null
+- royal_conservatoire_of_scotland_organ_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_organ_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_organ_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_organ_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_percussion_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_percussion_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_percussion_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_percussion_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_piano_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_piano_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_piano_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_piano_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_saxophone_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_saxophone_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_saxophone_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_saxophone_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_tenor_trombone_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_tenor_trombone_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_tenor_trombone_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_tenor_trombone_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_trumpet_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_trumpet_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_trumpet_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_trumpet_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_tuba_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_tuba_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_tuba_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_tuba_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_viola_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_viola_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_viola_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_viola_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_violin_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_violin_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_violin_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_violin_mm_mmus_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_voice_ad: language_of_instruction is null
+- royal_conservatoire_of_scotland_voice_bm: language_of_instruction is null
+- royal_conservatoire_of_scotland_voice_mm_ma_performance: language_of_instruction is null
+- royal_conservatoire_of_scotland_voice_mm_mmus_performance: language_of_instruction is null
+
+## Final assessment
+
+The package is schema-valid and mechanically complete for all V4-representable seeded-field offerings. It remains intentionally unreviewed and not ready for Directus import; named needs-attention items require the independent review pass.

@@ -1,0 +1,417 @@
+# programs V4 Validation Report
+
+Generated: 2026-07-21
+
+## Result
+
+**V4 schema and hard rules: PASS**  
+**Hard errors: 0**
+
+## Package counts
+
+| Record type | Count |
+|---|---:|
+| Program offerings | 123 |
+| Current application records | 123 |
+| Current audition records | 123 |
+| Source records | 737 |
+| Decision-critical null fields | 124 |
+
+## Hard-rule coverage
+
+- JSON Schema Draft 2020-12 compatibility
+- Seeded field and degree vocabularies
+- Deterministic refs and duplicate detection
+- One current application and audition record per offering
+- Prohibited/legacy fields and Directus IDs
+- Official-domain and source natural-key checks
+- Required evidence quotes for deadline, tuition, English minimums, prescreen, audition, and repertoire
+- Material-name constraints and explicit critical-null review notes
+
+## Hard failures
+
+- None
+
+## Needs attention
+
+- Degree crosswalk for STAGE review: MPerf maps to mm; PhD maps to dma; Advanced Postgraduate Diploma maps to gd; International Artist Diploma maps to ad; BA Music Education is represented under bm because bm is the only seeded bachelor-level degree ref.
+- found, not seeded: recorder; cornet; tenor horn; baritone horn; marimba; singer-songwriter; music production; GRNCM/MusB joint award; MEd; PGDip/PGCert Education; String Leadership.
+- royal_northern_college_of_music_bass_trombone_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bass_trombone_ad: tuition_annual is null
+- royal_northern_college_of_music_bass_trombone_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bass_trombone_bm: tuition_annual is null
+- royal_northern_college_of_music_bass_trombone_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bass_trombone_gd: tuition_annual is null
+- royal_northern_college_of_music_bass_trombone_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bass_trombone_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_bass_trombone_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bass_trombone_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_bassoon_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bassoon_ad: tuition_annual is null
+- royal_northern_college_of_music_bassoon_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bassoon_bm: tuition_annual is null
+- royal_northern_college_of_music_bassoon_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bassoon_gd: tuition_annual is null
+- royal_northern_college_of_music_bassoon_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bassoon_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_bassoon_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_bassoon_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_cello_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_cello_ad: tuition_annual is null
+- royal_northern_college_of_music_cello_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_cello_bm: tuition_annual is null
+- royal_northern_college_of_music_cello_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_cello_gd: tuition_annual is null
+- royal_northern_college_of_music_cello_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_cello_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_cello_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_cello_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_clarinet_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_clarinet_ad: tuition_annual is null
+- royal_northern_college_of_music_clarinet_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_clarinet_bm: tuition_annual is null
+- royal_northern_college_of_music_clarinet_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_clarinet_gd: tuition_annual is null
+- royal_northern_college_of_music_clarinet_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_clarinet_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_clarinet_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_clarinet_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_composition_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_composition_ad: tuition_annual is null
+- royal_northern_college_of_music_composition_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_composition_bm: tuition_annual is null
+- royal_northern_college_of_music_composition_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_composition_gd: tuition_annual is null
+- royal_northern_college_of_music_composition_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_composition_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_composition_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_composition_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_contemporary_musical_arts_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_contemporary_musical_arts_ad: tuition_annual is null
+- royal_northern_college_of_music_contemporary_musical_arts_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_contemporary_musical_arts_bm: tuition_annual is null
+- royal_northern_college_of_music_contemporary_musical_arts_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_contemporary_musical_arts_gd: tuition_annual is null
+- royal_northern_college_of_music_contemporary_musical_arts_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_contemporary_musical_arts_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_contemporary_musical_arts_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_contemporary_musical_arts_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_double_bass_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_double_bass_ad: tuition_annual is null
+- royal_northern_college_of_music_double_bass_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_double_bass_bm: tuition_annual is null
+- royal_northern_college_of_music_double_bass_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_double_bass_gd: tuition_annual is null
+- royal_northern_college_of_music_double_bass_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_double_bass_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_double_bass_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_double_bass_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_euphonium_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_euphonium_ad: tuition_annual is null
+- royal_northern_college_of_music_euphonium_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_euphonium_bm: tuition_annual is null
+- royal_northern_college_of_music_euphonium_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_euphonium_gd: tuition_annual is null
+- royal_northern_college_of_music_euphonium_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_euphonium_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_euphonium_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_euphonium_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_flute_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_flute_ad: tuition_annual is null
+- royal_northern_college_of_music_flute_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_flute_bm: tuition_annual is null
+- royal_northern_college_of_music_flute_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_flute_gd: tuition_annual is null
+- royal_northern_college_of_music_flute_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_flute_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_flute_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_flute_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_guitar_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_guitar_ad: tuition_annual is null
+- royal_northern_college_of_music_guitar_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_guitar_bm: tuition_annual is null
+- royal_northern_college_of_music_guitar_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_guitar_gd: tuition_annual is null
+- royal_northern_college_of_music_guitar_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_guitar_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_guitar_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_guitar_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_harp_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harp_ad: tuition_annual is null
+- royal_northern_college_of_music_harp_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harp_bm: tuition_annual is null
+- royal_northern_college_of_music_harp_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harp_gd: tuition_annual is null
+- royal_northern_college_of_music_harp_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harp_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_harp_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harp_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_harpsichord_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harpsichord_ad: tuition_annual is null
+- royal_northern_college_of_music_harpsichord_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harpsichord_bm: tuition_annual is null
+- royal_northern_college_of_music_harpsichord_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harpsichord_gd: tuition_annual is null
+- royal_northern_college_of_music_harpsichord_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harpsichord_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_harpsichord_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_harpsichord_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_horn_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_horn_ad: tuition_annual is null
+- royal_northern_college_of_music_horn_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_horn_bm: tuition_annual is null
+- royal_northern_college_of_music_horn_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_horn_gd: tuition_annual is null
+- royal_northern_college_of_music_horn_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_horn_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_horn_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_horn_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_music_education_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_music_education_bm: non-recommended material name 'Written response'
+- royal_northern_college_of_music_music_education_bm: tuition_annual is null
+- royal_northern_college_of_music_musicology_dma_phd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_musicology_dma_phd: application_deadline is null
+- royal_northern_college_of_music_musicology_dma_phd: current 2027-entry application deadline was not verified on https://www.rncm.ac.uk/research/research-degrees/; application_deadline left null.
+- royal_northern_college_of_music_musicology_dma_phd: tuition_annual is null
+- royal_northern_college_of_music_oboe_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_oboe_ad: tuition_annual is null
+- royal_northern_college_of_music_oboe_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_oboe_bm: tuition_annual is null
+- royal_northern_college_of_music_oboe_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_oboe_gd: tuition_annual is null
+- royal_northern_college_of_music_oboe_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_oboe_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_oboe_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_oboe_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_orchestral_conducting_mm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_orchestral_conducting_mm: tuition_annual is null
+- royal_northern_college_of_music_organ_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_organ_ad: tuition_annual is null
+- royal_northern_college_of_music_organ_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_organ_bm: tuition_annual is null
+- royal_northern_college_of_music_organ_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_organ_gd: tuition_annual is null
+- royal_northern_college_of_music_organ_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_organ_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_organ_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_organ_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_percussion_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_percussion_ad: tuition_annual is null
+- royal_northern_college_of_music_percussion_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_percussion_bm: tuition_annual is null
+- royal_northern_college_of_music_percussion_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_percussion_gd: tuition_annual is null
+- royal_northern_college_of_music_percussion_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_percussion_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_percussion_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_percussion_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_piano_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_piano_ad: tuition_annual is null
+- royal_northern_college_of_music_piano_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_piano_bm: tuition_annual is null
+- royal_northern_college_of_music_piano_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_piano_gd: tuition_annual is null
+- royal_northern_college_of_music_piano_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_piano_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_piano_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_piano_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_saxophone_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_saxophone_ad: tuition_annual is null
+- royal_northern_college_of_music_saxophone_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_saxophone_bm: tuition_annual is null
+- royal_northern_college_of_music_saxophone_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_saxophone_gd: tuition_annual is null
+- royal_northern_college_of_music_saxophone_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_saxophone_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_saxophone_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_saxophone_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_tenor_trombone_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tenor_trombone_ad: tuition_annual is null
+- royal_northern_college_of_music_tenor_trombone_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tenor_trombone_bm: tuition_annual is null
+- royal_northern_college_of_music_tenor_trombone_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tenor_trombone_gd: tuition_annual is null
+- royal_northern_college_of_music_tenor_trombone_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tenor_trombone_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_tenor_trombone_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tenor_trombone_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_trumpet_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_trumpet_ad: tuition_annual is null
+- royal_northern_college_of_music_trumpet_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_trumpet_bm: tuition_annual is null
+- royal_northern_college_of_music_trumpet_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_trumpet_gd: tuition_annual is null
+- royal_northern_college_of_music_trumpet_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_trumpet_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_trumpet_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_trumpet_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_tuba_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tuba_ad: tuition_annual is null
+- royal_northern_college_of_music_tuba_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tuba_bm: tuition_annual is null
+- royal_northern_college_of_music_tuba_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tuba_gd: tuition_annual is null
+- royal_northern_college_of_music_tuba_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tuba_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_tuba_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_tuba_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_viola_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_viola_ad: tuition_annual is null
+- royal_northern_college_of_music_viola_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_viola_bm: tuition_annual is null
+- royal_northern_college_of_music_viola_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_viola_gd: tuition_annual is null
+- royal_northern_college_of_music_viola_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_viola_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_viola_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_viola_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_violin_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_violin_ad: tuition_annual is null
+- royal_northern_college_of_music_violin_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_violin_bm: tuition_annual is null
+- royal_northern_college_of_music_violin_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_violin_gd: tuition_annual is null
+- royal_northern_college_of_music_violin_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_violin_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_violin_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_violin_mm_master_of_performance: tuition_annual is null
+- royal_northern_college_of_music_voice_ad: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_voice_ad: tuition_annual is null
+- royal_northern_college_of_music_voice_bm: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_voice_bm: tuition_annual is null
+- royal_northern_college_of_music_voice_gd: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_voice_gd: tuition_annual is null
+- royal_northern_college_of_music_voice_mm_master_of_music: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_voice_mm_master_of_music: tuition_annual is null
+- royal_northern_college_of_music_voice_mm_master_of_performance: 2027-28 tuition was not published on https://www.rncm.ac.uk/study-here/make-an-application/fees/tuition-fees/; tuition_annual left null.
+- royal_northern_college_of_music_voice_mm_master_of_performance: tuition_annual is null
+
+## Warnings
+
+- royal_northern_college_of_music_bass_trombone_ad: language_of_instruction is null
+- royal_northern_college_of_music_bass_trombone_bm: language_of_instruction is null
+- royal_northern_college_of_music_bass_trombone_gd: language_of_instruction is null
+- royal_northern_college_of_music_bass_trombone_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_bass_trombone_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_bassoon_ad: language_of_instruction is null
+- royal_northern_college_of_music_bassoon_bm: language_of_instruction is null
+- royal_northern_college_of_music_bassoon_gd: language_of_instruction is null
+- royal_northern_college_of_music_bassoon_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_bassoon_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_cello_ad: language_of_instruction is null
+- royal_northern_college_of_music_cello_bm: language_of_instruction is null
+- royal_northern_college_of_music_cello_gd: language_of_instruction is null
+- royal_northern_college_of_music_cello_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_cello_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_clarinet_ad: language_of_instruction is null
+- royal_northern_college_of_music_clarinet_bm: language_of_instruction is null
+- royal_northern_college_of_music_clarinet_gd: language_of_instruction is null
+- royal_northern_college_of_music_clarinet_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_clarinet_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_composition_ad: language_of_instruction is null
+- royal_northern_college_of_music_composition_bm: language_of_instruction is null
+- royal_northern_college_of_music_composition_gd: language_of_instruction is null
+- royal_northern_college_of_music_composition_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_composition_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_contemporary_musical_arts_ad: language_of_instruction is null
+- royal_northern_college_of_music_contemporary_musical_arts_bm: language_of_instruction is null
+- royal_northern_college_of_music_contemporary_musical_arts_gd: language_of_instruction is null
+- royal_northern_college_of_music_contemporary_musical_arts_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_contemporary_musical_arts_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_double_bass_ad: language_of_instruction is null
+- royal_northern_college_of_music_double_bass_bm: language_of_instruction is null
+- royal_northern_college_of_music_double_bass_gd: language_of_instruction is null
+- royal_northern_college_of_music_double_bass_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_double_bass_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_euphonium_ad: language_of_instruction is null
+- royal_northern_college_of_music_euphonium_bm: language_of_instruction is null
+- royal_northern_college_of_music_euphonium_gd: language_of_instruction is null
+- royal_northern_college_of_music_euphonium_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_euphonium_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_flute_ad: language_of_instruction is null
+- royal_northern_college_of_music_flute_bm: language_of_instruction is null
+- royal_northern_college_of_music_flute_gd: language_of_instruction is null
+- royal_northern_college_of_music_flute_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_flute_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_guitar_ad: language_of_instruction is null
+- royal_northern_college_of_music_guitar_bm: language_of_instruction is null
+- royal_northern_college_of_music_guitar_gd: language_of_instruction is null
+- royal_northern_college_of_music_guitar_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_guitar_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_harp_ad: language_of_instruction is null
+- royal_northern_college_of_music_harp_bm: language_of_instruction is null
+- royal_northern_college_of_music_harp_gd: language_of_instruction is null
+- royal_northern_college_of_music_harp_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_harp_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_harpsichord_ad: language_of_instruction is null
+- royal_northern_college_of_music_harpsichord_bm: language_of_instruction is null
+- royal_northern_college_of_music_harpsichord_gd: language_of_instruction is null
+- royal_northern_college_of_music_harpsichord_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_harpsichord_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_horn_ad: language_of_instruction is null
+- royal_northern_college_of_music_horn_bm: language_of_instruction is null
+- royal_northern_college_of_music_horn_gd: language_of_instruction is null
+- royal_northern_college_of_music_horn_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_horn_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_music_education_bm: language_of_instruction is null
+- royal_northern_college_of_music_musicology_dma_phd: language_of_instruction is null
+- royal_northern_college_of_music_oboe_ad: language_of_instruction is null
+- royal_northern_college_of_music_oboe_bm: language_of_instruction is null
+- royal_northern_college_of_music_oboe_gd: language_of_instruction is null
+- royal_northern_college_of_music_oboe_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_oboe_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_orchestral_conducting_mm: language_of_instruction is null
+- royal_northern_college_of_music_organ_ad: language_of_instruction is null
+- royal_northern_college_of_music_organ_bm: language_of_instruction is null
+- royal_northern_college_of_music_organ_gd: language_of_instruction is null
+- royal_northern_college_of_music_organ_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_organ_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_percussion_ad: language_of_instruction is null
+- royal_northern_college_of_music_percussion_bm: language_of_instruction is null
+- royal_northern_college_of_music_percussion_gd: language_of_instruction is null
+- royal_northern_college_of_music_percussion_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_percussion_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_piano_ad: language_of_instruction is null
+- royal_northern_college_of_music_piano_bm: language_of_instruction is null
+- royal_northern_college_of_music_piano_gd: language_of_instruction is null
+- royal_northern_college_of_music_piano_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_piano_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_saxophone_ad: language_of_instruction is null
+- royal_northern_college_of_music_saxophone_bm: language_of_instruction is null
+- royal_northern_college_of_music_saxophone_gd: language_of_instruction is null
+- royal_northern_college_of_music_saxophone_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_saxophone_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_tenor_trombone_ad: language_of_instruction is null
+- royal_northern_college_of_music_tenor_trombone_bm: language_of_instruction is null
+- royal_northern_college_of_music_tenor_trombone_gd: language_of_instruction is null
+- royal_northern_college_of_music_tenor_trombone_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_tenor_trombone_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_trumpet_ad: language_of_instruction is null
+- royal_northern_college_of_music_trumpet_bm: language_of_instruction is null
+- royal_northern_college_of_music_trumpet_gd: language_of_instruction is null
+- royal_northern_college_of_music_trumpet_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_trumpet_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_tuba_ad: language_of_instruction is null
+- royal_northern_college_of_music_tuba_bm: language_of_instruction is null
+- royal_northern_college_of_music_tuba_gd: language_of_instruction is null
+- royal_northern_college_of_music_tuba_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_tuba_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_viola_ad: language_of_instruction is null
+- royal_northern_college_of_music_viola_bm: language_of_instruction is null
+- royal_northern_college_of_music_viola_gd: language_of_instruction is null
+- royal_northern_college_of_music_viola_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_viola_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_violin_ad: language_of_instruction is null
+- royal_northern_college_of_music_violin_bm: language_of_instruction is null
+- royal_northern_college_of_music_violin_gd: language_of_instruction is null
+- royal_northern_college_of_music_violin_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_violin_mm_master_of_performance: language_of_instruction is null
+- royal_northern_college_of_music_voice_ad: language_of_instruction is null
+- royal_northern_college_of_music_voice_bm: language_of_instruction is null
+- royal_northern_college_of_music_voice_gd: language_of_instruction is null
+- royal_northern_college_of_music_voice_mm_master_of_music: language_of_instruction is null
+- royal_northern_college_of_music_voice_mm_master_of_performance: language_of_instruction is null
+
+## Final assessment
+
+The package is schema-valid and mechanically complete for all V4-representable seeded-field offerings. It remains intentionally unreviewed and not ready for Directus import; named needs-attention items require the independent review pass.

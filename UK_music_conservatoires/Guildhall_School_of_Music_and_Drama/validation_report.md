@@ -1,0 +1,145 @@
+# programs V4 Validation Report
+
+Generated: 2026-07-21
+
+## Result
+
+**V4 schema and hard rules: PASS**  
+**Hard errors: 0**
+
+## Package counts
+
+| Record type | Count |
+|---|---:|
+| Program offerings | 96 |
+| Current application records | 96 |
+| Current audition records | 96 |
+| Source records | 766 |
+| Decision-critical null fields | 2 |
+
+## Hard-rule coverage
+
+- JSON Schema Draft 2020-12 compatibility
+- Seeded field and degree vocabularies
+- Deterministic refs and duplicate detection
+- One current application and audition record per offering
+- Prohibited/legacy fields and Directus IDs
+- Official-domain and source natural-key checks
+- Required evidence quotes for deadline, tuition, English minimums, prescreen, audition, and repertoire
+- Material-name constraints and explicit critical-null review notes
+
+## Hard failures
+
+- None
+
+## Needs attention
+
+- Degree crosswalk for STAGE review: MPerf and MComp map to mm; MPhil/PhD and DMus map to dma; Advanced Artist Diploma maps to ad.
+- found, not seeded: MA Music Therapy; MA Opera Making and Writing; Advanced Certificate; recorder; lute; viols; repetiteur; orchestral artistry as a separately named pathway.
+- guildhall_school_of_music_and_drama_musicology_dma_phd: 2027-28 tuition was not published on https://www.gsmd.ac.uk/study-with-guildhall/fee-schedule-202728; tuition_annual left null.
+- guildhall_school_of_music_and_drama_musicology_dma_phd: application_deadline is null
+- guildhall_school_of_music_and_drama_musicology_dma_phd: current 2027-entry application deadline was not verified on https://www.gsmd.ac.uk/study-with-guildhall/postgraduate-research; application_deadline left null.
+- guildhall_school_of_music_and_drama_musicology_dma_phd: tuition_annual is null
+
+## Warnings
+
+- guildhall_school_of_music_and_drama_bass_trombone_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_bass_trombone_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_bass_trombone_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_bass_trombone_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_bassoon_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_bassoon_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_bassoon_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_bassoon_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_cello_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_cello_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_cello_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_cello_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_clarinet_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_clarinet_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_clarinet_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_clarinet_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_collaborative_piano_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_collaborative_piano_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_composition_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_composition_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_composition_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_double_bass_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_double_bass_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_double_bass_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_double_bass_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_flute_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_flute_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_flute_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_flute_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_guitar_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_guitar_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_guitar_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_guitar_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_harp_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_harp_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_harp_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_harp_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_harpsichord_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_harpsichord_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_harpsichord_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_harpsichord_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_horn_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_horn_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_horn_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_horn_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_jazz_performance_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_jazz_performance_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_jazz_performance_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_music_creation_technology_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_musicology_dma_phd: language_of_instruction is null
+- guildhall_school_of_music_and_drama_oboe_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_oboe_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_oboe_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_oboe_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_opera_studies_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_opera_studies_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_organ_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_organ_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_organ_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_organ_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_percussion_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_percussion_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_percussion_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_percussion_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_piano_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_piano_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_piano_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_piano_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_saxophone_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_saxophone_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_saxophone_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_saxophone_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_tenor_trombone_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_tenor_trombone_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_tenor_trombone_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_tenor_trombone_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_trumpet_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_trumpet_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_trumpet_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_trumpet_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_tuba_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_tuba_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_tuba_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_tuba_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_viola_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_viola_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_viola_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_viola_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_violin_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_violin_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_violin_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_violin_mm_master_of_performance: language_of_instruction is null
+- guildhall_school_of_music_and_drama_voice_ad: language_of_instruction is null
+- guildhall_school_of_music_and_drama_voice_bm: language_of_instruction is null
+- guildhall_school_of_music_and_drama_voice_mm_master_of_music: language_of_instruction is null
+- guildhall_school_of_music_and_drama_voice_mm_master_of_performance: language_of_instruction is null
+
+## Final assessment
+
+The package is schema-valid and mechanically complete for all V4-representable seeded-field offerings. It remains intentionally unreviewed and not ready for Directus import; named needs-attention items require the independent review pass.

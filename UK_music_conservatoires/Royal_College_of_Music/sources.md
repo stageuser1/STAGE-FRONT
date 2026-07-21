@@ -1,0 +1,27 @@
+# Royal College of Music — official sources
+
+Retrieved: 2026-07-21
+
+- [Application Requirements Page](https://www.rcm.ac.uk/apply/)
+- [Application Requirements Page](https://www.rcm.ac.uk/apply/feesandfunding/scholarships/)
+- [Audition Requirements Page](https://www.rcm.ac.uk/brass/auditionrequirements/)
+- [Audition Requirements Page](https://www.rcm.ac.uk/composition/auditionrequirements/)
+- [Audition Requirements Page](https://www.rcm.ac.uk/conducting/auditionrequirements/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/artdipcomposition/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/artdipconducting/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/artdipopera/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/artdipperformance/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/graddip/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/mcomp/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/mmuscomposition/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/mmusperformance/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/postgraduate/mperf/)
+- [Audition Requirements Page](https://www.rcm.ac.uk/courses/researchdegrees/phd/)
+- [Official Program Page](https://www.rcm.ac.uk/courses/undergraduate/bmus/)
+- [Audition Requirements Page](https://www.rcm.ac.uk/keyboard/auditionrequirements/)
+- [English Language Requirements Page](https://www.rcm.ac.uk/media/RCM%20List%20of%20approved%20English%20tests%20and%20scores%202026%20onwards%20(minor%20update%20June%202026).pdf)
+- [Deadline/Fee Page](https://www.rcm.ac.uk/media/Tuition%20Fees%20and%20Other%20Charges%202027-28.pdf)
+- [Audition Requirements Page](https://www.rcm.ac.uk/percussion/auditionrequirements/)
+- [Audition Requirements Page](https://www.rcm.ac.uk/strings/auditionrequirements/)
+- [Audition Requirements Page](https://www.rcm.ac.uk/vocal/auditionrequirements/)
+- [Audition Requirements Page](https://www.rcm.ac.uk/woodwind/auditionrequirements/)
