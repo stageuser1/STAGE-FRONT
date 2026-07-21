@@ -1,15 +1,271 @@
 [
-  { "slug": "cello", "name": "Cello", "aliases": [] },
-  { "slug": "composition", "name": "Composition", "aliases": [] },
-  { "slug": "juilliard_music_area_composition", "name": "Composition", "aliases": ["composition"] },
-  { "slug": "juilliard_music_area_historical_performance", "name": "Historical Performance", "aliases": ["historical_performance"] },
-  { "slug": "juilliard_music_area_instruments", "name": "Instruments", "aliases": ["instruments"] },
-  { "slug": "juilliard_music_area_jazz_studies", "name": "Jazz Studies", "aliases": ["jazz_studies"] },
-  { "slug": "juilliard_music_area_orchestral_conducting", "name": "Orchestral Conducting", "aliases": ["orchestral_conducting"] },
-  { "slug": "juilliard_music_area_string_quartet_studies", "name": "String Quartet Studies", "aliases": ["string_quartet_studies"] },
-  { "slug": "juilliard_music_area_vocal_arts", "name": "Vocal Arts", "aliases": ["vocal_arts"] },
-  { "slug": "opera_studies", "name": "Opera Studies", "aliases": [] },
-  { "slug": "piano", "name": "Piano", "aliases": [] },
-  { "slug": "violin", "name": "Violin", "aliases": [] },
-  { "slug": "voice", "name": "Voice", "aliases": [] }
+  {
+    "slug": "cello",
+    "name": "Cello",
+    "aliases": []
+  },
+  {
+    "slug": "composition",
+    "name": "Composition",
+    "aliases": []
+  },
+  {
+    "slug": "juilliard_music_area_composition",
+    "name": "Composition",
+    "aliases": [
+      "composition"
+    ]
+  },
+  {
+    "slug": "juilliard_music_area_historical_performance",
+    "name": "Historical Performance",
+    "aliases": [
+      "historical_performance"
+    ]
+  },
+  {
+    "slug": "juilliard_music_area_instruments",
+    "name": "Instruments",
+    "aliases": [
+      "instruments"
+    ]
+  },
+  {
+    "slug": "juilliard_music_area_jazz_studies",
+    "name": "Jazz Studies",
+    "aliases": [
+      "jazz_studies"
+    ]
+  },
+  {
+    "slug": "juilliard_music_area_orchestral_conducting",
+    "name": "Orchestral Conducting",
+    "aliases": [
+      "orchestral_conducting"
+    ]
+  },
+  {
+    "slug": "juilliard_music_area_string_quartet_studies",
+    "name": "String Quartet Studies",
+    "aliases": [
+      "string_quartet_studies"
+    ]
+  },
+  {
+    "slug": "juilliard_music_area_vocal_arts",
+    "name": "Vocal Arts",
+    "aliases": [
+      "vocal_arts"
+    ]
+  },
+  {
+    "slug": "opera_studies",
+    "name": "Opera Studies",
+    "aliases": []
+  },
+  {
+    "slug": "piano",
+    "name": "Piano",
+    "aliases": []
+  },
+  {
+    "slug": "violin",
+    "name": "Violin",
+    "aliases": []
+  },
+  {
+    "slug": "voice",
+    "name": "Voice",
+    "aliases": []
+  },
+  {
+    "slug": "bass",
+    "name": "Bass",
+    "aliases": []
+  },
+  {
+    "slug": "bass_trombone",
+    "name": "Bass Trombone",
+    "aliases": []
+  },
+  {
+    "slug": "bassoon",
+    "name": "Bassoon",
+    "aliases": []
+  },
+  {
+    "slug": "chamber_music",
+    "name": "Chamber Music",
+    "aliases": []
+  },
+  {
+    "slug": "choral_conducting",
+    "name": "Choral Conducting",
+    "aliases": []
+  },
+  {
+    "slug": "clarinet",
+    "name": "Clarinet",
+    "aliases": []
+  },
+  {
+    "slug": "collaborative_piano",
+    "name": "Collaborative Piano",
+    "aliases": []
+  },
+  {
+    "slug": "contemporary_ensembles_conducting",
+    "name": "Contemporary Ensembles Conducting",
+    "aliases": []
+  },
+  {
+    "slug": "contemporary_media_film_composition",
+    "name": "Contemporary Media/Film Composition",
+    "aliases": []
+  },
+  {
+    "slug": "contemporary_musical_arts",
+    "name": "Contemporary Musical Arts",
+    "aliases": []
+  },
+  {
+    "slug": "double_bass",
+    "name": "Double Bass",
+    "aliases": []
+  },
+  {
+    "slug": "drum_set",
+    "name": "Drum Set",
+    "aliases": []
+  },
+  {
+    "slug": "early_music",
+    "name": "Early Music",
+    "aliases": []
+  },
+  {
+    "slug": "euphonium",
+    "name": "Euphonium",
+    "aliases": []
+  },
+  {
+    "slug": "flute",
+    "name": "Flute",
+    "aliases": []
+  },
+  {
+    "slug": "guitar",
+    "name": "Guitar",
+    "aliases": []
+  },
+  {
+    "slug": "harp",
+    "name": "Harp",
+    "aliases": []
+  },
+  {
+    "slug": "harpsichord",
+    "name": "Harpsichord",
+    "aliases": []
+  },
+  {
+    "slug": "horn",
+    "name": "Horn",
+    "aliases": []
+  },
+  {
+    "slug": "jazz_performance",
+    "name": "Jazz Performance",
+    "aliases": []
+  },
+  {
+    "slug": "jazz_studies",
+    "name": "Jazz Studies & Contemporary Media",
+    "aliases": []
+  },
+  {
+    "slug": "music_creation_technology",
+    "name": "Music Creation and Technology",
+    "aliases": []
+  },
+  {
+    "slug": "music_education",
+    "name": "Music Education",
+    "aliases": []
+  },
+  {
+    "slug": "music_history",
+    "name": "Music History",
+    "aliases": []
+  },
+  {
+    "slug": "music_theory",
+    "name": "Music Theory",
+    "aliases": []
+  },
+  {
+    "slug": "musicology",
+    "name": "Musicology",
+    "aliases": []
+  },
+  {
+    "slug": "oboe",
+    "name": "Oboe",
+    "aliases": []
+  },
+  {
+    "slug": "orchestral_conducting",
+    "name": "Orchestral Conducting",
+    "aliases": []
+  },
+  {
+    "slug": "organ",
+    "name": "Organ",
+    "aliases": []
+  },
+  {
+    "slug": "percussion",
+    "name": "Percussion",
+    "aliases": []
+  },
+  {
+    "slug": "professional_piano_trio",
+    "name": "Professional Piano Trio",
+    "aliases": []
+  },
+  {
+    "slug": "professional_string_quartet",
+    "name": "Professional String Quartet",
+    "aliases": []
+  },
+  {
+    "slug": "saxophone",
+    "name": "Saxophone",
+    "aliases": []
+  },
+  {
+    "slug": "tenor_trombone",
+    "name": "Trombone",
+    "aliases": []
+  },
+  {
+    "slug": "trumpet",
+    "name": "Trumpet",
+    "aliases": []
+  },
+  {
+    "slug": "tuba",
+    "name": "Tuba",
+    "aliases": []
+  },
+  {
+    "slug": "viola",
+    "name": "Viola",
+    "aliases": []
+  },
+  {
+    "slug": "wind_conducting",
+    "name": "Wind Conducting",
+    "aliases": []
+  }
 ]

@@ -1,0 +1,493 @@
+# eastman.v4 V4 Validation Report
+
+Generated: 2026-07-21
+
+## Result
+
+**V4 schema and hard rules: PASS**  
+**Hard errors: 0**
+
+## Package counts
+
+| Record type | Count |
+|---|---:|
+| Program offerings | 112 |
+| Current application records | 112 |
+| Current audition records | 112 |
+| Source records | 785 |
+| Decision-critical null fields | 112 |
+
+## Hard-rule coverage
+
+- JSON Schema Draft 2020-12 compatibility
+- Seeded field and degree vocabularies
+- Deterministic refs and duplicate detection
+- One current application and audition record per offering
+- Prohibited/legacy fields and Directus IDs
+- Official-domain and source natural-key checks
+- Required evidence quotes for deadline, tuition, English minimums, prescreen, audition, and repertoire
+- Material-name constraints and explicit critical-null review notes
+
+## Hard failures
+
+- None
+
+## Needs attention
+
+- Eastman publishes simultaneous new TOEFL 1-6 and still-valid legacy iBT scales; the unlabeled numeric V4 TOEFL field remains null.
+- Fall 2027 applications are open, but several instrument repertoire pages still carry 2026 dates or studio-opening notices; all audition records remain Needs Review.
+- The latest undergraduate tuition is for 2026-27 and graduate cost varies by unit/lesson load; current-cycle tuition remains null.
+- eastman_bassoon_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_bassoon_bm: tuition_annual is null
+- eastman_bassoon_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_bassoon_dma: tuition_annual is null
+- eastman_bassoon_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_bassoon_mm: tuition_annual is null
+- eastman_cello_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_cello_bm: tuition_annual is null
+- eastman_cello_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_cello_dma: tuition_annual is null
+- eastman_cello_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_cello_mm: tuition_annual is null
+- eastman_choral_conducting_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_choral_conducting_dma: tuition_annual is null
+- eastman_choral_conducting_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_choral_conducting_mm: tuition_annual is null
+- eastman_clarinet_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_clarinet_bm: tuition_annual is null
+- eastman_clarinet_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_clarinet_dma: tuition_annual is null
+- eastman_clarinet_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_clarinet_mm: tuition_annual is null
+- eastman_collaborative_piano_dma_piano_accompanying_chamber_music: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_collaborative_piano_dma_piano_accompanying_chamber_music: tuition_annual is null
+- eastman_collaborative_piano_mm_piano_accompanying_chamber_music: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_collaborative_piano_mm_piano_accompanying_chamber_music: tuition_annual is null
+- eastman_composition_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_composition_bm: tuition_annual is null
+- eastman_composition_bm_jazz_studies_contemporary_media_writing: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_composition_bm_jazz_studies_contemporary_media_writing: tuition_annual is null
+- eastman_composition_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_composition_dma: tuition_annual is null
+- eastman_composition_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_composition_mm: tuition_annual is null
+- eastman_composition_mm_jazz_studies_contemporary_media_writing: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_composition_mm_jazz_studies_contemporary_media_writing: tuition_annual is null
+- eastman_contemporary_ensembles_conducting_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_contemporary_ensembles_conducting_dma: tuition_annual is null
+- eastman_contemporary_ensembles_conducting_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_contemporary_ensembles_conducting_mm: tuition_annual is null
+- eastman_contemporary_media_film_composition_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_contemporary_media_film_composition_mm: tuition_annual is null
+- eastman_double_bass_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_double_bass_bm: tuition_annual is null
+- eastman_double_bass_bm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_double_bass_bm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_double_bass_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_double_bass_dma: tuition_annual is null
+- eastman_double_bass_dma_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_double_bass_dma_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_double_bass_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_double_bass_mm: tuition_annual is null
+- eastman_double_bass_mm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_double_bass_mm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_drum_set_bm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_drum_set_bm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_drum_set_dma_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_drum_set_dma_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_drum_set_mm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_drum_set_mm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_early_music_dma_historical_plucked_instruments_harpsichord: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_early_music_dma_historical_plucked_instruments_harpsichord: tuition_annual is null
+- eastman_early_music_dma_historical_plucked_instruments_lute: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_early_music_dma_historical_plucked_instruments_lute: tuition_annual is null
+- eastman_early_music_mm_historical_plucked_instruments_harpsichord: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_early_music_mm_historical_plucked_instruments_harpsichord: tuition_annual is null
+- eastman_early_music_mm_historical_plucked_instruments_lute: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_early_music_mm_historical_plucked_instruments_lute: tuition_annual is null
+- eastman_euphonium_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_euphonium_bm: tuition_annual is null
+- eastman_euphonium_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_euphonium_dma: tuition_annual is null
+- eastman_euphonium_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_euphonium_mm: tuition_annual is null
+- eastman_flute_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_flute_bm: tuition_annual is null
+- eastman_flute_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_flute_dma: tuition_annual is null
+- eastman_flute_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_flute_mm: tuition_annual is null
+- eastman_guitar_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_guitar_bm: tuition_annual is null
+- eastman_guitar_bm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_guitar_bm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_guitar_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_guitar_dma: tuition_annual is null
+- eastman_guitar_dma_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_guitar_dma_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_guitar_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_guitar_mm: tuition_annual is null
+- eastman_guitar_mm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_guitar_mm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_harp_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_harp_bm: tuition_annual is null
+- eastman_harp_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_harp_dma: tuition_annual is null
+- eastman_harp_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_harp_mm: tuition_annual is null
+- eastman_harpsichord_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_harpsichord_dma: tuition_annual is null
+- eastman_harpsichord_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_harpsichord_mm: tuition_annual is null
+- eastman_horn_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_horn_bm: tuition_annual is null
+- eastman_horn_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_horn_dma: tuition_annual is null
+- eastman_horn_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_horn_mm: tuition_annual is null
+- eastman_music_creation_technology_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_music_creation_technology_bm: tuition_annual is null
+- eastman_music_education_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_music_education_bm: tuition_annual is null
+- eastman_music_education_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_music_education_dma: tuition_annual is null
+- eastman_music_education_mm_new_york_state_initial_plus_professional_certification: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_music_education_mm_new_york_state_initial_plus_professional_certification: tuition_annual is null
+- eastman_music_education_mm_professional_studies: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_music_education_mm_professional_studies: tuition_annual is null
+- eastman_music_education_mm_summers_only: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_music_education_mm_summers_only: tuition_annual is null
+- eastman_music_theory_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_music_theory_bm: tuition_annual is null
+- eastman_oboe_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_oboe_bm: tuition_annual is null
+- eastman_oboe_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_oboe_dma: tuition_annual is null
+- eastman_oboe_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_oboe_mm: tuition_annual is null
+- eastman_opera_studies_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_opera_studies_mm: tuition_annual is null
+- eastman_orchestral_conducting_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_orchestral_conducting_dma: tuition_annual is null
+- eastman_orchestral_conducting_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_orchestral_conducting_mm: tuition_annual is null
+- eastman_organ_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_organ_bm: tuition_annual is null
+- eastman_organ_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_organ_dma: tuition_annual is null
+- eastman_organ_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_organ_mm: tuition_annual is null
+- eastman_percussion_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_percussion_bm: tuition_annual is null
+- eastman_percussion_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_percussion_dma: tuition_annual is null
+- eastman_percussion_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_percussion_mm: tuition_annual is null
+- eastman_piano_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_piano_bm: tuition_annual is null
+- eastman_piano_bm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_piano_bm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_piano_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_piano_dma: tuition_annual is null
+- eastman_piano_dma_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_piano_dma_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_piano_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_piano_mm: tuition_annual is null
+- eastman_piano_mm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_piano_mm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_saxophone_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_saxophone_bm: tuition_annual is null
+- eastman_saxophone_bm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_saxophone_bm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_saxophone_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_saxophone_dma: tuition_annual is null
+- eastman_saxophone_dma_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_saxophone_dma_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_saxophone_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_saxophone_mm: tuition_annual is null
+- eastman_saxophone_mm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_saxophone_mm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_tenor_trombone_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tenor_trombone_bm: tuition_annual is null
+- eastman_tenor_trombone_bm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tenor_trombone_bm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_tenor_trombone_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tenor_trombone_dma: tuition_annual is null
+- eastman_tenor_trombone_dma_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tenor_trombone_dma_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_tenor_trombone_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tenor_trombone_mm: tuition_annual is null
+- eastman_tenor_trombone_mm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tenor_trombone_mm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_trumpet_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_trumpet_bm: tuition_annual is null
+- eastman_trumpet_bm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_trumpet_bm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_trumpet_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_trumpet_dma: tuition_annual is null
+- eastman_trumpet_dma_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_trumpet_dma_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_trumpet_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_trumpet_mm: tuition_annual is null
+- eastman_trumpet_mm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_trumpet_mm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_tuba_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tuba_bm: tuition_annual is null
+- eastman_tuba_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tuba_dma: tuition_annual is null
+- eastman_tuba_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_tuba_mm: tuition_annual is null
+- eastman_viola_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_viola_bm: tuition_annual is null
+- eastman_viola_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_viola_dma: tuition_annual is null
+- eastman_viola_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_viola_mm: tuition_annual is null
+- eastman_violin_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_violin_bm: tuition_annual is null
+- eastman_violin_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_violin_dma: tuition_annual is null
+- eastman_violin_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_violin_mm: tuition_annual is null
+- eastman_voice_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_voice_bm: tuition_annual is null
+- eastman_voice_bm_jazz_studies_contemporary_media_performance: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_voice_bm_jazz_studies_contemporary_media_performance: tuition_annual is null
+- eastman_voice_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_voice_dma: tuition_annual is null
+- eastman_voice_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_voice_mm: tuition_annual is null
+- eastman_wind_conducting_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_wind_conducting_dma: tuition_annual is null
+- eastman_wind_conducting_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- eastman_wind_conducting_mm: tuition_annual is null
+- found, not representable by unchanged degree enum: Advanced Diploma in Concertmaster Studies — Violin.
+- found, not representable by unchanged degree enum: Advanced Diploma in Performance — Performance.
+- found, not representable by unchanged degree enum: Doctor of Philosophy — Composition, Music Education, Musicology, Theory.
+- found, not representable by unchanged degree enum: Master of Arts — Composition, Ethnomusicology, Music Education — Professional Studies, Music Education — NYS Certification, Music Education — Summers Only, Music Leadership, Musicology, Music Theory Pedagogy, Theory.
+
+## Warnings
+
+- eastman_bassoon_bm: duration_years is null
+- eastman_bassoon_bm: language_of_instruction is null
+- eastman_bassoon_dma: duration_years is null
+- eastman_bassoon_dma: language_of_instruction is null
+- eastman_bassoon_mm: duration_years is null
+- eastman_bassoon_mm: language_of_instruction is null
+- eastman_cello_bm: language_of_instruction is null
+- eastman_cello_dma: duration_years is null
+- eastman_cello_dma: language_of_instruction is null
+- eastman_cello_mm: duration_years is null
+- eastman_cello_mm: language_of_instruction is null
+- eastman_choral_conducting_dma: duration_years is null
+- eastman_choral_conducting_dma: language_of_instruction is null
+- eastman_choral_conducting_mm: duration_years is null
+- eastman_choral_conducting_mm: language_of_instruction is null
+- eastman_clarinet_bm: duration_years is null
+- eastman_clarinet_bm: language_of_instruction is null
+- eastman_clarinet_dma: duration_years is null
+- eastman_clarinet_dma: language_of_instruction is null
+- eastman_clarinet_mm: duration_years is null
+- eastman_clarinet_mm: language_of_instruction is null
+- eastman_collaborative_piano_dma_piano_accompanying_chamber_music: duration_years is null
+- eastman_collaborative_piano_dma_piano_accompanying_chamber_music: language_of_instruction is null
+- eastman_collaborative_piano_mm_piano_accompanying_chamber_music: duration_years is null
+- eastman_collaborative_piano_mm_piano_accompanying_chamber_music: language_of_instruction is null
+- eastman_composition_bm: language_of_instruction is null
+- eastman_composition_bm_jazz_studies_contemporary_media_writing: duration_years is null
+- eastman_composition_bm_jazz_studies_contemporary_media_writing: language_of_instruction is null
+- eastman_composition_dma: duration_years is null
+- eastman_composition_dma: language_of_instruction is null
+- eastman_composition_mm: duration_years is null
+- eastman_composition_mm: language_of_instruction is null
+- eastman_composition_mm_jazz_studies_contemporary_media_writing: duration_years is null
+- eastman_composition_mm_jazz_studies_contemporary_media_writing: language_of_instruction is null
+- eastman_contemporary_ensembles_conducting_dma: duration_years is null
+- eastman_contemporary_ensembles_conducting_dma: language_of_instruction is null
+- eastman_contemporary_ensembles_conducting_mm: duration_years is null
+- eastman_contemporary_ensembles_conducting_mm: language_of_instruction is null
+- eastman_contemporary_media_film_composition_mm: duration_years is null
+- eastman_contemporary_media_film_composition_mm: language_of_instruction is null
+- eastman_double_bass_bm: duration_years is null
+- eastman_double_bass_bm: language_of_instruction is null
+- eastman_double_bass_bm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_double_bass_bm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_double_bass_dma: duration_years is null
+- eastman_double_bass_dma: language_of_instruction is null
+- eastman_double_bass_dma_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_double_bass_dma_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_double_bass_mm: duration_years is null
+- eastman_double_bass_mm: language_of_instruction is null
+- eastman_double_bass_mm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_double_bass_mm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_drum_set_bm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_drum_set_bm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_drum_set_dma_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_drum_set_dma_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_drum_set_mm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_drum_set_mm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_early_music_dma_historical_plucked_instruments_harpsichord: duration_years is null
+- eastman_early_music_dma_historical_plucked_instruments_harpsichord: language_of_instruction is null
+- eastman_early_music_dma_historical_plucked_instruments_lute: duration_years is null
+- eastman_early_music_dma_historical_plucked_instruments_lute: language_of_instruction is null
+- eastman_early_music_mm_historical_plucked_instruments_harpsichord: duration_years is null
+- eastman_early_music_mm_historical_plucked_instruments_harpsichord: language_of_instruction is null
+- eastman_early_music_mm_historical_plucked_instruments_lute: duration_years is null
+- eastman_early_music_mm_historical_plucked_instruments_lute: language_of_instruction is null
+- eastman_euphonium_bm: duration_years is null
+- eastman_euphonium_bm: language_of_instruction is null
+- eastman_euphonium_dma: duration_years is null
+- eastman_euphonium_dma: language_of_instruction is null
+- eastman_euphonium_mm: duration_years is null
+- eastman_euphonium_mm: language_of_instruction is null
+- eastman_flute_bm: duration_years is null
+- eastman_flute_bm: language_of_instruction is null
+- eastman_flute_dma: duration_years is null
+- eastman_flute_dma: language_of_instruction is null
+- eastman_flute_mm: duration_years is null
+- eastman_flute_mm: language_of_instruction is null
+- eastman_guitar_bm: duration_years is null
+- eastman_guitar_bm: language_of_instruction is null
+- eastman_guitar_bm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_guitar_bm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_guitar_dma: duration_years is null
+- eastman_guitar_dma: language_of_instruction is null
+- eastman_guitar_dma_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_guitar_dma_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_guitar_mm: duration_years is null
+- eastman_guitar_mm: language_of_instruction is null
+- eastman_guitar_mm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_guitar_mm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_harp_bm: duration_years is null
+- eastman_harp_bm: language_of_instruction is null
+- eastman_harp_dma: duration_years is null
+- eastman_harp_dma: language_of_instruction is null
+- eastman_harp_mm: duration_years is null
+- eastman_harp_mm: language_of_instruction is null
+- eastman_harpsichord_dma: duration_years is null
+- eastman_harpsichord_dma: language_of_instruction is null
+- eastman_harpsichord_mm: duration_years is null
+- eastman_harpsichord_mm: language_of_instruction is null
+- eastman_horn_bm: duration_years is null
+- eastman_horn_bm: language_of_instruction is null
+- eastman_horn_dma: duration_years is null
+- eastman_horn_dma: language_of_instruction is null
+- eastman_horn_mm: duration_years is null
+- eastman_horn_mm: language_of_instruction is null
+- eastman_music_creation_technology_bm: duration_years is null
+- eastman_music_creation_technology_bm: language_of_instruction is null
+- eastman_music_education_bm: duration_years is null
+- eastman_music_education_bm: language_of_instruction is null
+- eastman_music_education_dma: duration_years is null
+- eastman_music_education_dma: language_of_instruction is null
+- eastman_music_education_mm_new_york_state_initial_plus_professional_certification: duration_years is null
+- eastman_music_education_mm_new_york_state_initial_plus_professional_certification: language_of_instruction is null
+- eastman_music_education_mm_professional_studies: duration_years is null
+- eastman_music_education_mm_professional_studies: language_of_instruction is null
+- eastman_music_education_mm_summers_only: duration_years is null
+- eastman_music_education_mm_summers_only: language_of_instruction is null
+- eastman_music_theory_bm: duration_years is null
+- eastman_music_theory_bm: language_of_instruction is null
+- eastman_oboe_bm: duration_years is null
+- eastman_oboe_bm: language_of_instruction is null
+- eastman_oboe_dma: duration_years is null
+- eastman_oboe_dma: language_of_instruction is null
+- eastman_oboe_mm: duration_years is null
+- eastman_oboe_mm: language_of_instruction is null
+- eastman_opera_studies_mm: duration_years is null
+- eastman_opera_studies_mm: language_of_instruction is null
+- eastman_orchestral_conducting_dma: duration_years is null
+- eastman_orchestral_conducting_dma: language_of_instruction is null
+- eastman_orchestral_conducting_mm: duration_years is null
+- eastman_orchestral_conducting_mm: language_of_instruction is null
+- eastman_organ_bm: duration_years is null
+- eastman_organ_bm: language_of_instruction is null
+- eastman_organ_dma: duration_years is null
+- eastman_organ_dma: language_of_instruction is null
+- eastman_organ_mm: duration_years is null
+- eastman_organ_mm: language_of_instruction is null
+- eastman_percussion_bm: duration_years is null
+- eastman_percussion_bm: language_of_instruction is null
+- eastman_percussion_dma: duration_years is null
+- eastman_percussion_dma: language_of_instruction is null
+- eastman_percussion_mm: duration_years is null
+- eastman_percussion_mm: language_of_instruction is null
+- eastman_piano_bm: language_of_instruction is null
+- eastman_piano_bm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_piano_bm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_piano_dma: duration_years is null
+- eastman_piano_dma: language_of_instruction is null
+- eastman_piano_dma_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_piano_dma_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_piano_mm: duration_years is null
+- eastman_piano_mm: language_of_instruction is null
+- eastman_piano_mm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_piano_mm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_saxophone_bm: duration_years is null
+- eastman_saxophone_bm: language_of_instruction is null
+- eastman_saxophone_bm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_saxophone_bm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_saxophone_dma: duration_years is null
+- eastman_saxophone_dma: language_of_instruction is null
+- eastman_saxophone_dma_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_saxophone_dma_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_saxophone_mm: duration_years is null
+- eastman_saxophone_mm: language_of_instruction is null
+- eastman_saxophone_mm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_saxophone_mm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_tenor_trombone_bm: duration_years is null
+- eastman_tenor_trombone_bm: language_of_instruction is null
+- eastman_tenor_trombone_bm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_tenor_trombone_bm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_tenor_trombone_dma: duration_years is null
+- eastman_tenor_trombone_dma: language_of_instruction is null
+- eastman_tenor_trombone_dma_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_tenor_trombone_dma_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_tenor_trombone_mm: duration_years is null
+- eastman_tenor_trombone_mm: language_of_instruction is null
+- eastman_tenor_trombone_mm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_tenor_trombone_mm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_trumpet_bm: duration_years is null
+- eastman_trumpet_bm: language_of_instruction is null
+- eastman_trumpet_bm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_trumpet_bm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_trumpet_dma: duration_years is null
+- eastman_trumpet_dma: language_of_instruction is null
+- eastman_trumpet_dma_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_trumpet_dma_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_trumpet_mm: duration_years is null
+- eastman_trumpet_mm: language_of_instruction is null
+- eastman_trumpet_mm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_trumpet_mm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_tuba_bm: duration_years is null
+- eastman_tuba_bm: language_of_instruction is null
+- eastman_tuba_dma: duration_years is null
+- eastman_tuba_dma: language_of_instruction is null
+- eastman_tuba_mm: duration_years is null
+- eastman_tuba_mm: language_of_instruction is null
+- eastman_viola_bm: duration_years is null
+- eastman_viola_bm: language_of_instruction is null
+- eastman_viola_dma: duration_years is null
+- eastman_viola_dma: language_of_instruction is null
+- eastman_viola_mm: duration_years is null
+- eastman_viola_mm: language_of_instruction is null
+- eastman_violin_bm: language_of_instruction is null
+- eastman_violin_dma: duration_years is null
+- eastman_violin_dma: language_of_instruction is null
+- eastman_violin_mm: duration_years is null
+- eastman_violin_mm: language_of_instruction is null
+- eastman_voice_bm: language_of_instruction is null
+- eastman_voice_bm_jazz_studies_contemporary_media_performance: duration_years is null
+- eastman_voice_bm_jazz_studies_contemporary_media_performance: language_of_instruction is null
+- eastman_voice_dma: duration_years is null
+- eastman_voice_dma: language_of_instruction is null
+- eastman_voice_mm: duration_years is null
+- eastman_voice_mm: language_of_instruction is null
+- eastman_wind_conducting_dma: duration_years is null
+- eastman_wind_conducting_dma: language_of_instruction is null
+- eastman_wind_conducting_mm: duration_years is null
+- eastman_wind_conducting_mm: language_of_instruction is null
+
+## Final assessment
+
+The package is schema-valid and mechanically complete for all V4-representable seeded-field offerings. It remains intentionally unreviewed and not ready for Directus import; named needs-attention items require the independent review pass.

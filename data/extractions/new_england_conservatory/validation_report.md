@@ -1,0 +1,614 @@
+# new_england_conservatory.v4 V4 Validation Report
+
+Generated: 2026-07-21
+
+## Result
+
+**V4 schema and hard rules: PASS**  
+**Hard errors: 0**
+
+## Package counts
+
+| Record type | Count |
+|---|---:|
+| Program offerings | 141 |
+| Current application records | 141 |
+| Current audition records | 141 |
+| Source records | 986 |
+| Decision-critical null fields | 141 |
+
+## Hard-rule coverage
+
+- JSON Schema Draft 2020-12 compatibility
+- Seeded field and degree vocabularies
+- Deterministic refs and duplicate detection
+- One current application and audition record per offering
+- Prohibited/legacy fields and Directus IDs
+- Official-domain and source natural-key checks
+- Required evidence quotes for deadline, tuition, English minimums, prescreen, audition, and repertoire
+- Material-name constraints and explicit critical-null review notes
+
+## Hard failures
+
+- None
+
+## Needs attention
+
+- Graduate Performance Certificate and undergraduate diploma/certificate combinations are fully inventoried but cannot enter program_offerings under the unchanged degree enum.
+- The latest published tuition is for 2026-27, so 2027-28 tuition remains null.
+- The recurring December 1 deadline is mapped to 2026-12-01 for Fall 2027; all records remain Needs Review.
+- found, not representable by unchanged degree enum: Graduate Performance Certificate — All published MM/GD audition areas.
+- found, not representable by unchanged degree enum: Harvard/NEC and Holy Cross dual-degree pathways — Eligible NEC MM fields.
+- found, not representable by unchanged degree enum: Undergraduate Diploma — Instrumental Performance, Vocal Performance, Composition.
+- found, not representable by unchanged degree enum: Undergraduate Performance Certificate — Instrument/Area of Study.
+- new_england_conservatory_bass_trombone_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bass_trombone_ad: tuition_annual is null
+- new_england_conservatory_bass_trombone_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bass_trombone_bm: tuition_annual is null
+- new_england_conservatory_bass_trombone_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bass_trombone_dma: tuition_annual is null
+- new_england_conservatory_bass_trombone_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bass_trombone_gd: tuition_annual is null
+- new_england_conservatory_bass_trombone_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bass_trombone_mm: tuition_annual is null
+- new_england_conservatory_bassoon_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bassoon_ad: tuition_annual is null
+- new_england_conservatory_bassoon_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bassoon_bm: tuition_annual is null
+- new_england_conservatory_bassoon_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bassoon_dma: tuition_annual is null
+- new_england_conservatory_bassoon_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bassoon_gd: tuition_annual is null
+- new_england_conservatory_bassoon_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_bassoon_mm: tuition_annual is null
+- new_england_conservatory_cello_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_cello_ad: tuition_annual is null
+- new_england_conservatory_cello_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_cello_bm: tuition_annual is null
+- new_england_conservatory_cello_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_cello_dma: tuition_annual is null
+- new_england_conservatory_cello_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_cello_gd: tuition_annual is null
+- new_england_conservatory_cello_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_cello_mm: tuition_annual is null
+- new_england_conservatory_chamber_music_dma_chamber_music_for_piano: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_chamber_music_dma_chamber_music_for_piano: tuition_annual is null
+- new_england_conservatory_chamber_music_gd_chamber_music_for_piano: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_chamber_music_gd_chamber_music_for_piano: tuition_annual is null
+- new_england_conservatory_chamber_music_mm_chamber_music_for_piano: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_chamber_music_mm_chamber_music_for_piano: tuition_annual is null
+- new_england_conservatory_choral_conducting_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_choral_conducting_dma: tuition_annual is null
+- new_england_conservatory_choral_conducting_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_choral_conducting_gd: tuition_annual is null
+- new_england_conservatory_choral_conducting_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_choral_conducting_mm: tuition_annual is null
+- new_england_conservatory_clarinet_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_clarinet_ad: tuition_annual is null
+- new_england_conservatory_clarinet_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_clarinet_bm: tuition_annual is null
+- new_england_conservatory_clarinet_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_clarinet_dma: tuition_annual is null
+- new_england_conservatory_clarinet_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_clarinet_gd: tuition_annual is null
+- new_england_conservatory_clarinet_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_clarinet_mm: tuition_annual is null
+- new_england_conservatory_collaborative_piano_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_collaborative_piano_dma: tuition_annual is null
+- new_england_conservatory_collaborative_piano_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_collaborative_piano_gd: tuition_annual is null
+- new_england_conservatory_collaborative_piano_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_collaborative_piano_mm: tuition_annual is null
+- new_england_conservatory_collaborative_piano_mm_piano_collaborative_piano_dual_degree_program: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_collaborative_piano_mm_piano_collaborative_piano_dual_degree_program: tuition_annual is null
+- new_england_conservatory_composition_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_composition_bm: tuition_annual is null
+- new_england_conservatory_composition_bm_jazz_studies_composition: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_composition_bm_jazz_studies_composition: tuition_annual is null
+- new_england_conservatory_composition_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_composition_dma: tuition_annual is null
+- new_england_conservatory_composition_dma_jazz_studies_composition: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_composition_dma_jazz_studies_composition: tuition_annual is null
+- new_england_conservatory_composition_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_composition_gd: tuition_annual is null
+- new_england_conservatory_composition_gd_jazz_studies_composition: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_composition_gd_jazz_studies_composition: tuition_annual is null
+- new_england_conservatory_composition_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_composition_mm: tuition_annual is null
+- new_england_conservatory_composition_mm_jazz_studies_composition: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_composition_mm_jazz_studies_composition: tuition_annual is null
+- new_england_conservatory_contemporary_musical_arts_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_contemporary_musical_arts_ad: tuition_annual is null
+- new_england_conservatory_contemporary_musical_arts_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_contemporary_musical_arts_bm: tuition_annual is null
+- new_england_conservatory_contemporary_musical_arts_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_contemporary_musical_arts_dma: tuition_annual is null
+- new_england_conservatory_contemporary_musical_arts_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_contemporary_musical_arts_gd: tuition_annual is null
+- new_england_conservatory_contemporary_musical_arts_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_contemporary_musical_arts_mm: tuition_annual is null
+- new_england_conservatory_double_bass_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_double_bass_ad: tuition_annual is null
+- new_england_conservatory_double_bass_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_double_bass_bm: tuition_annual is null
+- new_england_conservatory_double_bass_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_double_bass_dma: tuition_annual is null
+- new_england_conservatory_double_bass_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_double_bass_gd: tuition_annual is null
+- new_england_conservatory_double_bass_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_double_bass_mm: tuition_annual is null
+- new_england_conservatory_euphonium_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_euphonium_ad: tuition_annual is null
+- new_england_conservatory_euphonium_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_euphonium_bm: tuition_annual is null
+- new_england_conservatory_euphonium_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_euphonium_dma: tuition_annual is null
+- new_england_conservatory_euphonium_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_euphonium_gd: tuition_annual is null
+- new_england_conservatory_euphonium_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_euphonium_mm: tuition_annual is null
+- new_england_conservatory_flute_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_flute_ad: tuition_annual is null
+- new_england_conservatory_flute_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_flute_bm: tuition_annual is null
+- new_england_conservatory_flute_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_flute_dma: tuition_annual is null
+- new_england_conservatory_flute_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_flute_gd: tuition_annual is null
+- new_england_conservatory_flute_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_flute_mm: tuition_annual is null
+- new_england_conservatory_guitar_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_guitar_ad: tuition_annual is null
+- new_england_conservatory_guitar_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_guitar_bm: tuition_annual is null
+- new_england_conservatory_guitar_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_guitar_dma: tuition_annual is null
+- new_england_conservatory_guitar_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_guitar_gd: tuition_annual is null
+- new_england_conservatory_guitar_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_guitar_mm: tuition_annual is null
+- new_england_conservatory_harp_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_harp_ad: tuition_annual is null
+- new_england_conservatory_harp_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_harp_bm: tuition_annual is null
+- new_england_conservatory_harp_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_harp_dma: tuition_annual is null
+- new_england_conservatory_harp_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_harp_gd: tuition_annual is null
+- new_england_conservatory_harp_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_harp_mm: tuition_annual is null
+- new_england_conservatory_horn_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_horn_ad: tuition_annual is null
+- new_england_conservatory_horn_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_horn_bm: tuition_annual is null
+- new_england_conservatory_horn_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_horn_dma: tuition_annual is null
+- new_england_conservatory_horn_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_horn_gd: tuition_annual is null
+- new_england_conservatory_horn_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_horn_mm: tuition_annual is null
+- new_england_conservatory_jazz_performance_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_jazz_performance_ad: tuition_annual is null
+- new_england_conservatory_jazz_performance_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_jazz_performance_bm: tuition_annual is null
+- new_england_conservatory_jazz_performance_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_jazz_performance_dma: tuition_annual is null
+- new_england_conservatory_jazz_performance_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_jazz_performance_gd: tuition_annual is null
+- new_england_conservatory_jazz_performance_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_jazz_performance_mm: tuition_annual is null
+- new_england_conservatory_music_history_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_music_history_bm: tuition_annual is null
+- new_england_conservatory_music_theory_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_music_theory_bm: tuition_annual is null
+- new_england_conservatory_music_theory_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_music_theory_dma: tuition_annual is null
+- new_england_conservatory_music_theory_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_music_theory_gd: tuition_annual is null
+- new_england_conservatory_music_theory_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_music_theory_mm: tuition_annual is null
+- new_england_conservatory_musicology_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_musicology_mm: tuition_annual is null
+- new_england_conservatory_oboe_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_oboe_ad: tuition_annual is null
+- new_england_conservatory_oboe_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_oboe_bm: tuition_annual is null
+- new_england_conservatory_oboe_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_oboe_dma: tuition_annual is null
+- new_england_conservatory_oboe_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_oboe_gd: tuition_annual is null
+- new_england_conservatory_oboe_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_oboe_mm: tuition_annual is null
+- new_england_conservatory_orchestral_conducting_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_orchestral_conducting_gd: tuition_annual is null
+- new_england_conservatory_orchestral_conducting_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_orchestral_conducting_mm: tuition_annual is null
+- new_england_conservatory_percussion_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_percussion_ad: tuition_annual is null
+- new_england_conservatory_percussion_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_percussion_bm: tuition_annual is null
+- new_england_conservatory_percussion_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_percussion_dma: tuition_annual is null
+- new_england_conservatory_percussion_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_percussion_gd: tuition_annual is null
+- new_england_conservatory_percussion_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_percussion_mm: tuition_annual is null
+- new_england_conservatory_piano_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_piano_ad: tuition_annual is null
+- new_england_conservatory_piano_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_piano_bm: tuition_annual is null
+- new_england_conservatory_piano_bm_piano_collaborative_piano_dual_degree_program: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_piano_bm_piano_collaborative_piano_dual_degree_program: tuition_annual is null
+- new_england_conservatory_piano_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_piano_dma: tuition_annual is null
+- new_england_conservatory_piano_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_piano_gd: tuition_annual is null
+- new_england_conservatory_piano_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_piano_mm: tuition_annual is null
+- new_england_conservatory_professional_piano_trio_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_professional_piano_trio_gd: tuition_annual is null
+- new_england_conservatory_professional_piano_trio_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_professional_piano_trio_mm: tuition_annual is null
+- new_england_conservatory_professional_string_quartet_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_professional_string_quartet_gd: tuition_annual is null
+- new_england_conservatory_professional_string_quartet_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_professional_string_quartet_mm: tuition_annual is null
+- new_england_conservatory_saxophone_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_saxophone_ad: tuition_annual is null
+- new_england_conservatory_saxophone_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_saxophone_bm: tuition_annual is null
+- new_england_conservatory_saxophone_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_saxophone_dma: tuition_annual is null
+- new_england_conservatory_saxophone_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_saxophone_gd: tuition_annual is null
+- new_england_conservatory_saxophone_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_saxophone_mm: tuition_annual is null
+- new_england_conservatory_tenor_trombone_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tenor_trombone_ad: tuition_annual is null
+- new_england_conservatory_tenor_trombone_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tenor_trombone_bm: tuition_annual is null
+- new_england_conservatory_tenor_trombone_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tenor_trombone_dma: tuition_annual is null
+- new_england_conservatory_tenor_trombone_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tenor_trombone_gd: tuition_annual is null
+- new_england_conservatory_tenor_trombone_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tenor_trombone_mm: tuition_annual is null
+- new_england_conservatory_trumpet_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_trumpet_ad: tuition_annual is null
+- new_england_conservatory_trumpet_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_trumpet_bm: tuition_annual is null
+- new_england_conservatory_trumpet_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_trumpet_dma: tuition_annual is null
+- new_england_conservatory_trumpet_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_trumpet_gd: tuition_annual is null
+- new_england_conservatory_trumpet_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_trumpet_mm: tuition_annual is null
+- new_england_conservatory_tuba_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tuba_ad: tuition_annual is null
+- new_england_conservatory_tuba_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tuba_bm: tuition_annual is null
+- new_england_conservatory_tuba_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tuba_dma: tuition_annual is null
+- new_england_conservatory_tuba_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tuba_gd: tuition_annual is null
+- new_england_conservatory_tuba_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_tuba_mm: tuition_annual is null
+- new_england_conservatory_viola_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_viola_ad: tuition_annual is null
+- new_england_conservatory_viola_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_viola_bm: tuition_annual is null
+- new_england_conservatory_viola_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_viola_dma: tuition_annual is null
+- new_england_conservatory_viola_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_viola_gd: tuition_annual is null
+- new_england_conservatory_viola_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_viola_mm: tuition_annual is null
+- new_england_conservatory_violin_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_violin_ad: tuition_annual is null
+- new_england_conservatory_violin_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_violin_bm: tuition_annual is null
+- new_england_conservatory_violin_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_violin_dma: tuition_annual is null
+- new_england_conservatory_violin_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_violin_gd: tuition_annual is null
+- new_england_conservatory_violin_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_violin_mm: tuition_annual is null
+- new_england_conservatory_voice_ad: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_voice_ad: tuition_annual is null
+- new_england_conservatory_voice_bm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_voice_bm: tuition_annual is null
+- new_england_conservatory_voice_dma: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_voice_dma: tuition_annual is null
+- new_england_conservatory_voice_gd: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_voice_gd: tuition_annual is null
+- new_england_conservatory_voice_mm: exact current-cycle annual tuition is not published as one applicable amount; tuition_annual left null.
+- new_england_conservatory_voice_mm: tuition_annual is null
+
+## Warnings
+
+- new_england_conservatory_bass_trombone_ad: duration_years is null
+- new_england_conservatory_bass_trombone_ad: language_of_instruction is null
+- new_england_conservatory_bass_trombone_bm: duration_years is null
+- new_england_conservatory_bass_trombone_bm: language_of_instruction is null
+- new_england_conservatory_bass_trombone_dma: duration_years is null
+- new_england_conservatory_bass_trombone_dma: language_of_instruction is null
+- new_england_conservatory_bass_trombone_gd: duration_years is null
+- new_england_conservatory_bass_trombone_gd: language_of_instruction is null
+- new_england_conservatory_bass_trombone_mm: duration_years is null
+- new_england_conservatory_bass_trombone_mm: language_of_instruction is null
+- new_england_conservatory_bassoon_ad: duration_years is null
+- new_england_conservatory_bassoon_ad: language_of_instruction is null
+- new_england_conservatory_bassoon_bm: duration_years is null
+- new_england_conservatory_bassoon_bm: language_of_instruction is null
+- new_england_conservatory_bassoon_dma: duration_years is null
+- new_england_conservatory_bassoon_dma: language_of_instruction is null
+- new_england_conservatory_bassoon_gd: duration_years is null
+- new_england_conservatory_bassoon_gd: language_of_instruction is null
+- new_england_conservatory_bassoon_mm: duration_years is null
+- new_england_conservatory_bassoon_mm: language_of_instruction is null
+- new_england_conservatory_cello_ad: duration_years is null
+- new_england_conservatory_cello_ad: language_of_instruction is null
+- new_england_conservatory_cello_bm: duration_years is null
+- new_england_conservatory_cello_bm: language_of_instruction is null
+- new_england_conservatory_cello_dma: duration_years is null
+- new_england_conservatory_cello_dma: language_of_instruction is null
+- new_england_conservatory_cello_gd: duration_years is null
+- new_england_conservatory_cello_gd: language_of_instruction is null
+- new_england_conservatory_cello_mm: duration_years is null
+- new_england_conservatory_cello_mm: language_of_instruction is null
+- new_england_conservatory_chamber_music_dma_chamber_music_for_piano: duration_years is null
+- new_england_conservatory_chamber_music_dma_chamber_music_for_piano: language_of_instruction is null
+- new_england_conservatory_chamber_music_gd_chamber_music_for_piano: duration_years is null
+- new_england_conservatory_chamber_music_gd_chamber_music_for_piano: language_of_instruction is null
+- new_england_conservatory_chamber_music_mm_chamber_music_for_piano: duration_years is null
+- new_england_conservatory_chamber_music_mm_chamber_music_for_piano: language_of_instruction is null
+- new_england_conservatory_choral_conducting_dma: duration_years is null
+- new_england_conservatory_choral_conducting_dma: language_of_instruction is null
+- new_england_conservatory_choral_conducting_gd: duration_years is null
+- new_england_conservatory_choral_conducting_gd: language_of_instruction is null
+- new_england_conservatory_choral_conducting_mm: duration_years is null
+- new_england_conservatory_choral_conducting_mm: language_of_instruction is null
+- new_england_conservatory_clarinet_ad: duration_years is null
+- new_england_conservatory_clarinet_ad: language_of_instruction is null
+- new_england_conservatory_clarinet_bm: duration_years is null
+- new_england_conservatory_clarinet_bm: language_of_instruction is null
+- new_england_conservatory_clarinet_dma: duration_years is null
+- new_england_conservatory_clarinet_dma: language_of_instruction is null
+- new_england_conservatory_clarinet_gd: duration_years is null
+- new_england_conservatory_clarinet_gd: language_of_instruction is null
+- new_england_conservatory_clarinet_mm: duration_years is null
+- new_england_conservatory_clarinet_mm: language_of_instruction is null
+- new_england_conservatory_collaborative_piano_dma: duration_years is null
+- new_england_conservatory_collaborative_piano_dma: language_of_instruction is null
+- new_england_conservatory_collaborative_piano_gd: duration_years is null
+- new_england_conservatory_collaborative_piano_gd: language_of_instruction is null
+- new_england_conservatory_collaborative_piano_mm: duration_years is null
+- new_england_conservatory_collaborative_piano_mm: language_of_instruction is null
+- new_england_conservatory_collaborative_piano_mm_piano_collaborative_piano_dual_degree_program: duration_years is null
+- new_england_conservatory_collaborative_piano_mm_piano_collaborative_piano_dual_degree_program: language_of_instruction is null
+- new_england_conservatory_composition_bm: duration_years is null
+- new_england_conservatory_composition_bm: language_of_instruction is null
+- new_england_conservatory_composition_bm_jazz_studies_composition: duration_years is null
+- new_england_conservatory_composition_bm_jazz_studies_composition: language_of_instruction is null
+- new_england_conservatory_composition_dma: duration_years is null
+- new_england_conservatory_composition_dma: language_of_instruction is null
+- new_england_conservatory_composition_dma_jazz_studies_composition: duration_years is null
+- new_england_conservatory_composition_dma_jazz_studies_composition: language_of_instruction is null
+- new_england_conservatory_composition_gd: duration_years is null
+- new_england_conservatory_composition_gd: language_of_instruction is null
+- new_england_conservatory_composition_gd_jazz_studies_composition: duration_years is null
+- new_england_conservatory_composition_gd_jazz_studies_composition: language_of_instruction is null
+- new_england_conservatory_composition_mm: duration_years is null
+- new_england_conservatory_composition_mm: language_of_instruction is null
+- new_england_conservatory_composition_mm_jazz_studies_composition: duration_years is null
+- new_england_conservatory_composition_mm_jazz_studies_composition: language_of_instruction is null
+- new_england_conservatory_contemporary_musical_arts_ad: duration_years is null
+- new_england_conservatory_contemporary_musical_arts_ad: language_of_instruction is null
+- new_england_conservatory_contemporary_musical_arts_bm: duration_years is null
+- new_england_conservatory_contemporary_musical_arts_bm: language_of_instruction is null
+- new_england_conservatory_contemporary_musical_arts_dma: duration_years is null
+- new_england_conservatory_contemporary_musical_arts_dma: language_of_instruction is null
+- new_england_conservatory_contemporary_musical_arts_gd: duration_years is null
+- new_england_conservatory_contemporary_musical_arts_gd: language_of_instruction is null
+- new_england_conservatory_contemporary_musical_arts_mm: duration_years is null
+- new_england_conservatory_contemporary_musical_arts_mm: language_of_instruction is null
+- new_england_conservatory_double_bass_ad: duration_years is null
+- new_england_conservatory_double_bass_ad: language_of_instruction is null
+- new_england_conservatory_double_bass_bm: duration_years is null
+- new_england_conservatory_double_bass_bm: language_of_instruction is null
+- new_england_conservatory_double_bass_dma: duration_years is null
+- new_england_conservatory_double_bass_dma: language_of_instruction is null
+- new_england_conservatory_double_bass_gd: duration_years is null
+- new_england_conservatory_double_bass_gd: language_of_instruction is null
+- new_england_conservatory_double_bass_mm: duration_years is null
+- new_england_conservatory_double_bass_mm: language_of_instruction is null
+- new_england_conservatory_euphonium_ad: duration_years is null
+- new_england_conservatory_euphonium_ad: language_of_instruction is null
+- new_england_conservatory_euphonium_bm: duration_years is null
+- new_england_conservatory_euphonium_bm: language_of_instruction is null
+- new_england_conservatory_euphonium_dma: duration_years is null
+- new_england_conservatory_euphonium_dma: language_of_instruction is null
+- new_england_conservatory_euphonium_gd: duration_years is null
+- new_england_conservatory_euphonium_gd: language_of_instruction is null
+- new_england_conservatory_euphonium_mm: duration_years is null
+- new_england_conservatory_euphonium_mm: language_of_instruction is null
+- new_england_conservatory_flute_ad: duration_years is null
+- new_england_conservatory_flute_ad: language_of_instruction is null
+- new_england_conservatory_flute_bm: duration_years is null
+- new_england_conservatory_flute_bm: language_of_instruction is null
+- new_england_conservatory_flute_dma: duration_years is null
+- new_england_conservatory_flute_dma: language_of_instruction is null
+- new_england_conservatory_flute_gd: duration_years is null
+- new_england_conservatory_flute_gd: language_of_instruction is null
+- new_england_conservatory_flute_mm: duration_years is null
+- new_england_conservatory_flute_mm: language_of_instruction is null
+- new_england_conservatory_guitar_ad: duration_years is null
+- new_england_conservatory_guitar_ad: language_of_instruction is null
+- new_england_conservatory_guitar_bm: duration_years is null
+- new_england_conservatory_guitar_bm: language_of_instruction is null
+- new_england_conservatory_guitar_dma: duration_years is null
+- new_england_conservatory_guitar_dma: language_of_instruction is null
+- new_england_conservatory_guitar_gd: duration_years is null
+- new_england_conservatory_guitar_gd: language_of_instruction is null
+- new_england_conservatory_guitar_mm: duration_years is null
+- new_england_conservatory_guitar_mm: language_of_instruction is null
+- new_england_conservatory_harp_ad: duration_years is null
+- new_england_conservatory_harp_ad: language_of_instruction is null
+- new_england_conservatory_harp_bm: duration_years is null
+- new_england_conservatory_harp_bm: language_of_instruction is null
+- new_england_conservatory_harp_dma: duration_years is null
+- new_england_conservatory_harp_dma: language_of_instruction is null
+- new_england_conservatory_harp_gd: duration_years is null
+- new_england_conservatory_harp_gd: language_of_instruction is null
+- new_england_conservatory_harp_mm: duration_years is null
+- new_england_conservatory_harp_mm: language_of_instruction is null
+- new_england_conservatory_horn_ad: duration_years is null
+- new_england_conservatory_horn_ad: language_of_instruction is null
+- new_england_conservatory_horn_bm: duration_years is null
+- new_england_conservatory_horn_bm: language_of_instruction is null
+- new_england_conservatory_horn_dma: duration_years is null
+- new_england_conservatory_horn_dma: language_of_instruction is null
+- new_england_conservatory_horn_gd: duration_years is null
+- new_england_conservatory_horn_gd: language_of_instruction is null
+- new_england_conservatory_horn_mm: duration_years is null
+- new_england_conservatory_horn_mm: language_of_instruction is null
+- new_england_conservatory_jazz_performance_ad: duration_years is null
+- new_england_conservatory_jazz_performance_ad: language_of_instruction is null
+- new_england_conservatory_jazz_performance_bm: duration_years is null
+- new_england_conservatory_jazz_performance_bm: language_of_instruction is null
+- new_england_conservatory_jazz_performance_dma: duration_years is null
+- new_england_conservatory_jazz_performance_dma: language_of_instruction is null
+- new_england_conservatory_jazz_performance_gd: duration_years is null
+- new_england_conservatory_jazz_performance_gd: language_of_instruction is null
+- new_england_conservatory_jazz_performance_mm: duration_years is null
+- new_england_conservatory_jazz_performance_mm: language_of_instruction is null
+- new_england_conservatory_music_history_bm: duration_years is null
+- new_england_conservatory_music_history_bm: language_of_instruction is null
+- new_england_conservatory_music_theory_bm: duration_years is null
+- new_england_conservatory_music_theory_bm: language_of_instruction is null
+- new_england_conservatory_music_theory_dma: duration_years is null
+- new_england_conservatory_music_theory_dma: language_of_instruction is null
+- new_england_conservatory_music_theory_gd: duration_years is null
+- new_england_conservatory_music_theory_gd: language_of_instruction is null
+- new_england_conservatory_music_theory_mm: duration_years is null
+- new_england_conservatory_music_theory_mm: language_of_instruction is null
+- new_england_conservatory_musicology_mm: duration_years is null
+- new_england_conservatory_musicology_mm: language_of_instruction is null
+- new_england_conservatory_oboe_ad: duration_years is null
+- new_england_conservatory_oboe_ad: language_of_instruction is null
+- new_england_conservatory_oboe_bm: duration_years is null
+- new_england_conservatory_oboe_bm: language_of_instruction is null
+- new_england_conservatory_oboe_dma: duration_years is null
+- new_england_conservatory_oboe_dma: language_of_instruction is null
+- new_england_conservatory_oboe_gd: duration_years is null
+- new_england_conservatory_oboe_gd: language_of_instruction is null
+- new_england_conservatory_oboe_mm: duration_years is null
+- new_england_conservatory_oboe_mm: language_of_instruction is null
+- new_england_conservatory_orchestral_conducting_gd: duration_years is null
+- new_england_conservatory_orchestral_conducting_gd: language_of_instruction is null
+- new_england_conservatory_orchestral_conducting_mm: duration_years is null
+- new_england_conservatory_orchestral_conducting_mm: language_of_instruction is null
+- new_england_conservatory_percussion_ad: duration_years is null
+- new_england_conservatory_percussion_ad: language_of_instruction is null
+- new_england_conservatory_percussion_bm: duration_years is null
+- new_england_conservatory_percussion_bm: language_of_instruction is null
+- new_england_conservatory_percussion_dma: duration_years is null
+- new_england_conservatory_percussion_dma: language_of_instruction is null
+- new_england_conservatory_percussion_gd: duration_years is null
+- new_england_conservatory_percussion_gd: language_of_instruction is null
+- new_england_conservatory_percussion_mm: duration_years is null
+- new_england_conservatory_percussion_mm: language_of_instruction is null
+- new_england_conservatory_piano_ad: duration_years is null
+- new_england_conservatory_piano_ad: language_of_instruction is null
+- new_england_conservatory_piano_bm: duration_years is null
+- new_england_conservatory_piano_bm: language_of_instruction is null
+- new_england_conservatory_piano_bm_piano_collaborative_piano_dual_degree_program: duration_years is null
+- new_england_conservatory_piano_bm_piano_collaborative_piano_dual_degree_program: language_of_instruction is null
+- new_england_conservatory_piano_dma: duration_years is null
+- new_england_conservatory_piano_dma: language_of_instruction is null
+- new_england_conservatory_piano_gd: duration_years is null
+- new_england_conservatory_piano_gd: language_of_instruction is null
+- new_england_conservatory_piano_mm: duration_years is null
+- new_england_conservatory_piano_mm: language_of_instruction is null
+- new_england_conservatory_professional_piano_trio_gd: duration_years is null
+- new_england_conservatory_professional_piano_trio_gd: language_of_instruction is null
+- new_england_conservatory_professional_piano_trio_mm: duration_years is null
+- new_england_conservatory_professional_piano_trio_mm: language_of_instruction is null
+- new_england_conservatory_professional_string_quartet_gd: duration_years is null
+- new_england_conservatory_professional_string_quartet_gd: language_of_instruction is null
+- new_england_conservatory_professional_string_quartet_mm: duration_years is null
+- new_england_conservatory_professional_string_quartet_mm: language_of_instruction is null
+- new_england_conservatory_saxophone_ad: duration_years is null
+- new_england_conservatory_saxophone_ad: language_of_instruction is null
+- new_england_conservatory_saxophone_bm: duration_years is null
+- new_england_conservatory_saxophone_bm: language_of_instruction is null
+- new_england_conservatory_saxophone_dma: duration_years is null
+- new_england_conservatory_saxophone_dma: language_of_instruction is null
+- new_england_conservatory_saxophone_gd: duration_years is null
+- new_england_conservatory_saxophone_gd: language_of_instruction is null
+- new_england_conservatory_saxophone_mm: duration_years is null
+- new_england_conservatory_saxophone_mm: language_of_instruction is null
+- new_england_conservatory_tenor_trombone_ad: duration_years is null
+- new_england_conservatory_tenor_trombone_ad: language_of_instruction is null
+- new_england_conservatory_tenor_trombone_bm: duration_years is null
+- new_england_conservatory_tenor_trombone_bm: language_of_instruction is null
+- new_england_conservatory_tenor_trombone_dma: duration_years is null
+- new_england_conservatory_tenor_trombone_dma: language_of_instruction is null
+- new_england_conservatory_tenor_trombone_gd: duration_years is null
+- new_england_conservatory_tenor_trombone_gd: language_of_instruction is null
+- new_england_conservatory_tenor_trombone_mm: duration_years is null
+- new_england_conservatory_tenor_trombone_mm: language_of_instruction is null
+- new_england_conservatory_trumpet_ad: duration_years is null
+- new_england_conservatory_trumpet_ad: language_of_instruction is null
+- new_england_conservatory_trumpet_bm: duration_years is null
+- new_england_conservatory_trumpet_bm: language_of_instruction is null
+- new_england_conservatory_trumpet_dma: duration_years is null
+- new_england_conservatory_trumpet_dma: language_of_instruction is null
+- new_england_conservatory_trumpet_gd: duration_years is null
+- new_england_conservatory_trumpet_gd: language_of_instruction is null
+- new_england_conservatory_trumpet_mm: duration_years is null
+- new_england_conservatory_trumpet_mm: language_of_instruction is null
+- new_england_conservatory_tuba_ad: duration_years is null
+- new_england_conservatory_tuba_ad: language_of_instruction is null
+- new_england_conservatory_tuba_bm: duration_years is null
+- new_england_conservatory_tuba_bm: language_of_instruction is null
+- new_england_conservatory_tuba_dma: duration_years is null
+- new_england_conservatory_tuba_dma: language_of_instruction is null
+- new_england_conservatory_tuba_gd: duration_years is null
+- new_england_conservatory_tuba_gd: language_of_instruction is null
+- new_england_conservatory_tuba_mm: duration_years is null
+- new_england_conservatory_tuba_mm: language_of_instruction is null
+- new_england_conservatory_viola_ad: duration_years is null
+- new_england_conservatory_viola_ad: language_of_instruction is null
+- new_england_conservatory_viola_bm: duration_years is null
+- new_england_conservatory_viola_bm: language_of_instruction is null
+- new_england_conservatory_viola_dma: duration_years is null
+- new_england_conservatory_viola_dma: language_of_instruction is null
+- new_england_conservatory_viola_gd: duration_years is null
+- new_england_conservatory_viola_gd: language_of_instruction is null
+- new_england_conservatory_viola_mm: duration_years is null
+- new_england_conservatory_viola_mm: language_of_instruction is null
+- new_england_conservatory_violin_ad: duration_years is null
+- new_england_conservatory_violin_ad: language_of_instruction is null
+- new_england_conservatory_violin_bm: duration_years is null
+- new_england_conservatory_violin_bm: language_of_instruction is null
+- new_england_conservatory_violin_dma: duration_years is null
+- new_england_conservatory_violin_dma: language_of_instruction is null
+- new_england_conservatory_violin_gd: duration_years is null
+- new_england_conservatory_violin_gd: language_of_instruction is null
+- new_england_conservatory_violin_mm: duration_years is null
+- new_england_conservatory_violin_mm: language_of_instruction is null
+- new_england_conservatory_voice_ad: duration_years is null
+- new_england_conservatory_voice_ad: language_of_instruction is null
+- new_england_conservatory_voice_bm: duration_years is null
+- new_england_conservatory_voice_bm: language_of_instruction is null
+- new_england_conservatory_voice_dma: duration_years is null
+- new_england_conservatory_voice_dma: language_of_instruction is null
+- new_england_conservatory_voice_gd: duration_years is null
+- new_england_conservatory_voice_gd: language_of_instruction is null
+- new_england_conservatory_voice_mm: duration_years is null
+- new_england_conservatory_voice_mm: language_of_instruction is null
+
+## Final assessment
+
+The package is schema-valid and mechanically complete for all V4-representable seeded-field offerings. It remains intentionally unreviewed and not ready for Directus import; named needs-attention items require the independent review pass.
