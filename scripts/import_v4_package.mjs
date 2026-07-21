@@ -66,25 +66,42 @@ const ACTIVE_FIELDS = {
 const FIELD_SEED_NAMES = {
   alto_saxophone: ["Alto Saxophone", "Music Performance"],
   baritone_saxophone: ["Baritone Saxophone", "Music Performance"],
+  bass: ["Bass", "Music Performance"],
   bass_clarinet: ["Bass Clarinet", "Music Performance"],
   bass_trombone: ["Bass Trombone", "Music Performance"],
   bassoon: ["Bassoon", "Music Performance"],
   clarinet: ["Clarinet", "Music Performance"],
+  chamber_music: ["Chamber Music", "Chamber Music"],
+  choral_conducting: ["Choral Conducting", "Conducting"],
   collaborative_piano: ["Collaborative Piano", "Music Performance"],
+  contemporary_ensembles_conducting: ["Contemporary Ensembles Conducting", "Conducting"],
+  contemporary_media_film_composition: ["Contemporary Media/Film Composition", "Composition/Theory"],
+  contemporary_musical_arts: ["Contemporary Musical Arts", "Music Performance"],
   double_bass: ["Double Bass", "Music Performance"],
   drum_set: ["Drum Set", "Music Performance"],
+  early_music: ["Early Music", "Music Performance"],
   electric_bass: ["Electric Bass", "Music Performance"],
+  euphonium: ["Euphonium", "Music Performance"],
   flute: ["Flute", "Music Performance"],
   guitar: ["Guitar", "Music Performance"],
   harmonica: ["Harmonica", "Music Performance"],
   harp: ["Harp", "Music Performance"],
+  harpsichord: ["Harpsichord", "Music Performance"],
   horn: ["Horn", "Music Performance"],
   jazz_arts_advancement: ["Jazz Arts Advancement", "Jazz Studies"],
+  jazz_performance: ["Jazz Performance", "Jazz Studies"],
+  music_creation_technology: ["Music Creation and Technology", "Composition/Theory"],
+  music_education: ["Music Education", "Music Education"],
+  music_history: ["Music History", "Musicology"],
+  music_theory: ["Music Theory", "Composition/Theory"],
+  musicology: ["Musicology", "Musicology"],
   musical_theatre: ["Musical Theatre", "Musical Theatre"],
   oboe: ["Oboe", "Music Performance"],
   orchestral_conducting: ["Orchestral Conducting", "Conducting"],
   organ: ["Organ", "Music Performance"],
   percussion: ["Percussion", "Music Performance"],
+  professional_piano_trio: ["Professional Piano Trio", "Chamber Music"],
+  professional_string_quartet: ["Professional String Quartet", "Chamber Music"],
   saxophone: ["Saxophone", "Music Performance"],
   tenor_saxophone: ["Tenor Saxophone", "Music Performance"],
   tenor_trombone: ["Tenor Trombone", "Music Performance"],
@@ -92,6 +109,7 @@ const FIELD_SEED_NAMES = {
   tuba: ["Tuba", "Music Performance"],
   vibraphone: ["Vibraphone", "Music Performance"],
   viola: ["Viola", "Music Performance"],
+  wind_conducting: ["Wind Conducting", "Conducting"],
 };
 
 // One-time reconciliation: the original (pre-V4) MSM import used a
@@ -416,14 +434,18 @@ export async function runImport({ packageData, client, mode = "dry-run", seedFie
       fields: ACTIVE_FIELDS.schools, packageData, programRef: null,
     });
     const schoolId = school.id;
-    if (typeof schoolId === "string" && schoolId.startsWith("planned:")) {
-      throw new Error("Refusing to plan programs under a not-yet-created school in dry-run preview");
-    }
+    const schoolIsPlanned =
+      typeof schoolId === "string" && schoolId.startsWith("planned:");
 
-    const existingPrograms = await client.list("program_offerings", {
-      filter: { school_id: { _eq: schoolId } },
-      fields: "id,program_offering_ref,school_id,field_id,degree_level_id,track_or_concentration,official_program_name,program_url,application_url,audition_url,duration_years,language_of_instruction,last_checked,review_status",
-    });
+    // A first-time school has no relational rows to query. Keep its planned
+    // identifier in the dry-run graph so the complete import can be previewed
+    // without sending a synthetic string ID to Directus' integer relations.
+    const existingPrograms = schoolIsPlanned
+      ? []
+      : await client.list("program_offerings", {
+          filter: { school_id: { _eq: schoolId } },
+          fields: "id,program_offering_ref,school_id,field_id,degree_level_id,track_or_concentration,official_program_name,program_url,application_url,audition_url,duration_years,language_of_instruction,last_checked,review_status",
+        });
     const programByRef = new Map(existingPrograms.map((item) => [item.program_offering_ref, item]));
     const resolvedProgramByRef = new Map();
 
@@ -558,7 +580,7 @@ export async function runImport({ packageData, client, mode = "dry-run", seedFie
       "audition_requirements", packageData.audition_requirements, existingAuditions, auditionComplete,
     );
 
-    const existingSources = programIds.length || schoolId
+    const existingSources = !schoolIsPlanned && (programIds.length || schoolId)
       ? await client.list("source_records", {
           filter: { _or: [
             { program_offering_id: { _in: programIds.length ? programIds : [-1] } },
