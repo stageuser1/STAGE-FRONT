@@ -22,7 +22,10 @@ export type IconName =
   | "link"
   | "user"
   | "home"
-  | "filter";
+  | "filter"
+  | "bell"
+  | "heart"
+  | "compare";
 
 const paths: Record<IconName, ReactNode> = {
   search: (
@@ -124,6 +127,21 @@ const paths: Record<IconName, ReactNode> = {
     </>
   ),
   filter: <path d="M4 6h16M7 12h10m-7 6h4" />,
+  bell: (
+    <>
+      <path d="M18 9a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6Z" />
+      <path d="M10.5 20a1.8 1.8 0 0 0 3 0" />
+    </>
+  ),
+  heart: (
+    <path d="M12 20.5s-7-4.6-9.3-9.2C1 8 2.6 4.8 5.8 4.5c2-.2 3.4 1 4.2 2.2.8-1.2 2.2-2.4 4.2-2.2 3.2.3 4.8 3.5 3.1 6.8C19 15.9 12 20.5 12 20.5Z" />
+  ),
+  compare: (
+    <>
+      <rect height="13" rx="2" width="10" x="3" y="7" />
+      <rect height="13" rx="2" width="10" x="11" y="4" />
+    </>
+  ),
 };
 
 interface IconProps extends ComponentPropsWithoutRef<"svg"> {

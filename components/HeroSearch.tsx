@@ -11,10 +11,10 @@ export function HeroSearch() {
       <label className="sr-only" htmlFor="hero-search">
         搜索学校、专业、学历
       </label>
-      <div className="flex h-12 items-center gap-3 rounded-full border border-line bg-white pl-4 pr-1.5 shadow-card transition focus-within:border-brand-500 focus-within:shadow-[0_0_0_3px_rgba(43,70,235,0.12)]">
+      <div className="flex h-14 items-center gap-3 rounded-full border border-line bg-white pl-5 pr-2 shadow-card transition focus-within:border-brand-500 focus-within:shadow-[0_0_0_3px_rgba(43,70,235,0.12)]">
         <span
           aria-hidden="true"
-          className="h-2 w-2 shrink-0 rounded-full bg-brand-600"
+          className="h-2.5 w-2.5 shrink-0 rounded-full bg-brand-600"
         />
         <input
           className="h-full min-w-0 flex-1 bg-transparent text-[15px] text-ink-900 outline-none placeholder:text-ink-400"
@@ -25,10 +25,10 @@ export function HeroSearch() {
         />
         <button
           aria-label="搜索"
-          className="flex h-9 w-14 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white transition hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300"
+          className="flex h-11 w-[54px] shrink-0 items-center justify-center rounded-2xl bg-brand-600 text-white transition hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300"
           type="submit"
         >
-          <Icon name="search" size={18} />
+          <Icon name="search" size={20} />
         </button>
       </div>
     </form>

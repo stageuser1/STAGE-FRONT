@@ -1,4 +1,4 @@
-import type { DegreeInfo, Program } from "@/data/types";
+import type { DegreeInfo, Program, School } from "@/data/types";
 
 /** "2025-12-01" → "2025年12月1日"; anything unparsable returns null. */
 export function formatDateZh(value: string | null | undefined): string | null {
@@ -62,6 +62,119 @@ export function formatFee(program: Program): string | null {
   const fee = program.cost_aid.application_fee;
   if (fee === null) return null;
   return `${program.cost_aid.currency} ${fee.toLocaleString()}`;
+}
+
+const degreeCategoryZhByLevel: Record<string, string> = {
+  bachelor: "本科",
+  master: "硕士",
+  doctorate: "博士",
+  diploma: "文凭",
+  certificate: "证书",
+};
+
+/** Short Chinese degree-category badge label: 本科 / 硕士 / 博士 / 文凭. */
+export function degreeCategoryZh(program: Program): string {
+  return degreeCategoryZhByLevel[program.degree_level] ?? "项目";
+}
+
+const monthAbbr = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+/** "2025-12-01" → "Dec 1, 2025"; anything unparsable returns null. */
+export function formatDeadlineEn(
+  value: string | null | undefined,
+): string | null {
+  if (!value) return null;
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(value);
+  if (!match) return null;
+  const month = monthAbbr[Number(match[2]) - 1];
+  if (!month) return null;
+  return `${month} ${Number(match[3])}, ${match[1]}`;
+}
+
+/**
+ * Annual tuition for the program card: "USD 56,280/year". Reads the raw
+ * application-requirement values already carried on the program (no extra
+ * fetch); returns null when tuition is not recorded.
+ */
+export function formatTuition(program: Program): string | null {
+  const values = program.review_records?.application?.values;
+  const amount = values?.tuition_annual;
+  if (amount === null || amount === undefined || amount === "") return null;
+  const number = Number(amount);
+  const amountText = Number.isFinite(number)
+    ? number.toLocaleString("en-US")
+    : String(amount);
+  const currency = String(values?.tuition_currency ?? "").toUpperCase().trim();
+  return `${currency ? `${currency} ` : ""}${amountText}/year`;
+}
+
+const countryCodeByName: Record<string, string> = {
+  "united states": "US",
+  "united states of america": "US",
+  usa: "US",
+  america: "US",
+  "united kingdom": "GB",
+  uk: "GB",
+  "great britain": "GB",
+  england: "GB",
+  canada: "CA",
+  australia: "AU",
+  germany: "DE",
+  france: "FR",
+  austria: "AT",
+  netherlands: "NL",
+  italy: "IT",
+  spain: "ES",
+  switzerland: "CH",
+};
+
+/** Short country label for compact rows: "United States" → "US". */
+export function countryShort(country: string): string {
+  const trimmed = country.trim();
+  const code = countryCodeByName[trimmed.toLowerCase()];
+  if (code) return code;
+  // Already a 2–3 letter code (US, GBR) — keep as-is.
+  if (/^[A-Za-z]{2,3}$/.test(trimmed)) return trimmed.toUpperCase();
+  return trimmed;
+}
+
+/** Latest update date across a school and every one of its programs. */
+export function latestSchoolUpdate(
+  school: School,
+  programs: Program[],
+): string | null {
+  const dates = [
+    ...(school.sources ?? []).map((source) => source.accessed_at),
+    ...programs.flatMap((program) =>
+      program.sources.map((source) => source.accessed_at),
+    ),
+  ].filter(Boolean);
+  if (dates.length === 0) return null;
+  return dates.sort().at(-1) ?? null;
+}
+
+/** Most recent verification date for a program: latest source retrieval. */
+export function latestCheckedDate(program: Program): string | null {
+  const dates = program.sources
+    .map((source) => source.accessed_at)
+    .filter(Boolean);
+  const lastChecked = program.review_records?.offering?.values?.last_checked;
+  if (typeof lastChecked === "string" && lastChecked) dates.push(lastChecked);
+  if (dates.length === 0) return null;
+  return dates.sort().at(-1) ?? null;
 }
 
 export function languageSummary(program: Program): string | null {

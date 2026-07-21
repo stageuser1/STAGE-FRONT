@@ -5,6 +5,8 @@ import { ReviewerHeaderLink } from "./ReviewerHeaderLink";
 interface MobileHeaderProps {
   subtitle?: string;
   backHref?: string;
+  /** Show the notification bell on the right (homepage top bar). */
+  showNotifications?: boolean;
 }
 
 const navLinks = [
@@ -16,7 +18,11 @@ const navLinks = [
  * App top bar. Mobile: wordmark (or back chevron + wordmark).
  * ≥768px it gains inline navigation links and the reviewer entry.
  */
-export function MobileHeader({ subtitle, backHref }: MobileHeaderProps) {
+export function MobileHeader({
+  subtitle,
+  backHref,
+  showNotifications = false,
+}: MobileHeaderProps) {
   return (
     <header className="sticky top-0 z-10 border-b border-line bg-white/95 backdrop-blur">
       <div className="mx-auto flex min-h-14 w-full max-w-md items-center gap-3 px-4 py-2 md:max-w-3xl md:px-6 lg:max-w-5xl">
@@ -55,8 +61,19 @@ export function MobileHeader({ subtitle, backHref }: MobileHeaderProps) {
           ))}
         </nav>
 
-        <div className="ml-auto hidden shrink-0 md:block">
-          <ReviewerHeaderLink />
+        <div className="ml-auto flex shrink-0 items-center gap-1">
+          <div className="hidden md:block">
+            <ReviewerHeaderLink />
+          </div>
+          {showNotifications ? (
+            <button
+              aria-label="通知"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-ink-700 transition hover:bg-ink-100 hover:text-brand-600"
+              type="button"
+            >
+              <Icon name="bell" size={22} />
+            </button>
+          ) : null}
         </div>
       </div>
     </header>
