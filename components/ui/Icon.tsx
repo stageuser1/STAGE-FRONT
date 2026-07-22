@@ -25,7 +25,8 @@ export type IconName =
   | "filter"
   | "bell"
   | "heart"
-  | "compare";
+  | "compare"
+  | "bookmark";
 
 const paths: Record<IconName, ReactNode> = {
   search: (
@@ -141,6 +142,9 @@ const paths: Record<IconName, ReactNode> = {
       <rect height="13" rx="2" width="10" x="3" y="7" />
       <rect height="13" rx="2" width="10" x="11" y="4" />
     </>
+  ),
+  bookmark: (
+    <path d="M6.5 4.5A1.5 1.5 0 0 1 8 3h8a1.5 1.5 0 0 1 1.5 1.5V21L12 17.5 6.5 21V4.5Z" />
   ),
 };
 

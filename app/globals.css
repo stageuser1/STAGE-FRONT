@@ -4,7 +4,7 @@
 
 :root {
   color: #0f172a;
-  background: #f6f7fb;
+  background: #ffffff;
 }
 
 html {
@@ -16,7 +16,7 @@ body {
   margin: 0;
   font-family: "Inter", "PingFang SC", "Noto Sans SC", -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f6f7fb;
+  background: #ffffff;
   color: #0f172a;
 }
 

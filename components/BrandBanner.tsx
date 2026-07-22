@@ -5,24 +5,24 @@
  */
 export function BrandBanner() {
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-brand-700 via-brand-600 to-brand-600 px-5 py-4 shadow-card md:px-7 md:py-5">
-      <div className="relative z-10 flex items-center gap-3 pr-32 sm:pr-40">
+    <div className="relative h-[72px] overflow-hidden rounded-xl bg-gradient-to-r from-brand-500 via-brand-600 to-brand-600 px-4 py-2.5 shadow-card md:px-7 md:py-5">
+      <div className="relative z-10 flex h-full items-center gap-7 pr-24 sm:pr-40">
         <p
           aria-hidden="true"
-          className="shrink-0 font-serif text-lg italic leading-5 tracking-wide text-white/85 md:text-xl"
+          className="w-[76px] shrink-0 font-serif text-lg font-semibold leading-5 text-white md:text-xl"
         >
-          find your
+          Find your
           <br />
           future
         </p>
-        <p className="text-lg font-bold tracking-[0.14em] text-white md:text-xl">
+        <p className="whitespace-nowrap text-sm font-bold tracking-[0.04em] text-white md:text-xl">
           发现 · 成就 · 未来
         </p>
       </div>
 
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-1 right-2 h-[92px] w-[150px] md:right-5 md:h-[104px] md:w-[168px]"
+        className="pointer-events-none absolute -bottom-1 -right-3 h-[72px] w-[116px] bg-white/95 md:right-5 md:h-[104px] md:w-[168px]"
         fill="none"
         viewBox="0 0 168 104"
         xmlns="http://www.w3.org/2000/svg"

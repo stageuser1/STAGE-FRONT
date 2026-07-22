@@ -1,11 +1,6 @@
 import Link from "next/link";
 import type { Program, School } from "@/data/types";
-import {
-  countryShort,
-  degreeChipLabel,
-  degreeOrder,
-  latestSchoolUpdate,
-} from "@/lib/format";
+import { countryShort, latestSchoolUpdate } from "@/lib/format";
 import { Icon } from "./ui/Icon";
 
 interface HomeSchoolCardProps {
@@ -13,121 +8,151 @@ interface HomeSchoolCardProps {
   programs: Program[];
 }
 
-/**
- * Homepage "最新更新院校" feed card. Same visual language as the program
- * card (media-placeholder thumbnail, tag pills, light fact box, footer),
- * but the primary entity is the institution: its major areas, offered
- * degrees, program count and latest update roll up from its programs.
- * The whole card links to the school detail page.
- */
+const schoolNamesZh: Record<string, string> = {
+  "The Juilliard School": "茱莉亚音乐学院",
+  "Juilliard School": "茱莉亚音乐学院",
+  "Manhattan School of Music": "曼哈顿音乐学院",
+  "Curtis Institute of Music": "柯蒂斯音乐学院",
+  "Eastman School of Music": "伊斯曼音乐学院",
+  "New England Conservatory": "新英格兰音乐学院",
+  "New England Conservatory of Music": "新英格兰音乐学院",
+  "Colburn School": "科尔本音乐学院",
+  "Berklee College of Music": "伯克利音乐学院",
+  "Cleveland Institute of Music": "克利夫兰音乐学院",
+  "Oberlin Conservatory of Music": "欧柏林音乐学院",
+  "Jacobs School of Music": "雅各布斯音乐学院",
+  "USC Thornton School of Music": "南加州大学桑顿音乐学院",
+  "Bienen School of Music": "比嫩音乐学院",
+  "Northwestern Bienen School of Music": "西北大学比嫩音乐学院",
+  "Shepherd School of Music": "谢泼德音乐学院",
+  "Rice Shepherd School of Music": "莱斯大学谢泼德音乐学院",
+  "Yale School of Music": "耶鲁音乐学院",
+  "Peabody Institute": "皮博迪音乐学院",
+  "Royal College of Music": "英国皇家音乐学院",
+  "Royal Academy of Music": "英国皇家音乐学院",
+  "Royal Northern College of Music": "皇家北方音乐学院",
+  "Royal Conservatoire of Scotland": "苏格兰皇家音乐学院",
+  "Guildhall School of Music and Drama": "市政厅音乐及戏剧学院",
+  "Guildhall School of Music & Drama": "市政厅音乐及戏剧学院",
+};
+
+function shortDate(value: string | null): string {
+  if (!value) return "待更新";
+  return value.slice(0, 10).replaceAll("-", ".");
+}
+
+function tuitionRange(programs: Program[]): string {
+  const values = programs
+    .map((program) => program.cost_aid.tuition_amount)
+    .filter((value): value is number => value !== null)
+    .sort((a, b) => a - b);
+  if (values.length === 0) return "待公布";
+  const currency = programs.find(
+    (program) => program.cost_aid.tuition_amount !== null,
+  )?.cost_aid.currency;
+  const compact = (value: number) =>
+    value >= 1000 ? `${Math.round(value / 1000)}k` : String(value);
+  const range =
+    values[0] === values.at(-1)
+      ? compact(values[0])
+      : `${compact(values[0])}-${compact(values.at(-1)!)}`;
+  return `${currency ?? ""} ${range}`.trim();
+}
+
+function nearestDeadline(programs: Program[]): string {
+  const deadlines = programs
+    .flatMap((program) => [
+      program.deadline.application_deadline,
+      program.deadline.prescreening_deadline,
+    ])
+    .filter((value): value is string => Boolean(value))
+    .sort();
+  return deadlines[0] ? shortDate(deadlines[0]) : "待公布";
+}
+
+/** Explore feed card; all values are derived from the existing school/program data. */
 export function HomeSchoolCard({ school, programs }: HomeSchoolCardProps) {
-  // Distinct major areas (display label) offered by the school.
-  const areas = [
-    ...new Map(
-      programs
-        .filter((program) => program.major_area)
-        .map((program) => [
-          program.major_area,
-          program.major_area_zh ?? program.major_area,
-        ]),
-    ).values(),
-  ];
-  const shownAreas = areas.slice(0, 4);
-
-  // Distinct degrees, in canonical order: BM → MM → GD → AD → DMA.
-  const degrees = [
-    ...new Map(
-      programs
-        .filter((program) => program.degree?.abbreviation)
-        .map((program) => [program.degree!.abbreviation!, program.degree!]),
-    ).values(),
-  ].sort((left, right) => degreeOrder(left.slug) - degreeOrder(right.slug));
-
   const updated = latestSchoolUpdate(school, programs);
+  const majors = new Set(
+    programs.map((program) => program.major_area).filter(Boolean),
+  ).size;
+  const nameZh = schoolNamesZh[school.name] ?? "中文名称待补充";
 
   return (
-    <Link
-      className="group block rounded-2xl border border-line bg-white p-4 shadow-card transition hover:border-brand-300 hover:shadow-raised"
-      href={`/schools/${school.id}`}
-    >
-      <div className="flex gap-4">
+    <article className="group relative overflow-hidden rounded-[18px] border border-[#e7e7e7] bg-white shadow-[0_1px_4px_rgba(15,23,42,0.10)] transition hover:border-brand-300 hover:shadow-raised">
+      <Link className="block" href={`/schools/${school.id}`}>
         <div
           aria-hidden="true"
-          className="relative h-[104px] w-[100px] shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-brand-100 via-brand-50 to-ink-100"
-        >
-          <Icon
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-brand-300"
-            name="school"
-            size={34}
+          className="m-[5px] h-[99px] rounded-[14px] border border-[#eeeeee] bg-[#fcfcfc]"
+        />
+
+        <div className="flex h-[61px] items-center gap-3 px-2.5">
+          <div
+            aria-label="学校图片占位"
+          className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded bg-[#dedede] text-[#b8b8b8]"
           />
-        </div>
-
-        <div className="min-w-0 flex-1">
-          <h3 className="line-clamp-2 text-[17px] font-bold leading-6 text-ink-900">
-            {school.name}
-          </h3>
-          <p className="mt-1.5 flex items-center gap-1 truncate text-[13px] leading-5 text-ink-500">
-            <Icon className="shrink-0 text-ink-400" name="location" size={13} />
-            {countryShort(school.country)} · {school.city}
-          </p>
-          {shownAreas.length > 0 ? (
-            <div className="mt-2 flex flex-wrap items-center gap-1.5">
-              {shownAreas.map((area) => (
-                <span
-                  className="inline-flex h-[22px] items-center rounded-full bg-ink-50 px-2.5 text-xs text-ink-500"
-                  key={area}
-                >
-                  {area}
-                </span>
-              ))}
-              {areas.length > shownAreas.length ? (
-                <span className="inline-flex h-[22px] items-center rounded-full bg-ink-50 px-2.5 text-xs text-ink-400">
-                  +{areas.length - shownAreas.length}
-                </span>
-              ) : null}
+          <div className="min-w-0 flex-1">
+            <div className="flex min-w-0 items-center justify-between gap-3">
+              <h3 className="truncate text-[13px] font-semibold leading-5 text-[#171717]">
+                {school.name}
+              </h3>
+              <p className="shrink-0 text-[12px] font-semibold leading-5 text-[#171717]">
+                {nameZh}
+              </p>
             </div>
-          ) : null}
+            <p className="mt-0.5 flex items-center gap-1 truncate text-[9px] leading-3 text-[#8b8b8b]">
+              <Icon className="shrink-0 text-[#b2b2b2]" name="location" size={11} />
+              {countryShort(school.country)} · {school.city}
+            </p>
+          </div>
         </div>
-      </div>
 
-      {degrees.length > 0 ? (
-        <div className="mt-3 flex flex-wrap items-center gap-1.5">
-          {degrees.map((degree) => (
-            <span
-              className="inline-flex h-[22px] items-center rounded-full bg-brand-50 px-2.5 text-xs font-semibold text-brand-600"
-              key={degree.abbreviation}
-              title={degree.name_zh ?? degree.name}
-            >
-              {degreeChipLabel(degree)}
-            </span>
-          ))}
+        <div className="grid h-[44px] grid-cols-4 border-y border-[#eeeeee] px-1">
+          <Metric icon="school" label="专业数量" value={`${majors || programs.length} 个`} />
+          <Metric icon="calendar" label="最新更新" value={shortDate(updated)} />
+          <Metric icon="tuition" label="学费范围" value={tuitionRange(programs)} />
+          <Metric icon="clock" label="申请截止" value={nearestDeadline(programs)} />
         </div>
-      ) : null}
 
-      <div className="mt-3 overflow-hidden rounded-xl bg-ink-50">
-        <div className="flex items-center justify-between gap-3 px-3.5 py-2.5">
-          <span className="shrink-0 text-[13px] leading-5 text-ink-500">
-            招生项目
-          </span>
-          <span className="min-w-0 truncate text-right text-[13px] font-medium leading-5 text-ink-900">
-            {programs.length} 个
-          </span>
-        </div>
-      </div>
-
-      <div className="mt-3 flex items-center justify-between gap-3 border-t border-line-subtle pt-3">
-        <span className="truncate text-xs leading-4 text-ink-400">
-          {updated ? `最近更新:${updated}` : "更新日期待确认"}
-        </span>
-        <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-brand-600">
-          查看详情
+        <div className="flex h-[27px] items-center justify-center gap-2 text-[10px] font-medium text-brand-600">
+          查看院校
           <Icon
             className="transition group-hover:translate-x-0.5"
             name="chevron-right"
-            size={16}
+            size={13}
           />
+        </div>
+      </Link>
+
+      <button
+        aria-label={`收藏 ${school.name}`}
+        className="absolute right-3 top-3 flex h-6 w-6 items-center justify-center rounded-sm border border-[#eeeeee] bg-white/85 text-[#b8b8b8]"
+        type="button"
+      >
+        <Icon name="bookmark" size={15} />
+      </button>
+    </article>
+  );
+}
+
+function Metric({
+  icon,
+  label,
+  value,
+}: {
+  icon: "school" | "calendar" | "tuition" | "clock";
+  label: string;
+  value: string;
+}) {
+  return (
+    <div className="flex min-w-0 items-center justify-center gap-1">
+      <Icon className="shrink-0 text-[#a6a6a6]" name={icon} size={12} />
+      <span className="min-w-0 text-[8px] leading-[11px] text-[#242424]">
+        <span className="block whitespace-nowrap">{label}</span>
+        <span className="block max-w-[62px] truncate text-[7px] text-[#989898]">
+          {value}
         </span>
-      </div>
-    </Link>
+      </span>
+    </div>
   );
 }

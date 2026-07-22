@@ -12,10 +12,10 @@ export const dynamic = "force-dynamic";
 /** Canonical country filter set shown on the homepage. */
 const countryChips: FilterChipItem[] = [
   { label: "全部", href: "/", active: true },
-  { label: "US", href: "/search?country=US" },
-  { label: "GB", href: "/search?country=GB" },
-  { label: "CA", href: "/search?country=CA" },
-  { label: "AU", href: "/search?country=AU" },
+  { label: "美国", href: "/search?country=US" },
+  { label: "英国", href: "/search?country=GB" },
+  { label: "加拿大", href: "/search?country=CA" },
+  { label: "韩国", href: "/search?country=KR" },
   { label: "筛选", href: "/search", icon: "filter" },
 ];
 
@@ -44,28 +44,28 @@ export default async function HomePage() {
     <>
       <MobileHeader showNotifications subtitle="海外音乐院校招生数据库" />
       <PageShell>
-        <section className="space-y-4 md:mx-auto md:max-w-2xl">
-          <h1 className="text-[28px] font-bold leading-9 text-ink-900 md:text-center md:text-[34px] md:leading-[44px]">
+        <section className="space-y-[14px] md:mx-auto md:max-w-2xl">
+          <h1 className="px-2 text-[25px] font-bold leading-8 tracking-[0.01em] text-ink-900 md:text-center md:text-[34px] md:leading-[44px]">
             探索全球音乐教育机会
           </h1>
           <HeroSearch />
           <FilterChips ariaLabel="按国家筛选" chips={countryChips} />
         </section>
 
-        <section className="mt-6">
+        <section className="mt-5">
           <BrandBanner />
         </section>
 
-        <section className="mt-8">
-          <div className="mb-3 px-1">
-            <h2 className="text-[20px] font-bold leading-7 text-ink-900">
-              最新更新院校
+        <section className="mt-2.5">
+          <div className="mb-2 px-2">
+            <h2 className="text-base font-bold leading-5 text-ink-900">
+              精选院校
             </h2>
-            <p className="mt-1 text-sm leading-5 text-ink-500">
-              共 {schools.length} 所学校
+            <p className="mt-0.5 text-[10px] leading-4 text-ink-500">
+              为你精选全球顶尖音乐学府
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 md:gap-5">
+          <div className="grid gap-2.5 md:grid-cols-2 md:gap-5">
             {feed.map((school) => (
               <HomeSchoolCard
                 key={school.id}

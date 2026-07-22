@@ -23,14 +23,14 @@ export function FilterChips({ chips, ariaLabel = "筛选" }: FilterChipsProps) {
   return (
     <nav
       aria-label={ariaLabel}
-      className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1"
+      className="no-scrollbar flex gap-1.5 overflow-x-auto px-2 pb-0.5"
     >
       {chips.map((chip) => (
         <Link
           className={
             chip.active
-              ? "flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-brand-600 px-4 text-sm font-semibold text-white shadow-card"
-              : "flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border border-line bg-white px-4 text-sm font-medium text-ink-700 transition hover:border-brand-300 hover:text-brand-600"
+              ? "flex h-8 shrink-0 items-center gap-1 rounded-full border border-line bg-white px-2.5 text-[13px] font-medium text-ink-900 shadow-card"
+              : "flex h-8 shrink-0 items-center gap-1 rounded-full border border-line bg-white px-2.5 text-[13px] font-medium text-ink-900 transition hover:border-brand-300 hover:text-brand-600"
           }
           href={chip.href}
           key={`${chip.label}-${chip.href}`}

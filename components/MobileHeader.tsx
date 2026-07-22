@@ -24,8 +24,8 @@ export function MobileHeader({
   showNotifications = false,
 }: MobileHeaderProps) {
   return (
-    <header className="sticky top-0 z-10 border-b border-line bg-white/95 backdrop-blur">
-      <div className="mx-auto flex min-h-14 w-full max-w-md items-center gap-3 px-4 py-2 md:max-w-3xl md:px-6 lg:max-w-5xl">
+    <header className="relative z-10 bg-white">
+      <div className="mx-auto flex h-[94px] w-full max-w-[402px] items-center gap-3 px-6 pt-1 md:max-w-3xl md:px-6 lg:max-w-5xl">
         {backHref ? (
           <Link
             aria-label="返回"
@@ -35,12 +35,12 @@ export function MobileHeader({
             <Icon name="chevron-left" size={22} />
           </Link>
         ) : null}
-        <Link className="min-w-0 py-1" href="/">
-          <p className="text-[22px] font-extrabold leading-6 tracking-tight text-brand-600">
+        <Link className="min-w-0 translate-y-2 py-1" href="/">
+          <p className="text-[24px] font-extrabold leading-7 tracking-[-0.035em] text-brand-600">
             STAGE
           </p>
           {subtitle ? (
-            <p className="mt-0.5 truncate text-xs leading-4 text-ink-500">
+            <p className="mt-2 truncate text-sm leading-5 tracking-[0.04em] text-ink-500">
               {subtitle}
             </p>
           ) : null}
@@ -68,10 +68,10 @@ export function MobileHeader({
           {showNotifications ? (
             <button
               aria-label="通知"
-              className="flex h-10 w-10 items-center justify-center rounded-full text-ink-700 transition hover:bg-ink-100 hover:text-brand-600"
+              className="flex h-11 w-11 items-center justify-center rounded-full text-[#171717] transition hover:bg-ink-100 hover:text-brand-600"
               type="button"
             >
-              <Icon name="bell" size={22} />
+              <Icon name="bell" size={28} />
             </button>
           ) : null}
         </div>
@@ -93,11 +93,11 @@ export function PageShell({
 }) {
   const widthClasses =
     width === "reading"
-      ? "max-w-md md:max-w-2xl lg:max-w-3xl"
-      : "max-w-md md:max-w-3xl lg:max-w-5xl";
+      ? "max-w-[402px] md:max-w-2xl lg:max-w-3xl"
+      : "max-w-[402px] md:max-w-3xl lg:max-w-5xl";
   return (
     <main
-      className={`mx-auto min-h-screen w-full px-4 pb-24 pt-4 md:px-6 md:pb-10 md:pt-6 ${widthClasses} ${className}`}
+      className={`mx-auto min-h-screen w-full px-4 pb-24 pt-[5px] md:px-6 md:pb-10 md:pt-6 ${widthClasses} ${className}`}
     >
       {children}
     </main>
