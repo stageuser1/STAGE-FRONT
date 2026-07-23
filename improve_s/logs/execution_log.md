@@ -1427,3 +1427,67 @@ machinery worked as designed.
 `04_phase_2_speed_architecture`.
 
 ---
+
+### [2026-07-23] Phase 2 · Planning — execution plan written
+
+- **Actor:** Claude
+- **Branch:** `perf/s0-baseline` (planning only; `perf/s1-speed-track` not yet created)
+- **Approved by owner:** planning was requested; **the plan itself is not yet approved**
+
+**Files modified:** `improve_s/04_phase_2_speed_architecture/claude_plan.md`
+**Files added:** none · **Files deleted:** none
+**Dependency / configuration / database / Directus changes:** none
+**Application code changes:** none
+
+**Typecheck / Build / Tests:** not run — planning only
+
+**New evidence derived at planning time** (from `batch4_d015_home.stdout.txt`,
+already captured in Phase 0 but not previously broken out):
+
+Per-collection transfer per render —
+`source_records` 15,731,434 B (**57.6%**) · `audition_requirements` fallback
+6,415,237 B (**23.5%**) · `application_requirements` 3,090,406 B (11.3%) ·
+`program_offerings` 2,076,109 B (7.6%) · `schools` **9,206 B (0.03%)** ·
+audition 403 415 B. Total 27,322,807 B.
+
+**The homepage transfers 27.32 MB to render a page whose primary entity is
+9.2 KB.**
+
+**Principal planning judgement:** caching solves the 27.32 MB problem; query
+narrowing does not. After the fetch-cache change the transfer is paid once per
+revalidation window rather than once per request — a >99% reduction in Directus
+load at any realistic traffic level, and removed entirely from user-perceived
+latency. Query narrowing only improves the cache-miss path, is second-order, and
+carries materially more regression risk. **Phase 2 therefore does caching only.**
+Narrowing opportunities (up to 15.73 MB from `sources` on `/` and `/search`, up
+to 6.42 MB from `audition_requirements`) are recorded as evidence-gated
+follow-ups and explicitly excluded from this phase.
+
+**Field allowlists were found already correct** — no `fields=*` anywhere, one
+level of narrow relation expansion. The bulk is row volume, not field selection.
+No allowlist work is proposed.
+
+**C2 resolved in-plan:** keep `evidence_metadata`. It is consumed
+(`lib/data.ts:755` → `topic_key` → `lib/school-detail.ts:293` citation
+grouping), removal would visibly regroup citations (Global Constraint 1), and
+Batch 5 measured 0 occurrences in every anonymous RSC payload — a performance
+question, not a security one. The original Batch 3 ("remove the field") is
+cancelled and replaced by a measure-only batch.
+
+**C1 recommendation:** revalidation window **900 s**, set in `lib/data.ts:165`
+as the single source of truth and mirrored in route exports.
+
+**Anticipated complication recorded:** `force-dynamic` alters default
+fetch-cache behaviour, so Batch 1 may show little improvement until Batch 2
+removes it. Documented as diagnostic, explicitly **not** a stop condition, so
+Codex does not halt or attempt a fix.
+
+**Outcome:** completed. Plan ready for owner review.
+
+**Blocked:** C1, C2, C3 must be resolved before Batch 1. C4 (Preview) blocks the
+exit gate, not the start.
+
+**Next action:** owner reviews the plan and resolves C1–C3. On approval, Claude
+writes `04_phase_2_speed_architecture/codex_execution.md`.
+
+---
