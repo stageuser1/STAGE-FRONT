@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+Content-Type: text/x-component
+Date: Thu, 23 Jul 2026 07:25:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+

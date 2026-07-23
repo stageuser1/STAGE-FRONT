@@ -1162,3 +1162,87 @@ checklist; formal Batch 7 completion.
 **Commit SHA:** recorded by the Batch 4 completion commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 5 — anonymous RSC payload capture
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 5
+- **Approved by owner:** yes — decisions.md refs: **D-012**, **D-015**
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:**
+- `improve_s/01_phase_0_baseline/batch5_server.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch5_server.stderr.txt`
+- `improve_s/01_phase_0_baseline/payloads/home.rsc`
+- `improve_s/01_phase_0_baseline/payloads/home.headers.txt`
+- `improve_s/01_phase_0_baseline/payloads/search.rsc`
+- `improve_s/01_phase_0_baseline/payloads/search.headers.txt`
+- `improve_s/01_phase_0_baseline/payloads/school_yale.rsc`
+- `improve_s/01_phase_0_baseline/payloads/school_yale.headers.txt`
+- `improve_s/01_phase_0_baseline/payloads/program_1190.rsc`
+- `improve_s/01_phase_0_baseline/payloads/program_1190.headers.txt`
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none
+
+**Database / Directus changes:** none
+
+**Application code changes:** none
+
+**git diff --stat for Batch 5:**
+
+```text
+ .../01_phase_0_baseline/batch5_server.stderr.txt   |  0
+ .../01_phase_0_baseline/batch5_server.stdout.txt   | 10 +++
+ .../01_phase_0_baseline/payloads/home.headers.txt  |  9 +++
+ improve_s/01_phase_0_baseline/payloads/home.rsc    | 73 +++++++++++++++++++
+ .../payloads/program_1190.headers.txt              |  9 +++
+ .../01_phase_0_baseline/payloads/program_1190.rsc  | 41 +++++++++++
+ .../payloads/school_yale.headers.txt               |  9 +++
+ .../01_phase_0_baseline/payloads/school_yale.rsc   | 64 +++++++++++++++++
+ .../payloads/search.headers.txt                    |  9 +++
+ improve_s/01_phase_0_baseline/payloads/search.rsc  | 78 ++++++++++++++++++++
+ improve_s/01_phase_0_baseline/report.md            | 72 ++++++++++++++-----
+ improve_s/logs/execution_log.md                    | 84 ++++++++++++++++++++++
+ 12 files changed, 441 insertions(+), 17 deletions(-)
+```
+
+**Capture method:** anonymous `curl` requests with `RSC: 1`; no cookies,
+reviewer session, or Directus request. All four returned HTTP 200 and
+`Content-Type: text/x-component`. Batch 5 server stderr was empty.
+
+**Marker measurements:**
+
+| Route | `review_record` | `review_records` | `evidence_metadata` | `confidence` | `internal_` | `admin_` | Bytes |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `/` | 0 | 0 | 0 | 0 | 0 | 0 | 128,717 |
+| `/search` | 0 | 0 | 0 | 0 | 0 | 0 | 36,791 |
+| `/schools/yale_school_of_music` | 1 | 0 | 0 | 1 | 0 | 0 | 107,114 |
+| `/schools/yale_school_of_music/programs/1190` | 1 | 1 | 0 | 1 | 0 | 0 | 49,640 |
+
+The Flight capture method is valid and S10 is not triggered: both detail
+routes contain internal review/confidence markers. Zero counts for
+`evidence_metadata`, `internal_`, and `admin_` are recorded exactly as
+observed.
+
+**Typecheck / Build / Tests:** not rerun — no application code changed and the
+approved Batch 5 verification is the payload capture itself.
+
+**Outcome:** completed
+
+**Stop condition:** none
+
+**Blocked or incomplete items:** Batch 6 manual checklist and formal Batch 7
+completion.
+
+**Commit SHA:** recorded by the Batch 5 commit
+
+---

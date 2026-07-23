@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** 🟢 **BATCH 4 COMPLETE UNDER D-015 — Batches 5–7 pending**
-**Completed:** No — Batches 0–4 complete and valid; Batches 5–7 pending
+**Status:** 🟢 **BATCH 5 COMPLETE — Batches 6–7 pending**
+**Completed:** No — Batches 0–5 complete and valid; Batches 6–7 pending
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -130,9 +130,10 @@
 | Batch 4 attempt 1 | 2026-07-23 12:22 +08:00 |
 | Batch 4 authorized retry | 2026-07-23 14:58 +08:00 |
 | D-015 successful resumption | 2026-07-23 15:17–15:21 +08:00 |
-| End | In progress — Batches 5–7 pending |
+| Batch 5 capture | 2026-07-23 15:25–15:26 +08:00 |
+| End | In progress — Batches 6–7 pending |
 | Actor | Codex |
-| Outcome | Batches 0–4 complete and valid; proceed to Batch 5 |
+| Outcome | Batches 0–5 complete and valid; proceed to Batch 6 |
 
 Completed work:
 
@@ -153,6 +154,9 @@ Completed work:
 - D-015 disclosed that both failures were operator-caused, authorized
   resumption after restoration, and the resumption completed all four Batch 4
   routes successfully.
+- Batch 5 captured four anonymous raw RSC/Flight payloads with
+  `Content-Type: text/x-component`; internal markers were present on both
+  detail routes.
 
 Prior attempt retained as history: the 2026-07-23 11:40–11:46 run stopped
 before Batch 1 under S12 because approval and decisions D-001/D-002/D-004 had
@@ -164,7 +168,7 @@ those Phase 0 preconditions.
 | Type | Files / result |
 |---|---|
 | Modified | `improve_s/01_phase_0_baseline/report.md`; `improve_s/logs/execution_log.md` |
-| Added | Six Batch 3 and twelve Batch 4 local-server stdout/stderr measurement artifacts listed below |
+| Added | Six Batch 3, twelve Batch 4, and ten Batch 5 measurement artifacts listed below |
 | Deleted | none |
 | Dependency changes | none |
 | Configuration changes | none |
@@ -192,6 +196,9 @@ Added measurement artifacts:
 - `improve_s/01_phase_0_baseline/batch4_d015_school.stderr.txt`
 - `improve_s/01_phase_0_baseline/batch4_d015_program.stdout.txt`
 - `improve_s/01_phase_0_baseline/batch4_d015_program.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch5_server.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch5_server.stderr.txt`
+- Eight files under `improve_s/01_phase_0_baseline/payloads/` listed in §6
 
 `git diff --stat` after the stop-record commit: empty (clean working tree).
 
@@ -217,13 +224,23 @@ Branch versus rollback SHA `86c1db9` after staging the stop record:
  .../01_phase_0_baseline/batch4_home.stdout.txt     |  18 +
  .../batch4_retry_home.stderr.txt                   |   5 +
  .../batch4_retry_home.stdout.txt                   |  18 +
+ .../01_phase_0_baseline/batch5_server.stderr.txt   |   0
+ .../01_phase_0_baseline/batch5_server.stdout.txt   |  10 +
  improve_s/01_phase_0_baseline/codex_execution.md   |  86 +-
- improve_s/01_phase_0_baseline/report.md            | 557 +++++++++--
+ .../01_phase_0_baseline/payloads/home.headers.txt  |   9 +
+ improve_s/01_phase_0_baseline/payloads/home.rsc    |  73 ++
+ .../payloads/program_1190.headers.txt              |   9 +
+ .../01_phase_0_baseline/payloads/program_1190.rsc  |  41 +
+ .../payloads/school_yale.headers.txt               |   9 +
+ .../01_phase_0_baseline/payloads/school_yale.rsc   |  64 ++
+ .../payloads/search.headers.txt                    |   9 +
+ improve_s/01_phase_0_baseline/payloads/search.rsc  |  78 ++
+ improve_s/01_phase_0_baseline/report.md            | 609 +++++++++--
  improve_s/README.md                                |   3 +-
- improve_s/logs/decisions.md                        | 504 +++++++++-
- improve_s/logs/execution_log.md                    | 1036 ++++++++++++++++++++
+ improve_s/logs/decisions.md                        | 504 ++++++++-
+ improve_s/logs/execution_log.md                    | 1120 ++++++++++++++++++++
  improve_s/logs/rollback_history.md                 |  33 +-
- 25 files changed, 2310 insertions(+), 122 deletions(-)
+ 35 files changed, 2741 insertions(+), 129 deletions(-)
 ```
 
 This branch-level stat includes the approved entry-gate and rollback
@@ -467,18 +484,33 @@ or response-byte baseline.
 
 | Route | `review_record` | `review_records` | `evidence_metadata` | `confidence` | `internal_` | `admin_` | Payload bytes |
 |---|---|---|---|---|---|---|---|
-| `/` | not captured | not captured | not captured | not captured | not captured | not captured | n/a |
-| `/search` | not captured | not captured | not captured | not captured | not captured | not captured | n/a |
-| `/schools/yale_school_of_music` | not captured | not captured | not captured | not captured | not captured | not captured | n/a |
-| `/schools/yale_school_of_music/programs/1190` | not captured | not captured | not captured | not captured | not captured | not captured | n/a |
+| `/` | 0 | 0 | 0 | 0 | 0 | 0 | 128,717 |
+| `/search` | 0 | 0 | 0 | 0 | 0 | 0 | 36,791 |
+| `/schools/yale_school_of_music` | 1 | 0 | 0 | 1 | 0 | 0 | 107,114 |
+| `/schools/yale_school_of_music/programs/1190` | 1 | 1 | 0 | 1 | 0 | 0 | 49,640 |
 
-Payload files: pending. Batch 5 begins after the Batch 4 report commit.
+All captures were anonymous requests with no cookie or reviewer session and
+returned HTTP 200 with `Content-Type: text/x-component`.
+
+Payload files:
+
+- `/` → `payloads/home.rsc`; headers: `payloads/home.headers.txt`
+- `/search` → `payloads/search.rsc`; headers: `payloads/search.headers.txt`
+- `/schools/yale_school_of_music` → `payloads/school_yale.rsc`; headers:
+  `payloads/school_yale.headers.txt`
+- `/schools/yale_school_of_music/programs/1190` →
+  `payloads/program_1190.rsc`; headers: `payloads/program_1190.headers.txt`
+
+The raw RSC method is valid: all four bodies begin with Flight protocol records
+and both detail routes expose internal review/confidence markers. S10 is not
+triggered. `evidence_metadata`, `internal_`, and `admin_` were zero in all four
+captures and are retained as measured results rather than inferred findings.
 
 ## 7. QA mechanism
 
 Approved path: **Path B — manual checklist** (D-002).
 
-Execution status: pending. Batch 6 follows Path B after Batch 5.
+Execution status: pending. Batch 6 follows Path B.
 
 Smoke-suite files created: none. Dependency changes: none.
 
@@ -498,6 +530,11 @@ Smoke-suite files created: none. Dependency changes: none.
   failures are not ambient link-instability evidence. They remain evidence of
   the app's generic 200-with-error-page behavior and undifferentiated
   `fetch failed` observability when Directus is unavailable.
+- Batch 5 captured marker names exactly as specified. `evidence_metadata`,
+  `internal_`, and `admin_` were zero on every route; the capture is still
+  valid because it is raw `text/x-component` Flight data and internal
+  `review_record`/`review_records`/`confidence` markers are non-zero on the
+  detail routes.
 - No route substitution was made; all four planned routes returned HTTP 200.
 - The homepage timing spread was wide (3436.724–9490.978 ms across official
   cold/warm runs), but the median remained computable. The other routes were
@@ -542,7 +579,8 @@ Entry and resume approvals were valid. No Batch 4 blocker remains.
   HTTP 200; the expected `audition_requirements` fallback is baseline data.
 - Batch 4: complete under D-015; all four required route request/byte
   observations are recorded.
-- Batch 5: pending anonymous RSC payload capture.
+- Batch 5: complete; four anonymous raw RSC payloads and response headers
+  captured.
 - Batch 6: Path B was approved, but the manual checklist was not written
   yet.
 - Batch 7: the required `is_current` limitation remains recorded in §8 from the
@@ -556,5 +594,5 @@ triggered but are causally resolved under D-015.
 Default recommendation after a valid Phase 0 baseline remains
 **`04_phase_2_speed_architecture`**.
 
-Phase 0 remains in progress through Batches 5–7. No later phase is authorized
+Phase 0 remains in progress through Batches 6–7. No later phase is authorized
 until this report is complete and the owner signs the Phase 0 gate.
