@@ -36,11 +36,11 @@ These block the phases named. Record each one below as it is resolved.
 | **D-003** | How to clean the dirty working tree — commit or stash the 6 outstanding items | Phase `01_` Batch 1 | ✅ **RESOLVED** — see D-003 below |
 | **D-004** | Confirm the "1–2 second" baseline from the original brief is discarded | All performance gates | ✅ **RESOLVED** — discarded — see below |
 | **D-005** | Transport security approach: A (TLS on Directus) / B (server-side proxy) / C (both) | Phase `02_` | ⬜ Open |
-| **D-006** | Revalidation window for ISR, and acceptance of the staleness trade-off | Phase `04_` gate | ⬜ Open |
+| **D-006** | Revalidation window for ISR, and acceptance of the staleness trade-off | Phase `04_` gate | ✅ **RESOLVED — 900 s** (D-017 / C1) |
 | **D-007** | `/pilot/*` disposition: keep / gate behind auth / remove | Phases `03_`, `05_` | ⬜ Open |
 | **D-008** | Bundle analyzer devDependency + `next.config.ts` edit — pre-authorize? | Phase `05_` | ⬜ Open |
 | **D-009** | Reviewer test account — obtain before Phase `06_` | Phase `06_` | ⬜ Open |
-| **D-010** | Confirm execution order: `01_` → `04_` → `03_` → `05_` → `06_`, with `02_` in parallel | Program sequence | ⬜ Open |
+| **D-010** | Confirm execution order: `01_` → `04_` → `03_` → `05_` → `06_`, with `02_` in parallel | Program sequence | ✅ **RESOLVED** — benchmark-first rollout (D-017 / C3) |
 
 ---
 
@@ -769,3 +769,86 @@ it does not affect Phase `03_`'s scope.
 
 - **Reversible?** Yes — this is a gate decision; the rollback point `86c1db9`
   is unchanged.
+
+---
+
+### D-017 · [2026-07-23] — PHASE 2 ENTRY: C1, C2, C3 approved; execution package issued
+
+- **Type:** approval
+- **Phase:** `04_` — entry
+- **Decided by:** owner
+
+#### Approved decisions
+
+| # | Decision | Approved value |
+|---|---|---|
+| **C1** | ISR revalidation window | **900 seconds (15 minutes)** — as recommended in `claude_plan.md` §3.1 |
+| **C2** | `evidence_metadata` | **Keep. Do not remove or alter in Phase 2.** Treated as a **required field** for current citation-grouping behaviour. |
+| **C3** | Execution order | **1.** Benchmark one route first · **2.** Apply cache architecture change · **3.** Measure before expanding · **4.** Roll out only after acceptance criteria are met |
+
+**C4 (D-001, Preview) remains open** — blocks the Phase `04_` **exit gate**, not
+its start. Recorded in the package so Codex does not stop on it.
+
+#### C2 — consequence recorded
+
+`evidence_metadata` is now a **protected field** for the duration of Phase 2.
+`codex_execution.md` §4 lists it explicitly among forbidden changes, alongside
+`sourceTopicKey()` (`lib/data.ts:755`) and `inferredTopicKey()`
+(`lib/school-detail.ts:293`). The original Batch 3 ("remove the field") is
+**cancelled**. Only line 165 of `lib/data.ts` is writable in this phase.
+
+#### C3 — one documented deviation, and how it is honoured
+
+**Batch 1 cannot be route-scoped.** This is a property of the codebase, not a
+choice: `directusFetch()` (`lib/data.ts:152`) is the single fetch helper behind
+`loadDirectusData()`, which every route calls. There is no per-route fetch layer.
+
+**C3 is still honoured:**
+- Batch 1 changes only *how data is fetched* — **no route's rendering mode
+  changes**; all four keep `force-dynamic`, so request-time behaviour is
+  unchanged by design.
+- **The benchmark route (`/schools/yale_school_of_music`) is the first and only
+  route to change rendering mode** (Batch 2). The other three stay untouched
+  until GATE A passes.
+- Batch 1 is verified by measuring **all four** routes for no regression — a
+  stricter check than a route-scoped change would need.
+- If any route regresses, that is P2-S3 and a one-line revert restores baseline.
+
+#### Batch structure issued
+
+| Batch | Scope |
+|---|---|
+| 0 | Pre-flight: branch `perf/s1-speed-track`, rollback SHA |
+| 1 | Fetch Data Cache — `lib/data.ts:165` only (global by necessity) |
+| 2 | **Benchmark route only** — ISR 900 s |
+| 3 | **Benchmark route only** — `generateStaticParams`, 20 school pages |
+| **🚦 GATE A** | **Benchmark acceptance — owner approval required before Batch 4** |
+| 4 | Expand: program detail route |
+| 5 | Expand: `/` and `/search` |
+| 6 | Final measurement |
+
+**GATE A is a hard stop (F12).** It implements C3 step 4: roll out only after
+acceptance criteria are met. Its criteria table is in `codex_execution.md` §5.
+
+#### Anticipated complication pre-authorised
+
+`force-dynamic` alters default fetch-cache behaviour, so **Batch 1 may show
+little or no improvement on its own**, with the benefit arriving at Batch 2.
+This is recorded in the package as **diagnostic, explicitly not a stop
+condition**, so Codex neither halts nor attempts a fix. Three of the last four
+Codex sessions ended in an S7 stop; pre-empting a foreseeable false stop is
+deliberate.
+
+#### Authorised / not authorised
+
+**Authorised:** Codex executes `04_phase_2_speed_architecture/codex_execution.md`,
+Batches 0–3, then **stops at GATE A**.
+
+**Not authorised:** Batches 4–6 without recorded GATE A approval; any Directus
+change; any dependency or configuration change; any `lib/data.ts` edit outside
+line 165; any revalidation value other than 900; `revalidateTag` or cache tags
+(Phase 5, deferred); `/pilot/*` changes (D-007).
+
+- **Reversible?** Yes — every batch reverts independently; full-phase rollback
+  restores the Phase 0 baseline exactly, with no schema, dependency, or
+  configuration change to undo.

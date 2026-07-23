@@ -117,7 +117,7 @@ owner overrides this order, record the decision in `logs/decisions.md`.
 | Phase 0 — Baseline | `01_` | ✅ **COMPLETE — PASS WITH CONDITIONS (D-016)** |
 | Phase 0.5 — Transport security | `02_` | ⬜ Not started (parallel) |
 | Phase 1 — Data boundary | `03_` | ⬜ Not started |
-| Phase 2 — Speed architecture | `04_` | 🟡 **NEXT** — blocked on C1, C2, C3 (see D-016) |
+| Phase 2 — Speed architecture | `04_` | 🟢 **APPROVED (D-017)** — cleared for Batches 0–3, then GATE A |
 | Phase 3 — Cleanup | `05_` | ⬜ Not started |
 | Phase 4 — Final verification | `06_` | ⬜ Not started |
 

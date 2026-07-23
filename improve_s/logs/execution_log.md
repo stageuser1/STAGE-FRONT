@@ -1491,3 +1491,54 @@ exit gate, not the start.
 writes `04_phase_2_speed_architecture/codex_execution.md`.
 
 ---
+
+### [2026-07-23] Phase 2 · Entry approved (D-017); Codex package issued
+
+- **Actor:** Owner (approval) / Claude (package)
+- **Branch:** `perf/s0-baseline` (planning); `perf/s1-speed-track` to be created in Batch 0
+- **Approved by owner:** yes — decisions.md ref: **D-017**
+
+**Files modified:** `04_phase_2_speed_architecture/codex_execution.md`,
+`logs/decisions.md`, `logs/execution_log.md`, `README.md`
+**Files added:** none · **Files deleted:** none
+**Dependency / configuration / database / Directus changes:** none
+**Application code changes:** none
+
+**Typecheck / Build / Tests:** not run — packaging only
+
+**Approved:** C1 = **900 s** · C2 = **keep `evidence_metadata`** (protected
+field) · C3 = **benchmark-first rollout**. D-006 and D-010 closed as a result.
+
+**Package structure:** Batches 0–3 authorised (pre-flight → fetch Data Cache →
+benchmark route ISR → benchmark `generateStaticParams`), then a **hard stop at
+GATE A** requiring recorded owner approval before Batches 4–6 expand to the
+other three routes. GATE A implements C3 step 4.
+
+**Documented deviation from C3:** Batch 1 cannot be route-scoped —
+`directusFetch()` is the single fetch helper behind `loadDirectusData()`, which
+every route calls; there is no per-route fetch layer. C3 is still honoured
+because Batch 1 changes no route's rendering mode (all four keep
+`force-dynamic`), the benchmark route is the first and only route to change
+mode, and Batch 1 is verified by measuring all four routes for no regression.
+
+**Two foreseeable false stops pre-empted in the package**, both recorded as
+explicitly NOT stop conditions: Batch 1 showing little improvement until
+`force-dynamic` is removed at Batch 2, and `/search` correctly remaining
+dynamic because it reads `searchParams`.
+
+**C2 enforcement:** only line 165 of `lib/data.ts` is writable for the whole
+phase. `sourceRecordFields` (line 977, containing `evidence_metadata`),
+`sourceTopicKey()` (line 755) and `inferredTopicKey()`
+(`lib/school-detail.ts:293`) are named individually as forbidden. The original
+"remove the field" batch is cancelled.
+
+**Outcome:** completed. Phase 2 cleared for execution through GATE A.
+
+**Blocked / carried forward:** C4 (D-001 Preview) still blocks the Phase `04_`
+exit gate, not its start. D-005, D-007, D-008, D-009 remain open; none blocks
+this phase.
+
+**Next action:** Codex executes `04_phase_2_speed_architecture/codex_execution.md`
+Batches 0–3, then stops at GATE A.
+
+---
