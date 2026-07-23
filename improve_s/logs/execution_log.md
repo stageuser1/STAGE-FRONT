@@ -368,3 +368,50 @@ files in `tests/`. It has no dependency on D-002 and **must run in Batch 2**
 **Commit SHA:** recorded by the Batch 0 commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 1 — baseline branch and clean tree verified
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 1
+- **Approved by owner:** yes — decisions.md refs: **D-003**, **D-012**
+
+**Files modified:** `improve_s/logs/execution_log.md`
+
+**Files added:** none
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none
+
+**Database changes:** none
+
+**Application code changes:** none
+
+**Verification:**
+- Branch: `perf/s0-baseline`
+- Program rollback SHA:
+  `86c1db9ccda8e71a73603454a625652e7df8177b`
+- Rollback SHA is recorded in `improve_s/logs/rollback_history.md`.
+- The rollback SHA is an ancestor of the current branch.
+- The branch contains only approved Phase 0 gate/documentation commits after
+  the rollback point.
+- `git status --short` returned empty before this batch report was written.
+- Remaining untracked files: none.
+
+**Typecheck:** not run — begins in Batch 2
+
+**Build:** not run — begins in Batch 2
+
+**Tests / smoke:** not run — begins in Batch 2
+
+**Outcome:** completed
+
+**Blocked or incomplete items:** none for Batch 1
+
+**Commit SHA:** recorded by the Batch 1 commit
+
+---
