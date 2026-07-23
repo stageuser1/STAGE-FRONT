@@ -1,0 +1,422 @@
+{
+  "mode": "commit",
+  "generated_at": "2026-07-23T02:27:09.250Z",
+  "endpoint": "http://47.86.26.168:8055",
+  "input_root": "D:\\STAGE FRONT\\output",
+  "school_refs": [
+    "yale_school_of_music",
+    "jacobs_school_of_music",
+    "university_of_michigan_smtd",
+    "northwestern_bienen_school_of_music",
+    "usc_thornton_school_of_music",
+    "rice_shepherd_school_of_music",
+    "peabody_institute",
+    "oberlin_conservatory_of_music",
+    "cleveland_institute_of_music"
+  ],
+  "preexisting_school_slugs": [
+    "colburn",
+    "curtis",
+    "eastman",
+    "guildhall_school_of_music_and_drama",
+    "juilliard",
+    "manhattan_school_of_music",
+    "new_england_conservatory",
+    "royal_academy_of_music",
+    "royal_college_of_music",
+    "royal_conservatoire_of_scotland",
+    "royal_northern_college_of_music"
+  ],
+  "schools": [
+    {
+      "school_ref": "yale_school_of_music",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 0,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 76,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 76,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 76,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 539,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 768
+    },
+    {
+      "school_ref": "jacobs_school_of_music",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 68,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 68,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 68,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 448,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 654
+    },
+    {
+      "school_ref": "university_of_michigan_smtd",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 0,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 79,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 79,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 79,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 525,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 763
+    },
+    {
+      "school_ref": "northwestern_bienen_school_of_music",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 0,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 76,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 76,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 76,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 530,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 759
+    },
+    {
+      "school_ref": "usc_thornton_school_of_music",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 0,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 74,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 74,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 74,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 514,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 737
+    },
+    {
+      "school_ref": "rice_shepherd_school_of_music",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 0,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 71,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 71,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 71,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 420,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 634
+    },
+    {
+      "school_ref": "peabody_institute",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 0,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 167,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 167,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 167,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 1074,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 1576
+    },
+    {
+      "school_ref": "oberlin_conservatory_of_music",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 0,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 35,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 35,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 35,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 225,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 331
+    },
+    {
+      "school_ref": "cleveland_institute_of_music",
+      "counts": {
+        "schools": {
+          "create": 1,
+          "update": 0,
+          "skip": 0
+        },
+        "fields": {
+          "create": 0,
+          "update": 0,
+          "skip": 0
+        },
+        "program_offerings": {
+          "create": 108,
+          "update": 0,
+          "skip": 0
+        },
+        "application_requirements": {
+          "create": 108,
+          "update": 0,
+          "skip": 0
+        },
+        "audition_requirements": {
+          "create": 108,
+          "update": 0,
+          "skip": 0
+        },
+        "source_records": {
+          "create": 643,
+          "update": 0,
+          "skip": 0
+        }
+      },
+      "conflicts": [],
+      "journal_entries": 968
+    }
+  ],
+  "totals": {
+    "schools": {
+      "create": 9,
+      "update": 0,
+      "skip": 0
+    },
+    "fields": {
+      "create": 1,
+      "update": 0,
+      "skip": 0
+    },
+    "program_offerings": {
+      "create": 754,
+      "update": 0,
+      "skip": 0
+    },
+    "application_requirements": {
+      "create": 754,
+      "update": 0,
+      "skip": 0
+    },
+    "audition_requirements": {
+      "create": 754,
+      "update": 0,
+      "skip": 0
+    },
+    "source_records": {
+      "create": 4918,
+      "update": 0,
+      "skip": 0
+    }
+  },
+  "conflicts": [],
+  "final_school_slugs": [
+    "cleveland_institute_of_music",
+    "colburn",
+    "curtis",
+    "eastman",
+    "guildhall_school_of_music_and_drama",
+    "jacobs_school_of_music",
+    "juilliard",
+    "manhattan_school_of_music",
+    "new_england_conservatory",
+    "northwestern_bienen_school_of_music",
+    "oberlin_conservatory_of_music",
+    "peabody_institute",
+    "rice_shepherd_school_of_music",
+    "royal_academy_of_music",
+    "royal_college_of_music",
+    "royal_conservatoire_of_scotland",
+    "royal_northern_college_of_music",
+    "university_of_michigan_smtd",
+    "usc_thornton_school_of_music",
+    "yale_school_of_music"
+  ],
+  "preexisting_schools_preserved": true,
+  "completed": true
+}
