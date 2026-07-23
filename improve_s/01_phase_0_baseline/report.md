@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** 🟢 **BATCH 5 COMPLETE — Batches 6–7 pending**
-**Completed:** No — Batches 0–5 complete and valid; Batches 6–7 pending
+**Status:** 🟢 **BATCH 6 COMPLETE — Batch 7 pending**
+**Completed:** No — Batches 0–6 complete and valid; Batch 7 pending
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -131,9 +131,10 @@
 | Batch 4 authorized retry | 2026-07-23 14:58 +08:00 |
 | D-015 successful resumption | 2026-07-23 15:17–15:21 +08:00 |
 | Batch 5 capture | 2026-07-23 15:25–15:26 +08:00 |
-| End | In progress — Batches 6–7 pending |
+| Batch 6 | 2026-07-23 15:27 +08:00 |
+| End | In progress — Batch 7 pending |
 | Actor | Codex |
-| Outcome | Batches 0–5 complete and valid; proceed to Batch 6 |
+| Outcome | Batches 0–6 complete and valid; proceed to Batch 7 |
 
 Completed work:
 
@@ -157,6 +158,8 @@ Completed work:
 - Batch 5 captured four anonymous raw RSC/Flight payloads with
   `Content-Type: text/x-component`; internal markers were present on both
   detail routes.
+- Batch 6 documented the approved Path B ten-check manual QA mechanism without
+  creating files or changing dependencies.
 
 Prior attempt retained as history: the 2026-07-23 11:40–11:46 run stopped
 before Batch 1 under S12 because approval and decisions D-001/D-002/D-004 had
@@ -235,12 +238,12 @@ Branch versus rollback SHA `86c1db9` after staging the stop record:
  .../01_phase_0_baseline/payloads/school_yale.rsc   |  64 ++
  .../payloads/search.headers.txt                    |   9 +
  improve_s/01_phase_0_baseline/payloads/search.rsc  |  78 ++
- improve_s/01_phase_0_baseline/report.md            | 609 +++++++++--
+ improve_s/01_phase_0_baseline/report.md            | 627 +++++++++--
  improve_s/README.md                                |   3 +-
  improve_s/logs/decisions.md                        | 504 ++++++++-
- improve_s/logs/execution_log.md                    | 1120 ++++++++++++++++++++
+ improve_s/logs/execution_log.md                    | 1173 ++++++++++++++++++++
  improve_s/logs/rollback_history.md                 |  33 +-
- 35 files changed, 2741 insertions(+), 129 deletions(-)
+ 35 files changed, 2812 insertions(+), 129 deletions(-)
 ```
 
 This branch-level stat includes the approved entry-gate and rollback
@@ -510,7 +513,22 @@ captures and are retained as measured results rather than inferred findings.
 
 Approved path: **Path B — manual checklist** (D-002).
 
-Execution status: pending. Batch 6 follows Path B.
+The QA mechanism is the following ten-check manual checklist:
+
+- [ ] `/` returns HTTP 200 and renders the hero heading.
+- [ ] `/` lists school cards.
+- [ ] `/search` returns HTTP 200.
+- [ ] `/search?country=US` returns HTTP 200 and filters results.
+- [ ] `/schools/yale_school_of_music` returns HTTP 200 and shows the school
+  name.
+- [ ] The school page lists its program count.
+- [ ] `/schools/yale_school_of_music/programs/1190` returns HTTP 200.
+- [ ] The program page shows requirement content.
+- [ ] The program page shows source citations.
+- [ ] `/login` returns HTTP 200 and renders the login form.
+
+These checks define the approved manual regression mechanism; they are not
+marked complete by merely defining the checklist.
 
 Smoke-suite files created: none. Dependency changes: none.
 
@@ -581,8 +599,8 @@ Entry and resume approvals were valid. No Batch 4 blocker remains.
   observations are recorded.
 - Batch 5: complete; four anonymous raw RSC payloads and response headers
   captured.
-- Batch 6: Path B was approved, but the manual checklist was not written
-  yet.
+- Batch 6: complete; Path B ten-check manual checklist defined; no test files
+  or dependencies added.
 - Batch 7: the required `is_current` limitation remains recorded in §8 from the
   prior report; formal Batch 7 completion is pending.
 
@@ -594,5 +612,5 @@ triggered but are causally resolved under D-015.
 Default recommendation after a valid Phase 0 baseline remains
 **`04_phase_2_speed_architecture`**.
 
-Phase 0 remains in progress through Batches 6–7. No later phase is authorized
+Phase 0 remains in progress through Batch 7. No later phase is authorized
 until this report is complete and the owner signs the Phase 0 gate.

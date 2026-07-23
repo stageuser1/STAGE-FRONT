@@ -1246,3 +1246,56 @@ completion.
 **Commit SHA:** recorded by the Batch 5 commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 6 — Path B manual QA mechanism
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 6 Path B
+- **Approved by owner:** yes — decisions.md ref: **D-002**
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:** none
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none
+
+**Database / Directus changes:** none
+
+**Application code changes:** none
+
+**git diff --stat for Batch 6:**
+
+```text
+ improve_s/01_phase_0_baseline/report.md | 34 ++++++++++++++++-----
+ improve_s/logs/execution_log.md         | 53 +++++++++++++++++++++++++++++++++
+ 2 files changed, 79 insertions(+), 8 deletions(-)
+```
+
+**QA mechanism:** completed. The report now defines all ten approved manual
+checks: homepage status/hero/cards; search status/filter; school
+status/name/program count; program status/requirements/citations; login
+status/form.
+
+No smoke-suite file was created, nothing was installed, and the checklist
+items remain unchecked until a human/manual QA pass executes them.
+
+**Typecheck / Build / Tests:** not rerun — Batch 6 is documentation-only Path B
+and no application code changed.
+
+**Outcome:** completed
+
+**Stop condition:** none
+
+**Blocked or incomplete items:** formal Batch 7 completion.
+
+**Commit SHA:** recorded by the Batch 6 commit
+
+---
