@@ -1,0 +1,18 @@
+[P0_DIAG_READY]
+
+> stage-front@0.1.0 start
+> next start
+
+[P0_DIAG_READY]
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.5.170:3000
+
+ ✓ Starting...
+ ✓ Ready in 685ms
+[P0_DIRECTUS_START] id=1 collection=schools method=GET
+[P0_DIRECTUS_START] id=2 collection=program_offerings method=GET
+[P0_DIRECTUS_START] id=3 collection=application_requirements method=GET
+[P0_DIRECTUS_START] id=4 collection=audition_requirements method=GET
+[P0_DIRECTUS_START] id=5 collection=source_records method=GET
+[P0_DIRECTUS_START] id=6 collection=audition_requirements method=GET

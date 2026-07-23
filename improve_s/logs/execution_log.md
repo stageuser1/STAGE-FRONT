@@ -672,3 +672,141 @@ or schema change to "fix" the 403; removing the optimistic query.
 Batch 6 remains Path B.
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 4 — stopped on new Directus `schools` fetch failure
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 4 and revised S7
+- **Approved by owner:** yes — decisions.md refs: **D-012**, **D-013**
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:**
+- `improve_s/01_phase_0_baseline/batch4_home.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch4_home.stderr.txt`
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none. The application-side observer used a
+process-local `NODE_OPTIONS=--import=data:...` diagnostics subscriber and did
+not edit any environment or configuration file.
+
+**Database changes:** none
+
+**Application code changes:** none
+
+**git diff --stat for the Batch 4 stop record:**
+
+```text
+ .../01_phase_0_baseline/batch4_home.stderr.txt     |   5 +
+ .../01_phase_0_baseline/batch4_home.stdout.txt     |  18 +++
+ improve_s/01_phase_0_baseline/report.md            | 126 +++++++++++--------
+ improve_s/logs/execution_log.md                    | 138 +++++++++++++++++++++
+ 4 files changed, 237 insertions(+), 50 deletions(-)
+```
+
+**Typecheck / Build / Tests:** not rerun — Batches 0–3 were explicitly not to
+be rerun; their prior results remain valid.
+
+**Measurements:** no valid Batch 4 route measurement completed. The first
+homepage attempt returned a localhost HTTP 200 in 11038.552 ms with only 15,395
+bytes, while the production server reported a Directus `schools` fetch failure.
+
+**Outcome:** stopped
+
+**Stop condition:** **S7** — Directus failed on the `schools` collection with
+`fetch failed`. This is a new error outside the narrow D-013 exception, which
+applies only to an `audition_requirements` 403 immediately followed by a
+successful fallback on the same collection.
+
+**Exact request-and-evidence command:**
+
+```powershell
+$listener=Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue |
+  Select-Object -First 1
+if(-not $listener){
+  'SERVER_READY=False'
+  Get-Content -LiteralPath 'improve_s\01_phase_0_baseline\batch4_home.stdout.txt'
+  Get-Content -LiteralPath 'improve_s\01_phase_0_baseline\batch4_home.stderr.txt'
+  exit 1
+}
+$started=Get-Date
+$format="%{http_code}`t%{time_total}`t%{size_download}"
+$metric=& curl.exe -sS --max-time 120 -o NUL -w $format 'http://localhost:3000/'
+$code=$LASTEXITCODE
+Start-Sleep -Seconds 1
+$ended=Get-Date
+"ROUTE=/"
+"APP_METRIC=$metric"
+"START=$($started.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
+"END=$($ended.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
+'SERVER_OUTPUT:'
+Get-Content -LiteralPath 'improve_s\01_phase_0_baseline\batch4_home.stdout.txt'
+'STDERR_BYTES='+(Get-Item -LiteralPath 'improve_s\01_phase_0_baseline\batch4_home.stderr.txt').Length
+$pidToStop=[int]$listener.OwningProcess
+Stop-Process -Id $pidToStop -Force
+```
+
+**Complete request command output:**
+
+```text
+ROUTE=/
+APP_METRIC=200	11.038552	15395
+START=2026-07-23 12:22:15 +08:00
+END=2026-07-23 12:22:27 +08:00
+SERVER_OUTPUT:
+[P0_DIAG_READY]
+
+> stage-front@0.1.0 start
+> next start
+
+[P0_DIAG_READY]
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.5.170:3000
+
+ ✓ Starting...
+ ✓ Ready in 685ms
+[P0_DIRECTUS_START] id=1 collection=schools method=GET
+[P0_DIRECTUS_START] id=2 collection=program_offerings method=GET
+[P0_DIRECTUS_START] id=3 collection=application_requirements method=GET
+[P0_DIRECTUS_START] id=4 collection=audition_requirements method=GET
+[P0_DIRECTUS_START] id=5 collection=source_records method=GET
+[P0_DIRECTUS_START] id=6 collection=audition_requirements method=GET
+STDERR_BYTES=329
+```
+
+**Complete server stderr:**
+
+```text
+Error: Directus request failed on /items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status,intro_zh,school_detail_sections: fetch failed
+    at f (D:\STAGE FRONT\.next\server\chunks\993.js:1:594)
+    at async (D:\STAGE FRONT\.next\server\chunks\993.js:1:5326) {
+  digest: '173315409'
+}
+```
+
+**Current `git status --short` captured immediately after stopping the server
+and before writing this stop record:**
+
+```text
+?? improve_s/01_phase_0_baseline/batch4_home.stderr.txt
+?? improve_s/01_phase_0_baseline/batch4_home.stdout.txt
+```
+
+The local server was stopped and port 3000 was confirmed free. The volatile
+`.codex-dev.*.log` hashes remain unchanged.
+
+**Blocked or incomplete items:** Batch 4 four-route request/byte baseline;
+Batch 5 RSC captures; Batch 6 manual checklist; formal Batch 7 completion.
+Batches 5–7 were not executed.
+
+**Commit SHA:** recorded by the Batch 4 stop-record commit
+
+---

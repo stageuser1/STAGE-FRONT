@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** 🟢 **S7 STOP OVERTURNED (D-013) — cleared to resume at Batch 4**
-**Completed:** No — Batches 0–3 complete; Batches 4–7 pending
+**Status:** ⛔ **STOPPED IN BATCH 4 — S7 (new `schools` fetch failure)**
+**Completed:** No — Batches 0–3 complete; Batch 4 stopped; Batches 5–7 not executed
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -19,8 +19,8 @@
 > 2. **Batch 6 follows Path B.** The run stopped before Batch 6, so no checklist
 >    or smoke-suite file was created and nothing was installed.
 
-> This document is **not yet a valid program baseline** — Batches 4–7 remain
-> outstanding. No later phase may treat the partial measurements as an exit gate
+> This document is **not yet a valid program baseline** — Batch 4 stopped on a
+> new S7 condition. No later phase may treat the partial measurements as an exit gate
 > until Phase 0 completes and the owner signs `acceptance_checklist.md`.
 
 > **Batch 3 S7 stop — OVERTURNED as a false positive. See `logs/decisions.md` D-013.**
@@ -41,6 +41,11 @@
 >
 > **Do not "fix" the 403.** No Directus permission change, no added columns, no
 > removal of the optimistic query.
+>
+> **Batch 4 resume attempt — new valid S7 stop.** The first Batch 4 render
+> reported `Directus request failed on /items/schools … fetch failed`. This is
+> not the narrow D-013 exception. No retry or fix was attempted; Batches 5–7
+> were not executed.
 
 ---
 
@@ -52,9 +57,10 @@
 | Baseline SHA | `86c1db9ccda8e71a73603454a625652e7df8177b` |
 | Shell | PowerShell |
 | Start | 2026-07-23 11:59 +08:00 |
-| End | 2026-07-23 12:09 +08:00 |
+| Resume attempt | 2026-07-23 approximately 12:20 +08:00 |
+| End | 2026-07-23 12:22 +08:00 |
 | Actor | Codex |
-| Outcome | Batches 0–2 completed; Batch 3 timing completed, then stopped under S7 during the required link/request observation |
+| Outcome | Batches 0–3 valid under D-013; Batch 4 stopped under S7 on a new `schools` fetch failure |
 
 Completed work:
 
@@ -64,10 +70,11 @@ Completed work:
 - Batch 2 passed typecheck, all 10 tests, and the production build.
 - Batch 3 captured 5 cold and 5 warm 200-response timings for each required
   route on a local production build.
-- The supplemental application-side diagnostics probe observed a Directus 403
-  on the initial `audition_requirements` request, followed by the existing
-  fallback request and a page-level 200. S7 requires an immediate stop on a
-  Directus error during measurement.
+- D-013 confirmed the Batch 3 `audition_requirements` 403 → fallback 200 as an
+  expected baseline observation and authorized resume at Batch 4.
+- The first Batch 4 homepage render failed to fetch `schools` from Directus.
+  This new error is outside D-013 and triggered S7 before any valid Batch 4
+  route observation was completed.
 
 Prior attempt retained as history: the 2026-07-23 11:40–11:46 run stopped
 before Batch 1 under S12 because approval and decisions D-001/D-002/D-004 had
@@ -79,7 +86,7 @@ those Phase 0 preconditions.
 | Type | Files / result |
 |---|---|
 | Modified | `improve_s/01_phase_0_baseline/report.md`; `improve_s/logs/execution_log.md` |
-| Added | Six Batch 3 local-server stdout/stderr measurement artifacts listed below |
+| Added | Six Batch 3 and two Batch 4 local-server stdout/stderr measurement artifacts listed below |
 | Deleted | none |
 | Dependency changes | none |
 | Configuration changes | none |
@@ -95,6 +102,8 @@ Added measurement artifacts:
 - `improve_s/01_phase_0_baseline/batch3_server_20260723_1203.stderr.txt`
 - `improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stdout.txt`
 - `improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch4_home.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch4_home.stderr.txt`
 
 `git diff --stat` after the stop-record commit: empty (clean working tree).
 
@@ -103,17 +112,20 @@ Branch versus rollback SHA `86c1db9` after staging the stop record:
 ```text
  .../01_phase_0_baseline/acceptance_checklist.md    |  23 +-
  .../batch3_probe_server_20260723_1208.stderr.txt   |   0
- .../batch3_probe_server_20260723_1208.stdout.txt   |  24 ++
+ .../batch3_probe_server_20260723_1208.stdout.txt   |  24 +
  .../batch3_server_20260723_1201.stderr.txt         |   0
  .../batch3_server_20260723_1201.stdout.txt         |  10 +
  .../batch3_server_20260723_1203.stderr.txt         |   0
  .../batch3_server_20260723_1203.stdout.txt         |  10 +
- improve_s/01_phase_0_baseline/report.md            | 429 +++++++++++++-----
+ .../01_phase_0_baseline/batch4_home.stderr.txt     |   5 +
+ .../01_phase_0_baseline/batch4_home.stdout.txt     |  18 +
+ improve_s/01_phase_0_baseline/codex_execution.md   |  46 +-
+ improve_s/01_phase_0_baseline/report.md            | 463 ++++++++++----
  improve_s/README.md                                |   3 +-
- improve_s/logs/decisions.md                        | 166 ++++++-
- improve_s/logs/execution_log.md                    | 486 +++++++++++++++++++++
+ improve_s/logs/decisions.md                        | 277 ++++++++-
+ improve_s/logs/execution_log.md                    | 684 +++++++++++++++++++++
  improve_s/logs/rollback_history.md                 |  33 +-
- 12 files changed, 1056 insertions(+), 128 deletions(-)
+ 15 files changed, 1473 insertions(+), 123 deletions(-)
 ```
 
 This branch-level stat includes the approved entry-gate and rollback
@@ -326,18 +338,27 @@ local production build.
 
 | Route | Request count | Collections | Approx. response bytes |
 |---|---|---|---|
-| `/` | **6 attempts observed; incomplete baseline** | `schools`, `program_offerings`, `application_requirements`, `audition_requirements` (403), `audition_requirements` fallback (200), `source_records` | unavailable — diagnostics channel exposed no body-chunk sizes |
-| `/search` | not observed — stopped under S7 | not observed | not measured |
-| `/schools/yale_school_of_music` | not observed — stopped under S7 | not observed | not measured |
-| `/schools/yale_school_of_music/programs/1190` | not observed — stopped under S7 | not observed | not measured |
+| `/` | Batch 3 trace: 6 valid attempts; Batch 4 attempt invalid | Batch 3: `schools`, `program_offerings`, `application_requirements`, `audition_requirements` (403), `audition_requirements` fallback (200), `source_records`; Batch 4 stopped on `schools` fetch failure | unavailable |
+| `/search` | not observed in Batch 4 — stopped under S7 | not observed | not measured |
+| `/schools/yale_school_of_music` | not observed in Batch 4 — stopped under S7 | not observed | not measured |
+| `/schools/yale_school_of_music/programs/1190` | not observed in Batch 4 — stopped under S7 | not observed | not measured |
 
 No request was made directly to Directus. The application-side probe was
-performed as the Batch 3 link-throughput observation. It recorded five initial
-collection reads, but the initial `audition_requirements` response was HTTP
-403; the application then issued a sixth request for the same collection and
-received HTTP 200. The page itself returned HTTP 200 in 3945.555 ms. This
-triggered S7 before Batch 4 began, so the required four-route request baseline
-is incomplete.
+performed as the Batch 3 link-throughput observation. D-013 validates its five
+initial collection reads plus the expected sixth `audition_requirements`
+fallback request.
+
+The Batch 4 resume attempt started the same six request attempts, but no
+successful response-completion records were emitted. Server stderr reported:
+
+```text
+Error: Directus request failed on /items/schools?...: fetch failed
+```
+
+The localhost response was HTTP 200 in 11038.552 ms but only 15,395 bytes,
+consistent with the rendered error response rather than a valid homepage. This
+is outside the narrow D-013 exception and triggered S7 before a valid Batch 4
+render was completed.
 
 ## 6. Public exposure baseline
 
@@ -348,14 +369,15 @@ is incomplete.
 | `/schools/yale_school_of_music` | not captured | not captured | not captured | not captured | not captured | not captured | n/a |
 | `/schools/yale_school_of_music/programs/1190` | not captured | not captured | not captured | not captured | not captured | not captured | n/a |
 
-Payload files: none. Batch 5 did not begin because execution stopped under S7.
+Payload files: none. Batch 5 did not begin because the resumed execution
+stopped under S7 in Batch 4.
 
 ## 7. QA mechanism
 
 Approved path: **Path B — manual checklist** (D-002).
 
-Execution status: Batch 6 was not reached because execution stopped under S7,
-so the ten-item manual checklist was not added during this run.
+Execution status: Batch 6 was not reached because resumed execution stopped
+under S7 in Batch 4, so the ten-item manual checklist was not added.
 
 Smoke-suite files created: none. Dependency changes: none.
 
@@ -363,13 +385,17 @@ Smoke-suite files created: none. Dependency changes: none.
 
 - The four-route local-production timing set is complete, but Phase 0 did not
   produce a valid overall baseline because the required request-count,
-  response-byte, public-exposure, and QA batches remain incomplete after S7.
+  response-byte, public-exposure, and QA batches remain incomplete after the
+  new Batch 4 S7 stop.
 - No real-user data is available.
 - D-001 formally permits local production for Phase 0 only. Preview remains
   unresolved and blocks later phase gates.
-- Directus link throughput is known to vary materially. A valid byte-rate was
-  not produced because the observation stopped on a Directus 403 and the
-  diagnostics channel exposed no response-body byte counts.
+- Directus link throughput is known to vary materially. D-013 accepts that a
+  valid byte-rate was not produced because the diagnostics channel exposed no
+  response-body byte counts; per-collection durations are the approved proxy.
+- The Batch 4 resume attempt encountered a new `schools` fetch failure. Its
+  11-second localhost response and 15,395-byte error output are not baseline
+  request-count or response-byte measurements.
 - No route substitution was made; all four planned routes returned HTTP 200.
 - The homepage timing spread was wide (3436.724–9490.978 ms across official
   cold/warm runs), but the median remained computable. The other routes were
@@ -401,31 +427,31 @@ Smoke-suite files created: none. Dependency changes: none.
 | D-009 | Open | Not blocking Phase 0; required before Phase 4 final verification |
 | D-010 | Open | Program execution order unconfirmed |
 | D-012 | Approved | Authorized Batches 0–7; does not override stop conditions |
+| D-013 | Resolved | Validated Batch 3 and authorized resume at Batch 4; exception covers only `audition_requirements` 403 → fallback 200 |
 
-Entry approval was valid. The current blocker is the S7 measurement failure,
-not a missing owner decision.
+Entry and resume approvals were valid. The current blocker is a new S7
+`schools` fetch failure outside D-013, not a missing owner decision.
 
 ## 10. Incomplete or blocked items
 
 - Batches 0–2: completed and committed.
-- Batch 3: all 40 timing requests completed with HTTP 200, but its supplemental
-  link/byte observation triggered S7 on a Directus 403. No valid link
-  throughput was produced.
-- Batch 4: not begun. A partial homepage request trace exists from the Batch 3
-  probe, but it contradicted the expected five successful reads.
+- Batch 3: complete and valid under D-013. All 40 timing requests returned
+  HTTP 200; the expected `audition_requirements` fallback is baseline data.
+- Batch 4: stopped on its first route because the `schools` Directus request
+  failed. No valid four-route request/byte baseline was produced.
 - Batch 5: anonymous RSC payloads not captured.
 - Batch 6: Path B was approved, but the manual checklist was not written
   because the batch was not reached.
 - Batch 7: the required `is_current` limitation remains recorded in §8 from the
-  prior stop report; Batch 7 was not formally reached in this execution.
+  prior report; Batch 7 was not formally reached in this execution.
 - Phase 0 cannot be completed or sent to its exit gate until Claude/owner
-  review the S7 evidence and approve a refreshed execution package or other
-  disposition.
+  review the new Batch 4 S7 evidence and approve a refreshed execution package
+  or other disposition.
 
-**Stop condition:** S7 — Directus returned HTTP 403 during the
-application-side measurement probe. The application retried with a fallback
-query and returned the page successfully, but the package requires an
-immediate stop on any Directus error mid-measurement. No fix was attempted.
+**Stop condition:** S7 — Directus failed the Batch 4 `schools` request with
+`fetch failed`. This is not the known `audition_requirements` 403 → fallback
+200 signature authorized by D-013. No retry, permission change, or fix was
+attempted.
 
 ## 11. Recommended next phase
 
@@ -433,6 +459,6 @@ Default recommendation after a valid Phase 0 baseline remains
 **`04_phase_2_speed_architecture`**.
 
 Phase 0 is incomplete, so no next phase is authorized. The immediate action is
-Claude/owner review of the Directus 403/fallback evidence and a refreshed,
-explicitly approved Phase 0 execution package or disposition. Codex must not
-resume Batches 4–7 under the current stopped run.
+Claude/owner review of the new Batch 4 `schools` fetch-failure evidence and a
+refreshed, explicitly approved Phase 0 execution package or disposition. Codex
+must not resume Batches 4–7 under the current stopped run.

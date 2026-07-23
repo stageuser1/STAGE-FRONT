@@ -1,0 +1,5 @@
+ ⨯ Error: Directus request failed on /items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status,intro_zh,school_detail_sections: fetch failed
+    at f (D:\STAGE FRONT\.next\server\chunks\993.js:1:594)
+    at async (D:\STAGE FRONT\.next\server\chunks\993.js:1:5326) {
+  digest: '173315409'
+}
