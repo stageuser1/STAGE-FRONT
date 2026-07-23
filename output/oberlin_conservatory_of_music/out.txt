@@ -1,0 +1,43 @@
+Prescreen: Applicants choice between: Faure's Morceau de Concours for flute and piano; Movement 1 Lin-Fa or Movement 3 Gaia from Legends for flute and piano by Valerie Coleman; or Here's One by William Grant Still, playing the vocal line with piano;; Minimum of one additional piece of applicant's choice; One or more pieces of the applicant's choice, totaling approximately ten minutes of playing; Not to exceed 10 minutes of music.; Applicant can choose one or multiple works.; Bb or A clarinet is acceptable for any work. If you would like to perform a solo or excerpts on the bass clarinet or E-flat clarinet, it would be in addition to the requirements above. Piano accompaniment not required but appreciated.; The selected work(s) should demonstrate the following criteria to the best of your ability: creativity, lyrical playing, technical facility and the passion for the instrument and repertoire you have chosen to perform. Please announce your name at the beginning of the video.; Video introduction including : Name Secondary major, if applicable Current private teacher Current school level Why you've chosen to pursue music Fun fact about yourself; Kopprasch #3 & #22 OR Gallay #8 from 12 Studies for Second Horn; Shostakovich - Symphony No. 5: Mvt. 1, 2 mm. after [17] to [21]; Mussorgsky - Pictures at an Exhibition: Promenade II, 6 mm. after [18] to [19]; One solo piece of applicant's choice, such as the first movement of Kennan's Trumpet Sonata and the second movement of Hummel's Trumpet Concerto; One étude; such as Charlier, Étude #2 or Arban, Characteristic Study #1.; Orchestral excerpts: Mussorgsky's Pictures at an Exhibition , "Promenade" Stravinsky's Petruschka , "Ballerina Danse" Respighi's Pines of Rome , offstage solo Beethoven's Leonore Overture No. 2 and No. 3, trumpet calls Mahler's Symphony No. 5, opening call; One étude; Wagner's Die Meistersinger Overture, beginning to downbeat of letter A; One, two-octave scale | Audition: When choosing repertoire to satisfy requirements of your choice, we encourage exploring the works of Black and other underrepresented composers, or other works that you find personally meaningful or diverse. Choosing repertoire is an opportunity to showcase works that best reflect your culture, gender or other forms of self-identity.; Early Decision: Saturday, December 5, 2026; Saturday, February 6, 2027; Sunday, February 7, 2027; Saturday, February 13, 2027; Sunday, February 14, 2027; Three selections from sonatas, concertos and other solo pieces or etudes, of contrasting style. A movement may be considered as one selection.; While not required, additional orchestral excerpts are welcomed and encouraged.; Two or three selections, including movements from sonatas, concertos, and other solo pieces, of contrasting styles from standard repertoires; Barret's Sixteen Grand Studies , any one of the applicant's choice; Compositions chosen should demonstrate the applicant's ability in phrasing, sustained playing, and technical facility, including legato and staccato at varied tempi.; Two required works:; Mozart’s Clarinet Concerto , first movement, exposition only: m. 57-m. 155; Samuel Coleridge-Taylor's Clarinet Quintet Op.10 , second movement, begin at 5th bar of letter O and end at 3rd bar of Letter P; One of the following works:; Antonio Lauro's Lauro for Clarinet , arranged by Paquito D'Rivera, choose one movement; Stravinsky's Three Pieces for Solo Clarinet , Mvt. II only; Zach Good '13, Madder and woad (2020), a concert étude for solo Bb clarinet dedicated to the memory of Oberlin student Jung Choi (2012)
+
+{
+  "prescreen": [
+    "Applicants choice between: Faure's Morceau de Concours for flute and piano; Movement 1 Lin-Fa or Movement 3 Gaia from Legends for flute and piano by Valerie Coleman; or Here's One by William Grant Still, playing the vocal line with piano;",
+    "Minimum of one additional piece of applicant's choice",
+    "One or more pieces of the applicant's choice, totaling approximately ten minutes of playing",
+    "Not to exceed 10 minutes of music.",
+    "Applicant can choose one or multiple works.",
+    "Bb or A clarinet is acceptable for any work. If you would like to perform a solo or excerpts on the bass clarinet or E-flat clarinet, it would be in addition to the requirements above. Piano accompaniment not required but appreciated.",
+    "The selected work(s) should demonstrate the following criteria to the best of your ability: creativity, lyrical playing, technical facility and the passion for the instrument and repertoire you have chosen to perform. Please announce your name at the beginning of the video.",
+    "Video introduction including : Name Secondary major, if applicable Current private teacher Current school level Why you've chosen to pursue music Fun fact about yourself",
+    "Kopprasch #3 & #22 OR Gallay #8 from 12 Studies for Second Horn",
+    "Shostakovich - Symphony No. 5: Mvt. 1, 2 mm. after [17] to [21]",
+    "Mussorgsky - Pictures at an Exhibition: Promenade II, 6 mm. after [18] to [19]",
+    "One solo piece of applicant's choice, such as the first movement of Kennan's Trumpet Sonata and the second movement of Hummel's Trumpet Concerto",
+    "One étude; such as Charlier, Étude #2 or Arban, Characteristic Study #1.",
+    "Orchestral excerpts: Mussorgsky's Pictures at an Exhibition , \"Promenade\" Stravinsky's Petruschka , \"Ballerina Danse\" Respighi's Pines of Rome , offstage solo Beethoven's Leonore Overture No. 2 and No. 3, trumpet calls Mahler's Symphony No. 5, opening call",
+    "One étude",
+    "Wagner's Die Meistersinger Overture, beginning to downbeat of letter A",
+    "One, two-octave scale"
+  ],
+  "audition": [
+    "When choosing repertoire to satisfy requirements of your choice, we encourage exploring the works of Black and other underrepresented composers, or other works that you find personally meaningful or diverse. Choosing repertoire is an opportunity to showcase works that best reflect your culture, gender or other forms of self-identity.",
+    "Early Decision: Saturday, December 5, 2026",
+    "Saturday, February 6, 2027",
+    "Sunday, February 7, 2027",
+    "Saturday, February 13, 2027",
+    "Sunday, February 14, 2027",
+    "Three selections from sonatas, concertos and other solo pieces or etudes, of contrasting style. A movement may be considered as one selection.",
+    "While not required, additional orchestral excerpts are welcomed and encouraged.",
+    "Two or three selections, including movements from sonatas, concertos, and other solo pieces, of contrasting styles from standard repertoires",
+    "Barret's Sixteen Grand Studies , any one of the applicant's choice",
+    "Compositions chosen should demonstrate the applicant's ability in phrasing, sustained playing, and technical facility, including legato and staccato at varied tempi.",
+    "Two required works:",
+    "Mozart’s Clarinet Concerto , first movement, exposition only: m. 57-m. 155",
+    "Samuel Coleridge-Taylor's Clarinet Quintet Op.10 , second movement, begin at 5th bar of letter O and end at 3rd bar of Letter P",
+    "One of the following works:",
+    "Antonio Lauro's Lauro for Clarinet , arranged by Paquito D'Rivera, choose one movement",
+    "Stravinsky's Three Pieces for Solo Clarinet , Mvt. II only",
+    "Zach Good '13, Madder and woad (2020), a concert étude for solo Bb clarinet dedicated to the memory of Oberlin student Jung Choi (2012)"
+  ]
+}

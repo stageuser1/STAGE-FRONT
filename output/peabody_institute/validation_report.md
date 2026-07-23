@@ -1,0 +1,551 @@
+# peabody_institute V4 Validation Report
+
+Generated: 2026-07-21
+
+## Result
+
+**V4 schema and hard rules: PASS**  
+**Hard errors: 0**
+
+## Package counts
+
+| Record type | Count |
+|---|---:|
+| Program offerings | 167 |
+| Current application records | 167 |
+| Current audition records | 167 |
+| Source records | 1074 |
+| Decision-critical null fields | 167 |
+
+## Hard-rule coverage
+
+- JSON Schema Draft 2020-12 compatibility
+- Seeded field and degree vocabularies
+- Deterministic refs and duplicate detection
+- One current application and audition record per offering
+- Prohibited/legacy fields and Directus IDs
+- Official-domain and source natural-key checks
+- Required evidence quotes for deadline, tuition, English minimums, prescreen, audition, and repertoire
+- Material-name constraints and explicit critical-null review notes
+
+## Hard failures
+
+- None
+
+## Needs attention
+
+- found, not seeded: Bachelor of Fine Arts at https://peabody.jhu.edu/academics/instruments-areas-of-study/
+- found, not seeded: Graduate Performance Diploma at https://peabody.jhu.edu/academics/instruments-areas-of-study/
+- found, not seeded: Hip Hop at https://peabody.jhu.edu/academics/instruments-areas-of-study/
+- found, not seeded: Master of Arts in Audio Science at https://peabody.jhu.edu/academics/instruments-areas-of-study/
+- found, not seeded: Performer's Certificate at https://peabody.jhu.edu/academics/instruments-areas-of-study/
+- peabody_institute_bass_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_bass_bm_jazz: tuition_annual is null
+- peabody_institute_bass_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_bass_mm_jazz: tuition_annual is null
+- peabody_institute_bassoon_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_bassoon_ad: tuition_annual is null
+- peabody_institute_bassoon_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_bassoon_bm: tuition_annual is null
+- peabody_institute_bassoon_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_bassoon_dma: tuition_annual is null
+- peabody_institute_bassoon_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_bassoon_mm: tuition_annual is null
+- peabody_institute_bassoon_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_bassoon_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_cello_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_ad: tuition_annual is null
+- peabody_institute_cello_ad_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_ad_historical_performance: tuition_annual is null
+- peabody_institute_cello_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_bm: tuition_annual is null
+- peabody_institute_cello_bm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_bm_historical_performance: tuition_annual is null
+- peabody_institute_cello_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_dma: tuition_annual is null
+- peabody_institute_cello_dma_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_dma_historical_performance: tuition_annual is null
+- peabody_institute_cello_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_mm: tuition_annual is null
+- peabody_institute_cello_mm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_mm_historical_performance: tuition_annual is null
+- peabody_institute_cello_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_cello_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_choral_conducting_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_choral_conducting_dma: tuition_annual is null
+- peabody_institute_choral_conducting_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_choral_conducting_mm: tuition_annual is null
+- peabody_institute_clarinet_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_clarinet_ad: tuition_annual is null
+- peabody_institute_clarinet_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_clarinet_bm: tuition_annual is null
+- peabody_institute_clarinet_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_clarinet_bm_jazz: tuition_annual is null
+- peabody_institute_clarinet_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_clarinet_dma: tuition_annual is null
+- peabody_institute_clarinet_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_clarinet_mm: tuition_annual is null
+- peabody_institute_clarinet_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_clarinet_mm_jazz: tuition_annual is null
+- peabody_institute_clarinet_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_clarinet_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_composition_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_composition_bm: tuition_annual is null
+- peabody_institute_composition_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_composition_dma: tuition_annual is null
+- peabody_institute_composition_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_composition_mm: tuition_annual is null
+- peabody_institute_contemporary_media_film_composition_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_contemporary_media_film_composition_bm: tuition_annual is null
+- peabody_institute_contemporary_media_film_composition_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_contemporary_media_film_composition_mm: tuition_annual is null
+- peabody_institute_double_bass_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_double_bass_ad: tuition_annual is null
+- peabody_institute_double_bass_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_double_bass_bm: tuition_annual is null
+- peabody_institute_double_bass_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_double_bass_dma: tuition_annual is null
+- peabody_institute_double_bass_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_double_bass_mm: tuition_annual is null
+- peabody_institute_double_bass_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_double_bass_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_euphonium_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_euphonium_ad: tuition_annual is null
+- peabody_institute_euphonium_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_euphonium_bm: tuition_annual is null
+- peabody_institute_euphonium_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_euphonium_dma: tuition_annual is null
+- peabody_institute_euphonium_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_euphonium_mm: tuition_annual is null
+- peabody_institute_euphonium_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_euphonium_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_flute_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_ad: tuition_annual is null
+- peabody_institute_flute_ad_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_ad_historical_performance: tuition_annual is null
+- peabody_institute_flute_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_bm: tuition_annual is null
+- peabody_institute_flute_bm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_bm_historical_performance: tuition_annual is null
+- peabody_institute_flute_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_bm_jazz: tuition_annual is null
+- peabody_institute_flute_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_dma: tuition_annual is null
+- peabody_institute_flute_dma_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_dma_historical_performance: tuition_annual is null
+- peabody_institute_flute_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_mm: tuition_annual is null
+- peabody_institute_flute_mm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_mm_historical_performance: tuition_annual is null
+- peabody_institute_flute_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_mm_jazz: tuition_annual is null
+- peabody_institute_flute_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_flute_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_guitar_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_ad: tuition_annual is null
+- peabody_institute_guitar_ad_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_ad_historical_performance: tuition_annual is null
+- peabody_institute_guitar_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_bm: tuition_annual is null
+- peabody_institute_guitar_bm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_bm_historical_performance: tuition_annual is null
+- peabody_institute_guitar_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_bm_jazz: tuition_annual is null
+- peabody_institute_guitar_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_dma: tuition_annual is null
+- peabody_institute_guitar_dma_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_dma_historical_performance: tuition_annual is null
+- peabody_institute_guitar_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_mm: tuition_annual is null
+- peabody_institute_guitar_mm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_mm_historical_performance: tuition_annual is null
+- peabody_institute_guitar_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_mm_jazz: tuition_annual is null
+- peabody_institute_guitar_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_guitar_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_harp_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harp_ad: tuition_annual is null
+- peabody_institute_harp_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harp_bm: tuition_annual is null
+- peabody_institute_harp_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harp_dma: tuition_annual is null
+- peabody_institute_harp_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harp_mm: tuition_annual is null
+- peabody_institute_harp_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harp_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_harpsichord_ad_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harpsichord_ad_historical_performance: tuition_annual is null
+- peabody_institute_harpsichord_bm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harpsichord_bm_historical_performance: tuition_annual is null
+- peabody_institute_harpsichord_dma_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harpsichord_dma_historical_performance: tuition_annual is null
+- peabody_institute_harpsichord_mm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_harpsichord_mm_historical_performance: tuition_annual is null
+- peabody_institute_horn_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_horn_ad: tuition_annual is null
+- peabody_institute_horn_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_horn_bm: tuition_annual is null
+- peabody_institute_horn_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_horn_dma: tuition_annual is null
+- peabody_institute_horn_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_horn_mm: tuition_annual is null
+- peabody_institute_horn_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_horn_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_music_creation_technology_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_music_creation_technology_bm: tuition_annual is null
+- peabody_institute_music_creation_technology_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_music_creation_technology_mm: tuition_annual is null
+- peabody_institute_music_education_bm: Requirements vary by area, instrument, degree, or admission round; consult the linked official audition page. prescreening_required could not be resolved to one official program-specific value after the available area pages were checked on 2026-07-22. audition_required could not be resolved to one official program-specific value after the available area pages were checked on 2026-07-22.
+- peabody_institute_music_education_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_music_education_bm: tuition_annual is null
+- peabody_institute_music_education_mm: Requirements vary by area, instrument, degree, or admission round; consult the linked official audition page. prescreening_required could not be resolved to one official program-specific value after the available area pages were checked on 2026-07-22. audition_required could not be resolved to one official program-specific value after the available area pages were checked on 2026-07-22.
+- peabody_institute_music_education_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_music_education_mm: tuition_annual is null
+- peabody_institute_music_theory_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_music_theory_mm: tuition_annual is null
+- peabody_institute_musicology_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_musicology_mm: tuition_annual is null
+- peabody_institute_oboe_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_ad: tuition_annual is null
+- peabody_institute_oboe_ad_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_ad_historical_performance: tuition_annual is null
+- peabody_institute_oboe_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_bm: tuition_annual is null
+- peabody_institute_oboe_bm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_bm_historical_performance: tuition_annual is null
+- peabody_institute_oboe_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_dma: tuition_annual is null
+- peabody_institute_oboe_dma_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_dma_historical_performance: tuition_annual is null
+- peabody_institute_oboe_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_mm: tuition_annual is null
+- peabody_institute_oboe_mm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_mm_historical_performance: tuition_annual is null
+- peabody_institute_oboe_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_oboe_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_orchestral_conducting_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_orchestral_conducting_dma: tuition_annual is null
+- peabody_institute_orchestral_conducting_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_orchestral_conducting_mm: tuition_annual is null
+- peabody_institute_organ_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_organ_ad: tuition_annual is null
+- peabody_institute_organ_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_organ_bm: tuition_annual is null
+- peabody_institute_organ_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_organ_dma: tuition_annual is null
+- peabody_institute_organ_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_organ_mm: tuition_annual is null
+- peabody_institute_organ_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_organ_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_percussion_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_percussion_ad: tuition_annual is null
+- peabody_institute_percussion_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_percussion_bm: tuition_annual is null
+- peabody_institute_percussion_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_percussion_bm_jazz: tuition_annual is null
+- peabody_institute_percussion_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_percussion_dma: tuition_annual is null
+- peabody_institute_percussion_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_percussion_mm: tuition_annual is null
+- peabody_institute_percussion_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_percussion_mm_jazz: tuition_annual is null
+- peabody_institute_percussion_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_percussion_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_piano_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_piano_ad: tuition_annual is null
+- peabody_institute_piano_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_piano_bm: tuition_annual is null
+- peabody_institute_piano_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_piano_bm_jazz: tuition_annual is null
+- peabody_institute_piano_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_piano_dma: tuition_annual is null
+- peabody_institute_piano_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_piano_mm: tuition_annual is null
+- peabody_institute_piano_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_piano_mm_jazz: tuition_annual is null
+- peabody_institute_piano_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_piano_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_saxophone_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_saxophone_ad: tuition_annual is null
+- peabody_institute_saxophone_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_saxophone_bm: tuition_annual is null
+- peabody_institute_saxophone_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_saxophone_bm_jazz: tuition_annual is null
+- peabody_institute_saxophone_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_saxophone_dma: tuition_annual is null
+- peabody_institute_saxophone_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_saxophone_mm: tuition_annual is null
+- peabody_institute_saxophone_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_saxophone_mm_jazz: tuition_annual is null
+- peabody_institute_saxophone_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_saxophone_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_tenor_trombone_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tenor_trombone_ad: tuition_annual is null
+- peabody_institute_tenor_trombone_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tenor_trombone_bm: tuition_annual is null
+- peabody_institute_tenor_trombone_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tenor_trombone_bm_jazz: tuition_annual is null
+- peabody_institute_tenor_trombone_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tenor_trombone_dma: tuition_annual is null
+- peabody_institute_tenor_trombone_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tenor_trombone_mm: tuition_annual is null
+- peabody_institute_tenor_trombone_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tenor_trombone_mm_jazz: tuition_annual is null
+- peabody_institute_tenor_trombone_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tenor_trombone_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_trumpet_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_trumpet_ad: tuition_annual is null
+- peabody_institute_trumpet_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_trumpet_bm: tuition_annual is null
+- peabody_institute_trumpet_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_trumpet_bm_jazz: tuition_annual is null
+- peabody_institute_trumpet_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_trumpet_dma: tuition_annual is null
+- peabody_institute_trumpet_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_trumpet_mm: tuition_annual is null
+- peabody_institute_trumpet_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_trumpet_mm_jazz: tuition_annual is null
+- peabody_institute_trumpet_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_trumpet_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_tuba_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tuba_ad: tuition_annual is null
+- peabody_institute_tuba_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tuba_bm: tuition_annual is null
+- peabody_institute_tuba_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tuba_dma: tuition_annual is null
+- peabody_institute_tuba_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tuba_mm: tuition_annual is null
+- peabody_institute_tuba_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_tuba_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_viola_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_ad: tuition_annual is null
+- peabody_institute_viola_ad_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_ad_historical_performance: tuition_annual is null
+- peabody_institute_viola_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_bm: tuition_annual is null
+- peabody_institute_viola_bm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_bm_historical_performance: tuition_annual is null
+- peabody_institute_viola_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_dma: tuition_annual is null
+- peabody_institute_viola_dma_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_dma_historical_performance: tuition_annual is null
+- peabody_institute_viola_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_mm: tuition_annual is null
+- peabody_institute_viola_mm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_mm_historical_performance: tuition_annual is null
+- peabody_institute_viola_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_viola_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_violin_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_ad: tuition_annual is null
+- peabody_institute_violin_ad_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_ad_historical_performance: tuition_annual is null
+- peabody_institute_violin_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_bm: tuition_annual is null
+- peabody_institute_violin_bm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_bm_historical_performance: tuition_annual is null
+- peabody_institute_violin_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_bm_jazz: tuition_annual is null
+- peabody_institute_violin_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_dma: tuition_annual is null
+- peabody_institute_violin_dma_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_dma_historical_performance: tuition_annual is null
+- peabody_institute_violin_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_mm: tuition_annual is null
+- peabody_institute_violin_mm_historical_performance: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_mm_historical_performance: tuition_annual is null
+- peabody_institute_violin_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_mm_jazz: tuition_annual is null
+- peabody_institute_violin_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_violin_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_voice_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_voice_ad: tuition_annual is null
+- peabody_institute_voice_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_voice_bm: tuition_annual is null
+- peabody_institute_voice_bm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_voice_bm_jazz: tuition_annual is null
+- peabody_institute_voice_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_voice_dma: tuition_annual is null
+- peabody_institute_voice_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_voice_mm: tuition_annual is null
+- peabody_institute_voice_mm_jazz: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_voice_mm_jazz: tuition_annual is null
+- peabody_institute_voice_mm_performance_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_voice_mm_performance_pedagogy: tuition_annual is null
+- peabody_institute_wind_conducting_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_wind_conducting_dma: tuition_annual is null
+- peabody_institute_wind_conducting_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- peabody_institute_wind_conducting_mm: tuition_annual is null
+
+## Warnings
+
+- peabody_institute_bass_bm_jazz: language_of_instruction is null
+- peabody_institute_bass_mm_jazz: language_of_instruction is null
+- peabody_institute_bassoon_ad: language_of_instruction is null
+- peabody_institute_bassoon_bm: language_of_instruction is null
+- peabody_institute_bassoon_dma: language_of_instruction is null
+- peabody_institute_bassoon_mm: language_of_instruction is null
+- peabody_institute_bassoon_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_cello_ad: language_of_instruction is null
+- peabody_institute_cello_ad_historical_performance: language_of_instruction is null
+- peabody_institute_cello_bm: language_of_instruction is null
+- peabody_institute_cello_bm_historical_performance: language_of_instruction is null
+- peabody_institute_cello_dma: language_of_instruction is null
+- peabody_institute_cello_dma_historical_performance: language_of_instruction is null
+- peabody_institute_cello_mm: language_of_instruction is null
+- peabody_institute_cello_mm_historical_performance: language_of_instruction is null
+- peabody_institute_cello_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_choral_conducting_dma: language_of_instruction is null
+- peabody_institute_choral_conducting_mm: language_of_instruction is null
+- peabody_institute_clarinet_ad: language_of_instruction is null
+- peabody_institute_clarinet_bm: language_of_instruction is null
+- peabody_institute_clarinet_bm_jazz: language_of_instruction is null
+- peabody_institute_clarinet_dma: language_of_instruction is null
+- peabody_institute_clarinet_mm: language_of_instruction is null
+- peabody_institute_clarinet_mm_jazz: language_of_instruction is null
+- peabody_institute_clarinet_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_composition_bm: language_of_instruction is null
+- peabody_institute_composition_dma: language_of_instruction is null
+- peabody_institute_composition_mm: language_of_instruction is null
+- peabody_institute_contemporary_media_film_composition_bm: language_of_instruction is null
+- peabody_institute_contemporary_media_film_composition_mm: language_of_instruction is null
+- peabody_institute_double_bass_ad: language_of_instruction is null
+- peabody_institute_double_bass_bm: language_of_instruction is null
+- peabody_institute_double_bass_dma: language_of_instruction is null
+- peabody_institute_double_bass_mm: language_of_instruction is null
+- peabody_institute_double_bass_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_euphonium_ad: language_of_instruction is null
+- peabody_institute_euphonium_bm: language_of_instruction is null
+- peabody_institute_euphonium_dma: language_of_instruction is null
+- peabody_institute_euphonium_mm: language_of_instruction is null
+- peabody_institute_euphonium_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_flute_ad: language_of_instruction is null
+- peabody_institute_flute_ad_historical_performance: language_of_instruction is null
+- peabody_institute_flute_bm: language_of_instruction is null
+- peabody_institute_flute_bm_historical_performance: language_of_instruction is null
+- peabody_institute_flute_bm_jazz: language_of_instruction is null
+- peabody_institute_flute_dma: language_of_instruction is null
+- peabody_institute_flute_dma_historical_performance: language_of_instruction is null
+- peabody_institute_flute_mm: language_of_instruction is null
+- peabody_institute_flute_mm_historical_performance: language_of_instruction is null
+- peabody_institute_flute_mm_jazz: language_of_instruction is null
+- peabody_institute_flute_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_guitar_ad: language_of_instruction is null
+- peabody_institute_guitar_ad_historical_performance: language_of_instruction is null
+- peabody_institute_guitar_bm: language_of_instruction is null
+- peabody_institute_guitar_bm_historical_performance: language_of_instruction is null
+- peabody_institute_guitar_bm_jazz: language_of_instruction is null
+- peabody_institute_guitar_dma: language_of_instruction is null
+- peabody_institute_guitar_dma_historical_performance: language_of_instruction is null
+- peabody_institute_guitar_mm: language_of_instruction is null
+- peabody_institute_guitar_mm_historical_performance: language_of_instruction is null
+- peabody_institute_guitar_mm_jazz: language_of_instruction is null
+- peabody_institute_guitar_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_harp_ad: language_of_instruction is null
+- peabody_institute_harp_bm: language_of_instruction is null
+- peabody_institute_harp_dma: language_of_instruction is null
+- peabody_institute_harp_mm: language_of_instruction is null
+- peabody_institute_harp_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_harpsichord_ad_historical_performance: language_of_instruction is null
+- peabody_institute_harpsichord_bm_historical_performance: language_of_instruction is null
+- peabody_institute_harpsichord_dma_historical_performance: language_of_instruction is null
+- peabody_institute_harpsichord_mm_historical_performance: language_of_instruction is null
+- peabody_institute_horn_ad: language_of_instruction is null
+- peabody_institute_horn_bm: language_of_instruction is null
+- peabody_institute_horn_dma: language_of_instruction is null
+- peabody_institute_horn_mm: language_of_instruction is null
+- peabody_institute_horn_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_music_creation_technology_bm: language_of_instruction is null
+- peabody_institute_music_creation_technology_mm: language_of_instruction is null
+- peabody_institute_music_education_bm: language_of_instruction is null
+- peabody_institute_music_education_mm: language_of_instruction is null
+- peabody_institute_music_theory_mm: language_of_instruction is null
+- peabody_institute_musicology_mm: language_of_instruction is null
+- peabody_institute_oboe_ad: language_of_instruction is null
+- peabody_institute_oboe_ad_historical_performance: language_of_instruction is null
+- peabody_institute_oboe_bm: language_of_instruction is null
+- peabody_institute_oboe_bm_historical_performance: language_of_instruction is null
+- peabody_institute_oboe_dma: language_of_instruction is null
+- peabody_institute_oboe_dma_historical_performance: language_of_instruction is null
+- peabody_institute_oboe_mm: language_of_instruction is null
+- peabody_institute_oboe_mm_historical_performance: language_of_instruction is null
+- peabody_institute_oboe_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_orchestral_conducting_dma: language_of_instruction is null
+- peabody_institute_orchestral_conducting_mm: language_of_instruction is null
+- peabody_institute_organ_ad: language_of_instruction is null
+- peabody_institute_organ_bm: language_of_instruction is null
+- peabody_institute_organ_dma: language_of_instruction is null
+- peabody_institute_organ_mm: language_of_instruction is null
+- peabody_institute_organ_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_percussion_ad: language_of_instruction is null
+- peabody_institute_percussion_bm: language_of_instruction is null
+- peabody_institute_percussion_bm_jazz: language_of_instruction is null
+- peabody_institute_percussion_dma: language_of_instruction is null
+- peabody_institute_percussion_mm: language_of_instruction is null
+- peabody_institute_percussion_mm_jazz: language_of_instruction is null
+- peabody_institute_percussion_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_piano_ad: language_of_instruction is null
+- peabody_institute_piano_bm: language_of_instruction is null
+- peabody_institute_piano_bm_jazz: language_of_instruction is null
+- peabody_institute_piano_dma: language_of_instruction is null
+- peabody_institute_piano_mm: language_of_instruction is null
+- peabody_institute_piano_mm_jazz: language_of_instruction is null
+- peabody_institute_piano_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_saxophone_ad: language_of_instruction is null
+- peabody_institute_saxophone_bm: language_of_instruction is null
+- peabody_institute_saxophone_bm_jazz: language_of_instruction is null
+- peabody_institute_saxophone_dma: language_of_instruction is null
+- peabody_institute_saxophone_mm: language_of_instruction is null
+- peabody_institute_saxophone_mm_jazz: language_of_instruction is null
+- peabody_institute_saxophone_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_tenor_trombone_ad: language_of_instruction is null
+- peabody_institute_tenor_trombone_bm: language_of_instruction is null
+- peabody_institute_tenor_trombone_bm_jazz: language_of_instruction is null
+- peabody_institute_tenor_trombone_dma: language_of_instruction is null
+- peabody_institute_tenor_trombone_mm: language_of_instruction is null
+- peabody_institute_tenor_trombone_mm_jazz: language_of_instruction is null
+- peabody_institute_tenor_trombone_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_trumpet_ad: language_of_instruction is null
+- peabody_institute_trumpet_bm: language_of_instruction is null
+- peabody_institute_trumpet_bm_jazz: language_of_instruction is null
+- peabody_institute_trumpet_dma: language_of_instruction is null
+- peabody_institute_trumpet_mm: language_of_instruction is null
+- peabody_institute_trumpet_mm_jazz: language_of_instruction is null
+- peabody_institute_trumpet_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_tuba_ad: language_of_instruction is null
+- peabody_institute_tuba_bm: language_of_instruction is null
+- peabody_institute_tuba_dma: language_of_instruction is null
+- peabody_institute_tuba_mm: language_of_instruction is null
+- peabody_institute_tuba_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_viola_ad: language_of_instruction is null
+- peabody_institute_viola_ad_historical_performance: language_of_instruction is null
+- peabody_institute_viola_bm: language_of_instruction is null
+- peabody_institute_viola_bm_historical_performance: language_of_instruction is null
+- peabody_institute_viola_dma: language_of_instruction is null
+- peabody_institute_viola_dma_historical_performance: language_of_instruction is null
+- peabody_institute_viola_mm: language_of_instruction is null
+- peabody_institute_viola_mm_historical_performance: language_of_instruction is null
+- peabody_institute_viola_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_violin_ad: language_of_instruction is null
+- peabody_institute_violin_ad_historical_performance: language_of_instruction is null
+- peabody_institute_violin_bm: language_of_instruction is null
+- peabody_institute_violin_bm_historical_performance: language_of_instruction is null
+- peabody_institute_violin_bm_jazz: language_of_instruction is null
+- peabody_institute_violin_dma: language_of_instruction is null
+- peabody_institute_violin_dma_historical_performance: language_of_instruction is null
+- peabody_institute_violin_mm: language_of_instruction is null
+- peabody_institute_violin_mm_historical_performance: language_of_instruction is null
+- peabody_institute_violin_mm_jazz: language_of_instruction is null
+- peabody_institute_violin_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_voice_ad: language_of_instruction is null
+- peabody_institute_voice_bm: language_of_instruction is null
+- peabody_institute_voice_bm_jazz: language_of_instruction is null
+- peabody_institute_voice_dma: language_of_instruction is null
+- peabody_institute_voice_mm: language_of_instruction is null
+- peabody_institute_voice_mm_jazz: language_of_instruction is null
+- peabody_institute_voice_mm_performance_pedagogy: language_of_instruction is null
+- peabody_institute_wind_conducting_dma: language_of_instruction is null
+- peabody_institute_wind_conducting_mm: language_of_instruction is null
+
+## Final assessment
+
+The package is schema-valid and mechanically complete for all V4-representable seeded-field offerings. It remains intentionally unreviewed and not ready for Directus import; named needs-attention items require the independent review pass.

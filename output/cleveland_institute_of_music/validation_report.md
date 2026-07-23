@@ -1,0 +1,781 @@
+# cleveland_institute_of_music V4 Validation Report
+
+Generated: 2026-07-21
+
+## Result
+
+**V4 schema and hard rules: PASS**  
+**Hard errors: 0**
+
+## Package counts
+
+| Record type | Count |
+|---|---:|
+| Program offerings | 108 |
+| Current application records | 108 |
+| Current audition records | 108 |
+| Source records | 643 |
+| Decision-critical null fields | 312 |
+
+## Hard-rule coverage
+
+- JSON Schema Draft 2020-12 compatibility
+- Seeded field and degree vocabularies
+- Deterministic refs and duplicate detection
+- One current application and audition record per offering
+- Prohibited/legacy fields and Directus IDs
+- Official-domain and source natural-key checks
+- Required evidence quotes for deadline, tuition, English minimums, prescreen, audition, and repertoire
+- Material-name constraints and explicit critical-null review notes
+
+## Hard failures
+
+- None
+
+## Needs attention
+
+- cleveland_institute_of_music_bass_trombone_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_ad: application_deadline is null
+- cleveland_institute_of_music_bass_trombone_ad: prescreening_deadline is null
+- cleveland_institute_of_music_bass_trombone_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_ad: tuition_annual is null
+- cleveland_institute_of_music_bass_trombone_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_bm: application_deadline is null
+- cleveland_institute_of_music_bass_trombone_bm: prescreening_deadline is null
+- cleveland_institute_of_music_bass_trombone_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_bm: tuition_annual is null
+- cleveland_institute_of_music_bass_trombone_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_dma: application_deadline is null
+- cleveland_institute_of_music_bass_trombone_dma: prescreening_deadline is null
+- cleveland_institute_of_music_bass_trombone_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_dma: tuition_annual is null
+- cleveland_institute_of_music_bass_trombone_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_gd: application_deadline is null
+- cleveland_institute_of_music_bass_trombone_gd: prescreening_deadline is null
+- cleveland_institute_of_music_bass_trombone_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_gd: tuition_annual is null
+- cleveland_institute_of_music_bass_trombone_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_mm: application_deadline is null
+- cleveland_institute_of_music_bass_trombone_mm: prescreening_deadline is null
+- cleveland_institute_of_music_bass_trombone_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bass_trombone_mm: tuition_annual is null
+- cleveland_institute_of_music_bassoon_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_ad: application_deadline is null
+- cleveland_institute_of_music_bassoon_ad: prescreening_deadline is null
+- cleveland_institute_of_music_bassoon_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_bassoon_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_ad: tuition_annual is null
+- cleveland_institute_of_music_bassoon_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_bm: application_deadline is null
+- cleveland_institute_of_music_bassoon_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_bm: tuition_annual is null
+- cleveland_institute_of_music_bassoon_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_dma: application_deadline is null
+- cleveland_institute_of_music_bassoon_dma: prescreening_deadline is null
+- cleveland_institute_of_music_bassoon_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_bassoon_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_dma: tuition_annual is null
+- cleveland_institute_of_music_bassoon_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_gd: application_deadline is null
+- cleveland_institute_of_music_bassoon_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_gd: tuition_annual is null
+- cleveland_institute_of_music_bassoon_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_mm: application_deadline is null
+- cleveland_institute_of_music_bassoon_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_bassoon_mm: tuition_annual is null
+- cleveland_institute_of_music_cello_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_ad: application_deadline is null
+- cleveland_institute_of_music_cello_ad: prescreening_deadline is null
+- cleveland_institute_of_music_cello_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_cello_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_ad: tuition_annual is null
+- cleveland_institute_of_music_cello_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_bm: application_deadline is null
+- cleveland_institute_of_music_cello_bm: prescreening_deadline is null
+- cleveland_institute_of_music_cello_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_cello_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_bm: tuition_annual is null
+- cleveland_institute_of_music_cello_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_dma: application_deadline is null
+- cleveland_institute_of_music_cello_dma: prescreening_deadline is null
+- cleveland_institute_of_music_cello_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_cello_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_dma: tuition_annual is null
+- cleveland_institute_of_music_cello_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_gd: application_deadline is null
+- cleveland_institute_of_music_cello_gd: prescreening_deadline is null
+- cleveland_institute_of_music_cello_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_cello_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_gd: tuition_annual is null
+- cleveland_institute_of_music_cello_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_mm: application_deadline is null
+- cleveland_institute_of_music_cello_mm: prescreening_deadline is null
+- cleveland_institute_of_music_cello_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_cello_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_mm: tuition_annual is null
+- cleveland_institute_of_music_cello_mm_suzuki_pedagogy: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_mm_suzuki_pedagogy: application_deadline is null
+- cleveland_institute_of_music_cello_mm_suzuki_pedagogy: prescreening_deadline is null
+- cleveland_institute_of_music_cello_mm_suzuki_pedagogy: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_cello_mm_suzuki_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_cello_mm_suzuki_pedagogy: tuition_annual is null
+- cleveland_institute_of_music_clarinet_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_ad: application_deadline is null
+- cleveland_institute_of_music_clarinet_ad: prescreening_deadline is null
+- cleveland_institute_of_music_clarinet_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_clarinet_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_ad: tuition_annual is null
+- cleveland_institute_of_music_clarinet_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_bm: application_deadline is null
+- cleveland_institute_of_music_clarinet_bm: prescreening_deadline is null
+- cleveland_institute_of_music_clarinet_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_clarinet_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_bm: tuition_annual is null
+- cleveland_institute_of_music_clarinet_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_dma: application_deadline is null
+- cleveland_institute_of_music_clarinet_dma: prescreening_deadline is null
+- cleveland_institute_of_music_clarinet_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_clarinet_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_dma: tuition_annual is null
+- cleveland_institute_of_music_clarinet_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_gd: application_deadline is null
+- cleveland_institute_of_music_clarinet_gd: prescreening_deadline is null
+- cleveland_institute_of_music_clarinet_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_clarinet_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_gd: tuition_annual is null
+- cleveland_institute_of_music_clarinet_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_mm: application_deadline is null
+- cleveland_institute_of_music_clarinet_mm: prescreening_deadline is null
+- cleveland_institute_of_music_clarinet_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_clarinet_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_clarinet_mm: tuition_annual is null
+- cleveland_institute_of_music_collaborative_piano_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_ad: application_deadline is null
+- cleveland_institute_of_music_collaborative_piano_ad: prescreening_deadline is null
+- cleveland_institute_of_music_collaborative_piano_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_ad: tuition_annual is null
+- cleveland_institute_of_music_collaborative_piano_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_dma: application_deadline is null
+- cleveland_institute_of_music_collaborative_piano_dma: prescreening_deadline is null
+- cleveland_institute_of_music_collaborative_piano_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_dma: tuition_annual is null
+- cleveland_institute_of_music_collaborative_piano_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_gd: application_deadline is null
+- cleveland_institute_of_music_collaborative_piano_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_gd: tuition_annual is null
+- cleveland_institute_of_music_collaborative_piano_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_mm: application_deadline is null
+- cleveland_institute_of_music_collaborative_piano_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_collaborative_piano_mm: tuition_annual is null
+- cleveland_institute_of_music_composition_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_ad: application_deadline is null
+- cleveland_institute_of_music_composition_ad: prescreening_deadline is null
+- cleveland_institute_of_music_composition_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_composition_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_ad: tuition_annual is null
+- cleveland_institute_of_music_composition_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_bm: application_deadline is null
+- cleveland_institute_of_music_composition_bm: prescreening_deadline is null
+- cleveland_institute_of_music_composition_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_composition_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_bm: tuition_annual is null
+- cleveland_institute_of_music_composition_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_dma: application_deadline is null
+- cleveland_institute_of_music_composition_dma: prescreening_deadline is null
+- cleveland_institute_of_music_composition_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_composition_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_dma: tuition_annual is null
+- cleveland_institute_of_music_composition_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_gd: application_deadline is null
+- cleveland_institute_of_music_composition_gd: prescreening_deadline is null
+- cleveland_institute_of_music_composition_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_composition_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_gd: tuition_annual is null
+- cleveland_institute_of_music_composition_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_mm: application_deadline is null
+- cleveland_institute_of_music_composition_mm: prescreening_deadline is null
+- cleveland_institute_of_music_composition_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_composition_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_composition_mm: tuition_annual is null
+- cleveland_institute_of_music_double_bass_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_ad: application_deadline is null
+- cleveland_institute_of_music_double_bass_ad: prescreening_deadline is null
+- cleveland_institute_of_music_double_bass_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_double_bass_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_ad: tuition_annual is null
+- cleveland_institute_of_music_double_bass_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_bm: application_deadline is null
+- cleveland_institute_of_music_double_bass_bm: prescreening_deadline is null
+- cleveland_institute_of_music_double_bass_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_double_bass_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_bm: tuition_annual is null
+- cleveland_institute_of_music_double_bass_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_dma: application_deadline is null
+- cleveland_institute_of_music_double_bass_dma: prescreening_deadline is null
+- cleveland_institute_of_music_double_bass_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_double_bass_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_dma: tuition_annual is null
+- cleveland_institute_of_music_double_bass_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_gd: application_deadline is null
+- cleveland_institute_of_music_double_bass_gd: prescreening_deadline is null
+- cleveland_institute_of_music_double_bass_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_double_bass_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_gd: tuition_annual is null
+- cleveland_institute_of_music_double_bass_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_mm: application_deadline is null
+- cleveland_institute_of_music_double_bass_mm: prescreening_deadline is null
+- cleveland_institute_of_music_double_bass_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_double_bass_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_double_bass_mm: tuition_annual is null
+- cleveland_institute_of_music_flute_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_ad: application_deadline is null
+- cleveland_institute_of_music_flute_ad: prescreening_deadline is null
+- cleveland_institute_of_music_flute_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_flute_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_ad: tuition_annual is null
+- cleveland_institute_of_music_flute_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_bm: application_deadline is null
+- cleveland_institute_of_music_flute_bm: prescreening_deadline is null
+- cleveland_institute_of_music_flute_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_flute_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_bm: tuition_annual is null
+- cleveland_institute_of_music_flute_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_dma: application_deadline is null
+- cleveland_institute_of_music_flute_dma: prescreening_deadline is null
+- cleveland_institute_of_music_flute_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_flute_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_dma: tuition_annual is null
+- cleveland_institute_of_music_flute_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_gd: application_deadline is null
+- cleveland_institute_of_music_flute_gd: prescreening_deadline is null
+- cleveland_institute_of_music_flute_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_flute_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_gd: tuition_annual is null
+- cleveland_institute_of_music_flute_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_mm: application_deadline is null
+- cleveland_institute_of_music_flute_mm: prescreening_deadline is null
+- cleveland_institute_of_music_flute_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_flute_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_flute_mm: tuition_annual is null
+- cleveland_institute_of_music_guitar_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_ad: application_deadline is null
+- cleveland_institute_of_music_guitar_ad: prescreening_deadline is null
+- cleveland_institute_of_music_guitar_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_guitar_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_ad: tuition_annual is null
+- cleveland_institute_of_music_guitar_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_bm: application_deadline is null
+- cleveland_institute_of_music_guitar_bm: prescreening_deadline is null
+- cleveland_institute_of_music_guitar_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_guitar_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_bm: tuition_annual is null
+- cleveland_institute_of_music_guitar_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_dma: application_deadline is null
+- cleveland_institute_of_music_guitar_dma: prescreening_deadline is null
+- cleveland_institute_of_music_guitar_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_guitar_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_dma: tuition_annual is null
+- cleveland_institute_of_music_guitar_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_gd: application_deadline is null
+- cleveland_institute_of_music_guitar_gd: prescreening_deadline is null
+- cleveland_institute_of_music_guitar_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_guitar_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_gd: tuition_annual is null
+- cleveland_institute_of_music_guitar_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_mm: application_deadline is null
+- cleveland_institute_of_music_guitar_mm: prescreening_deadline is null
+- cleveland_institute_of_music_guitar_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_guitar_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_guitar_mm: tuition_annual is null
+- cleveland_institute_of_music_harp_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_ad: application_deadline is null
+- cleveland_institute_of_music_harp_ad: prescreening_deadline is null
+- cleveland_institute_of_music_harp_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_harp_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_ad: tuition_annual is null
+- cleveland_institute_of_music_harp_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_bm: application_deadline is null
+- cleveland_institute_of_music_harp_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_bm: tuition_annual is null
+- cleveland_institute_of_music_harp_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_dma: application_deadline is null
+- cleveland_institute_of_music_harp_dma: prescreening_deadline is null
+- cleveland_institute_of_music_harp_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_harp_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_dma: tuition_annual is null
+- cleveland_institute_of_music_harp_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_gd: application_deadline is null
+- cleveland_institute_of_music_harp_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_gd: tuition_annual is null
+- cleveland_institute_of_music_harp_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_mm: application_deadline is null
+- cleveland_institute_of_music_harp_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_harp_mm: tuition_annual is null
+- cleveland_institute_of_music_horn_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_ad: application_deadline is null
+- cleveland_institute_of_music_horn_ad: prescreening_deadline is null
+- cleveland_institute_of_music_horn_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_horn_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_ad: tuition_annual is null
+- cleveland_institute_of_music_horn_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_bm: application_deadline is null
+- cleveland_institute_of_music_horn_bm: prescreening_deadline is null
+- cleveland_institute_of_music_horn_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_horn_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_bm: tuition_annual is null
+- cleveland_institute_of_music_horn_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_dma: application_deadline is null
+- cleveland_institute_of_music_horn_dma: prescreening_deadline is null
+- cleveland_institute_of_music_horn_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_horn_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_dma: tuition_annual is null
+- cleveland_institute_of_music_horn_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_gd: application_deadline is null
+- cleveland_institute_of_music_horn_gd: prescreening_deadline is null
+- cleveland_institute_of_music_horn_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_horn_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_gd: tuition_annual is null
+- cleveland_institute_of_music_horn_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_mm: application_deadline is null
+- cleveland_institute_of_music_horn_mm: prescreening_deadline is null
+- cleveland_institute_of_music_horn_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_horn_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_horn_mm: tuition_annual is null
+- cleveland_institute_of_music_oboe_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_ad: application_deadline is null
+- cleveland_institute_of_music_oboe_ad: prescreening_deadline is null
+- cleveland_institute_of_music_oboe_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_oboe_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_ad: tuition_annual is null
+- cleveland_institute_of_music_oboe_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_bm: application_deadline is null
+- cleveland_institute_of_music_oboe_bm: prescreening_deadline is null
+- cleveland_institute_of_music_oboe_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_oboe_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_bm: tuition_annual is null
+- cleveland_institute_of_music_oboe_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_dma: application_deadline is null
+- cleveland_institute_of_music_oboe_dma: prescreening_deadline is null
+- cleveland_institute_of_music_oboe_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_oboe_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_dma: tuition_annual is null
+- cleveland_institute_of_music_oboe_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_gd: application_deadline is null
+- cleveland_institute_of_music_oboe_gd: prescreening_deadline is null
+- cleveland_institute_of_music_oboe_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_oboe_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_gd: tuition_annual is null
+- cleveland_institute_of_music_oboe_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_mm: application_deadline is null
+- cleveland_institute_of_music_oboe_mm: prescreening_deadline is null
+- cleveland_institute_of_music_oboe_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_oboe_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_oboe_mm: tuition_annual is null
+- cleveland_institute_of_music_orchestral_conducting_gd: Requirements vary by area, instrument, degree, or admission round; consult the linked official audition page. prescreening_required could not be resolved to one official program-specific value after the available area pages were checked on 2026-07-22.
+- cleveland_institute_of_music_orchestral_conducting_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_orchestral_conducting_gd: application_deadline is null
+- cleveland_institute_of_music_orchestral_conducting_gd: repertoire_summary is null
+- cleveland_institute_of_music_orchestral_conducting_gd: repertoire_summary remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_orchestral_conducting_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_orchestral_conducting_gd: tuition_annual is null
+- cleveland_institute_of_music_orchestral_conducting_mm: Requirements vary by area, instrument, degree, or admission round; consult the linked official audition page. prescreening_required could not be resolved to one official program-specific value after the available area pages were checked on 2026-07-22.
+- cleveland_institute_of_music_orchestral_conducting_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_orchestral_conducting_mm: application_deadline is null
+- cleveland_institute_of_music_orchestral_conducting_mm: repertoire_summary is null
+- cleveland_institute_of_music_orchestral_conducting_mm: repertoire_summary remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_orchestral_conducting_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_orchestral_conducting_mm: tuition_annual is null
+- cleveland_institute_of_music_organ_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_ad: application_deadline is null
+- cleveland_institute_of_music_organ_ad: prescreening_deadline is null
+- cleveland_institute_of_music_organ_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_organ_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_ad: tuition_annual is null
+- cleveland_institute_of_music_organ_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_bm: application_deadline is null
+- cleveland_institute_of_music_organ_bm: prescreening_deadline is null
+- cleveland_institute_of_music_organ_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_organ_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_bm: tuition_annual is null
+- cleveland_institute_of_music_organ_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_dma: application_deadline is null
+- cleveland_institute_of_music_organ_dma: prescreening_deadline is null
+- cleveland_institute_of_music_organ_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_organ_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_dma: tuition_annual is null
+- cleveland_institute_of_music_organ_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_gd: application_deadline is null
+- cleveland_institute_of_music_organ_gd: prescreening_deadline is null
+- cleveland_institute_of_music_organ_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_organ_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_gd: tuition_annual is null
+- cleveland_institute_of_music_organ_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_mm: application_deadline is null
+- cleveland_institute_of_music_organ_mm: prescreening_deadline is null
+- cleveland_institute_of_music_organ_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_organ_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_organ_mm: tuition_annual is null
+- cleveland_institute_of_music_percussion_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_ad: application_deadline is null
+- cleveland_institute_of_music_percussion_ad: prescreening_deadline is null
+- cleveland_institute_of_music_percussion_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_percussion_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_ad: tuition_annual is null
+- cleveland_institute_of_music_percussion_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_bm: application_deadline is null
+- cleveland_institute_of_music_percussion_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_bm: tuition_annual is null
+- cleveland_institute_of_music_percussion_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_dma: application_deadline is null
+- cleveland_institute_of_music_percussion_dma: prescreening_deadline is null
+- cleveland_institute_of_music_percussion_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_percussion_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_dma: tuition_annual is null
+- cleveland_institute_of_music_percussion_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_gd: application_deadline is null
+- cleveland_institute_of_music_percussion_gd: prescreening_deadline is null
+- cleveland_institute_of_music_percussion_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_percussion_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_gd: tuition_annual is null
+- cleveland_institute_of_music_percussion_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_mm: application_deadline is null
+- cleveland_institute_of_music_percussion_mm: prescreening_deadline is null
+- cleveland_institute_of_music_percussion_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_percussion_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_percussion_mm: tuition_annual is null
+- cleveland_institute_of_music_piano_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_ad: application_deadline is null
+- cleveland_institute_of_music_piano_ad: prescreening_deadline is null
+- cleveland_institute_of_music_piano_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_piano_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_ad: tuition_annual is null
+- cleveland_institute_of_music_piano_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_bm: application_deadline is null
+- cleveland_institute_of_music_piano_bm: prescreening_deadline is null
+- cleveland_institute_of_music_piano_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_piano_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_bm: tuition_annual is null
+- cleveland_institute_of_music_piano_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_dma: application_deadline is null
+- cleveland_institute_of_music_piano_dma: prescreening_deadline is null
+- cleveland_institute_of_music_piano_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_piano_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_dma: tuition_annual is null
+- cleveland_institute_of_music_piano_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_gd: application_deadline is null
+- cleveland_institute_of_music_piano_gd: prescreening_deadline is null
+- cleveland_institute_of_music_piano_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_piano_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_gd: tuition_annual is null
+- cleveland_institute_of_music_piano_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_mm: application_deadline is null
+- cleveland_institute_of_music_piano_mm: prescreening_deadline is null
+- cleveland_institute_of_music_piano_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_piano_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_piano_mm: tuition_annual is null
+- cleveland_institute_of_music_tenor_trombone_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_ad: application_deadline is null
+- cleveland_institute_of_music_tenor_trombone_ad: prescreening_deadline is null
+- cleveland_institute_of_music_tenor_trombone_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_ad: tuition_annual is null
+- cleveland_institute_of_music_tenor_trombone_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_bm: application_deadline is null
+- cleveland_institute_of_music_tenor_trombone_bm: prescreening_deadline is null
+- cleveland_institute_of_music_tenor_trombone_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_bm: tuition_annual is null
+- cleveland_institute_of_music_tenor_trombone_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_dma: application_deadline is null
+- cleveland_institute_of_music_tenor_trombone_dma: prescreening_deadline is null
+- cleveland_institute_of_music_tenor_trombone_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_dma: tuition_annual is null
+- cleveland_institute_of_music_tenor_trombone_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_gd: application_deadline is null
+- cleveland_institute_of_music_tenor_trombone_gd: prescreening_deadline is null
+- cleveland_institute_of_music_tenor_trombone_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_gd: tuition_annual is null
+- cleveland_institute_of_music_tenor_trombone_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_mm: application_deadline is null
+- cleveland_institute_of_music_tenor_trombone_mm: prescreening_deadline is null
+- cleveland_institute_of_music_tenor_trombone_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tenor_trombone_mm: tuition_annual is null
+- cleveland_institute_of_music_trumpet_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_ad: application_deadline is null
+- cleveland_institute_of_music_trumpet_ad: prescreening_deadline is null
+- cleveland_institute_of_music_trumpet_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_trumpet_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_ad: tuition_annual is null
+- cleveland_institute_of_music_trumpet_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_bm: application_deadline is null
+- cleveland_institute_of_music_trumpet_bm: prescreening_deadline is null
+- cleveland_institute_of_music_trumpet_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_trumpet_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_bm: tuition_annual is null
+- cleveland_institute_of_music_trumpet_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_dma: application_deadline is null
+- cleveland_institute_of_music_trumpet_dma: prescreening_deadline is null
+- cleveland_institute_of_music_trumpet_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_trumpet_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_dma: tuition_annual is null
+- cleveland_institute_of_music_trumpet_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_gd: application_deadline is null
+- cleveland_institute_of_music_trumpet_gd: prescreening_deadline is null
+- cleveland_institute_of_music_trumpet_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_trumpet_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_gd: tuition_annual is null
+- cleveland_institute_of_music_trumpet_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_mm: application_deadline is null
+- cleveland_institute_of_music_trumpet_mm: prescreening_deadline is null
+- cleveland_institute_of_music_trumpet_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_trumpet_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_trumpet_mm: tuition_annual is null
+- cleveland_institute_of_music_tuba_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_ad: application_deadline is null
+- cleveland_institute_of_music_tuba_ad: prescreening_deadline is null
+- cleveland_institute_of_music_tuba_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_tuba_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_ad: tuition_annual is null
+- cleveland_institute_of_music_tuba_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_bm: application_deadline is null
+- cleveland_institute_of_music_tuba_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_bm: tuition_annual is null
+- cleveland_institute_of_music_tuba_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_dma: application_deadline is null
+- cleveland_institute_of_music_tuba_dma: prescreening_deadline is null
+- cleveland_institute_of_music_tuba_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_tuba_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_dma: tuition_annual is null
+- cleveland_institute_of_music_tuba_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_gd: application_deadline is null
+- cleveland_institute_of_music_tuba_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_gd: tuition_annual is null
+- cleveland_institute_of_music_tuba_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_mm: application_deadline is null
+- cleveland_institute_of_music_tuba_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_tuba_mm: tuition_annual is null
+- cleveland_institute_of_music_viola_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_ad: application_deadline is null
+- cleveland_institute_of_music_viola_ad: prescreening_deadline is null
+- cleveland_institute_of_music_viola_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_viola_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_ad: tuition_annual is null
+- cleveland_institute_of_music_viola_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_bm: application_deadline is null
+- cleveland_institute_of_music_viola_bm: prescreening_deadline is null
+- cleveland_institute_of_music_viola_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_viola_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_bm: tuition_annual is null
+- cleveland_institute_of_music_viola_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_dma: application_deadline is null
+- cleveland_institute_of_music_viola_dma: prescreening_deadline is null
+- cleveland_institute_of_music_viola_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_viola_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_dma: tuition_annual is null
+- cleveland_institute_of_music_viola_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_gd: application_deadline is null
+- cleveland_institute_of_music_viola_gd: prescreening_deadline is null
+- cleveland_institute_of_music_viola_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_viola_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_gd: tuition_annual is null
+- cleveland_institute_of_music_viola_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_mm: application_deadline is null
+- cleveland_institute_of_music_viola_mm: prescreening_deadline is null
+- cleveland_institute_of_music_viola_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_viola_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_viola_mm: tuition_annual is null
+- cleveland_institute_of_music_violin_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_ad: application_deadline is null
+- cleveland_institute_of_music_violin_ad: prescreening_deadline is null
+- cleveland_institute_of_music_violin_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_violin_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_ad: tuition_annual is null
+- cleveland_institute_of_music_violin_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_bm: application_deadline is null
+- cleveland_institute_of_music_violin_bm: prescreening_deadline is null
+- cleveland_institute_of_music_violin_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_violin_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_bm: tuition_annual is null
+- cleveland_institute_of_music_violin_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_dma: application_deadline is null
+- cleveland_institute_of_music_violin_dma: prescreening_deadline is null
+- cleveland_institute_of_music_violin_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_violin_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_dma: tuition_annual is null
+- cleveland_institute_of_music_violin_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_gd: application_deadline is null
+- cleveland_institute_of_music_violin_gd: prescreening_deadline is null
+- cleveland_institute_of_music_violin_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_violin_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_gd: tuition_annual is null
+- cleveland_institute_of_music_violin_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_mm: application_deadline is null
+- cleveland_institute_of_music_violin_mm: prescreening_deadline is null
+- cleveland_institute_of_music_violin_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_violin_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_mm: tuition_annual is null
+- cleveland_institute_of_music_violin_mm_suzuki_pedagogy: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_mm_suzuki_pedagogy: application_deadline is null
+- cleveland_institute_of_music_violin_mm_suzuki_pedagogy: prescreening_deadline is null
+- cleveland_institute_of_music_violin_mm_suzuki_pedagogy: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_violin_mm_suzuki_pedagogy: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_violin_mm_suzuki_pedagogy: tuition_annual is null
+- cleveland_institute_of_music_voice_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_ad: application_deadline is null
+- cleveland_institute_of_music_voice_ad: prescreening_deadline is null
+- cleveland_institute_of_music_voice_ad: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_voice_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_ad: tuition_annual is null
+- cleveland_institute_of_music_voice_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_bm: application_deadline is null
+- cleveland_institute_of_music_voice_bm: prescreening_deadline is null
+- cleveland_institute_of_music_voice_bm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_voice_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_bm: tuition_annual is null
+- cleveland_institute_of_music_voice_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_dma: application_deadline is null
+- cleveland_institute_of_music_voice_dma: prescreening_deadline is null
+- cleveland_institute_of_music_voice_dma: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_voice_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_dma: tuition_annual is null
+- cleveland_institute_of_music_voice_gd: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_gd: application_deadline is null
+- cleveland_institute_of_music_voice_gd: prescreening_deadline is null
+- cleveland_institute_of_music_voice_gd: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_voice_gd: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_gd: tuition_annual is null
+- cleveland_institute_of_music_voice_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_mm: application_deadline is null
+- cleveland_institute_of_music_voice_mm: prescreening_deadline is null
+- cleveland_institute_of_music_voice_mm: prescreening_deadline remains unresolved after checking https://www.cim.edu/admissions/audition/repertoire on 2026-07-22.
+- cleveland_institute_of_music_voice_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- cleveland_institute_of_music_voice_mm: tuition_annual is null
+- found, not seeded: Artist Certificate at https://catalog.cim.edu/degrees
+- found, not seeded: Audio Recording at https://catalog.cim.edu/degrees
+- found, not seeded: Eurhythmics at https://catalog.cim.edu/degrees
+- found, not seeded: Timpani as a separate concentration at https://catalog.cim.edu/degrees
+
+## Warnings
+
+- cleveland_institute_of_music_bass_trombone_ad: language_of_instruction is null
+- cleveland_institute_of_music_bass_trombone_bm: language_of_instruction is null
+- cleveland_institute_of_music_bass_trombone_dma: language_of_instruction is null
+- cleveland_institute_of_music_bass_trombone_gd: language_of_instruction is null
+- cleveland_institute_of_music_bass_trombone_mm: language_of_instruction is null
+- cleveland_institute_of_music_bassoon_ad: language_of_instruction is null
+- cleveland_institute_of_music_bassoon_bm: language_of_instruction is null
+- cleveland_institute_of_music_bassoon_dma: language_of_instruction is null
+- cleveland_institute_of_music_bassoon_gd: language_of_instruction is null
+- cleveland_institute_of_music_bassoon_mm: language_of_instruction is null
+- cleveland_institute_of_music_cello_ad: language_of_instruction is null
+- cleveland_institute_of_music_cello_bm: language_of_instruction is null
+- cleveland_institute_of_music_cello_dma: language_of_instruction is null
+- cleveland_institute_of_music_cello_gd: language_of_instruction is null
+- cleveland_institute_of_music_cello_mm: language_of_instruction is null
+- cleveland_institute_of_music_cello_mm_suzuki_pedagogy: language_of_instruction is null
+- cleveland_institute_of_music_clarinet_ad: language_of_instruction is null
+- cleveland_institute_of_music_clarinet_bm: language_of_instruction is null
+- cleveland_institute_of_music_clarinet_dma: language_of_instruction is null
+- cleveland_institute_of_music_clarinet_gd: language_of_instruction is null
+- cleveland_institute_of_music_clarinet_mm: language_of_instruction is null
+- cleveland_institute_of_music_collaborative_piano_ad: language_of_instruction is null
+- cleveland_institute_of_music_collaborative_piano_dma: language_of_instruction is null
+- cleveland_institute_of_music_collaborative_piano_gd: language_of_instruction is null
+- cleveland_institute_of_music_collaborative_piano_mm: language_of_instruction is null
+- cleveland_institute_of_music_composition_ad: language_of_instruction is null
+- cleveland_institute_of_music_composition_bm: language_of_instruction is null
+- cleveland_institute_of_music_composition_dma: language_of_instruction is null
+- cleveland_institute_of_music_composition_gd: language_of_instruction is null
+- cleveland_institute_of_music_composition_mm: language_of_instruction is null
+- cleveland_institute_of_music_double_bass_ad: language_of_instruction is null
+- cleveland_institute_of_music_double_bass_bm: language_of_instruction is null
+- cleveland_institute_of_music_double_bass_dma: language_of_instruction is null
+- cleveland_institute_of_music_double_bass_gd: language_of_instruction is null
+- cleveland_institute_of_music_double_bass_mm: language_of_instruction is null
+- cleveland_institute_of_music_flute_ad: language_of_instruction is null
+- cleveland_institute_of_music_flute_bm: language_of_instruction is null
+- cleveland_institute_of_music_flute_dma: language_of_instruction is null
+- cleveland_institute_of_music_flute_gd: language_of_instruction is null
+- cleveland_institute_of_music_flute_mm: language_of_instruction is null
+- cleveland_institute_of_music_guitar_ad: language_of_instruction is null
+- cleveland_institute_of_music_guitar_bm: language_of_instruction is null
+- cleveland_institute_of_music_guitar_dma: language_of_instruction is null
+- cleveland_institute_of_music_guitar_gd: language_of_instruction is null
+- cleveland_institute_of_music_guitar_mm: language_of_instruction is null
+- cleveland_institute_of_music_harp_ad: language_of_instruction is null
+- cleveland_institute_of_music_harp_bm: language_of_instruction is null
+- cleveland_institute_of_music_harp_dma: language_of_instruction is null
+- cleveland_institute_of_music_harp_gd: language_of_instruction is null
+- cleveland_institute_of_music_harp_mm: language_of_instruction is null
+- cleveland_institute_of_music_horn_ad: language_of_instruction is null
+- cleveland_institute_of_music_horn_bm: language_of_instruction is null
+- cleveland_institute_of_music_horn_dma: language_of_instruction is null
+- cleveland_institute_of_music_horn_gd: language_of_instruction is null
+- cleveland_institute_of_music_horn_mm: language_of_instruction is null
+- cleveland_institute_of_music_oboe_ad: language_of_instruction is null
+- cleveland_institute_of_music_oboe_bm: language_of_instruction is null
+- cleveland_institute_of_music_oboe_dma: language_of_instruction is null
+- cleveland_institute_of_music_oboe_gd: language_of_instruction is null
+- cleveland_institute_of_music_oboe_mm: language_of_instruction is null
+- cleveland_institute_of_music_orchestral_conducting_gd: language_of_instruction is null
+- cleveland_institute_of_music_orchestral_conducting_mm: language_of_instruction is null
+- cleveland_institute_of_music_organ_ad: language_of_instruction is null
+- cleveland_institute_of_music_organ_bm: language_of_instruction is null
+- cleveland_institute_of_music_organ_dma: language_of_instruction is null
+- cleveland_institute_of_music_organ_gd: language_of_instruction is null
+- cleveland_institute_of_music_organ_mm: language_of_instruction is null
+- cleveland_institute_of_music_percussion_ad: language_of_instruction is null
+- cleveland_institute_of_music_percussion_bm: language_of_instruction is null
+- cleveland_institute_of_music_percussion_dma: language_of_instruction is null
+- cleveland_institute_of_music_percussion_gd: language_of_instruction is null
+- cleveland_institute_of_music_percussion_mm: language_of_instruction is null
+- cleveland_institute_of_music_piano_ad: language_of_instruction is null
+- cleveland_institute_of_music_piano_bm: language_of_instruction is null
+- cleveland_institute_of_music_piano_dma: language_of_instruction is null
+- cleveland_institute_of_music_piano_gd: language_of_instruction is null
+- cleveland_institute_of_music_piano_mm: language_of_instruction is null
+- cleveland_institute_of_music_tenor_trombone_ad: language_of_instruction is null
+- cleveland_institute_of_music_tenor_trombone_bm: language_of_instruction is null
+- cleveland_institute_of_music_tenor_trombone_dma: language_of_instruction is null
+- cleveland_institute_of_music_tenor_trombone_gd: language_of_instruction is null
+- cleveland_institute_of_music_tenor_trombone_mm: language_of_instruction is null
+- cleveland_institute_of_music_trumpet_ad: language_of_instruction is null
+- cleveland_institute_of_music_trumpet_bm: language_of_instruction is null
+- cleveland_institute_of_music_trumpet_dma: language_of_instruction is null
+- cleveland_institute_of_music_trumpet_gd: language_of_instruction is null
+- cleveland_institute_of_music_trumpet_mm: language_of_instruction is null
+- cleveland_institute_of_music_tuba_ad: language_of_instruction is null
+- cleveland_institute_of_music_tuba_bm: language_of_instruction is null
+- cleveland_institute_of_music_tuba_dma: language_of_instruction is null
+- cleveland_institute_of_music_tuba_gd: language_of_instruction is null
+- cleveland_institute_of_music_tuba_mm: language_of_instruction is null
+- cleveland_institute_of_music_viola_ad: language_of_instruction is null
+- cleveland_institute_of_music_viola_bm: language_of_instruction is null
+- cleveland_institute_of_music_viola_dma: language_of_instruction is null
+- cleveland_institute_of_music_viola_gd: language_of_instruction is null
+- cleveland_institute_of_music_viola_mm: language_of_instruction is null
+- cleveland_institute_of_music_violin_ad: language_of_instruction is null
+- cleveland_institute_of_music_violin_bm: language_of_instruction is null
+- cleveland_institute_of_music_violin_dma: language_of_instruction is null
+- cleveland_institute_of_music_violin_gd: language_of_instruction is null
+- cleveland_institute_of_music_violin_mm: language_of_instruction is null
+- cleveland_institute_of_music_violin_mm_suzuki_pedagogy: language_of_instruction is null
+- cleveland_institute_of_music_voice_ad: language_of_instruction is null
+- cleveland_institute_of_music_voice_bm: language_of_instruction is null
+- cleveland_institute_of_music_voice_dma: language_of_instruction is null
+- cleveland_institute_of_music_voice_gd: language_of_instruction is null
+- cleveland_institute_of_music_voice_mm: language_of_instruction is null
+
+## Final assessment
+
+The package is schema-valid and mechanically complete for all V4-representable seeded-field offerings. It remains intentionally unreviewed and not ready for Directus import; named needs-attention items require the independent review pass.

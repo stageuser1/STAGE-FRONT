@@ -1,0 +1,604 @@
+# rice_shepherd_school_of_music V4 Validation Report
+
+Generated: 2026-07-21
+
+## Result
+
+**V4 schema and hard rules: PASS**  
+**Hard errors: 0**
+
+## Package counts
+
+| Record type | Count |
+|---|---:|
+| Program offerings | 71 |
+| Current application records | 71 |
+| Current audition records | 71 |
+| Source records | 420 |
+| Decision-critical null fields | 209 |
+
+## Hard-rule coverage
+
+- JSON Schema Draft 2020-12 compatibility
+- Seeded field and degree vocabularies
+- Deterministic refs and duplicate detection
+- One current application and audition record per offering
+- Prohibited/legacy fields and Directus IDs
+- Official-domain and source natural-key checks
+- Required evidence quotes for deadline, tuition, English minimums, prescreen, audition, and repertoire
+- Material-name constraints and explicit critical-null review notes
+
+## Hard failures
+
+- None
+
+## Needs attention
+
+- found, not seeded: Bachelor of Arts with a Concentration in Music at https://music.rice.edu/admissions/shepherd-school-degree-plans
+- rice_shepherd_school_of_music_bassoon_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_bassoon_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_ad: application_deadline is null
+- rice_shepherd_school_of_music_bassoon_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_bassoon_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-bassoon-performance on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_ad: tuition_annual is null
+- rice_shepherd_school_of_music_bassoon_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_bassoon_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_bm: application_deadline is null
+- rice_shepherd_school_of_music_bassoon_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_bassoon_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-bassoon-performance on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_bm: tuition_annual is null
+- rice_shepherd_school_of_music_bassoon_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_bassoon_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_mm: application_deadline is null
+- rice_shepherd_school_of_music_bassoon_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_bassoon_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-bassoon-performance on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_bassoon_mm: tuition_annual is null
+- rice_shepherd_school_of_music_cello_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_cello_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_cello_ad: application_deadline is null
+- rice_shepherd_school_of_music_cello_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_cello_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-cello-performance on 2026-07-22.
+- rice_shepherd_school_of_music_cello_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_cello_ad: tuition_annual is null
+- rice_shepherd_school_of_music_cello_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_cello_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_cello_bm: application_deadline is null
+- rice_shepherd_school_of_music_cello_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_cello_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-cello-performance on 2026-07-22.
+- rice_shepherd_school_of_music_cello_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_cello_bm: tuition_annual is null
+- rice_shepherd_school_of_music_cello_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_cello_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_cello_dma: application_deadline is null
+- rice_shepherd_school_of_music_cello_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_cello_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-cello-performance on 2026-07-22.
+- rice_shepherd_school_of_music_cello_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_cello_dma: tuition_annual is null
+- rice_shepherd_school_of_music_cello_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_cello_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_cello_mm: application_deadline is null
+- rice_shepherd_school_of_music_cello_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_cello_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-cello-performance on 2026-07-22.
+- rice_shepherd_school_of_music_cello_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_cello_mm: tuition_annual is null
+- rice_shepherd_school_of_music_clarinet_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_clarinet_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_ad: application_deadline is null
+- rice_shepherd_school_of_music_clarinet_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_clarinet_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-clarinet-performance on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_ad: tuition_annual is null
+- rice_shepherd_school_of_music_clarinet_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_clarinet_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_bm: application_deadline is null
+- rice_shepherd_school_of_music_clarinet_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_clarinet_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-clarinet-performance on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_bm: tuition_annual is null
+- rice_shepherd_school_of_music_clarinet_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_clarinet_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_dma: application_deadline is null
+- rice_shepherd_school_of_music_clarinet_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_clarinet_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-clarinet-performance on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_dma: tuition_annual is null
+- rice_shepherd_school_of_music_clarinet_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_clarinet_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_mm: application_deadline is null
+- rice_shepherd_school_of_music_clarinet_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_clarinet_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-clarinet-performance on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_clarinet_mm: tuition_annual is null
+- rice_shepherd_school_of_music_collaborative_piano_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_collaborative_piano_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_collaborative_piano_mm: application_deadline is null
+- rice_shepherd_school_of_music_collaborative_piano_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_collaborative_piano_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-piano-chamber-music-and-accompanying on 2026-07-22.
+- rice_shepherd_school_of_music_collaborative_piano_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_collaborative_piano_mm: tuition_annual is null
+- rice_shepherd_school_of_music_composition_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_composition_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_composition_bm: application_deadline is null
+- rice_shepherd_school_of_music_composition_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_composition_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-composition on 2026-07-22.
+- rice_shepherd_school_of_music_composition_bm: repertoire_summary is null
+- rice_shepherd_school_of_music_composition_bm: repertoire_summary remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-composition on 2026-07-22.
+- rice_shepherd_school_of_music_composition_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_composition_bm: tuition_annual is null
+- rice_shepherd_school_of_music_composition_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_composition_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_composition_dma: application_deadline is null
+- rice_shepherd_school_of_music_composition_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_composition_dma: tuition_annual is null
+- rice_shepherd_school_of_music_composition_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_composition_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_composition_mm: application_deadline is null
+- rice_shepherd_school_of_music_composition_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_composition_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-composition on 2026-07-22.
+- rice_shepherd_school_of_music_composition_mm: repertoire_summary is null
+- rice_shepherd_school_of_music_composition_mm: repertoire_summary remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-composition on 2026-07-22.
+- rice_shepherd_school_of_music_composition_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_composition_mm: tuition_annual is null
+- rice_shepherd_school_of_music_double_bass_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_double_bass_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_ad: application_deadline is null
+- rice_shepherd_school_of_music_double_bass_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_double_bass_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-double-bass-performance on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_ad: tuition_annual is null
+- rice_shepherd_school_of_music_double_bass_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_double_bass_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_bm: application_deadline is null
+- rice_shepherd_school_of_music_double_bass_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_double_bass_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-double-bass-performance on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_bm: tuition_annual is null
+- rice_shepherd_school_of_music_double_bass_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_double_bass_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_dma: application_deadline is null
+- rice_shepherd_school_of_music_double_bass_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_double_bass_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-double-bass-performance on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_dma: tuition_annual is null
+- rice_shepherd_school_of_music_double_bass_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_double_bass_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_mm: application_deadline is null
+- rice_shepherd_school_of_music_double_bass_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_double_bass_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-double-bass-performance on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_double_bass_mm: tuition_annual is null
+- rice_shepherd_school_of_music_flute_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_flute_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_flute_ad: application_deadline is null
+- rice_shepherd_school_of_music_flute_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_flute_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-flute-performance on 2026-07-22.
+- rice_shepherd_school_of_music_flute_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_flute_ad: tuition_annual is null
+- rice_shepherd_school_of_music_flute_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_flute_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_flute_bm: application_deadline is null
+- rice_shepherd_school_of_music_flute_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_flute_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-flute-performance on 2026-07-22.
+- rice_shepherd_school_of_music_flute_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_flute_bm: tuition_annual is null
+- rice_shepherd_school_of_music_flute_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_flute_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_flute_dma: application_deadline is null
+- rice_shepherd_school_of_music_flute_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_flute_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-flute-performance on 2026-07-22.
+- rice_shepherd_school_of_music_flute_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_flute_dma: tuition_annual is null
+- rice_shepherd_school_of_music_flute_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_flute_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_flute_mm: application_deadline is null
+- rice_shepherd_school_of_music_flute_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_flute_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-flute-performance on 2026-07-22.
+- rice_shepherd_school_of_music_flute_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_flute_mm: tuition_annual is null
+- rice_shepherd_school_of_music_harp_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_harp_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_harp_ad: application_deadline is null
+- rice_shepherd_school_of_music_harp_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_harp_ad: tuition_annual is null
+- rice_shepherd_school_of_music_harp_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_harp_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_harp_bm: application_deadline is null
+- rice_shepherd_school_of_music_harp_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_harp_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-harp-performance on 2026-07-22.
+- rice_shepherd_school_of_music_harp_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_harp_bm: tuition_annual is null
+- rice_shepherd_school_of_music_harp_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_harp_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_harp_mm: application_deadline is null
+- rice_shepherd_school_of_music_harp_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_harp_mm: tuition_annual is null
+- rice_shepherd_school_of_music_horn_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_horn_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_horn_ad: application_deadline is null
+- rice_shepherd_school_of_music_horn_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_horn_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-horn-performance on 2026-07-22.
+- rice_shepherd_school_of_music_horn_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_horn_ad: tuition_annual is null
+- rice_shepherd_school_of_music_horn_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_horn_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_horn_bm: application_deadline is null
+- rice_shepherd_school_of_music_horn_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_horn_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-horn-performance on 2026-07-22.
+- rice_shepherd_school_of_music_horn_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_horn_bm: tuition_annual is null
+- rice_shepherd_school_of_music_horn_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_horn_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_horn_mm: application_deadline is null
+- rice_shepherd_school_of_music_horn_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_horn_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-horn-performance on 2026-07-22.
+- rice_shepherd_school_of_music_horn_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_horn_mm: tuition_annual is null
+- rice_shepherd_school_of_music_music_history_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_music_history_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_music_history_bm: application_deadline is null
+- rice_shepherd_school_of_music_music_history_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_music_history_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-music-history on 2026-07-22.
+- rice_shepherd_school_of_music_music_history_bm: repertoire_summary is null
+- rice_shepherd_school_of_music_music_history_bm: repertoire_summary remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-music-history on 2026-07-22.
+- rice_shepherd_school_of_music_music_history_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_music_history_bm: tuition_annual is null
+- rice_shepherd_school_of_music_music_theory_bm: Requirements vary by area, instrument, degree, or admission round; consult the linked official audition page. prescreening_required could not be resolved to one official program-specific value after the available area pages were checked on 2026-07-22. audition_required could not be resolved to one official program-specific value after the available area pages were checked on 2026-07-22.
+- rice_shepherd_school_of_music_music_theory_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_music_theory_bm: application_deadline is null
+- rice_shepherd_school_of_music_music_theory_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_music_theory_bm: tuition_annual is null
+- rice_shepherd_school_of_music_musicology_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_musicology_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_musicology_mm: application_deadline is null
+- rice_shepherd_school_of_music_musicology_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_musicology_mm: tuition_annual is null
+- rice_shepherd_school_of_music_oboe_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_oboe_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_ad: application_deadline is null
+- rice_shepherd_school_of_music_oboe_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_oboe_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-oboe-performance on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_ad: tuition_annual is null
+- rice_shepherd_school_of_music_oboe_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_oboe_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_bm: application_deadline is null
+- rice_shepherd_school_of_music_oboe_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_oboe_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-oboe-performance on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_bm: tuition_annual is null
+- rice_shepherd_school_of_music_oboe_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_oboe_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_dma: application_deadline is null
+- rice_shepherd_school_of_music_oboe_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_oboe_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-oboe-performance on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_dma: tuition_annual is null
+- rice_shepherd_school_of_music_oboe_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_oboe_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_mm: application_deadline is null
+- rice_shepherd_school_of_music_oboe_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_oboe_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-oboe-performance on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_oboe_mm: tuition_annual is null
+- rice_shepherd_school_of_music_opera_studies_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_opera_studies_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_opera_studies_ad: application_deadline is null
+- rice_shepherd_school_of_music_opera_studies_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_opera_studies_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-opera-studies on 2026-07-22.
+- rice_shepherd_school_of_music_opera_studies_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_opera_studies_ad: tuition_annual is null
+- rice_shepherd_school_of_music_orchestral_conducting_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_orchestral_conducting_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_orchestral_conducting_ad: application_deadline is null
+- rice_shepherd_school_of_music_orchestral_conducting_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_orchestral_conducting_ad: tuition_annual is null
+- rice_shepherd_school_of_music_orchestral_conducting_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_orchestral_conducting_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_orchestral_conducting_mm: application_deadline is null
+- rice_shepherd_school_of_music_orchestral_conducting_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_orchestral_conducting_mm: tuition_annual is null
+- rice_shepherd_school_of_music_organ_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_organ_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_organ_ad: application_deadline is null
+- rice_shepherd_school_of_music_organ_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_organ_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/artist-diploma-organ-performance on 2026-07-22.
+- rice_shepherd_school_of_music_organ_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_organ_ad: tuition_annual is null
+- rice_shepherd_school_of_music_organ_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_organ_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_organ_bm: application_deadline is null
+- rice_shepherd_school_of_music_organ_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_organ_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-organ-performance on 2026-07-22.
+- rice_shepherd_school_of_music_organ_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_organ_bm: tuition_annual is null
+- rice_shepherd_school_of_music_organ_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_organ_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_organ_dma: application_deadline is null
+- rice_shepherd_school_of_music_organ_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_organ_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-organ-performance on 2026-07-22.
+- rice_shepherd_school_of_music_organ_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_organ_dma: tuition_annual is null
+- rice_shepherd_school_of_music_organ_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_organ_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_organ_mm: application_deadline is null
+- rice_shepherd_school_of_music_organ_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_organ_mm: tuition_annual is null
+- rice_shepherd_school_of_music_percussion_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_percussion_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_ad: application_deadline is null
+- rice_shepherd_school_of_music_percussion_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_percussion_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-percussion-performance on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_ad: tuition_annual is null
+- rice_shepherd_school_of_music_percussion_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_percussion_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_bm: application_deadline is null
+- rice_shepherd_school_of_music_percussion_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_percussion_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-percussion-performance on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_bm: tuition_annual is null
+- rice_shepherd_school_of_music_percussion_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_percussion_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_dma: application_deadline is null
+- rice_shepherd_school_of_music_percussion_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_percussion_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-percussion-performance on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_dma: tuition_annual is null
+- rice_shepherd_school_of_music_percussion_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_percussion_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_mm: application_deadline is null
+- rice_shepherd_school_of_music_percussion_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_percussion_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-percussion-performance on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_percussion_mm: tuition_annual is null
+- rice_shepherd_school_of_music_piano_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_piano_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_piano_ad: application_deadline is null
+- rice_shepherd_school_of_music_piano_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_piano_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-piano-performance on 2026-07-22.
+- rice_shepherd_school_of_music_piano_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_piano_ad: tuition_annual is null
+- rice_shepherd_school_of_music_piano_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_piano_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_piano_bm: application_deadline is null
+- rice_shepherd_school_of_music_piano_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_piano_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-piano-performance on 2026-07-22.
+- rice_shepherd_school_of_music_piano_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_piano_bm: tuition_annual is null
+- rice_shepherd_school_of_music_piano_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_piano_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_piano_dma: application_deadline is null
+- rice_shepherd_school_of_music_piano_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_piano_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-piano-performance on 2026-07-22.
+- rice_shepherd_school_of_music_piano_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_piano_dma: tuition_annual is null
+- rice_shepherd_school_of_music_piano_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_piano_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_piano_mm: application_deadline is null
+- rice_shepherd_school_of_music_piano_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_piano_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-piano-performance on 2026-07-22.
+- rice_shepherd_school_of_music_piano_mm: repertoire_summary is null
+- rice_shepherd_school_of_music_piano_mm: repertoire_summary remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-piano-performance on 2026-07-22.
+- rice_shepherd_school_of_music_piano_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_piano_mm: tuition_annual is null
+- rice_shepherd_school_of_music_professional_string_quartet_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_professional_string_quartet_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_professional_string_quartet_mm: application_deadline is null
+- rice_shepherd_school_of_music_professional_string_quartet_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_professional_string_quartet_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-string-quartet on 2026-07-22.
+- rice_shepherd_school_of_music_professional_string_quartet_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_professional_string_quartet_mm: tuition_annual is null
+- rice_shepherd_school_of_music_tenor_trombone_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_tenor_trombone_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_ad: application_deadline is null
+- rice_shepherd_school_of_music_tenor_trombone_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_tenor_trombone_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/artist-diploma-trombone-performance on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_ad: tuition_annual is null
+- rice_shepherd_school_of_music_tenor_trombone_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_tenor_trombone_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_bm: application_deadline is null
+- rice_shepherd_school_of_music_tenor_trombone_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_tenor_trombone_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-trombone-performance on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_bm: tuition_annual is null
+- rice_shepherd_school_of_music_tenor_trombone_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_tenor_trombone_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_mm: application_deadline is null
+- rice_shepherd_school_of_music_tenor_trombone_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_tenor_trombone_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-trombone-performance on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tenor_trombone_mm: tuition_annual is null
+- rice_shepherd_school_of_music_trumpet_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_trumpet_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_ad: application_deadline is null
+- rice_shepherd_school_of_music_trumpet_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_trumpet_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-trumpet-performance on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_ad: tuition_annual is null
+- rice_shepherd_school_of_music_trumpet_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_trumpet_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_bm: application_deadline is null
+- rice_shepherd_school_of_music_trumpet_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_trumpet_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-trumpet-performance on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_bm: tuition_annual is null
+- rice_shepherd_school_of_music_trumpet_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_trumpet_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_mm: application_deadline is null
+- rice_shepherd_school_of_music_trumpet_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_trumpet_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-trumpet-performance on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_trumpet_mm: tuition_annual is null
+- rice_shepherd_school_of_music_tuba_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_tuba_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tuba_bm: application_deadline is null
+- rice_shepherd_school_of_music_tuba_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_tuba_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-tuba-performance on 2026-07-22.
+- rice_shepherd_school_of_music_tuba_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tuba_bm: tuition_annual is null
+- rice_shepherd_school_of_music_tuba_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_tuba_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tuba_mm: application_deadline is null
+- rice_shepherd_school_of_music_tuba_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_tuba_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-tuba-performance on 2026-07-22.
+- rice_shepherd_school_of_music_tuba_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_tuba_mm: tuition_annual is null
+- rice_shepherd_school_of_music_viola_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_viola_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_viola_ad: application_deadline is null
+- rice_shepherd_school_of_music_viola_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_viola_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-viola-performance on 2026-07-22.
+- rice_shepherd_school_of_music_viola_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_viola_ad: tuition_annual is null
+- rice_shepherd_school_of_music_viola_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_viola_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_viola_bm: application_deadline is null
+- rice_shepherd_school_of_music_viola_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_viola_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-viola-performance on 2026-07-22.
+- rice_shepherd_school_of_music_viola_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_viola_bm: tuition_annual is null
+- rice_shepherd_school_of_music_viola_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_viola_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_viola_dma: application_deadline is null
+- rice_shepherd_school_of_music_viola_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_viola_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-viola-performance on 2026-07-22.
+- rice_shepherd_school_of_music_viola_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_viola_dma: tuition_annual is null
+- rice_shepherd_school_of_music_viola_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_viola_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_viola_mm: application_deadline is null
+- rice_shepherd_school_of_music_viola_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_viola_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-viola-performance on 2026-07-22.
+- rice_shepherd_school_of_music_viola_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_viola_mm: tuition_annual is null
+- rice_shepherd_school_of_music_violin_ad: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_violin_ad: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_violin_ad: application_deadline is null
+- rice_shepherd_school_of_music_violin_ad: prescreening_deadline is null
+- rice_shepherd_school_of_music_violin_ad: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/artist-diploma-violin-performance on 2026-07-22.
+- rice_shepherd_school_of_music_violin_ad: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_violin_ad: tuition_annual is null
+- rice_shepherd_school_of_music_violin_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_violin_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_violin_bm: application_deadline is null
+- rice_shepherd_school_of_music_violin_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_violin_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-violin-performance on 2026-07-22.
+- rice_shepherd_school_of_music_violin_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_violin_bm: tuition_annual is null
+- rice_shepherd_school_of_music_violin_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_violin_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_violin_dma: application_deadline is null
+- rice_shepherd_school_of_music_violin_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_violin_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-violin-performance on 2026-07-22.
+- rice_shepherd_school_of_music_violin_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_violin_dma: tuition_annual is null
+- rice_shepherd_school_of_music_violin_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_violin_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_violin_mm: application_deadline is null
+- rice_shepherd_school_of_music_violin_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_violin_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-violin-performance on 2026-07-22.
+- rice_shepherd_school_of_music_violin_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_violin_mm: tuition_annual is null
+- rice_shepherd_school_of_music_voice_bm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_voice_bm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_voice_bm: application_deadline is null
+- rice_shepherd_school_of_music_voice_bm: prescreening_deadline is null
+- rice_shepherd_school_of_music_voice_bm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/undergraduate/audition/bachelor-music-vocal-performance on 2026-07-22.
+- rice_shepherd_school_of_music_voice_bm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_voice_bm: tuition_annual is null
+- rice_shepherd_school_of_music_voice_dma: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_voice_dma: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_voice_dma: application_deadline is null
+- rice_shepherd_school_of_music_voice_dma: prescreening_deadline is null
+- rice_shepherd_school_of_music_voice_dma: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/doctor-musical-arts-vocal-performance on 2026-07-22.
+- rice_shepherd_school_of_music_voice_dma: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_voice_dma: tuition_annual is null
+- rice_shepherd_school_of_music_voice_mm: The latest official instrument page available on 2026-07-22 is labeled Fall 2026 and cites a December 1, 2025 preliminary deadline; it is retained as the latest published repertoire but not treated as a current-cycle deadline.
+- rice_shepherd_school_of_music_voice_mm: application_deadline for 2027-2028 was not published on the official admission page checked on 2026-07-22.
+- rice_shepherd_school_of_music_voice_mm: application_deadline is null
+- rice_shepherd_school_of_music_voice_mm: prescreening_deadline is null
+- rice_shepherd_school_of_music_voice_mm: prescreening_deadline remains unresolved after checking https://music.rice.edu/admissions/graduate/audition/master-music-vocal-performance on 2026-07-22.
+- rice_shepherd_school_of_music_voice_mm: tuition_annual for 2027-2028 was not published on the official tuition page checked on 2026-07-22.
+- rice_shepherd_school_of_music_voice_mm: tuition_annual is null
+
+## Warnings
+
+- rice_shepherd_school_of_music_bassoon_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_bassoon_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_bassoon_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_cello_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_cello_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_cello_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_cello_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_clarinet_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_clarinet_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_clarinet_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_clarinet_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_collaborative_piano_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_composition_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_composition_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_composition_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_double_bass_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_double_bass_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_double_bass_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_double_bass_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_flute_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_flute_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_flute_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_flute_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_harp_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_harp_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_harp_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_horn_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_horn_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_horn_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_music_history_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_music_theory_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_musicology_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_oboe_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_oboe_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_oboe_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_oboe_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_opera_studies_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_orchestral_conducting_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_orchestral_conducting_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_organ_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_organ_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_organ_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_organ_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_percussion_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_percussion_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_percussion_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_percussion_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_piano_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_piano_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_piano_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_piano_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_professional_string_quartet_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_tenor_trombone_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_tenor_trombone_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_tenor_trombone_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_trumpet_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_trumpet_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_trumpet_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_tuba_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_tuba_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_viola_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_viola_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_viola_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_viola_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_violin_ad: language_of_instruction is null
+- rice_shepherd_school_of_music_violin_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_violin_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_violin_mm: language_of_instruction is null
+- rice_shepherd_school_of_music_voice_bm: language_of_instruction is null
+- rice_shepherd_school_of_music_voice_dma: language_of_instruction is null
+- rice_shepherd_school_of_music_voice_mm: language_of_instruction is null
+
+## Final assessment
+
+The package is schema-valid and mechanically complete for all V4-representable seeded-field offerings. It remains intentionally unreviewed and not ready for Directus import; named needs-attention items require the independent review pass.
