@@ -15,7 +15,7 @@ Two purposes:
 
 | Phase | Branch | Rollback SHA | Recorded on | Recorded by |
 |---|---|---|---|---|
-| `01_` Baseline | `perf/s0-baseline` | | | |
+| `01_` Baseline | `perf/s0-baseline` | `86c1db9` | 2026-07-23 | Claude |
 | `02_` Transport security | none (infra) | n/a — DNS/proxy revert | | |
 | `04_` Speed architecture | `perf/s1-speed-track` | | | |
 | `03_` Data boundary | `perf/s2-data-boundary` | | | |
@@ -24,12 +24,33 @@ Two purposes:
 
 ---
 
-## Program baseline
+## Program baseline ✅ ESTABLISHED
 
-- **Baseline commit SHA:** ____________
-- **Recorded on:** ____________
-- **Branch at time of recording:** ____________
-- **Working tree clean:** ☐ yes ☐ no
+- **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
+- **Short SHA:** `86c1db9`
+- **Message:** "Add optimization program control workspace"
+- **Recorded on:** 2026-07-23
+- **Branch at time of recording:** `main` (tip); Phase 0 branch
+  `perf/s0-baseline` cut from this commit
+- **Working tree clean:** ☑ yes — `git status --short` empty
+- **Pushed to origin:** ☐ **NO — local only.** See D-003 open risk before pushing.
+
+**This is the commit every later phase reverts to.**
+
+### How the baseline was reached (D-003)
+
+`00b341a` → four commits applying the D-003 classification:
+
+```
+86c1db9  Add optimization program control workspace          ← BASELINE
+e884935  Ignore local Directus import scratch directory
+524efcd  Add V4 extraction packages for ten schools          (62 files, +118,288)
+32bd745  Add UK conservatoire and nine-school extraction tooling
+00b341a  Import nine STAGE V4 schools into Directus          (previous HEAD)
+```
+
+`tmp/` (34 MB of dry-run scratch) was gitignored rather than committed.
+No application code, configuration, or Directus setting was touched.
 
 Pre-program state (**corrected 2026-07-23** — `HEAD` advanced during workspace
 setup; an earlier draft of this file recorded `c123ec8`, which is now stale):

@@ -126,3 +126,56 @@ Execution order verified as speed-first.
 `01_phase_0_baseline/` to begin.
 
 ---
+
+### [2026-07-23] D-003 resolution and baseline preparation
+
+- **Actor:** Claude
+- **Branch:** `main` → `perf/s0-baseline`
+- **Approved by owner:** yes — "proceed with D-003 resolution and baseline
+  preparation in one controlled operation"
+
+**Files modified:** 5 documentation files under `improve_s/`
+**Files added:** 66 (4 scripts, 62 under `output/`) + 38 under `improve_s/`
+**Files deleted:** none
+**Dependency changes:** none · **Configuration changes:** `.gitignore` only (`tmp/`)
+**Database changes:** none · **Application code changes:** none
+
+**Commits created (4, on `main`, local only — nothing pushed):**
+
+| SHA | Message |
+|---|---|
+| `32bd745` | Add UK conservatoire and nine-school extraction tooling |
+| `524efcd` | Add V4 extraction packages for ten schools |
+| `e884935` | Ignore local Directus import scratch directory |
+| `86c1db9` | Add optimization program control workspace ← **BASELINE** |
+
+**Typecheck / Build / Tests:** not run — no application code touched
+
+**Actions taken:**
+1. D-003 recorded in `decisions.md` with the full classification table
+2. Four untracked scripts committed (peers already tracked)
+3. `output/` committed — 7.8 MB, 62 files, source data for the `00b341a` import
+4. `tmp/` gitignored — 34 MB derived scratch, superseded by `docs/imports/`
+5. `improve_s/` committed — now version-controlled
+6. Branch `perf/s0-baseline` created from `86c1db9`
+7. Baseline SHA recorded in `rollback_history.md`
+
+**Incidental finding — D-011 raised and resolved:**
+`.codex-dev.stdout.log` was found **already overwritten**. The 2026-07-22
+timings (`GET / 200 in 31395ms`) were replaced by a 2026-07-23 verification run.
+Both datasets were transcribed verbatim into `01_phase_0_baseline/report.md`
+before any further action. A new **Batch 0** was added to the Phase 0 Codex
+package, rule **F10** was rewritten, and `optimization_scope.md` now cites the
+report rather than the volatile log.
+
+**Outcome:** completed. Repository baseline ready for Phase 0.
+
+**Blocked / carried forward:**
+- `output/` remote-visibility and licensing question — **unresolved**, gated by
+  the decision not to push (D-003)
+- D-001, D-002, D-004…D-010 remain open
+
+**Next action:** owner resolves the remaining open decisions, then approves
+`01_phase_0_baseline/codex_execution.md` for Codex.
+
+---
