@@ -322,3 +322,49 @@ files in `tests/`. It has no dependency on D-002 and **must run in Batch 2**
 `improve_s/01_phase_0_baseline/codex_execution.md`, Batches 0–7.
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 0 — volatile log evidence verified
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 0
+- **Approved by owner:** yes — decisions.md ref: **D-012**
+
+**Files modified:** `improve_s/logs/execution_log.md`
+
+**Files added:** none
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none
+
+**Database changes:** none
+
+**Application code changes:** none
+
+**Evidence verification:**
+- `.codex-dev.stdout.log`: 1,881 bytes; SHA-256
+  `6B1DE3B7E5D6B79DD1D65EEFF27D375F7B01C6DAE74078CFCB6AB15BEDD3E5FD`
+- `.codex-dev.stderr.log`: 0 bytes; SHA-256
+  `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- Both files match the complete Set C already transcribed in
+  `01_phase_0_baseline/report.md`; no duplicate transcription was added.
+- Neither volatile file was modified, deleted, truncated, or used as the
+  authoritative baseline.
+
+**Typecheck:** not run — not part of Batch 0
+
+**Build:** not run — not part of Batch 0
+
+**Tests / smoke:** n/a
+
+**Outcome:** completed
+
+**Blocked or incomplete items:** none for Batch 0
+
+**Commit SHA:** recorded by the Batch 0 commit
+
+---
