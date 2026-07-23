@@ -15,3 +15,6 @@ tsconfig.tsbuildinfo
 
 __pycache__/
 *.py[cod]
+
+# Local Directus import scratch (dry-run logs, superseded by docs/imports/)
+tmp/
