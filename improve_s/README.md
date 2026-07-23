@@ -108,10 +108,10 @@ owner overrides this order, record the decision in `logs/decisions.md`.
 |---|---|---|
 | Program setup | — | ✅ Complete |
 | Baseline commit `86c1db9` | — | ✅ Recorded (D-003) |
-| Phase 0 — Baseline | `01_` | 🟢 **ENTRY GATE APPROVED (D-012)** — cleared to execute |
+| Phase 0 — Baseline | `01_` | ✅ **COMPLETE — PASS WITH CONDITIONS (D-016)** |
 | Phase 0.5 — Transport security | `02_` | ⬜ Not started (parallel) |
 | Phase 1 — Data boundary | `03_` | ⬜ Not started |
-| Phase 2 — Speed architecture | `04_` | ⬜ Not started |
+| Phase 2 — Speed architecture | `04_` | 🟡 **NEXT** — blocked on C1, C2, C3 (see D-016) |
 | Phase 3 — Cleanup | `05_` | ⬜ Not started |
 | Phase 4 — Final verification | `06_` | ⬜ Not started |
 

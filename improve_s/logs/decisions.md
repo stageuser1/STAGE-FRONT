@@ -686,3 +686,86 @@ remains in force for any *new* unexplained S7 stop.
 - **Reversible?** Yes — this authorizes one attempt; if it fails, Phase 0 stops
   again cleanly at the same rollback point (`86c1db9`), and the new failure is
   assessed fresh rather than assumed to have the same explanation.
+
+---
+
+### D-016 · [2026-07-23] — PHASE 0 EXIT GATE: PASS WITH CONDITIONS
+
+- **Type:** approval / gate
+- **Phase:** `01_` — exit
+- **Decided by:** owner
+- **Question:** does Phase 0 pass its exit gate, and what must be true before
+  the next phase begins?
+
+#### Verdict: **PASS WITH CONDITIONS**
+
+Every approved Batch 0–7 deliverable exists, is evidenced by retained
+artifacts, and was spot-verified independently at this gate. **No application
+file changed** — re-verified: `git diff --stat 86c1db9 HEAD -- app components
+lib data` is empty.
+
+Not a clean PASS solely because of carried-forward items that gate the *next*
+phase (C1–C4 below). None reflects a defect in Phase 0's own execution.
+
+#### Batch-by-batch verification
+
+| Batch | Deliverable | Status |
+|---|---|---|
+| 0 | Volatile logs preserved | ✅ Both files read, unmodified; matched durable Set C |
+| 1 | Clean tree, baseline SHA | ✅ `86c1db9` recorded in `rollback_history.md` |
+| 2 | Typecheck / tests / build | ✅ exit 0 / 10-of-10 / exit 0, 17.617 s, no warnings |
+| 3 | Timing baseline | ✅ 40/40 requests HTTP 200; medians computed; cold and warm separated |
+| 4 | Directus request + byte baseline | ✅ All 4 routes; **27.32 MB per render measured** |
+| 5 | Anonymous RSC payloads | ✅ 4 payloads + headers, `text/x-component`; markers counted |
+| 6 | QA mechanism (Path B) | ✅ 10-check manual checklist in `report.md` §7; nothing installed |
+| 7 | `is_current` observation | ✅ Recorded; no action taken |
+
+**Governance integrity across the phase was sound.** Three S7 stops occurred;
+all three were correctly triggered as written; Codex never attempted a fix,
+never expanded scope, and never touched application code. One (D-013) exposed a
+genuine defect in Claude's Phase 0 package wording, which was corrected. Two
+(D-014/D-015) were operator-caused and resolved by disclosure. **The stop
+machinery worked as designed** — that is itself a Phase 0 result worth
+recording.
+
+#### Accepted limitation
+
+**Link byte-rate was never obtained** (D-013). The diagnostics channel exposed
+no response-body byte counts. This is superseded by two stronger measurements
+that Phase 0 did produce: per-collection Directus durations, and total
+per-render transfer volume. **No re-run is required.**
+
+#### Conditions on the next phase
+
+| # | Condition | Gates | Detail |
+|---|---|---|---|
+| **C1** | **D-006** — ISR revalidation window + staleness acceptance | `04_` **Batch 1** | Batch 1's single-line change sets the window. It cannot start undecided. |
+| **C2** | **`evidence_metadata` consumer** | `04_` **Batch 3** | See below — new finding at this gate |
+| **C3** | **D-010** — execution order confirmed | `04_` entry | Formality; `01_`→`04_`→`03_`→`05_`→`06_` |
+| **C4** | **D-001** — Preview resolved or exit criteria rewritten | `04_` **exit gate** | Blocks finishing, not starting |
+
+**C1–C3 block Phase `04_` starting. C4 blocks it finishing.**
+
+#### New finding at this gate — C2, `evidence_metadata`
+
+Phase `04_` Batch 3 instructs: *"First, investigate — do not edit yet… If
+nothing reads it: remove. If something reads it: stop and report."*
+
+**Verified at this gate: something reads it.** `lib/data.ts:755`
+(`sourceTopicKey`) parses `evidence_metadata` to extract exactly one string,
+`topic_key`, which `lib/school-detail.ts:293` (`inferredTopicKey`) uses to group
+source citations into topic sections on the school detail page. A fallback
+inference from `related_field`, `title` and `url` exists when the key is absent.
+
+**Consequence:** Batch 3 as written will halt on its stop-and-report path.
+Removing the field wholesale would change citation grouping — a visible change,
+prohibited by Global Constraint 1.
+
+**Resolve before Batch 3 runs. No solution is prescribed here** — designing one
+is Phase `04_` planning work, not an exit-gate decision. Note only that Batch 5
+measured `evidence_metadata` at **0 occurrences in every anonymous RSC
+payload**, so this is a **pure performance question, not a security one**, and
+it does not affect Phase `03_`'s scope.
+
+- **Reversible?** Yes — this is a gate decision; the rollback point `86c1db9`
+  is unchanged.

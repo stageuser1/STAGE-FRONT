@@ -1,7 +1,8 @@
 # Phase 0 — Baseline · Report
 
-**Status:** ✅ **PHASE 0 EXECUTION COMPLETE — awaiting Claude review and owner gate**
-**Completed:** Yes — approved Batches 0–7 executed
+**Status:** ✅ **PHASE 0 COMPLETE — EXIT GATE PASSED WITH CONDITIONS (D-016)**
+**Completed:** Yes — Batches 0–7 executed, reviewed, and accepted
+**This IS the program baseline.** Later phases compare against §3–§6 below.
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -19,9 +20,21 @@
 > 2. **Batch 6 follows Path B.** The run stopped before Batch 6, so no checklist
 >    or smoke-suite file was created and nothing was installed.
 
-> This document is **not yet a complete program baseline** — Batches 5–7 remain
-> pending. No later phase may treat the partial measurements as an exit gate
-> until Phase 0 completes and the owner signs `acceptance_checklist.md`.
+> ✅ **This document is now the accepted program baseline.** Phase 0 passed its
+> exit gate on 2026-07-23 with conditions — see `logs/decisions.md` **D-016**
+> and the signed `acceptance_checklist.md`.
+>
+> **Conditions carried to Phase `04_`:** C1 (D-006 revalidation window),
+> C2 (`evidence_metadata` consumer — see below), C3 (D-010 execution order)
+> block Phase `04_` **starting**; C4 (D-001 Preview) blocks it **finishing**.
+>
+> **New finding at the gate (C2):** `evidence_metadata` **is** consumed —
+> `lib/data.ts:755` (`sourceTopicKey`) extracts one string, `topic_key`, used by
+> `lib/school-detail.ts:293` to group source citations on the school page.
+> Phase `04_` Batch 3 will therefore hit its stop-and-report path and needs a
+> decision first. Batch 5 measured `evidence_metadata` at **0 occurrences in
+> every anonymous RSC payload** — so this is a **pure performance question, not
+> a security one**, and it does not affect Phase `03_`'s scope.
 
 > **Batch 3 S7 stop — OVERTURNED as a false positive. See `logs/decisions.md` D-013.**
 >

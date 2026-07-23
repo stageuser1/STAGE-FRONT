@@ -1378,3 +1378,52 @@ acceptance remains required before any later phase.
 **Commit SHA:** recorded by the Batch 7 completion commit
 
 ---
+
+### [2026-07-23] Phase 0 · EXIT GATE — PASS WITH CONDITIONS
+
+- **Actor:** Claude (review) / Owner (verdict)
+- **Branch:** `perf/s0-baseline`
+- **Approved by owner:** yes — decisions.md ref: **D-016**
+
+**Files modified:** 4 documentation files under `improve_s/`
+**Files added:** none · **Files deleted:** none
+**Dependency / configuration / database / Directus changes:** none
+**Application code changes:** none — re-verified at the gate
+
+**Verdict:** **PASS WITH CONDITIONS.** All eight batches delivered and
+evidenced. Spot-verified independently: RSC payload marker counts, retained
+artifacts, and an empty `git diff --stat 86c1db9 HEAD -- app components lib data`.
+
+**Confirmed baseline for Phase `04_`:**
+- **27.32 MB transferred per page render**, every request, all four routes
+- **6 Directus requests** (`/`, `/search`) / **7** (detail routes) per render
+- Directus wall-clock ≈ **2.7–3.9 s** of a **3.8–5.0 s** render (~75–80%)
+- All six public/pilot routes **dynamic (`ƒ`)**; zero caching
+- Medians: `/` 3718 ms cold / 5237 ms warm · `/search` 3049 / 3358 ·
+  school 3649 / 4054 · program 3707 / 3691 — **warm is not faster than cold**
+- Internal markers in anonymous RSC: `review_record` 1 (school), 1 (program);
+  `review_records` 1 (program); `confidence` 1 each on both detail routes;
+  `evidence_metadata`, `internal_`, `admin_` **0 everywhere**
+
+**Accepted limitation:** link byte-rate never obtained (D-013); superseded by
+per-collection durations and measured per-render transfer volume. No re-run.
+
+**New finding at the gate (C2):** `evidence_metadata` **is** consumed —
+`lib/data.ts:755` extracts `topic_key`, used by `lib/school-detail.ts:293` for
+citation grouping. Phase `04_` Batch 3 will hit its stop-and-report path.
+Pure performance concern, not security (0 occurrences in all RSC payloads).
+
+**Conditions:** C1 (D-006) · C2 (`evidence_metadata`) · C3 (D-010) block
+Phase `04_` **starting**. C4 (D-001 Preview) blocks it **finishing**.
+
+**Governance note:** three S7 stops across the phase, all correctly triggered;
+Codex never fixed, never expanded scope, never touched application code. One
+exposed a real defect in Claude's package wording (D-013), corrected. The stop
+machinery worked as designed.
+
+**Outcome:** completed. Phase 0 closed.
+
+**Next action:** owner resolves C1, C2, C3, then authorizes
+`04_phase_2_speed_architecture`.
+
+---
