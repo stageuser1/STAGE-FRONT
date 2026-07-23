@@ -1542,3 +1542,178 @@ this phase.
 Batches 0–3, then stops at GATE A.
 
 ---
+
+### [2026-07-23] Phase 2 · Batch 0 — pre-flight complete
+
+- **Actor:** Codex
+- **Branch:** `perf/s1-speed-track`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` —
+  Batch 0
+- **Approved by owner:** yes — D-017
+- **Rollback SHA:** `742e901bf036daed924ea7732f7b33ec1f800107`
+- **Commit:** `019a5ed` (`Phase 2 Batch 0: record rollback point`)
+
+**Files modified:** `improve_s/04_phase_2_speed_architecture/report.md`;
+`improve_s/logs/rollback_history.md`
+
+**Files added / deleted:** none
+
+**Dependency / configuration / database / Directus changes:** none
+
+**Validation:**
+- `npm run typecheck`: PASS
+- `npm run build`: PASS in 26,372.993 ms; all four measured routes remained `ƒ`
+- `npm test`: PASS, 10/10
+- Path B QA: PASS, 10/10
+- School and program RSC payloads: semantic diff PASS after normalizing only
+  Next.js volatile build/hydration IDs; byte lengths matched Phase 0 exactly
+
+**Outcome:** completed
+
+**Stop condition:** none
+
+---
+
+### [2026-07-23] Phase 2 · Batch 1 — STOPPED: Data Cache item limit and unexpected Directus 503
+
+- **Actor:** Codex
+- **Branch:** `perf/s1-speed-track`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` —
+  Batch 1
+- **Approved by owner:** yes — D-017
+- **Batch commit:** stop commit recorded in branch history; the one-line
+  application diff is preserved for Claude/owner review
+
+**Approved application diff applied:**
+
+```diff
+-        cache: "no-store",
++        next: { revalidate: 900 },
+```
+
+No other application line changed.
+
+**Validation completed before measurement:**
+- `npm run typecheck`: PASS
+- `npm run build`: PASS in 16,865.633 ms; all four measured routes remained `ƒ`
+- `npm test`: PASS, 10/10
+
+**Stop conditions:**
+
+1. **P2-S8** — two unexpected HTTP 503 responses from the fallback
+   `audition_requirements` request. D-013 permits only the known initial 403
+   followed by a successful fallback.
+2. **Global unexpected architecture issue** — Next.js rejected all four large
+   Directus bulk responses from Data Cache because each item exceeded its
+   2 MB item limit. The approved one-line mechanism therefore cannot remove
+   Directus from the request path.
+
+**Exact timing command:**
+
+```powershell
+$routes=@('/','/search','/schools/yale_school_of_music','/schools/yale_school_of_music/programs/1190')
+$sessionStart=Get-Date
+$rows=@()
+foreach($route in $routes){
+  foreach($phase in @('cold','warm')){
+    for($run=1;$run -le 5;$run++){
+      $metric=& curl.exe -sS --max-time 120 -o NUL -w '%{http_code}`t%{time_total}`t%{size_download}' ('http://localhost:3000'+$route)
+      $parts=$metric -split '`t'
+      $rows += [pscustomobject]@{
+        Route=$route; Phase=$phase; Run=$run; Http=$parts[0]
+        Ms=[math]::Round(([double]$parts[1])*1000,3); Bytes=[int64]$parts[2]
+      }
+      if($LASTEXITCODE -ne 0 -or $parts[0] -ne '200'){
+        $rows | Format-Table -AutoSize
+        exit 1
+      }
+    }
+  }
+}
+```
+
+**Complete direct command result:**
+
+```text
+command timed out after 604044 milliseconds
+```
+
+The timing command buffered the table until completion, so no partial medians
+are treated as valid evidence.
+
+**Process-local observer summary for that incomplete session:**
+
+```text
+DIRECTUS_STARTS=198
+DIRECTUS_ENDS=198
+DIRECTUS_200=157
+DIRECTUS_403=39
+DIRECTUS_OTHER=2
+CACHE_REJECTION_LINES=154
+
+Collection                  Bytes Occurrences
+application_requirements  4122101          39
+audition_requirements     8555082          37
+program_offerings         2769823          39
+source_records           20976456          39
+```
+
+The two other Directus completions were:
+
+```text
+[P2_DIRECTUS_END] 503 /items/audition_requirements?...base-field-list...
+[P2_DIRECTUS_END] 503 /items/audition_requirements?...base-field-list...
+```
+
+The corresponding application errors were:
+
+```text
+Error: Directus 503 on /items/audition_requirements?...base-field-list...
+Error: Directus 503 on /items/audition_requirements?...base-field-list...
+```
+
+Representative cache rejection:
+
+```text
+Failed to set Next.js data cache for <Directus request>, items over 2MB can not be cached
+```
+
+**Measurement window:** server diagnostics created 2026-07-23 18:12:10 +08:00;
+last server output 18:22:55 +08:00.
+
+**Content diff / Path B QA after Batch 1:** not run. The stop was observed
+during the required timing step; the stop protocol forbids continuing.
+
+**Reviewer workflow:** not run. Batch 2 was not reached.
+
+**Server cleanup:** production server stopped; port 3000 confirmed free; zero
+remaining `curl` processes.
+
+**Files modified at stop:**
+- `lib/data.ts`
+- `improve_s/04_phase_2_speed_architecture/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added / deleted:** none
+
+**Dependency / configuration / database / Directus changes:** none
+
+**Current application diff at stop:**
+
+```text
+ lib/data.ts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+**Outcome:** stopped in Batch 1. GATE A was not reached. GATE A criteria are
+not satisfied.
+
+**Blocked / incomplete:** Batch 1 measurements and post-change QA; all of
+Batches 2–3; ISR verification; all GATE A performance criteria. Batches 4–6
+remain prohibited.
+
+**Next action:** Claude/owner reviews the 2 MB Data Cache constraint and the
+unexpected 503 evidence and issues a revised approved plan. Codex does not
+improvise a cache redesign or retry the unexpected Directus error.
+
+---

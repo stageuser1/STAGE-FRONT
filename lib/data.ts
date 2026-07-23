@@ -162,7 +162,7 @@ async function directusFetch<T>(path: string): Promise<T> {
     try {
       res = await fetch(`${base.replace(/\/$/, "")}${path}`, {
         headers,
-        cache: "no-store",
+        next: { revalidate: 900 },
       });
     } catch (error) {
       if (attempt === 1) {
