@@ -1,0 +1,128 @@
+# Execution Log
+
+Append-only. One entry per execution batch. Newest at the bottom.
+
+**Never delete or rewrite an entry.** If something was wrong, add a correcting
+entry — the history of what was believed at the time is part of the evidence.
+
+---
+
+## Entry template
+
+```markdown
+### [YYYY-MM-DD] Phase __ · Batch __ — <short description>
+
+- **Actor:** Codex / Claude / Owner
+- **Branch:** 
+- **Plan reference:** improve_s/__/claude_plan.md — batch __
+- **Approved by owner:** yes / no — decisions.md ref: 
+
+**Files modified:** 
+**Files added:** 
+**Files deleted:** 
+**Dependency changes:** 
+**Configuration changes:** 
+**Database changes:** 
+
+**git diff --stat:**
+```
+```
+
+**Typecheck:** pass / fail
+**Build:** pass / fail
+**Tests / smoke:** pass / fail / n-a
+
+**Measurements:**
+| Route | Runs | Median | vs. baseline |
+|---|---|---|---|
+
+**Outcome:** completed / stopped / reverted
+**Stop reason (if stopped):** 
+**Blocked or incomplete items:** 
+**Commit SHA:** 
+```
+
+---
+
+## Log
+
+### [2026-07-23] Program setup — `improve_s/` workspace created
+
+- **Actor:** Claude
+- **Branch:** `main` (no commit made)
+- **Approved by owner:** yes — workspace creation was explicitly requested
+
+**Files modified:** none
+**Files added:** 38 documentation files under `improve_s/`
+**Files deleted:** none
+**Dependency changes:** none
+**Configuration changes:** none
+**Database changes:** none
+
+**Typecheck:** not run (no application code touched)
+**Build:** not run (no application code touched)
+**Tests / smoke:** n/a
+
+**Outcome:** completed
+
+**Notes:**
+- Documentation and control structure only. No application code, configuration,
+  or dependency was touched. No commit was created.
+- Folder numbering follows the original program's phase numbering for
+  traceability. **The recommended execution order differs** — see `README.md`
+  and `00_program_overview/optimization_scope.md` §5.
+- Phase `02_` (security transport) was **added** — it was not in the original
+  program.
+- Original Phases 2 and 3 are **merged** into `04_phase_2_speed_architecture`,
+  because this repository has a single shared data loader rather than
+  independent per-route data paths.
+
+**Next action:** owner reviews `00_program_overview/`, then approves
+`01_phase_0_baseline/claude_plan.md` to begin.
+
+---
+
+### [2026-07-23] Initialization review — stale facts corrected
+
+- **Actor:** Claude
+- **Branch:** `main` (no commit made)
+- **Approved by owner:** yes — review explicitly requested
+
+**Files modified:** 12 documentation files under `improve_s/` (no application code)
+**Files added:** none
+**Files deleted:** none
+**Dependency changes:** none · **Configuration changes:** none · **Database changes:** none
+
+**Typecheck / Build / Tests:** not run — no application code touched
+
+**Findings corrected:**
+
+1. **`HEAD` advanced during workspace setup** — `c123ec8` → `00b341a`
+   ("Import nine STAGE V4 schools into Directus"). `rollback_history.md`
+   corrected; `scripts/import_v4_package.mjs` is no longer a modified file.
+2. **Dataset grew ~6×.** Live counts (source:
+   `docs/imports/stage-v4-nine-school-verification.json`, 2026-07-23T02:44:08Z):
+   20 schools, 1,938 program offerings, 1,938 application requirements,
+   2,087 audition requirements, 17,663 source records.
+   Previously recorded: 2 schools / 334 programs / ~5,069 sources.
+3. **New finding — in-memory join cost is now material.** ~42M array
+   comparisons per request from the per-program `sourceRecords.filter(...)`
+   (`lib/data.ts:1038`) and two `selectCurrentCycle` scans. Negligible at 334
+   programs; a real CPU cost at 1,938.
+4. **Static generation estimate revised** ~336 → **~1,958 pages**. Phase `04_`
+   Batch 4 gained a documented fallback (schools-only static params).
+5. **D-000c revised** — PostgreSQL workstream changed from "struck" to
+   "deferred pending evidence"; the absolute claim no longer holds at 17,663
+   source records.
+6. **Data observation recorded** — `current_application_rows: 0` for 8 of 9 new
+   schools. Not a bug: `selectCurrentCycle` falls back to all matching rows, and
+   frontend verification passed. Recorded so QA does not later mistake a change
+   here for an optimization regression.
+
+**Outcome:** completed. Folder structure verified (10 dirs, 38 files).
+Execution order verified as speed-first.
+
+**Next action:** owner resolves D-001…D-010, then approves
+`01_phase_0_baseline/` to begin.
+
+---
