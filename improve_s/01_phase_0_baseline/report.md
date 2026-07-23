@@ -9,18 +9,18 @@
 > The first run (recorded in §1 below) correctly stopped under S12 because no
 > owner approval existed and D-001/D-002/D-004 were open. All three are now
 > resolved and Phase 0 is approved. **That stop record is retained as history —
-> do not overwrite it.** Sections 3–11 remain to be filled by the execution run.
+> do not overwrite it.** Sections 3–11 now describe the stopped execution run.
 >
-> **Two corrections that apply to the next run:**
+> **Two corrections applied to this run:**
 > 1. **`npm test` must be run in Batch 2.** The previous run skipped it citing
 >    D-002; that was incorrect — `npm test` runs the existing Python validator
 >    and Node importer suites and has no dependency on D-002. Expected: PASS,
 >    10 tests.
-> 2. **Batch 6 follows Path B** (manual checklist written into this report).
->    Create no files. Install nothing.
+> 2. **Batch 6 follows Path B.** The run stopped before Batch 6, so no checklist
+>    or smoke-suite file was created and nothing was installed.
 
-> This document becomes the reference baseline for the entire program.
-> Every later phase compares against the numbers recorded here.
+> This document is **not yet a valid program baseline** because Phase 0 stopped
+> under S7. No later phase may treat the partial measurements as an exit gate.
 
 ---
 
@@ -88,12 +88,12 @@ Branch versus rollback SHA `86c1db9` after staging the stop record:
  .../batch3_server_20260723_1201.stdout.txt         |  10 +
  .../batch3_server_20260723_1203.stderr.txt         |   0
  .../batch3_server_20260723_1203.stdout.txt         |  10 +
- improve_s/01_phase_0_baseline/report.md            | 423 +++++++++++++-----
+ improve_s/01_phase_0_baseline/report.md            | 429 +++++++++++++-----
  improve_s/README.md                                |   3 +-
  improve_s/logs/decisions.md                        | 166 ++++++-
  improve_s/logs/execution_log.md                    | 486 +++++++++++++++++++++
  improve_s/logs/rollback_history.md                 |  33 +-
- 12 files changed, 1053 insertions(+), 125 deletions(-)
+ 12 files changed, 1056 insertions(+), 128 deletions(-)
 ```
 
 This branch-level stat includes the approved entry-gate and rollback
