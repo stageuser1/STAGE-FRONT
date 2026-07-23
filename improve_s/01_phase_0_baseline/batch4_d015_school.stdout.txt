@@ -1,0 +1,26 @@
+[P0_DIAG_READY]
+
+> stage-front@0.1.0 start
+> next start
+
+[P0_DIAG_READY]
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.5.170:3000
+
+ ✓ Starting...
+ ✓ Ready in 666ms
+[P0_DIRECTUS_START] id=1 collection=schools method=GET
+[P0_DIRECTUS_START] id=2 collection=program_offerings method=GET
+[P0_DIRECTUS_START] id=3 collection=application_requirements method=GET
+[P0_DIRECTUS_START] id=4 collection=audition_requirements method=GET
+[P0_DIRECTUS_START] id=5 collection=source_records method=GET
+[P0_DIRECTUS_END] id=1 collection=schools status=200 content_length=9206 duration_ms=134
+[P0_DIRECTUS_END] id=4 collection=audition_requirements status=403 content_length=415 duration_ms=131
+[P0_DIRECTUS_START] id=6 collection=audition_requirements method=GET
+[P0_DIRECTUS_END] id=3 collection=application_requirements status=200 content_length=3090406 duration_ms=1671
+[P0_DIRECTUS_END] id=6 collection=audition_requirements status=200 content_length=6415237 duration_ms=2173
+[P0_DIRECTUS_END] id=2 collection=program_offerings status=200 content_length=2076109 duration_ms=2423
+[P0_DIRECTUS_END] id=5 collection=source_records status=200 content_length=15731434 duration_ms=3475
+[P0_DIRECTUS_START] id=7 collection=source_records method=GET
+[P0_DIRECTUS_END] id=7 collection=source_records status=200 content_length=1085 duration_ms=39

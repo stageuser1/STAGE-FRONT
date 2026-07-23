@@ -1082,3 +1082,83 @@ through Batch 7. On failure, stop under S7 and return to the owner as new,
 unexplained evidence.
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 4 — completed under D-015
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 4
+- **Approved by owner:** yes — decisions.md ref: **D-015**
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:**
+- `improve_s/01_phase_0_baseline/batch4_d015_home.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch4_d015_home.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch4_d015_search.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch4_d015_search.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch4_d015_school.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch4_d015_school.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch4_d015_program.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch4_d015_program.stderr.txt`
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none. Observation used a process-local Node
+diagnostics subscriber and did not edit environment or configuration files.
+
+**Database / Directus changes:** none
+
+**Application code changes:** none
+
+**git diff --stat for Batch 4:**
+
+```text
+ .../batch4_d015_home.stderr.txt                    |   0
+ .../batch4_d015_home.stdout.txt                    |  24 ++++
+ .../batch4_d015_program.stderr.txt                 |   0
+ .../batch4_d015_program.stdout.txt                 |  26 +++++
+ .../batch4_d015_school.stderr.txt                  |   0
+ .../batch4_d015_school.stdout.txt                  |  26 +++++
+ .../batch4_d015_search.stderr.txt                  |   0
+ .../batch4_d015_search.stdout.txt                  |  24 ++++
+ improve_s/01_phase_0_baseline/report.md            | 144 +++++++++++----------
+ improve_s/logs/execution_log.md                    |  80 ++++++++++++
+ 10 files changed, 256 insertions(+), 68 deletions(-)
+```
+
+**Typecheck / Build / Tests:** not rerun — Batches 0–3 were explicitly not to
+be rerun and remain valid.
+
+**Measurements:**
+
+| Route | App result | Directus attempts | Approx. Directus response bytes |
+|---|---|---:|---:|
+| `/` | HTTP 200; 4979.844 ms; 254,146 bytes | 6 | 27,322,807 |
+| `/search` | HTTP 200; 4459.706 ms; 73,791 bytes | 6 | 27,322,807 |
+| `/schools/yale_school_of_music` | HTTP 200; 4585.244 ms; 198,471 bytes | 7 | 27,323,892 |
+| `/schools/yale_school_of_music/programs/1190` | HTTP 200; 3846.071 ms; 99,601 bytes | 7 | 27,325,319 |
+
+Each route made the five initial bulk reads plus the expected
+`audition_requirements` 403 → fallback 200. Each detail route made one
+additional filtered `source_records` quote request. All final collection
+responses were HTTP 200, and all four server stderr artifacts were empty.
+
+The two earlier operator-outage attempts remain preserved unchanged and are
+not included in the valid Batch 4 baseline.
+
+**Outcome:** completed
+
+**Stop condition:** none
+
+**Blocked or incomplete items:** Batch 5 RSC captures; Batch 6 manual
+checklist; formal Batch 7 completion.
+
+**Commit SHA:** recorded by the Batch 4 completion commit
+
+---
