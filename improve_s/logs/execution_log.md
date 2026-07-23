@@ -810,3 +810,72 @@ Batches 5–7 were not executed.
 **Commit SHA:** recorded by the Batch 4 stop-record commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 4 S7 stop — reviewed, correctly triggered, bounded retry authorized
+
+- **Actor:** Claude (review) / Owner (decision)
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `01_phase_0_baseline/codex_execution.md` — Batch 4, S7,
+  new "Retry protocol for raw connectivity failures" section
+- **Approved by owner:** yes — decisions.md ref: **D-014**
+
+**Files modified:** 3 documentation files under `improve_s/`
+**Files added:** none · **Files deleted:** none
+**Dependency changes:** none · **Configuration changes:** none
+**Database changes:** none · **Directus permission changes:** none
+**Application code changes:** none
+
+**Typecheck / Build / Tests:** not re-run — this is a gate review, not execution
+
+**Findings:**
+
+1. **S7 was correctly triggered — and correctly so, unlike D-013.** No rule
+   defect this time. `fetch failed` on `/items/schools` means no HTTP response
+   was ever received on the load-bearing first collection in
+   `loadDirectusData()` (`lib/data.ts:980`). There is no documented fallback for
+   this, unlike the audition-fields case. `directusFetch()` (`lib/data.ts:152`)
+   had already retried internally once (250 ms backoff) before surfacing the
+   final error — Codex saw the failure after two internal attempts.
+2. **Suspected transient network degradation, not a structural block** —
+   supported but not confirmed:
+   - Batch 3's diagnostic probe fetched `schools` successfully in 107 ms only
+     ~16 minutes earlier over the same `DIRECTUS_URL`
+     (`batch3_probe_server_20260723_1208.stdout.txt`)
+   - 11.04 s to fail is a slow hang-then-timeout, not an instant refusal —
+     consistent with a degraded link rather than a closed port/revoked token
+   - `git status` was clean before and after; nothing in the repository or
+     environment changed between the two attempts
+   - The link (`http://47.86.26.168:8055`) is already documented elsewhere in
+     this program (`optimization_scope.md`) as prone to dropping to ~0.2 MB/s
+   - One data point only — requires verification by retry, not assumption
+3. **Bounded retry authorized, capped at 2 total Batch 4 attempts** (the failed
+   attempt already counts as #1). 60 s cool-down before retry. If attempt 2
+   also fails with a raw connectivity error: stop again, do not attempt a
+   third try, escalate as a suspected infrastructure issue rather than
+   continuing to retry.
+4. **If the retry succeeds:** the failed attempt's artifacts are kept as
+   baseline evidence (link fragility data), not discarded, and Batch 4
+   proceeds through Batch 7 under the existing plan.
+
+**Documentation changes:**
+- `codex_execution.md` — new "Retry protocol for raw connectivity failures
+  (D-014)" subsection added after the stop conditions table, explicitly
+  distinguished from the D-013 "Known Directus behaviour" exception (D-013 = do
+  not stop on a documented pattern; this protocol = do stop, then a bounded
+  verified resume procedure)
+- **S7's wording unchanged** — no defect found this time
+- `report.md` header updated: 🟡 reviewed, one bounded retry authorized
+
+**Outcome:** completed. Batch 4 stop upheld as correct; a single, conditioned
+retry is authorized — not an open-ended retry loop, and not a rule change.
+
+**Explicitly NOT authorized:** any change to `directusFetch` retry/backoff/
+timeout behavior; any Directus permission, token, or network configuration
+change; any change to `loadDirectusData()` concurrency or fail-fast behavior;
+a third Batch 4 attempt without a fresh owner decision.
+
+**Next action:** Codex may retry Batch 4 once, per the protocol. On success,
+continue through Batch 7. On a second raw-connectivity failure, stop and
+escalate to the owner as a suspected infrastructure issue.
+
+---

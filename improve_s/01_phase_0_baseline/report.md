@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** ⛔ **STOPPED IN BATCH 4 — S7 (new `schools` fetch failure)**
-**Completed:** No — Batches 0–3 complete; Batch 4 stopped; Batches 5–7 not executed
+**Status:** 🟡 **S7 STOP REVIEWED (D-014) — correctly triggered; ONE bounded retry of Batch 4 authorized**
+**Completed:** No — Batches 0–3 complete and valid; Batch 4 attempt 1 failed; retry pending; Batches 5–7 not executed
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -46,6 +46,35 @@
 > reported `Directus request failed on /items/schools … fetch failed`. This is
 > not the narrow D-013 exception. No retry or fix was attempted; Batches 5–7
 > were not executed.
+>
+> **Reviewed — see `logs/decisions.md` D-014.** S7 was **correctly triggered,
+> and correctly so this time** — unlike D-013, there is no rule defect. A raw
+> `fetch failed` with no HTTP response received on `schools`, the load-bearing
+> first request in `loadDirectusData()`, is exactly what S7 exists to catch.
+> Codex was right to stop without attempting any fix.
+>
+> **Assessment: suspected transient network degradation, not a structural
+> block.** Batch 3's probe fetched `schools` successfully in 107 ms only ~16
+> minutes earlier over the same link; this failure took 11.04 s to surface
+> (a slow hang-then-fail, not an instant refusal); no repository, environment,
+> or Directus configuration changed in between; and the link
+> (`http://47.86.26.168:8055`) is already documented elsewhere in this program
+> as prone to degrading to ~0.2 MB/s. This is one data point, not confirmed —
+> it must be verified by a successful retry, not assumed.
+>
+> **ONE retry of Batch 4 is authorized**, under the bounded protocol added to
+> `codex_execution.md` ("Retry protocol for raw connectivity failures"): wait
+> ≥60 s, retry exactly as specified, cap 2 total attempts. If the retry also
+> fails with a raw connectivity error, **stop again and escalate as a
+> suspected infrastructure issue** — do not attempt a third try, and do not
+> weaken S7 to tolerate it. If the retry succeeds, proceed through Batch 7 and
+> **keep this failed attempt's artifacts as baseline evidence** of link
+> fragility, per D-014.
+>
+> **S7's wording is unchanged this time — no rule defect.** Do not confuse this
+> retry protocol with the D-013 exception: D-013 means *do not stop* on a
+> specific documented 403 pattern; this protocol means *stop, then follow a
+> bounded, verified resume procedure* for a raw connectivity failure.
 
 ---
 

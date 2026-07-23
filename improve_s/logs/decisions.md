@@ -459,3 +459,128 @@ missing columns. Removing the optimistic query is likewise out of scope
 
 - **Reversible?** Yes — the correction is documentation-only; Batches 4–7 are
   read-only with respect to application code.
+
+---
+
+### D-014 · [2026-07-23] — Batch 4 S7 stop: correctly triggered, transient network failure suspected; bounded retry authorized
+
+- **Type:** gate / risk-acceptance
+- **Phase:** `01_` Batch 4
+- **Decided by:** owner
+- **Question:** the Batch 4 homepage render failed with
+  `Directus request failed on /items/schools...: fetch failed`, and Codex
+  stopped under S7. Was the stop correct, is this transient or a real blocker,
+  should Batch 4 be retried, and does any documentation need to change?
+
+#### 1. Was S7 correctly triggered?
+
+**Yes — unambiguously, and correctly this time. No rule defect.**
+
+This is **not** the D-013 exception. D-013 covers exactly one signature: an
+HTTP **403 response** on `audition_requirements` immediately followed by a
+successful retry on the same collection — a completed, documented, deterministic
+code path (`fetchAuditionRequirements()`, `lib/data.ts:947`).
+
+What happened here is different in kind. Evidence from
+`batch4_home.stderr.txt` and the diagnostics log:
+
+```text
+[P0_DIRECTUS_START] id=1 collection=schools method=GET
+                                                          ← no [P0_DIRECTUS_END] for id=1
+Error: Directus request failed on /items/schools...: fetch failed
+```
+
+`fetch failed` is a raw network-layer failure — **no HTTP response was ever
+received**, on `schools`, the first and load-bearing collection in
+`loadDirectusData()` (`lib/data.ts:980`). There is no documented fallback for
+this in the codebase, unlike the audition case. `directusFetch()`
+(`lib/data.ts:152`) had already retried once internally (250 ms backoff) before
+surfacing this error to the application — Codex saw the *final* failure after
+two attempts, not the first.
+
+This squarely matches S7's actual wording, unchanged since the D-013 correction:
+*"Directus is unreachable, or returns an error of a class not previously
+seen."* Codex was right to stop immediately, attempt no fix, and not touch
+`lib/data.ts`'s retry/timeout behavior (which would in any case be an
+application-code change, out of scope for Phase 0 regardless of this incident).
+
+**S7's wording is correct and is not being changed.**
+
+#### 2. Transient failure or real Phase 0 blocker?
+
+**Suspected transient network degradation. Not confirmed, but well-supported.**
+
+Supporting evidence:
+
+| Signal | Detail |
+|---|---|
+| Recent success on the same path | Batch 3's diagnostic probe (`batch3_probe_server_20260723_1208.stdout.txt`) fetched `schools` successfully in **107 ms**, ~16 minutes before this failure, over the same `DIRECTUS_URL` |
+| Failure shape | 11.04 s total page response before failing — a **slow hang-then-fail**, not an instant refusal. Instant rejection (closed port, revoked token, firewall) typically fails in milliseconds; an 11 s death is consistent with a stalled TCP connection or timeout over a degraded link |
+| No repository change | `git status` was clean before and after; no code, environment variable, or Directus configuration changed between the successful Batch 3 probe and the failed Batch 4 attempt |
+| Documented precedent | Project memory and `00_program_overview/optimization_scope.md` already record this exact link (`http://47.86.26.168:8055`, Alibaba Cloud, bare IP, plain HTTP) as prone to dropping to ~0.2 MB/s |
+| Scope of failure | Only the `schools` request is confirmed failed. The other 5 concurrent requests (`Promise.all`) never logged completion either, but that is `Promise.all`'s fail-fast behavior abandoning them the instant `schools` rejected — not independent evidence of a wider outage |
+
+**This is not proof of transience — it is one data point.** It has not been
+confirmed by a second observation. Given the documented link volatility and the
+absence of any other explanation, transient network degradation is the more
+probable cause than a structural block (e.g., revoked token, closed firewall,
+Directus service down), but the difference matters for what happens next: it
+must be **verified by a successful retry**, not assumed.
+
+**If this recurs on retry, it stops being "context" and becomes a real
+blocker** requiring infrastructure escalation — see the retry protocol below.
+
+#### 3. Should Batch 4 be retried?
+
+**Yes — one retry is authorized, under bounded conditions. Not an open-ended
+retry loop.**
+
+**New retry protocol (distinct from the D-013 exception — this is a resume
+procedure after a real stop, not an exemption from stopping):**
+
+1. **Cool-down first.** Wait at least 60 seconds before retrying, to let a
+   transient network condition clear. Do not immediately re-hit the same
+   failing endpoint.
+2. **Re-run Batch 4 exactly as specified** in `codex_execution.md`. No
+   modification to the batch, to `lib/data.ts`, to any environment variable, or
+   to any Directus configuration or permission.
+3. **Cap: 2 total Batch 4 attempts.** The failed attempt already recorded counts
+   as attempt 1. If attempt 2 also fails with a raw connectivity error
+   (`fetch failed`, timeout, connection refused, or any error not matching a
+   completed HTTP response):
+   - **Stop again under S7.**
+   - **Do not attempt a third try.**
+   - Escalate: record it as a suspected infrastructure issue with the Directus
+     host, not a Phase 0 measurement defect, and return to the owner. At that
+     point the question becomes an SRE/infrastructure one — outside what Phase 0
+     documentation-only correction can resolve.
+4. **If attempt 2 succeeds:** proceed with Batch 4 through Batch 7 normally
+   under the existing plan. **Retain this failed attempt in the report as
+   baseline evidence** — it is not noise. A production-grade caching layer
+   (Phase `04_`) removes exactly this kind of request-time fragility; one
+   confirmed mid-measurement Directus failure is itself a data point supporting
+   the program's core diagnosis and should be cited in the Phase 0 report's
+   "known measurement limitations" section, not discarded.
+
+**Explicitly not authorized:** any change to `directusFetch`'s retry count,
+backoff, or timeout behavior (`lib/data.ts:152`); any Directus permission,
+token, or network configuration change; any change to `loadDirectusData()`'s
+concurrency (`Promise.all`) or fail-fast behavior. All of these are application
+or infrastructure changes and are out of scope for this decision and for
+Phase 0 generally.
+
+#### 4. Documentation changes made
+
+- **`codex_execution.md`** — added a new "Retry protocol for raw connectivity
+  failures" subsection immediately after the stop conditions table, clearly
+  separated from the D-013 "Known Directus behaviour" exception so the two are
+  never conflated: D-013 = do not stop (documented, deterministic pattern);
+  this protocol = do stop, then follow a bounded, verified resume procedure.
+- **S7's wording is unchanged** — no rule defect this time.
+- **`report.md`** header updated to record that the stop was reviewed and found
+  correctly triggered, and that a single bounded retry is authorized.
+- **`execution_log.md`** — review entry appended.
+
+- **Reversible?** Yes — this is a resume authorization, not an application
+  change. If the retry fails, Phase 0 simply stops again, cleanly, with the
+  same rollback point (`86c1db9`) intact.

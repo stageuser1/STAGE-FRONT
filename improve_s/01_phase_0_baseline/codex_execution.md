@@ -380,6 +380,46 @@ report**. The exception covers exactly one signature and nothing else.
 
 ---
 
+### Retry protocol for raw connectivity failures (D-014) — a resume procedure, NOT an exception
+
+**This is different from the "Known Directus behaviour" exception above.**
+That exception means *do not stop*. This protocol applies **after a real S7
+stop** on a raw connectivity failure — no HTTP response received at all (e.g.
+`fetch failed`, connection timeout, connection refused) — and defines the
+bounded, verified conditions under which Codex may resume the same batch.
+
+**Trigger:** S7 fired because a Directus request never completed — distinct
+from the narrow 403-then-retry signature above, which requires a completed HTTP
+response.
+
+**Procedure:**
+
+1. **Stop first, exactly as S7 requires.** Do not attempt a fix. Do not touch
+   `lib/data.ts`, any environment variable, or any Directus configuration or
+   permission.
+2. **Record the failure** in `report.md` and `logs/execution_log.md` as usual.
+3. **Wait at least 60 seconds** before any retry — do not immediately re-hit the
+   same endpoint.
+4. **Retry the same batch exactly as specified**, once.
+5. **Cap: 2 total attempts per batch.** If the retry also fails with a raw
+   connectivity error:
+   - **Stop again under S7.**
+   - **Do not attempt a third try.**
+   - Report it as a suspected Directus/infrastructure issue and return to the
+     owner — this becomes an SRE/infrastructure question, not something
+     resolvable by re-planning Phase 0 documentation.
+6. **If the retry succeeds:** continue with the batch and the phase normally.
+   **Keep the failed attempt's artifacts and record it in the report** — a
+   mid-measurement Directus failure is baseline evidence of link fragility, not
+   noise to discard. It directly supports the program's core diagnosis.
+
+**Forbidden regardless of outcome:** any change to `directusFetch`'s retry
+count, backoff, or timeout (`lib/data.ts:152`); any Directus permission, token,
+or network change; any change to `loadDirectusData()`'s concurrency
+(`Promise.all`) or fail-fast behavior.
+
+---
+
 ## 6. Final report requirements
 
 Write to `improve_s/01_phase_0_baseline/report.md`. **Every section is
