@@ -11,9 +11,15 @@ by the Next.js app.
 
 ## Purpose
 
-STAGE FRONT public routes currently take **2.6–33 seconds** to respond
-(measured 2026-07-22, `.codex-dev.stdout.log`). The cause is confirmed and
-documented in `00_program_overview/optimization_scope.md`.
+STAGE FRONT public routes take **3.0–5.2 seconds** to respond, and **transfer
+27.32 MB from Directus on every single render** — with no warm-cache benefit
+whatsoever. Measured 2026-07-23 on a local production build; this is the
+accepted Phase 0 baseline (`01_phase_0_baseline/report.md`, gate D-016).
+
+The cause is confirmed and documented in
+`00_program_overview/optimization_scope.md`: all six public routes are
+`force-dynamic`, and `loadDirectusData()` re-reads five entire collections
+per request.
 
 This program fixes that, then hardens the data boundary and cleans up the
 codebase — in controlled phases, each one gated by explicit human approval.
@@ -136,4 +142,7 @@ Update this table at every gate. `logs/execution_log.md` holds the detail.
 1. Read `00_program_overview/optimization_scope.md` — what is wrong and why.
 2. Read `00_program_overview/execution_rules.md` — how work is performed.
 3. Read `00_program_overview/stage_gate_process.md` — how phases are approved.
-4. Open `01_phase_0_baseline/claude_plan.md` and begin.
+4. Read `01_phase_0_baseline/report.md` — **the accepted baseline** all later
+   phases measure against.
+5. Resolve conditions C1–C3 (D-016), then open
+   `04_phase_2_speed_architecture/claude_plan.md`.
