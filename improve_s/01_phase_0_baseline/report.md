@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** 🟡 **S7 STOP REVIEWED (D-014) — correctly triggered; ONE bounded retry of Batch 4 authorized**
-**Completed:** No — Batches 0–3 complete and valid; Batch 4 attempt 1 failed; retry pending; Batches 5–7 not executed
+**Status:** ⛔ **BATCH 4 RETRY FAILED — S7; D-014 two-attempt cap exhausted**
+**Completed:** No — Batches 0–3 complete and valid; both Batch 4 attempts failed; Batches 5–7 not executed
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -75,6 +75,12 @@
 > retry protocol with the D-013 exception: D-013 means *do not stop* on a
 > specific documented 403 pattern; this protocol means *stop, then follow a
 > bounded, verified resume procedure* for a raw connectivity failure.
+>
+> **D-014 retry result — FAILED.** After a cool-down of more than two hours,
+> the single authorized retry again failed on the `schools` collection with
+> raw `fetch failed` and no completed Directus HTTP response. The two-attempt
+> cap is exhausted. Do not attempt a third retry; escalate as a suspected
+> Directus host/link infrastructure issue.
 
 ---
 
@@ -86,10 +92,11 @@
 | Baseline SHA | `86c1db9ccda8e71a73603454a625652e7df8177b` |
 | Shell | PowerShell |
 | Start | 2026-07-23 11:59 +08:00 |
-| Resume attempt | 2026-07-23 approximately 12:20 +08:00 |
-| End | 2026-07-23 12:22 +08:00 |
+| Batch 4 attempt 1 | 2026-07-23 12:22 +08:00 |
+| Batch 4 authorized retry | 2026-07-23 14:58 +08:00 |
+| End | 2026-07-23 14:58 +08:00 |
 | Actor | Codex |
-| Outcome | Batches 0–3 valid under D-013; Batch 4 stopped under S7 on a new `schools` fetch failure |
+| Outcome | Batches 0–3 valid; Batch 4 failed twice on raw `schools` connectivity; D-014 retry cap exhausted |
 
 Completed work:
 
@@ -104,6 +111,9 @@ Completed work:
 - The first Batch 4 homepage render failed to fetch `schools` from Directus.
   This new error is outside D-013 and triggered S7 before any valid Batch 4
   route observation was completed.
+- D-014 authorized one retry after a 60-second minimum cool-down. The retry
+  occurred more than two hours later and failed with the same raw `schools`
+  connectivity error. No third attempt is authorized.
 
 Prior attempt retained as history: the 2026-07-23 11:40–11:46 run stopped
 before Batch 1 under S12 because approval and decisions D-001/D-002/D-004 had
@@ -115,7 +125,7 @@ those Phase 0 preconditions.
 | Type | Files / result |
 |---|---|
 | Modified | `improve_s/01_phase_0_baseline/report.md`; `improve_s/logs/execution_log.md` |
-| Added | Six Batch 3 and two Batch 4 local-server stdout/stderr measurement artifacts listed below |
+| Added | Six Batch 3 and four Batch 4 local-server stdout/stderr measurement artifacts listed below |
 | Deleted | none |
 | Dependency changes | none |
 | Configuration changes | none |
@@ -133,6 +143,8 @@ Added measurement artifacts:
 - `improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stderr.txt`
 - `improve_s/01_phase_0_baseline/batch4_home.stdout.txt`
 - `improve_s/01_phase_0_baseline/batch4_home.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch4_retry_home.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch4_retry_home.stderr.txt`
 
 `git diff --stat` after the stop-record commit: empty (clean working tree).
 
@@ -148,13 +160,15 @@ Branch versus rollback SHA `86c1db9` after staging the stop record:
  .../batch3_server_20260723_1203.stdout.txt         |  10 +
  .../01_phase_0_baseline/batch4_home.stderr.txt     |   5 +
  .../01_phase_0_baseline/batch4_home.stdout.txt     |  18 +
- improve_s/01_phase_0_baseline/codex_execution.md   |  46 +-
- improve_s/01_phase_0_baseline/report.md            | 463 ++++++++++----
+ .../batch4_retry_home.stderr.txt                   |   5 +
+ .../batch4_retry_home.stdout.txt                   |  18 +
+ improve_s/01_phase_0_baseline/codex_execution.md   |  86 +-
+ improve_s/01_phase_0_baseline/report.md            | 517 +++++++++---
  improve_s/README.md                                |   3 +-
- improve_s/logs/decisions.md                        | 277 ++++++++-
- improve_s/logs/execution_log.md                    | 684 +++++++++++++++++++++
+ improve_s/logs/decisions.md                        | 402 ++++++++-
+ improve_s/logs/execution_log.md                    | 899 +++++++++++++++++++++
  improve_s/logs/rollback_history.md                 |  33 +-
- 15 files changed, 1473 insertions(+), 123 deletions(-)
+ 17 files changed, 1932 insertions(+), 121 deletions(-)
 ```
 
 This branch-level stat includes the approved entry-gate and rollback
@@ -389,6 +403,16 @@ consistent with the rendered error response rather than a valid homepage. This
 is outside the narrow D-013 exception and triggered S7 before a valid Batch 4
 render was completed.
 
+After the D-014 cool-down, attempt 2 produced the same result:
+
+```text
+APP_METRIC=200  11.006122  15395
+Error: Directus request failed on /items/schools?...: fetch failed
+```
+
+No Directus request emitted a successful completion record. The two-attempt
+cap is exhausted, so no third Batch 4 attempt is permitted.
+
 ## 6. Public exposure baseline
 
 | Route | `review_record` | `review_records` | `evidence_metadata` | `confidence` | `internal_` | `admin_` | Payload bytes |
@@ -422,9 +446,11 @@ Smoke-suite files created: none. Dependency changes: none.
 - Directus link throughput is known to vary materially. D-013 accepts that a
   valid byte-rate was not produced because the diagnostics channel exposed no
   response-body byte counts; per-collection durations are the approved proxy.
-- The Batch 4 resume attempt encountered a new `schools` fetch failure. Its
-  11-second localhost response and 15,395-byte error output are not baseline
-  request-count or response-byte measurements.
+- Both Batch 4 attempts encountered the same raw `schools` fetch failure after
+  approximately 11 seconds. Their 15,395-byte localhost error outputs are not
+  baseline request-count or response-byte measurements. The repeat after a
+  greater-than-two-hour cool-down is suspected Directus host/link
+  infrastructure instability and exhausts D-014's retry cap.
 - No route substitution was made; all four planned routes returned HTTP 200.
 - The homepage timing spread was wide (3436.724–9490.978 ms across official
   cold/warm runs), but the median remained computable. The other routes were
@@ -457,30 +483,33 @@ Smoke-suite files created: none. Dependency changes: none.
 | D-010 | Open | Program execution order unconfirmed |
 | D-012 | Approved | Authorized Batches 0–7; does not override stop conditions |
 | D-013 | Resolved | Validated Batch 3 and authorized resume at Batch 4; exception covers only `audition_requirements` 403 → fallback 200 |
+| D-014 | Resolved / cap exhausted | Authorized one Batch 4 retry after ≥60 seconds; retry failed with the same raw `schools` connectivity error; no third attempt |
 
-Entry and resume approvals were valid. The current blocker is a new S7
-`schools` fetch failure outside D-013, not a missing owner decision.
+Entry and resume approvals were valid. The current blocker is a repeated S7
+`schools` raw connectivity failure outside D-013. D-014's retry cap is
+exhausted.
 
 ## 10. Incomplete or blocked items
 
 - Batches 0–2: completed and committed.
 - Batch 3: complete and valid under D-013. All 40 timing requests returned
   HTTP 200; the expected `audition_requirements` fallback is baseline data.
-- Batch 4: stopped on its first route because the `schools` Directus request
-  failed. No valid four-route request/byte baseline was produced.
+- Batch 4: both authorized attempts stopped on the first route because the
+  `schools` Directus request failed. No valid four-route request/byte baseline
+  was produced, and no third attempt is authorized.
 - Batch 5: anonymous RSC payloads not captured.
 - Batch 6: Path B was approved, but the manual checklist was not written
   because the batch was not reached.
 - Batch 7: the required `is_current` limitation remains recorded in §8 from the
   prior report; Batch 7 was not formally reached in this execution.
 - Phase 0 cannot be completed or sent to its exit gate until Claude/owner
-  review the new Batch 4 S7 evidence and approve a refreshed execution package
-  or other disposition.
+  address the suspected Directus host/link infrastructure issue and explicitly
+  authorize any future execution.
 
 **Stop condition:** S7 — Directus failed the Batch 4 `schools` request with
-`fetch failed`. This is not the known `audition_requirements` 403 → fallback
-200 signature authorized by D-013. No retry, permission change, or fix was
-attempted.
+raw `fetch failed` on both attempt 1 and the single D-014-authorized retry.
+This is not the known `audition_requirements` 403 → fallback 200 signature.
+No third retry, permission change, configuration change, or fix was attempted.
 
 ## 11. Recommended next phase
 
@@ -488,6 +517,6 @@ Default recommendation after a valid Phase 0 baseline remains
 **`04_phase_2_speed_architecture`**.
 
 Phase 0 is incomplete, so no next phase is authorized. The immediate action is
-Claude/owner review of the new Batch 4 `schools` fetch-failure evidence and a
-refreshed, explicitly approved Phase 0 execution package or disposition. Codex
-must not resume Batches 4–7 under the current stopped run.
+SRE/infrastructure review of the Directus host/link, followed by an explicit
+owner disposition. D-014 prohibits a third Batch 4 attempt. Codex must not
+resume Batches 4–7 under the current stopped run.

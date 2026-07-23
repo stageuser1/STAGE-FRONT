@@ -879,3 +879,149 @@ continue through Batch 7. On a second raw-connectivity failure, stop and
 escalate to the owner as a suspected infrastructure issue.
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 4 attempt 2 — retry failed; D-014 cap exhausted
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 4 and D-014 retry protocol
+- **Approved by owner:** yes — decisions.md ref: **D-014**
+
+**Retry protocol compliance:**
+- Attempt 1 failed at 2026-07-23 12:22 +08:00.
+- Attempt 2 began at 2026-07-23 14:58 +08:00.
+- Cool-down exceeded the required 60 seconds by more than two hours.
+- Exactly one retry was made.
+- Attempt 1 artifacts were retained unchanged:
+  - `batch4_home.stdout.txt` SHA-256
+    `DA5B80035BFF85DC645C9ABBB035FC1D194984F0A6351394E9404B1A29D4A26E`
+  - `batch4_home.stderr.txt` SHA-256
+    `B5004CE685F93CF8DFA8F79B15F327DA338959777AE4E54328877AA499F7CE3D`
+- No third attempt was made.
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:**
+- `improve_s/01_phase_0_baseline/batch4_retry_home.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch4_retry_home.stderr.txt`
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none. The process-local diagnostics subscriber was
+the same observation method approved for Batch 4 and did not edit any file.
+
+**Database changes:** none
+
+**Application code changes:** none
+
+**git diff --stat for the Batch 4 retry stop record:**
+
+```text
+ .../batch4_retry_home.stderr.txt                   |   5 +
+ .../batch4_retry_home.stdout.txt                   |  18 +++
+ improve_s/01_phase_0_baseline/report.md            |  81 ++++++++----
+ improve_s/logs/execution_log.md                    | 146 +++++++++++++++++++++
+ 4 files changed, 224 insertions(+), 26 deletions(-)
+```
+
+**Typecheck / Build / Tests:** not rerun — Batches 0–3 were explicitly not to
+be rerun and remain valid.
+
+**Measurements:** no valid Batch 4 route measurement completed. The retry
+homepage request returned localhost HTTP 200 in 11006.122 ms with 15,395 bytes,
+while the production server again reported raw Directus `schools` fetch
+failure.
+
+**Outcome:** stopped — suspected Directus host/link infrastructure issue
+
+**Stop condition:** **S7** — the single D-014-authorized retry failed with the
+same raw connectivity failure as attempt 1. No Directus HTTP completion was
+observed for `schools`. The two-attempt cap is exhausted.
+
+**Exact retry request-and-evidence command:**
+
+```powershell
+$listener=Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue |
+  Select-Object -First 1
+if(-not $listener){
+  'SERVER_READY=False'
+  Get-Content -LiteralPath 'improve_s\01_phase_0_baseline\batch4_retry_home.stdout.txt'
+  Get-Content -LiteralPath 'improve_s\01_phase_0_baseline\batch4_retry_home.stderr.txt'
+  exit 1
+}
+$started=Get-Date
+$format="%{http_code}`t%{time_total}`t%{size_download}"
+$metric=& curl.exe -sS --max-time 120 -o NUL -w $format 'http://localhost:3000/'
+$code=$LASTEXITCODE
+Start-Sleep -Seconds 2
+$ended=Get-Date
+"ROUTE=/"
+"APP_METRIC=$metric"
+"START=$($started.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
+"END=$($ended.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
+'SERVER_OUTPUT:'
+Get-Content -LiteralPath 'improve_s\01_phase_0_baseline\batch4_retry_home.stdout.txt'
+'STDERR:'
+Get-Content -LiteralPath 'improve_s\01_phase_0_baseline\batch4_retry_home.stderr.txt'
+$pidToStop=[int]$listener.OwningProcess
+Stop-Process -Id $pidToStop -Force
+```
+
+**Complete retry command output:**
+
+```text
+ROUTE=/
+APP_METRIC=200	11.006122	15395
+START=2026-07-23 14:58:06 +08:00
+END=2026-07-23 14:58:19 +08:00
+SERVER_OUTPUT:
+[P0_DIAG_READY]
+
+> stage-front@0.1.0 start
+> next start
+
+[P0_DIAG_READY]
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.5.170:3000
+
+ ✓ Starting...
+ ✓ Ready in 6.9s
+[P0_DIRECTUS_START] id=1 collection=schools method=GET
+[P0_DIRECTUS_START] id=2 collection=program_offerings method=GET
+[P0_DIRECTUS_START] id=3 collection=application_requirements method=GET
+[P0_DIRECTUS_START] id=4 collection=audition_requirements method=GET
+[P0_DIRECTUS_START] id=5 collection=source_records method=GET
+[P0_DIRECTUS_START] id=6 collection=audition_requirements method=GET
+STDERR:
+Error: Directus request failed on /items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status,intro_zh,school_detail_sections: fetch failed
+    at f (D:\STAGE FRONT\.next\server\chunks\993.js:1:594)
+    at async (D:\STAGE FRONT\.next\server\chunks\993.js:1:5326) {
+  digest: '173315409'
+}
+```
+
+**Current `git status --short` captured immediately after stopping the retry
+server and before writing this stop record:**
+
+```text
+?? improve_s/01_phase_0_baseline/batch4_retry_home.stderr.txt
+?? improve_s/01_phase_0_baseline/batch4_retry_home.stdout.txt
+```
+
+The local server was stopped and port 3000 was confirmed free. The volatile
+`.codex-dev.*.log` hashes remain unchanged.
+
+**Blocked or incomplete items:** Batch 4 four-route request/byte baseline;
+Batch 5 RSC captures; Batch 6 manual checklist; formal Batch 7 completion.
+Batches 5–7 were not executed. A third Batch 4 attempt is prohibited by D-014
+without a fresh owner decision after infrastructure review.
+
+**Commit SHA:** recorded by the Batch 4 retry stop-record commit
+
+---
