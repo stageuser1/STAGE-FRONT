@@ -415,3 +415,45 @@ files in `tests/`. It has no dependency on D-002 and **must run in Batch 2**
 **Commit SHA:** recorded by the Batch 1 commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 2 — typecheck, tests, and production build
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 2
+- **Approved by owner:** yes — decisions.md ref: **D-012**
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:** none
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none
+
+**Database changes:** none
+
+**Application code changes:** none
+
+**Typecheck:** pass — exit 0; 1.755 s; no diagnostics
+
+**Build:** pass — exit 0; 17.617 s; all six public/pilot routes dynamic;
+complete route table recorded in the Phase 0 report; no warnings
+
+**Tests / smoke:** pass — 10/10 tests (2 validator + 8 importer); exit 0;
+3.094 s
+
+**Measurements:** n/a — timing begins in Batch 3
+
+**Outcome:** completed
+
+**Blocked or incomplete items:** none for Batch 2
+
+**Commit SHA:** recorded by the Batch 2 commit
+
+---

@@ -75,12 +75,38 @@ Completed work:
 
 | Check | Exit code / result | Output |
 |---|---|---|
-| `npm run typecheck` | not run | Blocked by missing Phase 0 owner approval |
-| `npm test` | not run | D-002 is open; package path is unresolved |
-| `npm run build` | not run | Blocked by missing Phase 0 owner approval |
-| Route table | not available | Build was not authorized |
-| Build duration | not applicable | Build was not run |
-| Warnings | none observed | Build was not run |
+| `npm run typecheck` | 0 — PASS | `tsc --noEmit`; no diagnostics; 1.755 s |
+| `npm test` | 0 — PASS | 10/10 tests: 2 Python validator + 8 Node importer; 3.094 s |
+| `npm run build` | 0 — PASS | Next.js 15.5.20 production build |
+| Route table | captured below | Six public/pilot routes are dynamic (`ƒ`); `/login` and `/_not-found` are static (`○`) |
+| Build duration | 17.617 s | 2026-07-23 12:00:31–12:00:48 +08:00 |
+| Warnings | none | No build warning was emitted |
+
+The test command emitted two non-failing
+`System.Management.Automation.RemoteException` wrapper lines around the Python
+`unittest` summary. The Python suite still reported `OK`, the Node suite
+reported 8 passes and 0 failures, and the package command exited 0.
+
+Complete build route table (verbatim):
+
+```text
+Route (app)                                      Size  First Load JS
+┌ ƒ /                                         1.85 kB         108 kB
+├ ○ /_not-found                                 994 B         103 kB
+├ ○ /login                                    2.69 kB         109 kB
+├ ƒ /pilot/program/[program_offering_ref]     3.97 kB         110 kB
+├ ƒ /pilot/school/[slug]                        161 B         106 kB
+├ ƒ /schools/[schoolId]                       1.13 kB         113 kB
+├ ƒ /schools/[schoolId]/programs/[programId]  9.28 kB         121 kB
+└ ƒ /search                                   1.85 kB         108 kB
++ First Load JS shared by all                  102 kB
+  ├ chunks/255-3981a3d1f3561bd8.js            46.2 kB
+  ├ chunks/4bd1b696-c023c6e3521b1417.js       54.2 kB
+  └ other shared chunks (total)               1.99 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+```
 
 ## 4. Timing baseline
 
