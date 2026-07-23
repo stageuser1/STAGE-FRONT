@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** ✅ **ENTRY GATE APPROVED — cleared to execute Batches 0–7**
-**Completed:** Not yet — execution pending
+**Status:** ⛔ **STOPPED IN BATCH 3 — S7 (Directus HTTP 403 during measurement)**
+**Completed:** No — Batches 4–7 were not executed
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -31,31 +31,35 @@
 | Branch | `perf/s0-baseline` |
 | Baseline SHA | `86c1db9ccda8e71a73603454a625652e7df8177b` |
 | Shell | PowerShell |
-| Start | 2026-07-23 11:40 +08:00 |
-| End | 2026-07-23 11:46 +08:00 |
+| Start | 2026-07-23 11:59 +08:00 |
+| End | 2026-07-23 12:09 +08:00 |
 | Actor | Codex |
-| Outcome | Stopped before Batch 1 under S12 |
+| Outcome | Batches 0–2 completed; Batch 3 timing completed, then stopped under S7 during the required link/request observation |
 
 Completed work:
 
-- Read all documents required by `codex_execution.md`.
-- Verified branch `perf/s0-baseline`, clean starting tree, and recorded rollback
-  SHA.
-- Read both volatile `.codex-dev.*.log` files without modifying them.
-- Verified that the stdout content is the same 2026-07-23 session represented
-  by Set B; Set C below preserves both files in full, including the empty
-  stderr file.
-- Checked the Phase 0 entry decisions. D-001, D-002, and D-004 remain open,
-  and no owner approval to start Phase 0 is recorded.
-- Stopped before typecheck, tests, build, server start, HTTP measurement,
-  Directus observation, or RSC capture.
+- Batch 0 verified that both volatile logs still match the durable Set C
+  transcription; neither live log was modified.
+- Batch 1 verified the approved branch, rollback SHA, and clean tree.
+- Batch 2 passed typecheck, all 10 tests, and the production build.
+- Batch 3 captured 5 cold and 5 warm 200-response timings for each required
+  route on a local production build.
+- The supplemental application-side diagnostics probe observed a Directus 403
+  on the initial `audition_requirements` request, followed by the existing
+  fallback request and a page-level 200. S7 requires an immediate stop on a
+  Directus error during measurement.
+
+Prior attempt retained as history: the 2026-07-23 11:40–11:46 run stopped
+before Batch 1 under S12 because approval and decisions D-001/D-002/D-004 had
+not yet been recorded. D-012 subsequently approved execution and resolved
+those Phase 0 preconditions.
 
 ## 2. File accounting
 
 | Type | Files / result |
 |---|---|
 | Modified | `improve_s/01_phase_0_baseline/report.md`; `improve_s/logs/execution_log.md` |
-| Added | none |
+| Added | Six Batch 3 local-server stdout/stderr measurement artifacts listed below |
 | Deleted | none |
 | Dependency changes | none |
 | Configuration changes | none |
@@ -63,13 +67,37 @@ Completed work:
 | Application changes | none under `app/`, `components/`, `lib/`, or `data/` |
 | Remaining untracked files | none |
 
-`git diff --stat`:
+Added measurement artifacts:
 
+- `improve_s/01_phase_0_baseline/batch3_server_20260723_1201.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch3_server_20260723_1201.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch3_server_20260723_1203.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch3_server_20260723_1203.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stderr.txt`
+
+`git diff --stat` after the stop-record commit: empty (clean working tree).
+
+Branch versus rollback SHA `86c1db9` after staging the stop record:
+
+```text
+ .../01_phase_0_baseline/acceptance_checklist.md    |  23 +-
+ .../batch3_probe_server_20260723_1208.stderr.txt   |   0
+ .../batch3_probe_server_20260723_1208.stdout.txt   |  24 ++
+ .../batch3_server_20260723_1201.stderr.txt         |   0
+ .../batch3_server_20260723_1201.stdout.txt         |  10 +
+ .../batch3_server_20260723_1203.stderr.txt         |   0
+ .../batch3_server_20260723_1203.stdout.txt         |  10 +
+ improve_s/01_phase_0_baseline/report.md            | 423 +++++++++++++-----
+ improve_s/README.md                                |   3 +-
+ improve_s/logs/decisions.md                        | 166 ++++++-
+ improve_s/logs/execution_log.md                    | 486 +++++++++++++++++++++
+ improve_s/logs/rollback_history.md                 |  33 +-
+ 12 files changed, 1053 insertions(+), 125 deletions(-)
 ```
- improve_s/01_phase_0_baseline/report.md | 306 +++++++++++++++++++++-----------
- improve_s/logs/execution_log.md         |  91 ++++++++++
- 2 files changed, 294 insertions(+), 103 deletions(-)
-```
+
+This branch-level stat includes the approved entry-gate and rollback
+documentation commits that preceded the execution batches.
 
 ## 3. Build and test results
 
@@ -110,20 +138,34 @@ Route (app)                                      Size  First Load JS
 
 ## 4. Timing baseline
 
-**Environment:** ☐ local dev ☐ local production build ☐ Preview ☐ production
+**Environment:** ☐ local dev ☑ local production build ☐ Preview ☐ production
 
-**Wall-clock measurement start/end:** not applicable — measurement was not run
+**Wall-clock measurement start/end:** 2026-07-23 12:03:32–12:06:17 +08:00
+(165.149 s)
 
-**Directus link throughput:** not measured
+**Directus link throughput:** no valid byte-rate could be produced. The
+application-side byte-count probe stopped under S7 after observing a Directus
+403, and its installed diagnostics channel did not expose response-body chunk
+sizes. No direct Directus query was made. The per-render end-to-end durations
+below are the only valid network-condition proxy from this stopped run.
 
-**Machine state:** not recorded because the measurement session did not start
+**Machine state:** no intentional heavy workload was started alongside the
+measurement. After the run, total CPU was 10.4%; the machine had 15.94 GB
+visible RAM and 2.68 GB free physical RAM. Windows Defender
+(`MsMpEng`) was the largest non-system process by cumulative CPU and used
+approximately 555 MB working set.
 
 | Route | Cold runs (ms) | Cold median | Warm runs (ms) | Warm median | Link note |
 |---|---|---|---|---|---|
-| `/` | not run | n/a | not run | n/a | not measured |
-| `/search` | not run | n/a | not run | n/a | not measured |
-| `/schools/yale_school_of_music` | not run | n/a | not run | n/a | not measured |
-| `/schools/yale_school_of_music/programs/1190` | not run | n/a | not run | n/a | not measured |
+| `/` | 3718.076, 3436.724, 3623.326, 6365.277, 8052.986 | **3718.076 ms** | 9490.978, 6872.603, 5237.129, 4076.979, 3537.454 | **5237.129 ms** | Same local-production session; valid byte-rate unavailable after S7 |
+| `/search` | 3048.691, 3188.943, 2952.741, 3111.590, 2991.556 | **3048.691 ms** | 3682.700, 3327.073, 3549.827, 3358.273, 3315.171 | **3358.273 ms** | Same local-production session; valid byte-rate unavailable after S7 |
+| `/schools/yale_school_of_music` | 3324.729, 3648.994, 3266.326, 4698.626, 4885.535 | **3648.994 ms** | 5049.444, 4170.443, 3941.928, 4054.367, 3861.516 | **4054.367 ms** | Same local-production session; valid byte-rate unavailable after S7 |
+| `/schools/yale_school_of_music/programs/1190` | 3918.926, 3707.178, 3624.230, 3736.154, 3613.488 | **3707.178 ms** | 3503.749, 3712.279, 3691.290, 3784.770, 3602.065 | **3691.290 ms** | Same local-production session; valid byte-rate unavailable after S7 |
+
+All 40 official timing responses were HTTP 200. An earlier formatting-failed
+measurement command made one preliminary `/` request (HTTP 200, 4460.188 ms)
+before aborting locally; it is excluded from the table. The local server was
+restarted before the official cold series, and both server logs were retained.
 
 ### Prior evidence — PRESERVED VERBATIM
 
@@ -264,12 +306,18 @@ local production build.
 
 | Route | Request count | Collections | Approx. response bytes |
 |---|---|---|---|
-| `/` | not observed | not observed | not measured |
-| `/search` | not observed | not observed | not measured |
-| `/schools/yale_school_of_music` | not observed | not observed | not measured |
-| `/schools/yale_school_of_music/programs/1190` | not observed | not observed | not measured |
+| `/` | **6 attempts observed; incomplete baseline** | `schools`, `program_offerings`, `application_requirements`, `audition_requirements` (403), `audition_requirements` fallback (200), `source_records` | unavailable — diagnostics channel exposed no body-chunk sizes |
+| `/search` | not observed — stopped under S7 | not observed | not measured |
+| `/schools/yale_school_of_music` | not observed — stopped under S7 | not observed | not measured |
+| `/schools/yale_school_of_music/programs/1190` | not observed — stopped under S7 | not observed | not measured |
 
-No request was made directly to Directus. Batch 4 did not begin.
+No request was made directly to Directus. The application-side probe was
+performed as the Batch 3 link-throughput observation. It recorded five initial
+collection reads, but the initial `audition_requirements` response was HTTP
+403; the application then issued a sixth request for the same collection and
+received HTTP 200. The page itself returned HTTP 200 in 3945.555 ms. This
+triggered S7 before Batch 4 began, so the required four-route request baseline
+is incomplete.
 
 ## 6. Public exposure baseline
 
@@ -280,24 +328,34 @@ No request was made directly to Directus. Batch 4 did not begin.
 | `/schools/yale_school_of_music` | not captured | not captured | not captured | not captured | not captured | not captured | n/a |
 | `/schools/yale_school_of_music/programs/1190` | not captured | not captured | not captured | not captured | not captured | not captured | n/a |
 
-Payload files: none. Batch 5 did not begin.
+Payload files: none. Batch 5 did not begin because execution stopped under S7.
 
 ## 7. QA mechanism
 
-Path taken: neither Path A nor Path B. D-002 remains open in
-`logs/decisions.md`, so the execution package does not authorize Codex to choose
-between a smoke suite and a manual checklist.
+Approved path: **Path B — manual checklist** (D-002).
+
+Execution status: Batch 6 was not reached because execution stopped under S7,
+so the ten-item manual checklist was not added during this run.
 
 Smoke-suite files created: none. Dependency changes: none.
 
 ## 8. Known measurement limitations
 
-- No valid local-production timing baseline was produced because execution
-  stopped before Batch 2.
+- The four-route local-production timing set is complete, but Phase 0 did not
+  produce a valid overall baseline because the required request-count,
+  response-byte, public-exposure, and QA batches remain incomplete after S7.
 - No real-user data is available.
-- Preview/production status is unresolved because D-001 remains open.
-- Directus link throughput was not measured and is known to vary materially.
-- No route substitution was made; no route measurement began.
+- D-001 formally permits local production for Phase 0 only. Preview remains
+  unresolved and blocks later phase gates.
+- Directus link throughput is known to vary materially. A valid byte-rate was
+  not produced because the observation stopped on a Directus 403 and the
+  diagnostics channel exposed no response-body byte counts.
+- No route substitution was made; all four planned routes returned HTTP 200.
+- The homepage timing spread was wide (3436.724–9490.978 ms across official
+  cold/warm runs), but the median remained computable. The other routes were
+  materially tighter.
+- One preliminary homepage probe (HTTP 200, 4460.188 ms) was excluded after a
+  local output-delimiter error; the server was restarted before official runs.
 - The preserved Set A and Set B figures are local development-server context,
   not a production baseline.
 - `docs/imports/stage-v4-nine-school-verification.json` reports
@@ -312,44 +370,49 @@ Smoke-suite files created: none. Dependency changes: none.
 
 | Decision | Status at stop | Effect on Phase 0 |
 |---|---|---|
-| D-001 | Open | Preview/staging status unresolved |
-| D-002 | Open | QA Path A vs. Path B unresolved |
+| D-001 | Resolved for Phase 0 only | Local production is approved for Phase 0; Preview remains open for later gates |
+| D-002 | Resolved | Path B manual checklist approved |
 | D-003 | Resolved | Working tree and rollback point established |
-| D-004 | Open | Stale 1–2 second baseline not owner-confirmed as discarded |
+| D-004 | Resolved | Unsupported 1–2 second figure formally discarded |
 | D-005 | Open | Not a Phase 0 execution item |
 | D-006 | Open | Not a Phase 0 execution item |
 | D-007 | Open | Not a Phase 0 execution item |
 | D-008 | Open | Not a Phase 0 execution item |
 | D-009 | Open | Not blocking Phase 0; required before Phase 4 final verification |
 | D-010 | Open | Program execution order unconfirmed |
+| D-012 | Approved | Authorized Batches 0–7; does not override stop conditions |
 
-The package status remains “READY — do not execute until the owner records
-approval in `improve_s/logs/decisions.md`.” No such approval entry exists.
+Entry approval was valid. The current blocker is the S7 measurement failure,
+not a missing owner decision.
 
 ## 10. Incomplete or blocked items
 
-- Batch 1: no new action required for branch/rollback setup, but Phase 0 entry
-  approval is missing.
-- Batch 2: typecheck, 10-test verification, and production build not run.
-- Batch 3: timing baseline not run.
-- Batch 4: application-side Directus request count not observed.
+- Batches 0–2: completed and committed.
+- Batch 3: all 40 timing requests completed with HTTP 200, but its supplemental
+  link/byte observation triggered S7 on a Directus 403. No valid link
+  throughput was produced.
+- Batch 4: not begun. A partial homepage request trace exists from the Batch 3
+  probe, but it contradicted the expected five successful reads.
 - Batch 5: anonymous RSC payloads not captured.
-- Batch 6: QA mechanism not selected because D-002 is open.
-- Batch 7: required data limitation is recorded in §8; no action was taken.
-- Phase 0 cannot be completed or sent to its gate without the missing owner
-  decisions and approval.
+- Batch 6: Path B was approved, but the manual checklist was not written
+  because the batch was not reached.
+- Batch 7: the required `is_current` limitation remains recorded in §8 from the
+  prior stop report; Batch 7 was not formally reached in this execution.
+- Phase 0 cannot be completed or sent to its exit gate until Claude/owner
+  review the S7 evidence and approve a refreshed execution package or other
+  disposition.
 
-**Stop condition:** S12 — the package is ambiguous/unexecutable without a
-recorded Phase 0 approval and a D-002 choice. Proceeding would also violate the
-global execution rule that the human owner must authorize the start of each
-phase.
+**Stop condition:** S7 — Directus returned HTTP 403 during the
+application-side measurement probe. The application retried with a fallback
+query and returned the page successfully, but the package requires an
+immediate stop on any Directus error mid-measurement. No fix was attempted.
 
 ## 11. Recommended next phase
 
-Default recommendation after a valid Phase 0 baseline:
+Default recommendation after a valid Phase 0 baseline remains
 **`04_phase_2_speed_architecture`**.
 
-Phase 0 is not complete, so no next phase is authorized. The immediate required
-action is for the owner to record the Phase 0 entry approval and resolve D-001,
-D-002, and D-004 in `logs/decisions.md`; then Batch 2 can begin without
-expanding scope.
+Phase 0 is incomplete, so no next phase is authorized. The immediate action is
+Claude/owner review of the Directus 403/fallback evidence and a refreshed,
+explicitly approved Phase 0 execution package or disposition. Codex must not
+resume Batches 4–7 under the current stopped run.

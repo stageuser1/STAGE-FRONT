@@ -457,3 +457,158 @@ complete route table recorded in the Phase 0 report; no warnings
 **Commit SHA:** recorded by the Batch 2 commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 3 — timing captured; stopped on Directus 403
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 3
+- **Approved by owner:** yes — decisions.md ref: **D-012**
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:**
+- `improve_s/01_phase_0_baseline/batch3_server_20260723_1201.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch3_server_20260723_1201.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch3_server_20260723_1203.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch3_server_20260723_1203.stderr.txt`
+- `improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stdout.txt`
+- `improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stderr.txt`
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none. The probe used a process-local
+`NODE_OPTIONS=--import=data:...` diagnostics subscriber and did not edit any
+environment or configuration file.
+
+**Database changes:** none
+
+**Application code changes:** none
+
+**git diff --stat for this staged stop record:**
+
+```text
+ .../batch3_probe_server_20260723_1208.stderr.txt   |   0
+ .../batch3_probe_server_20260723_1208.stdout.txt   |  24 +++
+ .../batch3_server_20260723_1201.stderr.txt         |   0
+ .../batch3_server_20260723_1201.stdout.txt         |  10 +
+ .../batch3_server_20260723_1203.stderr.txt         |   0
+ .../batch3_server_20260723_1203.stdout.txt         |  10 +
+ improve_s/01_phase_0_baseline/report.md            | 201 ++++++++++++++-------
+ improve_s/logs/execution_log.md                    | 155 ++++++++++++++++
+ 8 files changed, 331 insertions(+), 69 deletions(-)
+```
+
+The final numbers differ slightly after inserting this stat block; the
+authoritative branch-versus-rollback accounting is in the Phase 0 report.
+
+**Typecheck:** pass in Batch 2
+
+**Build:** pass in Batch 2
+
+**Tests / smoke:** 10/10 tests pass in Batch 2; Batch 6 manual QA not reached
+
+**Measurements:**
+
+| Route | Cold median | Warm median | HTTP result |
+|---|---:|---:|---|
+| `/` | 3718.076 ms | 5237.129 ms | 10/10 HTTP 200 |
+| `/search` | 3048.691 ms | 3358.273 ms | 10/10 HTTP 200 |
+| `/schools/yale_school_of_music` | 3648.994 ms | 4054.367 ms | 10/10 HTTP 200 |
+| `/schools/yale_school_of_music/programs/1190` | 3707.178 ms | 3691.290 ms | 10/10 HTTP 200 |
+
+All individual timing runs and the machine/session context are recorded in
+`01_phase_0_baseline/report.md`.
+
+**Outcome:** stopped
+
+**Stop condition:** **S7** — Directus returned HTTP 403 for the initial
+`audition_requirements` collection request during the application-side
+measurement probe. The application issued a fallback request that returned
+200, and the page returned 200, but the execution package requires an
+immediate stop on any Directus error mid-measurement.
+
+**Exact command that triggered and displayed the stop evidence:**
+
+```powershell
+$started=Get-Date
+$format="%{http_code}`t%{time_total}`t%{size_download}"
+$metric=& curl.exe -sS --max-time 120 -o NUL -w $format 'http://localhost:3000/'
+$code=$LASTEXITCODE
+$ended=Get-Date
+"APP_PROBE=$metric"
+"APP_PROBE_START=$($started.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
+"APP_PROBE_END=$($ended.ToString('yyyy-MM-dd HH:mm:ss zzz'))"
+"APP_PROBE_WALL_MS=$([math]::Round(($ended-$started).TotalMilliseconds,3))"
+'PROBE_LOG:'
+Get-Content -LiteralPath 'improve_s\01_phase_0_baseline\batch3_probe_server_20260723_1208.stdout.txt'
+'PROBE_STDERR_BYTES=' + (Get-Item -LiteralPath 'improve_s\01_phase_0_baseline\batch3_probe_server_20260723_1208.stderr.txt').Length
+exit $code
+```
+
+**Complete command output:**
+
+```text
+APP_PROBE=200	3.945555	254146
+APP_PROBE_START=2026-07-23 12:09:09 +08:00
+APP_PROBE_END=2026-07-23 12:09:13 +08:00
+APP_PROBE_WALL_MS=3962.896
+PROBE_LOG:
+[P0_DIAG_READY]
+
+> stage-front@0.1.0 start
+> next start
+
+[P0_DIAG_READY]
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.5.170:3000
+
+ ✓ Starting...
+ ✓ Ready in 677ms
+[P0_DIRECTUS_START] id=1 collection=schools method=GET
+[P0_DIRECTUS_START] id=2 collection=program_offerings method=GET
+[P0_DIRECTUS_START] id=3 collection=application_requirements method=GET
+[P0_DIRECTUS_START] id=4 collection=audition_requirements method=GET
+[P0_DIRECTUS_START] id=5 collection=source_records method=GET
+[P0_DIRECTUS_END] id=1 collection=schools status=200 body_bytes=0 duration_ms=107
+[P0_DIRECTUS_END] id=4 collection=audition_requirements status=403 body_bytes=0 duration_ms=160
+[P0_DIRECTUS_START] id=6 collection=audition_requirements method=GET
+[P0_DIRECTUS_END] id=3 collection=application_requirements status=200 body_bytes=0 duration_ms=1399
+[P0_DIRECTUS_END] id=2 collection=program_offerings status=200 body_bytes=0 duration_ms=1902
+[P0_DIRECTUS_END] id=6 collection=audition_requirements status=200 body_bytes=0 duration_ms=2302
+[P0_DIRECTUS_END] id=5 collection=source_records status=200 body_bytes=0 duration_ms=2970
+PROBE_STDERR_BYTES=0
+```
+
+No response bodies, request headers, or credentials were logged.
+
+**Current `git status --short` captured immediately after stopping the local
+server and before writing this stop record:**
+
+```text
+?? improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stderr.txt
+?? improve_s/01_phase_0_baseline/batch3_probe_server_20260723_1208.stdout.txt
+?? improve_s/01_phase_0_baseline/batch3_server_20260723_1201.stderr.txt
+?? improve_s/01_phase_0_baseline/batch3_server_20260723_1201.stdout.txt
+?? improve_s/01_phase_0_baseline/batch3_server_20260723_1203.stderr.txt
+?? improve_s/01_phase_0_baseline/batch3_server_20260723_1203.stdout.txt
+```
+
+The application-side probe server was stopped and port 3000 was confirmed
+free. The `pktmon` counters-only alternative was blocked by local command
+policy before execution; no packet filter or capture file was created.
+
+**Blocked or incomplete items:** valid Directus link throughput; Batch 4
+four-route request/byte baseline; Batch 5 RSC captures; Batch 6 manual
+checklist; formal Batch 7 completion. No fix was attempted, and Batches 4–7
+were not executed.
+
+**Commit SHA:** recorded by the Batch 3 stop-record commit
+
+---
