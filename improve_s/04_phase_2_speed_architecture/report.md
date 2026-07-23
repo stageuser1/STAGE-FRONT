@@ -1,9 +1,11 @@
 # Phase 2 — Speed Architecture · Report
 
-**Status:** ⬜ Not started
+**Status:** 🟡 In progress — Batches 0–3 only; hard stop at GATE A
 **Completed:** ____________
 **Branch:** `perf/s1-speed-track`
-**Rollback SHA:** ____________
+**Rollback SHA:** `742e901bf036daed924ea7732f7b33ec1f800107`
+**Shell:** PowerShell
+**Environment:** local production build (`next build` + `next start`)
 
 ★ Milestone 1 — "Public pages load fast" — is judged from this report.
 
@@ -15,11 +17,24 @@ _To be filled by Codex._
 
 | Batch | Description | Status | Commit |
 |---|---|---|---|
-| 1 | Data Cache — `lib/data.ts:165` | | |
-| 2 | Rendering mode — remove `force-dynamic` ×4 | | |
-| 3 | Payload cut — `evidence_metadata` | | |
-| 4 | `generateStaticParams` ×2 | | |
-| 5 | Full measurement | | |
+| 0 | Pre-flight, branch, rollback point | Complete (2026-07-23 18:10 +08:00) | pending |
+| 1 | Directus fetch Data Cache, 900 s | Not started | |
+| 2 | Yale school benchmark route ISR, 900 s | Not started | |
+| 3 | Prerender all school pages | Not started | |
+| 4–6 | Rollout and final measurement | **Not authorized before GATE A** | n/a |
+
+### Batch 0 validation
+
+- `npm run typecheck`: PASS (exit 0)
+- `npm test`: PASS (10/10: 2 Python + 8 Node)
+- `npm run build`: PASS (exit 0; 26,372.993 ms)
+- Route table: all four measured public routes remained dynamic (`ƒ`)
+- Path B QA: PASS, 10/10 checks
+- School/program RSC comparison: semantically identical after normalizing only
+  volatile Next.js build and hydration IDs; byte lengths exactly matched the
+  Phase 0 captures (107,114 and 49,640 bytes)
+- Reviewer login/edit round-trip: not required in Batch 0
+- Directus, dependency, configuration, and database changes: none
 
 ---
 
