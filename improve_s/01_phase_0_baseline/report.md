@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** 🟢 **BATCH 6 COMPLETE — Batch 7 pending**
-**Completed:** No — Batches 0–6 complete and valid; Batch 7 pending
+**Status:** ✅ **PHASE 0 EXECUTION COMPLETE — awaiting Claude review and owner gate**
+**Completed:** Yes — approved Batches 0–7 executed
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -132,9 +132,9 @@
 | D-015 successful resumption | 2026-07-23 15:17–15:21 +08:00 |
 | Batch 5 capture | 2026-07-23 15:25–15:26 +08:00 |
 | Batch 6 | 2026-07-23 15:27 +08:00 |
-| End | In progress — Batch 7 pending |
+| Batch 7 / End | 2026-07-23 15:29 +08:00 |
 | Actor | Codex |
-| Outcome | Batches 0–6 complete and valid; proceed to Batch 7 |
+| Outcome | Batches 0–7 complete; Phase 0 execution package ready for gate review |
 
 Completed work:
 
@@ -160,6 +160,8 @@ Completed work:
   detail routes.
 - Batch 6 documented the approved Path B ten-check manual QA mechanism without
   creating files or changing dependencies.
+- Batch 7 formally retained the required `is_current` data observation and
+  took no action on Directus or application data.
 
 Prior attempt retained as history: the 2026-07-23 11:40–11:46 run stopped
 before Batch 1 under S12 because approval and decisions D-001/D-002/D-004 had
@@ -203,9 +205,10 @@ Added measurement artifacts:
 - `improve_s/01_phase_0_baseline/batch5_server.stderr.txt`
 - Eight files under `improve_s/01_phase_0_baseline/payloads/` listed in §6
 
-`git diff --stat` after the stop-record commit: empty (clean working tree).
+Final working-tree `git diff --stat`: empty after the Batch 7 commit; confirmed
+again during final handoff verification.
 
-Branch versus rollback SHA `86c1db9` after staging the stop record:
+Branch-versus-rollback snapshot immediately before the Batch 7 commit:
 
 ```text
  .../01_phase_0_baseline/acceptance_checklist.md    |  23 +-
@@ -238,12 +241,12 @@ Branch versus rollback SHA `86c1db9` after staging the stop record:
  .../01_phase_0_baseline/payloads/school_yale.rsc   |  64 ++
  .../payloads/search.headers.txt                    |   9 +
  improve_s/01_phase_0_baseline/payloads/search.rsc  |  78 ++
- improve_s/01_phase_0_baseline/report.md            | 627 +++++++++--
+ improve_s/01_phase_0_baseline/report.md            | 637 ++++++++--
  improve_s/README.md                                |   3 +-
- improve_s/logs/decisions.md                        | 504 ++++++++-
- improve_s/logs/execution_log.md                    | 1173 ++++++++++++++++++++
+ improve_s/logs/decisions.md                        | 504 +++++++-
+ improve_s/logs/execution_log.md                    | 1252 ++++++++++++++++++++
  improve_s/logs/rollback_history.md                 |  33 +-
- 35 files changed, 2812 insertions(+), 129 deletions(-)
+ 35 files changed, 2900 insertions(+), 130 deletions(-)
 ```
 
 This branch-level stat includes the approved entry-gate and rollback
@@ -448,7 +451,7 @@ local production build.
 
 > **The original brief's "approximately 1–2 seconds" claim is formally
 > discarded.** Neither Set A nor Set B supports it.
-> Confirmed by: ____________ on ____________
+> Confirmed by: owner via D-004 on 2026-07-23
 
 ---
 
@@ -534,9 +537,8 @@ Smoke-suite files created: none. Dependency changes: none.
 
 ## 8. Known measurement limitations
 
-- The four-route local-production timing set is complete, but Phase 0 did not
-  produce a valid overall baseline because the required request-count,
-  public-exposure, and QA artifacts are not all complete yet.
+- The Phase 0 execution baseline is complete. The limitations below constrain
+  interpretation but do not invalidate the measured local-production baseline.
 - No real-user data is available.
 - D-001 formally permits local production for Phase 0 only. Preview remains
   unresolved and blocks later phase gates.
@@ -571,7 +573,7 @@ Smoke-suite files created: none. Dependency changes: none.
 
 ## 9. Blocking precondition status
 
-| Decision | Status at stop | Effect on Phase 0 |
+| Decision | Current status | Effect on Phase 0 |
 |---|---|---|
 | D-001 | Resolved for Phase 0 only | Local production is approved for Phase 0; Preview remains open for later gates |
 | D-002 | Resolved | Path B manual checklist approved |
@@ -585,7 +587,7 @@ Smoke-suite files created: none. Dependency changes: none.
 | D-010 | Open | Program execution order unconfirmed |
 | D-012 | Approved | Authorized Batches 0–7; does not override stop conditions |
 | D-013 | Resolved | Validated Batch 3 and authorized resume at Batch 4; exception covers only `audition_requirements` 403 → fallback 200 |
-| D-014 | Resolved / cap exhausted | Authorized one Batch 4 retry after ≥60 seconds; retry failed with the same raw `schools` connectivity error; no third attempt |
+| D-014 | Superseded in cause by D-015 | Historical bounded retry decision; its link-instability hypothesis was retracted after owner disclosure |
 | D-015 | Resolved | Disclosed operator-caused outages, retracted the link-instability hypothesis, and authorized the successful restored-environment resumption |
 
 Entry and resume approvals were valid. No Batch 4 blocker remains.
@@ -602,15 +604,21 @@ Entry and resume approvals were valid. No Batch 4 blocker remains.
 - Batch 6: complete; Path B ten-check manual checklist defined; no test files
   or dependencies added.
 - Batch 7: the required `is_current` limitation remains recorded in §8 from the
-  prior report; formal Batch 7 completion is pending.
+  prior report; no action was taken.
+
+No approved Phase 0 execution item is incomplete or blocked. Claude review and
+the owner's Phase 0 exit-gate decision remain pending governance actions, not
+execution batches.
 
 **Active stop condition:** none. The two historical S7 stops were correctly
 triggered but are causally resolved under D-015.
 
 ## 11. Recommended next phase
 
-Default recommendation after a valid Phase 0 baseline remains
+Recommended next phase after owner acceptance:
 **`04_phase_2_speed_architecture`**.
 
-Phase 0 remains in progress through Batch 7. No later phase is authorized
-until this report is complete and the owner signs the Phase 0 gate.
+The baseline corroborates the documented diagnosis: each render performs
+27.32 MB of Directus reads, takes roughly 3–5 seconds, and has no warm-cache
+benefit. The owner must still sign the Phase 0 exit gate before that phase is
+authorized.

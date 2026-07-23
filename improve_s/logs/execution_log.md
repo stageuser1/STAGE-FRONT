@@ -1299,3 +1299,82 @@ and no application code changed.
 **Commit SHA:** recorded by the Batch 6 commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 7 — data observation and execution completion
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  Batch 7 and final report requirements
+- **Approved by owner:** yes — decisions.md refs: **D-012**, **D-015**
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:** none
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none
+
+**Database / Directus changes:** none
+
+**Application code changes:** none
+
+**git diff --stat for Batch 7 before final commit:**
+
+```text
+ improve_s/01_phase_0_baseline/report.md | 48 +++++++++++---------
+ improve_s/logs/execution_log.md         | 79 +++++++++++++++++++++++++++++++++
+ 2 files changed, 107 insertions(+), 20 deletions(-)
+```
+
+**Required data observation:** formally recorded and retained:
+`docs/imports/stage-v4-nine-school-verification.json` reports
+`current_application_rows: 0` for 8 of the 9 newly imported schools. Those rows
+have no `is_current = true`; pages render through `selectCurrentCycle` fallback.
+If `is_current` is populated later, resulting content changes must not be
+attributed to optimization work.
+
+No action was taken on the data.
+
+**Phase 0 execution summary:**
+- Batches 0–7 completed.
+- Typecheck passed.
+- All 10 existing tests passed.
+- Production build passed; all six public/pilot routes are dynamic.
+- Four-route cold/warm timing baseline captured.
+- Directus request count and approximate response-byte baseline captured.
+- Four anonymous raw RSC/Flight payloads captured.
+- Path B ten-check manual QA mechanism documented.
+- No application, Directus, dependency, or configuration change was made.
+
+**Correction to the preceding Batch 6 entry:** its embedded stat was captured
+before the final report text settled. The authoritative Batch 6 commit output
+was:
+
+```text
+ improve_s/01_phase_0_baseline/report.md | 40 ++++++++++++++++++-------
+ improve_s/logs/execution_log.md         | 53 +++++++++++++++++++++++++++++++++
+ 2 files changed, 82 insertions(+), 11 deletions(-)
+```
+
+The earlier pre-commit stat remains in place under the append-only policy.
+
+**Typecheck / Build / Tests:** not rerun — no application code changed in
+Batch 7; Batch 2 results remain authoritative.
+
+**Outcome:** completed — Phase 0 execution package ready for Claude review and
+owner gate decision
+
+**Stop condition:** none active
+
+**Blocked or incomplete items:** none within approved Batches 0–7. Owner
+acceptance remains required before any later phase.
+
+**Commit SHA:** recorded by the Batch 7 completion commit
+
+---
