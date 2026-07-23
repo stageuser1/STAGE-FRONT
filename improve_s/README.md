@@ -107,7 +107,8 @@ owner overrides this order, record the decision in `logs/decisions.md`.
 | Phase | Folder | Status |
 |---|---|---|
 | Program setup | — | ✅ Complete |
-| Phase 0 — Baseline | `01_` | ⬜ Not started |
+| Baseline commit `86c1db9` | — | ✅ Recorded (D-003) |
+| Phase 0 — Baseline | `01_` | 🟢 **ENTRY GATE APPROVED (D-012)** — cleared to execute |
 | Phase 0.5 — Transport security | `02_` | ⬜ Not started (parallel) |
 | Phase 1 — Data boundary | `03_` | ⬜ Not started |
 | Phase 2 — Speed architecture | `04_` | ⬜ Not started |

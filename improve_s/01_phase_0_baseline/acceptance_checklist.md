@@ -40,11 +40,24 @@ BRANCH: perf/s0-baseline                ROLLBACK SHA: ____________
 - [ ] Environment explicitly labelled (dev / local prod build / Preview / production)
 - [ ] The brief's "1–2 second" figure formally discarded in `report.md`
 
-## Blocking preconditions
+## Blocking preconditions — ✅ RESOLVED AT ENTRY (D-012, 2026-07-23)
 
-- [ ] **Preview environment**: confirmed with URL ☐ / created ☐ / formally waived with gates rewritten ☐
-- [ ] Reviewer test account: obtained ☐ / deferred to before Phase `06_` ☐
-- [ ] Bundle analyzer devDependency: pre-authorized ☐ / deferred to Phase `05_` ☐
+- [x] **Preview environment (D-001)**: ☑ **not required for Phase 0** — this
+      phase measures a local production build. Verified batch by batch.
+      **Still open for the Phase `04_` gate onward** — must be answered before
+      Phase `04_` reaches its gate.
+- [x] **QA mechanism (D-002)**: ☑ **Path B — manual checklist.** No dependency
+      installed, no configuration edited. Batch 6 writes the ten checks into
+      `report.md`.
+- [x] **Stale baseline (D-004)**: ☑ the "1–2 second" figure is formally
+      discarded — contradicted by observation Sets A, B and C.
+- [x] **Working tree (D-003)**: ☑ clean; baseline `86c1db9` recorded in
+      `logs/rollback_history.md`; branch `perf/s0-baseline` created.
+- [ ] Reviewer test account: obtained ☐ / **deferred to before Phase `06_`** ☑
+- [ ] Bundle analyzer devDependency: pre-authorized ☐ / **deferred to Phase `05_`** ☑
+
+> Entry approval: **D-012**. Phase 0 execution is authorized.
+> Deferred items above do not block this phase.
 
 ## Phase-specific gate
 

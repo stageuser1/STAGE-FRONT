@@ -179,3 +179,146 @@ report rather than the volatile log.
 `01_phase_0_baseline/codex_execution.md` for Codex.
 
 ---
+
+### [2026-07-23] Phase 0 · Entry gate / Batch 0 — stopped before execution
+
+- **Actor:** Codex
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/codex_execution.md` —
+  entry gate and Batch 0
+- **Approved by owner:** no — no Phase 0 approval entry exists in
+  `logs/decisions.md`
+
+**Files modified:**
+- `improve_s/01_phase_0_baseline/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added:** none
+
+**Files deleted:** none
+
+**Dependency changes:** none
+
+**Configuration changes:** none
+
+**Database changes:** none
+
+**Application code changes:** none
+
+**git diff --stat:** recorded in the Phase 0 report after the final working-tree
+snapshot.
+
+**Typecheck:** not run
+
+**Build:** not run
+
+**Tests / smoke:** not run
+
+**Measurements:** No Phase 0 measurement began. Batch 0 only read and preserved
+the existing `.codex-dev.*.log` contents.
+
+**Outcome:** stopped
+
+**Stop condition:** S12 — Phase 0 has no recorded owner entry approval, D-002
+does not select QA Path A or Path B, and D-001/D-004 remain unresolved. The
+global execution rules require the owner to approve the start of each phase and
+require Codex to stop on ambiguity.
+
+**Exact precondition command:**
+
+```powershell
+Select-String -LiteralPath 'D:\STAGE FRONT\improve_s\logs\decisions.md' -Pattern '^\| \*\*D-00[1-9]\*\*','^\| \*\*D-010\*\*','Phase 0','01_phase_0_baseline' -Encoding UTF8
+```
+
+**Complete command output:**
+
+```text
+improve_s\logs\decisions.md:34:| **D-001** | Does a Preview/staging environment exist? If not: create one, or formally downgrade all Preview-dependent gates to local production builds | All phase gates | ⬜ Open |
+improve_s\logs\decisions.md:35:| **D-002** | QA mechanism: build a smoke suite in Phase `01_` (requires a devDependency), or downgrade QA sign-off to a manual checklist | Every gate's QA criterion | ⬜ Open |
+improve_s\logs\decisions.md:36:| **D-003** | How to clean the dirty working tree — commit or stash the 6 outstanding items | Phase `01_` Batch 1 | ✅ **RESOLVED** — see D-003 below |
+improve_s\logs\decisions.md:37:| **D-004** | Confirm the "1–2 second" baseline from the original brief is discarded | All performance gates | ⬜ Open |
+improve_s\logs\decisions.md:38:| **D-005** | Transport security approach: A (TLS on Directus) / B (server-side proxy) / C (both) | Phase `02_` | ⬜ Open |
+improve_s\logs\decisions.md:39:| **D-006** | Revalidation window for ISR, and acceptance of the staleness trade-off | Phase `04_` gate | ⬜ Open |
+improve_s\logs\decisions.md:40:| **D-007** | `/pilot/*` disposition: keep / gate behind auth / remove | Phases `03_`, `05_` | ⬜ Open |
+improve_s\logs\decisions.md:41:| **D-008** | Bundle analyzer devDependency + `next.config.ts` edit — pre-authorize? | Phase `05_` | ⬜ Open |
+improve_s\logs\decisions.md:42:| **D-009** | Reviewer test account — obtain before Phase `06_` | Phase `06_` | ⬜ Open |
+improve_s\logs\decisions.md:43:| **D-010** | Confirm execution order: `01_` → `04_` → `03_` → `05_` → `06_`, with `02_` in parallel | Program sequence | ⬜ Open |
+improve_s\logs\decisions.md:108:### D-003 · [2026-07-23] — Working tree handling before Phase 0
+improve_s\logs\decisions.md:113:- **Question:** how to clean the working tree so Phase 0 has a reproducible
+improve_s\logs\decisions.md:131:| `improve_s/` | 244 KB, 38 files | **Commit** | Program source of truth; Phase 0 writes to its logs and needs a tracked baseline to diff against |
+improve_s\logs\decisions.md:140:- `main` advances by 4 commits before the Phase 0 branch is cut
+improve_s\logs\decisions.md:142:- The Phase 0 rollback point becomes unambiguous
+improve_s\logs\decisions.md:167:- **Question:** the Phase 0 package cited `.codex-dev.*.log` as baseline
+improve_s\logs\decisions.md:173:2026-07-23 by the nine-school verification run, before Phase 0 began.
+improve_s\logs\decisions.md:176:1. Both datasets transcribed verbatim into `01_phase_0_baseline/report.md`
+improve_s\logs\decisions.md:179:2. New **Batch 0** added to `01_phase_0_baseline/codex_execution.md`: transcribe
+improve_s\logs\decisions.md:188:are context; Phase 0 Batch 3 produces the real baseline.
+```
+
+**Current `git status --short`:**
+
+```text
+ M improve_s/01_phase_0_baseline/report.md
+ M improve_s/logs/execution_log.md
+```
+
+**Blocked or incomplete items:** Batches 1–7 remain incomplete except for the
+pre-existing D-003 branch/rollback setup and Batch 7's report-only limitation
+note. The owner must record Phase 0 entry approval and resolve D-001, D-002,
+and D-004 before execution can resume.
+
+**Commit SHA:** none — stopped documentation remains uncommitted
+
+---
+
+### [2026-07-23] Phase 0 · Entry gate — APPROVED
+
+- **Actor:** Claude (assessment) / Owner (approval)
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `improve_s/01_phase_0_baseline/claude_plan.md`
+- **Approved by owner:** yes — decisions.md ref: **D-012**
+
+**Files modified:** 4 documentation files under `improve_s/`
+**Files added:** none · **Files deleted:** none
+**Dependency changes:** none · **Configuration changes:** none
+**Database changes:** none · **Application code changes:** none
+
+**Typecheck / Build / Tests:** not run — this is a gate decision, not execution
+
+**Decisions resolved:**
+
+| # | Resolution |
+|---|---|
+| **D-001** | Preview environment **not required for Phase 0** — verified batch by batch; Phase 0 measures a local production build. **Remains open for Phase `04_` gate onward.** |
+| **D-002** | **Path B — manual checklist.** No devDependency, no config edit. |
+| **D-004** | "1–2 second" baseline **formally discarded** — contradicted by Sets A, B, C. |
+| **D-012** | **Phase 0 entry gate APPROVED.** Batches 0–7 authorized. |
+
+**Correction issued to Codex:**
+The previous entry-gate run recorded `npm test` as "not run — D-002 is open;
+package path is unresolved." **Incorrect.** `npm test` runs
+`python -m unittest tests.test_validator` and `node --test` over two existing
+files in `tests/`. It has no dependency on D-002 and **must run in Batch 2**
+(expected: PASS, 10 tests). Recorded in D-002 and in the Phase 0 report header.
+
+**Status changes:**
+- `01_phase_0_baseline/report.md` — status ⛔ Stopped → ✅ Entry gate approved.
+  The prior stop record in §1 is **retained as history**, per the append-only rule.
+- `01_phase_0_baseline/acceptance_checklist.md` — blocking preconditions marked resolved
+- `README.md` — Phase 0 status table updated
+
+**Outcome:** completed. Phase 0 cleared for Codex execution.
+
+**Blocked / carried forward:**
+- **D-001 for later gates** — a Preview environment (or formally rewritten exit
+  criteria) is required before the Phase `04_` gate. Do not let `04_` reach its
+  gate with this open.
+- **D-002 recommendation** — revisit the automated smoke suite before Phase `03_`,
+  where silent content loss is the top regression risk and manual checking is weak.
+- `output/` remote-visibility / licensing question — still gates `git push`
+- D-005, D-006, D-007, D-008, D-009, D-010 remain open; none blocks Phase 0
+
+**Next action:** Codex executes
+`improve_s/01_phase_0_baseline/codex_execution.md`, Batches 0–7.
+
+---

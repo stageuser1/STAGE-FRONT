@@ -31,10 +31,10 @@ These block the phases named. Record each one below as it is resolved.
 
 | # | Decision required | Blocks | Status |
 |---|---|---|---|
-| **D-001** | Does a Preview/staging environment exist? If not: create one, or formally downgrade all Preview-dependent gates to local production builds | All phase gates | ⬜ Open |
-| **D-002** | QA mechanism: build a smoke suite in Phase `01_` (requires a devDependency), or downgrade QA sign-off to a manual checklist | Every gate's QA criterion | ⬜ Open |
+| **D-001** | Does a Preview/staging environment exist? If not: create one, or formally downgrade all Preview-dependent gates to local production builds | ~~All phase gates~~ → **Phase `04_` gate onward** | 🟡 **RESOLVED FOR PHASE 0 ONLY** — see below. Still open for later gates. |
+| **D-002** | QA mechanism: build a smoke suite in Phase `01_` (requires a devDependency), or downgrade QA sign-off to a manual checklist | Every gate's QA criterion | ✅ **RESOLVED** — Path B (manual checklist) — see below |
 | **D-003** | How to clean the dirty working tree — commit or stash the 6 outstanding items | Phase `01_` Batch 1 | ✅ **RESOLVED** — see D-003 below |
-| **D-004** | Confirm the "1–2 second" baseline from the original brief is discarded | All performance gates | ⬜ Open |
+| **D-004** | Confirm the "1–2 second" baseline from the original brief is discarded | All performance gates | ✅ **RESOLVED** — discarded — see below |
 | **D-005** | Transport security approach: A (TLS on Directus) / B (server-side proxy) / C (both) | Phase `02_` | ⬜ Open |
 | **D-006** | Revalidation window for ISR, and acceptance of the staleness trade-off | Phase `04_` gate | ⬜ Open |
 | **D-007** | `/pilot/*` disposition: keep / gate behind auth / remove | Phases `03_`, `05_` | ⬜ Open |
@@ -188,3 +188,163 @@ being *faster* despite ~6× more data must **not** be read as improvement. Both
 are context; Phase 0 Batch 3 produces the real baseline.
 
 - **Reversible?** n/a — a correction to documentation and evidence handling.
+
+---
+
+### D-001 · [2026-07-23] — Preview environment: NOT required for Phase 0
+
+- **Type:** gate / scope
+- **Phase:** scoped down to `01_` only
+- **Decided by:** owner
+- **Question:** no `vercel.json`, no `.vercel/`, no CI exists in the repository.
+  Does the absence of a Preview environment block Phase 0?
+
+**Finding: no.** Phase 0 measures a **local production build**. Reviewed batch
+by batch against `01_phase_0_baseline/codex_execution.md`:
+
+| Batch | Needs Preview? |
+|---|---|
+| 0 — preserve log evidence | no |
+| 1 — clean tree, baseline SHA | no |
+| 2 — typecheck / test / build | no |
+| 3 — timings (`npm run start`) | no — local production build by design |
+| 4 — Directus request counts | no — observed application-side |
+| 5 — RSC payload capture | no |
+| 6 — QA mechanism | no |
+| 7 — `is_current` note | no |
+
+**Decision:** Phase 0 proceeds on a local production build. The Phase 0
+acceptance criterion "Preview environment resolved or formally waived" is
+satisfied by this entry.
+
+**⚠️ D-001 is NOT globally resolved.** The earlier assessment — that the missing
+Preview environment is the single largest structural gap in the program — stands
+unchanged. It blocks the **exit** gates of Phases `03_`, `04_`, `05_`, and `06_`,
+every one of which requires Preview verification before merge.
+
+**Carried forward — must be answered before the Phase `04_` gate:**
+confirm a Preview environment exists (record the URL), create one, **or**
+formally rewrite the Preview-dependent exit criteria in
+`03_`/`04_`/`05_`/`06_`'s `acceptance_checklist.md`. Whichever is chosen, record
+it as a new decision. Do not let Phase `04_` reach its gate with this open.
+
+- **Reversible?** Yes — trivially, since nothing was built or waived permanently.
+
+---
+
+### D-002 · [2026-07-23] — QA mechanism: Path B, manual checklist
+
+- **Type:** gate / risk-acceptance
+- **Phase:** `01_` Batch 6, and every later gate's QA criterion
+- **Decided by:** owner
+- **Question:** build an automated smoke suite (Path A, requires a
+  devDependency and a `package.json` edit), or use a documented manual
+  checklist (Path B, creates no files)?
+
+**Decision: Path B — manual checklist.** Codex writes the ten checks into
+`01_phase_0_baseline/report.md` as a manual QA checklist. **No dependency is
+installed. No configuration is edited.** This keeps Phase 0 free of the only
+change that would have required relaxing the no-install rule, and matches the
+"do not expand scope" instruction for this gate.
+
+**Correction to a Codex claim.** The Phase 0 entry-gate report recorded
+`npm test` as "not run — D-002 is open; package path is unresolved."
+**That is incorrect.** `npm test` runs
+`python -m unittest tests.test_validator` plus
+`node --test tests/import_package.test.mjs tests/import_v4_package.test.mjs`.
+Both suites and all their fixtures already exist in `tests/`. `npm test` has
+**no dependency on D-002** and **must be run in Batch 2** as the package
+specifies. Expected: PASS, 10 tests.
+
+**Consequence — accepted, and it is a real cost.** QA sign-off is manual for the
+whole program. The weakest point is Phase `03_` (public data boundary), where
+the highest-probability regression is **silent content loss** when field
+allowlists tighten — a missing field renders as a page that looks fine. Manual
+checking detects this poorly.
+
+**Recommendation carried forward (not a blocker now):** revisit Path A before
+Phase `03_` begins. Ten Playwright assertions is a few hours of work and would
+convert that phase's gate from opinion into evidence. The HTML content-diff
+requirement in `03_`'s checklist is the compensating control until then, and it
+must not be skipped.
+
+- **Reversible?** Yes — Path A can be adopted at any later phase.
+
+---
+
+### D-004 · [2026-07-23] — The "1–2 second" baseline is formally discarded
+
+- **Type:** gate
+- **Phase:** all performance gates
+- **Decided by:** owner
+- **Question:** the original program brief stated that earlier query fixes had
+  reduced route rendering to "approximately 1–2 seconds." Does that figure stand?
+
+**Decision: discarded. It is not supported by any evidence in the repository.**
+
+Three independent observation sets, all transcribed verbatim in
+`01_phase_0_baseline/report.md` under "Prior evidence — PRESERVED VERBATIM":
+
+| Set | Date | Dataset | Observed |
+|---|---|---|---|
+| A | 2026-07-22 | 2 schools / 334 programs | **2.6s – 33s** (homepage 31.4s) |
+| B | 2026-07-23 | 20 schools / 1,938 programs | **3.4s – 7.7s**, median ≈ 4.4s |
+| C | 2026-07-23 | Batch 0 full-file preservation | same session as B, complete |
+
+**No observation anywhere approaches 1–2 seconds.** The nearest is 3.4s, on a
+dev server, on a warm route, with compile time excluded from the comparison.
+
+Set B additionally shows five consecutive requests to the same school page at
+5.4 / 4.3 / 4.2 / 3.6s — **no warm-cache benefit**, exactly as `cache: "no-store"`
+at `lib/data.ts:165` predicts.
+
+**Consequences:**
+- No gate may cite "1–2 seconds" as a prior state or a target.
+- Sets A, B and C are **context, not the baseline**. They are dev-server figures
+  and are not comparable to each other (different link conditions, machine
+  state, routes; compile time in both).
+- The authoritative baseline is produced by **Phase 0 Batch 3** against a local
+  production build, ≥5 runs per route, medians, cold and warm separated.
+
+- **Reversible?** No — the figure is contradicted by evidence, not by preference.
+
+---
+
+### D-012 · [2026-07-23] — PHASE 0 ENTRY GATE: APPROVED
+
+- **Type:** approval
+- **Phase:** `01_` — entry
+- **Decided by:** owner
+- **Question:** may Codex execute Phase 0?
+
+**Decision: APPROVED. Codex is authorized to execute
+`improve_s/01_phase_0_baseline/codex_execution.md`, Batches 0 through 7.**
+
+**Entry preconditions — all satisfied:**
+
+| Precondition | Status |
+|---|---|
+| D-003 — working tree handling | ✅ Resolved. Tree clean, baseline `86c1db9` recorded |
+| D-001 — Preview environment | ✅ Not required for Phase 0 (scoped; open for later gates) |
+| D-002 — QA mechanism | ✅ Resolved — Path B, manual checklist |
+| D-004 — stale baseline discarded | ✅ Resolved |
+| Branch `perf/s0-baseline` exists | ✅ Created from `86c1db9` |
+| Rollback point recorded | ✅ `rollback_history.md` |
+| Approved plan exists | ✅ `01_phase_0_baseline/claude_plan.md` |
+
+**Standing constraints — unchanged, and binding:**
+- Phase 0 changes **no application code**. Rules F1–F14 apply in full.
+- Batch 2 **must run `npm test`** (see the D-002 correction above).
+- Batch 6 follows **Path B** — create no files, install nothing.
+- Any stop condition S1–S13 halts execution. Do not fix; report.
+- **Do not push.** The `output/` remote-visibility question from D-003 is
+  unresolved and gates `git push`, not local commits.
+
+**Not approved by this decision:** Phases `02_`–`06_`, any optimization work,
+any dependency installation, any Directus or configuration change.
+
+**Still open:** D-005, D-006, D-007, D-008, D-009, D-010, and D-001 for the
+later gates. None blocks Phase 0.
+
+- **Reversible?** Yes — Phase 0 is read-only with respect to application code;
+  revert to `86c1db9`.
