@@ -1025,3 +1025,60 @@ without a fresh owner decision after infrastructure review.
 **Commit SHA:** recorded by the Batch 4 retry stop-record commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 4 — D-014 causal correction; one further attempt authorized
+
+- **Actor:** Owner (causal disclosure) / Claude (assessment)
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `01_phase_0_baseline/codex_execution.md` — Batch 4 retry protocol
+- **Approved by owner:** yes — decisions.md ref: **D-015**
+
+**Files modified:** 3 documentation files under `improve_s/`
+**Files added:** none · **Files deleted:** none (all 4 Batch 4 artifacts retained per instruction)
+**Dependency changes:** none · **Configuration changes:** none
+**Database changes:** none · **Directus permission changes:** none
+**Application code changes:** none
+
+**Disclosure:** both Batch 4 failures (initial attempt and the D-014-authorized
+retry) occurred because the owner manually stopped the server environment
+during those windows. Directus was unavailable by operator action, not ambient
+network degradation. The environment has since been restored. `git status`
+confirms no application code, Directus configuration, permission, or dependency
+changed at any point.
+
+**Assessment:**
+1. **D-014's "suspected transient network degradation" hypothesis is
+   retracted** — it was an unconfirmed inference, now superseded by the
+   disclosed cause. S7 was still correctly triggered on both attempts;
+   Codex's conduct was correct throughout.
+2. **The two failures no longer count as link/network instability evidence.**
+   They must not be cited to support the ~0.2 MB/s flaky-link hypothesis in
+   `optimization_scope.md`. Reclassified to a narrower, still-valid value:
+   `loadDirectusData()` has no graceful-degradation path when Directus is
+   unreachable for any reason, and `directusFetch()`'s error is an
+   undifferentiated `fetch failed` regardless of cause — both retained as
+   observations, not action items.
+3. **One further Batch 4 attempt authorized**, as a resumption under a
+   disclosed and resolved cause — not a third attempt at D-014's unexplained
+   two-attempt cap. That general cap is unchanged for future, genuinely
+   unexplained S7 stops. If this new attempt also fails, it is new evidence
+   requiring a fresh decision.
+
+**Status changes:**
+- `report.md` — ⛔ retry-cap-exhausted → 🟡 cause identified, one further
+  attempt authorized. All prior stop/retry records retained as history; a new
+  blockquote appended, nothing overwritten.
+- All four Batch 4 artifacts retained unmodified, per instruction.
+
+**Outcome:** completed. Continuation decision resolved.
+
+**Explicitly NOT authorized:** any application code, Directus permission,
+configuration, or dependency change; a second further retry without a fresh
+decision if this next attempt also fails; redefinition of the general
+two-attempt retry cap for future unexplained failures.
+
+**Next action:** Codex retries Batch 4 once, per D-015. On success, continue
+through Batch 7. On failure, stop under S7 and return to the owner as new,
+unexplained evidence.
+
+---

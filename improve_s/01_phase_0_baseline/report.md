@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** ⛔ **BATCH 4 RETRY FAILED — S7; D-014 two-attempt cap exhausted**
-**Completed:** No — Batches 0–3 complete and valid; both Batch 4 attempts failed; Batches 5–7 not executed
+**Status:** 🟡 **CAUSE IDENTIFIED (D-015) — one further Batch 4 attempt authorized**
+**Completed:** No — Batches 0–3 complete and valid; two Batch 4 attempts failed for a now-known, resolved cause; retry pending; Batches 5–7 not executed
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -81,6 +81,36 @@
 > raw `fetch failed` and no completed Directus HTTP response. The two-attempt
 > cap is exhausted. Do not attempt a third retry; escalate as a suspected
 > Directus host/link infrastructure issue.
+>
+> **Cause disclosed — see `logs/decisions.md` D-015. Both failures were
+> operator-caused, not infrastructure instability.** The owner manually stopped
+> the server environment during both windows; Directus was unavailable by
+> design, not by degradation. The environment has been restored. No
+> application code, Directus configuration, permissions, or dependency changed
+> at any point (confirmed by `git status` before and after).
+>
+> **D-014's "suspected transient network degradation" hypothesis is
+> retracted** — it was a reasonable but unconfirmed inference at the time, now
+> superseded by the actual cause. **The two failures no longer count as
+> evidence of link/network instability** and must not be cited to support the
+> ~0.2 MB/s flaky-link hypothesis documented in `optimization_scope.md`. They
+> retain a narrower value: they show `loadDirectusData()` has no
+> graceful-degradation path when Directus is unreachable for *any* reason
+> (a generic error-boundary 200 response in both cases), and that
+> `directusFetch()`'s error surfaces as an undifferentiated `fetch failed` with
+> no distinguishing detail between "service stopped" and "network flake" —
+> both retained as observations, not action items.
+>
+> **All four Batch 4 artifacts are retained** — `batch4_home.stdout.txt`,
+> `batch4_home.stderr.txt`, `batch4_retry_home.stdout.txt`,
+> `batch4_retry_home.stderr.txt`. Only their evidentiary label changes.
+>
+> **One further Batch 4 attempt is authorized (D-015).** This is a resumption
+> under a disclosed, resolved cause — not a third attempt at the same
+> unexplained retry loop D-014 capped at two. The general two-attempt cap for
+> genuinely *unexplained* connectivity failures is unchanged for any future,
+> new S7 stop. If this attempt also fails, that is new evidence requiring a
+> fresh decision, not a continuation of this one.
 
 ---
 

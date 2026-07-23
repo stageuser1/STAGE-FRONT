@@ -584,3 +584,105 @@ Phase 0 generally.
 - **Reversible?** Yes — this is a resume authorization, not an application
   change. If the retry fails, Phase 0 simply stops again, cleanly, with the
   same rollback point (`86c1db9`) intact.
+
+---
+
+### D-015 · [2026-07-23] — D-014 causal correction: operator-caused outage, not link instability; one further retry authorized
+
+- **Type:** gate / risk-acceptance
+- **Phase:** `01_` Batch 4
+- **Decided by:** owner (causal disclosure) / Claude (assessment)
+- **Question:** the owner has disclosed that both Batch 4 `schools` fetch
+  failures occurred because **the owner manually stopped the server
+  environment** during those windows — Directus was unavailable due to this
+  operator action, not ambient network conditions. The environment has since
+  been restored; no application code, Directus configuration, permissions, or
+  dependencies changed. Does this change the D-014 assessment, do the two
+  failures still count as infrastructure-instability evidence, and is a further
+  retry appropriate?
+
+#### 1. Updated assessment, superseding the D-014 causal hypothesis
+
+**D-014's causal hypothesis — "suspected transient network degradation" — is
+retracted.** It was a reasonable inference from the available signals at the
+time (fast success in Batch 3, slow hang-then-fail shape, no repo/config
+change, a documented history of link volatility), but it was an inference, not
+a confirmed cause, and it was explicitly logged as unconfirmed ("one data point,
+not confirmed"). **The actual cause is now known: the owner stopped the server
+environment during both windows.** That fully explains `fetch failed` with no
+completed HTTP response on both attempts — Directus was not reachable at all
+during either window, by design, not by degradation.
+
+**Per the append-only log policy, D-014 is not edited — this entry corrects it.**
+
+**What does NOT change:**
+- S7 was still correctly triggered, on both attempts. "Directus is unreachable"
+  is exactly what happened, regardless of why. No rule defect, then or now.
+- No application code, Directus permission, configuration, or dependency
+  changed at any point — confirmed again by `git status` before this entry.
+- Codex's conduct was correct throughout: stop, do not fix, report.
+
+#### 2. Do the two prior failures still count as infrastructure-instability evidence?
+
+**No — not as evidence of ambient link/network instability. That specific
+characterization in D-014 is retracted.** The two failures do not support the
+"link drops to ~0.2 MB/s" hypothesis documented elsewhere in this program
+(`optimization_scope.md`); they were a controlled, operator-initiated outage,
+unrelated to the Alibaba-hosted link's actual behavior when up.
+
+**They retain a narrower, still-valid evidentiary value, reclassified:**
+
+| Value | Status |
+|---|---|
+| Evidence of ambient Directus/link network instability | **Retracted** — cause is known and unrelated |
+| Evidence that `loadDirectusData()` has no graceful-degradation path when Directus is unreachable for *any* reason | **Retained** — the app's error boundary produced a generic 200-with-error-page response in both cases; this is a real, general resilience observation, independent of cause |
+| Evidence that `directusFetch()`'s error surfaced as an undifferentiated `fetch failed` with no distinguishing detail between "service down" and "network flake" | **Retained as an observability note** — worth a "known measurement limitation" line, not an action item; changing this would be an application-code change and is out of scope here |
+
+**Do not delete the artifacts.** Per the owner's instruction, all four Batch 4
+files (`batch4_home.stdout.txt`, `batch4_home.stderr.txt`,
+`batch4_retry_home.stdout.txt`, `batch4_retry_home.stderr.txt`) are retained.
+Their *label* changes — from "suspected link fragility" to "confirmed
+operator-caused outage, retained for the resilience observation above" — the
+underlying files do not change.
+
+#### 3. Is a further Batch 4 retry appropriate?
+
+**Yes — one further attempt is authorized. This is a resumption under a
+disclosed and resolved cause, not a third attempt at the same unexplained
+retry-loop D-014 capped at two.**
+
+The original two-attempt cap in D-014 existed specifically to prevent Codex
+from retrying indefinitely against an **unknown, possibly unfixable**
+condition. That premise no longer holds: the cause is now known (operator
+action), disclosed, and the owner states the environment is restored. Treating
+this next attempt as "blindly trying a third time" would misapply a safeguard
+designed for a different situation.
+
+**This authorization is scoped narrowly to the current incident** — it does not
+redefine the general two-attempt retry cap in `codex_execution.md` for future,
+genuinely unexplained connectivity failures. That protocol is unchanged and
+remains in force for any *new* unexplained S7 stop.
+
+**Conditions for this retry:**
+
+1. Retry Batch 4 exactly as specified in `codex_execution.md` — no batch
+   redesign, no change to the four required routes or the measurement procedure.
+2. No cool-down requirement beyond confirming the environment is actually
+   restored before starting (the 60 s wait existed to let an *ambient* condition
+   clear; that rationale does not apply to a resolved operator action, but
+   Codex should still confirm Directus responds before starting the full batch).
+3. **If this attempt also fails with a raw connectivity error, this is new
+   evidence, not covered by this authorization.** It would mean the disclosed
+   cause does not fully explain the failures, and Codex must stop under S7
+   again and return to the owner — do not attempt a further retry without a new
+   decision.
+4. **If it succeeds:** proceed through Batch 5, 6 (Path B), and 7 under the
+   existing plan. Retain the two prior failed attempts in the report, relabeled
+   per §2 above.
+5. Unchanged from D-014: no application code, Directus permission, token,
+   network, or dependency change is authorized by this decision, regardless of
+   outcome.
+
+- **Reversible?** Yes — this authorizes one attempt; if it fails, Phase 0 stops
+  again cleanly at the same rollback point (`86c1db9`), and the new failure is
+  assessed fresh rather than assumed to have the same explanation.
