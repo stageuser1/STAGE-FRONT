@@ -323,7 +323,7 @@ Claude. **Do not attempt a fix. Do not continue to the next batch.**
 | S4 | `git status` shows a modified tracked file in Batch 1 |
 | S5 | The working tree cannot be cleaned |
 | S6 | Any route returns non-200 |
-| S7 | Directus is unreachable, or errors mid-measurement |
+| S7 | Directus is unreachable, or returns an error **of a class not previously seen** — see "Known Directus behaviour" below |
 | S8 | Any route is **not** dynamic in the build output |
 | S9 | Timing variance makes medians meaningless |
 | S10 | RSC capture shows zero internal fields on every route (method is wrong) |
@@ -333,6 +333,50 @@ Claude. **Do not attempt a fix. Do not continue to the next batch.**
 
 When stopping, report: which batch, which condition, the exact command, the
 complete output, and the current `git status`.
+
+### Known Directus behaviour — expected, do NOT stop on it
+
+**Corrected 2026-07-23 (D-013).** S7 previously read "errors mid-measurement",
+which is broader than the governing rule in
+`00_program_overview/execution_rules.md` §5 condition 3 ("any Directus error
+class **not previously seen**"). That over-broad wording caused a false stop.
+S7 is now aligned with the governing rule.
+
+**Expected observation — HTTP 403 on `audition_requirements`, followed by a
+successful retry on the same collection.**
+
+`fetchAuditionRequirements()` (`lib/data.ts:947`) optimistically requests
+`prescreen_repertoire` and `audition_repertoire`, which **do not exist in
+Directus yet**. Directus rejects queries naming unknown fields, so the function
+catches the failure and re-requests the base field list. The source comment at
+`lib/data.ts:939-945` documents this as deliberate; `skills/backend_engineer_role.md`
+records it as a known quirk. The `"field" in record` detection activates
+automatically when the columns are added.
+
+Signature of the expected pattern:
+
+```text
+[P0_DIRECTUS_START] id=4 collection=audition_requirements method=GET
+[P0_DIRECTUS_END]   id=4 collection=audition_requirements status=403 ...
+[P0_DIRECTUS_START] id=6 collection=audition_requirements method=GET   ← fallback
+[P0_DIRECTUS_END]   id=6 collection=audition_requirements status=200 ...
+```
+
+**Record it as a baseline observation. Do not stop.** It is real baseline data:
+the documented double round trip that Phase `04_` will remove.
+
+**This exception is narrow. S7 still applies — stop — if any of these occur:**
+
+| Condition | Why it is different |
+|---|---|
+| The **fallback retry also fails** (403, 5xx, or timeout) | The known quirk always recovers. A failing fallback means genuine loss of access. |
+| A 403 on **any other collection** — `schools`, `program_offerings`, `application_requirements`, `source_records` | No documented fallback exists; would indicate a permissions regression |
+| A 403 **without** an immediately following retry on the same collection | Not the documented code path |
+| Any **4xx other than 403**, or any **5xx**, on any collection | Not a previously seen class |
+| Directus unreachable, connection refused, or timeout | Unchanged |
+
+If in doubt whether an observation matches the expected pattern, **stop and
+report**. The exception covers exactly one signature and nothing else.
 
 ---
 

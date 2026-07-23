@@ -1,7 +1,7 @@
 # Phase 0 — Baseline · Report
 
-**Status:** ⛔ **STOPPED IN BATCH 3 — S7 (Directus HTTP 403 during measurement)**
-**Completed:** No — Batches 4–7 were not executed
+**Status:** 🟢 **S7 STOP OVERTURNED (D-013) — cleared to resume at Batch 4**
+**Completed:** No — Batches 0–3 complete; Batches 4–7 pending
 **Branch:** `perf/s0-baseline`
 **Baseline commit SHA:** `86c1db9ccda8e71a73603454a625652e7df8177b`
 
@@ -19,8 +19,28 @@
 > 2. **Batch 6 follows Path B.** The run stopped before Batch 6, so no checklist
 >    or smoke-suite file was created and nothing was installed.
 
-> This document is **not yet a valid program baseline** because Phase 0 stopped
-> under S7. No later phase may treat the partial measurements as an exit gate.
+> This document is **not yet a valid program baseline** — Batches 4–7 remain
+> outstanding. No later phase may treat the partial measurements as an exit gate
+> until Phase 0 completes and the owner signs `acceptance_checklist.md`.
+
+> **Batch 3 S7 stop — OVERTURNED as a false positive. See `logs/decisions.md` D-013.**
+>
+> The 403 on `audition_requirements` followed by a successful retry is the
+> documented `fetchAuditionRequirements()` fallback (`lib/data.ts:947`), recorded
+> before this run in the source comment at `lib/data.ts:939-945` and in
+> `skills/backend_engineer_role.md`. It is **expected behaviour and a valid
+> baseline observation**, not an error class requiring a halt.
+>
+> **Codex applied S7 correctly as written.** The defect was in the Phase 0
+> package: S7 read "errors mid-measurement", broader than the governing rule in
+> `execution_rules.md` §5 ("any Directus error class **not previously seen**").
+> S7 has been rewritten and a narrow "Known Directus behaviour" exception added.
+>
+> **Batch 3 is complete and its data is valid — do not re-run it.** All 40
+> timings returned HTTP 200. Resume at **Batch 4**.
+>
+> **Do not "fix" the 403.** No Directus permission change, no added columns, no
+> removal of the optimistic query.
 
 ---
 

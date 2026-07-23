@@ -348,3 +348,114 @@ later gates. None blocks Phase 0.
 
 - **Reversible?** Yes — Phase 0 is read-only with respect to application code;
   revert to `86c1db9`.
+
+---
+
+### D-013 · [2026-07-23] — Batch 3 S7 stop: false positive; resume at Batch 4
+
+- **Type:** gate / scope
+- **Phase:** `01_` Batch 3 → 4
+- **Decided by:** owner
+- **Question:** Codex halted Batch 3 under S7 after observing a Directus
+  HTTP 403 on `audition_requirements` followed by a fallback retry. Was the stop
+  correct, is this a blocker, and what is required to resume?
+
+#### 1. Was S7 correctly triggered?
+
+**Yes — as written. Codex behaved correctly and is not at fault.**
+
+S7 read: *"Directus is unreachable, or errors mid-measurement."* A 403 is an
+error and it occurred mid-measurement. Codex applied the rule literally, halted
+without attempting a fix, preserved artifacts, and reported. That is exactly the
+discipline the program requires.
+
+**The rule was defective, not the execution.** S7 contradicted the governing
+rule in `00_program_overview/execution_rules.md` §5 condition 3 — *"any Directus
+error class **not previously seen**"* — which is narrower and correct. This error
+class **had** been seen and was documented in three places before the run:
+
+- `lib/data.ts:939-945` — source comment describing it as deliberate
+- `improve_s/skills/backend_engineer_role.md` — "Known quirk" section
+- project memory
+
+Under the governing rule the run should have continued. The over-broad S7
+wording is a **drafting error in the Phase 0 package**, authored by Claude.
+
+#### 2. Baseline observation or measurement blocker?
+
+**Baseline observation. Not a blocker.**
+
+Evidence — `batch3_probe_server_20260723_1208.stdout.txt`:
+
+```text
+[P0_DIRECTUS_START] id=4 collection=audition_requirements method=GET
+[P0_DIRECTUS_END]   id=4 collection=audition_requirements status=403 duration_ms=160
+[P0_DIRECTUS_START] id=6 collection=audition_requirements method=GET
+[P0_DIRECTUS_END]   id=6 collection=audition_requirements status=200 duration_ms=2302
+```
+
+This is precisely `fetchAuditionRequirements()` (`lib/data.ts:947`): request the
+optional `prescreen_repertoire` / `audition_repertoire` columns, which do not
+exist in Directus; catch the 403; re-request the base field list. The page
+returned 200.
+
+**It is not a permissions regression.** Had the token lost access to
+`audition_requirements`, the fallback (id=6) would also have failed. It returned
+200. The other four collections returned 200 on first request.
+
+**It is valuable baseline data**, not noise: it is the documented *sixth*
+request — the double round trip that Phase `04_` caching will eliminate — and it
+cost 160 ms + 2,302 ms on that collection.
+
+**Directus timing captured by the probe (per render, concurrent via `Promise.all`):**
+
+| id | Collection | Status | Duration |
+|---:|---|---:|---:|
+| 1 | `schools` | 200 | 107 ms |
+| 3 | `application_requirements` | 200 | 1,399 ms |
+| 2 | `program_offerings` | 200 | 1,902 ms |
+| 4 | `audition_requirements` | **403** | 160 ms |
+| 6 | `audition_requirements` (fallback) | 200 | 2,302 ms |
+| 5 | `source_records` | 200 | 2,970 ms |
+
+Wall-clock Directus time ≈ **2,970 ms** (concurrent, bounded by `source_records`)
+against a ~3.6–3.7 s page render — **roughly 80% of render time is Directus
+round trips.** This directly corroborates the program's diagnosis and is the
+single most useful number Phase 0 has produced.
+
+#### 3. Decision
+
+**The stop is overturned as a false positive. Phase 0 resumes at Batch 4.**
+
+**Batch 3 is COMPLETE and its data is VALID. Do not re-run it.** All 40 timing
+responses were HTTP 200 across the four required routes, cold and warm, on a
+local production build.
+
+**One Batch 3 sub-item was not obtained:** Directus link byte-rate. The
+instrumentation reported `body_bytes=0` — it did not expose response-body chunk
+sizes. Recorded as a **measurement limitation, not a re-run trigger**. The
+per-collection durations above are a better network-condition proxy than a byte
+rate would have been.
+
+**Corrections applied to `01_phase_0_baseline/codex_execution.md`:**
+
+1. **S7 rewritten** to align with `execution_rules.md` §5 condition 3 — now
+   "an error **of a class not previously seen**".
+2. **"Known Directus behaviour" section added**, specifying the expected
+   403-then-retry signature and instructing that it be recorded, not stopped on.
+3. **The exception is deliberately narrow.** S7 still fires — stop — if: the
+   fallback retry also fails; a 403 appears on any other collection; a 403
+   appears without an immediately following retry on the same collection; any
+   non-403 4xx or any 5xx occurs; or Directus is unreachable. If in doubt, stop.
+
+**Authorized:** Codex resumes at **Batch 4**, through Batch 7, under the
+unchanged plan. Batch 6 remains **Path B** (manual checklist, install nothing).
+
+**Not authorized by this decision:** re-running Batches 0–3; any application
+code change; **any Directus permission or schema change** — the 403 is expected
+behaviour and must not be "fixed" by granting field access or by adding the
+missing columns. Removing the optimistic query is likewise out of scope
+(`skills/backend_engineer_role.md`: the detection is deliberate).
+
+- **Reversible?** Yes — the correction is documentation-only; Batches 4–7 are
+  read-only with respect to application code.

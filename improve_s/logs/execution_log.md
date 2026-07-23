@@ -612,3 +612,63 @@ were not executed.
 **Commit SHA:** recorded by the Batch 3 stop-record commit
 
 ---
+
+### [2026-07-23] Phase 0 · Batch 3 S7 stop — reviewed and OVERTURNED
+
+- **Actor:** Claude (review) / Owner (decision)
+- **Branch:** `perf/s0-baseline`
+- **Plan reference:** `01_phase_0_baseline/codex_execution.md` — Batch 3, S7
+- **Approved by owner:** yes — decisions.md ref: **D-013**
+
+**Files modified:** 3 documentation files under `improve_s/`
+**Files added:** none · **Files deleted:** none
+**Dependency changes:** none · **Configuration changes:** none
+**Database changes:** none · **Directus permission changes:** none
+**Application code changes:** none
+
+**Typecheck / Build / Tests:** not re-run — this is a gate review, not execution
+
+**Findings:**
+
+1. **S7 was correctly triggered as written — Codex is not at fault.** It applied
+   the rule literally, halted without attempting a fix, preserved six artifacts,
+   and reported. Correct discipline.
+2. **The rule was defective.** S7 read "errors mid-measurement", contradicting
+   the governing rule in `execution_rules.md` §5 condition 3 ("any Directus error
+   class **not previously seen**"). Drafting error in the Phase 0 package,
+   authored by Claude.
+3. **The 403 is expected behaviour**, documented in three places before the run:
+   `lib/data.ts:939-945`, `skills/backend_engineer_role.md`, and project memory.
+   It is `fetchAuditionRequirements()` requesting two columns that do not exist
+   in Directus, catching the 403, and re-requesting the base field list.
+4. **Not a permissions regression** — the fallback returned 200; all other
+   collections returned 200 on first request.
+5. **Valuable baseline data recovered from the probe:** Directus wall-clock time
+   ≈ **2,970 ms** per render (concurrent, bounded by `source_records`) against a
+   ~3.6–3.7 s page render — **~80% of render time is Directus round trips.**
+   Per-collection: schools 107 ms · application_requirements 1,399 ms ·
+   program_offerings 1,902 ms · audition_requirements 403 @160 ms then
+   200 @2,302 ms · source_records 2,970 ms.
+
+**Corrections applied to `01_phase_0_baseline/codex_execution.md`:**
+- S7 rewritten to match `execution_rules.md` §5 condition 3
+- "Known Directus behaviour" section added with the exact expected signature
+- Exception scoped narrowly: S7 still fires if the fallback also fails, if a 403
+  appears on any other collection, if a 403 has no following retry, on any
+  non-403 4xx or any 5xx, or if Directus is unreachable
+
+**Status changes:**
+- `report.md` — ⛔ Stopped → 🟢 cleared to resume at Batch 4. Batch 3 recorded
+  as **complete and valid**; the stop record is retained as history.
+- Link byte-rate recorded as a **measurement limitation**, not a re-run trigger
+  (`body_bytes=0`; instrumentation did not expose body chunk sizes).
+
+**Outcome:** completed. Stop overturned as a false positive.
+
+**Explicitly NOT authorized:** re-running Batches 0–3; any Directus permission
+or schema change to "fix" the 403; removing the optimistic query.
+
+**Next action:** Codex resumes at **Batch 4** and runs through Batch 7.
+Batch 6 remains Path B.
+
+---
