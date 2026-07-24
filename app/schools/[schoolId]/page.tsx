@@ -11,11 +11,23 @@ import { SchoolVerificationCard } from "@/components/school/SchoolVerificationCa
 import { SchoolProfileCard } from "@/components/reviewer/SchoolProfileCard";
 import { FactRow } from "@/components/ui/FactRow";
 import { SectionCard } from "@/components/ui/SectionCard";
-import { getProgramsBySchoolId, getSchoolById } from "@/lib/data";
+import {
+  getAllSchools,
+  getProgramsBySchoolId,
+  getSchoolById,
+} from "@/lib/data";
 import { areaAnchorId } from "@/lib/format";
 import { buildSchoolDetailViewModel } from "@/lib/school-detail";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 900;
+
+export async function generateStaticParams() {
+  const schools = await getAllSchools();
+
+  return schools.map((school) => ({
+    schoolId: school.id,
+  }));
+}
 
 interface SchoolPageProps {
   params: Promise<{

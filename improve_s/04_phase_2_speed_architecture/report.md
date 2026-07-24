@@ -1,13 +1,18 @@
 # Phase 2 — Speed Architecture · Report
 
-**Status:** ⛔ **STOPPED in Batch 1 — P2-S8 and unplanned cache-size limit**
-**Stopped:** 2026-07-23 18:23 +08:00
+**Status:** ⛔ **STOPPED in revised Batch 2 QA — D-018 thesis passed; P2-S8 interrupted full GATE A acceptance**
+**Stopped:** 2026-07-24 11:11 +08:00
 **Branch:** `perf/s1-speed-track`
 **Rollback SHA:** `742e901bf036daed924ea7732f7b33ec1f800107`
 **Shell:** PowerShell
 **Environment:** local production build (`next build` + `next start`)
 
-GATE A was not reached. Batches 2–6 were not executed.
+The Batch 1 record below is retained as history. Revised Batch 2 was executed
+under D-018 and its authoritative evidence is in §13. The benchmark passed the
+Full Route Cache thesis check, but a later required raw-RSC/content-verification
+request to the unchanged dynamic program route received Directus HTTP 503.
+P2-S8 therefore stopped execution before the full GATE A checklist could pass.
+Batches 3–6 were not executed.
 
 ---
 
@@ -230,3 +235,269 @@ No visible-content difference was observed before the stop.
 - Batches 4–6: not executed and remain prohibited without owner approval.
 - Required next step: return the cache-size evidence to Claude/owner for a
   revised approved architecture. Codex did not improvise a fix.
+
+---
+
+## 13. Revised Batch 2 execution under D-018 — authoritative addendum
+
+This section supersedes the earlier statements that Batch 2 was not executed.
+The preceding sections remain unchanged as the historical Batch 1 stop record.
+
+### 13.1 Execution metadata
+
+| Field | Value |
+|---|---|
+| Batch | Revised Batch 2 only |
+| Date / window | 2026-07-24 11:03–11:11 +08:00 |
+| Branch | `perf/s1-speed-track` |
+| Starting HEAD | `64af4f4991e86f2ebb7421ad4394857eef29b2ee` (D-018 documentation commit) |
+| Batch 1 prerequisite | `fdf5cc7` retained; not rerun |
+| Shell | PowerShell |
+| Environment | Local production build (`next build` + `next start`) |
+| Outcome | Core benchmark PASS; mandatory stop under P2-S8 during later content verification |
+
+### 13.2 File accounting
+
+Application change before the stop:
+
+| Type | Files |
+|---|---|
+| Modified | `app/schools/[schoolId]/page.tsx`; this report; `improve_s/logs/execution_log.md` |
+| Added | none |
+| Deleted | none |
+| Dependency changes | none |
+| Configuration changes | none |
+| Database / schema changes | none |
+| Directus changes | none |
+| Other route changes | none |
+
+The application diff is exactly:
+
+```text
+ app/schools/[schoolId]/page.tsx | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+```
+
+The route now imports the existing `getAllSchools()`, exports
+`revalidate = 900`, and maps each existing school to
+`{ schoolId: school.id }` from `generateStaticParams()`. The prior
+`dynamic = "force-dynamic"` export was removed. No new query was added.
+
+### 13.3 Build, typecheck, and tests
+
+| Check | Result |
+|---|---|
+| `npm run typecheck` | PASS, exit 0, 8,966.583 ms |
+| `npm run build` | PASS, exit 0, 104,839.844 ms |
+| `npm test` | PASS, exit 0, 10/10 tests (2 Python + 8 Node), 3,126.975 ms |
+| 30-minute build stop threshold | Not triggered; build completed in 1m 44.840s |
+
+The expected >2 MB fetch Data Cache rejection warnings occurred during static
+generation for the four large collections. They did not prevent Full Route
+Cache output from being generated. No unexpected Directus HTTP status occurred
+during the build.
+
+Batch 2 build route table, verbatim:
+
+```text
+Route (app)                                      Size  First Load JS  Revalidate  Expire
+┌ ƒ /                                         1.85 kB         108 kB
+├ ○ /_not-found                                 994 B         103 kB
+├ ○ /login                                    2.69 kB         109 kB
+├ ƒ /pilot/program/[program_offering_ref]     3.97 kB         110 kB
+├ ƒ /pilot/school/[slug]                        161 B         106 kB
+├ ● /schools/[schoolId]                       1.13 kB         113 kB         15m      1y
+├   ├ /schools/juilliard                                                     15m      1y
+├   ├ /schools/manhattan_school_of_music                                     15m      1y
+├   ├ /schools/colburn                                                       15m      1y
+├   └ [+17 more paths]
+├ ƒ /schools/[schoolId]/programs/[programId]  9.28 kB         121 kB
+└ ƒ /search                                   1.85 kB         108 kB
++ First Load JS shared by all                  102 kB
+  ├ chunks/255-3981a3d1f3561bd8.js            46.2 kB
+  ├ chunks/4bd1b696-c023c6e3521b1417.js       54.2 kB
+  └ other shared chunks (total)               1.99 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+```
+
+### 13.4 Static generation result
+
+- Build progress completed `Generating static pages (24/24)`.
+- `/schools/[schoolId]` is `●` SSG with `Revalidate 15m`.
+- `.next/prerender-manifest.json` contains exactly **20** concrete one-level
+  school routes.
+- The generated set includes
+  `/schools/yale_school_of_music`.
+- The manifest contains all 20 existing school slugs; the build route table
+  reports three explicitly and `[+17 more paths]`.
+- `/`, `/search`, and
+  `/schools/[schoolId]/programs/[programId]` remain `ƒ`, as revised Batch 2
+  requires.
+- A local production request returned `x-nextjs-cache: HIT`,
+  `x-nextjs-prerender: 1`, and
+  `Cache-Control: s-maxage=900, stale-while-revalidate=31535100`.
+
+This confirms `generateStaticParams()` used the expected `school.id` values
+and that its output entered the Full Route Cache.
+
+### 13.5 Benchmark timing — before / after
+
+Route: `/schools/yale_school_of_music`
+
+| Phase | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Median |
+|---|---:|---:|---:|---:|---:|---:|
+| Batch 2 first/cold set | 34.580 ms | 5.639 ms | 4.430 ms | 5.251 ms | 4.533 ms | **5.251 ms** |
+| Batch 2 warm set | 4.235 ms | 4.514 ms | 4.265 ms | 23.896 ms | 4.874 ms | **4.514 ms** |
+
+Every request returned HTTP 200 and a 197,174-byte HTML response.
+
+| Comparison | Phase 0 | Revised Batch 2 | Change |
+|---|---:|---:|---:|
+| Cold/first-set median | 3,648.994 ms | 5.251 ms | 99.856% lower |
+| Warm median | 4,054.367 ms | **4.514 ms** | **99.889% lower; 898.2× faster** |
+| Warm target | — | `< 1000 ms` | PASS by 995.486 ms |
+
+The current result is a local-production Full Route Cache hit. It is not a
+Preview or production-deployment measurement.
+
+### 13.6 Directus request comparison
+
+The production server ran with the same process-local `diagnostics_channel`
+observer approach used by Phase 0; no application or configuration file was
+edited.
+
+| Benchmark request-time metric | Phase 0 | Revised Batch 2 warm window |
+|---|---:|---:|
+| Directus requests per school-detail render | 7 | **0** |
+| Directus response transfer per render | 27,322,807 bytes | **0 bytes** |
+| Observer starts during 5 cold + 5 warm benchmark requests | n/a | **0** |
+| Observer completions during benchmark requests | n/a | **0** |
+
+The observer log contained no `[P2_DIRECTUS_START]` or
+`[P2_DIRECTUS_END]` line before or during the ten benchmark requests. This is
+the D-018 thesis result: the large fetch responses remain uncacheable in the
+fetch Data Cache, but warm users are served the already-rendered route output
+and do not contact Directus.
+
+The later QA/content-verification window exercised unchanged dynamic routes and
+recorded 31 Directus starts/completions: 24 HTTP 200, 6 expected initial
+`audition_requirements` HTTP 403 responses, and **1 fallback HTTP 503**. The
+non-200 outside D-013 was:
+
+```text
+[P2_DIRECTUS_END] id=31 status=503 path=/items/audition_requirements?limit=-1&fields=id,program_offering_id,is_current,admission_cycle,review_status,prescreening_deadline,prescreening_required,Prescreening_required,audition_required,repertoire_summary,repertoire_structured,audition_format,video_requirements,file_format_requirements,accompaniment_requirements,interview_or_callback_requirements,special_notes,conditional_notes,notes
+```
+
+That event occurred during a raw RSC capture of the still-dynamic program route,
+not during the cached benchmark window. It triggered P2-S8. No retry or
+Directus change was attempted.
+
+### 13.7 Content and QA verification
+
+School content comparison against
+`01_phase_0_baseline/payloads/school_yale.rsc`:
+
+- Phase 0 RSC: 64 Flight records, 107,114 bytes.
+- Batch 2 prerendered RSC: 66 physical lines / 64 normalized Flight records,
+  107,225 bytes.
+- Static generation adds one preload record and shifts subsequent Flight
+  record IDs by one. After removing that protocol-only record and applying the
+  deterministic ID shift, **all 39 page-content records checked
+  (`8`, `1a`–`3f`) are byte-identical**.
+- Only root/infrastructure records `0` and `13` differ, as expected when the
+  route changes from dynamic rendering to prerendered output.
+- The served HTML contains the same school name, 76-program count, requirement
+  data, and citation content. No visible school-content difference was found.
+
+Path B checklist:
+
+| # | Check | Result |
+|---:|---|---|
+| 1 | `/` HTTP 200 + hero heading | PASS |
+| 2 | `/` lists school cards | PASS, 20 school links |
+| 3 | `/search` HTTP 200 | PASS |
+| 4 | `/search?country=US` HTTP 200 + filter state | PASS; filter state rendered, existing exact-match behavior returned 0 items |
+| 5 | Yale school HTTP 200 + school name | PASS |
+| 6 | Yale page lists program count | PASS, 76 |
+| 7 | Program 1190 HTTP 200 | PASS |
+| 8 | Program requirement content | PASS |
+| 9 | Program source citations | PASS |
+| 10 | `/login` HTTP 200 + hydrated login form | PASS in browser: email, password, and login controls present |
+
+The unchanged program page rendered valid HTML with requirement and citation
+content before the raw-RSC verification request hit the later Directus 503.
+The planned new raw program RSC semantic diff is therefore **incomplete under
+P2-S8**. Batch 0's prior program RSC semantic diff remains PASS, and Batch 2 did
+not modify the program route or its data path.
+
+### 13.8 Reviewer workflow
+
+- `/login` returned HTTP 200.
+- Hydrated UI showed the reviewer email field, password field, and login
+  button.
+- Authenticated reviewer login and an edit/save round-trip were **not
+  executed**: no reviewer credentials were supplied, and the user explicitly
+  prohibited Directus modification. No record write was attempted.
+
+### 13.9 P2-S8 stop handling
+
+The Directus 503 was discovered when the buffered server diagnostics were
+reviewed after the content-verification requests. One subsequent malformed
+local router-state-header probe had already run before that review; it produced
+a framework 500 (`router state header ... could not be parsed`) and made zero
+Directus requests. Once the P2-S8 evidence was identified:
+
+- the local production server was stopped;
+- port 3000 was confirmed free;
+- no retry was attempted;
+- no code, configuration, dependency, schema, record, permission, or Directus
+  change was made;
+- no Batch 3 work started.
+
+### 13.10 GATE A summary
+
+| Criterion | Target | Result |
+|---|---|---|
+| Warm benchmark Directus fetches | 0 | **PASS — 0 starts / 0 completions** |
+| Benchmark warm TTFB | < 1000 ms | **PASS — 4.514 ms median** |
+| Benchmark rendering mode | SSG/ISR | **PASS — `●`, 15m, cache HIT** |
+| Static params | one per school | **PASS — 20 concrete routes including Yale** |
+| School content identical | no visible change | **PASS — 39/39 content records identical after protocol normalization** |
+| Other three routes | not regressed | Build modes unchanged; Path B HTTP/content checks PASS |
+| Reviewer login + edit round-trip | works | **INCOMPLETE — login UI PASS; auth/edit prohibited/unavailable** |
+| QA checklist | 10 checks pass | **PASS — 10/10** |
+| Typecheck / build / tests | pass | **PASS / PASS / 10/10** |
+| No forbidden change | none | **PASS** |
+| No unexpected Directus status | required by P2-S8 | **FAIL — fallback HTTP 503 during program RSC verification** |
+
+**GATE A verdict: NOT PASSED / owner approval not requested from this run.**
+The Full Route Cache thesis and all benchmark-specific targets passed, but the
+mandatory P2-S8 stop and the prohibited/unavailable authenticated edit
+round-trip leave the complete gate unsatisfied. Per F12, Batch 3 and later
+batches remain prohibited.
+
+### 13.11 Known limitations
+
+- This is a local production build, not Preview; C4 / D-001 remains open for
+  the phase exit gate.
+- Link throughput was not independently measured. The decisive warm window
+  made zero Directus requests, so request-time Directus transfer is exactly
+  zero regardless of link rate.
+- Static generation still performs the 27.32 MB bulk Directus load and emits
+  the expected >2 MB fetch Data Cache rejection warnings; the Full Route Cache
+  removes that cost from warm request time, not from build/revalidation.
+- `/search?country=US` returns zero items because the existing search code
+  exact-matches `US` against stored country names such as `United States`.
+  This pre-existing behavior was not changed or fixed in Batch 2.
+
+### 13.12 Incomplete or blocked items
+
+- New program-page raw RSC semantic diff: interrupted by P2-S8.
+- Authenticated reviewer login + edit/save round-trip: not executed because no
+  credentials were provided and Directus modification is forbidden.
+- Full GATE A acceptance: not achieved.
+- Batch 3 and all later work: not started and prohibited pending a new
+  Claude/owner decision.

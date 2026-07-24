@@ -1776,3 +1776,97 @@ then stops at GATE A. GATE A now requires proof that a warm benchmark request
 performs 0 Directus fetches — the D-018 thesis check.
 
 ---
+
+### [2026-07-24] Phase 2 · Revised Batch 2 — benchmark SSG/ISR passed; P2-S8 stop during content verification
+
+- **Actor:** Codex
+- **Branch:** `perf/s1-speed-track`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` —
+  revised Batch 2 under D-018
+- **Approved by owner:** yes — user requested revised Batch 2 only
+- **Starting HEAD:** `64af4f4991e86f2ebb7421ad4394857eef29b2ee`
+- **Batch 1 prerequisite:** `fdf5cc7` retained; not rerun
+
+**Files modified:**
+- `app/schools/[schoolId]/page.tsx`
+- `improve_s/04_phase_2_speed_architecture/report.md`
+- `improve_s/logs/execution_log.md`
+
+**Files added / deleted:** none
+
+**Dependency / configuration / database / schema / Directus changes:** none
+
+**Other route changes:** none
+
+**Application diff:**
+
+```text
+ app/schools/[schoolId]/page.tsx | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+```
+
+The route removed `dynamic = "force-dynamic"`, added `revalidate = 900`, and
+added `generateStaticParams()` using the existing `getAllSchools()` and
+`{ schoolId: school.id }`. No new query was added.
+
+**Typecheck:** PASS, exit 0, 8,966.583 ms
+
+**Build:** PASS, exit 0, 104,839.844 ms. Build output marked
+`/schools/[schoolId]` as `●` SSG with `15m` revalidation and reported three
+paths plus `[+17 more paths]`. `.next/prerender-manifest.json` contains exactly
+20 concrete school routes including `/schools/yale_school_of_music`. `/`,
+`/search`, and the program route remained dynamic.
+
+**Tests:** PASS, exit 0, 10/10 (2 Python validator + 8 Node importer),
+3,126.975 ms.
+
+**Benchmark measurements — local production build:**
+
+| Phase | Runs (ms) | Median | Phase 0 median | Change |
+|---|---|---:|---:|---:|
+| Cold/first set | 34.580, 5.639, 4.430, 5.251, 4.533 | 5.251 ms | 3,648.994 ms | 99.856% lower |
+| Warm | 4.235, 4.514, 4.265, 23.896, 4.874 | **4.514 ms** | 4,054.367 ms | **99.889% lower; 898.2× faster** |
+
+All ten benchmark requests returned HTTP 200. Response headers included
+`x-nextjs-cache: HIT`, `x-nextjs-prerender: 1`, and
+`Cache-Control: s-maxage=900`.
+
+**D-018 thesis check:** PASS. The process-local diagnostics subscriber recorded
+zero Directus starts and zero completions during the five cold/first and five
+warm benchmark requests. Phase 0 was 7 Directus requests and 27,322,807 bytes
+per school-detail render; revised Batch 2 warm request-time values are 0
+requests and 0 Directus bytes.
+
+**Content / QA:**
+- Yale prerendered RSC contains the same 39 page-content Flight records as the
+  Phase 0 capture after normalizing only the static-generation protocol record
+  and deterministic one-record ID shift. Only root/infrastructure records
+  differ.
+- Path B QA passed 10/10: homepage hero + 20 school links; search and country
+  filter state; Yale name + 76-program count; program 1190 requirements +
+  citations; hydrated login form.
+- Reviewer login UI passed. Authenticated login plus edit/save was not run
+  because no credentials were supplied and Directus modification is forbidden.
+
+**Stop condition — P2-S8:** During the later required raw-RSC content
+verification of the unchanged dynamic program route, the Directus observer
+recorded one fallback `audition_requirements` HTTP 503. The post-benchmark QA
+window totals were 31 starts/completions: 24 HTTP 200, 6 expected initial 403,
+and 1 HTTP 503. The new program RSC diff is incomplete.
+
+The 503 was found when buffered diagnostics were reviewed. A malformed local
+router-state-header probe had already run before that review; it produced a
+framework 500 and zero Directus requests. Once P2-S8 was identified, the
+server was stopped, port 3000 was confirmed free, no retry was attempted, and
+no Directus or other fix was made.
+
+**Outcome:** stopped in revised Batch 2 after the benchmark-specific GATE A
+thesis criteria passed but before the full gate checklist could be accepted.
+
+**GATE A:** NOT PASSED. Blocking items are P2-S8 and the prohibited/unavailable
+authenticated reviewer edit round-trip. Batch 3 and later batches were not
+started and remain prohibited.
+
+**Commit SHA:** recorded by this Batch 2 commit
+
+---
