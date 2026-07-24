@@ -1382,3 +1382,45 @@ loader.
 
 - **Reversible?** Yes — homepage reverts as one line; the narrowing is a
   documentation clarification.
+
+---
+
+### D-023 · [2026-07-24] — PHASE 3 (`03_`) ENTRY: approved, scope narrowed; D-007 reconfirmed deferred to Phase `05_`
+
+- **Type:** approval / scope
+- **Phase:** `03_` — entry
+- **Decided by:** owner
+
+#### Approved
+
+Codex is authorized to execute `03_phase_1_public_data_boundary/codex_execution.md`,
+Batches 0 through 5, under the narrowed scope below.
+
+#### D-007 — reconfirmed deferred
+
+**`/pilot/*` disposition (keep / gate / remove) stays deferred to Phase `05_`.**
+Not decided or executed here. No `/pilot/*` file may change in Phase `03_`.
+
+#### Scope narrowed for this entry — explicit exclusions
+
+The owner restricted Phase `03_` to exactly:
+- Public DTO type definitions
+- Server-side mapping (Directus row → public DTO)
+- Removing internal review fields from the RSC/client payload boundary
+- Preserving visible content exactly (no visible regression)
+
+**Explicitly excluded from this phase, regardless of what any prior document proposed:**
+- Any routing change
+- Any authentication change (Batch 3/4's client-side review-record load reuses
+  the *existing* `useReviewerAuth` request path already in production for PATCH —
+  it introduces no new auth mechanism; if it would require one, that is a stop
+  condition, not something to build)
+- Any Directus permission change (the public-role review remains read-only
+  documentation, per the original package — this entry does not authorize
+  softening that to a write)
+
+**Consequence for `codex_execution.md`:** rewritten to state these exclusions
+directly in the stop conditions, not just imply them via the allowlist.
+
+- **Reversible?** Yes — an entry-gate scope statement; no code executed by this
+  decision.
