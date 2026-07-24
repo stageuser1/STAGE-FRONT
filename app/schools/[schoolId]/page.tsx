@@ -15,6 +15,7 @@ import {
   getAllSchools,
   getProgramsBySchoolId,
   getSchoolById,
+  toPublicSchoolDto,
 } from "@/lib/data";
 import { areaAnchorId } from "@/lib/format";
 import { buildSchoolDetailViewModel } from "@/lib/school-detail";
@@ -73,7 +74,10 @@ export default async function SchoolPage({ params }: SchoolPageProps) {
             status={school.status}
           />
           <div className="relative z-[1] -mt-8 px-2 md:px-4">
-            <SchoolProfileCard programCount={programs.length} school={school} />
+            <SchoolProfileCard
+              programCount={programs.length}
+              school={toPublicSchoolDto(school)}
+            />
           </div>
         </div>
 
