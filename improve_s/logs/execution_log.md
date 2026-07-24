@@ -2037,3 +2037,112 @@ builds, runs the two-request cache verification, completes the interrupted RSC
 diff and Path B QA, then commits. Batches 4–6 follow under D-019.
 
 ---
+
+### [2026-07-24] Phase 2 · revised Batch 3 — STOPPED: on-demand route output was not cached
+
+- **Actor:** Codex
+- **Branch:** `perf/s1-speed-track`
+- **Starting SHA:** `3034b8f`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` · revised Batch 3
+- **Owner authorization:** D-020
+- **Shell:** PowerShell
+- **Execution window:** ended 2026-07-24 11:53 +08:00
+
+**Application change:** only
+`app/schools/[schoolId]/programs/[programId]/page.tsx`:
+
+- deleted the rejected `generateStaticParams()` function
+- removed `getAllPrograms` from the import
+- kept `export const revalidate = 900`
+
+The resulting application diff versus `fa43c9c` is exactly one line:
+`dynamic = "force-dynamic"` → `revalidate = 900`. The school route was not
+modified. No Directus, loader, dependency, configuration, schema, database,
+design, or content change was made.
+
+**Static verification:**
+
+| Check | Result |
+|---|---|
+| `npm run typecheck` | PASS, exit 0 |
+| `npm run build` | PASS, exit 0, 89.4 s |
+| `npm test` | PASS, exit 0, 10/10 (2 Python + 8 Node) |
+| Program build mode | `ƒ`, no prerendered program paths, as revised plan expected |
+| Static pages generated | 24/24; only the existing 20 school paths are parameterized |
+
+**Decisive local-production verification:**
+
+Route:
+`/schools/yale_school_of_music/programs/1190`
+
+| Request | HTTP | Time | `x-nextjs-cache` | `Cache-Control` | Directus starts |
+|---|---:|---:|---|---|---:|
+| First | 200 | 3,698.460 ms | absent | `private, no-cache, no-store, max-age=0, must-revalidate` | 6 |
+| Second | 200 | 3,465.152 ms | **absent** | `private, no-cache, no-store, max-age=0, must-revalidate` | **5** |
+
+Both responses were 99,601 bytes. The process-local diagnostics subscriber
+recorded 11 Directus starts and 11 completions in total. The first request made
+the four bulk collection requests, the expected `audition_requirements`
+403→fallback request, and one source-quote request. The second again made the
+four bulk requests plus the expected audition fallback. There were no
+unexpected Directus statuses or errors.
+
+**Stop condition:** D-020's explicit decisive condition. The second request did
+not return `x-nextjs-cache: HIT`, did not perform zero Directus requests, and
+did not complete under 1,000 ms. The generated response was therefore not
+stored in the Full Route Cache.
+
+**Outcome:** revised Batch 3 acceptance criteria NOT PASSED. The interrupted
+program RSC semantic diff, Path B QA, four-route measurement, and commit were
+not performed because the plan requires an immediate stop on this result.
+`generateStaticParams` was not restored, no narrow loader was created, Batch 4
+was not started, and no fix was improvised. The next option requires a new
+owner decision.
+
+---
+
+### [2026-07-24] Phase 2 · Batch 3 verification — D-020 corrected by D-021
+
+- **Actor:** Claude (review) / Owner (decision)
+- **Branch:** `perf/s1-speed-track`
+- **Approved by owner:** yes — decisions.md ref: **D-021**
+
+**Files modified:** 4 documentation files under `improve_s/`
+**Files added / deleted:** none
+**Dependency / configuration / database / Directus changes:** none
+**Application code changes:** none by this review — the working-tree program
+route (D-020 form: no `generateStaticParams`) will be edited by Codex next.
+
+**Typecheck / Build / Tests:** not run — gate review
+
+**Finding:** with `generateStaticParams` deleted, the program route built and
+passed typecheck but rendered **fully dynamic** — 2nd request: no
+`x-nextjs-cache`, 5 Directus requests, `Cache-Control: private, no-cache`.
+Verified the route uses **no dynamic API**, so nothing forces it dynamic; the
+cause is the **absent `generateStaticParams`**. In the App Router `revalidate`
+alone does not cache a dynamic segment — on-demand ISR requires
+`generateStaticParams` present + `dynamicParams: true`.
+
+**D-020 error owned:** "delete the function → on-demand ISR" was wrong; that is
+pure dynamic rendering. Second Next.js-semantics correction in the phase (D-018
+= build-time dedup; D-021 = on-demand-cache trigger). Both caught by the
+two-request proof gate — which is exactly why it exists.
+
+**Decision (D-021):** add a **small** non-empty `generateStaticParams` +
+`dynamicParams = true`, keep `revalidate = 900`. Build prerenders only the small
+subset (no 53 GB — D-020's bulk finding stands); every other page generates
+on-demand and Full-Route-Caches. Prove with the two-request test on a
+non-prebuilt page. **If it still does not cache → Option C: revert to dynamic,
+defer program-route optimization to the narrow loader, proceed to Batch 4.** No
+third mechanism without a new decision.
+
+**Rejected:** removing a "dynamic blocker" (none exists); bulk generateStaticParams
+(D-020); data-loader rewrite (out of scope).
+
+**Outcome:** completed. Re-revised Batch 3 authorised with a hard fallback.
+
+**Next action:** Codex edits the program route (small `generateStaticParams` +
+`dynamicParams = true`), builds, runs the two-request cache proof; commits if it
+caches, else takes Option C and proceeds to Batch 4.
+
+---

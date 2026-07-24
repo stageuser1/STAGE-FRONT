@@ -455,16 +455,28 @@ pages is fatal at 1,938. D-018 was right that it is irrelevant to warm
 request-time performance (GATE A proved that); it missed that the same rejection
 also removes build-time dedup.
 
-**Revised approach — delete `generateStaticParams`, keep `revalidate = 900`.**
-Nothing prerendered at build; each page renders on first request and is then
-Full-Route-Cached for 15 minutes. Build cost for this route ≈ 0.
+**Revised approach (D-021, corrects D-020) — SMALL `generateStaticParams` +
+on-demand fill.** Deleting `generateStaticParams` entirely (D-020) was wrong: it
+produced a fully dynamic route (`ƒ`, `Cache-Control: private, no-cache`, no
+HIT), because in the App Router `revalidate` alone does **not** cache a dynamic
+segment — **on-demand ISR requires `generateStaticParams` to be present**, with
+`dynamicParams: true` (default) generating and caching the pages not pre-listed.
 
-This is also the better architecture here: prerendering 1,938 pages spends 53 GB
-generating pages nobody may visit; on-demand pays only for pages requested.
+So: add `generateStaticParams` returning a **small non-empty subset** (a handful
+of programs — enough to register the route as `●` SSG), plus explicit
+`export const dynamicParams = true;`, keeping `revalidate = 900`. The build
+prerenders only that subset (no 53 GB); every other page is generated on first
+request and then Full-Route-Cached.
 
-**Must be proven, not assumed** (the Batch 1 lesson): request a program page
+This keeps D-020's real finding — **bulk generation of all 1,938 is out** — and
+on-demand pays only for pages actually visited.
+
+**Must be proven, not assumed** (this is the *second* Next.js-semantics miss in
+the phase; both caught by this gate): request a **non-prebuilt** program page
 **twice**; the second must return `x-nextjs-cache: HIT`, **0** Directus
-requests, **< 1000 ms**. If it does not cache, stop and report.
+requests, **< 1000 ms**. **If it does not cache → option C (defer): revert the
+route to dynamic, proceed to Batch 4, escalate to the narrow loader separately.**
+Do not attempt a third mechanism without a new decision.
 
 **Accepted limitations** — all with the same remedy, the deferred narrow loader:
 - First visitor per page per window still pays ~4 s / 27.32 MB

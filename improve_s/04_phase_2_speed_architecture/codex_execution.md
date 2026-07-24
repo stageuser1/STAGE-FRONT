@@ -258,47 +258,63 @@ just this route, is then in question.
 > the host returned 503 at `0/1962` in 54 s, twice. **Do not attempt
 > `generateStaticParams` on this route again.**
 
-**Starting point:** the working tree already carries the failed attempt.
-**Edit it — do not revert it, do not `git checkout` it.**
+> **Two prior Batch 3 attempts failed. Read D-020 and D-021 before touching
+> this route.**
+> - Bulk `generateStaticParams` (all 1,938) → 53 GB build → 503. **Banned.**
+> - No `generateStaticParams` at all → fully dynamic `ƒ`, no cache HIT. **Wrong.**
+> - **This attempt:** a *small* `generateStaticParams` + on-demand fill.
+
+**Starting point:** the working tree carries the D-020 attempt (no
+`generateStaticParams`). **Edit it — do not revert, do not `git checkout`.**
 
 **Only `app/schools/[schoolId]/programs/[programId]/page.tsx`:**
 
-1. **Delete** the `generateStaticParams` function entirely.
-2. **Remove `getAllPrograms`** from the `@/lib/data` import (keep
-   `getProgramById`).
-3. **Keep** `export const revalidate = 900;` exactly as is.
-
-Resulting diff vs. `fa43c9c` should be only: `force-dynamic` → `revalidate = 900`.
+1. Ensure `getAllPrograms` is imported from `@/lib/data` (re-add if absent).
+2. **Add** a `generateStaticParams` that returns a **SMALL non-empty subset** —
+   e.g. the first few programs from `getAllPrograms()` mapped to
+   `{ schoolId: program.school_id, programId: program.id }`. **Do NOT return all
+   1,938** (that is the banned 53 GB build) and **do NOT return `[]`** (empty is
+   unreliable — Next may treat it as fully dynamic). A handful is enough to
+   register the route as `●` SSG.
+3. **Add** `export const dynamicParams = true;` (explicit, though it is the
+   default) so pages outside the subset are generated on demand and cached.
+4. **Keep** `export const revalidate = 900;`.
 
 ```bash
 npm run typecheck && npm run build && npm test
 ```
 
-**Expected build:** completes quickly. Route table shows
-`/schools/[schoolId]/programs/[programId]` as **`ƒ`** with **no** prerendered
-program paths. That is correct — `ƒ` here does **not** mean uncached.
+**Expected build:** completes quickly (only the small subset prerenders). Route
+table shows `/schools/[schoolId]/programs/[programId]` as **`●` SSG** with a
+**small** prerendered count — **not** 1,938, **not** `ƒ`.
 
-#### ★ Decisive verification — prove the cache, do not assume it
+**Build fails with 503 →** the subset is too large. **P2-S8**, D-014 protocol,
+then stop. A handful of pages should never 503.
 
-Start the production server and request
-`/schools/yale_school_of_music/programs/1190` **twice**:
+#### ★ Decisive verification — prove the cache (this is the 2nd semantics miss)
+
+Start the production server and request a **NON-prebuilt** program page (pick one
+not in your subset — `/schools/yale_school_of_music/programs/1190` if it is not
+in the first few) **twice**:
 
 | Request | Expected |
 |---|---|
-| 1st (cold) | HTTP 200, ~4 s, full Directus load — **normal** |
+| 1st (cold) | HTTP 200, ~4 s, full Directus load — **normal** (on-demand generation) |
 | **2nd (warm)** | **`x-nextjs-cache: HIT`, 0 Directus requests, < 1000 ms** |
 
 Confirm zero `[P2_DIRECTUS_START]` lines during the second request.
 
-> **If the second request does NOT cache — STOP and report.** Do not improvise,
-> do not add `generateStaticParams` back. The next option requires a new
-> owner decision.
+> **If the second request does NOT cache → STOP and take OPTION C (D-021):**
+> revert this route to its dynamic state (`force-dynamic`, no
+> `generateStaticParams`), record it, and proceed to Batch 4. The program route
+> stays dynamic (Phase 0 behaviour, still correct) and its optimization escalates
+> to the narrow-loader work separately. **Do not attempt a third mechanism.**
 
 Then: the interrupted program-route RSC semantic diff vs.
 `01_phase_0_baseline/payloads/program_1190.rsc`, and Path B QA. Measure all four
 routes.
 
-**Commit:** `Phase 2 Batch 3: program detail route on-demand ISR`
+**Commit (if it caches):** `Phase 2 Batch 3: program detail route on-demand ISR`
 
 ---
 

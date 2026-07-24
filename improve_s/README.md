@@ -117,7 +117,7 @@ owner overrides this order, record the decision in `logs/decisions.md`.
 | Phase 0 — Baseline | `01_` | ✅ **COMPLETE — PASS WITH CONDITIONS (D-016)** |
 | Phase 0.5 — Transport security | `02_` | ⬜ Not started (parallel) |
 | Phase 1 — Data boundary | `03_` | ⬜ Not started |
-| Phase 2 — Speed architecture | `04_` | 🟢 **GATE A PASSED (D-019)** — thesis proven: school route 4,054 ms → **4.5 ms**, 0 Directus requests. Batches 3–6 authorised |
+| Phase 2 — Speed architecture | `04_` | 🔧 **Batch 3 iterating (D-021)** — school route done (4.5 ms); program route needs a small `generateStaticParams` for on-demand ISR; fallback = defer. Batches 4–6 pending |
 | Phase 3 — Cleanup | `05_` | ⬜ Not started |
 | Phase 4 — Final verification | `06_` | ⬜ Not started |
 

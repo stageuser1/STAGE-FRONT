@@ -1,6 +1,18 @@
 # Phase 2 — Speed Architecture · Report
 
-**Status:** 🔧 **Batch 3 approach REVISED (D-020) — stop upheld; on-demand ISR authorised**
+**Status:** 🔧 **Batch 3 approach RE-REVISED (D-021) — small `generateStaticParams` + on-demand fill**
+
+> **D-020 corrected by D-021, 2026-07-24.** Deleting `generateStaticParams` did
+> not produce on-demand ISR — it produced a fully dynamic route (`ƒ`,
+> `Cache-Control: private, no-cache`, no HIT, 5 Directus requests on the 2nd
+> call). In the App Router, `revalidate` alone does **not** cache a dynamic
+> segment; on-demand ISR requires `generateStaticParams` to be **present** with
+> `dynamicParams: true`. The corrected fix adds a **small** non-empty
+> `generateStaticParams` (no 53 GB build) so unlisted pages generate on demand
+> and cache. This is the second Next.js-semantics miss in the phase — both
+> caught by the mandatory two-request proof gate. If the corrected form still
+> does not cache, the pre-authorized fallback is **Option C: defer the program
+> route (leave it dynamic), proceed to Batch 4.** Below is retained history.
 
 > **Batch 3 reviewed 2026-07-24 — see `logs/decisions.md` D-020.**
 >

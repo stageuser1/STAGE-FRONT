@@ -1189,3 +1189,111 @@ to register the route as SSG with on-demand fill, which requires a new decision.
 
 - **Reversible?** Yes — the program route reverts as one file; the school route
   and its proven gains are untouched.
+
+---
+
+### D-021 · [2026-07-24] — D-020 correction: `revalidate` alone does not cache a dynamic route; on-demand ISR needs a (small) `generateStaticParams`
+
+- **Type:** gate / architecture correction
+- **Phase:** `04_` Batch 3
+- **Decided by:** owner
+- **Question:** with `generateStaticParams` deleted (D-020), the program route
+  built and passed, but a second request showed no `x-nextjs-cache`, 5 Directus
+  requests, and `Cache-Control: private, no-cache`. Why can it not enter the
+  Full Route Cache, and what is the minimal next step?
+
+#### Own the error first
+
+**D-020's premise was wrong, and it is mine.** I reasoned that deleting
+`generateStaticParams` while keeping `revalidate = 900` would yield "on-demand
+ISR — render on first request, then cache." It does not. That produced **pure
+dynamic rendering**, exactly as the evidence shows.
+
+This is the **second** Next.js caching-semantics correction in this phase
+(D-018 missed build-time dedup; D-021 missed the trigger for on-demand caching).
+Both were caught by the **mandatory two-request proof gate** — which is the
+entire reason that gate exists. The pattern is now explicit: **prove Next.js
+cache behaviour by measurement; never infer it.**
+
+#### 1. Why the program route cannot enter the Full Route Cache
+
+Verified: the route uses **no dynamic API** — no `cookies()`, `headers()`,
+`searchParams`, `noStore()`. Nothing in the code forces dynamic rendering.
+
+The cause is the **absence of `generateStaticParams`**. In the Next.js App
+Router, a dynamic segment (`[schoolId]/[programId]`) is rendered dynamically
+(`ƒ`) **unless `generateStaticParams` is present**. `revalidate` by itself does
+not make a dynamic route cacheable — it sets the window for a route that is
+*already* static/ISR.
+
+**On-demand ISR** — generating and caching pages for params not pre-listed — is
+a feature of **`generateStaticParams` + `dynamicParams: true`** (the default),
+**not** of `revalidate` alone. With no `generateStaticParams` at all, Next.js
+never registers the route as statically optimizable, so every request renders
+dynamically and emits `Cache-Control: private, no-cache`.
+
+The one config difference between the working school route and the broken
+program route confirms it exactly:
+
+| | `generateStaticParams` | `revalidate` | Result |
+|---|:---:|:---:|---|
+| school route | ✅ | 900 | `●` SSG, cache HIT, 4.5 ms |
+| program route | ❌ | 900 | `ƒ` dynamic, no cache, 3,698 ms |
+
+Corroboration: 6 → 5 Directus requests between the two requests is the 9 KB
+`schools` response (under 2 MB) being served from the fetch Data Cache on the
+second call, while the four >2 MB responses re-fetch. The Data Cache works for
+the one small collection; the route is simply not route-cached.
+
+#### 2. Minimal next step — **A, corrected: a *small* `generateStaticParams` + on-demand fill**
+
+Not the D-020 empty/absent form. Add `generateStaticParams` returning a **small
+non-empty subset** (a handful of programs — enough to register the route as `●`
+SSG), and keep `dynamicParams: true` (the default, stated explicitly for
+clarity). Then:
+
+- Build prerenders only that small subset — **no 53 GB build** (D-020's real
+  finding stands: bulk generation is out).
+- Every other program page is generated **on first request and then
+  Full-Route-Cached** — genuine on-demand ISR, which requires the function to
+  exist.
+
+Against the offered options:
+
+| Option | Verdict |
+|---|---|
+| **A — partial/minimal `generateStaticParams`** ✅ | The correct minimal fix. One small function; no data-loader change; the pre-authorized on-demand path, now implemented the way Next.js actually requires. |
+| B — remove a dynamic-rendering blocker | ✅ *is* A in effect — but there is **no dynamic-API blocker to remove** (verified). The "blocker" is the *missing* function, so the fix is to add it, not remove something. |
+| C — defer the program route, continue Batches 4–5 | The **pre-authorized fallback** if A does not prove out. Not first choice: A is a few lines and the program route is the highest route-level-JS page in the app (121 KB). But deferring is safe — the route already works, just dynamically (Phase 0 behaviour), and the school route is already fixed. |
+| D / full narrow-loader rewrite | ❌ Not now. Explicitly out of scope per the request. Remains the escalation path if on-demand 503s appear once live. |
+
+#### 3. Prove it — again, do not assume
+
+Same two-request gate, now with a corrected expectation:
+
+> After the small `generateStaticParams`: the build shows `●` SSG with a small
+> prerendered count. Request a **non-prebuilt** program page (e.g. Yale 1190 if
+> it is not in the subset) **twice**. The **second** request must return
+> `x-nextjs-cache: HIT`, **0** Directus requests, **< 1000 ms**.
+
+**If the second request still does not cache → STOP and take option C** (revert
+the program route to leave it as-is/dynamic, proceed to Batch 4). Do not attempt
+a third mechanism without a new decision. Two Next.js-semantics misses is enough;
+the third response to failure is to defer, not to guess again.
+
+#### Decision
+
+- **Revised Batch 3 (D-021):** on the working-tree program route, **add**
+  `generateStaticParams` returning a small non-empty subset of programs from the
+  existing `getAllPrograms()`, and **add** `export const dynamicParams = true;`.
+  Keep `revalidate = 900`. Re-import `getAllPrograms`.
+- Build, typecheck, tests, then the two-request cache proof, then the RSC diff
+  and Path B QA.
+- **If it caches:** commit, continue Batches 4–6 under D-019.
+- **If it does not cache:** option **C** — revert the program route to dynamic,
+  record it, proceed to Batch 4; program-route optimization escalates to the
+  narrow loader as separate work.
+- **Not authorised:** bulk `generateStaticParams` (D-020); any Directus change;
+  any data-loader rewrite; a third distinct mechanism without a new decision.
+
+- **Reversible?** Yes — one file; option C is a clean revert to dynamic.
