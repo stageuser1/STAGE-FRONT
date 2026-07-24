@@ -1430,3 +1430,154 @@ export async function searchPrograms(
     );
   });
 }
+
+/**
+ * Narrow Directus boundary for the dynamic search route.
+ *
+ * Search needs enough data to build its filters, apply the existing query
+ * semantics, and render ProgramCard. It deliberately avoids the bulk schools
+ * and source_records queries used by the detail-route loader.
+ */
+export async function loadSearchPagePrograms(
+  query: ProgramSearchQuery | null,
+): Promise<{ allPrograms: Program[]; matchedPrograms: Program[] }> {
+  const [offerings, applicationRequirements, auditionRequirements] =
+    await Promise.all([
+      directusFetch<DirectusProgramOffering[]>(
+        "/items/program_offerings?limit=-1&fields=id,official_program_name,program_name_zh,track_or_concentration,department,review_status,school_id.slug,school_id.school_name,school_id.city,school_id.country,field_id.field_name,field_id.field_name_zh,degree_level_id.slug,degree_level_id.degree_level_name,degree_level_id.degree_level_name_zh,degree_level_id.abbreviation,degree_level_id.degree_category",
+      ),
+      directusFetch<DirectusApplicationRequirement[]>(
+        "/items/application_requirements?limit=-1&fields=id,program_offering_id,is_current,admission_cycle,review_status,application_deadline,english_language_tests,toefl_minimum,ielts_minimum,duolingo_minimum,english_waiver_policy,application_fee,application_fee_currency",
+      ),
+      directusFetch<DirectusAuditionRequirement[]>(
+        "/items/audition_requirements?limit=-1&fields=id,program_offering_id,is_current,admission_cycle,review_status,prescreening_deadline",
+      ),
+    ]);
+
+  const allPrograms = offerings.flatMap<Program>((offering) => {
+    const programId = String(offering.id);
+    const school = relationObject<DirectusSchool>(offering.school_id);
+    const schoolSlug = textValue(school?.slug);
+    const programName = textValue(offering.official_program_name);
+    if (!school || !schoolSlug || !programName) return [];
+
+    const application = selectCurrentCycle(
+      applicationRequirements,
+      programId,
+    );
+    const audition = selectCurrentCycle(auditionRequirements, programId);
+    const field = relationObject<DirectusField>(offering.field_id);
+    const degreeLevel = mapDegreeLevel(offering, programName);
+    const degree = mapDegreeInfo(offering, programName);
+    const acceptedTests = mapLanguageTests(application);
+    const statuses = [mapReviewStatus(offering.review_status)];
+    if (application) statuses.push(mapReviewStatus(application.review_status));
+    if (audition) statuses.push(mapReviewStatus(audition.review_status));
+
+    return [
+      {
+        id: programId,
+        school_id: schoolSlug,
+        school_name: textValue(school.school_name) ?? "暂未收录",
+        country: textValue(school.country) ?? "待核实",
+        city: textValue(school.city) ?? "待核实",
+        name: programName,
+        name_zh: textValue(offering.program_name_zh),
+        degree_level: degreeLevel.degreeLevel,
+        degree,
+        major_area: textValue(field?.field_name) ?? "",
+        major_area_zh: textValue(field?.field_name_zh),
+        specialization:
+          textValue(offering.track_or_concentration) ??
+          textValue(field?.field_name),
+        department: textValue(offering.department),
+        application: null,
+        prescreen: null,
+        audition: null,
+        duration: null,
+        application_url: null,
+        deadline: {
+          application_deadline: dateValue(application?.application_deadline),
+          prescreening_deadline: dateValue(audition?.prescreening_deadline),
+          audition_date: null,
+          notes: null,
+        },
+        language_requirements: {
+          instruction_language: null,
+          english_required: derivedEnglishRequired(application, acceptedTests),
+          accepted_tests: acceptedTests,
+          waiver_policy: textValue(application?.english_waiver_policy),
+          notes: displayStructuredValue(application?.english_language_tests),
+        },
+        audition_requirements: {
+          prescreening_required: null,
+          audition_required: null,
+          repertoire_requirements: null,
+          format: null,
+          notes: null,
+        },
+        cost_aid: mapCostAid(
+          application?.application_fee,
+          application?.application_fee_currency,
+        ),
+        sources: [],
+        data_quality: {
+          confidence: "medium",
+          status: weakestStatus(statuses),
+          missing_fields: [],
+          review_notes: degreeLevel.reviewNote,
+        },
+      },
+    ];
+  });
+
+  if (!query) return { allPrograms, matchedPrograms: [] };
+
+  const keyword = query.keyword?.trim().toLowerCase() ?? "";
+  const country = query.country?.trim().toLowerCase() ?? "";
+  const majorArea = query.major_area?.trim().toLowerCase() ?? "";
+  const degreeSlug = query.degree_slug?.trim().toLowerCase() ?? "";
+  const matchedPrograms = allPrograms.filter((program) => {
+    const keywordTarget = [
+      program.name,
+      program.name_zh,
+      program.school_name,
+      program.country,
+      program.city,
+      program.degree_level,
+      program.degree?.name,
+      program.degree?.name_zh,
+      program.degree?.abbreviation,
+      program.major_area,
+      program.major_area_zh,
+      program.specialization,
+      program.department,
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+
+    const matchesKeyword = keyword === "" || keywordTarget.includes(keyword);
+    const matchesCountry =
+      country === "" || program.country.toLowerCase() === country;
+    const matchesDegree =
+      !query.degree_level || program.degree_level === query.degree_level;
+    const matchesDegreeSlug =
+      degreeSlug === "" ||
+      (program.degree?.slug ?? "").toLowerCase() === degreeSlug;
+    const matchesMajorArea =
+      majorArea === "" ||
+      program.major_area.toLowerCase() === majorArea ||
+      (program.major_area_zh ?? "").toLowerCase() === majorArea;
+
+    return (
+      matchesKeyword &&
+      matchesCountry &&
+      matchesDegree &&
+      matchesDegreeSlug &&
+      matchesMajorArea
+    );
+  });
+
+  return { allPrograms, matchedPrograms };
+}

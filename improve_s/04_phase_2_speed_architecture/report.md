@@ -1,6 +1,6 @@
 # Phase 2 — Speed Architecture · Report
 
-**Status:** ✅ **Batch 4 homepage ACCEPTED (D-022); `/search` P2-S3 overturned — it is Batch 5’s target**
+**Status:** ✅ **Batch 5 query boundary executed and verified; stopping before Batch 6**
 
 > **D-020 corrected by D-021, 2026-07-24.** Deleting `generateStaticParams` did
 > not produce on-demand ISR — it produced a fully dynamic route (`ƒ`,
@@ -938,3 +938,171 @@ already carries this verification to the Phase 2 exit gate.
 The local server was stopped, port 3000 was confirmed free, and all temporary
 observer and server-log files were removed. Resolution of the P2-S3 stop
 belongs to Claude and the owner; Codex did not improvise a retry or exemption.
+
+---
+
+## 17. Batch 5 execution — `/search` query boundary
+
+Codex executed only Batch 5 on `perf/s1-speed-track`, starting from the
+owner-approved Batch 4 state. The separate Batch 4 homepage commit is
+`ef52760` (`Phase 2 Batch 4: homepage SSG/ISR`).
+
+### 17.1 File accounting
+
+Application files modified:
+
+- `app/search/page.tsx`
+- `lib/data.ts`
+
+Documentation files modified:
+
+- `improve_s/04_phase_2_speed_architecture/report.md`
+- `improve_s/logs/execution_log.md`
+
+Added files: none. Deleted files: none. Dependency, configuration, schema,
+database, Directus, design, copy, and unrelated-route changes: none.
+
+`lib/data.ts` is additive only: the existing `directusFetch`,
+`loadDirectusData`, field lists, mappers, and accessors were not changed. The
+new `loadSearchPagePrograms()` function is appended after the existing code.
+
+### 17.2 Query boundary
+
+The dynamic search route now performs three narrow reads:
+
+| Collection | Fields selected for search | Measured response bytes |
+|---|---|---:|
+| `program_offerings` | identity, names, school relation, field relation, degree relation, review status | 1,038,128 |
+| `application_requirements` | current-cycle selection, review status, application deadline, language-test summary inputs, fee | 1,503,461 |
+| `audition_requirements` | current-cycle selection, review status, prescreen deadline | 310,271 |
+| **Total** | **3 requests** | **2,851,860** |
+
+The route makes no `schools` request and no `source_records` request. It also
+does not use the detail loader's optimistic audition-field probe, so there is
+no search-specific 403/fallback request. All three responses are below the
+Next.js 2 MB fetch-cache item limit.
+
+The additional application/audition fields are the minimum needed to preserve
+the existing `ProgramCard` output: application and prescreen deadlines,
+language-test summary, application fee, and the three-record weakest review
+status. Fields not rendered by `/search` are not requested.
+
+### 17.3 Static validation
+
+| Check | Result |
+|---|---|
+| `git diff --check` | PASS |
+| `npm run typecheck` | PASS, exit 0 |
+| `npm run build` | PASS, exit 0, 78,339.145 ms |
+| `npm test` | PASS, exit 0, 10/10 (2 Python + 8 Node) |
+| 30-minute build threshold | PASS |
+| `/search` rendering mode | PASS, remains `ƒ` dynamic |
+| Revalidation value | PASS, 900 seconds |
+| Static pages generated | PASS, 29/29 |
+
+Relevant build output:
+
+```text
+┌ ○ /                                                1.85 kB         108 kB         15m      1y
+├ ● /schools/[schoolId]                              1.13 kB         113 kB         15m      1y
+├ ● /schools/[schoolId]/programs/[programId]         9.28 kB         121 kB         15m      1y
+└ ƒ /search                                          1.85 kB         108 kB
+```
+
+### 17.4 Search payload comparison
+
+The only Phase 0 search payload of record is the anonymous default route
+capture at `01_phase_0_baseline/payloads/search.rsc`.
+
+| Comparison | Phase 0 | Batch 5 | Result |
+|---|---:|---:|---|
+| Raw RSC bytes | 36,791 | 36,791 | identical size |
+| Normalized bytes | 36,764 | 36,764 | identical |
+| Normalized SHA-256 | `f925c45810483f205fe96b851ce91c8914b29aeccc05d23e3b28b878a71f26fe` | same | **byte-identical** |
+| Flight records | 78 | 78 | identical record set |
+
+The byte comparison normalized only the volatile Next build ID and the two
+volatile hydration IDs. The comparable cold capture is byte-identical after
+those normalizations. A later warm capture emitted the same 78 normalized
+Flight records in a different stream order (the two metadata records completed
+later after the data fetch became a cache hit); sorting by Flight record for
+semantic comparison produced identical SHA-256
+`6378b4f12720a61c0e2f281a1ebd727bd9b268fbcf0d753a56a82ec78375dca6`.
+There is no visible or semantic content difference.
+
+Hydrated query checks also passed:
+
+- `/search?country=US`: active `US` chip and the existing zero-result state.
+- `/search?keyword=Bassoon`: 79 program cards rendered; sampled cards retained
+  title, school, country/city, degree, major, review status, deadlines, and
+  language summary.
+
+### 17.5 Timing and Directus reduction
+
+Environment: local production build. Each cold sample used a fresh production
+server with only the three generated narrow fetch-cache entries isolated before
+the request. Each cold request therefore performed the three Directus reads.
+
+| Set | Runs (ms) | Median | Phase 0 median | Change |
+|---|---|---:|---:|---:|
+| Cold | 944.204, 837.891, 1,002.507, 1,499.392, 1,442.456 | **1,002.507** | 3,048.691 | **−67.117%** |
+| Warm | 124.620, 116.110, 120.266, 114.297, 126.070 | **120.266** | 3,358.273 | **−96.419%** |
+
+| Directus metric | Phase 0 `/search` | Batch 5 cold | Batch 5 warm |
+|---|---:|---:|---:|
+| Requests / render | 6 | **3** | **0** |
+| Response bytes / render | 27,322,807 | **2,851,860** | **0** |
+| Reduction vs. Phase 0 | — | **24,470,947 bytes / 89.562%** | **100%** |
+
+The process-local observer recorded exactly 3 starts and 3 HTTP 200 completions
+for every cold sample. The five-request warm set added zero starts and zero
+completions, proving the three sub-2 MB projections entered the fetch Data
+Cache while `/search` itself remained dynamic.
+
+### 17.6 Content and Path B verification
+
+Path B passed 10/10 with hydrated browser checks:
+
+1. Homepage HTTP 200 and hero heading present.
+2. Homepage contains 20 unique school links.
+3. `/search` HTTP 200.
+4. `/search?country=US` HTTP 200 with active `US` chip and filtered state.
+5. Yale school page HTTP 200 with school name.
+6. Yale page reports 76 programs.
+7. Yale program 1190 rendered.
+8. Program requirement content present.
+9. Program source citations present.
+10. `/login` hydrated UI contains one email input, one password input, and one
+    login submit control.
+
+Authenticated reviewer login plus edit/save remains unexecuted: no credentials
+were supplied and the Batch 5 instruction explicitly forbids Directus
+modification. This remains the D-019 exit-gate carry.
+
+During the unchanged program route's cold on-demand QA, the observer recorded
+one raw `fetch failed` request and the application logged the already-known
+`program_offerings` fetch-failure class. The program page subsequently rendered
+with its requirements and sources. This was not on `/search`, was not a search
+revalidation, and did not affect any Batch 5 measurement. Under D-019 it is
+recorded as an unchanged-route baseline observation; no retry loop, Directus
+change, or unrelated route fix was attempted.
+
+### 17.7 Acceptance and stop status
+
+**Batch 5 technical acceptance: PASS.**
+
+- `/search` remains dynamic: PASS.
+- Narrow additive loader: PASS.
+- `source_records` absent: PASS.
+- Search payload equivalence: PASS.
+- Modified-route medians versus Phase 0: PASS.
+- Warm target `<1000 ms`: PASS at 120.266 ms.
+- Directus request and byte reduction: PASS.
+- Typecheck, build, tests, and Path B QA: PASS.
+- Dependency, configuration, database, schema, and Directus changes: none.
+- Reviewer authenticated edit/save: incomplete under the existing D-019
+  exit-gate carry.
+
+Batch 6 was not started. The local server was stopped, port 3000 was confirmed
+free, and temporary observer files were removed. Phase 2 exit acceptance remains
+owner-governed and was not attempted.

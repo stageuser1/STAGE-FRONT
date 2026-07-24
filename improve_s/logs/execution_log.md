@@ -2328,3 +2328,66 @@ boundary (additive narrow search loader in `lib/data.ts`; `/search` stays `ƒ`;
 output must be byte-identical to `payloads/search.rsc`).
 
 ---
+
+### [2026-07-24] Phase 2 · Batch 5 — `/search` query boundary executed
+
+- **Actor:** Codex
+- **Branch:** `perf/s1-speed-track`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` · Batch 5
+- **Authorization:** D-019 and D-022
+
+**Batch 4 prerequisite:** committed separately as `ef52760`
+(`Phase 2 Batch 4: homepage SSG/ISR`).
+
+**Files modified:** `app/search/page.tsx`, `lib/data.ts`,
+`improve_s/04_phase_2_speed_architecture/report.md`,
+`improve_s/logs/execution_log.md`
+
+**Files added / deleted:** none
+**Dependency / configuration / database / schema / Directus changes:** none
+
+**Implementation:** added the search-only `loadSearchPagePrograms()` function
+without modifying any existing loader, mapper, accessor, or field list. The
+route now reads three narrow projections (`program_offerings`,
+`application_requirements`, `audition_requirements`) and never requests
+`source_records`. `app/search/page.tsx` uses the new boundary, removes
+`force-dynamic`, and exports `revalidate = 900`; the build correctly keeps the
+route `ƒ` dynamic because it reads `searchParams`.
+
+**Validation:**
+
+- `git diff --check`: PASS
+- `npm run typecheck`: PASS
+- `npm run build`: PASS, 78,339.145 ms, 29/29 pages; `/search` remains `ƒ`
+- `npm test`: PASS, 10/10
+- Path B: PASS, 10/10 with hydrated filter and login checks
+- Phase 0 default search RSC comparison: PASS; 36,791 raw bytes on both sides,
+  normalized SHA-256 identical
+  (`f925c45810483f205fe96b851ce91c8914b29aeccc05d23e3b28b878a71f26fe`)
+
+**Measurements:**
+
+| Metric | Phase 0 | Batch 5 |
+|---|---:|---:|
+| Cold median | 3,048.691 ms | **1,002.507 ms** |
+| Warm median | 3,358.273 ms | **120.266 ms** |
+| Cold Directus requests | 6 | **3** |
+| Warm Directus requests | 6 | **0** |
+| Cold Directus bytes | 27,322,807 | **2,851,860** |
+| Cold byte reduction | — | **24,470,947 / 89.562%** |
+
+Every cold sample recorded exactly 3 starts and 3 HTTP 200 completions. The
+five-request warm set added zero Directus activity.
+
+**Recorded unchanged-route observation:** one already-known raw
+`program_offerings` `fetch failed` occurred during cold on-demand QA of program
+1190. The page subsequently rendered correctly. It did not occur on `/search`
+or in the Batch 5 measurement window; under D-019 it is recorded and no
+unrelated fix was attempted.
+
+**Outcome:** Batch 5 technical criteria PASS. Reviewer authenticated edit/save
+remains the D-019 exit-gate carry because credentials were not supplied and
+Directus writes are forbidden. Batch 6 was not started. Server stopped; port
+3000 confirmed free; temporary observer removed.
+
+---

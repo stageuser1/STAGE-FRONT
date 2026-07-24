@@ -5,13 +5,13 @@ import { ProgramCard } from "@/components/ProgramCard";
 import { SearchInput } from "@/components/SearchInput";
 import { Icon } from "@/components/ui/Icon";
 import type { DegreeLevel, ProgramSearchQuery } from "@/data/types";
-import { getAllPrograms, searchPrograms } from "@/lib/data";
+import { loadSearchPagePrograms } from "@/lib/data";
 import {
   buildFilterOptions,
   type SearchFilterOption,
 } from "@/lib/search-options";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 900;
 
 interface SearchParams {
   keyword?: string;
@@ -117,10 +117,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     query.country || query.degree_slug || query.degree_level || query.major_area,
   );
   const hasQuery = hasSelectedFilter || Boolean(query.keyword?.trim());
-  const [allPrograms, matchedPrograms] = await Promise.all([
-    getAllPrograms(),
-    hasQuery ? searchPrograms(query) : Promise.resolve([]),
-  ]);
+  const { allPrograms, matchedPrograms } = await loadSearchPagePrograms(
+    hasQuery ? query : null,
+  );
   const { countryOptions, majorOptions, degreeOptions } =
     buildFilterOptions(allPrograms);
 
