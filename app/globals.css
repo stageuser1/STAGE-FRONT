@@ -149,6 +149,17 @@
   }
 }
 
+/* Visible focus rings, scoped to the marketing surface (doc 03 accessibility).
+ * Scoped via .font-stage-sans so the Explore surface is unaffected. */
+.font-stage-sans a:focus-visible,
+.font-stage-sans button:focus-visible,
+.font-stage-sans summary:focus-visible,
+.font-stage-sans [tabindex]:focus-visible {
+  outline: 2px solid var(--stage-primary);
+  outline-offset: 2px;
+  border-radius: var(--stage-radius-sm);
+}
+
 html {
   min-height: 100%;
 }

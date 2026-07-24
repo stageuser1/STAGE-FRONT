@@ -15,9 +15,13 @@ export function IeltsSimPreview({ scale = "full" }: { scale?: "full" | "compact"
   const compact = scale === "compact";
 
   return (
-    <div aria-hidden="true">
+    <div>
+      {/* sr-only label is a SIBLING of the aria-hidden mock so AT still reads it */}
       <span className="sr-only">{d.ariaLabel}</span>
-      <div className="overflow-hidden rounded-stage-xl bg-stage-surface-dark text-stage-fg-on-dark shadow-stage-md ring-1 ring-white/10">
+      <div
+        aria-hidden="true"
+        className="overflow-hidden rounded-stage-xl bg-stage-surface-dark text-stage-fg-on-dark shadow-stage-md ring-1 ring-white/10"
+      >
         {/* window chrome */}
         <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
           <span className="h-3 w-3 rounded-full bg-white/25" />

@@ -25,7 +25,7 @@ export function HeroSection() {
 
       <Container className="relative">
         <div className="grid items-center gap-12 py-20 md:py-28 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <Reveal>
               <span className="text-caption font-medium uppercase text-stage-primary">
                 {hero.eyebrow}
@@ -62,9 +62,9 @@ export function HeroSection() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <Reveal delay={0.15}>
-              <div className="relative mx-auto max-w-[560px]">
+              <div className="relative mx-auto min-w-0 max-w-[560px]">
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 -z-10 shadow-stage-glow"

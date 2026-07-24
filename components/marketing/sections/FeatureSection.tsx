@@ -30,7 +30,7 @@ export function FeatureSection({
         <div className="grid items-center gap-10 py-20 md:py-28 lg:grid-cols-2 lg:gap-16">
           {/* text */}
           <Reveal
-            className={visualRight ? "lg:order-1" : "lg:order-2"}
+            className={`min-w-0 ${visualRight ? "lg:order-1" : "lg:order-2"}`}
           >
             <span className="text-caption font-medium uppercase text-stage-primary">
               {feature.eyebrow}
@@ -63,7 +63,7 @@ export function FeatureSection({
           {/* visual */}
           <Reveal
             delay={0.12}
-            className={visualRight ? "lg:order-2" : "lg:order-1"}
+            className={`min-w-0 ${visualRight ? "lg:order-2" : "lg:order-1"}`}
           >
             <FeatureVisual feature={feature} />
           </Reveal>

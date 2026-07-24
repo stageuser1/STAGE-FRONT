@@ -1,18 +1,19 @@
 "use client";
 
-import { animate, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Number count-up for the credibility band (doc 03 §3): 0 → value once on
- * first entrance. Reduced-motion renders the final value immediately.
- * Numerals are rendered by the caller in Geist Mono.
+ * Number count-up for the credibility band (doc 03 §3): 0 → value once when it
+ * enters view, via requestAnimationFrame (easeOutCubic). Native APIs only.
+ *
+ * SSR/no-JS/reduced-motion render the FINAL value, so numbers are never stuck
+ * at 0 if JS or IntersectionObserver never runs.
  */
 export function CountUp({
   value,
   suffix = "",
   className,
-  duration = 0.8,
+  duration = 800,
 }: {
   value: number;
   suffix?: string;
@@ -20,23 +21,56 @@ export function CountUp({
   duration?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.4 });
-  const reduce = useReducedMotion();
-  const [display, setDisplay] = useState(0);
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
+    const el = ref.current;
+    if (!el) return;
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !("IntersectionObserver" in window)
+    ) {
       setDisplay(value);
       return;
     }
-    const controls = animate(0, value, {
-      duration,
-      ease: "easeOut",
-      onUpdate: (v) => setDisplay(Math.round(v)),
-    });
-    return () => controls.stop();
-  }, [inView, reduce, value, duration]);
+
+    let started = false;
+    let raf = 0;
+    const run = () => {
+      if (started) return;
+      started = true;
+      const start = performance.now();
+      setDisplay(0);
+      const tick = (now: number) => {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        setDisplay(Math.round(eased * value));
+        if (t < 1) raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    };
+
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+      run();
+      return () => cancelAnimationFrame(raf);
+    }
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          run();
+          io.disconnect();
+        }
+      },
+      { threshold: 0.4 },
+    );
+    io.observe(el);
+    return () => {
+      io.disconnect();
+      cancelAnimationFrame(raf);
+    };
+  }, [value, duration]);
 
   return (
     <span ref={ref} className={className}>
