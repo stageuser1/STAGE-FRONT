@@ -1,13 +1,29 @@
 import type { Metadata } from "next";
-import { MobileBottomNav } from "@/components/MobileBottomNav";
-import { ReviewerSessionBar } from "@/components/reviewer/ReviewerSessionBar";
+import { Geist_Mono, Noto_Sans_SC } from "next/font/google";
 import { AuthProvider } from "@/lib/directus-auth";
 import "./globals.css";
 
+// Marketing-surface fonts (ADR-6). Only CSS variables are defined at the
+// root — the families are applied inside the (marketing) layout, so the
+// Explore surface keeps its existing system font stack untouched.
+const notoSansSC = Noto_Sans_SC({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  variable: "--font-noto-sans-sc",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist-mono",
+});
+
 export const metadata: Metadata = {
-  title: "STAGE · 海外音乐院校招生数据库",
+  metadataBase: new URL("https://stage.app"),
+  title: "STAGE — 发现、准备并申请全球顶尖音乐院校",
   description:
-    "STAGE 收录海外音乐院校的招生项目、申请要求、语言要求与试音曲目，并标注每条信息的核验状态。",
+    "汇聚全球顶尖音乐院校的权威招生数据，结合 AI 雅思备考。找到适合的项目，明确申请要求，掌握申请进度。",
 };
 
 export default function RootLayout({
@@ -16,13 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" className={`${notoSansSC.variable} ${geistMono.variable}`}>
       <body>
-        <AuthProvider>
-          <ReviewerSessionBar />
-          {children}
-          <MobileBottomNav />
-        </AuthProvider>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

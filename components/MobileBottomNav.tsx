@@ -14,7 +14,7 @@ interface NavItem {
 }
 
 const items: NavItem[] = [
-  { label: "探索", icon: "home", href: "/", isActive: (p) => p === "/" },
+  { label: "探索", icon: "home", href: "/schools", isActive: (p) => p === "/schools" },
   {
     label: "院校",
     icon: "search",

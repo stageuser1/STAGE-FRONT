@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { BrandBanner } from "@/components/BrandBanner";
 import { FilterChips, type FilterChipItem } from "@/components/FilterChips";
 import { HeroSearch } from "@/components/HeroSearch";
@@ -6,6 +7,13 @@ import { MobileHeader, PageShell } from "@/components/MobileHeader";
 import type { Program } from "@/data/types";
 import { getAllPrograms, getAllSchools } from "@/lib/data";
 import { latestSchoolUpdate } from "@/lib/format";
+
+// Former homepage metadata — preserved verbatim through the / → /schools move.
+export const metadata: Metadata = {
+  title: "STAGE · 海外音乐院校招生数据库",
+  description:
+    "STAGE 收录海外音乐院校的招生项目、申请要求、语言要求与试音曲目，并标注每条信息的核验状态。",
+};
 
 export const revalidate = 900;
 
