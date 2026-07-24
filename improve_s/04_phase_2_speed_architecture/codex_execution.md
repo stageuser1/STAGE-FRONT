@@ -251,23 +251,54 @@ just this route, is then in question.
 
 ---
 
-### Batch 3 — Program detail route
+### Batch 3 — Program detail route — ⚠️ **REVISED BY D-020: on-demand ISR**
 
-**Only `app/schools/[schoolId]/programs/[programId]/page.tsx`.** Remove
-`force-dynamic` (line 7); add `export const revalidate = 900;`; add
-`generateStaticParams` returning `{ schoolId, programId }`. `Program.school_id`
-is the school slug; `Program.id` is the offering id as a string (e.g. `"1190"`).
-Source from `getAllPrograms()`.
+> **The first attempt failed and its approach is withdrawn.** Bulk static
+> generation of 1,938 pages means ≈**53 GB** of build-time Directus transfer —
+> the host returned 503 at `0/1962` in 54 s, twice. **Do not attempt
+> `generateStaticParams` on this route again.**
 
-**Expected ~1,938 pages.** Record build duration.
+**Starting point:** the working tree already carries the failed attempt.
+**Edit it — do not revert it, do not `git checkout` it.**
 
-**Fallback if build too slow:** empty `generateStaticParams` array + rely on
-`dynamicParams` (generate on first request, then route-cache). Keeps ISR without
-a 1,938-page build. **Record the reason.**
+**Only `app/schools/[schoolId]/programs/[programId]/page.tsx`:**
 
-Warm request must perform **0** Directus fetches. Measure all four routes.
+1. **Delete** the `generateStaticParams` function entirely.
+2. **Remove `getAllPrograms`** from the `@/lib/data` import (keep
+   `getProgramById`).
+3. **Keep** `export const revalidate = 900;` exactly as is.
 
-**Commit:** `Phase 2 Batch 3: program detail route SSG/ISR`
+Resulting diff vs. `fa43c9c` should be only: `force-dynamic` → `revalidate = 900`.
+
+```bash
+npm run typecheck && npm run build && npm test
+```
+
+**Expected build:** completes quickly. Route table shows
+`/schools/[schoolId]/programs/[programId]` as **`ƒ`** with **no** prerendered
+program paths. That is correct — `ƒ` here does **not** mean uncached.
+
+#### ★ Decisive verification — prove the cache, do not assume it
+
+Start the production server and request
+`/schools/yale_school_of_music/programs/1190` **twice**:
+
+| Request | Expected |
+|---|---|
+| 1st (cold) | HTTP 200, ~4 s, full Directus load — **normal** |
+| **2nd (warm)** | **`x-nextjs-cache: HIT`, 0 Directus requests, < 1000 ms** |
+
+Confirm zero `[P2_DIRECTUS_START]` lines during the second request.
+
+> **If the second request does NOT cache — STOP and report.** Do not improvise,
+> do not add `generateStaticParams` back. The next option requires a new
+> owner decision.
+
+Then: the interrupted program-route RSC semantic diff vs.
+`01_phase_0_baseline/payloads/program_1190.rsc`, and Path B QA. Measure all four
+routes.
+
+**Commit:** `Phase 2 Batch 3: program detail route on-demand ISR`
 
 ---
 

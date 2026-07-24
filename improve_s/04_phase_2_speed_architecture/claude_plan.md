@@ -438,11 +438,41 @@ Add one criterion: **"Warm benchmark request performs 0 Directus fetches despite
 the 2MB Data Cache rejection."** If that fails, stop the entire phase — the
 approach does not work and needs re-planning, not rollout.
 
-### Batch 3 — Program detail route
+### Batch 3 — Program detail route — **REVISED (D-020): on-demand ISR**
 
-Same treatment: ISR + `generateStaticParams` for ~1,938 program pages.
-**Fallback if build is too slow:** empty `generateStaticParams` + `dynamicParams`
-(generate on first request, then route-cache). Record the reason if used.
+**Bulk static generation is abandoned for this route.** The first attempt failed
+twice with Directus 503 at `0/1962` in 54 s. Cause is arithmetic, not ISR:
+
+| | Pages | Build-time transfer | Result |
+|---|---:|---:|---|
+| Batch 2 (schools) | 20 | 546 MB | ✅ 104.8 s |
+| Batch 3 (programs) | 1,938 | **≈53 GB** | ❌ host 503 |
+
+Each render pulls the whole 27.32 MB database, and — because the fetch Data
+Cache rejects every >2 MB response (D-018) — **there is no cross-page
+deduplication during the build.** The 2 MB rejection that was harmless at 20
+pages is fatal at 1,938. D-018 was right that it is irrelevant to warm
+request-time performance (GATE A proved that); it missed that the same rejection
+also removes build-time dedup.
+
+**Revised approach — delete `generateStaticParams`, keep `revalidate = 900`.**
+Nothing prerendered at build; each page renders on first request and is then
+Full-Route-Cached for 15 minutes. Build cost for this route ≈ 0.
+
+This is also the better architecture here: prerendering 1,938 pages spends 53 GB
+generating pages nobody may visit; on-demand pays only for pages requested.
+
+**Must be proven, not assumed** (the Batch 1 lesson): request a program page
+**twice**; the second must return `x-nextjs-cache: HIT`, **0** Directus
+requests, **< 1000 ms**. If it does not cache, stop and report.
+
+**Accepted limitations** — all with the same remedy, the deferred narrow loader:
+- First visitor per page per window still pays ~4 s / 27.32 MB
+- A crawler over all 1,938 pages would still trigger ≈53 GB, spread over time
+- Each trafficked page re-pulls 27.32 MB per window
+
+**Escalation if 503s recur once live:** the route-specific narrow loader — *not*
+a longer window, and never a Directus change.
 
 ### Batch 4 — Homepage `/`
 

@@ -1068,3 +1068,124 @@ allowlist.
 
 - **Reversible?** Yes — Batch 2 reverts as one file; each later batch reverts
   independently.
+
+---
+
+### D-020 · [2026-07-24] — Batch 3: data-loading strategy failure at scale, not ISR failure; switch program route to on-demand ISR
+
+- **Type:** gate / architecture correction
+- **Phase:** `04_` Batch 3
+- **Decided by:** owner
+- **Question:** Batch 3's build failed twice with Directus HTTP 503 while
+  prerendering 1,938 program pages. Is this an ISR architecture failure or a
+  data-loading failure, which strategy should the program route use, and what is
+  the minimal adjustment?
+
+#### 0. The stop was correct — no rule defect this time
+
+The 503s came from `program_offerings` **on the route Batch 3 modified**, and
+the D-014 retry cap (2 attempts, 60 s apart) was exhausted. That is precisely
+what the D-019-narrowed P2-S8 covers. **Codex applied the corrected rule
+correctly. No commit was created; no fix was improvised.** Nothing about P2-S8
+changes here.
+
+#### 1. ISR failure or data-loading failure?
+
+**Data-loading, unambiguously. The ISR architecture is proven and is not in
+question.**
+
+GATE A established ISR works: the school route went 4,054 ms → **4.514 ms**
+(898×) with **0** Directus requests. That mechanism is unchanged and untouched
+by this failure.
+
+The failure is arithmetic:
+
+| | Pages | Build-time Directus transfer | Result |
+|---|---:|---:|---|
+| Batch 2 (schools) | 20 | **546 MB** | ✅ built in 104.8 s |
+| Batch 3 (programs) | 1,938 | **≈53 GB** | ❌ 503 at `0/1962` in 54 s |
+
+**98× the pages, 98× the load.** Each page render calls `getProgramById()` →
+`loadDirectusData()` → the entire 27.32 MB database.
+
+**The decisive mechanism — why it did not self-correct.** Next.js would normally
+deduplicate identical fetches across page renders during a build **via the fetch
+Data Cache**. But per D-018, every one of those responses is 2.77–20.98 MB and
+**the Data Cache rejects everything over 2 MB.** So there is *no cross-page
+deduplication at all*: all 1,938 renders each pull the full database.
+
+**The 2 MB rejection that was harmless at 20 pages is fatal at 1,938.** D-018
+correctly judged it irrelevant to *warm request-time* performance — that
+conclusion stands, and GATE A proved it. What D-018 did not anticipate is that
+the same rejection also removes build-time deduplication, which only becomes
+visible at scale. This is a genuine gap in the D-018 analysis, corrected here.
+
+The Directus host did not degrade gradually — it returned 503 within 54 seconds,
+at page 0 of 1962. This is the fourth and fifth 503 incident; every one has
+occurred on a route performing per-request full-database pulls.
+
+#### 2. Chosen strategy: **dynamic cached (on-demand ISR)**
+
+Remove `generateStaticParams` from the program route. Keep `revalidate = 900`.
+Nothing is prerendered at build; each page renders on first request and is then
+served from the Full Route Cache for 15 minutes.
+
+**This is the fallback already pre-authorized** in `claude_plan.md` §5 Batch 3
+and `codex_execution.md` — no new scope.
+
+| Option | Verdict |
+|---|---|
+| **On-demand ISR** ✅ | Minimal (delete one function), no new data path, pre-authorized, warm performance identical to the school route, build cost for this route ≈ 0 |
+| Bulk static generation | ❌ Rejected — 53 GB, demonstrated to collapse the host twice |
+| Route-specific narrow loader | ⏸ Deferred — correct long-term, but a genuinely new data path: `mapSource`, `selectCurrentCycle`, and the degree/language mappers all operate on the bulk arrays, so reproducing an identical `Program` object from narrow queries is non-trivial and regression-prone. That pattern is already Batch 5's job for `/search`; doing it here too doubles the phase's risk in one step. **Documented as the escalation path.** |
+| Partial static generation (top-N) | ❌ Rejected — **no traffic data exists** (Phase 0 recorded no analytics), so any N is arbitrary. Complexity without evidence. |
+
+**On-demand ISR is also better architecture here, not merely a retreat.** With
+1,938 program pages and low traffic, prerendering all of them spends 53 GB
+generating pages nobody visits. On-demand generation pays only for pages
+actually requested.
+
+#### 3. Honest limitations of the chosen strategy
+
+- **Cold cost per page, per window.** The *first* visitor to a given program page
+  still pays ~4 s and 27.32 MB. Only subsequent visitors within 900 s get
+  ~4.5 ms. The school route is strictly better (prerendered, so *every* visitor
+  is warm).
+- **Crawler exposure.** A crawler walking all 1,938 pages would still trigger
+  ≈53 GB — spread over time rather than in one build, each pull risking a 503.
+- **Revalidation load.** Every trafficked program page re-pulls 27.32 MB per
+  window. 100 active pages ≈ 2.7 GB per 15 minutes.
+
+**All three have the same remedy: the narrow route loader** (deferred above).
+If 503s recur once the program route is live, that is the escalation — not a
+longer window, and never a Directus change.
+
+#### 4. Verification requirement — do not assume, prove
+
+The Batch 1 lesson applies directly. Without `generateStaticParams` the build
+marks the route `ƒ`, and **it must be proven that its output is still
+Full-Route-Cached**:
+
+> Request `/schools/yale_school_of_music/programs/1190` **twice**. The second
+> request must return `x-nextjs-cache: HIT`, perform **0** Directus requests,
+> and complete in **< 1000 ms**.
+
+If the second request does not cache, **stop and report** — do not improvise.
+The next option would be a deliberately small non-empty `generateStaticParams`
+to register the route as SSG with on-demand fill, which requires a new decision.
+
+#### Decision
+
+- **Revised Batch 3:** on the working-tree copy of
+  `app/schools/[schoolId]/programs/[programId]/page.tsx`, **delete the
+  `generateStaticParams` function and drop `getAllPrograms` from the import**.
+  Keep `export const revalidate = 900`. Do not revert the file; edit it.
+- Build, typecheck, tests, then the two-request cache verification above, then
+  the interrupted program-route RSC semantic diff and Path B QA.
+- **C1 unchanged at 900 s** for this route.
+- Batches 4–6 remain authorised under D-019 after Batch 3 passes.
+- **Not authorised:** any Directus change; any retry beyond D-014; the narrow
+  loader; any change to `loadDirectusData()`.
+
+- **Reversible?** Yes — the program route reverts as one file; the school route
+  and its proven gains are untouched.

@@ -1926,3 +1926,114 @@ fallback if the build is too slow), and retries the interrupted program-route
 RSC semantic diff. Then Batches 4–6 without further gate approval.
 
 ---
+
+### [2026-07-24] Phase 2 · Batch 3 — STOPPED after D-014 retry exhaustion
+
+- **Actor:** Codex
+- **Branch:** `perf/s1-speed-track`
+- **Starting SHA:** `fa43c9c93302c91abe943979498cf315d875ba05`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` · Batch 3
+- **Owner authorization:** D-019
+- **Shell:** PowerShell
+- **Execution window:** ended 2026-07-24 11:36 +08:00
+
+**Application change attempted:** only
+`app/schools/[schoolId]/programs/[programId]/page.tsx`:
+
+- replaced `dynamic = "force-dynamic"` with `revalidate = 900`
+- imported existing `getAllPrograms()`
+- added `generateStaticParams()` mapping every program to
+  `{ schoolId: program.school_id, programId: program.id }`
+
+**File accounting before this log entry:** 1 application file modified,
+11 insertions / 2 deletions. No added or deleted files. No dependency,
+configuration, schema, database, or Directus changes.
+
+**Verification:**
+
+| Check | Result |
+|---|---|
+| `npm run typecheck` | PASS, exit 0 |
+| First `npm run build` | FAIL during prerender; 54,431.263 ms |
+| D-014 wait | completed, 60 seconds |
+| Single permitted build retry | FAIL during prerender; 74,966.990 ms |
+| `npm test` | NOT RUN — stop condition had fired |
+| Runtime/content/Directus warm comparison | NOT RUN — no valid production build |
+
+The first build received Directus HTTP 503 from `program_offerings` while
+prerendering `/schools/manhattan_school_of_music/programs/3`. After the required
+60-second wait, the single permitted retry received the same HTTP 503 class
+while prerendering `/schools/peabody_institute/programs/1789`.
+
+The retry build announced `Generating static pages (0/1962)`. The input dataset
+contains 1,938 program params, but the build did not complete, so there is no
+successful Batch 3 route table or finalized set of generated program routes.
+The >2 MB fetch Data Cache rejection messages were the expected D-018 condition
+and were not treated as the stop.
+
+**Stop condition:** P2-S8, with the D-014 bounded retry protocol exhausted.
+No implementation fallback was applied because the approved fallback is for a
+build exceeding 30 minutes; both failures were Directus non-200 responses on
+the route modified by Batch 3.
+
+**Outcome:** Batch 3 acceptance criteria NOT PASSED. No commit created. No
+runtime measurement, content diff, QA checklist, or Batch 4+ work was performed.
+
+---
+
+### [2026-07-24] Phase 2 · Batch 3 P2-S8 stop — reviewed: stop upheld; approach revised (D-020)
+
+- **Actor:** Claude (review) / Owner (decision)
+- **Branch:** `perf/s1-speed-track`
+- **Approved by owner:** yes — decisions.md ref: **D-020**
+
+**Files modified:** 4 documentation files under `improve_s/`
+**Files added / deleted:** none
+**Dependency / configuration / database / Directus changes:** none
+**Application code changes:** none by this review — the failed Batch 3 attempt
+remains uncommitted in the working tree and will be *edited*, not reverted.
+
+**Typecheck / Build / Tests:** not run — gate review
+
+**Stop upheld — no rule defect.** 503s from `program_offerings` on the route
+Batch 3 modified, D-014 cap exhausted. The D-019-narrowed P2-S8 covers exactly
+this. Codex was correct and created no commit.
+
+**Cause — data-loading at scale, not ISR:**
+
+| | Pages | Build-time transfer | Result |
+|---|---:|---:|---|
+| Batch 2 schools | 20 | 546 MB | ✅ 104.8 s |
+| Batch 3 programs | 1,938 | **≈53 GB** | ❌ 503 at `0/1962` in 54 s |
+
+Each render pulls the full 27.32 MB database; the fetch Data Cache rejects every
+>2 MB response (D-018), so **no cross-page deduplication occurs during a build**.
+The 2 MB rejection was harmless at 20 pages and fatal at 1,938 — a gap in the
+D-018 analysis, now corrected. ISR itself is proven and untouched (GATE A).
+
+**Decision:** on-demand ISR for the program route — delete
+`generateStaticParams`, keep `revalidate = 900`. Pre-authorized fallback, no new
+scope, no new data path. Rejected: bulk static generation (53 GB, demonstrated
+to collapse the host); partial top-N generation (no traffic data exists — Phase 0
+recorded no analytics, so any N is arbitrary). Deferred: route-specific narrow
+loader — correct long-term but a genuinely new data path, and already Batch 5's
+pattern for `/search`; doing it here too would double the phase's risk.
+
+**Limitations accepted and recorded:** first visitor per page per window still
+pays ~4 s / 27.32 MB; a full crawl of 1,938 pages would still move ≈53 GB spread
+over time; each trafficked page re-pulls 27.32 MB per window. Common remedy if
+503s recur once live: the deferred narrow loader — never a Directus change.
+
+**Verification required (Batch 1 lesson):** without `generateStaticParams` the
+build marks the route `ƒ`; it must be *proven* the output is still
+Full-Route-Cached — second request must show `x-nextjs-cache: HIT`, 0 Directus
+requests, < 1000 ms. If not, stop and report; do not improvise.
+
+**Outcome:** completed. Revised Batch 3 authorised.
+
+**Next action:** Codex edits the working-tree program route (delete
+`generateStaticParams`, drop `getAllPrograms` import, keep `revalidate = 900`),
+builds, runs the two-request cache verification, completes the interrupted RSC
+diff and Path B QA, then commits. Batches 4–6 follow under D-019.
+
+---

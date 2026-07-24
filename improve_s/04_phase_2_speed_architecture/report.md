@@ -1,6 +1,30 @@
 # Phase 2 — Speed Architecture · Report
 
-**Status:** ✅ **GATE A PASSED WITH CONDITIONS (D-019) — thesis proven; Batches 3–6 authorised**
+**Status:** 🔧 **Batch 3 approach REVISED (D-020) — stop upheld; on-demand ISR authorised**
+
+> **Batch 3 reviewed 2026-07-24 — see `logs/decisions.md` D-020.**
+>
+> **The P2-S8 stop is UPHELD — correct, no rule defect.** The 503s came from
+> `program_offerings` on the route Batch 3 modified, and the D-014 retry cap was
+> exhausted. Codex applied the D-019-narrowed rule correctly and created no
+> commit.
+>
+> **Cause: data-loading strategy at scale, NOT ISR.** ISR is proven (GATE A:
+> 898× faster, 0 Directus requests). The failure is arithmetic — 20 school pages
+> = 546 MB and built fine; 1,938 program pages = **≈53 GB**. Each render pulls
+> the whole 27.32 MB database, and because the fetch Data Cache rejects every
+> >2 MB response (D-018) there is **no cross-page deduplication during the
+> build**. The 2 MB rejection that was harmless at 20 pages is fatal at 1,938 —
+> a gap in the D-018 analysis, corrected in D-020.
+>
+> **Revised approach: on-demand ISR.** Delete `generateStaticParams`; keep
+> `revalidate = 900`. Pages render on first request, then Full-Route-Cache for
+> 15 min. Build cost ≈ 0. Pre-authorized fallback; no new scope.
+>
+> **Must be proven:** second request to a program page must show
+> `x-nextjs-cache: HIT`, 0 Directus requests, < 1000 ms.
+>
+> Below is the prior GATE A record — retained, not overwritten.
 
 > **Reviewed 2026-07-24 — see `logs/decisions.md` D-019.**
 >
@@ -535,3 +559,72 @@ batches remain prohibited.
 - Full GATE A acceptance: not achieved.
 - Batch 3 and all later work: not started and prohibited pending a new
   Claude/owner decision.
+
+---
+
+## 14. Batch 3 execution under D-019 — STOPPED
+
+This section supersedes the pre-D-019 gate status in sections 13.10–13.12.
+D-019 approved Gate A and authorized Batch 3. Codex executed only Batch 3 on
+`perf/s1-speed-track`, starting at
+`fa43c9c93302c91abe943979498cf315d875ba05`, using PowerShell.
+
+### 14.1 File accounting
+
+Application file modified:
+
+- `app/schools/[schoolId]/programs/[programId]/page.tsx`
+
+Documentation file modified:
+
+- `improve_s/logs/execution_log.md`
+- this report
+
+Added files: none. Deleted files: none. Dependency, configuration, schema,
+database, and Directus changes: none.
+
+The application diff replaces `force-dynamic` with `revalidate = 900` and adds
+`generateStaticParams()` from the existing `getAllPrograms()`, returning
+`{ schoolId: program.school_id, programId: program.id }`.
+
+### 14.2 Verification results
+
+| Check | Result |
+|---|---|
+| Typecheck | PASS, exit 0 |
+| Build attempt 1 | FAIL, Directus HTTP 503, 54,431.263 ms |
+| D-014 wait | 60 seconds |
+| Build attempt 2 (only permitted retry) | FAIL, Directus HTTP 503, 74,966.990 ms |
+| Tests | NOT RUN — P2-S8 stop |
+| Content diff / Path B QA | NOT RUN — no valid production build |
+| Warm route measurement | NOT RUN — no valid production build |
+
+Attempt 1 failed while prerendering
+`/schools/manhattan_school_of_music/programs/3`. Attempt 2 failed while
+prerendering `/schools/peabody_institute/programs/1789`. Both failures were
+Directus HTTP 503 responses from `program_offerings` on the route modified by
+Batch 3. The D-014 retry cap is exhausted, so P2-S8 requires a stop.
+
+### 14.3 Generated-route and Directus comparison
+
+The program dataset supplied 1,938 static params. Next.js announced 1,962
+total static pages for the build and was at `0/1962` when the retry failed.
+Because neither build completed, the number of finalized Batch 3 program routes
+is **0** and no Batch 3 route table exists.
+
+| Program-detail request metric | Phase 0 | Batch 3 warm |
+|---|---:|---:|
+| Directus requests per render | 7 | NOT MEASURED |
+| Directus response bytes per render | 27,322,807 | NOT MEASURED |
+
+The expected target was 0 warm Directus requests, but it cannot be claimed:
+the failed build prevented starting a production server. The repeated >2 MB
+fetch Data Cache rejection messages were expected under D-018 and were not the
+stop condition.
+
+### 14.4 Outcome
+
+**Batch 3 acceptance criteria: NOT PASSED.** Typecheck passed and the approved
+route-only implementation is present in the working tree, but build, content
+integrity, warm-cache, and zero-Directus verification could not complete.
+No commit was created. No Batch 4+ work was performed.
