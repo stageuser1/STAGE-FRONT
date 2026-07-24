@@ -10,6 +10,9 @@ import type {
   PrescreenSection,
   Program,
   ProgramSearchQuery,
+  PublicProgramDto,
+  PublicSchoolDto,
+  PublicSourceCitationDto,
   School,
   SchoolDetailSection,
   SchoolDetailSectionKey,
@@ -748,6 +751,164 @@ function mapSource(record: DirectusSourceRecord): SourceRecord | null {
     notes: textValue(record.source_quote),
     related_field: textValue(record.related_field),
     topic_key: sourceTopicKey(record),
+  };
+}
+
+function toPublicSourceCitationDto(
+  source: SourceRecord,
+): PublicSourceCitationDto {
+  return {
+    source_title: source.title,
+    source_url: source.url,
+    source_type: source.source_type,
+    accessed_at: source.accessed_at,
+  };
+}
+
+/**
+ * Explicit server-side boundary for the school profile client component.
+ * Reviewer records and backend-only source metadata are intentionally not
+ * copied into the returned object.
+ */
+export function toPublicSchoolDto(school: School): PublicSchoolDto {
+  return {
+    id: school.id,
+    name: school.name,
+    country: school.country,
+    city: school.city,
+    website_url: school.website_url,
+    status: school.status,
+    sources: school.sources?.map(toPublicSourceCitationDto),
+  };
+}
+
+/**
+ * Explicit server-side boundary for the program detail client component.
+ * Keep this mapping field-by-field so additions to the internal Program shape
+ * cannot cross the public boundary without an intentional mapping change.
+ */
+export function toPublicProgramDto(program: Program): PublicProgramDto {
+  return {
+    id: program.id,
+    school_name: program.school_name,
+    country: program.country,
+    city: program.city,
+    name: program.name,
+    name_zh: program.name_zh,
+    degree: program.degree
+      ? {
+          slug: program.degree.slug,
+          name: program.degree.name,
+          name_zh: program.degree.name_zh,
+          abbreviation: program.degree.abbreviation,
+          category: program.degree.category,
+        }
+      : undefined,
+    major_area: program.major_area,
+    major_area_zh: program.major_area_zh,
+    specialization: program.specialization,
+    department: program.department,
+    card_summary: program.card_summary,
+    application:
+      program.application === undefined
+        ? undefined
+        : program.application === null
+          ? null
+          : {
+              resume_required: program.application.resume_required,
+              essay_required: program.application.essay_required,
+              recommendation_letters:
+                program.application.recommendation_letters,
+              transcript_requirements:
+                program.application.transcript_requirements,
+              portfolio_required: program.application.portfolio_required,
+              required_materials: [...program.application.required_materials],
+              international_applicant_notes:
+                program.application.international_applicant_notes,
+              conditional_notes: program.application.conditional_notes,
+              notes: program.application.notes,
+              admission_cycle: program.application.admission_cycle,
+            },
+    prescreen:
+      program.prescreen === undefined
+        ? undefined
+        : program.prescreen === null
+          ? null
+          : {
+              required: program.prescreen.required,
+              required_text: program.prescreen.required_text,
+              deadline: program.prescreen.deadline,
+              video_requirements: program.prescreen.video_requirements,
+              file_format_requirements:
+                program.prescreen.file_format_requirements,
+              repertoire: program.prescreen.repertoire,
+            },
+    audition:
+      program.audition === undefined
+        ? undefined
+        : program.audition === null
+          ? null
+          : {
+              required: program.audition.required,
+              required_text: program.audition.required_text,
+              format: program.audition.format,
+              accompaniment_requirements:
+                program.audition.accompaniment_requirements,
+              interview_or_callback_requirements:
+                program.audition.interview_or_callback_requirements,
+              repertoire: program.audition.repertoire,
+              special_notes: program.audition.special_notes,
+              conditional_notes: program.audition.conditional_notes,
+              notes: program.audition.notes,
+              legacy_repertoire_summary:
+                program.audition.legacy_repertoire_summary,
+            },
+    duration: program.duration,
+    program_url: program.program_url,
+    application_url: program.application_url,
+    audition_url: program.audition_url,
+    international_url: program.international_url,
+    deadline: {
+      application_deadline: program.deadline.application_deadline,
+      prescreening_deadline: program.deadline.prescreening_deadline,
+      audition_date: program.deadline.audition_date,
+      notes: program.deadline.notes,
+    },
+    language_requirements: {
+      instruction_language: program.language_requirements.instruction_language,
+      english_required: program.language_requirements.english_required,
+      accepted_tests: program.language_requirements.accepted_tests.map(
+        (test) => ({
+          test_name: test.test_name,
+          minimum_score: test.minimum_score,
+          section_minimums: test.section_minimums,
+          notes: test.notes,
+        }),
+      ),
+      waiver_policy: program.language_requirements.waiver_policy,
+      notes: program.language_requirements.notes,
+    },
+    audition_requirements: {
+      prescreening_required:
+        program.audition_requirements.prescreening_required,
+      audition_required: program.audition_requirements.audition_required,
+      repertoire_requirements:
+        program.audition_requirements.repertoire_requirements,
+      format: program.audition_requirements.format,
+      notes: program.audition_requirements.notes,
+    },
+    cost_aid: {
+      currency: program.cost_aid.currency,
+      tuition_amount: program.cost_aid.tuition_amount,
+      tuition_period: program.cost_aid.tuition_period,
+      application_fee: program.cost_aid.application_fee,
+      scholarships_available: program.cost_aid.scholarships_available,
+      notes: program.cost_aid.notes,
+    },
+    sources: program.sources.map(toPublicSourceCitationDto),
+    data_quality: {
+      status: program.data_quality.status,
+    },
   };
 }
 
