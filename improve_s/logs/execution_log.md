@@ -1870,3 +1870,59 @@ started and remain prohibited.
 **Commit SHA:** recorded by this Batch 2 commit
 
 ---
+
+### [2026-07-24] Phase 2 · GATE A — reviewed: thesis PROVEN; P2-S8 overturned; Batches 3–6 authorised
+
+- **Actor:** Claude (review) / Owner (decision)
+- **Branch:** `perf/s1-speed-track`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` — GATE A
+- **Approved by owner:** yes — decisions.md ref: **D-019**
+
+**Files modified:** 3 documentation files under `improve_s/`
+**Files added:** none · **Files deleted:** none
+**Dependency / configuration / database / Directus changes:** none
+**Application code changes:** none — Batch 2's `7fa0171` stands
+
+**Typecheck / Build / Tests:** not re-run — gate review, not execution
+
+**Verified independently at the gate:** the Batch 2 application diff is exactly
+one file (`app/schools/[schoolId]/page.tsx`, +14/−2) — `force-dynamic` removed,
+`revalidate = 900` added, `generateStaticParams` mapping `school.id`. No other
+route, loader, or field list touched. `evidence_metadata` untouched (C2 held).
+
+**Result — thesis PROVEN:**
+
+| Metric | Phase 0 | Batch 2 warm |
+|---|---:|---:|
+| Warm median | 4,054.367 ms | **4.514 ms** (898.2× faster) |
+| Directus requests | 7 | **0** |
+| Directus bytes | 27,322,807 | **0** |
+| Mode | `ƒ` | **`●` SSG 15m**, cache HIT |
+
+D-018 confirmed exactly: >2MB fetch-cache rejections still occurred during
+static generation and were irrelevant — the Full Route Cache serves warm users
+without contacting Directus. Content 39/39 records identical; QA 10/10.
+
+**P2-S8 stop OVERTURNED.** The 503 was on the unchanged, still-dynamic program
+route during content verification — outside GATE A's scope, outside the
+benchmark window (0 Directus calls), and untouched by Batch 2. Third such 503;
+all three on routes still doing per-request full-DB pulls, none on a cached
+route. Evidence for proceeding to Batch 3, not for halting. Codex applied the
+rule correctly; the rule was over-broad and has been narrowed.
+
+**Reviewer edit round-trip waived for GATE A**, required at the phase exit gate
+(blocked by D-009). Reviewer auth is client-side; Batch 2 cannot plausibly have
+affected it.
+
+**Owner note surfaced:** cached school pages mean a reviewer's own edit appears
+to vanish on reload until revalidation (≤15 min) — inside the accepted C1/D-006
+trade-off, but sharper than its original "other viewers" framing.
+
+**Outcome:** completed. **GATE A: PASS WITH CONDITIONS.**
+
+**Next action:** Codex executes **Batch 3** (program detail route: ISR +
+`generateStaticParams`, ~1,938 pages, with the empty-array/`dynamicParams`
+fallback if the build is too slow), and retries the interrupted program-route
+RSC semantic diff. Then Batches 4–6 without further gate approval.
+
+---

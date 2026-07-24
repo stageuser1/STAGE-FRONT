@@ -236,6 +236,19 @@ warm hit) and return **< 1000 ms**.
 revert to `fdf5cc7` (Batch 1 state) and return to Claude — the mechanism, not
 just this route, is then in question.
 
+> ## ✅ GATE A PASSED WITH CONDITIONS — 2026-07-24 (D-019)
+>
+> **Thesis proven:** benchmark warm median **4,054 ms → 4.514 ms (898× faster)**,
+> **0** Directus requests, **0** bytes, `x-nextjs-cache: HIT`, `●` SSG 15m,
+> 20 routes prerendered, 39/39 content records identical, QA 10/10.
+>
+> **Batches 3–6 are AUTHORISED.** No further GATE A approval is needed between
+> them; the phase exit gate governs.
+>
+> Two carried conditions (neither blocks Batch 3): reviewer edit round-trip
+> (needs D-009 credentials) and C4/D-001 Preview — both due at the **exit gate**.
+> Also retry the interrupted program-route RSC diff during Batch 3.
+
 ---
 
 ### Batch 3 — Program detail route
@@ -410,16 +423,26 @@ Additional Phase 2 conditions:
 | **P2-S5** | Build duration exceeds 30 minutes |
 | **P2-S6** | A change would touch a file not yet writable in the current batch |
 | **P2-S7** | Working tree not clean at Batch 0 |
-| **P2-S8** | Any Directus request returns an unexpected non-200 outside the D-013 exception (e.g. the 503 that stopped the first Batch 1 run) |
+| **P2-S8** | An unexpected non-200 from Directus **on the route modified by the current batch**, or on a revalidation render of an already-converted route, outside the D-013 exception |
 
-> **On P2-S8 and transient 503s (D-018).** The first Batch 1 run stopped on 2×
-> HTTP 503 from the audition fallback during 39 rapid full-DB renders. That was
-> a **correct** stop. But once routes are static (Batch 2+), a warm request
-> makes **zero** Directus calls, so this class largely disappears. If a 503
-> occurs during a **revalidation** render, treat it like the D-014 protocol:
-> stop, wait 60 s, retry once, cap 2 attempts, then escalate. A 503 is transient
-> host stress, not a permissions or schema problem — **never respond by changing
-> Directus.**
+> **P2-S8 NARROWED by D-019 — read carefully.**
+>
+> Three 503s have now occurred (2× Batch 1, 1× Batch 2 QA). **Every one was on a
+> route still doing per-request full-database fetches. None occurred on a cached
+> route** — by construction one cannot. A 503 is transient host stress from
+> 27.32 MB pulls, not a permissions or schema fault.
+>
+> **DO NOT STOP** when a transient non-200 occurs on a route **not modified by
+> the current batch** (e.g. the still-dynamic program route during Batch 2
+> verification). Record it as a baseline observation and continue — it is
+> evidence about the routes not yet fixed, and it argues for proceeding, not
+> halting.
+>
+> **DO STOP** when: the non-200 is on the route the current batch modified; or a
+> **revalidation** render of a converted route fails; or the D-014 protocol
+> (wait 60 s, retry once, cap 2 attempts) is exhausted.
+>
+> **Never respond to a 503 by changing Directus.** (F3)
 
 **Explicitly NOT stop conditions:**
 

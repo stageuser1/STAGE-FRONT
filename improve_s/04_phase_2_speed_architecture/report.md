@@ -1,6 +1,40 @@
 # Phase 2 — Speed Architecture · Report
 
-**Status:** ⛔ **STOPPED in revised Batch 2 QA — D-018 thesis passed; P2-S8 interrupted full GATE A acceptance**
+**Status:** ✅ **GATE A PASSED WITH CONDITIONS (D-019) — thesis proven; Batches 3–6 authorised**
+
+> **Reviewed 2026-07-24 — see `logs/decisions.md` D-019.**
+>
+> **The Phase 2 core thesis is PROVEN.** Benchmark warm median
+> **4,054.367 ms → 4.514 ms (898.2× faster)**, **0** Directus requests, **0**
+> bytes, `x-nextjs-cache: HIT`, `●` SSG 15m, 20 routes prerendered, 39/39
+> content records byte-identical, QA 10/10. D-018's prediction confirmed
+> exactly: the >2MB fetch-cache rejections still occurred during static
+> generation and did not matter — the Full Route Cache serves warm users
+> without contacting Directus.
+>
+> **The P2-S8 stop is OVERTURNED.** Codex applied the rule correctly as written;
+> the rule was over-broad. The 503 hit the **unchanged, still-dynamic program
+> route** during content verification — a route GATE A does not cover, outside
+> the benchmark window (which recorded 0 Directus calls), and untouched by
+> Batch 2's one-file diff. It is the known pre-existing fragility of
+> per-request 27.32 MB pulls, not a regression. This is the third such 503 —
+> **all three on unfixed dynamic routes, none on a cached route.** It argues for
+> proceeding to Batch 3, which removes the failure mode, not for halting.
+>
+> **P2-S8 has been narrowed** so a transient non-200 on a route not modified by
+> the current batch is recorded, not stopped on.
+>
+> **Reviewer edit round-trip: waived for GATE A**, still required at the phase
+> exit gate. Blocked by D-009 (no credentials); cannot plausibly have been broken
+> by Batch 2, since reviewer auth is client-side `localStorage` and edits PATCH
+> Directus directly from the browser.
+>
+> **⚠️ Owner note:** with the school page cached, a reviewer's own edit will
+> appear to vanish on reload until revalidation (up to 15 min). Inside the
+> accepted C1/D-006 trade-off, but sharper than the "other viewers" framing.
+>
+> **Retained below as the execution record — not overwritten.** The §1 batch
+> table predates §13; §13 is authoritative.
 **Stopped:** 2026-07-24 11:11 +08:00
 **Branch:** `perf/s1-speed-track`
 **Rollback SHA:** `742e901bf036daed924ea7732f7b33ec1f800107`

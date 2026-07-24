@@ -955,3 +955,116 @@ the Directus host. **Never respond to a 503 by changing Directus.**
 - **Reversible?** Yes — documentation-only correction. The benchmark experiment
   (Batch 2) either proves the thesis at GATE A or stops the phase cleanly at
   `fdf5cc7`.
+
+---
+
+### D-019 · [2026-07-24] — GATE A: thesis PROVEN; program-route 503 does not block; proceed to Batch 3
+
+- **Type:** gate
+- **Phase:** `04_` GATE A
+- **Decided by:** owner
+- **Question:** the benchmark passed every speed and content criterion, but
+  Codex stopped under P2-S8 on one Directus HTTP 503 hit while capturing raw RSC
+  from the **unchanged, still-dynamic** program route. Is the thesis proven,
+  should that 503 block GATE A, and what happens next?
+
+#### 1. Is the Phase 2 core thesis proven?
+
+**Yes — conclusively, and by the widest margin in the program.**
+
+| Metric | Phase 0 | Batch 2 warm | Change |
+|---|---:|---:|---|
+| Benchmark warm median | 4,054.367 ms | **4.514 ms** | **898.2× faster** (−99.889%) |
+| Directus requests / render | 7 | **0** | eliminated |
+| Directus bytes / render | 27,322,807 | **0** | eliminated |
+| Rendering mode | `ƒ` dynamic | **`●` SSG, 15m** | as designed |
+
+Corroborating: `x-nextjs-cache: HIT`, `x-nextjs-prerender: 1`,
+`Cache-Control: s-maxage=900, stale-while-revalidate=…`;
+`.next/prerender-manifest.json` holds exactly **20** school routes including
+Yale; the diagnostics observer recorded **zero** `[P2_DIRECTUS_START]` lines
+across all ten benchmark requests.
+
+**The D-018 prediction is confirmed exactly.** The >2MB fetch Data Cache
+rejections still occurred — during *static generation* — and did not matter:
+warm users are served pre-rendered route output and never contact Directus. The
+distinction between the fetch Data Cache (2MB-limited, useless here) and the
+Full Route Cache (no such limit, decisive) was the correct diagnosis.
+
+**Content is intact.** 39/39 page-content Flight records byte-identical after
+normalizing one added preload record and the deterministic ID shift; only
+root/infrastructure records `0` and `13` differ, which is expected when a route
+moves from dynamic to prerendered. Path B QA 10/10. Typecheck, build, tests pass.
+
+#### 2. Should the program-route 503 block GATE A?
+
+**No. The stop was correct under the rule as written; the rule is over-broad for
+this case.** Overturned, on four independent grounds:
+
+1. **It is on a route GATE A does not cover.** GATE A tests the *benchmark
+   school route*. The 503 hit `/schools/[schoolId]/programs/[programId]` — still
+   `force-dynamic`, untouched by Batch 2. The application diff is one file
+   (`app/schools/[schoolId]/page.tsx`, +14/−2); the program route's data path
+   was not modified.
+2. **It is outside the decisive measurement window.** The benchmark window
+   recorded 0 Directus starts and 0 completions. The 503 came later, during
+   content verification of an unmodified dynamic route.
+3. **It is the known pre-existing fragility, not a regression.** An unfixed
+   dynamic route still pulls 27.32 MB per render from a host already documented
+   (Phase 0, D-014, D-018) as struggling under repeated full loads. `503 Service
+   Unavailable` is transient host stress.
+4. **It argues for proceeding, not halting.** This is the **third** 503 incident
+   (2× in Batch 1, 1× here) — every one of them on a route still doing
+   per-request full-database fetches. **Zero** have occurred on the cached
+   route, which by construction cannot produce one. Batch 3 removes this
+   failure mode from the program route; stopping preserves it.
+
+**Rule correction:** P2-S8 is narrowed so a transient non-200 on a route **not
+modified by the current batch** is recorded as a baseline observation, not a
+stop. It still fires for any non-200 on the route under test, on a revalidation
+render of a converted route, or if the D-014 retry protocol is exhausted.
+
+#### 3. The reviewer edit round-trip — genuinely incomplete, waived for GATE A
+
+Not executed: no reviewer credentials exist (**D-009**, deferred to Phase `06_`),
+and Directus writes are forbidden. Login page and hydrated form verified PASS.
+
+**Waived for GATE A**, because Batch 2 cannot plausibly have broken it: reviewer
+auth is entirely client-side (`lib/directus-auth.tsx`, `localStorage`), the
+reviewer components were not modified, and edits PATCH Directus directly from
+the browser — a path that never touches route rendering. **Still required before
+the Phase `04_` exit gate**, when credentials arrive.
+
+**⚠️ Consequence the owner should see explicitly.** With the school page cached,
+a reviewer who edits a field will see their change locally (optimistic state)
+but, **on reload, will see the pre-edit value again until revalidation — up to
+15 minutes.** Their own edit will appear to have vanished. This falls inside the
+accepted C1/D-006 staleness trade-off, but that decision was framed as "other
+viewers see stale content," and this sharper reviewer-facing form deserves
+naming. It is not a defect and does not block anything. If it proves
+unacceptable in practice, the remedies are a shorter window, excluding
+reviewer-facing views from caching, or reopening Phase 5 (D-000d).
+
+#### Decision
+
+**GATE A: PASS WITH CONDITIONS.** Every benchmark criterion passed. The two
+unmet items are (a) an out-of-scope transient on an unmodified route —
+overturned above, and (b) an item blocked by a deferred decision — waived with
+rationale and carried forward.
+
+**Authorised:** Batch 3 (program detail route: ISR + `generateStaticParams`),
+then Batch 4 (homepage), Batch 5 (`/search` query boundary), Batch 6 (final
+measurement), under the revised package. **No new GATE A approval is needed
+between Batches 3–6**; the phase exit gate governs.
+
+**Conditions carried to the phase exit gate:**
+- Reviewer login + edit round-trip verified (needs D-009 credentials)
+- C4 / D-001 Preview resolved or exit criteria formally rewritten
+- Program-route RSC semantic diff completed (interrupted; retry during Batch 3)
+
+**Not authorised:** any Directus change in response to the 503; any retry loop
+beyond the D-014 protocol; any application change outside the Batch 3–6
+allowlist.
+
+- **Reversible?** Yes — Batch 2 reverts as one file; each later batch reverts
+  independently.
