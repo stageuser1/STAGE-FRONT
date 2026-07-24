@@ -1,6 +1,6 @@
 # Phase 2 — Speed Architecture · Report
 
-**Status:** 🔧 **Batch 3 approach RE-REVISED (D-021) — small `generateStaticParams` + on-demand fill**
+**Status:** ✅ **Batch 4 homepage ACCEPTED (D-022); `/search` P2-S3 overturned — it is Batch 5’s target**
 
 > **D-020 corrected by D-021, 2026-07-24.** Deleting `generateStaticParams` did
 > not produce on-demand ISR — it produced a fully dynamic route (`ƒ`,
@@ -767,3 +767,174 @@ requests, and response time below 1,000 ms.
 The local production server was stopped, port 3000 was confirmed free, and the
 temporary diagnostics module and event log were removed. No Batch 4 work was
 started.
+
+## 16. Batch 4 execution — STOPPED under P2-S3
+
+Codex executed only Batch 4 on `perf/s1-speed-track`, starting at
+`0abc021ed38b7879535ea164582c74435d816af6`, using PowerShell. The execution
+window ended at 2026-07-24 12:45 +08:00.
+
+The approved homepage change itself passed every static-rendering, cache,
+content, build, test, and warm-performance target. The required all-route
+measurement nevertheless found that the unchanged `/search` route's first-set
+median was 31.667% slower than the Phase 0 cold median. P2-S3 says to stop when
+**any measured route** becomes slower and provides no unchanged-route
+exception. No rerun, search change, or Batch 5 work was attempted.
+
+### 16.1 File accounting
+
+Application file modified:
+
+- `app/page.tsx`
+
+Documentation files modified:
+
+- `improve_s/04_phase_2_speed_architecture/report.md`
+- `improve_s/logs/execution_log.md`
+
+Added files: none. Deleted files: none. Dependency, configuration, schema,
+database, Directus, design, copy, and other-route changes: none.
+
+The application diff is exactly:
+
+```diff
+-export const dynamic = "force-dynamic";
++export const revalidate = 900;
+```
+
+No `generateStaticParams` was added. Because P2-S3 stopped acceptance, no
+Batch 4 commit was created; the scoped change and stop documentation remain
+uncommitted for review.
+
+### 16.2 Static validation
+
+| Check | Result |
+|---|---|
+| `git diff --check` | PASS |
+| `npm run typecheck` | PASS, exit 0, 1,824.240 ms |
+| `npm run build` | PASS, exit 0, 96,227.668 ms |
+| `npm test` | PASS, exit 0, 10/10 (2 Python + 8 Node), 3,195.448 ms |
+| 30-minute build threshold | PASS; 96.228 s |
+| Homepage rendering mode | PASS, `○` static |
+| Homepage revalidation | PASS, `15m` / 900 seconds |
+| Static pages generated | PASS, 28/28 (27 in Batch 3 plus homepage) |
+
+Build route table:
+
+```text
+Route (app)                                             Size  First Load JS  Revalidate  Expire
+┌ ○ /                                                1.85 kB         108 kB         15m      1y
+├ ○ /_not-found                                        994 B         103 kB
+├ ○ /login                                           2.69 kB         109 kB
+├ ƒ /pilot/program/[program_offering_ref]            3.97 kB         110 kB
+├ ƒ /pilot/school/[slug]                               161 B         106 kB
+├ ● /schools/[schoolId]                              1.13 kB         113 kB         15m      1y
+├   ├ /schools/juilliard                                                            15m      1y
+├   ├ /schools/manhattan_school_of_music                                            15m      1y
+├   ├ /schools/colburn                                                              15m      1y
+├   └ [+17 more paths]
+├ ● /schools/[schoolId]/programs/[programId]         9.28 kB         121 kB         15m      1y
+├   ├ /schools/manhattan_school_of_music/programs/3                                 15m      1y
+├   ├ /schools/manhattan_school_of_music/programs/4                                 15m      1y
+├   └ /schools/manhattan_school_of_music/programs/5                                 15m      1y
+└ ƒ /search                                          1.85 kB         108 kB
+```
+
+The expected greater-than-2 MB fetch Data Cache rejection warnings occurred
+during static generation. They are the known D-018 behavior and did not prevent
+the homepage Full Route Cache output. No Directus HTTP failure occurred.
+
+### 16.3 Cache and Directus verification
+
+Local production, `http://127.0.0.1:3000`:
+
+| Route | Cache result | Directus starts in first set | Directus starts in warm set |
+|---|---|---:|---:|
+| `/` | 10/10 `x-nextjs-cache: HIT` | **0** | **0** |
+| `/search` | no route-cache header; dynamic as planned | 25 | 25 |
+| `/schools/yale_school_of_music` | 10/10 `HIT` | **0** | **0** |
+| `/schools/yale_school_of_music/programs/1190` | first request `MISS`; next 9 `HIT` | 6 | **0** |
+
+The homepage responses were all HTTP 200 and 252,007 bytes. The ten measured
+homepage requests added zero observer events, proving zero request-time
+Directus fetches and zero Directus response bytes.
+
+Across the complete runtime, content, and QA window, the process-local observer
+recorded 66 starts and 66 completions: 53 HTTP 200 responses, 13 documented
+initial `audition_requirements` HTTP 403 responses followed by fallback, zero
+unexpected statuses, and zero request errors. `/search` made five starts per
+request because the small `schools` response was already in the fetch Data
+Cache while the four greater-than-2 MB responses remained uncacheable.
+
+### 16.4 Timing comparison
+
+Environment: local production build. The first set is the first five requests
+per route in this server session; the warm set is the following five. Link
+byte-rate remained unavailable, as in Phase 0.
+
+| Route | Set | Runs (ms) | Median | Phase 0 median | Change |
+|---|---|---|---:|---:|---:|
+| `/` | first | 56.084, 7.229, 4.659, 13.422, 4.472 | **7.229** | 3,718.076 | **−99.806%; 514.3× faster** |
+| `/` | warm | 4.593, 4.348, 4.334, 6.884, 9.795 | **4.593** | 5,237.129 | **−99.912%; 1,140.2× faster** |
+| `/search` | first | 5,051.551, 4,656.458, 4,014.133, 3,892.509, 3,679.738 | **4,014.133** | 3,048.691 | **+31.667%; P2-S3** |
+| `/search` | warm | 3,273.298, 3,074.536, 3,061.670, 2,967.521, 4,328.677 | **3,074.536** | 3,358.273 | −8.449% |
+| school | first | 11.714, 3.103, 3.153, 2.896, 2.759 | **3.103** | 3,648.994 | −99.915% |
+| school | warm | 3.120, 9.073, 3.134, 2.649, 2.844 | **3.120** | 4,054.367 | −99.923% |
+| program | first | 3,218.927, 3.611, 2.385, 2.065, 2.581 | **2.581** | 3,707.178 | −99.930% |
+| program | warm | 2.165, 2.549, 2.167, 3.139, 3.417 | **2.549** | 3,691.290 | −99.931% |
+
+The program first-set median includes one expected on-demand `MISS`
+(3,218.927 ms, six Directus starts) followed by four `HIT`s. It is not a claim
+that an uncached program request is 2.581 ms.
+
+The Batch 4 homepage target passed by 995.407 ms and improved its warm median
+from 5,237.129 ms to 4.593 ms. Batch acceptance still stops because P2-S3 is
+route-global as written.
+
+### 16.5 Content and Path B verification
+
+RSC semantic comparisons against the Phase 0 captures passed after removing
+only the static-render preload record and remapping deterministic Flight record
+IDs:
+
+- Homepage: **49/49** structured page-content records byte-identical.
+- Yale school: **39/39** page-content records byte-identical.
+- Yale program 1190: **17/17** records byte-identical (15 structured records
+  plus 2 length-prefixed text payloads).
+
+Path B passed 10/10:
+
+1. Homepage HTTP 200 and hero heading present.
+2. Homepage contains 20 school links.
+3. `/search` HTTP 200.
+4. `/search?country=US` HTTP 200 with a hydrated active `US` chip and filtered
+   result state.
+5. Yale school page HTTP 200 with school name.
+6. Yale page reports 76 programs.
+7. Yale program 1190 HTTP 200.
+8. Program requirement content present.
+9. Program source citations present.
+10. `/login` HTTP 200; hydrated UI contains one email input, one password
+    input, and one login submit control.
+
+Authenticated reviewer login plus edit/save was not executed. No credentials
+were supplied, and the user explicitly forbids Directus modification. D-019
+already carries this verification to the Phase 2 exit gate.
+
+### 16.6 Stop and acceptance status
+
+**Batch 4 acceptance: STOPPED / NOT ACCEPTED under P2-S3.**
+
+- Homepage static/ISR implementation: PASS.
+- Homepage warm cache: PASS, 10/10 HIT, zero Directus.
+- Build, typecheck, tests, Path B, and semantic content checks: PASS.
+- Required all-route performance comparison: **FAIL under P2-S3** because the
+  unchanged `/search` first-set median was slower than Phase 0.
+- Reviewer authenticated edit/save: incomplete under the existing D-019
+  exit-gate carry.
+- Commit: none.
+- Batch 5+: not started.
+
+The local server was stopped, port 3000 was confirmed free, and all temporary
+observer and server-log files were removed. Resolution of the P2-S3 stop
+belongs to Claude and the owner; Codex did not improvise a retry or exemption.

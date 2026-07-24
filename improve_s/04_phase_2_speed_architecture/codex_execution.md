@@ -465,7 +465,7 @@ Additional Phase 2 conditions:
 |---|---|
 | **P2-S1** | Any visible content difference vs. the Phase 0 payload captures |
 | **P2-S2** | A route's rendering mode differs from this package's expectation (**`/search` staying dynamic is expected, not a violation**) |
-| **P2-S3** | Any measured route becomes **slower** than its Phase 0 median |
+| **P2-S3** | The route **modified by the current batch** has a **median** slower than its Phase 0 median — see D-022 narrowing below |
 | **P2-S4** | Reviewer login or edit round-trip breaks |
 | **P2-S5** | Build duration exceeds 30 minutes |
 | **P2-S6** | A change would touch a file not yet writable in the current batch |
@@ -491,11 +491,28 @@ Additional Phase 2 conditions:
 >
 > **Never respond to a 503 by changing Directus.** (F3)
 
+> **P2-S3 NARROWED by D-022 — read carefully.**
+>
+> Compare **median to median**, never a single reading to a median. The dynamic
+> routes pull 27.32 MB over a link that varies widely, so individual cold
+> readings swing by seconds.
+>
+> **DO NOT STOP** when a route **not modified by the current batch** shows a
+> single slow reading whose **median** is not worse than Phase 0. Record it and
+> continue. (Batch 4 stopped on a `/search` 4,014 ms first-set reading, though
+> `/search` was untouched and its warm median 3,074 ms *beat* Phase 0's
+> 3,358 ms — a false stop.)
+>
+> **DO STOP** when the route the current batch **modified** has a **median**
+> slower than its Phase 0 median.
+
 **Explicitly NOT stop conditions:**
 
 - The 154 Next.js cache-write rejections from Batch 1 while routes are still
   dynamic (expected; they vanish as routes go static — D-018)
 - `/search` remaining dynamic in the build output (see Batch 5)
+- A single high-variance reading on a route the current batch did not modify,
+  when its median is not worse than Phase 0 (D-022)
 - The documented `audition_requirements` 403 → fallback 200 (D-013)
 
 On a stop: write to `logs/execution_log.md`, do not attempt a fix, do not

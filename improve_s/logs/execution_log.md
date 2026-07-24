@@ -2213,3 +2213,118 @@ program page is on-demand ISR and its second request met all required targets:
 cache HIT, zero Directus requests, and under 1,000 ms. No Batch 4 work started.
 
 ---
+
+### [2026-07-24] Phase 2 · Batch 4 — STOPPED under P2-S3
+
+- **Actor:** Codex
+- **Branch:** `perf/s1-speed-track`
+- **Starting SHA:** `0abc021ed38b7879535ea164582c74435d816af6`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` · Batch 4
+- **Owner authorization:** D-019 and current owner instruction
+- **Shell:** PowerShell
+- **Execution window:** ended 2026-07-24 12:45 +08:00
+
+**Application change:** only `app/page.tsx`:
+
+```diff
+-export const dynamic = "force-dynamic";
++export const revalidate = 900;
+```
+
+No `generateStaticParams` was added. No other application route, loader,
+dependency, configuration, schema, database, Directus setting or record,
+design, copy, or functionality was changed.
+
+**Static validation:**
+
+| Check | Result |
+|---|---|
+| `git diff --check` | PASS |
+| `npm run typecheck` | PASS, exit 0, 1,824.240 ms |
+| `npm run build` | PASS, exit 0, 96,227.668 ms |
+| `npm test` | PASS, exit 0, 10/10 |
+| Homepage build mode | `○` static, 15m / 900 s |
+| Static pages | 28/28; one more than Batch 3 |
+
+The expected D-018 greater-than-2 MB fetch-cache rejection warnings appeared
+during generation. No unexpected Directus status or error occurred.
+
+**Local-production cache and timing results:**
+
+| Route | First-set median | Warm median | Warm cache / Directus |
+|---|---:|---:|---|
+| `/` | 7.229 ms | **4.593 ms** | 10/10 HIT; **0 Directus starts** |
+| `/search` | **4,014.133 ms** | 3,074.536 ms | dynamic; 5 starts/request |
+| school | 3.103 ms | 3.120 ms | HIT; **0 starts** |
+| program 1190 | 2.581 ms | 2.549 ms | first request MISS; next 9 HIT; warm **0 starts** |
+
+The homepage improved from the Phase 0 warm median of 5,237.129 ms to
+4.593 ms (−99.912%, 1,140.2× faster) and passed the `<1000 ms`, HIT, and
+zero-Directus targets.
+
+**Stop condition:** `/search`, which Batch 4 did not modify, had a first-set
+median of 4,014.133 ms against the Phase 0 cold median of 3,048.691 ms
+(+31.667%). P2-S3 says to stop when any measured route becomes slower and does
+not contain an unchanged-route exception. The warm search median improved by
+8.449%, but that does not erase the first-set failure.
+
+**Content and QA:**
+
+- Homepage RSC semantic diff: PASS, 49/49 page-content records identical.
+- Yale school RSC semantic diff: PASS, 39/39.
+- Program 1190 RSC semantic diff: PASS, 17/17.
+- Path B: PASS, 10/10, including hydrated country-filter state and login form.
+- Reviewer authenticated edit/save: not executed; credentials unavailable and
+  Directus modification explicitly forbidden. Existing D-019 exit-gate carry.
+
+Observer totals across measurement and QA: 66 starts, 66 completions, 53 HTTP
+200, 13 documented initial audition HTTP 403, zero unexpected status, zero
+errors. Homepage measurement added zero observer activity.
+
+**Outcome:** Batch 4 homepage implementation passed its direct criteria, but
+Batch 4 acceptance is **STOPPED / NOT ACCEPTED under P2-S3**. No commit was
+created. No Batch 5+ work was started. The server was stopped, port 3000 was
+confirmed free, and all temporary observer artifacts were removed.
+
+---
+
+### [2026-07-24] Phase 2 · Batch 4 — homepage ACCEPTED; /search P2-S3 overturned (D-022)
+
+- **Actor:** Claude (review) / Owner (decision)
+- **Branch:** `perf/s1-speed-track`
+- **Approved by owner:** yes — decisions.md ref: **D-022**
+
+**Files modified by this review:** 4 documentation files under `improve_s/`
+**Files added / deleted:** none
+**Dependency / configuration / database / Directus changes:** none
+**Application code changes by this review:** none — Batch 4's verified
+`app/page.tsx` (one line: `force-dynamic` → `revalidate = 900`) is left
+uncommitted for Codex to commit as its own Batch 4 commit.
+
+**Typecheck / Build / Tests:** not run — gate review
+
+**Homepage accepted:** warm 5,237 ms → **4.593 ms** (~1,140×), 10/10 cache HIT,
+0 Directus requests. Verified: Batch 4 diff is one line in `app/page.tsx`;
+`/search` has an empty diff (untouched); school (Batch 2) and program (Batch 3,
+`0abc021`, `slice(0,3)` + `dynamicParams`) ISR verifications remain passing.
+
+**P2-S3 stop overturned.** It fired on `/search`, which Batch 4 did not modify.
+Two grounds: (a) no mechanism — Batch 4 changed only `app/page.tsx`; `/search`
+shares only the untouched loader, so making the homepage static cannot slow it;
+(b) by median `/search` improved (warm 3,074 ms vs Phase 0 3,358 ms). The
+4,014 ms was a single first-set reading on a still-dynamic 27.32 MB route over a
+variable link — variance, compared wrongly against a median. `/search`'s slowness
+is exactly what Batch 5's query boundary targets.
+
+**P2-S3 narrowed** (parallel to D-019's P2-S8): median-to-median only; a single
+high-variance reading on a route the batch did not modify is recorded, not
+stopped on; it still fires if a modified route's median regresses.
+
+**Outcome:** completed. Batch 4 accepted; Batch 5 authorised.
+
+**Next action:** Codex commits the verified homepage change as
+`Phase 2 Batch 4: homepage ISR`, then executes Batch 5 — the `/search` query
+boundary (additive narrow search loader in `lib/data.ts`; `/search` stays `ƒ`;
+output must be byte-identical to `payloads/search.rsc`).
+
+---

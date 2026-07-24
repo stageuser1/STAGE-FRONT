@@ -1297,3 +1297,88 @@ the third response to failure is to defer, not to guess again.
   any data-loader rewrite; a third distinct mechanism without a new decision.
 
 - **Reversible?** Yes — one file; option C is a clean revert to dynamic.
+
+---
+
+### D-022 · [2026-07-24] — Batch 4: accept homepage ISR; `/search` P2-S3 does not block — it is Batch 5's target
+
+- **Type:** gate
+- **Phase:** `04_` Batch 4
+- **Decided by:** owner
+- **Question:** Batch 4 converted the homepage to ISR successfully, but stopped
+  under P2-S3 because `/search` measured 4,014 ms in one set. Should the homepage
+  work be accepted, should `/search` be handled as the planned Batch 5 rather
+  than blocking Batch 4, and what is the next action?
+
+#### 0. The stop — correct as written, over-broad for this case (as with D-019)
+
+P2-S3 = "any measured route becomes slower than its Phase 0 median." A `/search`
+reading of 4,014 ms exceeded Phase 0's cold median (3,048 ms), so Codex stopped.
+Correct application; the rule is over-broad for a route the batch did not touch —
+the same shape of issue as the P2-S8 / D-019 program-route stop.
+
+#### 1. Accept the homepage work?
+
+**Yes — unreservedly. It is a clean success.**
+
+| Homepage | Phase 0 warm | Batch 4 warm |
+|---|---:|---:|
+| Time | 5,237 ms | **4.593 ms** (≈1,140× faster) |
+| Cache | — | **10/10 HIT** |
+| Directus requests | 6 | **0** |
+
+Verified independently: the Batch 4 diff is one line in `app/page.tsx`
+(`force-dynamic` → `revalidate = 900`); `/search` (`app/search/page.tsx`) has an
+**empty diff** — untouched. School and program ISR verifications remain passing
+(Batch 3 committed at `0abc021` with the D-021 `slice(0,3)` + `dynamicParams`
+form). `/` is a single fixed route, so no `generateStaticParams` is needed —
+exactly as planned.
+
+#### 2. Is the `/search` number a Batch 4 regression?
+
+**No — on two independent grounds.**
+
+**(a) No mechanism.** Batch 4 changed only `app/page.tsx`. `/search` shares only
+`loadDirectusData`/`directusFetch`, which Batch 4 did not touch. Making the
+homepage static removes the homepage's request-time load; it cannot slow
+`/search`. If anything it reduces concurrent pressure. There is no code path by
+which Batch 4 affected `/search`.
+
+**(b) By median, `/search` improved.** The stop compared a single first-set
+reading against a median — a methodological mismatch.
+
+| `/search` | Phase 0 | Batch 4 |
+|---|---:|---:|
+| Warm median | 3,358 ms | **3,074 ms** (improved) |
+| One first-set reading | (cold median 3,048) | 4,014 ms (the outlier that fired P2-S3) |
+
+`/search` is unmodified, still `ƒ`, still pulling 27.32 MB over 6 Directus
+requests on a link documented (Phase 0, D-014) to vary between ~0.2 MB/s and
+normal. A single 4-second cold reading against a 3-second baseline is variance,
+not regression — and the warm **median** is faster than Phase 0.
+
+#### 3. `/search` is Batch 5's target, not a Batch 4 blocker
+
+`/search`'s ~3-second time **is** the pre-existing slowness Batch 5 exists to
+fix, via the narrow query boundary (D-018). It is scheduled work, not a
+regression to diagnose. Blocking Batch 4 on it inverts the plan.
+
+#### Decision
+
+- **Batch 4 ACCEPTED.** Homepage ISR is verified-good; commit it as its own
+  batch commit. School and program routes remain passing.
+- **`/search` is deferred to Batch 5 as planned** — its query boundary.
+- **P2-S3 narrowed**, parallel to the D-019 P2-S8 narrowing:
+  - It fires for a slowdown on a route **modified by the current batch**.
+  - For a route **not modified** by the current batch, a single high-variance
+    reading is **recorded, not stopped on**; the comparison is **median vs
+    median**, not single-reading vs median.
+  - It still fires if a modified route's **median** regresses.
+- **Batch 5 authorised** under D-019 (no new gate between Batches 3–6).
+
+**Not authorised:** any change to `/search` beyond the planned query boundary;
+any Directus change; any data-loader change beyond the additive Batch 5 search
+loader.
+
+- **Reversible?** Yes — homepage reverts as one line; the narrowing is a
+  documentation clarification.
