@@ -8,7 +8,7 @@ import "./globals.css";
 // Explore surface keeps its existing system font stack untouched.
 const notoSansSC = Noto_Sans_SC({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "700"],
   display: "swap",
   variable: "--font-noto-sans-sc",
 });

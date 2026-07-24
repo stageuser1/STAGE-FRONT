@@ -1,17 +1,21 @@
 import type { ReactNode } from "react";
+import { MarketingFooter } from "@/components/marketing/MarketingFooter";
+import { MarketingNavbar } from "@/components/marketing/MarketingNavbar";
 
 /**
- * Marketing surface layout (Phase 1A foundation).
- *
- * Intentionally a pass-through for now. The MarketingNavbar / MarketingFooter,
- * the Noto Sans SC font scope, and the --stage-* token surface are added in the
- * next EP1 step (see docs 02 / 04). This file exists so the marketing route
- * group is a stable, isolated boundary — it deliberately does NOT pull in the
- * Explore chrome (ReviewerSessionBar / MobileBottomNav), which stays scoped to
- * app/(explore)/layout.tsx.
+ * Marketing surface layout. Scopes the Noto Sans SC font family and the
+ * --stage-* token surface here (the Explore surface keeps its system stack),
+ * and wraps every marketing page in the shared navbar + footer. The Explore
+ * chrome (ReviewerSessionBar / MobileBottomNav) stays in app/(explore)/.
  */
 export default function MarketingLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
-  return <>{children}</>;
+  return (
+    <div className="flex min-h-screen flex-col bg-stage-bg font-stage-sans text-stage-fg antialiased">
+      <MarketingNavbar />
+      <main className="flex-1">{children}</main>
+      <MarketingFooter />
+    </div>
+  );
 }

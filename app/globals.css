@@ -7,6 +7,148 @@
   background: #ffffff;
 }
 
+/*
+ * STAGE marketing design tokens (docs 02). ADDITIVE and namespaced --stage-*:
+ * the Explore surface (brand/ink/line/page) is untouched. Consumed only by the
+ * (marketing) surface via the stage-* Tailwind utilities in tailwind.config.
+ */
+:root {
+  /* brand scales (doc 02 §2.1) */
+  --stage-blue-50: #eff6ff;
+  --stage-blue-100: #dbeafe;
+  --stage-blue-200: #bfdbfe;
+  --stage-blue-400: #60a5fa;
+  --stage-blue-500: #3b82f6;
+  --stage-blue-600: #2563eb;
+  --stage-navy-700: #1d2e5e;
+  --stage-navy-800: #16234a;
+  --stage-navy-900: #0e1633;
+  --stage-sky-300: #a5c8ff;
+  --stage-sky-100: #e4eeff;
+  --stage-white: #ffffff;
+  --stage-mist: #f7faff;
+
+  /* semantic aliases (doc 02 §2.2) */
+  --stage-bg: var(--stage-white);
+  --stage-bg-soft: var(--stage-mist);
+  --stage-fg: var(--stage-navy-900);
+  --stage-fg-muted: rgba(29, 46, 94, 0.72); /* navy-700 @ 72% */
+  --stage-primary: var(--stage-blue-500);
+  --stage-primary-hover: var(--stage-blue-600);
+  --stage-border: rgba(14, 22, 51, 0.08); /* navy-900 @ 8% */
+  --stage-surface-dark: var(--stage-navy-800);
+  --stage-fg-on-dark: var(--stage-white);
+  --stage-fg-on-dark-muted: rgba(255, 255, 255, 0.68);
+  --stage-success: #10b981;
+  --stage-warning: #f59e0b;
+
+  /* radius (doc 02 §4) */
+  --stage-radius-sm: 8px;
+  --stage-radius-md: 12px;
+  --stage-radius-lg: 20px;
+  --stage-radius-xl: 28px;
+
+  /* shadows (doc 02 §4 / §2.3) */
+  --stage-shadow-sm: 0 1px 2px rgba(14, 22, 51, 0.06);
+  --stage-shadow-md: 0 12px 32px -12px rgba(14, 22, 51, 0.14);
+  --stage-glow-card: 0 0 80px -20px rgba(96, 165, 250, 0.35);
+
+  /* gradients (doc 02 §2.3) — hero cloud + CTA glow are layered in markup */
+  --stage-gradient-cta: linear-gradient(
+    135deg,
+    var(--stage-navy-900),
+    var(--stage-navy-800)
+  );
+  --stage-gradient-text: linear-gradient(
+    90deg,
+    var(--stage-blue-500),
+    var(--stage-blue-400)
+  );
+}
+
+/* Ambient motion (doc 02 §5): CSS keyframes, transform-only, ≤12px travel. */
+@keyframes stage-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes stage-float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes stage-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(12px, -10px);
+  }
+}
+
+/* IELTS mock: AI band fills once on mount; timer colon pulses softly. */
+@keyframes stage-band {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes stage-pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.stage-animate-float {
+  animation: stage-float 7s ease-in-out infinite;
+}
+
+.stage-animate-float-slow {
+  animation: stage-float-slow 9s ease-in-out infinite;
+}
+
+.stage-animate-drift {
+  animation: stage-drift 12s ease-in-out infinite;
+}
+
+.stage-animate-band {
+  animation: stage-band 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.stage-animate-pulse-soft {
+  animation: stage-pulse-soft 2s ease-in-out infinite;
+}
+
+/* Reduced motion (doc 02 §5): kill all ambient loops. Entrance animations are
+ * additionally guarded in components/motion/* via useReducedMotion(). */
+@media (prefers-reduced-motion: reduce) {
+  .stage-animate-float,
+  .stage-animate-float-slow,
+  .stage-animate-drift,
+  .stage-animate-band,
+  .stage-animate-pulse-soft {
+    animation: none !important;
+  }
+}
+
 html {
   min-height: 100%;
 }

@@ -26,7 +26,8 @@ export type IconName =
   | "bell"
   | "heart"
   | "compare"
-  | "bookmark";
+  | "bookmark"
+  | "menu";
 
 const paths: Record<IconName, ReactNode> = {
   search: (
@@ -146,6 +147,7 @@ const paths: Record<IconName, ReactNode> = {
   bookmark: (
     <path d="M6.5 4.5A1.5 1.5 0 0 1 8 3h8a1.5 1.5 0 0 1 1.5 1.5V21L12 17.5 6.5 21V4.5Z" />
   ),
+  menu: <path d="M4 7h16M4 12h16M4 17h16" />,
 };
 
 interface IconProps extends ComponentPropsWithoutRef<"svg"> {
