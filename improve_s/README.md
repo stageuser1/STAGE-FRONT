@@ -117,7 +117,7 @@ owner overrides this order, record the decision in `logs/decisions.md`.
 | Phase 0 — Baseline | `01_` | ✅ **COMPLETE — PASS WITH CONDITIONS (D-016)** |
 | Phase 0.5 — Transport security | `02_` | ⬜ Not started (parallel) |
 | Phase 1 — Data boundary | `03_` | ⬜ Not started |
-| Phase 2 — Speed architecture | `04_` | 🟢 **APPROVED (D-017)** — cleared for Batches 0–3, then GATE A |
+| Phase 2 — Speed architecture | `04_` | 🔧 **REVISED (D-018)** — Batch 1 exposed the 2MB Data Cache limit; pivoted to Full Route Cache + `/search` query boundary; re-issued from Batch 2 |
 | Phase 3 — Cleanup | `05_` | ⬜ Not started |
 | Phase 4 — Final verification | `06_` | ⬜ Not started |
 

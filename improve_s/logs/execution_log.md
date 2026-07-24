@@ -1717,3 +1717,62 @@ unexpected 503 evidence and issues a revised approved plan. Codex does not
 improvise a cache redesign or retry the unexpected Directus error.
 
 ---
+
+### [2026-07-23] Phase 2 · Batch 1 P2-S8 stop — reviewed; mechanism corrected (D-018)
+
+- **Actor:** Claude (review) / Owner (review requested)
+- **Branch:** `perf/s1-speed-track`
+- **Plan reference:** `04_phase_2_speed_architecture/claude_plan.md`, `codex_execution.md`
+- **Approved by owner:** review requested — decisions.md ref: **D-018**
+
+**Files modified:** 3 documentation files under `improve_s/`
+(`claude_plan.md`, `codex_execution.md`, `logs/decisions.md`) + this log
+**Files added:** none · **Files deleted:** none
+**Dependency / configuration / database / Directus changes:** none
+**Application code changes:** none — Batch 1's `fdf5cc7` stands, no revert
+
+**Typecheck / Build / Tests:** not run — documentation review only
+
+**Finding:** Batch 1's fetch-cache change triggered 154 Next.js "items over 2MB
+cannot be cached" rejections. Four of five Directus collections
+(20.98 / 8.56 / 4.12 / 2.77 MB) exceed the fetch Data Cache's 2MB per-entry
+limit; only `schools` (9.2 KB) fits. The one-line fetch-cache change therefore
+cannot remove Directus from the request path.
+
+**Assessment:** the Batch 1 *mechanism* is invalidated; the Phase 2 *thesis* is
+not. The caching layer that matters is the **Full Route Cache** (static/ISR
+route output, ~107 KB, no 2MB limit), not the fetch Data Cache. A static route
+runs its fetches at build/revalidation and serves cached output; request-time
+Directus fetches drop to zero regardless of the fetch-cache rejection. Batch 1's
+`no-store` removal is kept as the *prerequisite* for static generation.
+
+**Pivot:** partial and targeted. Three of four routes need no pivot — route
+caching was always the plan, just wrongly sequenced behind the fetch cache. Only
+`/search` (unavoidably dynamic) pivots to a **query boundary**: a new narrow
+search-only loader that never requests `source_records`.
+
+**503s:** the literal P2-S8 trigger (2× on the audition fallback during 39 rapid
+full-DB renders) was a correct stop but is transient host stress, handled like
+D-014 going forward. ISR replaces 39 renders with one background render per
+window.
+
+**Documents revised:** `claude_plan.md` (finding section + corrected mechanism
+§1.2/§1.3/§2.1 + revised batches §5); `codex_execution.md` (status, §2 revised
+mechanism, §3/§4 allowlist with additive-only Batch 5 `lib/data.ts` allowance,
+§5 batches, §8 stop conditions). Revised batch order: 2 = benchmark ISR +
+static params together → GATE A (with 0-Directus-fetch thesis check) → 3 program
+→ 4 homepage → 5 `/search` query boundary → 6 final.
+
+**Rejected:** custom `cacheHandler` to raise the 2MB limit — config change +
+untested infra, treats the symptom.
+
+**C2 unaffected:** `evidence_metadata` untouched; `/search` projection never
+requests `source_records`.
+
+**Outcome:** completed. Phase 2 re-issued for execution from Batch 2.
+
+**Next action:** Codex executes revised Batch 2 (benchmark ISR + static params),
+then stops at GATE A. GATE A now requires proof that a warm benchmark request
+performs 0 Directus fetches — the D-018 thesis check.
+
+---

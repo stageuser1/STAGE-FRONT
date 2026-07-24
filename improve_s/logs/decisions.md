@@ -852,3 +852,106 @@ line 165; any revalidation value other than 900; `revalidateTag` or cache tags
 - **Reversible?** Yes — every batch reverts independently; full-phase rollback
   restores the Phase 0 baseline exactly, with no schema, dependency, or
   configuration change to undo.
+
+---
+
+### D-018 · [2026-07-23] — Batch 1 finding: fetch Data Cache 2MB limit; pivot to Full Route Cache + `/search` query boundary
+
+- **Type:** gate / architecture correction
+- **Phase:** `04_` Batch 1 → 2
+- **Decided by:** Claude (assessment) / owner (review requested)
+- **Question:** Batch 1's P2-S8 stop reported (a) 154 Next.js "items over 2MB
+  cannot be cached" rejections across four collections, and (b) 2× HTTP 503.
+  Is the Phase 2 caching assumption invalidated, what minimal adjustment is
+  required, and should the phase pivot to "query boundary + cacheable fragments"?
+
+#### 1. Was the caching assumption invalidated?
+
+**The Batch 1 *mechanism* — yes. The Phase 2 *thesis* — no.** These are
+different layers, and conflating them is the whole error to avoid.
+
+| Cache layer | Stores | 2MB/entry limit | Our payloads |
+|---|---|:---:|---|
+| **fetch Data Cache** (`next: {revalidate}`) | raw fetch responses | **Yes** | 4 of 5 rejected (2.77–20.98 MB) — **dead end** |
+| **Full Route Cache** (static/ISR route output) | rendered RSC/HTML | **No** | ~50–130 KB/route — **fits easily** |
+
+Batch 1 measured the rejections directly: `source_records` 20,976,456 B ·
+audition fallback 8,555,082 B · `application_requirements` 4,122,101 B ·
+`program_offerings` 2,769,823 B · `schools` 9,206 B (the only one cached).
+
+**A statically-generated route runs its fetches at build/revalidation time and
+caches the rendered output** (~107 KB for the school page, measured Phase 0).
+At request time it makes **zero** Directus fetches, so the 2MB fetch-cache
+rejection is irrelevant. The 27.32 MB is consumed once per window during a
+background render, never on the user's request.
+
+**The specific assumption invalidated:** that switching `directusFetch` to
+`next: { revalidate: 900 }` would remove Directus from the request path. It does
+not, for two independent reasons — `force-dynamic` routes never consult the
+Data Cache, and the Data Cache rejects the payload anyway. **The broader thesis —
+static/ISR generation removes Directus from the request path — stands.** The
+plan simply front-loaded the weaker lever.
+
+**Batch 1's change is kept**, reframed as a **prerequisite**: `cache: "no-store"`
+opts a route out of static generation, so it had to be removed before any route
+could become static. It was never sufficient alone.
+
+#### 2. Minimal architecture adjustment
+
+- **Static-shape routes (`/`, school, program):** rely on the **Full Route
+  Cache** via `generateStaticParams` + `revalidate`. No config change, no custom
+  `cacheHandler`. This is the original Batch 2–4 plan, now correctly understood
+  as the load-bearing mechanism and sequenced first on the benchmark.
+- **`/search`:** unavoidably dynamic (`searchParams`), so it can use neither the
+  route cache nor (per the 2MB limit) the fetch Data Cache. It gets a **narrow
+  query boundary** — a new search-only loader returning just the ~12 fields the
+  results list and filters read, and **not** `source_records`.
+
+**Rejected: custom `cacheHandler` to raise the 2MB limit.** Requires a
+`next.config.ts` change plus untested infrastructure, and it treats the symptom —
+caching/deserializing a 27 MB blob per window is itself wasteful. The Full Route
+Cache stores 100 KB and needs no config change. Out of scope.
+
+#### 3. Pivot to "query boundary + cacheable fragments"?
+
+**Partial and targeted, not wholesale.** Three of four routes need no pivot —
+route-level caching was always the plan; it just had to be proven before the
+fetch-cache assumption was trusted. **Only `/search` genuinely pivots** to a
+query boundary. Calling the whole phase a pivot would overstate it.
+
+#### 4. The 503s (the literal P2-S8 trigger)
+
+2× HTTP 503 on the audition fallback during 39 rapid full-DB renders. **Transient
+host stress**, corroborating why per-request full-DB fetches must stop — not an
+independent architectural blocker. The stop was still correct. Handled like
+D-014 going forward (stop, 60 s, one retry, cap 2, escalate). ISR replaces 39
+measurement renders with one background render per 15-min window — far gentler on
+the Directus host. **Never respond to a 503 by changing Directus.**
+
+#### Decision
+
+- **Batch 1 stands (`fdf5cc7`). No revert.** Its role is corrected to
+  prerequisite.
+- **Revised batch plan** (both Phase 2 documents updated):
+  Batch 2 = benchmark ISR **+** `generateStaticParams` **together** (the route
+  cache is untestable until the route is genuinely static) → **GATE A with an
+  added thesis check: warm benchmark performs 0 Directus fetches** → Batch 3
+  program route → Batch 4 homepage → **Batch 5 `/search` query boundary** →
+  Batch 6 final measurement.
+- **`generateStaticParams` split out of the shared-loader concern:** it uses the
+  existing `getAllSchools()`/`getAllPrograms()`; no new query for the static
+  routes.
+- **Batch 5 allowlist widened, additively only:** a new narrow loader function
+  may be **added** to `lib/data.ts`; every existing line except the done line
+  165 stays frozen — `loadDirectusData`, `sourceRecordFields:977`,
+  `sourceTopicKey:755`, `fetchAuditionRequirements:947` unchanged.
+- **C2 unaffected:** `evidence_metadata` untouched. The `/search` projection
+  simply never requests `source_records`, so the field never arises there.
+- **Documents updated:** `claude_plan.md` (finding section, corrected mechanism
+  §1.2/§1.3/§2.1, revised batches §5), `codex_execution.md` (status, §2 revised
+  mechanism, §3/§4 allowlist, §5 batches, §8 stop conditions). No application
+  code touched in this review. No other phase touched.
+
+- **Reversible?** Yes — documentation-only correction. The benchmark experiment
+  (Batch 2) either proves the thesis at GATE A or stops the phase cleanly at
+  `fdf5cc7`.

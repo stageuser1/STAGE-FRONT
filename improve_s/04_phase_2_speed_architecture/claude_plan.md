@@ -1,9 +1,72 @@
 # Phase 2 — Speed Architecture · Claude Plan
 
-**Status:** ⬜ Awaiting owner approval — **blocked on C1, C2, C3 (D-016)**
+**Status:** 🔧 **REVISED after Batch 1 finding (D-018)** — mechanism corrected; re-issued for execution
 **Branch:** `perf/s1-speed-track`
-**Rollback point:** `86c1db9` (Phase 0 baseline)
+**Rollback point:** `86c1db9` (Phase 0 baseline); Batch 1 committed at `fdf5cc7`
 **Baseline of record:** `01_phase_0_baseline/report.md` (accepted, D-016)
+
+---
+
+## ⚠️ Batch 1 finding — the fetch Data Cache cannot hold these responses (D-018)
+
+**What happened:** Batch 1 switched `directusFetch` to `next: { revalidate: 900 }`.
+The build passed, but during measurement Next.js emitted 154 cache-write
+rejections:
+
+> `Failed to set Next.js data cache … items over 2MB can not be cached`
+
+| Collection | Cache-item bytes | Over 2MB? |
+|---|---:|:---:|
+| `source_records` | 20,976,456 | ✗ rejected |
+| `audition_requirements` fallback | 8,555,082 | ✗ rejected |
+| `application_requirements` | 4,122,101 | ✗ rejected |
+| `program_offerings` | 2,769,823 | ✗ rejected |
+| `schools` | 9,206 | ✓ cached |
+
+**Four of five collections cannot enter the Next.js Data Cache.** The fetch-level
+cache has a hard 2MB-per-entry limit, and `loadDirectusData()` returns five
+monolithic blobs, four of which are 2.77–20.98MB.
+
+**This invalidates the *Batch 1 mechanism*, not the *phase thesis*.** The
+distinction is the whole pivot:
+
+| Cache layer | Stores | 2MB limit? | Our payloads |
+|---|---|:---:|---|
+| **fetch Data Cache** (`next: {revalidate}`) | raw fetch responses | **Yes** | 4/5 rejected — **dead end** |
+| **Full Route Cache** (static / ISR route output) | the rendered RSC/HTML | **No** | ~50–130KB per route — **fits easily** |
+
+A statically-generated route runs its fetches at **build / revalidation time**
+and caches the **rendered output** (~107KB for the school page — measured in
+Phase 0). At request time it performs **zero** Directus fetches, so the 2MB
+fetch-cache rejection is irrelevant. The 27.32MB is consumed once per window
+during a background render, never on the user's request.
+
+**Batch 1's change is still correct and is kept** — not as the caching
+mechanism, but as a **prerequisite**: `cache: "no-store"` opts a route *out* of
+static generation, so it had to go before any route could become static. It
+simply was never sufficient on its own, and the plan wrongly presented it as the
+load-bearing step.
+
+**Consequence for `/search`:** it reads `searchParams`, so it is unavoidably
+dynamic and **cannot** use the Full Route Cache. Its only caching option is the
+fetch Data Cache — which rejects the payload. `/search` therefore needs a
+**query boundary** (a narrow, search-specific projection), not a cache. This is
+the one place the phase genuinely pivots to "query boundary + cacheable
+fragment." See §5 Batch 5.
+
+**Rejected alternative — custom `cacheHandler` to raise the 2MB limit.** It
+would require a `next.config.ts` change plus an untested infrastructure
+component, and it treats the symptom: caching and deserializing a 27MB blob per
+window is itself wasteful. The Full Route Cache needs no config change and
+stores 100KB, not 27MB. **Out of scope; do not pursue.**
+
+**Second, separate finding — 2× HTTP 503 (the literal P2-S8 trigger).** During
+39 rapid full-database renders, the audition fallback returned 503 twice. This
+is transient host stress (`503 Service Unavailable`), *corroborating* why
+per-request full-DB fetches must stop — not an independent blocker. Handled like
+D-014: not ambient instability to design around, but real evidence the Directus
+host struggles under repeated full loads. ISR replaces 39 measurement renders
+with **one background render per 15-minute window**, which is far gentler.
 
 > ★ **Highest-value phase in the program.** Users feel the improvement here and
 > nowhere else. Everything after this is quality, security, and durability.
@@ -95,42 +158,59 @@ Two compounding costs:
 `getProgramById` (`lib/data.ts:1366`) loads the entire database to return one
 program. `searchPrograms` (`lib/data.ts:1382`) filters the full dataset in JS.
 
-### 1.2 Target architecture
+### 1.2 Target architecture — corrected mechanism (D-018)
 
 ```
 Build / revalidation (once per window)          Request time (every user)
 ──────────────────────────────────────          ─────────────────────────
-Directus → Next.js Data Cache                   Cache → HTML
-27.32 MB, ~4 s                                  0 Directus requests
-                                                sub-second
+Directus → render → FULL ROUTE CACHE            Route Cache → HTML
+27.32 MB in, ~107 KB out                        0 Directus requests
+(fetch Data Cache NOT used — 2MB limit)         sub-second
 ```
 
-- Public routes prerendered where their shape allows
-- `/search` stays dynamic (it reads `searchParams`) but renders **over cached data**
-- Explicit revalidation window replaces `cache: "no-store"`
-- `generateStaticParams` over ~1,958 detail pages (20 schools + 1,938 programs)
+- **The caching mechanism is the Full Route Cache (static/ISR), not the fetch
+  Data Cache.** It stores the ~50–130KB rendered output and has no 2MB limit.
+- `/`, `/schools/[schoolId]`, `.../programs/[programId]` → statically generated
+  with `revalidate`; **prerendered, zero request-time fetches**.
+- `/search` reads `searchParams` → **cannot** be route-cached → gets a **narrow
+  query boundary** instead (Batch 5). It renders dynamically, but over a small
+  working set, not 27.32MB.
+- Removing `cache: "no-store"` (Batch 1) is the **prerequisite** that lets a
+  route be static — kept, but not the mechanism.
+- `generateStaticParams` over ~1,958 detail pages (20 schools + 1,938 programs).
 
 **Reviewer state does not block any of this.** Auth is entirely client-side via
 `localStorage` (`lib/directus-auth.tsx:40`); no server session forces dynamic
 rendering. Public pages are already safe to cache.
 
-### 1.3 Which routes migrate first — and why the order is unusual
+### 1.3 Which routes migrate first — corrected (D-018)
 
-Because all four routes share one loader, **the fetch-level cache change fixes
-all of them simultaneously.** There is no per-route rollout to sequence.
+The fetch-cache change (Batch 1, done) was **not** the mechanism — it is a
+prerequisite. The mechanism is per-route static generation, which **must be
+proven on the benchmark before rollout**, because Batch 1 disproved the
+assumption that a single global change would fix everything.
 
-The sequencing that matters is *by change type*, not by route:
+Corrected sequencing:
 
-| Order | Change | Blast radius | Risk |
+| Order | Change | Route(s) | Risk |
 |---:|---|---|---|
-| 1 | Fetch Data Cache (`lib/data.ts:165`) | All routes at once | **Very low** — one line, perfectly reversible |
-| 2 | Remove `force-dynamic`, add `revalidate` | 4 route files | Low |
-| 3 | `generateStaticParams` | 2 detail routes | Medium — build duration |
+| 1 (done) | Remove `no-store` → `revalidate` — prerequisite | loader | Very low, reversible |
+| 2 | `force-dynamic`→ISR **+** `generateStaticParams` together | **benchmark only** | Medium — this is the decisive experiment |
+| **GATE A** | Prove request-time Directus = 0 on the benchmark | — | — |
+| 3 | Same, program route | program detail | Medium |
+| 4 | Same, homepage | `/` | Low |
+| 5 | **Query boundary** | `/search` | Medium — new data path |
 
 **Benchmark route for verification: `/schools/yale_school_of_music`.** It is
 representative (detail route, 7 Directus requests, real content, source
 citations), it has a stable known-good URL from Phase 0, and its Phase 0
 medians (3649 ms cold / 4054 ms warm) are the comparison of record.
+
+**GATE A is now doubly important:** it must confirm the Full Route Cache
+actually removes Directus from the request path despite the 2MB fetch-cache
+rejection. If a warm benchmark request still hits Directus, the phase thesis is
+wrong and everything stops. That is the single most important measurement in the
+program.
 
 `/pilot/*` is **out of scope** for this phase. Leave `lib/pilot-data.ts:122`
 untouched; disposition is D-007, decided in Phase `03_`/`05_`.
@@ -139,22 +219,25 @@ untouched; disposition is D-007, decided in Phase `03_`/`05_`.
 
 ## 2. Directus query optimization
 
-### 2.1 The core judgement — read this before planning any query work
+### 2.1 The core judgement — CORRECTED after Batch 1 (D-018)
 
-**Caching solves the 27.32 MB problem. Query narrowing does not.**
+**Route-level caching solves the 27.32 MB problem for 3 of 4 routes. `/search`
+needs a query boundary. Query narrowing is otherwise still not required.**
 
-After Batch 1, the 27.32 MB is paid **once per revalidation window**, not once
-per request. At any realistic traffic level that is a >99% reduction in Directus
-load and removes the transfer entirely from user-perceived latency.
+For the three static-shape routes, the Full Route Cache pays the 27.32MB **once
+per revalidation window** during a background render and serves ~107KB output at
+request time — a >99% reduction in request-time Directus load, removed entirely
+from user-perceived latency. The 2MB fetch-cache limit does not touch this path.
 
-Query narrowing only improves the **cache-miss path** — the revalidation itself.
-That is worth something (faster builds, less link pressure) but it is
-second-order, and it carries far more regression risk because it requires
-proving, field by field, that nothing rendered depends on what is removed.
+**`/search` is the exception, and the one place the phase pivots.** It cannot be
+route-cached (dynamic on `searchParams`) and cannot use the fetch Data Cache
+(payload rejected). So `/search` gets a **narrow, search-specific query** — the
+"query boundary" — sized to what the results list actually needs. This is both
+faster uncached and small enough to become fetch-cacheable if desired.
 
-**Recommendation: do the caching in this phase. Do not narrow queries in this
-phase.** Narrowing is proposed below as an evidence-gated follow-up, not as
-Phase 2 work.
+For the three static routes, **do not narrow queries** — the route cache makes
+it unnecessary, and narrowing carries regression risk. Narrowing beyond
+`/search` remains an evidence-gated follow-up, not Phase 2 work.
 
 ### 2.2 Field allowlist strategy — already done, correctly
 
@@ -325,61 +408,79 @@ Gated on evidence, and on proving byte-identical output:
 Each batch = one commit on `perf/s1-speed-track`, separately revertable,
 **measured before the next begins**.
 
-### Batch 1 — Fetch Data Cache ★ the whole phase in one line
+> **The batch structure below is REVISED by D-018.** The authoritative,
+> step-by-step version is in `codex_execution.md`. This is the rationale.
 
-`lib/data.ts:165`: replace `cache: "no-store"` with `next: { revalidate: 900 }`.
-**Touch no other line.**
+### Batch 1 — Remove `no-store` (DONE, `fdf5cc7`) — prerequisite, not mechanism
 
-Measure `/`, `/search`, `/schools/yale_school_of_music`, and the program route —
-5 cold + 5 warm each, medians, against Phase 0.
+Already committed. Kept. Its role is corrected: it enables static generation, it
+does not itself cache the large responses (the 2MB limit rejects them). No
+revert. The phase builds forward from here.
 
-> ⚠️ **Expected complication — not a failure.** `export const dynamic =
-> "force-dynamic"` changes the default fetch-cache behaviour for a route. Batch 1
-> may therefore show **little or no improvement on its own**, with the win
-> arriving only after Batch 2 removes `force-dynamic`. **This is diagnostic, not
-> a stop condition.** Record the result and proceed to Batch 2. Do not "fix" it.
+### Batch 2 — Benchmark route: ISR **+** `generateStaticParams` together ★ decisive experiment
 
-**Rollback:** revert one line.
+On `app/schools/[schoolId]/page.tsx` **only**: remove `force-dynamic`, add
+`export const revalidate = 900`, and add `generateStaticParams` for the 20
+schools — **in one batch**, because the Full Route Cache is only exercised when
+the route is actually statically generated. Splitting them would leave an
+untestable intermediate state.
 
-### Batch 2 — Rendering mode
+**The measurement that matters:** a **warm** request to
+`/schools/yale_school_of_music` must perform **zero** Directus fetches
+(confirmed via the diagnostics subscriber) and return in **< 1s**. That single
+result validates or refutes the corrected thesis.
 
-Remove `export const dynamic = "force-dynamic"` from the four public routes
-(`app/page.tsx:10`, `app/search/page.tsx:14`,
-`app/schools/[schoolId]/page.tsx:18`,
-`app/schools/[schoolId]/programs/[programId]/page.tsx:7`); add
-`export const revalidate = 900`.
+**Rollback:** revert the one file.
 
-**Verify in the build output, do not assume:** `/`, school, and program routes
-static/ISR; `/search` dynamic (it reads `searchParams`) but serving cached data.
+### 🚦 GATE A — as in D-017, plus the D-018 thesis check
 
-**This is where the improvement should appear if Batch 1 alone did not deliver it.**
+Add one criterion: **"Warm benchmark request performs 0 Directus fetches despite
+the 2MB Data Cache rejection."** If that fails, stop the entire phase — the
+approach does not work and needs re-planning, not rollout.
 
-**Rollback:** restore four one-line exports.
+### Batch 3 — Program detail route
 
-### Batch 3 — `evidence_metadata`: measure only
+Same treatment: ISR + `generateStaticParams` for ~1,938 program pages.
+**Fallback if build is too slow:** empty `generateStaticParams` + `dynamicParams`
+(generate on first request, then route-cache). Record the reason if used.
 
-**No code change.** Record what the earlier "remove `evidence_metadata`"
-instruction has been superseded by (§4, C2). Confirm in the report that the
-field is retained deliberately.
+### Batch 4 — Homepage `/`
 
-> The original Batch 3 ("remove the field") is **cancelled** by D-016 / §4.3.
+Remove `force-dynamic`, add `revalidate`. `/` is a single fixed route — no
+`generateStaticParams` needed. It becomes one prerendered page.
 
-### Batch 4 — `generateStaticParams`
+### Batch 5 — `/search`: query boundary (the pivot)
 
-Add to both detail routes. ~1,958 pages (20 schools + 1,938 programs). Record
-build duration and page count.
+`/search` cannot be route-cached and cannot use the fetch Data Cache. Give it a
+**narrow, search-specific data path** that loads only what the results list and
+filters read — verified in Phase 2 planning as: program `name`/`name_zh`,
+`school_name`, `country`/`city`, `degree`, `major_area`/`major_area_zh`,
+`specialization`, `data_quality`. **It does not need `source_records` at all**,
+and needs audition data only insofar as `data_quality` derives from it.
 
-**Fallback if build duration is unacceptable:** static params for the 20 school
-pages only, leaving program pages to `dynamicParams` (generated on first
-request, then cached). Keeps the win on the highest-traffic pages without a
-1,938-page build over a slow link. **Record the reason if the fallback is used.**
+This is a genuinely new data path, so it carries the most regression risk in the
+phase. Options, in order of preference:
+1. A new narrow loader function in `lib/data.ts` for search only, leaving
+   `loadDirectusData()` untouched for the cached routes.
+2. If that proves large, reuse `loadDirectusData()` but confirm `/search`
+   rendering is unchanged.
 
-**Rollback:** remove the two functions.
+**Whichever is chosen, the rendered `/search` output must be byte-identical to
+Phase 0** (verified against `payloads/search.rsc`). Remove `force-dynamic`; add
+`revalidate` (the fetch may now be small enough to cache).
 
-### Batch 5 — Full measurement
+**Rollback:** revert the search route and any new loader function.
+
+### Batch 6 — Full measurement
 
 All four routes, 5 cold + 5 warm, medians, vs. Phase 0. Plus: Directus request
-count per route (target **0** warm), build duration, page count, route-level JS.
+count per route (target **0** warm on the three static routes; **reduced** on
+`/search`), build duration, page count, route-level JS.
+
+> **`evidence_metadata` (C2):** untouched throughout, on every route including
+> the new `/search` query. The original "remove the field" batch stays
+> cancelled. The `/search` projection simply never requests `source_records`, so
+> the question does not arise there.
 
 ---
 
