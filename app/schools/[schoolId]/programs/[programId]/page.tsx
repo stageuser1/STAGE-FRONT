@@ -2,9 +2,18 @@ import { EmptyState } from "@/components/EmptyState";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
 import { ProgramDetailSections } from "@/components/program/ProgramDetailSections";
 import { SourceCitationBlock } from "@/components/SourceCitationBlock";
-import { getProgramById } from "@/lib/data";
+import { getAllPrograms, getProgramById } from "@/lib/data";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 900;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const programs = await getAllPrograms();
+  return programs.slice(0, 3).map((program) => ({
+    schoolId: program.school_id,
+    programId: program.id,
+  }));
+}
 
 interface ProgramPageProps {
   params: Promise<{

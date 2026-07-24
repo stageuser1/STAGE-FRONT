@@ -2146,3 +2146,70 @@ third mechanism without a new decision.
 caches, else takes Option C and proceeds to Batch 4.
 
 ---
+
+### [2026-07-24] Phase 2 · corrected Batch 3 — PASSED under D-021
+
+- **Actor:** Codex
+- **Branch:** `perf/s1-speed-track`
+- **Starting SHA:** `6d3e381e1e6c26cc2e32b60da6bba1fd418860f0`
+- **Plan reference:** `04_phase_2_speed_architecture/codex_execution.md` · corrected Batch 3
+- **Owner authorization:** D-021
+- **Shell:** PowerShell
+- **Execution window:** ended 2026-07-24 12:25 +08:00
+
+**Application change:** only
+`app/schools/[schoolId]/programs/[programId]/page.tsx`:
+
+- replaced `dynamic = "force-dynamic"` with `revalidate = 900`
+- added explicit `dynamicParams = true`
+- re-imported the existing `getAllPrograms()`
+- added `generateStaticParams()` returning only `programs.slice(0, 3)`
+
+The build pre-rendered exactly three program pages (IDs 3, 4, and 5), not all
+1,938. No narrow loader, Directus change, dependency, configuration, schema,
+database, other-route, design, copy, or functional change was made.
+
+**Static verification:**
+
+| Check | Result |
+|---|---|
+| `npm run typecheck` | PASS, exit 0 |
+| `npm run build` | PASS, exit 0, 106 s |
+| `npm test` | PASS, exit 0, 10/10 |
+| Program build mode | `●` SSG/ISR |
+| Revalidation | `15m` / 900 seconds |
+| Static pages | 27/27 total; 3 program pages |
+
+The expected greater-than-2 MB fetch-cache rejection messages appeared during
+generation. No Directus HTTP failure occurred during the build.
+
+**Decisive local-production verification:**
+
+Route:
+`/schools/yale_school_of_music/programs/1190`
+(confirmed absent from the three-page static subset).
+
+| Request | HTTP | Time | `x-nextjs-cache` | Directus starts |
+|---|---:|---:|---|---:|
+| First | 200 | 7,208.520 ms | `MISS` | 6 |
+| Second | 200 | **89.313 ms** | **`HIT`** | **0** |
+
+The second response also returned `x-nextjs-prerender: 1` and
+`Cache-Control: s-maxage=900`. The observer log remained at exactly 12 lines
+across the second request, proving zero new Directus activity. Runtime and QA
+totals were 26 starts/completions: 21 HTTP 200, 5 documented initial audition
+HTTP 403 responses, zero unexpected statuses, and zero errors.
+
+**Content and QA:**
+
+- Program 1190 RSC semantic diff: PASS; 17/17 page-content Flight records
+  byte-identical after deterministic static-render ID remapping.
+- Path B: PASS, 10/10, including the hydrated reviewer login form.
+- Local server stopped; port 3000 confirmed free.
+- Temporary process-local observer artifacts removed.
+
+**Outcome:** corrected Batch 3 acceptance criteria PASSED. The non-prebuilt
+program page is on-demand ISR and its second request met all required targets:
+cache HIT, zero Directus requests, and under 1,000 ms. No Batch 4 work started.
+
+---

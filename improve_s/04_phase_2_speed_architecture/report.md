@@ -640,3 +640,130 @@ stop condition.
 route-only implementation is present in the working tree, but build, content
 integrity, warm-cache, and zero-Directus verification could not complete.
 No commit was created. No Batch 4+ work was performed.
+
+---
+
+## 15. Corrected Batch 3 execution under D-021 — PASSED
+
+This section supersedes section 14 for the final Batch 3 outcome. D-021
+approved a small non-empty static subset plus on-demand fill. Codex executed
+only corrected Batch 3 on `perf/s1-speed-track`, starting at
+`6d3e381e1e6c26cc2e32b60da6bba1fd418860f0`, using PowerShell. The execution
+completed at 2026-07-24 12:25 +08:00.
+
+### 15.1 File accounting
+
+Application file modified:
+
+- `app/schools/[schoolId]/programs/[programId]/page.tsx`
+
+Documentation files modified:
+
+- `improve_s/04_phase_2_speed_architecture/report.md`
+- `improve_s/logs/execution_log.md`
+
+Added files: none. Deleted files: none. Dependency, configuration, schema,
+database, Directus, and other-route changes: none.
+
+The application change:
+
+- removes `dynamic = "force-dynamic"`
+- keeps `revalidate = 900`
+- adds `dynamicParams = true`
+- imports the existing `getAllPrograms()`
+- returns only `programs.slice(0, 3)` from `generateStaticParams()`
+
+No narrow loader was created. The route does not enumerate all 1,938 programs.
+
+### 15.2 Static verification
+
+| Check | Result |
+|---|---|
+| `npm run typecheck` | PASS, exit 0 |
+| `npm run build` | PASS, exit 0, 106 s |
+| `npm test` | PASS, exit 0, 10/10 (2 Python + 8 Node) |
+| Program rendering mode | PASS, `●` SSG/ISR |
+| Revalidation | PASS, `15m` / 900 seconds |
+| Static pages generated | PASS, 27/27 total |
+| Program pages prebuilt | PASS, exactly 3 |
+
+The three prebuilt program routes were:
+
+```text
+/schools/manhattan_school_of_music/programs/3
+/schools/manhattan_school_of_music/programs/4
+/schools/manhattan_school_of_music/programs/5
+```
+
+The decisive Yale route
+`/schools/yale_school_of_music/programs/1190` was therefore confirmed
+non-prebuilt.
+
+Program-route build-table excerpt:
+
+```text
+├ ● /schools/[schoolId]/programs/[programId]         9.28 kB         121 kB         15m      1y
+├   ├ /schools/manhattan_school_of_music/programs/3                                 15m      1y
+├   ├ /schools/manhattan_school_of_music/programs/4                                 15m      1y
+├   └ /schools/manhattan_school_of_music/programs/5                                 15m      1y
+```
+
+The expected greater-than-2 MB fetch Data Cache rejection warnings appeared
+during static generation. No Directus HTTP failure occurred during the build.
+
+### 15.3 Decisive non-prebuilt cache verification
+
+Local production route:
+`/schools/yale_school_of_music/programs/1190`
+
+| Request | HTTP | Time | `x-nextjs-cache` | Directus starts | Result |
+|---|---:|---:|---|---:|---|
+| First | 200 | 7,208.520 ms | `MISS` | 6 | expected on-demand generation |
+| Second | 200 | **89.313 ms** | **`HIT`** | **0** | PASS |
+
+Both responses were 98,366 bytes. The second response also returned
+`x-nextjs-prerender: 1` and
+`Cache-Control: s-maxage=900, stale-while-revalidate=31535100`.
+
+The process-local diagnostics observer had 12 event lines after request 1
+(6 starts and 6 completions). It still had exactly 12 lines after request 2:
+**zero new Directus starts, completions, or errors**. Across the entire runtime
+verification and QA window it recorded 26 starts and 26 completions:
+21 HTTP 200, 5 documented initial audition-query HTTP 403 responses, zero
+unexpected statuses, and zero request errors.
+
+Against the Phase 0 program warm median of 3,691.290 ms, the verified warm hit
+was 97.580% lower and 41.3 times faster. The `< 1000 ms` target passed by
+910.687 ms.
+
+### 15.4 Content and Path B verification
+
+The on-demand-generated RSC was compared with
+`01_phase_0_baseline/payloads/program_1190.rsc` using a Flight-record parser.
+After remapping only the deterministic record IDs introduced by static
+rendering, **17/17 program page-content records were byte-identical**. Text,
+requirements, citations, and rendered program data had zero mismatches.
+
+Path B passed 10/10:
+
+1. Homepage HTTP 200 and hero heading present.
+2. Homepage contains 20 school links.
+3. `/search` HTTP 200.
+4. `/search?country=US` HTTP 200 with US filter state.
+5. Yale school page HTTP 200 with school name.
+6. Yale page contains 76 program links.
+7. Yale program 1190 HTTP 200.
+8. Program requirement content present.
+9. Program source citations present.
+10. `/login` HTTP 200; hydrated UI contains email, password, and login controls.
+
+### 15.5 Outcome
+
+**Corrected Batch 3 acceptance criteria: PASSED.** The route is ISR-capable,
+the non-prebuilt page entered the Full Route Cache, and the second request met
+all three decisive requirements: `x-nextjs-cache: HIT`, zero Directus
+requests, and response time below 1,000 ms.
+
+The local production server was stopped, port 3000 was confirmed free, and the
+temporary diagnostics module and event log were removed. No Batch 4 work was
+started.
