@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 export const revalidate = 900;
 
-/** Canonical country filter set shown on the homepage. */
+/** Canonical country filter set shown on the school database index. */
 const countryChips: FilterChipItem[] = [
-  { label: "全部", href: "/", active: true },
+  { label: "全部", href: "/schools", active: true },
   { label: "美国", href: "/search?country=US" },
   { label: "英国", href: "/search?country=GB" },
   { label: "加拿大", href: "/search?country=CA" },
