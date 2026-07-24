@@ -7,7 +7,7 @@ import type { Program } from "@/data/types";
 import { getAllPrograms, getAllSchools } from "@/lib/data";
 import { latestSchoolUpdate } from "@/lib/format";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 900;
 
 /** Canonical country filter set shown on the homepage. */
 const countryChips: FilterChipItem[] = [
