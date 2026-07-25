@@ -18,7 +18,7 @@ Two purposes:
 | `01_` Baseline | `perf/s0-baseline` | `86c1db9` | 2026-07-23 | Claude |
 | `02_` Transport security | none (infra) | n/a — DNS/proxy revert | | |
 | `04_` Speed architecture | `perf/s1-speed-track` | `742e901bf036daed924ea7732f7b33ec1f800107` | 2026-07-23 | Codex |
-| `03_` Data boundary | `perf/s2-data-boundary` | | | |
+| `03_` Data boundary | `perf/s2-data-boundary` | `ac46f9e09551cdb67cba48fe05858f3366c489d1` | 2026-07-24 | Codex |
 | `05_` Cleanup | `perf/s4-cleanup` | | | |
 | `06_` Final verification | none (verification) | last known-good `main` | | |
 

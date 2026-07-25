@@ -1,8 +1,14 @@
 "use client";
 
-import type { School } from "@/data/types";
+import { useEffect, useMemo, useState } from "react";
+import type {
+  DirectusReviewRecord,
+  PublicSchoolDto,
+  ReviewStatus,
+} from "@/data/types";
 import { Icon } from "@/components/ui/Icon";
 import { WorkflowStatusBadge } from "@/components/ui/StatusBadge";
+import { useReviewerAuth } from "@/lib/directus-auth";
 import { ReviewerEditableCard } from "./ReviewerEditableCard";
 
 const countries = [
@@ -21,18 +27,64 @@ export function SchoolProfileCard({
   school,
 }: {
   programCount: number;
-  school: School;
+  school: PublicSchoolDto;
 }) {
-  const reviewRecord = school.review_record ?? {
-    id: school.id,
-    review_status: null,
-    values: {
-      school_name: school.name,
-      country: school.country,
-      city: school.city,
-      official_website: school.website_url,
-    },
-  };
+  const { isReviewer, request } = useReviewerAuth();
+  const publicRecord = useMemo<DirectusReviewRecord>(
+    () => ({
+      id: school.id,
+      review_status: null,
+      values: {
+        school_name: school.name,
+        country: school.country,
+        city: school.city,
+        official_website: school.website_url,
+      },
+    }),
+    [school],
+  );
+  const [reviewRecord, setReviewRecord] =
+    useState<DirectusReviewRecord>(publicRecord);
+
+  useEffect(() => {
+    setReviewRecord(publicRecord);
+  }, [publicRecord]);
+
+  useEffect(() => {
+    if (!isReviewer) return;
+
+    let active = true;
+    void request<{
+      id: string | number;
+      review_status: ReviewStatus | null;
+      school_name: string | null;
+      country: string | null;
+      city: string | null;
+      official_website: string | null;
+    }>(
+      `/items/schools/${school.id}?fields=id,review_status,school_name,country,city,official_website`,
+    )
+      .then((record) => {
+        if (!active) return;
+        setReviewRecord({
+          id: String(record.id),
+          review_status: record.review_status,
+          values: {
+            school_name: record.school_name,
+            country: record.country,
+            city: record.city,
+            official_website: record.official_website,
+          },
+        });
+      })
+      .catch(() => {
+        if (active) setReviewRecord(publicRecord);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, [isReviewer, publicRecord, request, school.id]);
   return (
     <ReviewerEditableCard
       collection="schools"

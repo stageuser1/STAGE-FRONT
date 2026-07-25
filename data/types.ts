@@ -215,6 +215,72 @@ export interface Program {
   };
 }
 
+/**
+ * Public citation fields. Raw source-record ids, confidence metadata, review
+ * status, and extraction metadata are intentionally not part of this shape.
+ */
+export interface PublicSourceCitationDto {
+  source_title: string;
+  source_url: string;
+  source_type: SourceType;
+  accessed_at: string;
+}
+
+/**
+ * Public verification state used by the program detail UI. Reviewer-only
+ * confidence and review-note fields intentionally remain on `DataQuality`.
+ */
+export interface PublicDataQualityDto {
+  status: WorkflowStatus;
+}
+
+/**
+ * Server-to-client shape for the public school profile card.
+ * `review_record` is intentionally not representable.
+ */
+export interface PublicSchoolDto {
+  id: string;
+  name: string;
+  country: string;
+  city: string;
+  website_url: string | null;
+  status: WorkflowStatus;
+  sources?: PublicSourceCitationDto[];
+}
+
+/**
+ * Server-to-client shape for public program detail rendering.
+ * `review_records` and reviewer/backend metadata are intentionally absent.
+ */
+export interface PublicProgramDto {
+  id: string;
+  school_name: string;
+  country: string;
+  city: string;
+  name: string;
+  name_zh?: string | null;
+  degree?: DegreeInfo;
+  major_area: string;
+  major_area_zh?: string | null;
+  specialization?: string | null;
+  department?: string | null;
+  card_summary?: string | null;
+  application?: ApplicationSection | null;
+  prescreen?: PrescreenSection | null;
+  audition?: AuditionSection | null;
+  duration: string | null;
+  program_url?: string | null;
+  application_url: string | null;
+  audition_url?: string | null;
+  international_url?: string | null;
+  deadline: Deadline;
+  language_requirements: LanguageRequirements;
+  audition_requirements: AuditionRequirements;
+  cost_aid: CostAid;
+  sources: PublicSourceCitationDto[];
+  data_quality: PublicDataQualityDto;
+}
+
 export interface ProgramSearchQuery {
   keyword?: string | null;
   country?: string | null;

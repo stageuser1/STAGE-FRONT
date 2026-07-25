@@ -10,7 +10,7 @@ interface MobileHeaderProps {
 }
 
 const navLinks = [
-  { href: "/", label: "首页" },
+  { href: "/schools", label: "首页" },
   { href: "/search", label: "搜索" },
 ];
 
@@ -35,7 +35,7 @@ export function MobileHeader({
             <Icon name="chevron-left" size={22} />
           </Link>
         ) : null}
-        <Link className="min-w-0 translate-y-2 py-1" href="/">
+        <Link className="min-w-0 translate-y-2 py-1" href="/schools">
           <p className="text-[24px] font-extrabold leading-7 tracking-[-0.035em] text-brand-600">
             STAGE
           </p>
