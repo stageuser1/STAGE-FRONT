@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { ComingSoon } from "@/components/marketing/ComingSoon";
-import { teasers } from "@/content/landing";
+import { ExamCatalog } from "@/components/ielts/ExamCatalog";
+import { getAllExams } from "@/lib/ielts/catalog";
 
 export const metadata: Metadata = {
   title: "雅思实验室 · STAGE",
-  description: "STAGE 雅思实验室即将上线：完整还原考试环境的 AI 雅思练习平台。",
+  description: "STAGE 雅思实验室：完整还原考试环境的雅思阅读练习平台。",
 };
 
-export default function IeltsLabTeaserPage() {
-  return <ComingSoon {...teasers["ielts-lab"]} />;
+export default function IeltsLabPage() {
+  // Server component: the catalog is static data, so the 223 records are
+  // resolved at build time and handed to the client filter as props.
+  return <ExamCatalog exams={getAllExams()} />;
 }
