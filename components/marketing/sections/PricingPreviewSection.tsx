@@ -19,10 +19,10 @@ export function PricingPreviewSection() {
             {pricingPreview.tiers.map((tier, i) => (
               <Reveal key={tier.name} delay={i * 0.08}>
                 <div
-                  className={`flex h-full flex-col rounded-stage-lg bg-stage-bg p-6 ${
+                  className={`stage-card flex h-full flex-col p-6 ${
                     tier.highlighted
-                      ? "border-2 border-stage-primary shadow-stage-md"
-                      : "border border-stage-border shadow-stage-sm"
+                      ? "ring-2 ring-stage-primary"
+                      : "stage-card-interactive"
                   }`}
                 >
                   <div className="flex items-center justify-between gap-2">

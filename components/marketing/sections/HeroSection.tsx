@@ -1,56 +1,55 @@
 import Link from "next/link";
 import { Container } from "@/components/marketing/Container";
+import { HeroAtmosphere } from "@/components/marketing/HeroAtmosphere";
 import { IeltsSimPreview } from "@/components/marketing/IeltsSimPreview";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/motion/Reveal";
 import { hero } from "@/content/landing";
 
 /**
- * Hero (doc 03 §2). Two-column ≥ lg (text / IELTS mock), stacked below.
- * Cloud-gradient atmosphere is layered blurred blobs (not an image), with
- * ambient float loops disabled under reduced motion (globals.css).
+ * Hero (doc 03 §2). Centered, typography-led composition: eyebrow → two-line
+ * headline → supporting copy → two CTAs, with the IELTS mock beneath the text
+ * group (rising out of the cloud band, not competing with it).
+ *
+ * The luminous sky/grid/glow/cloud atmosphere lives in <HeroAtmosphere/> (an
+ * original CSS system, tunable via the --hero-* vars on .stage-hero). Clouds
+ * step rightward with hero scroll and fade the blue into a clean white section
+ * two. All ambient/scroll motion is disabled under prefers-reduced-motion.
  */
 export function HeroSection() {
   return (
     <section
       aria-label="STAGE 简介"
-      className="relative overflow-hidden bg-stage-bg"
+      className="stage-hero relative isolate overflow-hidden bg-stage-bg"
     >
-      {/* cloud atmosphere (doc 02 §2.3) */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-stage-sky-100 to-transparent" />
-        <div className="stage-animate-drift absolute -left-24 top-10 h-72 w-72 rounded-full bg-stage-sky-300/40 blur-3xl" />
-        <div className="stage-animate-float-slow absolute right-0 top-32 h-80 w-80 rounded-full bg-stage-blue-400/20 blur-3xl" />
-      </div>
+      <HeroAtmosphere />
 
-      <Container className="relative">
-        <div className="grid items-center gap-12 py-20 md:py-28 lg:grid-cols-12">
-          <div className="min-w-0 lg:col-span-5">
-            <Reveal>
-              <span className="text-caption font-medium uppercase text-stage-primary">
+      <Container className="relative z-10">
+        <div className="pb-24 pt-16 md:pb-32 md:pt-24">
+          {/* Text + CTA group — centered, typography-led */}
+          <Reveal>
+            <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+              <span className="text-caption font-medium uppercase tracking-[0.14em] text-stage-primary">
                 {hero.eyebrow}
               </span>
-              <h1 className="mt-4 text-balance text-display-sm font-bold text-stage-fg md:text-display">
-                {hero.headline.pre}
-                <span className="bg-stage-gradient-text bg-clip-text text-transparent">
-                  {hero.headline.highlight}
-                </span>
-                {hero.headline.post}
+              <h1 className="mt-5 font-bold leading-[1.08] tracking-[-0.03em] text-stage-fg text-[2.125rem] sm:text-[3.25rem] lg:text-[4.5rem]">
+                <span className="block">{hero.headline.line1}</span>
+                <span className="block">{hero.headline.line2}</span>
               </h1>
-              <p className="mt-6 max-w-[34ch] text-body-lg text-stage-fg-muted">
+              <p className="mt-6 max-w-[36rem] text-body-lg text-stage-fg-muted">
                 {hero.subhead}
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
                 <Link
                   href={hero.primaryCta.href}
-                  className="inline-flex items-center justify-center gap-2 rounded-stage-md bg-stage-primary px-6 py-3 text-body font-medium text-stage-fg-on-dark transition hover:bg-stage-primary-hover"
+                  className="inline-flex items-center justify-center gap-2 rounded-stage-md bg-stage-primary px-6 py-3 text-body font-medium text-stage-fg-on-dark shadow-stage-sm transition hover:bg-stage-primary-hover"
                 >
                   {hero.primaryCta.label}
                   <Icon name="arrow-right" size={18} />
                 </Link>
                 <Link
                   href={hero.secondaryCta.href}
-                  className="inline-flex items-center justify-center rounded-stage-md border border-stage-border px-6 py-3 text-body font-medium text-stage-fg transition hover:bg-stage-blue-50"
+                  className="inline-flex items-center justify-center rounded-stage-md border border-stage-border bg-stage-bg/70 px-6 py-3 text-body font-medium text-stage-fg backdrop-blur-sm transition hover:bg-stage-bg"
                 >
                   {hero.secondaryCta.label}
                 </Link>
@@ -59,22 +58,21 @@ export function HeroSection() {
                 <Icon name="check" size={16} className="text-stage-success" />
                 {hero.trustLine}
               </p>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
 
-          <div className="min-w-0 lg:col-span-7">
-            <Reveal delay={0.15}>
-              <div className="relative mx-auto min-w-0 max-w-[560px]">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 -z-10 shadow-stage-glow"
-                />
-                <div className="stage-animate-float lg:[transform:perspective(1600px)_rotateY(-2deg)]">
-                  <IeltsSimPreview />
-                </div>
+          {/* Product preview — beneath the text, rising above the cloud band */}
+          <Reveal delay={0.15}>
+            <div className="relative mx-auto mt-16 min-w-0 max-w-[880px] md:mt-20">
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10 shadow-stage-glow"
+              />
+              <div className="stage-animate-float">
+                <IeltsSimPreview />
               </div>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
         </div>
       </Container>
     </section>
