@@ -35,12 +35,12 @@ export const nav = {
 /* --------------------------------------------------------------------- hero */
 
 export const hero = {
-  eyebrow: "AI 驱动的音乐教育平台",
-  headline: { pre: "属于你的", highlight: "舞台", post: "，从选对院校开始。" },
+  eyebrow: "音乐申请 × IELTS 准备",
+  headline: { line1: "找到适合你的学校", line2: "也准备好你的 IELTS" },
   subhead:
-    "STAGE 汇聚全球顶尖音乐院校的权威招生数据，结合 AI 英语能力评估，帮助你更从容地找到方向、做好准备、完成申请。",
-  primaryCta: { href: "/schools", label: "探索院校" },
-  secondaryCta: { href: "/ielts-lab", label: "了解雅思实验室" },
+    "从院校筛选、项目要求，到 IELTS 模考与诊断，STAGE 帮音乐学生把复杂的申请准备，变成一条更清晰的路径。",
+  primaryCta: { href: "/ielts-lab", label: "体验 IELTS Lab" },
+  secondaryCta: { href: "/schools", label: "探索音乐院校" },
   trustLine: "每一条招生要求，均可追溯至官方信息源。",
 } as const;
 

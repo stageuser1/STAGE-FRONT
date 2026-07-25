@@ -11,7 +11,7 @@ export function CredibilitySection() {
   return (
     <section
       aria-label={credibility.eyebrow}
-      className="border-y border-stage-border bg-stage-bg"
+      className="border-b border-stage-border bg-stage-bg"
     >
       <Container>
         <div className="py-16 md:py-20">

@@ -7,10 +7,7 @@ import { Icon } from "@/components/ui/Icon";
  */
 export function AppPreviewCard({ variant }: { variant: "explore" | "dashboard" }) {
   return (
-    <div
-      aria-hidden="true"
-      className="rounded-stage-lg border border-stage-border bg-stage-bg p-5 shadow-stage-md"
-    >
+    <div aria-hidden="true" className="stage-card p-5">
       {variant === "explore" ? <ExploreMock /> : <DashboardMock />}
     </div>
   );

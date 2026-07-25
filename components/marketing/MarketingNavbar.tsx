@@ -9,7 +9,7 @@ import { MarketingMobileMenu } from "./MarketingMobileMenu";
  */
 export function MarketingNavbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-stage-border bg-stage-bg/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-stage-border/60 bg-stage-bg/70 backdrop-blur-md supports-[backdrop-filter]:bg-stage-bg/55">
       <div className="mx-auto flex h-16 max-w-stage items-center justify-between px-6 md:px-8">
         <Link
           href="/"

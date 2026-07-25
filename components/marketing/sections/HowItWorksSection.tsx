@@ -20,7 +20,7 @@ export function HowItWorksSection() {
             />
             {howItWorks.steps.map((step, i) => (
               <Reveal key={step.number} delay={i * 0.08}>
-                <div className="relative rounded-stage-lg border border-stage-border bg-stage-bg p-6 shadow-stage-sm">
+                <div className="stage-card stage-card-interactive relative p-6">
                   <span className="font-stage-mono text-h3 font-bold text-stage-primary">
                     {step.number}
                   </span>
