@@ -59,11 +59,36 @@ export interface ScoreInfo {
   source?: string;
 }
 
+/**
+ * How an attempt was started. Recorded because it changes how a result should
+ * be read: a suite entry was taken under time pressure from the previous two
+ * passages, an endless attempt was one of a rapid sequence.
+ */
+export type PracticeMode = "single" | "endless" | "suite";
+
+/**
+ * Suite membership for an attempt.
+ *
+ * The source project collapsed a three-part suite into ONE record and avoided
+ * question-id collisions by rewriting every key as `examId::questionId`. STAGE
+ * stores one record per passage instead and groups them here: the suite total
+ * is the sum of its entries either way, but per-question ids stay untouched, so
+ * question-type analytics keeps working on suite attempts without a special case.
+ */
+export interface SuiteRef {
+  id: string;
+  /** 0-based position in the P1 → P2 → P3 sequence. */
+  index: number;
+  total: number;
+}
+
 export interface PracticeRecord {
   id: string;
   examId: string;
   title: string;
   category: ExamCategory | "";
+  /** Corpus frequency at the time of the attempt. Absent on pre-2.1.0 records. */
+  frequency?: ExamFrequency | "";
   /** The IELTS skill module. Only reading is implemented. */
   type: "reading";
   /**
@@ -85,6 +110,15 @@ export interface PracticeRecord {
   answers: Record<string, string | string[]>;
   answerComparison: Record<string, AnswerComparison>;
   correctAnswerMap: Record<string, string | string[]>;
+  /**
+   * Questions the learner flagged in the runner. The runner reports these in
+   * `metadata.markedQuestions`; keeping them lets a review re-open with the
+   * same flags rather than a clean slate.
+   */
+  markedQuestions?: string[];
+  /** Absent on pre-2.1.0 records, which were all single attempts. */
+  mode?: PracticeMode;
+  suite?: SuiteRef;
   createdAt: string;
   version: string;
 }
@@ -94,7 +128,22 @@ export interface PracticeStats {
   totalPractices: number;
   averageAccuracy: number;
   totalTimeSeconds: number;
+  /** Consecutive days up to and including the most recent practice day. */
+  streakDays: number;
   byCategory: Record<ExamCategory, { practices: number; averageAccuracy: number }>;
+}
+
+/** Per-exam rollup of a learner's history, keyed by exam id. */
+export interface ExamProgress {
+  attempts: number;
+  /** Highest accuracy achieved, as a ratio in [0,1]. */
+  bestAccuracy: number;
+  /** Accuracy of the most recent attempt, as a ratio in [0,1]. */
+  lastAccuracy: number;
+  /** ISO timestamp of the most recent attempt. */
+  lastAttemptAt: string;
+  /** Id of the most recent attempt — the target of "review last attempt". */
+  lastRecordId: string;
 }
 
 /** One point on the score / accuracy trend charts, oldest first. */

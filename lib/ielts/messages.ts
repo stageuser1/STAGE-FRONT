@@ -58,6 +58,11 @@ export interface PracticeCompleteData {
     examTitle?: string;
     title?: string;
     category?: string;
+    frequency?: string;
+    practiceMode?: string;
+    dataKey?: string;
+    /** Question ids the learner flagged in the runner. */
+    markedQuestions?: string[];
   };
 }
 
@@ -76,6 +81,81 @@ export function isTrustedRunnerEvent(
   const payload = event.data as RunnerEnvelope | null;
   if (!payload || typeof payload !== "object") return false;
   return typeof payload.type === "string";
+}
+
+/**
+ * Sends a message *to* the runner.
+ *
+ * Targeted at this origin rather than "*": the runner is same-origin, so there
+ * is no reason to widen the target and let another document read the payload
+ * if the frame is ever redirected.
+ */
+function postToRunner(
+  frame: HTMLIFrameElement | null,
+  type: string,
+  data: Record<string, unknown>,
+): void {
+  const target = frame?.contentWindow;
+  if (!target || typeof window === "undefined") return;
+  target.postMessage({ type, data }, window.location.origin);
+}
+
+/**
+ * Completes the runner's startup handshake.
+ *
+ * Until this arrives the runner re-posts SESSION_READY on an interval
+ * (`stopInitLoop` in unifiedReadingPage.js is only reached from its
+ * INIT_SESSION branch), so a host that merely listens leaves a timer running
+ * for the life of the page.
+ */
+export function sendInitSession(
+  frame: HTMLIFrameElement | null,
+  data: { examId: string; sessionId: string },
+): void {
+  postToRunner(frame, "INIT_SESSION", data);
+}
+
+/**
+ * Re-opens a stored attempt read-only, restoring the learner's answers, flags,
+ * per-question outcomes and score.
+ *
+ * The stored comparison and score are sent rather than left for the runner to
+ * re-derive: `buildReplayResults` only falls back to comparing answers when a
+ * field is absent, so passing them makes the review show exactly the result the
+ * learner was given, even if the corpus answer key is later corrected.
+ */
+export function sendReplayRecord(
+  frame: HTMLIFrameElement | null,
+  record: {
+    examId: string;
+    answers: Record<string, string | string[]>;
+    correctAnswerMap: Record<string, string | string[]>;
+    answerComparison: Record<string, AnswerComparison>;
+    correctAnswers: number;
+    totalQuestions: number;
+    accuracy: number;
+    markedQuestions?: string[];
+  },
+): void {
+  const marked = record.markedQuestions ?? [];
+  postToRunner(frame, "REPLAY_PRACTICE_RECORD", {
+    entry: {
+      examId: record.examId,
+      answers: record.answers,
+      correctAnswers: record.correctAnswerMap,
+      answerComparison: record.answerComparison,
+      scoreInfo: {
+        correct: record.correctAnswers,
+        total: record.totalQuestions,
+        totalQuestions: record.totalQuestions,
+        accuracy: record.accuracy,
+        percentage: Math.round(record.accuracy * 100),
+      },
+      markedQuestions: marked,
+    },
+    markedQuestions: marked,
+    readOnly: true,
+  });
 }
 
 /** URL of the exam runner for a given exam. */

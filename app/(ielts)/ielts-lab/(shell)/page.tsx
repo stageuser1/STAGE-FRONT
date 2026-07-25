@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ExamCatalog } from "@/components/ielts/ExamCatalog";
+import { LabOverview } from "@/components/ielts/LabOverview";
 import { getAllExams } from "@/lib/ielts/catalog";
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function IeltsLabPage() {
-  // Server component: the catalog is static data, so the 223 records are
-  // resolved at build time and handed to the client filter as props.
-  return <ExamCatalog exams={getAllExams()} />;
+  // Server component: the catalog is static, so the 223 records are resolved at
+  // build time. Progress is layered on in the client from local history.
+  return <LabOverview exams={getAllExams()} />;
 }

@@ -13,18 +13,24 @@ import type { PracticeCompleteData } from "./messages";
 import type {
   AnswerComparison,
   ExamCategory,
+  ExamFrequency,
+  PracticeMode,
   PracticeRecord,
   PracticeStats,
+  SuiteRef,
 } from "./types";
 
 const STORAGE_KEY = "stage.ielts.practice-records";
 /**
- * 2.0.0 adds `answerComparison[].questionType` and `userKey`. Both are optional,
- * so 1.0.0 records remain readable and are NOT rewritten on load — analytics
- * resolves their types from the live corpus index instead. Keeping old records
- * untouched means a bug in this module can never corrupt existing history.
+ * 2.0.0 added `answerComparison[].questionType` and `userKey`.
+ * 2.1.0 adds `frequency`, `markedQuestions`, `mode` and `suite`.
+ *
+ * Every addition is optional, so older records stay readable and are NOT
+ * rewritten on load — analytics resolves their question types from the live
+ * corpus index instead. Keeping old records untouched means a bug in this
+ * module can never corrupt existing history.
  */
-const RECORD_VERSION = "2.0.0";
+const RECORD_VERSION = "2.1.0";
 /** The source project truncates at 1,000; the same cap keeps quota predictable. */
 const MAX_RECORDS = 1000;
 /** Owner of every record while history is browser-local. See PracticeRecord. */
@@ -47,12 +53,10 @@ export function loadRecords(): PracticeRecord[] {
   }
 }
 
-export function saveRecord(record: PracticeRecord): PracticeRecord[] {
-  if (!isBrowser()) return [];
-  const next = [record, ...loadRecords().filter((r) => r.id !== record.id)].slice(
-    0,
-    MAX_RECORDS,
-  );
+/** Writes the list as given, newest first. Returns what was actually stored. */
+function persist(records: PracticeRecord[]): PracticeRecord[] {
+  const next = records.slice(0, MAX_RECORDS);
+  if (!isBrowser()) return next;
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
   } catch {
@@ -61,9 +65,97 @@ export function saveRecord(record: PracticeRecord): PracticeRecord[] {
   return next;
 }
 
+export function saveRecord(record: PracticeRecord): PracticeRecord[] {
+  if (!isBrowser()) return [];
+  return persist([record, ...loadRecords().filter((r) => r.id !== record.id)]);
+}
+
+export function getRecord(id: string): PracticeRecord | undefined {
+  return loadRecords().find((record) => record.id === id);
+}
+
+/** Removes the given ids. Returns the surviving records. */
+export function deleteRecords(ids: readonly string[]): PracticeRecord[] {
+  if (!isBrowser()) return [];
+  const doomed = new Set(ids);
+  return persist(loadRecords().filter((record) => !doomed.has(record.id)));
+}
+
 export function clearRecords(): void {
   if (!isBrowser()) return;
   window.localStorage.removeItem(STORAGE_KEY);
+}
+
+function timeOf(iso: string): number {
+  const value = new Date(iso).getTime();
+  return Number.isNaN(value) ? 0 : value;
+}
+
+/**
+ * Merges imported records into history, newest first.
+ *
+ * De-duplicated on record id, with the *existing* record winning: an import
+ * must never silently overwrite an attempt the learner actually took on this
+ * machine. Returns the merged list and how many records were genuinely new.
+ */
+export function mergeRecords(incoming: readonly PracticeRecord[]): {
+  records: PracticeRecord[];
+  added: number;
+} {
+  const existing = loadRecords();
+  const seen = new Set(existing.map((record) => record.id));
+  const added = incoming.filter((record) => record?.id && !seen.has(record.id));
+
+  const merged = [...existing, ...added].sort(
+    (a, b) => timeOf(b.createdAt) - timeOf(a.createdAt),
+  );
+  return { records: persist(merged), added: added.length };
+}
+
+/** Local calendar day of an ISO timestamp, as `YYYY-M-D`. */
+function dayKey(date: Date): string {
+  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+}
+
+function startOfDay(iso: string): number {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return 0;
+  date.setHours(0, 0, 0, 0);
+  return date.getTime();
+}
+
+/**
+ * Consecutive practice days ending at the most recent practice day.
+ *
+ * Counts back from the latest day a record exists for, not from today, so a
+ * streak that ended yesterday still reports its length rather than collapsing
+ * to zero the moment the clock rolls over.
+ *
+ * Steps by calendar day rather than by subtracting 24h from a timestamp: across
+ * a DST boundary the two disagree, and the calendar is what a learner counts.
+ */
+export function computeStreak(records: readonly PracticeRecord[]): number {
+  const days = new Set<string>();
+  let latest = 0;
+
+  for (const record of records) {
+    const start = startOfDay(record.createdAt);
+    if (start === 0) continue;
+    days.add(dayKey(new Date(start)));
+    if (start > latest) latest = start;
+  }
+  if (latest === 0) return 0;
+
+  let streak = 0;
+  const cursor = new Date(latest);
+  while (days.has(dayKey(cursor))) {
+    streak += 1;
+    // Step by calendar field, not by subtracting 24h: across a DST boundary a
+    // fixed -86400000ms lands on 23:00 of the same day and would loop forever.
+    cursor.setDate(cursor.getDate() - 1);
+    cursor.setHours(0, 0, 0, 0);
+  }
+  return streak;
 }
 
 export function computeStats(records: PracticeRecord[]): PracticeStats {
@@ -96,8 +188,19 @@ export function computeStats(records: PracticeRecord[]): PracticeStats {
     totalPractices: records.length,
     averageAccuracy: records.length > 0 ? totalAccuracy / records.length : 0,
     totalTimeSeconds,
+    streakDays: computeStreak(records),
     byCategory,
   };
+}
+
+/** Context the runner cannot know: which exam STAGE launched, and why. */
+export interface RecordContext {
+  examId: string;
+  title: string;
+  category: ExamCategory | "";
+  frequency?: ExamFrequency;
+  mode?: PracticeMode;
+  suite?: SuiteRef;
 }
 
 /**
@@ -109,7 +212,7 @@ export function computeStats(records: PracticeRecord[]): PracticeStats {
  */
 export function toPracticeRecord(
   data: PracticeCompleteData,
-  fallback: { examId: string; title: string; category: ExamCategory | "" },
+  context: RecordContext,
   /**
    * Resolves a question's type from the corpus. Injected rather than imported
    * so this module stays free of the ~26KB type index: the history page reads
@@ -129,12 +232,16 @@ export function toPracticeRecord(
 
   const endTime = data.endTime ?? new Date().toISOString();
   const startTime = data.startTime ?? endTime;
+  const marked = data.metadata?.markedQuestions;
 
   return {
-    id: `${fallback.examId}-${Date.now()}`,
-    examId: data.examId ?? data.metadata?.examId ?? fallback.examId,
-    title: data.metadata?.examTitle ?? data.metadata?.title ?? fallback.title,
-    category: (data.metadata?.category as ExamCategory) || fallback.category,
+    // Suite entries are saved back-to-back, so a millisecond clock alone is not
+    // a safe key; the sequence position disambiguates without a uuid dependency.
+    id: `${context.examId}-${Date.now()}${context.suite ? `-${context.suite.index}` : ""}`,
+    examId: data.examId ?? data.metadata?.examId ?? context.examId,
+    title: data.metadata?.examTitle ?? data.metadata?.title ?? context.title,
+    category: (data.metadata?.category as ExamCategory) || context.category,
+    frequency: (data.metadata?.frequency as ExamFrequency) || context.frequency || "",
     type: "reading",
     userKey: LOCAL_USER_KEY,
     startTime,
@@ -149,10 +256,13 @@ export function toPracticeRecord(
       data.answerComparison ?? {},
       // The catalog id, not the runner-reported one: the type index is keyed by
       // catalog id, and the runner is free to report a dataset key instead.
-      fallback.examId,
+      context.examId,
       resolveQuestionType,
     ),
     correctAnswerMap: data.correctAnswers ?? {},
+    markedQuestions: Array.isArray(marked) ? marked.map(String) : undefined,
+    mode: context.mode ?? "single",
+    suite: context.suite,
     createdAt: new Date().toISOString(),
     version: RECORD_VERSION,
   };

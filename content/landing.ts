@@ -23,7 +23,7 @@ export const nav = {
   brand: "STAGE",
   links: [
     { href: "/schools", label: "院校探索" },
-    { href: "/ielts-lab", label: "雅思实验室", soon: true },
+    { href: "/ielts-lab", label: "雅思实验室" },
     { href: "/dashboard", label: "学习中心", soon: true },
     { href: "/pricing", label: "定价" },
     { href: "/contact", label: "联系我们" },
@@ -118,7 +118,7 @@ export const features: Feature[] = [
     title: "像真实考场一样练习。",
     body: "完整还原 IELTS Academic 考试环境，AI 精确分析你的答题表现，告诉你分数从何而来，以及如何提升。",
     bullets: ["高度还原真实考试环境的限时练习", "每道题目均有 AI 反馈", "四项技能的薄弱环节分析"],
-    cta: { href: "/ielts-lab", label: "预览实验室" },
+    cta: { href: "/ielts-lab", label: "进入实验室" },
     visual: "ielts",
     visualSide: "left",
   },
@@ -298,12 +298,7 @@ export const footer = {
 /* --------------------------------------------------------- teaser / metadata */
 
 export const teasers = {
-  "ielts-lab": {
-    eyebrow: "雅思实验室",
-    title: "雅思实验室即将上线。",
-    body: "完整还原考试环境的 AI 雅思练习平台正在开发中。在此期间，你可以先探索院校数据库，明确目标院校的语言要求。",
-    cta: { href: "/schools", label: "探索院校" },
-  },
+  // The ielts-lab teaser is gone: /ielts-lab is the live product now.
   dashboard: {
     eyebrow: "学习中心",
     title: "学习中心即将上线。",
