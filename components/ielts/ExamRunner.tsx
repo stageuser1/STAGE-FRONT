@@ -8,6 +8,7 @@ import {
   type PracticeCompleteData,
   type RunnerEnvelope,
 } from "@/lib/ielts/messages";
+import { questionTypeOf } from "@/lib/ielts/question-types";
 import { saveRecord, toPracticeRecord } from "@/lib/ielts/storage";
 import type { ExamSummary } from "@/lib/ielts/types";
 
@@ -32,11 +33,17 @@ export function ExamRunner({ exam }: { exam: ExamSummary }) {
       setResult(data);
       setStatus("submitted");
       saveRecord(
-        toPracticeRecord(data, {
-          examId: exam.id,
-          title: exam.title,
-          category: exam.category,
-        }),
+        toPracticeRecord(
+          data,
+          {
+            examId: exam.id,
+            title: exam.title,
+            category: exam.category,
+          },
+          // Annotates each question with its corpus type, which the runner
+          // does not report. Scoring is untouched — this is metadata only.
+          questionTypeOf,
+        ),
       );
     },
     [exam.id, exam.title, exam.category],

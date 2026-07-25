@@ -25,12 +25,27 @@ export interface ExamSummary {
   hasExplanation: boolean;
 }
 
+/**
+ * An IELTS reading question type, as named by the corpus (`matching`,
+ * `true_false_not_given`, …). Kept as a widened string rather than a union:
+ * the corpus is the authority, and a new kind appearing there must not turn
+ * into a type error in stored history.
+ */
+export type QuestionType = string;
+
 /** Per-question outcome, as scored by the exam runner. */
 export interface AnswerComparison {
   questionId: string;
   userAnswer: string | string[];
   correctAnswer: string | string[];
   isCorrect: boolean;
+  /**
+   * Resolved from the corpus at save time (record version 2.0.0+). Absent on
+   * records written before analytics existed; readers fall back to the live
+   * index. Stored rather than always derived so that a later corpus revision
+   * cannot retroactively change what a past attempt is reported as.
+   */
+  questionType?: QuestionType;
 }
 
 /** Scoring summary produced by the runner. `total` is weight-adjusted: an
@@ -49,7 +64,14 @@ export interface PracticeRecord {
   examId: string;
   title: string;
   category: ExamCategory | "";
+  /** The IELTS skill module. Only reading is implemented. */
   type: "reading";
+  /**
+   * Owner of the record. Always "local" today: STAGE has no learner accounts,
+   * so history is browser-local (see storage.ts). Present so that records
+   * written now can be attributed without a rewrite if accounts arrive.
+   */
+  userKey?: string;
   /** ISO timestamps. */
   startTime: string;
   endTime: string;
@@ -73,4 +95,31 @@ export interface PracticeStats {
   averageAccuracy: number;
   totalTimeSeconds: number;
   byCategory: Record<ExamCategory, { practices: number; averageAccuracy: number }>;
+}
+
+/** One point on the score / accuracy trend charts, oldest first. */
+export interface TrendPoint {
+  /** Attempt id — stable key for the chart. */
+  id: string;
+  /** 1-based position in the series; the x axis is attempt order, not date. */
+  index: number;
+  /** Localised short date, shown in the tooltip. */
+  date: string;
+  title: string;
+  category: ExamCategory | "";
+  /** Correct answers on this attempt. */
+  score: number;
+  totalQuestions: number;
+  /** Whole percent, 0–100 — charts read better in percent than in [0,1]. */
+  accuracy: number;
+}
+
+/** Per-question-type rollup driving the weakness breakdown. */
+export interface QuestionTypeStat {
+  type: QuestionType;
+  label: string;
+  attempted: number;
+  correct: number;
+  /** Whole percent, 0–100. */
+  accuracy: number;
 }

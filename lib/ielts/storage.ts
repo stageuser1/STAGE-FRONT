@@ -10,12 +10,25 @@
  * stays comfortably inside the localStorage quota. Revisit if volume grows.
  */
 import type { PracticeCompleteData } from "./messages";
-import type { ExamCategory, PracticeRecord, PracticeStats } from "./types";
+import type {
+  AnswerComparison,
+  ExamCategory,
+  PracticeRecord,
+  PracticeStats,
+} from "./types";
 
 const STORAGE_KEY = "stage.ielts.practice-records";
-const RECORD_VERSION = "1.0.0";
+/**
+ * 2.0.0 adds `answerComparison[].questionType` and `userKey`. Both are optional,
+ * so 1.0.0 records remain readable and are NOT rewritten on load — analytics
+ * resolves their types from the live corpus index instead. Keeping old records
+ * untouched means a bug in this module can never corrupt existing history.
+ */
+const RECORD_VERSION = "2.0.0";
 /** The source project truncates at 1,000; the same cap keeps quota predictable. */
 const MAX_RECORDS = 1000;
+/** Owner of every record while history is browser-local. See PracticeRecord. */
+const LOCAL_USER_KEY = "local";
 
 function isBrowser(): boolean {
   return typeof window !== "undefined";
@@ -97,6 +110,12 @@ export function computeStats(records: PracticeRecord[]): PracticeStats {
 export function toPracticeRecord(
   data: PracticeCompleteData,
   fallback: { examId: string; title: string; category: ExamCategory | "" },
+  /**
+   * Resolves a question's type from the corpus. Injected rather than imported
+   * so this module stays free of the ~26KB type index: the history page reads
+   * records without ever needing to write one.
+   */
+  resolveQuestionType?: (examId: string, questionId: string) => string | undefined,
 ): PracticeRecord {
   const score = data.scoreInfo;
   const correct = Number(score?.correct ?? 0);
@@ -117,6 +136,7 @@ export function toPracticeRecord(
     title: data.metadata?.examTitle ?? data.metadata?.title ?? fallback.title,
     category: (data.metadata?.category as ExamCategory) || fallback.category,
     type: "reading",
+    userKey: LOCAL_USER_KEY,
     startTime,
     endTime,
     duration: Math.max(0, Number(data.duration ?? 0)),
@@ -125,9 +145,42 @@ export function toPracticeRecord(
     correctAnswers: correct,
     accuracy,
     answers: data.answers ?? {},
-    answerComparison: data.answerComparison ?? {},
+    answerComparison: annotateTypes(
+      data.answerComparison ?? {},
+      // The catalog id, not the runner-reported one: the type index is keyed by
+      // catalog id, and the runner is free to report a dataset key instead.
+      fallback.examId,
+      resolveQuestionType,
+    ),
     correctAnswerMap: data.correctAnswers ?? {},
     createdAt: new Date().toISOString(),
     version: RECORD_VERSION,
   };
+}
+
+/**
+ * Copies the runner's per-question comparison, adding the corpus question type.
+ *
+ * Never drops or rewrites a comparison whose type cannot be resolved — an
+ * unclassified question still counts toward the attempt's score, and losing it
+ * would make the stored record disagree with the score the learner was shown.
+ */
+function annotateTypes(
+  comparison: Record<string, AnswerComparison>,
+  examId: string,
+  resolve?: (examId: string, questionId: string) => string | undefined,
+): Record<string, AnswerComparison> {
+  if (!resolve) return comparison;
+
+  const annotated: Record<string, AnswerComparison> = {};
+  for (const [questionId, entry] of Object.entries(comparison)) {
+    if (!entry || typeof entry !== "object") continue;
+    // The map key is authoritative: the runner has been seen to omit
+    // `questionId` from the value while still keying it correctly.
+    // Prefer the value's own id, falling back to the map key — the runner is
+    // untrusted input, and the two are expected to agree.
+    const type = resolve(examId, entry.questionId ?? questionId);
+    annotated[questionId] = type ? { ...entry, questionType: type } : entry;
+  }
+  return annotated;
 }
