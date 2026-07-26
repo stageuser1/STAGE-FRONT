@@ -20,7 +20,7 @@ export function HeroSearch() {
           className="h-full min-w-0 flex-1 bg-transparent text-xs text-ink-900 outline-none placeholder:text-ink-400"
           id="hero-search"
           name="keyword"
-          placeholder="搜索学校、专业、学历，开启你的音乐之旅"
+          placeholder="搜索院校、专业、城市或学位缩写"
           type="search"
         />
         <button

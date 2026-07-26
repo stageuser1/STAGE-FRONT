@@ -27,7 +27,11 @@ export type IconName =
   | "heart"
   | "compare"
   | "bookmark"
-  | "menu";
+  | "menu"
+  | "flag"
+  | "target"
+  | "trend"
+  | "list-checks";
 
 const paths: Record<IconName, ReactNode> = {
   search: (
@@ -148,6 +152,33 @@ const paths: Record<IconName, ReactNode> = {
     <path d="M6.5 4.5A1.5 1.5 0 0 1 8 3h8a1.5 1.5 0 0 1 1.5 1.5V21L12 17.5 6.5 21V4.5Z" />
   ),
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,
+  flag: (
+    <>
+      <path d="M5.5 21V4" />
+      <path d="M5.5 5h11l-2 3.5 2 3.5h-11" />
+    </>
+  ),
+  target: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="12" cy="12" r="0.75" fill="currentColor" />
+    </>
+  ),
+  trend: (
+    <>
+      <path d="m4 16 5-5 3.5 3.5L20 7" />
+      <path d="M15 7h5v5" />
+    </>
+  ),
+  "list-checks": (
+    <>
+      <path d="m3.5 6.5 1.5 1.5 2.5-3" />
+      <path d="m3.5 13 1.5 1.5 2.5-3" />
+      <path d="m3.5 19.5 1.5 1.5 2.5-3" />
+      <path d="M11 7h9M11 13.5h9M11 20h9" />
+    </>
+  ),
 };
 
 interface IconProps extends ComponentPropsWithoutRef<"svg"> {

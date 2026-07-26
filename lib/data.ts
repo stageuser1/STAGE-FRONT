@@ -788,6 +788,17 @@ export function toPublicSchoolDto(school: School): PublicSchoolDto {
  * cannot cross the public boundary without an intentional mapping change.
  */
 export function toPublicProgramDto(program: Program): PublicProgramDto {
+  const offeringValues = program.review_records?.offering.values;
+  const applicationValues = program.review_records?.application?.values;
+  const auditionValues = program.review_records?.audition?.values;
+  const degreeLabel =
+    program.review_records?.degree_level_options.find(
+      (option) => option.value === offeringValues?.degree_level_id,
+    )?.label ?? null;
+  const publicText = (
+    value: string | number | boolean | null | undefined,
+  ): string | null => (value === null || value === undefined ? null : String(value));
+
   return {
     id: program.id,
     school_name: program.school_name,
@@ -908,6 +919,125 @@ export function toPublicProgramDto(program: Program): PublicProgramDto {
     sources: program.sources.map(toPublicSourceCitationDto),
     data_quality: {
       status: program.data_quality.status,
+    },
+    display: {
+      offering: {
+        official_program_name: publicText(
+          offeringValues?.official_program_name ?? program.name,
+        ),
+        program_name_zh: publicText(
+          offeringValues?.program_name_zh ?? program.name_zh,
+        ),
+        track_or_concentration: publicText(
+          offeringValues?.track_or_concentration ?? program.specialization,
+        ),
+        duration_years: publicText(
+          offeringValues?.duration_years ?? program.duration,
+        ),
+        language_of_instruction: publicText(
+          offeringValues?.language_of_instruction ??
+            program.language_requirements.instruction_language,
+        ),
+        program_url: publicText(
+          offeringValues?.program_url ?? program.program_url,
+        ),
+        application_url: publicText(
+          offeringValues?.application_url ?? program.application_url,
+        ),
+        audition_url: publicText(
+          offeringValues?.audition_url ?? program.audition_url,
+        ),
+        international_url: publicText(
+          offeringValues?.international_url ?? program.international_url,
+        ),
+        degree_label: degreeLabel,
+      },
+      application: applicationValues
+        ? {
+            application_deadline: publicText(
+              applicationValues.application_deadline,
+            ),
+            deadline_notes: publicText(applicationValues.deadline_notes),
+            toefl_minimum: publicText(applicationValues.toefl_minimum),
+            ielts_minimum: publicText(applicationValues.ielts_minimum),
+            duolingo_minimum: publicText(applicationValues.duolingo_minimum),
+            english_waiver_policy: publicText(
+              applicationValues.english_waiver_policy,
+            ),
+            english_language_tests: publicText(
+              applicationValues.english_language_tests,
+            ),
+            resume_required: publicText(applicationValues.resume_required),
+            essay_required: publicText(applicationValues.essay_required),
+            recommendation_letters: publicText(
+              applicationValues.recommendation_letters,
+            ),
+            transcript_requirements: publicText(
+              applicationValues.transcript_requirements,
+            ),
+            portfolio_required: publicText(
+              applicationValues.portfolio_required,
+            ),
+            required_materials: publicText(
+              applicationValues.required_materials,
+            ),
+            international_applicant_notes: publicText(
+              applicationValues.international_applicant_notes,
+            ),
+            conditional_notes: publicText(applicationValues.conditional_notes),
+            notes: publicText(applicationValues.notes),
+            application_fee: publicText(applicationValues.application_fee),
+            application_fee_currency: publicText(
+              applicationValues.application_fee_currency,
+            ),
+            tuition_annual: publicText(applicationValues.tuition_annual),
+            tuition_currency: publicText(applicationValues.tuition_currency),
+            scholarships_available: publicText(
+              applicationValues.scholarships_available,
+            ),
+            scholarship_note: publicText(applicationValues.scholarship_note),
+          }
+        : null,
+      audition: auditionValues
+        ? {
+            prescreening_required: publicText(
+              auditionValues.prescreening_required,
+            ),
+            prescreening_deadline: publicText(
+              auditionValues.prescreening_deadline,
+            ),
+            audition_required: publicText(auditionValues.audition_required),
+            audition_format: publicText(auditionValues.audition_format),
+            repertoire_summary: publicText(auditionValues.repertoire_summary),
+            ...("prescreen_repertoire" in auditionValues
+              ? {
+                  prescreen_repertoire: publicText(
+                    auditionValues.prescreen_repertoire,
+                  ),
+                }
+              : {}),
+            ...("audition_repertoire" in auditionValues
+              ? {
+                  audition_repertoire: publicText(
+                    auditionValues.audition_repertoire,
+                  ),
+                }
+              : {}),
+            video_requirements: publicText(auditionValues.video_requirements),
+            file_format_requirements: publicText(
+              auditionValues.file_format_requirements,
+            ),
+            accompaniment_requirements: publicText(
+              auditionValues.accompaniment_requirements,
+            ),
+            interview_or_callback_requirements: publicText(
+              auditionValues.interview_or_callback_requirements,
+            ),
+            special_notes: publicText(auditionValues.special_notes),
+            conditional_notes: publicText(auditionValues.conditional_notes),
+            notes: publicText(auditionValues.notes),
+          }
+        : null,
     },
   };
 }

@@ -177,6 +177,24 @@ export function latestCheckedDate(program: Program): string | null {
   return dates.sort().at(-1) ?? null;
 }
 
+/**
+ * Trims a Directus decimal to what a score actually is.
+ *
+ * The column is numeric, so it arrives as "6.00000" / "86.00000". Rendering
+ * that verbatim on a requirement surface reads as spurious precision on a
+ * scale that has none. Non-numeric text (e.g. "6.5 overall") passes through
+ * untouched — the original wording is never discarded.
+ */
+export function formatTestScore(value: string | null | undefined): string | null {
+  if (!value) return null;
+  const text = String(value).trim();
+  if (text === "") return null;
+  const number = Number(text);
+  if (!Number.isFinite(number)) return text;
+  // Half-points matter for IELTS; whole numbers for TOEFL/Duolingo.
+  return Number.isInteger(number) ? String(number) : String(Number(number.toFixed(1)));
+}
+
 export function languageSummary(program: Program): string | null {
   const tests = program.language_requirements.accepted_tests;
   const namedTests = tests.filter(
@@ -184,11 +202,10 @@ export function languageSummary(program: Program): string | null {
   );
   if (namedTests.length > 0) {
     return namedTests
-      .map((test) =>
-        test.minimum_score
-          ? `${test.test_name} ${test.minimum_score}`
-          : test.test_name,
-      )
+      .map((test) => {
+        const score = formatTestScore(test.minimum_score);
+        return score ? `${test.test_name} ${score}` : test.test_name;
+      })
       .join(" / ");
   }
   if (program.language_requirements.english_required === true) {

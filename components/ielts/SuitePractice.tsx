@@ -20,10 +20,26 @@ import {
   type SuiteSession,
 } from "@/lib/ielts/session";
 import { loadRecords } from "@/lib/ielts/storage";
+import { loadProfile, patchProfile } from "@/lib/profile/storage";
 import type { ExamProgress, ExamSummary, PracticeRecord } from "@/lib/ielts/types";
+import {
+  ACADEMIC_READING_TABLE,
+  estimateBand,
+  formatBand,
+} from "@/lib/ielts/band";
+import { FREQUENCY_LABELS } from "@/lib/ielts/catalog";
 import { Card, EmptyNote, StatTile } from "./ui";
 
 const SCOPES: FrequencyScope[] = ["high", "high_medium", "all"];
+
+/**
+ * Stated in plain language, above the button that acts on it.
+ *
+ * A ranked or generated list has to say what rule produced it — this is the
+ * suite's version of that contract.
+ */
+const RULE_SENTENCE =
+  "随机抽取 P1 → P2 → P3 各一篇组成一套；优先抽取你还没做过的篇目；三篇全部完成后，按雅思学术类阅读评分表估算分数。";
 
 function toEntry(exam: ExamSummary): SuiteEntry {
   return { examId: exam.id, title: exam.title, category: exam.category };
@@ -49,6 +65,9 @@ export function SuitePractice({ exams }: { exams: ExamSummary[] }) {
   const [session, setSession] = useState<SuiteSession | null>(null);
   const [scope, setScope] = useState<FrequencyScope>("all");
   const [error, setError] = useState<string | null>(null);
+  // Composition is previewed before it is committed: the learner sees the three
+  // passages, can swap any of them, and only then locks the set into a session.
+  const [preview, setPreview] = useState<ExamSummary[] | null>(null);
 
   useEffect(() => {
     setRecords(loadRecords());
@@ -67,14 +86,38 @@ export function SuitePractice({ exams }: { exams: ExamSummary[] }) {
     return map;
   }, [records]);
 
-  function start() {
+  /** Draws a candidate set for preview. Nothing is committed yet. */
+  function compose() {
     const picks = composeSuite(exams, progress, scope);
     if (!picks) {
-      setError("当前范围内没有足够的题目，换一个范围试试。");
+      setError(
+        `${FREQUENCY_SCOPE_LABELS[scope]}范围内凑不齐 P1 / P2 / P3 各一篇，换一个更宽的范围试试。`,
+      );
+      setPreview(null);
       return;
     }
     setError(null);
-    setSession(startSuite(picks.map(toEntry), scope));
+    setPreview(picks);
+  }
+
+  /** Swaps one previewed passage before the suite is committed. */
+  function rerollPreview(index: number) {
+    if (!preview) return;
+    const taken = new Set(preview.map((exam) => exam.id));
+    const pick = pickRandomExam(exams, progress, {
+      category: preview[index].category,
+      scope,
+      exclude: taken,
+    });
+    if (!pick) return;
+    setPreview(preview.map((exam, position) => (position === index ? pick : exam)));
+  }
+
+  /** Freezes the previewed composition into a session. */
+  function start() {
+    if (!preview) return;
+    setSession(startSuite(preview.map(toEntry), scope));
+    setPreview(null);
   }
 
   /** Swaps one not-yet-attempted entry for a different passage. */
@@ -128,13 +171,21 @@ export function SuitePractice({ exams }: { exams: ExamSummary[] }) {
           onAbandon={abandon}
         />
       ) : (
-        <Card title="选择出题范围" subtitle="优先抽取尚未练习过的篇目">
+        <Card title="选择出题范围">
+          <p className="mb-3 text-xs leading-5 text-stage-fg-muted">
+            {RULE_SENTENCE}
+          </p>
           <div className="flex flex-wrap gap-2">
             {SCOPES.map((value) => (
               <button
                 key={value}
                 type="button"
-                onClick={() => setScope(value)}
+                onClick={() => {
+                  setScope(value);
+                  // A preview drawn under a different scope is no longer a
+                  // preview of what this button would produce.
+                  setPreview(null);
+                }}
                 aria-pressed={scope === value}
                 className={`rounded-full border px-3 py-1 text-sm transition-colors ${
                   scope === value
@@ -148,16 +199,66 @@ export function SuitePractice({ exams }: { exams: ExamSummary[] }) {
           </div>
 
           {error ? (
-            <p className="mt-3 text-sm text-stage-warning">{error}</p>
+            <p className="mt-3 text-sm text-amber-700">{error}</p>
           ) : null}
 
-          <button
-            type="button"
-            onClick={start}
-            className="mt-4 rounded-stage-md bg-stage-primary px-4 py-2 text-sm font-medium text-stage-fg-on-dark transition-colors hover:bg-stage-primary-hover"
-          >
-            抽取三篇并开始
-          </button>
+          {preview ? (
+            <div className="mt-4">
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <p className="text-sm font-medium">本套预览</p>
+                <button
+                  type="button"
+                  onClick={compose}
+                  className="text-xs text-stage-fg-muted underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
+                >
+                  重新抽取
+                </button>
+              </div>
+              <ol className="space-y-2">
+                {preview.map((exam, index) => (
+                  <li
+                    key={exam.id}
+                    className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-stage-md border border-stage-border px-3 py-2"
+                  >
+                    <span className="rounded bg-stage-bg-soft px-1.5 py-0.5 text-xs font-medium">
+                      {exam.category}
+                    </span>
+                    <span className="min-w-0 flex-1 truncate text-sm">
+                      {exam.title}
+                    </span>
+                    <span className="text-xs text-stage-fg-muted">
+                      {FREQUENCY_LABELS[exam.frequency]}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => rerollPreview(index)}
+                      className="text-xs text-stage-fg-muted underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
+                    >
+                      换一篇
+                    </button>
+                  </li>
+                ))}
+              </ol>
+              <button
+                type="button"
+                onClick={start}
+                className="mt-4 rounded-stage-md bg-stage-primary px-4 py-2 text-sm font-medium text-stage-fg-on-dark transition-colors hover:bg-stage-primary-hover"
+              >
+                开始套题
+              </button>
+              <p className="mt-2 text-xs text-stage-fg-muted">
+                开始后本套组成将被锁定，已完成的篇目不可更换。
+              </p>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={compose}
+              className="mt-4 rounded-stage-md bg-stage-primary px-4 py-2 text-sm font-medium text-stage-fg-on-dark transition-colors hover:bg-stage-primary-hover"
+            >
+              抽取三篇
+            </button>
+          )}
         </Card>
       )}
     </div>
@@ -206,18 +307,37 @@ function ActiveSuite({
         }
       >
         {scored.length > 0 ? (
-          <dl className="mb-4 grid grid-cols-3 gap-3">
-            <StatTile
-              label="总分"
-              value={`${correct}/${total}`}
-              hint={finished ? "三篇合计" : "已完成部分"}
-            />
-            <StatTile
-              label="正确率"
-              value={`${total > 0 ? Math.round((correct / total) * 100) : 0}%`}
-            />
-            <StatTile label="总用时" value={formatDuration(duration)} />
-          </dl>
+          <>
+            <dl className="mb-4 grid grid-cols-3 gap-3">
+              <StatTile
+                label="总分"
+                value={`${correct}/${total}`}
+                hint={finished ? "三篇合计" : "已完成部分"}
+              />
+              <StatTile
+                label="正确率"
+                value={`${total > 0 ? Math.round((correct / total) * 100) : 0}%`}
+              />
+              <StatTile label="总用时" value={formatDuration(duration)} />
+            </dl>
+            {/* The band is only estimated once every passage is in: a partial
+                suite would understate the score and read as a real result. */}
+            {finished && scored.length === session.entries.length ? (
+              <BandEstimateBlock
+                correct={correct}
+                recordCount={scored.length}
+                total={total}
+              />
+            ) : !finished ? (
+              <p className="mb-4 text-xs text-stage-fg-muted">
+                三篇全部完成后会给出估算分数。
+              </p>
+            ) : (
+              <p className="mb-4 text-xs text-amber-700">
+                部分成绩缺失，暂不估算分数。
+              </p>
+            )}
+          </>
         ) : (
           <EmptyNote>完成第一篇后这里会显示合计成绩。</EmptyNote>
         )}
@@ -255,6 +375,125 @@ function ActiveSuite({
   );
 }
 
+/**
+ * The suite's band estimate, with every caveat attached.
+ *
+ * Never renders a bare number: the conversion table, the question count it was
+ * scaled from, and the word 估算 travel with it, because a reading-only score
+ * is not an IELTS result and must not be able to read as one.
+ */
+function BandEstimateBlock({
+  correct,
+  total,
+  recordCount,
+}: {
+  correct: number;
+  total: number;
+  recordCount: number;
+}) {
+  const estimate = estimateBand(correct, total);
+  const [saved, setSaved] = useState(false);
+  const [hasProfile, setHasProfile] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    setHasProfile(loadProfile() !== null);
+  }, []);
+
+  if (!estimate) return null;
+
+  /**
+   * The fusion step, and deliberately an explicit button.
+   *
+   * A suite result never silently overwrites a self-reported score: the
+   * learner decides whether a practice estimate should become the number their
+   * program gaps are computed against.
+   */
+  function applyToProfile() {
+    patchProfile((profile) => ({
+      ...profile,
+      english: {
+        ...profile.english,
+        labEstimate: {
+          band: estimate!.band,
+          questionCount: estimate!.total,
+          recordCount,
+          computedAt: new Date().toISOString(),
+          tableVersion: estimate!.tableVersion,
+        },
+        currentOverall: estimate!.band,
+        currentSource: "lab_estimate",
+      },
+      steps: { ...profile.steps, english: "answered" },
+    }));
+    setSaved(true);
+  }
+
+  return (
+    <div className="mb-4 rounded-stage-md border border-stage-border bg-stage-bg-soft p-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <p className="text-sm text-stage-fg-muted">估算分数</p>
+        <p className="text-3xl font-semibold tabular-nums">
+          {formatBand(estimate.band)}
+        </p>
+      </div>
+      <p className="mt-1 text-xs text-stage-fg-muted">
+        {correct}/{total} 题
+        {estimate.scaled
+          ? ` · 按 ${total} 题折算为 40 题制的 ${estimate.scaledCorrect} 分`
+          : ""}{" "}
+        · 依据雅思学术类阅读评分表 {estimate.tableVersion}
+      </p>
+      <p className="mt-1 text-xs text-stage-fg-muted">
+        估算仅供参考，不等同于真实考试成绩。
+      </p>
+
+      <details className="group mt-2">
+        <summary className="cursor-pointer list-none text-xs text-stage-fg-muted underline-offset-2 hover:underline [&::-webkit-details-marker]:hidden">
+          分数区间表 ▾
+        </summary>
+        <ul className="mt-2 grid grid-cols-2 gap-x-4 gap-y-0.5 text-xs text-stage-fg-muted sm:grid-cols-3">
+          {ACADEMIC_READING_TABLE.filter(([min]) => min >= 6).map(
+            ([min, band]) => (
+              <li key={band} className="tabular-nums">
+                {min}+ 题 → {formatBand(band)}
+              </li>
+            ),
+          )}
+        </ul>
+      </details>
+
+      <div className="mt-4 border-t border-stage-border pt-3">
+        {saved ? (
+          <p className="flex flex-wrap items-center gap-2 text-xs text-emerald-700">
+            已更新到档案 · 相关项目的语言差距会重新计算
+            <Link
+              href="/dashboard"
+              className="text-stage-primary underline-offset-2 hover:underline"
+            >
+              去学习中心查看 →
+            </Link>
+          </p>
+        ) : hasProfile === false ? (
+          <Link
+            href={`/profile?return=/ielts-lab/suite&prefillBand=${estimate.band}`}
+            className="inline-flex rounded-stage-md bg-stage-primary px-4 py-2 text-sm font-medium text-stage-fg-on-dark transition-colors hover:bg-stage-primary-hover"
+          >
+            建立档案并保存这个估算
+          </Link>
+        ) : hasProfile ? (
+          <button
+            type="button"
+            onClick={applyToProfile}
+            className="rounded-stage-md bg-stage-primary px-4 py-2 text-sm font-medium text-stage-fg-on-dark transition-colors hover:bg-stage-primary-hover"
+          >
+            用这个估算更新我的档案
+          </button>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
 function SuiteRow({
   entry,
   index,
@@ -288,10 +527,16 @@ function SuiteRow({
             {record.correctAnswers}/{record.totalQuestions}
           </span>
           <Link
+            href={`/ielts-lab/review/${record.id}`}
+            className="text-xs text-stage-primary underline-offset-2 transition-colors hover:underline"
+          >
+            逐题回顾
+          </Link>
+          <Link
             href={reviewHref(entry.examId, record.id)}
             className="text-xs text-stage-fg-muted underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
           >
-            回顾
+            原题
           </Link>
         </>
       ) : entry.recordId ? (

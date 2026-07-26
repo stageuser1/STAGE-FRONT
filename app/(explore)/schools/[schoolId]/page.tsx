@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { EmptyState } from "@/components/EmptyState";
+import { SchoolFitStrip } from "@/components/fit/SchoolFitStrip";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
 import { AreaProgramIndex } from "@/components/school/AreaProgramIndex";
 import { SchoolAdmissionsOverview } from "@/components/school/SchoolAdmissionsOverview";
@@ -17,6 +18,7 @@ import {
   getSchoolById,
   toPublicSchoolDto,
 } from "@/lib/data";
+import { toExploreProgram } from "@/lib/explore/types";
 import { areaAnchorId } from "@/lib/format";
 import { buildSchoolDetailViewModel } from "@/lib/school-detail";
 
@@ -82,6 +84,11 @@ export default async function SchoolPage({ params }: SchoolPageProps) {
         </div>
 
         <SchoolQuickFacts facts={detail.quickFacts} />
+
+        <SchoolFitStrip
+          programs={programs.map(toExploreProgram)}
+          schoolName={school.name}
+        />
 
         {hasVerifiedSchoolContent && detail.highlights.length > 0 ? (
           <SectionCard

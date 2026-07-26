@@ -11,6 +11,7 @@ import {
   type PracticeCompleteData,
   type RunnerEnvelope,
 } from "@/lib/ielts/messages";
+import { clearDraft, saveDraft } from "@/lib/ielts/draft";
 import { buildProgressIndex, pickRandomExam } from "@/lib/ielts/progress";
 import { questionTypeOf } from "@/lib/ielts/question-types";
 import {
@@ -56,6 +57,10 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
   const [record, setRecord] = useState<PracticeRecord | null>(null);
   const [suite, setSuite] = useState<SuiteSession | null>(null);
   const [busy, setBusy] = useState(false);
+  // The handshake used to give up silently after its retry budget, leaving a
+  // blank frame and no explanation. This surfaces the failure.
+  const [handshakeFailed, setHandshakeFailed] = useState(false);
+  const [draftSavedAt, setDraftSavedAt] = useState<Date | null>(null);
 
   // The attempt being reviewed. Read once on mount: localStorage is only
   // available in the browser, and the value must be ready before SESSION_READY.
@@ -111,6 +116,10 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
       saveRecord(saved);
       setRecord(saved);
       setStatus("submitted");
+      // The attempt is now a record; a lingering draft marker would leave the
+      // catalog claiming this passage is still in progress.
+      clearDraft(exam.id);
+      setDraftSavedAt(null);
 
       if (flow === "endless") {
         const endless = loadSessionOfKind("endless");
@@ -160,6 +169,7 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
 
   const startHandshake = useCallback(() => {
     stopHandshake();
+    setHandshakeFailed(false);
     const sessionId = `stage-${exam.id}-${Date.now()}`;
     let attempts = 0;
 
@@ -168,7 +178,10 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
       sendInitSession(frameRef.current, { examId: exam.id, sessionId });
       // ~10s. If the runner has not replied by then it failed to boot, and
       // retrying forever would only keep a timer alive on a dead page.
-      if (attempts >= 20) stopHandshake();
+      if (attempts >= 20) {
+        stopHandshake();
+        setHandshakeFailed(true);
+      }
     };
 
     send();
@@ -203,6 +216,25 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
           } else {
             setStatus((current) => (current === "loading" ? "ready" : current));
           }
+          break;
+        }
+        case "SIMULATION_DRAFT_SYNC": {
+          // The runner owns the answers themselves and autosaves them
+          // internally; STAGE records only that a draft exists and how far it
+          // got, which is what makes the catalog's "进行中" state honest.
+          const draft = envelope.data as PracticeCompleteData | undefined;
+          const answered = draft?.answers
+            ? Object.values(draft.answers).filter((value) =>
+                Array.isArray(value) ? value.length > 0 : String(value ?? "").trim() !== "",
+              ).length
+            : 0;
+          saveDraft({
+            examId: exam.id,
+            updatedAt: new Date().toISOString(),
+            answered,
+            total: draft?.scoreInfo?.totalQuestions ?? 0,
+          });
+          setDraftSavedAt(new Date());
           break;
         }
         case "PRACTICE_COMPLETE":
@@ -293,6 +325,15 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
           {status === "loading" ? (
             <span className="text-stage-fg-muted">加载中…</span>
           ) : null}
+          {draftSavedAt && status === "ready" ? (
+            <span className="text-xs text-stage-fg-muted">
+              已保存 ·{" "}
+              {draftSavedAt.toLocaleTimeString("zh-CN", {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </span>
+          ) : null}
           <Link
             href="/ielts-lab/history"
             className="text-stage-fg-muted transition-colors hover:text-stage-fg"
@@ -308,6 +349,19 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
         </p>
       ) : null}
 
+      {handshakeFailed && status === "loading" ? (
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stage-border bg-amber-50 px-4 py-3 text-sm text-amber-700">
+          <span>题目加载失败，可能是网络中断或题目文件缺失。</span>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="rounded-stage-sm border border-amber-300 px-3 py-1.5 text-xs font-medium transition-colors hover:bg-amber-100"
+          >
+            重新加载
+          </button>
+        </div>
+      ) : null}
+
       {record && (status === "submitted" || status === "review") ? (
         <ResultPanel
           record={record}
@@ -319,13 +373,14 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
           }
           actions={
             status === "review" ? (
-              <ReviewActions examId={exam.id} />
+              <ReviewActions examId={exam.id} recordId={record.id} />
             ) : (
               <SubmittedActions
                 exam={exam}
                 flow={flow}
                 suite={suite}
                 busy={busy}
+                recordId={record.id}
                 onNextEndless={goToNextEndless}
               />
             )
@@ -347,7 +402,13 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
   );
 }
 
-/** Back out of an attempt, confirming first if one is under way. */
+/**
+ * Back out of an attempt, confirming first if one is under way.
+ *
+ * An inline confirmation rather than `window.confirm`: a native dialog blocks
+ * the whole page, cannot be styled or made accessible, and is one of the
+ * defects this product set out not to copy.
+ */
 function ExitButton({
   confirmFirst,
   onExit,
@@ -355,13 +416,39 @@ function ExitButton({
   confirmFirst: boolean;
   onExit: () => void;
 }) {
+  const [confirming, setConfirming] = useState(false);
+
+  if (confirming) {
+    return (
+      <div
+        role="alertdialog"
+        aria-label="退出确认"
+        className="flex shrink-0 flex-wrap items-center gap-2 text-xs"
+      >
+        <span className="text-stage-fg-muted">未提交的作答不会保存</span>
+        <button
+          type="button"
+          onClick={onExit}
+          className="rounded-stage-sm border border-stage-border px-2.5 py-1 transition-colors hover:border-red-400 hover:text-red-600"
+        >
+          仍要退出
+        </button>
+        <button
+          type="button"
+          autoFocus
+          onClick={() => setConfirming(false)}
+          className="rounded-stage-sm bg-stage-primary px-2.5 py-1 font-medium text-stage-fg-on-dark"
+        >
+          继续作答
+        </button>
+      </div>
+    );
+  }
+
   return (
     <button
       type="button"
-      onClick={() => {
-        if (confirmFirst && !window.confirm("练习尚未提交，确定要退出吗？")) return;
-        onExit();
-      }}
+      onClick={() => (confirmFirst ? setConfirming(true) : onExit())}
       className="shrink-0 text-sm text-stage-fg-muted transition-colors hover:text-stage-fg"
     >
       ← 退出
@@ -397,12 +484,21 @@ function RetryButton({
   );
 }
 
-function ReviewActions({ examId }: { examId: string }) {
+function ReviewActions({
+  examId,
+  recordId,
+}: {
+  examId: string;
+  recordId: string;
+}) {
   return (
     <>
       <RetryButton examId={examId} className={ACTION_PRIMARY}>
         重做这篇
       </RetryButton>
+      <Link href={`/ielts-lab/review/${recordId}`} className={ACTION_SECONDARY}>
+        逐题回顾
+      </Link>
       <Link href="/ielts-lab/history" className={ACTION_SECONDARY}>
         返回记录
       </Link>
@@ -425,14 +521,24 @@ function SubmittedActions({
   flow,
   suite,
   busy,
+  recordId,
   onNextEndless,
 }: {
   exam: ExamSummary;
   flow?: SessionFlow;
   suite: SuiteSession | null;
   busy: boolean;
+  recordId: string;
   onNextEndless: () => void;
 }) {
+  // Available in every flow: finishing a passage should always offer the
+  // analysis, not only the next passage.
+  const review = (
+    <Link href={`/ielts-lab/review/${recordId}`} className={ACTION_SECONDARY}>
+      查看逐题回顾
+    </Link>
+  );
+
   if (flow === "endless") {
     return (
       <>
@@ -444,6 +550,7 @@ function SubmittedActions({
         >
           {busy ? "正在挑选…" : "下一篇"}
         </button>
+        {review}
         <Link href="/ielts-lab" className={ACTION_SECONDARY}>
           结束无尽模式
         </Link>
@@ -459,6 +566,7 @@ function SubmittedActions({
           <Link href={practiceHref(next.examId, "suite")} className={ACTION_PRIMARY}>
             下一篇 · {next.category}
           </Link>
+          {review}
           <Link href="/ielts-lab/suite" className={ACTION_SECONDARY}>
             套题概览
           </Link>
@@ -466,18 +574,24 @@ function SubmittedActions({
       );
     }
     return (
-      <Link href="/ielts-lab/suite" className={ACTION_PRIMARY}>
-        查看套题总成绩
-      </Link>
+      <>
+        <Link href="/ielts-lab/suite" className={ACTION_PRIMARY}>
+          查看套题总成绩
+        </Link>
+        {review}
+      </>
     );
   }
 
   return (
     <>
+      <Link href={`/ielts-lab/review/${recordId}`} className={ACTION_PRIMARY}>
+        查看逐题回顾
+      </Link>
       <RetryButton examId={exam.id} className={ACTION_SECONDARY}>
         再做一次
       </RetryButton>
-      <Link href="/ielts-lab/browse" className={ACTION_PRIMARY}>
+      <Link href="/ielts-lab/browse" className={ACTION_SECONDARY}>
         继续练习
       </Link>
       <Link href="/ielts-lab/history" className={ACTION_SECONDARY}>

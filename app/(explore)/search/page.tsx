@@ -1,11 +1,19 @@
 import Link from "next/link";
 import { EmptyState } from "@/components/EmptyState";
+import { MatchReasonTag } from "@/components/explore/MatchReasonTag";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
 import { ProgramCard } from "@/components/ProgramCard";
 import { SearchInput } from "@/components/SearchInput";
 import { Icon } from "@/components/ui/Icon";
-import type { DegreeLevel, ProgramSearchQuery } from "@/data/types";
+import type { DegreeLevel, Program, ProgramSearchQuery } from "@/data/types";
 import { loadSearchPagePrograms } from "@/lib/data";
+import { toExploreProgram } from "@/lib/explore/types";
+import {
+  buildSearchIndex,
+  rankSearch,
+  SEARCH_RESULT_LIMIT,
+  type MatchReason,
+} from "@/lib/search";
 import {
   buildFilterOptions,
   type SearchFilterOption,
@@ -122,6 +130,32 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   );
   const { countryOptions, majorOptions, degreeOptions } =
     buildFilterOptions(allPrograms);
+
+  /**
+   * Explainable ranking.
+   *
+   * The existing `loadSearchPagePrograms` still applies the structured filters
+   * (country / degree / major) — it owns that contract and is untouched. When a
+   * keyword is present, the deterministic tier pipeline re-orders those matches
+   * and attaches the reason each one matched, so no result is unexplained.
+   */
+  const keyword = params.keyword?.trim() ?? "";
+  const reasonsById = new Map<string, MatchReason[]>();
+  let rankedPrograms: Program[] = matchedPrograms;
+  let truncated = false;
+
+  if (keyword) {
+    const index = buildSearchIndex(matchedPrograms.map(toExploreProgram));
+    const ranked = rankSearch(index, keyword);
+    const byId = new Map(matchedPrograms.map((program) => [program.id, program]));
+    rankedPrograms = ranked.flatMap((result) => {
+      const program = byId.get(result.programId);
+      if (!program) return [];
+      reasonsById.set(result.programId, result.reasons);
+      return [program];
+    });
+    truncated = ranked.length >= SEARCH_RESULT_LIMIT;
+  }
 
   const hiddenParams: Record<string, string> = {};
   if (params.country) hiddenParams.country = params.country;
@@ -249,16 +283,40 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             </h1>
             <p className="mt-0.5 text-[13px] leading-5 text-ink-500">
               {hasQuery
-                ? `找到 ${matchedPrograms.length} 个项目`
+                ? `找到 ${rankedPrograms.length} 个项目`
                 : "输入关键词或选择筛选条件"}
+              {truncated ? ` · 仅显示前 ${SEARCH_RESULT_LIMIT} 条，请细化条件` : ""}
             </p>
           </div>
 
-          {matchedPrograms.length > 0 ? (
+          {rankedPrograms.length > 0 ? (
             <div className="grid gap-3 md:grid-cols-2 md:gap-4">
-              {matchedPrograms.map((program) => (
-                <ProgramCard key={program.id} program={program} />
-              ))}
+              {rankedPrograms.map((program) => {
+                const reasons = reasonsById.get(program.id);
+                return (
+                  <div key={program.id}>
+                    <ProgramCard program={program} />
+                    {reasons && reasons.length > 0 ? (
+                      <div className="mt-1.5 flex flex-wrap gap-1.5 px-1">
+                        {/* Why this result is here — at most three, so the
+                            explanation never outweighs the result. */}
+                        {reasons.slice(0, 3).map((reason) => (
+                          <MatchReasonTag
+                            key={`${reason.kind}-${reason.field}`}
+                            kind={reason.kind}
+                            matched={{ field: reason.field, value: reason.value }}
+                          />
+                        ))}
+                        {reasons.length > 3 ? (
+                          <span className="text-[11px] text-ink-400">
+                            +{reasons.length - 3}
+                          </span>
+                        ) : null}
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              })}
             </div>
           ) : (
             <EmptyState

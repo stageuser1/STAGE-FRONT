@@ -1,6 +1,12 @@
 "use client";
 
-import type { LanguageRequirements, Program } from "@/data/types";
+import { useEffect, useMemo, useState } from "react";
+import type {
+  DirectusReviewRecord,
+  LanguageRequirements,
+  PublicProgramDto,
+  ReviewStatus,
+} from "@/data/types";
 import { LanguageRequirementContent } from "@/components/LanguageRequirementBlock";
 import { Icon } from "@/components/ui/Icon";
 import { ExpandableSection } from "@/components/ui/ExpandableSection";
@@ -13,9 +19,9 @@ import {
   degreeLabel,
   formatDateZh,
   formatDurationZh,
-  formatFee,
-  languageSummary,
+  formatTestScore,
 } from "@/lib/format";
+import { useReviewerAuth } from "@/lib/directus-auth";
 import {
   ReviewerEditableCard,
   type EditableFieldDefinition,
@@ -146,7 +152,7 @@ function normalizedRequirementStatus(
 }
 
 function languageRequirements(
-  program: Program,
+  program: PublicProgramDto,
   values: FormValues,
 ): LanguageRequirements {
   let rawTests: unknown = null;
@@ -218,29 +224,233 @@ function languageRequirements(
   };
 }
 
-export function ProgramDetailSections({ program }: { program: Program }) {
-  const offering = program.review_records?.offering ?? {
-    id: program.id,
-    review_status: null,
-    values: {
-      official_program_name: program.name,
-      program_name_zh: program.name_zh ?? null,
-      track_or_concentration: program.specialization ?? null,
-      department: program.department ?? null,
-      card_summary_zh: program.card_summary ?? null,
-      degree_level_id: null,
-      duration_years: program.duration,
-      language_of_instruction:
-        program.language_requirements.instruction_language,
-      program_url: program.program_url ?? null,
-      application_url: program.application_url,
-      audition_url: program.audition_url ?? null,
-      international_url: program.international_url ?? null,
-    },
+function languageSummary(program: PublicProgramDto): string | null {
+  const tests = program.language_requirements.accepted_tests.filter(
+    (test) => test.test_name !== "Other" || Boolean(test.minimum_score),
+  );
+  if (tests.length > 0) {
+    return tests
+      .map((test) => {
+        const score = formatTestScore(test.minimum_score);
+        return score ? `${test.test_name} ${score}` : test.test_name;
+      })
+      .join(" / ");
+  }
+  if (program.language_requirements.english_required === true) {
+    return "需要英语成绩";
+  }
+  if (program.language_requirements.english_required === false) return "不要求";
+  return null;
+}
+
+const offeringReviewFields = [
+  "official_program_name",
+  "program_name_zh",
+  "track_or_concentration",
+  "department",
+  "card_summary_zh",
+  "degree_level_id",
+  "duration_years",
+  "language_of_instruction",
+  "program_url",
+  "faculty_list",
+  "last_checked",
+  "application_url",
+  "audition_url",
+  "international_url",
+] as const;
+
+const applicationReviewFields = [
+  "application_deadline",
+  "deadline_notes",
+  "toefl_minimum",
+  "ielts_minimum",
+  "duolingo_minimum",
+  "english_waiver_policy",
+  "english_language_tests",
+  "resume_required",
+  "essay_required",
+  "recommendation_letters",
+  "transcript_requirements",
+  "portfolio_required",
+  "required_materials",
+  "international_applicant_notes",
+  "conditional_notes",
+  "notes",
+  "application_fee",
+  "application_fee_currency",
+  "tuition_annual",
+  "tuition_currency",
+  "scholarships_available",
+  "scholarship_note",
+] as const;
+
+const auditionReviewFields = [
+  "prescreening_required",
+  "prescreening_deadline",
+  "audition_required",
+  "audition_format",
+  "repertoire_summary",
+  "video_requirements",
+  "file_format_requirements",
+  "accompaniment_requirements",
+  "interview_or_callback_requirements",
+  "special_notes",
+  "conditional_notes",
+  "notes",
+] as const;
+
+const optionalAuditionReviewFields = [
+  "prescreen_repertoire",
+  "audition_repertoire",
+] as const;
+
+function reviewValue(value: unknown): string | number | boolean | null {
+  if (value === null || value === undefined) return null;
+  if (
+    typeof value === "string" ||
+    typeof value === "number" ||
+    typeof value === "boolean"
+  ) {
+    return value;
+  }
+  return JSON.stringify(value);
+}
+
+function reviewRecord(
+  record: Record<string, unknown>,
+  fields: readonly string[],
+): DirectusReviewRecord {
+  return {
+    id: String(record.id),
+    review_status:
+      typeof record.review_status === "string"
+        ? (record.review_status as ReviewStatus)
+        : null,
+    values: Object.fromEntries(
+      fields.map((field) => [field, reviewValue(record[field])]),
+    ),
   };
-  const application = program.review_records?.application ?? null;
-  const audition = program.review_records?.audition ?? null;
-  const degreeLevelOptions = program.review_records?.degree_level_options ?? [];
+}
+
+export function ProgramDetailSections({
+  program,
+}: {
+  program: PublicProgramDto;
+}) {
+  const { isReviewer, request } = useReviewerAuth();
+  const publicOffering = useMemo<DirectusReviewRecord>(
+    () => ({
+      id: program.id,
+      review_status: null,
+      values: {
+        official_program_name: program.display.offering.official_program_name,
+        program_name_zh: program.display.offering.program_name_zh,
+        track_or_concentration:
+          program.display.offering.track_or_concentration,
+        duration_years: program.display.offering.duration_years,
+        language_of_instruction:
+          program.display.offering.language_of_instruction,
+        program_url: program.display.offering.program_url,
+        application_url: program.display.offering.application_url,
+        audition_url: program.display.offering.audition_url,
+        international_url: program.display.offering.international_url,
+      },
+    }),
+    [program],
+  );
+  const publicApplication = useMemo<DirectusReviewRecord | null>(
+    () =>
+      program.display.application
+        ? {
+            id: `${program.id}:application`,
+            review_status: null,
+            values: { ...program.display.application },
+          }
+        : null,
+    [program],
+  );
+  const publicAudition = useMemo<DirectusReviewRecord | null>(
+    () =>
+      program.display.audition
+        ? {
+            id: `${program.id}:audition`,
+            review_status: null,
+            values: { ...program.display.audition },
+          }
+        : null,
+    [program],
+  );
+  const [reviewerOffering, setReviewerOffering] =
+    useState<DirectusReviewRecord | null>(null);
+  const [reviewerApplication, setReviewerApplication] =
+    useState<DirectusReviewRecord | null>(null);
+  const [reviewerAudition, setReviewerAudition] =
+    useState<DirectusReviewRecord | null>(null);
+
+  useEffect(() => {
+    if (!isReviewer) {
+      setReviewerOffering(null);
+      setReviewerApplication(null);
+      setReviewerAudition(null);
+      return;
+    }
+
+    let active = true;
+    const cycleQuery =
+      `filter[program_offering_id][_eq]=${encodeURIComponent(program.id)}` +
+      "&limit=1&sort=-is_current,-admission_cycle";
+    const fetchOffering = request<Record<string, unknown>>(
+      `/items/program_offerings/${program.id}?fields=id,review_status,${offeringReviewFields.join(",")}`,
+    ).then((record) => {
+      if (active) {
+        setReviewerOffering(reviewRecord(record, offeringReviewFields));
+      }
+    });
+    const fetchApplication = request<Array<Record<string, unknown>>>(
+      `/items/application_requirements?${cycleQuery}&fields=id,review_status,${applicationReviewFields.join(",")}`,
+    ).then((records) => {
+      if (active) {
+        setReviewerApplication(
+          records[0] ? reviewRecord(records[0], applicationReviewFields) : null,
+        );
+      }
+    });
+    const auditionPath = (fields: readonly string[]) =>
+      `/items/audition_requirements?${cycleQuery}&fields=id,review_status,${fields.join(",")}`;
+    const allAuditionFields = [
+      ...auditionReviewFields,
+      ...optionalAuditionReviewFields,
+    ];
+    const fetchAudition = request<Array<Record<string, unknown>>>(
+      auditionPath(allAuditionFields),
+    )
+      .catch(() =>
+        request<Array<Record<string, unknown>>>(
+          auditionPath(auditionReviewFields),
+        ),
+      )
+      .then((records) => {
+        if (active) {
+          setReviewerAudition(
+            records[0] ? reviewRecord(records[0], allAuditionFields) : null,
+          );
+        }
+      });
+
+    void Promise.allSettled([
+      fetchOffering,
+      fetchApplication,
+      fetchAudition,
+    ]);
+    return () => {
+      active = false;
+    };
+  }, [isReviewer, program.id, request]);
+
+  const offering = reviewerOffering ?? publicOffering;
+  const application = isReviewer ? reviewerApplication : publicApplication;
+  const audition = isReviewer ? reviewerAudition : publicAudition;
 
   /* ------------------------------ header ------------------------------ */
 
@@ -458,9 +668,6 @@ export function ProgramDetailSections({ program }: { program: Program }) {
       initialValues={offering.values}
       recordId={offering.id}
       renderView={(values) => {
-        const degreeOption = degreeLevelOptions.find(
-          (option) => option.value === values.degree_level_id,
-        );
         const links = [
           { href: values.program_url, label: "项目官网" },
           { href: values.application_url, label: "申请入口" },
@@ -473,7 +680,10 @@ export function ProgramDetailSections({ program }: { program: Program }) {
             <div className="mt-2 grid gap-0">
               <FactRow
                 label="学位"
-                value={degreeOption?.label ?? degreeLabel(program.degree)}
+                value={
+                  program.display.offering.degree_label ??
+                  degreeLabel(program.degree)
+                }
               />
               <FactRow
                 label="学制"
@@ -609,7 +819,14 @@ export function ProgramDetailSections({ program }: { program: Program }) {
             </h2>
             <div className="mt-2 grid gap-0">
               <FactRow label="年学费" value={amount} />
-              <FactRow label="申请费" value={formatFee(program)} />
+              <FactRow
+                label="申请费"
+                value={
+                  program.cost_aid.application_fee === null
+                    ? null
+                    : `${program.cost_aid.currency} ${program.cost_aid.application_fee.toLocaleString()}`
+                }
+              />
               <FactRow
                 label="学制"
                 value={formatDurationZh(program.duration)}

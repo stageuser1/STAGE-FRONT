@@ -14,7 +14,7 @@ interface SearchInputProps {
 export function SearchInput({
   defaultValue = "",
   hiddenParams = {},
-  placeholder = "搜索学校、专业、学历…",
+  placeholder = "搜索院校、专业、城市或学位缩写…",
 }: SearchInputProps) {
   return (
     <form action="/search" method="get" role="search">

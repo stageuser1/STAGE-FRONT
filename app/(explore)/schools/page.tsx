@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { BrandBanner } from "@/components/BrandBanner";
-import { FilterChips, type FilterChipItem } from "@/components/FilterChips";
+import { ExploreCatalog } from "@/components/explore/ExploreCatalog";
 import { HeroSearch } from "@/components/HeroSearch";
-import { HomeSchoolCard } from "@/components/HomeSchoolCard";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
+import { ProfileNudge } from "@/components/explore/ProfileNudge";
 import type { Program } from "@/data/types";
 import { getAllPrograms, getAllSchools } from "@/lib/data";
+import { toExploreProgram, toExploreSchool } from "@/lib/explore/types";
 import { latestSchoolUpdate } from "@/lib/format";
 
 // Former homepage metadata — preserved verbatim through the / → /schools move.
@@ -16,16 +17,6 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 900;
-
-/** Canonical country filter set shown on the school database index. */
-const countryChips: FilterChipItem[] = [
-  { label: "全部", href: "/schools", active: true },
-  { label: "美国", href: "/search?country=US" },
-  { label: "英国", href: "/search?country=GB" },
-  { label: "加拿大", href: "/search?country=CA" },
-  { label: "韩国", href: "/search?country=KR" },
-  { label: "筛选", href: "/search", icon: "filter" },
-];
 
 export default async function HomePage() {
   const [schools, programs] = await Promise.all([
@@ -41,12 +32,23 @@ export default async function HomePage() {
     programsBySchool.set(program.school_id, list);
   }
 
-  // Most recently updated institutions first — the "最新更新院校" feed.
-  const updatedAt = (id: string, school: (typeof schools)[number]) =>
-    latestSchoolUpdate(school, programsBySchool.get(id) ?? []) ?? "";
-  const feed = [...schools].sort((left, right) =>
-    updatedAt(right.id, right).localeCompare(updatedAt(left.id, left)),
-  );
+  // Map to the slim catalog shape at the server boundary: the full Program
+  // carries reviewer records and source blobs the catalog never reads, and
+  // shipping those to a client component would be megabytes of dead payload.
+  const exploreProgams = programs.map(toExploreProgram);
+  const exploreSchools = schools.map((school) => {
+    const own = programsBySchool.get(school.id) ?? [];
+    return toExploreSchool(
+      school,
+      own.map(toExploreProgram),
+      latestSchoolUpdate(school, own),
+    );
+  });
+
+  const idsBySchool: Record<string, string[]> = {};
+  for (const program of exploreProgams) {
+    (idsBySchool[program.schoolId] ??= []).push(program.id);
+  }
 
   return (
     <>
@@ -57,32 +59,21 @@ export default async function HomePage() {
             探索全球音乐教育机会
           </h1>
           <HeroSearch />
-          <FilterChips ariaLabel="按国家筛选" chips={countryChips} />
         </section>
 
         <section className="mt-5">
           <BrandBanner />
         </section>
 
-        <section className="mt-2.5">
-          <div className="mb-2 px-2">
-            <h2 className="text-base font-bold leading-5 text-ink-900">
-              精选院校
-            </h2>
-            <p className="mt-0.5 text-[10px] leading-4 text-ink-500">
-              为你精选全球顶尖音乐学府
-            </p>
-          </div>
-          <div className="grid gap-2.5 md:grid-cols-2 md:gap-5">
-            {feed.map((school) => (
-              <HomeSchoolCard
-                key={school.id}
-                programs={programsBySchool.get(school.id) ?? []}
-                school={school}
-              />
-            ))}
-          </div>
-        </section>
+        <ProfileNudge />
+
+        {/* The catalog is populated on first paint — no chip has to be clicked
+            to see what the database contains. */}
+        <ExploreCatalog
+          programs={exploreProgams}
+          programsBySchool={idsBySchool}
+          schools={exploreSchools}
+        />
       </PageShell>
     </>
   );
