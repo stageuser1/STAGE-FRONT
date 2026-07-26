@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { bandFromRecords, formatBand } from "@/lib/ielts/band";
 import { CATEGORIES, countByCategory } from "@/lib/ielts/catalog";
 import { buildProgressIndex, pickRandomExam, practisedByCategory } from "@/lib/ielts/progress";
 import {
@@ -15,6 +16,7 @@ import {
 } from "@/lib/ielts/session";
 import { computeStats, loadRecords } from "@/lib/ielts/storage";
 import type { ExamCategory, ExamSummary, PracticeRecord } from "@/lib/ielts/types";
+import { wrongbookCount } from "@/lib/ielts/wrongbook";
 import { Card, EmptyNote, StatTile } from "./ui";
 
 const CATEGORY_BLURB: Record<ExamCategory, string> = {
@@ -73,6 +75,45 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
     () => (records ? computeStats(records) : null),
     [records],
   );
+  const band = useMemo(
+    () => (records ? bandFromRecords(records) : null),
+    [records],
+  );
+  const mistakes = useMemo(
+    () => (records ? wrongbookCount(records) : 0),
+    [records],
+  );
+
+  /**
+   * Mean accuracy of each category's LATEST attempts.
+   *
+   * Latest rather than all-time, matching the wrongbook and status rules: the
+   * tile answers "where am I now", and averaging in a first attempt from three
+   * months ago answers a different question. Null (not zero) when a category
+   * has never been attempted — "未开始" is not "0%".
+   */
+  const accuracyByCategory = useMemo(() => {
+    const totalsByCategory: Record<ExamCategory, { sum: number; n: number }> = {
+      P1: { sum: 0, n: 0 },
+      P2: { sum: 0, n: 0 },
+      P3: { sum: 0, n: 0 },
+    };
+    const seen = new Map<string, ExamCategory>();
+
+    for (const exam of exams) {
+      const entry = progress.get(exam.id);
+      if (!entry) continue;
+      seen.set(exam.id, exam.category);
+      totalsByCategory[exam.category].sum += entry.lastAccuracy;
+      totalsByCategory[exam.category].n += 1;
+    }
+
+    return {
+      P1: totalsByCategory.P1.n > 0 ? totalsByCategory.P1.sum / totalsByCategory.P1.n : null,
+      P2: totalsByCategory.P2.n > 0 ? totalsByCategory.P2.sum / totalsByCategory.P2.n : null,
+      P3: totalsByCategory.P3.n > 0 ? totalsByCategory.P3.sum / totalsByCategory.P3.n : null,
+    } satisfies Record<ExamCategory, number | null>;
+  }, [exams, progress]);
 
   function startRandom(category?: ExamCategory) {
     const pick = pickRandomExam(exams, progress, { category });
@@ -108,6 +149,31 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
         />
       ) : null}
 
+      {band ? (
+        <Card className="border-stage-primary/30 bg-stage-primary/5">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-sm">
+                当前阅读估算{" "}
+                <span className="text-lg font-semibold tabular-nums">
+                  {formatBand(band.band)}
+                </span>
+              </p>
+              <p className="mt-0.5 text-xs text-stage-fg-muted">
+                基于最近 {band.recordCount} 次练习共 {band.total} 题 ·{" "}
+                {band.tableVersion} · 估算仅供参考，不等同于真实考试成绩
+              </p>
+            </div>
+            <Link
+              href="/ielts-lab/suite"
+              className="shrink-0 rounded-stage-sm border border-stage-border bg-stage-bg px-3 py-1.5 text-xs transition-colors hover:border-stage-primary"
+            >
+              做一套题更新估算
+            </Link>
+          </div>
+        </Card>
+      ) : null}
+
       <div className="flex flex-wrap gap-2">
         <button
           type="button"
@@ -134,6 +200,17 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
           className="rounded-stage-md border border-stage-border px-4 py-2 text-sm transition-colors hover:border-stage-primary hover:text-stage-fg"
         >
           浏览题库
+        </Link>
+        <Link
+          href="/ielts-lab/mistakes"
+          className="flex items-center gap-1.5 rounded-stage-md border border-stage-border px-4 py-2 text-sm transition-colors hover:border-stage-primary hover:text-stage-fg"
+        >
+          错题本
+          {mistakes > 0 ? (
+            <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-amber-100 px-1 text-[11px] font-medium tabular-nums text-amber-700">
+              {mistakes}
+            </span>
+          ) : null}
         </Link>
       </div>
 
@@ -163,6 +240,7 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
               category={category}
               total={totals[category]}
               practised={practised[category]}
+              accuracy={accuracyByCategory[category]}
               onRandom={() => startRandom(category)}
             />
           ))}
@@ -220,11 +298,14 @@ function CategoryCard({
   category,
   total,
   practised,
+  accuracy,
   onRandom,
 }: {
   category: ExamCategory;
   total: number;
   practised: number;
+  /** Null when the category has never been attempted — NOT zero. */
+  accuracy: number | null;
   onRandom: () => void;
 }) {
   const percent = total > 0 ? Math.round((practised / total) * 100) : 0;
@@ -235,8 +316,20 @@ function CategoryCard({
         <h3 className="text-base font-semibold">{category} 阅读</h3>
         <span className="text-xs text-stage-fg-muted">{total} 篇</span>
       </div>
-      <p className="mt-1 text-xs text-stage-fg-muted">
-        {CATEGORY_BLURB[category]}
+
+      {/* "未开始" rather than "0%": a category with no attempts is absent data,
+          and rendering it as a zero score reads as failure. */}
+      <p className="mt-2 text-2xl font-semibold tabular-nums">
+        {accuracy === null ? (
+          <span className="text-base font-medium text-stage-fg-muted">
+            未开始
+          </span>
+        ) : (
+          `${Math.round(accuracy * 100)}%`
+        )}
+      </p>
+      <p className="text-xs text-stage-fg-muted">
+        {accuracy === null ? CATEGORY_BLURB[category] : "最近一次作答平均正确率"}
       </p>
 
       <div

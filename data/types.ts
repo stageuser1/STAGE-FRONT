@@ -234,6 +234,61 @@ export interface PublicDataQualityDto {
   status: WorkflowStatus;
 }
 
+export interface PublicProgramOfferingDisplayDto {
+  official_program_name: string | null;
+  program_name_zh: string | null;
+  track_or_concentration: string | null;
+  duration_years: string | null;
+  language_of_instruction: string | null;
+  program_url: string | null;
+  application_url: string | null;
+  audition_url: string | null;
+  international_url: string | null;
+  degree_label: string | null;
+}
+
+export interface PublicProgramApplicationDisplayDto {
+  application_deadline: string | null;
+  deadline_notes: string | null;
+  toefl_minimum: string | null;
+  ielts_minimum: string | null;
+  duolingo_minimum: string | null;
+  english_waiver_policy: string | null;
+  english_language_tests: string | null;
+  resume_required: string | null;
+  essay_required: string | null;
+  recommendation_letters: string | null;
+  transcript_requirements: string | null;
+  portfolio_required: string | null;
+  required_materials: string | null;
+  international_applicant_notes: string | null;
+  conditional_notes: string | null;
+  notes: string | null;
+  application_fee: string | null;
+  application_fee_currency: string | null;
+  tuition_annual: string | null;
+  tuition_currency: string | null;
+  scholarships_available: string | null;
+  scholarship_note: string | null;
+}
+
+export interface PublicProgramAuditionDisplayDto {
+  prescreening_required: string | null;
+  prescreening_deadline: string | null;
+  audition_required: string | null;
+  audition_format: string | null;
+  repertoire_summary: string | null;
+  prescreen_repertoire?: string | null;
+  audition_repertoire?: string | null;
+  video_requirements: string | null;
+  file_format_requirements: string | null;
+  accompaniment_requirements: string | null;
+  interview_or_callback_requirements: string | null;
+  special_notes: string | null;
+  conditional_notes: string | null;
+  notes: string | null;
+}
+
 /**
  * Server-to-client shape for the public school profile card.
  * `review_record` is intentionally not representable.
@@ -279,6 +334,11 @@ export interface PublicProgramDto {
   cost_aid: CostAid;
   sources: PublicSourceCitationDto[];
   data_quality: PublicDataQualityDto;
+  display: {
+    offering: PublicProgramOfferingDisplayDto;
+    application: PublicProgramApplicationDisplayDto | null;
+    audition: PublicProgramAuditionDisplayDto | null;
+  };
 }
 
 export interface ProgramSearchQuery {

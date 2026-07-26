@@ -8,13 +8,20 @@ import {
   DEFAULT_FILTERS,
   FREQUENCY_LABELS,
   SORT_LABELS,
+  countByDimension,
   filterExams,
   sortExams,
   type ProgressFilter,
   type SortKey,
 } from "@/lib/ielts/catalog";
+import { loadDrafts } from "@/lib/ielts/draft";
 import { buildProgressIndex, pickRandomExam } from "@/lib/ielts/progress";
 import { practiceHref, reviewHref } from "@/lib/ielts/session";
+import {
+  buildLatestWrongIndex,
+  examStatus,
+  type ExamStatus,
+} from "@/lib/ielts/status";
 import { loadRecords } from "@/lib/ielts/storage";
 import type {
   ExamCategory,
@@ -22,6 +29,7 @@ import type {
   ExamProgress,
   ExamSummary,
 } from "@/lib/ielts/types";
+import { StatusChip } from "@/components/ui/StatusChip";
 import { Badge, EmptyNote } from "./ui";
 
 const FREQUENCIES: ExamFrequency[] = ["high", "medium", "low"];
@@ -31,6 +39,7 @@ const PROGRESS_LABELS: Record<ProgressFilter, string> = {
   all: "全部",
   fresh: "未练习",
   practised: "已练习",
+  wrong: "有错题",
 };
 
 /**
@@ -100,10 +109,22 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
   const [progress, setProgress] = useState<Map<string, ExamProgress>>(
     () => new Map(),
   );
+  // Wrong-answer counts of each exam's latest attempt, and any in-flight
+  // drafts: together these turn the old binary "practised" dot into the
+  // four-state card semantics.
+  const [wrongIndex, setWrongIndex] = useState<Map<string, number>>(
+    () => new Map(),
+  );
+  const [draftIds, setDraftIds] = useState<ReadonlySet<string>>(
+    () => new Set(),
+  );
   const [restored, setRestored] = useState(false);
 
   useEffect(() => {
-    setProgress(buildProgressIndex(loadRecords()));
+    const records = loadRecords();
+    setProgress(buildProgressIndex(records));
+    setWrongIndex(buildLatestWrongIndex(records));
+    setDraftIds(new Set(loadDrafts().keys()));
 
     const saved = readBrowseState();
     // An explicit ?category= (the overview's category cards) is a deliberate
@@ -128,20 +149,42 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
   }, [state, restored]);
 
   const practisedIds = useMemo(() => new Set(progress.keys()), [progress]);
+  const errorIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const [examId, wrong] of wrongIndex) if (wrong > 0) ids.add(examId);
+    return ids;
+  }, [wrongIndex]);
+
+  const activeFilters = useMemo(
+    () => ({
+      search: state.search,
+      category: state.category,
+      frequency: state.frequency,
+      progress: state.progress,
+      practised: practisedIds,
+      withErrors: errorIds,
+    }),
+    [state, practisedIds, errorIds],
+  );
 
   const visible = useMemo(
-    () =>
-      sortExams(
-        filterExams(exams, {
-          search: state.search,
-          category: state.category,
-          frequency: state.frequency,
-          progress: state.progress,
-          practised: practisedIds,
-        }),
-        state.sort,
-      ),
-    [exams, state, practisedIds],
+    () => sortExams(filterExams(exams, activeFilters), state.sort),
+    [exams, activeFilters, state.sort],
+  );
+
+  // Counted against the other dimensions' selection, so a chip's number always
+  // equals what clicking it yields.
+  const categoryCounts = useMemo(
+    () => countByDimension(exams, "category", activeFilters),
+    [exams, activeFilters],
+  );
+  const frequencyCounts = useMemo(
+    () => countByDimension(exams, "frequency", activeFilters),
+    [exams, activeFilters],
+  );
+  const progressCounts = useMemo(
+    () => countByDimension(exams, "progress", activeFilters),
+    [exams, activeFilters],
   );
 
   // Corpus position, so the ordinal on a card is stable under filtering and
@@ -221,7 +264,7 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
             active={state.category === "all"}
             onClick={() => setState((prev) => ({ ...prev, category: "all" }))}
           >
-            全部
+            全部 {categoryCounts.get("all") ?? 0}
           </Chip>
           {CATEGORIES.map((value) => (
             <Chip
@@ -229,7 +272,7 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
               active={state.category === value}
               onClick={() => setState((prev) => ({ ...prev, category: value }))}
             >
-              {value}
+              {value} {categoryCounts.get(value) ?? 0}
             </Chip>
           ))}
           <span className="mx-1 w-px bg-stage-border" aria-hidden />
@@ -245,7 +288,7 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
               active={state.frequency === value}
               onClick={() => setState((prev) => ({ ...prev, frequency: value }))}
             >
-              {FREQUENCY_LABELS[value]}
+              {FREQUENCY_LABELS[value]} {frequencyCounts.get(value) ?? 0}
             </Chip>
           ))}
           <span className="mx-1 w-px bg-stage-border" aria-hidden />
@@ -255,7 +298,8 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
               active={state.progress === value}
               onClick={() => setState((prev) => ({ ...prev, progress: value }))}
             >
-              {PROGRESS_LABELS[value]}
+              {PROGRESS_LABELS[value]}{" "}
+              {value === "all" ? exams.length : progressCounts.get(value) ?? 0}
             </Chip>
           ))}
         </div>
@@ -286,6 +330,14 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
                 exam={exam}
                 ordinal={ordinals.get(exam.id) ?? 0}
                 progress={progress.get(exam.id)}
+                status={examStatus(
+                  progress.get(exam.id),
+                  draftIds.has(exam.id)
+                    ? { examId: exam.id, updatedAt: "", answered: 0, total: 0 }
+                    : undefined,
+                  wrongIndex.get(exam.id),
+                )}
+                wrongCount={wrongIndex.get(exam.id) ?? 0}
               />
             </li>
           ))}
@@ -299,10 +351,14 @@ function ExamCard({
   exam,
   ordinal,
   progress,
+  status,
+  wrongCount,
 }: {
   exam: ExamSummary;
   ordinal: number;
   progress?: ExamProgress;
+  status: ExamStatus;
+  wrongCount: number;
 }) {
   const meta = (
     <>
@@ -317,15 +373,17 @@ function ExamCard({
         ) : null}
         {exam.hasExplanation ? <span>· 含解析</span> : null}
       </div>
-      <p className="text-sm font-medium leading-snug">
-        {progress ? (
-          <span
-            aria-hidden
-            className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-stage-primary align-middle"
-          />
-        ) : null}
-        {exam.title}
-      </p>
+      {/* Three-state semantics replace the old binary "practised" dot: the
+          card now says which of unstarted / in-progress / done / has-errors
+          it is, in words as well as colour. */}
+      <div className="mb-1.5">
+        <StatusChip
+          surface="app"
+          state={status}
+          count={status === "completed_with_errors" ? wrongCount : undefined}
+        />
+      </div>
+      <p className="text-sm font-medium leading-snug">{exam.title}</p>
     </>
   );
 

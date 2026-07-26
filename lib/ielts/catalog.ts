@@ -18,7 +18,7 @@ export const FREQUENCY_LABELS: Record<ExamFrequency, string> = {
 };
 
 /** Whether the learner has already attempted a passage. */
-export type ProgressFilter = "all" | "practised" | "fresh";
+export type ProgressFilter = "all" | "practised" | "fresh" | "wrong";
 
 export interface CatalogFilters {
   search?: string;
@@ -27,6 +27,8 @@ export interface CatalogFilters {
   progress?: ProgressFilter;
   /** Exam ids with at least one stored attempt. Only read when `progress` is set. */
   practised?: ReadonlySet<string>;
+  /** Exam ids whose most recent attempt still has wrong answers. */
+  withErrors?: ReadonlySet<string>;
 }
 
 export const DEFAULT_FILTERS: Required<
@@ -70,13 +72,16 @@ export function filterExams(
     frequency = "all",
     progress = "all",
     practised,
+    withErrors,
   }: CatalogFilters,
 ): ExamSummary[] {
   const needle = search.trim().toLowerCase();
   return exams.filter((exam) => {
     if (category !== "all" && exam.category !== category) return false;
     if (frequency !== "all" && exam.frequency !== frequency) return false;
-    if (progress !== "all") {
+    if (progress === "wrong") {
+      if (!withErrors?.has(exam.id)) return false;
+    } else if (progress !== "all") {
       const done = practised?.has(exam.id) ?? false;
       if (progress === "practised" ? !done : done) return false;
     }
@@ -129,5 +134,46 @@ export function countByCategory(
 ): Record<ExamCategory, number> {
   const counts: Record<ExamCategory, number> = { P1: 0, P2: 0, P3: 0 };
   for (const exam of exams) counts[exam.category] += 1;
+  return counts;
+}
+
+/** Which catalog dimension a chip belongs to. */
+export type FilterDimension = "category" | "frequency" | "progress";
+
+/**
+ * Counts for one dimension's chips, computed against the OTHER dimensions'
+ * current selection.
+ *
+ * This is what makes a chip count honest: it always equals the number of rows
+ * clicking that chip actually produces. Counting against the full corpus
+ * instead would promise results the filter cannot deliver.
+ */
+export function countByDimension(
+  exams: ExamSummary[],
+  dimension: FilterDimension,
+  filters: CatalogFilters,
+): Map<string, number> {
+  // Drop the dimension being counted; keep every other active constraint.
+  const rest: CatalogFilters = { ...filters, [dimension]: "all" };
+  const pool = filterExams(exams, rest);
+  const counts = new Map<string, number>();
+
+  const bump = (key: string) => counts.set(key, (counts.get(key) ?? 0) + 1);
+
+  for (const exam of pool) {
+    switch (dimension) {
+      case "category":
+        bump(exam.category);
+        break;
+      case "frequency":
+        bump(exam.frequency);
+        break;
+      case "progress":
+        bump(filters.practised?.has(exam.id) ? "practised" : "fresh");
+        if (filters.withErrors?.has(exam.id)) bump("wrong");
+        break;
+    }
+  }
+  counts.set("all", pool.length);
   return counts;
 }

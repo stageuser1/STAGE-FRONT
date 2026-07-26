@@ -16,24 +16,39 @@ interface NavItem {
 const items: NavItem[] = [
   { label: "探索", icon: "home", href: "/schools", isActive: (p) => p === "/schools" },
   {
-    label: "院校",
+    label: "搜索",
     icon: "search",
     href: "/search",
     isActive: (p) => p.startsWith("/search"),
   },
-  { label: "收藏", icon: "heart", href: null },
   {
+    label: "实验室",
+    icon: "target",
+    href: "/ielts-lab",
+    isActive: (p) => p.startsWith("/ielts-lab"),
+  },
+  {
+    label: "学习中心",
+    icon: "trend",
+    href: "/dashboard",
+    isActive: (p) => p.startsWith("/dashboard"),
+  },
+  {
+    // Points at the learner's own profile, NOT /login — that route is reviewer
+    // CMS authentication and has never been a learner destination.
     label: "我的",
     icon: "user",
-    href: "/login",
-    isActive: (p) => p.startsWith("/login"),
+    href: "/profile",
+    isActive: (p) => p.startsWith("/profile"),
   },
 ];
 
 /**
- * Fixed four-item bottom navigation for phones (hidden ≥768px), matching
- * the product design. 收藏 renders as a placeholder until that feature
- * ships, so there is no tap dead-end on a missing route.
+ * Fixed bottom navigation for phones (hidden ≥768px).
+ *
+ * Five real destinations now that the lab, the dashboard and the profile
+ * exist; the inert 收藏 placeholder is gone, because a tab that does nothing
+ * is worse than one fewer tab.
  */
 export function MobileBottomNav() {
   const pathname = usePathname() ?? "/";

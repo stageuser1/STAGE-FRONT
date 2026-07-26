@@ -1,11 +1,13 @@
 import Link from "next/link";
-import type { Program, School } from "@/data/types";
-import { countryShort, latestSchoolUpdate } from "@/lib/format";
+import type { ExploreSchool } from "@/lib/explore/types";
+import { countryShort } from "@/lib/format";
+import { ConfidenceBadge } from "./ui/ConfidenceBadge";
 import { Icon } from "./ui/Icon";
 
 interface HomeSchoolCardProps {
-  school: School;
-  programs: Program[];
+  school: ExploreSchool;
+  /** How many of this school's programs survive the active filters. */
+  matchedProgramCount?: number;
 }
 
 const schoolNamesZh: Record<string, string> = {
@@ -41,41 +43,22 @@ function shortDate(value: string | null): string {
   return value.slice(0, 10).replaceAll("-", ".");
 }
 
-function tuitionRange(programs: Program[]): string {
-  const values = programs
-    .map((program) => program.cost_aid.tuition_amount)
-    .filter((value): value is number => value !== null)
-    .sort((a, b) => a - b);
-  if (values.length === 0) return "待公布";
-  const currency = programs.find(
-    (program) => program.cost_aid.tuition_amount !== null,
-  )?.cost_aid.currency;
+function tuitionRange(school: ExploreSchool): string {
+  if (school.tuitionMin === null) return "待公布";
   const compact = (value: number) =>
     value >= 1000 ? `${Math.round(value / 1000)}k` : String(value);
   const range =
-    values[0] === values.at(-1)
-      ? compact(values[0])
-      : `${compact(values[0])}-${compact(values.at(-1)!)}`;
-  return `${currency ?? ""} ${range}`.trim();
+    school.tuitionMin === school.tuitionMax
+      ? compact(school.tuitionMin)
+      : `${compact(school.tuitionMin)}-${compact(school.tuitionMax ?? school.tuitionMin)}`;
+  return `${school.tuitionCurrency ?? ""} ${range}`.trim();
 }
 
-function nearestDeadline(programs: Program[]): string {
-  const deadlines = programs
-    .flatMap((program) => [
-      program.deadline.application_deadline,
-      program.deadline.prescreening_deadline,
-    ])
-    .filter((value): value is string => Boolean(value))
-    .sort();
-  return deadlines[0] ? shortDate(deadlines[0]) : "待公布";
-}
-
-/** Explore feed card; all values are derived from the existing school/program data. */
-export function HomeSchoolCard({ school, programs }: HomeSchoolCardProps) {
-  const updated = latestSchoolUpdate(school, programs);
-  const majors = new Set(
-    programs.map((program) => program.major_area).filter(Boolean),
-  ).size;
+/** Explore feed card; every value is derived on the server from real records. */
+export function HomeSchoolCard({
+  school,
+  matchedProgramCount,
+}: HomeSchoolCardProps) {
   const nameZh = schoolNamesZh[school.name] ?? "中文名称待补充";
 
   return (
@@ -89,7 +72,7 @@ export function HomeSchoolCard({ school, programs }: HomeSchoolCardProps) {
         <div className="flex h-[61px] items-center gap-3 px-2.5">
           <div
             aria-label="学校图片占位"
-          className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded bg-[#dedede] text-[#b8b8b8]"
+            className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded bg-[#dedede] text-[#b8b8b8]"
           />
           <div className="min-w-0 flex-1">
             <div className="flex min-w-0 items-center justify-between gap-3">
@@ -108,13 +91,43 @@ export function HomeSchoolCard({ school, programs }: HomeSchoolCardProps) {
         </div>
 
         <div className="grid h-[44px] grid-cols-4 border-y border-[#eeeeee] px-1">
-          <Metric icon="school" label="专业数量" value={`${majors || programs.length} 个`} />
-          <Metric icon="calendar" label="最新更新" value={shortDate(updated)} />
-          <Metric icon="tuition" label="学费范围" value={tuitionRange(programs)} />
-          <Metric icon="clock" label="申请截止" value={nearestDeadline(programs)} />
+          <Metric
+            icon="school"
+            label="专业数量"
+            value={`${school.majorCount || school.programCount} 个`}
+          />
+          <Metric
+            icon="calendar"
+            label="最新更新"
+            value={shortDate(school.lastCheckedAt)}
+          />
+          <Metric icon="tuition" label="学费范围" value={tuitionRange(school)} />
+          <Metric
+            icon="clock"
+            label="申请截止"
+            value={shortDate(school.nearestDeadline)}
+          />
         </div>
 
-        <div className="flex h-[27px] items-center justify-center gap-2 text-[10px] font-medium text-brand-600">
+        {/* min-w-0 + flex-wrap: without them this row's min-content width sets
+            the card's, and a long freshness sentence widens every card in the
+            grid until the page itself scrolls sideways. */}
+        <div className="flex min-w-0 flex-wrap items-center justify-between gap-x-2 gap-y-0.5 px-2.5 py-1.5">
+          <ConfidenceBadge
+            status={school.status}
+            lastCheckedAt={school.lastCheckedAt}
+            className="min-w-0 text-[9px]"
+          />
+          {/* Only shown while filters are active, so the card can say how much
+              of this school actually matched rather than implying all of it. */}
+          {matchedProgramCount !== undefined ? (
+            <span className="shrink-0 text-[9px] text-brand-600">
+              {matchedProgramCount} / {school.programCount} 个项目匹配
+            </span>
+          ) : null}
+        </div>
+
+        <div className="flex h-[27px] items-center justify-center gap-2 border-t border-[#eeeeee] text-[10px] font-medium text-brand-600">
           查看院校
           <Icon
             className="transition group-hover:translate-x-0.5"

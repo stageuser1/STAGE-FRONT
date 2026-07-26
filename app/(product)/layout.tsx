@@ -3,10 +3,12 @@ import { MarketingFooter } from "@/components/marketing/MarketingFooter";
 import { MarketingNavbar } from "@/components/marketing/MarketingNavbar";
 
 /**
- * Product surface layout — Phase 1. The Dashboard / IELTS Lab routes are
- * "coming soon" teasers only (doc 01 §3), so they share the marketing chrome
- * and font scope. The real auth-gated app shell (ADR-11) is built in a later
- * phase; this layout is deliberately the marketing shell for now.
+ * Product surface layout.
+ *
+ * /dashboard and /profile are live product surfaces now, not teasers. They
+ * keep the marketing chrome (navbar + footer) and the stage-* font scope,
+ * which is what makes them App-family surfaces; the auth-gated app shell
+ * arrives with accounts in a later phase.
  */
 export default function ProductLayout({
   children,

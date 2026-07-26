@@ -498,6 +498,12 @@ function RecordRow({
 
       <div className="flex flex-wrap items-center gap-3 px-4 pb-2 pt-2 text-xs">
         <Link
+          href={`/ielts-lab/review/${record.id}`}
+          className="font-medium text-stage-primary underline-offset-2 transition-colors hover:underline"
+        >
+          逐题回顾
+        </Link>
+        <Link
           href={reviewHref(record.examId, record.id)}
           className="text-stage-fg-muted underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
         >

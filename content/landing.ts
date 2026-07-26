@@ -298,13 +298,8 @@ export const footer = {
 /* --------------------------------------------------------- teaser / metadata */
 
 export const teasers = {
-  // The ielts-lab teaser is gone: /ielts-lab is the live product now.
-  dashboard: {
-    eyebrow: "学习中心",
-    title: "学习中心即将上线。",
-    body: "集中管理成绩、收藏院校与申请进度的工作台正在开发中。在此期间，你可以先探索院校数据库。",
-    cta: { href: "/schools", label: "探索院校" },
-  },
+  // The ielts-lab and dashboard teasers are both gone: those routes are the
+  // live product now. Only /contact still has nothing behind it.
   contact: {
     eyebrow: "联系我们",
     title: "与 STAGE 取得联系。",

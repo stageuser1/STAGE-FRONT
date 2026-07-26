@@ -1,8 +1,9 @@
 import { EmptyState } from "@/components/EmptyState";
+import { FitPanel } from "@/components/fit/FitPanel";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
 import { ProgramDetailSections } from "@/components/program/ProgramDetailSections";
 import { SourceCitationBlock } from "@/components/SourceCitationBlock";
-import { getAllPrograms, getProgramById } from "@/lib/data";
+import { getAllPrograms, getProgramById, toPublicProgramDto } from "@/lib/data";
 
 export const revalidate = 900;
 export const dynamicParams = true;
@@ -25,8 +26,12 @@ interface ProgramPageProps {
 export default async function ProgramPage({ params }: ProgramPageProps) {
   const { schoolId, programId } = await params;
   const program = await getProgramById(schoolId, programId);
+  // Mapped once and shared: the detail sections and the fit panel must read
+  // exactly the same public shape, or the checklist could disagree with the
+  // section it summarises.
+  const dto = program ? toPublicProgramDto(program) : null;
 
-  if (!program) {
+  if (!program || !dto) {
     return (
       <>
         <MobileHeader backHref={`/schools/${schoolId}`} />
@@ -47,11 +52,15 @@ export default async function ProgramPage({ params }: ProgramPageProps) {
     <>
       <MobileHeader backHref={`/schools/${program.school_id}`} />
       <PageShell>
-        <div className="gap-5 lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
-          <div className="min-w-0">
-            <ProgramDetailSections program={program} />
+        <div className="flex flex-col gap-5 lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
+          <div className="min-w-0 lg:order-none">
+            <ProgramDetailSections program={dto} />
           </div>
-          <div className="mt-4 lg:sticky lg:top-20 lg:mt-0">
+          {/* The fit panel is the decision, so on narrow screens it leads
+              rather than dropping below the prose. One instance, two
+              positions — never a duplicated component. */}
+          <div className="order-first space-y-4 lg:sticky lg:top-20 lg:order-none">
+            <FitPanel program={dto} />
             <SourceCitationBlock
               dataQuality={program.data_quality}
               sources={program.sources}
