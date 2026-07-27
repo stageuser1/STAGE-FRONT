@@ -13,6 +13,42 @@ const nextConfig: NextConfig = {
    * making the school route ISR-only) and is out of scope for this upgrade.
    */
   staticPageGenerationTimeout: 300,
+
+  /**
+   * Baseline security headers, applied to every response.
+   *
+   * Deliberately NOT here: Content-Security-Policy. The IELTS runner under
+   * `public/ielts/` is a vendored IIFE bundle that registers exam data through
+   * globals and runs inside a same-origin iframe; any useful CSP has to be
+   * tested against that runtime before it can be enforced, so it is a separate
+   * piece of work rather than a line in this list.
+   *
+   * X-Frame-Options is SAMEORIGIN rather than DENY precisely because of that
+   * iframe — the runner is framed by our own pages and DENY would break it.
+   *
+   * HSTS carries no `preload`: submitting to the preload list is effectively
+   * one-way and belongs to a deployment decision, not to the app config.
+   */
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains",
+          },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

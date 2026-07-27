@@ -1,11 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect } from "react";
 import { Icon } from "@/components/ui/Icon";
 
 /**
  * Route-level error boundary: an honest retryable failure card —
  * never a blank page, never stale data presented as fresh.
+ *
+ * The card is deliberately incurious: the copy is the same sentence for
+ * every failure, and the only failure-specific thing on screen is the
+ * digest, an opaque hash the user can quote to support. Messages and
+ * stacks describe our internals, so they go to the console (and from
+ * there to monitoring) rather than to the reader.
  */
 export default function RouteError({
   error,
@@ -14,7 +20,9 @@ export default function RouteError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  const [showDetail, setShowDetail] = useState(false);
+  useEffect(() => {
+    console.error("[stage-front] route error boundary", error);
+  }, [error]);
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-md items-center px-4 py-10">
@@ -33,21 +41,13 @@ export default function RouteError({
         >
           重试
         </button>
-        <div className="mt-4">
-          <button
-            className="text-xs font-medium text-ink-400 underline-offset-2 hover:underline"
-            onClick={() => setShowDetail((current) => !current)}
-            type="button"
-          >
-            {showDetail ? "收起详情" : "查看详情"}
-          </button>
-          {showDetail ? (
-            <p className="mx-auto mt-2 max-w-sm break-words rounded-lg bg-ink-50 px-3 py-2 text-left text-xs leading-5 text-ink-500">
-              {error.message}
-              {error.digest ? ` (digest: ${error.digest})` : null}
-            </p>
-          ) : null}
-        </div>
+        {error.digest ? (
+          <p className="mt-4 text-xs leading-5 text-ink-400">
+            参考编号 <span className="font-mono">{error.digest}</span>
+            <br />
+            如需协助，请在联系我们时附上此编号。
+          </p>
+        ) : null}
       </div>
     </main>
   );
