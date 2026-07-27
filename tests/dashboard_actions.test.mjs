@@ -6,7 +6,29 @@ import { buildReadiness, upcomingDeadlines } from "../lib/dashboard/readiness.ts
 import { createEmptyProfile } from "../lib/profile/types.ts";
 
 const DAY = 86_400_000;
-const isoIn = (days) => new Date(Date.now() + days * DAY).toISOString().slice(0, 10);
+
+/**
+ * Deadline `days` calendar days from today, in the *local* calendar.
+ *
+ * Deadlines are calendar dates, and every consumer of them (`daysUntil`,
+ * `upcomingDeadlines`, the readiness dimensions) parses `YYYY-MM-DD` as local
+ * midnight — a Chinese applicant's "10 天后截止" counts from their own today.
+ * Building the fixture with `toISOString()` produced a UTC calendar date
+ * instead, so east-of-UTC zones disagreed with the code under test for the
+ * part of the day where the two calendars differ: in Asia/Shanghai every
+ * expectation shifted by one day between 00:00 and 08:00 local. Ticking the
+ * local calendar keeps the fixture and the code on the same day everywhere.
+ */
+const isoIn = (days) => {
+  // Noon, so a DST transition cannot land on a local midnight that does not
+  // exist or happens twice.
+  const date = new Date();
+  date.setHours(12, 0, 0, 0);
+  date.setDate(date.getDate() + days);
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${date.getFullYear()}-${month}-${day}`;
+};
 
 function savedProgram(overrides = {}) {
   const snapshot = {
