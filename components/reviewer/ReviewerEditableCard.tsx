@@ -4,6 +4,7 @@ import { useEffect, useId, useMemo, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import type { ReviewStatus } from "@/data/types";
 import { useReviewerAuth } from "@/lib/directus-auth";
+import { revalidateReviewedCollections } from "@/lib/reviewer/revalidate";
 import {
   EditableSelect,
   EditableTextField,
@@ -148,6 +149,25 @@ export function ReviewerEditableCard({
     );
   }
 
+  /**
+   * Drop the cached public reads this save invalidated, before refreshing.
+   *
+   * The browser writes straight to Directus, so the server's Data Cache would
+   * otherwise keep serving pre-edit values to `router.refresh()` for the rest
+   * of the 900s revalidation window. Awaiting it means the refresh that
+   * follows renders against Directus. A failure here is not a save failure:
+   * the record is already written, so the page just refreshes as it did
+   * before and the edit becomes visible when the window rolls over.
+   */
+  async function refreshPublicData(collections: string[]) {
+    try {
+      await revalidateReviewedCollections(collections);
+    } catch {
+      // Cache invalidation is best-effort; the write itself already succeeded.
+    }
+    router.refresh();
+  }
+
   async function assertUnchanged() {
     const targets = new Map<string, EditableFieldDefinition[]>();
     fields.forEach((definition) => {
@@ -210,6 +230,7 @@ export function ReviewerEditableCard({
       });
 
       const savedTargets: string[] = [];
+      const savedCollections: string[] = [];
       for (const [targetKey, payload] of payloads.entries()) {
         const separator = targetKey.indexOf(":");
         const targetCollection = targetKey.slice(0, separator);
@@ -219,7 +240,7 @@ export function ReviewerEditableCard({
         } catch (caught) {
           const reason =
             caught instanceof Error ? caught.message : String(caught);
-          if (savedTargets.length > 0) router.refresh();
+          if (savedTargets.length > 0) await refreshPublicData(savedCollections);
           throw new Error(
             savedTargets.length > 0
               ? `Saved ${savedTargets.join(", ")}, but failed to save ${targetCollection} record ${targetRecordId}: ${reason}. The page may be partially saved and has been refreshed.`
@@ -227,11 +248,12 @@ export function ReviewerEditableCard({
           );
         }
         savedTargets.push(`${targetCollection} record ${targetRecordId}`);
+        savedCollections.push(targetCollection);
       }
       setValues({ ...draft });
       setEditing(false);
       setNotice("Saved.");
-      router.refresh();
+      await refreshPublicData(savedCollections);
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
       router.refresh();
@@ -256,6 +278,7 @@ export function ReviewerEditableCard({
         });
       });
       const savedTargets: string[] = [];
+      const savedCollections: string[] = [];
       for (const target of targets.values()) {
         try {
           await patch(target.collection, target.recordId, {
@@ -264,7 +287,7 @@ export function ReviewerEditableCard({
         } catch (caught) {
           const reason =
             caught instanceof Error ? caught.message : String(caught);
-          if (savedTargets.length > 0) router.refresh();
+          if (savedTargets.length > 0) await refreshPublicData(savedCollections);
           throw new Error(
             savedTargets.length > 0
               ? `Updated ${savedTargets.join(", ")}, but failed to update ${target.collection} record ${target.recordId}: ${reason}. The page may be partially updated and has been refreshed.`
@@ -272,12 +295,13 @@ export function ReviewerEditableCard({
           );
         }
         savedTargets.push(`${target.collection} record ${target.recordId}`);
+        savedCollections.push(target.collection);
         publishStatus(nextStatus, target.collection, target.recordId);
       }
       setNotice(
         nextStatus === "Verified" ? "Marked Verified." : "Marked Needs Update.",
       );
-      router.refresh();
+      await refreshPublicData(savedCollections);
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : String(caught));
       router.refresh();
