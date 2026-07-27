@@ -90,16 +90,41 @@ export class DirectusRequestError extends Error {
 
 /**
  * Directus answers a query that names a column the token cannot see — or that
- * does not exist yet — with 403 and a message naming the fields. That is the
- * signal the optimistic `audition_requirements` query relies on, and it is the
- * only failure that may be answered by re-requesting a narrower field list.
+ * does not exist yet — with 403 and a message naming the *fields*:
+ *
+ *   You don't have permission to access fields "prescreen_repertoire",
+ *   "audition_repertoire" in collection "audition_requirements" or they do
+ *   not exist. Queried in root.
+ *
+ * That is the signal the optimistic `audition_requirements` query relies on,
+ * and it is the only failure that may be answered by re-requesting a narrower
+ * field list. The match deliberately requires the word "field": a missing
+ * *collection* produces the same 403 with the same "or it does not exist"
+ * tail, and retrying that one with fewer fields would only fail again.
  */
-function isUnknownFieldBody(status: number, body: string): boolean {
+function isUnknownFieldBody(status: number, message: string): boolean {
   if (status !== 403 && status !== 400) return false;
-  return (
-    /permission to access fields?\s+"/i.test(body) ||
-    /do(?:es)? not exist/i.test(body)
-  );
+  return /permission to access fields?\s+"/i.test(message);
+}
+
+/**
+ * Directus errors arrive as `{ errors: [{ message }] }`. Classifying against
+ * the decoded message rather than the raw body keeps the patterns readable and
+ * immune to JSON escaping.
+ */
+function errorMessage(body: string): string {
+  try {
+    const parsed = JSON.parse(body) as {
+      errors?: Array<{ message?: unknown }>;
+    };
+    const messages = (parsed.errors ?? [])
+      .map((entry) => entry?.message)
+      .filter((message): message is string => typeof message === "string");
+    if (messages.length > 0) return messages.join(" ");
+  } catch {
+    // Not a Directus error envelope — fall through to the raw body.
+  }
+  return body;
 }
 
 export function isUnknownFieldError(error: unknown): boolean {
@@ -213,15 +238,18 @@ async function sendOnce<T>(
       }
     }
 
-    const body = await response.text().catch(() => "");
-    if (isUnknownFieldBody(response.status, body)) {
+    const detail = errorMessage(await response.text().catch(() => "")).slice(
+      0,
+      300,
+    );
+    if (isUnknownFieldBody(response.status, detail)) {
       throw new DirectusRequestError({
         kind: "schema",
         message: `Directus ${response.status} on ${path}: unknown or unreadable field`,
         path,
         status: response.status,
         retryable: false,
-        detail: body.slice(0, 300),
+        detail,
       });
     }
     throw new DirectusRequestError({
@@ -230,7 +258,7 @@ async function sendOnce<T>(
       path,
       status: response.status,
       retryable: response.status === 429 || response.status >= 500,
-      detail: body.slice(0, 300),
+      detail,
     });
   } finally {
     clearTimeout(timer);
