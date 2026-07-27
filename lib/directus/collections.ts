@@ -304,6 +304,53 @@ export function readCatalogSchools(): Promise<DirectusSchool[]> {
   return readAllItems<DirectusSchool>("schools", { fields: schoolCatalogFields });
 }
 
+/**
+ * Slugs only, for the school route's static params. Generating 20 route
+ * params does not need names, cities, review status or a catalog of programs.
+ */
+export function readSchoolSlugs(): Promise<DirectusSchool[]> {
+  return readAllItems<DirectusSchool>("schools", { fields: "id,slug" });
+}
+
+/**
+ * Enough of an offering to produce a `/schools/[schoolId]/programs/[programId]`
+ * param and to apply the same "has a school slug and a program name" guard the
+ * catalog applies, so the params match the programs the catalog would list.
+ */
+export function readOfferingRouteParams(
+  limit: number,
+): Promise<DirectusProgramOffering[]> {
+  return readItems<DirectusProgramOffering>("program_offerings", {
+    fields: "id,official_program_name,school_id.slug",
+    limit,
+  });
+}
+
+/**
+ * The columns the profile route's filter vocabulary is built from: country,
+ * major area and degree identity, plus the two guard columns. No requirement
+ * rows, no source aggregates — a chip list needs none of them.
+ */
+const offeringFilterOptionFields = [
+  "id",
+  "official_program_name",
+  "school_id.slug",
+  "school_id.country",
+  "field_id.field_name",
+  "field_id.field_name_zh",
+  "degree_level_id.slug",
+  "degree_level_id.degree_level_name",
+  "degree_level_id.degree_level_name_zh",
+  "degree_level_id.abbreviation",
+  "degree_level_id.degree_category",
+].join(",");
+
+export function readOfferingFilterOptions(): Promise<DirectusProgramOffering[]> {
+  return readAllItems<DirectusProgramOffering>("program_offerings", {
+    fields: offeringFilterOptionFields,
+  });
+}
+
 export async function readSchoolBySlug(
   slug: string,
 ): Promise<DirectusSchool | null> {

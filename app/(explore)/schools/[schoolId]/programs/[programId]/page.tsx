@@ -3,17 +3,17 @@ import { FitPanel } from "@/components/fit/FitPanel";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
 import { ProgramDetailSections } from "@/components/program/ProgramDetailSections";
 import { SourceCitationBlock } from "@/components/SourceCitationBlock";
-import { getAllPrograms, getProgramById, toPublicProgramDto } from "@/lib/data";
+import {
+  getProgramById,
+  getProgramRouteParams,
+  toPublicProgramDto,
+} from "@/lib/data";
 
 export const revalidate = 900;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const programs = await getAllPrograms();
-  return programs.slice(0, 3).map((program) => ({
-    schoolId: program.school_id,
-    programId: program.id,
-  }));
+  return getProgramRouteParams(3);
 }
 
 interface ProgramPageProps {

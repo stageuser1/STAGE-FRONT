@@ -13,9 +13,9 @@ import { SchoolProfileCard } from "@/components/reviewer/SchoolProfileCard";
 import { FactRow } from "@/components/ui/FactRow";
 import { SectionCard } from "@/components/ui/SectionCard";
 import {
-  getAllSchools,
   getProgramsBySchoolId,
   getSchoolById,
+  getSchoolRouteParams,
   toPublicSchoolDto,
 } from "@/lib/data";
 import { toExploreProgram } from "@/lib/explore/types";
@@ -25,11 +25,7 @@ import { buildSchoolDetailViewModel } from "@/lib/school-detail";
 export const revalidate = 900;
 
 export async function generateStaticParams() {
-  const schools = await getAllSchools();
-
-  return schools.map((school) => ({
-    schoolId: school.id,
-  }));
+  return getSchoolRouteParams();
 }
 
 interface SchoolPageProps {

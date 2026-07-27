@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ProfileFlow, type ProfileOptions } from "@/components/profile/ProfileFlow";
-import { getAllPrograms } from "@/lib/data";
+import { getFilterOptionPrograms } from "@/lib/data";
 import { buildFilterOptions } from "@/lib/search-options";
 
 export const metadata: Metadata = {
@@ -17,14 +17,16 @@ export const revalidate = 900;
  *
  * The option lists come from real records on the server, so the chips a
  * learner picks are the same vocabulary the catalog filters on — a profile can
- * never contain a discipline or degree that matches nothing.
+ * never contain a discipline or degree that matches nothing. The loader reads
+ * only the four columns those chips are built from; this page renders no
+ * deadlines, requirements or citations and so loads none.
  *
  * The flow itself is entirely client-side and makes no network request.
  */
 export default async function ProfilePage() {
-  const programs = await getAllPrograms();
-  const { countryOptions, majorOptions, degreeOptions } =
-    buildFilterOptions(programs);
+  const { countryOptions, majorOptions, degreeOptions } = buildFilterOptions(
+    await getFilterOptionPrograms(),
+  );
 
   const options: ProfileOptions = {
     fields: majorOptions,

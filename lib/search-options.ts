@@ -1,4 +1,4 @@
-import type { Program } from "@/data/types";
+import type { DegreeInfo } from "@/data/types";
 import { degreeOrder } from "@/lib/format";
 
 export interface SearchFilterOption {
@@ -7,11 +7,25 @@ export interface SearchFilterOption {
 }
 
 /**
+ * The four fields the option lists are built from.
+ *
+ * `Program` satisfies this structurally, so the search route passes its
+ * programs unchanged. Naming the narrow shape lets the profile route load
+ * only these columns instead of a whole catalog it renders none of.
+ */
+export interface FilterOptionSource {
+  country: string;
+  major_area: string;
+  major_area_zh?: string | null;
+  degree?: DegreeInfo;
+}
+
+/**
  * Filter options derived from real records only. Majors come from the
  * `fields` relation (never from program-name fallbacks) and degrees are
  * keyed by Directus slug so GD and AD stay distinct.
  */
-export function buildFilterOptions(programs: Program[]): {
+export function buildFilterOptions(programs: FilterOptionSource[]): {
   countryOptions: SearchFilterOption[];
   majorOptions: SearchFilterOption[];
   degreeOptions: SearchFilterOption[];
