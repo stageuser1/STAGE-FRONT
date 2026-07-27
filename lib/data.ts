@@ -17,128 +17,39 @@ import type {
   SchoolDetailSection,
   SchoolDetailSectionKey,
   SourceRecord,
+  SourceSummary,
   SourceType,
   WorkflowStatus,
 } from "@/data/types";
-
-type DirectusId = string | number;
-
-interface DirectusSchool {
-  id: DirectusId;
-  slug?: string | null;
-  school_name?: string | null;
-  city?: string | null;
-  country?: string | null;
-  official_website?: string | null;
-  review_status?: string | null;
-  intro_zh?: string | null;
-  school_detail_sections?: unknown;
-}
-
-interface DirectusField {
-  id?: DirectusId;
-  slug?: string | null;
-  field_name?: string | null;
-  field_name_zh?: string | null;
-  field_category?: string | null;
-}
-
-interface DirectusDegreeLevel {
-  id?: DirectusId;
-  slug?: string | null;
-  degree_level_name?: string | null;
-  degree_level_name_zh?: string | null;
-  abbreviation?: string | null;
-  degree_category?: string | null;
-}
-
-interface DirectusProgramOffering {
-  id: DirectusId;
-  school_id?: DirectusId | DirectusSchool | null;
-  field_id?: DirectusId | DirectusField | null;
-  degree_level_id?: DirectusId | DirectusDegreeLevel | null;
-  official_program_name?: string | null;
-  program_name_zh?: string | null;
-  track_or_concentration?: string | null;
-  department?: string | null;
-  card_summary_zh?: string | null;
-  duration_years?: string | number | null;
-  language_of_instruction?: unknown;
-  program_url?: string | null;
-  application_url?: string | null;
-  audition_url?: string | null;
-  international_url?: string | null;
-  review_status?: string | null;
-  faculty_list?: string | null;
-  last_checked?: string | null;
-  program_offering_ref?: string | null;
-}
-
-interface DirectusCycleRecord {
-  id: DirectusId;
-  program_offering_id?: DirectusId | { id?: DirectusId } | null;
-  is_current?: boolean | string | number | null;
-  admission_cycle?: string | number | null;
-  review_status?: string | null;
-}
-
-interface DirectusApplicationRequirement extends DirectusCycleRecord {
-  deadline_notes?: string | null;
-  application_deadline?: string | null;
-  english_language_tests?: unknown;
-  toefl_minimum?: string | number | null;
-  ielts_minimum?: string | number | null;
-  duolingo_minimum?: string | number | null;
-  english_waiver_policy?: string | null;
-  resume_required?: string | null;
-  essay_required?: string | null;
-  recommendation_letters?: string | number | null;
-  transcript_requirements?: string | null;
-  portfolio_required?: string | null;
-  required_materials?: unknown;
-  international_applicant_notes?: string | null;
-  conditional_notes?: string | null;
-  notes?: string | null;
-  application_fee?: string | number | null;
-  application_fee_currency?: string | null;
-  tuition_annual?: string | number | null;
-  tuition_currency?: string | null;
-  scholarships_available?: string | null;
-  scholarship_note?: string | null;
-}
-
-interface DirectusAuditionRequirement extends DirectusCycleRecord {
-  prescreening_deadline?: string | null;
-  prescreening_required?: string | null;
-  Prescreening_required?: string | null;
-  audition_required?: string | null;
-  repertoire_summary?: string | null;
-  repertoire_structured?: unknown;
-  prescreen_repertoire?: string | null;
-  audition_repertoire?: string | null;
-  audition_format?: string | null;
-  video_requirements?: string | null;
-  file_format_requirements?: string | null;
-  accompaniment_requirements?: string | null;
-  interview_or_callback_requirements?: string | null;
-  special_notes?: string | null;
-  conditional_notes?: string | null;
-  notes?: string | null;
-}
-
-interface DirectusSourceRecord {
-  id?: DirectusId;
-  program_offering_id?: DirectusId | { id?: DirectusId } | null;
-  school_id?: DirectusId | { id?: DirectusId } | null;
-  source_url?: string | null;
-  source_title?: string | null;
-  source_quote?: string | null;
-  retrieved_date?: string | null;
-  confidence_level?: string | null;
-  source_type?: string | null;
-  related_field?: string | null;
-  evidence_metadata?: unknown;
-}
+import type {
+  DirectusApplicationRequirement,
+  DirectusAuditionRequirement,
+  DirectusCycleRecord,
+  DirectusDegreeLevel,
+  DirectusField,
+  DirectusProgramOffering,
+  DirectusSchool,
+  DirectusSourceRecord,
+  SourceStatsRow,
+} from "@/lib/directus/collections";
+import {
+  readCatalogApplications,
+  readCatalogAuditions,
+  readCatalogOfferings,
+  readCatalogSchools,
+  readDegreeLevels,
+  readOfferingById,
+  readProgramApplications,
+  readProgramAuditions,
+  readProgramConfidenceStats,
+  readProgramSources,
+  readProgramSourceStats,
+  readSchoolBySlug,
+  readSchoolConfidenceStats,
+  readSchoolSources,
+  readSchoolSourceStats,
+  readSourceEvidence,
+} from "@/lib/directus/collections";
 
 interface DirectusData {
   schools: School[];
@@ -151,46 +62,6 @@ const statusStrength: Record<WorkflowStatus, number> = {
   human_reviewed: 2,
   published: 3,
 };
-
-async function directusFetch<T>(path: string): Promise<T> {
-  const base = process.env.DIRECTUS_URL;
-  if (!base) throw new Error("DIRECTUS_URL is not set");
-  const headers: HeadersInit = {};
-  if (process.env.DIRECTUS_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.DIRECTUS_TOKEN}`;
-  }
-
-  for (let attempt = 0; attempt < 2; attempt += 1) {
-    let res: Response;
-    try {
-      res = await fetch(`${base.replace(/\/$/, "")}${path}`, {
-        headers,
-        next: { revalidate: 900 },
-      });
-    } catch (error) {
-      if (attempt === 1) {
-        const message = error instanceof Error ? error.message : String(error);
-        throw new Error(`Directus request failed on ${path}: ${message}`);
-      }
-      await new Promise((resolve) => setTimeout(resolve, 250));
-      continue;
-    }
-
-    if (res.ok) {
-      const json = await res.json();
-      return json.data as T;
-    }
-
-    const retryable = res.status === 429 || res.status >= 500;
-    if (!retryable || attempt === 1) {
-      throw new Error(`Directus ${res.status} on ${path}`);
-    }
-
-    await new Promise((resolve) => setTimeout(resolve, 250));
-  }
-
-  throw new Error(`Directus request failed on ${path}`);
-}
 
 function relationId(value: unknown): string | null {
   if (typeof value === "string" || typeof value === "number") {
@@ -343,17 +214,38 @@ function weakestConfidence(records: DirectusSourceRecord[]): ConfidenceLevel {
   }, mapConfidence(records[0].confidence_level));
 }
 
-function selectCurrentCycle<T extends DirectusCycleRecord>(
+/**
+ * Groups cycle rows by their program once. Selecting a program's cycle is
+ * then a map lookup rather than a filter over the whole collection, which
+ * mattered at 1,938 programs × 4,000 requirement rows per render.
+ */
+function indexByProgram<T extends DirectusCycleRecord>(
   records: T[],
-  programId: string,
+): Map<string, T[]> {
+  const index = new Map<string, T[]>();
+  for (const record of records) {
+    const programId = relationId(record.program_offering_id);
+    if (!programId) continue;
+    const bucket = index.get(programId);
+    if (bucket) bucket.push(record);
+    else index.set(programId, [record]);
+  }
+  return index;
+}
+
+/**
+ * Current admission cycle for one program: the `is_current` rows when any
+ * exist, otherwise every row, newest `admission_cycle` first. Group order is
+ * collection order, so the tie-break is unchanged.
+ */
+function selectCurrentCycle<T extends DirectusCycleRecord>(
+  records: T[] | undefined,
 ): T | null {
-  const matching = records.filter(
-    (record) => relationId(record.program_offering_id) === programId,
-  );
-  const current = matching.filter(
+  if (!records || records.length === 0) return null;
+  const current = records.filter(
     (record) => booleanValue(record.is_current) === true,
   );
-  const candidates = current.length > 0 ? current : matching;
+  const candidates = current.length > 0 ? current : records;
 
   return (
     [...candidates].sort((left, right) =>
@@ -1098,245 +990,534 @@ function mapSchoolDetailSections(
 }
 
 /**
- * Detail-page enhancement: load the evidence quotes for a small set of
- * already-mapped source records. Quotes are supplementary content, so a
- * failed quote fetch never fails the page — it just renders without
- * blockquotes.
+ * Detail-page enhancement: load the evidence bodies for a small set of
+ * already-mapped source records — the quote every citation renders, and the
+ * `evidence_metadata` the school page reads `topic_key` from.
+ *
+ * This is the boundary that keeps 17,663 source bodies off every other
+ * surface: evidence is fetched only here, only for records the page is about
+ * to display, and only by id. Quotes are supplementary content, so a failed
+ * fetch degrades to citations without blockquotes rather than failing the
+ * page — but the degradation is logged rather than swallowed.
  */
-async function attachSourceQuotes(
+async function attachSourceEvidence(
   sources: SourceRecord[],
+  options: { withMetadata: boolean },
 ): Promise<SourceRecord[]> {
   const ids = sources
     .map((source) => source.record_id)
     .filter((id): id is string => Boolean(id));
   if (ids.length === 0) return sources;
 
-  try {
-    const rows = await directusFetch<
-      Array<{ id?: DirectusId; source_quote?: string | null }>
-    >(
-      `/items/source_records?limit=-1&fields=id,source_quote&filter[id][_in]=${ids
-        .map((id) => encodeURIComponent(id))
-        .join(",")}`,
-    );
-    const quotes = new Map(
-      rows.map((row) => [String(row.id), textValue(row.source_quote)]),
-    );
-    return sources.map((source) =>
-      source.record_id && quotes.has(source.record_id)
-        ? { ...source, notes: quotes.get(source.record_id) ?? source.notes }
-        : source,
-    );
-  } catch {
-    return sources;
-  }
+  const evidence = await readSourceEvidence(ids, options);
+  if (evidence.size === 0) return sources;
+
+  return sources.map((source) => {
+    const row = source.record_id ? evidence.get(source.record_id) : undefined;
+    if (!row) return source;
+    return {
+      ...source,
+      notes: textValue(row.source_quote) ?? source.notes,
+      topic_key: options.withMetadata
+        ? sourceTopicKey(row) ?? source.topic_key
+        : source.topic_key,
+    };
+  });
+}
+
+/* ------------------------------------------------------------------ *
+ * Source summaries
+ *
+ * List surfaces need two facts about a record's citations — how recently it
+ * was verified, and how many/how confident they are — and never the citation
+ * bodies. Reading those facts as Directus aggregates instead of downloading
+ * the corpus is the single largest delivery change in this phase: the shared
+ * loader's source read was 15MB / 90s; the aggregates that replace it are
+ * ~0.3MB / ~1s and produce identical values (verified group by group against
+ * the in-memory join they replace).
+ * ------------------------------------------------------------------ */
+
+const confidenceStrength: Record<ConfidenceLevel, number> = {
+  low: 0,
+  medium: 1,
+  high: 2,
+};
+
+function weakerConfidence(
+  left: ConfidenceLevel,
+  right: ConfidenceLevel,
+): ConfidenceLevel {
+  return confidenceStrength[left] <= confidenceStrength[right] ? left : right;
+}
+
+function laterDate(left: string | null, right: string | null): string | null {
+  if (!left) return right;
+  if (!right) return left;
+  return right > left ? right : left;
+}
+
+interface SummaryAccumulator {
+  last: string | null;
+  count: number;
+  confidence: ConfidenceLevel | null;
 }
 
 /**
- * Every query names exactly the fields the mappers read. The import
- * pipeline stores very large blob columns on these collections
- * (program_payload ~117KB/row, requirement_sections ~89KB/row,
- * evidence_metadata ~126KB/row) that the frontend never uses; fetching
- * with `fields=*` drags tens of megabytes through a slow link on every
- * request and stalls server rendering for minutes.
+ * Folds the date/count aggregate and the confidence aggregate into one
+ * summary per group. They are separate reads because they answer questions
+ * with different scopes: dates and counts describe records that survive
+ * mapping, while `weakestConfidence` has always been computed over every
+ * linked record, dropped ones included.
  */
-const offeringFields = [
-  "id",
-  "program_offering_ref",
-  "official_program_name",
-  "program_name_zh",
-  "track_or_concentration",
-  "department",
-  "card_summary_zh",
-  "duration_years",
-  "language_of_instruction",
-  "program_url",
-  "application_url",
-  "audition_url",
-  "international_url",
-  "review_status",
-  "faculty_list",
-  "last_checked",
-  "school_id.id",
-  "school_id.slug",
-  "school_id.school_name",
-  "school_id.city",
-  "school_id.country",
-  "field_id.id",
-  "field_id.slug",
-  "field_id.field_name",
-  "field_id.field_name_zh",
-  "field_id.field_category",
-  "degree_level_id.id",
-  "degree_level_id.slug",
-  "degree_level_id.degree_level_name",
-  "degree_level_id.degree_level_name_zh",
-  "degree_level_id.abbreviation",
-  "degree_level_id.degree_category",
-].join(",");
+function buildSourceSummaries(
+  stats: SourceStatsRow[],
+  confidence: SourceStatsRow[],
+  key: "program_offering_id" | "school_id",
+): Map<string, SourceSummary> {
+  const accumulators = new Map<string, SummaryAccumulator>();
+  const ensure = (id: string): SummaryAccumulator => {
+    const existing = accumulators.get(id);
+    if (existing) return existing;
+    const created: SummaryAccumulator = {
+      last: null,
+      count: 0,
+      confidence: null,
+    };
+    accumulators.set(id, created);
+    return created;
+  };
 
-const applicationFields = [
-  "id",
-  "program_offering_id",
-  "is_current",
-  "admission_cycle",
-  "review_status",
-  "deadline_notes",
-  "application_deadline",
-  "english_language_tests",
-  "toefl_minimum",
-  "ielts_minimum",
-  "duolingo_minimum",
-  "english_waiver_policy",
-  "resume_required",
-  "essay_required",
-  "recommendation_letters",
-  "transcript_requirements",
-  "portfolio_required",
-  "required_materials",
-  "international_applicant_notes",
-  "conditional_notes",
-  "notes",
-  "application_fee",
-  "application_fee_currency",
-  "tuition_annual",
-  "tuition_currency",
-  "scholarships_available",
-  "scholarship_note",
-].join(",");
-
-const auditionBaseFields = [
-  "id",
-  "program_offering_id",
-  "is_current",
-  "admission_cycle",
-  "review_status",
-  "prescreening_deadline",
-  "prescreening_required",
-  "Prescreening_required",
-  "audition_required",
-  "repertoire_summary",
-  "repertoire_structured",
-  "audition_format",
-  "video_requirements",
-  "file_format_requirements",
-  "accompaniment_requirements",
-  "interview_or_callback_requirements",
-  "special_notes",
-  "conditional_notes",
-  "notes",
-].join(",");
-
-/**
- * The split repertoire columns do not exist in Directus yet. Directus
- * rejects queries naming unknown fields, so request them opportunistically
- * and fall back to the base list — the `"field" in record` detection in
- * the mappers keeps working the day the admin adds the columns.
- */
-const auditionOptionalFields = ["prescreen_repertoire", "audition_repertoire"];
-
-async function fetchAuditionRequirements(): Promise<
-  DirectusAuditionRequirement[]
-> {
-  try {
-    return await directusFetch<DirectusAuditionRequirement[]>(
-      `/items/audition_requirements?limit=-1&fields=${auditionBaseFields},${auditionOptionalFields.join(",")}`,
+  for (const row of stats) {
+    const id = relationId(row[key]);
+    if (!id) continue;
+    const accumulator = ensure(id);
+    accumulator.last = laterDate(
+      accumulator.last,
+      dateValue(row.max?.retrieved_date),
     );
-  } catch {
-    return directusFetch<DirectusAuditionRequirement[]>(
-      `/items/audition_requirements?limit=-1&fields=${auditionBaseFields}`,
-    );
+    accumulator.count += numberValue(row.count?.id) ?? 0;
   }
-}
 
-/**
- * The bulk load intentionally skips `source_quote`: 5,000+ rows carry
- * ~2KB quotes each (~6MB). Quotes are only rendered on school and
- * program detail pages, which fetch them per-record via
- * attachSourceQuotes below.
- */
-const sourceRecordFields = [
-  "id",
-  "program_offering_id",
-  "school_id",
-  "source_url",
-  "source_title",
-  "retrieved_date",
-  "confidence_level",
-  "source_type",
-  "related_field",
-  "evidence_metadata",
-].join(",");
+  for (const row of confidence) {
+    const id = relationId(row[key]);
+    if (!id) continue;
+    const accumulator = ensure(id);
+    const level = mapConfidence(row.confidence_level);
+    accumulator.confidence =
+      accumulator.confidence === null
+        ? level
+        : weakerConfidence(accumulator.confidence, level);
+  }
 
-const loadDirectusData = cache(async (): Promise<DirectusData> => {
-  const [
-    directusSchools,
-    offerings,
-    applicationRequirements,
-    auditionRequirements,
-    sourceRecords,
-  ] = await Promise.all([
-    directusFetch<DirectusSchool[]>(
-      "/items/schools?limit=-1&fields=id,slug,school_name,city,country,official_website,review_status,intro_zh,school_detail_sections",
-    ),
-    directusFetch<DirectusProgramOffering[]>(
-      `/items/program_offerings?limit=-1&fields=${offeringFields}`,
-    ),
-    directusFetch<DirectusApplicationRequirement[]>(
-      `/items/application_requirements?limit=-1&fields=${applicationFields}`,
-    ),
-    fetchAuditionRequirements(),
-    directusFetch<DirectusSourceRecord[]>(
-      `/items/source_records?limit=-1&fields=${sourceRecordFields}`,
-    ),
-  ]);
-
-  const schoolsByDirectusId = new Map(
-    directusSchools.map((school) => [String(school.id), school]),
+  return new Map(
+    [...accumulators].map(([id, accumulator]) => [
+      id,
+      {
+        last_retrieved_at: accumulator.last,
+        count: accumulator.count,
+        confidence: accumulator.confidence ?? "medium",
+      },
+    ]),
   );
-  const degreeLevelOptions = [
-    ...new Map(
-      offerings.flatMap((offering) => {
-        const degree = relationObject<DirectusDegreeLevel>(
-          offering.degree_level_id,
-        );
-        const id = relationId(offering.degree_level_id);
-        const label =
-          textValue(degree?.degree_level_name) ?? textValue(degree?.slug);
-        return id && label ? [[id, { label, value: id }] as const] : [];
-      }),
-    ).values(),
-  ].sort((left, right) => left.label.localeCompare(right.label));
+}
 
-  const programs = offerings.flatMap<Program>((offering) => {
+/**
+ * A program's citations have always been its own records plus its school's
+ * school-level records, so its summary is the merge of both groups.
+ */
+function mergeSourceSummaries(
+  ...parts: Array<SourceSummary | undefined>
+): SourceSummary {
+  let last: string | null = null;
+  let count = 0;
+  let confidence: ConfidenceLevel | null = null;
+  for (const part of parts) {
+    if (!part) continue;
+    last = laterDate(last, part.last_retrieved_at);
+    count += part.count;
+    confidence =
+      confidence === null
+        ? part.confidence
+        : weakerConfidence(confidence, part.confidence);
+  }
+  return { last_retrieved_at: last, count, confidence: confidence ?? "medium" };
+}
+
+/** Same three facts, derived from records a detail route already holds. */
+function summariseSourceRows(rows: DirectusSourceRecord[]): SourceSummary {
+  const mapped = rows
+    .map(mapSource)
+    .filter((source): source is SourceRecord => source !== null);
+  return {
+    last_retrieved_at: mapped.reduce<string | null>(
+      (latest, source) => laterDate(latest, source.accessed_at),
+      null,
+    ),
+    count: mapped.length,
+    confidence: weakestConfidence(rows),
+  };
+}
+
+/* ------------------------------------------------------------------ *
+ * Assembly
+ * ------------------------------------------------------------------ */
+
+interface CatalogInput {
+  offerings: DirectusProgramOffering[];
+  applications: DirectusApplicationRequirement[];
+  auditions: DirectusAuditionRequirement[];
+  schoolsById: Map<string, DirectusSchool>;
+  programSummaries: Map<string, SourceSummary>;
+  schoolSummaries: Map<string, SourceSummary>;
+}
+
+/**
+ * Catalog fidelity: the fields the school catalog, the school page's program
+ * index, the fit strip and the profile filter options read.
+ *
+ * Detail prose, URLs, requirement sections and the reviewer editing surface
+ * are deliberately absent — they belong to the program page, which loads one
+ * program at full fidelity. `review_records` carries only the two columns
+ * list surfaces derive from (`last_checked` for the verification date,
+ * tuition for the school card range); the program page rebuilds it in full.
+ */
+function buildCatalogPrograms(input: CatalogInput): Program[] {
+  const applicationsByProgram = indexByProgram(input.applications);
+  const auditionsByProgram = indexByProgram(input.auditions);
+
+  return input.offerings.flatMap<Program>((offering) => {
     const programId = String(offering.id);
     const expandedSchool = relationObject<DirectusSchool>(offering.school_id);
     const schoolDirectusId = relationId(offering.school_id);
     const school =
       expandedSchool ??
       (schoolDirectusId
-        ? schoolsByDirectusId.get(schoolDirectusId) ?? null
+        ? input.schoolsById.get(schoolDirectusId) ?? null
         : null);
     const schoolSlug = textValue(school?.slug);
     const programName = textValue(offering.official_program_name);
     if (!school || !schoolSlug || !programName) return [];
 
-    const application = selectCurrentCycle(
-      applicationRequirements,
-      programId,
+    const application = selectCurrentCycle(applicationsByProgram.get(programId));
+    const audition = selectCurrentCycle(auditionsByProgram.get(programId));
+    const field = relationObject<DirectusField>(offering.field_id);
+    const degreeLevel = mapDegreeLevel(offering, programName);
+    const degree = mapDegreeInfo(offering, programName);
+    const acceptedTests = mapLanguageTests(application);
+    const statuses = [mapReviewStatus(offering.review_status)];
+    if (application) statuses.push(mapReviewStatus(application.review_status));
+    if (audition) statuses.push(mapReviewStatus(audition.review_status));
+    const sourceSummary = mergeSourceSummaries(
+      input.programSummaries.get(programId),
+      schoolDirectusId
+        ? input.schoolSummaries.get(schoolDirectusId)
+        : undefined,
     );
-    const audition = selectCurrentCycle(auditionRequirements, programId);
-    const linkedSourceRecords = sourceRecords.filter((source) => {
-      const sourceProgramId = relationId(source.program_offering_id);
-      const sourceSchoolId = relationId(source.school_id);
-      return (
-        sourceProgramId === programId ||
-        (!sourceProgramId && sourceSchoolId === String(school.id))
-      );
+
+    return [
+      {
+        id: programId,
+        school_id: schoolSlug,
+        school_name: textValue(school.school_name) ?? "暂未收录",
+        country: textValue(school.country) ?? "待核实",
+        city: textValue(school.city) ?? "待核实",
+        name: programName,
+        name_zh: textValue(offering.program_name_zh),
+        degree_level: degreeLevel.degreeLevel,
+        degree,
+        major_area: textValue(field?.field_name) ?? "",
+        major_area_zh: textValue(field?.field_name_zh),
+        specialization:
+          textValue(offering.track_or_concentration) ??
+          textValue(field?.field_name),
+        department: textValue(offering.department),
+        application: null,
+        prescreen: null,
+        audition: null,
+        duration: null,
+        application_url: null,
+        deadline: {
+          application_deadline: dateValue(application?.application_deadline),
+          prescreening_deadline: dateValue(audition?.prescreening_deadline),
+          audition_date: null,
+          notes: null,
+        },
+        language_requirements: {
+          instruction_language: null,
+          english_required: derivedEnglishRequired(application, acceptedTests),
+          accepted_tests: acceptedTests,
+          waiver_policy: textValue(application?.english_waiver_policy),
+          notes: displayStructuredValue(application?.english_language_tests),
+        },
+        audition_requirements: {
+          prescreening_required: null,
+          audition_required: null,
+          repertoire_requirements: null,
+          format: null,
+          notes: null,
+        },
+        cost_aid: mapCostAid(
+          application?.application_fee,
+          application?.application_fee_currency,
+        ),
+        sources: [],
+        source_summary: sourceSummary,
+        data_quality: {
+          confidence: sourceSummary.confidence,
+          status: weakestStatus(statuses),
+          missing_fields: [],
+          review_notes: degreeLevel.reviewNote,
+        },
+        review_records: {
+          offering: {
+            id: programId,
+            review_status: textValue(offering.review_status),
+            values: { last_checked: dateValue(offering.last_checked) },
+          },
+          application: application
+            ? {
+                id: String(application.id),
+                review_status: textValue(application.review_status),
+                values: {
+                  tuition_annual: textValue(application.tuition_annual),
+                  tuition_currency: textValue(application.tuition_currency),
+                },
+              }
+            : null,
+          audition: null,
+          degree_level_options: [],
+        },
+      },
+    ];
+  });
+}
+
+function buildSchool(
+  row: DirectusSchool,
+  programs: Program[],
+  citations: { sources?: SourceRecord[]; summary?: SourceSummary },
+): School | null {
+  const slug = textValue(row.slug);
+  if (!slug) return null;
+
+  const status =
+    programs.length > 0
+      ? weakestStatus(programs.map((program) => program.data_quality.status))
+      : "extracted_awaiting_review";
+  const confidence =
+    programs.length > 0
+      ? programs
+          .slice(1)
+          .reduce<ConfidenceLevel>(
+            (weakest, program) =>
+              weakerConfidence(weakest, program.data_quality.confidence),
+            programs[0].data_quality.confidence,
+          )
+      : "medium";
+
+  return {
+    id: slug,
+    name: textValue(row.school_name) ?? "暂未收录",
+    country: textValue(row.country) ?? "待核实",
+    city: textValue(row.city) ?? "待核实",
+    website_url: textValue(row.official_website),
+    intro_zh: textValue(row.intro_zh),
+    detail_sections: mapSchoolDetailSections(row.school_detail_sections),
+    sources: citations.sources ?? [],
+    source_summary: citations.summary,
+    status,
+    data_quality: {
+      confidence,
+      status,
+      missing_fields: [],
+      review_notes: null,
+    },
+    review_record: {
+      id: String(row.id),
+      review_status: textValue(row.review_status),
+      values: {
+        school_name: textValue(row.school_name),
+        country: textValue(row.country),
+        city: textValue(row.city),
+        official_website: textValue(row.official_website),
+      },
+    },
+  };
+}
+
+/* ------------------------------------------------------------------ *
+ * Route-specific loaders
+ * ------------------------------------------------------------------ */
+
+/**
+ * Catalog loader: every school and every program at list fidelity.
+ *
+ * Six bounded reads (four paged collections, two source aggregates) replace
+ * the five `limit=-1` reads the pre-R1 shared loader issued. No source-record
+ * body is fetched on this path at all.
+ */
+const loadCatalogData = cache(async (): Promise<DirectusData> => {
+  const [
+    schoolRows,
+    offerings,
+    applications,
+    auditions,
+    programStats,
+    programConfidence,
+    schoolStats,
+    schoolConfidence,
+  ] = await Promise.all([
+    readCatalogSchools(),
+    readCatalogOfferings(),
+    readCatalogApplications(),
+    readCatalogAuditions(),
+    readProgramSourceStats(),
+    readProgramConfidenceStats(),
+    readSchoolSourceStats(),
+    readSchoolConfidenceStats(),
+  ]);
+
+  const schoolsById = new Map(
+    schoolRows.map((school) => [String(school.id), school]),
+  );
+  const schoolSummaries = buildSourceSummaries(
+    schoolStats,
+    schoolConfidence,
+    "school_id",
+  );
+  const programs = buildCatalogPrograms({
+    offerings,
+    applications,
+    auditions,
+    schoolsById,
+    programSummaries: buildSourceSummaries(
+      programStats,
+      programConfidence,
+      "program_offering_id",
+    ),
+    schoolSummaries,
+  });
+
+  const programsBySchool = new Map<string, Program[]>();
+  for (const program of programs) {
+    const bucket = programsBySchool.get(program.school_id);
+    if (bucket) bucket.push(program);
+    else programsBySchool.set(program.school_id, [program]);
+  }
+
+  const schools = schoolRows.flatMap<School>((row) => {
+    const slug = textValue(row.slug);
+    if (!slug) return [];
+    const school = buildSchool(row, programsBySchool.get(slug) ?? [], {
+      summary: schoolSummaries.get(String(row.id)),
     });
+    return school ? [school] : [];
+  });
+
+  return { schools, programs };
+});
+
+/**
+ * School page loader: one school, its programs at catalog fidelity, and its
+ * school-level citations with their evidence.
+ *
+ * Program citations are summarised rather than fetched — the page counts them
+ * and dates them but renders only the school-level ones.
+ */
+const loadSchoolPageData = cache(
+  async (
+    slug: string,
+  ): Promise<{ school: School; programs: Program[] } | null> => {
+    const schoolRow = await readSchoolBySlug(slug);
+    if (!schoolRow) return null;
+
+    const schoolId = String(schoolRow.id);
+    const scopedToSchool = {
+      "filter[program_offering_id][school_id][_eq]": schoolId,
+    };
+    const [
+      offerings,
+      applications,
+      auditions,
+      schoolSourceRows,
+      programStats,
+      programConfidence,
+    ] = await Promise.all([
+      readCatalogOfferings({ "filter[school_id][_eq]": schoolId }),
+      readCatalogApplications(scopedToSchool),
+      readCatalogAuditions(scopedToSchool),
+      readSchoolSources(schoolId),
+      readProgramSourceStats(scopedToSchool),
+      readProgramConfidenceStats(scopedToSchool),
+    ]);
+
+    const schoolSummary = summariseSourceRows(schoolSourceRows);
+    const programs = buildCatalogPrograms({
+      offerings,
+      applications,
+      auditions,
+      schoolsById: new Map([[schoolId, schoolRow]]),
+      programSummaries: buildSourceSummaries(
+        programStats,
+        programConfidence,
+        "program_offering_id",
+      ),
+      schoolSummaries: new Map([[schoolId, schoolSummary]]),
+    });
+
+    const sources = await attachSourceEvidence(
+      schoolSourceRows
+        .map(mapSource)
+        .filter((source): source is SourceRecord => source !== null),
+      { withMetadata: true },
+    );
+    // The school's own citations are real records here, so `sources` is
+    // authoritative and no summary is attached.
+    const school = buildSchool(schoolRow, programs, { sources });
+    return school ? { school, programs } : null;
+  },
+);
+
+/**
+ * Program page loader: one offering at full fidelity, its cycle records, and
+ * every citation it displays — with quotes, because this is the surface that
+ * renders them.
+ */
+const loadProgramDetailData = cache(
+  async (programId: string): Promise<Program | null> => {
+    const offering = await readOfferingById(programId);
+    if (!offering) return null;
+
+    const school = relationObject<DirectusSchool>(offering.school_id);
+    const schoolDirectusId = relationId(offering.school_id);
+    const schoolSlug = textValue(school?.slug);
+    const programName = textValue(offering.official_program_name);
+    if (!school || !schoolDirectusId || !schoolSlug || !programName) return null;
+
+    const [applications, auditions, linkedSourceRecords, degreeLevels] =
+      await Promise.all([
+        readProgramApplications(programId),
+        readProgramAuditions(programId),
+        readProgramSources(programId, schoolDirectusId),
+        readDegreeLevels(),
+      ]);
+
+    const application = selectCurrentCycle(applications);
+    const audition = selectCurrentCycle(auditions);
+    const degreeLevelOptions = degreeLevels
+      .flatMap((level) => {
+        const id = level.id === undefined ? null : String(level.id);
+        const label =
+          textValue(level.degree_level_name) ?? textValue(level.slug);
+        return id && label ? [{ label, value: id }] : [];
+      })
+      .sort((left, right) => left.label.localeCompare(right.label));
+
     const mappedSources = linkedSourceRecords.map(mapSource);
-    const sources = mappedSources
-      .filter((source): source is SourceRecord => source !== null);
+    const sources = await attachSourceEvidence(
+      mappedSources.filter((source): source is SourceRecord => source !== null),
+      { withMetadata: true },
+    );
     const field = relationObject<DirectusField>(offering.field_id);
     const degreeLevel = mapDegreeLevel(offering, programName);
     const degree = mapDegreeInfo(offering, programName);
@@ -1370,380 +1551,292 @@ const loadDirectusData = cache(async (): Promise<DirectusData> => {
     const applicationFeeValue = application?.application_fee;
     const applicationFeeCurrency = application?.application_fee_currency;
 
-    return [
-      {
-        id: programId,
-        school_id: schoolSlug,
-        school_name: textValue(school.school_name) ?? "暂未收录",
-        country: textValue(school.country) ?? "待核实",
-        city: textValue(school.city) ?? "待核实",
-        name: programName,
-        name_zh: textValue(offering.program_name_zh),
-        degree_level: degreeLevel.degreeLevel,
-        degree,
-        major_area: textValue(field?.field_name) ?? "",
-        major_area_zh: textValue(field?.field_name_zh),
-        specialization:
-          textValue(offering.track_or_concentration) ??
-          textValue(field?.field_name),
-        department: textValue(offering.department),
-        card_summary: textValue(offering.card_summary_zh),
-        application: mapApplicationSection(application),
-        prescreen: sections.prescreen,
-        audition: sections.audition,
-        duration: textValue(offering.duration_years),
-        program_url: textValue(offering.program_url),
-        application_url: textValue(offering.application_url),
-        audition_url: textValue(offering.audition_url),
-        international_url: textValue(offering.international_url),
-        deadline: {
-          application_deadline: dateValue(application?.application_deadline),
-          prescreening_deadline: dateValue(audition?.prescreening_deadline),
-          audition_date: null,
-          notes: textValue(application?.deadline_notes),
-        },
-        language_requirements: {
-          instruction_language: displayStructuredValue(
-            offering.language_of_instruction,
-          ),
-          english_required: derivedEnglishRequired(application, acceptedTests),
-          accepted_tests: acceptedTests,
-          waiver_policy: textValue(application?.english_waiver_policy),
-          notes: displayStructuredValue(application?.english_language_tests),
-        },
-        audition_requirements: {
-          prescreening_required: requirementBoolean(
-            audition?.prescreening_required ?? audition?.Prescreening_required,
-          ),
-          audition_required: requirementBoolean(audition?.audition_required),
-          repertoire_requirements: textValue(audition?.repertoire_summary),
-          format: textValue(audition?.audition_format),
-          notes: textValue(audition?.notes),
-        },
-        cost_aid: mapCostAid(applicationFeeValue, applicationFeeCurrency),
-        sources,
-        data_quality: {
-          confidence: weakestConfidence(linkedSourceRecords),
-          status,
-          missing_fields: [],
-          review_notes:
-            reviewNotes.length > 0 ? reviewNotes.join(" ") : null,
-        },
-        review_records: {
-          offering: {
-            id: programId,
-            review_status: textValue(offering.review_status),
-            values: {
-              official_program_name: programName,
-              program_name_zh: textValue(offering.program_name_zh),
-              track_or_concentration: textValue(
-                offering.track_or_concentration,
-              ),
-              department: textValue(offering.department),
-              card_summary_zh: textValue(offering.card_summary_zh),
-              degree_level_id: relationId(offering.degree_level_id),
-              duration_years: textValue(offering.duration_years),
-              language_of_instruction: editorValue(
-                offering.language_of_instruction,
-              ),
-              program_url: textValue(offering.program_url),
-              faculty_list: textValue(offering.faculty_list),
-              last_checked: dateValue(offering.last_checked),
-              application_url: textValue(offering.application_url),
-              audition_url: textValue(offering.audition_url),
-              international_url: textValue(offering.international_url),
-            },
-          },
-          application: application
-            ? {
-                id: String(application.id),
-                review_status: textValue(application.review_status),
-                values: {
-                  application_deadline: dateValue(
-                    application.application_deadline,
-                  ),
-                  deadline_notes: textValue(application.deadline_notes),
-                  toefl_minimum: textValue(application.toefl_minimum),
-                  ielts_minimum: textValue(application.ielts_minimum),
-                  duolingo_minimum: textValue(application.duolingo_minimum),
-                  english_waiver_policy: textValue(
-                    application.english_waiver_policy,
-                  ),
-                  english_language_tests: editorValue(
-                    application.english_language_tests,
-                  ),
-                  resume_required: textValue(application.resume_required),
-                  essay_required: textValue(application.essay_required),
-                  recommendation_letters: textValue(
-                    application.recommendation_letters,
-                  ),
-                  transcript_requirements: textValue(
-                    application.transcript_requirements,
-                  ),
-                  portfolio_required: textValue(
-                    application.portfolio_required,
-                  ),
-                  required_materials: editorValue(
-                    application.required_materials,
-                  ),
-                  international_applicant_notes: textValue(
-                    application.international_applicant_notes,
-                  ),
-                  conditional_notes: textValue(application.conditional_notes),
-                  notes: textValue(application.notes),
-                  application_fee: textValue(applicationFeeValue),
-                  application_fee_currency:
-                    textValue(applicationFeeCurrency),
-                  tuition_annual: textValue(application.tuition_annual),
-                  tuition_currency: textValue(application.tuition_currency),
-                  scholarships_available: textValue(
-                    application.scholarships_available,
-                  ),
-                  scholarship_note: textValue(application.scholarship_note),
-                },
-              }
-            : null,
-          audition: audition
-            ? {
-                id: String(audition.id),
-                review_status: textValue(audition.review_status),
-                values: {
-                  prescreening_required: textValue(
-                    audition.prescreening_required ?? audition.Prescreening_required,
-                  ),
-                  prescreening_deadline: dateValue(
-                    audition.prescreening_deadline,
-                  ),
-                  audition_required: textValue(audition.audition_required),
-                  audition_format: textValue(audition.audition_format),
-                  repertoire_summary: textValue(audition.repertoire_summary),
-                  // Only expose the split repertoire fields for editing when
-                  // the Directus schema actually has them, so saves cannot
-                  // target nonexistent columns.
-                  ...("prescreen_repertoire" in audition
-                    ? {
-                        prescreen_repertoire: textValue(
-                          audition.prescreen_repertoire,
-                        ),
-                      }
-                    : {}),
-                  ...("audition_repertoire" in audition
-                    ? {
-                        audition_repertoire: textValue(
-                          audition.audition_repertoire,
-                        ),
-                      }
-                    : {}),
-                  video_requirements: textValue(audition.video_requirements),
-                  file_format_requirements: textValue(
-                    audition.file_format_requirements,
-                  ),
-                  accompaniment_requirements: textValue(
-                    audition.accompaniment_requirements,
-                  ),
-                  interview_or_callback_requirements: textValue(
-                    audition.interview_or_callback_requirements,
-                  ),
-                  special_notes: textValue(audition.special_notes),
-                  conditional_notes: textValue(audition.conditional_notes),
-                  notes: textValue(audition.notes),
-                },
-              }
-            : null,
-          degree_level_options: degreeLevelOptions,
-        },
+    return {
+      id: programId,
+      school_id: schoolSlug,
+      school_name: textValue(school.school_name) ?? "暂未收录",
+      country: textValue(school.country) ?? "待核实",
+      city: textValue(school.city) ?? "待核实",
+      name: programName,
+      name_zh: textValue(offering.program_name_zh),
+      degree_level: degreeLevel.degreeLevel,
+      degree,
+      major_area: textValue(field?.field_name) ?? "",
+      major_area_zh: textValue(field?.field_name_zh),
+      specialization:
+        textValue(offering.track_or_concentration) ??
+        textValue(field?.field_name),
+      department: textValue(offering.department),
+      card_summary: textValue(offering.card_summary_zh),
+      application: mapApplicationSection(application),
+      prescreen: sections.prescreen,
+      audition: sections.audition,
+      duration: textValue(offering.duration_years),
+      program_url: textValue(offering.program_url),
+      application_url: textValue(offering.application_url),
+      audition_url: textValue(offering.audition_url),
+      international_url: textValue(offering.international_url),
+      deadline: {
+        application_deadline: dateValue(application?.application_deadline),
+        prescreening_deadline: dateValue(audition?.prescreening_deadline),
+        audition_date: null,
+        notes: textValue(application?.deadline_notes),
       },
-    ];
-  });
-
-  const schools = directusSchools.flatMap<School>((school) => {
-    const slug = textValue(school.slug);
-    if (!slug) return [];
-    const schoolPrograms = programs.filter(
-      (program) => program.school_id === slug,
-    );
-    const schoolSources = sourceRecords
-      .filter(
-        (record) =>
-          !relationId(record.program_offering_id) &&
-          relationId(record.school_id) === String(school.id),
-      )
-      .map(mapSource)
-      .filter((source): source is SourceRecord => source !== null);
-    const status =
-      schoolPrograms.length > 0
-        ? weakestStatus(
-            schoolPrograms.map((program) => program.data_quality.status),
-          )
-        : "extracted_awaiting_review";
-    const confidenceStrength: Record<ConfidenceLevel, number> = {
-      low: 0,
-      medium: 1,
-      high: 2,
-    };
-    const confidence =
-      schoolPrograms.length > 0
-        ? schoolPrograms.slice(1).reduce<ConfidenceLevel>((weakest, program) => {
-            return confidenceStrength[program.data_quality.confidence] <
-              confidenceStrength[weakest]
-              ? program.data_quality.confidence
-              : weakest;
-          }, schoolPrograms[0].data_quality.confidence)
-        : "medium";
-
-    return [
-      {
-        id: slug,
-        name: textValue(school.school_name) ?? "暂未收录",
-        country: textValue(school.country) ?? "待核实",
-        city: textValue(school.city) ?? "待核实",
-        website_url: textValue(school.official_website),
-        intro_zh: textValue(school.intro_zh),
-        detail_sections: mapSchoolDetailSections(school.school_detail_sections),
-        sources: schoolSources,
+      language_requirements: {
+        instruction_language: displayStructuredValue(
+          offering.language_of_instruction,
+        ),
+        english_required: derivedEnglishRequired(application, acceptedTests),
+        accepted_tests: acceptedTests,
+        waiver_policy: textValue(application?.english_waiver_policy),
+        notes: displayStructuredValue(application?.english_language_tests),
+      },
+      audition_requirements: {
+        prescreening_required: requirementBoolean(
+          audition?.prescreening_required ?? audition?.Prescreening_required,
+        ),
+        audition_required: requirementBoolean(audition?.audition_required),
+        repertoire_requirements: textValue(audition?.repertoire_summary),
+        format: textValue(audition?.audition_format),
+        notes: textValue(audition?.notes),
+      },
+      cost_aid: mapCostAid(applicationFeeValue, applicationFeeCurrency),
+      sources,
+      data_quality: {
+        confidence: weakestConfidence(linkedSourceRecords),
         status,
-        data_quality: {
-          confidence,
-          status,
-          missing_fields: [],
-          review_notes: null,
-        },
-        review_record: {
-          id: String(school.id),
-          review_status: textValue(school.review_status),
+        missing_fields: [],
+        review_notes: reviewNotes.length > 0 ? reviewNotes.join(" ") : null,
+      },
+      review_records: {
+        offering: {
+          id: programId,
+          review_status: textValue(offering.review_status),
           values: {
-            school_name: textValue(school.school_name),
-            country: textValue(school.country),
-            city: textValue(school.city),
-            official_website: textValue(school.official_website),
+            official_program_name: programName,
+            program_name_zh: textValue(offering.program_name_zh),
+            track_or_concentration: textValue(offering.track_or_concentration),
+            department: textValue(offering.department),
+            card_summary_zh: textValue(offering.card_summary_zh),
+            degree_level_id: relationId(offering.degree_level_id),
+            duration_years: textValue(offering.duration_years),
+            language_of_instruction: editorValue(
+              offering.language_of_instruction,
+            ),
+            program_url: textValue(offering.program_url),
+            faculty_list: textValue(offering.faculty_list),
+            last_checked: dateValue(offering.last_checked),
+            application_url: textValue(offering.application_url),
+            audition_url: textValue(offering.audition_url),
+            international_url: textValue(offering.international_url),
           },
         },
+        application: application
+          ? {
+              id: String(application.id),
+              review_status: textValue(application.review_status),
+              values: {
+                application_deadline: dateValue(
+                  application.application_deadline,
+                ),
+                deadline_notes: textValue(application.deadline_notes),
+                toefl_minimum: textValue(application.toefl_minimum),
+                ielts_minimum: textValue(application.ielts_minimum),
+                duolingo_minimum: textValue(application.duolingo_minimum),
+                english_waiver_policy: textValue(
+                  application.english_waiver_policy,
+                ),
+                english_language_tests: editorValue(
+                  application.english_language_tests,
+                ),
+                resume_required: textValue(application.resume_required),
+                essay_required: textValue(application.essay_required),
+                recommendation_letters: textValue(
+                  application.recommendation_letters,
+                ),
+                transcript_requirements: textValue(
+                  application.transcript_requirements,
+                ),
+                portfolio_required: textValue(application.portfolio_required),
+                required_materials: editorValue(application.required_materials),
+                international_applicant_notes: textValue(
+                  application.international_applicant_notes,
+                ),
+                conditional_notes: textValue(application.conditional_notes),
+                notes: textValue(application.notes),
+                application_fee: textValue(applicationFeeValue),
+                application_fee_currency: textValue(applicationFeeCurrency),
+                tuition_annual: textValue(application.tuition_annual),
+                tuition_currency: textValue(application.tuition_currency),
+                scholarships_available: textValue(
+                  application.scholarships_available,
+                ),
+                scholarship_note: textValue(application.scholarship_note),
+              },
+            }
+          : null,
+        audition: audition
+          ? {
+              id: String(audition.id),
+              review_status: textValue(audition.review_status),
+              values: {
+                prescreening_required: textValue(
+                  audition.prescreening_required ??
+                    audition.Prescreening_required,
+                ),
+                prescreening_deadline: dateValue(audition.prescreening_deadline),
+                audition_required: textValue(audition.audition_required),
+                audition_format: textValue(audition.audition_format),
+                repertoire_summary: textValue(audition.repertoire_summary),
+                // Only expose the split repertoire fields for editing when
+                // the Directus schema actually has them, so saves cannot
+                // target nonexistent columns.
+                ...("prescreen_repertoire" in audition
+                  ? {
+                      prescreen_repertoire: textValue(
+                        audition.prescreen_repertoire,
+                      ),
+                    }
+                  : {}),
+                ...("audition_repertoire" in audition
+                  ? {
+                      audition_repertoire: textValue(
+                        audition.audition_repertoire,
+                      ),
+                    }
+                  : {}),
+                video_requirements: textValue(audition.video_requirements),
+                file_format_requirements: textValue(
+                  audition.file_format_requirements,
+                ),
+                accompaniment_requirements: textValue(
+                  audition.accompaniment_requirements,
+                ),
+                interview_or_callback_requirements: textValue(
+                  audition.interview_or_callback_requirements,
+                ),
+                special_notes: textValue(audition.special_notes),
+                conditional_notes: textValue(audition.conditional_notes),
+                notes: textValue(audition.notes),
+              },
+            }
+          : null,
+        degree_level_options: degreeLevelOptions,
       },
-    ];
-  });
-
-  return { schools, programs };
-});
+    };
+  },
+);
 
 export async function getAllSchools(): Promise<School[]> {
-  const { schools } = await loadDirectusData();
+  const { schools } = await loadCatalogData();
   return schools;
 }
 
 export async function getAllPrograms(): Promise<Program[]> {
-  const { programs } = await loadDirectusData();
+  const { programs } = await loadCatalogData();
   return programs;
 }
 
 export async function getSchoolById(
   schoolId: string,
 ): Promise<School | undefined> {
-  const { schools } = await loadDirectusData();
-  const school = schools.find((candidate) => candidate.id === schoolId);
-  if (!school) return undefined;
-  return {
-    ...school,
-    sources: await attachSourceQuotes(school.sources ?? []),
-  };
+  const data = await loadSchoolPageData(schoolId);
+  return data?.school;
 }
 
 export async function getProgramsBySchoolId(
   schoolId: string,
 ): Promise<Program[]> {
-  const { programs } = await loadDirectusData();
-  return programs.filter((program) => program.school_id === schoolId);
+  const data = await loadSchoolPageData(schoolId);
+  return data?.programs ?? [];
 }
 
 export async function getProgramById(
   schoolId: string,
   programId: string,
 ): Promise<Program | undefined> {
-  const { programs } = await loadDirectusData();
-  const program = programs.find(
-    (candidate) =>
-      candidate.school_id === schoolId && candidate.id === programId,
-  );
-  if (!program) return undefined;
-  return {
-    ...program,
-    sources: await attachSourceQuotes(program.sources),
-  };
+  const program = await loadProgramDetailData(programId);
+  // The school segment is part of the program's identity: a program reached
+  // through the wrong school is not found, exactly as before.
+  if (!program || program.school_id !== schoolId) return undefined;
+  return program;
 }
 
 export async function searchPrograms(
   query: ProgramSearchQuery,
 ): Promise<Program[]> {
-  const { programs } = await loadDirectusData();
+  const programs = await getAllPrograms();
+  return programs.filter((program) => matchesQuery(program, query));
+}
+
+/** Shared filter semantics for both program query entry points. */
+function matchesQuery(program: Program, query: ProgramSearchQuery): boolean {
   const keyword = query.keyword?.trim().toLowerCase() ?? "";
   const country = query.country?.trim().toLowerCase() ?? "";
   const majorArea = query.major_area?.trim().toLowerCase() ?? "";
   const degreeSlug = query.degree_slug?.trim().toLowerCase() ?? "";
 
-  return programs.filter((program) => {
-    const keywordTarget = [
-      program.name,
-      program.name_zh,
-      program.school_name,
-      program.country,
-      program.city,
-      program.degree_level,
-      program.degree?.name,
-      program.degree?.name_zh,
-      program.degree?.abbreviation,
-      program.major_area,
-      program.major_area_zh,
-      program.specialization,
-      program.department,
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
+  const keywordTarget = [
+    program.name,
+    program.name_zh,
+    program.school_name,
+    program.country,
+    program.city,
+    program.degree_level,
+    program.degree?.name,
+    program.degree?.name_zh,
+    program.degree?.abbreviation,
+    program.major_area,
+    program.major_area_zh,
+    program.specialization,
+    program.department,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
 
-    const matchesKeyword = keyword === "" || keywordTarget.includes(keyword);
-    const matchesCountry =
-      country === "" || program.country.toLowerCase() === country;
-    const matchesDegree =
-      !query.degree_level || program.degree_level === query.degree_level;
-    const matchesDegreeSlug =
-      degreeSlug === "" ||
-      (program.degree?.slug ?? "").toLowerCase() === degreeSlug;
-    const matchesMajorArea =
-      majorArea === "" ||
-      program.major_area.toLowerCase() === majorArea ||
-      (program.major_area_zh ?? "").toLowerCase() === majorArea;
+  const matchesKeyword = keyword === "" || keywordTarget.includes(keyword);
+  const matchesCountry =
+    country === "" || program.country.toLowerCase() === country;
+  const matchesDegree =
+    !query.degree_level || program.degree_level === query.degree_level;
+  const matchesDegreeSlug =
+    degreeSlug === "" ||
+    (program.degree?.slug ?? "").toLowerCase() === degreeSlug;
+  const matchesMajorArea =
+    majorArea === "" ||
+    program.major_area.toLowerCase() === majorArea ||
+    (program.major_area_zh ?? "").toLowerCase() === majorArea;
 
-    return (
-      matchesKeyword &&
-      matchesCountry &&
-      matchesDegree &&
-      matchesDegreeSlug &&
-      matchesMajorArea
-    );
-  });
+  return (
+    matchesKeyword &&
+    matchesCountry &&
+    matchesDegree &&
+    matchesDegreeSlug &&
+    matchesMajorArea
+  );
 }
 
 /**
  * Narrow Directus boundary for the dynamic search route.
  *
  * Search needs enough data to build its filters, apply the existing query
- * semantics, and render ProgramCard. It deliberately avoids the bulk schools
- * and source_records queries used by the detail-route loader.
+ * semantics, and render ProgramCard. It reads no schools collection and no
+ * source records at all — a search result carries no citations — and its
+ * three collection reads are paged rather than unbounded.
  */
 export async function loadSearchPagePrograms(
   query: ProgramSearchQuery | null,
 ): Promise<{ allPrograms: Program[]; matchedPrograms: Program[] }> {
   const [offerings, applicationRequirements, auditionRequirements] =
     await Promise.all([
-      directusFetch<DirectusProgramOffering[]>(
-        "/items/program_offerings?limit=-1&fields=id,official_program_name,program_name_zh,track_or_concentration,department,review_status,school_id.slug,school_id.school_name,school_id.city,school_id.country,field_id.field_name,field_id.field_name_zh,degree_level_id.slug,degree_level_id.degree_level_name,degree_level_id.degree_level_name_zh,degree_level_id.abbreviation,degree_level_id.degree_category",
-      ),
-      directusFetch<DirectusApplicationRequirement[]>(
-        "/items/application_requirements?limit=-1&fields=id,program_offering_id,is_current,admission_cycle,review_status,application_deadline,english_language_tests,toefl_minimum,ielts_minimum,duolingo_minimum,english_waiver_policy,application_fee,application_fee_currency",
-      ),
-      directusFetch<DirectusAuditionRequirement[]>(
-        "/items/audition_requirements?limit=-1&fields=id,program_offering_id,is_current,admission_cycle,review_status,prescreening_deadline",
-      ),
+      readCatalogOfferings(),
+      readCatalogApplications(),
+      readCatalogAuditions(),
     ]);
+
+  const applicationsByProgram = indexByProgram(applicationRequirements);
+  const auditionsByProgram = indexByProgram(auditionRequirements);
 
   const allPrograms = offerings.flatMap<Program>((offering) => {
     const programId = String(offering.id);
@@ -1752,11 +1845,8 @@ export async function loadSearchPagePrograms(
     const programName = textValue(offering.official_program_name);
     if (!school || !schoolSlug || !programName) return [];
 
-    const application = selectCurrentCycle(
-      applicationRequirements,
-      programId,
-    );
-    const audition = selectCurrentCycle(auditionRequirements, programId);
+    const application = selectCurrentCycle(applicationsByProgram.get(programId));
+    const audition = selectCurrentCycle(auditionsByProgram.get(programId));
     const field = relationObject<DirectusField>(offering.field_id);
     const degreeLevel = mapDegreeLevel(offering, programName);
     const degree = mapDegreeInfo(offering, programName);
@@ -1824,51 +1914,10 @@ export async function loadSearchPagePrograms(
 
   if (!query) return { allPrograms, matchedPrograms: [] };
 
-  const keyword = query.keyword?.trim().toLowerCase() ?? "";
-  const country = query.country?.trim().toLowerCase() ?? "";
-  const majorArea = query.major_area?.trim().toLowerCase() ?? "";
-  const degreeSlug = query.degree_slug?.trim().toLowerCase() ?? "";
-  const matchedPrograms = allPrograms.filter((program) => {
-    const keywordTarget = [
-      program.name,
-      program.name_zh,
-      program.school_name,
-      program.country,
-      program.city,
-      program.degree_level,
-      program.degree?.name,
-      program.degree?.name_zh,
-      program.degree?.abbreviation,
-      program.major_area,
-      program.major_area_zh,
-      program.specialization,
-      program.department,
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
-
-    const matchesKeyword = keyword === "" || keywordTarget.includes(keyword);
-    const matchesCountry =
-      country === "" || program.country.toLowerCase() === country;
-    const matchesDegree =
-      !query.degree_level || program.degree_level === query.degree_level;
-    const matchesDegreeSlug =
-      degreeSlug === "" ||
-      (program.degree?.slug ?? "").toLowerCase() === degreeSlug;
-    const matchesMajorArea =
-      majorArea === "" ||
-      program.major_area.toLowerCase() === majorArea ||
-      (program.major_area_zh ?? "").toLowerCase() === majorArea;
-
-    return (
-      matchesKeyword &&
-      matchesCountry &&
-      matchesDegree &&
-      matchesDegreeSlug &&
-      matchesMajorArea
-    );
-  });
-
-  return { allPrograms, matchedPrograms };
+  return {
+    allPrograms,
+    matchedPrograms: allPrograms.filter((program) =>
+      matchesQuery(program, query),
+    ),
+  };
 }

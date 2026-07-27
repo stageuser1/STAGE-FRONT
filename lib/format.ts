@@ -151,16 +151,25 @@ export function countryShort(country: string): string {
   return trimmed;
 }
 
-/** Latest update date across a school and every one of its programs. */
+/**
+ * Latest update date across a school and every one of its programs.
+ *
+ * List surfaces carry a `source_summary` instead of citation records (the
+ * corpus is too large to fetch for a date), so the newest retrieval date can
+ * arrive either way. Detail surfaces populate `sources` and leave the summary
+ * undefined, so both are read and the newer wins.
+ */
 export function latestSchoolUpdate(
   school: School,
   programs: Program[],
 ): string | null {
   const dates = [
     ...(school.sources ?? []).map((source) => source.accessed_at),
-    ...programs.flatMap((program) =>
-      program.sources.map((source) => source.accessed_at),
-    ),
+    school.source_summary?.last_retrieved_at ?? null,
+    ...programs.flatMap((program) => [
+      ...program.sources.map((source) => source.accessed_at),
+      program.source_summary?.last_retrieved_at ?? null,
+    ]),
   ].filter(Boolean);
   if (dates.length === 0) return null;
   return dates.sort().at(-1) ?? null;
@@ -171,6 +180,8 @@ export function latestCheckedDate(program: Program): string | null {
   const dates = program.sources
     .map((source) => source.accessed_at)
     .filter(Boolean);
+  const summarised = program.source_summary?.last_retrieved_at;
+  if (summarised) dates.push(summarised);
   const lastChecked = program.review_records?.offering?.values?.last_checked;
   if (typeof lastChecked === "string" && lastChecked) dates.push(lastChecked);
   if (dates.length === 0) return null;

@@ -60,6 +60,8 @@ export interface School {
   review_record?: DirectusReviewRecord;
   /** School-level source records (admissions policies, deadlines, fees…). */
   sources?: SourceRecord[];
+  /** Set instead of `sources` on surfaces that never render a citation. */
+  source_summary?: SourceSummary;
 }
 
 export type SchoolDetailSectionKey =
@@ -117,6 +119,27 @@ export interface DataQuality {
   status: WorkflowStatus;
   missing_fields: string[];
   review_notes: string | null;
+}
+
+/**
+ * Server-side stand-in for a full `sources` array.
+ *
+ * Catalog and school-index surfaces show how recently a record was verified
+ * and how many citations back it, but never render a citation body. Fetching
+ * 17,663 source rows to derive two numbers cost 15MB and 90s on the shared
+ * loader, so those surfaces read Directus aggregates instead and carry the
+ * result here. Detail routes fetch the real records and leave this undefined —
+ * `sources` is authoritative wherever it is populated.
+ *
+ * Internal only: no public DTO exposes it, and no client component receives it.
+ */
+export interface SourceSummary {
+  /** Newest `retrieved_date` across the linked records, or null if none. */
+  last_retrieved_at: string | null;
+  /** Records that would have survived mapping into `SourceRecord`. */
+  count: number;
+  /** Weakest confidence across every linked record, mapped as `mapSource` does. */
+  confidence: ConfidenceLevel;
 }
 
 export interface AuditionRequirements {
@@ -206,6 +229,8 @@ export interface Program {
   audition_requirements: AuditionRequirements;
   cost_aid: CostAid;
   sources: SourceRecord[];
+  /** Set instead of `sources` on surfaces that never render a citation. */
+  source_summary?: SourceSummary;
   data_quality: DataQuality;
   review_records?: {
     offering: DirectusReviewRecord;

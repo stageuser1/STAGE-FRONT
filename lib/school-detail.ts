@@ -157,11 +157,16 @@ export function buildSchoolDetailViewModel(
   ].sort((left, right) => degreeOrder(left.slug) - degreeOrder(right.slug));
 
   const schoolSources = school.sources ?? [];
+  // Program citations are summarised, not fetched: this page counts and dates
+  // them but renders only the school-level records, so pulling ~1,400 source
+  // bodies to derive two numbers is exactly the cost R1 removed.
   const allSourceDates = [
     ...schoolSources.map((source) => source.accessed_at),
-    ...programs.flatMap((program) =>
-      program.sources.map((source) => source.accessed_at),
-    ),
+    school.source_summary?.last_retrieved_at ?? null,
+    ...programs.flatMap((program) => [
+      ...program.sources.map((source) => source.accessed_at),
+      program.source_summary?.last_retrieved_at ?? null,
+    ]),
   ].filter(Boolean);
   const lastSourceDate =
     allSourceDates.length > 0 ? allSourceDates.sort().at(-1) ?? null : null;
@@ -246,7 +251,13 @@ export function buildSchoolDetailViewModel(
     demoContentLabel: DEMO_CONTENT_LABEL,
     sourceCount:
       schoolSources.length +
-      programs.reduce((count, program) => count + program.sources.length, 0),
+      programs.reduce(
+        (count, program) =>
+          count +
+          program.sources.length +
+          (program.source_summary?.count ?? 0),
+        0,
+      ),
   };
 }
 
