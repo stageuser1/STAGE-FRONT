@@ -25,19 +25,36 @@ export const DIRECTUS_REVALIDATE_SECONDS = 900;
 
 const RETRY_DELAY_MS = 250;
 
-/** Rows per page for collection reads. */
-export const DIRECTUS_PAGE_SIZE = 500;
+/**
+ * Rows per page for collection reads.
+ *
+ * Measured against the live instance, not guessed. The requirement rows carry
+ * heavily skewed JSON columns — a handful of rows hold most of the bytes — so
+ * the page size mostly decides the *largest single response*, which is the
+ * budget this phase is measured against: 0.963MB at 500/page, 0.865MB at 250.
+ * End-to-end catalog wall time is the same either way (both land in a 3.5–7s
+ * band the link's own variance covers), so the smaller page wins on the metric
+ * that matters and degrades more gently as the corpus grows.
+ */
+export const DIRECTUS_PAGE_SIZE = 250;
+
+/**
+ * Concurrent page requests per collection. Concurrency, unlike page size, is
+ * measurable: dropping to 2 roughly doubles the catalog load (~10s), while 3
+ * and 4 are indistinguishable against link noise.
+ */
+const PAGE_CONCURRENCY = 4;
 
 /** Groups per page for aggregate reads (one row per group, so far cheaper). */
 export const DIRECTUS_AGGREGATE_PAGE_SIZE = 2_000;
 
 /**
- * Hard ceiling on pages per read. At the current corpus (1,938 offerings,
- * 17,663 source records) nothing needs more than four. The cap is what makes
- * "bounded" true regardless of dataset growth: past it the read is truncated
- * and logged rather than growing without limit.
+ * Hard ceiling on pages per read: 15,000 rows per collection, ~7× the largest
+ * collection today (2,087 audition requirements). The cap is what makes
+ * "bounded" true regardless of dataset growth — past it the read is truncated
+ * and logged loudly rather than growing without limit.
  */
-export const DIRECTUS_MAX_PAGES = 40;
+export const DIRECTUS_MAX_PAGES = 60;
 
 /** Collections whose cached reads a reviewer write may invalidate. */
 export const REVALIDATABLE_COLLECTIONS = [
@@ -421,9 +438,13 @@ export async function readAllItems<T>(
 
   const batches = await runWithConcurrency(
     Array.from({ length: pages }, (_page, index) => index + 1),
-    3,
+    PAGE_CONCURRENCY,
     (page) =>
-      readItems<T>(collection, { ...read, limit: DIRECTUS_PAGE_SIZE, page }, options),
+      readItems<T>(
+        collection,
+        { ...read, limit: DIRECTUS_PAGE_SIZE, page },
+        options,
+      ),
   );
   return batches.flat();
 }
