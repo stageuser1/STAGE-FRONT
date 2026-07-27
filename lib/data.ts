@@ -39,6 +39,8 @@ import {
   readCatalogSchools,
   readDegreeLevels,
   readOfferingById,
+  readOfferingFilterOptions,
+  readOfferingRouteParams,
   readProgramApplications,
   readProgramAuditions,
   readProgramConfidenceStats,
@@ -46,10 +48,12 @@ import {
   readProgramSourceStats,
   readSchoolBySlug,
   readSchoolConfidenceStats,
+  readSchoolSlugs,
   readSchoolSources,
   readSchoolSourceStats,
   readSourceEvidence,
 } from "@/lib/directus/collections";
+import type { FilterOptionSource } from "@/lib/search-options";
 
 interface DirectusData {
   schools: School[];
@@ -1514,9 +1518,12 @@ const loadProgramDetailData = cache(
       .sort((left, right) => left.label.localeCompare(right.label));
 
     const mappedSources = linkedSourceRecords.map(mapSource);
+    // Quotes only. `evidence_metadata` exists to give the school page a
+    // `topic_key` to group citations by; the program page renders each
+    // citation on its own, so fetching the blob here would buy nothing.
     const sources = await attachSourceEvidence(
       mappedSources.filter((source): source is SourceRecord => source !== null),
-      { withMetadata: true },
+      { withMetadata: false },
     );
     const field = relationObject<DirectusField>(offering.field_id);
     const degreeLevel = mapDegreeLevel(offering, programName);
@@ -1735,6 +1742,76 @@ export async function getAllSchools(): Promise<School[]> {
 export async function getAllPrograms(): Promise<Program[]> {
   const { programs } = await loadCatalogData();
   return programs;
+}
+
+/* ------------------------------------------------------------------ *
+ * Narrow loaders
+ *
+ * Three callers want a fraction of the catalog: two `generateStaticParams`
+ * that need identifiers, and the profile route that needs a filter
+ * vocabulary. Routing them through the catalog loader would make each one
+ * read requirement rows and source aggregates it never looks at.
+ * ------------------------------------------------------------------ */
+
+/** Route params for the school page: slugs, nothing else. */
+export async function getSchoolRouteParams(): Promise<
+  Array<{ schoolId: string }>
+> {
+  const rows = await readSchoolSlugs();
+  return rows.flatMap((row) => {
+    const slug = textValue(row.slug);
+    return slug ? [{ schoolId: slug }] : [];
+  });
+}
+
+/**
+ * Route params for the program page.
+ *
+ * Reads a bounded window of offerings in catalog order and applies the same
+ * guard the catalog applies, so the params name programs the catalog would
+ * actually list. The window is generous relative to `count` because guarded-
+ * out rows do not count towards it.
+ */
+export async function getProgramRouteParams(
+  count: number,
+): Promise<Array<{ schoolId: string; programId: string }>> {
+  const rows = await readOfferingRouteParams(Math.max(count * 10, 50));
+  return rows
+    .flatMap((row) => {
+      const school = relationObject<DirectusSchool>(row.school_id);
+      const slug = textValue(school?.slug);
+      const name = textValue(row.official_program_name);
+      return slug && name
+        ? [{ schoolId: slug, programId: String(row.id) }]
+        : [];
+    })
+    .slice(0, count);
+}
+
+/**
+ * Country / major / degree vocabulary for the profile route's chips.
+ *
+ * Mapped exactly as the catalog maps them — same guard, same "待核实"
+ * fallback, same `mapDegreeInfo` — so the chips a learner picks stay the same
+ * vocabulary the catalog filters on.
+ */
+export async function getFilterOptionPrograms(): Promise<FilterOptionSource[]> {
+  const rows = await readOfferingFilterOptions();
+  return rows.flatMap((row) => {
+    const school = relationObject<DirectusSchool>(row.school_id);
+    const schoolSlug = textValue(school?.slug);
+    const programName = textValue(row.official_program_name);
+    if (!school || !schoolSlug || !programName) return [];
+    const field = relationObject<DirectusField>(row.field_id);
+    return [
+      {
+        country: textValue(school.country) ?? "待核实",
+        major_area: textValue(field?.field_name) ?? "",
+        major_area_zh: textValue(field?.field_name_zh),
+        degree: mapDegreeInfo(row, programName),
+      },
+    ];
+  });
 }
 
 export async function getSchoolById(
