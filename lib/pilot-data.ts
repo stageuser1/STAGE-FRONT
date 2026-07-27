@@ -1,6 +1,11 @@
 import "server-only";
 
 import pilotPackage from "@/data/pilot/manhattan_school_of_music.json";
+import {
+  readAllItems,
+  readItems,
+  type DirectusParams,
+} from "@/lib/directus/client";
 
 type Id = string | number;
 
@@ -104,28 +109,27 @@ const PILOT_REFS = new Set(
   pilotPackage.program_offerings.map(({ program_offering_ref }) => program_offering_ref),
 );
 
-function endpoint(): string {
-  const base = process.env.DIRECTUS_URL ?? process.env.NEXT_PUBLIC_DIRECTUS_URL;
-  if (!base) throw new Error("DIRECTUS_URL is not configured");
-  return base.replace(/\/+$/, "");
+/**
+ * The pilot routes are `force-dynamic` and have always read uncached, so they
+ * keep `revalidate: false`. They share the main transport for everything else:
+ * abort timeout, classified failures, and reads bounded by paging rather than
+ * `limit=-1`.
+ */
+const PILOT_READ = { revalidate: false } as const;
+
+/** Every pilot query is already scoped to one school or one program. */
+function pilotRead<T>(
+  collection: string,
+  read: { fields: string; filter: DirectusParams; sort?: string },
+): Promise<T[]> {
+  return readAllItems<T>(collection, read, PILOT_READ);
 }
 
-async function directusItems<T>(
+function pilotReadOne<T>(
   collection: string,
-  params: Record<string, string>,
+  read: { fields: string; filter: DirectusParams; sort?: string },
 ): Promise<T[]> {
-  const query = new URLSearchParams(params);
-  const response = await fetch(`${endpoint()}/items/${collection}?${query}`, {
-    headers: process.env.DIRECTUS_TOKEN
-      ? { Authorization: `Bearer ${process.env.DIRECTUS_TOKEN}` }
-      : undefined,
-    cache: "no-store",
-  });
-  if (!response.ok) {
-    throw new Error(`Directus ${response.status} while reading ${collection}`);
-  }
-  const body = (await response.json()) as { data: T[] };
-  return body.data;
+  return readItems<T>(collection, { ...read, limit: 1 }, PILOT_READ);
 }
 
 const PROGRAM_FIELDS = [
@@ -161,10 +165,9 @@ const SOURCE_FIELDS = [
 ].join(",");
 
 export async function getPilotProgramsBySchool(slug: string): Promise<PilotProgram[]> {
-  const rows = await directusItems<PilotProgram>("program_offerings", {
-    limit: "-1",
+  const rows = await pilotRead<PilotProgram>("program_offerings", {
     fields: PROGRAM_FIELDS,
-    "filter[school_id][slug][_eq]": slug,
+    filter: { "filter[school_id][slug][_eq]": slug },
     sort: "program_offering_ref",
   });
   return rows.filter(({ program_offering_ref }) => PILOT_REFS.has(program_offering_ref));
@@ -172,33 +175,37 @@ export async function getPilotProgramsBySchool(slug: string): Promise<PilotProgr
 
 export async function getPilotProgramByRef(ref: string): Promise<PilotProgramData | null> {
   if (!PILOT_REFS.has(ref)) return null;
-  const [program] = await directusItems<PilotProgram>("program_offerings", {
-    limit: "1",
+  const [program] = await pilotReadOne<PilotProgram>("program_offerings", {
     fields: PROGRAM_FIELDS,
-    "filter[program_offering_ref][_eq]": ref,
+    filter: { "filter[program_offering_ref][_eq]": ref },
   });
   if (!program) return null;
 
   const [applications, auditions, sources] = await Promise.all([
-    directusItems<PilotApplication>("application_requirements", {
-      limit: "1",
+    pilotReadOne<PilotApplication>("application_requirements", {
       fields: APPLICATION_FIELDS,
-      "filter[program_offering_id][_eq]": String(program.id),
-      "filter[is_current][_eq]": "true",
+      filter: {
+        "filter[program_offering_id][_eq]": String(program.id),
+        "filter[is_current][_eq]": "true",
+      },
       sort: "-admission_cycle",
     }),
-    directusItems<PilotAudition>("audition_requirements", {
-      limit: "1",
+    pilotReadOne<PilotAudition>("audition_requirements", {
       fields: AUDITION_FIELDS,
-      "filter[program_offering_id][_eq]": String(program.id),
-      "filter[is_current][_eq]": "true",
+      filter: {
+        "filter[program_offering_id][_eq]": String(program.id),
+        "filter[is_current][_eq]": "true",
+      },
       sort: "-admission_cycle",
     }),
-    directusItems<PilotSource>("source_records", {
-      limit: "-1",
+    // Evidence quotes belong here: this is a program detail surface that
+    // renders them, and the read is filtered to one program and its school.
+    pilotRead<PilotSource>("source_records", {
       fields: SOURCE_FIELDS,
-      "filter[_or][0][program_offering_id][_eq]": String(program.id),
-      "filter[_or][1][school_id][_eq]": String(program.school_id.id),
+      filter: {
+        "filter[_or][0][program_offering_id][_eq]": String(program.id),
+        "filter[_or][1][school_id][_eq]": String(program.school_id.id),
+      },
       sort: "related_field,source_url",
     }),
   ]);

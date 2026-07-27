@@ -198,6 +198,23 @@ export interface DirectusRequestOptions {
    * an expected answer (the audition schema fallback) pass 1.
    */
   attempts?: number;
+  /**
+   * Freshness window in seconds, or `false` for an uncached read. The pilot
+   * routes are `force-dynamic` and have always read uncached; they keep that
+   * behaviour while gaining the timeout and error classification.
+   */
+  revalidate?: number | false;
+}
+
+function cacheOptions(
+  revalidate: number | false,
+  tags: string[] | undefined,
+): RequestInit {
+  // Next rejects tags on an uncached read, and tagging one would be
+  // meaningless anyway — there is no cache entry to invalidate.
+  return revalidate === false
+    ? { cache: "no-store" }
+    : { next: { revalidate, tags } };
 }
 
 async function sendOnce<T>(
@@ -205,7 +222,7 @@ async function sendOnce<T>(
   path: string,
   headers: HeadersInit,
   budgetMs: number,
-  tags: string[] | undefined,
+  cache: RequestInit,
 ): Promise<T> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), budgetMs);
@@ -221,9 +238,9 @@ async function sendOnce<T>(
     let response: Response;
     try {
       response = await fetch(url, {
+        ...cache,
         headers,
         signal: controller.signal,
-        next: { revalidate: DIRECTUS_REVALIDATE_SECONDS, tags },
       });
     } catch (error) {
       if (controller.signal.aborted) throw aborted();
@@ -298,6 +315,10 @@ export async function directusFetch<T>(
 
   const deadline = Date.now() + (options.timeoutMs ?? DIRECTUS_TIMEOUT_MS);
   const maxAttempts = Math.max(1, options.attempts ?? 2);
+  const cache = cacheOptions(
+    options.revalidate ?? DIRECTUS_REVALIDATE_SECONDS,
+    options.tags,
+  );
   let lastError: DirectusRequestError | null = null;
 
   for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
@@ -305,7 +326,7 @@ export async function directusFetch<T>(
     if (budget <= 0) break;
 
     try {
-      return await sendOnce<T>(url, path, headers, budget, options.tags);
+      return await sendOnce<T>(url, path, headers, budget, cache);
     } catch (error) {
       const failure =
         error instanceof DirectusRequestError
