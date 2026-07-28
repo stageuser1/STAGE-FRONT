@@ -109,6 +109,7 @@ const config: Config = {
         "stage-gradient-cta": "var(--stage-gradient-cta)",
         "stage-gradient-text": "var(--stage-gradient-text)",
         "stage-ambient-sky": "var(--stage-ambient-sky)",
+        "stage-ambient-hero": "var(--stage-ambient-hero)",
       },
       // Colors: existing Explore tokens (brand/ink/line/page) + additive,
       // namespaced stage-* marketing tokens (doc 02). Explore tokens untouched.

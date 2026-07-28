@@ -177,209 +177,40 @@
     #e3ecfa 72%,
     #d8e5f7 100%
   );
+  /* The hero wash: the same low-saturation ambient tint, resolved back to page
+   * white at the section's lower edge so the block below it continues without
+   * a seam (homepage-spec §一: 低饱和氛围底色 + 大量留白). */
+  --stage-ambient-hero: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #eef4fc 26%,
+    #dfeaf8 62%,
+    #ffffff 100%
+  );
 }
 
 /*
- * ============================================================================
- * Marketing atmosphere & rhythm — luminous/editorial visual system.
- * All values are ADDITIVE and namespaced; the Explore surface is untouched.
- * Independently authored (no third-party assets). Everything here is a
- * tunable CSS variable so the look can be dialed in without touching markup.
- * ============================================================================
+ * Marketing card (T0 token map §10): the approved export's card is a white
+ * surface with a 1px hairline border and NO shadow — elevation comes from the
+ * border, not from a drop shadow. T2 owns this conversion.
  */
-:root {
-  /* Section rhythm + card language (soft, borderless, hairline ring). */
-  --marketing-card-radius: 16px;
-  --marketing-border-opacity: 0.08;
-  --marketing-shadow-strength: 0.1;
-  --marketing-card-shadow: 0 0 0 1px rgba(14, 22, 51, 0.045),
-    0 1px 2px rgba(14, 22, 51, 0.04),
-    0 24px 48px -28px rgba(14, 22, 51, var(--marketing-shadow-strength));
-  --marketing-card-shadow-hover: 0 0 0 1px rgba(14, 22, 51, 0.06),
-    0 2px 4px rgba(14, 22, 51, 0.05),
-    0 32px 60px -28px rgba(14, 22, 51, 0.16);
-}
-
-/* Hero atmosphere tunables — scoped to the hero so they never leak. */
-.stage-hero {
-  --hero-sky-top: #ffffff;
-  --hero-sky-upper: #eef4fb;
-  --hero-sky-mid: #d7e5f3;
-  --hero-sky-bottom: #bcd4ec;
-  --hero-glow-opacity: 0.55;
-  --hero-grid-size: 92px;
-  --hero-grid-opacity: 0.5;
-  --hero-cloud-opacity: 0.9;
-  --hero-cloud-travel-x: 300px;
-  --hero-cloud-travel-y: 0px;
-  --hero-cloud-scale: 1;
-  --hero-cloud-step-count: 40;
-  --hero-transition-height: 220px;
-  --hero-cloud-x: 0px; /* driven by HeroAtmosphere on scroll */
-}
-
-/* Full-bleed atmosphere layer inside the (relative) hero section. */
-.stage-atmosphere {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-/* White → sky-blue vertical wash (the luminous base). */
-.stage-sky {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    var(--hero-sky-top) 0%,
-    var(--hero-sky-upper) 32%,
-    var(--hero-sky-mid) 68%,
-    var(--hero-sky-bottom) 100%
-  );
-}
-
-/* Subtle square grid, radially masked so it dissolves toward the edges. */
-.stage-grid {
-  position: absolute;
-  inset: 0;
-  opacity: var(--hero-grid-opacity);
-  background-image: linear-gradient(
-      to right,
-      rgba(14, 22, 51, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(14, 22, 51, 0.05) 1px, transparent 1px);
-  background-size: var(--hero-grid-size) var(--hero-grid-size);
-  -webkit-mask-image: radial-gradient(
-    118% 82% at 50% 26%,
-    #000 38%,
-    transparent 76%
-  );
-  mask-image: radial-gradient(118% 82% at 50% 26%, #000 38%, transparent 76%);
-}
-
-/* Soft luminous glow behind the headline. */
-.stage-glow {
-  position: absolute;
-  left: 50%;
-  top: -6%;
-  height: 62%;
-  width: 68%;
-  transform: translateX(-50%);
-  opacity: var(--hero-glow-opacity);
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(120, 176, 250, 0.4),
-    transparent 70%
-  );
-  filter: blur(24px);
-}
-
-/*
- * Cloud band near the lower hero boundary. Original CSS puffs (layered soft
- * radial gradients) — no bitmap asset. Wider than the viewport and clipped by
- * .stage-atmosphere, so the scroll-linked rightward travel never causes page
- * overflow. Movement is set via --hero-cloud-x (stepped, stop-motion feel).
- */
-.stage-clouds {
-  position: absolute;
-  left: -45vw;
-  right: -45vw;
-  bottom: -1px;
-  height: 52%;
-  opacity: var(--hero-cloud-opacity);
-  transform: translate3d(
-      var(--hero-cloud-x),
-      var(--hero-cloud-travel-y),
-      0
-    )
-    scale(var(--hero-cloud-scale));
-  will-change: transform;
-  filter: blur(5px);
-  background-repeat: no-repeat;
-  background-image: radial-gradient(
-      40% 62% at 10% 100%,
-      #fff 0 44%,
-      rgba(255, 255, 255, 0) 66%
-    ),
-    radial-gradient(32% 54% at 22% 92%, #fff 0 46%, rgba(255, 255, 255, 0) 64%),
-    radial-gradient(46% 70% at 38% 104%, #fff 0 48%, rgba(255, 255, 255, 0) 66%),
-    radial-gradient(30% 50% at 52% 90%, #fff 0 46%, rgba(255, 255, 255, 0) 64%),
-    radial-gradient(44% 66% at 66% 103%, #fff 0 48%, rgba(255, 255, 255, 0) 66%),
-    radial-gradient(34% 56% at 82% 94%, #fff 0 46%, rgba(255, 255, 255, 0) 64%),
-    radial-gradient(40% 60% at 94% 102%, #fff 0 46%, rgba(255, 255, 255, 0) 66%);
-}
-
-/* Fades the atmosphere into the page white at the hero's lower edge, so the
- * next section reads as a clean, continuous white panel. */
-.stage-hero-fade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) calc(100% - var(--hero-transition-height)),
-    var(--stage-bg) 100%
-  );
-}
-
-/* Soft, borderless marketing card (hairline ring + layered drop shadow). */
 .stage-card {
-  border-radius: var(--marketing-card-radius);
-  background: var(--stage-white);
-  box-shadow: var(--marketing-card-shadow);
+  border-radius: var(--stage-radius-lg);
+  background: var(--stage-bg);
+  border: 1px solid var(--stage-border);
 }
 
 .stage-card-interactive {
-  transition: box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: border-color var(--stage-dur-base) var(--stage-ease-standard);
 }
 
 .stage-card-interactive:hover {
-  box-shadow: var(--marketing-card-shadow-hover);
-  transform: translateY(-2px);
+  border-color: var(--stage-border-strong);
 }
 
-/* Tablet/mobile: soften the atmosphere so it never fights the content. */
-@media (max-width: 809px) {
-  .stage-hero {
-    --hero-grid-size: 72px;
-    --hero-grid-opacity: 0.4;
-    --hero-cloud-travel-x: 140px;
-    --hero-cloud-step-count: 28;
-    --hero-glow-opacity: 0.45;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .stage-clouds {
-    /* HeroAtmosphere also pins --hero-cloud-x to 0; belt and suspenders. */
-    transform: none;
-  }
-}
-
-/* Ambient motion (doc 02 §5): CSS keyframes, transform-only, ≤12px travel. */
-@keyframes stage-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes stage-float-slow {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-7px);
-  }
-}
-
+/* Ambient motion (doc 02 §5): CSS keyframes, transform-only, small travel.
+ * Only the CTA band's glow drift survives T2 — the homepage's floating mock,
+ * band fill and pulsing colon went with the components that used them. */
 @keyframes stage-drift {
   0%,
   100% {
@@ -390,54 +221,14 @@
   }
 }
 
-/* IELTS mock: AI band fills once on mount; timer colon pulses softly. */
-@keyframes stage-band {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
-@keyframes stage-pulse-soft {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.35;
-  }
-}
-
-.stage-animate-float {
-  animation: stage-float 7s ease-in-out infinite;
-}
-
-.stage-animate-float-slow {
-  animation: stage-float-slow 9s ease-in-out infinite;
-}
-
 .stage-animate-drift {
   animation: stage-drift 12s ease-in-out infinite;
-}
-
-.stage-animate-band {
-  animation: stage-band 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.stage-animate-pulse-soft {
-  animation: stage-pulse-soft 2s ease-in-out infinite;
 }
 
 /* Reduced motion (doc 02 §5): kill all ambient loops. Entrance animations are
  * additionally guarded in components/motion/* via useReducedMotion(). */
 @media (prefers-reduced-motion: reduce) {
-  .stage-animate-float,
-  .stage-animate-float-slow,
-  .stage-animate-drift,
-  .stage-animate-band,
-  .stage-animate-pulse-soft {
+  .stage-animate-drift {
     animation: none !important;
   }
 }
