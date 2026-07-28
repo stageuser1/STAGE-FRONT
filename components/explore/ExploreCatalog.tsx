@@ -253,8 +253,13 @@ export function ExploreCatalog({
           </div>
         ) : (
           <ul className="grid gap-3 md:grid-cols-2 md:gap-4">
+            {/* `min-w-0` for the same reason the school view has no wrapper at
+                all: a grid item defaults to min-width:auto, so without it the
+                card's min-content width becomes the track's floor and pushes
+                the document sideways on narrow screens. The list semantics are
+                wanted here, so the item is contained rather than removed. */}
             {matchedPrograms.map((program) => (
-              <li key={program.id}>
+              <li className="min-w-0" key={program.id}>
                 <ExploreProgramCard program={program} />
               </li>
             ))}

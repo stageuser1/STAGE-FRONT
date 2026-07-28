@@ -294,7 +294,13 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               {rankedPrograms.map((program) => {
                 const reasons = reasonsById.get(program.id);
                 return (
-                  <div key={program.id}>
+                  // `min-w-0`: this div is the grid item, and a grid item's
+                  // default min-width:auto lets ProgramCard's min-content width
+                  // set the track floor — the overflow the catalog documents on
+                  // its own card grids. The wrapper has to stay because the
+                  // match reasons render underneath the card, so it is
+                  // contained instead of removed.
+                  <div className="min-w-0" key={program.id}>
                     <ProgramCard program={program} />
                     {reasons && reasons.length > 0 ? (
                       <div className="mt-1.5 flex flex-wrap gap-1.5 px-1">
