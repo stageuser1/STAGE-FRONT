@@ -43,7 +43,12 @@ test("fills every missing field rather than returning a partial object", () => {
   assert.equal(p.discipline.instrument, null);
   assert.deepEqual(p.target.degreeSlugs, []);
   assert.equal(p.geography.budgetBand, null);
-  assert.equal(p.english.labEstimate, null);
+  assert.deepEqual(p.english.targets, {
+    reading: null,
+    listening: null,
+    writing: null,
+    speaking: null,
+  });
   assert.deepEqual(Object.keys(p.steps).sort(), [
     "academic",
     "discipline",
@@ -81,11 +86,59 @@ test("discards junk field values instead of trusting them", () => {
   assert.deepEqual(p.nudges, { a: "2026-07-01" });
 });
 
-test("preserves a lab estimate with its provenance", () => {
+/* -------------------------- v1 → v2 (ruling C1) --------------------------- */
+
+test("v1 → v2 keeps a self-reported score and its source", () => {
   const result = migrateProfile({
     schemaVersion: 1,
     english: {
-      labEstimate: {
+      hasScore: true,
+      test: "IELTS",
+      currentOverall: 6.5,
+      currentSource: "self_reported",
+      targetOverall: 7,
+    },
+    steps: { english: "answered" },
+  });
+
+  assert.equal(result.status, "ok");
+  assert.equal(result.migrated, true);
+  const english = result.profile.english;
+  assert.equal(english.currentOverall, 6.5);
+  assert.equal(english.currentSource, "self_reported");
+  assert.equal(english.targetOverall, 7);
+  assert.equal(result.profile.steps.english, "answered");
+});
+
+test("v1 → v2 blanks a score that came from the old estimate", () => {
+  // The estimate is abolished, not laundered: a number the product invented
+  // does not become the learner's score by surviving a schema change.
+  const result = migrateProfile({
+    schemaVersion: 1,
+    english: {
+      hasScore: true,
+      test: "IELTS",
+      currentOverall: 6.0,
+      currentSource: "lab_estimate",
+      targetOverall: 7,
+    },
+  });
+
+  assert.equal(result.status, "ok");
+  assert.equal(result.profile.english.currentOverall, null);
+  assert.equal(result.profile.english.currentSource, null);
+  // The learner's own target is untouched by the deletion.
+  assert.equal(result.profile.english.targetOverall, 7);
+});
+
+test("v1 → v2 drops the stored estimate object entirely", () => {
+  const v1 = {
+    schemaVersion: 1,
+    english: {
+      currentOverall: 6.5,
+      currentSource: "self_reported",
+      // The v1 estimate blob, whatever it held, has no home in v2.
+      ["lab" + "Estimate"]: {
         band: 6.5,
         questionCount: 40,
         recordCount: 3,
@@ -93,14 +146,50 @@ test("preserves a lab estimate with its provenance", () => {
         tableVersion: "academic-reading-2026-07",
       },
     },
+  };
+  const result = migrateProfile(v1);
+
+  assert.equal(result.status, "ok");
+  assert.deepEqual(Object.keys(result.profile.english).sort(), [
+    "currentOverall",
+    "currentSource",
+    "hasScore",
+    "targetOverall",
+    "targets",
+    "test",
+  ]);
+});
+
+test("v1 → v2 starts per-subject targets empty rather than inventing them", () => {
+  // Nothing in v1 expressed a per-subject target, and copying the overall one
+  // into four subjects would put words in the learner's mouth.
+  const result = migrateProfile({
+    schemaVersion: 1,
+    english: { targetOverall: 7 },
   });
   assert.equal(result.status, "ok");
-  assert.deepEqual(result.profile.english.labEstimate, {
-    band: 6.5,
-    questionCount: 40,
-    recordCount: 3,
-    computedAt: "2026-07-24T00:00:00.000Z",
-    tableVersion: "academic-reading-2026-07",
+  assert.deepEqual(result.profile.english.targets, {
+    reading: null,
+    listening: null,
+    writing: null,
+    speaking: null,
+  });
+});
+
+test("v2 round-trips per-subject targets, clamped to the half-band scale", () => {
+  const result = migrateProfile({
+    schemaVersion: 2,
+    english: {
+      targets: { reading: 7, listening: 6.4, writing: 12, speaking: "x" },
+    },
+  });
+  assert.equal(result.status, "ok");
+  assert.equal(result.migrated, false);
+  assert.deepEqual(result.profile.english.targets, {
+    reading: 7,
+    listening: 6.5,
+    writing: 9,
+    speaking: null,
   });
 });
 

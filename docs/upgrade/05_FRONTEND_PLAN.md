@@ -125,7 +125,7 @@ it in `test`.
 |---|---|---|
 | `components/ui/StatusChip.tsx` (C-06) | three-state + requirement-state chip | S |
 | `lib/ui/surface.ts` | the two class maps (`01_DESIGN_SYSTEM.md` §1) | S |
-| `lib/ielts/band.ts` | `BAND_TABLE_VERSION`, `ACADEMIC_READING_TABLE`, `estimateBand(correct, total)`, `bandForProfile(records)` | S |
+| ~~`lib/ielts/band.ts`~~ | ~~table version, conversion table, raw→band helper, learner-level helper~~ **[2026-07-28] 作废 — ruling C1**: file deleted in stage T1; the requirement parser and the requirement-vs-learner gap type moved to `lib/fit/gap.ts` | S |
 | `lib/ielts/draft.ts` *(OQ-3)* | `saveDraft/loadDrafts/clearDraft` over `stage.ielts.drafts` | S |
 | `components/fit/BandGapMeter.tsx` (C-04) | used here by the suite result and the lab goal banner; reused by WP5 | M |
 
@@ -134,13 +134,15 @@ it in `test`.
 | File | Change | Size |
 |---|---|---|
 | `components/ielts/ExamCatalog.tsx` | C-06 chip per card (replaces the bare dot); chip counts on filters; new `有错题` progress filter | M |
-| `components/ielts/LabOverview.tsx` | C-07: accuracy with `未开始` semantics + trend; goal banner; wrongbook button | M |
-| `components/ielts/SuitePractice.tsx` | C-18 compose → preview → start split; band estimate block; `[用这个估算更新我的档案]` (writes only once WP4 lands — until then the button routes to `/profile`) | M |
+| `components/ielts/LabOverview.tsx` | C-07: accuracy with `未开始` semantics + trend; ~~goal banner~~ → **[2026-07-28] ruling C1**: the estimate-driven goal banner is replaced by the learner's own 目标分数设定卡 (one input per subject, 4.0–9.0, step 0.5); wrongbook button | M |
+| `components/ielts/SuitePractice.tsx` | C-18 compose → preview → start split; ~~band estimate block; the profile-update CTA~~ → **[2026-07-28] ruling C1**: both removed; the result is 总分 / 正确率 / 总用时 / 分篇明细 | M |
 | `components/ielts/ExamRunner.tsx` | `SIMULATION_DRAFT_SYNC` listener → `lib/ielts/draft.ts`; `上次作答保存于` in the bar | S |
 | `lib/ielts/catalog.ts` | `countBy(exams, dimension, activeFilters)` for chip counts | S |
 
-**Tests:** `tests/ielts_band.test.mjs` — exact table boundaries (39/40→9.0, 27/40→6.5,
-23/40→6.0), the scaling branch for `total ≠ 40`, and `total = 0`.
+~~**Tests:** `tests/ielts_band.test.mjs` — exact table boundaries, the scaling branch and
+`total = 0`.~~ **[2026-07-28] 作废 — ruling C1** (`docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`):
+the test file was deleted with the module it covered. The comparison rules that survive it
+are covered by `tests/fit_requirements.test.mjs` and `tests/profile_migrate.test.mjs`.
 
 ### Verification
 
@@ -224,10 +226,13 @@ bigram floor; dedupe; 50-row cap.
 | File | Change | Size |
 |---|---|---|
 | `components/MobileBottomNav.tsx` | `我的` → `/profile` (currently `/login`, which is reviewer CMS auth and must not be presented to learners) | S |
-| `components/ielts/SuitePractice.tsx` | wire `[用这个估算更新我的档案]` to `patchProfile` | S |
+| ~~`components/ielts/SuitePractice.tsx`~~ | ~~wire the profile-update CTA to `patchProfile`~~ **[2026-07-28] 作废 — ruling C1**: the suite result writes nothing to the profile | S |
 
 **Tests:** `tests/profile_migrate.test.mjs` — unknown version, missing fields, a
-hand-rolled object, a newer version (must refuse to write).
+hand-rolled object, a newer version (must refuse to write). **[2026-07-28] extended for
+ruling C1:** v1 → v2 keeps a self-reported score and the learner's target, blanks a score
+whose source was the abolished estimate, drops the stored estimate object, and starts
+per-subject targets empty rather than inventing them.
 
 ### Verification
 
@@ -335,7 +340,11 @@ generator not taking the others down.
 - [ ] Readiness discloses its rule sentence and `READINESS_ALGORITHM_VERSION` in place.
 - [ ] The timeline shows a 今天 marker, reflows to a vertical list below `md`, and its
       legend states that 试音日期暂未收录.
-- [ ] Band estimate never renders without its sample size and the word 估算.
+- [ ] ~~Band estimate never renders without its sample size and the word 估算.~~
+      **[2026-07-28] 作废 — ruling C1** (`docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`).
+      Replaced by: `/dashboard` renders native practice metrics (accuracy + attempt count,
+      accuracy trend with both sample sizes, weakest question type) and the learner's own
+      self-reported score and self-set targets, labelled as self-set.
 - [ ] DevTools Network: zero Directus requests from `/dashboard`.
 - [ ] `npm run typecheck && npm run build`.
 

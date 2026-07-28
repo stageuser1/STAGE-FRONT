@@ -67,16 +67,16 @@ function dto(overrides = {}) {
   };
 }
 
-function profileWithBand(band, source = "self_reported") {
+function profileWithBand(band) {
   const profile = createEmptyProfile();
   profile.english.currentOverall = band;
-  profile.english.currentSource = source;
+  profile.english.currentSource = "self_reported";
   return profile;
 }
 
 const languageOf = (items) => items.find((i) => i.key === "language.ielts");
 
-test("requirement 6.5 with estimate 6.0 is a gap", () => {
+test("requirement 6.5 with a self-reported 6.0 is a gap", () => {
   const items = buildRequirementChecklist(dto(), profileWithBand(6.0));
   assert.equal(languageOf(items).state, "gap");
 
@@ -95,6 +95,36 @@ test("a recorded requirement with no learner value is unknown, never a gap", () 
   const items = buildRequirementChecklist(dto(), createEmptyProfile());
   assert.equal(languageOf(items).state, "unknown");
   assert.equal(languageOf(items).missingProfileStep, "english");
+
+  const gap = ieltsGap(dto(), createEmptyProfile());
+  assert.equal(gap.state, "unconfirmed");
+  assert.equal(gap.current, null);
+  assert.equal(gap.delta, null);
+});
+
+test("a self-set target is carried for display but never satisfies a requirement", () => {
+  // Ruling C1: only a score the learner reported decides the state. Planning
+  // to reach 8.0 is not holding 8.0.
+  const profile = createEmptyProfile();
+  profile.english.targetOverall = 8;
+
+  const gap = ieltsGap(dto(), profile);
+  assert.equal(gap.target, 8);
+  assert.equal(gap.current, null);
+  assert.equal(gap.state, "unconfirmed");
+
+  const items = buildRequirementChecklist(dto(), profile);
+  assert.equal(languageOf(items).state, "unknown");
+});
+
+test("no learner-side figure can come from anywhere but the learner", () => {
+  // A figure with no self-reported source is not the learner's score, so the
+  // comparison stays unconfirmed rather than adopting it.
+  const profile = createEmptyProfile();
+  profile.english.currentOverall = 7;
+  profile.english.currentSource = null;
+
+  assert.equal(ieltsGap(dto(), profile).state, "unconfirmed");
 });
 
 test("a null requirement is unknown, never a gap", () => {

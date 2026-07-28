@@ -322,7 +322,11 @@ Implementation: render the Fit Panel once, in the right column, and use
   `lib/fit/language.ts::ieltsGap(program, profile)`,
   `lib/fit/dimensions.ts::scoreDimensions(program, profile)`.
 - Profile from `lib/profile/storage.ts` (client, after mount).
-- Lab band estimate from `profile.english.labEstimate` (written by WP2, read here).
+- ~~Lab band estimate from the profile's stored estimate field (written by WP2, read here).~~
+  **[2026-07-28] 作废 — superseded by ruling C1** (`docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`):
+  the field and the estimate behind it no longer exist. The panel reads the learner's
+  self-reported score and self-set target only; `ieltsGap` lives in `lib/fit/requirements.ts`
+  and the gap type in `lib/fit/gap.ts`.
 - **needs OQ-7:** `last_checked_at` on the DTO.
 
 ### States
@@ -584,7 +588,12 @@ program page is visited, and its age is shown.
 - [ ] Every action card's CTA lands on a surface that can actually close it.
 - [ ] Readiness discloses its rule sentence and version without leaving the page.
 - [ ] The timeline shows a 今天 marker and orders nodes chronologically.
-- [ ] Band estimate never appears without its sample size and the word 估算.
+- [ ] ~~Band estimate never appears without its sample size and the word 估算.~~
+      **[2026-07-28] 作废 — superseded by ruling C1**
+      (`docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`). Replaced by: the practice
+      section shows native metrics only (average accuracy with its attempt count, the
+      accuracy trend with both sample sizes, the weakest question type), plus the
+      learner's self-reported score and self-set targets, each labelled as theirs.
 - [ ] No Directus request is made by this page.
 
 ---
@@ -962,19 +971,25 @@ are reused. `[开始套题]` freezes the composition into the existing `SuiteSes
 └─────────────────────────────────────────────────────────┘
 ```
 
-`[用这个估算更新我的档案]` writes
-`profile.english.labEstimate = {band, recordCount, computedAt, algorithmVersion}` and
-`profile.english.currentSource = "lab_estimate"`. It is **explicit** — a suite result
-never silently rewrites the learner's stated score.
+> **[2026-07-28] 作废（整节的估算部分）— superseded by ruling C1**, see
+> `docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`. The estimate block in the wireframe
+> above, the profile-update CTA beneath it, and the scaling rule below are all gone as of
+> stage T1. The suite result shows **总分 / 正确率 / 总用时 / 分篇明细** and nothing else:
+> no conversion, no table, no profile write. The compose → preview → start mechanism above
+> is unaffected and still current.
+
+~~The update-profile CTA wrote the estimate and its source into the profile. It was
+**explicit** — a suite result never silently rewrote the learner's stated score.~~
 
 ### Data sources
 
 `composeSuite`, `pickRandomExam`, `startSuite`, `loadSessionOfKind`, `saveSession`
-(existing) · `loadRecords` (existing) · **new** `lib/ielts/band.ts::estimateBand(correct, total)` ·
-`lib/profile/storage.ts::patchProfile`.
+(existing) · `loadRecords` (existing) · ~~the band conversion helper~~ ·
+~~`lib/profile/storage.ts::patchProfile`~~ — both dropped with the estimate block.
 
-Suite total scaling: if `total !== 40` the raw score is scaled proportionally and the
-result is labelled `按 {total} 题折算` — never silently mapped as if it were a full paper.
+~~Suite total scaling: if `total !== 40` the raw score is scaled proportionally and the
+result is labelled `按 {total} 题折算`.~~ There is no scaling because there is no score
+to scale.
 
 ### States
 
@@ -983,14 +998,18 @@ result is labelled `按 {total} 题折算` — never silently mapped as if it we
 | loading | Existing `加载套题状态…`; keep. |
 | empty | No active suite → the compose card (existing behaviour). |
 | shortage | `当前范围内没有足够的题目` (existing) — extended to name the missing category. |
-| no-profile | The update-profile CTA reads `[建立档案并保存这个估算]` and routes to `/profile?return=/ielts-lab/suite`. |
+| no-profile | ~~The update-profile CTA reads `[建立档案并保存这个估算]` and routes to `/profile?return=/ielts-lab/suite`.~~ **[2026-07-28] 作废 — ruling C1**: the suite result has no profile CTA and no `prefillBand` route. |
 | error | A deleted mid-suite record already degrades correctly (existing `记录已删除` row); keep. |
 | stale | A suite composed before a corpus change: entries whose exam id no longer resolves show `题库中已无此篇` with a reroll. |
 
 ### Acceptance criteria
 
 - [ ] The composition is visible and rerollable before `[开始套题]`, and immutable after.
-- [ ] The band estimate always shows its table version and the 估算 disclaimer.
-- [ ] `[用这个估算更新我的档案]` is the only path from a suite result to the profile.
+- [ ] ~~The band estimate always shows its table version and the 估算 disclaimer.~~
+      **[2026-07-28] 作废 — ruling C1.** Replaced by: the result shows 总分 / 正确率 /
+      总用时 / 分篇明细, and no score conversion of any kind appears on the page.
+- [ ] ~~`[用这个估算更新我的档案]` is the only path from a suite result to the profile.~~
+      **[2026-07-28] 作废 — ruling C1.** Replaced by: a suite result writes nothing to the
+      profile. Target scores are set by the learner on the Lab overview.
 - [ ] Per-passage rows link to the new review route.
 - [ ] Abandoning a suite keeps every completed passage in history (existing behaviour).

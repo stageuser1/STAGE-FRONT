@@ -7,7 +7,7 @@ import type { ExploreProgram } from "@/lib/explore/types";
 import { READINESS_ALGORITHM_VERSION } from "@/lib/fit/dimensions";
 import { summariseSchoolFit } from "@/lib/fit/school-fit";
 import { loadProfile } from "@/lib/profile/storage";
-import type { ProfileV1 } from "@/lib/profile/types";
+import type { ProfileV2 } from "@/lib/profile/types";
 
 /**
  * School-level fit snapshot (P-02).
@@ -24,7 +24,7 @@ export function SchoolFitStrip({
   schoolName: string;
 }) {
   const pathname = usePathname();
-  const [profile, setProfile] = useState<ProfileV1 | null>(null);
+  const [profile, setProfile] = useState<ProfileV2 | null>(null);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {

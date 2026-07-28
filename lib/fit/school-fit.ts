@@ -10,9 +10,9 @@
  * budget, and the program page remains the authority on everything else.
  */
 import type { ExploreProgram } from "../explore/types.ts";
-import { parseBandScore } from "../ielts/band.ts";
 import { currentEnglishScore } from "../profile/derive.ts";
-import type { ProfileV1 } from "../profile/types.ts";
+import type { ProfileV2 } from "../profile/types.ts";
+import { parseBandScore } from "./gap.ts";
 import type { RequirementState } from "./requirements.ts";
 
 export interface SchoolFitSummary {
@@ -33,7 +33,7 @@ export interface SchoolFitSummary {
  */
 export function quickProgramState(
   program: ExploreProgram,
-  profile: ProfileV1 | null,
+  profile: ProfileV2 | null,
 ): RequirementState {
   const required = parseBandScore(program.ieltsMinimum);
   const current = currentEnglishScore(profile);
@@ -72,7 +72,7 @@ export function quickProgramState(
 
 export function summariseSchoolFit(
   programs: ExploreProgram[],
-  profile: ProfileV1 | null,
+  profile: ProfileV2 | null,
 ): SchoolFitSummary {
   const summary: SchoolFitSummary = {
     eligible: 0,

@@ -7,6 +7,16 @@
 This document records what maps to what, what gets built new, what does not get built,
 and every question that needs the human owner rather than a designer.
 
+> **[2026-07-28] Supersession — ruling C1, see `docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`.**
+> The band-estimate system is abolished. Every specification and acceptance criterion in
+> `docs/upgrade/00–06` that assumes a raw→band conversion, a stored practice estimate, an
+> estimate provenance line, or the suite-result CTA that wrote one is **void**, whether or
+> not it carries an individual note below. What replaced it: a programme requirement is
+> compared only against figures the learner entered themselves (a self-reported score and
+> self-set targets); with none entered the state is 待确认, rendered neutral — never 0,
+> never a warning colour. Delivered in stage T1; the plan document is authoritative where
+> the two disagree. History here is annotated, not rewritten.
+
 ---
 
 ## 1. Three facts that constrain everything below
@@ -177,7 +187,7 @@ stroke-2 grammar. No icon library dependency.
 | Three-state `pending` | Phase 1 derives `pending` **only** from an unfinished `SuiteSession`/`EndlessSession` entry. | It is the only draft signal STAGE currently owns. The runner emits `SIMULATION_DRAFT_SYNC` (declared in `RunnerMessageType`) — capturing it gives true drafts. See **OQ-3**. |
 | P-01 editorial "albums" sidebar | **Specified, not scheduled.** WP3 ships search + filter matrix + counts + sorts + rail; collections need editorial content that does not exist. | Shipping an empty sidebar is worse than not shipping it. Data contract is defined in `06_DATA_REQUIREMENTS.md` §6 so it can land without rework. |
 | Aggregate "average accuracy" per exam (C2's 平均 column) | **Not in Phase 1.** Personal column only. | Requires telemetry STAGE does not collect. Editorial substitutes would be fabricated numbers on a product whose whole thesis is provenance. |
-| Band estimate wording | Always 估算 / "estimate", always with its input count and the algorithm version. Never "your IELTS score". | Reading-only corpus; a 4-skill band cannot be claimed. |
+| Band estimate wording | ~~Always 估算 / "estimate", always with its input count and the algorithm version. Never "your IELTS score".~~ **[2026-07-28] 作废 — superseded by ruling C1**, see `docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`. There is no estimate to word: the whole score-estimation system was deleted in stage T1. The learner's own self-reported score and self-set targets are the only band figures the product holds. | Reading-only corpus; a 4-skill band cannot be claimed. |
 | Admission probability | Never shipped. Readiness/fit only, per blueprint. | — |
 | `/match` in Phase 1 | No. Specified for Phase 2 (blueprint §8.2 item 2.1). | WP1–WP6 is the Phase 1 build order and does not include it. |
 | New dependencies | **None.** Tailwind stays v3; no shadcn/ui, no Motion. `recharts@3.10` is already installed and already lazy-loaded — reuse it for trend/sparkline, add nothing. | Tech audit's migration order (Tailwind v4 → shadcn → Motion) is a separate project, and none of it is required by any Phase 1 work package. |
@@ -223,8 +233,18 @@ the old value instead of orphaning it):
 | `stage.match.runs` | local | `lib/match/storage.ts` | new (Phase 2) |
 
 **Versioned constants:** `PROFILE_SCHEMA_VERSION`, `READINESS_ALGORITHM_VERSION`,
-`BAND_TABLE_VERSION`, `SEARCH_INDEX_VERSION`, `MATCH_ALGORITHM_VERSION` — exported from
-their own module, rendered in the UI wherever a ranked or derived number appears.
+~~the band-table version constant,~~ `SEARCH_INDEX_VERSION`, `MATCH_ALGORITHM_VERSION` —
+exported from their own module, rendered in the UI wherever a ranked or derived number
+appears.
+
+> **[2026-07-28] 作废（部分）— superseded by ruling C1**, see
+> `docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`. The band-table version constant and
+> the module that exported it no longer exist; the conversion table it versioned was
+> deleted in stage T1. `PROFILE_SCHEMA_VERSION` is now **2**: the profile's English
+> block holds a self-reported score and per-subject self-set targets, and the estimate
+> field and its source value are gone. The `lib/ielts/band.ts` entry in the directory
+> map above is likewise obsolete — the requirement parser and the requirement-vs-learner
+> gap type now live in `lib/fit/gap.ts`.
 
 **Copy:** Chinese-first, English program/school names verbatim, English subtitle in the
 existing `text-xs text-ink-400` slot (`申请材料 Application Requirements` pattern).
@@ -238,7 +258,7 @@ Each has a recommended default so implementation is never blocked waiting.
 | # | Question | Recommended default | Blocks |
 |---|---|---|---|
 | **OQ-1** | Should `DataQuality.confidence` become public on program/school pages? `data/types.ts` currently marks it reviewer-only, but blueprint rule 11 wants confidence rendered everywhere. | **Expose it**, coarsened to three labels (高/中/待核验) alongside `last_checked_at`. Admitted gaps are the product's differentiator. Until ruled: ship C-19 with freshness + workflow status only. | C-19, P-03 |
-| **OQ-2** | Is the IELTS Academic Reading raw→band table in `lib/ielts/band.ts` acceptable as an *estimate* (labelled, versioned, disclaimed)? | **Yes, ship it** as `BAND_TABLE_VERSION = "academic-reading-2026-07"` with a visible "估算，仅供参考" note. | C-04, P-11, WP2 |
+| **OQ-2** | ~~Is the IELTS Academic Reading raw→band table in `lib/ielts/band.ts` acceptable as an *estimate* (labelled, versioned, disclaimed)?~~ **[2026-07-28] 已裁决并作废 — superseded by ruling C1**, see `docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`. The owner's answer was **no**: the table, the conversion helper, the stored estimate and every surface that rendered one were deleted in stage T1. A programme's requirement is now compared only against figures the learner entered themselves; with none entered the state is 待确认, rendered neutral. | ~~C-04, P-11, WP2~~ closed |
 | **OQ-3** | Capture the runner's `SIMULATION_DRAFT_SYNC` message to get true draft state (three-state `pending` on every card)? Adds a listener + a `stage.ielts.drafts` key. | **Yes, in WP2.** It is ~40 lines and it is the difference between honest three-state semantics and a partial one. | C-06, P-07 |
 | **OQ-4** | Should `/profile` require no navigation away from the originating page (modal flow) or be a real route? | **Real route** `/profile` with a `?return=` param; a modal over the Explore surface would cross token families and trap focus over reviewer chrome. | P-04 |
 | **OQ-5** | Explore surface: is a desktop left rail (≥1024px) wanted now, or does `MobileHeader`'s inline nav suffice until Match/Dashboard exist? | **Defer the rail to WP6**, when there are five real destinations. WP3 ships the catalog upgrade inside the existing shell. | P-01 |

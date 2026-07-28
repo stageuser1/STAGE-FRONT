@@ -1,7 +1,7 @@
 /**
  * Requirement checklist and gap computation.
  *
- * Pure functions over a PublicProgramDto and a ProfileV1. The rules here are
+ * Pure functions over a PublicProgramDto and a ProfileV2. The rules here are
  * the product's central honesty commitment, so they are stated once and used
  * everywhere:
  *
@@ -15,9 +15,9 @@
  * do not meet this" are different claims and must never share a colour.
  */
 import type { ConfidenceLevel, PublicProgramDto } from "@/data/types";
-import { parseBandScore, toBandGap, type BandGap } from "../ielts/band.ts";
-import { currentEnglishScore } from "../profile/derive.ts";
-import type { ProfileV1 } from "../profile/types.ts";
+import { currentEnglishScore, targetBand } from "../profile/derive.ts";
+import type { ProfileV2 } from "../profile/types.ts";
+import { parseBandScore, toBandGap, type BandGap } from "./gap.ts";
 
 export type RequirementState =
   | "satisfied"
@@ -145,7 +145,11 @@ function evidenceFor(
 }
 
 /**
- * IELTS requirement vs the learner's current figure.
+ * IELTS requirement vs the learner's own figures.
+ *
+ * Both learner-side numbers come from the learner: the score they reported and
+ * the target they set. Only the reported score decides the state — the target
+ * rides along so the meter can show it, never so it can satisfy a requirement.
  *
  * The raw requirement string is carried through untouched: "6.5 (no band below
  * 6.0)" has a section requirement the meter cannot express, and dropping it
@@ -153,7 +157,7 @@ function evidenceFor(
  */
 export function ieltsGap(
   program: PublicProgramDto,
-  profile: ProfileV1 | null,
+  profile: ProfileV2 | null,
 ): BandGap {
   const test = program.language_requirements.accepted_tests.find(
     (entry) => entry.test_name === "IELTS",
@@ -161,28 +165,15 @@ export function ieltsGap(
   const required = parseBandScore(test?.minimum_score ?? null);
   const current = currentEnglishScore(profile);
 
-  return toBandGap(
-    required,
-    current?.value ?? null,
-    current?.source ?? null,
-    {
-      requirementText: test?.minimum_score ?? null,
-      estimateMeta:
-        current?.source === "lab_estimate" && profile?.english.labEstimate
-          ? {
-              questionCount: profile.english.labEstimate.questionCount,
-              recordCount: profile.english.labEstimate.recordCount,
-              computedAt: profile.english.labEstimate.computedAt,
-              tableVersion: profile.english.labEstimate.tableVersion,
-            }
-          : undefined,
-    },
-  );
+  return toBandGap(required, current?.value ?? null, current?.source ?? null, {
+    target: targetBand(profile),
+    requirementText: test?.minimum_score ?? null,
+  });
 }
 
 export function buildRequirementChecklist(
   program: PublicProgramDto,
-  profile: ProfileV1 | null,
+  profile: ProfileV2 | null,
 ): RequirementItem[] {
   const lastCheckedAt = programLastChecked(program);
   const items: RequirementItem[] = [];
@@ -194,7 +185,9 @@ export function buildRequirementChecklist(
       ? "not_required"
       : gap.state === "no-requirement"
         ? "unknown"
-        : gap.state === "no-estimate"
+        : // No self-reported score: the requirement is recorded but nothing on
+          // the learner's side has been confirmed. Unknown, never a gap.
+          gap.state === "unconfirmed"
           ? "unknown"
           : gap.state === "below"
             ? "gap"
@@ -211,7 +204,9 @@ export function buildRequirementChecklist(
         ? "不要求英语成绩"
         : gap.required !== null
           ? `IELTS ${gap.required.toFixed(1)} 要求${
-              gap.current !== null ? ` · 你的 ${gap.current.toFixed(1)}` : ""
+              gap.current !== null
+                ? ` · 你填写的 ${gap.current.toFixed(1)}`
+                : " · 待确认"
             }`
           : program.language_requirements.accepted_tests.length > 0
             ? program.language_requirements.accepted_tests
@@ -228,8 +223,7 @@ export function buildRequirementChecklist(
             href: `/ielts-lab/suite?target=${gap.required ?? ""}&from=program:${program.id}`,
           }
         : undefined,
-    missingProfileStep:
-      gap.state === "no-estimate" ? "english" : undefined,
+    missingProfileStep: gap.state === "unconfirmed" ? "english" : undefined,
   });
 
   /* ------------------------------ prescreen ----------------------------- */

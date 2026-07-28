@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { bandFromRecords, formatBand } from "@/lib/ielts/band";
 import { CATEGORIES, countByCategory } from "@/lib/ielts/catalog";
 import { buildProgressIndex, pickRandomExam, practisedByCategory } from "@/lib/ielts/progress";
 import {
@@ -17,6 +16,17 @@ import {
 import { computeStats, loadRecords } from "@/lib/ielts/storage";
 import type { ExamCategory, ExamSummary, PracticeRecord } from "@/lib/ielts/types";
 import { wrongbookCount } from "@/lib/ielts/wrongbook";
+import { loadProfile, patchProfile } from "@/lib/profile/storage";
+import {
+  ENGLISH_SUBJECTS,
+  ENGLISH_SUBJECT_LABELS,
+  TARGET_MAX,
+  TARGET_MIN,
+  TARGET_STEP,
+  emptyTargets,
+  normaliseTarget,
+  type EnglishSubject,
+} from "@/lib/profile/types";
 import { Card, EmptyNote, StatTile } from "./ui";
 
 const CATEGORY_BLURB: Record<ExamCategory, string> = {
@@ -73,10 +83,6 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
   );
   const stats = useMemo(
     () => (records ? computeStats(records) : null),
-    [records],
-  );
-  const band = useMemo(
-    () => (records ? bandFromRecords(records) : null),
     [records],
   );
   const mistakes = useMemo(
@@ -149,30 +155,7 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
         />
       ) : null}
 
-      {band ? (
-        <Card className="border-stage-primary/30 bg-stage-primary/5">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div className="min-w-0">
-              <p className="text-sm">
-                当前阅读估算{" "}
-                <span className="text-lg font-semibold tabular-nums">
-                  {formatBand(band.band)}
-                </span>
-              </p>
-              <p className="mt-0.5 text-xs text-stage-fg-muted">
-                基于最近 {band.recordCount} 次练习共 {band.total} 题 ·{" "}
-                {band.tableVersion} · 估算仅供参考，不等同于真实考试成绩
-              </p>
-            </div>
-            <Link
-              href="/ielts-lab/suite"
-              className="shrink-0 rounded-stage-sm border border-stage-border bg-stage-bg px-3 py-1.5 text-xs transition-colors hover:border-stage-primary"
-            >
-              做一套题更新估算
-            </Link>
-          </div>
-        </Card>
-      ) : null}
+      <TargetScoreCard />
 
       <div className="flex flex-wrap gap-2">
         <button
@@ -291,6 +274,110 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
         )}
       </Card>
     </div>
+  );
+}
+
+/**
+ * The learner's own target scores (ruling C1).
+ *
+ * STAGE no longer produces a score of any kind, so the only band figures in the
+ * Lab are the ones the learner types here. Nothing derives them, nothing
+ * overwrites them, and the helper line says exactly what they are for.
+ *
+ * All four subjects are offered even though only Reading has a module today:
+ * these are the learner's own plans, not a claim about what STAGE can practise.
+ *
+ * Deliberately plain markup — T3 owns the visual treatment of this card.
+ */
+function TargetScoreCard() {
+  // localStorage is unreadable until after mount; drafts keep the input
+  // editable mid-typing without a half-entered value being snapped to 0.5.
+  const [drafts, setDrafts] = useState<Record<EnglishSubject, string>>({
+    reading: "",
+    listening: "",
+    writing: "",
+    speaking: "",
+  });
+
+  useEffect(() => {
+    const stored = loadProfile()?.english.targets ?? emptyTargets();
+    setDrafts({
+      reading: stored.reading === null ? "" : String(stored.reading),
+      listening: stored.listening === null ? "" : String(stored.listening),
+      writing: stored.writing === null ? "" : String(stored.writing),
+      speaking: stored.speaking === null ? "" : String(stored.speaking),
+    });
+  }, []);
+
+  function persist(subject: EnglishSubject, value: number | null) {
+    patchProfile((profile) => ({
+      ...profile,
+      english: {
+        ...profile.english,
+        targets: { ...profile.english.targets, [subject]: value },
+      },
+    }));
+  }
+
+  function onType(subject: EnglishSubject, raw: string) {
+    setDrafts((current) => ({ ...current, [subject]: raw }));
+    if (raw.trim() === "") {
+      persist(subject, null);
+      return;
+    }
+    const parsed = Number(raw);
+    // Persist only a value already inside the range; anything else waits for
+    // blur, where it is clamped rather than stored as typed.
+    if (
+      Number.isFinite(parsed) &&
+      parsed >= TARGET_MIN &&
+      parsed <= TARGET_MAX
+    ) {
+      persist(subject, parsed);
+    }
+  }
+
+  function onCommit(subject: EnglishSubject) {
+    const raw = drafts[subject];
+    const value =
+      raw.trim() === "" ? null : normaliseTarget(Number(raw));
+    persist(subject, value);
+    setDrafts((current) => ({
+      ...current,
+      [subject]: value === null ? "" : String(value),
+    }));
+  }
+
+  return (
+    <Card>
+      <fieldset>
+        <legend className="text-sm font-semibold">我的目标分数</legend>
+        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {ENGLISH_SUBJECTS.map((subject) => (
+            <label key={subject} className="block text-xs">
+              <span className="text-stage-fg-muted">
+                {ENGLISH_SUBJECT_LABELS[subject]}
+              </span>
+              <input
+                type="number"
+                inputMode="decimal"
+                min={TARGET_MIN}
+                max={TARGET_MAX}
+                step={TARGET_STEP}
+                value={drafts[subject]}
+                onChange={(event) => onType(subject, event.target.value)}
+                onBlur={() => onCommit(subject)}
+                placeholder="—"
+                className="mt-1 w-full rounded-stage-sm border border-stage-border bg-stage-bg px-2 py-1.5 text-sm tabular-nums focus:border-stage-primary focus:outline-none"
+              />
+            </label>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-stage-fg-muted">
+          目标分数由你自己设定，仅用于个人规划参考。
+        </p>
+      </fieldset>
+    </Card>
   );
 }
 

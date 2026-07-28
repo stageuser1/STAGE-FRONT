@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatBand, type BandGap } from "@/lib/ielts/band";
+import { formatBand, type BandGap } from "@/lib/fit/gap";
 import { surfaceTokens, type Surface } from "@/lib/ui/surface";
 
 /** The meter spans the band range a learner realistically moves within. */
@@ -12,37 +12,67 @@ function position(band: number): number {
 }
 
 /**
- * IELTS requirement vs current estimate (C-04).
+ * Programme requirement vs the learner's own figures (C-04, ruling C1).
  *
- * Never renders a number without its provenance: a lab estimate always states
- * how many questions it came from and which conversion table produced it, and
- * always carries the word 估算. The band a learner sees here is not a test score
- * and must never be able to read as one.
+ * Every number on the learner's side was typed by the learner. STAGE produces
+ * none of them, so there is no provenance line to render and no estimate to
+ * disclaim — the only two states are "you told us your score" and "待确认".
+ *
+ * 待确认 is deliberately neutral: not amber, not a zero-length bar, not a
+ * failure. A learner who has not filled in their score has not failed the
+ * requirement, and the meter must never imply otherwise. A self-set target is
+ * drawn as a hollow marker for context and never moves the verdict.
  */
 export function BandGapMeter({
   gap,
   surface = "explore",
   ctaHref,
   ctaLabel = "去雅思实验室提分",
+  profileHref,
   compact = false,
 }: {
   gap: BandGap;
   surface?: Surface;
   ctaHref?: string;
   ctaLabel?: string;
+  /** Where a learner goes to enter their own score. */
+  profileHref?: string;
   compact?: boolean;
 }) {
   const t = surfaceTokens[surface];
+
+  const ownFigures = (
+    <>
+      {gap.current !== null ? (
+        <>
+          {" · "}你填写的
+          <span className="font-semibold tabular-nums"> {formatBand(gap.current)}</span>
+        </>
+      ) : null}
+      {gap.target !== null ? (
+        <>
+          {" · "}你的目标
+          <span className="font-semibold tabular-nums"> {formatBand(gap.target)}</span>
+        </>
+      ) : null}
+    </>
+  );
 
   if (gap.state === "no-requirement") {
     return (
       <div className={`text-xs ${t.muted}`}>
         该项目未收录雅思最低分要求。
-        {gap.current !== null ? (
+        {gap.current !== null || gap.target !== null ? (
           <>
             {" "}
-            你的当前水平 {formatBand(gap.current)}
-            {gap.currentSource === "lab_estimate" ? "（估算）" : ""}。
+            你填写的信息：
+            {[
+              gap.current !== null ? `成绩 ${formatBand(gap.current)}` : null,
+              gap.target !== null ? `目标 ${formatBand(gap.target)}` : null,
+            ]
+              .filter(Boolean)
+              .join(" · ")}
+            。
           </>
         ) : null}
       </div>
@@ -51,8 +81,8 @@ export function BandGapMeter({
 
   const required = gap.required as number;
   const label =
-    gap.state === "no-estimate"
-      ? "尚无估算"
+    gap.state === "unconfirmed"
+      ? "待确认"
       : gap.state === "below"
         ? `还差 ${Math.abs(gap.delta ?? 0).toFixed(1)} 分`
         : gap.state === "meets"
@@ -62,7 +92,7 @@ export function BandGapMeter({
   const labelTone =
     gap.state === "below"
       ? "text-amber-700"
-      : gap.state === "no-estimate"
+      : gap.state === "unconfirmed"
         ? t.muted
         : "text-emerald-700";
 
@@ -71,16 +101,7 @@ export function BandGapMeter({
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <p className={`text-xs ${t.muted}`}>
           要求 <span className="font-semibold tabular-nums">{formatBand(required)}</span>
-          {gap.current !== null ? (
-            <>
-              {" · "}你的
-              <span className="font-semibold tabular-nums">
-                {" "}
-                {formatBand(gap.current)}
-              </span>
-              {gap.currentSource === "lab_estimate" ? "（估算）" : ""}
-            </>
-          ) : null}
+          {ownFigures}
         </p>
         <p className={`text-xs font-medium ${labelTone}`}>{label}</p>
       </div>
@@ -92,18 +113,28 @@ export function BandGapMeter({
         aria-valuenow={gap.current ?? required}
         aria-valuetext={
           gap.current === null
-            ? `要求 ${formatBand(required)}，尚无估算`
-            : `当前 ${formatBand(gap.current)}，要求 ${formatBand(required)}，${label}`
+            ? `要求 ${formatBand(required)}，你的成绩待确认${
+                gap.target !== null ? `，你的目标 ${formatBand(gap.target)}` : ""
+              }`
+            : `你填写的 ${formatBand(gap.current)}，要求 ${formatBand(required)}，${label}`
         }
-        aria-label="雅思分数差距"
+        aria-label="雅思分数对比"
         className={`relative mt-2 h-2 rounded-full ${t.neutral}`}
       >
-        {/* Requirement tick — the target the learner is aiming at. */}
+        {/* Requirement tick — the number the programme states. */}
         <span
           aria-hidden
           className="absolute top-1/2 h-4 w-0.5 -translate-y-1/2 rounded-full bg-ink-900"
           style={{ left: `${position(required)}%` }}
         />
+        {/* Self-set target — hollow, so it reads as a plan rather than a result. */}
+        {gap.target !== null ? (
+          <span
+            aria-hidden
+            className="absolute top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-ink-400 bg-white"
+            style={{ left: `${position(gap.target)}%` }}
+          />
+        ) : null}
         {gap.current !== null ? (
           <span
             aria-hidden
@@ -132,20 +163,25 @@ export function BandGapMeter({
         </p>
       ) : null}
 
-      {gap.estimateMeta ? (
-        <p className={`mt-1.5 text-[11px] ${t.faint}`}>
-          基于最近 {gap.estimateMeta.recordCount} 次练习共{" "}
-          {gap.estimateMeta.questionCount} 题估算 ·{" "}
-          {gap.estimateMeta.tableVersion} · 估算仅供参考，不等同于真实考试成绩
+      {gap.state === "unconfirmed" ? (
+        <p className={`mt-1.5 text-[11px] ${t.muted}`}>
+          填写你自己的成绩后，这里才会给出对比结果。
         </p>
       ) : null}
 
-      {ctaHref && gap.state !== "meets" && gap.state !== "exceeds" ? (
+      {gap.state === "unconfirmed" && profileHref ? (
+        <Link
+          href={profileHref}
+          className={`mt-2 inline-flex text-xs font-medium ${t.accent} underline-offset-2 hover:underline`}
+        >
+          填写我的成绩 →
+        </Link>
+      ) : ctaHref && gap.state === "below" ? (
         <Link
           href={ctaHref}
           className={`mt-2 inline-flex text-xs font-medium ${t.accent} underline-offset-2 hover:underline`}
         >
-          {gap.state === "no-estimate" ? "做一套题得到估算" : ctaLabel} →
+          {ctaLabel} →
         </Link>
       ) : null}
     </div>

@@ -126,46 +126,8 @@ const BINARY_EXTENSIONS = new Set([
  * called out separately in the report.
  */
 const WHITELIST = [
-  // --- ruling C1: the whole band-estimate system. Deleted by T1. ---
-  { rule: "estimate", file: "lib/ielts/band.ts", stage: "T1" },
-  { rule: "estimate", file: "lib/profile/types.ts", stage: "T1" },
-  { rule: "estimate", file: "lib/profile/derive.ts", stage: "T1" },
-  { rule: "estimate", file: "lib/profile/migrate.ts", stage: "T1" },
-  { rule: "estimate", file: "lib/fit/requirements.ts", stage: "T1" },
-  { rule: "estimate", file: "components/ielts/SuitePractice.tsx", stage: "T1" },
-  {
-    rule: "estimate",
-    file: "components/ielts/review/AttemptReview.tsx",
-    stage: "T1",
-  },
-  {
-    rule: "estimate",
-    file: "components/dashboard/DashboardView.tsx",
-    stage: "T1",
-  },
-  { rule: "estimate", file: "components/profile/ProfileFlow.tsx", stage: "T1" },
-  { rule: "estimate", file: "tests/ielts_band.test.mjs", stage: "T1" },
-  { rule: "estimate", file: "tests/profile_migrate.test.mjs", stage: "T1" },
-
-  // --- "估算" in Lab copy. Removed with the estimate blocks by T1. ---
-  {
-    rule: "lab-words",
-    file: "components/ielts/LabOverview.tsx",
-    term: "估算",
-    stage: "T1",
-  },
-  {
-    rule: "lab-words",
-    file: "components/ielts/SuitePractice.tsx",
-    term: "估算",
-    stage: "T1",
-  },
-  {
-    rule: "lab-words",
-    file: "components/ielts/review/AttemptReview.tsx",
-    term: "估算",
-    stage: "T1",
-  },
+  // T1 removed every band-estimate waiver that used to sit here: the system is
+  // gone from the code, so the rule now applies unwaived (Plan §5-T1).
 
   // --- "雅思实验室" naming. Unified to "IELTS Lab" by T3 (Plan §2.3). ---
   {

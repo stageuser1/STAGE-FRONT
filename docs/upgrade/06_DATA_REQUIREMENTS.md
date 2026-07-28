@@ -109,17 +109,49 @@ export interface ProfileV1 {
 }
 ```
 
+> **[2026-07-28] The `english` block above is v1 and is superseded — ruling C1**, see
+> `docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`. v2, shipped in stage T1:
+>
+> ```ts
+> english: {
+>   hasScore: boolean | null;
+>   test: "IELTS" | "TOEFL" | "Duolingo" | "none" | null;
+>   /** Self-reported only. STAGE never writes a figure here. */
+>   currentOverall: number | null;
+>   currentSource: "self_reported" | null;
+>   /** Overall target the learner set. Intent, never treated as a result. */
+>   targetOverall: number | null;
+>   /** Per-subject targets set by the learner in the Lab; null per subject = not set. */
+>   targets: { reading: number | null; listening: number | null;
+>              writing: number | null; speaking: number | null };
+> }
+> ```
+>
+> The stored estimate object and the `"lab_estimate"` source value are gone.
+> `PROFILE_SCHEMA_VERSION = 2`.
+
 **Invariants.**
-- `currentOverall` and `currentSource` move together. A lab estimate never overwrites a
-  self-reported score without the explicit CTA in Flow F.
-- `labEstimate` is retained even when `currentSource === "self_reported"`, so the
-  dashboard can show both ("你填写 6.5 · 练习估算 6.0").
+- `currentOverall` and `currentSource` move together. ~~A lab estimate never overwrites a
+  self-reported score without the explicit CTA in Flow F.~~ **[2026-07-28] ruling C1:**
+  there is no other source — only the learner writes this field.
+- ~~The estimate object is retained even when `currentSource === "self_reported"`, so the
+  dashboard can show both.~~ **[2026-07-28] 作废 — ruling C1:** nothing to retain.
+- **[2026-07-28] new (ruling C1):** a target never satisfies a requirement. Only
+  `currentOverall` decides a language state; a target is displayed for context. With no
+  self-reported score the state is 待确认, rendered neutral — never 0, never a warning.
 - Nothing in this object identifies a person. No name, no email, no birthdate. If a field
   like that is ever proposed, it needs the same review as a backend change.
 
 **Migration:** `lib/profile/migrate.ts` exists from day one.
 `schemaVersion > PROFILE_SCHEMA_VERSION` → refuse to write, show a refresh banner.
 `< current` → field-by-field upgrade. Unrecognisable → offer a JSON download, then reset.
+
+**[2026-07-28] v1 → v2 rules (ruling C1).** Self-reported score, its source, and the
+learner's target survive unchanged. A `currentOverall` whose source was the abolished
+estimate is set to **null** — a number the product invented does not become the learner's
+score by surviving a schema change. The stored estimate object is dropped. Per-subject
+targets start empty rather than being seeded from the overall target. Migration runs
+through the existing `loadProfile` machinery; nothing bypasses it.
 
 ### 2.2 `SavedProgramV1` — `lib/profile/saved.ts`
 
@@ -251,6 +283,15 @@ per the C1 contract) → else no progress → `unstarted` → else wrong > 0 →
 
 ### 3.3 `lib/ielts/band.ts`
 
+> **[2026-07-28] 整节作废 — superseded by ruling C1**, see
+> `docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`. The module below was deleted in stage
+> T1 together with its conversion table, its version constant, the raw→band helper and
+> the learner-level helper. The two pieces that were not about estimation moved to
+> **`lib/fit/gap.ts`**: the requirement-string parser (`parseBandScore`) and the
+> requirement-vs-learner comparison type, now carrying only self-entered values —
+> `current` (self-reported), `target` (self-set), and a state whose missing case is
+> `unconfirmed` → 待确认. The signatures below are kept for history only.
+
 ```ts
 export const BAND_TABLE_VERSION = "academic-reading-2026-07";
 
@@ -270,8 +311,9 @@ export function estimateBand(correct: number, total: number): BandEstimate | nul
 export function bandFromRecords(records: readonly PracticeRecord[], limit?: number): BandEstimate | null;
 ```
 
-`estimateBand` returns `null` for `total <= 0`. Scaling is `round(correct / total * 40)`,
-and the UI must render `按 {total} 题折算` whenever `scaled` is true. **Pending OQ-2.**
+~~The helper returned `null` for `total <= 0`; scaling was `round(correct / total * 40)`
+and the UI had to render `按 {total} 题折算` whenever it applied. **Pending OQ-2.**~~
+**[2026-07-28]** OQ-2 was answered **no** and this contract is void — see the note above.
 
 ### 3.4 `lib/ielts/corpus.ts` *(client-only)*
 
@@ -543,7 +585,11 @@ and should be **deleted** the day the field carries real data — two sources of
 4. **Export before destruction.** Any flow that clears local data offers a JSON export
    first — `history-io.ts` already sets this precedent, and the profile migration path
    follows it.
-5. **The band estimate is never presented as a test score.** Always 估算, always with its
-   question count and table version.
+5. ~~**The band estimate is never presented as a test score.** Always 估算, always with
+   its question count and table version.~~ **[2026-07-28] 作废 — superseded by ruling C1**
+   (`docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md`). Replaced by the stronger rule:
+   **STAGE produces no score at all.** Every band figure the product displays was entered
+   by the learner — their self-reported result or a target they set. Practice surfaces
+   report native data only (answered / accuracy / time / per-passage detail).
 6. **Provenance is never dropped to make a screen tidier.** If a fact renders, its
    `last_checked_at` renders with it.

@@ -1,27 +1,39 @@
 /**
  * Profile schema migration.
  *
- * Exists at version 1 on purpose: the migration path has to be in place before
- * there is anything to migrate, or the first schema change strands every
- * profile already sitting in a browser.
- *
  * Three outcomes, and the difference between them matters:
- *   - a ProfileV1            → usable
+ *   - a ProfileV2            → usable
  *   - "future"               → written by a NEWER build; refuse to touch it,
  *                              because writing would downgrade and lose fields
  *   - "unmigratable"         → unreadable; the caller offers a download before
  *                              anything is overwritten
+ *
+ * v1 → v2 (ruling C1) is the first real migration, and it is a DELETION:
+ *
+ *   - the lab's stored band estimate is dropped entirely;
+ *   - a `currentOverall` whose source was that estimate is blanked, because a
+ *     number the product invented does not become the learner's score by being
+ *     carried into a new schema — estimates are abolished, not laundered;
+ *   - a self-reported score, its source, and the learner's target survive
+ *     untouched: those are the learner's own statements;
+ *   - per-subject targets start empty. Nothing in v1 expressed them, and
+ *     copying the old overall target into four subjects would put words in the
+ *     learner's mouth.
  */
 import {
   createEmptyProfile,
+  emptyTargets,
+  ENGLISH_SUBJECTS,
+  normaliseTarget,
   PROFILE_SCHEMA_VERSION,
   PROFILE_STEPS,
-  type ProfileV1,
+  type EnglishTargets,
+  type ProfileV2,
   type StepState,
 } from "./types.ts";
 
 export type MigrationResult =
-  | { status: "ok"; profile: ProfileV1; migrated: boolean }
+  | { status: "ok"; profile: ProfileV2; migrated: boolean }
   | { status: "future"; version: number }
   | { status: "unmigratable"; raw: unknown };
 
@@ -43,6 +55,40 @@ function stringOrNull(value: unknown): string | null {
   return typeof value === "string" && value.trim() !== "" ? value : null;
 }
 
+/**
+ * The learner's self-reported score, or nothing.
+ *
+ * v1 allowed a second source — the lab's own estimate. That value is dropped
+ * here rather than carried forward under a new name: the whole point of ruling
+ * C1 is that the product stops asserting scores. A figure with no recognisable
+ * source is dropped for the same reason: it cannot be attributed to the
+ * learner, so it does not get to be the learner's score.
+ */
+function selfReportedScore(english: Record<string, unknown>): {
+  currentOverall: number | null;
+  currentSource: "self_reported" | null;
+} {
+  const source = stringOrNull(english.currentSource);
+  if (source !== "self_reported") {
+    return { currentOverall: null, currentSource: null };
+  }
+  const value = numberOrNull(english.currentOverall);
+  return value === null
+    ? { currentOverall: null, currentSource: null }
+    : { currentOverall: value, currentSource: "self_reported" };
+}
+
+/** Per-subject targets, present only from v2 onwards. */
+function readTargets(english: Record<string, unknown>): EnglishTargets {
+  const raw = isObject(english.targets) ? english.targets : null;
+  if (!raw) return emptyTargets();
+  const targets = emptyTargets();
+  for (const subject of ENGLISH_SUBJECTS) {
+    targets[subject] = normaliseTarget(numberOrNull(raw[subject]));
+  }
+  return targets;
+}
+
 export function migrateProfile(raw: unknown): MigrationResult {
   if (!isObject(raw)) return { status: "unmigratable", raw };
 
@@ -62,9 +108,8 @@ export function migrateProfile(raw: unknown): MigrationResult {
   const academic = isObject(raw.academic) ? raw.academic : {};
   const english = isObject(raw.english) ? raw.english : {};
   const steps = isObject(raw.steps) ? raw.steps : {};
-  const labEstimate = isObject(english.labEstimate) ? english.labEstimate : null;
 
-  const profile: ProfileV1 = {
+  const profile: ProfileV2 = {
     schemaVersion: PROFILE_SCHEMA_VERSION,
     profileId: stringOrNull(raw.profileId) ?? base.profileId,
     createdAt: stringOrNull(raw.createdAt) ?? base.createdAt,
@@ -80,34 +125,25 @@ export function migrateProfile(raw: unknown): MigrationResult {
     geography: {
       countries: stringArray(geography.countries),
       budgetBand: (stringOrNull(geography.budgetBand) ??
-        null) as ProfileV1["geography"]["budgetBand"],
+        null) as ProfileV2["geography"]["budgetBand"],
       budgetCeilingUsd: numberOrNull(geography.budgetCeilingUsd),
     },
     academic: {
       currentLevel: (stringOrNull(academic.currentLevel) ??
-        null) as ProfileV1["academic"]["currentLevel"],
+        null) as ProfileV2["academic"]["currentLevel"],
       graduationYear: numberOrNull(academic.graduationYear),
       gpaBand: (stringOrNull(academic.gpaBand) ??
-        null) as ProfileV1["academic"]["gpaBand"],
+        null) as ProfileV2["academic"]["gpaBand"],
     },
     english: {
       hasScore: typeof english.hasScore === "boolean" ? english.hasScore : null,
       test: (stringOrNull(english.test) ??
-        null) as ProfileV1["english"]["test"],
-      currentOverall: numberOrNull(english.currentOverall),
-      currentSource: (stringOrNull(english.currentSource) ??
-        null) as ProfileV1["english"]["currentSource"],
-      targetOverall: numberOrNull(english.targetOverall),
-      labEstimate: labEstimate
-        ? {
-            band: numberOrNull(labEstimate.band) ?? 0,
-            questionCount: numberOrNull(labEstimate.questionCount) ?? 0,
-            recordCount: numberOrNull(labEstimate.recordCount) ?? 0,
-            computedAt:
-              stringOrNull(labEstimate.computedAt) ?? new Date().toISOString(),
-            tableVersion: stringOrNull(labEstimate.tableVersion) ?? "unknown",
-          }
-        : null,
+        null) as ProfileV2["english"]["test"],
+      ...selfReportedScore(english),
+      // The learner's own target survives every migration: they set it, and no
+      // schema change makes it less theirs.
+      targetOverall: normaliseTarget(numberOrNull(english.targetOverall)),
+      targets: readTargets(english),
     },
     steps: Object.fromEntries(
       PROFILE_STEPS.map((step) => {
@@ -116,7 +152,7 @@ export function migrateProfile(raw: unknown): MigrationResult {
           value === "answered" || value === "skipped" || value === "pristine";
         return [step, (valid ? value : "pristine") as StepState];
       }),
-    ) as ProfileV1["steps"],
+    ) as ProfileV2["steps"],
     nudges: isObject(raw.nudges)
       ? Object.fromEntries(
           Object.entries(raw.nudges).filter(

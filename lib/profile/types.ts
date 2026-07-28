@@ -12,7 +12,12 @@
  */
 import type { DegreeLevel } from "@/data/types";
 
-export const PROFILE_SCHEMA_VERSION = 1;
+/**
+ * v2 (ruling C1): the lab's band estimate is gone from the schema. English
+ * figures are now exclusively the learner's own — a self-reported result and
+ * per-subject targets they set for themselves.
+ */
+export const PROFILE_SCHEMA_VERSION = 2;
 
 export type ProfileStepId =
   | "discipline"
@@ -70,17 +75,38 @@ export const GPA_LABELS: Record<GpaBand, string> = {
 
 export type EnglishTest = "IELTS" | "TOEFL" | "Duolingo" | "none";
 
-export interface LabEstimate {
-  band: number;
-  /** Always shown beside the band — an estimate without its sample is a claim. */
-  questionCount: number;
-  recordCount: number;
-  computedAt: string;
-  tableVersion: string;
-}
+export type EnglishSubject = "reading" | "listening" | "writing" | "speaking";
 
-export interface ProfileV1 {
-  schemaVersion: 1;
+export const ENGLISH_SUBJECTS: EnglishSubject[] = [
+  "reading",
+  "listening",
+  "writing",
+  "speaking",
+];
+
+export const ENGLISH_SUBJECT_LABELS: Record<EnglishSubject, string> = {
+  reading: "阅读",
+  listening: "听力",
+  writing: "写作",
+  speaking: "口语",
+};
+
+/** Bounds of a target the learner may set. Half-band steps, as IELTS reports. */
+export const TARGET_MIN = 4;
+export const TARGET_MAX = 9;
+export const TARGET_STEP = 0.5;
+
+/**
+ * Per-subject targets the learner sets for themselves.
+ *
+ * All four exist regardless of which modules have shipped: this is the
+ * learner's own plan, not a claim about what STAGE can practise. Null means
+ * "not set" — never 0.
+ */
+export type EnglishTargets = Record<EnglishSubject, number | null>;
+
+export interface ProfileV2 {
+  schemaVersion: 2;
   /** Local and non-identifying. Never a fingerprint. */
   profileId: string;
   createdAt: string;
@@ -116,13 +142,17 @@ export interface ProfileV1 {
   english: {
     hasScore: boolean | null;
     test: EnglishTest | null;
-    /** The figure compared against requirements. */
+    /**
+     * The figure compared against requirements — the learner's own report of
+     * their result. STAGE never writes a number here on their behalf.
+     */
     currentOverall: number | null;
-    /** Where currentOverall came from. Rendered in the UI, never hidden. */
-    currentSource: "self_reported" | "lab_estimate" | null;
+    /** Where currentOverall came from. Only the learner can be the source. */
+    currentSource: "self_reported" | null;
+    /** Overall target the learner set. Intent, never treated as a result. */
     targetOverall: number | null;
-    /** Written only by the explicit suite-result CTA. */
-    labEstimate: LabEstimate | null;
+    /** Per-subject targets, set in the Lab. Null per subject = not set. */
+    targets: EnglishTargets;
   };
 
   steps: Record<ProfileStepId, StepState>;
@@ -131,7 +161,11 @@ export interface ProfileV1 {
   nudges: Record<string, string>;
 }
 
-export function createEmptyProfile(now = new Date()): ProfileV1 {
+export function emptyTargets(): EnglishTargets {
+  return { reading: null, listening: null, writing: null, speaking: null };
+}
+
+export function createEmptyProfile(now = new Date()): ProfileV2 {
   const iso = now.toISOString();
   return {
     schemaVersion: PROFILE_SCHEMA_VERSION,
@@ -150,7 +184,7 @@ export function createEmptyProfile(now = new Date()): ProfileV1 {
       currentOverall: null,
       currentSource: null,
       targetOverall: null,
-      labEstimate: null,
+      targets: emptyTargets(),
     },
     steps: {
       discipline: "pristine",
@@ -178,3 +212,10 @@ export const STEP_HINTS: Record<ProfileStepId, string> = {
   academic: "用于判断申请资格，留空也可以。",
   english: "没有成绩也没关系，可以先填目标分数。",
 };
+
+/** Clamps a learner-entered target to the allowed range and half-band step. */
+export function normaliseTarget(value: number | null): number | null {
+  if (value === null || !Number.isFinite(value)) return null;
+  const stepped = Math.round(value / TARGET_STEP) * TARGET_STEP;
+  return Math.min(TARGET_MAX, Math.max(TARGET_MIN, stepped));
+}

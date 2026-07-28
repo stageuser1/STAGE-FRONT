@@ -9,12 +9,11 @@
  * Every generator runs inside its own try/catch — one throwing generator
  * contributes zero items rather than taking the whole feed down.
  */
-import { bandFromRecords } from "../ielts/band.ts";
+import { parseBandScore } from "../fit/gap.ts";
 import { wrongbookCount } from "../ielts/wrongbook.ts";
 import type { PracticeRecord } from "../ielts/types.ts";
 import { currentEnglishScore, firstPristineStep } from "../profile/derive.ts";
-import type { ProfileV1 } from "../profile/types.ts";
-import { parseBandScore } from "../ielts/band.ts";
+import type { ProfileV2 } from "../profile/types.ts";
 import {
   SNAPSHOT_STALE_DAYS,
   snapshotAgeDays,
@@ -43,7 +42,7 @@ export interface ActionItem {
 }
 
 export interface ActionInput {
-  profile: ProfileV1 | null;
+  profile: ProfileV2 | null;
   saved: SavedProgramV1[];
   records: PracticeRecord[];
   /**
@@ -78,25 +77,27 @@ function ieltsDemand(saved: SavedProgramV1[]): {
   return { required, count };
 }
 
-const ieltsGapAction: Generator = ({ profile, saved, records }) => {
+/**
+ * A shortfall the learner has told us about.
+ *
+ * Fires only on a self-reported score (ruling C1). With nothing entered there
+ * is no shortfall to assert — the profile-hole card asks for the number
+ * instead, which is the honest version of the same nudge.
+ */
+const ieltsGapAction: Generator = ({ profile, saved }) => {
   const { required, count } = ieltsDemand(saved);
   if (required === null) return [];
   const current = currentEnglishScore(profile);
-  const estimate = current ?? (bandFromRecords(records)
-    ? { value: bandFromRecords(records)!.band, source: "lab_estimate" as const }
-    : null);
-  if (!estimate || estimate.value >= required) return [];
+  if (!current || current.value >= required) return [];
 
-  const delta = Math.round((required - estimate.value) * 2) / 2;
+  const delta = Math.round((required - current.value) * 2) / 2;
   return [
     {
       id: "ielts_gap",
       kind: "ielts_gap",
       icon: "target",
       title: `提高雅思 ${delta.toFixed(1)} 分`,
-      why: `${count} 个收藏项目要求 ${required.toFixed(1)} · 你的${
-        estimate.source === "lab_estimate" ? "估算" : "成绩"
-      } ${estimate.value.toFixed(1)}`,
+      why: `${count} 个收藏项目要求 ${required.toFixed(1)} · 你填写的成绩 ${current.value.toFixed(1)}`,
       cta: { label: "去雅思实验室", href: "/ielts-lab/suite" },
       priority: 10,
     },

@@ -13,16 +13,42 @@ import {
   type ProgramReadiness,
 } from "@/lib/dashboard/readiness";
 import { READINESS_RULE_SENTENCE } from "@/lib/fit/dimensions";
-import { bandFromRecords, formatBand } from "@/lib/ielts/band";
 import { buildQuestionTypeStats, weakestType } from "@/lib/ielts/analytics";
 import { computeStats, loadRecords } from "@/lib/ielts/storage";
 import type { PracticeRecord } from "@/lib/ielts/types";
 import { wrongbookCount } from "@/lib/ielts/wrongbook";
 import { currentEnglishScore, profileCompleteness } from "@/lib/profile/derive";
 import { loadSaved, type SavedProgramV1 } from "@/lib/profile/saved";
-import { dismissNudge, loadProfile, patchProfile } from "@/lib/profile/storage";
-import type { ProfileV1 } from "@/lib/profile/types";
+import { dismissNudge, loadProfile } from "@/lib/profile/storage";
+import {
+  ENGLISH_SUBJECTS,
+  ENGLISH_SUBJECT_LABELS,
+  type ProfileV2,
+} from "@/lib/profile/types";
 import { DeadlineTimeline } from "./DeadlineTimeline";
+
+/** Attempts per side of the trend comparison. */
+const TREND_BLOCK = 5;
+
+/**
+ * Accuracy of the most recent attempts against the block before them.
+ *
+ * Native data compared with itself — no conversion, no score. Returns null
+ * until there are enough attempts on both sides for the comparison to mean
+ * anything; a trend drawn from one attempt is noise wearing a number.
+ */
+function accuracyTrend(
+  records: PracticeRecord[],
+  block = TREND_BLOCK,
+): { recent: number; previous: number; delta: number; sample: number } | null {
+  if (records.length < block * 2) return null;
+  const mean = (slice: PracticeRecord[]) =>
+    slice.reduce((sum, record) => sum + record.accuracy, 0) / slice.length;
+  // Records are stored newest-first.
+  const recent = Math.round(mean(records.slice(0, block)) * 100);
+  const previous = Math.round(mean(records.slice(block, block * 2)) * 100);
+  return { recent, previous, delta: recent - previous, sample: block };
+}
 
 /**
  * Product home (P-06).
@@ -33,7 +59,7 @@ import { DeadlineTimeline } from "./DeadlineTimeline";
  * marked "done": a card disappears when its condition stops holding.
  */
 export function DashboardView() {
-  const [profile, setProfile] = useState<ProfileV1 | null>(null);
+  const [profile, setProfile] = useState<ProfileV2 | null>(null);
   const [saved, setSaved] = useState<SavedProgramV1[]>([]);
   const [records, setRecords] = useState<PracticeRecord[] | null>(null);
   const [showDismissed, setShowDismissed] = useState(false);
@@ -58,8 +84,8 @@ export function DashboardView() {
   const hidden = useMemo(() => dismissedActions(input), [input]);
   const readiness = useMemo(() => buildReadiness(saved, profile), [saved, profile]);
   const deadlines = useMemo(() => upcomingDeadlines(saved), [saved]);
-  const band = useMemo(
-    () => (records ? bandFromRecords(records) : null),
+  const trend = useMemo(
+    () => (records ? accuracyTrend(records) : null),
     [records],
   );
   const stats = useMemo(
@@ -72,6 +98,20 @@ export function DashboardView() {
   );
   const completeness = profileCompleteness(profile);
   const savedScore = currentEnglishScore(profile)?.value ?? null;
+  // Every figure the learner set for themselves, overall first.
+  const targets = profile?.english.targets ?? null;
+  const targetLine = [
+    profile?.english.targetOverall != null
+      ? `总分 ${profile.english.targetOverall.toFixed(1)}`
+      : null,
+    ...ENGLISH_SUBJECTS.map((subject) =>
+      targets?.[subject] != null
+        ? `${ENGLISH_SUBJECT_LABELS[subject]} ${targets[subject]?.toFixed(1)}`
+        : null,
+    ),
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
   // localStorage is unreadable until after mount: null means loading, which is
   // a different state from "you have nothing".
@@ -202,64 +242,55 @@ export function DashboardView() {
               </>
             ) : (
               <>
+                {/* Native practice data only (ruling C1): what was answered,
+                    how accurately, and where it is moving. Nothing here is
+                    converted into a score. */}
                 <dl className="grid grid-cols-2 gap-3">
                   <StatTile
-                    hint={
-                      band
-                        ? `基于最近 ${band.recordCount} 次练习共 ${band.total} 题 · 估算`
-                        : undefined
-                    }
-                    label="最近练习估算"
-                    value={band ? formatBand(band.band) : "—"}
-                  />
-                  <StatTile
+                    hint={`共 ${records.length} 次练习`}
                     label="平均正确率"
                     value={stats ? `${Math.round(stats.averageAccuracy * 100)}%` : "—"}
                   />
+                  <StatTile
+                    hint={
+                      trend
+                        ? `最近 ${trend.sample} 次 ${trend.recent}% · 之前 ${trend.sample} 次 ${trend.previous}%`
+                        : `练满 ${TREND_BLOCK * 2} 次后开始对比`
+                    }
+                    label="正确率趋势"
+                    value={
+                      trend
+                        ? trend.delta === 0
+                          ? "持平"
+                          : `${trend.delta > 0 ? "+" : "−"}${Math.abs(trend.delta)} 个百分点`
+                        : "—"
+                    }
+                  />
                 </dl>
 
-                {/* The profile's saved figure and the freshest practice
-                    estimate legitimately differ — the learner has to choose to
-                    adopt one. Showing both unlabelled would look like a bug, so
-                    the divergence is named and the update offered explicitly. */}
-                {band && savedScore !== null && savedScore !== band.band ? (
-                  <p className="mt-3 flex flex-wrap items-center gap-2 rounded-stage-sm bg-stage-bg-soft px-3 py-2 text-xs text-stage-fg-muted">
-                    档案里记录的是 {formatBand(savedScore)}
-                    {profile?.english.currentSource === "self_reported"
-                      ? "（你填写的成绩）"
-                      : "（较早的估算）"}
-                    <button
-                      className="font-medium text-stage-primary underline-offset-2 hover:underline"
-                      onClick={() => {
-                        patchProfile((current) => ({
-                          ...current,
-                          english: {
-                            ...current.english,
-                            currentOverall: band.band,
-                            currentSource: "lab_estimate",
-                            labEstimate: {
-                              band: band.band,
-                              questionCount: band.total,
-                              recordCount: band.recordCount,
-                              computedAt: new Date().toISOString(),
-                              tableVersion: band.tableVersion,
-                            },
-                          },
-                        }));
-                        setProfile(loadProfile());
-                      }}
-                      type="button"
-                    >
-                      用最近估算更新档案
-                    </button>
-                  </p>
-                ) : null}
                 {weakest ? (
                   <p className="mt-3 text-xs text-stage-fg-muted">
                     最弱题型：{weakest.label} {weakest.accuracy}%（作答{" "}
                     {weakest.attempted} 题）
                   </p>
                 ) : null}
+
+                {/* The learner's own numbers, labelled as theirs. STAGE never
+                    writes either of them. */}
+                {savedScore !== null ? (
+                  <p className="mt-3 text-xs text-stage-fg-muted">
+                    你填写的成绩：{savedScore.toFixed(1)}
+                  </p>
+                ) : null}
+                {targetLine ? (
+                  <p className="mt-1 text-xs text-stage-fg-muted">
+                    你自己设定的目标分数：{targetLine}
+                  </p>
+                ) : (
+                  <p className="mt-1 text-xs text-stage-fg-muted">
+                    还没有设定目标分数，可以在 IELTS Lab 总览页自己填写。
+                  </p>
+                )}
                 <div className="mt-3 flex flex-wrap gap-2">
                   <Link
                     className="rounded-stage-md border border-stage-border px-3 py-1.5 text-xs transition-colors hover:border-stage-primary"
@@ -430,7 +461,7 @@ function Onboarding() {
     {
       icon: "target" as IconName,
       title: "开始雅思练习",
-      body: "练习记录会换算成阅读估算，用来比对项目的语言要求。",
+      body: "练习记录保存在本机，正确率与最弱题型会显示在这里。",
       href: "/ielts-lab",
       label: "去实验室",
     },

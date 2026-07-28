@@ -4,7 +4,6 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { buildQuestionTypeStats } from "@/lib/ielts/analytics";
-import { formatBand, estimateBand } from "@/lib/ielts/band";
 import {
   explanationByQuestion,
   loadExamData,
@@ -151,10 +150,6 @@ export function AttemptReview({ recordId }: { recordId: string }) {
     [record],
   );
 
-  const band = record
-    ? estimateBand(record.correctAnswers, record.totalQuestions)
-    : null;
-
   function scrollToQuestion(questionId: string) {
     setCurrentQuestion(questionId);
     const target =
@@ -226,7 +221,9 @@ export function AttemptReview({ recordId }: { recordId: string }) {
         </p>
       </header>
 
-      <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      {/* Answered, accuracy, time — what the attempt actually produced. No
+          score conversion (ruling C1). */}
+      <dl className="grid grid-cols-3 gap-3">
         <StatTile
           label="正确率"
           value={`${Math.round(record.accuracy * 100)}%`}
@@ -236,15 +233,6 @@ export function AttemptReview({ recordId }: { recordId: string }) {
           value={`${record.correctAnswers}/${record.totalQuestions}`}
         />
         <StatTile label="用时" value={formatDuration(record.duration)} />
-        <StatTile
-          label="本篇折合"
-          value={band ? formatBand(band.band) : "—"}
-          hint={
-            band
-              ? `估算 · ${band.scaled ? `按 ${band.total} 题折算` : "按 40 题"}`
-              : "题量不足"
-          }
-        />
       </dl>
 
       <AttemptPager

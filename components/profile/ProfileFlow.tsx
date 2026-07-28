@@ -20,7 +20,7 @@ import {
   type EnglishTest,
   type GpaBand,
   type ProfileStepId,
-  type ProfileV1,
+  type ProfileV2,
 } from "@/lib/profile/types";
 import { BandStepper, ChipGroup, ProfileStep } from "./ProfileStep";
 
@@ -69,9 +69,8 @@ export function ProfileFlow({ options }: { options: ProfileOptions }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const returnPath = searchParams.get("return");
-  const prefillBand = searchParams.get("prefillBand");
 
-  const [profile, setProfile] = useState<ProfileV1 | null>(null);
+  const [profile, setProfile] = useState<ProfileV2 | null>(null);
   const [loadState, setLoadState] = useState<
     "loading" | "ok" | "future" | "unmigratable"
   >("loading");
@@ -83,7 +82,7 @@ export function ProfileFlow({ options }: { options: ProfileOptions }) {
 
   // Kept in a ref so the visibility/unload flush always writes the newest
   // value without re-registering the listener on every keystroke.
-  const latest = useRef<ProfileV1 | null>(null);
+  const latest = useRef<ProfileV2 | null>(null);
 
   useEffect(() => {
     const result = loadProfileResult();
@@ -97,17 +96,10 @@ export function ProfileFlow({ options }: { options: ProfileOptions }) {
       return;
     }
 
+    // Step ⑤ is never prefilled: the only English figures this schema holds
+    // are ones the learner typed here (ruling C1).
     const existing =
       result.status === "ok" ? result.profile : createEmptyProfile();
-    // A band handed over from the suite result prefills step ⑤ but is still
-    // editable and still skippable — it is a suggestion, not a decision.
-    if (prefillBand && result.status !== "ok") {
-      const band = Number(prefillBand);
-      if (Number.isFinite(band)) {
-        existing.english.currentOverall = band;
-        existing.english.currentSource = "lab_estimate";
-      }
-    }
     setProfile(existing);
     latest.current = existing;
     setLoadState("ok");
@@ -117,9 +109,9 @@ export function ProfileFlow({ options }: { options: ProfileOptions }) {
       (step) => existing.steps[step] === "pristine",
     );
     setStepIndex(firstPristine === -1 ? 0 : firstPristine);
-  }, [prefillBand]);
+  }, []);
 
-  const commit = useCallback((next: ProfileV1) => {
+  const commit = useCallback((next: ProfileV2) => {
     latest.current = next;
     setProfile(next);
     const ok = saveProfile(next);
@@ -145,7 +137,7 @@ export function ProfileFlow({ options }: { options: ProfileOptions }) {
   }, []);
 
   const update = useCallback(
-    (patch: (current: ProfileV1) => ProfileV1) => {
+    (patch: (current: ProfileV2) => ProfileV2) => {
       const current = latest.current;
       if (!current) return;
       commit(patch(current));
@@ -513,14 +505,10 @@ export function ProfileFlow({ options }: { options: ProfileOptions }) {
             }
             value={profile.english.targetOverall}
           />
-
-          {profile.english.labEstimate ? (
-            <p className="rounded-stage-sm bg-stage-bg-soft px-3 py-2 text-xs text-stage-fg-muted">
-              雅思实验室估算：{profile.english.labEstimate.band.toFixed(1)}
-              （基于 {profile.english.labEstimate.recordCount} 次练习共{" "}
-              {profile.english.labEstimate.questionCount} 题）· 估算仅供参考
-            </p>
-          ) : null}
+          <p className="text-xs text-stage-fg-muted">
+            目标分数由你自己设定，仅用于个人规划参考。分科目标可以在 IELTS Lab
+            总览页填写。
+          </p>
         </div>
       ) : null}
     </ProfileStep>

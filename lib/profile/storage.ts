@@ -12,7 +12,7 @@
  * render.
  */
 import { migrateProfile, type MigrationResult } from "./migrate";
-import { createEmptyProfile, type ProfileV1 } from "./types";
+import { createEmptyProfile, type ProfileV2 } from "./types";
 
 const STORAGE_KEY = "stage.profile";
 
@@ -22,7 +22,7 @@ function isBrowser(): boolean {
 
 export type LoadResult =
   | { status: "none" }
-  | { status: "ok"; profile: ProfileV1 }
+  | { status: "ok"; profile: ProfileV2 }
   | { status: "future"; version: number }
   | { status: "unmigratable"; raw: string };
 
@@ -52,13 +52,13 @@ export function loadProfileResult(): LoadResult {
 }
 
 /** Convenience for readers that only care whether a usable profile exists. */
-export function loadProfile(): ProfileV1 | null {
+export function loadProfile(): ProfileV2 | null {
   const result = loadProfileResult();
   return result.status === "ok" ? result.profile : null;
 }
 
 /** Returns false when the write failed, so the caller can surface it. */
-export function saveProfile(profile: ProfileV1): boolean {
+export function saveProfile(profile: ProfileV2): boolean {
   if (!isBrowser()) return false;
   try {
     window.localStorage.setItem(
@@ -79,8 +79,8 @@ export function saveProfile(profile: ProfileV1): boolean {
  * whether a profile is already there.
  */
 export function patchProfile(
-  patch: (current: ProfileV1) => ProfileV1,
-): ProfileV1 | null {
+  patch: (current: ProfileV2) => ProfileV2,
+): ProfileV2 | null {
   if (!isBrowser()) return null;
   const current = loadProfile() ?? createEmptyProfile();
   const next = { ...patch(current), updatedAt: new Date().toISOString() };

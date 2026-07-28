@@ -7,9 +7,9 @@
  * the UI can admit when it might be out of date instead of quietly asserting
  * stale numbers.
  */
-import { parseBandScore } from "../ielts/band.ts";
-import { currentEnglishScore } from "../profile/derive.ts";
-import type { ProfileV1 } from "../profile/types.ts";
+import { parseBandScore } from "../fit/gap.ts";
+import { currentEnglishScore, targetBand } from "../profile/derive.ts";
+import type { ProfileV2 } from "../profile/types.ts";
 import {
   SNAPSHOT_STALE_DAYS,
   snapshotAgeDays,
@@ -46,9 +46,11 @@ function daysUntil(date: string | null): number | null {
 
 export function buildReadiness(
   saved: SavedProgramV1[],
-  profile: ProfileV1 | null,
+  profile: ProfileV2 | null,
 ): ProgramReadiness[] {
+  // Self-reported only (ruling C1); the self-set target is context, not a score.
   const current = currentEnglishScore(profile);
+  const target = targetBand(profile);
   const ceiling = profile?.geography.budgetCeilingUsd ?? null;
 
   return saved.map((entry) => {
@@ -68,10 +70,10 @@ export function buildReadiness(
         required === null
           ? "该项目未收录语言要求"
           : current === null
-            ? `要求 ${required.toFixed(1)} · 你还没有填写成绩`
-            : `要求 ${required.toFixed(1)} · 你的 ${current.value.toFixed(1)}${
-                current.source === "lab_estimate" ? "（估算）" : ""
-              }`,
+            ? `要求 ${required.toFixed(1)} · 待确认，你还没有填写成绩${
+                target !== null ? ` · 你的目标 ${target.toFixed(1)}` : ""
+              }`
+            : `要求 ${required.toFixed(1)} · 你填写的 ${current.value.toFixed(1)}`,
     };
 
     const days = daysUntil(snapshot.applicationDeadline);

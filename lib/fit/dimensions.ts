@@ -10,7 +10,7 @@
  * the same.
  */
 import type { PublicProgramDto } from "@/data/types";
-import type { ProfileV1 } from "../profile/types.ts";
+import type { ProfileV2 } from "../profile/types.ts";
 import {
   buildRequirementChecklist,
   ieltsGap,
@@ -52,12 +52,15 @@ function daysUntil(date: string | null): number | null {
 
 export function scoreDimensions(
   program: PublicProgramDto,
-  profile: ProfileV1 | null,
+  profile: ProfileV2 | null,
   checklist?: RequirementItem[],
 ): FitDimension[] {
   const items = checklist ?? buildRequirementChecklist(program, profile);
 
   /* ------------------------------- language ----------------------------- */
+  // Scored from the learner's SELF-REPORTED score only (ruling C1). A target
+  // they set is shown for context but never scores: intending to reach a band
+  // is not holding it, and a null score renders 待确认 rather than zero.
   const gap = ieltsGap(program, profile);
   let languageScore: number | null = null;
   let languageDetail = "该项目未收录语言要求";
@@ -71,11 +74,11 @@ export function scoreDimensions(
       gap.current >= gap.required
         ? 1
         : Math.max(0, 1 - (gap.required - gap.current) / 2);
-    languageDetail = `要求 ${gap.required.toFixed(1)} · 你的 ${gap.current.toFixed(1)}${
-      gap.currentSource === "lab_estimate" ? "（估算）" : ""
-    }`;
+    languageDetail = `要求 ${gap.required.toFixed(1)} · 你填写的 ${gap.current.toFixed(1)}`;
   } else if (gap.required !== null) {
-    languageDetail = `要求 ${gap.required.toFixed(1)} · 你还没有填写成绩`;
+    languageDetail = `要求 ${gap.required.toFixed(1)} · 待确认，你还没有填写成绩${
+      gap.target !== null ? ` · 你的目标 ${gap.target.toFixed(1)}` : ""
+    }`;
   }
 
   /* -------------------------------- timing ------------------------------ */

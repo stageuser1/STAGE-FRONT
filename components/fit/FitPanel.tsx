@@ -20,7 +20,7 @@ import {
   programTuition,
 } from "@/lib/fit/requirements";
 import { loadProfile } from "@/lib/profile/storage";
-import type { ProfileV1 } from "@/lib/profile/types";
+import type { ProfileV2 } from "@/lib/profile/types";
 import {
   isSaved,
   refreshSnapshot,
@@ -39,7 +39,7 @@ import { RequirementRow } from "./RequirementRow";
  */
 export function FitPanel({ program }: { program: PublicProgramDto }) {
   const pathname = usePathname();
-  const [profile, setProfile] = useState<ProfileV1 | null>(null);
+  const [profile, setProfile] = useState<ProfileV2 | null>(null);
   const [ready, setReady] = useState(false);
   const [saved, setSaved] = useState(false);
 
@@ -181,6 +181,7 @@ export function FitPanel({ program }: { program: PublicProgramDto }) {
               <BandGapMeter
                 ctaHref={`/ielts-lab/suite?from=program:${program.id}`}
                 gap={gap}
+                profileHref={profileHref}
               />
             </div>
 

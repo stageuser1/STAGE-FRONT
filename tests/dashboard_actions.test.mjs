@@ -97,6 +97,34 @@ test("an IELTS shortfall produces an imperative card citing its evidence", () =>
   // The why-line must cite the requirement and the learner's own figure.
   assert.match(gap.why, /6\.5/);
   assert.match(gap.why, /6\.0/);
+  assert.match(gap.why, /你填写的成绩/);
+});
+
+test("no IELTS card without a self-reported score, however much practice there is", () => {
+  // Ruling C1: STAGE has no score of its own to compare, so a shortfall it
+  // cannot evidence is not asserted. The profile card asks for the number.
+  const profile = createEmptyProfile();
+  for (const step of Object.keys(profile.steps)) profile.steps[step] = "answered";
+  profile.english.targetOverall = 6.0;
+
+  const actions = buildActions({
+    profile,
+    saved: [savedProgram()],
+    records: [
+      {
+        id: "r1",
+        examId: "e1",
+        title: "Passage",
+        category: "P1",
+        correctAnswers: 4,
+        totalQuestions: 13,
+        accuracy: 4 / 13,
+        duration: 600,
+        createdAt: new Date().toISOString(),
+      },
+    ],
+  });
+  assert.equal(actions.find((a) => a.kind === "ielts_gap"), undefined);
 });
 
 test("no IELTS card once the requirement is met", () => {
@@ -165,7 +193,17 @@ test("readiness reports null, not zero, for missing inputs", () => {
   // No score filled in and no budget set: unknown, never a zero score.
   assert.equal(language.score, null);
   assert.equal(budget.score, null);
+  assert.match(language.note, /待确认/);
   assert.match(language.note, /你还没有填写成绩/);
+});
+
+test("a self-set target is shown beside the requirement but does not score it", () => {
+  const profile = createEmptyProfile();
+  profile.english.targetOverall = 7.5;
+  const [program] = buildReadiness([savedProgram()], profile);
+  const language = program.dimensions.find((d) => d.key === "language");
+  assert.equal(language.score, null);
+  assert.match(language.note, /你的目标 7\.5/);
 });
 
 test("readiness scores a met requirement as full", () => {
