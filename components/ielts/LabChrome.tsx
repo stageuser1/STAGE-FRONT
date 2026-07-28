@@ -15,7 +15,7 @@ import { MarketingNavbar } from "@/components/marketing/MarketingNavbar";
  */
 export function LabChrome({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col bg-stage-bg font-stage-sans text-stage-fg antialiased">
+    <div className="flex min-h-screen flex-col bg-stage-bg font-stage-sans text-stage-fg-body antialiased">
       <MarketingNavbar />
       {/* flex-1 lets the runner claim the viewport without every child
           hard-coding the navbar height. */}

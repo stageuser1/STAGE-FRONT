@@ -35,10 +35,10 @@ export function LabNav() {
 
   return (
     <nav
-      aria-label="雅思实验室导航"
-      className="-mx-4 mb-6 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      aria-label="IELTS Lab 导航"
+      className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
-      <ul className="flex w-max gap-1 rounded-stage-md border border-stage-border bg-stage-bg-soft p-1">
+      <ul className="flex w-max gap-1 rounded-stage-pill border border-stage-border bg-stage-bg-soft p-1">
         {SECTIONS.map((section) => {
           // Exact match only: "/ielts-lab" is a prefix of every other section,
           // so a startsWith test would light up 总览 on all of them. The review
@@ -55,15 +55,15 @@ export function LabNav() {
               <Link
                 href={section.href}
                 aria-current={active ? "page" : undefined}
-                className={`flex items-center gap-1.5 whitespace-nowrap rounded-[calc(var(--stage-radius-md)-2px)] px-4 py-2 text-sm transition-colors ${
+                className={`flex items-center gap-1.5 whitespace-nowrap rounded-stage-pill px-4 py-1.5 text-stage-xs transition-colors duration-stage-fast ${
                   active
-                    ? "bg-stage-bg font-medium text-stage-fg shadow-stage-sm"
+                    ? "bg-stage-bg font-medium text-stage-primary shadow-stage-xs"
                     : "text-stage-fg-muted hover:text-stage-fg"
                 }`}
               >
                 {section.label}
                 {badge ? (
-                  <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-amber-100 px-1 text-[11px] font-medium tabular-nums text-amber-700">
+                  <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-stage-pill bg-stage-warning-soft px-1 text-stage-2xs font-medium tabular-nums text-stage-warning">
                     {badge}
                     <span className="sr-only"> 篇有错题</span>
                   </span>

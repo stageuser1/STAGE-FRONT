@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { CATEGORIES, countByCategory } from "@/lib/ielts/catalog";
+import { loadDrafts, type DraftEntry } from "@/lib/ielts/draft";
 import { buildProgressIndex, pickRandomExam, practisedByCategory } from "@/lib/ielts/progress";
 import {
   clearSession,
@@ -27,17 +28,45 @@ import {
   normaliseTarget,
   type EnglishSubject,
 } from "@/lib/profile/types";
-import { Card, EmptyNote, StatTile } from "./ui";
+import {
+  BUTTON_PRIMARY,
+  BUTTON_QUIET,
+  BUTTON_SECONDARY,
+  Card,
+  EmptyNote,
+  FIELD,
+  PageHeader,
+  StatTile,
+  Tag,
+  accuracyText,
+  splitTitle,
+} from "./ui";
+
+/** Onboarding strip dismissal. Follows the `stage.*` key convention (Plan §6.3). */
+const ONBOARDING_KEY = "stage.ielts.onboarding";
+
+/**
+ * The three steps of the starter strip (supplement §三).
+ *
+ * The labels are verbatim and must not be rewritten. The third step is the one
+ * the supplement singles out: it stays about consolidating a review and must
+ * never become score-oriented.
+ *
+ * The descriptions state what STAGE actually offers today — the spec's own
+ * example lists four skills, and naming three that have no module yet would be
+ * a promise the product does not keep.
+ */
+const ONBOARDING_STEPS = [
+  { label: "选科目", detail: "目前开放 Reading" },
+  { label: "去练习", detail: "在真实节奏下完成一次练习" },
+  { label: "复盘巩固", detail: "逐题回顾，错题自动进入错题本" },
+] as const;
 
 const CATEGORY_BLURB: Record<ExamCategory, string> = {
   P1: "篇幅最短，事实定位为主",
   P2: "论证结构，段落匹配偏多",
   P3: "学术论文，题型最复杂",
 };
-
-function accuracyPercent(ratio: number): number {
-  return Math.round(ratio * 100);
-}
 
 function relativeTime(iso: string): string {
   const then = new Date(iso).getTime();
@@ -56,20 +85,23 @@ function relativeTime(iso: string): string {
 /**
  * IELTS Lab entry screen.
  *
- * The catalog used to be the landing page, which meant a returning learner met
- * 223 undifferentiated cards and no indication of what they had already done.
- * This answers the three questions the source project's overview answers on
- * open: where was I, what should I do next, and how far through am I.
+ * Answers the three questions the master spec's overview answers on open:
+ * where was I, what should I do next, and how far through am I. Its body is
+ * the 批次一 layout minus the rulings' deferred items — no review queue card
+ * (C3+C6), and only the Reading module card, because a module card for a skill
+ * with no module would be the "即将上线" placeholder the spec forbids.
  */
 export function LabOverview({ exams }: { exams: ExamSummary[] }) {
   const router = useRouter();
   // localStorage and sessionStorage are unreadable until after mount.
   const [records, setRecords] = useState<PracticeRecord[] | null>(null);
   const [session, setSession] = useState<PracticeSession | null>(null);
+  const [drafts, setDrafts] = useState<DraftEntry[]>([]);
 
   useEffect(() => {
     setRecords(loadRecords());
     setSession(loadSession());
+    setDrafts([...loadDrafts().values()]);
   }, []);
 
   const totals = useMemo(() => countByCategory(exams), [exams]);
@@ -90,36 +122,27 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
     [records],
   );
 
+  const examsById = useMemo(() => {
+    const map = new Map<string, ExamSummary>();
+    for (const exam of exams) map.set(exam.id, exam);
+    return map;
+  }, [exams]);
+
   /**
-   * Mean accuracy of each category's LATEST attempts.
+   * The single passage worth offering to resume.
    *
-   * Latest rather than all-time, matching the wrongbook and status rules: the
-   * tile answers "where am I now", and averaging in a first attempt from three
-   * months ago answers a different question. Null (not zero) when a category
-   * has never been attempted — "未开始" is not "0%".
+   * Drafts are the runner's own autosave markers, so the most recently touched
+   * one is where the learner actually left off.
    */
-  const accuracyByCategory = useMemo(() => {
-    const totalsByCategory: Record<ExamCategory, { sum: number; n: number }> = {
-      P1: { sum: 0, n: 0 },
-      P2: { sum: 0, n: 0 },
-      P3: { sum: 0, n: 0 },
-    };
-    const seen = new Map<string, ExamCategory>();
-
-    for (const exam of exams) {
-      const entry = progress.get(exam.id);
-      if (!entry) continue;
-      seen.set(exam.id, exam.category);
-      totalsByCategory[exam.category].sum += entry.lastAccuracy;
-      totalsByCategory[exam.category].n += 1;
-    }
-
-    return {
-      P1: totalsByCategory.P1.n > 0 ? totalsByCategory.P1.sum / totalsByCategory.P1.n : null,
-      P2: totalsByCategory.P2.n > 0 ? totalsByCategory.P2.sum / totalsByCategory.P2.n : null,
-      P3: totalsByCategory.P3.n > 0 ? totalsByCategory.P3.sum / totalsByCategory.P3.n : null,
-    } satisfies Record<ExamCategory, number | null>;
-  }, [exams, progress]);
+  const resumable = useMemo(() => {
+    const candidates = drafts
+      .filter((draft) => examsById.has(draft.examId))
+      .sort(
+        (a, b) =>
+          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
+      );
+    return candidates[0] ?? null;
+  }, [drafts, examsById]);
 
   function startRandom(category?: ExamCategory) {
     const pick = pickRandomExam(exams, progress, { category });
@@ -135,15 +158,52 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
 
   const recent = (records ?? []).slice(0, 5);
   const practisedTotal = progress.size;
+  const latestAccuracy = records?.[0]?.accuracy ?? null;
 
   return (
     <div className="space-y-6">
-      <header>
-        <h1 className="text-2xl font-semibold">雅思实验室</h1>
-        <p className="mt-1 text-sm text-stage-fg-muted">
-          {exams.length} 篇真题阅读 · 完整还原考试环境 · 记录保存在本机
-        </p>
-      </header>
+      <OnboardingStrip />
+
+      <PageHeader
+        title="学习总览"
+        subtitle={`${exams.length} 篇真题阅读 · 完整还原考试环境 · 记录保存在本机`}
+        actions={
+          <>
+            <button
+              type="button"
+              onClick={() => startRandom()}
+              className={BUTTON_PRIMARY}
+            >
+              随机练习
+            </button>
+            <button
+              type="button"
+              onClick={startEndlessMode}
+              className={BUTTON_SECONDARY}
+            >
+              无尽模式
+            </button>
+            <Link href="/ielts-lab/suite" className={BUTTON_SECONDARY}>
+              套题练习
+            </Link>
+            <Link href="/ielts-lab/mistakes" className={BUTTON_SECONDARY}>
+              错题本
+              {mistakes > 0 ? (
+                <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-stage-pill bg-stage-warning-soft px-1 text-stage-2xs font-medium tabular-nums text-stage-warning">
+                  {mistakes}
+                </span>
+              ) : null}
+            </Link>
+          </>
+        }
+      />
+
+      {resumable ? (
+        <ContinueBar
+          draft={resumable}
+          title={examsById.get(resumable.examId)?.title ?? resumable.examId}
+        />
+      ) : null}
 
       {session ? (
         <ResumeBanner
@@ -155,91 +215,50 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
         />
       ) : null}
 
+      {/* Core metrics (master-spec 批次一 §3). Native data only: counts,
+          accuracy, minutes and days — never projected onto a score scale. */}
+      <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <StatTile
+          label="已练习题目"
+          value={String(stats?.totalPractices ?? 0)}
+          hint="累计练习次数"
+        />
+        <StatTile
+          label="平均正确率"
+          // Null, not zero: no attempts is absent data, and a 0% would read
+          // as a result the learner never produced.
+          value={
+            stats && stats.totalPractices > 0
+              ? accuracyText(stats.averageAccuracy)
+              : "—"
+          }
+        />
+        <StatTile
+          label="学习时长"
+          value={
+            stats && stats.totalPractices > 0
+              ? `${Math.round(stats.totalTimeSeconds / 60)} 分钟`
+              : "—"
+          }
+        />
+        <StatTile label="连续学习" value={`${stats?.streakDays ?? 0} 天`} />
+      </dl>
+
       <TargetScoreCard />
 
-      <div className="flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={() => startRandom()}
-          className="rounded-stage-md bg-stage-primary px-4 py-2 text-sm font-medium text-stage-fg-on-dark transition-colors hover:bg-stage-primary-hover"
-        >
-          随机练习
-        </button>
-        <button
-          type="button"
-          onClick={startEndlessMode}
-          className="rounded-stage-md border border-stage-border px-4 py-2 text-sm transition-colors hover:border-stage-primary hover:text-stage-fg"
-        >
-          无尽模式
-        </button>
-        <Link
-          href="/ielts-lab/suite"
-          className="rounded-stage-md border border-stage-border px-4 py-2 text-sm transition-colors hover:border-stage-primary hover:text-stage-fg"
-        >
-          套题模式
-        </Link>
-        <Link
-          href="/ielts-lab/browse"
-          className="rounded-stage-md border border-stage-border px-4 py-2 text-sm transition-colors hover:border-stage-primary hover:text-stage-fg"
-        >
-          浏览题库
-        </Link>
-        <Link
-          href="/ielts-lab/mistakes"
-          className="flex items-center gap-1.5 rounded-stage-md border border-stage-border px-4 py-2 text-sm transition-colors hover:border-stage-primary hover:text-stage-fg"
-        >
-          错题本
-          {mistakes > 0 ? (
-            <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-amber-100 px-1 text-[11px] font-medium tabular-nums text-amber-700">
-              {mistakes}
-            </span>
-          ) : null}
-        </Link>
-      </div>
-
-      {stats && stats.totalPractices > 0 ? (
-        <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <StatTile label="已练习题目" value={String(stats.totalPractices)} />
-          <StatTile
-            label="平均正确率"
-            value={`${accuracyPercent(stats.averageAccuracy)}%`}
-          />
-          <StatTile
-            label="学习时长"
-            value={`${Math.round(stats.totalTimeSeconds / 60)} 分钟`}
-          />
-          <StatTile label="连续学习" value={`${stats.streakDays} 天`} />
-        </dl>
-      ) : null}
-
-      <section aria-labelledby="category-heading">
-        <h2 id="category-heading" className="mb-3 text-sm font-semibold">
-          阅读分类
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-3">
-          {CATEGORIES.map((category) => (
-            <CategoryCard
-              key={category}
-              category={category}
-              total={totals[category]}
-              practised={practised[category]}
-              accuracy={accuracyByCategory[category]}
-              onRandom={() => startRandom(category)}
-            />
-          ))}
-        </div>
-        <p className="mt-3 text-xs text-stage-fg-muted">
-          已练习 {practisedTotal} / {exams.length} 篇
-        </p>
-      </section>
+      <ReadingModuleCard
+        total={exams.length}
+        practised={practisedTotal}
+        latestAccuracy={latestAccuracy}
+        totals={totals}
+        practisedByPart={practised}
+        onRandom={() => startRandom()}
+      />
 
       <Card
         title="最近练习"
         aside={
-          <Link
-            href="/ielts-lab/history"
-            className="text-xs text-stage-fg-muted transition-colors hover:text-stage-fg"
-          >
+          <Link href="/ielts-lab/history" className={BUTTON_QUIET}>
             全部记录 →
           </Link>
         }
@@ -249,31 +268,287 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
         ) : (
           <ul className="divide-y divide-stage-border">
             {recent.map((record) => (
-              <li
-                key={record.id}
-                className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-2 first:pt-0 last:pb-0"
-              >
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm">{record.title}</p>
-                  <p className="text-xs text-stage-fg-muted">
-                    {record.category || "—"} · {relativeTime(record.createdAt)}
-                  </p>
-                </div>
-                <span className="text-sm font-semibold text-stage-primary">
-                  {accuracyPercent(record.accuracy)}%
-                </span>
-                <Link
-                  href={reviewHref(record.examId, record.id)}
-                  className="text-xs text-stage-fg-muted transition-colors hover:text-stage-fg"
-                >
-                  回顾
-                </Link>
-              </li>
+              <RecentRow key={record.id} record={record} />
             ))}
           </ul>
         )}
       </Card>
     </div>
+  );
+}
+
+/**
+ * Starter strip (supplement §三).
+ *
+ * A thin rule with small controls rather than a banner — the Plan leaves the
+ * exact treatment to the implementer and forbids marketing-weight promos
+ * inside the study surface. Rendered only after the dismissal flag has been
+ * read, so a returning learner never sees it flash.
+ */
+function OnboardingStrip() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    try {
+      setVisible(window.localStorage.getItem(ONBOARDING_KEY) !== "dismissed");
+    } catch {
+      // Private-mode storage refusal: show it, it costs one row.
+      setVisible(true);
+    }
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <aside
+      aria-label="新手引导"
+      className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-stage-lg border border-stage-border bg-stage-bg px-4 py-3"
+    >
+      <ol className="flex min-w-0 flex-1 flex-wrap items-center gap-x-6 gap-y-2">
+        {ONBOARDING_STEPS.map((step, index) => (
+          <li key={step.label} className="flex items-center gap-2">
+            <span
+              aria-hidden
+              className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-stage-pill border border-stage-border-strong text-stage-2xs font-medium tabular-nums text-stage-fg-muted"
+            >
+              {index + 1}
+            </span>
+            <span className="text-stage-xs font-medium text-stage-fg">
+              {step.label}
+            </span>
+            <span className="text-stage-xs text-stage-fg-subtle">
+              {step.detail}
+            </span>
+          </li>
+        ))}
+      </ol>
+      <button
+        type="button"
+        onClick={() => {
+          setVisible(false);
+          try {
+            window.localStorage.setItem(ONBOARDING_KEY, "dismissed");
+          } catch {
+            // Dismissal is a preference; failing to store it is not an error.
+          }
+        }}
+        className={BUTTON_QUIET}
+      >
+        知道了
+      </button>
+    </aside>
+  );
+}
+
+/**
+ * Continue bar (master-spec 批次一 §1).
+ *
+ * Driven by the runner's autosave marker, which is why it can honestly say
+ * 已自动保存: STAGE is reporting that the runner saved, not claiming to have
+ * saved anything itself.
+ */
+function ContinueBar({ draft, title }: { draft: DraftEntry; title: string }) {
+  const { en, zh } = splitTitle(title);
+  const percent =
+    draft.total > 0
+      ? Math.min(100, Math.round((draft.answered / draft.total) * 100))
+      : 0;
+
+  return (
+    <section className="flex flex-wrap items-center gap-x-4 gap-y-3 rounded-stage-lg border border-stage-border-accent bg-stage-primary-soft px-4 py-3.5">
+      <div className="min-w-0 flex-1">
+        <p className="truncate text-stage-xs text-stage-fg-muted">
+          继续上次：
+          <span className="font-medium text-stage-fg">{en}</span>
+          {zh ? <span className="text-stage-fg-muted"> {zh}</span> : null}
+        </p>
+        {draft.total > 0 ? (
+          <div className="mt-2 flex items-center gap-3">
+            <div
+              className="h-1 w-32 overflow-hidden rounded-stage-pill bg-stage-neutral-100"
+              role="progressbar"
+              aria-valuenow={percent}
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-label="上次练习进度"
+            >
+              <div
+                className="h-full rounded-stage-pill bg-stage-primary"
+                style={{ width: `${percent}%` }}
+              />
+            </div>
+            <span className="text-stage-2xs tabular-nums text-stage-fg-muted">
+              已完成 {draft.answered}/{draft.total} 题
+            </span>
+          </div>
+        ) : null}
+      </div>
+      <span className="text-stage-2xs text-stage-fg-subtle">已自动保存</span>
+      <Link href={practiceHref(draft.examId)} className={BUTTON_PRIMARY}>
+        继续
+      </Link>
+    </section>
+  );
+}
+
+/**
+ * Reading module card (master-spec 批次一 §4, hardened by supplement §一).
+ *
+ * The other three skills get no card: the spec forbids "即将上线" placeholders,
+ * and a card is how a module announces that it exists.
+ *
+ * Every bullet is a fact about this build — no capability is claimed that the
+ * learner cannot exercise today, and nothing about scoring or evaluation.
+ */
+function ReadingModuleCard({
+  total,
+  practised,
+  latestAccuracy,
+  totals,
+  practisedByPart,
+  onRandom,
+}: {
+  total: number;
+  practised: number;
+  /** Accuracy of the most recent attempt; null when there is none. */
+  latestAccuracy: number | null;
+  totals: Record<ExamCategory, number>;
+  practisedByPart: Record<ExamCategory, number>;
+  onRandom: () => void;
+}) {
+  const percent = total > 0 ? Math.round((practised / total) * 100) : 0;
+  const facts = [
+    `题库总量 ${total} 篇`,
+    "频次分层筛选：高频 / 次高频 / 低频",
+    "逐题回顾与错题自动收集",
+    "练习记录保存在本机浏览器",
+  ];
+
+  return (
+    <Card>
+      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
+        <div className="flex min-w-0 items-start gap-3">
+          <span
+            aria-hidden
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-stage-md bg-stage-primary-soft text-stage-xs font-semibold text-stage-primary"
+          >
+            R
+          </span>
+          <div className="min-w-0">
+            <h2 className="text-stage-h4 font-semibold text-stage-fg">
+              Reading
+            </h2>
+            <p className="mt-0.5 text-stage-xs text-stage-fg-muted">
+              P1 / P2 / P3 三个部分
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/ielts-lab/browse" className={BUTTON_SECONDARY}>
+            浏览题库
+          </Link>
+          <button type="button" onClick={onRandom} className={BUTTON_SECONDARY}>
+            随机练习
+          </button>
+        </div>
+      </div>
+
+      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
+        <div className="min-w-[12rem] flex-1">
+          <div className="flex items-baseline justify-between gap-3">
+            <span className="text-stage-xs text-stage-fg-muted">
+              已练习 {practised} / {total} 篇
+            </span>
+            <span className="text-stage-2xs tabular-nums text-stage-fg-subtle">
+              {percent}%
+            </span>
+          </div>
+          <div
+            className="mt-1.5 h-1 overflow-hidden rounded-stage-pill bg-stage-neutral-100"
+            role="progressbar"
+            aria-valuenow={percent}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label="Reading 题库完成进度"
+          >
+            <div
+              className="h-full rounded-stage-pill bg-stage-primary transition-[width] duration-stage-base"
+              style={{ width: `${percent}%` }}
+            />
+          </div>
+        </div>
+        <p className="text-stage-xs text-stage-fg-muted">
+          最近一次正确率{" "}
+          <span className="font-semibold tabular-nums text-stage-fg">
+            {accuracyText(latestAccuracy)}
+          </span>
+        </p>
+      </div>
+
+      <ul className="mt-4 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
+        {facts.map((fact) => (
+          <li
+            key={fact}
+            className="flex items-start gap-2 text-stage-xs text-stage-fg-muted"
+          >
+            <span
+              aria-hidden
+              className="mt-2 inline-block h-1 w-1 shrink-0 rounded-stage-pill bg-stage-border-strong"
+            />
+            {fact}
+          </li>
+        ))}
+      </ul>
+
+      <ul className="mt-4 flex flex-wrap gap-2 border-t border-stage-border pt-4">
+        {CATEGORIES.map((category) => (
+          <li key={category}>
+            {/* No `title` attribute: it would replace the accessible name and
+                leave the link announced as its blurb rather than as "P1". */}
+            <Link
+              href={`/ielts-lab/browse?category=${category}`}
+              className="flex items-center gap-2 rounded-stage-sm border border-stage-border px-3 py-1.5 text-stage-2xs text-stage-fg-muted transition-colors duration-stage-fast hover:border-stage-border-strong hover:text-stage-fg"
+            >
+              <span className="font-medium text-stage-fg">{category}</span>
+              <span className="tabular-nums">
+                {practisedByPart[category]} / {totals[category]}
+              </span>
+              <span className="hidden text-stage-fg-subtle sm:inline">
+                {CATEGORY_BLURB[category]}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+}
+
+/** One row of 最近练习: title (EN + zh), Part, date, accuracy, 回顾. */
+function RecentRow({ record }: { record: PracticeRecord }) {
+  const { en, zh } = splitTitle(record.title);
+
+  return (
+    <li className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0">
+      <div className="min-w-0 flex-1">
+        <p className="truncate text-stage-xs font-medium text-stage-fg">{en}</p>
+        {zh ? (
+          <p className="truncate text-stage-2xs text-stage-fg-subtle">{zh}</p>
+        ) : null}
+      </div>
+      <div className="flex shrink-0 items-center gap-3">
+        {record.category ? <Tag>{record.category}</Tag> : null}
+        <span className="text-stage-2xs text-stage-fg-subtle">
+          {relativeTime(record.createdAt)}
+        </span>
+        <span className="text-stage-xs font-semibold tabular-nums text-stage-fg">
+          {accuracyText(record.accuracy)}
+        </span>
+        <Link href={reviewHref(record.examId, record.id)} className={BUTTON_QUIET}>
+          回顾
+        </Link>
+      </div>
+    </li>
   );
 }
 
@@ -286,8 +561,6 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
  *
  * All four subjects are offered even though only Reading has a module today:
  * these are the learner's own plans, not a claim about what STAGE can practise.
- *
- * Deliberately plain markup — T3 owns the visual treatment of this card.
  */
 function TargetScoreCard() {
   // localStorage is unreadable until after mount; drafts keep the input
@@ -351,11 +624,13 @@ function TargetScoreCard() {
   return (
     <Card>
       <fieldset>
-        <legend className="text-sm font-semibold">我的目标分数</legend>
-        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <legend className="text-stage-h4 font-semibold text-stage-fg">
+          我的目标分数
+        </legend>
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {ENGLISH_SUBJECTS.map((subject) => (
-            <label key={subject} className="block text-xs">
-              <span className="text-stage-fg-muted">
+            <label key={subject} className="block">
+              <span className="text-stage-xs text-stage-fg-muted">
                 {ENGLISH_SUBJECT_LABELS[subject]}
               </span>
               <input
@@ -368,12 +643,12 @@ function TargetScoreCard() {
                 onChange={(event) => onType(subject, event.target.value)}
                 onBlur={() => onCommit(subject)}
                 placeholder="—"
-                className="mt-1 w-full rounded-stage-sm border border-stage-border bg-stage-bg px-2 py-1.5 text-sm tabular-nums focus:border-stage-primary focus:outline-none"
+                className={`mt-1.5 w-full tabular-nums ${FIELD}`}
               />
             </label>
           ))}
         </div>
-        <p className="mt-3 text-xs text-stage-fg-muted">
+        <p className="mt-3 text-stage-xs text-stage-fg-subtle">
           目标分数由你自己设定，仅用于个人规划参考。
         </p>
       </fieldset>
@@ -381,86 +656,11 @@ function TargetScoreCard() {
   );
 }
 
-function CategoryCard({
-  category,
-  total,
-  practised,
-  accuracy,
-  onRandom,
-}: {
-  category: ExamCategory;
-  total: number;
-  practised: number;
-  /** Null when the category has never been attempted — NOT zero. */
-  accuracy: number | null;
-  onRandom: () => void;
-}) {
-  const percent = total > 0 ? Math.round((practised / total) * 100) : 0;
-
-  return (
-    <div className="rounded-stage-md border border-stage-border p-4">
-      <div className="flex items-baseline justify-between">
-        <h3 className="text-base font-semibold">{category} 阅读</h3>
-        <span className="text-xs text-stage-fg-muted">{total} 篇</span>
-      </div>
-
-      {/* "未开始" rather than "0%": a category with no attempts is absent data,
-          and rendering it as a zero score reads as failure. */}
-      <p className="mt-2 text-2xl font-semibold tabular-nums">
-        {accuracy === null ? (
-          <span className="text-base font-medium text-stage-fg-muted">
-            未开始
-          </span>
-        ) : (
-          `${Math.round(accuracy * 100)}%`
-        )}
-      </p>
-      <p className="text-xs text-stage-fg-muted">
-        {accuracy === null ? CATEGORY_BLURB[category] : "最近一次作答平均正确率"}
-      </p>
-
-      <div
-        className="mt-3 h-1.5 overflow-hidden rounded-full bg-stage-bg-soft"
-        role="progressbar"
-        aria-valuenow={percent}
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-label={`${category} 完成进度`}
-      >
-        <div
-          className="h-full rounded-full bg-stage-primary transition-[width]"
-          style={{ width: `${percent}%` }}
-        />
-      </div>
-      <p className="mt-1.5 text-xs text-stage-fg-muted">
-        已练习 {practised} / {total}
-      </p>
-
-      <div className="mt-3 flex gap-2">
-        <Link
-          href={`/ielts-lab/browse?category=${category}`}
-          className="flex-1 rounded-stage-sm border border-stage-border px-2 py-1.5 text-center text-xs transition-colors hover:border-stage-primary"
-        >
-          浏览题库
-        </Link>
-        <button
-          type="button"
-          onClick={onRandom}
-          className="flex-1 rounded-stage-sm border border-stage-border px-2 py-1.5 text-xs transition-colors hover:border-stage-primary"
-        >
-          随机练习
-        </button>
-      </div>
-    </div>
-  );
-}
-
 /**
  * Offers to resume an interrupted multi-passage session.
  *
- * The source project reconstructs a suite from a sessionStorage snapshot on
- * demand. Same idea, stated explicitly rather than restored silently: resuming
- * navigates back into a test, which should be the learner's choice.
+ * Resuming navigates back into a test, which should be the learner's choice —
+ * so the offer is stated rather than the session restored silently.
  */
 function ResumeBanner({
   session,
@@ -469,62 +669,50 @@ function ResumeBanner({
   session: PracticeSession;
   onDismiss: () => void;
 }) {
+  const shell =
+    "flex flex-wrap items-center justify-between gap-3 rounded-stage-lg border border-stage-border-accent bg-stage-primary-soft px-4 py-3.5";
+
   if (session.kind === "endless") {
     const last = session.served[session.served.length - 1];
     return (
-      <Card className="border-stage-primary/40 bg-stage-primary/5">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm">
-            无尽模式进行中 · 已完成 {session.completed} 篇
-          </p>
-          <div className="flex gap-2">
-            {last ? (
-              <Link
-                href={practiceHref(last, "endless")}
-                className="rounded-stage-sm bg-stage-primary px-3 py-1.5 text-xs font-medium text-stage-fg-on-dark"
-              >
-                继续
-              </Link>
-            ) : null}
-            <button
-              type="button"
-              onClick={onDismiss}
-              className="rounded-stage-sm border border-stage-border px-3 py-1.5 text-xs"
-            >
-              结束
-            </button>
-          </div>
+      <section className={shell}>
+        <p className="text-stage-xs text-stage-fg-body">
+          无尽模式进行中 · 已完成 {session.completed} 篇
+        </p>
+        <div className="flex gap-2">
+          {last ? (
+            <Link href={practiceHref(last, "endless")} className={BUTTON_PRIMARY}>
+              继续
+            </Link>
+          ) : null}
+          <button type="button" onClick={onDismiss} className={BUTTON_SECONDARY}>
+            结束
+          </button>
         </div>
-      </Card>
+      </section>
     );
   }
 
   const current = session.entries[session.index];
   return (
-    <Card className="border-stage-primary/40 bg-stage-primary/5">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm">
-          套题进行中 · 第 {session.index + 1} / {session.entries.length} 篇
-          {current ? ` · ${current.title}` : ""}
-        </p>
-        <div className="flex gap-2">
-          {current ? (
-            <Link
-              href={practiceHref(current.examId, "suite")}
-              className="rounded-stage-sm bg-stage-primary px-3 py-1.5 text-xs font-medium text-stage-fg-on-dark"
-            >
-              继续
-            </Link>
-          ) : null}
-          <button
-            type="button"
-            onClick={onDismiss}
-            className="rounded-stage-sm border border-stage-border px-3 py-1.5 text-xs"
+    <section className={shell}>
+      <p className="min-w-0 text-stage-xs text-stage-fg-body">
+        套题进行中 · 第 {session.index + 1} / {session.entries.length} 篇
+        {current ? ` · ${current.title}` : ""}
+      </p>
+      <div className="flex gap-2">
+        {current ? (
+          <Link
+            href={practiceHref(current.examId, "suite")}
+            className={BUTTON_PRIMARY}
           >
-            放弃
-          </button>
-        </div>
+            继续
+          </Link>
+        ) : null}
+        <button type="button" onClick={onDismiss} className={BUTTON_SECONDARY}>
+          放弃
+        </button>
       </div>
-    </Card>
+    </section>
   );
 }

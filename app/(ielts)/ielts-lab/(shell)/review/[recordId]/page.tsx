@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AttemptReview } from "@/components/ielts/review/AttemptReview";
 
 export const metadata: Metadata = {
-  title: "逐题回顾 · 雅思实验室",
+  title: "逐题回顾 · IELTS Lab",
   description: "查看一次练习的逐题结果、正确答案与解析定位。",
 };
 

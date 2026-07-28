@@ -29,8 +29,18 @@ import type {
   ExamProgress,
   ExamSummary,
 } from "@/lib/ielts/types";
-import { StatusChip } from "@/components/ui/StatusChip";
-import { Badge, EmptyNote } from "./ui";
+import {
+  BUTTON_PRIMARY,
+  BUTTON_QUIET,
+  Chip,
+  EmptyNote,
+  FIELD,
+  PageHeader,
+  StatusDot,
+  Tag,
+  accuracyText,
+  splitTitle,
+} from "./ui";
 
 const FREQUENCIES: ExamFrequency[] = ["high", "medium", "low"];
 const SORT_KEYS: SortKey[] = ["default", "frequency", "difficulty", "title"];
@@ -45,9 +55,9 @@ const PROGRESS_LABELS: Record<ProgressFilter, string> = {
 /**
  * Browse state, mirrored to sessionStorage.
  *
- * The source project keeps filters and list position when a learner leaves the
- * catalog and comes back; losing them turns "check one thing in my history"
- * into "set up the same four filters again".
+ * Filters and list position survive leaving the catalog and coming back;
+ * losing them turns "check one thing in my history" into "set up the same four
+ * filters again".
  */
 const BROWSE_STATE_KEY = "stage.ielts.browse";
 
@@ -75,32 +85,17 @@ function readBrowseState(): BrowseState | null {
   }
 }
 
-function Chip({
-  active,
-  onClick,
-  children,
+export function ExamCatalog({
+  exams,
+  /**
+   * Question-type labels per exam id, resolved on the server (the type index
+   * is 26KB and the client only needs the words).
+   */
+  typeLabels = {},
 }: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
+  exams: ExamSummary[];
+  typeLabels?: Record<string, string[]>;
 }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={`rounded-full border px-3 py-1 text-sm transition-colors ${
-        active
-          ? "border-stage-primary bg-stage-primary text-white"
-          : "border-stage-border text-stage-fg-muted hover:border-stage-primary hover:text-stage-fg"
-      }`}
-    >
-      {children}
-    </button>
-  );
-}
-
-export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category");
@@ -111,7 +106,7 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
   );
   // Wrong-answer counts of each exam's latest attempt, and any in-flight
   // drafts: together these turn the old binary "practised" dot into the
-  // four-state card semantics.
+  // four-state row semantics.
   const [wrongIndex, setWrongIndex] = useState<Map<string, number>>(
     () => new Map(),
   );
@@ -127,7 +122,7 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
     setDraftIds(new Set(loadDrafts().keys()));
 
     const saved = readBrowseState();
-    // An explicit ?category= (the overview's category cards) is a deliberate
+    // An explicit ?category= (the overview's Part links) is a deliberate
     // request and outranks whatever the learner last had selected.
     const fromUrl = CATEGORIES.find((value) => value === categoryParam);
     setState({
@@ -187,14 +182,6 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
     [exams, activeFilters],
   );
 
-  // Corpus position, so the ordinal on a card is stable under filtering and
-  // sorting — it identifies the passage rather than its place in this list.
-  const ordinals = useMemo(() => {
-    const map = new Map<string, number>();
-    exams.forEach((exam, index) => map.set(exam.id, index + 1));
-    return map;
-  }, [exams]);
-
   const isFiltered =
     state.search !== "" ||
     state.category !== "all" ||
@@ -208,24 +195,22 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
 
   return (
     <div>
-      <header className="mb-6 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-semibold">题库浏览</h1>
-          <p className="mt-1 text-sm text-stage-fg-muted">
-            共 {exams.length} 篇 · 已练习 {practisedIds.size} 篇
-          </p>
-        </div>
-        <button
-          type="button"
-          onClick={practiseRandom}
-          disabled={visible.length === 0}
-          className="rounded-stage-md bg-stage-primary px-4 py-2 text-sm font-medium text-stage-fg-on-dark transition-colors hover:bg-stage-primary-hover disabled:opacity-50"
-        >
-          从结果中随机练习
-        </button>
-      </header>
+      <PageHeader
+        title="题库"
+        subtitle={`共 ${exams.length} 篇 · 已练习 ${practisedIds.size} 篇`}
+        actions={
+          <button
+            type="button"
+            onClick={practiseRandom}
+            disabled={visible.length === 0}
+            className={BUTTON_PRIMARY}
+          >
+            从结果中随机练习
+          </button>
+        }
+      />
 
-      <div className="mb-6 space-y-3">
+      <div className="mb-5 space-y-3">
         <div className="flex flex-wrap gap-2">
           <input
             type="search"
@@ -233,11 +218,11 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
             onChange={(event) =>
               setState((prev) => ({ ...prev, search: event.target.value }))
             }
-            placeholder="搜索标题…"
-            aria-label="搜索题目标题"
-            className="min-w-0 flex-1 rounded-stage-md border border-stage-border bg-stage-bg px-4 py-2 text-sm outline-none focus:border-stage-primary"
+            placeholder="搜索题目"
+            aria-label="搜索题目"
+            className={`min-w-0 flex-1 ${FIELD}`}
           />
-          <label className="flex items-center gap-2 text-sm text-stage-fg-muted">
+          <label className="flex items-center gap-2 text-stage-xs text-stage-fg-muted">
             <span className="sr-only sm:not-sr-only">排序</span>
             <select
               value={state.sort}
@@ -248,7 +233,7 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
                 }))
               }
               aria-label="排序方式"
-              className="rounded-stage-md border border-stage-border bg-stage-bg px-3 py-2 text-sm text-stage-fg outline-none focus:border-stage-primary"
+              className={FIELD}
             >
               {SORT_KEYS.map((key) => (
                 <option key={key} value={key}>
@@ -275,7 +260,7 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
               {value} {categoryCounts.get(value) ?? 0}
             </Chip>
           ))}
-          <span className="mx-1 w-px bg-stage-border" aria-hidden />
+          <span className="mx-1 w-px self-stretch bg-stage-border" aria-hidden />
           <Chip
             active={state.frequency === "all"}
             onClick={() => setState((prev) => ({ ...prev, frequency: "all" }))}
@@ -291,7 +276,7 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
               {FREQUENCY_LABELS[value]} {frequencyCounts.get(value) ?? 0}
             </Chip>
           ))}
-          <span className="mx-1 w-px bg-stage-border" aria-hidden />
+          <span className="mx-1 w-px self-stretch bg-stage-border" aria-hidden />
           {(Object.keys(PROGRESS_LABELS) as ProgressFilter[]).map((value) => (
             <Chip
               key={value}
@@ -306,14 +291,16 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
       </div>
 
       <div className="mb-3 flex items-center justify-between gap-3">
-        <p className="text-sm text-stage-fg-muted">匹配 {visible.length} 篇</p>
+        <p className="text-stage-xs text-stage-fg-muted">
+          匹配 {visible.length} 篇
+        </p>
         {isFiltered ? (
           <button
             type="button"
             onClick={() =>
               setState((prev) => ({ ...INITIAL_STATE, sort: prev.sort }))
             }
-            className="text-sm text-stage-fg-muted underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
+            className={BUTTON_QUIET}
           >
             清除筛选
           </button>
@@ -323,12 +310,15 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
       {visible.length === 0 ? (
         <EmptyNote>没有符合条件的文章，试试调整筛选条件。</EmptyNote>
       ) : (
-        <ul className="grid gap-3 sm:grid-cols-2">
+        <ul className="overflow-hidden rounded-stage-lg border border-stage-border">
           {visible.map((exam) => (
-            <li key={exam.id}>
-              <ExamCard
+            <li
+              key={exam.id}
+              className="border-b border-stage-border last:border-b-0"
+            >
+              <ExamRow
                 exam={exam}
-                ordinal={ordinals.get(exam.id) ?? 0}
+                types={typeLabels[exam.id] ?? []}
                 progress={progress.get(exam.id)}
                 status={examStatus(
                   progress.get(exam.id),
@@ -347,78 +337,110 @@ export function ExamCatalog({ exams }: { exams: ExamSummary[] }) {
   );
 }
 
-function ExamCard({
+/**
+ * One catalog row (master-spec 批次二 §2).
+ *
+ * Columns: title (English main + Chinese subtitle) · Part · question type ·
+ * my accuracy · status dot · enter arrow. There is deliberately no
+ * cohort-average column — ruling C4 removed it, because STAGE has no telemetry
+ * and an editor-typed figure would violate its provenance rule.
+ *
+ * The whole row is clickable via a stretched link on the title, so the
+ * secondary "回顾上次" link can sit inside the row without nesting anchors.
+ */
+function ExamRow({
   exam,
-  ordinal,
+  types,
   progress,
   status,
   wrongCount,
 }: {
   exam: ExamSummary;
-  ordinal: number;
+  types: string[];
   progress?: ExamProgress;
   status: ExamStatus;
   wrongCount: number;
 }) {
-  const meta = (
+  const { en, zh } = splitTitle(exam.title);
+  const shownTypes = types.slice(0, 2);
+  const extraTypes = types.length - shownTypes.length;
+
+  const identity = (
     <>
-      <div className="mb-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-stage-fg-muted">
-        <span className="tabular-nums">{ordinal}</span>
-        <span className="rounded bg-stage-bg-soft px-1.5 py-0.5 font-medium">
-          {exam.category}
-        </span>
-        <span>{FREQUENCY_LABELS[exam.frequency]}</span>
-        {exam.difficultyScore !== undefined ? (
-          <span>难度 {exam.difficultyScore}</span>
-        ) : null}
-        {exam.hasExplanation ? <span>· 含解析</span> : null}
-      </div>
-      {/* Three-state semantics replace the old binary "practised" dot: the
-          card now says which of unstarted / in-progress / done / has-errors
-          it is, in words as well as colour. */}
-      <div className="mb-1.5">
-        <StatusChip
-          surface="app"
-          state={status}
-          count={status === "completed_with_errors" ? wrongCount : undefined}
-        />
-      </div>
-      <p className="text-sm font-medium leading-snug">{exam.title}</p>
+      <p className="truncate text-stage-xs font-medium text-stage-fg">{en}</p>
+      {zh ? (
+        <p className="truncate text-stage-2xs text-stage-fg-subtle">{zh}</p>
+      ) : null}
     </>
+  );
+
+  const tags = (
+    <div className="flex shrink-0 flex-wrap items-center gap-1.5">
+      <Tag>{exam.category}</Tag>
+      {shownTypes.map((type) => (
+        <Tag key={type}>{type}</Tag>
+      ))}
+      {extraTypes > 0 ? <Tag>+{extraTypes}</Tag> : null}
+      <span className="text-stage-2xs text-stage-fg-subtle">
+        {FREQUENCY_LABELS[exam.frequency]}
+        {exam.difficultyScore !== undefined
+          ? ` · 难度 ${exam.difficultyScore}`
+          : ""}
+      </span>
+    </div>
   );
 
   if (!exam.interactive) {
     return (
-      <div className="h-full rounded-stage-md border border-dashed border-stage-border p-4 opacity-60">
-        {meta}
-        <p className="mt-2 text-xs text-stage-fg-muted">暂无交互版本</p>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 bg-stage-bg-soft px-4 py-3">
+        <div className="min-w-0 flex-1 opacity-70">{identity}</div>
+        {tags}
+        <span className="text-stage-2xs text-stage-fg-subtle">暂无交互版本</span>
       </div>
     );
   }
 
   return (
-    <div className="flex h-full flex-col rounded-stage-md border border-stage-border p-4 transition-colors hover:border-stage-primary">
-      <Link href={practiceHref(exam.id)} className="flex-1">
-        {meta}
-        <span className="sr-only">
-          {progress ? "已练习，开始新的一次练习" : "开始练习"}
-        </span>
-      </Link>
+    <div className="relative flex flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3 transition-colors duration-stage-fast hover:bg-stage-bg-soft">
+      <div className="min-w-0 flex-1">
+        <Link
+          href={practiceHref(exam.id)}
+          className="after:absolute after:inset-0 after:content-['']"
+        >
+          {identity}
+          <span className="sr-only">
+            {progress ? "已练习，开始新的一次练习" : "开始练习"}
+          </span>
+        </Link>
+      </div>
 
-      {progress ? (
-        <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-stage-border pt-2 text-xs">
-          <Badge tone={progress.bestAccuracy >= 0.75 ? "positive" : "warning"}>
-            最佳 {Math.round(progress.bestAccuracy * 100)}%
-          </Badge>
-          <span className="text-stage-fg-muted">练习 {progress.attempts} 次</span>
+      {tags}
+
+      {/* Accuracy of the latest attempt. "—" when unpractised: absent data is
+          not a zero score. */}
+      <div className="flex shrink-0 items-center gap-4">
+        <span className="w-14 text-right text-stage-xs font-semibold tabular-nums text-stage-fg">
+          <span className="sr-only">我的正确率 </span>
+          {accuracyText(progress?.lastAccuracy ?? null)}
+        </span>
+        <span className="w-20">
+          <StatusDot
+            status={status}
+            count={status === "completed_with_errors" ? wrongCount : undefined}
+          />
+        </span>
+        {progress ? (
           <Link
             href={reviewHref(exam.id, progress.lastRecordId)}
-            className="ml-auto text-stage-fg-muted underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
+            className={`relative ${BUTTON_QUIET}`}
           >
             回顾上次
           </Link>
-        </div>
-      ) : null}
+        ) : null}
+        <span aria-hidden className="text-stage-fg-subtle">
+          →
+        </span>
+      </div>
     </div>
   );
 }

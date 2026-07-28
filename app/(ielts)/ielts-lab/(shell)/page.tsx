@@ -3,8 +3,8 @@ import { LabOverview } from "@/components/ielts/LabOverview";
 import { getAllExams } from "@/lib/ielts/catalog";
 
 export const metadata: Metadata = {
-  title: "雅思实验室 · STAGE",
-  description: "STAGE 雅思实验室：完整还原考试环境的雅思阅读练习平台。",
+  title: "学习总览 · IELTS Lab",
+  description: "STAGE IELTS Lab：完整还原考试环境的雅思阅读练习平台。",
 };
 
 export default function IeltsLabPage() {

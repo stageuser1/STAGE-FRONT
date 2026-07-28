@@ -22,7 +22,17 @@ import {
   type WrongbookFilters,
   type WrongbookSort,
 } from "@/lib/ielts/wrongbook";
-import { EmptyNote } from "./ui";
+import {
+  BUTTON_QUIET,
+  BUTTON_SECONDARY,
+  Chip,
+  EmptyNote,
+  FIELD,
+  PageHeader,
+  Tag,
+  accuracyText,
+  splitTitle,
+} from "./ui";
 
 const FREQUENCIES: ExamFrequency[] = ["high", "medium", "low"];
 
@@ -56,37 +66,13 @@ function readFilters(): WrongbookFilters | null {
   }
 }
 
-function Chip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={`rounded-full border px-3 py-1 text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stage-primary ${
-        active
-          ? "border-stage-primary bg-stage-primary text-white"
-          : "border-stage-border text-stage-fg-muted hover:border-stage-primary hover:text-stage-fg"
-      }`}
-    >
-      {children}
-    </button>
-  );
-}
-
 /**
  * Derived remediation queue (P-10).
  *
  * Nothing here is stored: the list is recomputed from practice history on every
  * render, so redoing a passage successfully removes it with no "resolved" flag
- * to drift out of step with the attempts themselves.
+ * to drift out of step with the attempts themselves. T3 restyled this surface
+ * and changed none of that.
  */
 export function Wrongbook({ exams }: { exams: ExamSummary[] }) {
   const [records, setRecords] = useState<PracticeRecord[] | null>(null);
@@ -149,17 +135,15 @@ export function Wrongbook({ exams }: { exams: ExamSummary[] }) {
     filters.questionType !== "all";
 
   if (records === null) {
-    return <p className="py-8 text-sm text-stage-fg-muted">加载错题本…</p>;
+    return <p className="py-8 text-stage-xs text-stage-fg-muted">加载错题本…</p>;
   }
 
   return (
     <div>
-      <header className="mb-5">
-        <h1 className="text-2xl font-semibold">错题本</h1>
-        <p className="mt-1 text-sm text-stage-fg-muted">
-          规则：每篇文章只看最近一次作答，其中还有错题的会出现在这里；重做全对后自动移出。
-        </p>
-      </header>
+      <PageHeader
+        title="错题本"
+        subtitle="规则：每篇文章只看最近一次作答，其中还有错题的会出现在这里；重做全对后自动移出。"
+      />
 
       {allEntries.length === 0 ? (
         records.length === 0 ? (
@@ -168,30 +152,21 @@ export function Wrongbook({ exams }: { exams: ExamSummary[] }) {
               还没有练习记录。完成一篇阅读后，这里会自动收集错题。
             </EmptyNote>
             <div className="mt-4">
-              <Link
-                href="/ielts-lab/browse"
-                className="rounded-stage-md border border-stage-border px-3 py-1.5 text-sm text-stage-fg-muted transition-colors hover:border-stage-primary hover:text-stage-fg"
-              >
+              <Link href="/ielts-lab/browse" className={BUTTON_SECONDARY}>
                 去题库
               </Link>
             </div>
           </>
         ) : (
           <>
-            <EmptyNote>
-              最近一次作答里没有错题 🎉 继续保持。
-            </EmptyNote>
+            {/* Celebratory, deliberately: an empty wrongbook is the goal
+                state, not an absence of data. */}
+            <EmptyNote>最近一次作答里没有错题 🎉 继续保持。</EmptyNote>
             <div className="mt-4 flex flex-wrap gap-2">
-              <Link
-                href="/ielts-lab/browse"
-                className="rounded-stage-md border border-stage-border px-3 py-1.5 text-sm text-stage-fg-muted transition-colors hover:border-stage-primary hover:text-stage-fg"
-              >
+              <Link href="/ielts-lab/browse" className={BUTTON_SECONDARY}>
                 继续练习
               </Link>
-              <Link
-                href="/ielts-lab/suite"
-                className="rounded-stage-md border border-stage-border px-3 py-1.5 text-sm text-stage-fg-muted transition-colors hover:border-stage-primary hover:text-stage-fg"
-              >
+              <Link href="/ielts-lab/suite" className={BUTTON_SECONDARY}>
                 来一套套题
               </Link>
             </div>
@@ -207,11 +182,11 @@ export function Wrongbook({ exams }: { exams: ExamSummary[] }) {
                 onChange={(event) =>
                   setFilters((prev) => ({ ...prev, search: event.target.value }))
                 }
-                placeholder="搜索标题…"
+                placeholder="搜索题目"
                 aria-label="搜索错题文章标题"
-                className="min-w-0 flex-1 rounded-stage-md border border-stage-border bg-stage-bg px-4 py-2 text-sm outline-none focus:border-stage-primary"
+                className={`min-w-0 flex-1 ${FIELD}`}
               />
-              <label className="flex items-center gap-2 text-sm text-stage-fg-muted">
+              <label className="flex items-center gap-2 text-stage-xs text-stage-fg-muted">
                 <span className="sr-only sm:not-sr-only">排序</span>
                 <select
                   value={filters.sort}
@@ -222,7 +197,7 @@ export function Wrongbook({ exams }: { exams: ExamSummary[] }) {
                     }))
                   }
                   aria-label="错题排序方式"
-                  className="rounded-stage-md border border-stage-border bg-stage-bg px-3 py-2 text-sm outline-none focus:border-stage-primary"
+                  className={FIELD}
                 >
                   {(Object.keys(SORT_LABELS) as WrongbookSort[]).map((key) => (
                     <option key={key} value={key}>
@@ -253,7 +228,10 @@ export function Wrongbook({ exams }: { exams: ExamSummary[] }) {
                   {value} {categoryCount(value)}
                 </Chip>
               ))}
-              <span className="mx-1 w-px self-stretch bg-stage-border" aria-hidden />
+              <span
+                className="mx-1 w-px self-stretch bg-stage-border"
+                aria-hidden
+              />
               <Chip
                 active={filters.frequency === "all"}
                 onClick={() =>
@@ -301,7 +279,7 @@ export function Wrongbook({ exams }: { exams: ExamSummary[] }) {
           </div>
 
           <div className="mb-3 flex items-center justify-between gap-3">
-            <p className="text-sm text-stage-fg-muted" aria-live="polite">
+            <p className="text-stage-xs text-stage-fg-muted" aria-live="polite">
               共 {entries.length} 篇 · {wrongQuestionCount(entries)} 道错题
             </p>
             {isFiltered ? (
@@ -313,7 +291,7 @@ export function Wrongbook({ exams }: { exams: ExamSummary[] }) {
                     sort: prev.sort,
                   }))
                 }
-                className="text-sm text-stage-fg-muted underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
+                className={BUTTON_QUIET}
               >
                 清除筛选
               </button>
@@ -341,52 +319,55 @@ function WrongbookRow({ entry }: { entry: WrongbookEntry }) {
   // Reveal is per-visit and per-question, exactly as on the review page:
   // the wrongbook is for reviewing, not for reading off answers.
   const [revealed, setRevealed] = useState<ReadonlySet<string>>(new Set());
+  const { en, zh } = splitTitle(entry.title);
 
   return (
-    <div className="rounded-stage-md border border-stage-border">
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 pt-3">
-        <span className="rounded bg-stage-bg-soft px-1.5 py-0.5 text-xs font-medium">
-          {entry.category || "—"}
-        </span>
-        {entry.frequency ? (
-          <span className="text-xs text-stage-fg-muted">
-            {FREQUENCY_LABELS[entry.frequency as ExamFrequency]}
+    <div className="rounded-stage-lg border border-stage-border bg-stage-bg">
+      <div className="flex flex-wrap items-start gap-x-3 gap-y-1 px-4 pt-3.5">
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-stage-xs font-medium text-stage-fg">
+            {en}
+          </p>
+          {zh ? (
+            <p className="truncate text-stage-2xs text-stage-fg-subtle">{zh}</p>
+          ) : null}
+        </div>
+        <div className="flex shrink-0 items-center gap-2">
+          <Tag>{entry.category || "—"}</Tag>
+          {entry.frequency ? (
+            <span className="text-stage-2xs text-stage-fg-subtle">
+              {FREQUENCY_LABELS[entry.frequency as ExamFrequency]}
+            </span>
+          ) : null}
+          <span className="text-stage-xs font-semibold tabular-nums text-stage-warning">
+            {entry.wrongCount} 错 / {entry.totalQuestions}
           </span>
-        ) : null}
-        <p className="min-w-0 flex-1 truncate text-sm font-medium">
-          {entry.title}
-        </p>
-        <span className="shrink-0 text-sm font-semibold tabular-nums text-amber-700">
-          {entry.wrongCount} 错 / {entry.totalQuestions}
-        </span>
+        </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-3 px-4 pb-2 pt-1.5 text-xs text-stage-fg-muted">
-        <span>
+      <div className="flex flex-wrap items-center gap-3 px-4 pb-2.5 pt-2 text-stage-2xs text-stage-fg-subtle">
+        <span className="tabular-nums">
           最近作答 {new Date(entry.latestAttemptAt).toLocaleDateString("zh-CN")} ·{" "}
-          {Math.round(entry.latestAccuracy * 100)}%
+          {accuracyText(entry.latestAccuracy)}
         </span>
-        <span>练习 {entry.attempts} 次</span>
+        <span className="tabular-nums">练习 {entry.attempts} 次</span>
         <Link
           href={`/ielts-lab/review/${entry.latestRecordId}`}
-          className="underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
+          className={BUTTON_QUIET}
         >
           逐题回顾
         </Link>
         {entry.orphaned ? (
-          <span className="text-amber-700">题库中已无此篇</span>
+          <span className="text-stage-warning">题库中已无此篇</span>
         ) : (
-          <a
-            href={practiceHref(entry.examId)}
-            className="underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
-          >
+          <a href={practiceHref(entry.examId)} className={BUTTON_QUIET}>
             重做
           </a>
         )}
       </div>
 
       <details className="group border-t border-stage-border">
-        <summary className="cursor-pointer px-4 py-2 text-xs text-stage-fg-muted [&::-webkit-details-marker]:hidden">
+        <summary className="cursor-pointer px-4 py-2 text-stage-2xs text-stage-fg-muted [&::-webkit-details-marker]:hidden">
           <span className="group-open:hidden">展开 {entry.wrongCount} 道错题 ▾</span>
           <span className="hidden group-open:inline">收起错题 ▴</span>
         </summary>
@@ -396,22 +377,20 @@ function WrongbookRow({ entry }: { entry: WrongbookEntry }) {
             return (
               <li
                 key={question.questionId}
-                className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-stage-border px-4 py-2 text-xs last:border-b-0"
+                className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-stage-border px-4 py-2 text-stage-2xs last:border-b-0"
               >
-                <span className="w-10 shrink-0 tabular-nums text-stage-fg-muted">
+                <span className="w-9 shrink-0 tabular-nums text-stage-fg-subtle">
                   {question.questionId.replace(/\D+/g, "") ||
                     question.questionId}
                 </span>
                 {question.questionType ? (
-                  <span className="rounded bg-stage-bg-soft px-1.5 py-0.5 text-stage-fg-muted">
-                    {questionTypeLabel(question.questionType)}
-                  </span>
+                  <Tag>{questionTypeLabel(question.questionType)}</Tag>
                 ) : null}
-                <span className="min-w-0 flex-1">
+                <span className="min-w-0 flex-1 text-stage-fg-body">
                   我的作答 {answerText(question.userAnswer)}
                 </span>
                 {isRevealed ? (
-                  <span className="font-medium">
+                  <span className="font-medium text-stage-fg">
                     正确 {answerText(question.correctAnswer)}
                   </span>
                 ) : (
@@ -423,7 +402,7 @@ function WrongbookRow({ entry }: { entry: WrongbookEntry }) {
                       )
                     }
                     aria-label={`显示第 ${question.questionId} 题的正确答案`}
-                    className="rounded-stage-sm border border-stage-border px-2 py-0.5 text-stage-fg-muted transition-colors hover:border-stage-primary hover:text-stage-fg"
+                    className="rounded-stage-sm border border-stage-border px-2 py-0.5 text-stage-fg-muted transition-colors duration-stage-fast hover:border-stage-primary hover:text-stage-fg"
                   >
                     <span aria-hidden className="tracking-widest">
                       ●●●

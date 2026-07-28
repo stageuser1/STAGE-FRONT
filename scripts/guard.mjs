@@ -129,61 +129,8 @@ const WHITELIST = [
   // T1 removed every band-estimate waiver that used to sit here: the system is
   // gone from the code, so the rule now applies unwaived (Plan §5-T1).
 
-  // --- "雅思实验室" naming. Unified to "IELTS Lab" by T3 (Plan §2.3). ---
-  {
-    rule: "lab-words",
-    file: "components/ielts/LabNav.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
-  {
-    rule: "lab-words",
-    file: "components/ielts/LabOverview.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
-  {
-    rule: "lab-words",
-    file: "app/(ielts)/ielts-lab/(shell)/page.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
-  {
-    rule: "lab-words",
-    file: "app/(ielts)/ielts-lab/(shell)/browse/page.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
-  {
-    rule: "lab-words",
-    file: "app/(ielts)/ielts-lab/(shell)/history/page.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
-  {
-    rule: "lab-words",
-    file: "app/(ielts)/ielts-lab/(shell)/mistakes/page.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
-  {
-    rule: "lab-words",
-    file: "app/(ielts)/ielts-lab/(shell)/suite/page.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
-  {
-    rule: "lab-words",
-    file: "app/(ielts)/ielts-lab/(shell)/review/[recordId]/page.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
-  {
-    rule: "lab-words",
-    file: "app/(ielts)/ielts-lab/practice/[examId]/page.tsx",
-    term: "雅思实验室",
-    stage: "T3",
-  },
+  // T3 removed the nine "雅思实验室" waivers that used to sit here: every Lab
+  // surface now says "IELTS Lab", so the rule applies unwaived (Plan §5-T3).
 
   // --- competitor names in pre-existing research notes. No stage owns these;
   // they are analysis scratch that predates the program. See the T0 report. ---

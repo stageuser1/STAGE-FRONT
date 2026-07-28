@@ -22,7 +22,7 @@ export async function generateMetadata({
   const { examId } = await params;
   const exam = getExamById(examId);
   return {
-    title: exam ? `${exam.title} · 雅思实验室` : "雅思实验室 · STAGE",
+    title: exam ? `${exam.title} · IELTS Lab` : "IELTS Lab · STAGE",
   };
 }
 

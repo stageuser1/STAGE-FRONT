@@ -25,10 +25,24 @@ import type {
   ExamCategory,
   PracticeRecord,
 } from "@/lib/ielts/types";
-import { Badge, EmptyNote, StatTile, Tabs } from "./ui";
+import {
+  BUTTON_QUIET,
+  BUTTON_SECONDARY,
+  Badge,
+  Chip,
+  ConfirmButton,
+  EmptyNote,
+  FIELD,
+  PageHeader,
+  StatTile,
+  Tabs,
+  Tag,
+  accuracyText,
+  splitTitle,
+} from "./ui";
 
 /**
- * Charts are a route-level minority: the default tab is the record list, and
+ * Charts are a route-level minority: the default tab is the timeline, and
  * Recharts is by far the heaviest thing IELTS Lab depends on. Loading it only
  * when the analytics tab is opened keeps the history page's first load close
  * to what it was before this module existed.
@@ -38,15 +52,15 @@ const PracticeAnalytics = dynamic(
   {
     ssr: false,
     loading: () => (
-      <p className="px-4 py-8 text-sm text-stage-fg-muted">加载图表…</p>
+      <p className="px-4 py-8 text-stage-xs text-stage-fg-muted">加载图表…</p>
     ),
   },
 );
 
-type View = "records" | "analytics";
+type View = "timeline" | "analytics";
 
 const VIEWS = [
-  { value: "records" as const, label: "练习记录" },
+  { value: "timeline" as const, label: "时间线" },
   { value: "analytics" as const, label: "数据分析" },
 ];
 
@@ -83,15 +97,79 @@ const SORT_LABELS: Record<SortKey, string> = {
   "duration-desc": "用时从长到短",
 };
 
+/**
+ * Timeline event kinds (master-spec 批次二 学习记录页).
+ *
+ * Derived from the records themselves, never stored: an attempt on a passage
+ * that already has an earlier attempt IS a retest, and saying so needs no new
+ * field. A "复盘" event has no source in the storage contract — opening a
+ * review writes nothing — so it is not invented here; see the T3 report.
+ */
+type EventKind = "practice" | "retest";
+
+const EVENT_LABELS: Record<EventKind, string> = {
+  practice: "练习",
+  retest: "重测",
+};
+
+/** Distinct glyph per kind, so the row is not distinguished by colour alone. */
+const EVENT_GLYPHS: Record<EventKind, string> = {
+  practice: "◆",
+  retest: "↻",
+};
+
+interface TimelineEvent {
+  record: PracticeRecord;
+  kind: EventKind;
+  /** Accuracy of the previous attempt on the same passage, for a retest. */
+  previousAccuracy: number | null;
+}
+
+/**
+ * Classifies every record against the attempts that came before it.
+ *
+ * Records arrive newest-first, so the pass walks them oldest-first and keeps
+ * the last accuracy seen per exam.
+ */
+function buildEvents(records: PracticeRecord[]): Map<string, TimelineEvent> {
+  const events = new Map<string, TimelineEvent>();
+  const lastSeen = new Map<string, number>();
+
+  for (let i = records.length - 1; i >= 0; i -= 1) {
+    const record = records[i];
+    const previous = lastSeen.get(record.examId);
+    events.set(record.id, {
+      record,
+      kind: previous === undefined ? "practice" : "retest",
+      previousAccuracy: previous ?? null,
+    });
+    lastSeen.set(record.examId, record.accuracy);
+  }
+  return events;
+}
+
 function formatDuration(seconds: number): string {
   const total = Math.max(0, Math.round(seconds));
   const minutes = Math.floor(total / 60);
   return `${minutes}:${String(total % 60).padStart(2, "0")}`;
 }
 
-function formatDate(iso: string): string {
+function dayKey(iso: string): string {
   const date = new Date(iso);
-  return Number.isNaN(date.getTime()) ? "—" : date.toLocaleString("zh-CN");
+  return Number.isNaN(date.getTime())
+    ? "—"
+    : date.toLocaleDateString("zh-CN", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+}
+
+function formatTime(iso: string): string {
+  const date = new Date(iso);
+  return Number.isNaN(date.getTime())
+    ? "—"
+    : date.toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
 }
 
 function answerText(value: string | string[] | undefined): string {
@@ -100,13 +178,10 @@ function answerText(value: string | string[] | undefined): string {
   return text.length > 0 ? text : "（未作答）";
 }
 
-const TOOLBAR_BUTTON =
-  "rounded-stage-md border border-stage-border px-3 py-1.5 text-sm text-stage-fg-muted transition-colors hover:border-stage-primary hover:text-stage-fg";
-
 export function PracticeHistory() {
   // Records live in localStorage, so they can only be read after mount.
   const [records, setRecords] = useState<PracticeRecord[] | null>(null);
-  const [view, setView] = useState<View>("records");
+  const [view, setView] = useState<View>("timeline");
   const [category, setCategory] = useState<ExamCategory | "all">("all");
   const [band, setBand] = useState<Band>("all");
   const [sort, setSort] = useState<SortKey>("recent");
@@ -122,6 +197,11 @@ export function PracticeHistory() {
   // "average accuracy" would silently answer a different question.
   const stats = useMemo(
     () => (records ? computeStats(records) : null),
+    [records],
+  );
+
+  const events = useMemo(
+    () => buildEvents(records ?? []),
     [records],
   );
 
@@ -149,6 +229,18 @@ export function PracticeHistory() {
     return sorted;
   }, [records, category, band, sort]);
 
+  /** Visible records grouped by calendar day, in the current sort order. */
+  const groups = useMemo(() => {
+    const byDay: Array<{ day: string; records: PracticeRecord[] }> = [];
+    for (const record of visible) {
+      const day = dayKey(record.createdAt);
+      const last = byDay[byDay.length - 1];
+      if (last && last.day === day) last.records.push(record);
+      else byDay.push({ day, records: [record] });
+    }
+    return byDay;
+  }, [visible]);
+
   function applyRecords(next: PracticeRecord[]) {
     setRecords(next);
     setSelection(new Set());
@@ -165,9 +257,9 @@ export function PracticeHistory() {
 
   function removeSelected() {
     if (selection.size === 0) return;
-    if (!window.confirm(`确定要删除选中的 ${selection.size} 条记录吗？`)) return;
+    const count = selection.size;
     applyRecords(deleteRecords([...selection]));
-    setNotice(`已删除 ${selection.size} 条记录。`);
+    setNotice(`已删除 ${count} 条记录。`);
   }
 
   async function handleImport(file: File) {
@@ -183,29 +275,27 @@ export function PracticeHistory() {
   }
 
   if (records === null) {
-    return <p className="py-8 text-sm text-stage-fg-muted">加载练习记录…</p>;
+    return <p className="py-8 text-stage-xs text-stage-fg-muted">加载练习记录…</p>;
   }
 
   return (
     <div>
-      <header className="mb-6">
-        <h1 className="text-2xl font-semibold">练习记录</h1>
-        <p className="mt-1 text-sm text-stage-fg-muted">
-          记录保存在本机浏览器中，可导出备份或迁移到其他设备
-        </p>
-      </header>
+      <PageHeader
+        title="练习记录"
+        subtitle="记录保存在本机浏览器中，可导出备份或迁移到其他设备"
+      />
 
       {records.length === 0 || !stats ? (
         <>
           <EmptyNote>还没有练习记录。完成一篇阅读后会自动保存。</EmptyNote>
           <div className="mt-4 flex flex-wrap gap-2">
-            <Link href="/ielts-lab/browse" className={TOOLBAR_BUTTON}>
+            <Link href="/ielts-lab/browse" className={BUTTON_SECONDARY}>
               去题库
             </Link>
             <ImportButton inputRef={fileRef} onFile={handleImport} />
           </div>
           {notice ? (
-            <p className="mt-3 text-sm text-stage-fg-muted">{notice}</p>
+            <p className="mt-3 text-stage-xs text-stage-fg-muted">{notice}</p>
           ) : null}
         </>
       ) : (
@@ -218,7 +308,7 @@ export function PracticeHistory() {
             />
             <StatTile
               label="平均正确率"
-              value={`${Math.round(stats.averageAccuracy * 100)}%`}
+              value={accuracyText(stats.averageAccuracy)}
             />
             <StatTile
               label="学习时长"
@@ -232,8 +322,13 @@ export function PracticeHistory() {
           </dl>
 
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-            <Tabs value={view} onChange={setView} options={VIEWS} />
-            {view === "records" ? (
+            <Tabs
+              value={view}
+              onChange={setView}
+              options={VIEWS}
+              label="练习记录视图"
+            />
+            {view === "timeline" ? (
               <div className="flex flex-wrap gap-2">
                 <button
                   type="button"
@@ -244,7 +339,7 @@ export function PracticeHistory() {
                       "text/markdown",
                     )
                   }
-                  className={TOOLBAR_BUTTON}
+                  className={BUTTON_SECONDARY}
                 >
                   导出 Markdown
                 </button>
@@ -257,7 +352,7 @@ export function PracticeHistory() {
                       "application/json",
                     )
                   }
-                  className={TOOLBAR_BUTTON}
+                  className={BUTTON_SECONDARY}
                 >
                   导出 JSON
                 </button>
@@ -271,36 +366,39 @@ export function PracticeHistory() {
           ) : (
             <>
               <div className="mb-3 flex flex-wrap items-center gap-2">
-                <FilterChip
+                <Chip
                   active={category === "all"}
                   onClick={() => setCategory("all")}
                 >
                   全部分类
-                </FilterChip>
+                </Chip>
                 {CATEGORIES.map((value) => (
-                  <FilterChip
+                  <Chip
                     key={value}
                     active={category === value}
                     onClick={() => setCategory(value)}
                   >
                     {value}
-                  </FilterChip>
+                  </Chip>
                 ))}
-                <span className="mx-1 w-px self-stretch bg-stage-border" aria-hidden />
+                <span
+                  className="mx-1 w-px self-stretch bg-stage-border"
+                  aria-hidden
+                />
                 {(Object.keys(BAND_LABELS) as Band[]).map((value) => (
-                  <FilterChip
+                  <Chip
                     key={value}
                     active={band === value}
                     onClick={() => setBand(value)}
                   >
                     {BAND_LABELS[value]}
-                  </FilterChip>
+                  </Chip>
                 ))}
                 <select
                   value={sort}
                   onChange={(event) => setSort(event.target.value as SortKey)}
                   aria-label="记录排序方式"
-                  className="ml-auto rounded-stage-md border border-stage-border bg-stage-bg px-3 py-1.5 text-sm outline-none focus:border-stage-primary"
+                  className={`ml-auto ${FIELD}`}
                 >
                   {(Object.keys(SORT_LABELS) as SortKey[]).map((key) => (
                     <option key={key} value={key}>
@@ -310,22 +408,20 @@ export function PracticeHistory() {
                 </select>
               </div>
 
-              <div className="mb-3 flex flex-wrap items-center gap-3 text-sm text-stage-fg-muted">
+              <div className="mb-3 flex flex-wrap items-center gap-3 text-stage-xs text-stage-fg-muted">
                 <span>共 {visible.length} 条</span>
                 {selection.size > 0 ? (
                   <>
                     <span>已选 {selection.size} 条</span>
-                    <button
-                      type="button"
-                      onClick={removeSelected}
-                      className="text-red-600 underline-offset-2 hover:underline"
-                    >
-                      删除所选
-                    </button>
+                    <ConfirmButton
+                      label="删除所选"
+                      question={`删除选中的 ${selection.size} 条记录？`}
+                      onConfirm={removeSelected}
+                    />
                     <button
                       type="button"
                       onClick={() => setSelection(new Set())}
-                      className="underline-offset-2 hover:underline"
+                      className={BUTTON_QUIET}
                     >
                       取消选择
                     </button>
@@ -334,7 +430,7 @@ export function PracticeHistory() {
               </div>
 
               {notice ? (
-                <p className="mb-3 rounded-stage-md border border-stage-border bg-stage-bg-soft px-3 py-2 text-sm">
+                <p className="mb-3 rounded-stage-md border border-stage-border bg-stage-bg-soft px-3 py-2 text-stage-xs text-stage-fg-body">
                   {notice}
                 </p>
               ) : null}
@@ -342,68 +438,56 @@ export function PracticeHistory() {
               {visible.length === 0 ? (
                 <EmptyNote>没有符合条件的记录。</EmptyNote>
               ) : (
-                <ul className="space-y-2">
-                  {visible.map((record) => (
-                    <li key={record.id}>
-                      <RecordRow
-                        record={record}
-                        selected={selection.has(record.id)}
-                        onToggle={() => toggleSelected(record.id)}
-                        onDelete={() => {
-                          if (!window.confirm("确定要删除这条记录吗？")) return;
-                          applyRecords(deleteRecords([record.id]));
-                        }}
-                      />
-                    </li>
+                <div className="space-y-6">
+                  {groups.map((group) => (
+                    <section key={group.day}>
+                      <h2 className="mb-2 flex items-baseline gap-2 text-stage-xs font-medium text-stage-fg">
+                        {group.day}
+                        <span className="text-stage-2xs font-normal text-stage-fg-subtle">
+                          {group.records.length} 次
+                        </span>
+                      </h2>
+                      {/* The rule down the left is the timeline spine; each
+                          event hangs off it with its own glyph. */}
+                      <ul className="space-y-2 border-l border-stage-border pl-4">
+                        {group.records.map((record) => (
+                          <li key={record.id}>
+                            <EventRow
+                              event={
+                                events.get(record.id) ?? {
+                                  record,
+                                  kind: "practice",
+                                  previousAccuracy: null,
+                                }
+                              }
+                              selected={selection.has(record.id)}
+                              onToggle={() => toggleSelected(record.id)}
+                              onDelete={() =>
+                                applyRecords(deleteRecords([record.id]))
+                              }
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
                   ))}
-                </ul>
+                </div>
               )}
 
-              <button
-                type="button"
-                onClick={() => {
-                  if (
-                    !window.confirm("确定要清空全部练习记录吗？此操作无法撤销。")
-                  ) {
-                    return;
-                  }
+              <ConfirmButton
+                label="清空记录"
+                question="清空全部练习记录？此操作无法撤销。"
+                onConfirm={() => {
                   clearRecords();
                   applyRecords([]);
                 }}
-                className="mt-6 rounded-stage-md border border-stage-border px-3 py-1.5 text-sm text-stage-fg-muted transition-colors hover:border-red-500 hover:text-red-600"
-              >
-                清空记录
-              </button>
+                className={`mt-6 ${BUTTON_SECONDARY}`}
+              />
             </>
           )}
         </>
       )}
     </div>
-  );
-}
-
-function FilterChip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={`rounded-full border px-3 py-1 text-sm transition-colors ${
-        active
-          ? "border-stage-primary bg-stage-primary text-white"
-          : "border-stage-border text-stage-fg-muted hover:border-stage-primary hover:text-stage-fg"
-      }`}
-    >
-      {children}
-    </button>
   );
 }
 
@@ -425,7 +509,7 @@ function ImportButton({
       <button
         type="button"
         onClick={() => inputRef.current?.click()}
-        className={TOOLBAR_BUTTON}
+        className={BUTTON_SECONDARY}
       >
         导入 JSON
       </button>
@@ -445,92 +529,122 @@ function ImportButton({
 }
 
 /**
- * One attempt, expandable to its per-question outcomes.
+ * One timeline event, expandable to its per-question outcomes.
  *
  * `<details>` rather than React state: the browser owns the disclosure, which
  * keeps the list cheap when a learner has hundreds of records, and matches the
  * ExpandableSection pattern used on the Explore surface.
  */
-function RecordRow({
-  record,
+function EventRow({
+  event,
   selected,
   onToggle,
   onDelete,
 }: {
-  record: PracticeRecord;
+  event: TimelineEvent;
   selected: boolean;
   onToggle: () => void;
   onDelete: () => void;
 }) {
+  const { record, kind, previousAccuracy } = event;
+  const { en, zh } = splitTitle(record.title);
   const questions = Object.entries(record.answerComparison ?? {});
 
   return (
     <div
-      className={`rounded-stage-md border ${
+      className={`relative rounded-stage-md border bg-stage-bg ${
         selected ? "border-stage-primary" : "border-stage-border"
       }`}
     >
-      <div className="flex items-center gap-3 px-4 pt-3">
+      {/* The glyph sits on the spine, so scanning the column tells the learner
+          what kind of event each row was without reading it. */}
+      <span
+        aria-hidden
+        className="absolute -left-[1.4rem] top-4 text-stage-2xs text-stage-fg-subtle"
+      >
+        {EVENT_GLYPHS[kind]}
+      </span>
+
+      <div className="flex items-start gap-3 px-4 pt-3">
         <input
           type="checkbox"
           checked={selected}
           onChange={onToggle}
           aria-label={`选择 ${record.title}`}
-          className="h-4 w-4 shrink-0 accent-[var(--stage-primary)]"
+          className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--stage-primary)]"
         />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-medium">{record.title}</p>
-          <p className="text-xs text-stage-fg-muted">
-            {record.category || "—"} · {formatDate(record.createdAt)} ·{" "}
-            {formatDuration(record.duration)}
-            {record.suite
-              ? ` · 套题 ${record.suite.index + 1}/${record.suite.total}`
-              : record.mode === "endless"
-                ? " · 无尽模式"
-                : ""}
+          <p className="truncate text-stage-xs font-medium text-stage-fg">
+            {en}
+          </p>
+          {zh ? (
+            <p className="truncate text-stage-2xs text-stage-fg-subtle">{zh}</p>
+          ) : null}
+          <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-stage-2xs text-stage-fg-subtle">
+            <Badge tone={kind === "retest" ? "accent" : "neutral"}>
+              {EVENT_LABELS[kind]}
+            </Badge>
+            {record.category ? <Tag>{record.category}</Tag> : null}
+            <span className="tabular-nums">{formatTime(record.createdAt)}</span>
+            <span className="tabular-nums">{formatDuration(record.duration)}</span>
+            {record.suite ? (
+              <span>套题 {record.suite.index + 1}/{record.suite.total}</span>
+            ) : record.mode === "endless" ? (
+              <span>无尽模式</span>
+            ) : null}
           </p>
         </div>
-        <span className="shrink-0 text-sm font-semibold text-stage-primary tabular-nums">
-          {record.correctAnswers}/{record.totalQuestions} ·{" "}
-          {Math.round(record.accuracy * 100)}%
+        <span className="shrink-0 text-right">
+          <span className="block text-stage-xs font-semibold tabular-nums text-stage-fg">
+            {accuracyText(record.accuracy)}
+          </span>
+          <span className="block text-stage-2xs tabular-nums text-stage-fg-subtle">
+            {record.correctAnswers}/{record.totalQuestions}
+          </span>
         </span>
       </div>
 
-      <div className="flex flex-wrap items-center gap-3 px-4 pb-2 pt-2 text-xs">
+      {/* Retest measurement: what this attempt changed, in the learner's own
+          native unit. Never a score. */}
+      {kind === "retest" && previousAccuracy !== null ? (
+        <p className="px-4 pt-2 text-stage-2xs tabular-nums text-stage-fg-muted">
+          上次 {accuracyText(previousAccuracy)} → 本次{" "}
+          <span className="font-semibold text-stage-fg">
+            {accuracyText(record.accuracy)}
+          </span>
+        </p>
+      ) : null}
+
+      <div className="flex flex-wrap items-center gap-3 px-4 pb-2 pt-2 text-stage-2xs">
         <Link
           href={`/ielts-lab/review/${record.id}`}
-          className="font-medium text-stage-primary underline-offset-2 transition-colors hover:underline"
+          className="font-medium text-stage-primary underline-offset-2 transition-colors duration-stage-fast hover:underline"
         >
           逐题回顾
         </Link>
-        <Link
-          href={reviewHref(record.examId, record.id)}
-          className="text-stage-fg-muted underline-offset-2 transition-colors hover:text-stage-fg hover:underline"
-        >
+        <Link href={reviewHref(record.examId, record.id)} className={BUTTON_QUIET}>
           在题目中回顾
         </Link>
-        <button
-          type="button"
-          onClick={onDelete}
-          className="text-stage-fg-muted underline-offset-2 transition-colors hover:text-red-600 hover:underline"
-        >
-          删除
-        </button>
+        <ConfirmButton
+          label="删除"
+          question="删除这条记录？"
+          onConfirm={onDelete}
+        />
         {record.markedQuestions?.length ? (
-          <span className="text-stage-fg-muted">
+          <span className="text-stage-fg-subtle">
             标记 {record.markedQuestions.length} 题
           </span>
         ) : null}
       </div>
 
       <details className="group border-t border-stage-border">
-        <summary className="cursor-pointer px-4 py-2 text-xs text-stage-fg-muted [&::-webkit-details-marker]:hidden">
+        <summary className="cursor-pointer px-4 py-2 text-stage-2xs text-stage-fg-muted [&::-webkit-details-marker]:hidden">
           <span className="group-open:hidden">展开逐题结果 ▾</span>
           <span className="hidden group-open:inline">收起逐题结果 ▴</span>
         </summary>
 
         {questions.length === 0 ? (
-          <p className="border-t border-stage-border px-4 py-3 text-xs text-stage-fg-muted">
+          <p className="border-t border-stage-border px-4 py-3 text-stage-2xs text-stage-fg-subtle">
             这条记录没有逐题数据。
           </p>
         ) : (
@@ -565,14 +679,14 @@ function QuestionRow({
 
   return (
     <li className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-stage-border px-4 py-2 last:border-b-0">
-      <span className="w-8 shrink-0 text-xs text-stage-fg-muted">
+      <span className="w-8 shrink-0 text-stage-2xs text-stage-fg-subtle">
         {questionId}
       </span>
       <Badge tone={entry.isCorrect ? "positive" : "warning"}>
         {entry.isCorrect ? "正确" : "错误"}
       </Badge>
       {type ? <Badge>{questionTypeLabel(type)}</Badge> : null}
-      <span className="min-w-0 flex-1 truncate text-xs text-stage-fg">
+      <span className="min-w-0 flex-1 truncate text-stage-2xs text-stage-fg-body">
         {answerText(entry.userAnswer)}
         {!entry.isCorrect ? (
           <span className="text-stage-fg-muted">

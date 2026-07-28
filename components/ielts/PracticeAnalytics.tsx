@@ -19,27 +19,28 @@ import { Badge, Card, EmptyNote } from "./ui";
 
 /** Chart colours come from the design tokens, not from Recharts' defaults. */
 const PRIMARY = "var(--stage-primary)";
-const MUTED = "var(--stage-fg-muted)";
+const SUBTLE = "var(--stage-fg-subtle)";
 const BORDER = "var(--stage-border)";
 const WARNING = "var(--stage-warning)";
 const SUCCESS = "var(--stage-success)";
+const DANGER = "var(--stage-danger)";
 
 const AXIS = {
-  stroke: MUTED,
+  stroke: SUBTLE,
   fontSize: 11,
   tickLine: false,
 } as const;
 
-/** Accuracy bands: red-ish below 50, amber to 75, green above. */
+/** Accuracy bands: danger below 50, amber to 75, green above. */
 function accuracyColor(accuracy: number): string {
   if (accuracy >= 75) return SUCCESS;
   if (accuracy >= 50) return WARNING;
-  return "#ef4444";
+  return DANGER;
 }
 
 function TooltipShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-stage-sm border border-stage-border bg-stage-bg px-3 py-2 text-xs shadow-stage-sm">
+    <div className="rounded-stage-sm border border-stage-border bg-stage-bg px-3 py-2 text-stage-2xs shadow-stage-sm">
       {children}
     </div>
   );
@@ -48,11 +49,9 @@ function TooltipShell({ children }: { children: React.ReactNode }) {
 function TrendTooltip({
   active,
   payload,
-  unit,
 }: {
   active?: boolean;
   payload?: Array<{ payload: TrendPoint }>;
-  unit: "score" | "accuracy";
 }) {
   const point = active ? payload?.[0]?.payload : undefined;
   if (!point) return null;
@@ -66,9 +65,10 @@ function TrendTooltip({
         {point.date} · {point.category || "—"}
       </p>
       <p className="mt-1 font-semibold text-stage-fg">
-        {unit === "accuracy"
-          ? `正确率 ${point.accuracy}%`
-          : `${point.score} / ${point.totalQuestions} 题`}
+        正确率 {point.accuracy}%
+      </p>
+      <p className="text-stage-fg-muted">
+        答对 {point.score} / {point.totalQuestions} 题
       </p>
     </TooltipShell>
   );
@@ -95,6 +95,16 @@ function TypeTooltip({
   );
 }
 
+/**
+ * Progress tracking (master-spec 批次二 学习记录页).
+ *
+ * The Y axis is accuracy in percent and nothing else. A second chart used to
+ * plot the raw number of correct answers per attempt under the heading
+ * "分数趋势"; it was removed rather than restyled, because passages carry
+ * different question counts, so that line moved with the passage rather than
+ * with the learner — and the vocabulary invited exactly the score reading the
+ * rulings forbid.
+ */
 export function PracticeAnalytics({ records }: { records: PracticeRecord[] }) {
   const trend = buildTrend(records);
   const typeStats = buildQuestionTypeStats(records);
@@ -109,7 +119,7 @@ export function PracticeAnalytics({ records }: { records: PracticeRecord[] }) {
     <div className="space-y-4">
       {weakest ? (
         <Card>
-          <p className="text-sm text-stage-fg">
+          <p className="text-stage-xs text-stage-fg-body">
             最需要加强的题型是{" "}
             <span className="font-semibold text-stage-primary">
               {weakest.label}
@@ -123,7 +133,9 @@ export function PracticeAnalytics({ records }: { records: PracticeRecord[] }) {
       <Card
         title="正确率趋势"
         subtitle={
-          hasTrend ? `最近 ${trend.length} 次练习，由旧到新` : undefined
+          hasTrend
+            ? `最近 ${trend.length} 次练习，由旧到新 · 纵轴为正确率百分比`
+            : undefined
         }
       >
         {hasTrend ? (
@@ -142,47 +154,12 @@ export function PracticeAnalytics({ records }: { records: PracticeRecord[] }) {
                   {...AXIS}
                 />
                 <Tooltip
-                  content={<TrendTooltip unit="accuracy" />}
+                  content={<TrendTooltip />}
                   cursor={{ stroke: BORDER }}
                 />
                 <Line
                   type="monotone"
                   dataKey="accuracy"
-                  stroke={PRIMARY}
-                  strokeWidth={2}
-                  dot={{ r: 3, fill: PRIMARY, strokeWidth: 0 }}
-                  activeDot={{ r: 5 }}
-                  isAnimationActive={false}
-                />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        ) : (
-          <EmptyNote>再完成一次练习即可看到趋势。</EmptyNote>
-        )}
-      </Card>
-
-      <Card
-        title="分数趋势"
-        subtitle={hasTrend ? "每次练习的答对题数" : undefined}
-      >
-        {hasTrend ? (
-          <div className="h-56 w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart
-                data={trend}
-                margin={{ top: 8, right: 8, bottom: 4, left: -20 }}
-              >
-                <CartesianGrid stroke={BORDER} vertical={false} />
-                <XAxis dataKey="date" {...AXIS} />
-                <YAxis allowDecimals={false} {...AXIS} />
-                <Tooltip
-                  content={<TrendTooltip unit="score" />}
-                  cursor={{ stroke: BORDER }}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="score"
                   stroke={PRIMARY}
                   strokeWidth={2}
                   dot={{ r: 3, fill: PRIMARY, strokeWidth: 0 }}
