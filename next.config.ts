@@ -2,17 +2,30 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /**
-   * The Directus instance answers the bulk collection queries slowly (the
-   * source_records payload alone is ~20MB, ~27s warm), and the school route
-   * prerenders every school in parallel build workers. Next's default 60s
-   * per-page budget expires under that load and the build aborts on an
-   * arbitrary school.
+   * Per-page budget for static generation.
+   *
+   * This was 300s — five times Next's default — because the pre-R1 school
+   * route pulled whole Directus collections (a ~20MB source_records read) into
+   * every prerender and pages genuinely took minutes. R1 replaced that with
+   * bounded route-specific loaders, so the number is now measured rather than
+   * guessed.
+   *
+   * Measured 2026-07-28 (R3):
+   *   - `.next/trace` on two from-clean builds: the whole `static-generation`
+   *     phase takes 4.6–4.7s for all 261 prerendered pages, which is a hard
+   *     ceiling on any single page.
+   *   - Cold on-demand renders of the heaviest route (program detail, which
+   *     does the same work a build-time prerender does) over 20 pages against
+   *     `next start`: 203–279ms, worst 279ms.
+   *
+   * 60s is therefore ~200x the measured worst page. It is also Next's default,
+   * which is the point: nothing about this app needs a raised budget any more,
+   * so a page that trips this is a real regression rather than a slow link.
    *
    * Build-time budget only: no runtime behaviour, caching semantics or data
-   * changes. The durable fix belongs in the data layer (a narrower query, or
-   * making the school route ISR-only) and is out of scope for this upgrade.
+   * changes.
    */
-  staticPageGenerationTimeout: 300,
+  staticPageGenerationTimeout: 60,
 
   /**
    * Baseline security headers, applied to every response.
