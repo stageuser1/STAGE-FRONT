@@ -15,7 +15,8 @@
     "test:importer": "node --test tests/import_package.test.mjs tests/import_v4_package.test.mjs",
     "test:lib": "node --test --experimental-strip-types tests/ielts_*.test.mjs tests/fit_*.test.mjs tests/profile_*.test.mjs tests/search_*.test.mjs tests/dashboard_*.test.mjs",
     "test": "npm run test:validator && npm run test:importer && npm run test:lib",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "guard": "node scripts/guard.mjs"
   },
   "engines": {
     "node": ">=22.12.0 <23"

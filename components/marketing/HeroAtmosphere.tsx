@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Hero atmosphere (original, Verseo-inspired). Renders the luminous sky wash,
+ * Hero atmosphere (original work, no third-party assets). Renders the sky wash,
  * masked grid, glow, an original CSS cloud band, and a fade-to-white — all
  * decorative (aria-hidden), all behind the hero content.
  *

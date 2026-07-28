@@ -165,7 +165,7 @@ welcome modal re-opens every launch; dead `#` help link; forced audio resume in 
 mode; transcript disappears (not reflows) under 820px; native alert/confirm; DOM-snapshot
 persistence; path-as-domain-model; client-embedded license secret.
 
-## 3. Competitor 2 — Comprehensive Platform (九分学长, D:\STAGE TARGET2)
+## 3. Competitor 2 — Comprehensive Platform (D:\STAGE TARGET2)
 
 ### 3.1 Product positioning
 

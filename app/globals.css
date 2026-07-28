@@ -8,61 +8,174 @@
 }
 
 /*
- * STAGE marketing design tokens (docs 02). ADDITIVE and namespaced --stage-*:
- * the Explore surface (brand/ink/line/page) is untouched. Consumed only by the
- * (marketing) surface via the stage-* Tailwind utilities in tailwind.config.
+ * ============================================================================
+ * STAGE App-family design tokens (--stage-*).
+ *
+ * Authority: design-reference/STAGE IELTS Lab.html (the approved visual
+ * export). Stage T0 of the visual replacement program re-pointed every value
+ * below at that export and added the steps the export needs; the old value,
+ * the new value and the export token each one came from are recorded in
+ * docs/roadmap/T0_TOKEN_MAP.md.
+ *
+ * ADDITIVE and namespaced. The Explore surface (brand/ink/line/page) contains
+ * no --stage-* reference anywhere, so nothing in this block can reach it.
+ * Consumed by (marketing)/(ielts)/(product) via the stage-* Tailwind
+ * utilities in tailwind.config.ts.
+ *
+ * The export's visual language in one line: a light, flat, hairline-ruled
+ * surface — white cards, 1px #e4e7ee borders, no shadows, a four-step text
+ * ramp and a deep navy-blue primary.
+ * ============================================================================
  */
 :root {
-  /* brand scales (doc 02 §2.1) */
-  --stage-blue-50: #eff6ff;
-  --stage-blue-100: #dbeafe;
-  --stage-blue-200: #bfdbfe;
-  --stage-blue-400: #60a5fa;
-  --stage-blue-500: #3b82f6;
-  --stage-blue-600: #2563eb;
-  --stage-navy-700: #1d2e5e;
-  --stage-navy-800: #16234a;
-  --stage-navy-900: #0e1633;
-  --stage-sky-300: #a5c8ff;
-  --stage-sky-100: #e4eeff;
-  --stage-white: #ffffff;
-  --stage-mist: #f7faff;
+  /* --- raw ramps ---------------------------------------------------------
+   * Blue is one continuous ramp: a near-white tint at 25, the mid brand blue
+   * at 500, and the near-black navy the export uses for strong text at 950.
+   */
+  --stage-blue-25: #f7fafe;
+  --stage-blue-50: #eff4fe;
+  --stage-blue-100: #dce8fb;
+  --stage-blue-200: #c2d6f8;
+  --stage-blue-300: #8fb2f0;
+  --stage-blue-400: #5c90ec;
+  --stage-blue-500: #2f6be0;
+  --stage-blue-600: #1e4fc4;
+  --stage-blue-700: #133a94;
+  --stage-blue-800: #0e2c6e;
+  --stage-blue-900: #0a1f4d;
+  --stage-blue-950: #04122e;
 
-  /* semantic aliases (doc 02 §2.2) */
-  --stage-bg: var(--stage-white);
-  --stage-bg-soft: var(--stage-mist);
-  --stage-fg: var(--stage-navy-900);
-  --stage-fg-muted: rgba(29, 46, 94, 0.72); /* navy-700 @ 72% */
-  --stage-primary: var(--stage-blue-500);
-  --stage-primary-hover: var(--stage-blue-600);
-  --stage-border: rgba(14, 22, 51, 0.08); /* navy-900 @ 8% */
-  --stage-surface-dark: var(--stage-navy-800);
-  --stage-fg-on-dark: var(--stage-white);
+  /* Neutrals carry every surface, border and secondary text step. */
+  --stage-neutral-0: #ffffff;
+  --stage-neutral-25: #fbfbfd;
+  --stage-neutral-50: #f6f7fa;
+  --stage-neutral-100: #eff1f5;
+  --stage-neutral-200: #e4e7ee;
+  --stage-neutral-300: #d2d7e1;
+  --stage-neutral-400: #aeb5c4;
+  --stage-neutral-500: #868e9f;
+  --stage-neutral-600: #5f6779;
+  --stage-neutral-700: #414957;
+  --stage-neutral-800: #2a303b;
+  --stage-neutral-900: #171c25;
+
+  --stage-green-50: #ecf8f3;
+  --stage-green-100: #d7f0e5;
+  --stage-green-500: #1fa377;
+  --stage-green-600: #12855f;
+  --stage-green-700: #0c6b4c;
+
+  --stage-gold-50: #fdf6e8;
+  --stage-gold-200: #fae6bf;
+  --stage-gold-500: #f4c870;
+  --stage-gold-600: #d9a03c;
+  --stage-gold-700: #b47c1e;
+
+  --stage-amber-50: #fdf3e3;
+  --stage-amber-600: #b4700c;
+
+  --stage-red-50: #fceeec;
+  --stage-red-600: #c0392f;
+
+  /* Legacy ramp names kept so shipped markup does not have to churn; they now
+   * resolve onto the export's blue ramp. */
+  --stage-navy-700: var(--stage-blue-700);
+  --stage-navy-800: var(--stage-blue-800);
+  --stage-navy-900: var(--stage-blue-950);
+  --stage-sky-300: var(--stage-blue-300);
+  --stage-sky-100: var(--stage-blue-100);
+  --stage-white: var(--stage-neutral-0);
+  --stage-mist: var(--stage-blue-25);
+
+  /* --- semantic aliases --------------------------------------------------
+   * Surfaces. `bg-soft` is the neutral sunken panel; `mist`/`bg-tint` is the
+   * cooler blue-tinted wash; `primary-soft` is the accent panel. */
+  --stage-bg: var(--stage-neutral-0);
+  --stage-bg-soft: var(--stage-neutral-50);
+  --stage-bg-tint: var(--stage-blue-25);
+  --stage-surface-dark: var(--stage-blue-950);
+
+  /* Text: a four-step ramp — strong headings, body, muted, subtle. */
+  --stage-fg: var(--stage-blue-950);
+  --stage-fg-body: var(--stage-neutral-800);
+  --stage-fg-muted: var(--stage-neutral-600);
+  --stage-fg-subtle: var(--stage-neutral-500);
+  --stage-fg-on-dark: var(--stage-neutral-0);
   --stage-fg-on-dark-muted: rgba(255, 255, 255, 0.68);
-  --stage-success: #10b981;
-  --stage-warning: #f59e0b;
 
-  /* radius (doc 02 §4) */
+  /* Action. The export's primary is the deep blue-700, not the mid blue. */
+  --stage-primary: var(--stage-blue-700);
+  --stage-primary-hover: var(--stage-blue-800);
+  --stage-primary-press: var(--stage-blue-900);
+  --stage-primary-soft: var(--stage-blue-50);
+
+  /* Borders: hairline rules everything; `strong` is the control border. */
+  --stage-border: var(--stage-neutral-200);
+  --stage-border-strong: var(--stage-neutral-300);
+  --stage-border-accent: var(--stage-blue-200);
+
+  /* Status. Each tone has a foreground that is legible on white and a soft
+   * background for chips; colour is never the only signal (doc 01 §4.1). */
+  --stage-success: var(--stage-green-600);
+  --stage-success-soft: var(--stage-green-50);
+  --stage-warning: var(--stage-amber-600);
+  --stage-warning-soft: var(--stage-amber-50);
+  --stage-danger: var(--stage-red-600);
+  --stage-danger-soft: var(--stage-red-50);
+  --stage-accent: var(--stage-gold-700);
+  --stage-accent-soft: var(--stage-gold-50);
+
+  /* Focus */
+  --stage-focus: var(--stage-blue-400);
+  --stage-focus-ring: 0 0 0 3px rgba(92, 144, 236, 0.38);
+
+  /* radius */
+  --stage-radius-xs: 4px;
   --stage-radius-sm: 8px;
   --stage-radius-md: 12px;
-  --stage-radius-lg: 20px;
-  --stage-radius-xl: 28px;
+  --stage-radius-lg: 16px;
+  --stage-radius-xl: 24px;
+  --stage-radius-pill: 999px;
 
-  /* shadows (doc 02 §4 / §2.3) */
-  --stage-shadow-sm: 0 1px 2px rgba(14, 22, 51, 0.06);
-  --stage-shadow-md: 0 12px 32px -12px rgba(14, 22, 51, 0.14);
-  --stage-glow-card: 0 0 80px -20px rgba(96, 165, 250, 0.35);
+  /* shadows — the export's product surface uses none of these; they exist for
+   * lifted chrome (dialogs, toasts, popovers) only. */
+  --stage-shadow-xs: 0 1px 2px rgba(10, 31, 77, 0.05);
+  --stage-shadow-sm: 0 1px 3px rgba(10, 31, 77, 0.06),
+    0 1px 2px rgba(10, 31, 77, 0.04);
+  --stage-shadow-md: 0 4px 16px rgba(10, 31, 77, 0.07);
+  --stage-shadow-lg: 0 12px 40px rgba(10, 31, 77, 0.1);
+  --stage-glow-card: 0 0 80px -20px rgba(92, 144, 236, 0.35);
 
-  /* gradients (doc 02 §2.3) — hero cloud + CTA glow are layered in markup */
+  /* motion */
+  --stage-dur-fast: 120ms;
+  --stage-dur-base: 200ms;
+  --stage-dur-slow: 360ms;
+  --stage-dur-reveal: 600ms;
+  --stage-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --stage-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* rhythm */
+  --stage-gutter: clamp(20px, 5vw, 64px);
+  --stage-section-y: clamp(72px, 11vw, 160px);
+  --stage-section-y-tight: clamp(48px, 7vw, 96px);
+
+  /* gradients — hero cloud + CTA glow are layered in markup */
   --stage-gradient-cta: linear-gradient(
     135deg,
-    var(--stage-navy-900),
-    var(--stage-navy-800)
+    var(--stage-blue-950),
+    var(--stage-blue-800)
   );
   --stage-gradient-text: linear-gradient(
     90deg,
     var(--stage-blue-500),
     var(--stage-blue-400)
+  );
+  --stage-ambient-sky: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f3f7fe 38%,
+    #e3ecfa 72%,
+    #d8e5f7 100%
   );
 }
 
@@ -335,7 +448,7 @@
 .font-stage-sans button:focus-visible,
 .font-stage-sans summary:focus-visible,
 .font-stage-sans [tabindex]:focus-visible {
-  outline: 2px solid var(--stage-primary);
+  outline: 2px solid var(--stage-focus);
   outline-offset: 2px;
   border-radius: var(--stage-radius-sm);
 }
