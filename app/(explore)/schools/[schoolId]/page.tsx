@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { EmptyState } from "@/components/EmptyState";
 import { SchoolFitStrip } from "@/components/fit/SchoolFitStrip";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
@@ -39,21 +40,13 @@ export default async function SchoolPage({ params }: SchoolPageProps) {
   const school = await getSchoolById(schoolId);
   const programs = await getProgramsBySchoolId(schoolId);
 
+  // A school id that resolves to nothing is a bad URL, not a page state: it
+  // has to answer 404 so crawlers, monitoring and caches can tell it apart
+  // from a school that exists (audit P1-10). `not-found.tsx` next to this file
+  // keeps the presentation that used to render here. Records that exist but
+  // are incomplete still render the page, with their own in-page notes.
   if (!school) {
-    return (
-      <>
-        <MobileHeader backHref="/" />
-        <PageShell>
-          <EmptyState
-            actionHref="/"
-            actionLabel="返回首页"
-            description="这个学校暂未收录，或链接已失效。"
-            icon="school"
-            title="学校未找到"
-          />
-        </PageShell>
-      </>
-    );
+    notFound();
   }
 
   const detail = buildSchoolDetailViewModel(school, programs);

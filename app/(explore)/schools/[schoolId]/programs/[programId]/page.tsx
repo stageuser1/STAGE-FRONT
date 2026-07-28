@@ -1,4 +1,4 @@
-import { EmptyState } from "@/components/EmptyState";
+import { notFound } from "next/navigation";
 import { FitPanel } from "@/components/fit/FitPanel";
 import { MobileHeader, PageShell } from "@/components/MobileHeader";
 import { ProgramDetailSections } from "@/components/program/ProgramDetailSections";
@@ -23,29 +23,35 @@ interface ProgramPageProps {
   }>;
 }
 
+/** Program ids are Directus primary keys and are always numeric. */
+const PROGRAM_ID = /^\d+$/;
+
 export default async function ProgramPage({ params }: ProgramPageProps) {
   const { schoolId, programId } = await params;
+
+  // Shape first: Directus answers 400 ("Invalid numeric value") for a
+  // non-numeric id on this collection, which would surface as a 500 — a worse
+  // answer than 200 for a URL that is simply wrong. A segment that cannot be a
+  // program id is a bad URL and gets the same 404 as an id with no record.
+  // Anything numeric still goes to the loader, so a real lookup failure stays a
+  // real lookup failure rather than a guess made here.
+  if (!PROGRAM_ID.test(programId)) {
+    notFound();
+  }
+
   const program = await getProgramById(schoolId, programId);
   // Mapped once and shared: the detail sections and the fit panel must read
   // exactly the same public shape, or the checklist could disagree with the
   // section it summarises.
   const dto = program ? toPublicProgramDto(program) : null;
 
+  // No such program under this school — including a real program reached
+  // through the wrong school segment — is a bad URL and answers 404 rather
+  // than a successful page (audit P1-10). `not-found.tsx` next to this file
+  // keeps the presentation that used to render here. A program that exists but
+  // is missing fields still renders, with its own in-page missing-data notes.
   if (!program || !dto) {
-    return (
-      <>
-        <MobileHeader backHref={`/schools/${schoolId}`} />
-        <PageShell>
-          <EmptyState
-            actionHref="/search"
-            actionLabel="搜索项目"
-            description="这个项目暂未收录，或链接已失效。"
-            icon="music"
-            title="项目未找到"
-          />
-        </PageShell>
-      </>
-    );
+    notFound();
   }
 
   return (

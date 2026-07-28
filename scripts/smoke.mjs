@@ -106,16 +106,13 @@ async function main() {
     { path: "/dashboard", marker: "学习中心 · STAGE" },
     { path: "/ielts-lab", marker: "雅思实验室 · STAGE" },
     { path: "/ielts-lab/browse", marker: "题库浏览 · 雅思实验室" },
+    // Invalid detail URLs answer 404, not a successful page (audit P1-10,
+    // landed by R4). Enforced now that the detail pages call notFound().
+    { path: "/schools/does-not-exist", status: 404, marker: "学校未找到" },
     {
-      path: "/schools/does-not-exist",
+      path: `${schoolPath}/programs/does-not-exist`,
       status: 404,
-      marker: null,
-      // R4 (docs/roadmap/STAGE_REMEDIATION_PLAN.md §R4) makes missing records
-      // call notFound(); until it merges the page renders an in-page empty
-      // state with HTTP 200. Recorded, not enforced — flip `expectedFail` to
-      // false in the same commit that lands R4's notFound() change.
-      expectedFail: true,
-      expectedFailNote: "pending R4 (invalid detail URLs still answer 200)",
+      marker: "项目未找到",
     },
   ];
 
