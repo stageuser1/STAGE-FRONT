@@ -1,0 +1,165 @@
+name: CI
+
+# Release gate for STAGE FRONT (pre-launch audit P1-7).
+#
+# Two jobs, split by one constraint: the second half of the pipeline needs the
+# live Directus instance.
+#
+#   checks           — install, dependency audit, typecheck, tests.
+#                      No dependency beyond the npm registry and PyPI-free
+#                      stdlib python, so it runs on a GitHub-hosted runner.
+#   build-and-smoke  — production build, `next start`, route smoke suite.
+#                      The build prerenders school and program pages from
+#                      Directus (http://47.86.26.168:8055) and the smoke suite
+#                      asserts real rendered content, so this job is only
+#                      meaningful on a runner that can reach that host.
+#
+# READ THIS BEFORE ASSUMING CI IS GREEN
+#
+# 1. Directus reachability has NOT been verified from GitHub's IP ranges. The
+#    instance is a plain-HTTP host on a fixed IP and whether a hosted runner can
+#    reach it depends on that host's firewall. Nothing here mocks Directus — a
+#    build against fake data would prove nothing about the failure this gate
+#    exists to catch (P0-1: static generation stalling on real payloads).
+#    So `build-and-smoke` runs on whatever runner the repository variable
+#    STAGE_BUILD_RUNNER names; point it at a self-hosted runner with access.
+#    The job's first step pings Directus and fails immediately, with a pointer
+#    to the manual gate in docs/ops/release.md, if it cannot reach it. If no
+#    such runner exists yet, build+start+smoke is a MANUAL gate — this workflow
+#    is deliberately allowed to fail loudly rather than pretend otherwise.
+#
+# 2. The build also reaches fonts.googleapis.com / fonts.gstatic.com, because
+#    app/layout.tsx loads two families through next/font/google — 106 woff2
+#    files, ~4.7 MB, on any build with an empty .next/cache. When one of those
+#    downloads is reset, Next 15.5.22 exits 0 with no artefact and no message
+#    (measured 4 failures in 10 from-cold builds on the dev machine). Two
+#    mitigations are wired in below: .next/cache is restored between runs so
+#    steady-state CI does not touch Google at all, and the build step asserts a
+#    startable artefact so a silent abort is a red job, never a green one.
+#    The durable fix — self-hosting the fonts with their unicode-range rules
+#    intact — is design-system work; see docs/ops/release.md.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  # Node 22 LTS, matching `engines` in package.json (.npmrc sets engine-strict,
+  # so a mismatched runner fails at `npm ci` rather than at build time).
+  NODE_VERSION: "22"
+
+jobs:
+  checks:
+    name: Install, audit, typecheck, test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      # `npm run test:validator` shells out to python for the import-package
+      # validator suite (stdlib unittest only, no requirements file).
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # `ci`, not `install`: the lockfile is the contract, and lockfile drift
+      # should fail here rather than silently resolve to different versions.
+      - name: Install from lockfile
+        run: npm ci
+
+      # Production tree only. R2 cleared the three high-severity groups; this
+      # keeps them cleared. Dev-only advisories are out of the deployable
+      # artefact and are reviewed, not gated.
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+
+      # `npm run typecheck` cleans the generated output first. tsconfig.json
+      # includes .next/types/**/*.ts, so a stale generated-types directory can
+      # fail the check on routes that no longer exist (audit P2-5). The fix is
+      # always to clean the types, never to restore a deleted route.
+      - name: Typecheck against cleaned output
+        run: npm run typecheck
+
+      # 89 tests: 2 validator (python) + 8 importer + 79 lib.
+      - name: Tests
+        run: npm test
+
+  build-and-smoke:
+    name: Build, start, smoke
+    needs: checks
+    # See note 1 in the header: point this at a runner with Directus access.
+    runs-on: ${{ vars.STAGE_BUILD_RUNNER || 'ubuntu-latest' }}
+    env:
+      DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
+      NEXT_PUBLIC_DIRECTUS_URL: ${{ secrets.NEXT_PUBLIC_DIRECTUS_URL }}
+      DIRECTUS_TOKEN: ${{ secrets.DIRECTUS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      # Fail fast and legibly. Without this the build would instead die deep in
+      # static generation with a fetch error on an arbitrary school page.
+      - name: Preflight — Directus must be reachable
+        run: |
+          if [ -z "$DIRECTUS_URL" ]; then
+            echo "DIRECTUS_URL secret is not set." >&2
+            exit 1
+          fi
+          if ! curl --fail --silent --show-error --max-time 20 "$DIRECTUS_URL/server/ping"; then
+            echo "" >&2
+            echo "Directus at $DIRECTUS_URL is not reachable from this runner." >&2
+            echo "Set the STAGE_BUILD_RUNNER repository variable to a self-hosted" >&2
+            echo "runner label with network access, or run the build+start+smoke" >&2
+            echo "gate manually per docs/ops/release.md. Do not mock Directus." >&2
+            exit 1
+          fi
+
+      - name: Install from lockfile
+        run: npm ci
+
+      # See note 2 in the header. This is a build cache, not a build artefact:
+      # `npm run clean` deletes everything under .next except this directory, so
+      # the build output is always regenerated. Restoring it keeps the 106 font
+      # downloads off the critical path of every run.
+      - name: Restore build cache
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            next-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
+            next-cache-${{ runner.os }}-
+
+      # `build:clean` = clean + build + assert a startable artefact. Measured
+      # budget: 20-21s on the dev machine from clean with a warm font cache; the
+      # step timeout is deliberately far above that so it catches a genuine
+      # stall rather than ordinary runner slowness. See docs/ops/release.md.
+      - name: Production build (from clean)
+        timeout-minutes: 15
+        run: npm run build:clean
+
+      - name: Start and smoke
+        run: |
+          npm start &
+          echo $! > server.pid
+          node scripts/smoke.mjs --base http://localhost:3000 --wait 90
+          kill "$(cat server.pid)"
+
+      # Report-only. Budgets are set here and enforced during reconstruction
+      # (audit P1-11 / TD-09); the current numbers are tabulated in
+      # docs/ops/release.md.
+      - name: Route artifact sizes (report only)
+        if: always()
+        run: |
+          find .next/server/app -name '*.html' -size +100k -printf '%s\t%p\n' \
+            | sort -rn | head -20 || true
