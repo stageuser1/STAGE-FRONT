@@ -51,7 +51,19 @@ export interface ReadingExplanation {
 export interface ReadingExamData {
   schemaVersion: string;
   examId: string;
-  passage?: { blocks?: Array<{ blockId: string; kind: string; html: string }> };
+  /**
+   * The passage, as one block per paper. Two shapes ship: `html` on the 199
+   * `kind: "html"` papers and `bodyHtml` on the 23 `kind: "text"` ones — the
+   * player reads `bodyHtml || html`, and so does `passageHtmlOf`.
+   */
+  passage?: {
+    blocks?: Array<{
+      blockId: string;
+      kind: string;
+      html?: string;
+      bodyHtml?: string;
+    }>;
+  };
   questionGroups?: Array<{
     groupId: string;
     kind: string;
