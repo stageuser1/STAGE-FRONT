@@ -50,13 +50,17 @@ function questionNumber(id: string): string {
 export function ResultPanel({
   record,
   title,
-  extraActions,
+  actions,
   note,
 }: {
   record: PracticeRecord;
   title: string;
-  /** Flow-specific follow-ups (next passage, suite overview, retry). */
-  extraActions?: ReactNode;
+  /**
+   * Flow-specific follow-ups supplied by the runner (next passage, suite
+   * overview, retry). Rendered after the two exits the spec names, whose
+   * wording and weighting belong to this panel.
+   */
+  actions: ReactNode;
   note?: ReactNode;
 }) {
   const byType = buildQuestionTypeStats([record]).filter(
@@ -150,7 +154,7 @@ export function ResultPanel({
           <Link href="/ielts-lab/browse" className={BUTTON_SECONDARY}>
             返回题库
           </Link>
-          {extraActions}
+          {actions}
         </div>
       </div>
     </div>

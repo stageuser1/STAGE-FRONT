@@ -25,12 +25,13 @@ import {
 import { getRecord, loadRecords, saveRecord, toPracticeRecord } from "@/lib/ielts/storage";
 import type { ExamSummary, PracticeRecord, SuiteRef } from "@/lib/ielts/types";
 import { ResultPanel } from "./ResultPanel";
-import { BUTTON_SECONDARY } from "./ui";
 
 type Status = "loading" | "ready" | "submitted" | "review";
 
-/** The runner's chrome uses the Lab's shared control language. */
-const ACTION_SECONDARY = BUTTON_SECONDARY;
+const ACTION_PRIMARY =
+  "rounded-stage-md bg-stage-primary px-4 py-2 text-sm font-medium text-stage-fg-on-dark transition-colors hover:bg-stage-primary-hover";
+const ACTION_SECONDARY =
+  "rounded-stage-md border border-stage-border bg-stage-bg px-4 py-2 text-sm transition-colors hover:border-stage-primary";
 
 export interface ExamRunnerProps {
   exam: ExamSummary;
@@ -306,10 +307,8 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
             }}
           />
           <div className="min-w-0">
-            <h1 className="truncate text-stage-xs font-semibold text-stage-fg">
-              {exam.title}
-            </h1>
-            <p className="text-stage-2xs text-stage-fg-subtle">
+            <h1 className="truncate text-sm font-semibold">{exam.title}</h1>
+            <p className="text-xs text-stage-fg-muted">
               {exam.category}
               {flow === "endless" ? " · 无尽模式" : ""}
               {suite
@@ -322,13 +321,13 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
           </div>
         </div>
 
-        <div className="flex items-center gap-3 text-stage-xs">
+        <div className="flex items-center gap-3 text-sm">
           {status === "loading" ? (
             <span className="text-stage-fg-muted">加载中…</span>
           ) : null}
           {draftSavedAt && status === "ready" ? (
-            <span className="text-stage-2xs text-stage-fg-subtle">
-              已自动保存 ·{" "}
+            <span className="text-xs text-stage-fg-muted">
+              已保存 ·{" "}
               {draftSavedAt.toLocaleTimeString("zh-CN", {
                 hour: "2-digit",
                 minute: "2-digit",
@@ -337,7 +336,7 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
           ) : null}
           <Link
             href="/ielts-lab/history"
-            className="text-stage-fg-muted transition-colors duration-stage-fast hover:text-stage-fg"
+            className="text-stage-fg-muted transition-colors hover:text-stage-fg"
           >
             练习记录
           </Link>
@@ -345,18 +344,18 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
       </div>
 
       {reviewMissing ? (
-        <p className="border-b border-stage-border bg-stage-bg-soft px-4 py-3 text-stage-xs text-stage-fg-muted">
+        <p className="border-b border-stage-border bg-stage-bg-soft px-4 py-3 text-sm text-stage-fg-muted">
           找不到这条练习记录，已按新的一次练习打开。
         </p>
       ) : null}
 
       {handshakeFailed && status === "loading" ? (
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stage-border bg-stage-warning-soft px-4 py-3 text-stage-xs text-stage-warning">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stage-border bg-amber-50 px-4 py-3 text-sm text-amber-700">
           <span>题目加载失败，可能是网络中断或题目文件缺失。</span>
           <button
             type="button"
             onClick={() => window.location.reload()}
-            className="rounded-stage-sm border border-stage-warning px-3 py-1.5 text-stage-2xs font-medium transition-colors duration-stage-fast hover:bg-stage-bg"
+            className="rounded-stage-sm border border-amber-300 px-3 py-1.5 text-xs font-medium transition-colors hover:bg-amber-100"
           >
             重新加载
           </button>
@@ -372,15 +371,16 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
               ? "答案与解析已按当时的作答还原，页面为只读。"
               : undefined
           }
-          extraActions={
+          actions={
             status === "review" ? (
-              <ReviewActions examId={exam.id} />
+              <ReviewActions examId={exam.id} recordId={record.id} />
             ) : (
               <SubmittedActions
                 exam={exam}
                 flow={flow}
                 suite={suite}
                 busy={busy}
+                recordId={record.id}
                 onNextEndless={goToNextEndless}
               />
             )
@@ -423,13 +423,13 @@ function ExitButton({
       <div
         role="alertdialog"
         aria-label="退出确认"
-        className="flex shrink-0 flex-wrap items-center gap-2 text-stage-2xs"
+        className="flex shrink-0 flex-wrap items-center gap-2 text-xs"
       >
         <span className="text-stage-fg-muted">未提交的作答不会保存</span>
         <button
           type="button"
           onClick={onExit}
-          className="rounded-stage-sm border border-stage-border px-2.5 py-1 transition-colors duration-stage-fast hover:border-stage-danger hover:text-stage-danger"
+          className="rounded-stage-sm border border-stage-border px-2.5 py-1 transition-colors hover:border-red-400 hover:text-red-600"
         >
           仍要退出
         </button>
@@ -449,7 +449,7 @@ function ExitButton({
     <button
       type="button"
       onClick={() => (confirmFirst ? setConfirming(true) : onExit())}
-      className="shrink-0 text-stage-xs text-stage-fg-muted transition-colors duration-stage-fast hover:text-stage-fg"
+      className="shrink-0 text-sm text-stage-fg-muted transition-colors hover:text-stage-fg"
     >
       ← 退出
     </button>
@@ -484,20 +484,26 @@ function RetryButton({
   );
 }
 
-/**
- * Follow-ups that sit beside the two canonical exits.
- *
- * 返回题库 and 查看复盘 are rendered by ResultPanel itself (spec §三.2); these
- * are the extras a particular flow adds.
- */
-function ReviewActions({ examId }: { examId: string }) {
+function ReviewActions({
+  examId,
+  recordId,
+}: {
+  examId: string;
+  recordId: string;
+}) {
   return (
     <>
-      <RetryButton examId={examId} className={ACTION_SECONDARY}>
+      <RetryButton examId={examId} className={ACTION_PRIMARY}>
         重做这篇
       </RetryButton>
+      <Link href={`/ielts-lab/review/${recordId}`} className={ACTION_SECONDARY}>
+        逐题回顾
+      </Link>
       <Link href="/ielts-lab/history" className={ACTION_SECONDARY}>
         返回记录
+      </Link>
+      <Link href="/ielts-lab/browse" className={ACTION_SECONDARY}>
+        返回题库
       </Link>
     </>
   );
@@ -506,23 +512,33 @@ function ReviewActions({ examId }: { examId: string }) {
 /**
  * What to do next after a submit.
  *
- * Which follow-up appears depends on the flow: finishing a passage should
- * always propose the obvious next step rather than dropping the learner back
- * on a list.
+ * Which action leads depends on the flow: the source project's value is that
+ * finishing a passage always proposes the obvious next step rather than
+ * dropping the learner back on a list.
  */
 function SubmittedActions({
   exam,
   flow,
   suite,
   busy,
+  recordId,
   onNextEndless,
 }: {
   exam: ExamSummary;
   flow?: SessionFlow;
   suite: SuiteSession | null;
   busy: boolean;
+  recordId: string;
   onNextEndless: () => void;
 }) {
+  // Available in every flow: finishing a passage should always offer the
+  // analysis, not only the next passage.
+  const review = (
+    <Link href={`/ielts-lab/review/${recordId}`} className={ACTION_SECONDARY}>
+      查看逐题回顾
+    </Link>
+  );
+
   if (flow === "endless") {
     return (
       <>
@@ -530,10 +546,11 @@ function SubmittedActions({
           type="button"
           onClick={onNextEndless}
           disabled={busy}
-          className={`${ACTION_SECONDARY} disabled:opacity-50`}
+          className={`${ACTION_PRIMARY} disabled:opacity-50`}
         >
           {busy ? "正在挑选…" : "下一篇"}
         </button>
+        {review}
         <Link href="/ielts-lab" className={ACTION_SECONDARY}>
           结束无尽模式
         </Link>
@@ -546,12 +563,10 @@ function SubmittedActions({
     if (next) {
       return (
         <>
-          <Link
-            href={practiceHref(next.examId, "suite")}
-            className={ACTION_SECONDARY}
-          >
+          <Link href={practiceHref(next.examId, "suite")} className={ACTION_PRIMARY}>
             下一篇 · {next.category}
           </Link>
+          {review}
           <Link href="/ielts-lab/suite" className={ACTION_SECONDARY}>
             套题概览
           </Link>
@@ -559,17 +574,26 @@ function SubmittedActions({
       );
     }
     return (
-      <Link href="/ielts-lab/suite" className={ACTION_SECONDARY}>
-        查看套题总成绩
-      </Link>
+      <>
+        <Link href="/ielts-lab/suite" className={ACTION_PRIMARY}>
+          查看套题总成绩
+        </Link>
+        {review}
+      </>
     );
   }
 
   return (
     <>
+      <Link href={`/ielts-lab/review/${recordId}`} className={ACTION_PRIMARY}>
+        查看逐题回顾
+      </Link>
       <RetryButton examId={exam.id} className={ACTION_SECONDARY}>
         再做一次
       </RetryButton>
+      <Link href="/ielts-lab/browse" className={ACTION_SECONDARY}>
+        继续练习
+      </Link>
       <Link href="/ielts-lab/history" className={ACTION_SECONDARY}>
         查看记录
       </Link>

@@ -67,23 +67,3 @@ export function questionTypeLabel(type: string): string {
 export function allQuestionTypes(): QuestionType[] {
   return INDEX.kinds as QuestionType[];
 }
-
-/**
- * Distinct question types of one exam, in the order they first appear.
- *
- * Drives the type tag on a catalog row. Resolved on the server so the browse
- * route does not have to ship this 26KB index to the client for a label.
- */
-export function examQuestionTypes(examId: string): QuestionType[] {
-  const questions = INDEX.exams[examId];
-  if (!questions) return [];
-  const seen = new Set<number>();
-  const types: QuestionType[] = [];
-  for (const index of Object.values(questions)) {
-    if (seen.has(index)) continue;
-    seen.add(index);
-    const kind = INDEX.kinds[index];
-    if (kind) types.push(kind as QuestionType);
-  }
-  return types;
-}
