@@ -18,6 +18,10 @@ const SECTIONS = [
   { href: "/ielts-lab", label: "总览" },
   { href: "/ielts-lab/browse", label: "题库" },
   { href: "/ielts-lab/suite", label: "套题练习" },
+  // Writing joins the rail in T6, when the module became real. Ruling C6 froze
+  // the *structure* of this list against speculative additions, not against a
+  // module that ships — what it forbids is an entry with nothing behind it.
+  { href: "/ielts-lab/writing", label: "写作" },
   { href: "/ielts-lab/mistakes", label: "错题本" },
   { href: "/ielts-lab/history", label: "练习记录" },
 ] as const;
@@ -42,11 +46,14 @@ export function LabNav() {
         {SECTIONS.map((section) => {
           // Exact match only: "/ielts-lab" is a prefix of every other section,
           // so a startsWith test would light up 总览 on all of them. The review
-          // route is a leaf of 练习记录 and lights that up instead.
+          // route is a leaf of 练习记录 and lights that up instead, and the
+          // writing screens are leaves of 写作.
           const active =
             pathname === section.href ||
             (section.href === "/ielts-lab/history" &&
-              Boolean(pathname?.startsWith("/ielts-lab/review")));
+              Boolean(pathname?.startsWith("/ielts-lab/review"))) ||
+            (section.href === "/ielts-lab/writing" &&
+              Boolean(pathname?.startsWith("/ielts-lab/writing/")));
           const badge =
             section.href === "/ielts-lab/mistakes" && mistakes ? mistakes : null;
 

@@ -16,6 +16,10 @@ import {
 } from "@/lib/ielts/session";
 import { computeStats, loadRecords } from "@/lib/ielts/storage";
 import type { ExamCategory, ExamSummary, PracticeRecord } from "@/lib/ielts/types";
+import {
+  loadWritingSessions,
+  type WritingSessionState,
+} from "@/lib/ielts/writing-session";
 import { wrongbookCount } from "@/lib/ielts/wrongbook";
 import { loadProfile, patchProfile } from "@/lib/profile/storage";
 import {
@@ -91,17 +95,28 @@ function relativeTime(iso: string): string {
  * (C3+C6), and only the Reading module card, because a module card for a skill
  * with no module would be the "即将上线" placeholder the spec forbids.
  */
-export function LabOverview({ exams }: { exams: ExamSummary[] }) {
+export function LabOverview({
+  exams,
+  /** Published writing sets. Zero means the module card is not rendered. */
+  writingSetCount = 0,
+}: {
+  exams: ExamSummary[];
+  writingSetCount?: number;
+}) {
   const router = useRouter();
   // localStorage and sessionStorage are unreadable until after mount.
   const [records, setRecords] = useState<PracticeRecord[] | null>(null);
   const [session, setSession] = useState<PracticeSession | null>(null);
   const [drafts, setDrafts] = useState<DraftEntry[]>([]);
+  const [writingSessions, setWritingSessions] = useState<WritingSessionState[]>(
+    [],
+  );
 
   useEffect(() => {
     setRecords(loadRecords());
     setSession(loadSession());
     setDrafts([...loadDrafts().values()]);
+    setWritingSessions([...loadWritingSessions().values()]);
   }, []);
 
   const totals = useMemo(() => countByCategory(exams), [exams]);
@@ -254,6 +269,13 @@ export function LabOverview({ exams }: { exams: ExamSummary[] }) {
         practisedByPart={practised}
         onRandom={() => startRandom()}
       />
+
+      {writingSetCount > 0 ? (
+        <WritingModuleCard
+          total={writingSetCount}
+          sessions={writingSessions}
+        />
+      ) : null}
 
       <Card
         title="最近练习"
@@ -517,6 +539,97 @@ function ReadingModuleCard({
                 {CATEGORY_BLURB[category]}
               </span>
             </Link>
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+}
+
+/**
+ * Writing module card (master-spec 批次一 §4).
+ *
+ * Rendered only once there is a published set behind it — the same rule that
+ * kept this card off the overview until T6, and that still keeps Listening and
+ * Speaking off it. Every figure is native: sets, drafts, words. Nothing here
+ * scores or evaluates what was written.
+ */
+function WritingModuleCard({
+  total,
+  sessions,
+}: {
+  total: number;
+  sessions: WritingSessionState[];
+}) {
+  const completed = sessions.filter((entry) => entry.completedAt).length;
+  const words = sessions.reduce(
+    (sum, entry) =>
+      sum +
+      Object.values(entry.tasks).reduce(
+        (inner, task) => inner + (task?.wordCount ?? 0),
+        0,
+      ),
+    0,
+  );
+  const facts = [
+    `题目总量 ${total} 组`,
+    "Task 1 / Task 2 分类浏览",
+    "两个任务共享一次练习会话",
+    "草稿自动保存在本机浏览器",
+  ];
+
+  return (
+    <Card>
+      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
+        <div className="flex min-w-0 items-start gap-3">
+          <span
+            aria-hidden
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-stage-md bg-stage-primary-soft text-stage-xs font-semibold text-stage-primary"
+          >
+            W
+          </span>
+          <div className="min-w-0">
+            <h2 className="text-stage-h4 font-semibold text-stage-fg">
+              Writing
+            </h2>
+            <p className="mt-0.5 text-stage-xs text-stage-fg-muted">
+              Task 1 / Task 2 写作练习
+            </p>
+          </div>
+        </div>
+        <Link href="/ielts-lab/writing" className={BUTTON_SECONDARY}>
+          浏览题目
+        </Link>
+      </div>
+
+      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
+        <p className="text-stage-xs text-stage-fg-muted">
+          已完成{" "}
+          <span className="font-semibold tabular-nums text-stage-fg">
+            {completed}
+          </span>{" "}
+          / {total} 组
+        </p>
+        <p className="text-stage-xs text-stage-fg-muted">
+          累计写下{" "}
+          <span className="font-semibold tabular-nums text-stage-fg">
+            {words}
+          </span>{" "}
+          词
+        </p>
+      </div>
+
+      <ul className="mt-4 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
+        {facts.map((fact) => (
+          <li
+            key={fact}
+            className="flex items-start gap-2 text-stage-xs text-stage-fg-muted"
+          >
+            <span
+              aria-hidden
+              className="mt-2 inline-block h-1 w-1 shrink-0 rounded-stage-pill bg-stage-border-strong"
+            />
+            {fact}
           </li>
         ))}
       </ul>
