@@ -287,6 +287,20 @@ export function ExamCatalog({
               {value === "all" ? exams.length : progressCounts.get(value) ?? 0}
             </Chip>
           ))}
+          {/* Reference link for the 题型 vocabulary the rows below use as tags.
+              It sits at the end of the filter row rather than beside a 题型
+              chip group because there is none — the catalog filters on Part,
+              frequency and progress. Labelled, not icon-only, for screen
+              readers; 36px tall so it clears the pointer-target minimum even
+              though the chips beside it are shorter. */}
+          <Link
+            href="/ielts-lab/question-types"
+            aria-label="题型说明"
+            title="题型说明"
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center self-center rounded-stage-pill border border-stage-border text-stage-xs text-stage-fg-muted transition-colors duration-stage-fast hover:border-stage-border-strong hover:text-stage-fg"
+          >
+            <span aria-hidden>?</span>
+          </Link>
         </div>
       </div>
 
