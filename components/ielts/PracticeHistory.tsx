@@ -14,6 +14,10 @@ import {
 import { questionTypeLabel, questionTypeOf } from "@/lib/ielts/question-types";
 import { reviewHref } from "@/lib/ielts/session";
 import {
+  listSoloEvents,
+  type SpeakingTimelineEvent,
+} from "@/lib/ielts/speaking-session";
+import {
   clearRecords,
   computeStats,
   deleteRecords,
@@ -118,6 +122,18 @@ const EVENT_GLYPHS: Record<EventKind, string> = {
   retest: "↻",
 };
 
+/**
+ * One entry on the spine — a reading attempt or a Speaking 独立表达 (T7).
+ *
+ * The two are kept as separate shapes rather than coercing the solo event into
+ * a `PracticeRecord`: it has no accuracy, no per-question comparison and no
+ * duration, and a synthetic record would be counted by the stats, the analytics
+ * and the wrongbook, all of which read every record.
+ */
+type TimelineItem =
+  | { kind: "record"; at: string; record: PracticeRecord }
+  | { kind: "solo"; at: string; solo: SpeakingTimelineEvent };
+
 interface TimelineEvent {
   record: PracticeRecord;
   kind: EventKind;
@@ -187,10 +203,12 @@ export function PracticeHistory() {
   const [sort, setSort] = useState<SortKey>("recent");
   const [selection, setSelection] = useState<Set<string>>(() => new Set());
   const [notice, setNotice] = useState<string | null>(null);
+  const [solos, setSolos] = useState<SpeakingTimelineEvent[]>([]);
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setRecords(loadRecords());
+    setSolos(listSoloEvents());
   }, []);
 
   // Stats describe the whole history, not the current filter: a filtered
@@ -229,17 +247,40 @@ export function PracticeHistory() {
     return sorted;
   }, [records, category, band, sort]);
 
-  /** Visible records grouped by calendar day, in the current sort order. */
+  /**
+   * Visible entries grouped by calendar day, in the current sort order.
+   *
+   * Speaking events join only while the list is in its natural order and
+   * unfiltered. They carry no category and no accuracy, so under a category or
+   * band filter the honest answer is to leave them out rather than to let rows
+   * through that do not satisfy the filter the learner set.
+   */
   const groups = useMemo(() => {
-    const byDay: Array<{ day: string; records: PracticeRecord[] }> = [];
-    for (const record of visible) {
-      const day = dayKey(record.createdAt);
+    const items: TimelineItem[] = visible.map((record) => ({
+      kind: "record" as const,
+      at: record.createdAt,
+      record,
+    }));
+
+    const unfiltered = category === "all" && band === "all" && sort === "recent";
+    if (unfiltered) {
+      for (const solo of solos) {
+        items.push({ kind: "solo" as const, at: solo.at, solo });
+      }
+      items.sort(
+        (left, right) => new Date(right.at).getTime() - new Date(left.at).getTime(),
+      );
+    }
+
+    const byDay: Array<{ day: string; items: TimelineItem[] }> = [];
+    for (const item of items) {
+      const day = dayKey(item.at);
       const last = byDay[byDay.length - 1];
-      if (last && last.day === day) last.records.push(record);
-      else byDay.push({ day, records: [record] });
+      if (last && last.day === day) last.items.push(item);
+      else byDay.push({ day, items: [item] });
     }
     return byDay;
-  }, [visible]);
+  }, [visible, solos, category, band, sort]);
 
   function applyRecords(next: PracticeRecord[]) {
     setRecords(next);
@@ -285,7 +326,10 @@ export function PracticeHistory() {
         subtitle="记录保存在本机浏览器中，可导出备份或迁移到其他设备"
       />
 
-      {records.length === 0 || !stats ? (
+      {/* A learner whose only activity is Speaking still has a timeline: the
+          empty state is about having nothing at all, not about having no
+          reading attempts. */}
+      {(records.length === 0 && solos.length === 0) || !stats ? (
         <>
           <EmptyNote>还没有练习记录。完成一篇阅读后会自动保存。</EmptyNote>
           <div className="mt-4 flex flex-wrap gap-2">
@@ -306,13 +350,23 @@ export function PracticeHistory() {
               value={String(stats.totalPractices)}
               hint="累计练习次数"
             />
+            {/* Null, not zero: with no attempt there is no accuracy, and a 0%
+                would read as a result the learner produced. */}
             <StatTile
               label="平均正确率"
-              value={accuracyText(stats.averageAccuracy)}
+              value={
+                stats.totalPractices > 0
+                  ? accuracyText(stats.averageAccuracy)
+                  : "—"
+              }
             />
             <StatTile
               label="学习时长"
-              value={`${Math.round(stats.totalTimeSeconds / 60)} 分钟`}
+              value={
+                stats.totalPractices > 0
+                  ? `${Math.round(stats.totalTimeSeconds / 60)} 分钟`
+                  : "—"
+              }
             />
             <StatTile
               label="连续学习"
@@ -409,7 +463,11 @@ export function PracticeHistory() {
               </div>
 
               <div className="mb-3 flex flex-wrap items-center gap-3 text-stage-xs text-stage-fg-muted">
-                <span>共 {visible.length} 条</span>
+                {/* Counts what the timeline is showing, which is not the same
+                    as the number of records once Speaking events join it. */}
+                <span>
+                  共 {groups.reduce((sum, group) => sum + group.items.length, 0)} 条
+                </span>
                 {selection.size > 0 ? (
                   <>
                     <span>已选 {selection.size} 条</span>
@@ -435,7 +493,7 @@ export function PracticeHistory() {
                 </p>
               ) : null}
 
-              {visible.length === 0 ? (
+              {groups.length === 0 ? (
                 <EmptyNote>没有符合条件的记录。</EmptyNote>
               ) : (
                 <div className="space-y-6">
@@ -444,30 +502,36 @@ export function PracticeHistory() {
                       <h2 className="mb-2 flex items-baseline gap-2 text-stage-xs font-medium text-stage-fg">
                         {group.day}
                         <span className="text-stage-2xs font-normal text-stage-fg-subtle">
-                          {group.records.length} 次
+                          {group.items.length} 次
                         </span>
                       </h2>
                       {/* The rule down the left is the timeline spine; each
                           event hangs off it with its own glyph. */}
                       <ul className="space-y-2 border-l border-stage-border pl-4">
-                        {group.records.map((record) => (
-                          <li key={record.id}>
-                            <EventRow
-                              event={
-                                events.get(record.id) ?? {
-                                  record,
-                                  kind: "practice",
-                                  previousAccuracy: null,
+                        {group.items.map((item) =>
+                          item.kind === "solo" ? (
+                            <li key={item.solo.id}>
+                              <SoloRow event={item.solo} />
+                            </li>
+                          ) : (
+                            <li key={item.record.id}>
+                              <EventRow
+                                event={
+                                  events.get(item.record.id) ?? {
+                                    record: item.record,
+                                    kind: "practice",
+                                    previousAccuracy: null,
+                                  }
                                 }
-                              }
-                              selected={selection.has(record.id)}
-                              onToggle={() => toggleSelected(record.id)}
-                              onDelete={() =>
-                                applyRecords(deleteRecords([record.id]))
-                              }
-                            />
-                          </li>
-                        ))}
+                                selected={selection.has(item.record.id)}
+                                onToggle={() => toggleSelected(item.record.id)}
+                                onDelete={() =>
+                                  applyRecords(deleteRecords([item.record.id]))
+                                }
+                              />
+                            </li>
+                          ),
+                        )}
                       </ul>
                     </section>
                   ))}
@@ -525,6 +589,48 @@ function ImportButton({
         }}
       />
     </>
+  );
+}
+
+/**
+ * One 独立表达 on the timeline (T7).
+ *
+ * Deliberately thin: the prompt, when it happened, and how many dimensions the
+ * learner said they covered. There is nothing to expand, because there is
+ * nothing else recorded — no audio, no duration, no result. The right-hand
+ * figure is a count of their own self-check ticks, never a measurement.
+ */
+function SoloRow({ event }: { event: SpeakingTimelineEvent }) {
+  return (
+    <div className="relative rounded-stage-md border border-stage-border bg-stage-bg px-4 py-3">
+      <span
+        aria-hidden
+        className="absolute -left-[1.4rem] top-4 text-stage-2xs text-stage-fg-subtle"
+      >
+        ✦
+      </span>
+      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
+        <div className="min-w-0 flex-1">
+          <p className="text-stage-xs font-medium text-stage-fg">
+            {event.questionText || "口语题目"}
+          </p>
+          <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-stage-2xs text-stage-fg-subtle">
+            <Badge tone="accent">独立表达</Badge>
+            <Tag>Speaking</Tag>
+            <span className="tabular-nums">{formatTime(event.at)}</span>
+            <span className="tabular-nums">
+              自查覆盖 {event.dimensions.length} 个维度
+            </span>
+          </p>
+        </div>
+        <Link
+          href={`/ielts-lab/speaking/${event.questionId}`}
+          className={BUTTON_QUIET}
+        >
+          回到这道题
+        </Link>
+      </div>
+    </div>
   );
 }
 

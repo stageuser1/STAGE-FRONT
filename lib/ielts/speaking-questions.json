@@ -1,0 +1,501 @@
+{
+  "corpusVersion": 1,
+  "generatedAt": "2026-07-29",
+  "sourceStatement": "STAGE 自撰题目卡，基于公开考试大纲的话题分类与题型结构；不含任何第三方题库的逐字内容。",
+  "topics": [
+    {
+      "id": "hometown",
+      "labelEn": "Hometown",
+      "labelZh": "家乡",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "hometown-p1-01", "part": 1, "textEn": "Where is your hometown?" },
+        { "id": "hometown-p1-02", "part": 1, "textEn": "What do you like most about the place where you grew up?" },
+        { "id": "hometown-p1-03", "part": 1, "textEn": "Has your hometown changed much since you were a child?" },
+        { "id": "hometown-p1-04", "part": 1, "textEn": "Would you like to live in your hometown in the future?" },
+        { "id": "hometown-p1-05", "part": 1, "textEn": "Is your hometown a good place for young people?" },
+        { "id": "hometown-p1-06", "part": 1, "textEn": "What would you show a visitor who only had one day there?" },
+        { "id": "hometown-p2-01", "part": 2, "textEn": "Describe a place in your hometown that you often take visitors to.", "cuePointsEn": ["Where it is", "How often you go there", "What visitors usually do there", "And explain why you take people to this place"] },
+        { "id": "hometown-p2-02", "part": 2, "textEn": "Describe a change you would like to see in your hometown.", "cuePointsEn": ["What the change is", "Why you think it is needed", "Who would benefit from it", "And explain how you think it could happen"] },
+        { "id": "hometown-p3-01", "part": 3, "textEn": "Why do people move away from the places where they grew up?", "glossZh": "问的是普遍原因，不是你自己的经历。" },
+        { "id": "hometown-p3-02", "part": 3, "textEn": "How does the size of a town change the way people live in it?" },
+        { "id": "hometown-p3-03", "part": 3, "textEn": "Should old buildings be protected when a city needs more space?", "glossZh": "取舍类问题：保护与发展之间怎么权衡。" }
+      ]
+    },
+    {
+      "id": "work-and-study",
+      "labelEn": "Work and Study",
+      "labelZh": "工作与学习",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "work-and-study-p1-01", "part": 1, "textEn": "Do you work, or are you a student?" },
+        { "id": "work-and-study-p1-02", "part": 1, "textEn": "What do you enjoy most about your work or your studies?" },
+        { "id": "work-and-study-p1-03", "part": 1, "textEn": "Is there anything you would change about your working day?" },
+        { "id": "work-and-study-p1-04", "part": 1, "textEn": "Do you prefer to work in the morning or later in the day?" },
+        { "id": "work-and-study-p1-05", "part": 1, "textEn": "Do you work better on your own or with other people?" },
+        { "id": "work-and-study-p1-06", "part": 1, "textEn": "What job did you want to do when you were a child?" },
+        { "id": "work-and-study-p2-01", "part": 2, "textEn": "Describe a task you found difficult but finished anyway.", "cuePointsEn": ["What the task was", "When you had to do it", "What made it difficult", "And explain how you felt when it was done"] },
+        { "id": "work-and-study-p2-02", "part": 2, "textEn": "Describe a skill you learned for your work or your studies.", "cuePointsEn": ["What the skill is", "How you learned it", "How long it took", "And explain how you use it now"] },
+        { "id": "work-and-study-p3-01", "part": 3, "textEn": "Why do some people change careers in the middle of their lives?", "glossZh": "谈中年转行的动因，可从个人与外部环境两面说。" },
+        { "id": "work-and-study-p3-02", "part": 3, "textEn": "What makes one workplace better to be in than another?" },
+        { "id": "work-and-study-p3-03", "part": 3, "textEn": "Will most people still go to an office in twenty years' time?" }
+      ]
+    },
+    {
+      "id": "daily-routine",
+      "labelEn": "Daily Routine",
+      "labelZh": "日常作息",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "daily-routine-p1-01", "part": 1, "textEn": "What time do you usually get up?" },
+        { "id": "daily-routine-p1-02", "part": 1, "textEn": "Is your daily routine the same every day?" },
+        { "id": "daily-routine-p1-03", "part": 1, "textEn": "Which part of the day do you like best?" },
+        { "id": "daily-routine-p1-04", "part": 1, "textEn": "Do you plan your day in advance, or decide as you go?" },
+        { "id": "daily-routine-p1-05", "part": 1, "textEn": "Has your routine changed in the last few years?" },
+        { "id": "daily-routine-p1-06", "part": 1, "textEn": "Is there anything you always do before you go to bed?" },
+        { "id": "daily-routine-p2-01", "part": 2, "textEn": "Describe a part of your daily routine that you enjoy.", "cuePointsEn": ["What it is", "When you do it", "How long it takes", "And explain why you enjoy it"] },
+        { "id": "daily-routine-p2-02", "part": 2, "textEn": "Describe a day when your usual routine was completely changed.", "cuePointsEn": ["When it happened", "What changed it", "What you did instead", "And explain how you felt about the day"] },
+        { "id": "daily-routine-p3-01", "part": 3, "textEn": "Why do some people keep the same routine for years?", "glossZh": "问的是稳定作息带来的好处或心理原因。" },
+        { "id": "daily-routine-p3-02", "part": 3, "textEn": "Is a fixed routine helpful, or does it stop people trying new things?", "glossZh": "两面讨论题，答案需要给出立场并说明理由。" },
+        { "id": "daily-routine-p3-03", "part": 3, "textEn": "How has the way people organise their day changed compared with their parents' generation?" }
+      ]
+    },
+    {
+      "id": "food-and-cooking",
+      "labelEn": "Food and Cooking",
+      "labelZh": "饮食与烹饪",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "food-and-cooking-p1-01", "part": 1, "textEn": "What kind of food do you usually eat?" },
+        { "id": "food-and-cooking-p1-02", "part": 1, "textEn": "Do you cook at home?" },
+        { "id": "food-and-cooking-p1-03", "part": 1, "textEn": "Did you learn to cook from anyone in your family?" },
+        { "id": "food-and-cooking-p1-04", "part": 1, "textEn": "Do you prefer eating at home or eating out?" },
+        { "id": "food-and-cooking-p1-05", "part": 1, "textEn": "Is there any food you disliked as a child but like now?" },
+        { "id": "food-and-cooking-p1-06", "part": 1, "textEn": "What is a dish that is common where you live?" },
+        { "id": "food-and-cooking-p2-01", "part": 2, "textEn": "Describe a meal you enjoyed cooking or eating with other people.", "cuePointsEn": ["What the meal was", "Who you were with", "Where it took place", "And explain why you remember it"] },
+        { "id": "food-and-cooking-p2-02", "part": 2, "textEn": "Describe a food that is popular in your country.", "cuePointsEn": ["What it is", "When people usually eat it", "How it is made", "And explain why you think it is popular"] },
+        { "id": "food-and-cooking-p3-01", "part": 3, "textEn": "Why do eating habits change when people move to another country?", "glossZh": "可以从可获得的食材、时间安排、社交场合等角度说。" },
+        { "id": "food-and-cooking-p3-02", "part": 3, "textEn": "Are family meals less common than they used to be?" },
+        { "id": "food-and-cooking-p3-03", "part": 3, "textEn": "Should schools teach children how to cook?" }
+      ]
+    },
+    {
+      "id": "weather-and-seasons",
+      "labelEn": "Weather and Seasons",
+      "labelZh": "天气与季节",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "weather-and-seasons-p1-01", "part": 1, "textEn": "What is the weather like where you live?" },
+        { "id": "weather-and-seasons-p1-02", "part": 1, "textEn": "Which season do you like best?" },
+        { "id": "weather-and-seasons-p1-03", "part": 1, "textEn": "Does the weather change what you do at the weekend?" },
+        { "id": "weather-and-seasons-p1-04", "part": 1, "textEn": "Do you prefer hot weather or cold weather?" },
+        { "id": "weather-and-seasons-p1-05", "part": 1, "textEn": "Do you check the weather forecast?" },
+        { "id": "weather-and-seasons-p1-06", "part": 1, "textEn": "Is there a kind of weather you find difficult?" },
+        { "id": "weather-and-seasons-p2-01", "part": 2, "textEn": "Describe a day when the weather changed your plans.", "cuePointsEn": ["When it was", "What you had planned", "What you did instead", "And explain how you felt about it"] },
+        { "id": "weather-and-seasons-p2-02", "part": 2, "textEn": "Describe a season or a time of year you look forward to.", "cuePointsEn": ["Which one it is", "What the weather is like then", "What you usually do", "And explain why you look forward to it"] },
+        { "id": "weather-and-seasons-p3-01", "part": 3, "textEn": "How does weather affect the way people feel?", "glossZh": "问的是天气与情绪、作息的关系。" },
+        { "id": "weather-and-seasons-p3-02", "part": 3, "textEn": "Why do people in different regions have such different attitudes to rain?" },
+        { "id": "weather-and-seasons-p3-03", "part": 3, "textEn": "Should cities be designed differently for hotter summers?", "glossZh": "城市规划类问题：可以谈绿化、遮阳、建筑材料等。" }
+      ]
+    },
+    {
+      "id": "getting-around",
+      "labelEn": "Getting Around",
+      "labelZh": "出行方式",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "getting-around-p1-01", "part": 1, "textEn": "How do you usually travel around your city?" },
+        { "id": "getting-around-p1-02", "part": 1, "textEn": "How long does it take you to get to work or to your school?" },
+        { "id": "getting-around-p1-03", "part": 1, "textEn": "Do you enjoy the journey, or is it just something you have to do?" },
+        { "id": "getting-around-p1-04", "part": 1, "textEn": "Have the transport options where you live improved?" },
+        { "id": "getting-around-p1-05", "part": 1, "textEn": "Do you ever walk or cycle instead?" },
+        { "id": "getting-around-p1-06", "part": 1, "textEn": "What do you usually do while you are travelling?" },
+        { "id": "getting-around-p2-01", "part": 2, "textEn": "Describe a journey you make regularly.", "cuePointsEn": ["Where you go", "How you travel", "How long it takes", "And explain how you feel about making it"] },
+        { "id": "getting-around-p2-02", "part": 2, "textEn": "Describe a time when a journey took much longer than you expected.", "cuePointsEn": ["Where you were going", "Why it took so long", "What you did while you waited", "And explain how you felt"] },
+        { "id": "getting-around-p3-01", "part": 3, "textEn": "Why do some people prefer driving even when public transport is available?", "glossZh": "谈选择背后的原因：时间、舒适度、习惯等。" },
+        { "id": "getting-around-p3-02", "part": 3, "textEn": "What makes people willing to walk or cycle more?" },
+        { "id": "getting-around-p3-03", "part": 3, "textEn": "How should a city decide where to build new transport links?", "glossZh": "问的是决策依据，不是具体线路。" }
+      ]
+    },
+    {
+      "id": "technology",
+      "labelEn": "Technology",
+      "labelZh": "科技与设备",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "technology-p1-01", "part": 1, "textEn": "What piece of technology do you use most?" },
+        { "id": "technology-p1-02", "part": 1, "textEn": "How often do you change your phone or your computer?" },
+        { "id": "technology-p1-03", "part": 1, "textEn": "Do you find new devices easy to learn?" },
+        { "id": "technology-p1-04", "part": 1, "textEn": "Do you use technology more for work or for entertainment?" },
+        { "id": "technology-p1-05", "part": 1, "textEn": "Is there any technology you have decided not to use?" },
+        { "id": "technology-p1-06", "part": 1, "textEn": "Who taught you to use the devices you own?" },
+        { "id": "technology-p2-01", "part": 2, "textEn": "Describe a piece of technology that made your life easier.", "cuePointsEn": ["What it is", "When you started using it", "What you use it for", "And explain how it changed things for you"] },
+        { "id": "technology-p2-02", "part": 2, "textEn": "Describe a time when a device stopped working when you needed it.", "cuePointsEn": ["What the device was", "When it happened", "What you did", "And explain how you felt"] },
+        { "id": "technology-p3-01", "part": 3, "textEn": "Why do some people feel uneasy about new technology?", "glossZh": "谈不安的来源：学习成本、隐私、可靠性等。" },
+        { "id": "technology-p3-02", "part": 3, "textEn": "Does having more devices actually save people time?", "glossZh": "反直觉类问题，需要给出立场并举例支撑。" },
+        { "id": "technology-p3-03", "part": 3, "textEn": "How should children's use of screens be managed?" }
+      ]
+    },
+    {
+      "id": "music",
+      "labelEn": "Music",
+      "labelZh": "音乐",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "music-p1-01", "part": 1, "textEn": "What kind of music do you listen to?" },
+        { "id": "music-p1-02", "part": 1, "textEn": "When do you usually listen to music?" },
+        { "id": "music-p1-03", "part": 1, "textEn": "Have you ever learned a musical instrument?" },
+        { "id": "music-p1-04", "part": 1, "textEn": "Has the music you like changed since you were younger?" },
+        { "id": "music-p1-05", "part": 1, "textEn": "Do you prefer listening at home or hearing music live?" },
+        { "id": "music-p1-06", "part": 1, "textEn": "Is music important in your family?" },
+        { "id": "music-p2-01", "part": 2, "textEn": "Describe a song or a piece of music that means something to you.", "cuePointsEn": ["What it is", "When you first heard it", "When you listen to it", "And explain why it matters to you"] },
+        { "id": "music-p2-02", "part": 2, "textEn": "Describe a live performance you attended.", "cuePointsEn": ["What it was", "Who you went with", "Where it took place", "And explain what you remember most about it"] },
+        { "id": "music-p3-01", "part": 3, "textEn": "Why does music from a particular period stay popular for so long?", "glossZh": "谈某个年代的音乐为什么经久不衰。" },
+        { "id": "music-p3-02", "part": 3, "textEn": "Should children be taught to play an instrument at school?" },
+        { "id": "music-p3-03", "part": 3, "textEn": "How has the way people find new music changed?" }
+      ]
+    },
+    {
+      "id": "sport-and-exercise",
+      "labelEn": "Sport and Exercise",
+      "labelZh": "运动与锻炼",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "sport-and-exercise-p1-01", "part": 1, "textEn": "Do you play any sports?" },
+        { "id": "sport-and-exercise-p1-02", "part": 1, "textEn": "How often do you exercise?" },
+        { "id": "sport-and-exercise-p1-03", "part": 1, "textEn": "Did you enjoy sport at school?" },
+        { "id": "sport-and-exercise-p1-04", "part": 1, "textEn": "Do you prefer team sports or exercising on your own?" },
+        { "id": "sport-and-exercise-p1-05", "part": 1, "textEn": "Do you watch sport on television?" },
+        { "id": "sport-and-exercise-p1-06", "part": 1, "textEn": "Is there a sport you would like to try?" },
+        { "id": "sport-and-exercise-p2-01", "part": 2, "textEn": "Describe a sport or an activity you enjoy doing.", "cuePointsEn": ["What it is", "How often you do it", "Who you do it with", "And explain why you enjoy it"] },
+        { "id": "sport-and-exercise-p2-02", "part": 2, "textEn": "Describe a time you kept going with something physical that was hard.", "cuePointsEn": ["What it was", "Why it was difficult", "How you kept going", "And explain how you felt afterwards"] },
+        { "id": "sport-and-exercise-p3-01", "part": 3, "textEn": "Why do many adults stop exercising after they leave school?", "glossZh": "谈成年后运动量下降的原因。" },
+        { "id": "sport-and-exercise-p3-02", "part": 3, "textEn": "Should local governments pay for sports facilities?", "glossZh": "公共支出类问题：谁受益、钱从哪来。" },
+        { "id": "sport-and-exercise-p3-03", "part": 3, "textEn": "What makes a sport popular in one country and not in another?" }
+      ]
+    },
+    {
+      "id": "reading",
+      "labelEn": "Reading",
+      "labelZh": "阅读",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "reading-p1-01", "part": 1, "textEn": "Do you read much?" },
+        { "id": "reading-p1-02", "part": 1, "textEn": "What sort of things do you read?" },
+        { "id": "reading-p1-03", "part": 1, "textEn": "Do you read on paper or on a screen?" },
+        { "id": "reading-p1-04", "part": 1, "textEn": "When do you usually find time to read?" },
+        { "id": "reading-p1-05", "part": 1, "textEn": "Did you enjoy reading as a child?" },
+        { "id": "reading-p1-06", "part": 1, "textEn": "Do you ever recommend books to other people?" },
+        { "id": "reading-p2-01", "part": 2, "textEn": "Describe a book or an article you found useful.", "cuePointsEn": ["What it was", "How you came across it", "What it was about", "And explain why it was useful to you"] },
+        { "id": "reading-p2-02", "part": 2, "textEn": "Describe something you read that changed how you thought about a subject.", "cuePointsEn": ["What it was", "When you read it", "What it said", "And explain what changed for you"] },
+        { "id": "reading-p3-01", "part": 3, "textEn": "Why do fewer people read long texts now?", "glossZh": "谈长文阅读减少的原因，可从注意力与媒介两面说。" },
+        { "id": "reading-p3-02", "part": 3, "textEn": "Do people remember things differently when they read on a screen?", "glossZh": "对比纸质与屏幕阅读的记忆效果。" },
+        { "id": "reading-p3-03", "part": 3, "textEn": "How can reading be encouraged among young people?" }
+      ]
+    },
+    {
+      "id": "shopping",
+      "labelEn": "Shopping",
+      "labelZh": "购物",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "shopping-p1-01", "part": 1, "textEn": "Do you enjoy shopping?" },
+        { "id": "shopping-p1-02", "part": 1, "textEn": "Do you shop online or in shops?" },
+        { "id": "shopping-p1-03", "part": 1, "textEn": "How often do you buy clothes?" },
+        { "id": "shopping-p1-04", "part": 1, "textEn": "Do you make a list before you shop?" },
+        { "id": "shopping-p1-05", "part": 1, "textEn": "Do you prefer shopping alone or with someone?" },
+        { "id": "shopping-p1-06", "part": 1, "textEn": "Is there a shop near you that you go to often?" },
+        { "id": "shopping-p2-01", "part": 2, "textEn": "Describe something you bought that you were pleased with.", "cuePointsEn": ["What it was", "Where you bought it", "Why you chose it", "And explain why you were pleased with it"] },
+        { "id": "shopping-p2-02", "part": 2, "textEn": "Describe a time you spent a long time deciding what to buy.", "cuePointsEn": ["What you were buying", "Why the decision was hard", "How you decided", "And explain whether you were happy with the choice"] },
+        { "id": "shopping-p3-01", "part": 3, "textEn": "Why do people buy things they do not really need?", "glossZh": "谈消费动机，不必只讲广告。" },
+        { "id": "shopping-p3-02", "part": 3, "textEn": "Have small local shops become less important?" },
+        { "id": "shopping-p3-03", "part": 3, "textEn": "How does advertising change what people buy?" }
+      ]
+    },
+    {
+      "id": "sleep",
+      "labelEn": "Sleep",
+      "labelZh": "睡眠",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "sleep-p1-01", "part": 1, "textEn": "How many hours do you usually sleep?" },
+        { "id": "sleep-p1-02", "part": 1, "textEn": "Do you go to bed at the same time every night?" },
+        { "id": "sleep-p1-03", "part": 1, "textEn": "Do you ever sleep during the day?" },
+        { "id": "sleep-p1-04", "part": 1, "textEn": "What helps you sleep well?" },
+        { "id": "sleep-p1-05", "part": 1, "textEn": "Has your sleep changed over the years?" },
+        { "id": "sleep-p1-06", "part": 1, "textEn": "Do you use an alarm to wake up?" },
+        { "id": "sleep-p2-01", "part": 2, "textEn": "Describe a habit that helps you rest well.", "cuePointsEn": ["What it is", "When you started it", "How often you do it", "And explain how it helps you"] },
+        { "id": "sleep-p2-02", "part": 2, "textEn": "Describe a time when you were very tired.", "cuePointsEn": ["When it was", "Why you were tired", "What you did", "And explain how you felt the next day"] },
+        { "id": "sleep-p3-01", "part": 3, "textEn": "Why do many people get less sleep than they need?", "glossZh": "谈睡眠不足的普遍原因。" },
+        { "id": "sleep-p3-02", "part": 3, "textEn": "Should workplaces pay attention to how well their staff rest?", "glossZh": "问的是雇主责任的边界。" },
+        { "id": "sleep-p3-03", "part": 3, "textEn": "How do modern habits affect the way people sleep?" }
+      ]
+    },
+    {
+      "id": "friends",
+      "labelEn": "Friends",
+      "labelZh": "朋友",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "friends-p1-01", "part": 1, "textEn": "How often do you see your friends?" },
+        { "id": "friends-p1-02", "part": 1, "textEn": "Where did you meet most of your friends?" },
+        { "id": "friends-p1-03", "part": 1, "textEn": "Do you prefer a large group of friends or a few close ones?" },
+        { "id": "friends-p1-04", "part": 1, "textEn": "What do you usually do together?" },
+        { "id": "friends-p1-05", "part": 1, "textEn": "Is it easy to make friends as an adult?" },
+        { "id": "friends-p1-06", "part": 1, "textEn": "Do you keep in touch with friends from school?" },
+        { "id": "friends-p2-01", "part": 2, "textEn": "Describe a friend you have known for a long time.", "cuePointsEn": ["Who the person is", "How you met", "What you usually do together", "And explain why the friendship has lasted"] },
+        { "id": "friends-p2-02", "part": 2, "textEn": "Describe a time a friend helped you.", "cuePointsEn": ["What the situation was", "What your friend did", "How you reacted", "And explain what it meant to you"] },
+        { "id": "friends-p3-01", "part": 3, "textEn": "Why do some friendships last for decades while others fade?", "glossZh": "对比两类友谊的差别，谈维系的条件。" },
+        { "id": "friends-p3-02", "part": 3, "textEn": "Has technology changed what friendship means?", "glossZh": "问的是友谊的定义是否变了，不只是联系方式。" },
+        { "id": "friends-p3-03", "part": 3, "textEn": "Are friends more important than family in some situations?" }
+      ]
+    },
+    {
+      "id": "free-time",
+      "labelEn": "Free Time",
+      "labelZh": "空闲时间",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "free-time-p1-01", "part": 1, "textEn": "What do you usually do in your free time?" },
+        { "id": "free-time-p1-02", "part": 1, "textEn": "Do you have more free time now than a few years ago?" },
+        { "id": "free-time-p1-03", "part": 1, "textEn": "Do you prefer to spend free time indoors or outdoors?" },
+        { "id": "free-time-p1-04", "part": 1, "textEn": "Do you plan your weekends?" },
+        { "id": "free-time-p1-05", "part": 1, "textEn": "Is there a hobby you would like to take up?" },
+        { "id": "free-time-p1-06", "part": 1, "textEn": "Do you spend free time alone or with other people?" },
+        { "id": "free-time-p2-01", "part": 2, "textEn": "Describe an activity you took up recently.", "cuePointsEn": ["What it is", "How you started", "How often you do it", "And explain what you get out of it"] },
+        { "id": "free-time-p2-02", "part": 2, "textEn": "Describe a weekend you enjoyed.", "cuePointsEn": ["When it was", "Where you were", "What you did", "And explain why you enjoyed it"] },
+        { "id": "free-time-p3-01", "part": 3, "textEn": "Why do some people find it hard to relax?", "glossZh": "谈放松困难的原因，可从工作节奏与心理习惯两面说。" },
+        { "id": "free-time-p3-02", "part": 3, "textEn": "Has the amount of free time people have changed over the years?" },
+        { "id": "free-time-p3-03", "part": 3, "textEn": "Should employers care what their staff do outside work?", "glossZh": "问的是工作与私人生活的界限。" }
+      ]
+    },
+    {
+      "id": "animals",
+      "labelEn": "Animals",
+      "labelZh": "动物",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "animals-p1-01", "part": 1, "textEn": "Do you have a pet, or have you had one?" },
+        { "id": "animals-p1-02", "part": 1, "textEn": "Are pets common where you live?" },
+        { "id": "animals-p1-03", "part": 1, "textEn": "Did you like animals when you were a child?" },
+        { "id": "animals-p1-04", "part": 1, "textEn": "Do you enjoy visiting places where you can see animals?" },
+        { "id": "animals-p1-05", "part": 1, "textEn": "Are there many birds or animals in your neighbourhood?" },
+        { "id": "animals-p1-06", "part": 1, "textEn": "Would you like to work with animals?" },
+        { "id": "animals-p2-01", "part": 2, "textEn": "Describe an animal you find interesting.", "cuePointsEn": ["What it is", "Where you have seen it", "What it does", "And explain why you find it interesting"] },
+        { "id": "animals-p2-02", "part": 2, "textEn": "Describe a time you looked after an animal.", "cuePointsEn": ["What the animal was", "When it was", "What you had to do", "And explain how you felt about it"] },
+        { "id": "animals-p3-01", "part": 3, "textEn": "Why do people keep pets in cities?", "glossZh": "谈城市养宠的动机与条件。" },
+        { "id": "animals-p3-02", "part": 3, "textEn": "Should wild spaces near cities be left alone?", "glossZh": "开发与保留之间的取舍。" },
+        { "id": "animals-p3-03", "part": 3, "textEn": "How do attitudes to animals differ between generations?" }
+      ]
+    },
+    {
+      "id": "clothes",
+      "labelEn": "Clothes",
+      "labelZh": "服饰",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "clothes-p1-01", "part": 1, "textEn": "What kind of clothes do you usually wear?" },
+        { "id": "clothes-p1-02", "part": 1, "textEn": "Do you dress differently for work and for the weekend?" },
+        { "id": "clothes-p1-03", "part": 1, "textEn": "Do you enjoy buying clothes?" },
+        { "id": "clothes-p1-04", "part": 1, "textEn": "Has your taste in clothes changed?" },
+        { "id": "clothes-p1-05", "part": 1, "textEn": "Do you follow what is fashionable?" },
+        { "id": "clothes-p1-06", "part": 1, "textEn": "Do you keep clothes for a long time?" },
+        { "id": "clothes-p2-01", "part": 2, "textEn": "Describe an item of clothing you wear often.", "cuePointsEn": ["What it is", "When you got it", "When you wear it", "And explain why you wear it so often"] },
+        { "id": "clothes-p2-02", "part": 2, "textEn": "Describe an occasion when you had to dress in a particular way.", "cuePointsEn": ["What the occasion was", "What you wore", "How you chose it", "And explain how you felt"] },
+        { "id": "clothes-p3-01", "part": 3, "textEn": "Why do people in some jobs wear a uniform?", "glossZh": "谈制服的作用：辨识、安全、平等等。" },
+        { "id": "clothes-p3-02", "part": 3, "textEn": "Does what people wear affect how they are treated?", "glossZh": "问的是着装与他人判断之间的关系。" },
+        { "id": "clothes-p3-03", "part": 3, "textEn": "How quickly do clothing styles change now compared with the past?" }
+      ]
+    },
+    {
+      "id": "photography",
+      "labelEn": "Photography",
+      "labelZh": "摄影",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "photography-p1-01", "part": 1, "textEn": "Do you take many photographs?" },
+        { "id": "photography-p1-02", "part": 1, "textEn": "What do you usually photograph?" },
+        { "id": "photography-p1-03", "part": 1, "textEn": "Do you prefer taking photos or being in them?" },
+        { "id": "photography-p1-04", "part": 1, "textEn": "Do you look back at old photographs?" },
+        { "id": "photography-p1-05", "part": 1, "textEn": "Do you print photos, or keep them on a device?" },
+        { "id": "photography-p1-06", "part": 1, "textEn": "Has the way you take photos changed?" },
+        { "id": "photography-p2-01", "part": 2, "textEn": "Describe a photograph you like.", "cuePointsEn": ["What is in it", "Who took it", "When it was taken", "And explain why you like it"] },
+        { "id": "photography-p2-02", "part": 2, "textEn": "Describe a time you wanted to take a photograph but could not.", "cuePointsEn": ["Where you were", "What you wanted to photograph", "Why you could not", "And explain how you felt"] },
+        { "id": "photography-p3-01", "part": 3, "textEn": "Why do people photograph so much of their daily lives now?", "glossZh": "谈随手拍照成为习惯的原因。" },
+        { "id": "photography-p3-02", "part": 3, "textEn": "Does taking photographs change how people experience an event?", "glossZh": "问的是记录行为本身对体验的影响。" },
+        { "id": "photography-p3-03", "part": 3, "textEn": "Should there be limits on photographing people in public?" }
+      ]
+    },
+    {
+      "id": "travel",
+      "labelEn": "Travel",
+      "labelZh": "旅行",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "travel-p1-01", "part": 1, "textEn": "Do you travel much?" },
+        { "id": "travel-p1-02", "part": 1, "textEn": "Where did you go on your last trip?" },
+        { "id": "travel-p1-03", "part": 1, "textEn": "Do you prefer travelling alone or with others?" },
+        { "id": "travel-p1-04", "part": 1, "textEn": "How do you decide where to go?" },
+        { "id": "travel-p1-05", "part": 1, "textEn": "Do you plan trips in detail?" },
+        { "id": "travel-p1-06", "part": 1, "textEn": "Would you rather visit a new place or return to one you know?" },
+        { "id": "travel-p2-01", "part": 2, "textEn": "Describe a trip you enjoyed.", "cuePointsEn": ["Where you went", "Who you went with", "What you did there", "And explain why you enjoyed it"] },
+        { "id": "travel-p2-02", "part": 2, "textEn": "Describe a place you would like to visit.", "cuePointsEn": ["Where it is", "How you heard about it", "What you would do there", "And explain why you want to go"] },
+        { "id": "travel-p3-01", "part": 3, "textEn": "Why has travelling become more common than it was fifty years ago?", "glossZh": "谈成本、交通、信息等条件的变化。" },
+        { "id": "travel-p3-02", "part": 3, "textEn": "Does tourism help or harm the places people visit?", "glossZh": "两面题：需要给出立场并举例。" },
+        { "id": "travel-p3-03", "part": 3, "textEn": "What can people learn from spending time in another country?" }
+      ]
+    },
+    {
+      "id": "neighbourhood",
+      "labelEn": "Neighbourhood",
+      "labelZh": "社区",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "neighbourhood-p1-01", "part": 1, "textEn": "Do you know your neighbours?" },
+        { "id": "neighbourhood-p1-02", "part": 1, "textEn": "What is your neighbourhood like?" },
+        { "id": "neighbourhood-p1-03", "part": 1, "textEn": "Is it quiet where you live?" },
+        { "id": "neighbourhood-p1-04", "part": 1, "textEn": "What facilities are near your home?" },
+        { "id": "neighbourhood-p1-05", "part": 1, "textEn": "Would you like to move somewhere else?" },
+        { "id": "neighbourhood-p1-06", "part": 1, "textEn": "Has your area changed recently?" },
+        { "id": "neighbourhood-p2-01", "part": 2, "textEn": "Describe a place near your home that you go to often.", "cuePointsEn": ["What it is", "How often you go", "What you do there", "And explain why you go there"] },
+        { "id": "neighbourhood-p2-02", "part": 2, "textEn": "Describe a neighbour you get on well with.", "cuePointsEn": ["Who the person is", "How you met", "What you talk about", "And explain why you get on"] },
+        { "id": "neighbourhood-p3-01", "part": 3, "textEn": "Why do people in cities often not know their neighbours?", "glossZh": "谈城市生活方式对邻里关系的影响。" },
+        { "id": "neighbourhood-p3-02", "part": 3, "textEn": "What makes a neighbourhood a good place to live?" },
+        { "id": "neighbourhood-p3-03", "part": 3, "textEn": "Should local people decide what gets built near them?", "glossZh": "问的是决策权归属，可谈利弊。" }
+      ]
+    },
+    {
+      "id": "languages",
+      "labelEn": "Languages",
+      "labelZh": "语言",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "languages-p1-01", "part": 1, "textEn": "How long have you been learning English?" },
+        { "id": "languages-p1-02", "part": 1, "textEn": "Do you speak any other languages?" },
+        { "id": "languages-p1-03", "part": 1, "textEn": "What do you find hardest about learning a language?" },
+        { "id": "languages-p1-04", "part": 1, "textEn": "Where do you practise speaking?" },
+        { "id": "languages-p1-05", "part": 1, "textEn": "Do you enjoy learning languages?" },
+        { "id": "languages-p1-06", "part": 1, "textEn": "Do you use English outside your studies?" },
+        { "id": "languages-p2-01", "part": 2, "textEn": "Describe a time you used a foreign language outside the classroom.", "cuePointsEn": ["Where you were", "Who you spoke to", "What you talked about", "And explain how it went"] },
+        { "id": "languages-p2-02", "part": 2, "textEn": "Describe a way of learning that works well for you.", "cuePointsEn": ["What it is", "When you started using it", "How often you use it", "And explain why it works for you"] },
+        { "id": "languages-p3-01", "part": 3, "textEn": "Why do some people learn languages faster than others?", "glossZh": "谈个体差异的来源：环境、方法、动机等。" },
+        { "id": "languages-p3-02", "part": 3, "textEn": "Will fewer people learn languages as translation tools improve?", "glossZh": "预测类问题，需要说明理由。" },
+        { "id": "languages-p3-03", "part": 3, "textEn": "What is lost when a language stops being spoken?", "glossZh": "谈语言消失带来的文化损失。" }
+      ]
+    },
+    {
+      "id": "celebrations",
+      "labelEn": "Celebrations",
+      "labelZh": "节日",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "celebrations-p1-01", "part": 1, "textEn": "What celebrations are important where you live?" },
+        { "id": "celebrations-p1-02", "part": 1, "textEn": "How do you usually celebrate your birthday?" },
+        { "id": "celebrations-p1-03", "part": 1, "textEn": "Do you enjoy large gatherings?" },
+        { "id": "celebrations-p1-04", "part": 1, "textEn": "Do you give presents on special occasions?" },
+        { "id": "celebrations-p1-05", "part": 1, "textEn": "Have the ways people celebrate changed since you were a child?" },
+        { "id": "celebrations-p1-06", "part": 1, "textEn": "Is there a celebration you look forward to?" },
+        { "id": "celebrations-p2-01", "part": 2, "textEn": "Describe a celebration you took part in.", "cuePointsEn": ["What it was", "Who was there", "What people did", "And explain what you remember about it"] },
+        { "id": "celebrations-p2-02", "part": 2, "textEn": "Describe a gift you gave or received.", "cuePointsEn": ["What it was", "Who it was from or for", "When it was given", "And explain why it stayed in your memory"] },
+        { "id": "celebrations-p3-01", "part": 3, "textEn": "Why do public celebrations matter to a community?", "glossZh": "谈集体庆祝的社会作用。" },
+        { "id": "celebrations-p3-02", "part": 3, "textEn": "Are traditional festivals losing their meaning?", "glossZh": "问的是意义是否被稀释，可给出双面看法。" },
+        { "id": "celebrations-p3-03", "part": 3, "textEn": "Should companies be involved in public celebrations?" }
+      ]
+    },
+    {
+      "id": "art-and-museums",
+      "labelEn": "Art and Museums",
+      "labelZh": "艺术与博物馆",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "art-and-museums-p1-01", "part": 1, "textEn": "Do you visit museums or galleries?" },
+        { "id": "art-and-museums-p1-02", "part": 1, "textEn": "Did you do art at school?" },
+        { "id": "art-and-museums-p1-03", "part": 1, "textEn": "Do you have any pictures on your walls at home?" },
+        { "id": "art-and-museums-p1-04", "part": 1, "textEn": "Would you like to learn to draw or paint?" },
+        { "id": "art-and-museums-p1-05", "part": 1, "textEn": "Are museums popular where you live?" },
+        { "id": "art-and-museums-p1-06", "part": 1, "textEn": "Do you prefer older art or modern art?" },
+        { "id": "art-and-museums-p2-01", "part": 2, "textEn": "Describe a museum or gallery you have visited.", "cuePointsEn": ["Where it is", "When you went", "What you saw", "And explain what you thought of it"] },
+        { "id": "art-and-museums-p2-02", "part": 2, "textEn": "Describe a work of art you remember.", "cuePointsEn": ["What it is", "Where you saw it", "What it shows", "And explain why you remember it"] },
+        { "id": "art-and-museums-p3-01", "part": 3, "textEn": "Why should public money be spent on museums?", "glossZh": "公共投入类问题：谈价值与受益者。" },
+        { "id": "art-and-museums-p3-02", "part": 3, "textEn": "Does art need to be understood to be enjoyed?", "glossZh": "问的是理解与欣赏之间的关系。" },
+        { "id": "art-and-museums-p3-03", "part": 3, "textEn": "How can museums make their collections interesting to young people?" }
+      ]
+    },
+    {
+      "id": "nature-and-plants",
+      "labelEn": "Nature and Plants",
+      "labelZh": "自然与植物",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "nature-and-plants-p1-01", "part": 1, "textEn": "Do you spend much time outdoors?" },
+        { "id": "nature-and-plants-p1-02", "part": 1, "textEn": "Are there parks near where you live?" },
+        { "id": "nature-and-plants-p1-03", "part": 1, "textEn": "Do you keep any plants at home?" },
+        { "id": "nature-and-plants-p1-04", "part": 1, "textEn": "Did you grow anything as a child?" },
+        { "id": "nature-and-plants-p1-05", "part": 1, "textEn": "Do you prefer the countryside or the city?" },
+        { "id": "nature-and-plants-p1-06", "part": 1, "textEn": "Is there a natural place you like to visit?" },
+        { "id": "nature-and-plants-p2-01", "part": 2, "textEn": "Describe a natural place you enjoy being in.", "cuePointsEn": ["Where it is", "How often you go", "What you do there", "And explain how it makes you feel"] },
+        { "id": "nature-and-plants-p2-02", "part": 2, "textEn": "Describe a plant or a tree that is common where you live.", "cuePointsEn": ["What it is", "Where it grows", "What it looks like", "And explain why people notice it"] },
+        { "id": "nature-and-plants-p3-01", "part": 3, "textEn": "Why do people feel better after time outdoors?", "glossZh": "谈户外活动与身心状态的关系。" },
+        { "id": "nature-and-plants-p3-02", "part": 3, "textEn": "Should cities have more green space, even if land is expensive?", "glossZh": "成本与收益的取舍题。" },
+        { "id": "nature-and-plants-p3-03", "part": 3, "textEn": "How can ordinary people help protect the natural world?" }
+      ]
+    },
+    {
+      "id": "money-and-saving",
+      "labelEn": "Money and Saving",
+      "labelZh": "金钱与储蓄",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "money-and-saving-p1-01", "part": 1, "textEn": "Do you keep track of what you spend?" },
+        { "id": "money-and-saving-p1-02", "part": 1, "textEn": "Did you save money as a child?" },
+        { "id": "money-and-saving-p1-03", "part": 1, "textEn": "Do you prefer to save or to spend?" },
+        { "id": "money-and-saving-p1-04", "part": 1, "textEn": "Do you use cash or a card?" },
+        { "id": "money-and-saving-p1-05", "part": 1, "textEn": "Do you plan large purchases in advance?" },
+        { "id": "money-and-saving-p1-06", "part": 1, "textEn": "Who taught you about money?" },
+        { "id": "money-and-saving-p2-01", "part": 2, "textEn": "Describe something you saved up for.", "cuePointsEn": ["What it was", "How long you saved", "How you managed it", "And explain how you felt when you got it"] },
+        { "id": "money-and-saving-p2-02", "part": 2, "textEn": "Describe a decision about money that you thought carefully about.", "cuePointsEn": ["What the decision was", "When you made it", "What you considered", "And explain how it turned out"] },
+        { "id": "money-and-saving-p3-01", "part": 3, "textEn": "Why do people find saving money difficult?", "glossZh": "谈储蓄困难的原因，可从收入与习惯两面说。" },
+        { "id": "money-and-saving-p3-02", "part": 3, "textEn": "Should personal finance be taught in schools?", "glossZh": "教育内容取舍类问题。" },
+        { "id": "money-and-saving-p3-03", "part": 3, "textEn": "How has the way people pay for things changed?" }
+      ]
+    },
+    {
+      "id": "education",
+      "labelEn": "Education",
+      "labelZh": "教育",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "education-p1-01", "part": 1, "textEn": "What subjects did you enjoy at school?" },
+        { "id": "education-p1-02", "part": 1, "textEn": "Was there a teacher you remember well?" },
+        { "id": "education-p1-03", "part": 1, "textEn": "Do you prefer studying alone or in a class?" },
+        { "id": "education-p1-04", "part": 1, "textEn": "Do you take courses outside your main studies?" },
+        { "id": "education-p1-05", "part": 1, "textEn": "How do you keep learning now?" },
+        { "id": "education-p1-06", "part": 1, "textEn": "Do you like taking tests?" },
+        { "id": "education-p2-01", "part": 2, "textEn": "Describe a teacher who had an effect on you.", "cuePointsEn": ["Who the person was", "What they taught", "How they taught", "And explain what effect they had on you"] },
+        { "id": "education-p2-02", "part": 2, "textEn": "Describe something you learned outside school.", "cuePointsEn": ["What it was", "How you learned it", "How long it took", "And explain why you wanted to learn it"] },
+        { "id": "education-p3-01", "part": 3, "textEn": "Why do people continue studying after they start working?", "glossZh": "谈在职学习的动机。" },
+        { "id": "education-p3-02", "part": 3, "textEn": "Should schools focus more on practical skills?", "glossZh": "课程取舍类问题：实用技能与学科知识的平衡。" },
+        { "id": "education-p3-03", "part": 3, "textEn": "How well can a written test show what someone knows?", "glossZh": "问的是评价方式的局限。" }
+      ]
+    },
+    {
+      "id": "cities-and-buildings",
+      "labelEn": "Cities and Buildings",
+      "labelZh": "城市与建筑",
+      "sourceNote": "自撰，基于公开大纲话题分类",
+      "questions": [
+        { "id": "cities-and-buildings-p1-01", "part": 1, "textEn": "Do you live in a house or a flat?" },
+        { "id": "cities-and-buildings-p1-02", "part": 1, "textEn": "What do you like about where you live?" },
+        { "id": "cities-and-buildings-p1-03", "part": 1, "textEn": "Would you like to live in a big city?" },
+        { "id": "cities-and-buildings-p1-04", "part": 1, "textEn": "Are there any buildings you admire?" },
+        { "id": "cities-and-buildings-p1-05", "part": 1, "textEn": "Is your city crowded?" },
+        { "id": "cities-and-buildings-p1-06", "part": 1, "textEn": "What would make your city better?" },
+        { "id": "cities-and-buildings-p2-01", "part": 2, "textEn": "Describe a building you find impressive.", "cuePointsEn": ["Where it is", "What it is used for", "What it looks like", "And explain why you find it impressive"] },
+        { "id": "cities-and-buildings-p2-02", "part": 2, "textEn": "Describe a place in a city where people like to spend time.", "cuePointsEn": ["Where it is", "Who goes there", "What people do", "And explain why it attracts people"] },
+        { "id": "cities-and-buildings-p3-01", "part": 3, "textEn": "Why do people keep moving to large cities?", "glossZh": "谈人口向大城市集中的原因。" },
+        { "id": "cities-and-buildings-p3-02", "part": 3, "textEn": "What problems come with cities growing quickly?" },
+        { "id": "cities-and-buildings-p3-03", "part": 3, "textEn": "Should new buildings match the style of older ones around them?", "glossZh": "城市风貌类问题：统一与多样的取舍。" }
+      ]
+    }
+  ]
+}

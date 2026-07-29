@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { LabOverview } from "@/components/ielts/LabOverview";
 import { getAllExams } from "@/lib/ielts/catalog";
+import { countByPart, getSpeakingQuestions } from "@/lib/ielts/speaking-corpus";
 import { loadWritingSetSummaries } from "@/lib/writing-data";
 
 export const metadata: Metadata = {
@@ -18,6 +19,16 @@ export default async function IeltsLabPage() {
   // is there, and the module's own page does the browsing. Zero published sets
   // means no Writing card at all — a card for an empty module would be the
   // "即将上线" placeholder the master spec forbids.
+  //
+  // Speaking is counted the same way, from the static corpus — a file read, so
+  // it costs the build nothing and cannot fail.
   const writingSets = await loadWritingSetSummaries();
-  return <LabOverview exams={getAllExams()} writingSetCount={writingSets.length} />;
+  return (
+    <LabOverview
+      exams={getAllExams()}
+      writingSetCount={writingSets.length}
+      speakingQuestionCount={getSpeakingQuestions().length}
+      speakingByPart={countByPart()}
+    />
+  );
 }

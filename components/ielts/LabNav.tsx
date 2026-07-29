@@ -22,6 +22,9 @@ const SECTIONS = [
   // the *structure* of this list against speculative additions, not against a
   // module that ships — what it forbids is an entry with nothing behind it.
   { href: "/ielts-lab/writing", label: "写作" },
+  // Speaking joins on the same terms as Writing did: the module ships in T7, so
+  // the entry has something behind it.
+  { href: "/ielts-lab/speaking", label: "口语" },
   { href: "/ielts-lab/mistakes", label: "错题本" },
   { href: "/ielts-lab/history", label: "练习记录" },
 ] as const;
@@ -53,7 +56,9 @@ export function LabNav() {
             (section.href === "/ielts-lab/history" &&
               Boolean(pathname?.startsWith("/ielts-lab/review"))) ||
             (section.href === "/ielts-lab/writing" &&
-              Boolean(pathname?.startsWith("/ielts-lab/writing/")));
+              Boolean(pathname?.startsWith("/ielts-lab/writing/"))) ||
+            (section.href === "/ielts-lab/speaking" &&
+              Boolean(pathname?.startsWith("/ielts-lab/speaking/")));
           const badge =
             section.href === "/ielts-lab/mistakes" && mistakes ? mistakes : null;
 

@@ -14,6 +14,12 @@ import {
   startEndless,
   type PracticeSession,
 } from "@/lib/ielts/session";
+import {
+  hasMaterial,
+  loadSpeakingStates,
+  type SpeakingQuestionState,
+} from "@/lib/ielts/speaking-session";
+import type { SpeakingPart } from "@/lib/ielts/speaking-types";
 import { computeStats, loadRecords } from "@/lib/ielts/storage";
 import type { ExamCategory, ExamSummary, PracticeRecord } from "@/lib/ielts/types";
 import {
@@ -99,9 +105,14 @@ export function LabOverview({
   exams,
   /** Published writing sets. Zero means the module card is not rendered. */
   writingSetCount = 0,
+  /** Questions in the static Speaking corpus. Zero hides that card too. */
+  speakingQuestionCount = 0,
+  speakingByPart,
 }: {
   exams: ExamSummary[];
   writingSetCount?: number;
+  speakingQuestionCount?: number;
+  speakingByPart?: Record<SpeakingPart, number>;
 }) {
   const router = useRouter();
   // localStorage and sessionStorage are unreadable until after mount.
@@ -111,12 +122,16 @@ export function LabOverview({
   const [writingSessions, setWritingSessions] = useState<WritingSessionState[]>(
     [],
   );
+  const [speakingStates, setSpeakingStates] = useState<SpeakingQuestionState[]>(
+    [],
+  );
 
   useEffect(() => {
     setRecords(loadRecords());
     setSession(loadSession());
     setDrafts([...loadDrafts().values()]);
     setWritingSessions([...loadWritingSessions().values()]);
+    setSpeakingStates([...loadSpeakingStates().values()]);
   }, []);
 
   const totals = useMemo(() => countByCategory(exams), [exams]);
@@ -274,6 +289,14 @@ export function LabOverview({
         <WritingModuleCard
           total={writingSetCount}
           sessions={writingSessions}
+        />
+      ) : null}
+
+      {speakingQuestionCount > 0 ? (
+        <SpeakingModuleCard
+          total={speakingQuestionCount}
+          byPart={speakingByPart}
+          states={speakingStates}
         />
       ) : null}
 
@@ -616,6 +639,122 @@ function WritingModuleCard({
             {words}
           </span>{" "}
           词
+        </p>
+      </div>
+
+      <ul className="mt-4 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
+        {facts.map((fact) => (
+          <li
+            key={fact}
+            className="flex items-start gap-2 text-stage-xs text-stage-fg-muted"
+          >
+            <span
+              aria-hidden
+              className="mt-2 inline-block h-1 w-1 shrink-0 rounded-stage-pill bg-stage-border-strong"
+            />
+            {fact}
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+}
+
+/**
+ * Speaking module card (master-spec 批次一 §4).
+ *
+ * The entry words are the pair the spec fixes for this module — `进入素材库`
+ * and `继续构建` — rather than the 浏览题库 / 随机练习 the other cards use.
+ *
+ * `继续构建` appears only once there is something to continue. A learner with no
+ * material has nowhere for it to lead, and a button that resolves to an
+ * arbitrary question would be an invention rather than a resumption.
+ *
+ * Every figure is a count of the learner's own material. Nothing here is a
+ * result, and nothing about this module produces one.
+ */
+function SpeakingModuleCard({
+  total,
+  byPart,
+  states,
+}: {
+  total: number;
+  byPart?: Record<SpeakingPart, number>;
+  states: SpeakingQuestionState[];
+}) {
+  const started = states.filter((state) => hasMaterial(state));
+  const fragments = started.reduce(
+    (sum, state) => sum + state.fragments.length,
+    0,
+  );
+  const solos = started.reduce((sum, state) => sum + state.soloEvents.length, 0);
+
+  const resumable = [...started].sort(
+    (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
+  )[0];
+
+  const facts = [
+    `题目总量 ${total} 道`,
+    "五步流程：题目 · 个人想法 · 答案构建 · 记忆巩固 · 独立表达",
+    "答案只由你自己写下的想法片段组成",
+    "素材保存在本机浏览器，可导出备份",
+  ];
+
+  return (
+    <Card>
+      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
+        <div className="flex min-w-0 items-start gap-3">
+          <span
+            aria-hidden
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-stage-md bg-stage-primary-soft text-stage-xs font-semibold text-stage-primary"
+          >
+            S
+          </span>
+          <div className="min-w-0">
+            <h2 className="text-stage-h4 font-semibold text-stage-fg">
+              Speaking
+            </h2>
+            <p className="mt-0.5 text-stage-xs text-stage-fg-muted">
+              {byPart
+                ? `Part 1 ${byPart[1]} · Part 2 ${byPart[2]} · Part 3 ${byPart[3]}`
+                : "Part 1 / 2 / 3 三个部分"}
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/ielts-lab/speaking" className={BUTTON_SECONDARY}>
+            进入素材库
+          </Link>
+          {resumable ? (
+            <Link
+              href={`/ielts-lab/speaking/${resumable.questionId}`}
+              className={BUTTON_SECONDARY}
+            >
+              继续构建
+            </Link>
+          ) : null}
+        </div>
+      </div>
+
+      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
+        <p className="text-stage-xs text-stage-fg-muted">
+          已开始{" "}
+          <span className="font-semibold tabular-nums text-stage-fg">
+            {started.length}
+          </span>{" "}
+          / {total} 道
+        </p>
+        <p className="text-stage-xs text-stage-fg-muted">
+          累计写下{" "}
+          <span className="font-semibold tabular-nums text-stage-fg">
+            {fragments}
+          </span>{" "}
+          条想法
+        </p>
+        <p className="text-stage-xs text-stage-fg-muted">
+          独立表达{" "}
+          <span className="font-semibold tabular-nums text-stage-fg">{solos}</span>{" "}
+          次
         </p>
       </div>
 
