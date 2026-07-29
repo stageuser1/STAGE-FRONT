@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import {
   WRITING_TASK_KIND_LABELS,
@@ -10,45 +10,90 @@ import {
   isModelAnswerUnlocked,
   loadWritingSession,
 } from "@/lib/ielts/writing-session";
-import { BUTTON_PRIMARY, BUTTON_SECONDARY, EmptyNote, PageHeader } from "./ui";
+import {
+  BUTTON_PRIMARY,
+  BUTTON_QUIET,
+  BUTTON_SECONDARY,
+  EmptyNote,
+  PageHeader,
+} from "./ui";
 
 /**
  * Model answers, behind the "try first, then unlock" rule (writing-spec §四).
  *
- * The rule now spans the whole Lab — Reading explanations, Listening
- * transcripts, Writing model answers — so this screen states it rather than
- * re-deciding it: nothing is rendered until the learner's own session says they
- * completed their writing with a non-zero word count.
+ * The rule spans the whole Lab — Reading explanations, Listening transcripts,
+ * Writing model answers — so this screen applies it rather than re-deciding it:
+ * nothing is shown until the learner's own session says they completed their
+ * writing with a non-zero word count.
  *
- * The gate is evaluated after mount, and the answers are not in the DOM before
- * it passes. What this cannot do is hide the prose from the page payload: STAGE
- * is a static site with no learner session to check on the server. That limit
- * is recorded in the approved data contract (§3.3) rather than papered over.
+ * The answers are NOT props. This component receives a slug and fetches the
+ * prose from `/api/ielts/writing/{slug}/model-answer` only once the gate has
+ * passed, so a learner who has not written anything never receives the text at
+ * all — the page they load contains no model answer to reveal.
  */
+
+/** Everything this screen can be showing, as one value. */
+type ViewState =
+  | { kind: "checking" }
+  | { kind: "locked" }
+  | { kind: "loading" }
+  | { kind: "ready"; answers: WritingModelAnswerDto[] }
+  | { kind: "failed" };
+
 export function WritingModelAnswer({
   slug,
   title,
-  answers,
 }: {
   slug: string;
   title: string;
-  answers: WritingModelAnswerDto[];
 }) {
-  // Three states, not two: "not yet read" must never render as "locked" or as
-  // "unlocked", or the screen flashes the wrong one on every load.
-  const [unlocked, setUnlocked] = useState<boolean | null>(null);
+  // "checking" is a state of its own: rendering the gate or the answers before
+  // local storage has been read would flash the wrong one on every load.
+  const [view, setView] = useState<ViewState>({ kind: "checking" });
+
+  const open = useCallback(
+    (signal?: AbortSignal) => {
+      // The gate is re-evaluated here, immediately before the request. It is
+      // the only thing that can cause a fetch, so an unfinished draft never
+      // reaches the endpoint.
+      if (!isModelAnswerUnlocked(loadWritingSession(slug))) {
+        setView({ kind: "locked" });
+        return;
+      }
+
+      setView({ kind: "loading" });
+      fetch(`/api/ielts/writing/${encodeURIComponent(slug)}/model-answer`, {
+        signal,
+        cache: "no-store",
+      })
+        .then(async (response) => {
+          if (!response.ok) throw new Error(String(response.status));
+          const body = (await response.json()) as {
+            answers?: WritingModelAnswerDto[];
+          };
+          setView({ kind: "ready", answers: body.answers ?? [] });
+        })
+        .catch((error: unknown) => {
+          if (error instanceof DOMException && error.name === "AbortError") return;
+          setView({ kind: "failed" });
+        });
+    },
+    [slug],
+  );
 
   useEffect(() => {
-    setUnlocked(isModelAnswerUnlocked(loadWritingSession(slug)));
-  }, [slug]);
+    const controller = new AbortController();
+    open(controller.signal);
+    return () => controller.abort();
+  }, [open]);
 
   return (
     <div>
       <PageHeader title="参考范文" subtitle={title} />
 
-      {unlocked === null ? (
+      {view.kind === "checking" ? (
         <p className="text-stage-xs text-stage-fg-muted">读取本机练习记录…</p>
-      ) : !unlocked ? (
+      ) : view.kind === "locked" ? (
         <div className="rounded-stage-lg border border-stage-border bg-stage-bg-soft px-4 py-10 text-center">
           <p className="text-stage-xs text-stage-fg-body">
             先完成你自己的写作，再看参考范文。
@@ -65,11 +110,24 @@ export function WritingModelAnswer({
             </Link>
           </div>
         </div>
-      ) : answers.length === 0 ? (
+      ) : view.kind === "loading" ? (
+        <p className="text-stage-xs text-stage-fg-muted">读取参考范文…</p>
+      ) : view.kind === "failed" ? (
+        <div className="rounded-stage-lg border border-stage-border bg-stage-bg-soft px-4 py-10 text-center">
+          <p className="text-stage-xs text-stage-fg-body">
+            参考范文没有读取成功。
+          </p>
+          <div className="mt-4">
+            <button type="button" onClick={() => open()} className={BUTTON_QUIET}>
+              重试
+            </button>
+          </div>
+        </div>
+      ) : view.answers.length === 0 ? (
         <EmptyNote>这道题还没有配参考范文。</EmptyNote>
       ) : (
         <div className="flex flex-col gap-4">
-          {answers.map((answer) => (
+          {view.answers.map((answer) => (
             <article
               key={answer.position}
               className="rounded-stage-lg border border-stage-border bg-stage-bg p-5"

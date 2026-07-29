@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { WritingModelAnswer } from "@/components/ielts/WritingModelAnswer";
-import {
-  getWritingSetSlugs,
-  loadWritingModelAnswers,
-  loadWritingSet,
-} from "@/lib/writing-data";
+import { getWritingSetSlugs, loadWritingSet } from "@/lib/writing-data";
 
 export const metadata: Metadata = {
   title: "参考范文 · IELTS Lab",
@@ -26,11 +22,12 @@ interface PageProps {
 /**
  * Model answers for one set (writing-spec §四).
  *
- * A separate route so the writing screen's own payload contains no model answer
- * at all: reaching this prose takes a deliberate navigation that only appears
- * after 完成本次练习. The gate itself runs in the client against the learner's
- * local session — the approved contract records why that is the ceiling here
- * (§3.3), and the module ships with these fields empty in v1.
+ * This page is a shell. It reads the set only to resolve a title and to answer
+ * 404 for an unknown slug — it does NOT read the model answer, and nothing on
+ * this route's payload contains one. The prose is fetched by the client from
+ * `/api/ielts/writing/[setSlug]/model-answer`, and only after the learner's
+ * local session shows they completed their own writing with a non-zero word
+ * count. A learner who has not written anything never receives the text.
  */
 export default async function IeltsWritingModelAnswerPage({ params }: PageProps) {
   const { setSlug } = await params;
@@ -38,11 +35,5 @@ export default async function IeltsWritingModelAnswerPage({ params }: PageProps)
   const set = await loadWritingSet(slug);
   if (!set) notFound();
 
-  return (
-    <WritingModelAnswer
-      slug={slug}
-      title={set.titleEn}
-      answers={await loadWritingModelAnswers(slug)}
-    />
-  );
+  return <WritingModelAnswer slug={slug} title={set.titleEn} />;
 }

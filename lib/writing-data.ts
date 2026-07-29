@@ -450,10 +450,10 @@ const hasModelAnswer = cache(async (slug: string): Promise<boolean> => {
 /**
  * Model answers for one set.
  *
- * Read by `/ielts-lab/writing/[setSlug]/model` and by nothing else. The route
- * that calls this is reached only after the learner has completed their own
- * writing (writing-spec §四); the gate itself is client-side, which the
- * approved contract records explicitly (§3.3).
+ * Called by `/api/ielts/writing/[setSlug]/model-answer` and by nothing else —
+ * in particular, by no page. That is what keeps the prose out of every
+ * prerendered payload: it is only ever produced in response to a request the
+ * client makes after the local completion condition passes (writing-spec §四).
  */
 export const loadWritingModelAnswers = cache(
   async (slug: string): Promise<WritingModelAnswerDto[]> => {

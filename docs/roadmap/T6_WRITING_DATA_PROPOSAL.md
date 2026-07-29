@@ -64,21 +64,22 @@
 
 参考范文必须以"学习者已完成自己的写作并点击**完成本次练习**"为解锁条件；写作区为空或字数为 0 时不可见。
 
-### 3.2 前端如何消费
+### 3.2 前端如何消费（2026-07-29 修订：范文改为解锁后按需拉取）
 
-范文**不进入写作界面的页面负载**。三段式：
+范文正文**不进入任何页面负载**——包括 `/model` 路由自己的负载。四段式：
 
-1. `/ielts-lab/writing/{slug}` （写作界面）——服务端只投递 `hasModelAnswer: boolean`，不投递范文正文。页面上没有任何可揭示的范文 DOM。
-2. 点击「完成本次练习」→ 本地会话写入 `completedAt` 与该任务的 `wordCount`（`lib/ielts/writing-session.ts`，见 §7）。**字数为 0 的任务不写 `completedAt`**，因此空草稿不可能解锁。
-3. 解锁后出现「查看参考范文」入口，跳转到独立路由 `/ielts-lab/writing/{slug}/model`。该路由在渲染前读取本地会话；未完成（或直接输 URL 进入）时不渲染范文，显示逐字提示 `先完成你自己的写作，再看参考范文。` 与返回写作界面的按钮。
+1. `/ielts-lab/writing/{slug}` （写作界面）——服务端只投递 `hasModelAnswer: boolean`，不投递范文正文。
+2. 点击「完成本次练习」→ 本地会话写入 `completedAt` 与该任务的 `wordCount`（`lib/ielts/writing-session.ts`，见 §7）。**字数为 0 时拒绝写入 `completedAt`**，因此空草稿不可能解锁。
+3. 解锁后出现「查看参考范文」入口，跳转到 `/ielts-lab/writing/{slug}/model`。**该页面是一个壳**：服务端只读标题与 404 判断，不读 `model_answer_*`，页面负载里没有任何范文可供揭示。
+4. 客户端挂载后重新判定解锁条件；**只有判定通过才发起请求** `GET /api/ielts/writing/{slug}/model-answer`（`Cache-Control: no-store`）。未完成写作的人不是"拿到了但被要求别看"，而是根本没有收到正文。
 
-### 3.3 诚实的边界（请业主知悉）
+### 3.3 边界（修订后仍需业主知悉）
 
-STAGE 目前是纯静态站点，Lab 下没有任何 route handler / 服务端会话。因此"解锁"是**客户端纪律**，不是服务端鉴权：范文正文存在于 `/model` 路由的静态负载里，一个懂开发者工具的人可以绕过判断读到它。
+解锁条件依然是**客户端判定**，不是服务端鉴权——本阶段不引入学习者身份、不引入账号（业主明确排除）。因此该 API 端点本身是无鉴权的：知道 slug 的人可以直接请求它。
 
-现有阅读复盘的「遮罩揭示」是同一量级的纪律（内容在负载里、由前端遮罩）。本方案比遮罩更严一档——**写作界面本身的负载里没有范文**，必须主动导航到另一个路由才会下载。要做到服务端强制，需要引入 route handler + 学习者身份，那是 T6 范围之外的架构变更。
+修订解决的是原方案真正的漏洞：范文正文曾经**静态内嵌在 `/model` 路由的预渲染负载里**，任何人打开页面即已下载，客户端判定只是不渲染它。现在正文只在解锁后经由一次请求产生，页面本身无正文可泄。
 
-**建议：** v1 内容录入阶段 `model_answer_en` 一律留空，模块先以"仅助力草稿管理与过程追踪"上线（规格 §五.8 的范围声明）。字段先建好，等有了自有授权范文再逐条填入——填入当天不需要任何代码改动。
+**建议不变：** v1 内容录入阶段 `model_answer_en` 一律留空，模块先以"仅助力草稿管理与过程追踪"上线（规格 §五.8 的范围声明）。字段先建好，等有了自有授权范文再逐条填入——填入当天不需要任何代码改动。
 
 ---
 
@@ -136,7 +137,7 @@ readAllItems("ielts_writing_sets", {
 })
 ```
 
-列表页**不读** `prompt_en`、不读 `figure_image`、不读范文——卡片不渲染它们。写作界面按 slug 单条读取时才带上 `tasks.prompt_en`、`tasks.figure_image.{id,width,height}`、`tasks.figure_alt_zh`；范文正文只在 `/model` 路由的读取里出现。这与 `collections.ts` 里"list 只读聚合、detail 才读正文"的既有分层一致。
+列表页**不读** `prompt_en`、不读 `figure_image`、不读范文——卡片不渲染它们。写作界面按 slug 单条读取时才带上 `tasks.prompt_en`、`tasks.figure_image.{id,width,height}`、`tasks.figure_alt_zh`；范文正文**只在 `/api/ielts/writing/{slug}/model-answer` 这一个 route handler 里读取，任何页面都不读**（§3.2 修订）。这与 `collections.ts` 里"list 只读聚合、detail 才读正文"的既有分层一致，并且更进一步：范文连 detail 页面都不进。
 
 ### 6.3 公开 DTO 字段清单（跨越服务端 → 客户端组件的全部字段）
 
@@ -158,7 +159,7 @@ slug, title_en, title_zh, difficulty, estimated_minutes,
 tasks: PublicWritingTaskDto[], has_model_answer: boolean
 ```
 
-`PublicWritingModelAnswerDto`（仅 `/model` 路由）：
+`PublicWritingModelAnswerDto`（**仅** `/api/ielts/writing/{slug}/model-answer` 的响应体，不是任何页面的 props）：
 ```
 position, task_kind, model_answer, model_answer_note, model_answer_source
 ```
@@ -167,13 +168,14 @@ position, task_kind, model_answer, model_answer_note, model_answer_source
 
 ### 6.4 路由与渲染
 
-新增路由三条，全部在既有 `(shell)` 组内（《总纲》§6.1 路由架构不变，不新建路由组）：
+新增页面路由三条，全部在既有 `(shell)` 组内（《总纲》§6.1 路由架构不变，不新建路由组），外加一条 route handler：
 
 | 路由 | 文件 | 渲染 |
 |---|---|---|
 | `/ielts-lab/writing` | `app/(ielts)/ielts-lab/(shell)/writing/page.tsx` | 静态 |
 | `/ielts-lab/writing/[setSlug]` | `.../writing/[setSlug]/page.tsx` | 静态 + `generateStaticParams` |
-| `/ielts-lab/writing/[setSlug]/model` | `.../writing/[setSlug]/model/page.tsx` | 静态（仅在批准范文字段时建） |
+| `/ielts-lab/writing/[setSlug]/model` | `.../writing/[setSlug]/model/page.tsx` | 静态壳（不含范文正文） |
+| `/api/ielts/writing/[setSlug]/model-answer` | `app/api/ielts/writing/[setSlug]/model-answer/route.ts` | `force-dynamic`，`no-store`（§3.2 修订） |
 
 **分页在客户端做。** 规格 §二.4 要求 `Previous 1 2 Next` + `共 {N} 项`；若用 `?page=` searchParam，Next 会把该路由降级为动态渲染，直接违反《总纲》§4.1.2。因此列表页构建时取全部已发布单元，由客户端组件切页。语料规模是几十条，代价可忽略。
 
