@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LabOverview } from "@/components/ielts/LabOverview";
 import { getAllExams } from "@/lib/ielts/catalog";
-import { countByPart, getSpeakingQuestions } from "@/lib/ielts/speaking-corpus";
+import { getSpeakingQuestions } from "@/lib/ielts/speaking-corpus";
 import { loadWritingSetSummaries } from "@/lib/writing-data";
 
 export const metadata: Metadata = {
@@ -28,7 +28,6 @@ export default async function IeltsLabPage() {
       exams={getAllExams()}
       writingSetCount={writingSets.length}
       speakingQuestionCount={getSpeakingQuestions().length}
-      speakingByPart={countByPart()}
     />
   );
 }

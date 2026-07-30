@@ -6,7 +6,7 @@ import { questionTypeLabel } from "@/lib/ielts/question-types";
 import questionTypeIndex from "@/lib/ielts/question-types.json";
 
 export const metadata: Metadata = {
-  title: "题库 · IELTS Lab",
+  title: "Reading 题库 · IELTS Lab",
   description: "浏览、筛选并开始 STAGE IELTS Lab 的阅读真题。",
 };
 
@@ -47,6 +47,17 @@ function buildTypeLabels(): Record<string, string[]> {
   return labels;
 }
 
+/**
+ * Every question-type label the corpus uses, in the index's own order.
+ *
+ * The filter row renders these rather than a curated subset: the approved export
+ * mocks six types, but this corpus carries thirteen, and a filter that omits
+ * seven of them would hide passages the learner cannot otherwise reach.
+ */
+function buildTypeOptions(): string[] {
+  return INDEX.kinds.map((kind) => questionTypeLabel(kind));
+}
+
 export default function IeltsBrowsePage() {
   // The catalog is static data resolved at build time; only the filter UI and
   // the progress overlay are client-side.
@@ -56,7 +67,11 @@ export default function IeltsBrowsePage() {
     <Suspense
       fallback={<p className="text-stage-xs text-stage-fg-muted">加载题库…</p>}
     >
-      <ExamCatalog exams={getAllExams()} typeLabels={buildTypeLabels()} />
+      <ExamCatalog
+        exams={getAllExams()}
+        typeLabels={buildTypeLabels()}
+        typeOptions={buildTypeOptions()}
+      />
     </Suspense>
   );
 }

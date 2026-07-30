@@ -174,8 +174,8 @@ function Stepper({
   return (
     // The scroll container and the wide row must be two elements: an element
     // that is both `w-max` and `overflow-x-auto` sizes to its content and never
-    // scrolls, which pushes the page sideways instead. LabNav splits them the
-    // same way.
+    // scrolls, which pushes the page sideways instead. `LabMobileNav` in
+    // LabSidebar.tsx splits them the same way.
     <nav
       aria-label="口语五步流程"
       className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"

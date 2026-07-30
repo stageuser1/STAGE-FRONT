@@ -3,15 +3,14 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { CATEGORIES, countByCategory } from "@/lib/ielts/catalog";
 import { loadDrafts, type DraftEntry } from "@/lib/ielts/draft";
-import { buildProgressIndex, pickRandomExam, practisedByCategory } from "@/lib/ielts/progress";
+import { buildProgressIndex, pickRandomExam } from "@/lib/ielts/progress";
+import { isDueForRetest } from "@/lib/ielts/retest";
 import {
   clearSession,
   loadSession,
   practiceHref,
   reviewHref,
-  startEndless,
   type PracticeSession,
 } from "@/lib/ielts/session";
 import {
@@ -19,18 +18,16 @@ import {
   loadSpeakingStates,
   type SpeakingQuestionState,
 } from "@/lib/ielts/speaking-session";
-import type { SpeakingPart } from "@/lib/ielts/speaking-types";
 import { computeStats, loadRecords } from "@/lib/ielts/storage";
 import type { ExamCategory, ExamSummary, PracticeRecord } from "@/lib/ielts/types";
 import {
   loadWritingSessions,
   type WritingSessionState,
 } from "@/lib/ielts/writing-session";
-import { wrongbookCount } from "@/lib/ielts/wrongbook";
+import { buildWrongbook } from "@/lib/ielts/wrongbook";
 import { loadProfile, patchProfile } from "@/lib/profile/storage";
 import {
   ENGLISH_SUBJECTS,
-  ENGLISH_SUBJECT_LABELS,
   TARGET_MAX,
   TARGET_MIN,
   TARGET_STEP,
@@ -38,16 +35,16 @@ import {
   normaliseTarget,
   type EnglishSubject,
 } from "@/lib/profile/types";
+import { Icon, type IconName } from "@/components/ui/Icon";
 import {
+  BUTTON_DISABLED_SM,
+  BUTTON_GHOST_SM,
   BUTTON_PRIMARY,
-  BUTTON_QUIET,
+  BUTTON_PRIMARY_SM,
   BUTTON_SECONDARY,
-  Card,
+  BUTTON_SECONDARY_SM,
+  Badge,
   EmptyNote,
-  FIELD,
-  PageHeader,
-  StatTile,
-  Tag,
   accuracyText,
   splitTitle,
 } from "./ui";
@@ -58,38 +55,127 @@ const ONBOARDING_KEY = "stage.ielts.onboarding";
 /**
  * The three steps of the starter strip (supplement §三).
  *
- * The labels are verbatim and must not be rewritten. The third step is the one
- * the supplement singles out: it stays about consolidating a review and must
- * never become score-oriented.
+ * Labels and descriptions are the approved export's own wording, verbatim.
  *
- * The descriptions state what STAGE actually offers today — the spec's own
- * example lists four skills, and naming three that have no module yet would be
- * a promise the product does not keep.
+ * Two of them describe more than this build ships: step 1 names Listening,
+ * which has no module, and step 3's 安排重测 names a scheduling step nothing in
+ * STAGE performs. Both are flagged in the T-stage report rather than silently
+ * reworded — the copy is 逐字 and not the implementer's to edit.
  */
 const ONBOARDING_STEPS = [
-  { label: "选科目", detail: "目前开放 Reading" },
+  { label: "选科目", detail: "从 Reading、Listening、Writing、Speaking 中选择" },
   { label: "去练习", detail: "在真实节奏下完成一次练习" },
-  { label: "复盘巩固", detail: "逐题回顾，错题自动进入错题本" },
+  { label: "复盘巩固", detail: "查看证据复盘，标记弱点，安排重测" },
 ] as const;
 
-const CATEGORY_BLURB: Record<ExamCategory, string> = {
-  P1: "篇幅最短，事实定位为主",
-  P2: "论证结构，段落匹配偏多",
-  P3: "学术论文，题型最复杂",
+/**
+ * Subject labels for the target-score inputs.
+ *
+ * The export labels these in English, matching the skill names used by the
+ * sidebar and the module cards. `ENGLISH_SUBJECT_LABELS` is the Chinese set the
+ * profile wizard uses and is left alone — the two surfaces disagree on purpose.
+ */
+const TARGET_SUBJECT_LABELS: Record<EnglishSubject, string> = {
+  reading: "Reading",
+  listening: "Listening",
+  writing: "Writing",
+  speaking: "Speaking",
 };
 
-function relativeTime(iso: string): string {
-  const then = new Date(iso).getTime();
-  if (Number.isNaN(then)) return "—";
-  const minutes = Math.round((Date.now() - then) / 60000);
-  if (minutes < 1) return "刚刚";
-  if (minutes < 60) return `${minutes} 分钟前`;
-  const hours = Math.round(minutes / 60);
-  if (hours < 24) return `${hours} 小时前`;
-  return new Date(then).toLocaleDateString("zh-CN", {
-    month: "numeric",
-    day: "numeric",
-  });
+/** Wrong answers old enough to be due, counted in questions (not passages). */
+function countRetestDue(
+  records: readonly PracticeRecord[],
+  exams: readonly ExamSummary[],
+): number {
+  return buildWrongbook(records, { exams }).reduce(
+    (sum, entry) =>
+      isDueForRetest(entry.latestAttemptAt) ? sum + entry.wrongCount : sum,
+    0,
+  );
+}
+
+/** Questions answered across all attempts — the export's 已练习题目 · 题. */
+function countQuestionsPractised(records: readonly PracticeRecord[]): number {
+  return records.reduce(
+    (sum, record) => sum + (Number(record.totalQuestions) || 0),
+    0,
+  );
+}
+
+/**
+ * Mean accuracy over the trailing 30 days, or null when that window is empty.
+ *
+ * Computed here rather than read off `computeStats`, whose `averageAccuracy` is
+ * all-time: the export labels this metric 近 30 天, and reporting a lifetime
+ * figure under that label would be a false statement about the window.
+ */
+function accuracyLast30Days(records: readonly PracticeRecord[]): number | null {
+  const cutoff = Date.now() - 30 * 86_400_000;
+  let sum = 0;
+  let count = 0;
+  for (const record of records) {
+    const at = new Date(record.createdAt).getTime();
+    if (!Number.isFinite(at) || at < cutoff) continue;
+    sum += record.accuracy;
+    count += 1;
+  }
+  return count > 0 ? sum / count : null;
+}
+
+/** Cumulative study time as the export writes it: `42h`, or `35m` under an hour. */
+function studyTimeText(totalSeconds: number): string {
+  if (!Number.isFinite(totalSeconds) || totalSeconds < 60) return "—";
+  const minutes = Math.round(totalSeconds / 60);
+  if (minutes < 60) return `${minutes}m`;
+  const hours = minutes / 60;
+  return `${hours < 10 ? hours.toFixed(1) : Math.round(hours)}h`;
+}
+
+/**
+ * Distinct question kinds in the reading corpus.
+ *
+ * The export's mock card reads `4 大题型`; this corpus actually carries 13
+ * (lib/ielts/question-types.json `kinds`). The real count is used, since the
+ * label is a claim about the question bank rather than decoration. Hard-coded
+ * rather than imported because that index is ~26KB and would land in this
+ * route's client bundle for the sake of one integer.
+ */
+const READING_QUESTION_KINDS = 13;
+
+/** `2026-07-27`, the export's date format for a history row. */
+function isoDate(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "—";
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${date.getFullYear()}-${month}-${day}`;
+}
+
+/** What one action slot on a module card resolves to. */
+type ModuleAction =
+  | { kind: "link"; label: string; href: string }
+  | { kind: "button"; label: string; onClick: () => void }
+  | { kind: "disabled"; label: string };
+
+interface ModuleCardData {
+  skill: string;
+  icon: IconName;
+  /** Right-aligned qualifier beside the skill name. */
+  sub: string;
+  facts: readonly string[];
+  done: number;
+  total: number;
+  /** Counting word: 篇 / 段 / 题 / 话题. */
+  unit: string;
+  /**
+   * Latest accuracy for this skill, or null when the module produces none.
+   *
+   * Writing and Speaking are permanently null: neither is scored, and ruling C1
+   * forbids deriving a figure for them. The row still renders (the export draws
+   * four uniform cards) and reads `—`.
+   */
+  lastAccuracy: number | null;
+  actions: readonly [ModuleAction, ModuleAction];
 }
 
 /**
@@ -103,16 +189,14 @@ function relativeTime(iso: string): string {
  */
 export function LabOverview({
   exams,
-  /** Published writing sets. Zero means the module card is not rendered. */
+  /** Published writing sets. Zero renders the Writing card's totals as 0. */
   writingSetCount = 0,
-  /** Questions in the static Speaking corpus. Zero hides that card too. */
+  /** Questions in the static Speaking corpus. */
   speakingQuestionCount = 0,
-  speakingByPart,
 }: {
   exams: ExamSummary[];
   writingSetCount?: number;
   speakingQuestionCount?: number;
-  speakingByPart?: Record<SpeakingPart, number>;
 }) {
   const router = useRouter();
   // localStorage and sessionStorage are unreadable until after mount.
@@ -134,22 +218,17 @@ export function LabOverview({
     setSpeakingStates([...loadSpeakingStates().values()]);
   }, []);
 
-  const totals = useMemo(() => countByCategory(exams), [exams]);
   const progress = useMemo(
     () => buildProgressIndex(records ?? []),
     [records],
-  );
-  const practised = useMemo(
-    () => practisedByCategory(exams, progress),
-    [exams, progress],
   );
   const stats = useMemo(
     () => (records ? computeStats(records) : null),
     [records],
   );
-  const mistakes = useMemo(
-    () => (records ? wrongbookCount(records) : 0),
-    [records],
+  const retestDue = useMemo(
+    () => (records ? countRetestDue(records, exams) : 0),
+    [records, exams],
   );
 
   const examsById = useMemo(() => {
@@ -179,59 +258,122 @@ export function LabOverview({
     if (pick) router.push(practiceHref(pick.id));
   }
 
-  function startEndlessMode() {
-    const pick = pickRandomExam(exams, progress);
-    if (!pick) return;
-    startEndless(pick.id);
-    router.push(practiceHref(pick.id, "endless"));
-  }
-
   const recent = (records ?? []).slice(0, 5);
-  const practisedTotal = progress.size;
-  const latestAccuracy = records?.[0]?.accuracy ?? null;
+  const resumableExam = resumable ? examsById.get(resumable.examId) : undefined;
+
+  /** Speaking question with material, most recently touched — 继续构建's target. */
+  const resumableSpeaking = useMemo(
+    () =>
+      [...speakingStates]
+        .filter((state) => hasMaterial(state))
+        .sort(
+          (a, b) =>
+            new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
+        )[0],
+    [speakingStates],
+  );
+
+  /**
+   * The four skill cards.
+   *
+   * Structure and wording come from the approved export; every FIGURE comes from
+   * this build. Where the two disagree the real number wins — the export's mock
+   * says Listening has 186 段 and Speaking 96 话题, but this build has no
+   * listening corpus at all, and the speaking total is whatever the corpus
+   * module currently holds (no number is written down here, so a corpus update
+   * cannot make this comment stale).
+   */
+  const moduleCards: readonly ModuleCardData[] = [
+    {
+      skill: "Reading",
+      icon: "book-open",
+      sub: `${READING_QUESTION_KINDS} 大题型`,
+      facts: [
+        `题库总量 ${exams.length} 篇`,
+        "频次分层筛选",
+        "讲解按答题解锁",
+      ],
+      done: progress.size,
+      total: exams.length,
+      unit: "篇",
+      lastAccuracy: records?.[0]?.accuracy ?? null,
+      actions: [
+        { kind: "link", label: "浏览题库", href: "/ielts-lab/browse" },
+        { kind: "button", label: "随机练习", onClick: () => startRandom() },
+      ],
+    },
+    {
+      // No corpus, no route. The card renders so the row is the export's four,
+      // but every figure is zero and both actions are inert — the same treatment
+      // the sidebar gives this entry.
+      skill: "Listening",
+      icon: "headphones",
+      sub: "P1–P4",
+      facts: ["题库总量 0 段", "原文证据复盘", "套题模式可选"],
+      done: 0,
+      total: 0,
+      unit: "段",
+      lastAccuracy: null,
+      actions: [
+        { kind: "disabled", label: "浏览题库" },
+        { kind: "disabled", label: "随机练习" },
+      ],
+    },
+    {
+      skill: "Writing",
+      icon: "pen-line",
+      sub: "Task 1 & Task 2",
+      facts: ["小作文按图型分类", "草稿自动保存", "范文按完成解锁"],
+      done: writingSessions.filter((entry) => entry.completedAt).length,
+      total: writingSetCount,
+      unit: "题",
+      lastAccuracy: null,
+      actions: [
+        { kind: "link", label: "浏览题库", href: "/ielts-lab/writing" },
+        // The module has no random-draw entry point to route to.
+        { kind: "disabled", label: "随机练习" },
+      ],
+    },
+    {
+      skill: "Speaking",
+      icon: "messages-square",
+      sub: "五步流程",
+      facts: ["九维度素材库", "个人故事构建", "可导出 / 导入"],
+      done: speakingStates.filter((state) => hasMaterial(state)).length,
+      total: speakingQuestionCount,
+      unit: "话题",
+      lastAccuracy: null,
+      actions: [
+        { kind: "link", label: "进入素材库", href: "/ielts-lab/speaking" },
+        resumableSpeaking
+          ? {
+              kind: "link",
+              label: "继续构建",
+              href: `/ielts-lab/speaking/${resumableSpeaking.questionId}`,
+            }
+          : { kind: "disabled", label: "继续构建" },
+      ],
+    },
+  ];
 
   return (
-    <div className="space-y-6">
-      <OnboardingStrip />
+    // 18px between blocks, per the export's own page grid. The explicit
+    // minmax(0,1fr) column is load-bearing: an `auto` track is sized by its
+    // items' min-content contributions, so one nowrap child (the onboarding
+    // steps) would otherwise widen the column past the viewport and take every
+    // sibling with it.
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-[18px]">
+      <h1 className="text-stage-h2 font-bold leading-[1.15] text-stage-fg">
+        学习总览
+      </h1>
 
-      <PageHeader
-        title="学习总览"
-        subtitle={`${exams.length} 篇真题阅读 · 完整还原考试环境 · 记录保存在本机`}
-        actions={
-          <>
-            <button
-              type="button"
-              onClick={() => startRandom()}
-              className={BUTTON_PRIMARY}
-            >
-              随机练习
-            </button>
-            <button
-              type="button"
-              onClick={startEndlessMode}
-              className={BUTTON_SECONDARY}
-            >
-              无尽模式
-            </button>
-            <Link href="/ielts-lab/suite" className={BUTTON_SECONDARY}>
-              套题练习
-            </Link>
-            <Link href="/ielts-lab/mistakes" className={BUTTON_SECONDARY}>
-              错题本
-              {mistakes > 0 ? (
-                <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-stage-pill bg-stage-warning-soft px-1 text-stage-2xs font-medium tabular-nums text-stage-warning">
-                  {mistakes}
-                </span>
-              ) : null}
-            </Link>
-          </>
-        }
-      />
+      <OnboardingStrip />
 
       {resumable ? (
         <ContinueBar
           draft={resumable}
-          title={examsById.get(resumable.examId)?.title ?? resumable.examId}
+          title={resumableExam?.title ?? resumable.examId}
+          category={resumableExam?.category ?? ""}
         />
       ) : null}
 
@@ -245,80 +387,58 @@ export function LabOverview({
         />
       ) : null}
 
-      {/* Core metrics (master-spec 批次一 §3). Native data only: counts,
-          accuracy, minutes and days — never projected onto a score scale. */}
-      <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <StatTile
-          label="已练习题目"
-          value={String(stats?.totalPractices ?? 0)}
-          hint="累计练习次数"
-        />
-        <StatTile
-          label="平均正确率"
-          // Null, not zero: no attempts is absent data, and a 0% would read
-          // as a result the learner never produced.
-          value={
-            stats && stats.totalPractices > 0
-              ? accuracyText(stats.averageAccuracy)
-              : "—"
-          }
-        />
-        <StatTile
-          label="学习时长"
-          value={
-            stats && stats.totalPractices > 0
-              ? `${Math.round(stats.totalTimeSeconds / 60)} 分钟`
-              : "—"
-          }
-        />
-        <StatTile label="连续学习" value={`${stats?.streakDays ?? 0} 天`} />
-      </dl>
+      {retestDue > 0 ? <RetestBar count={retestDue} /> : null}
+
+      <MetricRow
+        questions={records ? countQuestionsPractised(records) : 0}
+        accuracy30d={records ? accuracyLast30Days(records) : null}
+        studyTime={studyTimeText(stats?.totalTimeSeconds ?? 0)}
+        streak={stats?.streakDays ?? 0}
+      />
 
       <TargetScoreCard />
 
-      <ReadingModuleCard
-        total={exams.length}
-        practised={practisedTotal}
-        latestAccuracy={latestAccuracy}
-        totals={totals}
-        practisedByPart={practised}
-        onRandom={() => startRandom()}
-      />
+      {/* Four equal cards on one row; auto-fit reflows them below ~960px. */}
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-3.5">
+        {moduleCards.map((card) => (
+          <ModuleCard key={card.skill} card={card} />
+        ))}
+      </div>
 
-      {writingSetCount > 0 ? (
-        <WritingModuleCard
-          total={writingSetCount}
-          sessions={writingSessions}
-        />
-      ) : null}
+      <RecentPractice records={recent} />
 
-      {speakingQuestionCount > 0 ? (
-        <SpeakingModuleCard
-          total={speakingQuestionCount}
-          byPart={speakingByPart}
-          states={speakingStates}
-        />
-      ) : null}
-
-      <Card
-        title="最近练习"
-        aside={
-          <Link href="/ielts-lab/history" className={BUTTON_QUIET}>
-            全部记录 →
-          </Link>
-        }
-      >
-        {recent.length === 0 ? (
-          <EmptyNote>还没有练习记录。完成一篇阅读后会自动保存。</EmptyNote>
-        ) : (
-          <ul className="divide-y divide-stage-border">
-            {recent.map((record) => (
-              <RecentRow key={record.id} record={record} />
-            ))}
-          </ul>
-        )}
-      </Card>
+      <TrademarkDisclaimer />
     </div>
+  );
+}
+
+/**
+ * IELTS trademark disclaimer — the approved export's `LabFooter`, verbatim.
+ *
+ * Two paragraphs rather than the export's single string, so the two sentences
+ * always break where the design breaks them. The export's 88ch measure is
+ * dropped with it: at 11px that cap is ~530px, which wrapped the first sentence
+ * onto a second line and made the block three lines instead of two. The
+ * content column's own 1160px ceiling is the measure now.
+ *
+ * `mt` completes the export's rhythm: the page grid already contributes 18px,
+ * and the export puts 56px between the last content block and the rule, then
+ * 22px between the rule and the text.
+ *
+ * NOTE: the export renders this in the app shell, so it sits under every
+ * non-fullbleed Lab screen, not only the overview. It lives here because this
+ * step is scoped to the overview; it likely wants to move up to the shell
+ * layout once the other screens are rebuilt.
+ */
+function TrademarkDisclaimer() {
+  return (
+    <footer className="mt-[38px] border-t border-stage-border pt-[22px] text-stage-2xs leading-[1.85] text-stage-fg-subtle">
+      <p>
+        IELTS® 是英国文化教育协会（British Council）、IDP IELTS Australia
+        与剑桥大学英语考评部（Cambridge Assessment English）的注册商标。
+      </p>
+      <p>STAGE 与上述机构不存在任何关联、认可或合作关系。</p>
+    </footer>
   );
 }
 
@@ -347,28 +467,34 @@ function OnboardingStrip() {
   return (
     <aside
       aria-label="新手引导"
-      className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-stage-lg border border-stage-border bg-stage-bg px-4 py-3"
+      className="flex flex-wrap items-center gap-3.5 rounded-stage-md border border-stage-border px-4 py-[11px]"
     >
-      <ol className="flex min-w-0 flex-1 flex-wrap items-center gap-x-6 gap-y-2">
+      {/* Each step is nowrap inside a wrapping row, so a viewport that is merely
+          narrow moves whole steps to the next line instead of breaking one in
+          half. Below `sm` the longest step is wider than the viewport itself, so
+          nowrap is dropped and the text wraps rather than overflowing — the
+          export is a desktop-only surface and never meets this case. */}
+      <ol className="flex flex-wrap items-center gap-3.5">
         {ONBOARDING_STEPS.map((step, index) => (
-          <li key={step.label} className="flex items-center gap-2">
+          <li
+            key={step.label}
+            className="inline-flex items-center gap-2 text-stage-xs text-stage-fg-body sm:whitespace-nowrap"
+          >
             <span
               aria-hidden
-              className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-stage-pill border border-stage-border-strong text-stage-2xs font-medium tabular-nums text-stage-fg-muted"
+              className="grid h-[18px] w-[18px] flex-none place-items-center rounded-stage-pill bg-stage-primary-soft font-stage-mono text-[10px] text-stage-primary"
             >
               {index + 1}
             </span>
-            <span className="text-stage-xs font-medium text-stage-fg">
-              {step.label}
-            </span>
-            <span className="text-stage-xs text-stage-fg-subtle">
-              {step.detail}
-            </span>
+            <span className="font-medium">{step.label}</span>
+            <span className="text-stage-fg-subtle">— {step.detail}</span>
           </li>
         ))}
       </ol>
       <button
         type="button"
+        aria-label="关闭引导"
+        title="关闭引导"
         onClick={() => {
           setVisible(false);
           try {
@@ -377,9 +503,9 @@ function OnboardingStrip() {
             // Dismissal is a preference; failing to store it is not an error.
           }
         }}
-        className={BUTTON_QUIET}
+        className="ml-auto grid h-8 w-8 flex-none place-items-center rounded-stage-sm border border-transparent text-stage-fg-muted transition-colors duration-stage-fast ease-stage-standard hover:bg-stage-bg-soft hover:text-stage-fg"
       >
-        知道了
+        <Icon name="close" size={16} />
       </button>
     </aside>
   );
@@ -392,414 +518,354 @@ function OnboardingStrip() {
  * 已自动保存: STAGE is reporting that the runner saved, not claiming to have
  * saved anything itself.
  */
-function ContinueBar({ draft, title }: { draft: DraftEntry; title: string }) {
+function ContinueBar({
+  draft,
+  title,
+  category,
+}: {
+  draft: DraftEntry;
+  title: string;
+  category: ExamCategory | "";
+}) {
   const { en, zh } = splitTitle(title);
-  const percent =
-    draft.total > 0
-      ? Math.min(100, Math.round((draft.answered / draft.total) * 100))
-      : 0;
+  // The corpus stores the part as P1/P2/P3; the export writes it out in full.
+  const meta = [
+    zh,
+    category ? `Reading Passage ${category.slice(1)}` : "Reading",
+    draft.total > 0 ? `进度 ${draft.answered} / ${draft.total} 题` : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
   return (
-    <section className="flex flex-wrap items-center gap-x-4 gap-y-3 rounded-stage-lg border border-stage-border-accent bg-stage-primary-soft px-4 py-3.5">
-      <div className="min-w-0 flex-1">
-        <p className="truncate text-stage-xs text-stage-fg-muted">
-          继续上次：
-          <span className="font-medium text-stage-fg">{en}</span>
-          {zh ? <span className="text-stage-fg-muted"> {zh}</span> : null}
+    <section className="flex flex-wrap items-center gap-4 rounded-stage-lg border border-stage-border-accent bg-stage-primary-soft px-5 py-4">
+      <span aria-hidden className="grid flex-none text-stage-primary">
+        <Icon name="book-open" size={19} />
+      </span>
+      <div className="min-w-[200px] flex-1">
+        <p className="text-stage-sm font-semibold text-stage-fg">
+          继续上次：{en}
         </p>
-        {draft.total > 0 ? (
-          <div className="mt-2 flex items-center gap-3">
-            <div
-              className="h-1 w-32 overflow-hidden rounded-stage-pill bg-stage-neutral-100"
-              role="progressbar"
-              aria-valuenow={percent}
-              aria-valuemin={0}
-              aria-valuemax={100}
-              aria-label="上次练习进度"
-            >
-              <div
-                className="h-full rounded-stage-pill bg-stage-primary"
-                style={{ width: `${percent}%` }}
-              />
-            </div>
-            <span className="text-stage-2xs tabular-nums text-stage-fg-muted">
-              已完成 {draft.answered}/{draft.total} 题
-            </span>
-          </div>
-        ) : null}
+        <p className="mt-0.5 text-stage-xs text-stage-fg-muted">{meta}</p>
       </div>
-      <span className="text-stage-2xs text-stage-fg-subtle">已自动保存</span>
-      <Link href={practiceHref(draft.examId)} className={BUTTON_PRIMARY}>
+      <Link href={practiceHref(draft.examId)} className={BUTTON_PRIMARY_SM}>
         继续
+      </Link>
+      <span className="inline-flex items-center gap-[5px] text-stage-xs text-stage-fg-subtle">
+        <Icon aria-hidden name="check" size={12} strokeWidth={2.5} />
+        已自动保存
+      </span>
+    </section>
+  );
+}
+
+/**
+ * Retest reminder (master-spec 批次一 §2).
+ *
+ * The wording is verbatim. What makes a question "due" is
+ * `RETEST_DUE_AFTER_DAYS` — a placeholder, since STAGE schedules nothing; see
+ * that constant.
+ */
+function RetestBar({ count }: { count: number }) {
+  return (
+    <section className="flex flex-wrap items-center gap-3.5 rounded-stage-lg border border-stage-border px-5 py-3.5">
+      <span aria-hidden className="grid flex-none text-stage-fg-subtle">
+        <Icon name="rotate-ccw" size={18} />
+      </span>
+      <p className="flex-1 text-stage-sm text-stage-fg-body">
+        有 {count} 道错题到了建议重测的时间
+      </p>
+      <Link href="/ielts-lab/mistakes" className={BUTTON_SECONDARY_SM}>
+        去重测
       </Link>
     </section>
   );
 }
 
 /**
- * Reading module card (master-spec 批次一 §4, hardened by supplement §一).
+ * The four core metrics (master-spec 批次一 §3).
  *
- * The other three skills get no card: the spec forbids "即将上线" placeholders,
- * and a card is how a module announces that it exists.
+ * One bordered container with 1px gaps over a hairline background, so every
+ * cell is ruled on all four sides — the export's trick for making a wrapped
+ * row impossible to leave with a dividerless orphan cell.
  *
- * Every bullet is a fact about this build — no capability is claimed that the
- * learner cannot exercise today, and nothing about scoring or evaluation.
+ * Native data only: questions, accuracy, time and days. Nothing here is
+ * projected onto a band scale (ruling C1).
  */
-function ReadingModuleCard({
-  total,
-  practised,
-  latestAccuracy,
-  totals,
-  practisedByPart,
-  onRandom,
+function MetricRow({
+  questions,
+  accuracy30d,
+  studyTime,
+  streak,
 }: {
-  total: number;
-  practised: number;
-  /** Accuracy of the most recent attempt; null when there is none. */
-  latestAccuracy: number | null;
-  totals: Record<ExamCategory, number>;
-  practisedByPart: Record<ExamCategory, number>;
-  onRandom: () => void;
+  questions: number;
+  /** Null when no attempt falls inside the window — rendered as `—`, not 0%. */
+  accuracy30d: number | null;
+  studyTime: string;
+  streak: number;
 }) {
-  const percent = total > 0 ? Math.round((practised / total) * 100) : 0;
-  const facts = [
-    `题库总量 ${total} 篇`,
-    "频次分层筛选：高频 / 次高频 / 低频",
-    "逐题回顾与错题自动收集",
-    "练习记录保存在本机浏览器",
+  const metrics = [
+    { label: "已练习题目", note: "题", value: String(questions) },
+    { label: "平均正确率", note: "近 30 天", value: accuracyText(accuracy30d) },
+    { label: "学习时长", note: "累计", value: studyTime },
+    { label: "连续学习", note: "天", value: String(streak) },
   ];
 
   return (
-    <Card>
-      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
-        <div className="flex min-w-0 items-start gap-3">
-          <span
-            aria-hidden
-            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-stage-md bg-stage-primary-soft text-stage-xs font-semibold text-stage-primary"
-          >
-            R
-          </span>
-          <div className="min-w-0">
-            <h2 className="text-stage-h4 font-semibold text-stage-fg">
-              Reading
-            </h2>
-            <p className="mt-0.5 text-stage-xs text-stage-fg-muted">
-              P1 / P2 / P3 三个部分
-            </p>
-          </div>
+    <dl className="grid grid-cols-[repeat(auto-fit,minmax(128px,1fr))] gap-px overflow-hidden rounded-stage-lg border border-stage-border bg-stage-border">
+      {metrics.map((metric) => (
+        // dt precedes dd in the DOM (a dl group requires it) while
+        // flex-col-reverse puts the figure on top, as the export draws it.
+        <div
+          key={metric.label}
+          className="flex flex-col-reverse gap-[5px] bg-stage-bg px-[22px] py-5"
+        >
+          <dt className="text-stage-xs text-stage-fg-muted">
+            {metric.label} · {metric.note}
+          </dt>
+          <dd className="text-[clamp(1.75rem,2.4vw,2.5rem)] font-bold leading-none tracking-[-0.03em] tabular-nums text-stage-fg">
+            {metric.value}
+          </dd>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Link href="/ielts-lab/browse" className={BUTTON_SECONDARY}>
-            浏览题库
-          </Link>
-          <button type="button" onClick={onRandom} className={BUTTON_SECONDARY}>
-            随机练习
-          </button>
-        </div>
+      ))}
+    </dl>
+  );
+}
+
+/**
+ * One skill card (master-spec 批次一 §4, in the export's four-across layout).
+ *
+ * Uniform across all four skills, including the ones with less behind them: the
+ * export draws four cards and the row is the page's skill index. What varies is
+ * the data (zeros where there is nothing) and whether the actions resolve.
+ */
+function ModuleCard({ card }: { card: ModuleCardData }) {
+  const ratio = card.total > 0 ? card.done / card.total : 0;
+  // The export floors a non-empty bar at 1.5% so a single attempt still reads as
+  // a mark rather than an empty track. A module with no corpus stays at 0.
+  const percent = card.total > 0 ? Math.max(ratio * 100, 1.5) : 0;
+
+  return (
+    <section className="grid content-start gap-3 rounded-stage-lg border border-stage-border bg-stage-bg p-5">
+      <div className="flex items-center gap-[9px]">
+        <span aria-hidden className="grid flex-none text-stage-primary">
+          <Icon name={card.icon} size={19} />
+        </span>
+        <h2 className="text-stage-h4 font-semibold text-stage-fg">
+          {card.skill}
+        </h2>
+        <span className="ml-auto text-stage-xs text-stage-fg-subtle">
+          {card.sub}
+        </span>
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
-        <div className="min-w-[12rem] flex-1">
-          <div className="flex items-baseline justify-between gap-3">
-            <span className="text-stage-xs text-stage-fg-muted">
-              已练习 {practised} / {total} 篇
-            </span>
-            <span className="text-stage-2xs tabular-nums text-stage-fg-subtle">
-              {percent}%
-            </span>
-          </div>
-          <div
-            className="mt-1.5 h-1 overflow-hidden rounded-stage-pill bg-stage-neutral-100"
-            role="progressbar"
-            aria-valuenow={percent}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label="Reading 题库完成进度"
-          >
-            <div
-              className="h-full rounded-stage-pill bg-stage-primary transition-[width] duration-stage-base"
-              style={{ width: `${percent}%` }}
-            />
-          </div>
-        </div>
-        <p className="text-stage-xs text-stage-fg-muted">
-          最近一次正确率{" "}
-          <span className="font-semibold tabular-nums text-stage-fg">
-            {accuracyText(latestAccuracy)}
-          </span>
-        </p>
-      </div>
-
-      <ul className="mt-4 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
-        {facts.map((fact) => (
+      <ul className="grid gap-1.5">
+        {card.facts.map((fact) => (
           <li
             key={fact}
-            className="flex items-start gap-2 text-stage-xs text-stage-fg-muted"
+            className="flex gap-2 text-stage-xs leading-[1.6] text-stage-fg-body"
           >
+            {/* The export's 12px minus glyph, inline so this step stays inside
+                one file rather than extending the shared Icon set. */}
             <span
               aria-hidden
-              className="mt-2 inline-block h-1 w-1 shrink-0 rounded-stage-pill bg-stage-border-strong"
-            />
+              className="grid flex-none pt-[3px] text-stage-neutral-400"
+            >
+              <svg
+                fill="none"
+                height="12"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width="12"
+              >
+                <path d="M5 12h14" />
+              </svg>
+            </span>
             {fact}
           </li>
         ))}
       </ul>
 
-      <ul className="mt-4 flex flex-wrap gap-2 border-t border-stage-border pt-4">
-        {CATEGORIES.map((category) => (
-          <li key={category}>
-            {/* No `title` attribute: it would replace the accessible name and
-                leave the link announced as its blurb rather than as "P1". */}
-            <Link
-              href={`/ielts-lab/browse?category=${category}`}
-              className="flex items-center gap-2 rounded-stage-sm border border-stage-border px-3 py-1.5 text-stage-2xs text-stage-fg-muted transition-colors duration-stage-fast hover:border-stage-border-strong hover:text-stage-fg"
-            >
-              <span className="font-medium text-stage-fg">{category}</span>
-              <span className="tabular-nums">
-                {practisedByPart[category]} / {totals[category]}
-              </span>
-              <span className="hidden text-stage-fg-subtle sm:inline">
-                {CATEGORY_BLURB[category]}
-              </span>
-            </Link>
-          </li>
+      <div className="grid gap-[7px]">
+        <div className="flex items-baseline justify-between text-stage-xs text-stage-fg-muted">
+          <span>已练习</span>
+          <span className="flex-none whitespace-nowrap pl-2 font-stage-mono text-stage-fg-body">
+            {card.done} / {card.total} {card.unit}
+          </span>
+        </div>
+        <div
+          className="h-[5px] overflow-hidden rounded-stage-pill bg-stage-neutral-100"
+          role="progressbar"
+          aria-valuenow={Math.round(ratio * 100)}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label={`${card.skill} 题库完成进度`}
+        >
+          <div
+            className="h-full rounded-stage-pill bg-stage-blue-600 transition-[width] duration-stage-base"
+            style={{ width: `${percent}%` }}
+          />
+        </div>
+        <div className="flex items-baseline justify-between text-stage-xs text-stage-fg-muted">
+          <span>最近一次正确率</span>
+          <span className="flex-none whitespace-nowrap pl-2 font-stage-mono text-stage-fg-body">
+            {accuracyText(card.lastAccuracy)}
+          </span>
+        </div>
+      </div>
+
+      <div className="flex gap-2">
+        {card.actions.map((action, index) => (
+          <ModuleActionButton
+            key={action.label}
+            action={action}
+            variant={index === 0 ? "outline" : "ghost"}
+          />
         ))}
-      </ul>
-    </Card>
+      </div>
+    </section>
+  );
+}
+
+/** One of a module card's two action slots, at the export's sm size. */
+function ModuleActionButton({
+  action,
+  variant,
+}: {
+  action: ModuleAction;
+  variant: "outline" | "ghost";
+}) {
+  const shell = `w-full flex-1 ${
+    variant === "outline" ? BUTTON_SECONDARY_SM : BUTTON_GHOST_SM
+  }`;
+
+  // A span, not a disabled <button>: there is no action to disable, the module
+  // simply has nowhere to go yet. Matches the sidebar's inert Listening entry.
+  if (action.kind === "disabled") {
+    return (
+      <span
+        aria-disabled="true"
+        className={`w-full flex-1 ${BUTTON_DISABLED_SM}`}
+      >
+        {action.label}
+      </span>
+    );
+  }
+
+  if (action.kind === "link") {
+    return (
+      <Link href={action.href} className={shell}>
+        {action.label}
+      </Link>
+    );
+  }
+
+  return (
+    <button type="button" onClick={action.onClick} className={shell}>
+      {action.label}
+    </button>
   );
 }
 
 /**
- * Writing module card (master-spec 批次一 §4).
+ * 最近练习 (master-spec 批次一 §5).
  *
- * Rendered only once there is a published set behind it — the same rule that
- * kept this card off the overview until T6, and that still keeps Listening and
- * Speaking off it. Every figure is native: sets, drafts, words. Nothing here
- * scores or evaluates what was written.
+ * The export's row carries a 全体平均 figure beside the learner's own. It is
+ * absent here on two counts: nothing in the data layer holds a cohort average
+ * (neither PracticeRecord nor ExamSummary has such a field), and ruling C4
+ * struck that figure from the spec.
  */
-function WritingModuleCard({
-  total,
-  sessions,
-}: {
-  total: number;
-  sessions: WritingSessionState[];
-}) {
-  const completed = sessions.filter((entry) => entry.completedAt).length;
-  const words = sessions.reduce(
-    (sum, entry) =>
-      sum +
-      Object.values(entry.tasks).reduce(
-        (inner, task) => inner + (task?.wordCount ?? 0),
-        0,
-      ),
-    0,
-  );
-  const facts = [
-    `题目总量 ${total} 组`,
-    "Task 1 / Task 2 分类浏览",
-    "两个任务共享一次练习会话",
-    "草稿自动保存在本机浏览器",
-  ];
-
+function RecentPractice({ records }: { records: readonly PracticeRecord[] }) {
   return (
-    <Card>
-      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
-        <div className="flex min-w-0 items-start gap-3">
-          <span
-            aria-hidden
-            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-stage-md bg-stage-primary-soft text-stage-xs font-semibold text-stage-primary"
-          >
-            W
-          </span>
-          <div className="min-w-0">
-            <h2 className="text-stage-h4 font-semibold text-stage-fg">
-              Writing
-            </h2>
-            <p className="mt-0.5 text-stage-xs text-stage-fg-muted">
-              Task 1 / Task 2 写作练习
-            </p>
-          </div>
-        </div>
-        <Link href="/ielts-lab/writing" className={BUTTON_SECONDARY}>
-          浏览题目
+    <section>
+      <div className="flex items-baseline gap-3 pb-3">
+        <h2 className="text-stage-h4 font-semibold text-stage-fg">最近练习</h2>
+        <Link
+          href="/ielts-lab/question-types"
+          className="ml-auto text-stage-sm font-medium text-stage-fg-muted transition-colors duration-stage-fast hover:text-stage-fg"
+        >
+          题型说明
+        </Link>
+        <Link
+          href="/ielts-lab/history"
+          className="text-stage-sm font-medium text-stage-primary transition-colors duration-stage-fast hover:text-stage-primary-hover"
+        >
+          全部记录 →
         </Link>
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
-        <p className="text-stage-xs text-stage-fg-muted">
-          已完成{" "}
-          <span className="font-semibold tabular-nums text-stage-fg">
-            {completed}
-          </span>{" "}
-          / {total} 组
-        </p>
-        <p className="text-stage-xs text-stage-fg-muted">
-          累计写下{" "}
-          <span className="font-semibold tabular-nums text-stage-fg">
-            {words}
-          </span>{" "}
-          词
-        </p>
-      </div>
-
-      <ul className="mt-4 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
-        {facts.map((fact) => (
-          <li
-            key={fact}
-            className="flex items-start gap-2 text-stage-xs text-stage-fg-muted"
-          >
-            <span
-              aria-hidden
-              className="mt-2 inline-block h-1 w-1 shrink-0 rounded-stage-pill bg-stage-border-strong"
-            />
-            {fact}
-          </li>
-        ))}
-      </ul>
-    </Card>
+      {records.length === 0 ? (
+        <EmptyNote>还没有练习记录。完成一篇阅读后会自动保存。</EmptyNote>
+      ) : (
+        // The row is a five-column table and cannot compress far; below its
+        // natural width it scrolls inside this container rather than pushing the
+        // page sideways. The export is desktop-only and defines no narrow form.
+        <div className="overflow-x-auto">
+          <ul className="min-w-[720px] overflow-hidden rounded-stage-lg border border-stage-border">
+            {records.map((record, index) => (
+              <RecentRow
+                key={record.id}
+                record={record}
+                last={index === records.length - 1}
+              />
+            ))}
+          </ul>
+        </div>
+      )}
+    </section>
   );
 }
 
-/**
- * Speaking module card (master-spec 批次一 §4).
- *
- * The entry words are the pair the spec fixes for this module — `进入素材库`
- * and `继续构建` — rather than the 浏览题库 / 随机练习 the other cards use.
- *
- * `继续构建` appears only once there is something to continue. A learner with no
- * material has nowhere for it to lead, and a button that resolves to an
- * arbitrary question would be an invention rather than a resumption.
- *
- * Every figure is a count of the learner's own material. Nothing here is a
- * result, and nothing about this module produces one.
- */
-function SpeakingModuleCard({
-  total,
-  byPart,
-  states,
+/** One row of 最近练习: title (EN + zh), type tag, date, accuracy, 回顾. */
+function RecentRow({
+  record,
+  last,
 }: {
-  total: number;
-  byPart?: Record<SpeakingPart, number>;
-  states: SpeakingQuestionState[];
+  record: PracticeRecord;
+  last: boolean;
 }) {
-  const started = states.filter((state) => hasMaterial(state));
-  const fragments = started.reduce(
-    (sum, state) => sum + state.fragments.length,
-    0,
-  );
-  const solos = started.reduce((sum, state) => sum + state.soloEvents.length, 0);
-
-  const resumable = [...started].sort(
-    (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
-  )[0];
-
-  const facts = [
-    `题目总量 ${total} 道`,
-    "五步流程：题目 · 个人想法 · 答案构建 · 记忆巩固 · 独立表达",
-    "答案只由你自己写下的想法片段组成",
-    "素材保存在本机浏览器，可导出备份",
-  ];
-
-  return (
-    <Card>
-      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
-        <div className="flex min-w-0 items-start gap-3">
-          <span
-            aria-hidden
-            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-stage-md bg-stage-primary-soft text-stage-xs font-semibold text-stage-primary"
-          >
-            S
-          </span>
-          <div className="min-w-0">
-            <h2 className="text-stage-h4 font-semibold text-stage-fg">
-              Speaking
-            </h2>
-            <p className="mt-0.5 text-stage-xs text-stage-fg-muted">
-              {byPart
-                ? `Part 1 ${byPart[1]} · Part 2 ${byPart[2]} · Part 3 ${byPart[3]}`
-                : "Part 1 / 2 / 3 三个部分"}
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <Link href="/ielts-lab/speaking" className={BUTTON_SECONDARY}>
-            进入素材库
-          </Link>
-          {resumable ? (
-            <Link
-              href={`/ielts-lab/speaking/${resumable.questionId}`}
-              className={BUTTON_SECONDARY}
-            >
-              继续构建
-            </Link>
-          ) : null}
-        </div>
-      </div>
-
-      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
-        <p className="text-stage-xs text-stage-fg-muted">
-          已开始{" "}
-          <span className="font-semibold tabular-nums text-stage-fg">
-            {started.length}
-          </span>{" "}
-          / {total} 道
-        </p>
-        <p className="text-stage-xs text-stage-fg-muted">
-          累计写下{" "}
-          <span className="font-semibold tabular-nums text-stage-fg">
-            {fragments}
-          </span>{" "}
-          条想法
-        </p>
-        <p className="text-stage-xs text-stage-fg-muted">
-          独立表达{" "}
-          <span className="font-semibold tabular-nums text-stage-fg">{solos}</span>{" "}
-          次
-        </p>
-      </div>
-
-      <ul className="mt-4 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
-        {facts.map((fact) => (
-          <li
-            key={fact}
-            className="flex items-start gap-2 text-stage-xs text-stage-fg-muted"
-          >
-            <span
-              aria-hidden
-              className="mt-2 inline-block h-1 w-1 shrink-0 rounded-stage-pill bg-stage-border-strong"
-            />
-            {fact}
-          </li>
-        ))}
-      </ul>
-    </Card>
-  );
-}
-
-/** One row of 最近练习: title (EN + zh), Part, date, accuracy, 回顾. */
-function RecentRow({ record }: { record: PracticeRecord }) {
   const { en, zh } = splitTitle(record.title);
+  // Every record this build can produce is a reading attempt. The tag still
+  // names the skill, because the export's row is skill-labelled and this list
+  // gains other skills as their modules land.
+  const tag = record.category
+    ? `Reading Passage ${record.category.slice(1)}`
+    : "Reading";
 
   return (
-    <li className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0">
-      <div className="min-w-0 flex-1">
-        <p className="truncate text-stage-xs font-medium text-stage-fg">{en}</p>
-        {zh ? (
-          <p className="truncate text-stage-2xs text-stage-fg-subtle">{zh}</p>
-        ) : null}
-      </div>
-      <div className="flex shrink-0 items-center gap-3">
-        {record.category ? <Tag>{record.category}</Tag> : null}
-        <span className="text-stage-2xs text-stage-fg-subtle">
-          {relativeTime(record.createdAt)}
+    <li
+      className={`grid grid-cols-[1.6fr_auto_auto_auto_auto] items-center gap-[18px] px-[18px] py-3.5 ${
+        last ? "" : "border-b border-stage-border"
+      }`}
+    >
+      <span className="grid min-w-0">
+        <span className="truncate text-stage-sm font-medium text-stage-fg">
+          {en}
         </span>
-        <span className="text-stage-xs font-semibold tabular-nums text-stage-fg">
+        {zh ? (
+          <span className="mt-0.5 truncate text-stage-2xs text-stage-fg-subtle">
+            {zh}
+          </span>
+        ) : null}
+      </span>
+      <Badge tone="neutral">{tag}</Badge>
+      <span className="font-stage-mono text-stage-2xs text-stage-fg-subtle">
+        {isoDate(record.createdAt)}
+      </span>
+      <span className="text-stage-xs text-stage-fg-body">
+        我的正确率{" "}
+        <span className="font-stage-mono font-medium">
           {accuracyText(record.accuracy)}
         </span>
-        <Link href={reviewHref(record.examId, record.id)} className={BUTTON_QUIET}>
-          回顾
-        </Link>
-      </div>
+      </span>
+      <Link
+        href={reviewHref(record.examId, record.id)}
+        className="justify-self-end text-stage-xs font-semibold text-stage-primary transition-colors duration-stage-fast hover:text-stage-primary-hover"
+      >
+        回顾
+      </Link>
     </li>
   );
 }
@@ -874,16 +940,32 @@ function TargetScoreCard() {
   }
 
   return (
-    <Card>
-      <fieldset>
-        <legend className="text-stage-h4 font-semibold text-stage-fg">
-          我的目标分数
-        </legend>
-        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+    <section className="rounded-stage-lg border border-stage-border px-5 py-[18px]">
+      {/* role=group rather than fieldset/legend: the export puts the note on the
+          title's baseline, and a <legend> has to be the fieldset's first child,
+          which cannot be laid out that way without losing the accessible name. */}
+      <div
+        role="group"
+        aria-labelledby="target-score-title"
+        className="grid gap-3.5"
+      >
+        {/* The note qualifies what these figures are before any is read. */}
+        <div className="flex flex-wrap items-baseline gap-3">
+          <h2
+            id="target-score-title"
+            className="text-stage-h4 font-semibold text-stage-fg"
+          >
+            我的目标分数
+          </h2>
+          <p className="text-stage-xs text-stage-fg-subtle">
+            目标分数由你自己设定，仅用于个人规划参考。
+          </p>
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(132px,1fr))] gap-3">
           {ENGLISH_SUBJECTS.map((subject) => (
-            <label key={subject} className="block">
+            <label key={subject} className="grid gap-1.5">
               <span className="text-stage-xs text-stage-fg-muted">
-                {ENGLISH_SUBJECT_LABELS[subject]}
+                {TARGET_SUBJECT_LABELS[subject]}
               </span>
               <input
                 type="number"
@@ -895,16 +977,13 @@ function TargetScoreCard() {
                 onChange={(event) => onType(subject, event.target.value)}
                 onBlur={() => onCommit(subject)}
                 placeholder="—"
-                className={`mt-1.5 w-full tabular-nums ${FIELD}`}
+                className="w-full rounded-stage-sm border border-stage-border-strong bg-stage-bg px-3 py-[9px] font-stage-mono text-stage-body text-stage-fg outline-none transition-colors duration-stage-fast placeholder:text-stage-fg-subtle focus:border-stage-primary focus:shadow-stage-focus"
               />
             </label>
           ))}
         </div>
-        <p className="mt-3 text-stage-xs text-stage-fg-subtle">
-          目标分数由你自己设定，仅用于个人规划参考。
-        </p>
-      </fieldset>
-    </Card>
+      </div>
+    </section>
   );
 }
 

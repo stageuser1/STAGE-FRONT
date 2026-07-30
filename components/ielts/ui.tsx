@@ -38,6 +38,32 @@ export const BUTTON_PRIMARY = `${CONTROL_BASE} bg-stage-primary font-medium text
 /** Hairline-outlined action — the export's default button. */
 export const BUTTON_SECONDARY = `${CONTROL_BASE} border border-stage-border-strong bg-stage-bg text-stage-fg-body hover:border-stage-primary hover:text-stage-fg`;
 
+/**
+ * The export's `size="sm"` button: 32px tall, 12px side padding, 13px label.
+ *
+ * A distinct step rather than a modifier on CONTROL_BASE, which is the `md`
+ * size. The inline bars on the overview (继续 / 去重测) are the surfaces the
+ * export builds at this size.
+ */
+const CONTROL_SM =
+  "inline-flex h-8 items-center justify-center gap-1.5 whitespace-nowrap rounded-stage-sm px-3 text-stage-xs font-medium leading-none transition-colors duration-stage-fast ease-stage-standard disabled:cursor-not-allowed disabled:opacity-50";
+
+export const BUTTON_PRIMARY_SM = `${CONTROL_SM} border border-stage-primary bg-stage-primary text-stage-fg-on-dark hover:border-stage-primary-hover hover:bg-stage-primary-hover`;
+
+export const BUTTON_SECONDARY_SM = `${CONTROL_SM} border border-stage-border-strong bg-stage-bg text-stage-fg hover:bg-stage-bg-soft`;
+
+/** Transparent, ruleless, quiet hover — the export's `variant="ghost"` at sm. */
+export const BUTTON_GHOST_SM = `${CONTROL_SM} border border-transparent text-stage-fg hover:bg-stage-bg-soft`;
+
+/**
+ * Inert twin of the two above, for an action with nowhere to go yet.
+ *
+ * Rendered on a `<span aria-disabled>` rather than a disabled `<button>`: there
+ * is no action to disable, the module simply has no destination — the same
+ * treatment the sidebar gives its Listening entry.
+ */
+export const BUTTON_DISABLED_SM = `${CONTROL_SM} cursor-not-allowed border border-stage-border text-stage-neutral-400`;
+
 /** Text-only action for tertiary moves (clear filters, dismiss, reroll). */
 export const BUTTON_QUIET =
   "text-stage-xs text-stage-fg-muted underline-offset-2 transition-colors duration-stage-fast hover:text-stage-fg hover:underline";

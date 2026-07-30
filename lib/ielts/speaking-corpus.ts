@@ -113,15 +113,6 @@ export function getSpeakingQuestion(id: string): SpeakingQuestion | null {
   return BY_ID.get(id) ?? null;
 }
 
-/** Question totals by part, for the overview card. */
-export function countByPart(): Record<SpeakingPart, number> {
-  return {
-    1: getSpeakingQuestions(1).length,
-    2: getSpeakingQuestions(2).length,
-    3: getSpeakingQuestions(3).length,
-  };
-}
-
 /** Ids for `generateStaticParams`. */
 export function getSpeakingQuestionIds(): string[] {
   return QUESTIONS.map((question) => question.id);

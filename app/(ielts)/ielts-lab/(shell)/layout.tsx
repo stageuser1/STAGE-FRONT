@@ -1,12 +1,14 @@
 import type { ReactNode } from "react";
-import { LabNav } from "@/components/ielts/LabNav";
+import { LabMobileNav, LabSidebar } from "@/components/ielts/LabSidebar";
 
 /**
- * Container and section tabs for the browsable IELTS Lab sections.
+ * Application shell for the browsable IELTS Lab sections: fixed left sidebar,
+ * content on the right (master spec §应用壳). Below `lg` the rail folds into
+ * a horizontal strip, since the approved export defines no mobile shell.
  *
  * A nested route group, so `/ielts-lab/practice/[examId]` sits beside it rather
  * than under it: the runner is a full-bleed test surface and must not carry
- * section tabs the learner could click mid-attempt.
+ * section navigation the learner could click mid-attempt.
  *
  * Note this cannot be done by putting the runner in a *separate top-level*
  * group — two groups both declaring the `/ielts-lab` segment make Next compose
@@ -17,15 +19,16 @@ export default function LabShellLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 py-8">
-      {/* The approved export identifies the application in its sidebar head.
-          Ruling C3+C6 keeps the top navigation, so the identifier sits above
-          the section rail instead — same statement, existing IA. */}
-      <p className="mb-3 text-stage-2xs font-semibold uppercase tracking-stage-eyebrow text-stage-fg-subtle">
-        IELTS Lab
-      </p>
-      <LabNav />
-      <div className="mt-6">{children}</div>
+    <div className="min-h-screen lg:grid lg:grid-cols-[236px_1fr]">
+      <LabSidebar />
+      <LabMobileNav />
+      <main className="min-w-0">
+        {/* The export's content geometry: a 1160px column left-aligned against
+            the rail (not centred), with the shell's own clamped gutters. */}
+        <div className="w-full max-w-[1160px] px-[clamp(20px,3.4vw,44px)] pb-14 pt-[clamp(24px,3vw,40px)]">
+          {children}
+        </div>
+      </main>
     </div>
   );
 }

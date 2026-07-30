@@ -31,7 +31,15 @@ export type IconName =
   | "flag"
   | "target"
   | "trend"
-  | "list-checks";
+  | "list-checks"
+  | "arrow-left"
+  | "layout-dashboard"
+  | "book-open"
+  | "headphones"
+  | "pen-line"
+  | "messages-square"
+  | "rotate-ccw"
+  | "history";
 
 const paths: Record<IconName, ReactNode> = {
   search: (
@@ -177,6 +185,49 @@ const paths: Record<IconName, ReactNode> = {
       <path d="m3.5 13 1.5 1.5 2.5-3" />
       <path d="m3.5 19.5 1.5 1.5 2.5-3" />
       <path d="M11 7h9M11 13.5h9M11 20h9" />
+    </>
+  ),
+  "arrow-left": <path d="M20 12H4m6-6-6 6 6 6" />,
+  "layout-dashboard": (
+    <>
+      <rect height="9" rx="1" width="7" x="3" y="3" />
+      <rect height="5" rx="1" width="7" x="14" y="3" />
+      <rect height="9" rx="1" width="7" x="14" y="12" />
+      <rect height="5" rx="1" width="7" x="3" y="16" />
+    </>
+  ),
+  "book-open": (
+    <>
+      <path d="M2 3.5h5.5A4.5 4.5 0 0 1 12 8v13a3.5 3.5 0 0 0-3.5-3.5H2V3.5Z" />
+      <path d="M22 3.5h-5.5A4.5 4.5 0 0 0 12 8v13a3.5 3.5 0 0 1 3.5-3.5H22V3.5Z" />
+    </>
+  ),
+  headphones: (
+    <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
+  ),
+  "pen-line": (
+    <>
+      <path d="M12 20h9" />
+      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5Z" />
+    </>
+  ),
+  "messages-square": (
+    <>
+      <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5Z" />
+      <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+    </>
+  ),
+  "rotate-ccw": (
+    <>
+      <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+      <path d="M3 3v5h5" />
+    </>
+  ),
+  history: (
+    <>
+      <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+      <path d="M3 3v5h5" />
+      <path d="M12 7v5l4 2" />
     </>
   ),
 };
