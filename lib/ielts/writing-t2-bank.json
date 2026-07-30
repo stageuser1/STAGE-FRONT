@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "WritingT2BankV1",
+  "corpusVersion": 1,
+  "source": "verbatim-recall",
+  "generatedAt": "2026-07-30",
+  "sourceWindow": "2026-01..2026-07",
+  "sourceStatement": "题干为考生考后回忆的文字，非官方试题原文，逐字保留未作改写。同一场考题的不同回忆版本合并为一题：最完整的一版作为 promptText，其余存入 variants。essayType 与 incomplete 为 STAGE 编辑判断。",
+  "questions": [
+    {
+      "id": "wt2-001",
+      "promptText": "Some people believe that students should acquire working experience during their studies, while others think it is better for them to focus on their studies. Discuss both views and give your opinion.",
+      "variants": [],
+      "essayType": "discussion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": ["India"]
+    },
+    {
+      "id": "wt2-002",
+      "promptText": "Everyone wants to own a car. Discuss.",
+      "variants": [],
+      "essayType": null,
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": [],
+      "incomplete": true
+    },
+    {
+      "id": "wt2-003",
+      "promptText": "Congestion tax",
+      "variants": [],
+      "essayType": null,
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": [],
+      "incomplete": true
+    },
+    {
+      "id": "wt2-004",
+      "promptText": "Should the government provide free housing for people who cannot afford it? To what extent do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": []
+    },
+    {
+      "id": "wt2-005",
+      "promptText": "The use of mobile phones is as antisocial as smoking. - Smoking is banned in certain places, so mobile phones should be banned in the same way. - To what extent do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": [],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": ["India"]
+    },
+    {
+      "id": "wt2-006",
+      "promptText": "Some people believe that the government should provide free education at all levels. Others think individuals should pay for their own education. Discuss both views and give your own opinion.",
+      "variants": [],
+      "essayType": "discussion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": ["South Africa"]
+    },
+    {
+      "id": "wt2-007",
+      "promptText": "Some people believe that children should start school at a very early age, while others think they should begin at least 7 years old. - Discuss both views and give your own opinion.",
+      "variants": [],
+      "essayType": "discussion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": ["New Zealand"]
+    },
+    {
+      "id": "wt2-008",
+      "promptText": "Some people believe that the government should invest more in public transportation instead of building new roads. To what extent do you agree or disagree?",
+      "variants": [
+        "Some people think that governments should invest more in public transport than in building new roads. To what extent do you agree or disagree?",
+        "Some people believe that the government should spend more money on public transport rather than roads. - To what extent do you agree or disagree?",
+        "whether governments should spend money on public transport or on building new roads, and to give your opinion."
+      ],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 4,
+      "frequency": "high",
+      "months": ["2026-07", "2026-05", "2026-04", "2026-02"],
+      "countries": ["Nigeria", "Canada", "Oman"]
+    },
+    {
+      "id": "wt2-009",
+      "promptText": "Some people believe that children should be taught how to become good parents at school. Do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 2,
+      "frequency": "medium",
+      "months": ["2026-07", "2026-05"],
+      "countries": ["Kuwait", "Canada"]
+    },
+    {
+      "id": "wt2-010",
+      "promptText": "Universities should provide places for young people. - To what extent do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": []
+    },
+    {
+      "id": "wt2-011",
+      "promptText": "Intelligence is the most important quality for a leader.",
+      "variants": [],
+      "essayType": null,
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": [],
+      "incomplete": true
+    },
+    {
+      "id": "wt2-012",
+      "promptText": "National culture vs imported culture - Discuss both views and give your opinion.",
+      "variants": [],
+      "essayType": "discussion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": [],
+      "incomplete": true
+    },
+    {
+      "id": "wt2-013",
+      "promptText": "Why has public transport become more expensive? - What are the solutions?",
+      "variants": [],
+      "essayType": "problem-solution",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": []
+    },
+    {
+      "id": "wt2-014",
+      "promptText": "Many people spend more and more time away from their families. - Why is this happening? What effects does this have on individuals and society?",
+      "variants": [],
+      "essayType": "two-part",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": []
+    },
+    {
+      "id": "wt2-015",
+      "promptText": "The extinction of animals (for example, dinosaurs) is a natural process, so people should not try to prevent animals from becoming extinct. - To what extent do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": []
+    },
+    {
+      "id": "wt2-016",
+      "promptText": "Society would benefit from the ban on all forms of advertising because it may serve no useful purpose, and can even be damaging. - To what extent do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-07"],
+      "countries": []
+    },
+    {
+      "id": "wt2-017",
+      "promptText": "Some people say that supermarkets and manufacturers have a duty to reduce the amount of packaging of goods. - Others argue that customers should avoid buying goods with a lot of packaging. - Discuss both views and give your opinion.",
+      "variants": [
+        "The essay question discussed whether supermarkets and manufacturers have a responsibility to reduce the amount of packaging on goods, and asked for the candidate's opinion."
+      ],
+      "essayType": "discussion",
+      "modules": [],
+      "occurrenceCount": 2,
+      "frequency": "medium",
+      "months": ["2026-06"],
+      "countries": ["India"]
+    },
+    {
+      "id": "wt2-018",
+      "promptText": "Some people think it is important to keep and maintain old buildings rather than replace them with new ones. - To what extent do you agree or disagree?",
+      "variants": [
+        "The essay question was about whether it is more important to keep and maintain old buildings rather than replacing them with new ones, asking for the candidate's opinion."
+      ],
+      "essayType": "opinion",
+      "modules": [],
+      "occurrenceCount": 2,
+      "frequency": "medium",
+      "months": ["2026-06"],
+      "countries": ["India"]
+    },
+    {
+      "id": "wt2-019",
+      "promptText": "Some people believe that the best way to improve public health is by increasing the number of sports facilities. Others believe that this would have little effect on public health and that other measures are required. - Discuss both views and give your own opinion.",
+      "variants": [],
+      "essayType": "discussion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-05"],
+      "countries": ["Canada"]
+    },
+    {
+      "id": "wt2-020",
+      "promptText": "Some people believe that the best way to improve road safety is to increase the minimum legal age for driving a car or motorbike. - To what extent do you agree or disagree?",
+      "variants": [
+        "Some people think that the best way to improve road safety is to increase the minimum legal age for driving a car or motorbike. To what extent do you agree or disagree?"
+      ],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 2,
+      "frequency": "medium",
+      "months": ["2026-05"],
+      "countries": ["Canada"]
+    },
+    {
+      "id": "wt2-021",
+      "promptText": "Some people think that children should learn to be competitive, while others believe cooperation is more important. - Discuss both views and give your opinion.",
+      "variants": [
+        "Some people think that children should learn to compete, while others believe they should be taught to cooperate. - Discuss both views and give your opinion."
+      ],
+      "essayType": "discussion",
+      "modules": ["academic", "general"],
+      "occurrenceCount": 2,
+      "frequency": "medium",
+      "months": ["2026-05", "2026-04"],
+      "countries": ["Canada", "Australia"]
+    },
+    {
+      "id": "wt2-022",
+      "promptText": "Some people think that it is better to include more public parks and sports facilities in new towns rather than shopping malls. Do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": ["general"],
+      "occurrenceCount": 1,
+      "months": ["2026-04"],
+      "countries": ["Australia"]
+    },
+    {
+      "id": "wt2-023",
+      "promptText": "Some people think that children should learn how to cook at school. - Do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-03"],
+      "countries": ["Canada"]
+    },
+    {
+      "id": "wt2-024",
+      "promptText": "Some people believe that it is important to spend money on family celebrations, while others think it is a waste. - Discuss both views and give your opinion.",
+      "variants": [],
+      "essayType": "discussion",
+      "modules": ["general"],
+      "occurrenceCount": 1,
+      "months": ["2026-03"],
+      "countries": ["UAE"]
+    },
+    {
+      "id": "wt2-025",
+      "promptText": "Some people think that it is important for children to learn the difference between right and wrong at an early age. - Punishment is necessary to help them learn this distinction. - To what extent do you agree or disagree?",
+      "variants": [],
+      "essayType": "opinion",
+      "modules": ["academic"],
+      "occurrenceCount": 1,
+      "months": ["2026-01"],
+      "countries": ["UK"]
+    }
+  ]
+}

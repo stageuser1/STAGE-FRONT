@@ -1,0 +1,373 @@
+{
+  "schemaVersion": "WritingT1ArchiveV1",
+  "status": "frozen",
+  "note": "ARCHIVE ONLY — not production data. Must not be imported by application code. Task 1 recalls are held here pending a separate decision on whether the module ships. Text is verbatim test-taker recall, not official exam wording; chartType is an editorial inference and is null wherever the recall does not state a chart form.",
+  "generatedAt": "2026-07-30",
+  "sourceWindow": "2026-01..2026-07",
+  "tasks": [
+    {
+      "id": "wt1-001",
+      "text": "Australian exchange students",
+      "chartType": null,
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-002",
+      "text": "The table chart illustrates data on underground... (full chart details not provided in the index).",
+      "chartType": "table",
+      "months": ["2026-07"],
+      "countries": ["Thailand"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-003",
+      "text": "Simple line graph",
+      "chartType": "line",
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-004",
+      "text": "Line graph Percentage of people in four age groups who went to the cinema at least once a month 1978–2008",
+      "chartType": "line",
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-005",
+      "text": "The diagrams below illustrate the public park when it first opened in 1920 and the same park today.",
+      "chartType": "map",
+      "months": ["2026-07"],
+      "countries": ["Italy"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-006",
+      "text": "The line chart illustrates the number of international students enrolled in universities in three different countries from 2010 to 2020.",
+      "chartType": "line",
+      "months": ["2026-07"],
+      "countries": ["Saudi Arabia"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-007",
+      "text": "The given bar chart shows the share of expenditure for different categories in five countries.",
+      "chartType": "bar",
+      "months": ["2026-07"],
+      "countries": ["Malaysia"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-008",
+      "text": "The given pie chart illustrates Brazil's income distribution.",
+      "chartType": "pie",
+      "months": ["2026-07"],
+      "countries": ["Hong Kong"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-009",
+      "text": "The charts below show the percentage of American men and women in different age groups who did regular physical activity in 2010.",
+      "variants": ["The charts below shows the percentage of American men..."],
+      "chartType": null,
+      "months": ["2026-07"],
+      "countries": ["Germany"],
+      "module": "academic",
+      "occurrenceCount": 2
+    },
+    {
+      "id": "wt1-010",
+      "text": "The diagram illustrates the process of milk production.",
+      "chartType": "process-diagram",
+      "months": ["2026-07"],
+      "countries": ["South Africa"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-011",
+      "text": "The bar chart illustrates the online shopping sales for ...",
+      "chartType": "bar",
+      "months": ["2026-07"],
+      "countries": ["Ghana"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-012",
+      "text": "The pie chart illustrates the production and demand for electricity in different sectors.",
+      "chartType": "pie",
+      "months": ["2026-07"],
+      "countries": ["New Zealand"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-013",
+      "text": "The given bar chart illustrates the information on urban and rural population in different regions.",
+      "chartType": "bar",
+      "months": ["2026-07"],
+      "countries": ["Nigeria"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-014",
+      "text": "The line chart illustrates the information about how far people in a particular country travelled using three different modes of transport over a period of time.",
+      "chartType": "line",
+      "months": ["2026-07"],
+      "countries": ["Kuwait"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-015",
+      "text": "Carbon emissions from gas, oil and coal (graph)",
+      "chartType": null,
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-016",
+      "text": "Town map: present vs future",
+      "chartType": "map",
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-017",
+      "text": "Process diagram: heating water and air",
+      "chartType": "process-diagram",
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-018",
+      "text": "Table showing the male/female ratio in different countries",
+      "chartType": "table",
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-019",
+      "text": "Stacked bar chart - Car manufacturers' total sales - 2016–2020 - Regions: Europe, Asia, South America, North America",
+      "chartType": "bar",
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-020",
+      "text": "Map: Riverside Park (past vs. present)",
+      "chartType": "map",
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-021",
+      "text": "Map: Changes to a sports centre between 2007 and the present",
+      "chartType": "map",
+      "months": ["2026-07"],
+      "countries": [],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-022",
+      "text": "Bar chart showing last year's greenhouse gas emissions in five countries. - Candidates were asked to summarize and compare the data.",
+      "chartType": "bar",
+      "months": ["2026-07"],
+      "countries": ["Bangladesh"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-023",
+      "text": "The bar chart illustrates last year's greenhouse gas emissions from four different sectors in a particular country. - Summarize the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "chartType": "bar",
+      "months": ["2026-07"],
+      "countries": ["Bangladesh"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-024",
+      "text": "The table illustrates the number of residents in each city over a period of time. (No further details provided in the index.)",
+      "chartType": "table",
+      "months": ["2026-07"],
+      "countries": ["Vietnam"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-025",
+      "text": "The pie chart illustrates the five-year change in the number of students studying different subjects at a university. (No further details provided in the index.)",
+      "chartType": "pie",
+      "months": ["2026-07"],
+      "countries": ["UK"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-026",
+      "text": "The line chart illustrates the average monthly consumption of electricity in five different countries from 2010 to 2020.",
+      "chartType": "line",
+      "months": ["2026-07"],
+      "countries": ["Australia"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-027",
+      "text": "The given diagram illustrates how solar panels can be used to provide electricity for domestic use.",
+      "chartType": "process-diagram",
+      "months": ["2026-07"],
+      "countries": ["Hong Kong"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-028",
+      "text": "The bar chart illustrates the percentage of people l... (full chart details not provided in the index).",
+      "chartType": "bar",
+      "months": ["2026-06"],
+      "countries": ["Australia"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-029",
+      "text": "The task was to describe a bar chart showing the percentage of people living in urban and rural areas in four different countries in 2010 and projections for 2025.",
+      "chartType": "bar",
+      "months": ["2026-06"],
+      "countries": ["Australia"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-030",
+      "text": "The bar chart illustrates the percentage of people living alone in different age groups in the UK in 2004 and 2014.",
+      "chartType": "bar",
+      "months": ["2026-06"],
+      "countries": ["Australia"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-031",
+      "text": "The chart below shows the percentage of households in different income groups that had internet access in 2010 and 2020. - Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "variants": ["The chart below shows the percentage of households in different income groups that had internet access between 2010 and 2020."],
+      "chartType": null,
+      "months": ["2026-05"],
+      "countries": ["Canada"],
+      "module": "academic",
+      "occurrenceCount": 2
+    },
+    {
+      "id": "wt1-032",
+      "text": "describe a bar chart showing the percentage of people using different modes of transport in three cities in 2010 and 2020.",
+      "variants": ["Describe a bar chart showing the percentage of people using different modes of transport in three cities."],
+      "chartType": "bar",
+      "months": ["2026-05"],
+      "countries": ["Canada"],
+      "module": "academic",
+      "occurrenceCount": 2
+    },
+    {
+      "id": "wt1-033",
+      "text": "a line graph showing the number of people using public transport in three cities from 2010 to 2020",
+      "chartType": "line",
+      "months": ["2026-05"],
+      "countries": ["Canada"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-034",
+      "text": "a bar chart about the number of students studying three different subjects in four countries",
+      "chartType": "bar",
+      "months": ["2026-05"],
+      "countries": ["Canada"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-035",
+      "text": "Write a letter to your friend inviting them to a family celebration.",
+      "variants": ["a letter to a friend inviting them to a family celebration"],
+      "chartType": null,
+      "months": ["2026-04"],
+      "countries": ["Australia"],
+      "module": "general",
+      "occurrenceCount": 2
+    },
+    {
+      "id": "wt1-036",
+      "text": "Summarise a line graph showing the number of tourists visiting a country over 20 years.",
+      "chartType": "line",
+      "months": ["2026-04"],
+      "countries": ["Canada"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-037",
+      "text": "The table below shows the number of students attending four different secondary schools in 2025. - Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "chartType": "table",
+      "months": ["2026-03"],
+      "countries": ["Canada"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-038",
+      "text": "Write a letter to your neighbor about a problem with their dog.",
+      "chartType": null,
+      "months": ["2026-03"],
+      "countries": ["UAE"],
+      "module": "general",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-039",
+      "text": "The diagram below shows the process of making cheese. - Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "chartType": "process-diagram",
+      "months": ["2026-02"],
+      "countries": ["Oman"],
+      "module": "academic",
+      "occurrenceCount": 1
+    },
+    {
+      "id": "wt1-040",
+      "text": "The graph below shows the number of tourists visiting three different countries from 2010 to 2025. - Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "chartType": null,
+      "months": ["2026-01"],
+      "countries": ["UK"],
+      "module": "academic",
+      "occurrenceCount": 1
+    }
+  ]
+}
