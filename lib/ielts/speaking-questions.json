@@ -1,82 +1,2759 @@
 {
-  "corpusVersion": 1,
-  "generatedAt": "2026-07-29",
-  "sourceStatement": "STAGE 自撰题目卡，基于公开考试大纲的话题分类与题型结构；不含任何第三方题库的逐字内容。",
+  "corpusVersion": 2,
+  "generatedAt": "2026-07-30",
+  "sourceStatement": "题目基于考生回忆整理（2026 年 2–7 月场次），题干为考生回忆的转述文字，非官方试题原文；话题分类、话题中文名与中文注解为 STAGE 编辑撰写。保留的少量自撰话题在该话题的 sourceNote 中单独标明。",
   "topics": [
+    {
+      "id": "home-and-living",
+      "labelEn": "Home and Living",
+      "labelZh": "居住环境",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-995ed688",
+          "part": 1,
+          "textEn": "Are you friends with your neighbors?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-96a78ad0",
+          "part": 1,
+          "textEn": "Can you describe the view from your windows?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-20630a41",
+          "part": 1,
+          "textEn": "Do you intend to stay in this area in the future?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-eec754cb",
+          "part": 1,
+          "textEn": "Do you live in a house or a flat?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-f1553886",
+          "part": 1,
+          "textEn": "Do you plan to live there in the future?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-445e7bac",
+          "part": 1,
+          "textEn": "Do you think your city has undergone significant changes in recent years?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-34c17ea8",
+          "part": 1,
+          "textEn": "How long have you lived there?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-caa1984c",
+          "part": 1,
+          "textEn": "How's your neighborhood?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-241f46b9",
+          "part": 1,
+          "textEn": "If you could improve one thing in your home, what would it be?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-ad3a3b80",
+          "part": 1,
+          "textEn": "What areas in your neighborhood could use improvement?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-059b60d9",
+          "part": 1,
+          "textEn": "What do you like most about the place where you live?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-31d65bf6",
+          "part": 1,
+          "textEn": "Where are you living now?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-cf7f07a6",
+          "part": 1,
+          "textEn": "Which is your favorite room?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-19b6c085",
+          "part": 1,
+          "textEn": "Would you use mirrors to decorate your room?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
     {
       "id": "hometown",
       "labelEn": "Hometown",
       "labelZh": "家乡",
-      "sourceNote": "自撰，基于公开大纲话题分类",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
       "questions": [
-        { "id": "hometown-p1-01", "part": 1, "textEn": "Where is your hometown?" },
-        { "id": "hometown-p1-02", "part": 1, "textEn": "What do you like most about the place where you grew up?" },
-        { "id": "hometown-p1-03", "part": 1, "textEn": "Has your hometown changed much since you were a child?" },
-        { "id": "hometown-p1-04", "part": 1, "textEn": "Would you like to live in your hometown in the future?" },
-        { "id": "hometown-p1-05", "part": 1, "textEn": "Is your hometown a good place for young people?" },
-        { "id": "hometown-p1-06", "part": 1, "textEn": "What would you show a visitor who only had one day there?" },
-        { "id": "hometown-p2-01", "part": 2, "textEn": "Describe a place in your hometown that you often take visitors to.", "cuePointsEn": ["Where it is", "How often you go there", "What visitors usually do there", "And explain why you take people to this place"] },
-        { "id": "hometown-p2-02", "part": 2, "textEn": "Describe a change you would like to see in your hometown.", "cuePointsEn": ["What the change is", "Why you think it is needed", "Who would benefit from it", "And explain how you think it could happen"] },
-        { "id": "hometown-p3-01", "part": 3, "textEn": "Why do people move away from the places where they grew up?", "glossZh": "问的是普遍原因，不是你自己的经历。" },
-        { "id": "hometown-p3-02", "part": 3, "textEn": "How does the size of a town change the way people live in it?" },
-        { "id": "hometown-p3-03", "part": 3, "textEn": "Should old buildings be protected when a city needs more space?", "glossZh": "取舍类问题：保护与发展之间怎么权衡。" }
+        {
+          "id": "r1-c00479f2",
+          "part": 1,
+          "textEn": "Do you like living there?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-9d19ee0e",
+          "part": 1,
+          "textEn": "Do you like your hometown?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-6e18575a",
+          "part": 1,
+          "textEn": "How long have you been living there?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-55d49961",
+          "part": 1,
+          "textEn": "Is it a good place for young people?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-6dd201c5",
+          "part": 1,
+          "textEn": "Is there anything you dislike about it?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-517850cb",
+          "part": 1,
+          "textEn": "Is your hometown a good place for young people?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-03"
+          ]
+        },
+        {
+          "id": "r1-87a2f19b",
+          "part": 1,
+          "textEn": "What do you like about your hometown?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-03",
+            "2026-05",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-133a810e",
+          "part": 1,
+          "textEn": "Where is your hometown?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
       ]
     },
     {
       "id": "work-and-study",
       "labelEn": "Work and Study",
       "labelZh": "工作与学习",
-      "sourceNote": "自撰，基于公开大纲话题分类",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
       "questions": [
-        { "id": "work-and-study-p1-01", "part": 1, "textEn": "Do you work, or are you a student?" },
-        { "id": "work-and-study-p1-02", "part": 1, "textEn": "What do you enjoy most about your work or your studies?" },
-        { "id": "work-and-study-p1-03", "part": 1, "textEn": "Is there anything you would change about your working day?" },
-        { "id": "work-and-study-p1-04", "part": 1, "textEn": "Do you prefer to work in the morning or later in the day?" },
-        { "id": "work-and-study-p1-05", "part": 1, "textEn": "Do you work better on your own or with other people?" },
-        { "id": "work-and-study-p1-06", "part": 1, "textEn": "What job did you want to do when you were a child?" },
-        { "id": "work-and-study-p2-01", "part": 2, "textEn": "Describe a task you found difficult but finished anyway.", "cuePointsEn": ["What the task was", "When you had to do it", "What made it difficult", "And explain how you felt when it was done"] },
-        { "id": "work-and-study-p2-02", "part": 2, "textEn": "Describe a skill you learned for your work or your studies.", "cuePointsEn": ["What the skill is", "How you learned it", "How long it took", "And explain how you use it now"] },
-        { "id": "work-and-study-p3-01", "part": 3, "textEn": "Why do some people change careers in the middle of their lives?", "glossZh": "谈中年转行的动因，可从个人与外部环境两面说。" },
-        { "id": "work-and-study-p3-02", "part": 3, "textEn": "What makes one workplace better to be in than another?" },
-        { "id": "work-and-study-p3-03", "part": 3, "textEn": "Will most people still go to an office in twenty years' time?" }
+        {
+          "id": "r1-5b7ac541",
+          "part": 1,
+          "textEn": "Are you looking forward to working?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-06",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-fb43e531",
+          "part": 1,
+          "textEn": "Do you study or work?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-06",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-3414b9c7",
+          "part": 1,
+          "textEn": "Do you want to change jobs?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-7a28da90",
+          "part": 1,
+          "textEn": "Do you want to change your major?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-06",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-3d3061ad",
+          "part": 1,
+          "textEn": "Do you work or study?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-03",
+            "2026-05",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-709ba6a9",
+          "part": 1,
+          "textEn": "How much time do you spend on your studies each week?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-06",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-145965f6",
+          "part": 1,
+          "textEn": "Is your company good to its employees?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-61bb73b7",
+          "part": 1,
+          "textEn": "What are your plans after your studies?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-06",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-f67e0e2b",
+          "part": 1,
+          "textEn": "What changes would you like to see in your school?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-06",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-177363e2",
+          "part": 1,
+          "textEn": "What do you do, work or study?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-9ea879e7",
+          "part": 1,
+          "textEn": "What is your major?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-06",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-6cdb1ef3",
+          "part": 1,
+          "textEn": "What work do you do?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-3c404f58",
+          "part": 1,
+          "textEn": "Who helps you the most? And How?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-59422ded",
+          "part": 1,
+          "textEn": "Why do you like working for your company?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-685403f2",
+          "part": 3,
+          "textEn": "How has modern technology changed the way people work or study in your country?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
       ]
     },
     {
-      "id": "daily-routine",
-      "labelEn": "Daily Routine",
-      "labelZh": "日常作息",
-      "sourceNote": "自撰，基于公开大纲话题分类",
+      "id": "jobs-and-companies",
+      "labelEn": "Jobs and Companies",
+      "labelZh": "职业与公司",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
       "questions": [
-        { "id": "daily-routine-p1-01", "part": 1, "textEn": "What time do you usually get up?" },
-        { "id": "daily-routine-p1-02", "part": 1, "textEn": "Is your daily routine the same every day?" },
-        { "id": "daily-routine-p1-03", "part": 1, "textEn": "Which part of the day do you like best?" },
-        { "id": "daily-routine-p1-04", "part": 1, "textEn": "Do you plan your day in advance, or decide as you go?" },
-        { "id": "daily-routine-p1-05", "part": 1, "textEn": "Has your routine changed in the last few years?" },
-        { "id": "daily-routine-p1-06", "part": 1, "textEn": "Is there anything you always do before you go to bed?" },
-        { "id": "daily-routine-p2-01", "part": 2, "textEn": "Describe a part of your daily routine that you enjoy.", "cuePointsEn": ["What it is", "When you do it", "How long it takes", "And explain why you enjoy it"] },
-        { "id": "daily-routine-p2-02", "part": 2, "textEn": "Describe a day when your usual routine was completely changed.", "cuePointsEn": ["When it happened", "What changed it", "What you did instead", "And explain how you felt about the day"] },
-        { "id": "daily-routine-p3-01", "part": 3, "textEn": "Why do some people keep the same routine for years?", "glossZh": "问的是稳定作息带来的好处或心理原因。" },
-        { "id": "daily-routine-p3-02", "part": 3, "textEn": "Is a fixed routine helpful, or does it stop people trying new things?", "glossZh": "两面讨论题，答案需要给出立场并说明理由。" },
-        { "id": "daily-routine-p3-03", "part": 3, "textEn": "How has the way people organise their day changed compared with their parents' generation?" }
+        {
+          "id": "r2-99093461",
+          "part": 2,
+          "textEn": "Describe a person who works in a successful company.",
+          "cuePointsEn": [
+            "Who they are",
+            "What they do",
+            "What the company does",
+            "Why you think it's successful"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r2-7d08ca55",
+          "part": 2,
+          "textEn": "Describe your perfect job.",
+          "cuePointsEn": [
+            "What it is",
+            "How you knew about it",
+            "What it is like",
+            "Why you think it is perfect"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-e28364e2",
+          "part": 3,
+          "textEn": "Do young people prefer large or small companies?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-4723e209",
+          "part": 3,
+          "textEn": "Is salary most important?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-ca05e866",
+          "part": 3,
+          "textEn": "Is salary the main reason for job choice?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-6cf92268",
+          "part": 3,
+          "textEn": "What do you think of the job of a farmer?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-12cf66c6",
+          "part": 3,
+          "textEn": "What jobs do children want?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        }
       ]
     },
     {
-      "id": "food-and-cooking",
-      "labelEn": "Food and Cooking",
-      "labelZh": "饮食与烹饪",
-      "sourceNote": "自撰，基于公开大纲话题分类",
+      "id": "electricity-and-energy",
+      "labelEn": "Electricity and Energy",
+      "labelZh": "电力与能源",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
       "questions": [
-        { "id": "food-and-cooking-p1-01", "part": 1, "textEn": "What kind of food do you usually eat?" },
-        { "id": "food-and-cooking-p1-02", "part": 1, "textEn": "Do you cook at home?" },
-        { "id": "food-and-cooking-p1-03", "part": 1, "textEn": "Did you learn to cook from anyone in your family?" },
-        { "id": "food-and-cooking-p1-04", "part": 1, "textEn": "Do you prefer eating at home or eating out?" },
-        { "id": "food-and-cooking-p1-05", "part": 1, "textEn": "Is there any food you disliked as a child but like now?" },
-        { "id": "food-and-cooking-p1-06", "part": 1, "textEn": "What is a dish that is common where you live?" },
-        { "id": "food-and-cooking-p2-01", "part": 2, "textEn": "Describe a meal you enjoyed cooking or eating with other people.", "cuePointsEn": ["What the meal was", "Who you were with", "Where it took place", "And explain why you remember it"] },
-        { "id": "food-and-cooking-p2-02", "part": 2, "textEn": "Describe a food that is popular in your country.", "cuePointsEn": ["What it is", "When people usually eat it", "How it is made", "And explain why you think it is popular"] },
-        { "id": "food-and-cooking-p3-01", "part": 3, "textEn": "Why do eating habits change when people move to another country?", "glossZh": "可以从可获得的食材、时间安排、社交场合等角度说。" },
-        { "id": "food-and-cooking-p3-02", "part": 3, "textEn": "Are family meals less common than they used to be?" },
-        { "id": "food-and-cooking-p3-03", "part": 3, "textEn": "Should schools teach children how to cook?" }
+        {
+          "id": "r2-f7fe45ca",
+          "part": 2,
+          "textEn": "Describe a time when the electricity suddenly went out at your home.",
+          "cuePointsEn": [
+            "When it happened",
+            "How long it lasted",
+            "What you did",
+            "How you felt"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-459dc581",
+          "part": 3,
+          "textEn": "How dependent are people on electricity?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-40c933bf",
+          "part": 3,
+          "textEn": "Should governments invest more in renewables?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plans-and-changes",
+      "labelEn": "Plans and Changes",
+      "labelZh": "计划与变化",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r2-42fc8e76",
+          "part": 2,
+          "textEn": "Describe a plan you have changed recently.",
+          "cuePointsEn": [
+            "When it happened",
+            "What made you change it",
+            "What the new plan was",
+            "And how you felt about the change"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-26a9d9c0",
+          "part": 3,
+          "textEn": "Do people often change plans, is it important to make plans, why do some dislike changes in plans?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teachers",
+      "labelEn": "Teachers",
+      "labelZh": "老师",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-b217b762",
+          "part": 1,
+          "textEn": "Do you have a favorite teacher?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-ce78b5a0",
+          "part": 1,
+          "textEn": "Do you remember your teachers from primary school?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-a6dc0a7b",
+          "part": 1,
+          "textEn": "Do you want to be a teacher in the future?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-ef65ea36",
+          "part": 1,
+          "textEn": "What kind of teacher do you prefer?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-147c5914",
+          "part": 3,
+          "textEn": "In your opinion, should schools spend more money on technology or on teachers? Why?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-c7f57bfa",
+          "part": 3,
+          "textEn": "Should schools spend more on tech or teachers?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-e1cd59d4",
+          "part": 3,
+          "textEn": "Why do students find their teachers' lessons boring?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-work",
+      "labelEn": "Working in Groups",
+      "labelZh": "团队协作",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r2-93edf5e6",
+          "part": 2,
+          "textEn": "Describe a time when you worked in a group.",
+          "cuePointsEn": [
+            "What you did",
+            "Who you worked with",
+            "What problems you faced",
+            "And explain why you worked in the group"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-d06cdecb",
+          "part": 3,
+          "textEn": "Should students learn to do group work?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-f34e9c6a",
+          "part": 3,
+          "textEn": "What group tasks are there in schools?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-c5f7fd40",
+          "part": 3,
+          "textEn": "What should a leader do to make team members want to follow him or her?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-23457aa4",
+          "part": 3,
+          "textEn": "Why do some people prefer to work by themselves?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skills-and-learning",
+      "labelEn": "Skills and Learning",
+      "labelZh": "技能学习",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-68cd068e",
+          "part": 1,
+          "textEn": "Do you think fixing things is a necessary skill?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-cdc08e33",
+          "part": 2,
+          "textEn": "Describe a skill you learned when you were a child.",
+          "cuePointsEn": [
+            "What the skill was",
+            "How you learned it",
+            "And whether you still use it now"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-03"
+          ]
+        },
+        {
+          "id": "r3-480e3400",
+          "part": 3,
+          "textEn": "What skills can people learn from watching videos?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decisions-and-goals",
+      "labelEn": "Decisions and Goals",
+      "labelZh": "决定与目标",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r2-a3c0a933",
+          "part": 2,
+          "textEn": "Describe a piece of advice you recently received.",
+          "cuePointsEn": [
+            "Who gave you the advice",
+            "What the advice was",
+            "And explain how it helped you"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r2-4e8e67af",
+          "part": 2,
+          "textEn": "Describe a time when you had to make a difficult decision.",
+          "cuePointsEn": [
+            "What the decision was",
+            "Why it was difficult",
+            "And what happened as a result"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "helping-others",
+      "labelEn": "Helping Others",
+      "labelZh": "帮助他人",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-8dc3c176",
+          "part": 1,
+          "textEn": "What do you like about your work/studies?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-b6f15b95",
+          "part": 1,
+          "textEn": "What do you like about your work/study?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-19713b99",
+          "part": 2,
+          "textEn": "Describe a time when you helped someone.",
+          "cuePointsEn": [
+            "Who you helped",
+            "How you helped them",
+            "Why you helped them",
+            "And explain how you felt about it"
+          ],
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-05",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-69612832",
+          "part": 3,
+          "textEn": "Do you think people nowadays are less willing to help others than in the past?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-a6d92406",
+          "part": 3,
+          "textEn": "Do you think people should help strangers?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-eeb1bc55",
+          "part": 3,
+          "textEn": "How can children learn to help others?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-7864da61",
+          "part": 3,
+          "textEn": "How can schools encourage students to help others?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-6e9565c6",
+          "part": 3,
+          "textEn": "In your country, do people like to help others?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-00c6d9ac",
+          "part": 3,
+          "textEn": "Should children be taught to help others?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-2feae7bd",
+          "part": 3,
+          "textEn": "What are some ways people can help each other in the community?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-03b7c2a6",
+          "part": 3,
+          "textEn": "What kinds of help do people often need?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-9bac6e8e",
+          "part": 3,
+          "textEn": "Why do some people not want to ask for help?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "older-people",
+      "labelEn": "Talking with Older People",
+      "labelZh": "与长辈交流",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-3387a105",
+          "part": 1,
+          "textEn": "Do you often talk to older people?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-0454faee",
+          "part": 1,
+          "textEn": "What do you usually talk about with older people?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-9b9e968f",
+          "part": 1,
+          "textEn": "Who do you usually talk to among older people?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-1eb8c696",
+          "part": 2,
+          "textEn": "Describe an old person who has an interesting life and you enjoy talking to him or her.",
+          "cuePointsEn": [
+            "Who this person is",
+            "How you know him or her",
+            "What interesting things he or she has done",
+            "And explain why you enjoy talking to this person"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "famous-people",
+      "labelEn": "Famous People",
+      "labelZh": "名人",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-897e0481",
+          "part": 1,
+          "textEn": "Do you know any famous people in your local area?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-c7f5b290",
+          "part": 2,
+          "textEn": "Describe a famous person you would like to meet.",
+          "cuePointsEn": [
+            "Who he/she is",
+            "How you knew him/her",
+            "How/where you would like to meet him/her",
+            "And explain why you would like to meet him/her"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-db23c5ca",
+          "part": 3,
+          "textEn": "Do people become famous because of their talent?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-aa0e67e9",
+          "part": 3,
+          "textEn": "What are the advantages and disadvantages of being a famous child?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-75618e89",
+          "part": 3,
+          "textEn": "What can children do with their fame?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-fe0c2490",
+          "part": 3,
+          "textEn": "What can today's children do to become famous?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "animals-and-pets",
+      "labelEn": "Animals and Pets",
+      "labelZh": "动物与宠物",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-6479ed76",
+          "part": 1,
+          "textEn": "Have you ever had a pet before?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-dff8dde9",
+          "part": 1,
+          "textEn": "What is the most popular animal in your country?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-8980e4fa",
+          "part": 1,
+          "textEn": "What's your favorite animal? Why?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-f8939f08",
+          "part": 1,
+          "textEn": "Where do you prefer to keep your pet, indoors or outdoors?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-7661ec8c",
+          "part": 2,
+          "textEn": "Describe a wild animal that you would like to learn more about.",
+          "cuePointsEn": [
+            "What it is",
+            "When you saw it",
+            "Where you saw it",
+            "And explain why you want to know more about it"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-ec0b0c39",
+          "part": 3,
+          "textEn": "Do you think it's important to take children to the zoo to see animals?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-ba3ac506",
+          "part": 3,
+          "textEn": "Why are some people more willing to protect wild animals than others?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plants-and-growing",
+      "labelEn": "Plants and Growing",
+      "labelZh": "植物与种植",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r2-7211f3c4",
+          "part": 2,
+          "textEn": "Describe a person who loves to grow plants (e.g., vegetables, flowers) at home or in the garden.",
+          "cuePointsEn": [
+            "Who this person is",
+            "What he/she grows",
+            "Where he/she grows them",
+            "And explain why he/she enjoys growing plants"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-9f0665cf",
+          "part": 3,
+          "textEn": "Are there many people growing their vegetables now?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-9a17eae2",
+          "part": 3,
+          "textEn": "Do you think it's a good idea to let kids learn how to plant?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-31d7e009",
+          "part": 3,
+          "textEn": "Is technology beneficial in agriculture? Why?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-e249d965",
+          "part": 3,
+          "textEn": "What are the differences between traditional and modern agriculture?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food-and-meals",
+      "labelEn": "Food and Meals",
+      "labelZh": "饮食与餐叙",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-f0af1f57",
+          "part": 1,
+          "textEn": "Do people of different age groups live in your area?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-d0b83406",
+          "part": 2,
+          "textEn": "Describe a kind of food that you eat at special occasions.",
+          "cuePointsEn": [
+            "What it is",
+            "What occasion it was",
+            "Why you would like to eat it",
+            "How you feel about it"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-ad96db25",
+          "part": 2,
+          "textEn": "Describe a meal you had with your friends.",
+          "cuePointsEn": [
+            "When and where you had the meal",
+            "Who you were with",
+            "What food you ate"
+          ],
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-998b7e1b",
+          "part": 2,
+          "textEn": "Describe a special cake you received from others.",
+          "cuePointsEn": [
+            "What the cake was and who gave it to you",
+            "When and where you received it",
+            "What made the cake special",
+            "And how you felt about it"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-d3b78e33",
+          "part": 3,
+          "textEn": "Do people in your country prefer to eat at home or in restaurants?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-ef448972",
+          "part": 3,
+          "textEn": "Do you think the role of cakes in celebrations will change in the future?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-edc25f9c",
+          "part": 3,
+          "textEn": "How have people's diets changed compared to the past?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-c8d3e64f",
+          "part": 3,
+          "textEn": "How is festival food different from daily meals?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-6d401da5",
+          "part": 3,
+          "textEn": "What are the differences between special foods in your country and in foreign countries?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-b7f4dc01",
+          "part": 3,
+          "textEn": "What do people usually cook for special festivals in your country?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-901119fc",
+          "part": 3,
+          "textEn": "What do you think about the impact of technology on the food industry?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-09a7c6a0",
+          "part": 3,
+          "textEn": "What would you say the benefits and drawbacks of eating in a restaurant are?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-f58b56ab",
+          "part": 3,
+          "textEn": "Why do people eat special food on special occasions or festivals?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-5ab062fe",
+          "part": 3,
+          "textEn": "Why do some people spend a lot on meals on special days?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-e1d384be",
+          "part": 3,
+          "textEn": "Why is it important to have a special meal?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-dad165c5",
+          "part": 3,
+          "textEn": "With more and more people having their meals delivered, will people still cook at home?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cities-and-buildings",
+      "labelEn": "Cities and Buildings",
+      "labelZh": "城市与建筑",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r2-a672b89b",
+          "part": 2,
+          "textEn": "Describe a tall building in your city that you like or dislike.",
+          "cuePointsEn": [
+            "What it is",
+            "Where and when you saw it",
+            "How it looks like",
+            "And explain why you like or dislike it"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-209f427c",
+          "part": 2,
+          "textEn": "Describe an interesting building you saw during a trip.",
+          "cuePointsEn": [
+            "Where it is",
+            "What it looks like",
+            "What you did there",
+            "And explain why you found it interesting"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r2-eb6c7f10",
+          "part": 2,
+          "textEn": "Describe your favorite city that you have visited.",
+          "cuePointsEn": [
+            "Where it is",
+            "How you knew it",
+            "When you visited it",
+            "And explain why it is your favorite city"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-5e14b863",
+          "part": 3,
+          "textEn": "Do most people prefer to travel in a modern city or a historical city?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-00147795",
+          "part": 3,
+          "textEn": "Do you think a tourist city is also a good place to live? Why?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-2109975d",
+          "part": 3,
+          "textEn": "Do you think there will be more tall buildings in the future?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-2fa22a2a",
+          "part": 3,
+          "textEn": "How do people choose a city to travel to?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-f6d384a4",
+          "part": 3,
+          "textEn": "What are the disadvantages of living in a tall building?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-797fc1ab",
+          "part": 3,
+          "textEn": "What types of buildings are the most popular in your country today?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-b689fbe4",
+          "part": 3,
+          "textEn": "Which is more suitable for young people, urban life or rural life, and which is more suitable for old people?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-6f22faf5",
+          "part": 3,
+          "textEn": "Why do some people like to live in tall buildings nowadays?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-and-places",
+      "labelEn": "Travel and Places",
+      "labelZh": "旅行与地点",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r2-696a4465",
+          "part": 2,
+          "textEn": "Describe a boring place you have been to.",
+          "cuePointsEn": [
+            "Where it is",
+            "When you went there",
+            "Who you went with",
+            "And explain why you felt it was boring"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-b5795a90",
+          "part": 2,
+          "textEn": "Describe a place you visited that was very beautiful.",
+          "cuePointsEn": [
+            "Where it was",
+            "When you went there",
+            "And explain why you found it beautiful"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-03",
+            "2026-04"
+          ]
+        },
+        {
+          "id": "r2-b6f7701b",
+          "part": 2,
+          "textEn": "Describe a place you would like to visit in your free time.",
+          "cuePointsEn": [
+            "Where it is",
+            "What you will do",
+            "How long you will stay",
+            "Why you want to visit"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-d8a6be92",
+          "part": 3,
+          "textEn": "Do young and old like the same places?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        },
+        {
+          "id": "r3-dd6120e3",
+          "part": 3,
+          "textEn": "Will tourism become more popular?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cars-and-transport",
+      "labelEn": "Cars and Transport",
+      "labelZh": "汽车与出行",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-1212fe4d",
+          "part": 1,
+          "textEn": "Are there a lot of traffic jams in your city?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-adf9c97f",
+          "part": 1,
+          "textEn": "Do you own a car?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-2102cc94",
+          "part": 1,
+          "textEn": "Do you think it is necessary to learn how to drive?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-a9144470",
+          "part": 1,
+          "textEn": "How often do you use the car?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "labelEn": "Technology",
+      "labelZh": "科技与设备",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-3cafb336",
+          "part": 1,
+          "textEn": "Do you type on a desktop or laptop keyboard every day?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-ba9f304a",
+          "part": 1,
+          "textEn": "Do you use headphones?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-53f46441",
+          "part": 1,
+          "textEn": "How do you improve your typing?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-ea0b634e",
+          "part": 1,
+          "textEn": "In what conditions won't you use headphones?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-b01ab596",
+          "part": 1,
+          "textEn": "Is there any technology you find helpful in daily life?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-eb4c27b2",
+          "part": 1,
+          "textEn": "What type of headphones do you use?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-bbc51338",
+          "part": 1,
+          "textEn": "When did you learn how to type on a keyboard?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-367e503e",
+          "part": 1,
+          "textEn": "When would you use headphones?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-5b42c27d",
+          "part": 2,
+          "textEn": "Describe a piece of equipment that is important in your home.",
+          "cuePointsEn": [
+            "What it is",
+            "How you use it",
+            "How long you have had it",
+            "And explain why it is important"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r2-e283a035",
+          "part": 2,
+          "textEn": "Describe a piece of technology (not a phone) that you would like to own.",
+          "cuePointsEn": [
+            "What it is",
+            "How much it costs",
+            "What you will use it for",
+            "And explain why you would like to own it"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-16c45cb8",
+          "part": 3,
+          "textEn": "Do people rely too much on tech?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-00e91fab",
+          "part": 3,
+          "textEn": "Do you think people rely too much on technology at home?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-91047547",
+          "part": 3,
+          "textEn": "Do you think people rely too much on technology these days? Why or why not?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-0543000b",
+          "part": 3,
+          "textEn": "How has technology changed the way people use equipment at home?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-befa6f6c",
+          "part": 3,
+          "textEn": "What are the differences between the technology of the past and that of today?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-4cfede12",
+          "part": 3,
+          "textEn": "What kinds of equipment are used in modern homes?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-29f199fb",
+          "part": 3,
+          "textEn": "What kinds of technology are most popular among young people compared to older generations?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "websites",
+      "labelEn": "Websites",
+      "labelZh": "网站",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-d3e22e1e",
+          "part": 1,
+          "textEn": "Are there any changes to the websites you often visit?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-6097a0d0",
+          "part": 1,
+          "textEn": "What is your favorite website?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-dc3c3d1e",
+          "part": 1,
+          "textEn": "What kinds of websites are popular in your country?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-22998cf3",
+          "part": 1,
+          "textEn": "What kinds of websites do you often visit?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media-and-news",
+      "labelEn": "Media and News",
+      "labelZh": "影视与资讯",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-a38741b5",
+          "part": 1,
+          "textEn": "Can you describe it?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-6249060a",
+          "part": 1,
+          "textEn": "Did you watch any funny programs or films recently?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-8ccdfb98",
+          "part": 1,
+          "textEn": "Do you like your neighbourhood?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-1ebed90e",
+          "part": 1,
+          "textEn": "Have you ever read a novel that has been adapted into a film?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-0e48ade0",
+          "part": 1,
+          "textEn": "What do you like the most about it?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-a3d3e50c",
+          "part": 1,
+          "textEn": "Where do you live?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-9c25b484",
+          "part": 1,
+          "textEn": "Which one do you prefer, reading books or watching movies?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-9972d2b8",
+          "part": 2,
+          "textEn": "Describe a piece of good news you received.",
+          "cuePointsEn": [
+            "What the news was",
+            "Who told you",
+            "How you felt",
+            "And why it was important to you"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r2-7d847ccf",
+          "part": 2,
+          "textEn": "Describe a piece of local news that people are interested in.",
+          "cuePointsEn": [
+            "What the news is",
+            "Where you heard or read the news",
+            "Who was involved",
+            "And explain why it is interesting to you"
+          ],
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-c5c2734d",
+          "part": 2,
+          "textEn": "Describe an interesting video.",
+          "cuePointsEn": [
+            "When and where you watched it",
+            "What it is about",
+            "Why you watched it",
+            "And explain how you felt about it"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-0661978a",
+          "part": 3,
+          "textEn": "Are there any differences between the videos that young people and old people like to watch?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-852bba3f",
+          "part": 3,
+          "textEn": "Do people prefer to share good news face-to-face or online?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-e5a57ec4",
+          "part": 3,
+          "textEn": "How do people share good news in your country?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-269dd5a4",
+          "part": 3,
+          "textEn": "How do we identify if the news from the Internet is reliable?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-eb18f2e9",
+          "part": 3,
+          "textEn": "What are the different news sources today?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-121a9254",
+          "part": 3,
+          "textEn": "What kind of good news do people usually share?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-c0c586fb",
+          "part": 3,
+          "textEn": "What kind of videos do people in your country like to watch?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-16ebb548",
+          "part": 3,
+          "textEn": "Which is more helpful, watching videos or reading books?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-82c95572",
+          "part": 3,
+          "textEn": "Why do people like to read the local news?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-5e62f1de",
+          "part": 3,
+          "textEn": "Why do some people prefer watching movies to reading books?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-34a411ce",
+          "part": 3,
+          "textEn": "Why is it important to share good news?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading-and-books",
+      "labelEn": "Reading and Books",
+      "labelZh": "阅读与书籍",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-e7c31116",
+          "part": 1,
+          "textEn": "Are your reading habits now different from before?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-a733e854",
+          "part": 1,
+          "textEn": "Do you like reading?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-602826ab",
+          "part": 1,
+          "textEn": "Do you like to read books?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-05",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-20249ca1",
+          "part": 1,
+          "textEn": "Do you often read books? When?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-c8f68899",
+          "part": 1,
+          "textEn": "Do you prefer e-books or printed books?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-038556b9",
+          "part": 1,
+          "textEn": "Do you prefer living in a city or in the countryside?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-19534b8c",
+          "part": 1,
+          "textEn": "Do you prefer to read on paper or on a screen?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-8cbd91eb",
+          "part": 1,
+          "textEn": "Do you think reading is important?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-b8d5a3bb",
+          "part": 1,
+          "textEn": "What kind of books do you like to read?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-b001a408",
+          "part": 1,
+          "textEn": "What kind of books do you like?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-f0b98298",
+          "part": 1,
+          "textEn": "When do you need to read carefully, and when not?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-bdc69d47",
+          "part": 2,
+          "textEn": "Describe a book you have read more than once.",
+          "cuePointsEn": [
+            "What the book is",
+            "When you read it",
+            "Why you read it more than once",
+            "And explain what you learned from it"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r2-681f5cf5",
+          "part": 2,
+          "textEn": "Describe a book you read that had a big impact on you.",
+          "cuePointsEn": [
+            "What the book was",
+            "When you read it",
+            "And explain why it was impactful"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-04"
+          ]
+        },
+        {
+          "id": "r3-d1d6613c",
+          "part": 3,
+          "textEn": "Do people in your country like reading books?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-708eaf86",
+          "part": 3,
+          "textEn": "Do you think reading habits are changing nowadays?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-a60018e3",
+          "part": 3,
+          "textEn": "What kinds of books are popular in your country?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "music-and-singing",
+      "labelEn": "Music and Singing",
+      "labelZh": "音乐与歌唱",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-49b47908",
+          "part": 1,
+          "textEn": "Do you like singing? Why?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-a97cd2f9",
+          "part": 1,
+          "textEn": "Do you think singing can bring people happiness?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-cfde5ba0",
+          "part": 1,
+          "textEn": "Have you ever learned how to sing?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-ec3c1617",
+          "part": 1,
+          "textEn": "Who do you want to sing for?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-7890f8ea",
+          "part": 2,
+          "textEn": "Describe a creative person (e.g. an artist, a musician, etc.) you admire.",
+          "cuePointsEn": [
+            "Who this person is",
+            "What creative things he or she does",
+            "How you know about him or her",
+            "And explain why you admire this person"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-and-drawing",
+      "labelEn": "Art and Drawing",
+      "labelZh": "艺术与绘画",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r2-1ffc0ede",
+          "part": 2,
+          "textEn": "Describe a friend who loves drawing or painting.",
+          "cuePointsEn": [
+            "Who they are",
+            "How you know them",
+            "How often they draw/paint",
+            "Why you think they love it"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-091ab4d5",
+          "part": 3,
+          "textEn": "Should galleries/museums be free?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sports-and-games",
+      "labelEn": "Sports and Games",
+      "labelZh": "运动与比赛",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r2-c5ed26aa",
+          "part": 2,
+          "textEn": "Describe a live sports match you have watched.",
+          "cuePointsEn": [
+            "What it was",
+            "Why you watched",
+            "What it was like",
+            "How you felt"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-5b597b3d",
+          "part": 3,
+          "textEn": "Should children be involved in sports competitions?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hobbies-and-free-time",
+      "labelEn": "Hobbies and Free Time",
+      "labelZh": "爱好与休闲",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-d1f2e83d",
+          "part": 1,
+          "textEn": "Did you have any hobbies when you were a child?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-57eb3faf",
+          "part": 1,
+          "textEn": "Do you have a hobby that you've had since childhood?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-b6455f93",
+          "part": 1,
+          "textEn": "Do you have any hobbies?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-04e61d74",
+          "part": 1,
+          "textEn": "Do you have the same hobbies as your family members?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-cd2c2395",
+          "part": 1,
+          "textEn": "Do you prefer to spend time indoors or outdoors?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-47cf134a",
+          "part": 1,
+          "textEn": "Do you prefer to spend your free time alone or with others?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r1-d64a13fa",
+          "part": 1,
+          "textEn": "What do you do in your free time?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "r3-5984bad4",
+          "part": 3,
+          "textEn": "On what occasions do people feel bored?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r3-5de08d67",
+          "part": 3,
+          "textEn": "Question reported: Why do some people not like going to parties?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "humor-and-laughter",
+      "labelEn": "Humor and Laughter",
+      "labelZh": "幽默与欢笑",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-75596fbd",
+          "part": 1,
+          "textEn": "Do you like making other people laugh?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-b712e58e",
+          "part": 1,
+          "textEn": "Do you think it is important to have a sense of humor?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-d80bdaa7",
+          "part": 1,
+          "textEn": "What kinds of things make you laugh?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "labelEn": "Shopping",
+      "labelZh": "购物",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-f0663e0d",
+          "part": 1,
+          "textEn": "Do you compare prices when you shop? Why?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-479f886c",
+          "part": 1,
+          "textEn": "Do you like shopping?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-806487f4",
+          "part": 1,
+          "textEn": "Do you think expensive products are always better than cheaper ones?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-a03a0ac5",
+          "part": 1,
+          "textEn": "Is it difficult for you to make choices when you shop?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r2-5e848b18",
+          "part": 2,
+          "textEn": "Describe a shop or store you enjoy visiting.",
+          "cuePointsEn": [
+            "What kind of shop it is",
+            "Where it is",
+            "What you usually buy there",
+            "And explain why you enjoy visiting it"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "labelEn": "Science",
+      "labelZh": "科学",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-2096c976",
+          "part": 1,
+          "textEn": "Do you think science classes are necessary?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-353c125f",
+          "part": 1,
+          "textEn": "When did you start to learn science?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-b4dc033e",
+          "part": 1,
+          "textEn": "Which science subject interests you?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fixing-things",
+      "labelEn": "Fixing Things",
+      "labelZh": "修理物品",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-5da56224",
+          "part": 1,
+          "textEn": "Can you fix things?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-fe64c474",
+          "part": 1,
+          "textEn": "Have you ever asked people to teach you to fix things?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-a8ac0e0e",
+          "part": 1,
+          "textEn": "What kinds of things can you fix?",
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daily-habits",
+      "labelEn": "Daily Habits",
+      "labelZh": "日常习惯",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+      "questions": [
+        {
+          "id": "r1-b0df8fd7",
+          "part": 1,
+          "textEn": "Are you a tidy person?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-435cb3de",
+          "part": 1,
+          "textEn": "Do you like looking at yourself in the mirror?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-148096b0",
+          "part": 1,
+          "textEn": "Do you prefer to study in the mornings or the afternoons?",
+          "recallCount": 3,
+          "recallMonths": [
+            "2026-06",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-eb0a0f50",
+          "part": 1,
+          "textEn": "Do you prefer to work in the morning or afternoon?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-05",
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-51e931e9",
+          "part": 1,
+          "textEn": "Do you think people should be tidy all the time?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-53ef5aaf",
+          "part": 1,
+          "textEn": "Do you usually take a mirror with you?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-468c45f2",
+          "part": 1,
+          "textEn": "Have you ever bought mirrors?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        },
+        {
+          "id": "r1-4dde88a8",
+          "part": 1,
+          "textEn": "How do you keep things tidy?",
+          "recallCount": 2,
+          "recallMonths": [
+            "2026-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-and-gifts",
+      "labelEn": "Money and Gifts",
+      "labelZh": "金钱与馈赠",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）；含并入的自撰题（无频次字段）",
+      "questions": [
+        {
+          "id": "money-and-saving-p1-02",
+          "part": 1,
+          "textEn": "Did you save money as a child?"
+        },
+        {
+          "id": "money-and-saving-p1-01",
+          "part": 1,
+          "textEn": "Do you keep track of what you spend?"
+        },
+        {
+          "id": "money-and-saving-p1-05",
+          "part": 1,
+          "textEn": "Do you plan large purchases in advance?"
+        },
+        {
+          "id": "money-and-saving-p1-03",
+          "part": 1,
+          "textEn": "Do you prefer to save or to spend?"
+        },
+        {
+          "id": "money-and-saving-p1-04",
+          "part": 1,
+          "textEn": "Do you use cash or a card?"
+        },
+        {
+          "id": "money-and-saving-p1-06",
+          "part": 1,
+          "textEn": "Who taught you about money?"
+        },
+        {
+          "id": "money-and-saving-p2-02",
+          "part": 2,
+          "textEn": "Describe a decision about money that you thought carefully about.",
+          "cuePointsEn": [
+            "What the decision was",
+            "When you made it",
+            "What you considered",
+            "And explain how it turned out"
+          ]
+        },
+        {
+          "id": "r2-b1ccc3d6",
+          "part": 2,
+          "textEn": "Describe a time when you received money as a gift.",
+          "cuePointsEn": [
+            "When it was",
+            "Who gave it to you",
+            "And how you used it"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-02"
+          ]
+        },
+        {
+          "id": "money-and-saving-p2-01",
+          "part": 2,
+          "textEn": "Describe something you saved up for.",
+          "cuePointsEn": [
+            "What it was",
+            "How long you saved",
+            "How you managed it",
+            "And explain how you felt when you got it"
+          ]
+        },
+        {
+          "id": "money-and-saving-p3-03",
+          "part": 3,
+          "textEn": "How has the way people pay for things changed?"
+        },
+        {
+          "id": "money-and-saving-p3-02",
+          "part": 3,
+          "textEn": "Should personal finance be taught in schools?",
+          "glossZh": "教育内容取舍类问题。"
+        },
+        {
+          "id": "money-and-saving-p3-01",
+          "part": 3,
+          "textEn": "Why do people find saving money difficult?",
+          "glossZh": "谈储蓄困难的原因，可从收入与习惯两面说。"
+        }
+      ]
+    },
+    {
+      "id": "friends-and-family",
+      "labelEn": "Friends and Family",
+      "labelZh": "朋友与家人",
+      "sourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）；含并入的自撰题（无频次字段）",
+      "questions": [
+        {
+          "id": "friends-p1-06",
+          "part": 1,
+          "textEn": "Do you keep in touch with friends from school?"
+        },
+        {
+          "id": "friends-p1-03",
+          "part": 1,
+          "textEn": "Do you prefer a large group of friends or a few close ones?"
+        },
+        {
+          "id": "friends-p1-01",
+          "part": 1,
+          "textEn": "How often do you see your friends?"
+        },
+        {
+          "id": "friends-p1-05",
+          "part": 1,
+          "textEn": "Is it easy to make friends as an adult?"
+        },
+        {
+          "id": "friends-p1-04",
+          "part": 1,
+          "textEn": "What do you usually do together?"
+        },
+        {
+          "id": "friends-p1-02",
+          "part": 1,
+          "textEn": "Where did you meet most of your friends?"
+        },
+        {
+          "id": "friends-p2-01",
+          "part": 2,
+          "textEn": "Describe a friend you have known for a long time.",
+          "cuePointsEn": [
+            "Who the person is",
+            "How you met",
+            "What you usually do together",
+            "And explain why the friendship has lasted"
+          ]
+        },
+        {
+          "id": "r2-4ebc9f66",
+          "part": 2,
+          "textEn": "Describe a good friend who is important to you.",
+          "cuePointsEn": [
+            "Who this person is",
+            "How you met",
+            "What you do together",
+            "And explain why this friend is important to you"
+          ],
+          "recallCount": 1,
+          "recallMonths": [
+            "2026-05"
+          ]
+        },
+        {
+          "id": "friends-p2-02",
+          "part": 2,
+          "textEn": "Describe a time a friend helped you.",
+          "cuePointsEn": [
+            "What the situation was",
+            "What your friend did",
+            "How you reacted",
+            "And explain what it meant to you"
+          ]
+        },
+        {
+          "id": "friends-p3-03",
+          "part": 3,
+          "textEn": "Are friends more important than family in some situations?"
+        },
+        {
+          "id": "friends-p3-02",
+          "part": 3,
+          "textEn": "Has technology changed what friendship means?",
+          "glossZh": "问的是友谊的定义是否变了，不只是联系方式。"
+        },
+        {
+          "id": "friends-p3-01",
+          "part": 3,
+          "textEn": "Why do some friendships last for decades while others fade?",
+          "glossZh": "对比两类友谊的差别，谈维系的条件。"
+        }
       ]
     },
     {
@@ -85,131 +2762,75 @@
       "labelZh": "天气与季节",
       "sourceNote": "自撰，基于公开大纲话题分类",
       "questions": [
-        { "id": "weather-and-seasons-p1-01", "part": 1, "textEn": "What is the weather like where you live?" },
-        { "id": "weather-and-seasons-p1-02", "part": 1, "textEn": "Which season do you like best?" },
-        { "id": "weather-and-seasons-p1-03", "part": 1, "textEn": "Does the weather change what you do at the weekend?" },
-        { "id": "weather-and-seasons-p1-04", "part": 1, "textEn": "Do you prefer hot weather or cold weather?" },
-        { "id": "weather-and-seasons-p1-05", "part": 1, "textEn": "Do you check the weather forecast?" },
-        { "id": "weather-and-seasons-p1-06", "part": 1, "textEn": "Is there a kind of weather you find difficult?" },
-        { "id": "weather-and-seasons-p2-01", "part": 2, "textEn": "Describe a day when the weather changed your plans.", "cuePointsEn": ["When it was", "What you had planned", "What you did instead", "And explain how you felt about it"] },
-        { "id": "weather-and-seasons-p2-02", "part": 2, "textEn": "Describe a season or a time of year you look forward to.", "cuePointsEn": ["Which one it is", "What the weather is like then", "What you usually do", "And explain why you look forward to it"] },
-        { "id": "weather-and-seasons-p3-01", "part": 3, "textEn": "How does weather affect the way people feel?", "glossZh": "问的是天气与情绪、作息的关系。" },
-        { "id": "weather-and-seasons-p3-02", "part": 3, "textEn": "Why do people in different regions have such different attitudes to rain?" },
-        { "id": "weather-and-seasons-p3-03", "part": 3, "textEn": "Should cities be designed differently for hotter summers?", "glossZh": "城市规划类问题：可以谈绿化、遮阳、建筑材料等。" }
-      ]
-    },
-    {
-      "id": "getting-around",
-      "labelEn": "Getting Around",
-      "labelZh": "出行方式",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "getting-around-p1-01", "part": 1, "textEn": "How do you usually travel around your city?" },
-        { "id": "getting-around-p1-02", "part": 1, "textEn": "How long does it take you to get to work or to your school?" },
-        { "id": "getting-around-p1-03", "part": 1, "textEn": "Do you enjoy the journey, or is it just something you have to do?" },
-        { "id": "getting-around-p1-04", "part": 1, "textEn": "Have the transport options where you live improved?" },
-        { "id": "getting-around-p1-05", "part": 1, "textEn": "Do you ever walk or cycle instead?" },
-        { "id": "getting-around-p1-06", "part": 1, "textEn": "What do you usually do while you are travelling?" },
-        { "id": "getting-around-p2-01", "part": 2, "textEn": "Describe a journey you make regularly.", "cuePointsEn": ["Where you go", "How you travel", "How long it takes", "And explain how you feel about making it"] },
-        { "id": "getting-around-p2-02", "part": 2, "textEn": "Describe a time when a journey took much longer than you expected.", "cuePointsEn": ["Where you were going", "Why it took so long", "What you did while you waited", "And explain how you felt"] },
-        { "id": "getting-around-p3-01", "part": 3, "textEn": "Why do some people prefer driving even when public transport is available?", "glossZh": "谈选择背后的原因：时间、舒适度、习惯等。" },
-        { "id": "getting-around-p3-02", "part": 3, "textEn": "What makes people willing to walk or cycle more?" },
-        { "id": "getting-around-p3-03", "part": 3, "textEn": "How should a city decide where to build new transport links?", "glossZh": "问的是决策依据，不是具体线路。" }
-      ]
-    },
-    {
-      "id": "technology",
-      "labelEn": "Technology",
-      "labelZh": "科技与设备",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "technology-p1-01", "part": 1, "textEn": "What piece of technology do you use most?" },
-        { "id": "technology-p1-02", "part": 1, "textEn": "How often do you change your phone or your computer?" },
-        { "id": "technology-p1-03", "part": 1, "textEn": "Do you find new devices easy to learn?" },
-        { "id": "technology-p1-04", "part": 1, "textEn": "Do you use technology more for work or for entertainment?" },
-        { "id": "technology-p1-05", "part": 1, "textEn": "Is there any technology you have decided not to use?" },
-        { "id": "technology-p1-06", "part": 1, "textEn": "Who taught you to use the devices you own?" },
-        { "id": "technology-p2-01", "part": 2, "textEn": "Describe a piece of technology that made your life easier.", "cuePointsEn": ["What it is", "When you started using it", "What you use it for", "And explain how it changed things for you"] },
-        { "id": "technology-p2-02", "part": 2, "textEn": "Describe a time when a device stopped working when you needed it.", "cuePointsEn": ["What the device was", "When it happened", "What you did", "And explain how you felt"] },
-        { "id": "technology-p3-01", "part": 3, "textEn": "Why do some people feel uneasy about new technology?", "glossZh": "谈不安的来源：学习成本、隐私、可靠性等。" },
-        { "id": "technology-p3-02", "part": 3, "textEn": "Does having more devices actually save people time?", "glossZh": "反直觉类问题，需要给出立场并举例支撑。" },
-        { "id": "technology-p3-03", "part": 3, "textEn": "How should children's use of screens be managed?" }
-      ]
-    },
-    {
-      "id": "music",
-      "labelEn": "Music",
-      "labelZh": "音乐",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "music-p1-01", "part": 1, "textEn": "What kind of music do you listen to?" },
-        { "id": "music-p1-02", "part": 1, "textEn": "When do you usually listen to music?" },
-        { "id": "music-p1-03", "part": 1, "textEn": "Have you ever learned a musical instrument?" },
-        { "id": "music-p1-04", "part": 1, "textEn": "Has the music you like changed since you were younger?" },
-        { "id": "music-p1-05", "part": 1, "textEn": "Do you prefer listening at home or hearing music live?" },
-        { "id": "music-p1-06", "part": 1, "textEn": "Is music important in your family?" },
-        { "id": "music-p2-01", "part": 2, "textEn": "Describe a song or a piece of music that means something to you.", "cuePointsEn": ["What it is", "When you first heard it", "When you listen to it", "And explain why it matters to you"] },
-        { "id": "music-p2-02", "part": 2, "textEn": "Describe a live performance you attended.", "cuePointsEn": ["What it was", "Who you went with", "Where it took place", "And explain what you remember most about it"] },
-        { "id": "music-p3-01", "part": 3, "textEn": "Why does music from a particular period stay popular for so long?", "glossZh": "谈某个年代的音乐为什么经久不衰。" },
-        { "id": "music-p3-02", "part": 3, "textEn": "Should children be taught to play an instrument at school?" },
-        { "id": "music-p3-03", "part": 3, "textEn": "How has the way people find new music changed?" }
-      ]
-    },
-    {
-      "id": "sport-and-exercise",
-      "labelEn": "Sport and Exercise",
-      "labelZh": "运动与锻炼",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "sport-and-exercise-p1-01", "part": 1, "textEn": "Do you play any sports?" },
-        { "id": "sport-and-exercise-p1-02", "part": 1, "textEn": "How often do you exercise?" },
-        { "id": "sport-and-exercise-p1-03", "part": 1, "textEn": "Did you enjoy sport at school?" },
-        { "id": "sport-and-exercise-p1-04", "part": 1, "textEn": "Do you prefer team sports or exercising on your own?" },
-        { "id": "sport-and-exercise-p1-05", "part": 1, "textEn": "Do you watch sport on television?" },
-        { "id": "sport-and-exercise-p1-06", "part": 1, "textEn": "Is there a sport you would like to try?" },
-        { "id": "sport-and-exercise-p2-01", "part": 2, "textEn": "Describe a sport or an activity you enjoy doing.", "cuePointsEn": ["What it is", "How often you do it", "Who you do it with", "And explain why you enjoy it"] },
-        { "id": "sport-and-exercise-p2-02", "part": 2, "textEn": "Describe a time you kept going with something physical that was hard.", "cuePointsEn": ["What it was", "Why it was difficult", "How you kept going", "And explain how you felt afterwards"] },
-        { "id": "sport-and-exercise-p3-01", "part": 3, "textEn": "Why do many adults stop exercising after they leave school?", "glossZh": "谈成年后运动量下降的原因。" },
-        { "id": "sport-and-exercise-p3-02", "part": 3, "textEn": "Should local governments pay for sports facilities?", "glossZh": "公共支出类问题：谁受益、钱从哪来。" },
-        { "id": "sport-and-exercise-p3-03", "part": 3, "textEn": "What makes a sport popular in one country and not in another?" }
-      ]
-    },
-    {
-      "id": "reading",
-      "labelEn": "Reading",
-      "labelZh": "阅读",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "reading-p1-01", "part": 1, "textEn": "Do you read much?" },
-        { "id": "reading-p1-02", "part": 1, "textEn": "What sort of things do you read?" },
-        { "id": "reading-p1-03", "part": 1, "textEn": "Do you read on paper or on a screen?" },
-        { "id": "reading-p1-04", "part": 1, "textEn": "When do you usually find time to read?" },
-        { "id": "reading-p1-05", "part": 1, "textEn": "Did you enjoy reading as a child?" },
-        { "id": "reading-p1-06", "part": 1, "textEn": "Do you ever recommend books to other people?" },
-        { "id": "reading-p2-01", "part": 2, "textEn": "Describe a book or an article you found useful.", "cuePointsEn": ["What it was", "How you came across it", "What it was about", "And explain why it was useful to you"] },
-        { "id": "reading-p2-02", "part": 2, "textEn": "Describe something you read that changed how you thought about a subject.", "cuePointsEn": ["What it was", "When you read it", "What it said", "And explain what changed for you"] },
-        { "id": "reading-p3-01", "part": 3, "textEn": "Why do fewer people read long texts now?", "glossZh": "谈长文阅读减少的原因，可从注意力与媒介两面说。" },
-        { "id": "reading-p3-02", "part": 3, "textEn": "Do people remember things differently when they read on a screen?", "glossZh": "对比纸质与屏幕阅读的记忆效果。" },
-        { "id": "reading-p3-03", "part": 3, "textEn": "How can reading be encouraged among young people?" }
-      ]
-    },
-    {
-      "id": "shopping",
-      "labelEn": "Shopping",
-      "labelZh": "购物",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "shopping-p1-01", "part": 1, "textEn": "Do you enjoy shopping?" },
-        { "id": "shopping-p1-02", "part": 1, "textEn": "Do you shop online or in shops?" },
-        { "id": "shopping-p1-03", "part": 1, "textEn": "How often do you buy clothes?" },
-        { "id": "shopping-p1-04", "part": 1, "textEn": "Do you make a list before you shop?" },
-        { "id": "shopping-p1-05", "part": 1, "textEn": "Do you prefer shopping alone or with someone?" },
-        { "id": "shopping-p1-06", "part": 1, "textEn": "Is there a shop near you that you go to often?" },
-        { "id": "shopping-p2-01", "part": 2, "textEn": "Describe something you bought that you were pleased with.", "cuePointsEn": ["What it was", "Where you bought it", "Why you chose it", "And explain why you were pleased with it"] },
-        { "id": "shopping-p2-02", "part": 2, "textEn": "Describe a time you spent a long time deciding what to buy.", "cuePointsEn": ["What you were buying", "Why the decision was hard", "How you decided", "And explain whether you were happy with the choice"] },
-        { "id": "shopping-p3-01", "part": 3, "textEn": "Why do people buy things they do not really need?", "glossZh": "谈消费动机，不必只讲广告。" },
-        { "id": "shopping-p3-02", "part": 3, "textEn": "Have small local shops become less important?" },
-        { "id": "shopping-p3-03", "part": 3, "textEn": "How does advertising change what people buy?" }
+        {
+          "id": "weather-and-seasons-p1-01",
+          "part": 1,
+          "textEn": "What is the weather like where you live?"
+        },
+        {
+          "id": "weather-and-seasons-p1-02",
+          "part": 1,
+          "textEn": "Which season do you like best?"
+        },
+        {
+          "id": "weather-and-seasons-p1-03",
+          "part": 1,
+          "textEn": "Does the weather change what you do at the weekend?"
+        },
+        {
+          "id": "weather-and-seasons-p1-04",
+          "part": 1,
+          "textEn": "Do you prefer hot weather or cold weather?"
+        },
+        {
+          "id": "weather-and-seasons-p1-05",
+          "part": 1,
+          "textEn": "Do you check the weather forecast?"
+        },
+        {
+          "id": "weather-and-seasons-p1-06",
+          "part": 1,
+          "textEn": "Is there a kind of weather you find difficult?"
+        },
+        {
+          "id": "weather-and-seasons-p2-01",
+          "part": 2,
+          "textEn": "Describe a day when the weather changed your plans.",
+          "cuePointsEn": [
+            "When it was",
+            "What you had planned",
+            "What you did instead",
+            "And explain how you felt about it"
+          ]
+        },
+        {
+          "id": "weather-and-seasons-p2-02",
+          "part": 2,
+          "textEn": "Describe a season or a time of year you look forward to.",
+          "cuePointsEn": [
+            "Which one it is",
+            "What the weather is like then",
+            "What you usually do",
+            "And explain why you look forward to it"
+          ]
+        },
+        {
+          "id": "weather-and-seasons-p3-01",
+          "part": 3,
+          "textEn": "How does weather affect the way people feel?",
+          "glossZh": "问的是天气与情绪、作息的关系。"
+        },
+        {
+          "id": "weather-and-seasons-p3-02",
+          "part": 3,
+          "textEn": "Why do people in different regions have such different attitudes to rain?"
+        },
+        {
+          "id": "weather-and-seasons-p3-03",
+          "part": 3,
+          "textEn": "Should cities be designed differently for hotter summers?",
+          "glossZh": "城市规划类问题：可以谈绿化、遮阳、建筑材料等。"
+        }
       ]
     },
     {
@@ -218,93 +2839,75 @@
       "labelZh": "睡眠",
       "sourceNote": "自撰，基于公开大纲话题分类",
       "questions": [
-        { "id": "sleep-p1-01", "part": 1, "textEn": "How many hours do you usually sleep?" },
-        { "id": "sleep-p1-02", "part": 1, "textEn": "Do you go to bed at the same time every night?" },
-        { "id": "sleep-p1-03", "part": 1, "textEn": "Do you ever sleep during the day?" },
-        { "id": "sleep-p1-04", "part": 1, "textEn": "What helps you sleep well?" },
-        { "id": "sleep-p1-05", "part": 1, "textEn": "Has your sleep changed over the years?" },
-        { "id": "sleep-p1-06", "part": 1, "textEn": "Do you use an alarm to wake up?" },
-        { "id": "sleep-p2-01", "part": 2, "textEn": "Describe a habit that helps you rest well.", "cuePointsEn": ["What it is", "When you started it", "How often you do it", "And explain how it helps you"] },
-        { "id": "sleep-p2-02", "part": 2, "textEn": "Describe a time when you were very tired.", "cuePointsEn": ["When it was", "Why you were tired", "What you did", "And explain how you felt the next day"] },
-        { "id": "sleep-p3-01", "part": 3, "textEn": "Why do many people get less sleep than they need?", "glossZh": "谈睡眠不足的普遍原因。" },
-        { "id": "sleep-p3-02", "part": 3, "textEn": "Should workplaces pay attention to how well their staff rest?", "glossZh": "问的是雇主责任的边界。" },
-        { "id": "sleep-p3-03", "part": 3, "textEn": "How do modern habits affect the way people sleep?" }
-      ]
-    },
-    {
-      "id": "friends",
-      "labelEn": "Friends",
-      "labelZh": "朋友",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "friends-p1-01", "part": 1, "textEn": "How often do you see your friends?" },
-        { "id": "friends-p1-02", "part": 1, "textEn": "Where did you meet most of your friends?" },
-        { "id": "friends-p1-03", "part": 1, "textEn": "Do you prefer a large group of friends or a few close ones?" },
-        { "id": "friends-p1-04", "part": 1, "textEn": "What do you usually do together?" },
-        { "id": "friends-p1-05", "part": 1, "textEn": "Is it easy to make friends as an adult?" },
-        { "id": "friends-p1-06", "part": 1, "textEn": "Do you keep in touch with friends from school?" },
-        { "id": "friends-p2-01", "part": 2, "textEn": "Describe a friend you have known for a long time.", "cuePointsEn": ["Who the person is", "How you met", "What you usually do together", "And explain why the friendship has lasted"] },
-        { "id": "friends-p2-02", "part": 2, "textEn": "Describe a time a friend helped you.", "cuePointsEn": ["What the situation was", "What your friend did", "How you reacted", "And explain what it meant to you"] },
-        { "id": "friends-p3-01", "part": 3, "textEn": "Why do some friendships last for decades while others fade?", "glossZh": "对比两类友谊的差别，谈维系的条件。" },
-        { "id": "friends-p3-02", "part": 3, "textEn": "Has technology changed what friendship means?", "glossZh": "问的是友谊的定义是否变了，不只是联系方式。" },
-        { "id": "friends-p3-03", "part": 3, "textEn": "Are friends more important than family in some situations?" }
-      ]
-    },
-    {
-      "id": "free-time",
-      "labelEn": "Free Time",
-      "labelZh": "空闲时间",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "free-time-p1-01", "part": 1, "textEn": "What do you usually do in your free time?" },
-        { "id": "free-time-p1-02", "part": 1, "textEn": "Do you have more free time now than a few years ago?" },
-        { "id": "free-time-p1-03", "part": 1, "textEn": "Do you prefer to spend free time indoors or outdoors?" },
-        { "id": "free-time-p1-04", "part": 1, "textEn": "Do you plan your weekends?" },
-        { "id": "free-time-p1-05", "part": 1, "textEn": "Is there a hobby you would like to take up?" },
-        { "id": "free-time-p1-06", "part": 1, "textEn": "Do you spend free time alone or with other people?" },
-        { "id": "free-time-p2-01", "part": 2, "textEn": "Describe an activity you took up recently.", "cuePointsEn": ["What it is", "How you started", "How often you do it", "And explain what you get out of it"] },
-        { "id": "free-time-p2-02", "part": 2, "textEn": "Describe a weekend you enjoyed.", "cuePointsEn": ["When it was", "Where you were", "What you did", "And explain why you enjoyed it"] },
-        { "id": "free-time-p3-01", "part": 3, "textEn": "Why do some people find it hard to relax?", "glossZh": "谈放松困难的原因，可从工作节奏与心理习惯两面说。" },
-        { "id": "free-time-p3-02", "part": 3, "textEn": "Has the amount of free time people have changed over the years?" },
-        { "id": "free-time-p3-03", "part": 3, "textEn": "Should employers care what their staff do outside work?", "glossZh": "问的是工作与私人生活的界限。" }
-      ]
-    },
-    {
-      "id": "animals",
-      "labelEn": "Animals",
-      "labelZh": "动物",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "animals-p1-01", "part": 1, "textEn": "Do you have a pet, or have you had one?" },
-        { "id": "animals-p1-02", "part": 1, "textEn": "Are pets common where you live?" },
-        { "id": "animals-p1-03", "part": 1, "textEn": "Did you like animals when you were a child?" },
-        { "id": "animals-p1-04", "part": 1, "textEn": "Do you enjoy visiting places where you can see animals?" },
-        { "id": "animals-p1-05", "part": 1, "textEn": "Are there many birds or animals in your neighbourhood?" },
-        { "id": "animals-p1-06", "part": 1, "textEn": "Would you like to work with animals?" },
-        { "id": "animals-p2-01", "part": 2, "textEn": "Describe an animal you find interesting.", "cuePointsEn": ["What it is", "Where you have seen it", "What it does", "And explain why you find it interesting"] },
-        { "id": "animals-p2-02", "part": 2, "textEn": "Describe a time you looked after an animal.", "cuePointsEn": ["What the animal was", "When it was", "What you had to do", "And explain how you felt about it"] },
-        { "id": "animals-p3-01", "part": 3, "textEn": "Why do people keep pets in cities?", "glossZh": "谈城市养宠的动机与条件。" },
-        { "id": "animals-p3-02", "part": 3, "textEn": "Should wild spaces near cities be left alone?", "glossZh": "开发与保留之间的取舍。" },
-        { "id": "animals-p3-03", "part": 3, "textEn": "How do attitudes to animals differ between generations?" }
-      ]
-    },
-    {
-      "id": "clothes",
-      "labelEn": "Clothes",
-      "labelZh": "服饰",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "clothes-p1-01", "part": 1, "textEn": "What kind of clothes do you usually wear?" },
-        { "id": "clothes-p1-02", "part": 1, "textEn": "Do you dress differently for work and for the weekend?" },
-        { "id": "clothes-p1-03", "part": 1, "textEn": "Do you enjoy buying clothes?" },
-        { "id": "clothes-p1-04", "part": 1, "textEn": "Has your taste in clothes changed?" },
-        { "id": "clothes-p1-05", "part": 1, "textEn": "Do you follow what is fashionable?" },
-        { "id": "clothes-p1-06", "part": 1, "textEn": "Do you keep clothes for a long time?" },
-        { "id": "clothes-p2-01", "part": 2, "textEn": "Describe an item of clothing you wear often.", "cuePointsEn": ["What it is", "When you got it", "When you wear it", "And explain why you wear it so often"] },
-        { "id": "clothes-p2-02", "part": 2, "textEn": "Describe an occasion when you had to dress in a particular way.", "cuePointsEn": ["What the occasion was", "What you wore", "How you chose it", "And explain how you felt"] },
-        { "id": "clothes-p3-01", "part": 3, "textEn": "Why do people in some jobs wear a uniform?", "glossZh": "谈制服的作用：辨识、安全、平等等。" },
-        { "id": "clothes-p3-02", "part": 3, "textEn": "Does what people wear affect how they are treated?", "glossZh": "问的是着装与他人判断之间的关系。" },
-        { "id": "clothes-p3-03", "part": 3, "textEn": "How quickly do clothing styles change now compared with the past?" }
+        {
+          "id": "sleep-p1-01",
+          "part": 1,
+          "textEn": "How many hours do you usually sleep?"
+        },
+        {
+          "id": "sleep-p1-02",
+          "part": 1,
+          "textEn": "Do you go to bed at the same time every night?"
+        },
+        {
+          "id": "sleep-p1-03",
+          "part": 1,
+          "textEn": "Do you ever sleep during the day?"
+        },
+        {
+          "id": "sleep-p1-04",
+          "part": 1,
+          "textEn": "What helps you sleep well?"
+        },
+        {
+          "id": "sleep-p1-05",
+          "part": 1,
+          "textEn": "Has your sleep changed over the years?"
+        },
+        {
+          "id": "sleep-p1-06",
+          "part": 1,
+          "textEn": "Do you use an alarm to wake up?"
+        },
+        {
+          "id": "sleep-p2-01",
+          "part": 2,
+          "textEn": "Describe a habit that helps you rest well.",
+          "cuePointsEn": [
+            "What it is",
+            "When you started it",
+            "How often you do it",
+            "And explain how it helps you"
+          ]
+        },
+        {
+          "id": "sleep-p2-02",
+          "part": 2,
+          "textEn": "Describe a time when you were very tired.",
+          "cuePointsEn": [
+            "When it was",
+            "Why you were tired",
+            "What you did",
+            "And explain how you felt the next day"
+          ]
+        },
+        {
+          "id": "sleep-p3-01",
+          "part": 3,
+          "textEn": "Why do many people get less sleep than they need?",
+          "glossZh": "谈睡眠不足的普遍原因。"
+        },
+        {
+          "id": "sleep-p3-02",
+          "part": 3,
+          "textEn": "Should workplaces pay attention to how well their staff rest?",
+          "glossZh": "问的是雇主责任的边界。"
+        },
+        {
+          "id": "sleep-p3-03",
+          "part": 3,
+          "textEn": "How do modern habits affect the way people sleep?"
+        }
       ]
     },
     {
@@ -313,55 +2916,75 @@
       "labelZh": "摄影",
       "sourceNote": "自撰，基于公开大纲话题分类",
       "questions": [
-        { "id": "photography-p1-01", "part": 1, "textEn": "Do you take many photographs?" },
-        { "id": "photography-p1-02", "part": 1, "textEn": "What do you usually photograph?" },
-        { "id": "photography-p1-03", "part": 1, "textEn": "Do you prefer taking photos or being in them?" },
-        { "id": "photography-p1-04", "part": 1, "textEn": "Do you look back at old photographs?" },
-        { "id": "photography-p1-05", "part": 1, "textEn": "Do you print photos, or keep them on a device?" },
-        { "id": "photography-p1-06", "part": 1, "textEn": "Has the way you take photos changed?" },
-        { "id": "photography-p2-01", "part": 2, "textEn": "Describe a photograph you like.", "cuePointsEn": ["What is in it", "Who took it", "When it was taken", "And explain why you like it"] },
-        { "id": "photography-p2-02", "part": 2, "textEn": "Describe a time you wanted to take a photograph but could not.", "cuePointsEn": ["Where you were", "What you wanted to photograph", "Why you could not", "And explain how you felt"] },
-        { "id": "photography-p3-01", "part": 3, "textEn": "Why do people photograph so much of their daily lives now?", "glossZh": "谈随手拍照成为习惯的原因。" },
-        { "id": "photography-p3-02", "part": 3, "textEn": "Does taking photographs change how people experience an event?", "glossZh": "问的是记录行为本身对体验的影响。" },
-        { "id": "photography-p3-03", "part": 3, "textEn": "Should there be limits on photographing people in public?" }
-      ]
-    },
-    {
-      "id": "travel",
-      "labelEn": "Travel",
-      "labelZh": "旅行",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "travel-p1-01", "part": 1, "textEn": "Do you travel much?" },
-        { "id": "travel-p1-02", "part": 1, "textEn": "Where did you go on your last trip?" },
-        { "id": "travel-p1-03", "part": 1, "textEn": "Do you prefer travelling alone or with others?" },
-        { "id": "travel-p1-04", "part": 1, "textEn": "How do you decide where to go?" },
-        { "id": "travel-p1-05", "part": 1, "textEn": "Do you plan trips in detail?" },
-        { "id": "travel-p1-06", "part": 1, "textEn": "Would you rather visit a new place or return to one you know?" },
-        { "id": "travel-p2-01", "part": 2, "textEn": "Describe a trip you enjoyed.", "cuePointsEn": ["Where you went", "Who you went with", "What you did there", "And explain why you enjoyed it"] },
-        { "id": "travel-p2-02", "part": 2, "textEn": "Describe a place you would like to visit.", "cuePointsEn": ["Where it is", "How you heard about it", "What you would do there", "And explain why you want to go"] },
-        { "id": "travel-p3-01", "part": 3, "textEn": "Why has travelling become more common than it was fifty years ago?", "glossZh": "谈成本、交通、信息等条件的变化。" },
-        { "id": "travel-p3-02", "part": 3, "textEn": "Does tourism help or harm the places people visit?", "glossZh": "两面题：需要给出立场并举例。" },
-        { "id": "travel-p3-03", "part": 3, "textEn": "What can people learn from spending time in another country?" }
-      ]
-    },
-    {
-      "id": "neighbourhood",
-      "labelEn": "Neighbourhood",
-      "labelZh": "社区",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "neighbourhood-p1-01", "part": 1, "textEn": "Do you know your neighbours?" },
-        { "id": "neighbourhood-p1-02", "part": 1, "textEn": "What is your neighbourhood like?" },
-        { "id": "neighbourhood-p1-03", "part": 1, "textEn": "Is it quiet where you live?" },
-        { "id": "neighbourhood-p1-04", "part": 1, "textEn": "What facilities are near your home?" },
-        { "id": "neighbourhood-p1-05", "part": 1, "textEn": "Would you like to move somewhere else?" },
-        { "id": "neighbourhood-p1-06", "part": 1, "textEn": "Has your area changed recently?" },
-        { "id": "neighbourhood-p2-01", "part": 2, "textEn": "Describe a place near your home that you go to often.", "cuePointsEn": ["What it is", "How often you go", "What you do there", "And explain why you go there"] },
-        { "id": "neighbourhood-p2-02", "part": 2, "textEn": "Describe a neighbour you get on well with.", "cuePointsEn": ["Who the person is", "How you met", "What you talk about", "And explain why you get on"] },
-        { "id": "neighbourhood-p3-01", "part": 3, "textEn": "Why do people in cities often not know their neighbours?", "glossZh": "谈城市生活方式对邻里关系的影响。" },
-        { "id": "neighbourhood-p3-02", "part": 3, "textEn": "What makes a neighbourhood a good place to live?" },
-        { "id": "neighbourhood-p3-03", "part": 3, "textEn": "Should local people decide what gets built near them?", "glossZh": "问的是决策权归属，可谈利弊。" }
+        {
+          "id": "photography-p1-01",
+          "part": 1,
+          "textEn": "Do you take many photographs?"
+        },
+        {
+          "id": "photography-p1-02",
+          "part": 1,
+          "textEn": "What do you usually photograph?"
+        },
+        {
+          "id": "photography-p1-03",
+          "part": 1,
+          "textEn": "Do you prefer taking photos or being in them?"
+        },
+        {
+          "id": "photography-p1-04",
+          "part": 1,
+          "textEn": "Do you look back at old photographs?"
+        },
+        {
+          "id": "photography-p1-05",
+          "part": 1,
+          "textEn": "Do you print photos, or keep them on a device?"
+        },
+        {
+          "id": "photography-p1-06",
+          "part": 1,
+          "textEn": "Has the way you take photos changed?"
+        },
+        {
+          "id": "photography-p2-01",
+          "part": 2,
+          "textEn": "Describe a photograph you like.",
+          "cuePointsEn": [
+            "What is in it",
+            "Who took it",
+            "When it was taken",
+            "And explain why you like it"
+          ]
+        },
+        {
+          "id": "photography-p2-02",
+          "part": 2,
+          "textEn": "Describe a time you wanted to take a photograph but could not.",
+          "cuePointsEn": [
+            "Where you were",
+            "What you wanted to photograph",
+            "Why you could not",
+            "And explain how you felt"
+          ]
+        },
+        {
+          "id": "photography-p3-01",
+          "part": 3,
+          "textEn": "Why do people photograph so much of their daily lives now?",
+          "glossZh": "谈随手拍照成为习惯的原因。"
+        },
+        {
+          "id": "photography-p3-02",
+          "part": 3,
+          "textEn": "Does taking photographs change how people experience an event?",
+          "glossZh": "问的是记录行为本身对体验的影响。"
+        },
+        {
+          "id": "photography-p3-03",
+          "part": 3,
+          "textEn": "Should there be limits on photographing people in public?"
+        }
       ]
     },
     {
@@ -370,17 +2993,76 @@
       "labelZh": "语言",
       "sourceNote": "自撰，基于公开大纲话题分类",
       "questions": [
-        { "id": "languages-p1-01", "part": 1, "textEn": "How long have you been learning English?" },
-        { "id": "languages-p1-02", "part": 1, "textEn": "Do you speak any other languages?" },
-        { "id": "languages-p1-03", "part": 1, "textEn": "What do you find hardest about learning a language?" },
-        { "id": "languages-p1-04", "part": 1, "textEn": "Where do you practise speaking?" },
-        { "id": "languages-p1-05", "part": 1, "textEn": "Do you enjoy learning languages?" },
-        { "id": "languages-p1-06", "part": 1, "textEn": "Do you use English outside your studies?" },
-        { "id": "languages-p2-01", "part": 2, "textEn": "Describe a time you used a foreign language outside the classroom.", "cuePointsEn": ["Where you were", "Who you spoke to", "What you talked about", "And explain how it went"] },
-        { "id": "languages-p2-02", "part": 2, "textEn": "Describe a way of learning that works well for you.", "cuePointsEn": ["What it is", "When you started using it", "How often you use it", "And explain why it works for you"] },
-        { "id": "languages-p3-01", "part": 3, "textEn": "Why do some people learn languages faster than others?", "glossZh": "谈个体差异的来源：环境、方法、动机等。" },
-        { "id": "languages-p3-02", "part": 3, "textEn": "Will fewer people learn languages as translation tools improve?", "glossZh": "预测类问题，需要说明理由。" },
-        { "id": "languages-p3-03", "part": 3, "textEn": "What is lost when a language stops being spoken?", "glossZh": "谈语言消失带来的文化损失。" }
+        {
+          "id": "languages-p1-01",
+          "part": 1,
+          "textEn": "How long have you been learning English?"
+        },
+        {
+          "id": "languages-p1-02",
+          "part": 1,
+          "textEn": "Do you speak any other languages?"
+        },
+        {
+          "id": "languages-p1-03",
+          "part": 1,
+          "textEn": "What do you find hardest about learning a language?"
+        },
+        {
+          "id": "languages-p1-04",
+          "part": 1,
+          "textEn": "Where do you practise speaking?"
+        },
+        {
+          "id": "languages-p1-05",
+          "part": 1,
+          "textEn": "Do you enjoy learning languages?"
+        },
+        {
+          "id": "languages-p1-06",
+          "part": 1,
+          "textEn": "Do you use English outside your studies?"
+        },
+        {
+          "id": "languages-p2-01",
+          "part": 2,
+          "textEn": "Describe a time you used a foreign language outside the classroom.",
+          "cuePointsEn": [
+            "Where you were",
+            "Who you spoke to",
+            "What you talked about",
+            "And explain how it went"
+          ]
+        },
+        {
+          "id": "languages-p2-02",
+          "part": 2,
+          "textEn": "Describe a way of learning that works well for you.",
+          "cuePointsEn": [
+            "What it is",
+            "When you started using it",
+            "How often you use it",
+            "And explain why it works for you"
+          ]
+        },
+        {
+          "id": "languages-p3-01",
+          "part": 3,
+          "textEn": "Why do some people learn languages faster than others?",
+          "glossZh": "谈个体差异的来源：环境、方法、动机等。"
+        },
+        {
+          "id": "languages-p3-02",
+          "part": 3,
+          "textEn": "Will fewer people learn languages as translation tools improve?",
+          "glossZh": "预测类问题，需要说明理由。"
+        },
+        {
+          "id": "languages-p3-03",
+          "part": 3,
+          "textEn": "What is lost when a language stops being spoken?",
+          "glossZh": "谈语言消失带来的文化损失。"
+        }
       ]
     },
     {
@@ -389,74 +3071,75 @@
       "labelZh": "节日",
       "sourceNote": "自撰，基于公开大纲话题分类",
       "questions": [
-        { "id": "celebrations-p1-01", "part": 1, "textEn": "What celebrations are important where you live?" },
-        { "id": "celebrations-p1-02", "part": 1, "textEn": "How do you usually celebrate your birthday?" },
-        { "id": "celebrations-p1-03", "part": 1, "textEn": "Do you enjoy large gatherings?" },
-        { "id": "celebrations-p1-04", "part": 1, "textEn": "Do you give presents on special occasions?" },
-        { "id": "celebrations-p1-05", "part": 1, "textEn": "Have the ways people celebrate changed since you were a child?" },
-        { "id": "celebrations-p1-06", "part": 1, "textEn": "Is there a celebration you look forward to?" },
-        { "id": "celebrations-p2-01", "part": 2, "textEn": "Describe a celebration you took part in.", "cuePointsEn": ["What it was", "Who was there", "What people did", "And explain what you remember about it"] },
-        { "id": "celebrations-p2-02", "part": 2, "textEn": "Describe a gift you gave or received.", "cuePointsEn": ["What it was", "Who it was from or for", "When it was given", "And explain why it stayed in your memory"] },
-        { "id": "celebrations-p3-01", "part": 3, "textEn": "Why do public celebrations matter to a community?", "glossZh": "谈集体庆祝的社会作用。" },
-        { "id": "celebrations-p3-02", "part": 3, "textEn": "Are traditional festivals losing their meaning?", "glossZh": "问的是意义是否被稀释，可给出双面看法。" },
-        { "id": "celebrations-p3-03", "part": 3, "textEn": "Should companies be involved in public celebrations?" }
-      ]
-    },
-    {
-      "id": "art-and-museums",
-      "labelEn": "Art and Museums",
-      "labelZh": "艺术与博物馆",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "art-and-museums-p1-01", "part": 1, "textEn": "Do you visit museums or galleries?" },
-        { "id": "art-and-museums-p1-02", "part": 1, "textEn": "Did you do art at school?" },
-        { "id": "art-and-museums-p1-03", "part": 1, "textEn": "Do you have any pictures on your walls at home?" },
-        { "id": "art-and-museums-p1-04", "part": 1, "textEn": "Would you like to learn to draw or paint?" },
-        { "id": "art-and-museums-p1-05", "part": 1, "textEn": "Are museums popular where you live?" },
-        { "id": "art-and-museums-p1-06", "part": 1, "textEn": "Do you prefer older art or modern art?" },
-        { "id": "art-and-museums-p2-01", "part": 2, "textEn": "Describe a museum or gallery you have visited.", "cuePointsEn": ["Where it is", "When you went", "What you saw", "And explain what you thought of it"] },
-        { "id": "art-and-museums-p2-02", "part": 2, "textEn": "Describe a work of art you remember.", "cuePointsEn": ["What it is", "Where you saw it", "What it shows", "And explain why you remember it"] },
-        { "id": "art-and-museums-p3-01", "part": 3, "textEn": "Why should public money be spent on museums?", "glossZh": "公共投入类问题：谈价值与受益者。" },
-        { "id": "art-and-museums-p3-02", "part": 3, "textEn": "Does art need to be understood to be enjoyed?", "glossZh": "问的是理解与欣赏之间的关系。" },
-        { "id": "art-and-museums-p3-03", "part": 3, "textEn": "How can museums make their collections interesting to young people?" }
-      ]
-    },
-    {
-      "id": "nature-and-plants",
-      "labelEn": "Nature and Plants",
-      "labelZh": "自然与植物",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "nature-and-plants-p1-01", "part": 1, "textEn": "Do you spend much time outdoors?" },
-        { "id": "nature-and-plants-p1-02", "part": 1, "textEn": "Are there parks near where you live?" },
-        { "id": "nature-and-plants-p1-03", "part": 1, "textEn": "Do you keep any plants at home?" },
-        { "id": "nature-and-plants-p1-04", "part": 1, "textEn": "Did you grow anything as a child?" },
-        { "id": "nature-and-plants-p1-05", "part": 1, "textEn": "Do you prefer the countryside or the city?" },
-        { "id": "nature-and-plants-p1-06", "part": 1, "textEn": "Is there a natural place you like to visit?" },
-        { "id": "nature-and-plants-p2-01", "part": 2, "textEn": "Describe a natural place you enjoy being in.", "cuePointsEn": ["Where it is", "How often you go", "What you do there", "And explain how it makes you feel"] },
-        { "id": "nature-and-plants-p2-02", "part": 2, "textEn": "Describe a plant or a tree that is common where you live.", "cuePointsEn": ["What it is", "Where it grows", "What it looks like", "And explain why people notice it"] },
-        { "id": "nature-and-plants-p3-01", "part": 3, "textEn": "Why do people feel better after time outdoors?", "glossZh": "谈户外活动与身心状态的关系。" },
-        { "id": "nature-and-plants-p3-02", "part": 3, "textEn": "Should cities have more green space, even if land is expensive?", "glossZh": "成本与收益的取舍题。" },
-        { "id": "nature-and-plants-p3-03", "part": 3, "textEn": "How can ordinary people help protect the natural world?" }
-      ]
-    },
-    {
-      "id": "money-and-saving",
-      "labelEn": "Money and Saving",
-      "labelZh": "金钱与储蓄",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "money-and-saving-p1-01", "part": 1, "textEn": "Do you keep track of what you spend?" },
-        { "id": "money-and-saving-p1-02", "part": 1, "textEn": "Did you save money as a child?" },
-        { "id": "money-and-saving-p1-03", "part": 1, "textEn": "Do you prefer to save or to spend?" },
-        { "id": "money-and-saving-p1-04", "part": 1, "textEn": "Do you use cash or a card?" },
-        { "id": "money-and-saving-p1-05", "part": 1, "textEn": "Do you plan large purchases in advance?" },
-        { "id": "money-and-saving-p1-06", "part": 1, "textEn": "Who taught you about money?" },
-        { "id": "money-and-saving-p2-01", "part": 2, "textEn": "Describe something you saved up for.", "cuePointsEn": ["What it was", "How long you saved", "How you managed it", "And explain how you felt when you got it"] },
-        { "id": "money-and-saving-p2-02", "part": 2, "textEn": "Describe a decision about money that you thought carefully about.", "cuePointsEn": ["What the decision was", "When you made it", "What you considered", "And explain how it turned out"] },
-        { "id": "money-and-saving-p3-01", "part": 3, "textEn": "Why do people find saving money difficult?", "glossZh": "谈储蓄困难的原因，可从收入与习惯两面说。" },
-        { "id": "money-and-saving-p3-02", "part": 3, "textEn": "Should personal finance be taught in schools?", "glossZh": "教育内容取舍类问题。" },
-        { "id": "money-and-saving-p3-03", "part": 3, "textEn": "How has the way people pay for things changed?" }
+        {
+          "id": "celebrations-p1-01",
+          "part": 1,
+          "textEn": "What celebrations are important where you live?"
+        },
+        {
+          "id": "celebrations-p1-02",
+          "part": 1,
+          "textEn": "How do you usually celebrate your birthday?"
+        },
+        {
+          "id": "celebrations-p1-03",
+          "part": 1,
+          "textEn": "Do you enjoy large gatherings?"
+        },
+        {
+          "id": "celebrations-p1-04",
+          "part": 1,
+          "textEn": "Do you give presents on special occasions?"
+        },
+        {
+          "id": "celebrations-p1-05",
+          "part": 1,
+          "textEn": "Have the ways people celebrate changed since you were a child?"
+        },
+        {
+          "id": "celebrations-p1-06",
+          "part": 1,
+          "textEn": "Is there a celebration you look forward to?"
+        },
+        {
+          "id": "celebrations-p2-01",
+          "part": 2,
+          "textEn": "Describe a celebration you took part in.",
+          "cuePointsEn": [
+            "What it was",
+            "Who was there",
+            "What people did",
+            "And explain what you remember about it"
+          ]
+        },
+        {
+          "id": "celebrations-p2-02",
+          "part": 2,
+          "textEn": "Describe a gift you gave or received.",
+          "cuePointsEn": [
+            "What it was",
+            "Who it was from or for",
+            "When it was given",
+            "And explain why it stayed in your memory"
+          ]
+        },
+        {
+          "id": "celebrations-p3-01",
+          "part": 3,
+          "textEn": "Why do public celebrations matter to a community?",
+          "glossZh": "谈集体庆祝的社会作用。"
+        },
+        {
+          "id": "celebrations-p3-02",
+          "part": 3,
+          "textEn": "Are traditional festivals losing their meaning?",
+          "glossZh": "问的是意义是否被稀释，可给出双面看法。"
+        },
+        {
+          "id": "celebrations-p3-03",
+          "part": 3,
+          "textEn": "Should companies be involved in public celebrations?"
+        }
       ]
     },
     {
@@ -465,36 +3148,76 @@
       "labelZh": "教育",
       "sourceNote": "自撰，基于公开大纲话题分类",
       "questions": [
-        { "id": "education-p1-01", "part": 1, "textEn": "What subjects did you enjoy at school?" },
-        { "id": "education-p1-02", "part": 1, "textEn": "Was there a teacher you remember well?" },
-        { "id": "education-p1-03", "part": 1, "textEn": "Do you prefer studying alone or in a class?" },
-        { "id": "education-p1-04", "part": 1, "textEn": "Do you take courses outside your main studies?" },
-        { "id": "education-p1-05", "part": 1, "textEn": "How do you keep learning now?" },
-        { "id": "education-p1-06", "part": 1, "textEn": "Do you like taking tests?" },
-        { "id": "education-p2-01", "part": 2, "textEn": "Describe a teacher who had an effect on you.", "cuePointsEn": ["Who the person was", "What they taught", "How they taught", "And explain what effect they had on you"] },
-        { "id": "education-p2-02", "part": 2, "textEn": "Describe something you learned outside school.", "cuePointsEn": ["What it was", "How you learned it", "How long it took", "And explain why you wanted to learn it"] },
-        { "id": "education-p3-01", "part": 3, "textEn": "Why do people continue studying after they start working?", "glossZh": "谈在职学习的动机。" },
-        { "id": "education-p3-02", "part": 3, "textEn": "Should schools focus more on practical skills?", "glossZh": "课程取舍类问题：实用技能与学科知识的平衡。" },
-        { "id": "education-p3-03", "part": 3, "textEn": "How well can a written test show what someone knows?", "glossZh": "问的是评价方式的局限。" }
-      ]
-    },
-    {
-      "id": "cities-and-buildings",
-      "labelEn": "Cities and Buildings",
-      "labelZh": "城市与建筑",
-      "sourceNote": "自撰，基于公开大纲话题分类",
-      "questions": [
-        { "id": "cities-and-buildings-p1-01", "part": 1, "textEn": "Do you live in a house or a flat?" },
-        { "id": "cities-and-buildings-p1-02", "part": 1, "textEn": "What do you like about where you live?" },
-        { "id": "cities-and-buildings-p1-03", "part": 1, "textEn": "Would you like to live in a big city?" },
-        { "id": "cities-and-buildings-p1-04", "part": 1, "textEn": "Are there any buildings you admire?" },
-        { "id": "cities-and-buildings-p1-05", "part": 1, "textEn": "Is your city crowded?" },
-        { "id": "cities-and-buildings-p1-06", "part": 1, "textEn": "What would make your city better?" },
-        { "id": "cities-and-buildings-p2-01", "part": 2, "textEn": "Describe a building you find impressive.", "cuePointsEn": ["Where it is", "What it is used for", "What it looks like", "And explain why you find it impressive"] },
-        { "id": "cities-and-buildings-p2-02", "part": 2, "textEn": "Describe a place in a city where people like to spend time.", "cuePointsEn": ["Where it is", "Who goes there", "What people do", "And explain why it attracts people"] },
-        { "id": "cities-and-buildings-p3-01", "part": 3, "textEn": "Why do people keep moving to large cities?", "glossZh": "谈人口向大城市集中的原因。" },
-        { "id": "cities-and-buildings-p3-02", "part": 3, "textEn": "What problems come with cities growing quickly?" },
-        { "id": "cities-and-buildings-p3-03", "part": 3, "textEn": "Should new buildings match the style of older ones around them?", "glossZh": "城市风貌类问题：统一与多样的取舍。" }
+        {
+          "id": "education-p1-01",
+          "part": 1,
+          "textEn": "What subjects did you enjoy at school?"
+        },
+        {
+          "id": "education-p1-02",
+          "part": 1,
+          "textEn": "Was there a teacher you remember well?"
+        },
+        {
+          "id": "education-p1-03",
+          "part": 1,
+          "textEn": "Do you prefer studying alone or in a class?"
+        },
+        {
+          "id": "education-p1-04",
+          "part": 1,
+          "textEn": "Do you take courses outside your main studies?"
+        },
+        {
+          "id": "education-p1-05",
+          "part": 1,
+          "textEn": "How do you keep learning now?"
+        },
+        {
+          "id": "education-p1-06",
+          "part": 1,
+          "textEn": "Do you like taking tests?"
+        },
+        {
+          "id": "education-p2-01",
+          "part": 2,
+          "textEn": "Describe a teacher who had an effect on you.",
+          "cuePointsEn": [
+            "Who the person was",
+            "What they taught",
+            "How they taught",
+            "And explain what effect they had on you"
+          ]
+        },
+        {
+          "id": "education-p2-02",
+          "part": 2,
+          "textEn": "Describe something you learned outside school.",
+          "cuePointsEn": [
+            "What it was",
+            "How you learned it",
+            "How long it took",
+            "And explain why you wanted to learn it"
+          ]
+        },
+        {
+          "id": "education-p3-01",
+          "part": 3,
+          "textEn": "Why do people continue studying after they start working?",
+          "glossZh": "谈在职学习的动机。"
+        },
+        {
+          "id": "education-p3-02",
+          "part": 3,
+          "textEn": "Should schools focus more on practical skills?",
+          "glossZh": "课程取舍类问题：实用技能与学科知识的平衡。"
+        },
+        {
+          "id": "education-p3-03",
+          "part": 3,
+          "textEn": "How well can a written test show what someone knows?",
+          "glossZh": "问的是评价方式的局限。"
+        }
       ]
     }
   ]

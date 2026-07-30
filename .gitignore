@@ -18,3 +18,6 @@ __pycache__/
 
 # Local Directus import scratch (dry-run logs, superseded by docs/imports/)
 tmp/
+
+# Downloaded raw source files (question recalls etc.) - not committed
+data/raw/

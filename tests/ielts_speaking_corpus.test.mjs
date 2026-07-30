@@ -37,7 +37,13 @@ const CJK = /[　-〿一-鿿＀-￯]/;
 test("envelope carries a version", () => {
   assert.equal(typeof corpus.corpusVersion, "number");
   assert.ok(corpus.corpusVersion >= 1);
-  assert.equal(typeof corpus.sourceStatement, "string");
+  // Pinned verbatim since corpusVersion 2 (2026-07-30): the statement is the
+  // compliance posture of the corpus — recall-derived questions, editorial
+  // labels by STAGE — and must not drift in a content edit.
+  assert.equal(
+    corpus.sourceStatement,
+    "题目基于考生回忆整理（2026 年 2–7 月场次），题干为考生回忆的转述文字，非官方试题原文；话题分类、话题中文名与中文注解为 STAGE 编辑撰写。保留的少量自撰话题在该话题的 sourceNote 中单独标明。",
+  );
 });
 
 test("1 · every id is unique, non-empty and ASCII kebab", () => {
@@ -152,6 +158,13 @@ test("5 · no banned vocabulary anywhere in the corpus", () => {
  * orphans every fragment, draft block and 独立表达 event written against it, so
  * it has to be a deliberate act: update `tests/fixtures/speaking-corpus-ids.json`
  * in the same commit, having decided what happens to that material.
+ *
+ * 2026-07-30 · The baseline was reset at corpusVersion 2, when the self-authored
+ * v1 corpus was replaced by the recall-derived import (approved decision:
+ * recall questions become the corpus body; 20 self-authored topics deleted,
+ * friends/money-and-saving folded into recall topics, 6 kept). This was done
+ * pre-launch, with no learner data in existence, so no material was orphaned.
+ * The guarantee itself is unchanged and applies from v2 ids onward.
  */
 test("6 · no id from the previous corpus version has disappeared", () => {
   const present = new Set(questions.map((question) => question.id));
@@ -171,6 +184,35 @@ test("corpus is within the size budget agreed in the data contract", () => {
   ).byteLength;
   // §3.1: past 150 KB the corpus splits per part and is loaded on demand.
   assert.ok(bytes < 150_000, `corpus is ${bytes} bytes; the split threshold is 150 KB`);
-  assert.ok(questions.length >= 200 && questions.length <= 350);
-  assert.ok(topics.length >= 20 && topics.length <= 30);
+  // Bounds widened 2026-07-30 with the corpusVersion 2 recall import
+  // (approved): questions 350 → 500, topics 30 → 45. The 150 KB split
+  // threshold and the 200-question floor are unchanged.
+  assert.ok(questions.length >= 200 && questions.length <= 500);
+  assert.ok(topics.length >= 20 && topics.length <= 45);
+});
+
+/**
+ * Recall provenance, present since corpusVersion 2. Optional — self-authored
+ * rows have no sitting data and must omit both fields — but where present the
+ * pair is complete and well-formed. Data only for now; the UI's later
+ * "high-frequency" badge hangs off recallCount.
+ */
+test("recallCount/recallMonths are absent or a well-formed pair", () => {
+  for (const question of questions) {
+    const hasCount = "recallCount" in question;
+    const hasMonths = "recallMonths" in question;
+    assert.equal(hasCount, hasMonths, `recall fields must come as a pair: ${question.id}`);
+    if (!hasCount) continue;
+    assert.ok(
+      Number.isInteger(question.recallCount) && question.recallCount >= 1,
+      `recallCount must be a positive integer: ${question.id}`,
+    );
+    assert.ok(
+      Array.isArray(question.recallMonths) && question.recallMonths.length >= 1,
+      `recallMonths must be a non-empty array: ${question.id}`,
+    );
+    for (const month of question.recallMonths) {
+      assert.match(month, /^\d{4}-(0[1-9]|1[0-2])$/, `bad recall month on ${question.id}: ${month}`);
+    }
+  }
 });

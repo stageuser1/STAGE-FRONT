@@ -1,0 +1,68 @@
+{
+  "//": "Topic assignment rules for import-speaking-recalls.mjs. Ordered: the first rule with a matching pattern wins, so put narrow topics (tall building, favorite city) above broad ones (cities). Patterns are case-insensitive regexes tested against the question text (Part 2: prompt + cue points). Edit this file, not the script, when a new season introduces new topics.",
+  "sourceStatement": "题目基于考生回忆整理（2026 年 2–7 月场次），题干为考生回忆的转述文字，非官方试题原文；话题分类、话题中文名与中文注解为 STAGE 编辑撰写。保留的少量自撰话题在该话题的 sourceNote 中单独标明。",
+  "recallSourceNote": "考生回忆整理，2026 年 2–7 月场次（2026-05—08 换题季）",
+  "//mergeSelfInto": "Self-authored topics folded into a recall topic instead of deleted: their questions that are not verbatim duplicates of a recall question are appended (keeping their original ids, no recall fields).",
+  "mergeSelfInto": {
+    "friends": "friends-and-family",
+    "money-and-saving": "money-and-gifts"
+  },
+  "keepSelfAuthoredTopics": [
+    "weather-and-seasons",
+    "sleep",
+    "photography",
+    "languages",
+    "celebrations",
+    "education"
+  ],
+  "proceduralDrops": [
+    "what is your full name",
+    "may i see your id",
+    "can you tell me your full name",
+    "where are you from"
+  ],
+  "//fragmentDrops": "Normalized keys of items that parse as questions but are compressed recall fragments (checked by hand against the source). Kept out of the corpus, listed in the report.",
+  "fragmentDrops": [
+    "how diets have changed",
+    "how to avoid feeling bored"
+  ],
+  "topics": [
+    { "id": "home-and-living", "labelEn": "Home and Living", "labelZh": "居住环境", "patterns": ["house or a? ?flat", "favorite room", "\\broom\\b", "lived? there", "view from", "neighborhood", "neighbou?rs", "living now", "where you live", "your (city|area)\\b.*(changes|improvement|live)", "stay in this area", "home, what would"] },
+    { "id": "hometown", "labelEn": "Hometown", "labelZh": "家乡", "patterns": ["hometown"] },
+    { "id": "work-and-study", "labelEn": "Work and Study", "labelZh": "工作与学习", "patterns": ["work or stud", "study or work", "\\bmajor\\b", "your compan", "change jobs", "your studies", "looking forward to working", "in your school", "what work do you do", "helps you the most"] },
+    { "id": "jobs-and-companies", "labelEn": "Jobs and Companies", "labelZh": "职业与公司", "patterns": ["compan", "salary", "\\bjobs?\\b", "\\bcareer"] },
+    { "id": "electricity-and-energy", "labelEn": "Electricity and Energy", "labelZh": "电力与能源", "patterns": ["electricit", "renewable", "energy"] },
+    { "id": "plans-and-changes", "labelEn": "Plans and Changes", "labelZh": "计划与变化", "patterns": ["\\bplans?\\b"] },
+    { "id": "teachers", "labelEn": "Teachers", "labelZh": "老师", "patterns": ["teacher"] },
+    { "id": "group-work", "labelEn": "Working in Groups", "labelZh": "团队协作", "patterns": ["\\bgroup\\b", "work by themselves", "team members", "leader"] },
+    { "id": "skills-and-learning", "labelEn": "Skills and Learning", "labelZh": "技能学习", "patterns": ["\\bskill", "lifelong learning"] },
+    { "id": "decisions-and-goals", "labelEn": "Decisions and Goals", "labelZh": "决定与目标", "patterns": ["decision", "\\bgoal\\b", "advice"] },
+    { "id": "helping-others", "labelEn": "Helping Others", "labelZh": "帮助他人", "patterns": ["help(ed|ing)? (someone|others|each other|students)", "willing to help", "volunteer"] },
+    { "id": "older-people", "labelEn": "Talking with Older People", "labelZh": "与长辈交流", "patterns": ["older people", "old person"] },
+    { "id": "famous-people", "labelEn": "Famous People", "labelZh": "名人", "patterns": ["famous"] },
+    { "id": "animals-and-pets", "labelEn": "Animals and Pets", "labelZh": "动物与宠物", "patterns": ["animal", "\\bpet\\b", "\\bpets\\b", "\\bzoo\\b", "wild"] },
+    { "id": "plants-and-growing", "labelEn": "Plants and Growing", "labelZh": "植物与种植", "patterns": ["plant", "vegetable", "farmer", "agricultur", "\\bgrow"] },
+    { "id": "food-and-meals", "labelEn": "Food and Meals", "labelZh": "饮食与餐叙", "patterns": ["\\bcake\\b", "\\bmeal", "\\bfood", "restaurant", "\\bcook", "\\beat", "\\bdiet", "delivered", "festival food", "dining"] },
+    { "id": "cities-and-buildings", "labelEn": "Cities and Buildings", "labelZh": "城市与建筑", "patterns": ["tall building", "building", "favorite city", "urban life", "tourist city", "historical city", "modern city", "choose a city"] },
+    { "id": "travel-and-places", "labelEn": "Travel and Places", "labelZh": "旅行与地点", "patterns": ["place you (visited|would like to visit|like to visit)", "beautiful", "tourism", "travel", "trip", "boring place", "quiet", "visiting new places", "the same places", "like to visit in your free time"] },
+    { "id": "cars-and-transport", "labelEn": "Cars and Transport", "labelZh": "汽车与出行", "patterns": ["\\bcar\\b", "\\bdriv", "traffic", "commute", "transport"] },
+    { "id": "technology", "labelEn": "Technology", "labelZh": "科技与设备", "patterns": ["technolog", "gadget", "\\bapps?\\b", "headphone", "keyboard", "typing", "\\btype\\b", "device", "\\btech\\b", "equipment", "robot"] },
+    { "id": "websites", "labelEn": "Websites", "labelZh": "网站", "patterns": ["website"] },
+    { "id": "media-and-news", "labelEn": "Media and News", "labelZh": "影视与资讯", "patterns": ["\\bnews\\b", "video", "programme", "\\btv\\b", "movie", "\\bfilm", "cinema", "\\bmedia\\b"] },
+    { "id": "reading-and-books", "labelEn": "Reading and Books", "labelZh": "阅读与书籍", "patterns": ["\\bread", "\\bbook", "novel"] },
+    { "id": "music-and-singing", "labelEn": "Music and Singing", "labelZh": "音乐与歌唱", "patterns": ["\\bsing", "music"] },
+    { "id": "art-and-drawing", "labelEn": "Art and Drawing", "labelZh": "艺术与绘画", "patterns": ["\\bdraw", "paint", "\\bart\\b", "artwork", "galler", "museum"] },
+    { "id": "sports-and-games", "labelEn": "Sports and Games", "labelZh": "运动与比赛", "patterns": ["sport", "\\bmatch\\b", "swimming", "cycling"] },
+    { "id": "hobbies-and-free-time", "labelEn": "Hobbies and Free Time", "labelZh": "爱好与休闲", "patterns": ["hobb", "free time", "\\bbored\\b", "feeling bored", "\\bpart(y|ies)\\b", "relax", "indoors or outdoors", "video game"] },
+    { "id": "humor-and-laughter", "labelEn": "Humor and Laughter", "labelZh": "幽默与欢笑", "patterns": ["laugh", "humor", "humour", "funny"] },
+    { "id": "shopping", "labelEn": "Shopping", "labelZh": "购物", "patterns": ["shop", "prices", "expensive"] },
+    { "id": "science", "labelEn": "Science", "labelZh": "科学", "patterns": ["science"] },
+    { "id": "fixing-things", "labelEn": "Fixing Things", "labelZh": "修理物品", "patterns": ["\\bfix"] },
+    { "id": "daily-habits", "labelEn": "Daily Habits", "labelZh": "日常习惯", "patterns": ["tidy", "mirror", "routine", "morning", "get up", "go to bed"] },
+    { "id": "clothes-and-fashion", "labelEn": "Clothes and Fashion", "labelZh": "服饰与时尚", "patterns": ["cloth", "fashion", "\\bwear\\b", "accessor"] },
+    { "id": "money-and-gifts", "labelEn": "Money and Gifts", "labelZh": "金钱与馈赠", "patterns": ["money", "\\bgift", "\\bsav(e|ing)"] },
+    { "id": "education-and-school", "labelEn": "Education and School", "labelZh": "教育与校园", "patterns": ["school", "student", "education", "\\blearn", "subject"] },
+    { "id": "seasons-and-weather", "labelEn": "Seasons and Weather", "labelZh": "季节与天气", "patterns": ["season", "weather"] },
+    { "id": "friends-and-family", "labelEn": "Friends and Family", "labelZh": "朋友与家人", "patterns": ["friend", "family", "parents"] }
+  ]
+}
