@@ -1,27 +1,34 @@
 import type { Metadata } from "next";
-import { WritingCatalog } from "@/components/ielts/WritingCatalog";
-import { loadWritingSetSummaries } from "@/lib/writing-data";
+import { WritingT2Catalog } from "@/components/ielts/WritingT2Catalog";
+import {
+  getPracticableT2Questions,
+  getWritingT2SourceStatement,
+} from "@/lib/ielts/writing-t2-bank";
 
 export const metadata: Metadata = {
   title: "写作 · IELTS Lab",
   description:
-    "STAGE IELTS Lab 写作练习：按 Task 1 / Task 2 浏览题目，草稿保存在本机浏览器。",
+    "STAGE IELTS Lab 写作练习：浏览 Task 2 真题回忆题库，逐题写、随时改。草稿只保存在本机浏览器。",
 };
 
-export const revalidate = 900;
-
 /**
- * Writing task list (writing-spec §二).
+ * Writing task list (writing-spec §二), on the Task 2 recall bank.
  *
- * The sets are read at build time and paginated in the client, which is what
- * keeps this route static: a `?page=` search param would opt it into dynamic
- * rendering (Plan §4.1.2).
+ * The bank is a static file read at build time, so this route prerenders with no
+ * network call — which is why `revalidate` is gone: it was there for the Directus
+ * set summaries this page used to load, and there is nothing left to revalidate.
+ * Filtering and paging happen in the client, keeping the route static (Plan
+ * §4.1.2).
  *
- * `loadWritingSetSummaries` answers a Directus failure — the collections not
- * existing yet included — with an empty list rather than an exception, so this
- * page degrades to its empty state instead of failing the build (approved data
- * contract §6.4).
+ * The Directus-backed set catalog (`WritingCatalog`, `loadWritingSetSummaries`)
+ * and its `[setSlug]` routes are still in the tree but no longer reachable from
+ * the Lab; retiring them is a separate change.
  */
-export default async function IeltsWritingPage() {
-  return <WritingCatalog sets={await loadWritingSetSummaries()} />;
+export default function IeltsWritingPage() {
+  return (
+    <WritingT2Catalog
+      questions={getPracticableT2Questions()}
+      sourceStatement={getWritingT2SourceStatement()}
+    />
+  );
 }
