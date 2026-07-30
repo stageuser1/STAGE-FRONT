@@ -100,10 +100,10 @@ export interface WritingT2Bank {
 }
 
 export const WRITING_ESSAY_TYPE_LABELS: Record<WritingEssayType, string> = {
-  opinion: "同意与否",
-  discussion: "双边讨论",
+  opinion: "观点类",
+  discussion: "讨论类",
   "advantages-disadvantages": "利弊分析",
-  "problem-solution": "问题与对策",
+  "problem-solution": "问题解决",
   "two-part": "双问题",
 };
 
@@ -114,7 +114,7 @@ export const WRITING_MODULE_LABELS: Record<WritingModule, string> = {
 
 export const WRITING_FREQUENCY_LABELS: Record<WritingFrequency, string> = {
   high: "高频",
-  medium: "中频",
+  medium: "次高频",
 };
 
 /** The catalog default: fragments are hidden until a fuller recall lands. */
