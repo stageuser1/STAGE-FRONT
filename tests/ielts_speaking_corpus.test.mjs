@@ -14,6 +14,11 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
+import {
+  SPEAKING_FREQUENCY_LABELS,
+  speakingFrequency,
+} from "../lib/ielts/speaking-types.ts";
+
 const corpus = JSON.parse(
   readFileSync(
     fileURLToPath(new URL("../lib/ielts/speaking-questions.json", import.meta.url)),
@@ -215,4 +220,33 @@ test("recallCount/recallMonths are absent or a well-formed pair", () => {
       assert.match(month, /^\d{4}-(0[1-9]|1[0-2])$/, `bad recall month on ${question.id}: ${month}`);
     }
   }
+});
+
+/**
+ * The frequency mark, against the data it is drawn from.
+ *
+ * Two bands and a silence, not three bands: a row with no recall data gets no
+ * mark at all, because the corpus does not say the prompt is infrequent — only
+ * that it never came from a sitting. Marking those 非高频, the way the Reading
+ * catalog can, would state something nobody recorded.
+ */
+test("frequency bands are drawn from recallCount, and silence stays silent", () => {
+  assert.deepEqual(SPEAKING_FREQUENCY_LABELS, { high: "高频", medium: "次高频" });
+
+  assert.equal(speakingFrequency(null), null, "a self-authored row gets no band");
+  assert.equal(speakingFrequency(1), null, "one sighting is not a band");
+  assert.equal(speakingFrequency(2), "medium");
+  assert.equal(speakingFrequency(3), "high");
+  assert.equal(speakingFrequency(9), "high");
+
+  // The corpus must actually populate both bands, or the facet row is furniture.
+  const bands = questions.map((question) =>
+    speakingFrequency(question.recallCount ?? null),
+  );
+  assert.ok(bands.filter((band) => band === "high").length > 0);
+  assert.ok(bands.filter((band) => band === "medium").length > 0);
+  assert.ok(
+    bands.filter((band) => band === null).length > 0,
+    "rows with no recall data exist and must render unmarked",
+  );
 });

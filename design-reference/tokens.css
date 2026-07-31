@@ -1,0 +1,333 @@
+/* STAGE webfonts.
+   SUBSTITUTION NOTE: no font binaries were supplied with the brand assets.
+   Latin display/text = Plus Jakarta Sans (nearest Google Fonts match to the
+   geometric grotesque in the reference landing page and the STAGE wordmark).
+   Chinese = Noto Sans SC (思源黑体) — the brand standard, loaded as a webfont;
+   PingFang SC stays in the stack so Apple devices can use the system cut. Numerals/metadata = IBM Plex Mono. */
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+:root{
+  --font-latin:"Plus Jakarta Sans"; /* @kind font */
+  --font-zh:"Noto Sans SC","PingFang SC","Source Han Sans SC","Microsoft YaHei"; /* @kind font */
+  --font-mono-base:"IBM Plex Mono"; /* @kind font */
+}
+
+:root{
+  /* ---- Brand blues: sampled from the STAGE mark ---- */
+  --blue-950:#04122E; /* midnight ink — darkest facet of the mark */
+  --blue-900:#0A1F4D;
+  --blue-800:#0E2C6E;
+  --blue-700:#133A94; /* PRIMARY — lit facet of the mark */
+  --blue-600:#1E4FC4;
+  --blue-500:#2F6BE0;
+  --blue-400:#5C90EC;
+  --blue-300:#8FB2F0;
+  --blue-200:#C2D6F8;
+  --blue-100:#DCE8FB;
+  --blue-50:#EFF4FE;
+  --blue-25:#F7FAFE;
+
+  /* ---- Warm stage-light accent ---- */
+  --gold-700:#B47C1E;
+  --gold-600:#D9A03C;
+  --gold-500:#F4C870; /* sampled from the brand swatch pair */
+  --gold-200:#FAE6BF;
+  --gold-50:#FDF6E8;
+
+  /* ---- Verified green: trust signalling only ---- */
+  --green-700:#0C6B4C;
+  --green-600:#12855F;
+  --green-500:#1FA377;
+  --green-100:#D7F0E5;
+  --green-50:#ECF8F3;
+
+  /* ---- Amber / red: state only, never scores ---- */
+  --amber-600:#B4700C;
+  --amber-50:#FDF3E3;
+  --red-600:#C0392F;
+  --red-50:#FCEEEC;
+
+  /* ---- Neutrals: cool-leaning, low chroma ---- */
+  --n-0:#FFFFFF;
+  --n-25:#FBFBFD;
+  --n-50:#F6F7FA;
+  --n-100:#EFF1F5;
+  --n-200:#E4E7EE;
+  --n-300:#D2D7E1;
+  --n-400:#AEB5C4;
+  --n-500:#868E9F;
+  --n-600:#5F6779;
+  --n-700:#414957;
+  --n-800:#2A303B;
+  --n-900:#171C25;
+
+  /* ================= SEMANTIC ================= */
+  --text-strong:var(--blue-950);
+  --text-body:var(--n-800);
+  --text-muted:var(--n-600);
+  --text-subtle:var(--n-500);
+  --text-inverse:var(--n-0);
+  --text-link:var(--blue-700);
+  --text-link-hover:var(--blue-600);
+  --text-accent:var(--gold-700);
+
+  --surface-page:var(--n-0);
+  --surface-tint:var(--blue-25);      /* section wash */
+  --surface-card:var(--n-0);
+  --surface-sunken:var(--n-50);
+  --surface-inverse:var(--blue-950);
+  --surface-accent-soft:var(--blue-50);
+  --surface-verified:var(--green-50);
+  --surface-glass:rgba(255,255,255,.72);
+
+  --border-hairline:var(--n-200);
+  --border-default:var(--n-300);
+  --border-strong:var(--n-400);
+  --border-accent:var(--blue-200);
+  --border-inverse:rgba(255,255,255,.16);
+
+  --action-primary:var(--blue-700);
+  --action-primary-hover:var(--blue-800);
+  --action-primary-press:var(--blue-900);
+  --action-quiet-hover:var(--n-50);
+  --focus-ring:var(--blue-400);
+
+  --verified-fg:var(--green-700);
+  --verified-bg:var(--green-50);
+  --verified-border:var(--green-100);
+
+  /* Ambient wash: the atmospheric top-of-page light. Never a bold gradient. */
+  --ambient-sky:linear-gradient(180deg,#FFFFFF 0%,#F3F7FE 38%,#E3ECFA 72%,#D8E5F7 100%); /* @kind color */
+  --ambient-fade:linear-gradient(180deg,rgba(216,229,247,0) 0%,rgba(216,229,247,.55) 100%); /* @kind color */
+}
+
+:root{
+  /* Families. Latin first, Chinese next: 中文 falls through to PingFang/思源黑体. */
+  --font-display:var(--font-latin),var(--font-zh),-apple-system,sans-serif; /* @kind font */
+  --font-text:var(--font-latin),var(--font-zh),-apple-system,sans-serif; /* @kind font */
+  --font-mono:var(--font-mono-base),ui-monospace,"SFMono-Regular",monospace; /* @kind font */
+
+  /* Weights — hierarchy is built from weight + size only. */
+  --fw-light:300; /* @kind font */
+  --fw-regular:400; /* @kind font */
+  --fw-medium:500; /* @kind font */
+  --fw-semibold:600; /* @kind font */
+  --fw-bold:700; /* @kind font */
+  --fw-black:800; /* @kind font */
+
+  /* Size scale: deliberately huge span, Apple-style. */
+  --fs-hero:clamp(2.75rem,7.2vw,6rem); /* @kind font */   /* 44 → 96 */
+  --fs-d1:clamp(2.25rem,5vw,4.5rem); /* @kind font */     /* 36 → 72 */
+  --fs-d2:clamp(2rem,4vw,3.5rem); /* @kind font */        /* 32 → 56 */
+  --fs-h1:2.5rem; /* @kind font */    /* 40 */
+  --fs-h2:2rem; /* @kind font */      /* 32 */
+  --fs-h3:1.5rem; /* @kind font */    /* 24 */
+  --fs-h4:1.25rem; /* @kind font */   /* 20 */
+  --fs-lead:1.1875rem; /* @kind font */ /* 19 — section subtitle */
+  --fs-body:1.0625rem; /* @kind font */ /* 17 */
+  --fs-sm:0.9375rem; /* @kind font */   /* 15 */
+  --fs-xs:0.8125rem; /* @kind font */   /* 13 */
+  --fs-2xs:0.6875rem; /* @kind font */  /* 11 — eyebrow / meta */
+
+  /* Line heights: tight for display, generous for 中文 body. */
+  --lh-tight:1.02; /* @kind font */
+  --lh-display:1.08; /* @kind font */
+  --lh-heading:1.22; /* @kind font */
+  --lh-body:1.72; /* @kind font */
+  --lh-snug:1.5; /* @kind font */
+
+  /* Tracking: negative at display sizes (including 中文), positive on eyebrows. */
+  --ls-mega:-0.045em; /* @kind font */
+  --ls-display:-0.03em; /* @kind font */
+  --ls-heading:-0.018em; /* @kind font */
+  --ls-body:0; /* @kind font */
+  --ls-eyebrow:0.16em; /* @kind font */
+  --ls-wordmark:0.34em; /* @kind font */ /* the STAGE wordmark's own tracking */
+}
+
+:root{
+  --sp-1:4px;
+  --sp-2:8px;
+  --sp-3:12px;
+  --sp-4:16px;
+  --sp-5:20px;
+  --sp-6:24px;
+  --sp-8:32px;
+  --sp-10:40px;
+  --sp-12:48px;
+  --sp-16:64px;
+  --sp-20:80px;
+  --sp-24:96px;
+  --sp-32:128px;
+  --sp-40:160px;
+
+  /* Section rhythm: mobile-first, generous whitespace. */
+  --section-y:clamp(72px,11vw,160px); /* @kind spacing */
+  --section-y-tight:clamp(48px,7vw,96px); /* @kind spacing */
+  --gutter:clamp(20px,5vw,64px); /* @kind spacing */
+  --measure:68ch;      /* body text max line length */
+  --measure-lead:38ch; /* section subtitle */
+  --container:1200px; /* @kind spacing */
+  --container-narrow:760px; /* @kind spacing */
+
+  --radius-xs:4px;
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:16px;
+  --radius-xl:24px;
+  --radius-pill:999px;
+
+  --stroke-hairline:1px; /* @kind spacing */
+}
+
+:root{
+  /* Shadows are cool-tinted, wide and very low opacity. Cards lean on
+     hairline borders; shadow is only there to lift them off the wash. */
+  --shadow-none:none;
+  --shadow-xs:0 1px 2px rgba(10,31,77,.05);
+  --shadow-sm:0 1px 3px rgba(10,31,77,.06),0 1px 2px rgba(10,31,77,.04);
+  --shadow-md:0 4px 16px rgba(10,31,77,.07);
+  --shadow-lg:0 12px 40px rgba(10,31,77,.10);
+  --shadow-xl:0 28px 80px rgba(10,31,77,.14);
+  --shadow-inset-hairline:inset 0 0 0 1px var(--border-hairline);
+  --ring-focus:0 0 0 3px rgba(92,144,236,.38);
+  --blur-glass:saturate(1.1) blur(14px); /* @kind other */
+}
+
+:root{
+  /* Calm, short, no bounce anywhere. */
+  --dur-fast:120ms; /* @kind other */
+  --dur-base:200ms; /* @kind other */
+  --dur-slow:360ms; /* @kind other */
+  --dur-reveal:600ms; /* @kind other */
+  --ease-standard:cubic-bezier(.4,0,.2,1); /* @kind other */
+  --ease-out:cubic-bezier(.16,1,.3,1); /* @kind other */
+  --ease-in:cubic-bezier(.4,0,1,1); /* @kind other */
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-text);font-size:var(--fs-body);line-height:var(--lh-body);font-weight:var(--fw-regular);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4{margin:0;font-family:var(--font-display);color:var(--text-strong);font-weight:var(--fw-bold);line-height:var(--lh-heading);letter-spacing:var(--ls-heading);text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+a{color:var(--text-link);text-decoration:none;transition:color var(--dur-fast) var(--ease-standard)}
+a:hover{color:var(--text-link-hover)}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+::selection{background:var(--blue-100);color:var(--blue-950)}
+
+html,body{margin:0}body{background:var(--surface-page)}@keyframes stageFade{from{opacity:0}to{opacity:1}}

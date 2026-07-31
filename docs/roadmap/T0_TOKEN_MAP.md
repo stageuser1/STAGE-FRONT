@@ -2,9 +2,12 @@
 
 **Stage:** T0 (design foundation) of the STAGE visual replacement program
 **Date:** 2026-07-28
-**Source of truth:** `design-reference/STAGE IELTS Lab.html` — the approved visual
-export. Every "from" column below names the CSS custom property that file defines on
-`:root`; values were read out of a live render, not transcribed by eye.
+**Source of truth:** `design-reference/tokens.css` — the approved visual export's
+`:root` block. Every "from" column below names a custom property defined there;
+values were read out of a live render, not transcribed by eye.
+*(Was `design-reference/STAGE IELTS Lab.html` until 2026-07-31, when the export was
+unpacked and slimmed — same values, now readable without gunzipping an artifact.
+See `design-reference/README.md`.)*
 **Binding constraints:** `docs/roadmap/STAGE_VISUAL_REPLACEMENT_PLAN.md` §4–§6.
 
 Only App-family tokens changed. The Explore family (`brand.*`, `ink.*`, `line`,

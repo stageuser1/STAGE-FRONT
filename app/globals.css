@@ -11,8 +11,8 @@
  * ============================================================================
  * STAGE App-family design tokens (--stage-*).
  *
- * Authority: design-reference/STAGE IELTS Lab.html (the approved visual
- * export). Stage T0 of the visual replacement program re-pointed every value
+ * Authority: design-reference/tokens.css (the approved visual export's :root
+ * block). Stage T0 of the visual replacement program re-pointed every value
  * below at that export and added the steps the export needs; the old value,
  * the new value and the export token each one came from are recorded in
  * docs/roadmap/T0_TOKEN_MAP.md.

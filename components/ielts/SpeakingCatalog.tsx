@@ -3,9 +3,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
+  SPEAKING_FREQUENCY_LABELS,
   SPEAKING_PARTS,
   SPEAKING_PART_BLURB,
   SPEAKING_PART_LABELS,
+  speakingFrequency,
+  type SpeakingFrequency,
   type SpeakingPart,
   type SpeakingQuestion,
   type SpeakingTopic,
@@ -24,53 +27,41 @@ import {
   replaceSpeakingStates,
   type SpeakingQuestionState,
 } from "@/lib/ielts/speaking-session";
+import { Icon } from "@/components/ui/Icon";
+import { SpeakingSteps } from "./SpeakingSteps";
 import {
-  BUTTON_PRIMARY,
   BUTTON_SECONDARY,
-  Chip,
+  Badge,
   ConfirmButton,
-  EmptyNote,
   FIELD,
-  PageHeader,
-  Tabs,
-  Tag,
 } from "./ui";
 
-/** `Tabs` keys are strings, so the part filter is keyed `p1`/`p2`/`p3`. */
-type PartFilter = "all" | "p1" | "p2" | "p3";
+type FrequencyFilter = SpeakingFrequency | "all";
+type Sort = "corpus" | "frequency";
 
-const PART_OPTIONS: ReadonlyArray<{ value: PartFilter; label: string }> = [
-  { value: "all", label: "全部" },
-  ...SPEAKING_PARTS.map((part) => ({
-    value: `p${part}` as PartFilter,
-    label: SPEAKING_PART_LABELS[part],
-  })),
-];
-
-function partOf(filter: PartFilter): SpeakingPart | null {
-  return filter === "all" ? null : (Number(filter.slice(1)) as SpeakingPart);
-}
-
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 24;
 
 /**
- * 题目 — step one of the Speaking flow (master-spec 批次三 §1).
+ * 题目 — step one of the five-step Speaking flow.
  *
- * A browsing surface over the static corpus, filtered by part and topic. The
- * row status is derived from local material only; there is no accuracy, no
+ * Layout from the approved export's `SpeakingScreen.jsx` at `step === 0`: the
+ * page title, the step rail, a pill Part switch, then a card grid of prompts
+ * that each end in 选择此题 →. Four things the export's three-card mock did not
+ * have to solve are added around it, because this corpus is 324 real prompts
+ * rather than eight: search, a topic filter, a frequency facet and paging.
+ *
+ * The row status is derived from local material only; there is no accuracy, no
  * score and nothing that ranks one learner's answer against anything.
- *
- * The export/import controls sit at the foot of the page rather than in the
- * header — §6 asks for them "在 Speaking 板块设置角落，低调呈现", and they are
- * maintenance, not the thing a learner came here to do.
  */
 export function SpeakingCatalog({ topics }: { topics: SpeakingTopic[] }) {
-  const [part, setPart] = useState<PartFilter>("all");
+  const [part, setPart] = useState<SpeakingPart>(1);
   const [topicId, setTopicId] = useState<string>("all");
+  const [frequency, setFrequency] = useState<FrequencyFilter>("all");
+  const [sort, setSort] = useState<Sort>("corpus");
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   // localStorage is unreadable until after mount, so status appears with its
-  // data rather than flashing "未开始" on questions that have material.
+  // data rather than flashing on questions that have material.
   const [states, setStates] = useState<Map<string, SpeakingQuestionState>>(
     new Map(),
   );
@@ -84,12 +75,39 @@ export function SpeakingCatalog({ topics }: { topics: SpeakingTopic[] }) {
     [topics],
   );
 
+  /** Topics that actually hold a question of the chosen part. */
+  const partTopics = useMemo(
+    () =>
+      topics.filter((topic) =>
+        topic.questions.some((question) => question.part === part),
+      ),
+    [topics, part],
+  );
+
+  const inPart = useMemo(
+    () => questions.filter((question) => question.part === part),
+    [questions, part],
+  );
+
+  const frequencyCounts = useMemo(() => {
+    const counts = new Map<SpeakingFrequency, number>();
+    for (const question of inPart) {
+      const band = speakingFrequency(question.recallCount);
+      if (band) counts.set(band, (counts.get(band) ?? 0) + 1);
+    }
+    return counts;
+  }, [inPart]);
+
   const filtered = useMemo(() => {
     const needle = search.trim().toLowerCase();
-    const wanted = partOf(part);
-    return questions.filter((question) => {
-      if (wanted !== null && question.part !== wanted) return false;
+    const matched = inPart.filter((question) => {
       if (topicId !== "all" && question.topicId !== topicId) return false;
+      if (
+        frequency !== "all" &&
+        speakingFrequency(question.recallCount) !== frequency
+      ) {
+        return false;
+      }
       if (needle === "") return true;
       return (
         question.textEn.toLowerCase().includes(needle) ||
@@ -97,7 +115,14 @@ export function SpeakingCatalog({ topics }: { topics: SpeakingTopic[] }) {
         question.topicLabelZh.includes(needle)
       );
     });
-  }, [questions, part, topicId, search]);
+
+    if (sort === "corpus") return matched;
+    // Highest recall first, corpus order within a tie so the list is stable;
+    // rows with no recall data sort last rather than as a zero.
+    return [...matched].sort(
+      (left, right) => (right.recallCount ?? -1) - (left.recallCount ?? -1),
+    );
+  }, [inPart, topicId, frequency, search, sort]);
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   // Clamped rather than reset, so narrowing a filter lands on the last page
@@ -105,85 +130,98 @@ export function SpeakingCatalog({ topics }: { topics: SpeakingTopic[] }) {
   const current = Math.min(page, pageCount);
   const visible = filtered.slice((current - 1) * PAGE_SIZE, current * PAGE_SIZE);
 
-  const withMaterial = useMemo(
-    () => [...states.values()].filter((state) => hasMaterial(state)).length,
-    [states],
-  );
+  function reset<T>(setter: (next: T) => void) {
+    return (next: T) => {
+      setter(next);
+      setPage(1);
+    };
+  }
 
   return (
-    <div>
-      <PageHeader
-        title="口语素材库"
-        subtitle="按 Part 浏览题目，选一道走完五步流程。你写下的想法与草稿只保存在本机浏览器。"
-      />
+    <div className="grid content-start gap-[18px]">
+      <div className="flex flex-wrap items-center gap-3.5">
+        <h1 className="flex-1 text-stage-h2 font-bold leading-[1.15] text-stage-fg">
+          Speaking
+        </h1>
+      </div>
 
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
-        <Tabs
+      <SpeakingSteps current={0} />
+
+      <div className="flex flex-wrap items-center gap-3">
+        <PartTabs
           value={part}
           onChange={(next) => {
             setPart(next);
-            setPage(1);
-          }}
-          options={PART_OPTIONS}
-          label="口语部分"
-        />
-        <input
-          type="search"
-          value={search}
-          onChange={(event) => {
-            setSearch(event.target.value);
-            setPage(1);
-          }}
-          placeholder="搜索题目"
-          aria-label="搜索题目"
-          className={`w-full sm:w-64 ${FIELD}`}
-        />
-      </div>
-
-      {partOf(part) !== null ? (
-        <p className="mb-3 text-stage-2xs text-stage-fg-subtle">
-          {SPEAKING_PART_LABELS[partOf(part)!]} ·{" "}
-          {SPEAKING_PART_BLURB[partOf(part)!]}
-        </p>
-      ) : null}
-
-      <div className="mb-4 flex flex-wrap items-center gap-2">
-        <Chip
-          active={topicId === "all"}
-          onClick={() => {
             setTopicId("all");
+            setFrequency("all");
             setPage(1);
           }}
-        >
-          全部话题
-        </Chip>
-        {topics.map((topic) => (
-          <Chip
-            key={topic.id}
-            active={topicId === topic.id}
-            onClick={() => {
-              setTopicId(topic.id);
-              setPage(1);
-            }}
-          >
-            {topic.labelZh}
-          </Chip>
-        ))}
+        />
+        <p className="text-stage-xs text-stage-fg-subtle">
+          {SPEAKING_PART_BLURB[part]}
+        </p>
       </div>
 
-      <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-stage-2xs text-stage-fg-subtle">
-        <span className="tabular-nums">共 {filtered.length} 道题目</span>
-        {withMaterial > 0 ? (
-          <span className="tabular-nums">已有素材 {withMaterial} 道</span>
-        ) : null}
+      <SearchField value={search} onChange={reset(setSearch)} />
+
+      <div className="grid gap-3">
+        <FacetRow label="频次">
+          <FilterPill
+            selected={frequency === "all"}
+            onClick={() => reset(setFrequency)("all")}
+          >
+            全部
+          </FilterPill>
+          {(["high", "medium"] as const).map((band) => (
+            <FilterPill
+              key={band}
+              selected={frequency === band}
+              onClick={() =>
+                reset(setFrequency)(frequency === band ? "all" : band)
+              }
+              count={frequencyCounts.get(band) ?? 0}
+            >
+              {SPEAKING_FREQUENCY_LABELS[band]}
+            </FilterPill>
+          ))}
+          <FilterPill
+            selected={sort === "frequency"}
+            onClick={() =>
+              setSort(sort === "frequency" ? "corpus" : "frequency")
+            }
+          >
+            高频优先排序
+          </FilterPill>
+        </FacetRow>
+
+        <FacetRow label="话题">
+          <select
+            value={topicId}
+            onChange={(event) => reset(setTopicId)(event.target.value)}
+            aria-label="话题"
+            className={`h-[34px] py-0 ${FIELD}`}
+          >
+            <option value="all">全部话题（{partTopics.length}）</option>
+            {partTopics.map((topic) => (
+              <option key={topic.id} value={topic.id}>
+                {topic.labelZh} {topic.labelEn}
+              </option>
+            ))}
+          </select>
+          <span className="text-stage-xs tabular-nums text-stage-fg-subtle">
+            共 {filtered.length} 道题目
+          </span>
+        </FacetRow>
       </div>
 
       {visible.length === 0 ? (
-        <EmptyNote>没有符合条件的题目。</EmptyNote>
+        <p className="rounded-stage-lg border border-stage-border bg-stage-bg-soft px-[18px] py-7 text-center text-stage-sm text-stage-fg-subtle">
+          没有符合条件的题目，试试调整筛选条件。
+        </p>
       ) : (
-        <ul className="divide-y divide-stage-border rounded-stage-lg border border-stage-border bg-stage-bg">
+        <ul className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-3">
           {visible.map((question) => (
-            <QuestionRow
+            <QuestionCard
               key={question.id}
               question={question}
               state={states.get(question.id) ?? null}
@@ -205,56 +243,204 @@ export function SpeakingCatalog({ topics }: { topics: SpeakingTopic[] }) {
 }
 
 /**
- * One question row.
- *
- * The status line is the learner's own progress through the five steps, stated
- * in counts of what they wrote. `进入素材库` / `继续构建` are the entry words the
- * master spec fixes for this module (批次一 §4), so the row uses the same pair.
+ * The Part switch, at the export's `Tabs variant="pill"` geometry: a sunken 8px
+ * tray with 4px of padding, holding 4px-radius tabs; the selected one is a white
+ * chip. Local rather than `./ui`'s `Tabs`, which is the fully-rounded segmented
+ * control this screen does not use.
  */
-function QuestionRow({
+function PartTabs({
+  value,
+  onChange,
+}: {
+  value: SpeakingPart;
+  onChange: (next: SpeakingPart) => void;
+}) {
+  return (
+    <div
+      role="tablist"
+      aria-label="口语部分"
+      className="inline-flex gap-1.5 rounded-stage-sm bg-stage-bg-soft p-1"
+    >
+      {SPEAKING_PARTS.map((part) => {
+        const active = part === value;
+        return (
+          <button
+            key={part}
+            type="button"
+            role="tab"
+            aria-selected={active}
+            onClick={() => onChange(part)}
+            className={`whitespace-nowrap rounded-stage-xs px-4 py-2 text-stage-sm font-medium transition-colors duration-stage-fast ease-stage-standard ${
+              active
+                ? "bg-stage-bg text-stage-fg shadow-stage-xs"
+                : "text-stage-fg-muted hover:text-stage-fg"
+            }`}
+          >
+            {SPEAKING_PART_LABELS[part]}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+/** Full-width search box, identical to the Reading catalog's. */
+function SearchField({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (next: string) => void;
+}) {
+  return (
+    <label className="flex h-11 items-center gap-2.5 rounded-stage-sm border border-stage-border-strong bg-stage-bg px-3.5 transition-colors duration-stage-fast ease-stage-standard focus-within:border-stage-blue-500 focus-within:shadow-stage-focus">
+      <span aria-hidden className="grid flex-none text-stage-fg-subtle">
+        <Icon name="search" size={18} />
+      </span>
+      <span className="sr-only">搜索题目</span>
+      <input
+        type="search"
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        placeholder="搜索题目或话题"
+        className="min-w-0 flex-1 bg-transparent text-stage-sm text-stage-fg outline-none placeholder:text-stage-fg-subtle"
+      />
+    </label>
+  );
+}
+
+function FacetRow({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      role="group"
+      aria-label={label}
+      className="flex flex-wrap items-center gap-2"
+    >
+      <span className="w-11 flex-none text-stage-xs text-stage-fg-subtle">
+        {label}
+      </span>
+      {children}
+    </div>
+  );
+}
+
+/** The Reading catalog's facet pill, at the same sizes, so the two banks read alike. */
+function FilterPill({
+  selected,
+  onClick,
+  count,
+  children,
+}: {
+  selected: boolean;
+  onClick: () => void;
+  count?: number;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={selected}
+      className={`inline-flex h-[34px] flex-none items-center gap-1.5 whitespace-nowrap rounded-stage-pill border px-3.5 text-stage-sm font-medium transition-colors duration-stage-fast ease-stage-standard ${
+        selected
+          ? "border-stage-primary bg-stage-primary text-stage-fg-on-dark"
+          : "border-stage-border bg-stage-bg text-stage-fg-body hover:border-stage-border-strong hover:bg-stage-bg-soft"
+      }`}
+    >
+      {children}
+      {count !== undefined ? (
+        <span className="ml-0.5 font-stage-mono text-[11px] opacity-75">
+          {count}
+        </span>
+      ) : null}
+    </button>
+  );
+}
+
+/**
+ * One prompt card.
+ *
+ * The export's card: 18px padding, a 15px prompt, a 13px gloss and a blue
+ * 选择此题 → at the foot. The gloss line is omitted entirely when the corpus has
+ * none — 306 of 324 prompts have no gloss, and a placeholder on all of them
+ * would be 306 lines saying nothing.
+ *
+ * A Part 2 card carries its `You should say:` bullets, because a cue card
+ * *is* the prompt: choosing one without seeing them is choosing blind.
+ */
+function QuestionCard({
   question,
   state,
 }: {
   question: SpeakingQuestion;
   state: SpeakingQuestionState | null;
 }) {
-  const fragments = state?.fragments.length ?? 0;
-  const blocks = state?.draft.length ?? 0;
-  const solos = state?.soloEvents.length ?? 0;
-
-  const status =
-    solos > 0
-      ? `已完成独立表达 ${solos} 次`
-      : blocks > 0
-        ? `草稿 ${blocks} 段`
-        : fragments > 0
-          ? `想法 ${fragments} 条`
-          : null;
+  const band = speakingFrequency(question.recallCount);
+  const started = hasMaterial(state);
 
   return (
-    <li className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2 p-4">
-      <div className="min-w-0 flex-1">
-        <p className="text-stage-xs text-stage-fg">{question.textEn}</p>
-        {question.glossZh ? (
-          <p className="mt-1 text-stage-2xs text-stage-fg-subtle">
-            {question.glossZh}
-          </p>
+    <li className="relative grid content-start gap-1.5 rounded-stage-lg border border-stage-border bg-stage-bg p-[18px] transition-[border-color,box-shadow] duration-stage-base ease-stage-standard hover:border-stage-border-strong hover:shadow-stage-sm">
+      <div className="flex flex-wrap items-center gap-1.5">
+        {/* No band for a prompt with no recall data: the corpus does not say
+            it is infrequent, only that it never came from a recall. */}
+        {band ? (
+          <Badge tone={band === "high" ? "accent" : "neutral"}>
+            {SPEAKING_FREQUENCY_LABELS[band]}
+          </Badge>
         ) : null}
-        <p className="mt-2 flex flex-wrap items-center gap-2">
-          <Tag>{SPEAKING_PART_LABELS[question.part]}</Tag>
-          <Tag>
-            {question.topicLabelEn} {question.topicLabelZh}
-          </Tag>
-          {status ? (
-            <span className="text-stage-2xs text-stage-fg-muted">{status}</span>
-          ) : null}
-        </p>
+        <Badge tone="neutral">
+          {question.topicLabelEn} {question.topicLabelZh}
+        </Badge>
       </div>
+
+      <span className="text-stage-sm font-semibold leading-[1.5] text-stage-fg">
+        {question.textEn}
+      </span>
+      {question.glossZh ? (
+        <span className="text-stage-xs text-stage-fg-subtle">
+          {question.glossZh}
+        </span>
+      ) : null}
+
+      {question.cuePoints.length > 0 ? (
+        <ul className="mt-1 grid gap-1 rounded-stage-md border border-stage-border bg-stage-bg-soft px-3 py-2.5">
+          <li className="text-stage-2xs font-medium text-stage-fg-muted">
+            You should say:
+          </li>
+          {question.cuePoints.map((point) => (
+            <li
+              key={point}
+              className="flex items-start gap-2 text-stage-xs text-stage-fg-body"
+            >
+              <span
+                aria-hidden
+                className="mt-2 inline-block h-1 w-1 flex-none rounded-stage-pill bg-stage-border-strong"
+              />
+              {point}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+
+      {started ? (
+        <span className="mt-1 text-stage-2xs text-stage-fg-subtle">
+          已有素材 · 想法 {state?.fragments.length ?? 0} 条
+        </span>
+      ) : null}
+
+      {/* The stretched link makes the whole card the target; it is the only
+          interactive element in the card, so nothing sits under it. */}
       <Link
         href={`/ielts-lab/speaking/${question.id}`}
-        className={fragments > 0 || blocks > 0 ? BUTTON_SECONDARY : BUTTON_PRIMARY}
+        className="mt-1 text-stage-xs font-semibold text-stage-primary after:absolute after:inset-0 after:content-['']"
       >
-        {fragments > 0 || blocks > 0 ? "继续构建" : "进入素材库"}
+        {started ? "继续构建 →" : "选择此题 →"}
         <span className="sr-only">：{question.textEn}</span>
       </Link>
     </li>
@@ -276,7 +462,7 @@ function Pagination({
   return (
     <nav
       aria-label="题目分页"
-      className="mt-6 flex flex-wrap items-center justify-center gap-2"
+      className="flex flex-wrap items-center justify-center gap-2"
     >
       <button
         type="button"
@@ -316,11 +502,13 @@ function Pagination({
 }
 
 /**
- * The settings corner (批次三 §6).
+ * The settings corner.
  *
  * Export writes every question's material into one file; import merges it back,
- * newer side winning per question. Deliberately unobtrusive: a `<details>` that
- * starts closed, at the foot of the page.
+ * newer side winning per question. The export puts these two as icon buttons in
+ * the page header; they stay a closed `<details>` at the foot here, because the
+ * Lab's icon set has no download or upload glyph and adding one is a change to a
+ * shared file this work is not allowed to make.
  */
 function MaterialCorner({
   states,
@@ -352,7 +540,7 @@ function MaterialCorner({
   }
 
   return (
-    <details className="mt-8 rounded-stage-lg border border-stage-border bg-stage-bg-soft px-4 py-3">
+    <details className="rounded-stage-lg border border-stage-border bg-stage-bg-soft px-4 py-3">
       <summary className="cursor-pointer text-stage-2xs text-stage-fg-muted marker:text-stage-fg-subtle">
         素材管理
       </summary>

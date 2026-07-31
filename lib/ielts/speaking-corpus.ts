@@ -38,6 +38,9 @@ interface RawQuestion {
   textEn: string;
   glossZh?: string;
   cuePointsEn?: string[];
+  /** Present only on recall-derived rows; see the corpus test's last case. */
+  recallCount?: number;
+  recallMonths?: string[];
 }
 
 interface RawTopic {
@@ -86,6 +89,9 @@ const TOPICS: SpeakingTopic[] = RAW.topics.map((topic) => ({
         textEn: question.textEn,
         glossZh: question.glossZh ?? null,
         cuePoints: question.part === 2 ? (question.cuePointsEn ?? []) : [],
+        // `recallMonths` is deliberately not carried: nothing renders a sitting
+        // month, and the pair is only ever read as a frequency band.
+        recallCount: question.recallCount ?? null,
         topicId: topic.id,
         topicLabelEn: topic.labelEn,
         topicLabelZh: topic.labelZh,
