@@ -243,6 +243,17 @@ export function loadWritingT2Attempt(questionId: string): WritingT2Attempt | nul
 }
 
 /**
+ * Whether this question has a submitted record.
+ *
+ * The overview's Writing progress is the count of these across the practicable
+ * bank. Reading the record rather than a separate counter keeps one source of
+ * truth: a question is done when its attempt exists, and nothing else says so.
+ */
+export function hasWritingT2Attempt(questionId: string): boolean {
+  return loadWritingT2Attempt(questionId) !== null;
+}
+
+/**
  * Why a submission did not happen.
  *
  * `empty` is the guard refusing a blank essay; `storage` is the browser refusing

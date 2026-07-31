@@ -20,10 +20,7 @@ import {
 } from "@/lib/ielts/speaking-session";
 import { computeStats, loadRecords } from "@/lib/ielts/storage";
 import type { ExamCategory, ExamSummary, PracticeRecord } from "@/lib/ielts/types";
-import {
-  loadWritingSessions,
-  type WritingSessionState,
-} from "@/lib/ielts/writing-session";
+import { hasWritingT2Attempt } from "@/lib/ielts/writing-t2-attempt";
 import { buildWrongbook } from "@/lib/ielts/wrongbook";
 import { loadProfile, patchProfile } from "@/lib/profile/storage";
 import {
@@ -189,13 +186,17 @@ interface ModuleCardData {
  */
 export function LabOverview({
   exams,
-  /** Published writing sets. Zero renders the Writing card's totals as 0. */
-  writingSetCount = 0,
+  /**
+   * Practicable Task 2 question ids. Ids rather than a count, because the
+   * Writing card's "done" is how many of *these* carry a submitted attempt, and
+   * counting stored records instead could report more done than exist.
+   */
+  writingQuestionIds = [],
   /** Questions in the static Speaking corpus. */
   speakingQuestionCount = 0,
 }: {
   exams: ExamSummary[];
-  writingSetCount?: number;
+  writingQuestionIds?: string[];
   speakingQuestionCount?: number;
 }) {
   const router = useRouter();
@@ -203,9 +204,7 @@ export function LabOverview({
   const [records, setRecords] = useState<PracticeRecord[] | null>(null);
   const [session, setSession] = useState<PracticeSession | null>(null);
   const [drafts, setDrafts] = useState<DraftEntry[]>([]);
-  const [writingSessions, setWritingSessions] = useState<WritingSessionState[]>(
-    [],
-  );
+  const [writingDone, setWritingDone] = useState(0);
   const [speakingStates, setSpeakingStates] = useState<SpeakingQuestionState[]>(
     [],
   );
@@ -214,8 +213,11 @@ export function LabOverview({
     setRecords(loadRecords());
     setSession(loadSession());
     setDrafts([...loadDrafts().values()]);
-    setWritingSessions([...loadWritingSessions().values()]);
+    setWritingDone(writingQuestionIds.filter(hasWritingT2Attempt).length);
     setSpeakingStates([...loadSpeakingStates().values()]);
+    // `writingQuestionIds` is a build-time constant from the static bank, so it
+    // is read once on mount like every other local-storage lookup here.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const progress = useMemo(
@@ -320,12 +322,17 @@ export function LabOverview({
       ],
     },
     {
+      // Every fact here describes what this build actually does. The three it
+      // replaces described the retired Directus module: 小作文按图型分类 and
+      // 范文按完成解锁 named a Task 1 figure classification and a model-answer
+      // unlock that no longer exist anywhere, and a card advertising them would
+      // be promising the learner a feature the click cannot deliver.
       skill: "Writing",
       icon: "pen-line",
-      sub: "Task 1 & Task 2",
-      facts: ["小作文按图型分类", "草稿自动保存", "范文按完成解锁"],
-      done: writingSessions.filter((entry) => entry.completedAt).length,
-      total: writingSetCount,
+      sub: "Task 2",
+      facts: ["题目来自真题回忆", "草稿自动保存", "正计时与实时字数"],
+      done: writingDone,
+      total: writingQuestionIds.length,
       unit: "题",
       lastAccuracy: null,
       actions: [
