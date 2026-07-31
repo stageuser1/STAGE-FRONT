@@ -20,9 +20,9 @@ export const metadata: Metadata = {
  * Filtering and paging happen in the client, keeping the route static (Plan
  * §4.1.2).
  *
- * The Directus-backed set catalog (`WritingCatalog`, `loadWritingSetSummaries`)
- * and its `[setSlug]` routes are still in the tree but no longer reachable from
- * the Lab; retiring them is a separate change.
+ * This is the only Writing catalog: the Directus-backed set module it replaced
+ * — its catalog, `[setSlug]` workspace, model-answer page and API route, and
+ * `lib/writing-data.ts` — has been deleted.
  */
 export default function IeltsWritingPage() {
   return (
