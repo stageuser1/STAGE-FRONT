@@ -28,6 +28,10 @@ test("formatTime renders m:ss", () => {
   // Truncated, not rounded: a clock must never show a second the media has
   // not reached, or the total reads one second short of the elapsed at the end.
   assert.equal(formatTime(65.9), "1:05");
+  // Pinned at the rollover specifically: rounding here would print "1:00" for a
+  // track that has not reached the minute, and the elapsed clock would tick to
+  // the next minute a full second before the audio does.
+  assert.equal(formatTime(59.9), "0:59");
 });
 
 test("formatTime rolls over to h:mm:ss past the hour", () => {
