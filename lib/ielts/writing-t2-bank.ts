@@ -42,6 +42,22 @@ export function getPracticableT2Questions(): WritingT2Question[] {
 }
 
 /**
+ * Ids the practice route prerenders — the practicable set, and only it.
+ *
+ * A fragment is not addressable: `getPracticableT2Question` refuses one too, so a
+ * hand-typed `/t2/wt2-002` is a 404 rather than forty minutes spent writing an
+ * essay against the words "Congestion tax".
+ */
+export function getPracticableT2QuestionIds(): string[] {
+  return getPracticableT2Questions().map((question) => question.id);
+}
+
+export function getPracticableT2Question(id: string): WritingT2Question | null {
+  const question = BANK.questions.find((row) => row.id === id);
+  return question && isPracticable(question) ? question : null;
+}
+
+/**
  * Provenance line for any surface that renders bank text.
  *
  * Exported separately so a client component can show it without importing the
