@@ -53,6 +53,11 @@ export function reduce(attempt: Attempt, action: AttemptAction): Attempt {
       return { ...attempt, answers };
     }
     case "tick":
+      // A zero or negative tick cannot move a stopwatch forward, so it returns
+      // the same object rather than a copy — the same no-op contract a
+      // submitted attempt has, so a caller can compare by reference to tell
+      // whether anything actually changed.
+      if (action.seconds <= 0) return attempt;
       return { ...attempt, elapsedSec: attempt.elapsedSec + action.seconds };
     case "submit":
       return { ...attempt, status: "submitted" };

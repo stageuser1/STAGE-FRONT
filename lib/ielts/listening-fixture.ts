@@ -111,42 +111,50 @@ export const MUSEUM_MEMBERSHIP_SET: ListeningSet = {
 export const MUSEUM_MEMBERSHIP_RULES: ScoringRule[] = [
   {
     questionNo: 1,
+    mode: "text",
     accepted: ["Marchetti"],
     normalize: ["trim", "lowercase"],
   },
   {
     questionNo: 2,
+    mode: "text",
     accepted: ["1 5TR", "15TR"],
     normalize: ["trim", "lowercase", "collapseSpaces"],
   },
   {
     questionNo: 3,
+    mode: "text",
     accepted: ["07700 900142", "07700900142"],
     normalize: ["trim", "collapseSpaces"],
   },
   {
     questionNo: 4,
+    mode: "text",
     accepted: ["silver"],
     normalize: ["trim", "lowercase"],
   },
   {
-    // trim first, so a pasted " £25 " still has a *leading* £ to strip.
+    // trim first, so a pasted " £ 25 " still has a *leading* £ to strip.
     questionNo: 5,
+    mode: "text",
     accepted: ["25", "twenty-five", "twenty five"],
     normalize: ["trim", "lowercase", "stripCurrency", "collapseSpaces"],
   },
   {
     questionNo: 6,
+    mode: "multi",
     accepted: ["A", "C"],
     normalize: ["trim", "lowercase"],
   },
   {
     questionNo: 7,
+    mode: "single",
     accepted: ["C"],
     normalize: ["trim", "lowercase"],
   },
   {
     questionNo: 8,
+    mode: "single",
     accepted: ["first floor"],
     normalize: ["trim", "lowercase", "collapseSpaces"],
   },

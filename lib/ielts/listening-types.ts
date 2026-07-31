@@ -16,20 +16,10 @@ export type ListeningPart = 1 | 2 | 3 | 4;
 
 export const LISTENING_PARTS: readonly ListeningPart[] = [1, 2, 3, 4];
 
-export const LISTENING_PART_LABELS: Record<ListeningPart, string> = {
-  1: "Part 1",
-  2: "Part 2",
-  3: "Part 3",
-  4: "Part 4",
-};
-
 export type ListeningFrequency = "high" | "mid" | "low";
 
-export const LISTENING_FREQUENCY_LABELS: Record<ListeningFrequency, string> = {
-  high: "高频",
-  mid: "次高频",
-  low: "低频",
-};
+// No label maps here. Display copy for parts and frequency bands is a UI
+// decision and belongs to the batch that renders it, not to the contracts.
 
 /* --------------------------------------------------------------------------
  * Question groups
@@ -160,11 +150,33 @@ export type NormalizeStep =
   | "collapseSpaces"
   | "stripCurrency";
 
+/**
+ * How a question is marked.
+ *
+ * - `text`   — a typed gap-fill; `accepted` lists the alternatives.
+ * - `single` — one option chosen from a printed list; `accepted` lists the
+ *              forms that option may be recorded as.
+ * - `multi`  — several options chosen; `accepted` is the one correct set.
+ *
+ * `text` and `single` mark identically today. They stay distinct because the
+ * marking a question *should* get is a property of the question, not of what a
+ * candidate happened to submit — see `ScoringRule.mode`.
+ */
+export type ScoringMode = "text" | "single" | "multi";
+
 export interface ScoringRule {
   questionNo: number;
   /**
-   * For a gap-fill, the alternatives — matching any one of them is correct.
-   * For a multi-select, the whole array is the one correct set.
+   * Declares how this question is marked. Scoring dispatches on this and never
+   * on the runtime shape of the submitted answer: a rule that says `multi` is
+   * still marked as a set even if the UI sends a bare string, and that answer
+   * is wrong rather than an error. Inferring the mode from the given value
+   * would let a UI bug silently change the marking scheme.
+   */
+  mode: ScoringMode;
+  /**
+   * For `text` and `single`, the alternatives — matching any one is correct.
+   * For `multi`, the whole array is the one correct set.
    */
   accepted: string[];
   /** Applied in this order, to the given answer and to each accepted value. */

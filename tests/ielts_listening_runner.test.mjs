@@ -58,6 +58,17 @@ test("tick accumulates elapsed seconds", () => {
   assert.equal(attempt.elapsedSec, 32);
 });
 
+test("a zero or negative tick is a no-op returning the same object", () => {
+  let attempt = newAttempt();
+  attempt = reduce(attempt, { type: "tick", seconds: 10 });
+
+  for (const seconds of [0, -1, -600]) {
+    const ticked = reduce(attempt, { type: "tick", seconds });
+    assert.equal(ticked, attempt, `tick(${seconds}) did not return the same object`);
+    assert.equal(ticked.elapsedSec, 10);
+  }
+});
+
 test("every action after submit is a no-op", () => {
   let attempt = newAttempt();
   attempt = reduce(attempt, { type: "answer", questionNo: 1, value: "Marchetti" });

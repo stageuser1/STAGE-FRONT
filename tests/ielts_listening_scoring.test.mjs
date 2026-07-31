@@ -59,10 +59,17 @@ test("stripCurrency: a leading currency mark is ignored", () => {
   assert.equal(mark(5, "£25").correct, true);
 });
 
+test("stripCurrency also takes the space behind the mark", () => {
+  assert.equal(mark(5, "£ 25").correct, true);
+  assert.equal(normalize("£ 25", ["stripCurrency"]), "25");
+  assert.equal(normalize("$  25", ["stripCurrency"]), "25");
+});
+
 test("stripCurrency only strips a leading mark", () => {
   assert.equal(normalize("25£", ["stripCurrency"]), "25£");
   assert.equal(normalize("$25", ["stripCurrency"]), "25");
   assert.equal(normalize("€25", ["stripCurrency"]), "25");
+  assert.equal(mark(5, "25£").correct, false);
 });
 
 test("normalize applies steps in the declared order", () => {
@@ -96,6 +103,21 @@ test("multi-select gives no partial credit", () => {
   assert.equal(mark(6, ["A", "B"]).correct, false);
   assert.equal(mark(6, ["A", "C", "D"]).correct, false);
   assert.equal(mark(6, []).correct, false);
+});
+
+test("duplicate selections are never collapsed away", () => {
+  // ["A","A"] must not be marked as the set {A}, and ["A","A","C"] must not be
+  // marked as {A,C} — a doubled selection is an invalid submission, not a
+  // shorter correct one.
+  assert.equal(mark(6, ["A", "A"]).correct, false);
+  assert.equal(mark(6, ["A", "A", "C"]).correct, false);
+  assert.equal(mark(6, ["C", "C"]).correct, false);
+  assert.equal(mark(6, ["C", "A"]).correct, true);
+});
+
+test("duplicates are caught after normalization, not before", () => {
+  // " a " and "A" are the same selection once the rule's steps have run.
+  assert.equal(mark(6, [" a ", "A", "C"]).correct, false);
 });
 
 test("a multi-select answer is reported as the letters the candidate picked", () => {
@@ -135,6 +157,48 @@ test("a full fixture attempt scores as expected", () => {
     [true, true, false, true, true, true, true, false],
   );
   assert.equal(report.byQuestion[7].given, "");
+});
+
+/* --------------------------------------------------------------------------
+ * Mode dispatch
+ *
+ * The marking scheme is a property of the question. A UI that sends the wrong
+ * shape produces a wrong answer, never a different scheme and never a throw.
+ * ----------------------------------------------------------------------- */
+
+test("a single-mode question marks like a text question", () => {
+  assert.equal(mark(7, "C").correct, true);
+  assert.equal(mark(7, " c ").correct, true);
+  assert.equal(mark(7, "D").correct, false);
+  assert.equal(mark(8, "First Floor").correct, true);
+});
+
+test("an array given for a text question is wrong, not joined", () => {
+  const row = mark(1, ["Marchetti"]);
+  assert.equal(row.correct, false);
+  assert.equal(row.given, "Marchetti");
+});
+
+test("an array given for a single question is wrong", () => {
+  assert.equal(mark(7, ["C"]).correct, false);
+});
+
+test("a string given for a multi question is wrong, not text-matched", () => {
+  // The accepted set spelled out as a string must not sneak past set equality.
+  assert.equal(mark(6, "A, C").correct, false);
+  assert.equal(mark(6, "A").correct, false);
+  assert.equal(mark(6, "").correct, false);
+});
+
+test("mode, not the given value, decides the scheme", () => {
+  // Same answer, same accepted list, different declared mode.
+  const accepted = ["A", "C"];
+  const asMulti = { questionNo: 1, mode: "multi", accepted, normalize: ["trim"] };
+  const asText = { questionNo: 1, mode: "text", accepted, normalize: ["trim"] };
+  const attempt = attemptWith({ 1: ["C", "A"] });
+
+  assert.equal(scoreAttempt(attempt, [asMulti]).byQuestion[0].correct, true);
+  assert.equal(scoreAttempt(attempt, [asText]).byQuestion[0].correct, false);
 });
 
 test("the report covers every rule even when the attempt is empty", () => {

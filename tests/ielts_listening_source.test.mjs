@@ -95,3 +95,15 @@ test("getScoringRules covers every question exactly once", async () => {
     "at least two questions accept more than one answer",
   );
 });
+
+test("every rule declares a mode matching its question's group type", async () => {
+  const rules = await source.getScoringRules("museum-membership-enquiry");
+  const modeOf = (no) => rules.find((rule) => rule.questionNo === no).mode;
+
+  // Q1–5 are form blanks, Q6 is the "choose TWO" group, Q7 and Q8 each pick
+  // one printed option.
+  assert.deepEqual([1, 2, 3, 4, 5].map(modeOf), Array(5).fill("text"));
+  assert.equal(modeOf(6), "multi");
+  assert.equal(modeOf(7), "single");
+  assert.equal(modeOf(8), "single");
+});
