@@ -1,7 +1,7 @@
 /**
  * Local state for the IELTS Lab Speaking module.
  *
- * Everything a learner produces here — the nine-dimension fragments, the draft
+ * Everything a learner produces here — the per-dimension fragments, the draft
  * they assemble from them, their recall progress and their 独立表达 events —
  * stays in this browser. Nothing is uploaded, and there is nothing to upload it
  * to: the approved T7 data contract makes the corpus a static file and the
@@ -28,48 +28,28 @@
  * Absent by construction, and not by omission: audio, recording, pronunciation,
  * scores, bands, evaluation. There is no field any of them could be stored in.
  */
+import { isDimension, type SpeakingDimension } from "./speaking-dimensions.ts";
 import { isConnective, isRecallLevel, type RecallLevel } from "./speaking-text.ts";
 
 const STORAGE_KEY = "stage.ielts.speaking";
 export const SPEAKING_SCHEMA_VERSION = 1;
 
-/* ------------------------------------------------------------------ *
- * The nine dimensions
- * ------------------------------------------------------------------ */
-
 /**
- * 个人想法's nine guided dimensions (批次三 §2).
- *
- * The bilingual labels are verbatim from the spec and must not be rewritten.
- * The ids double as stored keys, so they are as fixed as the labels.
+ * The dimensions themselves live in `speaking-dimensions.ts` — they are read by
+ * three screens that have no business importing the storage layer. Re-exported
+ * here so callers that already hold a state object do not need both imports.
  */
-export const SPEAKING_DIMENSIONS = [
-  { id: "WHAT", labelEn: "WHAT", labelZh: "是什么" },
-  { id: "WHO", labelEn: "WHO", labelZh: "谁" },
-  { id: "WHEN", labelEn: "WHEN", labelZh: "何时" },
-  { id: "WHERE", labelEn: "WHERE", labelZh: "何地" },
-  { id: "WHY", labelEn: "WHY", labelZh: "为何" },
-  { id: "MEMORY", labelEn: "MEMORY", labelZh: "记忆" },
-  { id: "FEELING", labelEn: "FEELING", labelZh: "感受" },
-  { id: "CHANGE_OVER_TIME", labelEn: "CHANGE_OVER_TIME", labelZh: "变化" },
-  { id: "COMPARISON", labelEn: "COMPARISON", labelZh: "对比" },
-] as const;
-
-export type SpeakingDimension = (typeof SPEAKING_DIMENSIONS)[number]["id"];
-
-const DIMENSION_IDS = new Set<string>(
-  SPEAKING_DIMENSIONS.map((dimension) => dimension.id),
-);
-
-export function isDimension(value: unknown): value is SpeakingDimension {
-  return typeof value === "string" && DIMENSION_IDS.has(value);
-}
-
-/** `WHAT 是什么` — the label as the spec writes it. */
-export function dimensionLabel(dimension: SpeakingDimension): string {
-  const found = SPEAKING_DIMENSIONS.find((entry) => entry.id === dimension);
-  return found ? `${found.labelEn} ${found.labelZh}` : dimension;
-}
+export {
+  LEGACY_SPEAKING_DIMENSIONS,
+  SPEAKING_DIMENSIONS_BY_PART,
+  dimensionDef,
+  dimensionLabel,
+  dimensionsForPart,
+  isActiveDimension,
+  isDimension,
+  type SpeakingDimension,
+  type SpeakingDimensionDef,
+} from "./speaking-dimensions.ts";
 
 /* ------------------------------------------------------------------ *
  * Shapes
@@ -136,6 +116,22 @@ export const SPEAKING_STEPS = [
   { index: 4, label: "独立表达" },
 ] as const;
 
+/**
+ * What a screen reader says when focus lands on a step after a transition.
+ *
+ * The position is in the sentence, not only in the rail: moving between steps
+ * changes the whole panel without changing the page, so a reader that only
+ * heard "答案构建" would not know whether it had gone forward, gone back, or how
+ * much was left. An out-of-range index falls back to the count alone rather
+ * than announcing a label that is not on screen.
+ */
+export function stepAnnouncement(step: number): string {
+  const total = SPEAKING_STEPS.length;
+  const entry = SPEAKING_STEPS[step];
+  const position = `第 ${step + 1} 步，共 ${total} 步`;
+  return entry ? `${position}：${entry.label}` : position;
+}
+
 export function emptySpeakingState(questionId: string): SpeakingQuestionState {
   return {
     questionId,
@@ -175,6 +171,13 @@ function touched(
 /**
  * Adds one idea fragment. Blank input is refused by returning the state
  * unchanged, so a caller cannot mistake a no-op for a write.
+ *
+ * An unrecognised dimension is refused the same way. `SpeakingDimension` is a
+ * closed union, so this is unreachable from typed code — but a value that
+ * arrived as `string` and was cast, or one written by a future build, would
+ * otherwise be stored, look saved, and then be dropped by `normaliseState` on
+ * the next page load. A write that silently disappears is worse than one that
+ * never happened, so it never happens.
  */
 export function addFragment(
   state: SpeakingQuestionState,
@@ -183,7 +186,7 @@ export function addFragment(
   now: string = new Date().toISOString(),
 ): SpeakingQuestionState {
   const trimmed = text.trim();
-  if (trimmed === "") return state;
+  if (trimmed === "" || !isDimension(dimension)) return state;
   return touched(
     {
       ...state,
@@ -238,15 +241,44 @@ export function removeFragment(
   );
 }
 
-export function fragmentsByDimension(
+/**
+ * The single fragment a 个人想法 card edits, or `null` before anything is typed.
+ *
+ * The approved design gives each dimension one textarea, so one fragment is the
+ * whole of what a card holds. A dimension carrying several — only possible from
+ * material written under the nine-dimension set, which allowed a list — returns
+ * its first, and the extras are rendered by the 旧素材 group rather than
+ * silently merged into this one.
+ */
+export function primaryFragment(
   state: SpeakingQuestionState,
-): Map<SpeakingDimension, SpeakingFragment[]> {
-  const map = new Map<SpeakingDimension, SpeakingFragment[]>();
-  for (const dimension of SPEAKING_DIMENSIONS) map.set(dimension.id, []);
-  for (const fragment of state.fragments) {
-    map.get(fragment.dimension)?.push(fragment);
+  dimension: SpeakingDimension,
+): SpeakingFragment | null {
+  return state.fragments.find((entry) => entry.dimension === dimension) ?? null;
+}
+
+/**
+ * Writes a 个人想法 card: add, edit, or clear.
+ *
+ * Blanking the textarea deletes the fragment, which is what the learner means
+ * by emptying it — and takes its draft blocks with it, since `removeFragment`
+ * is the only way a draft cannot outlive its source.
+ */
+export function setFragmentText(
+  state: SpeakingQuestionState,
+  dimension: SpeakingDimension,
+  text: string,
+  now: string = new Date().toISOString(),
+): SpeakingQuestionState {
+  const trimmed = text.trim();
+  const existing = primaryFragment(state, dimension);
+
+  if (trimmed === "") {
+    return existing ? removeFragment(state, existing.id, now) : state;
   }
-  return map;
+  if (!existing) return addFragment(state, dimension, trimmed, now);
+  if (existing.text === trimmed) return state;
+  return updateFragment(state, existing.id, trimmed, now);
 }
 
 /** Dimensions with at least one fragment — the ones that get a check. */
@@ -385,12 +417,18 @@ export function setStep(
  * Append-only: a learner who practises the same question three times has three
  * events on the timeline, which is the whole value of the record. The event
  * carries what was ticked and nothing else — no duration, no audio, no result.
+ *
+ * `visible` is the checklist as it was rendered. Ticks outside it are kept in
+ * storage but left off the event: a tick a learner could not see is not a claim
+ * they made, and the timeline says "covered N dimensions".
  */
 export function logSoloEvent(
   state: SpeakingQuestionState,
   questionText: string,
+  visible: readonly SpeakingDimension[],
   now: string = new Date().toISOString(),
 ): SpeakingQuestionState {
+  const shown = new Set(visible);
   return touched(
     {
       ...state,
@@ -400,7 +438,7 @@ export function logSoloEvent(
           id: newId("solo"),
           at: now,
           questionText,
-          dimensions: [...state.checked],
+          dimensions: state.checked.filter((entry) => shown.has(entry)),
         },
       ],
     },

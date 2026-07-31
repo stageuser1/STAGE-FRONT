@@ -10,54 +10,163 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import {
-  SPEAKING_DIMENSIONS,
+  LEGACY_SPEAKING_DIMENSIONS,
   addFragment,
   appendConnectiveBlock,
   appendFragmentBlock,
+  dimensionLabel,
+  dimensionsForPart,
   draftText,
   emptySpeakingState,
   filledDimensions,
   fragmentBlockCount,
   hasMaterial,
+  isActiveDimension,
+  isDimension,
   logSoloEvent,
   moveBlock,
   normaliseState,
+  primaryFragment,
   removeBlock,
   removeFragment,
+  setFragmentText,
   setRecallLevel,
+  stepAnnouncement,
   toggleChecked,
   updateFragment,
 } from "../lib/ielts/speaking-session.ts";
 import {
   CONNECTIVES,
-  isContentWord,
-  keywordsOf,
-  skeletonTokens,
+  RECALL_LEVELS,
+  soloHints,
+  splitHead,
 } from "../lib/ielts/speaking-text.ts";
 import { mergeStates, parseImport, toJson } from "../lib/ielts/speaking-io.ts";
 
 function stateWithTwoFragments() {
   let state = emptySpeakingState("hometown-p2-01");
   state = addFragment(state, "WHAT", "a small tea house by the river");
-  state = addFragment(state, "FEELING", "quiet and familiar");
+  state = addFragment(state, "WHERE", "quiet and familiar");
   return state;
 }
 
-test("the nine dimensions are the spec's, verbatim and in order", () => {
-  assert.deepEqual(
-    SPEAKING_DIMENSIONS.map((d) => `${d.labelEn} ${d.labelZh}`),
-    [
-      "WHAT 是什么",
-      "WHO 谁",
-      "WHEN 何时",
-      "WHERE 何地",
-      "WHY 为何",
-      "MEMORY 记忆",
-      "FEELING 感受",
-      "CHANGE_OVER_TIME 变化",
-      "COMPARISON 对比",
+test("each part's dimensions are the spec's, verbatim and in order", () => {
+  assert.deepEqual(dimensionsForPart(1).map((d) => `${d.labelEn} ${d.labelZh}`), [
+    "OPINION 观点",
+    "REASON 理由",
+    "EXPLANATION 展开",
+  ]);
+  assert.deepEqual(dimensionsForPart(2).map((d) => `${d.labelEn} ${d.labelZh}`), [
+    "WHAT 是什么",
+    "WHY 为何",
+    "WHEN 何时",
+    "WHO 谁",
+    "WHERE 何地",
+    "HOW 如何",
+  ]);
+  assert.deepEqual(dimensionsForPart(3).map((d) => `${d.labelEn} ${d.labelZh}`), [
+    "OPINION 观点",
+    "REASON 理由",
+    "EXAMPLE 例子",
+    "EXPLANATION 展开",
+  ]);
+});
+
+/**
+ * The compatibility guarantee for pre-split material: a retired dimension is
+ * still a dimension the reader accepts, still carries its own label, and is
+ * simply no longer offered as a card. Narrowing `isDimension` to the active sets
+ * would make `normaliseState` delete these fragments on the next page load.
+ */
+test("nine-dimension material is still readable under its own labels", () => {
+  for (const def of LEGACY_SPEAKING_DIMENSIONS) {
+    assert.equal(isDimension(def.id), true, `${def.id} must survive a read`);
+    assert.equal(dimensionLabel(def.id), `${def.labelEn} ${def.labelZh}`);
+  }
+
+  const retired = ["MEMORY", "FEELING", "CHANGE_OVER_TIME", "COMPARISON"];
+  for (const id of retired) {
+    for (const part of [1, 2, 3]) {
+      assert.equal(
+        isActiveDimension(part, id),
+        false,
+        `${id} must not be offered on Part ${part}`,
+      );
+    }
+  }
+
+  const stored = {
+    ...emptySpeakingState("q1"),
+    fragments: [
+      {
+        id: "frag_legacy",
+        dimension: "CHANGE_OVER_TIME",
+        text: "it used to be much quieter",
+        createdAt: "2026-07-01T00:00:00.000Z",
+      },
     ],
-  );
+  };
+  const read = normaliseState(stored, "q1");
+  assert.equal(read.fragments.length, 1, "a retired dimension is not dropped");
+  assert.equal(read.fragments[0].dimension, "CHANGE_OVER_TIME");
+
+  assert.equal(isDimension("NOT_A_DIMENSION"), false);
+});
+
+/**
+ * The write path's own guard, not just the reader's.
+ *
+ * `SpeakingDimension` is a closed union, so an unknown id cannot arrive from
+ * typed code — but if one ever did, storing it would produce a write that looks
+ * saved and is then deleted by `normaliseState` on the next load. Refusing at
+ * the door is the only version of this a learner can trust.
+ */
+test("addFragment refuses an id that is not a dimension", () => {
+  const state = emptySpeakingState("q1");
+
+  for (const bogus of ["NOT_A_DIMENSION", "what", "", "OPINION "]) {
+    const after = addFragment(state, bogus, "text I typed");
+    assert.equal(after, state, `"${bogus}" must return the same object`);
+    assert.equal(after.fragments.length, 0);
+    assert.equal(
+      after.updatedAt,
+      state.updatedAt,
+      "a refused write does not even restamp the question",
+    );
+  }
+
+  // Nothing reaches storage, so nothing is there to be dropped later: what the
+  // writer refuses and what the reader would have deleted are the same set.
+  const stored = toJson([addFragment(state, "NOT_A_DIMENSION", "text I typed")]);
+  assert.ok(!stored.includes("NOT_A_DIMENSION"));
+  assert.ok(!stored.includes("text I typed"));
+
+  // The guard is the id, not the write: a real dimension still goes through.
+  assert.equal(addFragment(state, "OPINION", "text I typed").fragments.length, 1);
+});
+
+test("a dimension card holds one fragment: add, edit, then clear", () => {
+  let state = emptySpeakingState("q1");
+  state = setFragmentText(state, "OPINION", "   ");
+  assert.equal(state.fragments.length, 0, "blank input writes nothing");
+
+  state = setFragmentText(state, "OPINION", "  I mostly agree  ");
+  assert.equal(state.fragments.length, 1);
+  assert.equal(primaryFragment(state, "OPINION").text, "I mostly agree");
+
+  const same = setFragmentText(state, "OPINION", "I mostly agree");
+  assert.equal(same, state, "an unchanged write returns the same object");
+
+  state = setFragmentText(state, "OPINION", "I only partly agree");
+  assert.equal(state.fragments.length, 1, "editing does not add a second");
+  assert.equal(primaryFragment(state, "OPINION").text, "I only partly agree");
+
+  // Emptying the textarea deletes the fragment — and its draft blocks with it.
+  state = appendFragmentBlock(state, state.fragments[0].id);
+  assert.equal(state.draft.length, 1);
+  state = setFragmentText(state, "OPINION", "");
+  assert.equal(state.fragments.length, 0);
+  assert.equal(state.draft.length, 0, "the draft cannot outlive its source");
 });
 
 test("blank fragments are refused, and filled dimensions get a check", () => {
@@ -69,6 +178,43 @@ test("blank fragments are refused, and filled dimensions get a check", () => {
   assert.equal(state.fragments.length, 1);
   assert.equal(state.fragments[0].text, "an old market");
   assert.deepEqual([...filledDimensions(state)], ["WHAT"]);
+});
+
+/**
+ * The rule the whole of 答案构建 rests on, restated for the design's list: only
+ * a value from the closed vocabulary may enter a draft, and the vocabulary the
+ * screen offers is the export's six.
+ */
+test("the offered connectives are the approved design's six", () => {
+  assert.deepEqual(
+    [...CONNECTIVES],
+    ["because", "however", "for example", "after that", "which means", "compared with"],
+  );
+});
+
+test("a draft built under the previous connective list keeps its blocks", () => {
+  const stored = {
+    ...emptySpeakingState("q1"),
+    fragments: [
+      {
+        id: "frag_1",
+        dimension: "WHAT",
+        text: "my own words",
+        createdAt: "2026-07-01T00:00:00.000Z",
+      },
+    ],
+    draft: [
+      { id: "b1", kind: "connective", value: "First of all," },
+      { id: "b2", kind: "fragment", fragmentId: "frag_1" },
+      { id: "b3", kind: "connective", value: "a sentence written by a machine" },
+    ],
+  };
+  const read = normaliseState(stored, "q1");
+  assert.deepEqual(
+    read.draft.map((block) => block.id),
+    ["b1", "b2"],
+    "a retired connective survives; free text still does not",
+  );
 });
 
 test("a draft block can only reference a fragment that exists", () => {
@@ -95,13 +241,13 @@ test("only a connective from the closed list may join the draft", () => {
 test("draft text is always rebuilt from the fragments, never stored", () => {
   let state = stateWithTwoFragments();
   const [first, second] = state.fragments;
-  state = appendConnectiveBlock(state, "First of all,");
   state = appendFragmentBlock(state, first.id);
+  state = appendConnectiveBlock(state, "because");
   state = appendFragmentBlock(state, second.id);
 
   assert.equal(
     draftText(state),
-    "First of all, a small tea house by the river quiet and familiar",
+    "a small tea house by the river because quiet and familiar",
   );
 
   // Editing the source fragment changes the draft: there is no second copy.
@@ -148,51 +294,61 @@ test("recall levels are clamped to the four defined steps", () => {
   assert.equal(setRecallLevel(state, -1).recallLevel, 0);
 });
 
-test("the skeleton keeps content words and strips scaffolding", () => {
-  const text = "I visited the market with my brother";
-  assert.equal(isContentWord("market"), true);
-  assert.equal(isContentWord("the"), false);
-
-  const full = skeletonTokens(text, 0)
-    .map((token) => token.display)
-    .join("");
-  assert.equal(full, text, "level 0 reproduces the draft exactly");
-
-  const faded = skeletonTokens(text, 1);
-  assert.equal(faded.find((t) => t.raw === "the").faded, true);
-  assert.equal(faded.find((t) => t.raw === "market").faded, false);
-
-  const hidden = skeletonTokens(text, 2).filter((token) => token.kind === "word");
-  assert.deepEqual(
-    hidden.filter((token) => !token.content).map((token) => token.display),
-    ["·", "·", "·", "·"],
-    "I / the / with / my are all replaced",
-  );
-  assert.deepEqual(
-    hidden.filter((token) => token.content).map((token) => token.display),
-    ["visited", "market", "brother"],
-    "the learner's own words survive",
-  );
-
-  const initials = skeletonTokens(text, 3).filter((t) => t.content);
-  assert.equal(initials[0].display[0], "v");
-  assert.match(initials[0].display, /^v_+$/);
+/**
+ * What focus announces after a step transition. The flow moves focus to the new
+ * step's panel, and this string is that panel's accessible name — the only
+ * thing a screen-reader user hears to tell them the working area changed.
+ */
+test("a step announces its position as well as its name", () => {
+  assert.equal(stepAnnouncement(0), "第 1 步，共 5 步：题目");
+  assert.equal(stepAnnouncement(1), "第 2 步，共 5 步：个人想法");
+  assert.equal(stepAnnouncement(4), "第 5 步，共 5 步：独立表达");
+  // Out of range: the count is still true, so it is still said; the label is
+  // not invented.
+  assert.equal(stepAnnouncement(9), "第 10 步，共 5 步");
 });
 
-test("keyword hints are the learner's own words, deduplicated in order", () => {
-  const words = keywordsOf(
-    "the market was busy and the market was loud in the morning",
+test("the four hiding levels are the approved design's, in order", () => {
+  assert.deepEqual(
+    RECALL_LEVELS.map((entry) => entry.label),
+    ["全文", "淡化", "隐藏", "仅连接词"],
   );
-  assert.deepEqual(words, ["market", "busy", "loud", "morning"]);
-  assert.equal(keywordsOf("the market was busy", 1).length, 1);
+  assert.deepEqual(
+    RECALL_LEVELS.map((entry) => entry.value),
+    [0, 1, 2, 3],
+    "the stored value is the index, so levels chosen before the rewording resolve",
+  );
 });
 
-test("a solo event records what was ticked and nothing else", () => {
+test("a fragment reduces to its opening words, and loses nothing else", () => {
+  assert.deepEqual(splitHead("my chamber music teacher pushed me to try"), {
+    head: "my chamber",
+    rest: "music teacher pushed me to try",
+  });
+  // Short enough to be all cue: nothing is invented to fill the remainder.
+  assert.deepEqual(splitHead("very calm"), { head: "very calm", rest: "" });
+  assert.deepEqual(splitHead("  spaced   out  words "), {
+    head: "spaced out",
+    rest: "words",
+  });
+  assert.deepEqual(splitHead(""), { head: "", rest: "" });
+});
+
+test("solo hints are the learner's own opening words, in draft order", () => {
+  assert.equal(
+    soloHints(["learning to accompany singers", "nervous at first", ""]),
+    "learning to · nervous at",
+  );
+  assert.equal(soloHints([]), "", "nothing to hint at renders no strip");
+});
+
+test("a solo event records what was ticked and shown, and nothing else", () => {
   let state = stateWithTwoFragments();
+  const shown = ["WHAT", "WHY", "WHEN", "WHO", "WHERE", "HOW"];
   state = toggleChecked(state, "WHAT");
-  state = toggleChecked(state, "FEELING");
-  state = toggleChecked(state, "FEELING");
-  state = logSoloEvent(state, "Describe a place", "2026-07-29T10:00:00.000Z");
+  state = toggleChecked(state, "WHERE");
+  state = toggleChecked(state, "WHERE");
+  state = logSoloEvent(state, "Describe a place", shown, "2026-07-29T10:00:00.000Z");
 
   assert.equal(state.soloEvents.length, 1);
   assert.deepEqual(state.soloEvents[0].dimensions, ["WHAT"]);
@@ -203,19 +359,47 @@ test("a solo event records what was ticked and nothing else", () => {
     "questionText",
   ]);
 
-  state = logSoloEvent(state, "Describe a place", "2026-07-29T11:00:00.000Z");
+  state = logSoloEvent(state, "Describe a place", shown, "2026-07-29T11:00:00.000Z");
   assert.equal(state.soloEvents.length, 2, "events append, never replace");
+});
+
+/**
+ * A tick left over from the nine-dimension checklist is kept in storage but is
+ * not a claim the learner made on this run — they could not see it to untick it.
+ */
+test("a tick outside the rendered checklist is not written to the event", () => {
+  let state = emptySpeakingState("q1");
+  state = toggleChecked(state, "MEMORY");
+  state = toggleChecked(state, "OPINION");
+  state = logSoloEvent(
+    state,
+    "Do you like music?",
+    ["OPINION", "REASON", "EXPLANATION"],
+    "2026-07-29T10:00:00.000Z",
+  );
+
+  assert.deepEqual(state.soloEvents[0].dimensions, ["OPINION"]);
+  assert.deepEqual(
+    state.checked.sort(),
+    ["MEMORY", "OPINION"],
+    "the tick itself is kept, not deleted",
+  );
 });
 
 test("export → wipe → import restores every field", () => {
   let state = stateWithTwoFragments();
   const [first, second] = state.fragments;
-  state = appendConnectiveBlock(state, "First of all,");
   state = appendFragmentBlock(state, first.id);
+  state = appendConnectiveBlock(state, "which means");
   state = appendFragmentBlock(state, second.id);
   state = setRecallLevel(state, 2);
   state = toggleChecked(state, "WHAT");
-  state = logSoloEvent(state, "Describe a place", "2026-07-29T10:00:00.000Z");
+  state = logSoloEvent(
+    state,
+    "Describe a place",
+    ["WHAT", "WHERE"],
+    "2026-07-29T10:00:00.000Z",
+  );
 
   const exported = toJson([state]);
   // The wipe: nothing carried over but the file itself.
@@ -253,7 +437,7 @@ test("an imported draft cannot smuggle in text that is not a fragment", () => {
       { id: "b1", kind: "fragment", fragmentId: "frag_1" },
       { id: "b2", kind: "fragment", fragmentId: "frag_missing" },
       { id: "b3", kind: "connective", value: "a whole sentence written by a machine" },
-      { id: "b4", kind: "connective", value: "However," },
+      { id: "b4", kind: "connective", value: "however" },
     ],
     recallLevel: 0,
     checked: [],
@@ -267,7 +451,7 @@ test("an imported draft cannot smuggle in text that is not a fragment", () => {
     ["b1", "b4"],
     "a dangling reference and a forged connective are both dropped",
   );
-  assert.equal(draftText(state), "my own words However,");
+  assert.equal(draftText(state), "my own words however");
 });
 
 test("merging keeps the more recently updated side of each question", () => {

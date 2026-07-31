@@ -1,59 +1,78 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import Link from "next/link";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import {
   SPEAKING_PART_LABELS,
   type SpeakingQuestion,
 } from "@/lib/ielts/speaking-types";
 import {
-  SPEAKING_DIMENSIONS,
-  SPEAKING_STEPS,
-  addFragment,
   appendConnectiveBlock,
   appendFragmentBlock,
-  draftText,
+  dimensionDef,
+  dimensionsForPart,
   emptySpeakingState,
   filledDimensions,
-  fragmentBlockCount,
-  fragmentsByDimension,
+  hasMaterial,
   loadSpeakingState,
   logSoloEvent,
   moveBlock,
+  primaryFragment,
   removeBlock,
   removeFragment,
   saveSpeakingState,
+  setFragmentText,
   setRecallLevel,
   setStep,
+  stepAnnouncement,
   toggleChecked,
-  updateFragment,
   type SpeakingDimension,
+  type SpeakingDimensionDef,
   type SpeakingFragment,
   type SpeakingQuestionState,
 } from "@/lib/ielts/speaking-session";
 import {
   CONNECTIVES,
   RECALL_LEVELS,
-  keywordsOf,
-  skeletonTokens,
+  soloHints,
+  splitHead,
 } from "@/lib/ielts/speaking-text";
-import {
-  BUTTON_PRIMARY,
-  BUTTON_QUIET,
-  BUTTON_SECONDARY,
-  Card,
-  EmptyNote,
-  FIELD,
-  Tag,
-} from "./ui";
+import { Icon } from "@/components/ui/Icon";
+import { SpeakingSteps } from "./SpeakingSteps";
+import { Badge } from "./ui";
+
+/* --------------------------------------------------------------------------
+ * Control classes at the export's sizes.
+ *
+ * Local rather than `./ui`'s BUTTON_PRIMARY, which is the 13px control this
+ * screen's spec does not use: the export's step footers are its `md` Button —
+ * 44px tall, 18px side padding, a 15px medium label.
+ * ----------------------------------------------------------------------- */
+
+const STEP_BUTTON =
+  "inline-flex h-11 flex-none items-center justify-center gap-2 whitespace-nowrap rounded-stage-sm bg-stage-primary px-[18px] text-stage-sm font-medium leading-none text-stage-fg-on-dark transition-colors duration-stage-fast ease-stage-standard hover:bg-stage-primary-hover active:bg-stage-primary-press disabled:cursor-not-allowed disabled:opacity-[0.45] disabled:hover:bg-stage-primary";
+
+/** 11px uppercase section label, letter-spaced — the export's column heads. */
+const EYEBROW =
+  "text-stage-2xs font-semibold uppercase tracking-stage-eyebrow text-stage-fg-subtle";
+
+/** The mono dimension code that prefixes every fragment. */
+const DIM_CODE = "font-stage-mono text-stage-xs font-medium text-stage-primary";
 
 /**
- * The five-step Speaking flow (master-spec 批次三).
+ * The five-step Speaking flow, steps two to five.
  *
- * 题目 → 个人想法 → 答案构建 → 记忆巩固 → 独立表达, with the stepper resident at
- * the top of every step. The steps are component state rather than five routes:
- * everything the last three steps render lives in `localStorage`, so a server
- * route per step would prerender four empty shells.
+ * 题目 is the catalog route, so this component owns 个人想法 → 答案构建 →
+ * 记忆巩固 → 独立表达 and shares the step rail with it. The four steps are
+ * component state rather than four routes: everything the last three render
+ * lives in `localStorage`, so a server route per step would prerender three
+ * empty shells.
  *
  * What this module does not contain, and cannot: any button that produces
  * language on the learner's behalf, any recorder, any microphone permission,
@@ -63,15 +82,17 @@ import {
  */
 export function SpeakingFlow({ question }: { question: SpeakingQuestion }) {
   // null until the first read after mount; the flow renders a quiet placeholder
-  // rather than a blank five-step skeleton that would then fill in.
+  // rather than a four-step skeleton that would then fill in.
   const [state, setState] = useState<SpeakingQuestionState | null>(null);
-  const [step, setStepValue] = useState(0);
+  const [step, setStepValue] = useState(1);
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
     const stored = loadSpeakingState(question.id) ?? emptySpeakingState(question.id);
     setState(stored);
-    setStepValue(stored.step);
+    // Step 0 is the catalog; a learner arriving here is on 个人想法 at the
+    // earliest, whatever the stored value says.
+    setStepValue(Math.max(1, stored.step));
   }, [question.id]);
 
   /**
@@ -93,194 +114,165 @@ export function SpeakingFlow({ question }: { question: SpeakingQuestion }) {
     [],
   );
 
+  /**
+   * Focus moves to the new step's panel on every transition.
+   *
+   * Changing step replaces the whole working area without changing the page, so
+   * without this a keyboard user stays wherever they were — on 进入答案构建, or
+   * on a rail button several steps away — and a screen reader announces
+   * nothing. `lastFocused` starts null so the *first* rendered step is adopted
+   * silently: arriving on the route must not pull focus off the top of the
+   * document, and a stored step restored by the loader above is an arrival, not
+   * a transition.
+   */
+  const panel = useRef<HTMLElement>(null);
+  const lastFocused = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (!state) return;
+    if (lastFocused.current === null || lastFocused.current === step) {
+      lastFocused.current = step;
+      return;
+    }
+    lastFocused.current = step;
+    panel.current?.focus();
+  }, [step, state]);
+
   function goTo(next: number) {
     setStepValue(next);
     apply((current) => setStep(current, next));
   }
 
+  const dimensions = dimensionsForPart(question.part);
+
   if (!state) {
-    return <p className="py-8 text-stage-xs text-stage-fg-muted">载入素材…</p>;
+    return <p className="py-8 text-stage-sm text-stage-fg-muted">载入素材…</p>;
   }
 
   return (
-    <div className="space-y-5">
-      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-        <Link href="/ielts-lab/speaking" className={BUTTON_QUIET}>
-          ← 返回素材库
-        </Link>
-        {saved ? (
-          <span className="text-stage-2xs text-stage-fg-subtle">已自动保存</span>
+    <div className="grid content-start gap-[18px]">
+      <h1 className="text-stage-h2 font-bold leading-[1.15] text-stage-fg">
+        Speaking
+      </h1>
+
+      <SpeakingSteps
+        current={step}
+        catalogHref="/ielts-lab/speaking"
+        onGo={goTo}
+      />
+
+      <QuestionBar
+        question={question}
+        saved={saved || hasMaterial(state)}
+      />
+
+      {/* The focus target of every step transition. `tabIndex={-1}` makes it
+          programmatically focusable without adding a Tab stop, and the outline
+          is dropped because this is a container the learner was moved into, not
+          a control they can act on — the next Tab takes them to the step's
+          first real control. The heading is the accessible name, so a reader
+          announces which step it landed on and how far through it is. */}
+      <section
+        ref={panel}
+        tabIndex={-1}
+        aria-labelledby="speaking-step-title"
+        className="grid content-start gap-[18px] outline-none"
+      >
+        <h2 id="speaking-step-title" className="sr-only">
+          {stepAnnouncement(step)}
+        </h2>
+
+        {step === 1 ? (
+          <IdeasStep
+            state={state}
+            dimensions={dimensions}
+            apply={apply}
+            onNext={() => goTo(2)}
+          />
         ) : null}
-      </div>
-
-      <Stepper current={step} state={state} onGo={goTo} />
-
-      <QuestionBar question={question} />
-
-      {step === 0 ? (
-        <QuestionStep question={question} onNext={() => goTo(1)} />
-      ) : null}
-      {step === 1 ? (
-        <IdeasStep state={state} apply={apply} onNext={() => goTo(2)} />
-      ) : null}
-      {step === 2 ? (
-        <BuildStep
-          state={state}
-          apply={apply}
-          onBack={() => goTo(1)}
-          onNext={() => goTo(3)}
-        />
-      ) : null}
-      {step === 3 ? (
-        <RecallStep
-          state={state}
-          apply={apply}
-          onBack={() => goTo(2)}
-          onNext={() => goTo(4)}
-        />
-      ) : null}
-      {step === 4 ? (
-        <SoloStep question={question} state={state} apply={apply} onBack={() => goTo(3)} />
-      ) : null}
+        {step === 2 ? (
+          <BuildStep state={state} apply={apply} onNext={() => goTo(3)} />
+        ) : null}
+        {step === 3 ? (
+          <RecallStep
+            state={state}
+            apply={apply}
+            onBack={() => goTo(2)}
+            onNext={() => goTo(4)}
+          />
+        ) : null}
+        {step === 4 ? (
+          <SoloStep
+            question={question}
+            dimensions={dimensions}
+            state={state}
+            apply={apply}
+          />
+        ) : null}
+      </section>
     </div>
   );
 }
 
 /**
- * The resident stepper.
+ * The prompt, resident above every step so it is never out of sight.
  *
- * Every step is reachable at any time — the flow is a way of working, not a
- * gate — and each carries a small count of what the learner has put into it, so
- * the row doubles as a progress readout. Completion is marked with a glyph as
- * well as colour (Plan §4.1.4).
+ * A Part 2 cue card rides with it: the bullets are part of the prompt, and every
+ * step after 题目 is work against them — the ideas have to answer them, the
+ * draft has to cover them, and the solo turn is given holding them.
  */
-function Stepper({
-  current,
-  state,
-  onGo,
-}: {
-  current: number;
-  state: SpeakingQuestionState;
-  onGo: (step: number) => void;
-}) {
-  const counts = [
-    null,
-    state.fragments.length,
-    state.draft.length,
-    state.recallLevel > 0 ? state.recallLevel : null,
-    state.soloEvents.length,
-  ];
-
-  return (
-    // The scroll container and the wide row must be two elements: an element
-    // that is both `w-max` and `overflow-x-auto` sizes to its content and never
-    // scrolls, which pushes the page sideways instead. `LabMobileNav` in
-    // LabSidebar.tsx splits them the same way.
-    <nav
-      aria-label="口语五步流程"
-      className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-    >
-      <ol className="flex w-max min-w-full gap-1">
-        {SPEAKING_STEPS.map((entry) => {
-          const active = entry.index === current;
-          const count = counts[entry.index];
-          const done = typeof count === "number" && count > 0;
-
-          return (
-            <li key={entry.index} className="flex-1">
-              <button
-                type="button"
-                onClick={() => onGo(entry.index)}
-                aria-current={active ? "step" : undefined}
-                className={`flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-stage-sm border px-3 py-2 text-stage-2xs transition-colors duration-stage-fast ${
-                  active
-                    ? "border-stage-primary bg-stage-primary font-medium text-stage-fg-on-dark"
-                    : "border-stage-border bg-stage-bg text-stage-fg-muted hover:border-stage-border-strong hover:text-stage-fg"
-                }`}
-              >
-                <span className="tabular-nums opacity-70">{entry.index + 1}</span>
-                {entry.label}
-                {done ? (
-                  <span className="tabular-nums opacity-80">
-                    <span aria-hidden>✓</span>
-                    <span className="sr-only">已完成，</span>
-                    {count}
-                  </span>
-                ) : null}
-              </button>
-            </li>
-          );
-        })}
-      </ol>
-    </nav>
-  );
-}
-
-/** The prompt, resident above every step so it is never out of sight. */
-function QuestionBar({ question }: { question: SpeakingQuestion }) {
-  return (
-    <section className="rounded-stage-lg border border-stage-border-accent bg-stage-primary-soft px-4 py-3.5">
-      <p className="flex flex-wrap items-center gap-2">
-        <Tag>{SPEAKING_PART_LABELS[question.part]}</Tag>
-        <Tag>
-          {question.topicLabelEn} {question.topicLabelZh}
-        </Tag>
-      </p>
-      <p className="mt-2 text-stage-sm font-medium text-stage-fg">
-        {question.textEn}
-      </p>
-      {question.glossZh ? (
-        <p className="mt-1 text-stage-2xs text-stage-fg-muted">{question.glossZh}</p>
-      ) : null}
-    </section>
-  );
-}
-
-/** Step 1 — 题目. */
-function QuestionStep({
+function QuestionBar({
   question,
-  onNext,
+  saved,
 }: {
   question: SpeakingQuestion;
-  onNext: () => void;
+  saved: boolean;
 }) {
   return (
-    <Card title="题目" subtitle="确认这道题目，然后开始整理你自己的想法。">
-      {question.cuePoints.length > 0 ? (
-        <div className="rounded-stage-md border border-stage-border bg-stage-bg-soft px-4 py-3">
-          <p className="text-stage-2xs font-medium text-stage-fg">
-            You should say:
-          </p>
-          <ul className="mt-2 space-y-1">
-            {question.cuePoints.map((point) => (
-              <li
-                key={point}
-                className="flex items-start gap-2 text-stage-xs text-stage-fg-body"
-              >
-                <span
-                  aria-hidden
-                  className="mt-2 inline-block h-1 w-1 shrink-0 rounded-stage-pill bg-stage-border-strong"
-                />
-                {point}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : (
-        <p className="text-stage-xs text-stage-fg-muted">
-          {SPEAKING_PART_LABELS[question.part]} 题目没有提示卡，直接进入下一步整理想法。
-        </p>
-      )}
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        <button type="button" onClick={onNext} className={BUTTON_PRIMARY}>
-          开始整理想法
-        </button>
-        <Link href="/ielts-lab/speaking" className={BUTTON_SECONDARY}>
-          换一道题
-        </Link>
+    <div className="grid gap-2.5">
+      <div className="flex flex-wrap items-baseline gap-2.5">
+        <Badge tone="accent">{SPEAKING_PART_LABELS[question.part]}</Badge>
+        <span className="text-stage-body font-semibold text-stage-fg">
+          {question.textEn}
+        </span>
+        {question.glossZh ? (
+          <span className="text-stage-xs text-stage-fg-subtle">
+            {question.glossZh}
+          </span>
+        ) : null}
+        {saved ? (
+          <span
+            role="status"
+            className="ml-auto inline-flex items-center gap-[5px] text-stage-xs text-stage-fg-subtle"
+          >
+            <span aria-hidden className="grid">
+              <Icon name="check" size={12} strokeWidth={2.5} />
+            </span>
+            已自动保存
+          </span>
+        ) : null}
       </div>
-    </Card>
+
+      {question.cuePoints.length > 0 ? (
+        <ul className="grid gap-1 rounded-stage-md border border-stage-border bg-stage-bg-soft px-4 py-3">
+          <li className="text-stage-2xs font-medium text-stage-fg-muted">
+            You should say:
+          </li>
+          {question.cuePoints.map((point) => (
+            <li
+              key={point}
+              className="flex items-start gap-2 text-stage-xs text-stage-fg-body"
+            >
+              <span
+                aria-hidden
+                className="mt-2 inline-block h-1 w-1 flex-none rounded-stage-pill bg-stage-border-strong"
+              />
+              {point}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
   );
 }
 
@@ -288,429 +280,254 @@ type Apply = (
   transform: (current: SpeakingQuestionState) => SpeakingQuestionState,
 ) => void;
 
-/**
- * Step 2 — 个人想法 (批次三 §2).
- *
- * Nine dimension cards, bilingual labels verbatim, each a free-input area for
- * the learner's own fragments. A dimension with at least one fragment gets a
- * check. Nothing here suggests content: the cards ask a question and hold what
- * the learner answers.
- */
-function IdeasStep({
-  state,
-  apply,
-  onNext,
+/** The step footer: one action, then the sentence that qualifies it. */
+function StepFoot({
+  label,
+  note,
+  disabled = false,
+  onClick,
 }: {
-  state: SpeakingQuestionState;
-  apply: Apply;
-  onNext: () => void;
+  label: string;
+  note: string;
+  disabled?: boolean;
+  onClick: () => void;
 }) {
-  const grouped = useMemo(() => fragmentsByDimension(state), [state]);
-  const filled = useMemo(() => filledDimensions(state), [state]);
-
   return (
-    <div className="space-y-4">
-      <Card
-        title="个人想法"
-        subtitle="九个角度，只写你自己想到的片段。写下来的东西会成为下一步唯一的素材来源。"
-        aside={
-          <span className="text-stage-2xs tabular-nums text-stage-fg-subtle">
-            已填 {filled.size} / {SPEAKING_DIMENSIONS.length} 个维度
-          </span>
-        }
+    <div className="flex flex-wrap items-center gap-2.5 pt-1.5">
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={disabled}
+        className={STEP_BUTTON}
       >
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {SPEAKING_DIMENSIONS.map((dimension) => (
-            <DimensionCard
-              key={dimension.id}
-              labelEn={dimension.labelEn}
-              labelZh={dimension.labelZh}
-              filled={filled.has(dimension.id)}
-              fragments={grouped.get(dimension.id) ?? []}
-              onAdd={(text) =>
-                apply((current) => addFragment(current, dimension.id, text))
-              }
-              onEdit={(id, text) =>
-                apply((current) => updateFragment(current, id, text))
-              }
-              onRemove={(id) => apply((current) => removeFragment(current, id))}
-            />
-          ))}
-        </div>
-      </Card>
-
-      <div className="flex flex-wrap items-center gap-2">
-        <button
-          type="button"
-          onClick={onNext}
-          disabled={state.fragments.length === 0}
-          className={BUTTON_PRIMARY}
-        >
-          去构建答案
-        </button>
-        {state.fragments.length === 0 ? (
-          <span className="text-stage-2xs text-stage-fg-subtle">
-            至少写下一条想法，才有东西可以构建。
-          </span>
-        ) : null}
-      </div>
+        {label}
+      </button>
+      <span className="text-stage-xs text-stage-fg-subtle">{note}</span>
     </div>
   );
 }
 
-function DimensionCard({
-  labelEn,
-  labelZh,
-  filled,
-  fragments,
-  onAdd,
-  onEdit,
-  onRemove,
-}: {
-  labelEn: string;
-  labelZh: string;
-  filled: boolean;
-  fragments: SpeakingFragment[];
-  onAdd: (text: string) => void;
-  onEdit: (id: string, text: string) => void;
-  onRemove: (id: string) => void;
-}) {
-  const [draft, setDraft] = useState("");
-  const label = `${labelEn} ${labelZh}`;
+/**
+ * Column count per dimension set, so every row is full.
+ *
+ * The export's `repeat(auto-fill, minmax(300px, 1fr))` was written for a nine-
+ * card grid; with three, four or six cards it leaves a ragged tail. These lay
+ * 3 out as 3, 4 as 2×2 and 6 as 2×3 — no card is invented to fill a gap.
+ */
+const DIMENSION_COLUMNS: Record<number, string> = {
+  3: "sm:grid-cols-2 lg:grid-cols-3",
+  4: "sm:grid-cols-2",
+  6: "sm:grid-cols-2 lg:grid-cols-3",
+};
 
-  function submit() {
-    if (draft.trim() === "") return;
-    onAdd(draft);
-    setDraft("");
-  }
+/**
+ * Step 2 — 个人想法.
+ *
+ * One card per dimension of *this part*, bilingual label verbatim, each a free
+ * input for the learner's own fragment. A dimension with text gets a check.
+ * Nothing here suggests content: the cards ask a question and hold what the
+ * learner answers.
+ */
+function IdeasStep({
+  state,
+  dimensions,
+  apply,
+  onNext,
+}: {
+  state: SpeakingQuestionState;
+  dimensions: readonly SpeakingDimensionDef[];
+  apply: Apply;
+  onNext: () => void;
+}) {
+  const filled = useMemo(() => filledDimensions(state), [state]);
+  const filledHere = dimensions.filter((def) => filled.has(def.id)).length;
+  const legacy = useLegacyFragments(state, dimensions);
 
   return (
-    <section className="rounded-stage-md border border-stage-border bg-stage-bg p-3">
-      <h3 className="flex items-center gap-1.5 text-stage-2xs font-medium text-stage-fg">
-        {/* The check is a glyph plus a label, never colour alone. */}
-        <span
-          aria-hidden
-          className={filled ? "text-stage-success" : "text-stage-fg-subtle"}
-        >
-          {filled ? "✓" : "○"}
-        </span>
-        {label}
-        {filled ? <span className="sr-only">（已填写）</span> : null}
-      </h3>
+    <>
+      <div
+        className={`grid gap-3 ${DIMENSION_COLUMNS[dimensions.length] ?? "sm:grid-cols-2 lg:grid-cols-3"}`}
+      >
+        {dimensions.map((def) => (
+          <IdeaCard
+            key={def.id}
+            def={def}
+            text={primaryFragment(state, def.id)?.text ?? ""}
+            onCommit={(text) =>
+              apply((current) => setFragmentText(current, def.id, text))
+            }
+          />
+        ))}
+      </div>
 
-      {fragments.length > 0 ? (
-        <ul className="mt-2 space-y-1.5">
-          {fragments.map((fragment) => (
-            <li key={fragment.id} className="flex items-start gap-2">
-              <textarea
-                defaultValue={fragment.text}
-                rows={2}
-                aria-label={`${label} 想法片段`}
-                onBlur={(event) => {
-                  const next = event.target.value.trim();
-                  if (next !== "" && next !== fragment.text) {
-                    onEdit(fragment.id, next);
-                  } else if (next === "") {
-                    event.target.value = fragment.text;
-                  }
-                }}
-                className={`min-w-0 flex-1 resize-y ${FIELD}`}
-              />
-              <button
-                type="button"
-                onClick={() => onRemove(fragment.id)}
-                aria-label="删除这条想法"
-                className="shrink-0 rounded-stage-sm border border-stage-border px-2 py-1 text-stage-2xs text-stage-fg-muted transition-colors duration-stage-fast hover:border-stage-danger hover:text-stage-danger"
-              >
-                删除
-              </button>
-            </li>
-          ))}
-        </ul>
+      {legacy.length > 0 ? (
+        <LegacyPanel
+          fragments={legacy}
+          onRemove={(id) => apply((current) => removeFragment(current, id))}
+        />
       ) : null}
 
-      <div className="mt-2 flex items-start gap-2">
-        <textarea
-          value={draft}
-          rows={2}
-          onChange={(event) => setDraft(event.target.value)}
-          onKeyDown={(event) => {
-            // Enter commits, Shift+Enter keeps a line break — the same bargain
-            // every message field makes, so the habit transfers.
-            if (event.key === "Enter" && !event.shiftKey) {
-              event.preventDefault();
-              submit();
-            }
-          }}
-          placeholder="写一条想法…"
-          aria-label={`为 ${label} 添加想法`}
-          className={`min-w-0 flex-1 resize-y ${FIELD}`}
-        />
-        <button
-          type="button"
-          onClick={submit}
-          disabled={draft.trim() === ""}
-          className={`shrink-0 ${BUTTON_SECONDARY}`}
-        >
-          添加
-        </button>
-      </div>
+      <StepFoot
+        label="进入答案构建"
+        note={`已填 ${filledHere} / ${dimensions.length} 个维度`}
+        disabled={state.fragments.length === 0}
+        onClick={onNext}
+      />
+    </>
+  );
+}
+
+/**
+ * One dimension card.
+ *
+ * The textarea is uncontrolled from storage's point of view: it holds its own
+ * value and commits after 600ms of quiet, or on blur. Writing through on every
+ * keystroke would rewrite the whole store per character; committing only on
+ * blur would lose a paragraph to a closed tab.
+ */
+function IdeaCard({
+  def,
+  text,
+  onCommit,
+}: {
+  def: SpeakingDimensionDef;
+  text: string;
+  onCommit: (text: string) => void;
+}) {
+  const [value, setValue] = useState(text);
+  const committed = useRef(text);
+  // Held in a ref so the debounce below does not restart on every parent
+  // render — an `onCommit` recreated each render would reset the timer forever.
+  const commit = useRef(onCommit);
+  commit.current = onCommit;
+
+  // Storage changed under us (an undo elsewhere, a legacy delete): adopt it.
+  useEffect(() => {
+    if (text !== committed.current) {
+      committed.current = text;
+      setValue(text);
+    }
+  }, [text]);
+
+  useEffect(() => {
+    if (value.trim() === committed.current.trim()) return;
+    const timer = setTimeout(() => {
+      committed.current = value;
+      commit.current(value);
+    }, 600);
+    return () => clearTimeout(timer);
+  }, [value]);
+
+  const label = `${def.labelEn} ${def.labelZh}`;
+  const done = value.trim() !== "";
+
+  return (
+    <section className="grid content-start gap-2.5 rounded-stage-lg border border-stage-border bg-stage-bg p-4">
+      <h2 className="flex items-center gap-2">
+        <span className={DIM_CODE}>{def.labelEn}</span>
+        <span className="text-stage-sm font-semibold text-stage-fg">
+          {def.labelZh}
+        </span>
+        {/* The check is a glyph as well as a colour, never colour alone. */}
+        {done ? (
+          <span className="ml-auto grid text-stage-green-600">
+            <Icon name="check" size={15} strokeWidth={2.5} />
+            <span className="sr-only">已填写</span>
+          </span>
+        ) : null}
+      </h2>
+      <textarea
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
+        onBlur={() => {
+          if (value.trim() === committed.current.trim()) return;
+          committed.current = value;
+          commit.current(value);
+        }}
+        placeholder="写下你自己的想法片段…"
+        aria-label={label}
+        className="min-h-16 w-full resize-y rounded-stage-sm border border-stage-border-strong bg-stage-bg px-3 py-2.5 text-stage-sm leading-[1.6] text-stage-fg outline-none transition-colors duration-stage-fast placeholder:text-stage-fg-subtle focus:border-stage-primary focus:shadow-stage-focus"
+      />
     </section>
   );
 }
 
 /**
- * Step 3 — 答案构建 (批次三 §3).
+ * Fragments that no card on this part can edit.
  *
- * Left: the learner's fragments, grouped by dimension. Right: the draft, an
- * ordered list of references to those fragments plus connectives from a closed
- * list. There is no generation control on this screen, and there is nowhere for
- * one to write to: a draft block stores an id, never prose.
- *
- * Dragging is offered as an enhancement over the buttons, not instead of them —
- * a drag-only pane would be unusable from the keyboard (Plan §4.1.4).
+ * Material written under the retired nine-dimension set, plus any second and
+ * later fragment of a dimension that now holds one. Shown under its original
+ * label and nowhere else: not remapped, not merged, and still available to
+ * 答案构建 — but with no way to add more, since the dimension it names is no
+ * longer offered.
  */
-function BuildStep({
-  state,
-  apply,
-  onBack,
-  onNext,
+function useLegacyFragments(
+  state: SpeakingQuestionState,
+  dimensions: readonly SpeakingDimensionDef[],
+): SpeakingFragment[] {
+  return useMemo(() => {
+    // Everything an active card owns. A fragment outside this set either names a
+    // retired dimension, or is a second entry under one that now holds a single
+    // textarea — either way, no card on this part can reach it.
+    const owned = new Set(
+      dimensions
+        .map((def) => primaryFragment(state, def.id)?.id)
+        .filter((id): id is string => id !== undefined),
+    );
+    return state.fragments.filter((fragment) => !owned.has(fragment.id));
+  }, [state, dimensions]);
+}
+
+function LegacyPanel({
+  fragments,
+  onRemove,
 }: {
-  state: SpeakingQuestionState;
-  apply: Apply;
-  onBack: () => void;
-  onNext: () => void;
+  fragments: SpeakingFragment[];
+  onRemove: (id: string) => void;
 }) {
-  const grouped = useMemo(() => fragmentsByDimension(state), [state]);
-  const byId = useMemo(
-    () => new Map(state.fragments.map((fragment) => [fragment.id, fragment])),
-    [state.fragments],
-  );
-  const [dragOver, setDragOver] = useState(false);
-  const text = draftText(state);
-
-  const used = new Set(
-    state.draft.flatMap((block) =>
-      block.kind === "fragment" ? [block.fragmentId] : [],
-    ),
-  );
-
   return (
-    <div className="space-y-4">
-      <div className="grid gap-4 lg:grid-cols-2">
-        <Card
-          title="我的想法片段"
-          subtitle="按维度分组。加入右栏即可组织成答案。"
-        >
-          {state.fragments.length === 0 ? (
-            <EmptyNote>
-              还没有想法片段。回到「个人想法」写下几条，再回来构建。
-            </EmptyNote>
-          ) : (
-            <div className="space-y-3">
-              {SPEAKING_DIMENSIONS.map((dimension) => {
-                const fragments = grouped.get(dimension.id) ?? [];
-                if (fragments.length === 0) return null;
-                return (
-                  <section key={dimension.id}>
-                    <h3 className="text-stage-2xs font-medium text-stage-fg-muted">
-                      {dimension.labelEn} {dimension.labelZh}
-                    </h3>
-                    <ul className="mt-1.5 space-y-1.5">
-                      {fragments.map((fragment) => (
-                        <li
-                          key={fragment.id}
-                          draggable
-                          onDragStart={(event) => {
-                            event.dataTransfer.setData("text/plain", fragment.id);
-                            event.dataTransfer.effectAllowed = "copy";
-                          }}
-                          className="flex items-start justify-between gap-2 rounded-stage-sm border border-stage-border bg-stage-bg-soft px-3 py-2"
-                        >
-                          <span className="min-w-0 text-stage-2xs text-stage-fg-body">
-                            {fragment.text}
-                            {used.has(fragment.id) ? (
-                              <span className="ml-1.5 text-stage-fg-subtle">
-                                · 已在草稿中
-                              </span>
-                            ) : null}
-                          </span>
-                          <button
-                            type="button"
-                            onClick={() =>
-                              apply((current) =>
-                                appendFragmentBlock(current, fragment.id),
-                              )
-                            }
-                            className="shrink-0 rounded-stage-sm border border-stage-border-strong px-2 py-0.5 text-stage-2xs text-stage-fg-body transition-colors duration-stage-fast hover:border-stage-primary hover:text-stage-primary"
-                          >
-                            加入草稿
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-                );
-              })}
-            </div>
-          )}
-        </Card>
-
-        <Card
-          title="答案草稿"
-          subtitle="只能由你自己的片段与连接词组成。"
-          aside={
-            <span className="text-stage-2xs tabular-nums text-stage-fg-subtle">
-              {fragmentBlockCount(state)} 段来自你的片段
-            </span>
-          }
-        >
-          <div
-            onDragOver={(event) => {
-              event.preventDefault();
-              event.dataTransfer.dropEffect = "copy";
-              setDragOver(true);
-            }}
-            onDragLeave={() => setDragOver(false)}
-            onDrop={(event) => {
-              event.preventDefault();
-              setDragOver(false);
-              const fragmentId = event.dataTransfer.getData("text/plain");
-              // `appendFragmentBlock` refuses an id that is not a fragment of
-              // this question, so a dropped payload from anywhere else is inert.
-              if (fragmentId) {
-                apply((current) => appendFragmentBlock(current, fragmentId));
-              }
-            }}
-            className={`rounded-stage-md border border-dashed p-3 transition-colors duration-stage-fast ${
-              dragOver ? "border-stage-primary bg-stage-primary-soft" : "border-stage-border"
-            }`}
+    <section className="grid gap-2.5 rounded-stage-lg border border-stage-border bg-stage-bg-soft p-4">
+      <h2 className={EYEBROW}>旧素材 · 按原维度保留</h2>
+      <p className="text-stage-xs text-stage-fg-subtle">
+        这些片段写于旧的九维度体系。它们照原样保留，仍然可以在「答案构建」里使用；
+        新的想法请写在上面当前 Part 的维度卡片里。
+      </p>
+      <ul className="grid gap-1.5">
+        {fragments.map((fragment) => (
+          <li
+            key={fragment.id}
+            className="flex items-baseline gap-2 rounded-stage-sm border border-stage-border bg-stage-bg px-3 py-2.5 text-stage-sm leading-[1.5]"
           >
-            {state.draft.length === 0 ? (
-              <p className="py-6 text-center text-stage-2xs text-stage-fg-muted">
-                把左栏的片段拖到这里，或点「加入草稿」。
-              </p>
-            ) : (
-              <ol className="space-y-1.5">
-                {state.draft.map((block, index) => {
-                  const fragment =
-                    block.kind === "fragment" ? byId.get(block.fragmentId) : null;
-                  const dimension =
-                    fragment &&
-                    SPEAKING_DIMENSIONS.find((d) => d.id === fragment.dimension);
-
-                  return (
-                    <li
-                      key={block.id}
-                      className="flex items-start gap-2 rounded-stage-sm border border-stage-border bg-stage-bg px-3 py-2"
-                    >
-                      <span className="min-w-0 flex-1 text-stage-2xs text-stage-fg-body">
-                        {block.kind === "connective" ? (
-                          <span className="text-stage-fg-muted">{block.value}</span>
-                        ) : (
-                          <>
-                            {fragment?.text}
-                            {dimension ? (
-                              <span className="ml-1.5 text-stage-fg-subtle">
-                                · 来源 {dimension.labelEn} {dimension.labelZh}
-                              </span>
-                            ) : null}
-                          </>
-                        )}
-                      </span>
-                      <span className="flex shrink-0 gap-1">
-                        <MoveButton
-                          label="上移"
-                          glyph="↑"
-                          disabled={index === 0}
-                          onClick={() =>
-                            apply((current) => moveBlock(current, block.id, -1))
-                          }
-                        />
-                        <MoveButton
-                          label="下移"
-                          glyph="↓"
-                          disabled={index === state.draft.length - 1}
-                          onClick={() =>
-                            apply((current) => moveBlock(current, block.id, 1))
-                          }
-                        />
-                        <MoveButton
-                          label="移出草稿"
-                          glyph="×"
-                          onClick={() =>
-                            apply((current) => removeBlock(current, block.id))
-                          }
-                        />
-                      </span>
-                    </li>
-                  );
-                })}
-              </ol>
-            )}
-          </div>
-
-          <div className="mt-3">
-            <p className="text-stage-2xs text-stage-fg-muted">插入连接词</p>
-            <ul className="mt-1.5 flex flex-wrap gap-1.5">
-              {CONNECTIVES.map((connective) => (
-                <li key={connective}>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      apply((current) => appendConnectiveBlock(current, connective))
-                    }
-                    className="rounded-stage-pill border border-stage-border px-2.5 py-1 text-stage-2xs text-stage-fg-muted transition-colors duration-stage-fast hover:border-stage-border-strong hover:text-stage-fg"
-                  >
-                    {connective}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {text ? (
-            <div className="mt-4 border-t border-stage-border pt-3">
-              <p className="text-stage-2xs text-stage-fg-muted">连起来读一遍</p>
-              <p className="mt-1.5 text-stage-xs leading-relaxed text-stage-fg-body">
-                {text}
-              </p>
-            </div>
-          ) : null}
-
-          <p className="mt-3 text-stage-2xs text-stage-fg-subtle">
-            草稿里的每一段都来自你自己写下的片段——这一页只做组织与连接。
-          </p>
-        </Card>
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={onNext}
-          disabled={state.draft.length === 0}
-          className={BUTTON_PRIMARY}
-        >
-          去记忆巩固
-        </button>
-        <button type="button" onClick={onBack} className={BUTTON_SECONDARY}>
-          回到个人想法
-        </button>
-      </div>
-    </div>
+            <span className={`${DIM_CODE} flex-none`}>
+              {dimensionDef(fragment.dimension)?.labelEn ?? fragment.dimension}
+            </span>
+            <span className="min-w-0 flex-1 text-stage-fg-body">
+              {fragment.text}
+            </span>
+            <IconAction
+              label="删除这条旧素材"
+              onClick={() => onRemove(fragment.id)}
+            >
+              <Icon name="close" size={13} />
+            </IconAction>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
-function MoveButton({
+/** Quiet square glyph button — the export's inline `×` / move affordances. */
+function IconAction({
   label,
-  glyph,
   disabled = false,
   onClick,
+  children,
 }: {
   label: string;
-  glyph: string;
   disabled?: boolean;
   onClick: () => void;
+  children: ReactNode;
 }) {
   return (
     <button
@@ -718,20 +535,231 @@ function MoveButton({
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="rounded-stage-sm border border-stage-border px-1.5 py-0.5 text-stage-2xs text-stage-fg-muted transition-colors duration-stage-fast hover:border-stage-border-strong hover:text-stage-fg disabled:cursor-not-allowed disabled:opacity-40"
+      className="grid h-6 w-6 flex-none place-items-center self-center rounded-stage-xs text-stage-fg-subtle transition-colors duration-stage-fast hover:bg-stage-bg-soft hover:text-stage-fg disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
     >
-      <span aria-hidden>{glyph}</span>
+      {children}
     </button>
   );
 }
 
 /**
- * Step 4 — 记忆巩固 (批次三 §4).
+ * Step 3 — 答案构建.
  *
- * The draft as a keyword skeleton: connectives and the learner's own content
- * words hold, the grammatical scaffolding fades and then goes, and at the last
- * level only initials remain. Four levels, chosen by the learner and remembered
- * between visits.
+ * Left: the learner's fragments and the connective chips. Right: the draft, an
+ * ordered list of references to those fragments plus connectives from a closed
+ * list. There is no generation control on this screen, and there is nowhere for
+ * one to write to: a draft block stores an id, never prose.
+ *
+ * Dragging is offered as an enhancement over clicking, not instead of it — a
+ * drag-only pane would be unusable from the keyboard.
+ */
+function BuildStep({
+  state,
+  apply,
+  onNext,
+}: {
+  state: SpeakingQuestionState;
+  apply: Apply;
+  onNext: () => void;
+}) {
+  const [dragOver, setDragOver] = useState(false);
+  const byId = useMemo(
+    () => new Map(state.fragments.map((fragment) => [fragment.id, fragment])),
+    [state.fragments],
+  );
+  const used = useMemo(
+    () =>
+      new Set(
+        state.draft.flatMap((block) =>
+          block.kind === "fragment" ? [block.fragmentId] : [],
+        ),
+      ),
+    [state.draft],
+  );
+  const fragmentBlocks = state.draft.filter((block) => block.kind === "fragment");
+
+  return (
+    <>
+      <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+        <div className="grid content-start gap-2.5">
+          <h2 className={EYEBROW}>我的想法片段 · 点击加入右栏</h2>
+
+          {state.fragments.length === 0 ? (
+            <p className="rounded-stage-sm border border-stage-border bg-stage-bg-soft px-3 py-6 text-center text-stage-sm text-stage-fg-subtle">
+              还没有想法片段。回到「个人想法」写下几条，再回来构建。
+            </p>
+          ) : (
+            state.fragments.map((fragment) => {
+              const spent = used.has(fragment.id);
+              return (
+                <button
+                  key={fragment.id}
+                  type="button"
+                  disabled={spent}
+                  draggable={!spent}
+                  onDragStart={(event) => {
+                    event.dataTransfer.setData("text/plain", fragment.id);
+                    event.dataTransfer.effectAllowed = "copy";
+                  }}
+                  onClick={() =>
+                    apply((current) => appendFragmentBlock(current, fragment.id))
+                  }
+                  className={`flex items-baseline gap-2 rounded-stage-sm border px-3 py-2.5 text-left text-stage-sm leading-[1.5] transition-colors duration-stage-fast ${
+                    spent
+                      ? "cursor-default border-stage-border bg-stage-bg-soft opacity-55"
+                      : "border-stage-border-strong bg-stage-bg hover:border-stage-primary"
+                  }`}
+                >
+                  <span className={`${DIM_CODE} flex-none`}>
+                    {dimensionDef(fragment.dimension)?.labelEn ??
+                      fragment.dimension}
+                  </span>
+                  <span className="min-w-0 flex-1 text-stage-fg-body">
+                    {fragment.text}
+                  </span>
+                  {spent ? (
+                    <span className="sr-only">已在草稿中</span>
+                  ) : (
+                    <span
+                      aria-hidden
+                      className="flex-none self-center text-[15px] font-medium leading-none text-stage-primary"
+                    >
+                      +
+                    </span>
+                  )}
+                </button>
+              );
+            })
+          )}
+
+          <h2 className={`${EYEBROW} mt-2`}>连接词</h2>
+          <ul className="flex flex-wrap gap-1.5">
+            {CONNECTIVES.map((connective) => (
+              <li key={connective}>
+                <button
+                  type="button"
+                  onClick={() =>
+                    apply((current) => appendConnectiveBlock(current, connective))
+                  }
+                  className="inline-flex h-7 items-center whitespace-nowrap rounded-stage-pill border border-stage-border bg-stage-bg px-2.5 font-stage-mono text-stage-2xs font-medium text-stage-fg-body transition-colors duration-stage-fast hover:border-stage-border-strong hover:bg-stage-bg-soft"
+                >
+                  {connective}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <section
+          onDragOver={(event) => {
+            event.preventDefault();
+            event.dataTransfer.dropEffect = "copy";
+            setDragOver(true);
+          }}
+          onDragLeave={() => setDragOver(false)}
+          onDrop={(event) => {
+            event.preventDefault();
+            setDragOver(false);
+            const fragmentId = event.dataTransfer.getData("text/plain");
+            // `appendFragmentBlock` refuses an id that is not a fragment of this
+            // question, so a payload dropped from anywhere else is inert.
+            if (fragmentId) {
+              apply((current) => appendFragmentBlock(current, fragmentId));
+            }
+          }}
+          className={`grid min-h-[280px] content-start gap-2 rounded-stage-lg border bg-stage-bg p-4 transition-colors duration-stage-fast ${
+            dragOver ? "border-stage-primary bg-stage-primary-soft" : "border-stage-border"
+          }`}
+        >
+          <h2 className={EYEBROW}>答案草稿 · 只能由左栏片段组织而成</h2>
+
+          {state.draft.length === 0 ? (
+            <p className="py-6 text-center text-stage-sm text-stage-fg-subtle">
+              从左栏点选或拖入片段与连接词，按你要说的顺序拼装。
+            </p>
+          ) : (
+            <ol className="grid gap-2">
+              {state.draft.map((block, index) => {
+                const fragment =
+                  block.kind === "fragment" ? byId.get(block.fragmentId) : null;
+
+                return (
+                  <li
+                    key={block.id}
+                    className={
+                      block.kind === "connective"
+                        ? "flex items-center gap-2 justify-self-start rounded-stage-pill border border-stage-gold-200 bg-stage-gold-50 px-2.5 py-1 font-stage-mono text-stage-xs text-stage-gold-700"
+                        : "flex items-baseline gap-2 rounded-stage-sm border border-stage-border-accent bg-stage-primary-soft px-2.5 py-2 text-stage-sm leading-[1.5]"
+                    }
+                  >
+                    {fragment ? (
+                      <span className={`${DIM_CODE} flex-none`}>
+                        {dimensionDef(fragment.dimension)?.labelEn ??
+                          fragment.dimension}
+                      </span>
+                    ) : null}
+                    <span className="min-w-0 flex-1">
+                      {block.kind === "connective" ? block.value : fragment?.text}
+                    </span>
+                    {/* The export reorders by removing and re-adding; these two
+                        keep that possible without retyping, and are the only
+                        way to reorder from a keyboard. */}
+                    <IconAction
+                      label="上移"
+                      disabled={index === 0}
+                      onClick={() =>
+                        apply((current) => moveBlock(current, block.id, -1))
+                      }
+                    >
+                      <span aria-hidden className="text-[13px] leading-none">
+                        ↑
+                      </span>
+                    </IconAction>
+                    <IconAction
+                      label="下移"
+                      disabled={index === state.draft.length - 1}
+                      onClick={() =>
+                        apply((current) => moveBlock(current, block.id, 1))
+                      }
+                    >
+                      <span aria-hidden className="text-[13px] leading-none">
+                        ↓
+                      </span>
+                    </IconAction>
+                    <IconAction
+                      label="移出草稿"
+                      onClick={() =>
+                        apply((current) => removeBlock(current, block.id))
+                      }
+                    >
+                      <Icon name="close" size={13} />
+                    </IconAction>
+                  </li>
+                );
+              })}
+            </ol>
+          )}
+        </section>
+      </div>
+
+      <StepFoot
+        label="进入记忆巩固"
+        note="没有 AI 生成——答案只来自你自己的片段。"
+        disabled={fragmentBlocks.length === 0}
+        onClick={onNext}
+      />
+    </>
+  );
+}
+
+/**
+ * Step 4 — 记忆巩固.
+ *
+ * The draft at four levels of hiding. The connectives print in full at every
+ * level and each fragment keeps its opening words; the rest fades, then goes
+ * behind a dashed rule, then the fragment goes entirely and only the joins are
+ * left. Reduction is per fragment, not per word, so what remains is the shape
+ * of the answer the learner assembled.
  */
 function RecallStep({
   state,
@@ -744,251 +772,215 @@ function RecallStep({
   onBack: () => void;
   onNext: () => void;
 }) {
-  const text = draftText(state);
   const level = state.recallLevel;
-  const tokens = useMemo(() => skeletonTokens(text, level), [text, level]);
-  const active = RECALL_LEVELS[level];
+  const byId = useMemo(
+    () => new Map(state.fragments.map((fragment) => [fragment.id, fragment])),
+    [state.fragments],
+  );
 
-  if (text === "") {
+  if (state.draft.length === 0) {
     return (
-      <Card title="记忆巩固">
-        <EmptyNote>草稿还是空的。先回到「答案构建」组织出一段答案。</EmptyNote>
-        <button type="button" onClick={onBack} className={`mt-4 ${BUTTON_SECONDARY}`}>
-          回到答案构建
-        </button>
-      </Card>
+      <>
+        <p className="rounded-stage-lg border border-stage-border bg-stage-bg-soft px-4 py-10 text-center text-stage-sm text-stage-fg-muted">
+          草稿还是空的。先回到「答案构建」组织出一段答案。
+        </p>
+        <StepFoot
+          label="回到答案构建"
+          note="记忆巩固练的是你自己拼出来的那一段。"
+          onClick={onBack}
+        />
+      </>
     );
   }
 
   return (
-    <div className="space-y-4">
-      <Card
-        title="记忆巩固"
-        subtitle="逐级隐去文字，看着剩下的线索把整段说完整。"
-      >
-        <div
-          role="group"
-          aria-label="隐藏程度"
-          className="flex flex-wrap items-center gap-1.5"
-        >
-          {RECALL_LEVELS.map((entry) => (
+    <>
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-stage-xs text-stage-fg-subtle">隐藏程度：</span>
+        {RECALL_LEVELS.map((entry) => {
+          const on = entry.value === level;
+          return (
             <button
               key={entry.value}
               type="button"
-              aria-pressed={entry.value === level}
+              aria-pressed={on}
               onClick={() =>
                 apply((current) => setRecallLevel(current, entry.value))
               }
-              className={`rounded-stage-pill border px-3 py-1 text-stage-2xs transition-colors duration-stage-fast ${
-                entry.value === level
-                  ? "border-stage-primary bg-stage-primary font-medium text-stage-fg-on-dark"
-                  : "border-stage-border text-stage-fg-muted hover:border-stage-border-strong hover:text-stage-fg"
+              className={`inline-flex h-[30px] flex-none items-center whitespace-nowrap rounded-stage-pill border px-3.5 text-stage-sm font-medium transition-colors duration-stage-fast ease-stage-standard ${
+                on
+                  ? "border-stage-primary bg-stage-primary text-stage-fg-on-dark"
+                  : "border-stage-border bg-stage-bg text-stage-fg-body hover:border-stage-border-strong hover:bg-stage-bg-soft"
               }`}
             >
               {entry.label}
             </button>
-          ))}
-        </div>
-        <p className="mt-2 text-stage-2xs text-stage-fg-subtle">{active.hint}</p>
-
-        <p className="mt-4 rounded-stage-md border border-stage-border bg-stage-bg-soft px-4 py-4 text-stage-sm leading-loose text-stage-fg-body">
-          {tokens.map((token, index) => (
-            <span
-              key={index}
-              className={
-                token.faded
-                  ? "text-stage-fg-subtle opacity-50"
-                  : token.content
-                    ? "font-medium text-stage-fg"
-                    : undefined
-              }
-            >
-              {token.display}
-            </span>
-          ))}
-        </p>
-
-        {level > 0 ? (
-          <button
-            type="button"
-            onClick={() => apply((current) => setRecallLevel(current, 0))}
-            className={`mt-3 ${BUTTON_QUIET}`}
-          >
-            看回完整版本
-          </button>
-        ) : null}
-      </Card>
-
-      <div className="flex flex-wrap gap-2">
-        <button type="button" onClick={onNext} className={BUTTON_PRIMARY}>
-          去独立表达
-        </button>
-        <button type="button" onClick={onBack} className={BUTTON_SECONDARY}>
-          回到答案构建
-        </button>
+          );
+        })}
       </div>
-    </div>
+
+      <p className="rounded-stage-lg border border-stage-border bg-stage-bg p-[26px] text-stage-h4 font-normal leading-[2] text-stage-fg">
+        {state.draft.map((block) => {
+          if (block.kind === "connective") {
+            return (
+              <span
+                key={block.id}
+                className="px-1.5 font-stage-mono text-stage-body text-stage-gold-700"
+              >
+                {block.value}
+              </span>
+            );
+          }
+          const fragment = byId.get(block.fragmentId);
+          if (!fragment) return null;
+          const { head, rest } = splitHead(fragment.text);
+
+          // 仅连接词: the fragment goes entirely, leaving a ruled gap the length
+          // of what has to be recalled.
+          if (level === 3) {
+            return (
+              <span key={block.id} className="mr-2 border-b border-dashed border-stage-neutral-300 text-transparent">
+                {fragment.text}
+              </span>
+            );
+          }
+          return (
+            <span key={block.id} className="pr-2">
+              <span className="font-semibold">{head}</span>
+              {rest ? " " : null}
+              {rest && level === 0 ? <span>{rest}</span> : null}
+              {rest && level === 1 ? (
+                <span className="text-stage-neutral-300">{rest}</span>
+              ) : null}
+              {rest && level === 2 ? (
+                <span className="border-b border-dashed border-stage-neutral-300 text-transparent">
+                  {rest}
+                </span>
+              ) : null}
+            </span>
+          );
+        })}
+      </p>
+
+      <StepFoot
+        label="进入独立表达"
+        note="连接词与你的核心词保留，其余逐级隐去。"
+        onClick={onNext}
+      />
+    </>
   );
 }
 
 /**
- * Step 5 — 独立表达 (批次三 §5).
+ * Step 5 — 独立表达.
  *
- * The prompt, a dismissible keyword strip, and a self-check list of the
- * dimensions the learner meant to cover. Completing it writes one event.
+ * A dismissible strip of the learner's own opening words, and a self-check list
+ * of this part's dimensions. Completing it writes one event.
  *
  * The event says that the learner did this once, and which dimensions they say
  * they covered — that is the entire record, and the whole point of it. Nothing
- * is captured, timed, submitted or judged; the copy on screen states what the
- * step is rather than listing what it deliberately lacks.
+ * is captured, timed, submitted or judged.
  */
 function SoloStep({
   question,
+  dimensions,
   state,
   apply,
-  onBack,
 }: {
   question: SpeakingQuestion;
+  dimensions: readonly SpeakingDimensionDef[];
   state: SpeakingQuestionState;
   apply: Apply;
-  onBack: () => void;
 }) {
   const [hintsVisible, setHintsVisible] = useState(true);
   const [justLogged, setJustLogged] = useState(false);
 
-  const text = draftText(state);
-  const hints = useMemo(() => keywordsOf(text), [text]);
-  // The checklist covers what the learner actually planned; falling back to all
-  // nine when nothing was written keeps the list from being empty.
-  const planned = useMemo(() => {
-    const filled = filledDimensions(state);
-    return SPEAKING_DIMENSIONS.filter(
-      (dimension) => filled.size === 0 || filled.has(dimension.id),
+  const hints = useMemo(() => {
+    const byId = new Map(state.fragments.map((f) => [f.id, f]));
+    return soloHints(
+      state.draft.flatMap((block) =>
+        block.kind === "fragment"
+          ? [byId.get(block.fragmentId)?.text ?? ""]
+          : [],
+      ),
     );
-  }, [state]);
+  }, [state.draft, state.fragments]);
 
-  const checkedCount = state.checked.length;
+  const visible: SpeakingDimension[] = dimensions.map((def) => def.id);
 
   return (
-    <div className="space-y-4">
-      <Card
-        title="独立表达"
-        subtitle="不看草稿，把这道题完整说一遍。完成后只留下一条「做过一次」的记录。"
-      >
-        <p className="rounded-stage-md border border-stage-border bg-stage-bg-soft px-4 py-4 text-stage-sm text-stage-fg">
-          {question.textEn}
-        </p>
-
-        {hints.length > 0 ? (
-          hintsVisible ? (
-            <div className="mt-3">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <p className="text-stage-2xs text-stage-fg-muted">
-                  关键词提示（你自己的词）
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setHintsVisible(false)}
-                  className={BUTTON_QUIET}
-                >
-                  收起提示
-                </button>
-              </div>
-              <ul className="mt-1.5 flex flex-wrap gap-1.5">
-                {hints.map((word) => (
-                  <li key={word}>
-                    <Tag>{word}</Tag>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            <button
-              type="button"
-              onClick={() => setHintsVisible(true)}
-              className={`mt-3 ${BUTTON_QUIET}`}
-            >
-              显示关键词提示
-            </button>
-          )
-        ) : null}
-      </Card>
-
-      <Card
-        title="自查清单"
-        subtitle="说完之后，勾选你实际覆盖到的维度。"
-        aside={
-          <span className="text-stage-2xs tabular-nums text-stage-fg-subtle">
-            已勾选 {checkedCount} / {planned.length}
+    <>
+      {hints !== "" && hintsVisible ? (
+        <div className="flex items-center gap-3 rounded-stage-lg border border-stage-border bg-stage-bg p-4">
+          <span className="min-w-0 flex-1 text-stage-sm text-stage-fg-body">
+            {hints}
           </span>
-        }
-      >
-        <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-          {planned.map((dimension) => {
-            const checked = state.checked.includes(dimension.id);
+          <IconAction label="关闭提示" onClick={() => setHintsVisible(false)}>
+            <Icon name="close" size={13} />
+          </IconAction>
+        </div>
+      ) : null}
+
+      <section className="grid gap-3 rounded-stage-lg border border-stage-border bg-stage-bg p-5">
+        <h2 className="text-stage-sm font-semibold text-stage-fg">
+          自查清单 · 我的表达覆盖了哪些维度
+        </h2>
+        <ul className="grid gap-3">
+          {dimensions.map((def) => {
+            const checked = state.checked.includes(def.id);
             return (
-              <li key={dimension.id}>
-                <label className="flex cursor-pointer items-center gap-2 rounded-stage-sm border border-stage-border px-3 py-2 text-stage-2xs text-stage-fg-body">
+              <li key={def.id}>
+                <label className="flex cursor-pointer items-center gap-3">
                   <input
                     type="checkbox"
                     checked={checked}
                     onChange={() =>
-                      apply((current) =>
-                        toggleChecked(current, dimension.id as SpeakingDimension),
-                      )
+                      apply((current) => toggleChecked(current, def.id))
                     }
-                    className="h-4 w-4 shrink-0 accent-[var(--stage-primary)]"
+                    className="peer sr-only"
                   />
-                  {dimension.labelEn} {dimension.labelZh}
+                  <span
+                    aria-hidden
+                    className="grid h-5 w-5 flex-none place-items-center rounded-stage-xs border border-stage-border-strong bg-stage-bg text-stage-fg-on-dark transition-colors duration-stage-fast peer-checked:border-stage-primary peer-checked:bg-stage-primary peer-focus-visible:shadow-stage-focus"
+                  >
+                    {checked ? <Icon name="check" size={13} strokeWidth={3} /> : null}
+                  </span>
+                  <span className="text-stage-sm leading-[1.5] text-stage-fg-body">
+                    {def.labelEn} {def.labelZh}
+                  </span>
                 </label>
               </li>
             );
           })}
         </ul>
+      </section>
 
-        <div className="mt-4 flex flex-wrap items-center gap-3">
-          <button
-            type="button"
-            onClick={() => {
-              apply((current) => logSoloEvent(current, question.textEn));
-              setJustLogged(true);
-            }}
-            className={BUTTON_PRIMARY}
-          >
-            完成本次独立表达
-          </button>
-          <button type="button" onClick={onBack} className={BUTTON_SECONDARY}>
-            回到记忆巩固
-          </button>
-          {justLogged ? (
-            <span role="status" className="text-stage-2xs text-stage-success">
-              已记录，可以在练习记录里看到。
-            </span>
-          ) : null}
-        </div>
-
-        {state.soloEvents.length > 0 ? (
-          <div className="mt-4 border-t border-stage-border pt-3">
-            <p className="text-stage-2xs text-stage-fg-muted">
-              这道题已完成 {state.soloEvents.length} 次独立表达
-            </p>
-            <ul className="mt-1.5 space-y-1">
-              {[...state.soloEvents]
-                .reverse()
-                .slice(0, 5)
-                .map((event) => (
-                  <li
-                    key={event.id}
-                    className="text-stage-2xs tabular-nums text-stage-fg-subtle"
-                  >
-                    {new Date(event.at).toLocaleString("zh-CN")} · 覆盖{" "}
-                    {event.dimensions.length} 个维度
-                  </li>
-                ))}
-            </ul>
-          </div>
+      <div className="flex flex-wrap items-center gap-2.5 pt-1.5">
+        <button
+          type="button"
+          onClick={() => {
+            apply((current) => logSoloEvent(current, question.textEn, visible));
+            setJustLogged(true);
+          }}
+          className={STEP_BUTTON}
+        >
+          完成独立表达
+        </button>
+        <span className="text-stage-xs text-stage-fg-subtle">
+          无录音、无计分——完成后记录一次「独立表达」事件。
+        </span>
+        {justLogged ? (
+          <span role="status" className="text-stage-xs text-stage-green-600">
+            已记录，可以在学习记录里看到。
+          </span>
         ) : null}
-      </Card>
-    </div>
+      </div>
+
+      {state.soloEvents.length > 0 ? (
+        <p className="text-stage-xs tabular-nums text-stage-fg-subtle">
+          这道题已完成 {state.soloEvents.length} 次独立表达。
+        </p>
+      ) : null}
+    </>
   );
 }
