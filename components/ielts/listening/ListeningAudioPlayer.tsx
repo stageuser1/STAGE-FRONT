@@ -60,6 +60,7 @@ export function ListeningAudioPlayer({
     state,
     currentSec,
     durationSec: duration,
+    metadataLoaded,
     rate,
     toggle,
     seek,
@@ -85,9 +86,21 @@ export function ListeningAudioPlayer({
 
   const playing = state === "playing";
   const failed = state === "error";
-  // Markers are withheld until a real length is known; before that every
-  // position collapses to 0 and they would stack on the left edge.
-  const markers = duration > 0 ? anchorPositions(anchors, duration) : [];
+  /**
+   * Markers are withheld until the file itself reports a length.
+   *
+   * `duration` carries the declared `durationSec` until metadata lands, so
+   * `duration > 0` alone is true from the very first render and would place
+   * every marker against a length the audio may not have — a marker for Q7
+   * landing 40 seconds off the answer it is supposed to point at. `duration` is
+   * only ever written from the element once `metadataLoaded` is true, so gating
+   * on the flag is what makes these fractions the file's and not the fixture's.
+   *
+   * The clock below is deliberately not gated: printing the declared total
+   * before load is a reasonable placeholder, whereas *positioning* against it
+   * is not.
+   */
+  const markers = metadataLoaded ? anchorPositions(anchors, duration) : [];
 
   return (
     <div className="rounded-stage-lg border border-stage-border bg-stage-bg p-4">

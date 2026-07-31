@@ -51,6 +51,19 @@ export interface ListeningAudio {
   currentSec: number;
   /** Metadata length once loaded, the declared fallback before that. */
   durationSec: number;
+  /**
+   * Whether `durationSec` above is the file's own length rather than the
+   * declared fallback.
+   *
+   * The two are not interchangeable and the distinction is not cosmetic. A
+   * fallback is fine to *print* — a clock showing the set's declared length
+   * before the file loads is honest enough — but it must not be used to *place*
+   * anything, because the declared value and the real file routinely disagree
+   * and a marker positioned against the wrong one points at the wrong moment in
+   * the audio. Callers that measure against the bar must gate on this; callers
+   * that only display may ignore it.
+   */
+  metadataLoaded: boolean;
   rate: PlaybackRate;
   play: () => void;
   pause: () => void;
@@ -69,6 +82,7 @@ export function useListeningAudio({
   const [state, setState] = useState<ListeningAudioState>("idle");
   const [currentSec, setCurrentSec] = useState(0);
   const [duration, setDuration] = useState(durationSec);
+  const [metadataLoaded, setMetadataLoaded] = useState(false);
   const [rate, setRateState] = useState<PlaybackRate>(DEFAULT_PLAYBACK_RATE);
 
   /**
@@ -92,15 +106,30 @@ export function useListeningAudio({
     setState("idle");
     setCurrentSec(0);
     setDuration(fallbackDurationRef.current);
+    // Back to the fallback means back to un-loaded. These two must move
+    // together — a `true` flag next to a declared duration is exactly the state
+    // that would place markers against the wrong length.
+    setMetadataLoaded(false);
   }, [src]);
 
   useEffect(() => {
     const el = audioRef.current;
     if (!el) return;
 
+    /**
+     * The only writer of a real duration, and therefore the only place the
+     * loaded flag may be raised — the two always move together.
+     *
+     * Bound to `loadedmetadata` and also called once synchronously below. The
+     * synchronous call is what covers a file the browser already had cached:
+     * `loadedmetadata` fired before this effect could subscribe and will not
+     * fire again, so gating solely on the event would leave the flag false
+     * forever and the markers permanently hidden.
+     */
     const readDuration = () => {
       if (Number.isFinite(el.duration) && el.duration > 0) {
         setDuration(el.duration);
+        setMetadataLoaded(true);
       }
     };
     const handleTimeUpdate = () => {
@@ -184,6 +213,7 @@ export function useListeningAudio({
     state,
     currentSec,
     durationSec: duration,
+    metadataLoaded,
     rate,
     play,
     pause,
