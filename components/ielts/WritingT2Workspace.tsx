@@ -37,7 +37,7 @@ const PRIMARY_MD =
 const EYEBROW =
   "text-stage-2xs font-semibold uppercase tracking-stage-eyebrow text-stage-fg-subtle";
 
-type SaveState = "idle" | "saving" | "saved";
+type SaveState = "idle" | "saving" | "saved" | "failed";
 
 /**
  * Task 2 writing screen (writing-spec §三), on one bank question.
@@ -72,6 +72,7 @@ export function WritingT2Workspace({
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const [attempt, setAttempt] = useState<WritingT2Attempt | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [submitFailed, setSubmitFailed] = useState(false);
   // localStorage is unreadable until after mount. Until it has been read the
   // editor is read-only, so a keystroke can never be overwritten by the load.
   const [ready, setReady] = useState(false);
@@ -107,16 +108,23 @@ export function WritingT2Workspace({
     let ticks = 0;
     const timer = setInterval(() => {
       ticks += 1;
-      setElapsed((current) => {
-        const next = current + 1;
-        latest.current.elapsed = next;
-        // Only once there is a draft to attach it to. Opening a question and
-        // typing nothing must not leave storage behind.
-        if (ticks % ELAPSED_PERSIST_EVERY === 0 && latest.current.hasDraft) {
-          saveWritingT2Draft(questionId, latest.current.text, next);
-        }
-        return next;
-      });
+      // Driven from the ref rather than from inside a `setElapsed` updater: the
+      // periodic write now reports success, and setting state from within
+      // another state updater is not somewhere a side effect may live.
+      const next = latest.current.elapsed + 1;
+      latest.current.elapsed = next;
+      setElapsed(next);
+
+      // Only once there is a draft to attach it to. Opening a question and
+      // typing nothing must not leave storage behind.
+      if (ticks % ELAPSED_PERSIST_EVERY === 0 && latest.current.hasDraft) {
+        const stored = saveWritingT2Draft(
+          questionId,
+          latest.current.text,
+          next,
+        );
+        setSaveState(stored ? "saved" : "failed");
+      }
     }, 1000);
     return () => clearInterval(timer);
   }, [ready, submitted, questionId]);
@@ -137,9 +145,15 @@ export function WritingT2Workspace({
       const write = () => {
         pending.current = null;
         flush.current = null;
-        saveWritingT2Draft(questionId, next, latest.current.elapsed);
-        latest.current.hasDraft = true;
-        setSaveState("saved");
+        const stored = saveWritingT2Draft(
+          questionId,
+          next,
+          latest.current.elapsed,
+        );
+        // `hasDraft` tracks storage, not intent: a refused write left nothing
+        // behind, so the periodic elapsed save must not start writing either.
+        if (stored) latest.current.hasDraft = true;
+        setSaveState(stored ? "saved" : "failed");
       };
       flush.current = write;
       pending.current = setTimeout(write, AUTOSAVE_DELAY_MS);
@@ -148,29 +162,41 @@ export function WritingT2Workspace({
   );
 
   function onSubmit() {
-    // Write any pending keystrokes first: the guard below reads the live text,
-    // and a debounce must never be the reason a draft counts as empty.
+    // Perform the pending write rather than cancelling it. If the record write
+    // then fails, the last keystrokes are already in the draft — cancelling
+    // would have left them nowhere at all.
     if (pending.current) {
       clearTimeout(pending.current);
       pending.current = null;
     }
+    const flushPending = flush.current;
     flush.current = null;
+    flushPending?.();
 
-    const record = submitWritingT2Attempt(questionId, text, elapsed);
-    if (!record) return;
-    setAttempt(record);
+    const result = submitWritingT2Attempt(questionId, text, elapsed);
+    if (!result.ok) {
+      // `empty` is already prevented by the button, so anything reaching here is
+      // storage refusing the record. The draft is untouched and the editor stays
+      // open; saying nothing would let the learner leave believing it was filed.
+      setSubmitFailed(result.reason === "storage");
+      return;
+    }
+
+    setSubmitFailed(false);
+    setAttempt(result.attempt);
     setSubmitted(true);
     setSaveState("idle");
     latest.current.hasDraft = false;
   }
 
   function onRestart() {
-    restartWritingT2Attempt(questionId);
-    latest.current = { text: "", elapsed: 0, hasDraft: true };
+    const stored = restartWritingT2Attempt(questionId);
+    latest.current = { text: "", elapsed: 0, hasDraft: stored };
     setText("");
     setElapsed(0);
-    setSaveState("saved");
+    setSaveState(stored ? "saved" : "failed");
     setSubmitted(false);
+    setSubmitFailed(false);
   }
 
   const words = countWords(text);
@@ -258,6 +284,18 @@ export function WritingT2Workspace({
         </section>
       </div>
 
+      {submitFailed ? (
+        <p
+          role="alert"
+          className="flex items-start gap-2 rounded-stage-md border border-stage-warning-soft bg-stage-warning-soft px-[18px] py-3 text-stage-xs leading-[1.7] text-stage-warning"
+        >
+          <span aria-hidden className="grid flex-none pt-0.5">
+            <Icon name="alert" size={14} strokeWidth={2.5} />
+          </span>
+          本次提交没能存进浏览器，可能是存储空间已满。你的答案仍在编辑区，请先复制备份，再重试提交。
+        </p>
+      ) : null}
+
       <div className="flex flex-wrap items-center gap-3 rounded-stage-lg border border-stage-border bg-stage-bg px-[18px] py-3">
         <TaskSwitch words={words} />
         <span className="ml-auto">
@@ -321,6 +359,24 @@ function Clock({ seconds }: { seconds: number }) {
  */
 function SaveIndicator({ state }: { state: SaveState }) {
   if (state === "idle") return null;
+
+  if (state === "failed") {
+    // The existing warning treatment (amber), never red: §五.6 keeps the alarm
+    // colour off this screen, and this is a storage problem rather than
+    // anything about the learner's writing. `assertive`, because it contradicts
+    // what the line said a moment ago and must not wait for a pause.
+    return (
+      <span
+        aria-live="assertive"
+        className="ml-auto inline-flex items-center gap-1.5 text-stage-xs text-stage-warning"
+      >
+        <span aria-hidden className="grid flex-none">
+          <Icon name="alert" size={12} strokeWidth={2.5} />
+        </span>
+        保存失败 · 继续输入会重试
+      </span>
+    );
+  }
 
   return (
     <span

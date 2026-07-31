@@ -123,22 +123,33 @@ function readKey(key: string): unknown {
   }
 }
 
-function writeKey(key: string, value: unknown): void {
-  if (!isBrowser()) return;
+/**
+ * Write, reporting whether the value actually reached storage.
+ *
+ * The boolean is the whole point: a quota refusal used to be swallowed here, so
+ * the caller could not tell a saved draft from a lost one and the UI said
+ * 草稿已自动保存 over an empty store. Every write path returns this up to the
+ * component, which may only claim a save it was told happened.
+ */
+function writeKey(key: string, value: unknown): boolean {
+  if (!isBrowser()) return false;
   try {
     window.localStorage.setItem(key, JSON.stringify(value));
+    return true;
   } catch {
-    // Quota refusal: the in-memory draft the caller holds still renders, and the
-    // next keystroke tries again.
+    // Quota refusal or a blocked store. The in-memory draft the caller holds
+    // still renders, and the next debounced save tries again.
+    return false;
   }
 }
 
-function removeKey(key: string): void {
-  if (!isBrowser()) return;
+function removeKey(key: string): boolean {
+  if (!isBrowser()) return false;
   try {
     window.localStorage.removeItem(key);
+    return true;
   } catch {
-    /* nothing to do */
+    return false;
   }
 }
 
@@ -173,20 +184,29 @@ export function loadWritingT2Draft(questionId: string): WritingT2Draft | null {
     return null;
   }
 
-  return {
+  const draft: WritingT2Draft = {
     schemaVersion: SCHEMA_VERSION,
     questionId,
     text: row.text,
     elapsedSeconds: asSeconds(row.elapsedSeconds),
     updatedAt: known ? (stored as string) : new Date().toISOString(),
   };
+
+  // The repair is written back, not just returned. A restamp that lived only in
+  // memory would be redone on every load, so the draft would never age at all:
+  // each visit would reset its unknown age to "now". Persisting it starts the
+  // 180-day clock from the first read that could not tell how old it was.
+  if (!known) writeKey(DRAFT_PREFIX + questionId, draft);
+
+  return draft;
 }
 
+/** Returns whether the draft reached storage. */
 export function saveWritingT2Draft(
   questionId: string,
   text: string,
   elapsedSeconds: number,
-): WritingT2Draft {
+): boolean {
   const draft: WritingT2Draft = {
     schemaVersion: SCHEMA_VERSION,
     questionId,
@@ -194,12 +214,11 @@ export function saveWritingT2Draft(
     elapsedSeconds: asSeconds(elapsedSeconds),
     updatedAt: new Date().toISOString(),
   };
-  writeKey(DRAFT_PREFIX + questionId, draft);
-  return draft;
+  return writeKey(DRAFT_PREFIX + questionId, draft);
 }
 
-export function clearWritingT2Draft(questionId: string): void {
-  removeKey(DRAFT_PREFIX + questionId);
+export function clearWritingT2Draft(questionId: string): boolean {
+  return removeKey(DRAFT_PREFIX + questionId);
 }
 
 export function loadWritingT2Attempt(questionId: string): WritingT2Attempt | null {
@@ -224,20 +243,38 @@ export function loadWritingT2Attempt(questionId: string): WritingT2Attempt | nul
 }
 
 /**
+ * Why a submission did not happen.
+ *
+ * `empty` is the guard refusing a blank essay; `storage` is the browser refusing
+ * the write. The caller must tell these apart, because only one of them means
+ * the learner's text is at risk.
+ */
+export type WritingT2SubmitFailure = "empty" | "storage";
+
+export type WritingT2SubmitResult =
+  | { ok: true; attempt: WritingT2Attempt }
+  | { ok: false; reason: WritingT2SubmitFailure };
+
+/**
  * Record a submission and close the attempt.
  *
- * Returns `null` on empty text without writing anything — the empty-submit guard
- * lives here as well as on the button, because a disabled button is a UI state
- * and this is the rule. Nothing is scored, graded or sent anywhere; the record
- * is what was written, how long it took, and when.
+ * Refuses empty text without writing anything — the empty-submit guard lives
+ * here as well as on the button, because a disabled button is a UI state and
+ * this is the rule. Nothing is scored, graded or sent anywhere; the record is
+ * what was written, how long it took, and when.
+ *
+ * The draft is cleared **only** once the record write is confirmed. If storage
+ * refuses the record, the draft is left exactly where it was: clearing it first
+ * and discovering the failure afterwards would destroy the essay it was meant
+ * to replace.
  */
 export function submitWritingT2Attempt(
   questionId: string,
   text: string,
   elapsedSeconds: number,
-): WritingT2Attempt | null {
+): WritingT2SubmitResult {
   const wordCount = countWords(text);
-  if (wordCount === 0) return null;
+  if (wordCount === 0) return { ok: false, reason: "empty" };
 
   const attempt: WritingT2Attempt = {
     schemaVersion: SCHEMA_VERSION,
@@ -247,19 +284,22 @@ export function submitWritingT2Attempt(
     elapsedSeconds: asSeconds(elapsedSeconds),
     submittedAt: new Date().toISOString(),
   };
-  writeKey(ATTEMPT_PREFIX + questionId, attempt);
-  // Only after the record is safely written: a cleared draft with no record
-  // would lose the essay outright.
+
+  if (!writeKey(ATTEMPT_PREFIX + questionId, attempt)) {
+    return { ok: false, reason: "storage" };
+  }
+
   clearWritingT2Draft(questionId);
-  return attempt;
+  return { ok: true, attempt };
 }
 
 /**
  * Reopen a submitted question for another go.
  *
  * Writes an empty draft, which is what puts the screen back into the editor. The
- * previous record stays until a new submission replaces it.
+ * previous record stays until a new submission replaces it. Returns whether that
+ * draft reached storage.
  */
-export function restartWritingT2Attempt(questionId: string): WritingT2Draft {
+export function restartWritingT2Attempt(questionId: string): boolean {
   return saveWritingT2Draft(questionId, "", 0);
 }
