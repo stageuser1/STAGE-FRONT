@@ -14,7 +14,8 @@
     "test:validator": "python -m unittest tests.test_validator -v",
     "test:importer": "node --test tests/import_package.test.mjs tests/import_v4_package.test.mjs",
     "test:lib": "node --test --experimental-strip-types tests/ielts_*.test.mjs tests/fit_*.test.mjs tests/profile_*.test.mjs tests/search_*.test.mjs tests/dashboard_*.test.mjs",
-    "test": "npm run test:validator && npm run test:importer && npm run test:lib",
+    "test:dom": "vitest run",
+    "test": "npm run test:validator && npm run test:importer && npm run test:lib && npm run test:dom",
     "smoke": "node scripts/smoke.mjs",
     "guard": "node scripts/guard.mjs"
   },
@@ -29,13 +30,17 @@
     "recharts": "^3.10.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.10.10",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "autoprefixer": "^10.4.20",
+    "jsdom": "^30.0.1",
     "postcss": "^8.5.18",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.10"
   },
   "overrides": {
     "postcss": "^8.5.18",
