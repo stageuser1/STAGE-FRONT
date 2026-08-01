@@ -1,0 +1,516 @@
+{
+  "id": "p2-101-saving-energy",
+  "title": "Saving Energy",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-9d994c8c4966",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 461.065,
+    "checksum": "sha256:119d4a1281c1ded6ad6e8ebefa37471e897e4fe486ff5564ad101803d60961e5"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–16",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "What was Jill surprised to find?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Some work to reduce the water usage to her house could be done soon."
+            },
+            {
+              "id": "B",
+              "text": "The house was poorly insulated."
+            },
+            {
+              "id": "C",
+              "text": "She could get financial help."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "What does Jill say every family can do straight away?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Use energy-saving bulbs."
+            },
+            {
+              "id": "B",
+              "text": "Turn down the thermostat."
+            },
+            {
+              "id": "C",
+              "text": "Turn off their appliances completely."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "13",
+          "text": "What pleased Jill about the energy provider?",
+          "options": [
+            {
+              "id": "A",
+              "text": "reduction in price for prompt payment"
+            },
+            {
+              "id": "B",
+              "text": "allowing customers to pay online"
+            },
+            {
+              "id": "C",
+              "text": "having a reduction in price of the energy-saving sources"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "What difficulty does Jill have with the energy meters?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are difficult to access."
+            },
+            {
+              "id": "B",
+              "text": "The figures are hard to read accurately."
+            },
+            {
+              "id": "C",
+              "text": "She can’t tell whether they’re for electricity or for gas."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "What kind of energy-saving method is Jill going to take next?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Use an energy-saving boiler."
+            },
+            {
+              "id": "B",
+              "text": "Have the walls checked for their insulation level."
+            },
+            {
+              "id": "C",
+              "text": "Install double-glazed windows."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "16",
+          "text": "Why is Jill doubtful about renewable energy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She thinks it’s unsuitable for her house."
+            },
+            {
+              "id": "B",
+              "text": "She doesn’t understand the technical details."
+            },
+            {
+              "id": "C",
+              "text": "She believes it’s too expensive."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "17-18",
+      "title": "Questions 17-18",
+      "instruction": "Choose TWO letters, A-E.",
+      "questionText": "Which TWO water-saving tips does Jill recommend?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "use more showers than baths"
+        },
+        {
+          "id": "B",
+          "text": "keep the washing machine full before using it"
+        },
+        {
+          "id": "C",
+          "text": "boil only as much water as you need"
+        },
+        {
+          "id": "D",
+          "text": "turn off the taps while you are brushing your teeth"
+        },
+        {
+          "id": "E",
+          "text": "repair leaking taps"
+        }
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "Which TWO water-saving tips does Jill recommend?",
+          "answer": "C"
+        },
+        {
+          "id": "18",
+          "text": "Which TWO water-saving tips does Jill recommend?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "19-20",
+      "title": "Questions 19-20",
+      "instruction": "Choose TWO letters, A-E.",
+      "questionText": "Which TWO topics do people most frequently ask about?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "the ideal temperature setting on the thermostat"
+        },
+        {
+          "id": "B",
+          "text": "whether to leave the light on or not"
+        },
+        {
+          "id": "C",
+          "text": "whether to use a computer or laptop to watch movies"
+        },
+        {
+          "id": "D",
+          "text": "how to work out the operating cost of appliances"
+        },
+        {
+          "id": "E",
+          "text": "whether solar panels only work on sunny days"
+        }
+      ],
+      "questions": [
+        {
+          "id": "19",
+          "text": "Which TWO topics do people most frequently ask about?",
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "Which TWO topics do people most frequently ask about?",
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "C",
+        "13": "B",
+        "14": "B",
+        "15": "C",
+        "16": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "17_18": [
+          "C",
+          "E"
+        ],
+        "19_20": [
+          "A",
+          "C"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "17": "C",
+        "18": "E",
+        "19": "A",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2000,
+      "text": "Section 2"
+    },
+    {
+      "startMs": 2000,
+      "endMs": 9000,
+      "text": "You will hear a radio program giving some advice about saving energy."
+    },
+    {
+      "startMs": 9000,
+      "endMs": 15000,
+      "text": "First, you'll have some time to look at questions 11 to 16."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 52000,
+      "text": "Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 52000,
+      "endMs": 61000,
+      "text": "Hello ladies and gentlemen and thanks for tuning in to Action Radio where we discuss current affairs and global issues."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 72000,
+      "text": "My name is Jill and today I'll be discussing the very relevant issue of the importance of saving water and how you can do this at home."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 78000,
+      "text": "The most common type of wasted energy in the domestic environment is heat."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 86000,
+      "text": "However since the walls of my home are very well insulated I am lucky to have no issue with this."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 93000,
+      "text": "I've discovered however that I waste a lot of water as a result of my lifestyle."
+    },
+    {
+      "startMs": 93000,
+      "endMs": 107000,
+      "text": "I've researched ways to minimize my water usage online and have been pleasantly surprised to find that there are specialists in the area who can make some changes to my home immediately."
+    },
+    {
+      "startMs": 107000,
+      "endMs": 115000,
+      "text": "The only downside is that the works are quite expensive and there are no means of getting financial assistance."
+    },
+    {
+      "startMs": 115000,
+      "endMs": 126000,
+      "text": "Now if any of you listeners are interested in reducing your energy usage here are a couple of easy and positive changes you can make immediately."
+    },
+    {
+      "startMs": 126000,
+      "endMs": 134000,
+      "text": "A lot of the magazines will recommend that you change your bulbs for those with energy saving capabilities."
+    },
+    {
+      "startMs": 134000,
+      "endMs": 144000,
+      "text": "However I have found that these make little difference to your electricity bills and they also severely reduce the light levels in your home."
+    },
+    {
+      "startMs": 144000,
+      "endMs": 153000,
+      "text": "Instead simply switch off all plug sockets and appliances to make an immediate saving on your electricity consumption."
+    },
+    {
+      "startMs": 153000,
+      "endMs": 160000,
+      "text": "If this doesn't make enough of a saving for you you could later try turning down the thermostat as well."
+    },
+    {
+      "startMs": 160000,
+      "endMs": 173000,
+      "text": "Despite the discount that my energy provider gave me for prompt payment my monthly bills were very expensive for the amount of energy that I was using so I decided to change providers."
+    },
+    {
+      "startMs": 173000,
+      "endMs": 180000,
+      "text": "Not only did I make a huge monthly saving but the company also offered me other perks."
+    },
+    {
+      "startMs": 180000,
+      "endMs": 191000,
+      "text": "I am now able to pay my monthly bills online for example which I am thrilled about because it means that I no longer have to drive to the bank."
+    },
+    {
+      "startMs": 191000,
+      "endMs": 200000,
+      "text": "Once I have been a customer with them for a year they will also offer a deduction for all of the energy saving appliances I use."
+    },
+    {
+      "startMs": 201000,
+      "endMs": 210000,
+      "text": "Now many of you will have an electricity meter at home so I am sure you will all understand the issues associated with them."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 218000,
+      "text": "They occupy a lot of space in your home and can be unsightly if you are unable to tuck them away in a cupboard."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 231000,
+      "text": "Mine is quite large as it measures both my gas and electricity but I was luckily able to hide it in the coat cupboard where I can keep it hidden but also access it easily."
+    },
+    {
+      "startMs": 231000,
+      "endMs": 241000,
+      "text": "Having said that whenever I have to take a meter reading I have to use a torch because the screen is too dark to read the numbers correctly."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 252000,
+      "text": "I have recently had an extension built on my house to make room for a new bathroom complete with the low energy boiler so I can take long showers guilt free."
+    },
+    {
+      "startMs": 252000,
+      "endMs": 263000,
+      "text": "The walls are nice and thick and well insulated but unfortunately the window is a little drafty so I am going to have to invest in upgrading it."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 275000,
+      "text": "Speaking of renewable energy I initially considered installing solar panels on the roof instead of using a low energy boiler which was the less expensive option."
+    },
+    {
+      "startMs": 275000,
+      "endMs": 284000,
+      "text": "In the end I decided that the panels would look too ugly on my house despite that they were technically easy to operate."
+    },
+    {
+      "startMs": 294000,
+      "endMs": 302000,
+      "text": "Before you hear the rest of the talk you have some time to look at questions 17 to 20."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 325000,
+      "text": "Now listen and answer questions 17 to 20."
+    },
+    {
+      "startMs": 326000,
+      "endMs": 338000,
+      "text": "Now if you are a fan of taking long showers like I am then switching from bath to showers will not help to reduce your water usage."
+    },
+    {
+      "startMs": 338000,
+      "endMs": 343000,
+      "text": "Instead here are some small but effective changes you can make."
+    },
+    {
+      "startMs": 343000,
+      "endMs": 356000,
+      "text": "When making a cup of tea for example measure out the amount of water that you need before boiling it and when brushing your teeth use a cup of water instead of a running tap."
+    },
+    {
+      "startMs": 356000,
+      "endMs": 366000,
+      "text": "I tried filling up my washing machine before switching it on but I found that the clothes were not thoroughly cleaned so I would not recommend this."
+    },
+    {
+      "startMs": 366000,
+      "endMs": 376000,
+      "text": "If your tap drips when it is turned off then you should call a plumber to fix it as this can result in a lot of water being wasted."
+    },
+    {
+      "startMs": 376000,
+      "endMs": 383000,
+      "text": "Before finishing today's show I would like to address two questions that we often get asked by listeners."
+    },
+    {
+      "startMs": 383000,
+      "endMs": 393000,
+      "text": "We had some great feedback about our answer to last week's question on how to calculate the price involved in powering domestic appliances."
+    },
+    {
+      "startMs": 393000,
+      "endMs": 396000,
+      "text": "So let's see how we do this week."
+    },
+    {
+      "startMs": 396000,
+      "endMs": 404000,
+      "text": "One of our most commonly asked questions this week was which device is the lowest energy option for watching films."
+    },
+    {
+      "startMs": 404000,
+      "endMs": 410000,
+      "text": "The simplest answer is that the smaller the screen the lower the energy used."
+    },
+    {
+      "startMs": 410000,
+      "endMs": 420000,
+      "text": "One of our listeners wrote in with a question that made me chuckle and the answer is yes solar panels only work when the sun is out."
+    },
+    {
+      "startMs": 420000,
+      "endMs": 429000,
+      "text": "Now on a more serious note a number of you wanted to know what the most efficient temperature is to set the thermostat to."
+    },
+    {
+      "startMs": 429000,
+      "endMs": 435000,
+      "text": "The answer is that the closer you set it to room temperature the lower the energy used."
+    },
+    {
+      "startMs": 435000,
+      "endMs": 446000,
+      "text": "Before I say goodbye until next week I'll leave you with one last tip. Turn off the lights when you leave the room."
+    },
+    {
+      "startMs": 446000,
+      "endMs": 454000,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 45,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

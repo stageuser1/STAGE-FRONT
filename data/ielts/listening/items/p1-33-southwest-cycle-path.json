@@ -1,0 +1,490 @@
+{
+  "id": "p1-33-southwest-cycle-path",
+  "title": "Southwest Cycle Path",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-3a192f0119e0",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 247.602,
+    "checksum": "sha256:e835285d258a173058423ea416dc0370aa4b5cf5e7bda606fbb3c916decb4a5f"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Southwest Cycle Path General information The cycle path is also used for walking. It is 50 kilometers in length. Information is available on 1. __________.org.uk Users can find information about the distance, preparations and a 2. __________ Groups with a minimum of 5 people can be accompanied by a 3. __________ The Valley Trail has three spots for 4. __________ Cycle fast Bike hire costs £9 for a period of 5. __________ Hiring a 6. __________ costs £4. Booking is recommended during the 7. __________ season Phone number 8. __________ Other suggestions Find out about the 9. __________ before they set off Car park is available behind the 10. __________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Information is available on 1. __________.org.uk",
+          "answer": "Greenride"
+        },
+        {
+          "id": "2",
+          "text": "Users can find information about the distance, preparations and a 2. __________",
+          "answer": "Map/Good Map"
+        },
+        {
+          "id": "3",
+          "text": "Groups with a minimum of 5 people can be accompanied by a 3. __________",
+          "answer": "Guide"
+        },
+        {
+          "id": "4",
+          "text": "The Valley Trail has three spots for 4. __________",
+          "answer": "Bird-watching/Birdwatching"
+        },
+        {
+          "id": "5",
+          "text": "Bike hire costs £9 for a period of 5. __________",
+          "answer": "5 hours/five hours"
+        },
+        {
+          "id": "6",
+          "text": "Hiring a 6. __________ costs £4.",
+          "answer": "child seat"
+        },
+        {
+          "id": "7",
+          "text": "Booking is recommended during the 7. __________ season",
+          "answer": "holiday"
+        },
+        {
+          "id": "8",
+          "text": "Phone number 8. __________",
+          "answer": "01743228906"
+        },
+        {
+          "id": "9",
+          "text": "Find out about the 9. __________ before they set off",
+          "answer": "Weather conditions"
+        },
+        {
+          "id": "10",
+          "text": "Car park is available behind the 10. __________",
+          "answer": "Post office"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Southwest Cycle Path",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "General information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The cycle path is also used for walking.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It is 50 kilometers in length.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Information is available on 1. __________.org.uk",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Users can find information about the distance, preparations and a 2. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Groups with a minimum of 5 people can be accompanied by a 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The Valley Trail has three spots for 4. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Cycle fast",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Bike hire costs £9 for a period of 5. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Hiring a 6. __________ costs £4.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Booking is recommended during the 7. __________ season",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Phone number 8. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Other suggestions",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Find out about the 9. __________ before they set off",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Car park is available behind the 10. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Greenride",
+        "2": "Map/Good Map",
+        "3": "Guide",
+        "4": "Bird-watching/Birdwatching",
+        "5": "5 hours/five hours",
+        "6": "child seat",
+        "7": "holiday",
+        "8": "01743228906",
+        "9": "Weather conditions",
+        "10": "Post office"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10880,
+      "text": "Visitor: Hi, I'm really interested in exploring the famous Southwest Cycle Path."
+    },
+    {
+      "startMs": 10880,
+      "endMs": 12400,
+      "text": "Any suggestions?"
+    },
+    {
+      "startMs": 12400,
+      "endMs": 13920,
+      "text": "Staff: Definitely."
+    },
+    {
+      "startMs": 13920,
+      "endMs": 20040,
+      "text": "The Southwest Cycle Path is not just for cycling, it can also be used for walking."
+    },
+    {
+      "startMs": 20040,
+      "endMs": 24280,
+      "text": "It's a scenic route that spans 50 kilometres."
+    },
+    {
+      "startMs": 24280,
+      "endMs": 26200,
+      "text": "Visitor: That sounds amazing."
+    },
+    {
+      "startMs": 26200,
+      "endMs": 29880,
+      "text": "Is there any information available to help me plan my trip?"
+    },
+    {
+      "startMs": 29880,
+      "endMs": 32280,
+      "text": "Staff: Absolutely."
+    },
+    {
+      "startMs": 32280,
+      "endMs": 38280,
+      "text": "I recommend checking out the website greenride.org.uk."
+    },
+    {
+      "startMs": 38280,
+      "endMs": 45560,
+      "text": "As its name suggests, it's dedicated to promoting riding a bike as a green mode of transport."
+    },
+    {
+      "startMs": 45560,
+      "endMs": 47840,
+      "text": "Visitor: What information does it offer?"
+    },
+    {
+      "startMs": 47840,
+      "endMs": 52720,
+      "text": "Staff: They provide detailed information about the path, including the distance, preparations"
+    },
+    {
+      "startMs": 52800,
+      "endMs": 57920,
+      "text": "you can make, and most importantly, a good map to help you navigate."
+    },
+    {
+      "startMs": 57920,
+      "endMs": 63880,
+      "text": "It's a great resource to ensure you don't miss any major attractions or get lost."
+    },
+    {
+      "startMs": 63880,
+      "endMs": 64880,
+      "text": "Visitor: That's great."
+    },
+    {
+      "startMs": 64880,
+      "endMs": 68280,
+      "text": "Do they offer guided tours for group travel?"
+    },
+    {
+      "startMs": 68280,
+      "endMs": 70760,
+      "text": "Some of my friends want to join me as well."
+    },
+    {
+      "startMs": 70760,
+      "endMs": 76200,
+      "text": "Staff: Yes, if you prefer travelling in groups, they provide a guide for each group consisting"
+    },
+    {
+      "startMs": 76200,
+      "endMs": 79040,
+      "text": "of five to fifteen people."
+    },
+    {
+      "startMs": 79040,
+      "endMs": 83120,
+      "text": "This ensures a personalised experience for everyone."
+    },
+    {
+      "startMs": 83120,
+      "endMs": 87120,
+      "text": "Visitor: Wow, that sounds like a fun way to explore."
+    },
+    {
+      "startMs": 87120,
+      "endMs": 91200,
+      "text": "Are there any specific routes that are popular among cyclists?"
+    },
+    {
+      "startMs": 91200,
+      "endMs": 92880,
+      "text": "Staff: Definitely."
+    },
+    {
+      "startMs": 92880,
+      "endMs": 96240,
+      "text": "The Valley Trail is the most popular route."
+    },
+    {
+      "startMs": 96240,
+      "endMs": 103360,
+      "text": "It not only offers stunning scenic views, but also has three huts for birdwatching enthusiasts."
+    },
+    {
+      "startMs": 103360,
+      "endMs": 108800,
+      "text": "Just remember, while you can take photos, we don't recommend feeding wildlife."
+    },
+    {
+      "startMs": 108800,
+      "endMs": 110160,
+      "text": "Visitor: It's fantastic."
+    },
+    {
+      "startMs": 110160,
+      "endMs": 111880,
+      "text": "Do I need to bring my own bike?"
+    },
+    {
+      "startMs": 111880,
+      "endMs": 113560,
+      "text": "Or can I rent one?"
+    },
+    {
+      "startMs": 113560,
+      "endMs": 116440,
+      "text": "Staff: You can rent a bike from Cycle Fast."
+    },
+    {
+      "startMs": 116440,
+      "endMs": 122520,
+      "text": "They have rental options starting from £9 for a minimum of five hours."
+    },
+    {
+      "startMs": 122520,
+      "endMs": 127960,
+      "text": "Even if you finish the whole trip within four hours, you still need to pay this amount."
+    },
+    {
+      "startMs": 127960,
+      "endMs": 129040,
+      "text": "Visitor: That's reasonable."
+    },
+    {
+      "startMs": 129040,
+      "endMs": 131960,
+      "text": "It's a long and demanding trip after all."
+    },
+    {
+      "startMs": 131960,
+      "endMs": 136840,
+      "text": "Staff: They also offer other cycling equipment like helmets which are provided for free."
+    },
+    {
+      "startMs": 136880,
+      "endMs": 142480,
+      "text": "Plus, those travelling with children can also rent a child seat at £4."
+    },
+    {
+      "startMs": 142480,
+      "endMs": 144040,
+      "text": "Visitor: That's convenient."
+    },
+    {
+      "startMs": 144040,
+      "endMs": 146600,
+      "text": "Should I make a booking in advance?"
+    },
+    {
+      "startMs": 146600,
+      "endMs": 152360,
+      "text": "Staff: Yes, it's advisable to make an early booking, especially during the holiday."
+    },
+    {
+      "startMs": 152360,
+      "endMs": 158000,
+      "text": "Cycle Fast might have limited availability if you wait until the last minute."
+    },
+    {
+      "startMs": 158000,
+      "endMs": 159000,
+      "text": "Visitor: Great."
+    },
+    {
+      "startMs": 159000,
+      "endMs": 162760,
+      "text": "How can I contact Cycle Fast to make bike reservations?"
+    },
+    {
+      "startMs": 162760,
+      "endMs": 169200,
+      "text": "Staff: You can reach out to Cycle Fast to make your booking and inquire about their services."
+    },
+    {
+      "startMs": 169200,
+      "endMs": 177720,
+      "text": "Their hotline is 01743228906."
+    },
+    {
+      "startMs": 177720,
+      "endMs": 179680,
+      "text": "Visitor: Thank you for information."
+    },
+    {
+      "startMs": 179680,
+      "endMs": 184400,
+      "text": "Is there anything else I should keep in mind before starting my cycling adventure?"
+    },
+    {
+      "startMs": 184400,
+      "endMs": 188960,
+      "text": "Staff: Yes, make sure to check the weather conditions before you begin."
+    },
+    {
+      "startMs": 189000,
+      "endMs": 197640,
+      "text": "Sometimes, thunderstorms, hurricanes or hail can lead to the temporary closure of the cycling path for safety reasons."
+    },
+    {
+      "startMs": 197640,
+      "endMs": 199440,
+      "text": "Visitor: That's a good reminder."
+    },
+    {
+      "startMs": 199440,
+      "endMs": 203680,
+      "text": "Lastly, what about parking options near the cycling path?"
+    },
+    {
+      "startMs": 203680,
+      "endMs": 212120,
+      "text": "Staff: When driving to the cycling path, you can find parking available behind the post office, which should be convenient for you."
+    },
+    {
+      "startMs": 212120,
+      "endMs": 215200,
+      "text": "Visitor: Thank you so much for all the information."
+    },
+    {
+      "startMs": 215200,
+      "endMs": 219000,
+      "text": "I can't wait to start cycling and explore the Southwest Cycle Path."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 53,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

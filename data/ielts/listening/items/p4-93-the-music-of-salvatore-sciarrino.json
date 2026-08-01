@@ -1,0 +1,532 @@
+{
+  "id": "p4-93-the-music-of-salvatore-sciarrino",
+  "title": "The Music of Salvatore Sciarrino",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-30309330aaf4",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 315.462,
+    "checksum": "sha256:d14a5537133c44b66066e64a7fccbfd684a682474650c1fbe511951f01a2223e"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. The Music of Salvatore Sciarrino Biographical details He was born in Palermo in 1947. He moved to Rome in 1969 and took a course in electronic music, which influenced his style as a composer. Work In the 1970s he composed a lot of music and taught until 1982. As well as music, he has written many 31. ___________. He has won many awards – including one in 2011 for 32. ___________ in music. Musical characteristics Surprisingly, his music often features 33. ___________ and very soft sounds. His music uses unusual instrument techniques, e.g. violins often produce sounds which resemble those found in 34. ___________. He is seen as a 35. ___________ of music. Sciarrino compares his music to a distant 36. ___________. Concert piece for piano, chorus and orchestra finished in 1979 and written in memory of a 37. ___________. very difficult to play starts with a noise that sounds like 38. ___________, produced by two people moving large pieces of 39. ___________ although the music is unusual, it has a traditional 40. ___________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "As well as music, he has written many 31. ___________.",
+          "answer": "Essays"
+        },
+        {
+          "id": "32",
+          "text": "He has won many awards – including one in 2011 for 32. ___________ in music.",
+          "answer": "Originality"
+        },
+        {
+          "id": "33",
+          "text": "Surprisingly, his music often features 33. ___________ and very soft sounds.",
+          "answer": "Silence"
+        },
+        {
+          "id": "34",
+          "text": "His music uses unusual instrument techniques, e.g. violins often produce sounds which resemble those found in 34. ___________.",
+          "answer": "Nature"
+        },
+        {
+          "id": "35",
+          "text": "He is seen as a 35. ___________ of music.",
+          "answer": "Pioneer"
+        },
+        {
+          "id": "36",
+          "text": "Sciarrino compares his music to a distant 36. ___________.",
+          "answer": "Volcano"
+        },
+        {
+          "id": "37",
+          "text": "finished in 1979 and written in memory of a 37. ___________.",
+          "answer": "Friend"
+        },
+        {
+          "id": "38",
+          "text": "starts with a noise that sounds like 38. ___________, produced by two people moving large pieces of 39. ___________",
+          "answer": "Thunder"
+        },
+        {
+          "id": "39",
+          "text": "starts with a noise that sounds like 38. ___________, produced by two people moving large pieces of 39. ___________",
+          "answer": "Metal"
+        },
+        {
+          "id": "40",
+          "text": "although the music is unusual, it has a traditional 40. ___________",
+          "answer": "Structure"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Music of Salvatore Sciarrino",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Biographical details",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "He was born in Palermo in 1947.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "He moved to Rome in 1969 and took a course in electronic music, which influenced his style as a composer.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Work",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In the 1970s he composed a lot of music and taught until 1982.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "As well as music, he has written many 31. ___________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "He has won many awards – including one in 2011 for 32. ___________ in music.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Musical characteristics",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Surprisingly, his music often features 33. ___________ and very soft sounds.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "His music uses unusual instrument techniques, e.g. violins often produce sounds which resemble those found in 34. ___________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "He is seen as a 35. ___________ of music.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Sciarrino compares his music to a distant 36. ___________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Concert piece",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "for piano, chorus and orchestra",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "finished in 1979 and written in memory of a 37. ___________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "very difficult to play",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "starts with a noise that sounds like 38. ___________, produced by two people moving large pieces of 39. ___________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "although the music is unusual, it has a traditional 40. ___________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Essays",
+        "32": "Originality",
+        "33": "Silence",
+        "34": "Nature",
+        "35": "Pioneer",
+        "36": "Volcano",
+        "37": "Friend",
+        "38": "Thunder",
+        "39": "Metal",
+        "40": "Structure"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8920,
+      "text": "Now, listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 8920,
+      "endMs": 9920,
+      "text": "Good morning."
+    },
+    {
+      "startMs": 9920,
+      "endMs": 15400,
+      "text": "We're really pleased that our university is going to hold a concert featuring the music"
+    },
+    {
+      "startMs": 15400,
+      "endMs": 20040,
+      "text": "of the Italian composer Salvatore Scherino."
+    },
+    {
+      "startMs": 20040,
+      "endMs": 25480,
+      "text": "He's considered one of the leading composers of modern classical music in Europe."
+    },
+    {
+      "startMs": 25480,
+      "endMs": 31280,
+      "text": "His music is highly unusual, so in order to prepare you for this concert, I'm going to"
+    },
+    {
+      "startMs": 31280,
+      "endMs": 34240,
+      "text": "talk about his life and music."
+    },
+    {
+      "startMs": 34240,
+      "endMs": 38120,
+      "text": "First, some biographical details."
+    },
+    {
+      "startMs": 38120,
+      "endMs": 44960,
+      "text": "Salvatore Scherino was born in the Italian city of Palermo in 1947."
+    },
+    {
+      "startMs": 44960,
+      "endMs": 51080,
+      "text": "Though he did receive some music lessons, he is mainly self-taught as a composer."
+    },
+    {
+      "startMs": 51080,
+      "endMs": 58160,
+      "text": "After a few years of university in his home city, he moved to Rome in 1969, where he studied"
+    },
+    {
+      "startMs": 58160,
+      "endMs": 60360,
+      "text": "electronic music."
+    },
+    {
+      "startMs": 60360,
+      "endMs": 67520,
+      "text": "This experience served as a turning point in the development of Scherino as a composer."
+    },
+    {
+      "startMs": 67520,
+      "endMs": 73640,
+      "text": "Turning to his work, he composed a great deal in the 1970s, and was a music teacher"
+    },
+    {
+      "startMs": 73640,
+      "endMs": 76760,
+      "text": "until 1982."
+    },
+    {
+      "startMs": 76760,
+      "endMs": 82680,
+      "text": "But from composing music and teaching, he has also produced a large number of essays on"
+    },
+    {
+      "startMs": 82680,
+      "endMs": 89720,
+      "text": "a range of topics such as the philosophy behind his work and musical form."
+    },
+    {
+      "startMs": 89720,
+      "endMs": 95880,
+      "text": "Throughout his career, he is one numerous prestigious awards, most notably a major prize"
+    },
+    {
+      "startMs": 95880,
+      "endMs": 100880,
+      "text": "in 2011, which recognized his musical originality."
+    },
+    {
+      "startMs": 100880,
+      "endMs": 107600,
+      "text": "So you could say that he is one of the most important composers of our times."
+    },
+    {
+      "startMs": 107600,
+      "endMs": 115240,
+      "text": "Now, I'll talk about the characteristics of his music, which some people are a bit"
+    },
+    {
+      "startMs": 115240,
+      "endMs": 117560,
+      "text": "surprised by."
+    },
+    {
+      "startMs": 117560,
+      "endMs": 122520,
+      "text": "The first thing that many listeners will notice about Scherino's music is the frequent"
+    },
+    {
+      "startMs": 122520,
+      "endMs": 125240,
+      "text": "use of silence."
+    },
+    {
+      "startMs": 125240,
+      "endMs": 131600,
+      "text": "What is also striking about his music is his preference for extremely soft sounds"
+    },
+    {
+      "startMs": 131600,
+      "endMs": 136840,
+      "text": "that are sometimes at such a low volume that they can hardly be heard."
+    },
+    {
+      "startMs": 136840,
+      "endMs": 142400,
+      "text": "The other unusual aspect of his music is that he frequently requires musicians to play their"
+    },
+    {
+      "startMs": 142400,
+      "endMs": 149880,
+      "text": "instruments in unconventional ways, so that, for example, a violin may end up sounding"
+    },
+    {
+      "startMs": 149880,
+      "endMs": 155640,
+      "text": "very strange, and creating sounds we generally associate with nature."
+    },
+    {
+      "startMs": 155640,
+      "endMs": 162440,
+      "text": "Actually, his novel instrumental techniques have often been imitated by other composers."
+    },
+    {
+      "startMs": 162440,
+      "endMs": 169680,
+      "text": "As a result, he's widely regarded as a pioneer in terms of creating new sounds."
+    },
+    {
+      "startMs": 169680,
+      "endMs": 176680,
+      "text": "It may sound strange, but Scherino himself has likened his music to a volcano viewed from"
+    },
+    {
+      "startMs": 176680,
+      "endMs": 178360,
+      "text": "a far."
+    },
+    {
+      "startMs": 178360,
+      "endMs": 184680,
+      "text": "As you'll see, it builds up slowly to an exciting climax."
+    },
+    {
+      "startMs": 184680,
+      "endMs": 189880,
+      "text": "Let's move on to talk about the particular piece that we'll hear at the concert."
+    },
+    {
+      "startMs": 189880,
+      "endMs": 194040,
+      "text": "Many people consider it to be his finest work to date."
+    },
+    {
+      "startMs": 194040,
+      "endMs": 203000,
+      "text": "It's an immense piece of music for piano, chorus, and orchestra that was completed in 1979."
+    },
+    {
+      "startMs": 203000,
+      "endMs": 208680,
+      "text": "The work is dedicated to a friend who died unexpectedly, so it was written as a kind"
+    },
+    {
+      "startMs": 208680,
+      "endMs": 210760,
+      "text": "of memorial."
+    },
+    {
+      "startMs": 210760,
+      "endMs": 215840,
+      "text": "In many ways, it is representative of his work as a whole in terms of the sound that"
+    },
+    {
+      "startMs": 215840,
+      "endMs": null,
+      "text": "it creates."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "It's technically formidable, and it's a very challenging piece for musicians to play."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "The piece opens with a low sound of great complexity that is similar to thunder."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "This low-pitched noise is sustained almost uninterrupted for 45 minutes, which may sound"
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "quite boring, but I found it to be very haunting and atmospheric."
+    },
+    {
+      "startMs": 243000,
+      "endMs": null,
+      "text": "The sound, by the way, is created by large vibrating sheets of metal, which are slowly manipulated"
+    },
+    {
+      "startMs": 250160,
+      "endMs": null,
+      "text": "by two percussionists."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "There are very quiet and strange chords produced by string instruments and very complex piano"
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "melodies that quietly appear and then disappear."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "Even though the piece will be for many people very unusual in terms of the sounds it creates,"
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "it actually has a very conventional structure, which is just another surprising aspect of"
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "Skierino's work."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "Now let's move on to another work."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "That is the end of part four."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "You now have one minute to check your answers to part four."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 55,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": [
+      "One or more transcript cues have unparsed timestamps"
+    ]
+  }
+}

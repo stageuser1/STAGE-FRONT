@@ -1,0 +1,505 @@
+{
+  "id": "p4-56-boar-and-red-deer",
+  "title": "Boar and Red Deer",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-114910c40814",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 531.072,
+    "checksum": "sha256:32b753e8199ca37736cfb5368c10a1db2772107ad19a889e06a4a87b8761486f"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Boar and Red Deer Boar Boar is not a 31. __________ species. Their number should be controlled as a result of their damage to the 32. __________. They also spread 33. __________. Law was passed regarding banning use of 34. __________ in killing boars. Measures should be taken to keep the boars in the 35. __________ away from people in urban areas. The early 1990s witnessed a significant population rise of boars due to their escape from 36. __________. Red Deer Red deer can also damage agricultural produce, such as grain and 37. __________. In winter the red deer come out to the villages for 38. __________. The number of deer keep stable for 39. __________. Deer can have a devastating effect on the local 40. __________.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Boar is not a 31. __________ species.",
+          "answer": "Protected"
+        },
+        {
+          "id": "32",
+          "text": "Their number should be controlled as a result of their damage to the 32. __________.",
+          "answer": "Environment"
+        },
+        {
+          "id": "33",
+          "text": "They also spread 33. __________.",
+          "answer": "Diseases"
+        },
+        {
+          "id": "34",
+          "text": "Law was passed regarding banning use of 34. __________ in killing boars.",
+          "answer": "Poison"
+        },
+        {
+          "id": "35",
+          "text": "Measures should be taken to keep the boars in the 35. __________ away from people in urban areas.",
+          "answer": "Forest"
+        },
+        {
+          "id": "36",
+          "text": "The early 1990s witnessed a significant population rise of boars due to their escape from 36. __________.",
+          "answer": "Farms"
+        },
+        {
+          "id": "37",
+          "text": "Red deer can also damage agricultural produce, such as grain and 37. __________.",
+          "answer": "Potatoes"
+        },
+        {
+          "id": "38",
+          "text": "In winter the red deer come out to the villages for 38. __________.",
+          "answer": "Food"
+        },
+        {
+          "id": "39",
+          "text": "The number of deer keep stable for 39. __________.",
+          "answer": "Hunting"
+        },
+        {
+          "id": "40",
+          "text": "Deer can have a devastating effect on the local 40. __________.",
+          "answer": "Crops"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Boar and Red Deer",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Boar",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Boar is not a 31. __________ species.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Their number should be controlled as a result of their damage to the 32. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They also spread 33. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Law was passed regarding banning use of 34. __________ in killing boars.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Measures should be taken to keep the boars in the 35. __________ away from people in urban areas.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The early 1990s witnessed a significant population rise of boars due to their escape from 36. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Red Deer",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Red deer can also damage agricultural produce, such as grain and 37. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In winter the red deer come out to the villages for 38. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The number of deer keep stable for 39. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Deer can have a devastating effect on the local 40. __________.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Protected",
+        "32": "Environment",
+        "33": "Diseases",
+        "34": "Poison",
+        "35": "Forest",
+        "36": "Farms",
+        "37": "Potatoes",
+        "38": "Food",
+        "39": "Hunting",
+        "40": "Crops"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9880,
+      "text": "Practice 1."
+    },
+    {
+      "startMs": 9880,
+      "endMs": 18040,
+      "text": "You will hear a lecture about the situation of wild animals, especially wild boar."
+    },
+    {
+      "startMs": 18040,
+      "endMs": 22680,
+      "text": "First you have some time to look at questions 1 to 10."
+    },
+    {
+      "startMs": 48040,
+      "endMs": 77840,
+      "text": "Now listen carefully and answer questions 1 to 10."
+    },
+    {
+      "startMs": 77840,
+      "endMs": 91240,
+      "text": "Good morning. My name is Jim Robinson and today we're going to look at the control of wild animals, specifically wild boar."
+    },
+    {
+      "startMs": 91240,
+      "endMs": 104840,
+      "text": "Now, boar have been natural inhabitants of western Europe for thousands of years, but in recent years there has been a surge in boar activity that poses real threats."
+    },
+    {
+      "startMs": 104840,
+      "endMs": 113840,
+      "text": "Boars are not currently on the protected animals list, which is perhaps why there has been a spike in their breeding activity."
+    },
+    {
+      "startMs": 113840,
+      "endMs": 123840,
+      "text": "Boars are an indigenous species and are particularly plentiful in rural France and the Bavarian uplands of Germany."
+    },
+    {
+      "startMs": 123840,
+      "endMs": 134840,
+      "text": "Boar hunting is a European tradition that goes back to Roman times and became particularly popular among courtiers during the Middle Ages."
+    },
+    {
+      "startMs": 134840,
+      "endMs": 142840,
+      "text": "Even during the 20th century, boar hunting was seen as an integral part of rural life."
+    },
+    {
+      "startMs": 142840,
+      "endMs": 157840,
+      "text": "The decline in boar hunting has obviously led to a rise in the boar populations of Europe and the situation has reached a critical point with boar posing a critical threat to the environment."
+    },
+    {
+      "startMs": 157840,
+      "endMs": 166840,
+      "text": "Proponents of boar hunting cite this factor as a major reason why boar populations should be contained."
+    },
+    {
+      "startMs": 166840,
+      "endMs": 175840,
+      "text": "Boar also pose a threat to humans too, with countless reports of people being injured during boar attacks."
+    },
+    {
+      "startMs": 175840,
+      "endMs": 183840,
+      "text": "The origins of the wild boar have roots in Germanic and this perhaps explains their prevalence in Germany."
+    },
+    {
+      "startMs": 183840,
+      "endMs": 193840,
+      "text": "The problems with the boar population in Germany have ramifications for the rest of Europe, as boar packs migrate towards central and eastern Europe."
+    },
+    {
+      "startMs": 193840,
+      "endMs": 202840,
+      "text": "One of the main issues that is of great concern is the transmission of diseases that infect other species."
+    },
+    {
+      "startMs": 202840,
+      "endMs": 211840,
+      "text": "Dairy farmers in France are particularly concerned as many of them have seen their herds depleted by infections."
+    },
+    {
+      "startMs": 211840,
+      "endMs": 219840,
+      "text": "The methods for containing boar populations have been looked at in great detail and numerous options are available."
+    },
+    {
+      "startMs": 219840,
+      "endMs": 226840,
+      "text": "One is to encourage more boar hunting in wild regions, such as mountains and forests."
+    },
+    {
+      "startMs": 226840,
+      "endMs": 232840,
+      "text": "Hunters would be given licenses to hunt, either for food or sports."
+    },
+    {
+      "startMs": 232840,
+      "endMs": 240840,
+      "text": "Of course, boar do pose a threat to human life, so this possibility must be looked at with caution."
+    },
+    {
+      "startMs": 241840,
+      "endMs": 249840,
+      "text": "One method that must be ruled out is poison, as legislation has been introduced prohibiting this."
+    },
+    {
+      "startMs": 249840,
+      "endMs": 257840,
+      "text": "Such methods were tried with rabbits in the 1960s and this had a disastrous impact on the food chain."
+    },
+    {
+      "startMs": 257840,
+      "endMs": 265840,
+      "text": "The introduction of natural predators into the ecosystem is also an option that can't be considered."
+    },
+    {
+      "startMs": 265840,
+      "endMs": 272840,
+      "text": "The only known predators of boar in the world are wild cats, like lions and tigers."
+    },
+    {
+      "startMs": 272840,
+      "endMs": 279840,
+      "text": "Obviously, there's no way such animals can be allowed to roam the mountains and forests of Europe."
+    },
+    {
+      "startMs": 279840,
+      "endMs": 289840,
+      "text": "Given the threat that boars pose to humans, it is imperative that forest-dwelling boar are kept well away from people in cities."
+    },
+    {
+      "startMs": 289840,
+      "endMs": 296840,
+      "text": "This is absolutely essential as human safety must be the main priority of policymakers."
+    },
+    {
+      "startMs": 296840,
+      "endMs": 304840,
+      "text": "By the 11th century, boars in several European countries were becoming increasingly rare in Great Britain."
+    },
+    {
+      "startMs": 304840,
+      "endMs": 310840,
+      "text": "King Charles attempted to reintroduce boars in the New Forest area of the country,"
+    },
+    {
+      "startMs": 310840,
+      "endMs": 316840,
+      "text": "yet the entire population was almost wiped out during the battles of the English Civil War,"
+    },
+    {
+      "startMs": 316840,
+      "endMs": 320840,
+      "text": "when roaming soldiers hunted them for food."
+    },
+    {
+      "startMs": 320840,
+      "endMs": 328840,
+      "text": "During the 1980s, wild boar rearing was encouraged and boar populations began to rise again."
+    },
+    {
+      "startMs": 328840,
+      "endMs": 335840,
+      "text": "By the 1990s, there was a huge rise in the number of boar across England,"
+    },
+    {
+      "startMs": 335840,
+      "endMs": 340840,
+      "text": "to a large part to the species no longer forced to live in captivity."
+    },
+    {
+      "startMs": 340840,
+      "endMs": 352840,
+      "text": "Many boar have broken free from farms across England and are breeding at a rapid rate."
+    },
+    {
+      "startMs": 352840,
+      "endMs": 360840,
+      "text": "Aside from their environmental threats, boars also pose a problem for farmers growing crops and vegetables."
+    },
+    {
+      "startMs": 360840,
+      "endMs": 367840,
+      "text": "Other species such as red deer are a threat to farm produce like grain and potatoes,"
+    },
+    {
+      "startMs": 367840,
+      "endMs": 371840,
+      "text": "but boars certainly present the most serious risk."
+    },
+    {
+      "startMs": 371840,
+      "endMs": 379840,
+      "text": "The damage done to the farming industry is estimated to cost millions of pounds in insurance payments,"
+    },
+    {
+      "startMs": 379840,
+      "endMs": 383840,
+      "text": "as a result of this have spiked in the last decade."
+    },
+    {
+      "startMs": 383840,
+      "endMs": 394840,
+      "text": "Red deer are predominantly confined to forest areas, and it is unusual to see them outside their habitats during the summer months."
+    },
+    {
+      "startMs": 394840,
+      "endMs": 402840,
+      "text": "However, as the weather gets colder, they can be seen looking for food around local villages and fields."
+    },
+    {
+      "startMs": 402840,
+      "endMs": 407840,
+      "text": "Red deer have their origins in Asia and are a ruminant species,"
+    },
+    {
+      "startMs": 407840,
+      "endMs": 414840,
+      "text": "which means they have a stomach that consists of four compartments much like cows."
+    },
+    {
+      "startMs": 414840,
+      "endMs": 422840,
+      "text": "They are slaughtered for food and their meat is sold as venison and is increasingly popular among consumers."
+    },
+    {
+      "startMs": 422840,
+      "endMs": 429840,
+      "text": "There are nine subspecies of red deer, with three of them on the endangered species list."
+    },
+    {
+      "startMs": 429840,
+      "endMs": 437840,
+      "text": "The deer population doesn't pose the same threat as the boar population, but it certainly needs to be addressed."
+    },
+    {
+      "startMs": 437840,
+      "endMs": 446840,
+      "text": "Forest areas are their main habitats, and they are now breeding at a much higher rate than in previous years."
+    },
+    {
+      "startMs": 446840,
+      "endMs": 455840,
+      "text": "Of course, deer are an important part of the food chain and are an important part of the hunting traditions of the UK,"
+    },
+    {
+      "startMs": 455840,
+      "endMs": 461840,
+      "text": "so it is important that their population is kept stable for this reason."
+    },
+    {
+      "startMs": 461840,
+      "endMs": 470840,
+      "text": "Though the real concern is the problems that deer present for farmers who have seen their crops suffer in devastating ways."
+    },
+    {
+      "startMs": 470840,
+      "endMs": 480840,
+      "text": "Protection needs to be offered, and many farmers report building large perimeter fences around their fields to keep deer out,"
+    },
+    {
+      "startMs": 480840,
+      "endMs": 483840,
+      "text": "which cost them a huge amount of money."
+    },
+    {
+      "startMs": 483840,
+      "endMs": 489840,
+      "text": "Government funding is so far inadequate to offer the protection farmers need,"
+    },
+    {
+      "startMs": 489840,
+      "endMs": 497840,
+      "text": "but ways are being looked at to provide subsidies through other means."
+    },
+    {
+      "startMs": 497840,
+      "endMs": 501840,
+      "text": "That is the end of practice one."
+    },
+    {
+      "startMs": 501840,
+      "endMs": 506840,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 513840,
+      "endMs": 516840,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 59,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

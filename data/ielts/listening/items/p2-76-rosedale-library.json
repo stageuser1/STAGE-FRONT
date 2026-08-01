@@ -1,0 +1,476 @@
+{
+  "id": "p2-76-rosedale-library",
+  "title": "Rosedale Library",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-bd2fceedd44e",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 376.861,
+    "checksum": "sha256:de32a0a1b16f837eff041b3a9a915ea53188cfd6a5db2d319e4a16544b47dff0"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-15",
+      "instruction": "Choose the correct answer.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Why is David Laws leading the meeting instead of Penny Williams today?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Penny Williams is not well recently."
+            },
+            {
+              "id": "B",
+              "text": "David Laws is the director now."
+            },
+            {
+              "id": "C",
+              "text": "The meeting will be postponed."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "What does David say has been a problem with guest speaker talks?",
+          "options": [
+            {
+              "id": "A",
+              "text": "expensive tickets"
+            },
+            {
+              "id": "B",
+              "text": "lack of publicity"
+            },
+            {
+              "id": "C",
+              "text": "inconvenient time"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "What did the man say about the break-in at the library?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The building was damaged to some extent."
+            },
+            {
+              "id": "B",
+              "text": "Some valuable items were stolen."
+            },
+            {
+              "id": "C",
+              "text": "The thieves had prepared carefully."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "Why do they want to make an extension to the library?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It has had no renovation since it was founded."
+            },
+            {
+              "id": "B",
+              "text": "It needs to double the number of computers."
+            },
+            {
+              "id": "C",
+              "text": "There has been an increased number of visiting people."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "15",
+          "text": "The investment from the city council will be used for",
+          "options": [
+            {
+              "id": "A",
+              "text": "extra staff recruitment."
+            },
+            {
+              "id": "B",
+              "text": "buying more computers."
+            },
+            {
+              "id": "C",
+              "text": "improving the lighting."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 16-20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "Children's room",
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "Community room",
+          "answer": "A"
+        },
+        {
+          "id": "18",
+          "text": "Café",
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "Academic study room",
+          "answer": "H"
+        },
+        {
+          "id": "20",
+          "text": "Multimedia",
+          "answer": "G"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-76-rosedale-library-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-76-rosedale-library-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "B",
+        "13": "A",
+        "14": "C",
+        "15": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "C",
+        "17": "A",
+        "18": "B",
+        "19": "H",
+        "20": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 3000,
+      "text": "Now turn to section 2, on page 3."
+    },
+    {
+      "startMs": 5000,
+      "endMs": 6000,
+      "text": "Part 2."
+    },
+    {
+      "startMs": 6000,
+      "endMs": 11000,
+      "text": "You will hear a talk given at a public library by a member of staff called David Laws."
+    },
+    {
+      "startMs": 12000,
+      "endMs": 15000,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 39000,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 40000,
+      "endMs": 44000,
+      "text": "Good morning, everyone. Welcome to Rosedale Library Open Day."
+    },
+    {
+      "startMs": 45000,
+      "endMs": 50000,
+      "text": "It's good to see that so many members of the public are interested in the future of the library."
+    },
+    {
+      "startMs": 51000,
+      "endMs": 54000,
+      "text": "For those of you who don't know me, my name is David Laws."
+    },
+    {
+      "startMs": 54000,
+      "endMs": 59000,
+      "text": "I'm the new personal assistant to Penny Williams, the library director."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 67000,
+      "text": "Penny was supposed to be leading this meeting, but due to unexpected illness, I will be taking her place this morning."
+    },
+    {
+      "startMs": 68000,
+      "endMs": 72000,
+      "text": "We felt that this would be better than postponing the meeting to a later date."
+    },
+    {
+      "startMs": 73000,
+      "endMs": 76000,
+      "text": "Firstly, a couple of small matters."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 85000,
+      "text": "The guest speaker talks this year have been incredibly popular and the slight rise in ticket price has not put anyone off."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 90000,
+      "text": "We will continue to hold these events on a monthly basis."
+    },
+    {
+      "startMs": 91000,
+      "endMs": 97000,
+      "text": "It has, however, come to our attention that some people have missed events because they didn't know they were on."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 102000,
+      "text": "We now intend to notify everyone through email reminders."
+    },
+    {
+      "startMs": 103000,
+      "endMs": 115000,
+      "text": "Also, you might be aware that we had a break-in last month, and while the thief or thieves actually left empty handed, they did smash a number of windows and kick down a door trying to get in."
+    },
+    {
+      "startMs": 116000,
+      "endMs": 122000,
+      "text": "Police believe the offenders were just taking a chance that there might be something valuable in the library."
+    },
+    {
+      "startMs": 123000,
+      "endMs": 129000,
+      "text": "Anyway, we hope that the new security cameras along Robert's Avenue might deter this kind of activity."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 137000,
+      "text": "Now, the purpose of the meeting, of course, is to present the proposals for a new library layout."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 146000,
+      "text": "Rosedale Library has been serving the public for 50 years, but it's not been extended since the renovations in 1969."
+    },
+    {
+      "startMs": 147000,
+      "endMs": 156000,
+      "text": "Since opening the number of books on our shelves and other items has more than doubled, and visitor numbers have increased 20% in the last 10 years."
+    },
+    {
+      "startMs": 157000,
+      "endMs": 160000,
+      "text": "There is therefore a clear need for an extension."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 169000,
+      "text": "We hope that you have noticed some recent improvements to the library, such as the eight new PCs that were installed back in June."
+    },
+    {
+      "startMs": 170000,
+      "endMs": 181000,
+      "text": "We're also aware that the lighting is quite poor, but you'll shortly see a big difference because the City Council continued to support us and have authorized the spending in this area."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 193000,
+      "text": "We've also applied to the Council to approve the addition of another member of staff to work part time in the afternoons when mothers and children tend to use the library more often."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 197000,
+      "text": "And this decision will be made in the next few weeks."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 203000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 211000,
+      "endMs": 218000,
+      "text": "Now listen and answer questions 16 to 20."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 225000,
+      "text": "Now, turning to the proposal for the extensions and alterations to the library, please see the second page of your handout."
+    },
+    {
+      "startMs": 226000,
+      "endMs": 233000,
+      "text": "The double line indicates the rooms in the existing building and the dotted lines show where the exit is."
+    },
+    {
+      "startMs": 233000,
+      "endMs": 240000,
+      "text": "As you can see, the location of the entrance hall to the library would remain unchanged there at the bottom of the plan."
+    },
+    {
+      "startMs": 240000,
+      "endMs": 249000,
+      "text": "Once you go all the way through the entrance hall, on your immediate left would be the local history display that would face the information desk."
+    },
+    {
+      "startMs": 249000,
+      "endMs": 253000,
+      "text": "Behind it, the plan is for an extension."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 260000,
+      "text": "Meaning the mothers with push chairs and wheelchair users could ascend to the first new area."
+    },
+    {
+      "startMs": 260000,
+      "endMs": 271000,
+      "text": "This new room is designed to be light and airy and could be the ideal location for a new children's room looking out onto the park."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 276000,
+      "text": "You will notice there are steps that lead back down to the ground floor."
+    },
+    {
+      "startMs": 276000,
+      "endMs": 291000,
+      "text": "At the bottom of these, on the left, would be the adult fiction section, so no change there."
+    },
+    {
+      "startMs": 291000,
+      "endMs": 298000,
+      "text": "But behind this is proposed to construct a new community room for public lectures, special events and so forth."
+    },
+    {
+      "startMs": 298000,
+      "endMs": 303000,
+      "text": "This will be the largest new room."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 316000,
+      "text": "To the right of the adult fiction room with magnificent views of the sea, a cafe could provide visitors with light refreshments and an opportunity to browse a range of magazines."
+    },
+    {
+      "startMs": 316000,
+      "endMs": 323000,
+      "text": "There would be external access to this area via a set of steps leading down towards Queen's Parade."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 328000,
+      "text": "Now, let's go back to the entrance hall again."
+    },
+    {
+      "startMs": 328000,
+      "endMs": 337000,
+      "text": "On the right of the entrance hall, facing onto Robert's Avenue, is the new staff workroom."
+    },
+    {
+      "startMs": 337000,
+      "endMs": 349000,
+      "text": "The fact that the workroom would be overlooking Robert's Avenue means the staff will actually be able to see outside rather than be stuck in the small room behind the toilets."
+    },
+    {
+      "startMs": 349000,
+      "endMs": 356000,
+      "text": "The room looking out onto both Queen's Parade and Robert's Avenue would be the academic study room."
+    },
+    {
+      "startMs": 356000,
+      "endMs": 361000,
+      "text": "A facility we believe could be used by the growing number of local students."
+    },
+    {
+      "startMs": 361000,
+      "endMs": 368000,
+      "text": "Also facing Robert's Avenue, but not Queen's Parade, would be the multimedia room with our extensive audio collection right behind it."
+    },
+    {
+      "startMs": 368000,
+      "endMs": 373000,
+      "text": "That is the end of part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 49,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

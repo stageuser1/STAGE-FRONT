@@ -1,0 +1,431 @@
+{
+  "id": "p2-26-plan-of-richlands-station",
+  "title": "Plan of Richlands Station",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-508789b2f3d8",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 482.088,
+    "checksum": "sha256:54187d717fd4a1b36161297292bdc87564fae9639e738c1f370bada530d894c2"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 11–15.",
+      "instruction": "Choose FIVE answers from the box and write the correct letter, A–G, next to questions 11–15.",
+      "options": [
+        {
+          "id": "A",
+          "text": "improve the road surface"
+        },
+        {
+          "id": "B",
+          "text": "add flowering plants"
+        },
+        {
+          "id": "C",
+          "text": "provide more bus stops"
+        },
+        {
+          "id": "D",
+          "text": "plant native trees"
+        },
+        {
+          "id": "E",
+          "text": "create new grassy areas"
+        },
+        {
+          "id": "F",
+          "text": "build a noise barrier"
+        },
+        {
+          "id": "G",
+          "text": "install traffic lights"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Shared access paths",
+          "answer": "E"
+        },
+        {
+          "id": "12",
+          "text": "Highway",
+          "answer": "D"
+        },
+        {
+          "id": "13",
+          "text": "Housing estate",
+          "answer": "F"
+        },
+        {
+          "id": "14",
+          "text": "Local roads",
+          "answer": "C"
+        },
+        {
+          "id": "15",
+          "text": "Picnic area",
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 16-20.",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "Park 'n' ride car park",
+          "answer": "A"
+        },
+        {
+          "id": "17",
+          "text": "Bus interchange",
+          "answer": "G"
+        },
+        {
+          "id": "18",
+          "text": "Bicycle lockers",
+          "answer": "C"
+        },
+        {
+          "id": "19",
+          "text": "Showers",
+          "answer": "D"
+        },
+        {
+          "id": "20",
+          "text": "Lift",
+          "answer": "F"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-26-plan-of-richlands-station-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-26-plan-of-richlands-station-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "E",
+        "12": "D",
+        "13": "F",
+        "14": "C",
+        "15": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "A",
+        "17": "G",
+        "18": "C",
+        "19": "D",
+        "20": "F"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 17000,
+      "text": "You will hear part of a talk at a public meeting about a road and rail improvement project."
+    },
+    {
+      "startMs": 17000,
+      "endMs": 22000,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 55000,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 55000,
+      "endMs": 59000,
+      "text": "Welcome everyone. Thanks for coming to this information evening."
+    },
+    {
+      "startMs": 59000,
+      "endMs": 65000,
+      "text": "The purpose of this meeting is to give you a chance to learn more about the road and rail improvement project."
+    },
+    {
+      "startMs": 65000,
+      "endMs": 72000,
+      "text": "We've identified several problem areas and we've come up with some changes that we think will improve the local environment."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 82000,
+      "text": "For the shared access paths, by those I mean the paths shared by both bikes and pedestrians, we plan to turn these into open areas with grass around them."
+    },
+    {
+      "startMs": 82000,
+      "endMs": 88000,
+      "text": "Cyclists and pedestrians need to be able to see each other clearly to avoid any accidents."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 93000,
+      "text": "So we've decided to remove the large native trees from the area for that reason."
+    },
+    {
+      "startMs": 93000,
+      "endMs": 100000,
+      "text": "Now along the highway we want to put trees that are native to this area to add shade and make it more attractive."
+    },
+    {
+      "startMs": 100000,
+      "endMs": 105000,
+      "text": "We thought possibly the spotted gum which grows naturally here."
+    },
+    {
+      "startMs": 105000,
+      "endMs": 111000,
+      "text": "Now I know those of you who live in the housing estate are disturbed by the sound of traffic nearby."
+    },
+    {
+      "startMs": 111000,
+      "endMs": 121000,
+      "text": "We're aiming to solve this problem by constructing a wall between the estate and the road and possibly in the future we might consider adding some artwork to it."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 124000,
+      "text": "We think this will be quite an effective solution."
+    },
+    {
+      "startMs": 124000,
+      "endMs": 131000,
+      "text": "Moving on now to the local roads, we want to encourage more public transport use and solve some of our traffic problems."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 137000,
+      "text": "So we're going to add a considerable number of stops to the bus routes that run along those roads."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 145000,
+      "text": "Just finally as a way of thanking the community for their cooperation, we plan to make the picnic area in the park near the bus terminal more attractive."
+    },
+    {
+      "startMs": 145000,
+      "endMs": 153000,
+      "text": "So we're adding some colourful new rose beds that our gardeners will be putting in at the completion of the project."
+    },
+    {
+      "startMs": 153000,
+      "endMs": 161000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 167000,
+      "endMs": 191000,
+      "text": "Now listen and answer questions 16 to 20."
+    },
+    {
+      "startMs": 192000,
+      "endMs": 198000,
+      "text": "Now I'd like to give you more information about the renovations to Richlands Train Station."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 201000,
+      "text": "Can you all see a copy of the plan?"
+    },
+    {
+      "startMs": 201000,
+      "endMs": 205000,
+      "text": "We envisage Richlands Station as more than just a train station."
+    },
+    {
+      "startMs": 205000,
+      "endMs": 210000,
+      "text": "It'll be a transport hub linking all forms of transport in the area."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 220000,
+      "text": "To this end we're building an underground park and ride car park so commuters can drive to the station, park and then ride to work on the train."
+    },
+    {
+      "startMs": 220000,
+      "endMs": 225000,
+      "text": "That's the entrance to it on the corner of progress and garden road."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 228000,
+      "text": "You can drive into it from progress road."
+    },
+    {
+      "startMs": 228000,
+      "endMs": 235000,
+      "text": "Now on the progress road side of the site, on the top left of your map is where we plan to put the bus into change."
+    },
+    {
+      "startMs": 235000,
+      "endMs": 242000,
+      "text": "Commuters will have direct access to the platform from the bus into change via a covered walkway."
+    },
+    {
+      "startMs": 243000,
+      "endMs": 252000,
+      "text": "Cycling is an important part of our city's transport plan so cyclists will also be fully catered for with 18 new bicycle lockers."
+    },
+    {
+      "startMs": 252000,
+      "endMs": 258000,
+      "text": "You can see where they are on the plan in the bottom left hand corner next to the bike path."
+    },
+    {
+      "startMs": 258000,
+      "endMs": 263000,
+      "text": "Cyclists can ride to the station, store their bikes in the lockers and board the train."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 266000,
+      "text": "Oh and I forgot the most important thing."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 273000,
+      "text": "You'll even be able to shower at the station after your bike ride as we're installing showers between the toilets and the platform."
+    },
+    {
+      "startMs": 273000,
+      "endMs": 279000,
+      "text": "We'll also install a fountain at the station to make the area more attractive."
+    },
+    {
+      "startMs": 279000,
+      "endMs": 281000,
+      "text": "You can see it in the centre of the plan."
+    },
+    {
+      "startMs": 281000,
+      "endMs": 288000,
+      "text": "And between the fountain and the ticket machine we're putting in a lift for our elderly and disabled passengers."
+    },
+    {
+      "startMs": 288000,
+      "endMs": 293000,
+      "text": "They will be able to buy their ticket then pass directly to the platform via the lift."
+    },
+    {
+      "startMs": 294000,
+      "endMs": 300000,
+      "text": "So I hope that gives you a much better idea of the new facilities that will be available at Richland Station."
+    },
+    {
+      "startMs": 300000,
+      "endMs": 304000,
+      "text": "Now, we would like your feedback about the project."
+    },
+    {
+      "startMs": 307000,
+      "endMs": 309000,
+      "text": "That is the end of part two."
+    },
+    {
+      "startMs": 309000,
+      "endMs": 314000,
+      "text": "You now have 30 seconds to check your answers to part two."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 326000,
+      "text": "You"
+    },
+    {
+      "startMs": 353000,
+      "endMs": 356000,
+      "text": "You"
+    },
+    {
+      "startMs": 383000,
+      "endMs": 386000,
+      "text": "You"
+    },
+    {
+      "startMs": 413000,
+      "endMs": 416000,
+      "text": "You"
+    },
+    {
+      "startMs": 443000,
+      "endMs": 446000,
+      "text": "You"
+    },
+    {
+      "startMs": 473000,
+      "endMs": 476000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 48,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

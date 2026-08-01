@@ -1,0 +1,475 @@
+{
+  "id": "p4-64-a-survey-on-improving-hospitals",
+  "title": "A Survey on Improving Hospitals",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-fe6bac67f94c",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 439.632,
+    "checksum": "sha256:472788aa6e99f51395d15771179fc7e3f942ed2b6e02bbbc784cdb9d58dea60c"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY FOR each answer. The patients preferred to choose the hospital because: free 31. _____ service provided Patients were concerned about 33. _____ of the hospital treatment. Actions next year Improvements on the website for local 34. ______ as well as hospital medical staff The incentive to motivate staff extra 35. ______ for staff's success in work considering the opinions of the 36. ______ enhancing the effectiveness of 37. ______ between patients, doctors, and staff Recommendation The equipment is advanced enough to do the treatments",
+      "questions": [
+        {
+          "id": "31",
+          "text": "free 31. _____ service provided",
+          "answer": "transportation"
+        },
+        {
+          "id": "32",
+          "text": "A large proportion of patients wished the hospital to be 32. _____",
+          "answer": "clean"
+        },
+        {
+          "id": "33",
+          "text": "Patients were concerned about 33. _____ of the hospital treatment.",
+          "answer": "information"
+        },
+        {
+          "id": "34",
+          "text": "Improvements on the website for local 34. ______ as well as hospital medical staff",
+          "answer": "residents"
+        },
+        {
+          "id": "35",
+          "text": "extra 35. ______ for staff's success in work",
+          "answer": "bonus/bonuses"
+        },
+        {
+          "id": "36",
+          "text": "considering the opinions of the 36. ______",
+          "answer": "visitors"
+        },
+        {
+          "id": "37",
+          "text": "enhancing the effectiveness of 37. ______ between patients, doctors, and staff",
+          "answer": "communication"
+        },
+        {
+          "id": "38",
+          "text": "A new unit would be built for those who are struggling with 38. ______ disturbance",
+          "answer": "sleep"
+        },
+        {
+          "id": "39",
+          "text": "A new ward would be proposed for those in need of 39. ______ surgery",
+          "answer": "plastic"
+        },
+        {
+          "id": "40",
+          "text": "A better 40. _____ is needed to improve the efficiency",
+          "answer": "planning"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY FOR each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A Survey on Improving Hospitals",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The patients preferred to choose the hospital because:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "free 31. _____ service provided",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A large proportion of patients wished the hospital to be 32. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Patients were concerned about 33. _____ of the hospital treatment.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Actions next year",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Improvements on the website for local 34. ______ as well as hospital medical staff",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The incentive to motivate staff",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "extra 35. ______ for staff's success in work",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "considering the opinions of the 36. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "enhancing the effectiveness of 37. ______ between patients, doctors, and staff",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Recommendation",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A new unit would be built for those who are struggling with 38. ______ disturbance",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A new ward would be proposed for those in need of 39. ______ surgery",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The equipment is advanced enough to do the treatments",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A better 40. _____ is needed to improve the efficiency",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "transportation",
+        "32": "clean",
+        "33": "information",
+        "34": "residents",
+        "35": "bonus/bonuses",
+        "36": "visitors",
+        "37": "communication",
+        "38": "sleep",
+        "39": "plastic",
+        "40": "planning"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10880,
+      "text": "4. You will hear a talk on a survey on improving the local hospital service. First, you have"
+    },
+    {
+      "startMs": 10880,
+      "endMs": 14480,
+      "text": "some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 84480,
+      "text": "Now, listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 84480,
+      "endMs": 93440,
+      "text": "Good morning. Today, I'd like to discuss the results of our patient survey. We have reviewed"
+    },
+    {
+      "startMs": 93440,
+      "endMs": 99440,
+      "text": "the data collected in order to measure the strengths and weaknesses of our hospital and to determine"
+    },
+    {
+      "startMs": 99440,
+      "endMs": 106480,
+      "text": "potential future plans for improvement. The first question on the survey attempted to determine"
+    },
+    {
+      "startMs": 106480,
+      "endMs": 112320,
+      "text": "the main reason that patients choose to come to our hospital for treatment rather than others"
+    },
+    {
+      "startMs": 112320,
+      "endMs": 119360,
+      "text": "in the vicinity. The data showed that even though our hospital is not as centrally located as"
+    },
+    {
+      "startMs": 119360,
+      "endMs": 126320,
+      "text": "others, we offer a very good transportation service that enables patients to travel here by bus"
+    },
+    {
+      "startMs": 126320,
+      "endMs": 133520,
+      "text": "or train free of charge. Despite there being other hospitals that are larger with more facilities"
+    },
+    {
+      "startMs": 133520,
+      "endMs": 141520,
+      "text": "than ours, we still have higher patient numbers. The second question on the survey asked what quality"
+    },
+    {
+      "startMs": 141520,
+      "endMs": 148880,
+      "text": "patients hoped for most when visiting the hospital. There were five choice options, including"
+    },
+    {
+      "startMs": 148880,
+      "endMs": 155840,
+      "text": "short waiting times and friendly service from nurses. However, the data collected showed that"
+    },
+    {
+      "startMs": 155840,
+      "endMs": 162560,
+      "text": "most patients hoped that the hospital is clean when they visited. It seemed that patients were not"
+    },
+    {
+      "startMs": 162560,
+      "endMs": 169200,
+      "text": "concerned with the clarity of signs and notices in the hospital as this option got the smallest"
+    },
+    {
+      "startMs": 169200,
+      "endMs": 176480,
+      "text": "number of votes. They were, however, very keen to be given prior information by the staff"
+    },
+    {
+      "startMs": 176480,
+      "endMs": 182560,
+      "text": "about hospital treatments. Using the data collected from our survey,"
+    },
+    {
+      "startMs": 182560,
+      "endMs": 189520,
+      "text": "we have developed a list of actions that will be adopted within the next year. A main focus of"
+    },
+    {
+      "startMs": 189520,
+      "endMs": 197120,
+      "text": "these improvements is our website, which is currently very outdated. We will not only update our"
+    },
+    {
+      "startMs": 197120,
+      "endMs": 204400,
+      "text": "in-hospital service for the use of the medical staff, but also our main service so that local"
+    },
+    {
+      "startMs": 204400,
+      "endMs": 211520,
+      "text": "residents can also benefit from it. We hope that this new service will attract a large number of"
+    },
+    {
+      "startMs": 211520,
+      "endMs": 219520,
+      "text": "new patients. It is clear from the feedback that many members of staff are unhelpful towards"
+    },
+    {
+      "startMs": 219520,
+      "endMs": 226960,
+      "text": "patients and inefficient when carrying out their tasks. We feel that some incentive is needed"
+    },
+    {
+      "startMs": 226960,
+      "endMs": 233680,
+      "text": "to boost motivation to perform better, and so we are implementing a system whereby staff"
+    },
+    {
+      "startMs": 233680,
+      "endMs": 240880,
+      "text": "will be awarded an extra bonus for their success. The member of staff who has received the most"
+    },
+    {
+      "startMs": 240880,
+      "endMs": 248400,
+      "text": "bonuses at the end of the year will be announced as staff member of the year. We will continue to"
+    },
+    {
+      "startMs": 248400,
+      "endMs": 255280,
+      "text": "monitor progress on this issue through patient feedback forms, so that the opinions of our visitors"
+    },
+    {
+      "startMs": 255280,
+      "endMs": 262320,
+      "text": "will constantly be taken into consideration. Another issue that the survey has brought to light"
+    },
+    {
+      "startMs": 262320,
+      "endMs": 268800,
+      "text": "is the long delays experienced by visitors awaiting treatment, with some visitors reporting"
+    },
+    {
+      "startMs": 268800,
+      "endMs": 276880,
+      "text": "waiting times of up to five hours. This is unacceptable. We need to improve the effectiveness"
+    },
+    {
+      "startMs": 276880,
+      "endMs": 283920,
+      "text": "of communication between patients, doctors and staff, so we have decided to implement a ticketing"
+    },
+    {
+      "startMs": 284160,
+      "endMs": 290880,
+      "text": "system. This means that patients are seen on a first-come, first-served basis, and will never have"
+    },
+    {
+      "startMs": 290880,
+      "endMs": 297680,
+      "text": "to wait more than two hours to be seen by a doctor. The final topic that I want to cover in the"
+    },
+    {
+      "startMs": 297680,
+      "endMs": 303680,
+      "text": "lecture is the recommendations that we have put forward for future improvements to the hospital."
+    },
+    {
+      "startMs": 304720,
+      "endMs": 311040,
+      "text": "Firstly, we intend to be the first hospital in the country to build a new unit for those"
+    },
+    {
+      "startMs": 311040,
+      "endMs": 317280,
+      "text": "suffering from sleep disturbance, which is a relatively common illness affecting up to six"
+    },
+    {
+      "startMs": 317280,
+      "endMs": 323440,
+      "text": "percent of the population. Whilst we are a hospital primarily treating patients with illnesses"
+    },
+    {
+      "startMs": 323440,
+      "endMs": 330160,
+      "text": "and injuries, we cannot ignore the significant income that those in need of plastic surgery could"
+    },
+    {
+      "startMs": 330160,
+      "endMs": 337840,
+      "text": "bring to the hospital. We will therefore also be proposing a new ward to give patients access"
+    },
+    {
+      "startMs": 338000,
+      "endMs": 344320,
+      "text": "to this increasingly popular treatment. After much discussion about the quality and suitability"
+    },
+    {
+      "startMs": 344320,
+      "endMs": 350240,
+      "text": "of our equipment, we have decided that it is advanced enough to cope with the treatments that we"
+    },
+    {
+      "startMs": 350240,
+      "endMs": 356880,
+      "text": "offer, and that our spending should be directed to other areas where it will have a more significant"
+    },
+    {
+      "startMs": 356880,
+      "endMs": 363920,
+      "text": "impact. We feel that more effective planning is needed to improve the efficiency of the forms"
+    },
+    {
+      "startMs": 363920,
+      "endMs": 370640,
+      "text": "of communication that patients have with us. Therefore, patients who have received treatment"
+    },
+    {
+      "startMs": 370640,
+      "endMs": 377200,
+      "text": "will receive an email link to a survey that they can fill out online. This will eradicate"
+    },
+    {
+      "startMs": 377200,
+      "endMs": 382640,
+      "text": "meaningless paperwork and will also enable us to digitally monitor the data collected."
+    },
+    {
+      "startMs": 383520,
+      "endMs": 386000,
+      "text": "Now, if anyone has any questions?"
+    },
+    {
+      "startMs": 386000,
+      "endMs": 395840,
+      "text": "That is the end of section 4. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 416000,
+      "endMs": 434080,
+      "text": "That is the end of the listening test. In the IELTS test, you will now have 10 minutes to"
+    },
+    {
+      "startMs": 434080,
+      "endMs": 442160,
+      "text": "transfer your answers to the answer sheet."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 50,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

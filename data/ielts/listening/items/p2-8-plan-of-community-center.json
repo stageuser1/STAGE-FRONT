@@ -1,0 +1,499 @@
+{
+  "id": "p2-8-plan-of-community-center",
+  "title": "Plan of Community Center",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-671bde6c175f",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 533.952,
+    "checksum": "sha256:7fabfed94d06192513188bdce66c1e076268b32b18083c2e9661357eed1522bf"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "11-12",
+      "title": "Questions 11-12.",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO items will participants receive when they check in?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "a class list"
+        },
+        {
+          "id": "B",
+          "text": "a face towel"
+        },
+        {
+          "id": "C",
+          "text": "a name tag"
+        },
+        {
+          "id": "D",
+          "text": "a shoe bag"
+        },
+        {
+          "id": "E",
+          "text": "a water bottle"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Which TWO items will participants receive when they check in?",
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "Which TWO items will participants receive when they check in?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "13-14",
+      "title": "Questions 13-14.",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO activities will be hosted in the first afternoon and evening?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "costume making"
+        },
+        {
+          "id": "B",
+          "text": "a musical show"
+        },
+        {
+          "id": "C",
+          "text": "an informal dance"
+        },
+        {
+          "id": "D",
+          "text": "a talk on dance history"
+        },
+        {
+          "id": "E",
+          "text": "a dance test"
+        }
+      ],
+      "questions": [
+        {
+          "id": "13",
+          "text": "Which TWO activities will be hosted in the first afternoon and evening?",
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "Which TWO activities will be hosted in the first afternoon and evening?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 15-20.",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "shower room",
+          "answer": "C"
+        },
+        {
+          "id": "16",
+          "text": "bunkroom",
+          "answer": "E"
+        },
+        {
+          "id": "17",
+          "text": "games room",
+          "answer": "I"
+        },
+        {
+          "id": "18",
+          "text": "reception",
+          "answer": "F"
+        },
+        {
+          "id": "19",
+          "text": "medical centre",
+          "answer": "D"
+        },
+        {
+          "id": "20",
+          "text": "store",
+          "answer": "B"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-8-plan-of-community-center-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-8-plan-of-community-center-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "11_12": [
+          "A",
+          "D"
+        ],
+        "13_14": [
+          "C",
+          "D"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "D",
+        "13": "C",
+        "14": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "15": "C",
+        "16": "E",
+        "17": "I",
+        "18": "F",
+        "19": "D",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11280,
+      "text": "Part 2. You will hear a member of staff called Mary Linden giving some information about"
+    },
+    {
+      "startMs": 11280,
+      "endMs": 17760,
+      "text": "their community centre. First, you have some time to look at questions 11-14."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 40400,
+      "text": "Now, listen carefully and answer questions 11-14."
+    },
+    {
+      "startMs": 40400,
+      "endMs": 48720,
+      "text": "On behalf of our community centre, I'd like to welcome you all here today. My name is Mary"
+    },
+    {
+      "startMs": 48720,
+      "endMs": 54960,
+      "text": "Linden. As you can see here, this multi-purpose hall is a great venue for various events,"
+    },
+    {
+      "startMs": 54960,
+      "endMs": 61040,
+      "text": "including banquets, seminars or dances. The centre provides services for all ages. As the"
+    },
+    {
+      "startMs": 61040,
+      "endMs": 66480,
+      "text": "majority of you have already signed up for our dance workshops, I'll introduce relevant information"
+    },
+    {
+      "startMs": 66480,
+      "endMs": 73920,
+      "text": "first before we start the tour and get ourselves oriented. Okay, now when participants check in for"
+    },
+    {
+      "startMs": 73920,
+      "endMs": 79600,
+      "text": "their first dancing session, they will be given a class list printed with available seasonal"
+    },
+    {
+      "startMs": 79600,
+      "endMs": 86000,
+      "text": "classes ranging from Zumba to Ballet, as well as detailed descriptions and schedules."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 91360,
+      "text": "The dance studio will also give you a complimentary shoe bag to store your dance shoes."
+    },
+    {
+      "startMs": 91360,
+      "endMs": 96960,
+      "text": "Every week will be a surprise in cardio movement. Our fitness professional will guide you through"
+    },
+    {
+      "startMs": 96960,
+      "endMs": 104480,
+      "text": "an upbeat, heart-pumping, lively dance class. Therefore, it is highly advised to bring a face towel"
+    },
+    {
+      "startMs": 104560,
+      "endMs": 110080,
+      "text": "and a water bottle with you. As things get mixed up easily, you might also want to attach a name tag"
+    },
+    {
+      "startMs": 110080,
+      "endMs": 116400,
+      "text": "to your belongings. It will be sent to you by mail in advance. Now, let us get a closer look at our"
+    },
+    {
+      "startMs": 116400,
+      "endMs": 122000,
+      "text": "dance workshops and it's curriculum. There is a list of activities to participate during and"
+    },
+    {
+      "startMs": 122000,
+      "endMs": 127440,
+      "text": "after each session. You'll have the chance to make your own costume, but it won't be held until"
+    },
+    {
+      "startMs": 127440,
+      "endMs": 133680,
+      "text": "tomorrow. You can also practice dance with music whenever the studio is available. In the first"
+    },
+    {
+      "startMs": 133680,
+      "endMs": 138880,
+      "text": "afternoon and evening of your dance class, there will be an introduction to the development of"
+    },
+    {
+      "startMs": 138880,
+      "endMs": 145280,
+      "text": "dance for the past few decades. Then, we'll warm up with an informal dance. I know you don't have"
+    },
+    {
+      "startMs": 145280,
+      "endMs": 151680,
+      "text": "much experience in dancing, but we'll get there soon. Rest assured, there won't be a dance test"
+    },
+    {
+      "startMs": 151680,
+      "endMs": 163360,
+      "text": "until the end of the course. Before you hear the rest of the talk, you have some time to look"
+    },
+    {
+      "startMs": 163360,
+      "endMs": 170560,
+      "text": "at questions 15 to 20."
+    },
+    {
+      "startMs": 170560,
+      "endMs": 199920,
+      "text": "Now, listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 199920,
+      "endMs": 206960,
+      "text": "Okay, now a word about the layout of the centre. Our beautiful facility has 25 rooms altogether,"
+    },
+    {
+      "startMs": 206960,
+      "endMs": 213200,
+      "text": "which are both very functional and aesthetically pleasing. We're standing here right at the entrance."
+    },
+    {
+      "startMs": 213760,
+      "endMs": 220320,
+      "text": "To your left, you can see two rooms in a row. After each dance session, you're probably soaking"
+    },
+    {
+      "startMs": 220320,
+      "endMs": 226880,
+      "text": "in sweat and in desperate need of a shower. Just go straight ahead, turn left and the shower room"
+    },
+    {
+      "startMs": 226880,
+      "endMs": 232480,
+      "text": "is on your left hand side. If you just want to take a nap, there is a six-bed bunk room."
+    },
+    {
+      "startMs": 232480,
+      "endMs": 238240,
+      "text": "It's immediately to the left of where you are standing right before the shower room. We also have"
+    },
+    {
+      "startMs": 238240,
+      "endMs": 244720,
+      "text": "a games room with dartboards, table tennis, pool and card games. It is a good place to have fun"
+    },
+    {
+      "startMs": 244720,
+      "endMs": 250720,
+      "text": "with friends. Just take the first right. It is the second area to your right. You can explore it"
+    },
+    {
+      "startMs": 250800,
+      "endMs": 256800,
+      "text": "well later during our tour. Further ahead, in the corner, there are the bike racks. You can either"
+    },
+    {
+      "startMs": 256800,
+      "endMs": 263120,
+      "text": "park your bike here or hire one if you want to ride. The first hour is free. Part of our dance"
+    },
+    {
+      "startMs": 263120,
+      "endMs": 268960,
+      "text": "sessions will take place in the music room. It has a large mirror with various musical instruments"
+    },
+    {
+      "startMs": 268960,
+      "endMs": 275120,
+      "text": "and state-of-the-art stereos. If you want to get there, just go straight, take the second right"
+    },
+    {
+      "startMs": 275200,
+      "endMs": 281920,
+      "text": "and it's the second area to your left. Our friendly reception team is an invaluable resource for any"
+    },
+    {
+      "startMs": 281920,
+      "endMs": 288080,
+      "text": "visitor to the centre. If your mobile phone needs charging, we have several adapters and can easily"
+    },
+    {
+      "startMs": 288080,
+      "endMs": 293600,
+      "text": "get your phone back up and running again. We also offer a range of chargeable services,"
+    },
+    {
+      "startMs": 293600,
+      "endMs": 299600,
+      "text": "including photocopy, scanning and faxing. The reception is located in the centre to the south"
+    },
+    {
+      "startMs": 299680,
+      "endMs": 305520,
+      "text": "of the music room. There is a medical centre providing a full spectrum of care and treatment,"
+    },
+    {
+      "startMs": 305520,
+      "endMs": 310640,
+      "text": "especially for sports injuries like a sprained knee. It's right opposite the reception"
+    },
+    {
+      "startMs": 310640,
+      "endMs": 316160,
+      "text": "to the left of the music room. Now, I have to tell you about our gym, where some of our dance"
+    },
+    {
+      "startMs": 316160,
+      "endMs": 322240,
+      "text": "sessions take place. It is also equipped with the latest equipment, including exercise bikes,"
+    },
+    {
+      "startMs": 322240,
+      "endMs": 328480,
+      "text": "treadmills, rowing machines, etc. If you walk straight ahead before you come to the end and turn"
+    },
+    {
+      "startMs": 328480,
+      "endMs": 334720,
+      "text": "right, it's the second room to your left. And speaking of food, if you ever feel hungry,"
+    },
+    {
+      "startMs": 334720,
+      "endMs": 340560,
+      "text": "you can either cook in the kitchen or grab a snack at the store to reach it, keep straight on"
+    },
+    {
+      "startMs": 340560,
+      "endMs": 346000,
+      "text": "until you get to the third passageway, turn right and it's the one after the gym. And the"
+    },
+    {
+      "startMs": 346000,
+      "endMs": 352080,
+      "text": "kitchen sits right next to the gym on the same side of the passageway. It has all the utensils"
+    },
+    {
+      "startMs": 352160,
+      "endMs": 358880,
+      "text": "you need, spatulas, frying pans, ladles and plates. You name it, just feel free to use it."
+    },
+    {
+      "startMs": 358880,
+      "endMs": 364960,
+      "text": "By the way, if you have coats, umbrellas or any large bags with you, the cloak room is available."
+    },
+    {
+      "startMs": 364960,
+      "endMs": 371200,
+      "text": "It's the room in the top right corner on the far side. Right? Well, if you're ready,"
+    },
+    {
+      "startMs": 371200,
+      "endMs": 373840,
+      "text": "we'll start the tour of our lovely community centre."
+    },
+    {
+      "startMs": 373840,
+      "endMs": 383600,
+      "text": "That is the end of Part 2. You now have 30 seconds to check your answers to Part 2."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 54,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "id": "p2-16-fitchton-railway-station",
+  "title": "Fitchton Railway Station",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-0121ff0d7589",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 486.072,
+    "checksum": "sha256:36df2bc8fbb1bce02ae7c3327626fda63819a516d9b44045ff1ae9c20ec1156c"
+  },
+  "groups": [
+    {
+      "type": "map",
+      "title": "Questions 11-15.",
+      "instruction": "Label the map below has nine labels.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "bike racks",
+          "answer": "G"
+        },
+        {
+          "id": "12",
+          "text": "luggage lockers",
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "chemist’s",
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "toilet",
+          "answer": "F"
+        },
+        {
+          "id": "15",
+          "text": "news agency",
+          "answer": "D"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-16-fitchton-railway-station-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-16-fitchton-railway-station-map-png-map.png"
+      }
+    },
+    {
+      "type": "single",
+      "title": "Questions 16-20.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "16",
+          "text": "Where could the passengers see the exhibition?",
+          "options": [
+            {
+              "id": "A",
+              "text": "in the town library"
+            },
+            {
+              "id": "B",
+              "text": "in Fitchton college"
+            },
+            {
+              "id": "C",
+              "text": "in the station"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "17",
+          "text": "What is the best gift for passengers to buy and bring home?",
+          "options": [
+            {
+              "id": "A",
+              "text": "local food"
+            },
+            {
+              "id": "B",
+              "text": "clothing"
+            },
+            {
+              "id": "C",
+              "text": "jewelry"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "18",
+          "text": "Where can passengers buy souvenir postcards?",
+          "options": [
+            {
+              "id": "A",
+              "text": "in the museum"
+            },
+            {
+              "id": "B",
+              "text": "in the shop"
+            },
+            {
+              "id": "C",
+              "text": "in the college"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "19",
+          "text": "What will the old cinema be converted to?",
+          "options": [
+            {
+              "id": "A",
+              "text": "a housing area"
+            },
+            {
+              "id": "B",
+              "text": "a new theatre"
+            },
+            {
+              "id": "C",
+              "text": "a shop"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "Who is the statue in the train station modeled after?",
+          "options": [
+            {
+              "id": "A",
+              "text": "a poet"
+            },
+            {
+              "id": "B",
+              "text": "an engineer"
+            },
+            {
+              "id": "C",
+              "text": "a politician"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "16": "A",
+        "17": "A",
+        "18": "C",
+        "19": "A",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "11": "G",
+        "12": "B",
+        "13": "C",
+        "14": "F",
+        "15": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10480,
+      "text": "You will hear a railway station staff member introducing the activities the passengers"
+    },
+    {
+      "startMs": 10480,
+      "endMs": 14320,
+      "text": "can do while waiting for their trains."
+    },
+    {
+      "startMs": 14320,
+      "endMs": 18200,
+      "text": "First you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 51120,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 51120,
+      "endMs": 54640,
+      "text": "Dear passengers, welcome to Fitchton Railway Station."
+    },
+    {
+      "startMs": 54640,
+      "endMs": 58440,
+      "text": "I am sorry to inform you that the train to London is delayed."
+    },
+    {
+      "startMs": 58440,
+      "endMs": 63160,
+      "text": "It will take off two hours later at 11.45 am."
+    },
+    {
+      "startMs": 63160,
+      "endMs": 65360,
+      "text": "Please accept our apologies."
+    },
+    {
+      "startMs": 65360,
+      "endMs": 70360,
+      "text": "In the meantime, allow me to introduce Fitchton Railway Station so you can make the most"
+    },
+    {
+      "startMs": 70360,
+      "endMs": 73680,
+      "text": "of your time while waiting for the train."
+    },
+    {
+      "startMs": 73680,
+      "endMs": 77040,
+      "text": "The main entrance of the station is on Fitchton Road."
+    },
+    {
+      "startMs": 77040,
+      "endMs": 82800,
+      "text": "If you want to take a bike ride around here, walk down Fitchton Road and pass the taxi stop."
+    },
+    {
+      "startMs": 82800,
+      "endMs": 85840,
+      "text": "You can find a bike rack on the right."
+    },
+    {
+      "startMs": 85840,
+      "endMs": 88840,
+      "text": "And if you just want to stay in the station, it's okay."
+    },
+    {
+      "startMs": 88840,
+      "endMs": 91640,
+      "text": "You can find a luggage locker when you enter the station."
+    },
+    {
+      "startMs": 91640,
+      "endMs": 93240,
+      "text": "It's on the left."
+    },
+    {
+      "startMs": 93240,
+      "endMs": 95440,
+      "text": "You can put your luggage there."
+    },
+    {
+      "startMs": 95440,
+      "endMs": 99400,
+      "text": "If you don't feel very well or you need to buy some medicine, there's a chemist in"
+    },
+    {
+      "startMs": 99400,
+      "endMs": 103600,
+      "text": "the farthest corner of the station opposite to the cafe."
+    },
+    {
+      "startMs": 103600,
+      "endMs": 107520,
+      "text": "And you can have a cup of coffee at the cafe if you want."
+    },
+    {
+      "startMs": 107520,
+      "endMs": 112760,
+      "text": "The big area near the cafe is the waiting room where you can have a seat and relax."
+    },
+    {
+      "startMs": 112760,
+      "endMs": 117840,
+      "text": "If you want to use the toilet, make a left when you enter the station, then turn right."
+    },
+    {
+      "startMs": 117840,
+      "endMs": 122680,
+      "text": "Go straight until you walk past Platform 2, it's right there at the end."
+    },
+    {
+      "startMs": 122680,
+      "endMs": 128600,
+      "text": "The news agency is in the southeast corner of the station."
+    },
+    {
+      "startMs": 128600,
+      "endMs": 134240,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16-20."
+    },
+    {
+      "startMs": 142760,
+      "endMs": 167120,
+      "text": "Now listen and answer questions 16-20."
+    },
+    {
+      "startMs": 167120,
+      "endMs": 171240,
+      "text": "If you don't want to stay in the station, you can also have a look around the station,"
+    },
+    {
+      "startMs": 171240,
+      "endMs": 175840,
+      "text": "but make sure to get back in time for the train, I'm sure you don't want to miss it."
+    },
+    {
+      "startMs": 175840,
+      "endMs": 180960,
+      "text": "The Fichden College is within walking distance from the station, the view is quite good there."
+    },
+    {
+      "startMs": 180960,
+      "endMs": 184120,
+      "text": "The town library is also just down the road if you want to read. Oh, there's also an art exhibition at the moment, you can go and check it out."
+    },
+    {
+      "startMs": 184120,
+      "endMs": 189560,
+      "text": "Oh, there's also an art exhibition at the moment, you can go and check it out."
+    },
+    {
+      "startMs": 189560,
+      "endMs": 193880,
+      "text": "The store across the street opens throughout the day and you can find all kinds of stuff"
+    },
+    {
+      "startMs": 193880,
+      "endMs": 194880,
+      "text": "there. 。"
+    },
+    {
+      "startMs": 194880,
+      "endMs": 199120,
+      "text": "You don't want to buy any gifts for your friends there though, most items will be difficult"
+    },
+    {
+      "startMs": 199120,
+      "endMs": 201120,
+      "text": "to carry on a bike."
+    },
+    {
+      "startMs": 201120,
+      "endMs": 203760,
+      "text": "But our local food is something I recommend."
+    },
+    {
+      "startMs": 203760,
+      "endMs": 206840,
+      "text": "It would be too late if you want them once you're on the train."
+    },
+    {
+      "startMs": 206840,
+      "endMs": 211520,
+      "text": "You can buy some at the foodies shop, which is right next to the station."
+    },
+    {
+      "startMs": 211520,
+      "endMs": 215360,
+      "text": "If you're looking for anything to wear during the trip, you'd better go to the department"
+    },
+    {
+      "startMs": 215360,
+      "endMs": 219560,
+      "text": "store, but I'm afraid there isn't enough time for that."
+    },
+    {
+      "startMs": 219560,
+      "endMs": 223760,
+      "text": "You can send some postcards with local pictures on them to your friends and family."
+    },
+    {
+      "startMs": 223760,
+      "endMs": 227760,
+      "text": "You can buy them in the community college which is near the museum."
+    },
+    {
+      "startMs": 227760,
+      "endMs": 231880,
+      "text": "The old cinema behind the museum cannot compete against the new theatre in the shopping"
+    },
+    {
+      "startMs": 231880,
+      "endMs": 237160,
+      "text": "centre, so the current owner plans to make it an accommodation block instead."
+    },
+    {
+      "startMs": 237160,
+      "endMs": 242000,
+      "text": "In the back of the train station you can see a statue of Richard Travolte, a local government"
+    },
+    {
+      "startMs": 242000,
+      "endMs": 247000,
+      "text": "minister who is famous for completing a lot of construction projects in our city."
+    },
+    {
+      "startMs": 247000,
+      "endMs": 252880,
+      "text": "Again, I'd like to remind you that train will leave at 11.45."
+    },
+    {
+      "startMs": 252880,
+      "endMs": 259360,
+      "text": "Please get back in time and I hope you enjoy your time at Fichden."
+    },
+    {
+      "startMs": 259360,
+      "endMs": 261760,
+      "text": "That's the end of section 2."
+    },
+    {
+      "startMs": 261760,
+      "endMs": 264560,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 50,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

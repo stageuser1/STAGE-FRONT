@@ -1,0 +1,455 @@
+{
+  "id": "p4-24-gamification",
+  "title": "Gamification",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-50d12a3f458a",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 342.072,
+    "checksum": "sha256:6f5f9ead5d54d474fd2758e022af219ace1b6e4d30d41a25c03907617eba9866"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Gamification What is it? The use of gaming techniques in non-game situations In business, it is frequently used for 31. __________ Uses people's desire to win a reward Not a new idea, e.g. incentive schemes were first used by 32. __________ Uses To get online 33. __________ quickly To persuade people to change their 34. __________ For training purposes, e.g. simulators used by 35. __________ and town planners Successful examples Official campaigns Australian government: to encourage people to 36. __________ more overseas local authority: to reward drivers for not speeding Health a staircase at a station that worked like a 37. __________ a game that helps recovery when old people hurt their 38. __________ in a fall Things to consider It's important for gamification to be 39. __________ Need to think about the laws regarding 40. __________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "In business, it is frequently used for 31. __________",
+          "answer": "marketing"
+        },
+        {
+          "id": "32",
+          "text": "Not a new idea, e.g. incentive schemes were first used by 32. __________",
+          "answer": "airlines"
+        },
+        {
+          "id": "33",
+          "text": "To get online 33. __________ quickly",
+          "answer": "feedback"
+        },
+        {
+          "id": "34",
+          "text": "To persuade people to change their 34. __________",
+          "answer": "behavior/behaviour"
+        },
+        {
+          "id": "35",
+          "text": "For training purposes, e.g. simulators used by 35. __________ and town planners",
+          "answer": "pilots"
+        },
+        {
+          "id": "36",
+          "text": "Australian government: to encourage people to 36. __________ more",
+          "answer": "exercise"
+        },
+        {
+          "id": "37",
+          "text": "a staircase at a station that worked like a 37. __________",
+          "answer": "piano"
+        },
+        {
+          "id": "38",
+          "text": "a game that helps recovery when old people hurt their 38. __________ in a fall",
+          "answer": "hand"
+        },
+        {
+          "id": "39",
+          "text": "It's important for gamification to be 39. __________",
+          "answer": "fun"
+        },
+        {
+          "id": "40",
+          "text": "Need to think about the laws regarding 40. __________",
+          "answer": "privacy"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Gamification",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "What is it?",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The use of gaming techniques in non-game situations",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In business, it is frequently used for 31. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Uses people's desire to win a reward",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Not a new idea, e.g. incentive schemes were first used by 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Uses",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "To get online 33. __________ quickly",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "To persuade people to change their 34. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "For training purposes, e.g. simulators used by 35. __________ and town planners",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Successful examples",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Official campaigns",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Australian government: to encourage people to 36. __________ more",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "overseas local authority: to reward drivers for not speeding",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Health",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "a staircase at a station that worked like a 37. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a game that helps recovery when old people hurt their 38. __________ in a fall",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Things to consider",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "It's important for gamification to be 39. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Need to think about the laws regarding 40. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "marketing",
+        "32": "airlines",
+        "33": "feedback",
+        "34": "behavior/behaviour",
+        "35": "pilots",
+        "36": "exercise",
+        "37": "piano",
+        "38": "hand",
+        "39": "fun",
+        "40": "privacy"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7640,
+      "text": "Section 4."
+    },
+    {
+      "startMs": 7640,
+      "endMs": 13080,
+      "text": "You will hear a lecturer talking about the use of games techniques in business."
+    },
+    {
+      "startMs": 13080,
+      "endMs": 19600,
+      "text": "First, you have some time to look at questions 31-40 on page 7."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 37000,
+      "text": "You have some time to look at questions 31-40 on page 7."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 78000,
+      "text": "Now listen carefully and answer questions 31-40."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 84000,
+      "text": "Today we are going to look at how the phenomenon known as gamification has really exploded in recent years."
+    },
+    {
+      "startMs": 84000,
+      "endMs": 87000,
+      "text": "So what exactly is gamification?"
+    },
+    {
+      "startMs": 87000,
+      "endMs": 94000,
+      "text": "It has been defined as the use of games thinking and mechanics in non-game situations such as for business."
+    },
+    {
+      "startMs": 94000,
+      "endMs": 98000,
+      "text": "Up to now its most common function has been marketing."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 104000,
+      "text": "It is extremely popular with big companies but as we'll see it also has many other uses."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 108000,
+      "text": "Gamification techniques work on our natural desire for competition."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 112000,
+      "text": "One way they do this is by providing a reward."
+    },
+    {
+      "startMs": 112000,
+      "endMs": 118000,
+      "text": "For example, badges or points or providing a type of virtual currency."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 121000,
+      "text": "But don't be fooled into thinking the concept is another one."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 127000,
+      "text": "Just think of the frequent flyer incentive schemes that were initiated by airlines to try and retain customers."
+    },
+    {
+      "startMs": 127000,
+      "endMs": 129000,
+      "text": "In fact, it's been around for years."
+    },
+    {
+      "startMs": 129000,
+      "endMs": 134000,
+      "text": "However, it has become more prolific with advances in technology."
+    },
+    {
+      "startMs": 134000,
+      "endMs": 137000,
+      "text": "So how is gamification being used?"
+    },
+    {
+      "startMs": 137000,
+      "endMs": 144000,
+      "text": "Well, it is seen as an excellent way of obtaining almost instantaneous feedback through common social media sites."
+    },
+    {
+      "startMs": 144000,
+      "endMs": 155000,
+      "text": "However, there are other areas where it is increasingly being used, in particular as a means of trying to convince people through fun activities to alter their behaviour."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 163000,
+      "text": "Another use is in education or training in the workplace, especially when it is just not feasible to train people on the real thing."
+    },
+    {
+      "startMs": 163000,
+      "endMs": 175000,
+      "text": "Good examples of this are the aircraft simulators used by pilots or the urban simulators used by town planners."
+    },
+    {
+      "startMs": 175000,
+      "endMs": 180000,
+      "text": "So let's look at a few examples of the successful implementation of gamification."
+    },
+    {
+      "startMs": 180000,
+      "endMs": 189000,
+      "text": "One perhaps surprising use of gamification has been an official campaigns by governments and authorities who have quickly seen its potential."
+    },
+    {
+      "startMs": 189000,
+      "endMs": 197000,
+      "text": "In Australia, the government developed a smartphone app called My FitBuddy, whose aim was to help people get off the sofa and exercise."
+    },
+    {
+      "startMs": 197000,
+      "endMs": 205000,
+      "text": "The app provided plenty of motivational content to ensure people got the encouragement they needed to increase their levels of activity."
+    },
+    {
+      "startMs": 205000,
+      "endMs": 216000,
+      "text": "Overseas in one city, instead of just punishing the drivers caught driving too fast, a local authority conducted a trial where they rewarded good drivers with free entries into a draw."
+    },
+    {
+      "startMs": 216000,
+      "endMs": 222000,
+      "text": "The trial was so successful that it resulted in a 22% reduction in speeding."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 228000,
+      "text": "Gamification is also playing its part in helping people make healthy choices."
+    },
+    {
+      "startMs": 228000,
+      "endMs": 237000,
+      "text": "In an attempt to get commuters to walk instead of using the escalators in an underground station, the staircase next to it was transformed into a piano."
+    },
+    {
+      "startMs": 237000,
+      "endMs": 242000,
+      "text": "It had a touchpad underneath which played notes as people stepped on it."
+    },
+    {
+      "startMs": 242000,
+      "endMs": 249000,
+      "text": "When it was in use, almost everyone opted to use the stairs instead of the escalator."
+    },
+    {
+      "startMs": 249000,
+      "endMs": 253000,
+      "text": "Another example is a medical research company in Australia."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 260000,
+      "text": "They realised the potential of gamification to help the elderly recover much more quickly from accidents."
+    },
+    {
+      "startMs": 260000,
+      "endMs": 266000,
+      "text": "When the elderly fall, the most common injury is not to the arm or the leg but to the hand."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 276000,
+      "text": "So they took an already popular computer game which involved people smashing fruit and adapted it so patients could practice their fine motor skills in a fun way."
+    },
+    {
+      "startMs": 276000,
+      "endMs": 281000,
+      "text": "Now, there are a number of things to consider when using gamification."
+    },
+    {
+      "startMs": 281000,
+      "endMs": 284000,
+      "text": "First of all, there is no way it can work unless it is fun."
+    },
+    {
+      "startMs": 284000,
+      "endMs": 289000,
+      "text": "In fact, without that element, it could have the complete opposite effect on the consumer."
+    },
+    {
+      "startMs": 290000,
+      "endMs": 303000,
+      "text": "In addition, as companies are often obtaining a lot more personal information and data on their customers this way, they should always be mindful of their legal obligations in terms of legislation relating to privacy."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 312000,
+      "text": "So now, it is over to you to think of other examples of gamification that you might have come across."
+    },
+    {
+      "startMs": 312000,
+      "endMs": 319000,
+      "text": "That is the end of section 4. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 42,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,655 @@
+{
+  "id": "p3-68-renewable-energy",
+  "title": "Renewable Energy",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-dde7a8e91864",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 583.584,
+    "checksum": "sha256:c0dff3f8817a53b85134d5a51d5d823d9a6cd9ffb4df57333da765d08f26b343"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 21-23",
+      "instruction": "Complete the table below. Write ONE WORD ONLY for each answer. Research about different energy-saving innovations Kites in Germany used in different 21. ______ conditions to reduce the emission of toxic gas Vehicles in America powered by 22. ______ Gas canister in South Africa invented to reduce its chances to 23. ______",
+      "questions": [
+        {
+          "id": "21",
+          "text": "used in different 21. ______ conditions to reduce the emission of toxic gas",
+          "answer": "weather"
+        },
+        {
+          "id": "22",
+          "text": "powered by 22. ______",
+          "answer": "electricity"
+        },
+        {
+          "id": "23",
+          "text": "invented to reduce its chances to 23. ______",
+          "answer": "explode"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the table below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Research about different energy-saving innovations",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Kites in Germany",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "used in different 21. ______ conditions to reduce the emission of toxic gas",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Vehicles in America",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "powered by 22. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Gas canister in South Africa",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "invented to reduce its chances to 23. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "24-25",
+      "title": "Questions 24-25",
+      "instruction": "Which TWO types of interviewees do Greg and Syria choose to do the survey?",
+      "questionText": "Which TWO types of interviewees do Greg and Syria choose to do the survey?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "staff on campus"
+        },
+        {
+          "id": "B",
+          "text": "professors"
+        },
+        {
+          "id": "C",
+          "text": "local residents"
+        },
+        {
+          "id": "D",
+          "text": "companies"
+        },
+        {
+          "id": "E",
+          "text": "university students"
+        }
+      ],
+      "questions": [
+        {
+          "id": "24",
+          "text": "Which TWO types of interviewees do Greg and Syria choose to do the survey?",
+          "answer": "C"
+        },
+        {
+          "id": "25",
+          "text": "Which TWO types of interviewees do Greg and Syria choose to do the survey?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 26-30",
+      "instruction": "Choose the correct letter, A, B, or C.",
+      "questions": [
+        {
+          "id": "26",
+          "text": "What does Syria think about renewable energy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Most people know very little about renewable energy."
+            },
+            {
+              "id": "B",
+              "text": "The general public can distinguish different kinds of renewable energy."
+            },
+            {
+              "id": "C",
+              "text": "The majority of people feel the need to replace fossil fuels with renewable energy."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "27",
+          "text": "What do the speakers say about modem windmills?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They can be used to pump water from wells."
+            },
+            {
+              "id": "B",
+              "text": "The location to build them should be carefully chosen."
+            },
+            {
+              "id": "C",
+              "text": "Farmers use them to grind grain."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "What aspect of traditional fuels are they going to address?",
+          "options": [
+            {
+              "id": "A",
+              "text": "how to avoid fossil fuels from being depleted"
+            },
+            {
+              "id": "B",
+              "text": "the possible future of traditional resources"
+            },
+            {
+              "id": "C",
+              "text": "how to prevent pollution of traditional resources"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "29",
+          "text": "What does Greg say about nuclear plants?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are cleaner and less expensive than fossil fuel."
+            },
+            {
+              "id": "B",
+              "text": "It is the best way to fight climate change."
+            },
+            {
+              "id": "C",
+              "text": "Few people think they are safe"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "What does Syria think of hydrogen fuel?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The price of it will drop eventually."
+            },
+            {
+              "id": "B",
+              "text": "It entails environmental problems."
+            },
+            {
+              "id": "C",
+              "text": "The benefits of it overweigh its high cost."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "21": "weather",
+        "22": "electricity",
+        "23": "explode"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "26": "A",
+        "27": "B",
+        "28": "B",
+        "29": "C",
+        "30": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "24_25": [
+          "C",
+          "E"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "24": "C",
+        "25": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12400,
+      "text": "Section 3. You will hear two students called Syria and Greg talking about some research"
+    },
+    {
+      "startMs": 12400,
+      "endMs": 19320,
+      "text": "on renewable energy. First, you have some time to look at questions 21 to 23."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 55480,
+      "text": "Now, listen carefully and answer questions 21 to 23."
+    },
+    {
+      "startMs": 56480,
+      "endMs": 63480,
+      "text": "Syria: Hi, Greg. How did it go with the research on renewable energy? Have you found anything?"
+    },
+    {
+      "startMs": 63480,
+      "endMs": 69480,
+      "text": "Greg: Yes, but I think it's about time we exchange our findings and discuss our next move."
+    },
+    {
+      "startMs": 69480,
+      "endMs": 76480,
+      "text": "Syria: You read my mind. Right, I'll start first. Germany is the very first country I dug into"
+    },
+    {
+      "startMs": 76480,
+      "endMs": 82480,
+      "text": "in order to find innovative means of creating clean energy because 15 percent of its"
+    },
+    {
+      "startMs": 82480,
+      "endMs": 89480,
+      "text": "national electricity supply comes from renewable sources. I found that apart from the traditional fossil fuel industry,"
+    },
+    {
+      "startMs": 89480,
+      "endMs": 95480,
+      "text": "there's a German firm that has initiated a project using kites to generate power."
+    },
+    {
+      "startMs": 95480,
+      "endMs": 99480,
+      "text": "Greg: Really? I've never heard of it before. How does it work?"
+    },
+    {
+      "startMs": 99480,
+      "endMs": 105480,
+      "text": "Syria: As a substitution for traditional fossil fuels that release toxic gas into the atmosphere,"
+    },
+    {
+      "startMs": 105480,
+      "endMs": 111480,
+      "text": "the power generating kites can function in any weather compared to conventional wind turbines,"
+    },
+    {
+      "startMs": 111480,
+      "endMs": 118480,
+      "text": "such kites can produce twice as much energy because the overall power density is proportional to altitude."
+    },
+    {
+      "startMs": 118480,
+      "endMs": 124480,
+      "text": "Greg: Sounds like an efficient way of producing power. Okay, now let me tell you what I have found."
+    },
+    {
+      "startMs": 124480,
+      "endMs": 131480,
+      "text": "There is an American company manufacturing school buses and city buses depending solely on electricity"
+    },
+    {
+      "startMs": 131480,
+      "endMs": 138480,
+      "text": "instead of gasoline. The all electric vehicles can save up to 20 gallons of fuel on a daily basis."
+    },
+    {
+      "startMs": 138480,
+      "endMs": 145480,
+      "text": "This could reduce transport budgets by over $10,000 each year, not to mention maintenance savings."
+    },
+    {
+      "startMs": 145480,
+      "endMs": 150480,
+      "text": "Syria: Wow, impressive. If only there were more of these electric vehicles around."
+    },
+    {
+      "startMs": 150480,
+      "endMs": 157480,
+      "text": "Greg: Well, over the years, South Africa has attached great importance to clean energy."
+    },
+    {
+      "startMs": 157480,
+      "endMs": 164480,
+      "text": "The nation encourages using propane gas which can either be extracted from natural deposits"
+    },
+    {
+      "startMs": 164480,
+      "endMs": 171480,
+      "text": "or be produced organically. It is normally stored in gas canisters as a type of cooking gas."
+    },
+    {
+      "startMs": 171480,
+      "endMs": 179480,
+      "text": "To reduce the number of kitchen accidents, a new type of composite gas canister made of fiber was introduced."
+    },
+    {
+      "startMs": 179480,
+      "endMs": 186480,
+      "text": "It is much safer and less likely to explode even when engulfed in fire."
+    },
+    {
+      "startMs": 187480,
+      "endMs": 196480,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 24-30."
+    },
+    {
+      "startMs": 196480,
+      "endMs": 220480,
+      "text": "Now, listen and answer questions 24-30."
+    },
+    {
+      "startMs": 221480,
+      "endMs": 228480,
+      "text": "Greg: Now, about the survey, do you have any clues as to what kind of interviewees we should include?"
+    },
+    {
+      "startMs": 228480,
+      "endMs": 233480,
+      "text": "Syria: How about local companies doing business on clean energy products?"
+    },
+    {
+      "startMs": 233480,
+      "endMs": 240480,
+      "text": "Greg: Probably not the best choice of respondents. Remember the last time we asked corporate employees to do the questionnaire,"
+    },
+    {
+      "startMs": 240480,
+      "endMs": 244480,
+      "text": "only about 5% of them were actually willing to participate."
+    },
+    {
+      "startMs": 245480,
+      "endMs": 249480,
+      "text": "Syria: That wouldn't be enough then. It seems we have to drop that idea."
+    },
+    {
+      "startMs": 249480,
+      "endMs": 254480,
+      "text": "Then maybe we can ask the professors and administrative staff here to help us."
+    },
+    {
+      "startMs": 254480,
+      "endMs": 259480,
+      "text": "They could provide their insights and understanding on energy production."
+    },
+    {
+      "startMs": 259480,
+      "endMs": 266480,
+      "text": "Greg: It would be ideal if they would, but I'm afraid most of them are too busy to respond to the list of questions we've prepared."
+    },
+    {
+      "startMs": 266480,
+      "endMs": 271480,
+      "text": "I guess the students here at the university would be more suitable."
+    },
+    {
+      "startMs": 271480,
+      "endMs": 275480,
+      "text": "Syria: You're right, and it is a much bigger sample pool too."
+    },
+    {
+      "startMs": 275480,
+      "endMs": 278480,
+      "text": "Also, I think we should include the locals."
+    },
+    {
+      "startMs": 278480,
+      "endMs": 283480,
+      "text": "Their opinion is key to the promotion of renewable energy here in the town."
+    },
+    {
+      "startMs": 283480,
+      "endMs": 286480,
+      "text": "Greg: But wouldn't it be difficult to collect data?"
+    },
+    {
+      "startMs": 286480,
+      "endMs": 291480,
+      "text": "There's no way the two of us could go from door to door to interview all the residents."
+    },
+    {
+      "startMs": 291480,
+      "endMs": 299480,
+      "text": "Syria: There's no need to worry about that. We'll make it telephone interviews. That way we'll have enough time to get sufficient data."
+    },
+    {
+      "startMs": 299480,
+      "endMs": 302480,
+      "text": "Greg: Good idea. What should we present in our speech?"
+    },
+    {
+      "startMs": 302480,
+      "endMs": 309480,
+      "text": "Syria: Due to lack of media coverage, the majority of people actually have a limited understanding on renewable energy."
+    },
+    {
+      "startMs": 309480,
+      "endMs": 314480,
+      "text": "Most of them aren't able to identify various types of renewable sources."
+    },
+    {
+      "startMs": 314480,
+      "endMs": 321480,
+      "text": "So I feel we could start by clarifying what it is and the benefit of it compared to fossil fuels."
+    },
+    {
+      "startMs": 321480,
+      "endMs": 325480,
+      "text": "Greg: That makes sense. We could start with wind energy."
+    },
+    {
+      "startMs": 325480,
+      "endMs": 328480,
+      "text": "The centuries wind has been used to do work."
+    },
+    {
+      "startMs": 328480,
+      "endMs": 337480,
+      "text": "With the help of windmills, farmers used to pump water from wells or turn large grinding stones to grind wheat or corn."
+    },
+    {
+      "startMs": 337480,
+      "endMs": 344480,
+      "text": "The windmills today generate electricity. The only problem is that it might not be windy all the time."
+    },
+    {
+      "startMs": 344480,
+      "endMs": 348480,
+      "text": "So it is crucial to choose the appropriate site for wind farms."
+    },
+    {
+      "startMs": 348480,
+      "endMs": 357480,
+      "text": "Syria: Well, I think we can also include comparisons between clean energy and traditional energy resources like coal, oil and natural gas."
+    },
+    {
+      "startMs": 357480,
+      "endMs": 362480,
+      "text": "Greg: Maybe we can look into the prospect of these conventional sources of energy."
+    },
+    {
+      "startMs": 362480,
+      "endMs": 368480,
+      "text": "The rising cost of fossil fuels and the threat of climate change is a concern to many."
+    },
+    {
+      "startMs": 368480,
+      "endMs": 372480,
+      "text": "Syria: Totally, these traditional resources will deplete eventually."
+    },
+    {
+      "startMs": 372480,
+      "endMs": 378480,
+      "text": "Renewable energy currently makes up less than 2% of the world's primary energy supply."
+    },
+    {
+      "startMs": 378480,
+      "endMs": 383480,
+      "text": "And although growing very rapidly, it is not on course to fill the fossil fuel gap."
+    },
+    {
+      "startMs": 383480,
+      "endMs": 388480,
+      "text": "Greg：Nuclear energy is another type of energy we ought to mention."
+    },
+    {
+      "startMs": 388480,
+      "endMs": 397480,
+      "text": "Nuclear power plants can produce dependent power constantly and release far less greenhouse gases than other traditional power plants."
+    },
+    {
+      "startMs": 397480,
+      "endMs": 408480,
+      "text": "But most people feel that this type of energy is unsafe because radiation isn't easily dealt with, especially in nuclear waste and maintenance materials."
+    },
+    {
+      "startMs": 408480,
+      "endMs": 410480,
+      "text": "Syria: What should we end the speech with?"
+    },
+    {
+      "startMs": 410480,
+      "endMs": 415480,
+      "text": "Greg: Have you heard about a new type of energy called hydrogen fuel?"
+    },
+    {
+      "startMs": 415480,
+      "endMs": 421480,
+      "text": "It is an infinitely renewable fuel that doesn't have detrimental environmental effects."
+    },
+    {
+      "startMs": 421480,
+      "endMs": 427480,
+      "text": "The only problem is that it is so expensive that only wealthy individuals can afford it."
+    },
+    {
+      "startMs": 427480,
+      "endMs": 432480,
+      "text": "But I think overall, the benefits overshadow its high cost."
+    },
+    {
+      "startMs": 432480,
+      "endMs": 442480,
+      "text": "Syria: I think that even though this new type of renewable energy is too expensive to use at the moment, in the long run, its price will go down and become more accessible."
+    },
+    {
+      "startMs": 445480,
+      "endMs": 448480,
+      "text": "That is the end of section 3."
+    },
+    {
+      "startMs": 448480,
+      "endMs": 452480,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 478480,
+      "endMs": 484480,
+      "text": "Now turn to section 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 67,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

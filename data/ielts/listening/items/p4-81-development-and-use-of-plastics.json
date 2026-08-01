@@ -1,0 +1,495 @@
+{
+  "id": "p4-81-development-and-use-of-plastics",
+  "title": "Development and use of plastics",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-4bf1efec7308",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 366.68,
+    "checksum": "sha256:3a56c00b591a06631bb72992c899d3628b0ec14f90f7ad846b35b0ad698ae145"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Development and use of plastics 1930s Polythene LDPE: distinguishing feature: it is highly 31. __________, e.g. used to make 32. __________, carrier bags and packaging materials HDPE: made tougher by exposure to a particular kind of 33. __________, suitable for rigid container, e.g. for bleach Polyurethane blown form: used for making 34. __________ (padding), widely used in housing infrastructure to give 35. __________ non-blown form: used mainly for sportswear 1940s – 1950s PET used to make 36. __________ e.g. Dacron and Terylene popular for making containers for fizzy drinks used for household objects such as 37. __________ because it resists abrasion Tupperware storage boxes revolution in 38. __________ techniques 1960s Teflon non-stick, almost no 39. __________ used for protective coatings, e.g. for frying pans Gore-Tex best known for outdoor wear also used for various 40. __________ purposes",
+      "questions": [
+        {
+          "id": "31",
+          "text": "LDPE: distinguishing feature: it is highly 31. __________,",
+          "answer": "flexible"
+        },
+        {
+          "id": "32",
+          "text": "e.g. used to make 32. __________, carrier bags and packaging materials",
+          "answer": "film"
+        },
+        {
+          "id": "33",
+          "text": "HDPE: made tougher by exposure to a particular kind of 33. __________, suitable for rigid container, e.g. for bleach",
+          "answer": "gas"
+        },
+        {
+          "id": "34",
+          "text": "blown form: used for making 34. __________ (padding), widely used in housing infrastructure to give 35. __________",
+          "answer": "furniture"
+        },
+        {
+          "id": "35",
+          "text": "blown form: used for making 34. __________ (padding), widely used in housing infrastructure to give 35. __________",
+          "answer": "insulation"
+        },
+        {
+          "id": "36",
+          "text": "used to make 36. __________ e.g. Dacron and Terylene",
+          "answer": "fabric"
+        },
+        {
+          "id": "37",
+          "text": "used for household objects such as 37. __________ because it resists abrasion",
+          "answer": "trays"
+        },
+        {
+          "id": "38",
+          "text": "revolution in 38. __________ techniques",
+          "answer": "sales"
+        },
+        {
+          "id": "39",
+          "text": "non-stick, almost no 39. __________",
+          "answer": "friction"
+        },
+        {
+          "id": "40",
+          "text": "also used for various 40. __________ purposes",
+          "answer": "medical"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Development and use of plastics",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "1930s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Polythene",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "LDPE: distinguishing feature: it is highly 31. __________,",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "e.g. used to make 32. __________, carrier bags and packaging materials",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "HDPE: made tougher by exposure to a particular kind of 33. __________, suitable for rigid container, e.g. for bleach",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Polyurethane",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "blown form: used for making 34. __________ (padding), widely used in housing infrastructure to give 35. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "non-blown form: used mainly for sportswear",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1940s – 1950s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "PET",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "used to make 36. __________ e.g. Dacron and Terylene",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "popular for making containers for fizzy drinks",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "used for household objects such as 37. __________ because it resists abrasion",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Tupperware",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "storage boxes",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "revolution in 38. __________ techniques",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1960s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Teflon",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "non-stick, almost no 39. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "used for protective coatings, e.g. for frying pans",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Gore-Tex",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "best known for outdoor wear",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "also used for various 40. __________ purposes",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "flexible",
+        "32": "film",
+        "33": "gas",
+        "34": "furniture",
+        "35": "insulation",
+        "36": "fabric",
+        "37": "trays",
+        "38": "sales",
+        "39": "friction",
+        "40": "medical"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12360,
+      "text": "You will hear a lecture given to Materials Science undergraduates on the use of plastics"
+    },
+    {
+      "startMs": 12360,
+      "endMs": 13120,
+      "text": "in the home."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 41920,
+      "text": "Good morning. In the second in my series of lectures, The Appliance of Science, I'm going"
+    },
+    {
+      "startMs": 41920,
+      "endMs": 48320,
+      "text": "to outline developments in plastics since the 1930s, focusing on the unique properties"
+    },
+    {
+      "startMs": 48320,
+      "endMs": 55160,
+      "text": "of the different discoveries and how they impact on so many aspects of our daily lives."
+    },
+    {
+      "startMs": 55160,
+      "endMs": 61080,
+      "text": "It's hard to imagine what we do without plastics in their domestic application and also"
+    },
+    {
+      "startMs": 61080,
+      "endMs": 64760,
+      "text": "increasingly for leisure pursuits."
+    },
+    {
+      "startMs": 64760,
+      "endMs": 70360,
+      "text": "Let's start with one of the earliest forms of plastics, polythene, which was invented"
+    },
+    {
+      "startMs": 70360,
+      "endMs": 79640,
+      "text": "in 1933. It essentially evolved into two forms. The first, low-density polyethylene,"
+    },
+    {
+      "startMs": 79640,
+      "endMs": 87240,
+      "text": "better known as LDPE, is very flexible and, indeed, this is probably its most significant"
+    },
+    {
+      "startMs": 87240,
+      "endMs": 93920,
+      "text": "feature and one which its developers recognise as important. This means that it's suitable"
+    },
+    {
+      "startMs": 93920,
+      "endMs": 100440,
+      "text": "for making things like film and also carrier bags and other packaging materials."
+    },
+    {
+      "startMs": 100440,
+      "endMs": 108760,
+      "text": "High-density HDPE is more robust and it can be made more so by exposing it to a type of gas."
+    },
+    {
+      "startMs": 108760,
+      "endMs": 114680,
+      "text": "It's particularly used for making rigid containers, for example, for milk or for household"
+    },
+    {
+      "startMs": 114680,
+      "endMs": 122360,
+      "text": "cleaners such as bleach. But going back to the 1930s, another key development in plastics"
+    },
+    {
+      "startMs": 122360,
+      "endMs": 130440,
+      "text": "was polyurethane. It's still widely used in two forms. The first form is known as blown,"
+    },
+    {
+      "startMs": 131240,
+      "endMs": 135560,
+      "text": "and this type is used in the manufacture of furniture for the padded parts."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 143160,
+      "text": "Blown polyurethane is also still widely used in the infrastructure of houses as a means of"
+    },
+    {
+      "startMs": 143160,
+      "endMs": 151160,
+      "text": "providing insulation in loft and roof spaces in particular."
+    },
+    {
+      "startMs": 151160,
+      "endMs": 157800,
+      "text": "Polyurethane is also useful in its non-blown form. It can be made into extremely comfortable and stretchy fiber and nowadays"
+    },
+    {
+      "startMs": 157800,
+      "endMs": 167320,
+      "text": "it's widely used for sportswear. Moving to the 1940s, there was another significant departure"
+    },
+    {
+      "startMs": 167320,
+      "endMs": 175960,
+      "text": "when polyethylene terephthalate or PET was developed. Its first application was in fabric under"
+    },
+    {
+      "startMs": 175960,
+      "endMs": 182520,
+      "text": "the brand names of Dacron and Terylene. In addition to being able to be made into fabric,"
+    },
+    {
+      "startMs": 183160,
+      "endMs": 191080,
+      "text": "PET has a valued property, particularly impermeable, and is unaffected by carbonation which tends"
+    },
+    {
+      "startMs": 191080,
+      "endMs": 197880,
+      "text": "to attack other plastics. So it's used in the manufacture of bottles for fizzy drinks and is therefore"
+    },
+    {
+      "startMs": 197880,
+      "endMs": 205320,
+      "text": "probably present in most of our fridges. PET is also very resistant to abrasion, and for this"
+    },
+    {
+      "startMs": 205320,
+      "endMs": 210760,
+      "text": "reason it is used in the home for trays and other items that are often heavily scratched."
+    },
+    {
+      "startMs": 212760,
+      "endMs": 219480,
+      "text": "Turning now to the 1950s, which for many people was when plastic really impacted on their lives"
+    },
+    {
+      "startMs": 219480,
+      "endMs": 226760,
+      "text": "for the first time with a large number of new inventions and applications. One of the most visible"
+    },
+    {
+      "startMs": 226760,
+      "endMs": 233800,
+      "text": "parts of this plastics invasion was Earl Tupper's Tupperware, a line of sealable polyethylene food"
+    },
+    {
+      "startMs": 233800,
+      "endMs": 240280,
+      "text": "containers. The products were well designed and highly effective, greatly reducing spoilage"
+    },
+    {
+      "startMs": 240280,
+      "endMs": 248120,
+      "text": "of foods in storage. However, what Tupperware is probably best known for is the revolutionary techniques"
+    },
+    {
+      "startMs": 248120,
+      "endMs": 254840,
+      "text": "its inventor developed for sales."
+    },
+    {
+      "startMs": 254840,
+      "endMs": 261000,
+      "text": "He set up through a network of housewives who sold Tupperware as a means of bringing in extra money."
+    },
+    {
+      "startMs": 261080,
+      "endMs": 270440,
+      "text": "For many people, this method was the first encounter they had with the product. Finally, the 1960s."
+    },
+    {
+      "startMs": 270440,
+      "endMs": 277320,
+      "text": "I'd like to finish by talking about a type of plastic which,"
+    },
+    {
+      "startMs": 277320,
+      "endMs": 286920,
+      "text": "to my mind, is one of the most versatile materials ever invented. Polytetrafluoroethylene,"
+    },
+    {
+      "startMs": 286920,
+      "endMs": 294120,
+      "text": "PTFE, better known as Teflon. This is a non-stick material with hardly any friction, which can be"
+    },
+    {
+      "startMs": 294120,
+      "endMs": 302280,
+      "text": "deposited on metal surfaces as a protective coating. It was initially discovered by accident"
+    },
+    {
+      "startMs": 302280,
+      "endMs": 309960,
+      "text": "as long ago as 1938, but it took until the 1960s for Teflon non-stick frying pans to become an"
+    },
+    {
+      "startMs": 309960,
+      "endMs": 316520,
+      "text": "indispensable consumer item. Teflon was later used to synthesize the so-called miracle fabric"
+    },
+    {
+      "startMs": 316520,
+      "endMs": 322600,
+      "text": "Gore-Tex. The best known use of this is for making rainwear and outdoor gear that in principle"
+    },
+    {
+      "startMs": 322600,
+      "endMs": 330360,
+      "text": "breathes to keep the wearer's moisture from building up, and so is particularly comfortable to wear for"
+    },
+    {
+      "startMs": 330360,
+      "endMs": 337800,
+      "text": "walking. However, Gore-Tex has other uses which are less well known. It is increasingly being used"
+    },
+    {
+      "startMs": 337800,
+      "endMs": 339800,
+      "text": "for making materials used for a variety of medical applications."
+    },
+    {
+      "startMs": 339800,
+      "endMs": 339800,
+      "text": "Now, if anyone has any questions, I'd be happy to answer them."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 46,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

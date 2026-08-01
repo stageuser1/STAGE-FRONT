@@ -1,0 +1,496 @@
+{
+  "id": "p3-13-the-moa",
+  "title": "The Moa",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-b52297f6564c",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 398.448,
+    "checksum": "sha256:783e50454e421def07855ae29f57213e0560f83fecaee532ea2744364436f2af"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Question 21-26.",
+      "instruction": "Choose the correct letter A, B or C",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What is the thing that makes the Moa similar to dinosaur?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Both are of interest to the public."
+            },
+            {
+              "id": "B",
+              "text": "Both are extinct at similar time"
+            },
+            {
+              "id": "C",
+              "text": "Both left lots of fossil remains"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "What is the difference between Moa and other birds?",
+          "options": [
+            {
+              "id": "A",
+              "text": "No wing bones"
+            },
+            {
+              "id": "B",
+              "text": "A long tail"
+            },
+            {
+              "id": "C",
+              "text": "A smaller head"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "What’s the special feature of their chicks?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They never return to the nests."
+            },
+            {
+              "id": "B",
+              "text": "Most of them die within two months after birth."
+            },
+            {
+              "id": "C",
+              "text": "They can find food by themselves."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "24",
+          "text": "What is the tutor’s opinion on male hatching the eggs?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He doubts whether it is true or possible."
+            },
+            {
+              "id": "B",
+              "text": "He thinks it may be true."
+            },
+            {
+              "id": "C",
+              "text": "He can say with certainty that it is true."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "25",
+          "text": "What is the male student’s response after hearing some people see a Moa recently?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is surprised."
+            },
+            {
+              "id": "B",
+              "text": "He is worried."
+            },
+            {
+              "id": "C",
+              "text": "He is amused."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "Why did the Moa become extinct?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Climate change"
+            },
+            {
+              "id": "B",
+              "text": "Human interference"
+            },
+            {
+              "id": "C",
+              "text": "Competitions with other animals"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Question 27-30",
+      "instruction": "Choose FOUR answers from the box and write the correct letter A–F",
+      "options": [
+        {
+          "id": "A",
+          "text": "The much taller female"
+        },
+        {
+          "id": "B",
+          "text": "Less fossils left"
+        },
+        {
+          "id": "C",
+          "text": "The biggest eggs"
+        },
+        {
+          "id": "D",
+          "text": "Feeding at night"
+        },
+        {
+          "id": "E",
+          "text": "Better vocal sound"
+        },
+        {
+          "id": "F",
+          "text": "Poor eyesight"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "The North Island Giant Moa",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "The Crested Moa",
+          "answer": "B"
+        },
+        {
+          "id": "29",
+          "text": "The Stout-legged Moa",
+          "answer": "F"
+        },
+        {
+          "id": "30",
+          "text": "The Eastern Moa",
+          "answer": "E"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "A",
+        "23": "C",
+        "24": "B",
+        "25": "C",
+        "26": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "27": "A",
+        "28": "B",
+        "29": "F",
+        "30": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9560,
+      "text": "[Narrator]: Section 3. You will hear two students talking about the Moor with the lecturer. First,"
+    },
+    {
+      "startMs": 9560,
+      "endMs": 14240,
+      "text": "you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 53480,
+      "text": "Now, listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 53480,
+      "endMs": 59560,
+      "text": "[Lecturer]: Thank you all for coming here today to hear about the Moor, a kind of animal which has been"
+    },
+    {
+      "startMs": 59560,
+      "endMs": 67240,
+      "text": "extinct for a long time. Well, first of all, we look at what the Moor are. The Moor are nine"
+    },
+    {
+      "startMs": 67240,
+      "endMs": 72760,
+      "text": "species of flatless birds endemic to New Zealand. They were the dominant herbivores in New Zealand's"
+    },
+    {
+      "startMs": 72760,
+      "endMs": 79240,
+      "text": "forest, shrubland and subalpine ecosystems for thousands of years, but around 500 years ago,"
+    },
+    {
+      "startMs": 79240,
+      "endMs": 85920,
+      "text": "they all went extinct. When I mention extinct animals during ancient times, you may immediately"
+    },
+    {
+      "startMs": 85920,
+      "endMs": 92400,
+      "text": "think of dinosaurs which disappeared around 66 million years ago. Fossils of dinosaurs which were used to study are a large number, but not many of those of Moor remain. Though both animals appeal to people today."
+    },
+    {
+      "startMs": 92400,
+      "endMs": 99360,
+      "text": "were used to study are a large number, but not many of those of Moor remain. Though both animals"
+    },
+    {
+      "startMs": 99360,
+      "endMs": 106080,
+      "text": "appeal to people today. [Female Student]: So, the Moor sound more mysterious now, but sir, I've got a question"
+    },
+    {
+      "startMs": 106080,
+      "endMs": 113680,
+      "text": "about these flatless birds. How can we distinguish them from other birds? [Lecturer]: That's a good question. Birds"
+    },
+    {
+      "startMs": 113760,
+      "endMs": 121040,
+      "text": "are commonly characterized by being warm-blooded, having feathers and wings, usually capable of flight,"
+    },
+    {
+      "startMs": 121040,
+      "endMs": 127120,
+      "text": "and laying eggs while the flatless Moor, until their extinction, were the largest birds in the world."
+    },
+    {
+      "startMs": 127120,
+      "endMs": 132480,
+      "text": "Their heads are relatively small in relation to their bodies, and they are the only wingless birds"
+    },
+    {
+      "startMs": 132480,
+      "endMs": 138560,
+      "text": "lacking even the vestigial wings and substantial tailbones in their family. [Male Student]: That's impressive,"
+    },
+    {
+      "startMs": 138640,
+      "endMs": 145600,
+      "text": "but were they born to be like that? I mean, when they were chicks. [Lecturer]: Yes, absolutely. So let's move"
+    },
+    {
+      "startMs": 145600,
+      "endMs": 151680,
+      "text": "on to the chicks. The eggs of Moor were laid in nests and incubated for about two months. The"
+    },
+    {
+      "startMs": 151680,
+      "endMs": 156240,
+      "text": "chicks would be well developed upon hatching, and probably would be able to leave the nests to"
+    },
+    {
+      "startMs": 156240,
+      "endMs": 161840,
+      "text": "feed on their own almost immediately. [Female Student]: I've heard that the male Moor are thought to have incubated"
+    },
+    {
+      "startMs": 161840,
+      "endMs": 167280,
+      "text": "the eggs. Is that true? [Lecturer]: I think there is a possibility for that. I've read somewhere that the"
+    },
+    {
+      "startMs": 167280,
+      "endMs": 173440,
+      "text": "sex-specific DNA recovered from the outer surfaces of eggshells suggested that these eggs were likely to have been hatched by the male, but we still need to consult more. But I have a question."
+    },
+    {
+      "startMs": 179280,
+      "endMs": 184880,
+      "text": "There has been some occasional speculation that the Moor were still alive, because someone said"
+    },
+    {
+      "startMs": 184880,
+      "endMs": 189760,
+      "text": "they had caught sight of them in New Zealand in the late 19th century or even the 20th. Do you think"
+    },
+    {
+      "startMs": 189760,
+      "endMs": 196000,
+      "text": "it's possible? [Male Student]: I'm not amazed by that, since that kind of thing has been claimed several times."
+    },
+    {
+      "startMs": 196000,
+      "endMs": 202960,
+      "text": "But I find it funny, because no reliable evidence of Moor tracks has ever been found. An expert"
+    },
+    {
+      "startMs": 202960,
+      "endMs": 208800,
+      "text": "still contend that Moor's survival is extremely unlikely. [Female Student]: So what was the reason for the Moor's"
+    },
+    {
+      "startMs": 208800,
+      "endMs": 214400,
+      "text": "extinction? I wonder if it was global warming or some other factors related to their living environment."
+    },
+    {
+      "startMs": 214400,
+      "endMs": 221040,
+      "text": "[Lecturer]: Well, before the arrival of human settlers in New Zealand, the Moor's only predator"
+    },
+    {
+      "startMs": 221040,
+      "endMs": 228560,
+      "text": "was the massive hearse eagle. Then the Maori arrived sometime before CE-1300, and all Moor"
+    },
+    {
+      "startMs": 228560,
+      "endMs": 234240,
+      "text": "Genera was soon driven to extinction by hunting. What a horrible thing."
+    },
+    {
+      "startMs": 244480,
+      "endMs": 253360,
+      "text": "[Narrator]: Now, listen and answer questions 27-30."
+    },
+    {
+      "startMs": 256640,
+      "endMs": 263040,
+      "text": "[Lecturer]: All right, now let's look at the features of some species of Moor. The South Island giant Moor"
+    },
+    {
+      "startMs": 263040,
+      "endMs": 268720,
+      "text": "may have been the tallest birds ever known, and the second tallest of the nine Moor species"
+    },
+    {
+      "startMs": 268800,
+      "endMs": 274720,
+      "text": "is the North Island giant Moor, with the females being markedly larger than males, both in"
+    },
+    {
+      "startMs": 274720,
+      "endMs": 280080,
+      "text": "weight and height. [Male Student]: And I've heard that the smallest of the Moor birds are the coastal Moor."
+    },
+    {
+      "startMs": 280080,
+      "endMs": 285200,
+      "text": "Is that right? [Lecturer]: Yes, you were right, and have you heard about any other kind of Moor before?"
+    },
+    {
+      "startMs": 285200,
+      "endMs": 289200,
+      "text": "[Female Student]: I know the Crested Moor. The Eggstay Lake may be larger than others."
+    },
+    {
+      "startMs": 289200,
+      "endMs": 295440,
+      "text": "[Lecturer]: As they mainly lived in the remote interior of the southern island, their fossils are rare or"
+    },
+    {
+      "startMs": 295440,
+      "endMs": 302080,
+      "text": "absent in archaeological sites, and no egg remains have yet been identified. [Female Student]: Are there any species"
+    },
+    {
+      "startMs": 302080,
+      "endMs": 308320,
+      "text": "of Moor that have got more fossils? [Lecturer]: Yes, of course. A considerable amount of remains of the"
+    },
+    {
+      "startMs": 308320,
+      "endMs": 312960,
+      "text": "stout-legged Moor exist, due to the well-preserved properties of their habitat."
+    },
+    {
+      "startMs": 313600,
+      "endMs": 319760,
+      "text": "Their skulls reveal relatively bad vision, a good sense of smell, and a very short bill."
+    },
+    {
+      "startMs": 320720,
+      "endMs": 326960,
+      "text": "Then there is the Eastern Moor. They were remarkable in having very long and narrow wind pipes,"
+    },
+    {
+      "startMs": 326960,
+      "endMs": 332320,
+      "text": "which probably enabled them to make louder, more resonant calls than those of other Moor,"
+    },
+    {
+      "startMs": 332320,
+      "endMs": 337360,
+      "text": "and had the greatest vocal abilities, so they could communicate when they could not see each other"
+    },
+    {
+      "startMs": 337360,
+      "endMs": 344160,
+      "text": "in the forest or at night. They used a range of senses, apart from sound in their search for food,"
+    },
+    {
+      "startMs": 344160,
+      "endMs": 346240,
+      "text": "such as their sense of smell and vision."
+    },
+    {
+      "startMs": 350640,
+      "endMs": 360080,
+      "text": "[Narrator]: That is the end of section 3. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 49,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

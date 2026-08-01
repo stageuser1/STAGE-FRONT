@@ -1,0 +1,496 @@
+{
+  "id": "p2-39-basement-of-museum",
+  "title": "Basement of Museum",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-599bf6ffdf96",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 500.04,
+    "checksum": "sha256:81982d03001c6cab4205efdb0612395c9ec033559bb8a4fe837fbf1b2fe95381"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 11–16",
+      "instruction": "Choose SIX answers from the box and write the correct letter, A–G, next to Questions 1–6.",
+      "options": [
+        {
+          "id": "A",
+          "text": "was given by one person"
+        },
+        {
+          "id": "B",
+          "text": "was recently publicised in the media"
+        },
+        {
+          "id": "C",
+          "text": "includes some items given by members of the public"
+        },
+        {
+          "id": "D",
+          "text": "includes some items given by the artists"
+        },
+        {
+          "id": "E",
+          "text": "includes the most popular exhibits in the museum"
+        },
+        {
+          "id": "F",
+          "text": "is the largest of its kind in the country"
+        },
+        {
+          "id": "G",
+          "text": "has had some of its contents relocated"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "20th- and 21st-century paintings",
+          "answer": "E"
+        },
+        {
+          "id": "12",
+          "text": "19th-century paintings",
+          "answer": "D"
+        },
+        {
+          "id": "13",
+          "text": "Sculptures",
+          "answer": "G"
+        },
+        {
+          "id": "14",
+          "text": "‘Around the world’ exhibition",
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "Coins",
+          "answer": "C"
+        },
+        {
+          "id": "16",
+          "text": "Porcelain and glass",
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 17–20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "restaurant",
+          "answer": "F"
+        },
+        {
+          "id": "18",
+          "text": "café",
+          "answer": "H"
+        },
+        {
+          "id": "19",
+          "text": "baby-changing facilities",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "cloakroom",
+          "answer": "B"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-39-basement-of-museum-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-39-basement-of-museum-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "E",
+        "12": "D",
+        "13": "G",
+        "14": "B",
+        "15": "C",
+        "16": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "17": "F",
+        "18": "H",
+        "19": "C",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10400,
+      "text": "Section 2"
+    },
+    {
+      "startMs": 10400,
+      "endMs": 16280,
+      "text": "You will hear a guide at an art museum talking to a group of visitors."
+    },
+    {
+      "startMs": 16280,
+      "endMs": 22360,
+      "text": "First, you have some time to look at questions 11 to 16."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 58520,
+      "text": "Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 58520,
+      "endMs": 64880,
+      "text": "Good morning and welcome to the museum."
+    },
+    {
+      "startMs": 64880,
+      "endMs": 69080,
+      "text": "One with a remarkable range of exhibits which I'm sure you'll enjoy."
+    },
+    {
+      "startMs": 69080,
+      "endMs": 73680,
+      "text": "My name is Greg and I'll tell you about the various collections as we go around."
+    },
+    {
+      "startMs": 73680,
+      "endMs": 78480,
+      "text": "But before we go, let me just give you a taste of what we have here."
+    },
+    {
+      "startMs": 78480,
+      "endMs": 83200,
+      "text": "Well for one thing, we have a fine collection of 20th and 21st century paintings."
+    },
+    {
+      "startMs": 83200,
+      "endMs": 87880,
+      "text": "Many by very well known artists, I'm sure you'll recognize several of the paintings."
+    },
+    {
+      "startMs": 87880,
+      "endMs": 91800,
+      "text": "This is the gallery that attracts the largest number of visitors, so it's best to go in"
+    },
+    {
+      "startMs": 91800,
+      "endMs": 95480,
+      "text": "early in the day before the crowds arrive."
+    },
+    {
+      "startMs": 95480,
+      "endMs": 97960,
+      "text": "Then there are the 19th century paintings."
+    },
+    {
+      "startMs": 97960,
+      "endMs": 103200,
+      "text": "The museum was opened in the middle of that century and several of the artists each donated"
+    },
+    {
+      "startMs": 103200,
+      "endMs": 106240,
+      "text": "one work to get the museum started as it were."
+    },
+    {
+      "startMs": 106240,
+      "endMs": 111560,
+      "text": "So they're of special interest to us, we feel closer to them than to other works."
+    },
+    {
+      "startMs": 111560,
+      "endMs": 116120,
+      "text": "The sculpture gallery has a number of fine exhibits, but I'm afraid it's currently closed"
+    },
+    {
+      "startMs": 116120,
+      "endMs": 117600,
+      "text": "for refurbishment."
+    },
+    {
+      "startMs": 117600,
+      "endMs": 121640,
+      "text": "You'll need to come back next year to see it properly, but a number of the sculptures have"
+    },
+    {
+      "startMs": 121640,
+      "endMs": 125240,
+      "text": "been moved to other parts of the museum."
+    },
+    {
+      "startMs": 125240,
+      "endMs": 128280,
+      "text": "Around the World is a temporary exhibition."
+    },
+    {
+      "startMs": 128280,
+      "endMs": 132080,
+      "text": "You've probably seen something about it on TV or in the newspapers."
+    },
+    {
+      "startMs": 132080,
+      "endMs": 136760,
+      "text": "It's created a great deal of interest because it presents objects from every continent"
+    },
+    {
+      "startMs": 136760,
+      "endMs": 143200,
+      "text": "and many countries and provides information about their social context, why they were made,"
+    },
+    {
+      "startMs": 143200,
+      "endMs": 145760,
+      "text": "who for, and so on."
+    },
+    {
+      "startMs": 145760,
+      "endMs": 148040,
+      "text": "And there's the collection of coins."
+    },
+    {
+      "startMs": 148040,
+      "endMs": 153040,
+      "text": "This is what you might call a focused specialist collection because all the coins come from"
+    },
+    {
+      "startMs": 153040,
+      "endMs": 159360,
+      "text": "this country and were produced between 2000 and 1000 years ago, and many of them were"
+    },
+    {
+      "startMs": 159360,
+      "endMs": 165480,
+      "text": "discovered by ordinary people digging their gardens and donated to the museum."
+    },
+    {
+      "startMs": 165480,
+      "endMs": 171280,
+      "text": "All our porcelain and glass was left to the museum by its founder when he died in 1878,"
+    },
+    {
+      "startMs": 171280,
+      "endMs": 175280,
+      "text": "and in the terms of his will, we're not allowed to add anything to that collection."
+    },
+    {
+      "startMs": 175280,
+      "endMs": 183360,
+      "text": "He believed it was perfect in itself, and we don't see any reason to disagree."
+    },
+    {
+      "startMs": 183360,
+      "endMs": 189880,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 17-20."
+    },
+    {
+      "startMs": 205280,
+      "endMs": 216480,
+      "text": "Now listen and answer questions 17-20."
+    },
+    {
+      "startMs": 216480,
+      "endMs": 224120,
+      "text": "Okay, that was something about the collections, and now here's some more practical information"
+    },
+    {
+      "startMs": 224120,
+      "endMs": 226320,
+      "text": "in case you need it."
+    },
+    {
+      "startMs": 226320,
+      "endMs": 231640,
+      "text": "Most of the museum facilities are downstairs in the basement, so you go down the stairs"
+    },
+    {
+      "startMs": 231640,
+      "endMs": 232800,
+      "text": "here."
+    },
+    {
+      "startMs": 232800,
+      "endMs": 237280,
+      "text": "When you reach the bottom of the stairs, you'll find yourself in a sitting area with comfortable"
+    },
+    {
+      "startMs": 237280,
+      "endMs": 244040,
+      "text": "chairs and sofas where you can have a rest before continuing your exploration of the museum."
+    },
+    {
+      "startMs": 244040,
+      "endMs": 249880,
+      "text": "We have a very good restaurant which serves excellent food all day in a relaxing atmosphere."
+    },
+    {
+      "startMs": 249880,
+      "endMs": 255360,
+      "text": "To reach it, when you get to the bottom of the stairs, go straight ahead to the far side"
+    },
+    {
+      "startMs": 255360,
+      "endMs": 259960,
+      "text": "of the sitting area, then turn right into the corridor."
+    },
+    {
+      "startMs": 259960,
+      "endMs": 263760,
+      "text": "You'll see the door of the restaurant facing you."
+    },
+    {
+      "startMs": 263760,
+      "endMs": 268280,
+      "text": "If you just want to snack or if you'd like to eat somewhere with facilities for children,"
+    },
+    {
+      "startMs": 268280,
+      "endMs": 270320,
+      "text": "we also have a cafe."
+    },
+    {
+      "startMs": 270320,
+      "endMs": 275560,
+      "text": "When you reach the bottom of the stairs, you'll need to go straight ahead, turn right into"
+    },
+    {
+      "startMs": 275560,
+      "endMs": 281000,
+      "text": "the corridor, and the cafe is immediately on the right."
+    },
+    {
+      "startMs": 281000,
+      "endMs": 287680,
+      "text": "And talking about children, there are baby-changing facilities downstairs, across the sitting area,"
+    },
+    {
+      "startMs": 287680,
+      "endMs": 292640,
+      "text": "go straight ahead along the corridor on the left, and you and your baby will find"
+    },
+    {
+      "startMs": 292640,
+      "endMs": 296320,
+      "text": "the facilities on the left-hand side."
+    },
+    {
+      "startMs": 296320,
+      "endMs": 301920,
+      "text": "The cloakroom where you should leave coats, umbrellas, and any large bags is on the left-hand"
+    },
+    {
+      "startMs": 301920,
+      "endMs": 304680,
+      "text": "side of the sitting area."
+    },
+    {
+      "startMs": 304680,
+      "endMs": 308880,
+      "text": "It's through the last door before you come to the corridor."
+    },
+    {
+      "startMs": 308880,
+      "endMs": 313680,
+      "text": "There are toilets on every floor, but in the basement, they're the first rooms on the"
+    },
+    {
+      "startMs": 313680,
+      "endMs": 316120,
+      "text": "left when you get down there."
+    },
+    {
+      "startMs": 316120,
+      "endMs": 321480,
+      "text": "Okay, now if you've got anything to leave in the cloakroom, please do that now, and then"
+    },
+    {
+      "startMs": 321480,
+      "endMs": 326120,
+      "text": "we'll start our tour."
+    },
+    {
+      "startMs": 326120,
+      "endMs": 329400,
+      "text": "That is the end of section 2."
+    },
+    {
+      "startMs": 329400,
+      "endMs": 332800,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 346120,
+      "endMs": 365600,
+      "text": "Now turn to section 3."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 61,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

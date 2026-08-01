@@ -210,3 +210,56 @@ test("the report covers every rule even when the attempt is empty", () => {
     [1, 2, 3, 4, 5, 6, 7, 8],
   );
 });
+
+test("scores multiple numbered questions from one instruction group", () => {
+  const rules = [
+    {
+      questionNo: 17,
+      groupId: "17-18",
+      mode: "single",
+      accepted: ["C"],
+      normalize: ["trim", "lowercase"],
+    },
+    {
+      questionNo: 18,
+      groupId: "17-18",
+      mode: "single",
+      accepted: ["E"],
+      normalize: ["trim", "lowercase"],
+    },
+  ];
+
+  const report = scoreAttempt(attemptWith({ 17: "C", 18: "E" }), rules);
+
+  assert.equal(report.total, 2);
+  assert.equal(report.correct, 2);
+  assert.deepEqual(report.byQuestion.map((row) => row.no), [17, 18]);
+});
+
+test("matching questions can be scored by stable option IDs", () => {
+  const rule = {
+    questionNo: 21,
+    groupId: "21-22",
+    mode: "single",
+    answerKind: "optionId",
+    accepted: ["option-b"],
+    normalize: ["trim"],
+  };
+
+  const report = scoreAttempt(attemptWith({ 21: "option-b" }), [rule]);
+  assert.equal(report.byQuestion[0].correct, true);
+});
+
+test("multi-answer rules honor explicit selectCount", () => {
+  const rule = {
+    questionNo: 22,
+    groupId: "22-23",
+    mode: "multi",
+    accepted: ["A", "C"],
+    selectCount: 2,
+    normalize: ["trim", "lowercase"],
+  };
+
+  assert.equal(scoreAttempt(attemptWith({ 22: ["C", "A"] }), [rule]).correct, 1);
+  assert.equal(scoreAttempt(attemptWith({ 22: ["A"] }), [rule]).correct, 0);
+});

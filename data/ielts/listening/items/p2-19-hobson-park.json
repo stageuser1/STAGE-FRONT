@@ -1,0 +1,599 @@
+{
+  "id": "p2-19-hobson-park",
+  "title": "Hobson Park",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-46e5292991c6",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 462.072,
+    "checksum": "sha256:7f0a09a08980a056b48c9f7d55b4138d792f970e7b610a1aae683d3df018ac65"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–16",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "The park was originally the site of",
+          "options": [
+            {
+              "id": "A",
+              "text": "a forest."
+            },
+            {
+              "id": "B",
+              "text": "a lake."
+            },
+            {
+              "id": "C",
+              "text": "a volcano."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "The two chiefs met in the area to",
+          "options": [
+            {
+              "id": "A",
+              "text": "trade."
+            },
+            {
+              "id": "B",
+              "text": "end the fight."
+            },
+            {
+              "id": "C",
+              "text": "celebrate their victory."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "The park was founded in",
+          "options": [
+            {
+              "id": "A",
+              "text": "1840."
+            },
+            {
+              "id": "B",
+              "text": "1842."
+            },
+            {
+              "id": "C",
+              "text": "1942."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "The area used for testing is the",
+          "options": [
+            {
+              "id": "A",
+              "text": "duckpond."
+            },
+            {
+              "id": "B",
+              "text": "formal gardens."
+            },
+            {
+              "id": "C",
+              "text": "iron bridge."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "Who provided the artwork to the village?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the city council"
+            },
+            {
+              "id": "B",
+              "text": "local residents"
+            },
+            {
+              "id": "C",
+              "text": "local museum"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "16",
+          "text": "What is special about the Temperate House?",
+          "options": [
+            {
+              "id": "A",
+              "text": "it saves a large number of endangered New Zealand plants"
+            },
+            {
+              "id": "B",
+              "text": "it accommodates newly discovered plants"
+            },
+            {
+              "id": "C",
+              "text": "it collects plants from around the world"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 17–20",
+      "instruction": "Label the map below. Write the correct letter, A–G, next to Questions 17–20.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "Plant nursery",
+          "answer": "E"
+        },
+        {
+          "id": "18",
+          "text": "Pine tree hill",
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "Eagle mountain",
+          "answer": "G"
+        },
+        {
+          "id": "20",
+          "text": "Food kiosk",
+          "answer": "D"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-19-hobson-park-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-19-hobson-park-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "B",
+        "13": "B",
+        "14": "B",
+        "15": "A",
+        "16": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "17": "E",
+        "18": "B",
+        "19": "G",
+        "20": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 16240,
+      "text": "Part 2"
+    },
+    {
+      "startMs": 16240,
+      "endMs": 23400,
+      "text": "You will hear a tour guide introducing a park in New Zealand to a group of visitors."
+    },
+    {
+      "startMs": 23400,
+      "endMs": 28840,
+      "text": "First, you have some time to look at questions 11 to 16."
+    },
+    {
+      "startMs": 53400,
+      "endMs": 66840,
+      "text": "Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 66840,
+      "endMs": 70840,
+      "text": "Welcome to our lovely tour around Hobson Park."
+    },
+    {
+      "startMs": 70840,
+      "endMs": 76600,
+      "text": "Visible from much of Auckland, this is a widely recognised local landmark."
+    },
+    {
+      "startMs": 76600,
+      "endMs": 79240,
+      "text": "I hope you'll enjoy your stay here."
+    },
+    {
+      "startMs": 79240,
+      "endMs": 86840,
+      "text": "And first, let me briefly introduce its history to you before we stroll around the park."
+    },
+    {
+      "startMs": 86840,
+      "endMs": 93400,
+      "text": "Hobson Park is located on an island that used to be a volcano, which emerged just 600"
+    },
+    {
+      "startMs": 93400,
+      "endMs": 94800,
+      "text": "years ago."
+    },
+    {
+      "startMs": 94800,
+      "endMs": 99720,
+      "text": "You can still enjoy the breathtaking views of a nearby lake today."
+    },
+    {
+      "startMs": 99720,
+      "endMs": 105560,
+      "text": "The lava flow at the end of Takapuna Beach enveloped a kauri forest."
+    },
+    {
+      "startMs": 105560,
+      "endMs": 113480,
+      "text": "It is known to be New Zealand's only example of a fossil forest preserved in a lava flow."
+    },
+    {
+      "startMs": 113480,
+      "endMs": 120320,
+      "text": "Actually, Hobson Park was named after William Hobson, a British captain and also the first"
+    },
+    {
+      "startMs": 120320,
+      "endMs": 122600,
+      "text": "governor of New Zealand."
+    },
+    {
+      "startMs": 122600,
+      "endMs": 128360,
+      "text": "At the time, the British were making plans to claim New Zealand as a colony to ensure"
+    },
+    {
+      "startMs": 128360,
+      "endMs": 130480,
+      "text": "their trade interest."
+    },
+    {
+      "startMs": 130480,
+      "endMs": 135160,
+      "text": "War broke out between Maori troops and government forces."
+    },
+    {
+      "startMs": 135160,
+      "endMs": 141360,
+      "text": "The years of revolt, two Maori chiefs were invited to the island to restore peace."
+    },
+    {
+      "startMs": 141360,
+      "endMs": 145400,
+      "text": "They signed a treaty and shook hands with Governor Hobson."
+    },
+    {
+      "startMs": 145400,
+      "endMs": 151000,
+      "text": "While local tribes started to celebrate their success, the two Maori chiefs didn't stop"
+    },
+    {
+      "startMs": 151000,
+      "endMs": 158480,
+      "text": "promoting Maori self-determination in meetings and correspondence with the government."
+    },
+    {
+      "startMs": 158480,
+      "endMs": 163760,
+      "text": "In 1840, Hobson chose Auckland as the site for his capital."
+    },
+    {
+      "startMs": 163760,
+      "endMs": 168560,
+      "text": "The same year, plans for founding Hobson Park were initiated."
+    },
+    {
+      "startMs": 168560,
+      "endMs": 176840,
+      "text": "But it was in 1842 that the park was actually created and officially opened to the public."
+    },
+    {
+      "startMs": 176840,
+      "endMs": 179920,
+      "text": "As you can see, the park is immense."
+    },
+    {
+      "startMs": 179920,
+      "endMs": 185680,
+      "text": "It is comprised of many natural wonders as well as artificial features."
+    },
+    {
+      "startMs": 185680,
+      "endMs": 191720,
+      "text": "Just a few hundred metres away, there is a duck pond where you can observe the waterbirds,"
+    },
+    {
+      "startMs": 191720,
+      "endMs": 194160,
+      "text": "including some rare breeds."
+    },
+    {
+      "startMs": 194160,
+      "endMs": 199440,
+      "text": "But remember to keep a distance from them and refrain from feeding them."
+    },
+    {
+      "startMs": 199440,
+      "endMs": 204800,
+      "text": "Across the iron bridge, you'll get to formal gardens used for experiments on breeding"
+    },
+    {
+      "startMs": 204800,
+      "endMs": 207200,
+      "text": "local wild species."
+    },
+    {
+      "startMs": 207200,
+      "endMs": 213120,
+      "text": "If you keep roaming down the trail, you'll see the old residences of Maori people forming"
+    },
+    {
+      "startMs": 213120,
+      "endMs": 214920,
+      "text": "a small village."
+    },
+    {
+      "startMs": 214920,
+      "endMs": 221280,
+      "text": "These houses are full of local paintings, sculptures, and artifacts, all donated by the"
+    },
+    {
+      "startMs": 221280,
+      "endMs": 227600,
+      "text": "City Council to showcase the history and culture of Maori people living there."
+    },
+    {
+      "startMs": 227600,
+      "endMs": 232080,
+      "text": "And these are not something you'll stumble upon in a regular museum."
+    },
+    {
+      "startMs": 232080,
+      "endMs": 236520,
+      "text": "Oh, and don't forget to visit the Temperate House."
+    },
+    {
+      "startMs": 236520,
+      "endMs": 239960,
+      "text": "It's only a ten minute walk away from the duck pond."
+    },
+    {
+      "startMs": 239960,
+      "endMs": 244840,
+      "text": "It accommodates a whole range of wild plants from around the country."
+    },
+    {
+      "startMs": 244840,
+      "endMs": 251280,
+      "text": "But what makes it unique is the forest of Kauri trees, a native species to New Zealand."
+    },
+    {
+      "startMs": 251280,
+      "endMs": 258800,
+      "text": "However, the Kauri tree population was threatened by the spread of Kauri dieback disease, and"
+    },
+    {
+      "startMs": 258800,
+      "endMs": 265720,
+      "text": "is now under the protection of the Department of Conservation."
+    },
+    {
+      "startMs": 265720,
+      "endMs": 273000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 17-20."
+    },
+    {
+      "startMs": 304840,
+      "endMs": 315920,
+      "text": "Let me point out the whereabouts of some other critical features in the park, in case you"
+    },
+    {
+      "startMs": 315920,
+      "endMs": 317240,
+      "text": "need them."
+    },
+    {
+      "startMs": 317240,
+      "endMs": 322960,
+      "text": "If you are a plant lover, and want to take some local greenery home, you may wish to visit"
+    },
+    {
+      "startMs": 322960,
+      "endMs": 329720,
+      "text": "the plant nursery, where you can choose from an extensive collection of plants, from succulents,"
+    },
+    {
+      "startMs": 329720,
+      "endMs": 332200,
+      "text": "to some rare local species."
+    },
+    {
+      "startMs": 332200,
+      "endMs": 337240,
+      "text": "It's right next to the museum, on the same side of the road."
+    },
+    {
+      "startMs": 337240,
+      "endMs": 342200,
+      "text": "There is a pine tree hill, with tracks for hikers of all abilities."
+    },
+    {
+      "startMs": 342200,
+      "endMs": 345280,
+      "text": "The whole trip takes about half an hour."
+    },
+    {
+      "startMs": 345280,
+      "endMs": 351200,
+      "text": "There is a steep climb in places, tread carefully, and stick to the formal tracks."
+    },
+    {
+      "startMs": 351200,
+      "endMs": 353840,
+      "text": "You'll be rewarded with great views."
+    },
+    {
+      "startMs": 353840,
+      "endMs": 359160,
+      "text": "If you leave your car in the car park, you can see it just across the road, towards George"
+    },
+    {
+      "startMs": 359160,
+      "endMs": 361920,
+      "text": "Street Entry."
+    },
+    {
+      "startMs": 361920,
+      "endMs": 368680,
+      "text": "Or, if you are an experienced hiker and want some challenge, you can choose Eagle Mountain."
+    },
+    {
+      "startMs": 368680,
+      "endMs": 371600,
+      "text": "It offers fantastic hiking routes."
+    },
+    {
+      "startMs": 371600,
+      "endMs": 378560,
+      "text": "It's also an ideal spot for bird watching, with many wild species unique to New Zealand."
+    },
+    {
+      "startMs": 378560,
+      "endMs": 382160,
+      "text": "We are right here, at the Wellington entrance."
+    },
+    {
+      "startMs": 382160,
+      "endMs": 388880,
+      "text": "Then, take the first right, and you'll see Eagle Mountain immediately to your right."
+    },
+    {
+      "startMs": 388880,
+      "endMs": 395040,
+      "text": "If you're hungry, and want to take a quick bite, there is a nearby food kiosk, providing"
+    },
+    {
+      "startMs": 395040,
+      "endMs": 397200,
+      "text": "snacks, and beverages."
+    },
+    {
+      "startMs": 397200,
+      "endMs": 402920,
+      "text": "Start from the Wellington entrance, take the first left, keep walking down the road, and"
+    },
+    {
+      "startMs": 402920,
+      "endMs": 407960,
+      "text": "after the junction, where it meets a road connecting the George Street Entry, you'll see"
+    },
+    {
+      "startMs": 407960,
+      "endMs": 410680,
+      "text": "it on your right."
+    },
+    {
+      "startMs": 410680,
+      "endMs": 417600,
+      "text": "And lastly, there is a conservation area protecting Kauri trees, just by the winter garden."
+    },
+    {
+      "startMs": 417600,
+      "endMs": 421680,
+      "text": "Unfortunately, it's currently out of bounds to the public."
+    },
+    {
+      "startMs": 421680,
+      "endMs": 430600,
+      "text": "Okay, now, if you have anything else to ask, I'm here to help."
+    },
+    {
+      "startMs": 430600,
+      "endMs": 433200,
+      "text": "That is the end of part 2."
+    },
+    {
+      "startMs": 433200,
+      "endMs": 437760,
+      "text": "You now have half a minute to check your answers to part 2."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 71,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

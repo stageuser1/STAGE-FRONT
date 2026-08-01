@@ -1,0 +1,510 @@
+{
+  "id": "p4-38-nanotechnology-and-its-applications",
+  "title": "Nanotechnology and Its Applications",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-634fb84ca703",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 480.408,
+    "checksum": "sha256:9cd74ad45f8051091709c910d920408f48904f8bad4bca09afb3d54e27386f2e"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Nanotechnology and Its Applications About Nanotechnology It is a study on the scale of nanometre. The development in nanotechnology is the result of a new type of 31. __________. People are worried that nanotech products are 32. __________. Food and household The availability of 33. __________ in our diet (e.g. in potatoes) is greatly improved. The packaging cost, particularly 34. __________, is reduced. Nanotechnology can increase the 35. __________ of food. Nanotechnology can be used to make new types of furniture. Agriculture The efficiency of 36. __________ is increased. Health and medicine Nanotubes allow more 37. __________ to enter veins. As the most popular material, 38. __________ is used to kill bacteria. Nanotechnology is also helpful in 39. __________ loss program. Cosmetic Nanoparticles protect skin from the 40. __________ and help to improve the ability against aging. Nanotechnology helps to deliver effective elements to the skin.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The development in nanotechnology is the result of a new type of 31. __________.",
+          "answer": "microscope"
+        },
+        {
+          "id": "32",
+          "text": "People are worried that nanotech products are 32. __________.",
+          "answer": "unnatural"
+        },
+        {
+          "id": "33",
+          "text": "The availability of 33. __________ in our diet (e.g. in potatoes) is greatly improved.",
+          "answer": "iron"
+        },
+        {
+          "id": "34",
+          "text": "The packaging cost, particularly 34. __________, is reduced.",
+          "answer": "chocolate"
+        },
+        {
+          "id": "35",
+          "text": "Nanotechnology can increase the 35. __________ of food.",
+          "answer": "flavour/flavor"
+        },
+        {
+          "id": "36",
+          "text": "The efficiency of 36. __________ is increased.",
+          "answer": "fertilizers/fertilisers"
+        },
+        {
+          "id": "37",
+          "text": "Nanotubes allow more 37. __________ to enter veins.",
+          "answer": "drugs"
+        },
+        {
+          "id": "38",
+          "text": "As the most popular material, 38. __________ is used to kill bacteria.",
+          "answer": "silver"
+        },
+        {
+          "id": "39",
+          "text": "Nanotechnology is also helpful in 39. __________ loss program.",
+          "answer": "weight"
+        },
+        {
+          "id": "40",
+          "text": "Nanoparticles protect skin from the 40. __________ and help to improve the ability against aging.",
+          "answer": "sun"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Nanotechnology and Its Applications",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "About Nanotechnology",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "It is a study on the scale of nanometre.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The development in nanotechnology is the result of a new type of 31. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People are worried that nanotech products are 32. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Food and household",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The availability of 33. __________ in our diet (e.g. in potatoes) is greatly improved.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The packaging cost, particularly 34. __________, is reduced.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Nanotechnology can increase the 35. __________ of food.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Nanotechnology can be used to make new types of furniture.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Agriculture",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The efficiency of 36. __________ is increased.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Health and medicine",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Nanotubes allow more 37. __________ to enter veins.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "As the most popular material, 38. __________ is used to kill bacteria.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Nanotechnology is also helpful in 39. __________ loss program.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Cosmetic",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Nanoparticles protect skin from the 40. __________ and help to improve the ability against aging.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Nanotechnology helps to deliver effective elements to the skin.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "microscope",
+        "32": "unnatural",
+        "33": "iron",
+        "34": "chocolate",
+        "35": "flavour/flavor",
+        "36": "fertilizers/fertilisers",
+        "37": "drugs",
+        "38": "silver",
+        "39": "weight",
+        "40": "sun"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10120,
+      "text": "Part 4. You will hear part of a lecture on nanotechnology and its applications. First,"
+    },
+    {
+      "startMs": 10120,
+      "endMs": 14560,
+      "text": "you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 73080,
+      "text": "Now, listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 73080,
+      "endMs": 78240,
+      "text": "Today's lecture is the first of a series of lectures on nanotechnology. Nanotechnology"
+    },
+    {
+      "startMs": 78240,
+      "endMs": 83720,
+      "text": "sometimes shortened to nanotech refers to the manipulation of matter on an atomic and"
+    },
+    {
+      "startMs": 83720,
+      "endMs": 89680,
+      "text": "molecular level. It's a science, engineering and technology conducted at the nanoscale,"
+    },
+    {
+      "startMs": 89680,
+      "endMs": 95760,
+      "text": "which is about 1 to 100 nanometers. It is a study and application of extremely small"
+    },
+    {
+      "startMs": 95760,
+      "endMs": 101720,
+      "text": "things and can be used across all the other science fields. Just how small is that? A nanometer"
+    },
+    {
+      "startMs": 101720,
+      "endMs": 107560,
+      "text": "is 1 billionth of a meter. The idea of nanoscale research first started from a physicist"
+    },
+    {
+      "startMs": 107560,
+      "endMs": 113360,
+      "text": "called Richard Feynman in 1959. He envisaged a process in which scientists would be able"
+    },
+    {
+      "startMs": 113360,
+      "endMs": 119920,
+      "text": "to manipulate and control individual atoms and molecules. In fact, it wasn't until 1981"
+    },
+    {
+      "startMs": 119920,
+      "endMs": 126040,
+      "text": "with the invention of a special kind of microscope that modern nanotechnology truly began."
+    },
+    {
+      "startMs": 126040,
+      "endMs": 131320,
+      "text": "Even though nanotechnology has created many new materials and devices with a vast range"
+    },
+    {
+      "startMs": 131320,
+      "endMs": 136600,
+      "text": "of applications, there is always concern over these unnatural products. Many people are"
+    },
+    {
+      "startMs": 136600,
+      "endMs": 141280,
+      "text": "worried that they may pose a threat to the environment, health and safety also known"
+    },
+    {
+      "startMs": 141280,
+      "endMs": 147600,
+      "text": "as EHS. In order to better understand and evaluate the potential harm, risk assessment has"
+    },
+    {
+      "startMs": 147600,
+      "endMs": 155320,
+      "text": "been introduced. There are also ongoing international collaborations on a nanoeHS research and related"
+    },
+    {
+      "startMs": 155320,
+      "endMs": 161840,
+      "text": "policy issues. Despite the concern nanotechnology has benefited society in unexpected ways, in"
+    },
+    {
+      "startMs": 161840,
+      "endMs": 167320,
+      "text": "the food processing industry, nanotechnology is leveraged against iron deficiency, which"
+    },
+    {
+      "startMs": 167320,
+      "endMs": 173440,
+      "text": "triggers anemia. For example, by reducing the particle size in potatoes, this new technology"
+    },
+    {
+      "startMs": 173440,
+      "endMs": 179080,
+      "text": "improves the bioavailability of this nutritional ingredient without the tendency to cause color"
+    },
+    {
+      "startMs": 179080,
+      "endMs": 184800,
+      "text": "and odor changes. In terms of packaging, nanomaterials are more economical and are used"
+    },
+    {
+      "startMs": 184800,
+      "endMs": 190360,
+      "text": "in all sorts of products, chocolate in particular. Nanotechnology can also enhance the flavor"
+    },
+    {
+      "startMs": 190360,
+      "endMs": 196280,
+      "text": "of food on a domestic scale we expect more smart furniture, which is made of shape memory"
+    },
+    {
+      "startMs": 196280,
+      "endMs": 206040,
+      "text": "alloys to be manufactured. But nanotechnology has much wider application"
+    },
+    {
+      "startMs": 206040,
+      "endMs": 211400,
+      "text": "than this and could also help develop sustainable agriculture. It offers great potential to"
+    },
+    {
+      "startMs": 211400,
+      "endMs": 216920,
+      "text": "strengthen the effect of fertilizers, thereby minimizing the environmental impact and"
+    },
+    {
+      "startMs": 216920,
+      "endMs": 222360,
+      "text": "boosting the productivity of plants in the soil. In the area of medicine, bioengineers"
+    },
+    {
+      "startMs": 222360,
+      "endMs": 227960,
+      "text": "have developed simple and inexpensive nanoscale delivery vehicles. Conductors like carbon"
+    },
+    {
+      "startMs": 227960,
+      "endMs": 233300,
+      "text": "nanotubes have been invented with varying structures. Such nanotubes have become increasingly"
+    },
+    {
+      "startMs": 233300,
+      "endMs": 238800,
+      "text": "attractive to researchers because of their ability to efficiently deliver drugs into veins."
+    },
+    {
+      "startMs": 238800,
+      "endMs": 243600,
+      "text": "This means that higher doses of drugs loaded on them can be transported from the administration"
+    },
+    {
+      "startMs": 243600,
+      "endMs": 249400,
+      "text": "sites to the effects-related sites, such as cancer focuses, thus decreasing toxic side"
+    },
+    {
+      "startMs": 249400,
+      "endMs": 254440,
+      "text": "effects while increasing the treatment effects. The research team has also developed a widely"
+    },
+    {
+      "startMs": 254440,
+      "endMs": 259440,
+      "text": "accepted material that can be used to coat different surfaces, including wood, plastic"
+    },
+    {
+      "startMs": 259440,
+      "endMs": 264840,
+      "text": "and glass. It is mainly comprised of silver. Such nanoparticles can eventually kill some"
+    },
+    {
+      "startMs": 264840,
+      "endMs": 269880,
+      "text": "microbes due to the antiseptic properties. The whole process is simple, easy to apply"
+    },
+    {
+      "startMs": 269880,
+      "endMs": 276600,
+      "text": "and more importantly harmless to the environment. Surprisingly, nanotechnology has major implications"
+    },
+    {
+      "startMs": 276600,
+      "endMs": 281760,
+      "text": "for our health as well. By changing the metabolic rate through a particular type of protein,"
+    },
+    {
+      "startMs": 281760,
+      "endMs": 287000,
+      "text": "obese patients are able to burn calories faster, even under a high calorie diet. Therefore,"
+    },
+    {
+      "startMs": 287000,
+      "endMs": 292280,
+      "text": "treatment programs are provided for patients to lose weight by disposing of excess fat"
+    },
+    {
+      "startMs": 292280,
+      "endMs": 297760,
+      "text": "in a relatively safer manner. The finding may help explain why overweight people struggle"
+    },
+    {
+      "startMs": 297760,
+      "endMs": 303000,
+      "text": "to lose weight. Their stored fat is actively fighting against their efforts to burn it off"
+    },
+    {
+      "startMs": 303000,
+      "endMs": 308000,
+      "text": "at the molecular level. Further research is mainly focused on the clinical and commercial"
+    },
+    {
+      "startMs": 308000,
+      "endMs": 314480,
+      "text": "developments of therapies for obesity, diabetes and other associated conditions such as heart"
+    },
+    {
+      "startMs": 314480,
+      "endMs": 321320,
+      "text": "disease. In terms of cosmetics, the applications of nanotechnology and nanomaterials can be found"
+    },
+    {
+      "startMs": 321320,
+      "endMs": 327000,
+      "text": "in many products. There are two main uses for nanotechnology in cosmetics. The first"
+    },
+    {
+      "startMs": 327000,
+      "endMs": 333160,
+      "text": "one is that nanoparticles are commonly used as UV filters in anti-aging sun care products"
+    },
+    {
+      "startMs": 333160,
+      "endMs": 338840,
+      "text": "to avoid skin damage caused by the sun. In addition, nanotechnology has played an important"
+    },
+    {
+      "startMs": 338840,
+      "endMs": 344240,
+      "text": "role in delivering active ingredients to the skin. The mechanism proves to improve the"
+    },
+    {
+      "startMs": 344240,
+      "endMs": 351520,
+      "text": "bioavailability of active and enhanced skin hydration. The wide variety of nanotechnology"
+    },
+    {
+      "startMs": 351520,
+      "endMs": 357240,
+      "text": "applications leave no doubt that this field will only continue to get more exciting and"
+    },
+    {
+      "startMs": 357240,
+      "endMs": 363600,
+      "text": "I look forward to seeing these developments further branch out."
+    },
+    {
+      "startMs": 363600,
+      "endMs": 370240,
+      "text": "That is the end of Part 4. You now have one minute to check your answers to Part 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 54,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

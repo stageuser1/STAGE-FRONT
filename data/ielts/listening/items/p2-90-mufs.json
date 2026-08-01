@@ -1,0 +1,606 @@
+{
+  "id": "p2-90-mufs",
+  "title": "MUFS",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-50d38b5b6027",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 428.064,
+    "checksum": "sha256:05997b38c9d4cf90e0b33b0fd8cdad80bab8b3032e11986c04855eae8e825e0d"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-16.",
+      "instruction": "Choose the correct letter A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Who founded the Middletown Urban Farming Scheme?",
+          "options": [
+            {
+              "id": "A",
+              "text": "university specialists"
+            },
+            {
+              "id": "B",
+              "text": "business people"
+            },
+            {
+              "id": "C",
+              "text": "town planners"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "What was the original reason for starting the MUFS?",
+          "options": [
+            {
+              "id": "A",
+              "text": "to encourage more efficient land use"
+            },
+            {
+              "id": "B",
+              "text": "to help lessen CO2 emissions"
+            },
+            {
+              "id": "C",
+              "text": "to improve people's eating habits"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "For the coming year, the MUFS will focus on recruiting members from",
+          "options": [
+            {
+              "id": "A",
+              "text": "schools"
+            },
+            {
+              "id": "B",
+              "text": "companies"
+            },
+            {
+              "id": "C",
+              "text": "community centres"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "What kind of information is available from members of the MUFS committee?",
+          "options": [
+            {
+              "id": "A",
+              "text": "practical gardening tips"
+            },
+            {
+              "id": "B",
+              "text": "plant science"
+            },
+            {
+              "id": "C",
+              "text": "location of local garden sites"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "What are provided by the MUFS for the physically disabled?",
+          "options": [
+            {
+              "id": "A",
+              "text": "soil and compost"
+            },
+            {
+              "id": "B",
+              "text": "containers for plants"
+            },
+            {
+              "id": "C",
+              "text": "gardening tools"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "16",
+          "text": "According to school teachers, what has been an unexpected advantage of the MUFS?",
+          "options": [
+            {
+              "id": "A",
+              "text": "its usefulness as an aid for teaching science"
+            },
+            {
+              "id": "B",
+              "text": "its contribution to reducing costs of school meals"
+            },
+            {
+              "id": "C",
+              "text": "its help in encouraging community pride among students"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 17-20.",
+      "instruction": "Choose FOUR answers from the box and write the correct letter A–F, next to questions 17–20.",
+      "options": [
+        {
+          "id": "A",
+          "text": "fertilisers"
+        },
+        {
+          "id": "B",
+          "text": "cooking lessons"
+        },
+        {
+          "id": "C",
+          "text": "advice on soil"
+        },
+        {
+          "id": "D",
+          "text": "eat-to-keep-fit course"
+        },
+        {
+          "id": "E",
+          "text": "use of a greenhouse"
+        },
+        {
+          "id": "F",
+          "text": "market stalls"
+        }
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "city hospital",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "local government",
+          "answer": "E"
+        },
+        {
+          "id": "19",
+          "text": "university",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "supermarket",
+          "answer": "D"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "C",
+        "14": "A",
+        "15": "B",
+        "16": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "17": "B",
+        "18": "E",
+        "19": "C",
+        "20": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13200,
+      "text": "2. You will hear the chairperson of the Middletown Urban Farming scheme talking to a group"
+    },
+    {
+      "startMs": 13200,
+      "endMs": 16920,
+      "text": "of people who are interested in joining the scheme."
+    },
+    {
+      "startMs": 16920,
+      "endMs": 23760,
+      "text": "First, you have some time to look at questions 11-16 on page 3."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 73920,
+      "text": "Now listen carefully and answer questions 11-16."
+    },
+    {
+      "startMs": 73920,
+      "endMs": 82320,
+      "text": "I'm Chris Butler, and I'm the chairperson of the Middletown Urban Farming scheme, or"
+    },
+    {
+      "startMs": 82320,
+      "endMs": 88120,
+      "text": "MUFS for short, a highly successful program which encourages city dwellers to grow their"
+    },
+    {
+      "startMs": 88120,
+      "endMs": 92680,
+      "text": "own fruit and vegetables to become city farmers if you will."
+    },
+    {
+      "startMs": 92680,
+      "endMs": 94680,
+      "text": "Who started MUFS?"
+    },
+    {
+      "startMs": 94680,
+      "endMs": 100360,
+      "text": "Well, the idea of urban farming has been around for quite a while, particularly among town"
+    },
+    {
+      "startMs": 100360,
+      "endMs": 102040,
+      "text": "planners."
+    },
+    {
+      "startMs": 102040,
+      "endMs": 107040,
+      "text": "But it was actually a group of Middletown business people, including myself, who decided"
+    },
+    {
+      "startMs": 107040,
+      "endMs": 110560,
+      "text": "to create what became MUFS."
+    },
+    {
+      "startMs": 110560,
+      "endMs": 113880,
+      "text": "University agriculture specialists got involved later."
+    },
+    {
+      "startMs": 113880,
+      "endMs": 120440,
+      "text": "Now, initially, the aim was not some eco-friendly goal of reducing CO2 emissions caused by the"
+    },
+    {
+      "startMs": 120440,
+      "endMs": 123880,
+      "text": "transport of food from farm to dinner plate."
+    },
+    {
+      "startMs": 123880,
+      "endMs": 129080,
+      "text": "It was simply to maximize the utilization of the vacant or idle land that lies within"
+    },
+    {
+      "startMs": 129080,
+      "endMs": 130080,
+      "text": "the city."
+    },
+    {
+      "startMs": 130080,
+      "endMs": 135800,
+      "text": "Of course, later we realized that an additional benefit might be a healthier diet for local"
+    },
+    {
+      "startMs": 135800,
+      "endMs": 137600,
+      "text": "people."
+    },
+    {
+      "startMs": 137600,
+      "endMs": 141080,
+      "text": "Let me tell you a bit about the groups that have joined the scheme."
+    },
+    {
+      "startMs": 141080,
+      "endMs": 146520,
+      "text": "We've got any number of schools involved and loads of corporate employees, so our message"
+    },
+    {
+      "startMs": 146520,
+      "endMs": 149120,
+      "text": "seems to have been well received there."
+    },
+    {
+      "startMs": 149120,
+      "endMs": 153760,
+      "text": "But for next year, we're going to concentrate on getting various community centers, like"
+    },
+    {
+      "startMs": 153760,
+      "endMs": 159080,
+      "text": "those for senior citizens to join, because so far, they've been somewhat slow to take"
+    },
+    {
+      "startMs": 159080,
+      "endMs": 160520,
+      "text": "up the scheme."
+    },
+    {
+      "startMs": 160520,
+      "endMs": 167560,
+      "text": "Now, the core committee of the MUFS is a group of dedicated gardeners."
+    },
+    {
+      "startMs": 167560,
+      "endMs": 171680,
+      "text": "They probably won't be familiar with your specific plot of land."
+    },
+    {
+      "startMs": 171680,
+      "endMs": 173480,
+      "text": "They're mostly amateurs."
+    },
+    {
+      "startMs": 173480,
+      "endMs": 178320,
+      "text": "But they are the people who know the ins and outs of gardening, and they will be happy"
+    },
+    {
+      "startMs": 178320,
+      "endMs": 184760,
+      "text": "to sit down with any MUFS member and make some hands-on suggestions about gardening."
+    },
+    {
+      "startMs": 184760,
+      "endMs": 189800,
+      "text": "But don't expect them to know the answers to technical questions, like the Latin names"
+    },
+    {
+      "startMs": 189800,
+      "endMs": 191880,
+      "text": "of plants."
+    },
+    {
+      "startMs": 191880,
+      "endMs": 197160,
+      "text": "The MUFS are keen to support members who are physically disabled."
+    },
+    {
+      "startMs": 197160,
+      "endMs": 201400,
+      "text": "They're looking at the possibility of providing specially adapted gardening tools on loan"
+    },
+    {
+      "startMs": 201400,
+      "endMs": 204880,
+      "text": "to members who can't cope with regular tools."
+    },
+    {
+      "startMs": 204880,
+      "endMs": 206560,
+      "text": "That's not happening yet."
+    },
+    {
+      "startMs": 206560,
+      "endMs": 211800,
+      "text": "But we do have some window boxes, as well as larger containers, which we can distribute"
+    },
+    {
+      "startMs": 211800,
+      "endMs": 216280,
+      "text": "free of charge to these members, although they will have to provide their own soil and"
+    },
+    {
+      "startMs": 216280,
+      "endMs": 217880,
+      "text": "compost to themselves."
+    },
+    {
+      "startMs": 217880,
+      "endMs": 223080,
+      "text": "I'm especially proud of the work we've done with the local schools, both grade school"
+    },
+    {
+      "startMs": 223080,
+      "endMs": 225040,
+      "text": "level and high schools."
+    },
+    {
+      "startMs": 225040,
+      "endMs": 229640,
+      "text": "The teachers say that they knew the scheme would be of some practical use in science classes"
+    },
+    {
+      "startMs": 229640,
+      "endMs": 231560,
+      "text": "like biology."
+    },
+    {
+      "startMs": 231560,
+      "endMs": 236440,
+      "text": "Despite the original hopes of some, the fruit and vegetable plots haven't provided cheaper"
+    },
+    {
+      "startMs": 236440,
+      "endMs": 238720,
+      "text": "lunches for their students."
+    },
+    {
+      "startMs": 238720,
+      "endMs": 243720,
+      "text": "But what they didn't anticipate was the change in attitude that the scheme has created"
+    },
+    {
+      "startMs": 243720,
+      "endMs": 245560,
+      "text": "amongst their students."
+    },
+    {
+      "startMs": 245560,
+      "endMs": 250000,
+      "text": "They say the students have become much more conscious of their surrounding environment."
+    },
+    {
+      "startMs": 250000,
+      "endMs": 255240,
+      "text": "They want to keep it neat and tidy."
+    },
+    {
+      "startMs": 255240,
+      "endMs": 261760,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 17-20 on"
+    },
+    {
+      "startMs": 261760,
+      "endMs": 262720,
+      "text": "page 4."
+    },
+    {
+      "startMs": 280000,
+      "endMs": 290840,
+      "text": "Now listen and answer questions 17-20."
+    },
+    {
+      "startMs": 290840,
+      "endMs": 296920,
+      "text": "Now a number of local organizations and businesses provide our members with free goods and services."
+    },
+    {
+      "startMs": 296920,
+      "endMs": 298680,
+      "text": "Let me go through some of them."
+    },
+    {
+      "startMs": 298680,
+      "endMs": 304840,
+      "text": "The city hospital, as you might expect, has to provide thousands of meals for its patients."
+    },
+    {
+      "startMs": 304840,
+      "endMs": 310040,
+      "text": "Until the manager of its kitchen runs a course for our members on how to use vegetables"
+    },
+    {
+      "startMs": 310040,
+      "endMs": 312880,
+      "text": "in a huge variety of dishes."
+    },
+    {
+      "startMs": 312880,
+      "endMs": 318080,
+      "text": "The local government found it had a large glass building, which the Parks Department used,"
+    },
+    {
+      "startMs": 318080,
+      "endMs": 321800,
+      "text": "to start off flower seeds in young plants during the winter."
+    },
+    {
+      "startMs": 321800,
+      "endMs": 326680,
+      "text": "And they agreed to allow our members to use this free of charge to get their own little"
+    },
+    {
+      "startMs": 326680,
+      "endMs": 329800,
+      "text": "seedlings off to a good start."
+    },
+    {
+      "startMs": 329800,
+      "endMs": 330960,
+      "text": "Another thing."
+    },
+    {
+      "startMs": 330960,
+      "endMs": 336080,
+      "text": "The university has agreed that if members send them a sample of their soil, they will"
+    },
+    {
+      "startMs": 336080,
+      "endMs": 341800,
+      "text": "do a series of tests on it to indicate what kind of plants will grow best and what types"
+    },
+    {
+      "startMs": 341800,
+      "endMs": 345520,
+      "text": "of fertilizer and nutrients would be best to use."
+    },
+    {
+      "startMs": 345520,
+      "endMs": 350320,
+      "text": "And just to make sure our members know what's good for them, a supermarket is offering a"
+    },
+    {
+      "startMs": 350320,
+      "endMs": 356200,
+      "text": "series of classes on how to lose weight and stay healthy by having a sensible diet."
+    },
+    {
+      "startMs": 356200,
+      "endMs": 358920,
+      "text": "Now, let's talk about the practicalities."
+    },
+    {
+      "startMs": 361960,
+      "endMs": 365800,
+      "text": "That is the end of section 2."
+    },
+    {
+      "startMs": 365800,
+      "endMs": 369000,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 390960,
+      "endMs": 402520,
+      "text": "Now turn to section 3 on page 5."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 71,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

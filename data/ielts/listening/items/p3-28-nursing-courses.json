@@ -1,0 +1,511 @@
+{
+  "id": "p3-28-nursing-courses",
+  "title": "Nursing Courses",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-56d463fe5cce",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 521.064,
+    "checksum": "sha256:0e784e1716b5afa17e4709d83c863bdb831fcb26a86267f34a86efacf4d62c0e"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–24",
+      "instruction": "Choose the correct letter A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "how old are the students of the nursing program?",
+          "options": [
+            {
+              "id": "A",
+              "text": "they are teenagers."
+            },
+            {
+              "id": "B",
+              "text": "they are in their twenties"
+            },
+            {
+              "id": "C",
+              "text": "they belong to different age group"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "what do the speaker say about the group project?",
+          "options": [
+            {
+              "id": "A",
+              "text": "it helps to improve relationship among different classmates"
+            },
+            {
+              "id": "B",
+              "text": "it helps to develop problem solving skills"
+            },
+            {
+              "id": "C",
+              "text": "it provides supportive learning environment"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "which part of the program surprised Paul",
+          "options": [
+            {
+              "id": "A",
+              "text": "There's a number of essay to write"
+            },
+            {
+              "id": "B",
+              "text": "there's a lot of practical work"
+            },
+            {
+              "id": "C",
+              "text": "there's internship provided"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "what do they feel about learning law?",
+          "options": [
+            {
+              "id": "A",
+              "text": "it is essential training"
+            },
+            {
+              "id": "B",
+              "text": "it is too theoretical"
+            },
+            {
+              "id": "C",
+              "text": "it takes up took much time"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25–30",
+      "instruction": "Choose SIX answers from the box and write the correct letter, A–H next to Question 25–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "get feedback from teaching staff"
+        },
+        {
+          "id": "B",
+          "text": "do more reading"
+        },
+        {
+          "id": "C",
+          "text": "get help from school supporting staff"
+        },
+        {
+          "id": "D",
+          "text": "get help for nursing problem"
+        },
+        {
+          "id": "E",
+          "text": "manage time properly"
+        },
+        {
+          "id": "F",
+          "text": "be well prepared"
+        },
+        {
+          "id": "G",
+          "text": "review the notes regularly"
+        },
+        {
+          "id": "H",
+          "text": "don't set unrealistic goals"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Essays",
+          "answer": "E"
+        },
+        {
+          "id": "26",
+          "text": "Lectures",
+          "answer": "G"
+        },
+        {
+          "id": "27",
+          "text": "Research",
+          "answer": "C"
+        },
+        {
+          "id": "28",
+          "text": "Online forum",
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "placement tests",
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "freshmen",
+          "answer": "H"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "A",
+        "23": "A",
+        "24": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "E",
+        "26": "G",
+        "27": "C",
+        "28": "A",
+        "29": "B",
+        "30": "H"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10720,
+      "text": "Section 3. You will hear two students called Helen and Paul talking to their tutor about"
+    },
+    {
+      "startMs": 10720,
+      "endMs": 17680,
+      "text": "a nursing course. First, you have some time to look at questions 21 to 24."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 54880,
+      "text": "Now, listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 55360,
+      "endMs": 64080,
+      "text": "Tutor: Helen and Paul, congratulations to you both for doing so well the past semester. You two have"
+    },
+    {
+      "startMs": 64080,
+      "endMs": 69520,
+      "text": "exhibited an impeccable performance during your first year in the nursing program. I'd like to"
+    },
+    {
+      "startMs": 69520,
+      "endMs": 74960,
+      "text": "get some feedback from the two of you to better improve the program and to provide guidance for"
+    },
+    {
+      "startMs": 74960,
+      "endMs": 81360,
+      "text": "our prospective students. I'd like to start with you, Helen. So, first of all, which aspect of"
+    },
+    {
+      "startMs": 81360,
+      "endMs": 87760,
+      "text": "the program impressed you? Helen: Well, to be honest, when I was enrolled into the course, I was expecting"
+    },
+    {
+      "startMs": 87760,
+      "endMs": 93760,
+      "text": "a group of classmates my age, but as I stepped into the classroom for the first time, I was surprised"
+    },
+    {
+      "startMs": 93760,
+      "endMs": 100560,
+      "text": "by the diversity. Most were in their 20s, but there were also those in the 30s or even 40s."
+    },
+    {
+      "startMs": 100560,
+      "endMs": 106960,
+      "text": "As it turns out, the intergenerational communication has sparked intense debate and new thinking,"
+    },
+    {
+      "startMs": 106960,
+      "endMs": 111760,
+      "text": "and I think that's something special about the program that I appreciate very much."
+    },
+    {
+      "startMs": 111760,
+      "endMs": 117600,
+      "text": "Tutor: What about you, Paul? What do you think of the program? Paul: For me, the group project we carried out"
+    },
+    {
+      "startMs": 117600,
+      "endMs": 124640,
+      "text": "last semester is another key feature of the program. The whole class was divided into eight different"
+    },
+    {
+      "startMs": 124640,
+      "endMs": 130880,
+      "text": "groups working on eight prospective cases. Team building sessions were conducted in a collaborative"
+    },
+    {
+      "startMs": 130880,
+      "endMs": 137600,
+      "text": "way, most of the time, comprised of five members, our group studied acute pancreatitis."
+    },
+    {
+      "startMs": 138240,
+      "endMs": 144400,
+      "text": "During the process, we broke the task into different parts and assigned them to each member."
+    },
+    {
+      "startMs": 144400,
+      "endMs": 149600,
+      "text": "We were then able to tackle the complex problem by pulling our knowledge and skills."
+    },
+    {
+      "startMs": 149600,
+      "endMs": 155440,
+      "text": "More importantly, stronger links were established between the group members. Because of the project,"
+    },
+    {
+      "startMs": 155520,
+      "endMs": 161360,
+      "text": "we've all become good friends. Tutor: That's true. According to graduates, group projects prepare"
+    },
+    {
+      "startMs": 161360,
+      "endMs": 166960,
+      "text": "them for the work world in which teamwork and collaboration are increasingly the norm."
+    },
+    {
+      "startMs": 166960,
+      "endMs": 172880,
+      "text": "So tell me, Paul, what else do you like about the program? Paul: I want to be a registered nurse"
+    },
+    {
+      "startMs": 172880,
+      "endMs": 179680,
+      "text": "working in a public hospital after graduation. So the internship provided is a valuable opportunity"
+    },
+    {
+      "startMs": 179760,
+      "endMs": 185760,
+      "text": "for clinical practice in a supportive learning atmosphere. However, I was amazed by the amount"
+    },
+    {
+      "startMs": 185760,
+      "endMs": 191440,
+      "text": "of written assignments since I thought the course should have focused more on practice-oriented"
+    },
+    {
+      "startMs": 191440,
+      "endMs": 197040,
+      "text": "learning. Helen: Well, I have to disagree with you, Paul. The essays demonstrate your understanding of"
+    },
+    {
+      "startMs": 197040,
+      "endMs": 203120,
+      "text": "the course. For me, writing essays is a process that involves critical thinking, which challenges"
+    },
+    {
+      "startMs": 203120,
+      "endMs": 209200,
+      "text": "me to develop my points more thoroughly, I thus managed to gain a diversity of perspectives."
+    },
+    {
+      "startMs": 209200,
+      "endMs": 215680,
+      "text": "Tutor: The program is designed to deliver basic and advanced theoretical knowledge of core concepts,"
+    },
+    {
+      "startMs": 215680,
+      "endMs": 222240,
+      "text": "including healthcare systems concepts together with practicum or clinical practice experience"
+    },
+    {
+      "startMs": 222240,
+      "endMs": 229520,
+      "text": "to bridge the classroom content to the practice setting. So I'm afraid written work is unavoidable."
+    },
+    {
+      "startMs": 229520,
+      "endMs": 234080,
+      "text": "Also this year, we've added a module of law. How do you feel about that?"
+    },
+    {
+      "startMs": 234080,
+      "endMs": 240320,
+      "text": "Helen: At first, we felt that learning law is kind of redundant and too time-consuming. After a few"
+    },
+    {
+      "startMs": 240320,
+      "endMs": 252080,
+      "text": "sessions, we realized that it is necessary in dealing with future medical disputes."
+    },
+    {
+      "startMs": 255760,
+      "endMs": 262560,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 25 to 30."
+    },
+    {
+      "startMs": 264080,
+      "endMs": 292800,
+      "text": "Tutor: Do you have any suggestions for prospective students?"
+    },
+    {
+      "startMs": 293360,
+      "endMs": 299440,
+      "text": "Paul: What bothers me most is handing in essays on time. I almost missed the deadline once,"
+    },
+    {
+      "startMs": 299440,
+      "endMs": 305920,
+      "text": "because there were three essays due within the same week, so rationalising your time is critical."
+    },
+    {
+      "startMs": 305920,
+      "endMs": 309920,
+      "text": "Helen: Well, that's true. The lectures deliver so much useful information."
+    },
+    {
+      "startMs": 309920,
+      "endMs": 315840,
+      "text": "I have poor memory, so I kept making notes and revisiting them on a regular basis."
+    },
+    {
+      "startMs": 315840,
+      "endMs": 321120,
+      "text": "To my surprise, at the end of the semester, I have learnt the key concepts by heart."
+    },
+    {
+      "startMs": 321120,
+      "endMs": 326160,
+      "text": "Tutor: How was the research? I heard that it was quite challenging. How did you manage to overcome the"
+    },
+    {
+      "startMs": 326160,
+      "endMs": 332880,
+      "text": "difficulties? Paul: That's true. The majority of us had no clue how to carry out the research at first."
+    },
+    {
+      "startMs": 332880,
+      "endMs": 338160,
+      "text": "Fortunately, when I was digging up reference materials at the library, I sought help from the"
+    },
+    {
+      "startMs": 338160,
+      "endMs": 344560,
+      "text": "librarian. She taught me about finding the appropriate resources and choosing the proper research"
+    },
+    {
+      "startMs": 344560,
+      "endMs": 350160,
+      "text": "methods. Tutor: Have you checked out the online forum? Helen: Yes, it has become a habit for me to visit the"
+    },
+    {
+      "startMs": 350160,
+      "endMs": 356720,
+      "text": "forum regularly, in a sense. It extends classroom learning. It is where the students post academic"
+    },
+    {
+      "startMs": 356720,
+      "endMs": 362320,
+      "text": "problems that they come across and get support from the faculty members. Paul: Some of my classmates"
+    },
+    {
+      "startMs": 362320,
+      "endMs": 368240,
+      "text": "didn't do so well during the placement tests. I feel that background reading is necessary."
+    },
+    {
+      "startMs": 368240,
+      "endMs": 373680,
+      "text": "Tutor: Lastly, do you have anything to say to the freshmen? Helen: I was really ambitious at first,"
+    },
+    {
+      "startMs": 373680,
+      "endMs": 378800,
+      "text": "trying to get straight A's on my transcript. I made tons of notes and worked hard,"
+    },
+    {
+      "startMs": 378800,
+      "endMs": 384560,
+      "text": "even on the optional assignments to get extra credit. I stressed myself out before having an"
+    },
+    {
+      "startMs": 384560,
+      "endMs": 391520,
+      "text": "emotional breakdown. After consulting my advisor, I found it important to set realistic goals."
+    },
+    {
+      "startMs": 391520,
+      "endMs": 396000,
+      "text": "Don't push yourself too hard. It is wise to sort out your priorities."
+    },
+    {
+      "startMs": 396560,
+      "endMs": 401920,
+      "text": "Tutor: Thank you for coming here today and providing valuable feedback on the program. Have a great summer break."
+    },
+    {
+      "startMs": 401920,
+      "endMs": 410720,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 56,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

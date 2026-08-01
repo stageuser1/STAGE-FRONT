@@ -1,0 +1,460 @@
+{
+  "id": "p4-87-bird-surveying-techniques",
+  "title": "Bird Surveying Techniques",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-0f6a71c4f0be",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 328.936,
+    "checksum": "sha256:14efd33fed946d256f291f9437f8d972444db17a05e53154a2c6ed6b3998614a"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD for each answer. Bird Surveying Techniques The study by Cunningham in 1995 It aimed to study birds which were 31. __________ in cities. Methodology Researchers were able to 32. __________ rather than count the number of birds by some methods, such as random sampling. Using a 33. __________ system to study birds’ companionship habits. Research attached tags to birds’ legs to decide the 34. __________ over time. Findings Birds tended to choose the same nesting site in which they were raised. Human activities, e.g. 35. __________, can be a disadvantage to bird reproduction. Measures taken by local organisation: To increase birds’ rate of 36. __________ in various ways. To reduce the dangers caused by 37. __________ farms, e.g. colliding with turbines. The study by Conway in 2006 Researchers monitored the 38. __________ of birds’ nocturnal callings during flight. Data could be collected through noise detection devices placed at a great 40. __________.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "It aimed to study birds which were 31. __________ in cities.",
+          "answer": "Protected"
+        },
+        {
+          "id": "32",
+          "text": "Researchers were able to 32. __________ rather than count the number of birds by some methods, such as random sampling.",
+          "answer": "Estimate"
+        },
+        {
+          "id": "33",
+          "text": "Using a 33. __________ system to study birds’ companionship habits.",
+          "answer": "Mapping"
+        },
+        {
+          "id": "34",
+          "text": "Research attached tags to birds’ legs to decide the 34. __________ over time.",
+          "answer": "Trends"
+        },
+        {
+          "id": "35",
+          "text": "Human activities, e.g. 35. __________, can be a disadvantage to bird reproduction.",
+          "answer": "Pollution"
+        },
+        {
+          "id": "36",
+          "text": "To increase birds’ rate of 36. __________ in various ways.",
+          "answer": "Survival"
+        },
+        {
+          "id": "37",
+          "text": "To reduce the dangers caused by 37. __________ farms, e.g. colliding with turbines.",
+          "answer": "Wind"
+        },
+        {
+          "id": "38",
+          "text": "Researchers monitored the 38. __________ of birds’ nocturnal callings during flight.",
+          "answer": "Frequency"
+        },
+        {
+          "id": "39",
+          "text": "39. __________ were taken to listen to birds’ sounds.",
+          "answer": "Recordings"
+        },
+        {
+          "id": "40",
+          "text": "Data could be collected through noise detection devices placed at a great 40. __________.",
+          "answer": "Distance"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Bird Surveying Techniques",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The study by Cunningham in 1995",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "It aimed to study birds which were 31. __________ in cities.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Methodology",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Researchers were able to 32. __________ rather than count the number of birds by some methods, such as random sampling.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Using a 33. __________ system to study birds’ companionship habits.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Research attached tags to birds’ legs to decide the 34. __________ over time.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Findings",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Birds tended to choose the same nesting site in which they were raised.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Human activities, e.g. 35. __________, can be a disadvantage to bird reproduction.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Measures taken by local organisation:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "To increase birds’ rate of 36. __________ in various ways.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "To reduce the dangers caused by 37. __________ farms, e.g. colliding with turbines.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The study by Conway in 2006",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Researchers monitored the 38. __________ of birds’ nocturnal callings during flight.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "39. __________ were taken to listen to birds’ sounds.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Data could be collected through noise detection devices placed at a great 40. __________.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Protected",
+        "32": "Estimate",
+        "33": "Mapping",
+        "34": "Trends",
+        "35": "Pollution",
+        "36": "Survival",
+        "37": "Wind",
+        "38": "Frequency",
+        "39": "Recordings",
+        "40": "Distance"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9800,
+      "text": "Good afternoon. This is the third session of the series of lectures on wildlife. For"
+    },
+    {
+      "startMs": 9800,
+      "endMs": 14520,
+      "text": "this lecture, we're going to look at two studies on the habitats of birds and protection"
+    },
+    {
+      "startMs": 14520,
+      "endMs": 20840,
+      "text": "measures taken in Australia, including the basic methodology and related areas of research."
+    },
+    {
+      "startMs": 20840,
+      "endMs": 26920,
+      "text": "Now, let me give you some background information about the first research project on birds."
+    },
+    {
+      "startMs": 26920,
+      "endMs": 32600,
+      "text": "The study was carried out by RB Cunningham, and his team from the Australian National"
+    },
+    {
+      "startMs": 32600,
+      "endMs": 39880,
+      "text": "University in 1995. The primary goal was to detect the breeding habits and resting sites"
+    },
+    {
+      "startMs": 39880,
+      "endMs": 46280,
+      "text": "of some birds, especially those protected species in urban regions. These species included"
+    },
+    {
+      "startMs": 46280,
+      "endMs": 52440,
+      "text": "birds like Peregrine Falcon and Starling in Australia. The bird data set consisted"
+    },
+    {
+      "startMs": 52440,
+      "endMs": 60080,
+      "text": "of a total of 153 species recorded from 946 sites. One might expect that in order to"
+    },
+    {
+      "startMs": 60080,
+      "endMs": 65640,
+      "text": "obtain valid data on their distribution patterns and population densities, researchers had"
+    },
+    {
+      "startMs": 65640,
+      "endMs": 71400,
+      "text": "to count through binoculars. Instead, they managed to estimate with various standard"
+    },
+    {
+      "startMs": 71400,
+      "endMs": 77720,
+      "text": "distance sampling methods like random sampling. In addition, a mapping system was used to"
+    },
+    {
+      "startMs": 77800,
+      "endMs": 83960,
+      "text": "study their companionship behavior. It recorded proposed birds' nesting sites to monitor the"
+    },
+    {
+      "startMs": 83960,
+      "endMs": 90600,
+      "text": "mating behavior of targeted species. To obtain valid data of birds' whereabouts, researchers"
+    },
+    {
+      "startMs": 90600,
+      "endMs": 97240,
+      "text": "attached identity tags to bird's legs transmitting radio signals. The tagging process was done when"
+    },
+    {
+      "startMs": 97240,
+      "endMs": 103480,
+      "text": "the birds were between five and seven days of age. After the initial tagging, data was collected"
+    },
+    {
+      "startMs": 103560,
+      "endMs": 110200,
+      "text": "from subsets of radio-tagged birds, making it possible to assess the trends of birds over 15"
+    },
+    {
+      "startMs": 110200,
+      "endMs": 117800,
+      "text": "months. So, what did they find? Well, as it turned out, many of the birds tagged had the tendency"
+    },
+    {
+      "startMs": 117800,
+      "endMs": 123560,
+      "text": "to nest in the same habitat where they grew up. Their nesting sites were quite varied and included"
+    },
+    {
+      "startMs": 123560,
+      "endMs": 131800,
+      "text": "freshwater reed beds, tidal reed beds, agricultural crops and man-made sites. Even though naturally"
+    },
+    {
+      "startMs": 131800,
+      "endMs": 137880,
+      "text": "occurring nests were common, birds sometimes accidentally nested in man-made devices like"
+    },
+    {
+      "startMs": 137880,
+      "endMs": 144840,
+      "text": "power towers, chimneys and tunnels. This research also studied the impact of humans on bird"
+    },
+    {
+      "startMs": 144840,
+      "endMs": 150920,
+      "text": "communities, and found out that pollution had contributed greatly to the declining birth rates"
+    },
+    {
+      "startMs": 150920,
+      "endMs": 157080,
+      "text": "of some species, which were considered to be extinct or threatened to vanish from the study area."
+    },
+    {
+      "startMs": 157640,
+      "endMs": 163160,
+      "text": "These species are dependent on natural forests because of their breeding holes. They will"
+    },
+    {
+      "startMs": 163160,
+      "endMs": 169080,
+      "text": "become extinct when local natural forests continue to be polluted heavily. A number of"
+    },
+    {
+      "startMs": 169080,
+      "endMs": 175240,
+      "text": "measures were thus taken by members from local animal conservation organizations to boost their"
+    },
+    {
+      "startMs": 175240,
+      "endMs": 182600,
+      "text": "alarming survival rates. Firstly, breeding boxes were placed in trees taking on the role of breeding"
+    },
+    {
+      "startMs": 182840,
+      "endMs": 189400,
+      "text": "holes that were contaminated. Protection guidelines were also introduced to strictly prohibiting killing,"
+    },
+    {
+      "startMs": 189400,
+      "endMs": 195800,
+      "text": "disturbance and habitat destruction. A further measure was taken to ensure the safety of birds"
+    },
+    {
+      "startMs": 195800,
+      "endMs": 203240,
+      "text": "from wind farms. In fact, birds are sometimes shredded by wind turbine blades. A great deal of"
+    },
+    {
+      "startMs": 203240,
+      "endMs": 209480,
+      "text": "work was done on how to prevent them from colliding with turbines. A case in point was protecting"
+    },
+    {
+      "startMs": 209480,
+      "endMs": 216520,
+      "text": "space for bird migration by ensuring that migratory routes were kept free. Falcons generally"
+    },
+    {
+      "startMs": 216520,
+      "endMs": 223960,
+      "text": "cope well with wind turbines, but not in weather conditions where visibility is bad. So, with knowledge"
+    },
+    {
+      "startMs": 223960,
+      "endMs": 231000,
+      "text": "of how fast falcons fly, bird stations in northern Australia can notify wind farms further south of"
+    },
+    {
+      "startMs": 231000,
+      "endMs": 238600,
+      "text": "the falcons approach so that turbines can be shut down as they pass by. Then another piece of research"
+    },
+    {
+      "startMs": 238840,
+      "endMs": 246040,
+      "text": "was done a couple of years later by Conway in 2006. His team detected the calling frequency of"
+    },
+    {
+      "startMs": 246040,
+      "endMs": 252600,
+      "text": "sea birds flying at night. Acoustic signals are important communication tools for birds. These"
+    },
+    {
+      "startMs": 252600,
+      "endMs": 260680,
+      "text": "signals can indicate social cohesion, pre-location and breeding behaviour. Courtship songs are common"
+    },
+    {
+      "startMs": 260680,
+      "endMs": 266840,
+      "text": "among various species during mating seasons. Males produce calling songs that attract distant"
+    },
+    {
+      "startMs": 266840,
+      "endMs": 272440,
+      "text": "females, and then courtship songs will induce nearby females to respond."
+    },
+    {
+      "startMs": 272440,
+      "endMs": 280520,
+      "text": "Observers also took recordings of the sounds of all the individual birds detected. A tablet PC was used"
+    },
+    {
+      "startMs": 280520,
+      "endMs": 288440,
+      "text": "to process detailed information like sound pitch, spectrum, length and timing of surveys. To minimise"
+    },
+    {
+      "startMs": 288440,
+      "endMs": 294440,
+      "text": "the disturbance on the bird community, all the sounds were recorded from a distance using microphones"
+    },
+    {
+      "startMs": 294440,
+      "endMs": 301400,
+      "text": "to detect noise. They found that the probability of call events was much higher for solitary birds"
+    },
+    {
+      "startMs": 301400,
+      "endMs": 303960,
+      "text": "communicating early and late in the day."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 46,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

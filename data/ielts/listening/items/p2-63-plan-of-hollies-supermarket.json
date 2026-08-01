@@ -1,0 +1,484 @@
+{
+  "id": "p2-63-plan-of-hollies-supermarket",
+  "title": "Plan of Hollies Supermarket",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-f62a3f69b82a",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 405.264,
+    "checksum": "sha256:e16a051bcae066cd5622a89841baadd730b61a5027d138270ddf0b7a2c3c35bf"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-14",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "The supervisor starts her talk by explaining that employees have to",
+          "options": [
+            {
+              "id": "A",
+              "text": "be aware of the importance of teamwork."
+            },
+            {
+              "id": "B",
+              "text": "be flexible in terms of their availability."
+            },
+            {
+              "id": "C",
+              "text": "be capable of lifting heavy loads."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "The supervisor says that when the supermarket is very busy, employees must",
+          "options": [
+            {
+              "id": "A",
+              "text": "decide for themselves what needs doing."
+            },
+            {
+              "id": "B",
+              "text": "postpone their scheduled break."
+            },
+            {
+              "id": "C",
+              "text": "report minor accidents quickly."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "The supervisor explains that when employees have a positive attitude, it",
+          "options": [
+            {
+              "id": "A",
+              "text": "helps everyone in the supermarket to relax."
+            },
+            {
+              "id": "B",
+              "text": "encourages customers to spend more."
+            },
+            {
+              "id": "C",
+              "text": "improves work effectiveness."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "The supervisor says it is essential to stay calm when a customer",
+          "options": [
+            {
+              "id": "A",
+              "text": "reports an employee to the manager."
+            },
+            {
+              "id": "B",
+              "text": "delays other shoppers."
+            },
+            {
+              "id": "C",
+              "text": "refuses to wait their turn."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Question 15-20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "Staff entrance",
+          "answer": "A"
+        },
+        {
+          "id": "16",
+          "text": "Manager’s office",
+          "answer": "D"
+        },
+        {
+          "id": "17",
+          "text": "Storage and unpacking",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "Kitchen",
+          "answer": "E"
+        },
+        {
+          "id": "19",
+          "text": "Cleaning equipment",
+          "answer": "G"
+        },
+        {
+          "id": "20",
+          "text": "Staff relaxation area",
+          "answer": "C"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-63-plan-of-hollies-supermarket-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-63-plan-of-hollies-supermarket-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "C",
+        "14": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "15": "A",
+        "16": "D",
+        "17": "B",
+        "18": "E",
+        "19": "G",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10960,
+      "text": "Part 2."
+    },
+    {
+      "startMs": 10960,
+      "endMs": 18720,
+      "text": "You will hear a supervisor at Holley's supermarket talking to a group of new employees."
+    },
+    {
+      "startMs": 18720,
+      "endMs": 22080,
+      "text": "First you have some time to look at questions 11 to 14."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59280,
+      "text": "Now listen carefully and answer questions 11 to 14."
+    },
+    {
+      "startMs": 59280,
+      "endMs": 65520,
+      "text": "Welcome to Holley's supermarket. I'm sure you'll all enjoy working in our dedicated team here."
+    },
+    {
+      "startMs": 66320,
+      "endMs": 71760,
+      "text": "So what will you be doing? Well, we're open Monday through Sunday,"
+    },
+    {
+      "startMs": 71760,
+      "endMs": 76720,
+      "text": "so you'll need to be able to work weekends as well as irregular weekday shifts."
+    },
+    {
+      "startMs": 77600,
+      "endMs": 86080,
+      "text": "These sometimes start at 5am or finish at 11pm. Your duties will include checking and unpacking"
+    },
+    {
+      "startMs": 86080,
+      "endMs": 91280,
+      "text": "lorry deliveries as well as working on the shop floor, stocking shelves and so on."
+    },
+    {
+      "startMs": 91840,
+      "endMs": 96160,
+      "text": "But you'll only be required to do manual lifting if the goods are light."
+    },
+    {
+      "startMs": 98240,
+      "endMs": 104000,
+      "text": "When the store is very busy, you'll also have to assess changing priorities."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 109040,
+      "text": "For example, if there's a queue at the tills, you'll jump on a spare one to help."
+    },
+    {
+      "startMs": 109840,
+      "endMs": 114160,
+      "text": "If you notice something's been spilt and the surface is a little bit wet,"
+    },
+    {
+      "startMs": 114160,
+      "endMs": 118560,
+      "text": "you'll get a mop to clean it up, no need to check with the manager first."
+    },
+    {
+      "startMs": 119520,
+      "endMs": 124240,
+      "text": "Similarly, if bakery items are selling quickly, you'll help cook some more."
+    },
+    {
+      "startMs": 124800,
+      "endMs": 130960,
+      "text": "And if a customer can't find, say, the apples, you'll instantly leave what you're doing"
+    },
+    {
+      "startMs": 130960,
+      "endMs": 135760,
+      "text": "and show them. But you'll still get time off to relax too, of course."
+    },
+    {
+      "startMs": 137040,
+      "endMs": 142320,
+      "text": "We pride ourselves on a positive attitude here. A little small talk shows you're"
+    },
+    {
+      "startMs": 142320,
+      "endMs": 148240,
+      "text": "interested in the customers and are providing excellent service, just as long as you don't overdo"
+    },
+    {
+      "startMs": 148240,
+      "endMs": 155360,
+      "text": "it and keep another customer waiting. And always smile. It forces you to stay positive"
+    },
+    {
+      "startMs": 155360,
+      "endMs": 158960,
+      "text": "and being generally upbeat makes your whole team happy too."
+    },
+    {
+      "startMs": 160000,
+      "endMs": 163680,
+      "text": "This increases efficiency and gives a good impression to customers."
+    },
+    {
+      "startMs": 164640,
+      "endMs": 169920,
+      "text": "If it's quiet, help someone pack their bags. Customers really appreciate it,"
+    },
+    {
+      "startMs": 169920,
+      "endMs": 172480,
+      "text": "especially when they've bought more than they expected to."
+    },
+    {
+      "startMs": 174880,
+      "endMs": 180560,
+      "text": "Staying calm is also a necessity. If a customer's unhappy for any reason,"
+    },
+    {
+      "startMs": 180560,
+      "endMs": 186560,
+      "text": "keep cool and call for a supervisor to help diffuse a situation if things are getting out of hand."
+    },
+    {
+      "startMs": 187760,
+      "endMs": 192800,
+      "text": "Occasionally, when working tills, you'll find yourself waiting for someone to extract their wallet"
+    },
+    {
+      "startMs": 192800,
+      "endMs": 197600,
+      "text": "from the bottom of a cluttered bag while a long queue of annoyed customers builds up."
+    },
+    {
+      "startMs": 198160,
+      "endMs": 203040,
+      "text": "You have to make sure however hard it might be that you remain composed."
+    },
+    {
+      "startMs": 206480,
+      "endMs": 212000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 15-20."
+    },
+    {
+      "startMs": 227600,
+      "endMs": 244960,
+      "text": "Now listen and answer questions 15-20."
+    },
+    {
+      "startMs": 248480,
+      "endMs": 253920,
+      "text": "So now let's look at the plan of the supermarket. Have you all got your plans?"
+    },
+    {
+      "startMs": 254800,
+      "endMs": 261280,
+      "text": "Okay, good. We'll start with the staff entrance. Today, you came in through the customer"
+    },
+    {
+      "startMs": 261280,
+      "endMs": 266960,
+      "text": "entrance, clearly marked on the bottom of your plan, but in future, you'll enter through the door"
+    },
+    {
+      "startMs": 266960,
+      "endMs": 272880,
+      "text": "in the top left-hand corner of the diagram. Please don't confuse this with the emergency exits"
+    },
+    {
+      "startMs": 272880,
+      "endMs": 279200,
+      "text": "in the top right-hand corner and bottom left. It's very important that these are kept clear"
+    },
+    {
+      "startMs": 279680,
+      "endMs": 287360,
+      "text": "at all times. Regarding the manager's office, some of you may have attended interviews here"
+    },
+    {
+      "startMs": 287360,
+      "endMs": 293200,
+      "text": "when it was next to the newspaper and magazine sales area. However, it's recently been"
+    },
+    {
+      "startMs": 293200,
+      "endMs": 299600,
+      "text": "moved and is now the circular space marked on the right of your plans. When the manager's not"
+    },
+    {
+      "startMs": 299600,
+      "endMs": 306800,
+      "text": "on the shop floor, that's where you'll find her. The storage and unpacking area, you may be"
+    },
+    {
+      "startMs": 306880,
+      "endMs": 313600,
+      "text": "asked to help out here, both before and after opening hours. This is represented by the largest"
+    },
+    {
+      "startMs": 313600,
+      "endMs": 319840,
+      "text": "of the four rectangles in the top section of the plan. It tends to get very busy there at times,"
+    },
+    {
+      "startMs": 319840,
+      "endMs": 327040,
+      "text": "so please be careful on entering and leaving this area. There's a kitchen on site where food and"
+    },
+    {
+      "startMs": 327040,
+      "endMs": 332880,
+      "text": "drinks are prepared for customers. It has specialist staff, but some of you may have to fill in"
+    },
+    {
+      "startMs": 332880,
+      "endMs": 338960,
+      "text": "occasionally. On the plan, it's shown by the triangular shape to the left of the tinned good"
+    },
+    {
+      "startMs": 338960,
+      "endMs": 345600,
+      "text": "style. It's very busy, as many customers like to take a break in the cafe and read a newspaper"
+    },
+    {
+      "startMs": 345600,
+      "endMs": 352160,
+      "text": "before or after doing their shopping. Cleaning equipment is stored in a cupboard. It's the"
+    },
+    {
+      "startMs": 352160,
+      "endMs": 358400,
+      "text": "smaller of the two squares marked near the vegetable and fruit section, and can come in very handy."
+    },
+    {
+      "startMs": 358400,
+      "endMs": 362800,
+      "text": "You'd be surprised how often we have to mop up squash tomatoes or grapes."
+    },
+    {
+      "startMs": 364000,
+      "endMs": 369200,
+      "text": "Finally, you'll be pleased to know there's a separate staff relaxation area. This is at the"
+    },
+    {
+      "startMs": 369200,
+      "endMs": 375840,
+      "text": "top of your plan between the frozen good section and the exit. As well as comfortable chairs,"
+    },
+    {
+      "startMs": 375840,
+      "endMs": 382400,
+      "text": "there's also a microwave for heating up snacks and a drinks dispenser. So let's go there now."
+    },
+    {
+      "startMs": 382400,
+      "endMs": 391680,
+      "text": "That is the end of part two. You now have 30 seconds to check your answers to part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 53,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

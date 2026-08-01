@@ -1,0 +1,555 @@
+{
+  "id": "p4-32-a-museum-in-japan",
+  "title": "A museum in Japan",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-87855d1c1b28",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 476.064,
+    "checksum": "sha256:0133ad0301f1e4624c603e04379dff02cd42538dc0b9c24d6a45b3eb1bca6f79"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. The museum accommodates a diverse range of artworks. The museum is surrounded by 31. ______ The design was based on a Chinese 32. ______ the architect knew. Visitors can approach the museum through a 33. ______ and over a bridge. After getting into the building, a glass 34. ______ can be noticed immediately. Visitors feel like being 35. ______ because of the light. Advantages of underground houses: There is less 36. ______ They are at a lower risk of 37. ______ They do better in energy conservation. Disadvantages of underground houses: People may feel they do not have enough 38. ______ (but they are already used to 39. ______ shopping centres). Places suffering from 40. ______ cannot be used to construct underground buildings.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The museum is surrounded by 31. ______",
+          "answer": "mountains"
+        },
+        {
+          "id": "32",
+          "text": "The design was based on a Chinese 32. ______ the architect knew.",
+          "answer": "story"
+        },
+        {
+          "id": "33",
+          "text": "Visitors can approach the museum through a 33. ______ and over a bridge.",
+          "answer": "tunnel"
+        },
+        {
+          "id": "34",
+          "text": "After getting into the building, a glass 34. ______ can be noticed immediately.",
+          "answer": "roof"
+        },
+        {
+          "id": "35",
+          "text": "Visitors feel like being 35. ______ because of the light.",
+          "answer": "outside"
+        },
+        {
+          "id": "36",
+          "text": "There is less 36. ______",
+          "answer": "noise"
+        },
+        {
+          "id": "37",
+          "text": "They are at a lower risk of 37. ______",
+          "answer": "fire"
+        },
+        {
+          "id": "38",
+          "text": "People may feel they do not have enough 38. ______ (but they are already used to 39. ______ shopping centres).",
+          "answer": "space"
+        },
+        {
+          "id": "39",
+          "text": "People may feel they do not have enough 38. ______ (but they are already used to 39. ______ shopping centres).",
+          "answer": "basement"
+        },
+        {
+          "id": "40",
+          "text": "Places suffering from 40. ______ cannot be used to construct underground buildings.",
+          "answer": "flooding"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A museum in Japan",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The museum accommodates a diverse range of artworks.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The museum is surrounded by 31. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The design was based on a Chinese 32. ______ the architect knew.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Visitors can approach the museum through a 33. ______ and over a bridge.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "After getting into the building, a glass 34. ______ can be noticed immediately.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Visitors feel like being 35. ______ because of the light.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Advantages of underground houses:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "There is less 36. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They are at a lower risk of 37. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They do better in energy conservation.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Disadvantages of underground houses:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "People may feel they do not have enough 38. ______ (but they are already used to 39. ______ shopping centres).",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Places suffering from 40. ______ cannot be used to construct underground buildings.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "mountains",
+        "32": "story",
+        "33": "tunnel",
+        "34": "roof",
+        "35": "outside",
+        "36": "noise",
+        "37": "fire",
+        "38": "space",
+        "39": "basement",
+        "40": "flooding"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13440,
+      "text": "Part 4."
+    },
+    {
+      "startMs": 13440,
+      "endMs": 19480,
+      "text": "You will hear part of a lecture about a Japanese museum, comprised mainly of underground"
+    },
+    {
+      "startMs": 19480,
+      "endMs": 20480,
+      "text": "space."
+    },
+    {
+      "startMs": 20480,
+      "endMs": 25120,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 50480,
+      "endMs": 80440,
+      "text": "Now listen carefully, and answer questions 31 to 40."
+    },
+    {
+      "startMs": 80440,
+      "endMs": 88640,
+      "text": "For the last few sessions, we've been looking at the different architecture for both"
+    },
+    {
+      "startMs": 88640,
+      "endMs": 94640,
+      "text": "their utilitarian purposes and aesthetic features as well."
+    },
+    {
+      "startMs": 94640,
+      "endMs": 101720,
+      "text": "In today's lecture, I want to continue this series by first introducing to you a unique"
+    },
+    {
+      "startMs": 101720,
+      "endMs": 108440,
+      "text": "underground museum in Japan, and then we'll discuss the pros and cons of underground"
+    },
+    {
+      "startMs": 108440,
+      "endMs": 110440,
+      "text": "architecture."
+    },
+    {
+      "startMs": 110440,
+      "endMs": 120200,
+      "text": "Now, this museum was built in 1996, and around 80 percent of the museum is buried underground"
+    },
+    {
+      "startMs": 120200,
+      "endMs": 123720,
+      "text": "to preserve the lush natural beauty."
+    },
+    {
+      "startMs": 123720,
+      "endMs": 127600,
+      "text": "It has is an impressive collection of artworks."
+    },
+    {
+      "startMs": 127600,
+      "endMs": 135720,
+      "text": "The exhibits consist of works from ancient civilizations, including the Egyptians, Romans,"
+    },
+    {
+      "startMs": 135720,
+      "endMs": 144240,
+      "text": "and various Asian cultures, with the pieces mainly coming from the Founders' Private Collection."
+    },
+    {
+      "startMs": 144240,
+      "endMs": 150520,
+      "text": "But perhaps the most intriguing aspect of the museum is the design of its structures,"
+    },
+    {
+      "startMs": 150520,
+      "endMs": 155040,
+      "text": "and how they are integrated into their natural surroundings."
+    },
+    {
+      "startMs": 155040,
+      "endMs": 162680,
+      "text": "The museum is humbly embedded in mountains, close to a subway station, connecting the nearest"
+    },
+    {
+      "startMs": 162680,
+      "endMs": 166480,
+      "text": "metropolis in about an hour."
+    },
+    {
+      "startMs": 166480,
+      "endMs": 173640,
+      "text": "The design was inspired by an ancient Chinese story titled Peach Blossom Valley."
+    },
+    {
+      "startMs": 173640,
+      "endMs": 177120,
+      "text": "The architect read it when he was a schoolboy."
+    },
+    {
+      "startMs": 177120,
+      "endMs": 183800,
+      "text": "It is about a fisherman who loses his way, and his boat carries him upstream."
+    },
+    {
+      "startMs": 183800,
+      "endMs": 191120,
+      "text": "He is drawn into a cave by the fragrant scent of a forest of blossoming peach trees."
+    },
+    {
+      "startMs": 191120,
+      "endMs": 197800,
+      "text": "After travelling through a narrow road behind the cave, the man finds an idyllic village"
+    },
+    {
+      "startMs": 197800,
+      "endMs": 200200,
+      "text": "amid the splendid view."
+    },
+    {
+      "startMs": 200200,
+      "endMs": 206520,
+      "text": "The museum has been conceived as a real world version of this village."
+    },
+    {
+      "startMs": 206520,
+      "endMs": 213560,
+      "text": "Visitors must pass through a tunnel first, and then a cable bridge suspended over a gorge"
+    },
+    {
+      "startMs": 213560,
+      "endMs": 217280,
+      "text": "before arriving at the museum."
+    },
+    {
+      "startMs": 217280,
+      "endMs": 224200,
+      "text": "The museum's details reflect the designers' innovative endeavour to break new ground."
+    },
+    {
+      "startMs": 224200,
+      "endMs": 231120,
+      "text": "The architect changed the design numerous times, to ensure the building was in harmony"
+    },
+    {
+      "startMs": 231120,
+      "endMs": 233600,
+      "text": "with the natural landscape."
+    },
+    {
+      "startMs": 233600,
+      "endMs": 240920,
+      "text": "It becomes evident, as tourists walk around the building, as the detail is very fastidious,"
+    },
+    {
+      "startMs": 240920,
+      "endMs": 244320,
+      "text": "and makes for a unique experience."
+    },
+    {
+      "startMs": 244320,
+      "endMs": 251600,
+      "text": "Once visitors enter the museum, a sloping roof made of wide expanses of glass draws"
+    },
+    {
+      "startMs": 251600,
+      "endMs": 254080,
+      "text": "their attention right away."
+    },
+    {
+      "startMs": 254080,
+      "endMs": 260680,
+      "text": "The web-like structure filtered the light through, and scattered it across the surface, making"
+    },
+    {
+      "startMs": 260680,
+      "endMs": 272480,
+      "text": "visitors feel like being outside, with a vibrant backdrop of seasonal colours."
+    },
+    {
+      "startMs": 272480,
+      "endMs": 278720,
+      "text": "It is now clear that underground buildings have many advantages over traditional above"
+    },
+    {
+      "startMs": 278720,
+      "endMs": 286360,
+      "text": "ground houses, and many architects are looking into the possibilities of this type of subsurface"
+    },
+    {
+      "startMs": 286360,
+      "endMs": 287600,
+      "text": "structure."
+    },
+    {
+      "startMs": 287600,
+      "endMs": 294760,
+      "text": "The most important advantage of these houses, especially in the current scenario of environmental"
+    },
+    {
+      "startMs": 294760,
+      "endMs": 301480,
+      "text": "degradation, is that they can better preserve indigenous flora and fauna."
+    },
+    {
+      "startMs": 301480,
+      "endMs": 307400,
+      "text": "But the advantages of underground architecture go beyond that."
+    },
+    {
+      "startMs": 307400,
+      "endMs": 313760,
+      "text": "For one thing, the earth surrounding the homes absorbs noise, and thus provides natural"
+    },
+    {
+      "startMs": 313760,
+      "endMs": 319640,
+      "text": "sandproofing, creating a quiet living space with privacy."
+    },
+    {
+      "startMs": 319640,
+      "endMs": 327160,
+      "text": "Choosing an underground house will be peaceful and calm in, even in a noisy region."
+    },
+    {
+      "startMs": 327160,
+      "endMs": 333200,
+      "text": "Moreover, there is less part of underground houses, that can catch fire."
+    },
+    {
+      "startMs": 333200,
+      "endMs": 339040,
+      "text": "For the most part, wood is no longer needed for building a home underground."
+    },
+    {
+      "startMs": 339040,
+      "endMs": 347560,
+      "text": "The concrete foundations, and metal structures of these homes, all ensure good fireproofing."
+    },
+    {
+      "startMs": 347560,
+      "endMs": 354800,
+      "text": "Now underground houses, also have the potential to save energy in the long run, as they can"
+    },
+    {
+      "startMs": 354880,
+      "endMs": 358800,
+      "text": "tap the earth's heating or cooling power."
+    },
+    {
+      "startMs": 358800,
+      "endMs": 365320,
+      "text": "The earth's temperature doesn't vary as much as the temperature of the air outside."
+    },
+    {
+      "startMs": 365320,
+      "endMs": 371960,
+      "text": "It ensures that even though the climate outside fluctuates between extremes, the conditions"
+    },
+    {
+      "startMs": 371960,
+      "endMs": 377880,
+      "text": "inside the subterranean homes remain more or less stable."
+    },
+    {
+      "startMs": 378600,
+      "endMs": 384160,
+      "text": "However, there are also concerns over earth-sheltered homes."
+    },
+    {
+      "startMs": 384160,
+      "endMs": 390280,
+      "text": "There may be a psychological adjustment needed for a person shifting from a traditional"
+    },
+    {
+      "startMs": 390280,
+      "endMs": 394400,
+      "text": "above-ground house to an underground house."
+    },
+    {
+      "startMs": 394400,
+      "endMs": 400200,
+      "text": "Many people feel there is insufficient space in underground buildings."
+    },
+    {
+      "startMs": 400200,
+      "endMs": 406640,
+      "text": "But in fact, these people also admit that they often visit shopping centers, located"
+    },
+    {
+      "startMs": 406720,
+      "endMs": 411520,
+      "text": "in the basement, and did not feel claustrophobic."
+    },
+    {
+      "startMs": 411520,
+      "endMs": 418520,
+      "text": "In addition, underground houses cannot be built in regions' experience in flooding, due"
+    },
+    {
+      "startMs": 418520,
+      "endMs": 422280,
+      "text": "to their unique geographical location."
+    },
+    {
+      "startMs": 422280,
+      "endMs": 429520,
+      "text": "And even for areas that are suited for underground structures, drainage should be planned carefully"
+    },
+    {
+      "startMs": 429520,
+      "endMs": 433720,
+      "text": "to prevent moisture retention."
+    },
+    {
+      "startMs": 433720,
+      "endMs": 440160,
+      "text": "While the advantages, far outnumber their drawbacks, it may be a good idea to wait a"
+    },
+    {
+      "startMs": 440160,
+      "endMs": 447160,
+      "text": "little longer for these houses to come mainstream."
+    },
+    {
+      "startMs": 447160,
+      "endMs": 449560,
+      "text": "That is the end of Part 4."
+    },
+    {
+      "startMs": 449560,
+      "endMs": 453360,
+      "text": "You now have one minute to check your answers to Part 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 68,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

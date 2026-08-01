@@ -1,0 +1,726 @@
+{
+  "id": "p3-34-eyewitness-reliability",
+  "title": "Eyewitness Reliability",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-c5aeae789788",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 490.08,
+    "checksum": "sha256:cbad5d2f01aa618108a54a691244e0d17769df0e5c51c368f92fe72d04967bc1"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21-26.",
+      "instruction": "Choose the correct letter, A, B, or C",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Eleanor thinks eyewitnesses are believed when",
+          "options": [
+            {
+              "id": "A",
+              "text": "they are respected members of the community."
+            },
+            {
+              "id": "B",
+              "text": "they make their statements with confidence."
+            },
+            {
+              "id": "C",
+              "text": "they use sophisticated language in their accounts."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "What concerns Duckie, Eleanor, and Jamie about the texts they have read so far?",
+          "options": [
+            {
+              "id": "A",
+              "text": "No clear conclusions are reached."
+            },
+            {
+              "id": "B",
+              "text": "The studies involved comparatively few people."
+            },
+            {
+              "id": "C",
+              "text": "Some of the data were gathered some time ago."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "23",
+          "text": "They agree that the most significant factor affecting eyewitness reliability is",
+          "options": [
+            {
+              "id": "A",
+              "text": "how good the lighting is."
+            },
+            {
+              "id": "B",
+              "text": "how long the event lasts."
+            },
+            {
+              "id": "C",
+              "text": "how far away the witness is."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Jamie criticizes photo-identifications, saying witnesses",
+          "options": [
+            {
+              "id": "A",
+              "text": "fail to compare the photos with their memory of the event."
+            },
+            {
+              "id": "B",
+              "text": "are not properly briefed about the procedure."
+            },
+            {
+              "id": "C",
+              "text": "they are keen for the case to be concluded."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "They agree that the term ‘naive observer’ means a person who",
+          "options": [
+            {
+              "id": "A",
+              "text": "has no experience of a police investigation."
+            },
+            {
+              "id": "B",
+              "text": "did not realize they were witnessing a crime."
+            },
+            {
+              "id": "C",
+              "text": "was not present at the incident."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "They have learned that witnesses are reluctant to change their opinions because",
+          "options": [
+            {
+              "id": "A",
+              "text": "they do not want to appear foolish."
+            },
+            {
+              "id": "B",
+              "text": "they fear the legal consequences."
+            },
+            {
+              "id": "C",
+              "text": "they are keen for the case to be concluded."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 27-30.",
+      "instruction": "What problem may there be with child witnesses at each of the following stages of an interview?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Frightened by the unfamiliar environment"
+        },
+        {
+          "id": "B",
+          "text": "Influenced by the interviewer Duckie"
+        },
+        {
+          "id": "C",
+          "text": "Not understanding the difference between truth and lies"
+        },
+        {
+          "id": "D",
+          "text": "Unwillingness to say they don’t know"
+        },
+        {
+          "id": "E",
+          "text": "Confused by the terminology"
+        },
+        {
+          "id": "F",
+          "text": "Distrust of the interviewer"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Rapport",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "Open-ended questions",
+          "answer": "E"
+        },
+        {
+          "id": "29",
+          "text": "Closed questions",
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "Closure",
+          "answer": "F"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "C",
+        "23": "B",
+        "24": "A",
+        "25": "C",
+        "26": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "27": "A",
+        "28": "E",
+        "29": "C",
+        "30": "F"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 17320,
+      "text": "Now turn to Section 3 on page 5."
+    },
+    {
+      "startMs": 17320,
+      "endMs": 19520,
+      "text": "Section 3"
+    },
+    {
+      "startMs": 19520,
+      "endMs": 25920,
+      "text": "You will hear two law students called Eleanor and Jamie discussing their work on whether"
+    },
+    {
+      "startMs": 25920,
+      "endMs": 31600,
+      "text": "the evidence given by people who witness crimes is reliable."
+    },
+    {
+      "startMs": 31600,
+      "endMs": 38120,
+      "text": "First, you have some time to look at questions 21-26 on page 5."
+    },
+    {
+      "startMs": 55920,
+      "endMs": 66120,
+      "text": "You will hear two law students called Eleanor and Jamie discussing their work on whether"
+    },
+    {
+      "startMs": 66120,
+      "endMs": 83440,
+      "text": "the evidence given by people who witness crimes is reliable."
+    },
+    {
+      "startMs": 83440,
+      "endMs": 91640,
+      "text": "Now listen carefully and answer questions 21-26."
+    },
+    {
+      "startMs": 91640,
+      "endMs": 97240,
+      "text": "Eleanor: Hi Jamie, I've just been reading this book about eyewitness testimonies."
+    },
+    {
+      "startMs": 97240,
+      "endMs": 102120,
+      "text": "It really goes into how much we can actually rely on what the people who witness crimes"
+    },
+    {
+      "startMs": 102120,
+      "endMs": 106680,
+      "text": "actually say and what things influence eyewitness reliability."
+    },
+    {
+      "startMs": 106680,
+      "endMs": 110560,
+      "text": "Jamie: Oh, I've read a couple of case studies on that too."
+    },
+    {
+      "startMs": 110560,
+      "endMs": 112040,
+      "text": "Can we compare notes?"
+    },
+    {
+      "startMs": 112040,
+      "endMs": 113800,
+      "text": "Eleanor: Good idea."
+    },
+    {
+      "startMs": 113800,
+      "endMs": 118960,
+      "text": "It's fascinating to learn that eyewitness identification is such compelling evidence"
+    },
+    {
+      "startMs": 118960,
+      "endMs": 121880,
+      "text": "in both civil and criminal trials."
+    },
+    {
+      "startMs": 121880,
+      "endMs": 125920,
+      "text": "Jamie: You mean if a witness says something generally they're believed?"
+    },
+    {
+      "startMs": 125920,
+      "endMs": 130900,
+      "text": "Eleanor: And reading between the lines, I'd say that when a witness gives evidence in a very"
+    },
+    {
+      "startMs": 130900,
+      "endMs": 136800,
+      "text": "self-assured way, everyone takes them at their word, whether they're a doctor who speaks"
+    },
+    {
+      "startMs": 136800,
+      "endMs": 142480,
+      "text": "with an assumed authority or the average person in the street, it doesn't seem to matter"
+    },
+    {
+      "startMs": 142480,
+      "endMs": 144200,
+      "text": "as much as their manner."
+    },
+    {
+      "startMs": 144200,
+      "endMs": 145200,
+      "text": "Jamie: Right."
+    },
+    {
+      "startMs": 145200,
+      "endMs": 147480,
+      "text": "So is that textbook worth reading?"
+    },
+    {
+      "startMs": 147480,
+      "endMs": 148480,
+      "text": "Eleanor: Yes."
+    },
+    {
+      "startMs": 148480,
+      "endMs": 152880,
+      "text": "It's a good book, divided into user-friendly sections."
+    },
+    {
+      "startMs": 152880,
+      "endMs": 158640,
+      "text": "It refers to case studies and the conclusions are clearly underlined, but actually some"
+    },
+    {
+      "startMs": 158640,
+      "endMs": 161280,
+      "text": "of the cases are more than 10 years old now."
+    },
+    {
+      "startMs": 161280,
+      "endMs": 166840,
+      "text": "Jamie: Well, it's the same problem with the survey reports our tutor gave us, but at least they"
+    },
+    {
+      "startMs": 166840,
+      "endMs": 169240,
+      "text": "draw on a representative sample."
+    },
+    {
+      "startMs": 169240,
+      "endMs": 170240,
+      "text": "Eleanor: That's good."
+    },
+    {
+      "startMs": 170240,
+      "endMs": 174920,
+      "text": "All the books point out that eyewitness statements are very often unreliable."
+    },
+    {
+      "startMs": 174920,
+      "endMs": 181200,
+      "text": "Eleanor:But there can be good reasons for that, like an incident may happen at night in the dark."
+    },
+    {
+      "startMs": 181200,
+      "endMs": 187040,
+      "text": "Jamie: Or it happens some way away, but it's the fact that it can happen in just a split second"
+    },
+    {
+      "startMs": 187040,
+      "endMs": 190280,
+      "text": "that makes the witnesses account so unreliable."
+    },
+    {
+      "startMs": 190280,
+      "endMs": 193520,
+      "text": "Eleanor: That point's made very strongly in what I've read too."
+    },
+    {
+      "startMs": 193520,
+      "endMs": 194680,
+      "text": "Jamie: Yeah."
+    },
+    {
+      "startMs": 194680,
+      "endMs": 197840,
+      "text": "Eleanor：Have you read anything about photo identifications?"
+    },
+    {
+      "startMs": 197840,
+      "endMs": 198840,
+      "text": "Jamie: Yes."
+    },
+    {
+      "startMs": 198840,
+      "endMs": 204040,
+      "text": "About the procedure and the reliability of witnesses looking at photos of different people"
+    },
+    {
+      "startMs": 204040,
+      "endMs": 206160,
+      "text": "and picking out the suspect."
+    },
+    {
+      "startMs": 206160,
+      "endMs": 212320,
+      "text": "The case studies all clearly show how easy it is to sway a witness's choice of photo even"
+    },
+    {
+      "startMs": 212320,
+      "endMs": 214920,
+      "text": "just by the flicker of an eye."
+    },
+    {
+      "startMs": 214920,
+      "endMs": 218040,
+      "text": "But steps have been taken now to avoid this happening."
+    },
+    {
+      "startMs": 218040,
+      "endMs": 221360,
+      "text": "Eleanor: And are the witnesses told exactly what they have to do?"
+    },
+    {
+      "startMs": 221360,
+      "endMs": 222360,
+      "text": "Jamie: Mostly."
+    },
+    {
+      "startMs": 222360,
+      "endMs": 227480,
+      "text": "But the trouble is, most people focus on the photos and choose the most likely suspect"
+    },
+    {
+      "startMs": 227480,
+      "endMs": 233000,
+      "text": "from the bunch and forget about the actual incident and who they saw at the time."
+    },
+    {
+      "startMs": 233000,
+      "endMs": 236000,
+      "text": "Eleanor: Did I read something about a naive observer?"
+    },
+    {
+      "startMs": 236000,
+      "endMs": 237520,
+      "text": "Do you know what that is?"
+    },
+    {
+      "startMs": 237520,
+      "endMs": 240680,
+      "text": "Is it a witness who's never been in a court before?"
+    },
+    {
+      "startMs": 240680,
+      "endMs": 241680,
+      "text": "Jamie: Oh."
+    },
+    {
+      "startMs": 241680,
+      "endMs": 245520,
+      "text": "I understood it to mean someone who's had nothing to do with the event."
+    },
+    {
+      "startMs": 245520,
+      "endMs": 249520,
+      "text": "And they're asked to look at the photos and pick out the potential suspect."
+    },
+    {
+      "startMs": 249520,
+      "endMs": 250520,
+      "text": "Eleanor: That figures."
+    },
+    {
+      "startMs": 250520,
+      "endMs": 255320,
+      "text": "Then they can see if the photos are a good set and make sure one person doesn't stand"
+    },
+    {
+      "startMs": 255320,
+      "endMs": 256320,
+      "text": "out."
+    },
+    {
+      "startMs": 256320,
+      "endMs": 261520,
+      "text": "Jamie: Another thing I read was that witnesses don't like to change their minds once they've made"
+    },
+    {
+      "startMs": 261520,
+      "endMs": 263600,
+      "text": "a particular statement."
+    },
+    {
+      "startMs": 263600,
+      "endMs": 268040,
+      "text": "I thought people might worry about the fact that they told a lie in court and think they"
+    },
+    {
+      "startMs": 268040,
+      "endMs": 270120,
+      "text": "might be punished in some way."
+    },
+    {
+      "startMs": 270120,
+      "endMs": 275280,
+      "text": "But it's simply that they're afraid of seeming unintelligent or lightweight."
+    },
+    {
+      "startMs": 275280,
+      "endMs": 276280,
+      "text": "Eleanor: Yeah."
+    },
+    {
+      "startMs": 276280,
+      "endMs": 278960,
+      "text": "People are reluctant to lose face."
+    },
+    {
+      "startMs": 278960,
+      "endMs": 283800,
+      "text": "Imagine if a case had been going on for weeks and you suddenly realised you'd got something"
+    },
+    {
+      "startMs": 283800,
+      "endMs": 289000,
+      "text": "wrong right at the beginning."
+    },
+    {
+      "startMs": 289000,
+      "endMs": 295640,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27-30"
+    },
+    {
+      "startMs": 295640,
+      "endMs": 316880,
+      "text": "on page 6."
+    },
+    {
+      "startMs": 316880,
+      "endMs": 324280,
+      "text": "Now listen and answer questions 27-30."
+    },
+    {
+      "startMs": 324280,
+      "endMs": 328400,
+      "text": "Eleanor: Changing the topic slightly, can I just check with you what you've understood about the"
+    },
+    {
+      "startMs": 328400,
+      "endMs": 334200,
+      "text": "problems of interviewing child witnesses when they've witnessed, for example, robbery?"
+    },
+    {
+      "startMs": 334200,
+      "endMs": 335200,
+      "text": "Jamie: Yes."
+    },
+    {
+      "startMs": 335200,
+      "endMs": 339800,
+      "text": "Did you get the handout about the stages that should be followed when children are interviewed?"
+    },
+    {
+      "startMs": 339800,
+      "endMs": 340800,
+      "text": "Eleanor：Yes."
+    },
+    {
+      "startMs": 340800,
+      "endMs": 345400,
+      "text": "The rapport stage, when a relationship between the child and the interviewer is built"
+    },
+    {
+      "startMs": 345400,
+      "endMs": 347560,
+      "text": "up, seems to be crucial."
+    },
+    {
+      "startMs": 347560,
+      "endMs": 352280,
+      "text": "Jamie：But many children fail to say anything that provides any real information."
+    },
+    {
+      "startMs": 352280,
+      "endMs": 356720,
+      "text": "It must be hard for them not to feel a bit scared about being in a formal setting like"
+    },
+    {
+      "startMs": 356720,
+      "endMs": 358200,
+      "text": "a court building."
+    },
+    {
+      "startMs": 358200,
+      "endMs": 362760,
+      "text": "Still, it's a good lead-in to open-ended questions where the interviewer carefully"
+    },
+    {
+      "startMs": 362760,
+      "endMs": 366320,
+      "text": "sticks to their prepared questions in order to remain neutral."
+    },
+    {
+      "startMs": 366320,
+      "endMs": 372200,
+      "text": "Eleanor: I can see the point of that, but the handout discusses the issue of children simply not understanding"
+    },
+    {
+      "startMs": 372200,
+      "endMs": 377960,
+      "text": "the specialist language used, so the whole interview just gets more puzzling for them."
+    },
+    {
+      "startMs": 377960,
+      "endMs": 383160,
+      "text": "I think the stage called closed questions is easier for children to handle."
+    },
+    {
+      "startMs": 383160,
+      "endMs": 385640,
+      "text": "They just have to answer yes or no."
+    },
+    {
+      "startMs": 385640,
+      "endMs": 389200,
+      "text": "Jamie：But everything's not so clear cut in a child's world."
+    },
+    {
+      "startMs": 389200,
+      "endMs": 394960,
+      "text": "And abstract concepts such as honesty haven't been fully grasped by young children."
+    },
+    {
+      "startMs": 394960,
+      "endMs": 397080,
+      "text": "Eleanor：You mean they make things up?"
+    },
+    {
+      "startMs": 397080,
+      "endMs": 398560,
+      "text": "Jamie：Apparently."
+    },
+    {
+      "startMs": 398560,
+      "endMs": 403440,
+      "text": "And in the final stage, closure, where the interviewer has to check anything that hasn't"
+    },
+    {
+      "startMs": 403440,
+      "endMs": 409080,
+      "text": "been made clear to them by repeating previous questions, children often become suspicious"
+    },
+    {
+      "startMs": 409080,
+      "endMs": 410320,
+      "text": "of the questioner."
+    },
+    {
+      "startMs": 410320,
+      "endMs": 414920,
+      "text": "Eleanor：It must require lots of training to be able to interview children successfully."
+    },
+    {
+      "startMs": 414920,
+      "endMs": 418960,
+      "text": "Jamie：Yes, I think."
+    },
+    {
+      "startMs": 418960,
+      "endMs": 421640,
+      "text": "There is the end of section three."
+    },
+    {
+      "startMs": 421640,
+      "endMs": 424120,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 95,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

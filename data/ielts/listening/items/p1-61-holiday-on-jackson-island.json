@@ -1,0 +1,914 @@
+{
+  "id": "p1-61-holiday-on-jackson-island",
+  "title": "Holiday on Jackson Island",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-e78f9e9b5603",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 466.008,
+    "checksum": "sha256:f4d67c5ff9192177b72949a56272467e576a1a52428065ce78ffa2fb0cdbfefe"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–7",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Holiday on Jackson Island Place Anna’s accommodation Things Anna did Anna’s recommendation Camford Example — with cousin went shopping in the market need to take 1. ______ Newtown — bus tour visit the 2. ______ Golden Beach in a 3. ______ stay for at least 5. ______ in a motel went 7. ______ book some lessons in advance",
+      "questions": [
+        {
+          "id": "1",
+          "text": "need to take 1. ______",
+          "answer": "cash"
+        },
+        {
+          "id": "2",
+          "text": "visit the 2. ______",
+          "answer": "museum"
+        },
+        {
+          "id": "3",
+          "text": "in a 3. ______",
+          "answer": "caravan"
+        },
+        {
+          "id": "4",
+          "text": "4. ______",
+          "answer": "sailing"
+        },
+        {
+          "id": "5",
+          "text": "stay for at least 5. ______",
+          "answer": "four days/4 days"
+        },
+        {
+          "id": "6",
+          "text": "6. ______",
+          "answer": "White Mountain"
+        },
+        {
+          "id": "7",
+          "text": "went 7. ______",
+          "answer": "snowboarding"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Holiday on Jackson Island",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Place",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "Anna’s accommodation",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "Things Anna did",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "Anna’s recommendation",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 3,
+          "cols": 4
+        },
+        {
+          "text": "Camford",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "Example — with cousin",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "went shopping in the market",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "need to take 1. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 3,
+          "cols": 4
+        },
+        {
+          "text": "Newtown",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "—",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "bus tour",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "visit the 2. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 3,
+          "cols": 4
+        },
+        {
+          "text": "Golden Beach",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "in a 3. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "4. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "stay for at least 5. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 3,
+          "cols": 4
+        },
+        {
+          "text": "6. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "in a motel",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "went 7. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "book some lessons in advance",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 3,
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 8–10",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. More Advice Try the 8. __________ at the cafe on the mountain. Hire a 9. __________ Buy a 10. __________ before the holiday",
+      "questions": [
+        {
+          "id": "8",
+          "text": "Try the 8. __________ at the cafe on the mountain.",
+          "answer": "cakes"
+        },
+        {
+          "id": "9",
+          "text": "Hire a 9. __________",
+          "answer": "car"
+        },
+        {
+          "id": "10",
+          "text": "Buy a 10. __________ before the holiday",
+          "answer": "map"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "More Advice",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Try the 8. __________ at the cafe on the mountain.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Hire a 9. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Buy a 10. __________ before the holiday",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "cash",
+        "2": "museum",
+        "3": "caravan",
+        "4": "sailing",
+        "5": "four days/4 days",
+        "6": "White Mountain",
+        "7": "snowboarding",
+        "8": "cakes",
+        "9": "car",
+        "10": "map"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 17320,
+      "text": "You will hear a number of different recordings, and you will have to answer questions on what"
+    },
+    {
+      "startMs": 17320,
+      "endMs": 19120,
+      "text": "you hear."
+    },
+    {
+      "startMs": 19120,
+      "endMs": 23800,
+      "text": "There will be time for you to read the instructions and questions, and you will have a chance to"
+    },
+    {
+      "startMs": 23800,
+      "endMs": 26040,
+      "text": "check your work."
+    },
+    {
+      "startMs": 26040,
+      "endMs": 29920,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 29920,
+      "endMs": 33200,
+      "text": "The test is in four sections."
+    },
+    {
+      "startMs": 33200,
+      "endMs": 37000,
+      "text": "Write all your answers in the listening question booklet."
+    },
+    {
+      "startMs": 37000,
+      "endMs": 42000,
+      "text": "At the end of the test, you will be given ten minutes to transfer your answers to an"
+    },
+    {
+      "startMs": 42000,
+      "endMs": 45040,
+      "text": "answer sheet."
+    },
+    {
+      "startMs": 45040,
+      "endMs": 54520,
+      "text": "Now turn to section one on page two of your question booklet."
+    },
+    {
+      "startMs": 55520,
+      "endMs": 61040,
+      "text": "You will hear two friends called John and Anna talking about a holiday Anna has just"
+    },
+    {
+      "startMs": 61040,
+      "endMs": 63720,
+      "text": "had on Jackson Island."
+    },
+    {
+      "startMs": 63720,
+      "endMs": 67840,
+      "text": "First you have some time to look at questions one to seven on page two."
+    },
+    {
+      "startMs": 84520,
+      "endMs": 102160,
+      "text": "You will see that there is an example that has been done for you."
+    },
+    {
+      "startMs": 102160,
+      "endMs": 109760,
+      "text": "On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 109760,
+      "endMs": 113440,
+      "text": "John: Hi Anna, how was your holiday to Jackson Island?"
+    },
+    {
+      "startMs": 113440,
+      "endMs": 114440,
+      "text": "Anna: It was good."
+    },
+    {
+      "startMs": 114440,
+      "endMs": 116160,
+      "text": "There's quite a lot to see."
+    },
+    {
+      "startMs": 116160,
+      "endMs": 117920,
+      "text": "It's quite a big island, really."
+    },
+    {
+      "startMs": 117920,
+      "endMs": 118920,
+      "text": "John: Yeah."
+    },
+    {
+      "startMs": 118920,
+      "endMs": 123480,
+      "text": "I was thinking of going in the summer, so where would you recommend going on the island?"
+    },
+    {
+      "startMs": 123480,
+      "endMs": 126240,
+      "text": "Anna: Well, the capital, of course, Camford."
+    },
+    {
+      "startMs": 126240,
+      "endMs": 131240,
+      "text": "I stayed there with my cousin."
+    },
+    {
+      "startMs": 131240,
+      "endMs": 136880,
+      "text": "Anna stayed with her cousin, so cousin has been written in the space."
+    },
+    {
+      "startMs": 136880,
+      "endMs": 138720,
+      "text": "Now we shall begin."
+    },
+    {
+      "startMs": 138720,
+      "endMs": 142560,
+      "text": "You should answer the questions as you listen, because you will not hear the recording"
+    },
+    {
+      "startMs": 142560,
+      "endMs": 144960,
+      "text": "in a second time."
+    },
+    {
+      "startMs": 144960,
+      "endMs": 149280,
+      "text": "Listen carefully and answer questions one to seven."
+    },
+    {
+      "startMs": 149280,
+      "endMs": 155000,
+      "text": "John: Hi Anna, how was your holiday to Jackson Island?"
+    },
+    {
+      "startMs": 155000,
+      "endMs": 156000,
+      "text": "Anna: It was good."
+    },
+    {
+      "startMs": 156000,
+      "endMs": 157720,
+      "text": "There's quite a lot to see."
+    },
+    {
+      "startMs": 157720,
+      "endMs": 159480,
+      "text": "It's quite a big island, really."
+    },
+    {
+      "startMs": 159480,
+      "endMs": 160480,
+      "text": "John: Yeah."
+    },
+    {
+      "startMs": 160480,
+      "endMs": 165240,
+      "text": "I was thinking of going in the summer, so where would you recommend going on the island?"
+    },
+    {
+      "startMs": 165240,
+      "endMs": 167800,
+      "text": "Anna: Well, the capital, of course, Camford."
+    },
+    {
+      "startMs": 167800,
+      "endMs": 169840,
+      "text": "I stayed there with my cousin."
+    },
+    {
+      "startMs": 169840,
+      "endMs": 171440,
+      "text": "John: What did you do there?"
+    },
+    {
+      "startMs": 171440,
+      "endMs": 174640,
+      "text": "Anna: Well, actually I spent most of my time there shopping."
+    },
+    {
+      "startMs": 174640,
+      "endMs": 176800,
+      "text": "John: So has it got good shopping centres?"
+    },
+    {
+      "startMs": 176800,
+      "endMs": 180040,
+      "text": "Anna: Yes, but they're the same as at home, really."
+    },
+    {
+      "startMs": 180040,
+      "endMs": 183960,
+      "text": "So I did all my shopping in the market, which is great."
+    },
+    {
+      "startMs": 183960,
+      "endMs": 186760,
+      "text": "John: What kinds of things are good to buy there?"
+    },
+    {
+      "startMs": 186760,
+      "endMs": 190240,
+      "text": "Anna: Everything, but bags and shoes, especially."
+    },
+    {
+      "startMs": 190240,
+      "endMs": 194520,
+      "text": "Just make sure you've got cash with you, as most of the stalls don't take credit cards."
+    },
+    {
+      "startMs": 194520,
+      "endMs": 196680,
+      "text": "John: Okay, that's good to know."
+    },
+    {
+      "startMs": 196680,
+      "endMs": 198280,
+      "text": "Where else did you go?"
+    },
+    {
+      "startMs": 198280,
+      "endMs": 201320,
+      "text": "Anna: Well, my cousin and I went to Newtown."
+    },
+    {
+      "startMs": 201320,
+      "endMs": 204400,
+      "text": "She said it was famous for its modern architecture."
+    },
+    {
+      "startMs": 204400,
+      "endMs": 208800,
+      "text": "We only had half a day there, so we took a bus tour around the town."
+    },
+    {
+      "startMs": 208800,
+      "endMs": 212240,
+      "text": "But if I were you, I'd give the bus tour a miss."
+    },
+    {
+      "startMs": 212240,
+      "endMs": 216800,
+      "text": "Unless you know a lot about architecture, the buildings all look the same."
+    },
+    {
+      "startMs": 216800,
+      "endMs": 217800,
+      "text": "There's a museum, though."
+    },
+    {
+      "startMs": 217800,
+      "endMs": 219040,
+      "text": "That's supposed to be good."
+    },
+    {
+      "startMs": 219040,
+      "endMs": 220040,
+      "text": "You might like that."
+    },
+    {
+      "startMs": 220040,
+      "endMs": 222120,
+      "text": "John: Okay, I'll give it a go."
+    },
+    {
+      "startMs": 222120,
+      "endMs": 226520,
+      "text": "Anna: Then after that, we headed for Golden Beach, because we were going to meet up with an"
+    },
+    {
+      "startMs": 226520,
+      "endMs": 229320,
+      "text": "old friend that I hadn't seen for years."
+    },
+    {
+      "startMs": 229320,
+      "endMs": 233640,
+      "text": "But we had to stay in a caravan, as the hotels were all booked up."
+    },
+    {
+      "startMs": 233640,
+      "endMs": 236000,
+      "text": "John: Is it as pretty as it looks in the brochures?"
+    },
+    {
+      "startMs": 236000,
+      "endMs": 238800,
+      "text": "Anna: Yes, it's very picturesque."
+    },
+    {
+      "startMs": 238800,
+      "endMs": 242360,
+      "text": "We did some sailing on the most beautiful blue sea."
+    },
+    {
+      "startMs": 242360,
+      "endMs": 247120,
+      "text": "It was so clear that you could see the bottom, even quite far out to sea."
+    },
+    {
+      "startMs": 247120,
+      "endMs": 251640,
+      "text": "That part of the trip was great, and I'd have liked to have stayed even longer."
+    },
+    {
+      "startMs": 251640,
+      "endMs": 255680,
+      "text": "I'd suggest staying there for a minimum of four days if I were you."
+    },
+    {
+      "startMs": 255680,
+      "endMs": 258520,
+      "text": "We had two days there, and it wasn't nearly enough."
+    },
+    {
+      "startMs": 258520,
+      "endMs": 259520,
+      "text": "John: Sounds great."
+    },
+    {
+      "startMs": 259520,
+      "endMs": 262520,
+      "text": "I'll put that on my must-do list."
+    },
+    {
+      "startMs": 262520,
+      "endMs": 264000,
+      "text": "Was that the end of your trip?"
+    },
+    {
+      "startMs": 264000,
+      "endMs": 265000,
+      "text": "Anna: No."
+    },
+    {
+      "startMs": 265000,
+      "endMs": 269920,
+      "text": "After Golden Beach, we drove into the centre of the island to White Mountain."
+    },
+    {
+      "startMs": 269920,
+      "endMs": 271400,
+      "text": "John: White as in the colour?"
+    },
+    {
+      "startMs": 271400,
+      "endMs": 272400,
+      "text": "Anna: Yes."
+    },
+    {
+      "startMs": 272400,
+      "endMs": 277480,
+      "text": "The island's great, because you can go from the beaches up to the snowy mountain in a couple"
+    },
+    {
+      "startMs": 277480,
+      "endMs": 278960,
+      "text": "of hours."
+    },
+    {
+      "startMs": 278960,
+      "endMs": 283560,
+      "text": "We took a tent because we were going to camp, but the weather was so cold."
+    },
+    {
+      "startMs": 283560,
+      "endMs": 287880,
+      "text": "In fact, it was snowing when I was there, that we stopped in a motel instead."
+    },
+    {
+      "startMs": 287880,
+      "endMs": 289280,
+      "text": "John: Did you go skiing then?"
+    },
+    {
+      "startMs": 289280,
+      "endMs": 290280,
+      "text": "Anna: No."
+    },
+    {
+      "startMs": 290280,
+      "endMs": 293760,
+      "text": "But we tried snowboarding, and it was harder than it looked."
+    },
+    {
+      "startMs": 293760,
+      "endMs": 298360,
+      "text": "It looked so easy when you see other people doing it, but it took me ages to get the"
+    },
+    {
+      "startMs": 298360,
+      "endMs": 299360,
+      "text": "hang of it."
+    },
+    {
+      "startMs": 299360,
+      "endMs": 303360,
+      "text": "I wish I'd had some lessons, but you had to make your bookings in advance."
+    },
+    {
+      "startMs": 303360,
+      "endMs": 309520,
+      "text": "John: OK, I'll look into that, thanks."
+    },
+    {
+      "startMs": 309520,
+      "endMs": 313520,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions"
+    },
+    {
+      "startMs": 313520,
+      "endMs": 331080,
+      "text": "8 to 10 on page 2."
+    },
+    {
+      "startMs": 331080,
+      "endMs": 337360,
+      "text": "Now listen and answer questions 8 to 10."
+    },
+    {
+      "startMs": 337360,
+      "endMs": 340200,
+      "text": "John: So are there any other tips or advice you could give me?"
+    },
+    {
+      "startMs": 340200,
+      "endMs": 341200,
+      "text": "Anna: I don't know."
+    },
+    {
+      "startMs": 342200,
+      "endMs": 348760,
+      "text": "Oh, one place you should try to visit is this very quaint cafe, which is at the foot"
+    },
+    {
+      "startMs": 348760,
+      "endMs": 350200,
+      "text": "of the mountain."
+    },
+    {
+      "startMs": 350200,
+      "endMs": 352280,
+      "text": "It has the best cakes ever."
+    },
+    {
+      "startMs": 352280,
+      "endMs": 354280,
+      "text": "It's worth going there just for them."
+    },
+    {
+      "startMs": 354280,
+      "endMs": 356760,
+      "text": "John: I'll have to try those."
+    },
+    {
+      "startMs": 356760,
+      "endMs": 359240,
+      "text": "So what other advice would you give?"
+    },
+    {
+      "startMs": 359240,
+      "endMs": 362760,
+      "text": "Anna: Oh, let me think."
+    },
+    {
+      "startMs": 362760,
+      "endMs": 364480,
+      "text": "We didn't really have any problems."
+    },
+    {
+      "startMs": 364480,
+      "endMs": 367440,
+      "text": "John: Well, how did you get around when you were there?"
+    },
+    {
+      "startMs": 367440,
+      "endMs": 369960,
+      "text": "Anna: We wanted to get a motorbike at first."
+    },
+    {
+      "startMs": 369960,
+      "endMs": 375320,
+      "text": "They're very cheap to hire and great fun to ride as the roads are very good, but it turned"
+    },
+    {
+      "startMs": 375320,
+      "endMs": 379760,
+      "text": "out not to be a good idea because the weather is so changeable."
+    },
+    {
+      "startMs": 379760,
+      "endMs": 381720,
+      "text": "You'd be much better off in a car."
+    },
+    {
+      "startMs": 381720,
+      "endMs": 385720,
+      "text": "There are plenty of places where you can hire them, and the roads are well signposted,"
+    },
+    {
+      "startMs": 385720,
+      "endMs": 387120,
+      "text": "so you won't get lost."
+    },
+    {
+      "startMs": 387120,
+      "endMs": 389920,
+      "text": "John: And presumably I can get a map when I get there."
+    },
+    {
+      "startMs": 389920,
+      "endMs": 393200,
+      "text": "Anna: Well, you can, but they are expensive."
+    },
+    {
+      "startMs": 393200,
+      "endMs": 395960,
+      "text": "It'd be better to get one here before you go."
+    },
+    {
+      "startMs": 395960,
+      "endMs": 396960,
+      "text": "John: Great."
+    },
+    {
+      "startMs": 396960,
+      "endMs": 397960,
+      "text": "Really useful."
+    },
+    {
+      "startMs": 397960,
+      "endMs": 403960,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 109,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

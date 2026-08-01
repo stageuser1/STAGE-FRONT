@@ -1,0 +1,795 @@
+{
+  "id": "p1-89-working-in-a-summer-camp-in-the-usa",
+  "title": "Working in a summer camp in the USA",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-ffc667d37aeb",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 539.928,
+    "checksum": "sha256:bacb3deed936c8a6b5b70aaee910b2c188aeadb8b7c951218ceccdf366a76831"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 1-10.",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER. Working in a summer camp in the USA Job involves being with children for 24 hours per day General counsellors need experience of working with children as a 1. __________ Specialist counsellors could use skills in: Sports, e.g. 2. __________ Art Job in summer camp lasts for 3. __________ weeks with the chance to travel afterwards Job starts in 4. __________ First week of job is used for 5. __________ Officially, counsellors must be at least 6. __________ years old Salary: 7. __________ US $ Must pay for Own 8. __________ (£138) Can get a 10. __________ on travel in America after camp",
+      "questions": [
+        {
+          "id": "1",
+          "text": "General counsellors need experience of working with children as a 1. __________",
+          "answer": "Leader"
+        },
+        {
+          "id": "2",
+          "text": "Sports, e.g. 2. __________",
+          "answer": "Tennis"
+        },
+        {
+          "id": "3",
+          "text": "Job in summer camp lasts for 3. __________ weeks with the chance to travel afterwards",
+          "answer": "8/eight"
+        },
+        {
+          "id": "4",
+          "text": "Job starts in 4. __________",
+          "answer": "June"
+        },
+        {
+          "id": "5",
+          "text": "First week of job is used for 5. __________",
+          "answer": "Training"
+        },
+        {
+          "id": "6",
+          "text": "Officially, counsellors must be at least 6. __________ years old",
+          "answer": "19/nineteen"
+        },
+        {
+          "id": "7",
+          "text": "Salary: 7. __________ US $",
+          "answer": "985"
+        },
+        {
+          "id": "8",
+          "text": "Own 8. __________ (£138)",
+          "answer": "Insurance"
+        },
+        {
+          "id": "9",
+          "text": "A 9. __________ check in UK (£36)",
+          "answer": "Police"
+        },
+        {
+          "id": "10",
+          "text": "Can get a 10. __________ on travel in America after camp",
+          "answer": "Discount"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Working in a summer camp in the USA",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Job involves being with children for 24 hours per day",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "General counsellors need experience of working with children as a 1. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Specialist counsellors could use skills in:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Sports, e.g. 2. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Art",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Job in summer camp lasts for 3. __________ weeks with the chance to travel afterwards",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Job starts in 4. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "First week of job is used for 5. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Officially, counsellors must be at least 6. __________ years old",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Salary: 7. __________ US $",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Must pay for",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Own 8. __________ (£138)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A 9. __________ check in UK (£36)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Can get a 10. __________ on travel in America after camp",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Leader",
+        "2": "Tennis",
+        "3": "8/eight",
+        "4": "June",
+        "5": "Training",
+        "6": "19/nineteen",
+        "7": "985",
+        "8": "Insurance",
+        "9": "Police",
+        "10": "Discount"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "[Narrator]: You will hear a number of different recordings, and you will have to answer questions on what"
+    },
+    {
+      "startMs": 7000,
+      "endMs": 8000,
+      "text": "you hear."
+    },
+    {
+      "startMs": 8000,
+      "endMs": 13560,
+      "text": "There will be time for you to read the instructions and questions, and you will have a chance to"
+    },
+    {
+      "startMs": 13560,
+      "endMs": 15960,
+      "text": "check your work."
+    },
+    {
+      "startMs": 15960,
+      "endMs": 20480,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 20480,
+      "endMs": 24120,
+      "text": "The test is in four parts."
+    },
+    {
+      "startMs": 24120,
+      "endMs": 28360,
+      "text": "Write all your answers in the listening question booklet."
+    },
+    {
+      "startMs": 28360,
+      "endMs": 33240,
+      "text": "At the end of the test, you will be given ten minutes to transfer your answers to an"
+    },
+    {
+      "startMs": 33240,
+      "endMs": 36240,
+      "text": "answer sheet."
+    },
+    {
+      "startMs": 36240,
+      "endMs": 45240,
+      "text": "Now turn to part one on page two of your question booklet."
+    },
+    {
+      "startMs": 45240,
+      "endMs": 47240,
+      "text": "Part one"
+    },
+    {
+      "startMs": 47240,
+      "endMs": 52360,
+      "text": "You will hear a telephone conversation between a young man who wants to get a summer job in"
+    },
+    {
+      "startMs": 52360,
+      "endMs": 55160,
+      "text": "the USA and an agent."
+    },
+    {
+      "startMs": 55160,
+      "endMs": 60160,
+      "text": "First, you have some time to look at questions one to five."
+    },
+    {
+      "startMs": 85160,
+      "endMs": 92160,
+      "text": "Now listen carefully and answer questions one to five."
+    },
+    {
+      "startMs": 92160,
+      "endMs": 96160,
+      "text": "[Nicholas]: Hi, USA Summer Camps, Nicholas speaking."
+    },
+    {
+      "startMs": 96160,
+      "endMs": 98160,
+      "text": "How can I help you?"
+    },
+    {
+      "startMs": 98160,
+      "endMs": 104960,
+      "text": "[Man]: I want to get a job in the USA this summer, and I saw an advert on your website, and it said"
+    },
+    {
+      "startMs": 104960,
+      "endMs": 108160,
+      "text": "I should call this number if I wanted more information."
+    },
+    {
+      "startMs": 108160,
+      "endMs": 109160,
+      "text": "[Nicholas]: Right."
+    },
+    {
+      "startMs": 109160,
+      "endMs": 112160,
+      "text": "So, you're interested in working in a summer camp?"
+    },
+    {
+      "startMs": 112160,
+      "endMs": 114160,
+      "text": "[Man]: That's working with children, is it?"
+    },
+    {
+      "startMs": 115160,
+      "endMs": 116160,
+      "text": "[Nicholas]: Yes."
+    },
+    {
+      "startMs": 116160,
+      "endMs": 121160,
+      "text": "Lots of children go away to summer camp in the USA, and the jobs we're advertising are"
+    },
+    {
+      "startMs": 121160,
+      "endMs": 123160,
+      "text": "for what are called counselors."
+    },
+    {
+      "startMs": 123160,
+      "endMs": 127160,
+      "text": "That means you're with the children the whole day, 24 hours."
+    },
+    {
+      "startMs": 127160,
+      "endMs": 129160,
+      "text": "[Man]: Right."
+    },
+    {
+      "startMs": 129160,
+      "endMs": 132160,
+      "text": "So, what did I be doing exactly?"
+    },
+    {
+      "startMs": 132160,
+      "endMs": 133160,
+      "text": "[Nicholas]: Everything."
+    },
+    {
+      "startMs": 133160,
+      "endMs": 138160,
+      "text": "You'd be working with them, playing with them, teaching them everything."
+    },
+    {
+      "startMs": 138160,
+      "endMs": 143160,
+      "text": "[Man]: Your ad said there were different sorts of positions, general and specialists."
+    },
+    {
+      "startMs": 143160,
+      "endMs": 144160,
+      "text": "[Nicholas]: Yes."
+    },
+    {
+      "startMs": 144160,
+      "endMs": 150160,
+      "text": "For the general counselors, they're asking for people who have experience of working with children,"
+    },
+    {
+      "startMs": 150160,
+      "endMs": 154160,
+      "text": "but it has to be as a leader of some sort."
+    },
+    {
+      "startMs": 154160,
+      "endMs": 159160,
+      "text": "[Man]: I'm not sure what I'm really interested in is sports."
+    },
+    {
+      "startMs": 159160,
+      "endMs": 163160,
+      "text": "[Nicholas]: You might be more interested in being a specialist counselor then."
+    },
+    {
+      "startMs": 163160,
+      "endMs": 166160,
+      "text": "They focus on one particular area."
+    },
+    {
+      "startMs": 166160,
+      "endMs": 169160,
+      "text": "It doesn't have to be a sport, but mostly it is."
+    },
+    {
+      "startMs": 169160,
+      "endMs": 172160,
+      "text": "[Man]: Would tennis be okay for that?"
+    },
+    {
+      "startMs": 172160,
+      "endMs": 173160,
+      "text": "[Nicholas]: Absolutely."
+    },
+    {
+      "startMs": 173160,
+      "endMs": 177160,
+      "text": "You might find yourself coaching other sports as well though."
+    },
+    {
+      "startMs": 177160,
+      "endMs": 179160,
+      "text": "They do a big range usually."
+    },
+    {
+      "startMs": 179160,
+      "endMs": 185160,
+      "text": "That's what most of the kids are interested in, and of course, a lot of it's outdoor stuff."
+    },
+    {
+      "startMs": 185160,
+      "endMs": 189160,
+      "text": "[Man]: So, they wouldn't be so interested in something like art?"
+    },
+    {
+      "startMs": 189160,
+      "endMs": 190160,
+      "text": "[Nicholas]: Oh, yes."
+    },
+    {
+      "startMs": 190160,
+      "endMs": 191160,
+      "text": "They would be."
+    },
+    {
+      "startMs": 191160,
+      "endMs": 195160,
+      "text": "Anything you're enthusiastic about can help younger kids with."
+    },
+    {
+      "startMs": 195160,
+      "endMs": 196160,
+      "text": "[Man]: Okay."
+    },
+    {
+      "startMs": 196160,
+      "endMs": 201160,
+      "text": "Well, I'd be really interested in working with kids in both those areas."
+    },
+    {
+      "startMs": 201160,
+      "endMs": 206160,
+      "text": "Now, about times, the ad said the job was for 12 weeks."
+    },
+    {
+      "startMs": 206160,
+      "endMs": 208160,
+      "text": "[Nicholas]: Eight, actually."
+    },
+    {
+      "startMs": 208160,
+      "endMs": 213160,
+      "text": "But most people stay on in the US for another three or four weeks and go traveling."
+    },
+    {
+      "startMs": 213160,
+      "endMs": 214160,
+      "text": "[Man]: Yeah."
+    },
+    {
+      "startMs": 214160,
+      "endMs": 216160,
+      "text": "I'd really like to do that."
+    },
+    {
+      "startMs": 216160,
+      "endMs": 219160,
+      "text": "There are lots of places I'd like to see in America."
+    },
+    {
+      "startMs": 219160,
+      "endMs": 221160,
+      "text": "So, when would I need to be there?"
+    },
+    {
+      "startMs": 221160,
+      "endMs": 222160,
+      "text": "[Nicholas]: June."
+    },
+    {
+      "startMs": 222160,
+      "endMs": 226160,
+      "text": "Then you carry on to August and do your traveling after that."
+    },
+    {
+      "startMs": 226160,
+      "endMs": 228160,
+      "text": "So, you're back home in September."
+    },
+    {
+      "startMs": 228160,
+      "endMs": 229160,
+      "text": "[Man]: That's perfect."
+    },
+    {
+      "startMs": 229160,
+      "endMs": 231160,
+      "text": "Well, that all sounds great."
+    },
+    {
+      "startMs": 231160,
+      "endMs": 233160,
+      "text": "But about the job."
+    },
+    {
+      "startMs": 233160,
+      "endMs": 235160,
+      "text": "Do I just pick it up as I go along?"
+    },
+    {
+      "startMs": 235160,
+      "endMs": 236160,
+      "text": "[Nicholas]: No."
+    },
+    {
+      "startMs": 236160,
+      "endMs": 241160,
+      "text": "You get there a week before the kids arrive, and that time spent on training."
+    },
+    {
+      "startMs": 241160,
+      "endMs": 246160,
+      "text": "So, you'll learn all about the camp and working with American children and dealing with homesickness."
+    },
+    {
+      "startMs": 246160,
+      "endMs": 247160,
+      "text": "All that kind of thing."
+    },
+    {
+      "startMs": 247160,
+      "endMs": 248160,
+      "text": "[Man]: Right."
+    },
+    {
+      "startMs": 251160,
+      "endMs": 258160,
+      "text": "[Narrator]: Before you hear the rest of the conversation, you have some time to look at questions 6 to 10."
+    },
+    {
+      "startMs": 259160,
+      "endMs": 287160,
+      "text": "Now listen and answer questions 6 to 10."
+    },
+    {
+      "startMs": 288160,
+      "endMs": 293160,
+      "text": "[Man]: And I presume I'd be okay as far as my age goes."
+    },
+    {
+      "startMs": 293160,
+      "endMs": 295160,
+      "text": "I'll be 19 by then."
+    },
+    {
+      "startMs": 295160,
+      "endMs": 297160,
+      "text": "[Nicholas]: That's the minimum age officially."
+    },
+    {
+      "startMs": 297160,
+      "endMs": 303160,
+      "text": "Though they do occasionally accept people of 18 if they have special skills that are in demand."
+    },
+    {
+      "startMs": 303160,
+      "endMs": 305160,
+      "text": "[Man]: And how much would I actually get paid?"
+    },
+    {
+      "startMs": 305160,
+      "endMs": 309160,
+      "text": "[Nicholas]: You get a total of $985 US dollars."
+    },
+    {
+      "startMs": 309160,
+      "endMs": 313160,
+      "text": "You get a couple of hundred dollars more if you're over 21."
+    },
+    {
+      "startMs": 313160,
+      "endMs": 315160,
+      "text": "But that won't apply to you."
+    },
+    {
+      "startMs": 315160,
+      "endMs": 320160,
+      "text": "So you should end up with quite a bit of money to go traveling with when you finished."
+    },
+    {
+      "startMs": 320160,
+      "endMs": 321160,
+      "text": "[Man]: Great."
+    },
+    {
+      "startMs": 321160,
+      "endMs": 323160,
+      "text": "That's tons I want to see."
+    },
+    {
+      "startMs": 323160,
+      "endMs": 326160,
+      "text": "New York, San Francisco, the Grand Canyon."
+    },
+    {
+      "startMs": 326160,
+      "endMs": 330160,
+      "text": "[Nicholas]: But you do have to pay for your own insurance before you start out."
+    },
+    {
+      "startMs": 330160,
+      "endMs": 333160,
+      "text": "That costs 138 pounds sterling."
+    },
+    {
+      "startMs": 333160,
+      "endMs": 335160,
+      "text": "[Man]: That's in case I get ill or anything."
+    },
+    {
+      "startMs": 335160,
+      "endMs": 336160,
+      "text": "[Nicholas]: Yes."
+    },
+    {
+      "startMs": 336160,
+      "endMs": 340160,
+      "text": "Or you lose your luggage or have to cancel."
+    },
+    {
+      "startMs": 340160,
+      "endMs": 341160,
+      "text": "[Man]: Right."
+    },
+    {
+      "startMs": 341160,
+      "endMs": 345160,
+      "text": "And there was something in the ad about a check of some kind."
+    },
+    {
+      "startMs": 345160,
+      "endMs": 347160,
+      "text": "Because I'd be working with children."
+    },
+    {
+      "startMs": 347160,
+      "endMs": 348160,
+      "text": "[Nicholas]: Yes, that's right."
+    },
+    {
+      "startMs": 348160,
+      "endMs": 351160,
+      "text": "I forgot to mention that and it's very important."
+    },
+    {
+      "startMs": 351160,
+      "endMs": 354160,
+      "text": "You have to be checked by the police here in the UK."
+    },
+    {
+      "startMs": 354160,
+      "endMs": 356160,
+      "text": "And that costs 36 pounds."
+    },
+    {
+      "startMs": 356160,
+      "endMs": 358160,
+      "text": "[Man]: That's okay."
+    },
+    {
+      "startMs": 358160,
+      "endMs": 361160,
+      "text": "Is there anything else I should know as far as money goes?"
+    },
+    {
+      "startMs": 361160,
+      "endMs": 365160,
+      "text": "[Nicholas]: Well, just that if you register with us to work on the summer camp,"
+    },
+    {
+      "startMs": 365160,
+      "endMs": 368160,
+      "text": "you can go on and discover America tour afterwards."
+    },
+    {
+      "startMs": 368160,
+      "endMs": 370160,
+      "text": "A lot of camp counselors do that."
+    },
+    {
+      "startMs": 370160,
+      "endMs": 372160,
+      "text": "And we can offer you a discount on that."
+    },
+    {
+      "startMs": 372160,
+      "endMs": 374160,
+      "text": "And of course, you're bound to make lots of friends"
+    },
+    {
+      "startMs": 374160,
+      "endMs": 376160,
+      "text": "so you'll have people to travel with."
+    },
+    {
+      "startMs": 376160,
+      "endMs": 377160,
+      "text": "[Man]: Right."
+    },
+    {
+      "startMs": 377160,
+      "endMs": 380160,
+      "text": "Well, I'm definitely interested in the whole thing."
+    },
+    {
+      "startMs": 380160,
+      "endMs": 382160,
+      "text": "So what should I do next?"
+    },
+    {
+      "startMs": 382160,
+      "endMs": 384160,
+      "text": "[Nicholas]: Well, I'll give you our website address"
+    },
+    {
+      "startMs": 384160,
+      "endMs": 387160,
+      "text": "and you can fill in the application form."
+    },
+    {
+      "startMs": 387160,
+      "endMs": 389160,
+      "text": "You can fill it in online."
+    },
+    {
+      "startMs": 392160,
+      "endMs": 394160,
+      "text": "[Narrator]: That is the end of part one."
+    },
+    {
+      "startMs": 394160,
+      "endMs": 399160,
+      "text": "You now have one minute to check your answers to part one."
+    },
+    {
+      "startMs": 400160,
+      "endMs": 402160,
+      "text": "[Man]: Thank you very much."
+    },
+    {
+      "startMs": 430160,
+      "endMs": 432160,
+      "text": "[Narrator]: Thank you."
+    },
+    {
+      "startMs": 460160,
+      "endMs": 462160,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 490160,
+      "endMs": 492160,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 520160,
+      "endMs": 522160,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 115,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

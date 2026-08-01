@@ -1,0 +1,435 @@
+{
+  "id": "p1-45-western-train-incidence-report",
+  "title": "Western train incidence report",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-9c9c3c447d26",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 489.072,
+    "checksum": "sha256:e04741a3183fd0acdf531700cd0d040d03310a69fef11ac16dddb7c212329e34"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the form below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer. Western train incidence report Item: travel bag Name: Paul 1. _______ Last time noted the lost item: 2. _______ Last place noted the lost item: Coach 3. _______ Description of the lost item (main features): a soft bag on the 4. _______ There was a 6. _______ jacket and a 7. _______ inside the bag. The total estimated value of the lost item is £ 8. _______ Address: 21 9. _______ Street, Canterbury Post code: 10. _______",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Name: Paul 1. _______",
+          "answer": "Smithers"
+        },
+        {
+          "id": "2",
+          "text": "Last time noted the lost item: 2. _______",
+          "answer": "14th July/July 14th/14 July/July 14"
+        },
+        {
+          "id": "3",
+          "text": "Last place noted the lost item: Coach 3. _______",
+          "answer": "E"
+        },
+        {
+          "id": "4",
+          "text": "a soft bag on the 4. _______",
+          "answer": "rack"
+        },
+        {
+          "id": "5",
+          "text": "5. _______",
+          "answer": "two pockets/2 pockets"
+        },
+        {
+          "id": "6",
+          "text": "There was a 6. _______ jacket and a 7. _______ inside the bag.",
+          "answer": "leather"
+        },
+        {
+          "id": "7",
+          "text": "There was a 6. _______ jacket and a 7. _______ inside the bag.",
+          "answer": "notebook"
+        },
+        {
+          "id": "8",
+          "text": "The total estimated value of the lost item is £ 8. _______",
+          "answer": "445"
+        },
+        {
+          "id": "9",
+          "text": "Address: 21 9. _______ Street, Canterbury",
+          "answer": "Kierke"
+        },
+        {
+          "id": "10",
+          "text": "Post code: 10. _______",
+          "answer": "GW432HA"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the form below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Western train incidence report",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Item: travel bag",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Name: Paul 1. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Last time noted the lost item: 2. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Last place noted the lost item: Coach 3. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Description of the lost item (main features):",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a soft bag on the 4. _______",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "5. _______",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "There was a 6. _______ jacket and a 7. _______ inside the bag.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The total estimated value of the lost item is £ 8. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Address: 21 9. _______ Street, Canterbury",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Post code: 10. _______",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Smithers",
+        "2": "14th July/July 14th/14 July/July 14",
+        "3": "E",
+        "4": "rack",
+        "5": "two pockets/2 pockets",
+        "6": "leather",
+        "7": "notebook",
+        "8": "445",
+        "9": "Kierke",
+        "10": "GW432HA"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10000,
+      "text": "Passenger: Good morning, Madam. I lost my travel bag on the train. I was wondering if you could help me."
+    },
+    {
+      "startMs": 10000,
+      "endMs": 13000,
+      "text": "Staff: Of course, sit down, please. Passenger: Thank you very much."
+    },
+    {
+      "startMs": 13000,
+      "endMs": 16000,
+      "text": "Staff: First, let me take some details. What's your name, please?"
+    },
+    {
+      "startMs": 16000,
+      "endMs": 19000,
+      "text": "Passenger: My name is Paul Smithers. Staff: Smithers, could you please spell it?"
+    },
+    {
+      "startMs": 19000,
+      "endMs": 25000,
+      "text": "Passenger: Paul Smithers, SMITHS. Passenger：Paul Smithers，SMITHS。 Staff: All right. And when did you find you lost your travel bag?"
+    },
+    {
+      "startMs": 25000,
+      "endMs": 32000,
+      "text": "Passenger: Yesterday evening, I just finished a whole day's paperwork and took the train to return home. I was completely exhausted."
+    },
+    {
+      "startMs": 32000,
+      "endMs": 40000,
+      "text": "Staff: Yesterday, today is the 15th of July, so it's the 14th. You said you were on the train when you lost your bag."
+    },
+    {
+      "startMs": 40000,
+      "endMs": 44000,
+      "text": "Do you remember the number of the coach? Which coach were you in?"
+    },
+    {
+      "startMs": 44000,
+      "endMs": 45000,
+      "text": "Passenger: What do you mean?"
+    },
+    {
+      "startMs": 45000,
+      "endMs": 50000,
+      "text": "Staff: Each coach has different letters, represented its unique functions."
+    },
+    {
+      "startMs": 50000,
+      "endMs": 58000,
+      "text": "For example, coach A is for smoking passengers, while coach B is for non-smoking passengers."
+    },
+    {
+      "startMs": 58000,
+      "endMs": 61000,
+      "text": "So, do you still remember the number of the coach?"
+    },
+    {
+      "startMs": 61000,
+      "endMs": 67000,
+      "text": "Passenger: I don't remember the exact letter, but I do recall that I was trying to relax my brain with a cup of coffee."
+    },
+    {
+      "startMs": 67000,
+      "endMs": 69000,
+      "text": "So it must be the buffet car."
+    },
+    {
+      "startMs": 69000,
+      "endMs": 74000,
+      "text": "Staff: Wait a minute. I'll check it up for you. You mean the buffet car? That's the coach E."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 76000,
+      "text": "Passenger: Oh, yes, that's it then."
+    },
+    {
+      "startMs": 76000,
+      "endMs": 79000,
+      "text": "Staff: All right. Now, tell me something about the bag. What's the colour?"
+    },
+    {
+      "startMs": 79000,
+      "endMs": 84000,
+      "text": "Passenger: It is a brown one with a small blue cart and race car image at the bottom in the left-hand corner."
+    },
+    {
+      "startMs": 84000,
+      "endMs": 87000,
+      "text": "Staff: Okay, I know. And what does it look like? What's the style?"
+    },
+    {
+      "startMs": 87000,
+      "endMs": 88000,
+      "text": "Passenger: What do you mean?"
+    },
+    {
+      "startMs": 88000,
+      "endMs": 95000,
+      "text": "Staff: What kind of distinctive features does it have like is it a box type or a soft one? Does it contain any pockets?"
+    },
+    {
+      "startMs": 95000,
+      "endMs": 102000,
+      "text": "Passenger: Well, it's a soft one on the rack. What's more, there are two pockets at the front. They have long straps and are made by nylon."
+    },
+    {
+      "startMs": 102000,
+      "endMs": 106000,
+      "text": "Staff: Right, got that. Did you lose any other things besides your bag?"
+    },
+    {
+      "startMs": 107000,
+      "endMs": 111000,
+      "text": "Passenger: Uh, my jacket, which is made up of leather and my notebook were in it."
+    },
+    {
+      "startMs": 111000,
+      "endMs": 114000,
+      "text": "Staff: I am sorry to hear it. Do you remember where did you exactly put them?"
+    },
+    {
+      "startMs": 114000,
+      "endMs": 121000,
+      "text": "Passenger: Well, I walked in the coach, sat down beside my table, ordered my coffee, then, uh, yeah."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 128000,
+      "text": "I found there was not enough space to put my stuff, so I put them by the door and I forgot to take them when I leave."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 131000,
+      "text": "Staff: Okay, I know. So how much do you think the lost item cost?"
+    },
+    {
+      "startMs": 131000,
+      "endMs": 138000,
+      "text": "Passenger: Well, my travel bag was about 100 pounds, but the leather jacket cost me 345 pounds in the notebook."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 144000,
+      "text": "It is not worth much itself, but it contains all the contact I need. It's so frustrating."
+    },
+    {
+      "startMs": 144000,
+      "endMs": 146000,
+      "text": "Staff: We also need your personal information."
+    },
+    {
+      "startMs": 146000,
+      "endMs": 149000,
+      "text": "Passenger: No problem, please. Staff: Where do you live?"
+    },
+    {
+      "startMs": 149000,
+      "endMs": 154000,
+      "text": "Passenger: 21 Kierke Street, K-I-E-R-K-E Street, Canterbury."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 161000,
+      "text": "Staff: Kierke Street, my cousin also lives there and I went there sometimes. A quiet street, isn't it?"
+    },
+    {
+      "startMs": 161000,
+      "endMs": 166000,
+      "text": "Passenger: Yes, indeed. Have you ever been to the park at the corner of the street end?"
+    },
+    {
+      "startMs": 166000,
+      "endMs": 171000,
+      "text": "It's very quiet and beautiful. My aunt and uncle like there so much that they go there almost every week."
+    },
+    {
+      "startMs": 171000,
+      "endMs": 174000,
+      "text": "Staff: Not yet, but I'll certainly try there sometime."
+    },
+    {
+      "startMs": 174000,
+      "endMs": 177000,
+      "text": "Uh, let me see. Where were we?"
+    },
+    {
+      "startMs": 177000,
+      "endMs": 179000,
+      "text": "Oh yes, your postcode."
+    },
+    {
+      "startMs": 179000,
+      "endMs": 182000,
+      "text": "Passenger: GW-432HA. Passenger：GW-432HA。 Staff: Phone number."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 184000,
+      "text": "Passenger: 321-8892. Passenger：321-8892。"
+    },
+    {
+      "startMs": 184000,
+      "endMs": 190000,
+      "text": "Staff: Okay, I think that's all we need at the moment. We'll contact you as soon as we have any information on them."
+    },
+    {
+      "startMs": 190000,
+      "endMs": 191000,
+      "text": "Passenger: Thank you very much."
+    },
+    {
+      "startMs": 191000,
+      "endMs": 192000,
+      "text": "Staff: You're welcome."
+    },
+    {
+      "startMs": 192000,
+      "endMs": 193000,
+      "text": "Passenger: Bye."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 194000,
+      "text": "Staff: Bye."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 46,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "id": "p4-58-history-of-bags-and-purses",
+  "title": "History of Bags and Purses",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-830a901fe11e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 293.832,
+    "checksum": "sha256:4dccd5ef5cf5a93ca2ee2c17180ff4a248651820205a79fc7189e862cbd47afe"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40.",
+      "instruction": "Complete following sentences. Write ONE WORD ONLY for each answer. History of Bags and Purses BC Oldest bag preserved in ancient Egypt 14th and 16th Century Purses emerged to carry 31. ____ 16th and 17th Century Priests used decorated purses to symbolize their 32. ____ All bags and purses were attached to the 33. ____ Women kept bags under their 34. ____ Medieval age Purses were associated with 35. ____ Under poor hygiene condition, bags were full of 36. ___ to avoid bad smell Pursed were used to package 37. ____, such as money or perfume 1930s to 1960s New materials such as plastic and 38. ____ were introduced 1960s bags witnessed an age of 39. ____ 1980s to 1990s It was very popular that bags used for 40. ____ to fit certain purposes of shoes",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Purses emerged to carry 31. ____",
+          "answer": "coins"
+        },
+        {
+          "id": "32",
+          "text": "Priests used decorated purses to symbolize their 32. ____",
+          "answer": "status"
+        },
+        {
+          "id": "33",
+          "text": "All bags and purses were attached to the 33. ____",
+          "answer": "belt"
+        },
+        {
+          "id": "34",
+          "text": "Women kept bags under their 34. ____",
+          "answer": "skirt"
+        },
+        {
+          "id": "35",
+          "text": "Purses were associated with 35. ____",
+          "answer": "marriage"
+        },
+        {
+          "id": "36",
+          "text": "Under poor hygiene condition, bags were full of 36. ___ to avoid bad smell",
+          "answer": "spices"
+        },
+        {
+          "id": "37",
+          "text": "Pursed were used to package 37. ____, such as money or perfume",
+          "answer": "gifts"
+        },
+        {
+          "id": "38",
+          "text": "New materials such as plastic and 38. ____ were introduced",
+          "answer": "zippers"
+        },
+        {
+          "id": "39",
+          "text": "1960s bags witnessed an age of 39. ____",
+          "answer": "feminism"
+        },
+        {
+          "id": "40",
+          "text": "It was very popular that bags used for 40. ____ to fit certain purposes of shoes",
+          "answer": "sports"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete following sentences.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "History of Bags and Purses",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "BC",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Oldest bag preserved in ancient Egypt",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "14th and 16th Century",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Purses emerged to carry 31. ____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "16th and 17th Century",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Priests used decorated purses to symbolize their 32. ____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "All bags and purses were attached to the 33. ____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Women kept bags under their 34. ____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Medieval age",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Purses were associated with 35. ____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Under poor hygiene condition, bags were full of 36. ___ to avoid bad smell",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Pursed were used to package 37. ____, such as money or perfume",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1930s to 1960s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "New materials such as plastic and 38. ____ were introduced",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1960s bags witnessed an age of 39. ____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1980s to 1990s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "It was very popular that bags used for 40. ____ to fit certain purposes of shoes",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "coins",
+        "32": "status",
+        "33": "belt",
+        "34": "skirt",
+        "35": "marriage",
+        "36": "spices",
+        "37": "gifts",
+        "38": "zippers",
+        "39": "feminism",
+        "40": "sports"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5640,
+      "text": "The oldest bag preserved in the history is from the Tyroline Iceman."
+    },
+    {
+      "startMs": 5640,
+      "endMs": 9560,
+      "text": "This nickname was given to a well-preserved natural mummy."
+    },
+    {
+      "startMs": 9560,
+      "endMs": 16280,
+      "text": "The man reportedly lived between 3,400 and 3,100 BC."
+    },
+    {
+      "startMs": 16280,
+      "endMs": 23000,
+      "text": "In the 14th and 15th centuries, bags were caught the purses, exclusively carried coins."
+    },
+    {
+      "startMs": 23000,
+      "endMs": 28760,
+      "text": "These purses were essential, as the pockets in clothing were not developed just yet."
+    },
+    {
+      "startMs": 28760,
+      "endMs": 33720,
+      "text": "In the 14th century and without the pockets in clothing, a purse was attached to the strains"
+    },
+    {
+      "startMs": 33720,
+      "endMs": 35320,
+      "text": "of from the waste."
+    },
+    {
+      "startMs": 35320,
+      "endMs": 41600,
+      "text": "From the 16th century onward, priests often wore the purses, a hook with chains to which"
+    },
+    {
+      "startMs": 41600,
+      "endMs": 48560,
+      "text": "small things could be attached, such as keys, knife cases, scissors and sewing tools."
+    },
+    {
+      "startMs": 48560,
+      "endMs": 53600,
+      "text": "Since purses were often crafted from the precious metals, they were also considered as a symbol"
+    },
+    {
+      "startMs": 53600,
+      "endMs": 55200,
+      "text": "of status."
+    },
+    {
+      "startMs": 55200,
+      "endMs": 59640,
+      "text": "The design and accessories involved in the course of centuries, but it wasn't until the"
+    },
+    {
+      "startMs": 59640,
+      "endMs": 64560,
+      "text": "beginning of the 20th century that the handbag finally replaced it."
+    },
+    {
+      "startMs": 64560,
+      "endMs": 70240,
+      "text": "Facts and purses came in a variety of designs for a number of purposes, such as bags with"
+    },
+    {
+      "startMs": 70240,
+      "endMs": 72720,
+      "text": "clasps, leather poaches."
+    },
+    {
+      "startMs": 72720,
+      "endMs": 76240,
+      "text": "These were all worn attached to the belt."
+    },
+    {
+      "startMs": 76240,
+      "endMs": 81680,
+      "text": "The introduction of pockets towards the end of the 16th century meant that man's bags"
+    },
+    {
+      "startMs": 81680,
+      "endMs": 85880,
+      "text": "slowly disappeared in a course of 17th century."
+    },
+    {
+      "startMs": 85880,
+      "endMs": 91560,
+      "text": "From then on, bags belonged to almost exclusively to the women's domain."
+    },
+    {
+      "startMs": 91560,
+      "endMs": 98920,
+      "text": "In the 17th and 18th century, women's clothing were so large that one or two bags or pockets"
+    },
+    {
+      "startMs": 98920,
+      "endMs": 102440,
+      "text": "could easily be heightened underneath the skirt."
+    },
+    {
+      "startMs": 102440,
+      "endMs": 105760,
+      "text": "Such pockets were usually worn in pairs."
+    },
+    {
+      "startMs": 105760,
+      "endMs": 110120,
+      "text": "One hanging from each hip hence the name thigh pockets."
+    },
+    {
+      "startMs": 110120,
+      "endMs": 114920,
+      "text": "Thigh pockets remained fashionable for most of the 19th century."
+    },
+    {
+      "startMs": 114920,
+      "endMs": 61240,
+      "text": "The dark times of the medieval age give a way to manufacturing or curious portraits on"
+    },
+    {
+      "startMs": 121240,
+      "endMs": 122240,
+      "text": "purses."
+    },
+    {
+      "startMs": 122240,
+      "endMs": 128080,
+      "text": "Medieval purses were not only used as coin purses, they also were closely connected with"
+    },
+    {
+      "startMs": 128080,
+      "endMs": 129080,
+      "text": "marriage."
+    },
+    {
+      "startMs": 129080,
+      "endMs": 133080,
+      "text": "As a result, they commonly showed the love stories."
+    },
+    {
+      "startMs": 133080,
+      "endMs": 138000,
+      "text": "Interestingly enough, this connection is deduced from connection between the handbag and"
+    },
+    {
+      "startMs": 138000,
+      "endMs": 140400,
+      "text": "the fertility."
+    },
+    {
+      "startMs": 140400,
+      "endMs": 146920,
+      "text": "Bags alter to serve their uses to optimize their wearers way of life, at least such was"
+    },
+    {
+      "startMs": 146920,
+      "endMs": 153640,
+      "text": "the case with sweety bags, which are the bags that filled with sweet smelling material."
+    },
+    {
+      "startMs": 153640,
+      "endMs": 158960,
+      "text": "In a time when personal hygiene was poor, sweet bags were stuffed with sweet smelling spices"
+    },
+    {
+      "startMs": 158960,
+      "endMs": 162280,
+      "text": "to get rid of bad smelling."
+    },
+    {
+      "startMs": 162280,
+      "endMs": 166360,
+      "text": "For example, lavender's or perfume the balls of a cotton."
+    },
+    {
+      "startMs": 166360,
+      "endMs": 173240,
+      "text": "In a long run, sweet bags were also stored with clothes and the linens used for aroma therapy."
+    },
+    {
+      "startMs": 173240,
+      "endMs": 179680,
+      "text": "The bag continued to be highly functional and had many different nicknames and uses."
+    },
+    {
+      "startMs": 179680,
+      "endMs": 186240,
+      "text": "Purses were often used as decorative package for gifts, such as the money, perfume or"
+    },
+    {
+      "startMs": 186240,
+      "endMs": 187240,
+      "text": "jewels."
+    },
+    {
+      "startMs": 187240,
+      "endMs": 193040,
+      "text": "Notably, towards the end of century purses became more sophisticated."
+    },
+    {
+      "startMs": 193040,
+      "endMs": 199560,
+      "text": "Evolving from simple draw-strain design to more innovative shapes with dynamic materials."
+    },
+    {
+      "startMs": 199560,
+      "endMs": 205360,
+      "text": "Summingly, texture and manufacturing attributes were the only details left to be stylized."
+    },
+    {
+      "startMs": 205360,
+      "endMs": 210280,
+      "text": "For instance, the 1930s saw the art deco style arrival."
+    },
+    {
+      "startMs": 210280,
+      "endMs": 216520,
+      "text": "This particular style specifically highlighted the abstraction, just like any time period,"
+    },
+    {
+      "startMs": 216520,
+      "endMs": 222080,
+      "text": "which experiences new industrial materials, the bag integrates them as well as within"
+    },
+    {
+      "startMs": 222080,
+      "endMs": 223080,
+      "text": "its design."
+    },
+    {
+      "startMs": 223080,
+      "endMs": 228880,
+      "text": "In its particular case, plastic and zippers were introduced to the bag."
+    },
+    {
+      "startMs": 228880,
+      "endMs": 234280,
+      "text": "Once the 1960s began, the bag experienced a self-expression."
+    },
+    {
+      "startMs": 234280,
+      "endMs": 240360,
+      "text": "As if being dynamic and versatile wasn't already a part of bag's characteristics."
+    },
+    {
+      "startMs": 240360,
+      "endMs": 246760,
+      "text": "The bag experienced a brave awakening, specifically colorful patterns and flower power introduced"
+    },
+    {
+      "startMs": 246760,
+      "endMs": 250080,
+      "text": "an energy into the fabric of the bag."
+    },
+    {
+      "startMs": 250080,
+      "endMs": 256000,
+      "text": "The end of the 1960s saw the shoulder bag return and with it came a loss of buckles, all"
+    },
+    {
+      "startMs": 256000,
+      "endMs": 261440,
+      "text": "of which indicated that women and their bags were ultimately fit and ready for the beginning"
+    },
+    {
+      "startMs": 261440,
+      "endMs": 264840,
+      "text": "age of feminism."
+    },
+    {
+      "startMs": 264840,
+      "endMs": 271640,
+      "text": "Arning all the 1980s saw an expansion in active consumption, the bag quickly changed to accommodate"
+    },
+    {
+      "startMs": 271640,
+      "endMs": 277160,
+      "text": "purchasing power, providing logos to indicate the priorities of the owner."
+    },
+    {
+      "startMs": 277160,
+      "endMs": 283160,
+      "text": "For instance, sports bags such as Nike bags match athletic shoes were most popular at"
+    },
+    {
+      "startMs": 283160,
+      "endMs": 284160,
+      "text": "this time."
+    },
+    {
+      "startMs": 284160,
+      "endMs": 290440,
+      "text": "As a result, vulgar bags and even the brief case specifically featured a pocket, which"
+    },
+    {
+      "startMs": 290440,
+      "endMs": 293440,
+      "text": "were exclusively created to hold this new invention."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 61,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

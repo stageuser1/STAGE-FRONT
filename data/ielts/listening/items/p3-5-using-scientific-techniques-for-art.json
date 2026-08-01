@@ -1,0 +1,779 @@
+{
+  "id": "p3-5-using-scientific-techniques-for-art",
+  "title": "Using scientific techniques for art",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-a78b491c1a86",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 530.088,
+    "checksum": "sha256:81c80d4397c4ce9888608fddfdcac5669b152746bfb700c9403ec9fe5814a158"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21-24.",
+      "instruction": "Choose the correct letters, A, B, or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What does Josh think about Jackson Pollock’s paintings?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are easy to copy."
+            },
+            {
+              "id": "B",
+              "text": "They are complex."
+            },
+            {
+              "id": "C",
+              "text": "They are childish."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "The $5 painting was considered to be a fake because",
+          "options": [
+            {
+              "id": "A",
+              "text": "it lacked documentation."
+            },
+            {
+              "id": "B",
+              "text": "it was too cheap."
+            },
+            {
+              "id": "C",
+              "text": "it featured the wrong colours."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "What made the International Foundation for Art Research reject the $5 painting?",
+          "options": [
+            {
+              "id": "A",
+              "text": "what was on the back of the painting"
+            },
+            {
+              "id": "B",
+              "text": "the type of paint used"
+            },
+            {
+              "id": "C",
+              "text": "how the paint was applied"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "What do Josh and Emily agree about art evaluation?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Only an experienced critic can evaluate a painting’s authenticity."
+            },
+            {
+              "id": "B",
+              "text": "Modern scientific methods have replaced the traditional approach."
+            },
+            {
+              "id": "C",
+              "text": "Experts from the science and art worlds should work together."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25-30.",
+      "instruction": "Complete the flow-chart below.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "ultrasound"
+        },
+        {
+          "id": "B",
+          "text": "gamma-ray technology"
+        },
+        {
+          "id": "C",
+          "text": "stone"
+        },
+        {
+          "id": "D",
+          "text": "a laser scanner"
+        },
+        {
+          "id": "E",
+          "text": "a radar machine"
+        },
+        {
+          "id": "F",
+          "text": "glass"
+        },
+        {
+          "id": "G",
+          "text": "a thermographic camera"
+        },
+        {
+          "id": "H",
+          "text": "brick"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Seracini used _____ to help make a model of the building.",
+          "answer": "D"
+        },
+        {
+          "id": "26",
+          "text": "Seracini used _____ to reveal different materials in the walls.",
+          "answer": "G"
+        },
+        {
+          "id": "27",
+          "text": "Seracini guessed that Da Vinci painted his masterpiece on the east wall, in a space that used to hold _____",
+          "answer": "F"
+        },
+        {
+          "id": "28",
+          "text": "Seracini analysed the wall using _____ and discovered a second wall behind it.",
+          "answer": "E"
+        },
+        {
+          "id": "29",
+          "text": "Seracini hypothesised that the Da Vinci painting is still there on the original _____ wall.",
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "Seracini is using _____ to prove his theory.",
+          "answer": "B"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Seracini’s search for Leonardo Da Vinci’s Battle of Anghiari",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Seracini used 25 to help make a model of the building.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Seracini used 26 to reveal different materials in the walls.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "He found the original architecture.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Seracini guessed that Da Vinci painted his masterpiece on the east wall, in a space that used to hold 27",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Seracini analysed the wall using 28 and discovered a second wall behind it.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Seracini hypothesised that the Da Vinci painting is still there on the original 29 wall.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Seracini is using 30 to prove his theory.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "A",
+        "23": "B",
+        "24": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "D",
+        "26": "G",
+        "27": "F",
+        "28": "E",
+        "29": "C",
+        "30": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8920,
+      "text": "Section 3. You will hear two students called"
+    },
+    {
+      "startMs": 8920,
+      "endMs": 16280,
+      "text": "Josh and Emily discussing an assignment on applying scientific techniques to art."
+    },
+    {
+      "startMs": 16280,
+      "endMs": 21520,
+      "text": "First you have some time to look at questions 21 to 24 on page 5."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59760,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 59760,
+      "endMs": 63760,
+      "text": "Josh: Hi Emily. Emily: Hi Josh, are you ready to work on the assignment?"
+    },
+    {
+      "startMs": 63760,
+      "endMs": 71760,
+      "text": "Josh: Yeah. Now we need to describe how modern scientific techniques are being used in the field of art history."
+    },
+    {
+      "startMs": 71760,
+      "endMs": 77760,
+      "text": "Emily: Right. And Dr Abbott suggested that we choose some famous cases to illustrate the argument."
+    },
+    {
+      "startMs": 77760,
+      "endMs": 80760,
+      "text": "Josh: Okay, so what have you found?"
+    },
+    {
+      "startMs": 80760,
+      "endMs": 84760,
+      "text": "Emily: Well, there's a Canadian forensic scientist called Biro."
+    },
+    {
+      "startMs": 84760,
+      "endMs": 86760,
+      "text": "Josh: Yes, I think I've heard of him."
+    },
+    {
+      "startMs": 86760,
+      "endMs": 88760,
+      "text": "What do you know about him?"
+    },
+    {
+      "startMs": 88760,
+      "endMs": 91760,
+      "text": "Well, I'm a big fan of Jackson Pollock."
+    },
+    {
+      "startMs": 91760,
+      "endMs": 93760,
+      "text": "The modern American artist."
+    },
+    {
+      "startMs": 93760,
+      "endMs": 97760,
+      "text": "Emily: Didn't he paint those really huge abstract paintings?"
+    },
+    {
+      "startMs": 97760,
+      "endMs": 98760,
+      "text": "Josh: That's him."
+    },
+    {
+      "startMs": 98760,
+      "endMs": 101760,
+      "text": "Emily: I guess it would be pretty easy to fake one of those paintings."
+    },
+    {
+      "startMs": 101760,
+      "endMs": 106760,
+      "text": "Josh: No way Emily. I know a lot of people think that even a child could paint one."
+    },
+    {
+      "startMs": 106760,
+      "endMs": 113760,
+      "text": "To the untrained eye they might look simple but they're incredibly intricate works of art."
+    },
+    {
+      "startMs": 113760,
+      "endMs": 118760,
+      "text": "Emily: Well sorry, but I really can't agree with you."
+    },
+    {
+      "startMs": 118760,
+      "endMs": 120760,
+      "text": "Anyway what did Biro find out?"
+    },
+    {
+      "startMs": 120760,
+      "endMs": 130760,
+      "text": "Josh: Well Biro worked on a case where a client asked him to prove that a painting she bought for only five dollars was an authentic Jackson Pollock."
+    },
+    {
+      "startMs": 130760,
+      "endMs": 132760,
+      "text": "Emily: So was it a fake?"
+    },
+    {
+      "startMs": 132760,
+      "endMs": 139760,
+      "text": "Josh: Well Biro found evidence to show it was a genuine Pollock but the art world didn't accept his findings."
+    },
+    {
+      "startMs": 139760,
+      "endMs": 140760,
+      "text": "Emily: Why?"
+    },
+    {
+      "startMs": 140760,
+      "endMs": 147760,
+      "text": "Josh: Well one critic said that compared to other Pollocks the white and yellow lines on the painting were too straight."
+    },
+    {
+      "startMs": 147760,
+      "endMs": 149760,
+      "text": "Emily: Come on Josh."
+    },
+    {
+      "startMs": 149760,
+      "endMs": 152760,
+      "text": "That doesn't seem that convincing."
+    },
+    {
+      "startMs": 152760,
+      "endMs": 154760,
+      "text": "Josh: No you're right, it is a bit weak."
+    },
+    {
+      "startMs": 154760,
+      "endMs": 159760,
+      "text": "But the strongest argument was that there were no records of previous owners."
+    },
+    {
+      "startMs": 159760,
+      "endMs": 167760,
+      "text": "For the painting to be authentic you really should be able to trace the painting all the way back to the artist's studio."
+    },
+    {
+      "startMs": 167760,
+      "endMs": 170760,
+      "text": "Emily: Well that's true I suppose."
+    },
+    {
+      "startMs": 170760,
+      "endMs": 173760,
+      "text": "Did they consult with anyone else?"
+    },
+    {
+      "startMs": 173760,
+      "endMs": 177760,
+      "text": "Josh: The International Foundation for Art Research got involved."
+    },
+    {
+      "startMs": 177760,
+      "endMs": 179760,
+      "text": "Emily: And what was their verdict?"
+    },
+    {
+      "startMs": 179760,
+      "endMs": 183760,
+      "text": "Josh: Well they saw a definite similarity in the painting techniques used."
+    },
+    {
+      "startMs": 183760,
+      "endMs": 187760,
+      "text": "Emily: You mean the way Pollock dripped the oils on the canvas?"
+    },
+    {
+      "startMs": 187760,
+      "endMs": 193760,
+      "text": "Josh: Yeah, and they noted the dirt and paint marks on the back which all of Pollock's paintings have."
+    },
+    {
+      "startMs": 193760,
+      "endMs": 195760,
+      "text": "Emily: Why's that?"
+    },
+    {
+      "startMs": 195760,
+      "endMs": 199760,
+      "text": "Josh: He used to lie his canvases down on the ground when he painted them."
+    },
+    {
+      "startMs": 199760,
+      "endMs": 204760,
+      "text": "But the foundation were worried about the acrylic paint that was used on the painting."
+    },
+    {
+      "startMs": 204760,
+      "endMs": 209760,
+      "text": "It's quite common now but it was very unusual back in Pollock's day."
+    },
+    {
+      "startMs": 209760,
+      "endMs": 212760,
+      "text": "Emily: So it was probably painted much later."
+    },
+    {
+      "startMs": 212760,
+      "endMs": 213760,
+      "text": "Josh: Right."
+    },
+    {
+      "startMs": 213760,
+      "endMs": 217760,
+      "text": "Emily: So whose side are we on in this argument?"
+    },
+    {
+      "startMs": 217760,
+      "endMs": 221760,
+      "text": "Josh: When it comes to art you can see the art critics point."
+    },
+    {
+      "startMs": 221760,
+      "endMs": 227760,
+      "text": "If their knowledge and expertise tells them that it definitely isn't a Pollock painting,"
+    },
+    {
+      "startMs": 227760,
+      "endMs": 229760,
+      "text": "shouldn't we believe them?"
+    },
+    {
+      "startMs": 229760,
+      "endMs": 233760,
+      "text": "I mean that is usually how it works in the art world isn't it?"
+    },
+    {
+      "startMs": 233760,
+      "endMs": 238760,
+      "text": "Emily: Art historians have always judged paintings but things are changing now."
+    },
+    {
+      "startMs": 238760,
+      "endMs": 244760,
+      "text": "If we have modern scientific techniques like fingerprint analysis, why not use them?"
+    },
+    {
+      "startMs": 244760,
+      "endMs": 245760,
+      "text": "Josh: That's true."
+    },
+    {
+      "startMs": 245760,
+      "endMs": 248760,
+      "text": "Well maybe we need a combination."
+    },
+    {
+      "startMs": 248760,
+      "endMs": 250760,
+      "text": "Emily: I think you're right."
+    },
+    {
+      "startMs": 251760,
+      "endMs": 260760,
+      "text": "Before you hear the rest of the discussion you have some time to look at questions 25 to 30 on page 6."
+    },
+    {
+      "startMs": 281760,
+      "endMs": 293760,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 293760,
+      "endMs": 299760,
+      "text": "Emily: So did you find out anything else Josh?"
+    },
+    {
+      "startMs": 299760,
+      "endMs": 303760,
+      "text": "Josh: Well have you ever heard of a painting called The Battle of Anghiari?"
+    },
+    {
+      "startMs": 303760,
+      "endMs": 305760,
+      "text": "Emily: I have actually."
+    },
+    {
+      "startMs": 305760,
+      "endMs": 310760,
+      "text": "It's the Lost Masterpiece by Leonardo da Vinci, the famous Italian artist."
+    },
+    {
+      "startMs": 310760,
+      "endMs": 311760,
+      "text": "What about it?"
+    },
+    {
+      "startMs": 311760,
+      "endMs": 321760,
+      "text": "Josh: Well an Italian art analyst called Seracini thinks he knows where it is and he's using scientific techniques to help locate it."
+    },
+    {
+      "startMs": 321760,
+      "endMs": 322760,
+      "text": "Emily: How?"
+    },
+    {
+      "startMs": 322760,
+      "endMs": 326760,
+      "text": "Josh: Well art historians knew where the painting was last seen."
+    },
+    {
+      "startMs": 326760,
+      "endMs": 330760,
+      "text": "That's right in the Hall of the 500 in Florence."
+    },
+    {
+      "startMs": 330760,
+      "endMs": 331760,
+      "text": "Emily: Right."
+    },
+    {
+      "startMs": 331760,
+      "endMs": 337760,
+      "text": "Josh: So Seracini had a theory that the painting was still there and he set out to prove it."
+    },
+    {
+      "startMs": 337760,
+      "endMs": 343760,
+      "text": "He used a lot of different technology like radar and thermographic cameras."
+    },
+    {
+      "startMs": 343760,
+      "endMs": 352760,
+      "text": "But initially he scanned every inch of the hall with a laser in order to make a really accurate 3D model of the building's design."
+    },
+    {
+      "startMs": 352760,
+      "endMs": 356760,
+      "text": "Emily: Did he think the painting was hidden in the building somewhere?"
+    },
+    {
+      "startMs": 356760,
+      "endMs": 357760,
+      "text": "Josh: Exactly."
+    },
+    {
+      "startMs": 357760,
+      "endMs": 364760,
+      "text": "Then to find out what the hall looked like in Leonardo's time, he took pictures of it with a thermographic camera."
+    },
+    {
+      "startMs": 364760,
+      "endMs": 367760,
+      "text": "Emily: Couldn't he have used ultrasound to do that?"
+    },
+    {
+      "startMs": 367760,
+      "endMs": 368760,
+      "text": "Josh: Not really."
+    },
+    {
+      "startMs": 368760,
+      "endMs": 376760,
+      "text": "Different types of building materials produce different amounts of radiation and you can really see those differences in a thermal image."
+    },
+    {
+      "startMs": 376760,
+      "endMs": 381760,
+      "text": "So brick would look different from wood or glass, for example."
+    },
+    {
+      "startMs": 381760,
+      "endMs": 382760,
+      "text": "Emily: Yes."
+    },
+    {
+      "startMs": 382760,
+      "endMs": 389760,
+      "text": "Josh: Seracini worked out what the building looked like when it was first built and what renovations took place after that."
+    },
+    {
+      "startMs": 390760,
+      "endMs": 403760,
+      "text": "He found that two large glass windows on the east wall had been removed and filled in by the time Da Vinci started work on his painting, leaving a space big enough for it."
+    },
+    {
+      "startMs": 403760,
+      "endMs": 407760,
+      "text": "Emily: But why hasn't the painting been seen for 400 years?"
+    },
+    {
+      "startMs": 407760,
+      "endMs": 414760,
+      "text": "Josh: To answer that question, Seracini needed to study that wall even more closely."
+    },
+    {
+      "startMs": 414760,
+      "endMs": 416760,
+      "text": "Emily: Did he use the thermographic camera again?"
+    },
+    {
+      "startMs": 416760,
+      "endMs": 421760,
+      "text": "Josh: No, this time he used another kind of technology, radar."
+    },
+    {
+      "startMs": 421760,
+      "endMs": 423760,
+      "text": "Emily: And what did that show?"
+    },
+    {
+      "startMs": 423760,
+      "endMs": 430760,
+      "text": "Josh: It showed that there were in fact two walls there, an older one and a newer one built in front of it."
+    },
+    {
+      "startMs": 430760,
+      "endMs": 435760,
+      "text": "Emily: So does Seracini believe that Da Vinci's painting is on the concealed wall?"
+    },
+    {
+      "startMs": 435760,
+      "endMs": 436760,
+      "text": "Josh: Yes."
+    },
+    {
+      "startMs": 436760,
+      "endMs": 440760,
+      "text": "On a stone wall concealed by the newer brick wall."
+    },
+    {
+      "startMs": 440760,
+      "endMs": 444760,
+      "text": "Emily: So what's the next stage in the investigation?"
+    },
+    {
+      "startMs": 444760,
+      "endMs": 453760,
+      "text": "Josh: Well, he isn't allowed to remove any plaster or bricks, so he's now experimenting with a gamma ray camera to try and verify his theory."
+    },
+    {
+      "startMs": 453760,
+      "endMs": 459760,
+      "text": "Emily: Well, I think we've got some really strong examples there of how science can help art."
+    },
+    {
+      "startMs": 459760,
+      "endMs": 463760,
+      "text": "Let's see if we can type up an outline."
+    },
+    {
+      "startMs": 466760,
+      "endMs": 468760,
+      "text": "That is the end of section 3."
+    },
+    {
+      "startMs": 468760,
+      "endMs": 472760,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 474760,
+      "endMs": 479760,
+      "text": "Now turn to section 4."
+    },
+    {
+      "startMs": 479760,
+      "endMs": 484760,
+      "text": "On page 3."
+    },
+    {
+      "startMs": 484760,
+      "endMs": 488760,
+      "text": "Now turn to section 4."
+    },
+    {
+      "startMs": 488760,
+      "endMs": 492760,
+      "text": "On page 3."
+    },
+    {
+      "startMs": 492760,
+      "endMs": 496760,
+      "text": "Now turn to section 4."
+    },
+    {
+      "startMs": 496760,
+      "endMs": 500760,
+      "text": "On page 3."
+    },
+    {
+      "startMs": 501760,
+      "endMs": 504760,
+      "text": "Now turn to section 4."
+    },
+    {
+      "startMs": 504760,
+      "endMs": 507760,
+      "text": "On page 7."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 101,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

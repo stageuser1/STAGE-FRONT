@@ -93,8 +93,10 @@ export function stepQuestionNo(
  * B3 components are read-only, none of them accepts an id prop, and a lookup
  * keyed on their `aria-label` copy would break the moment that copy changed.
  *
- * Every group type except form completion is exactly one question, so its only
- * answer control is index 0.
+ * Expanded instruction groups contain one control cluster per numbered
+ * question. `controlIndex` therefore counts the controls in earlier question
+ * clusters so a jump lands on the requested question rather than the first
+ * option in the card.
  */
 export interface QuestionTarget {
   groupIndex: number;
@@ -118,6 +120,45 @@ export function questionTarget(
           }
           controlIndex += 1;
         }
+      }
+      continue;
+    }
+
+    if (group.type === "map_labelling" && group.questions?.length) {
+      let controlIndex = 0;
+      for (const question of group.questions) {
+        if (question.questionNo === questionNo) {
+          return { groupIndex, controlIndex };
+        }
+        controlIndex += question.labels.length;
+      }
+      continue;
+    }
+
+    if (group.type === "matching" && group.questions?.length) {
+      let controlIndex = 0;
+      for (const question of group.questions) {
+        if (question.questionNo === questionNo) {
+          return { groupIndex, controlIndex };
+        }
+        controlIndex +=
+          question.options?.length ??
+          group.optionItems?.length ??
+          group.options.length;
+      }
+      continue;
+    }
+
+    if (
+      (group.type === "mcq_single" || group.type === "mcq_multi") &&
+      group.questions?.length
+    ) {
+      let controlIndex = 0;
+      for (const question of group.questions) {
+        if (question.questionNo === questionNo) {
+          return { groupIndex, controlIndex };
+        }
+        controlIndex += question.options.length;
       }
       continue;
     }

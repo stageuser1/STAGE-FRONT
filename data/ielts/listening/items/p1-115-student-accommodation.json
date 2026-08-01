@@ -1,0 +1,600 @@
+{
+  "id": "p1-115-student-accommodation",
+  "title": "Student Accommodation",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-7468c21d4e67",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 365.724,
+    "checksum": "sha256:b88a3239ab3a4156b762d8f7cf898a1bd857d821968437aa89b16c8dc9156aec"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the form below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Student Accommodation Type Cost Contract College: Single room Standards: £3276 per year Ensuite: £ 1. __________ per year (meals are not included) Rooms not available during the 2. _______ Room with a family £150 per week – all inclusive Arrangements are 4. __________ Private renting: Room in a share house or a 5. __________ From £275 to £490 per month Additional costs (for this year) • gas and electricity £ 6. __________ per month approx. • 7. __________: £9 • 8. __________ six months Need • 9. __________ • two. 10 __________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Ensuite: £ 1. __________ per year",
+          "answer": "3834/3,834"
+        },
+        {
+          "id": "2",
+          "text": "Rooms not available during the 2. _______",
+          "answer": "Holidays"
+        },
+        {
+          "id": "3",
+          "text": "3. __________",
+          "answer": "Home Welcome"
+        },
+        {
+          "id": "4",
+          "text": "Arrangements are 4. __________",
+          "answer": "Flexible"
+        },
+        {
+          "id": "5",
+          "text": "Room in a share house or a 5. __________",
+          "answer": "Studio"
+        },
+        {
+          "id": "6",
+          "text": "• gas and electricity £ 6. __________ per month approx.",
+          "answer": "48/forty-eight"
+        },
+        {
+          "id": "7",
+          "text": "• 7. __________: £9",
+          "answer": "Water"
+        },
+        {
+          "id": "8",
+          "text": "• 8. __________",
+          "answer": "Transportation"
+        },
+        {
+          "id": "9",
+          "text": "• 9. __________",
+          "answer": "Deposit/A deposit"
+        },
+        {
+          "id": "10",
+          "text": "• two. 10 __________",
+          "answer": "References"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the form below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Student Accommodation",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Type",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "Cost",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "Contract",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "College:",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "Single room",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "Standards: £3276 per year",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "Ensuite: £ 1. __________ per year",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "(meals are not included)",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "36 weeks",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "Rooms not available during the 2. _______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "3. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "Room with a family",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "£150 per week – all inclusive",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "Arrangements are 4. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "Private renting:",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "Room in a share house or a 5. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "From £275 to £490 per month",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "Additional costs (for this year)",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• gas and electricity £ 6. __________ per month approx.",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• 7. __________: £9",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• 8. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "six months",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "Need",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "• 9. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "• two. 10 __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 3
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "3834/3,834",
+        "2": "Holidays",
+        "3": "Home Welcome",
+        "4": "Flexible",
+        "5": "Studio",
+        "6": "48/forty-eight",
+        "7": "Water",
+        "8": "Transportation",
+        "9": "Deposit/A deposit",
+        "10": "References"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8080,
+      "text": "Now we shall begin. You should answer the questions as you listen, because you will not hear"
+    },
+    {
+      "startMs": 8080,
+      "endMs": 17840,
+      "text": "the recording a second time. Listen carefully and answer questions one to four."
+    },
+    {
+      "startMs": 17840,
+      "endMs": 21760,
+      "text": "Darren: College accommodation bureau, Darren speaking, how may I help you?"
+    },
+    {
+      "startMs": 21760,
+      "endMs": 27840,
+      "text": "Student: Oh, good morning. I'm starting at the college in September and I need to find some accommodation."
+    },
+    {
+      "startMs": 27920,
+      "endMs": 34560,
+      "text": "Darren: Right. Well, there are various options. The first one is to stay in college accommodation."
+    },
+    {
+      "startMs": 35280,
+      "endMs": 43920,
+      "text": "That'd be a single room. Student: How much would that cost? Darren: Well, it depends. For a standard room,"
+    },
+    {
+      "startMs": 43920,
+      "endMs": 51760,
+      "text": "you're looking at 3,276 pounds for the year. That's just for a room with wash basin."
+    },
+    {
+      "startMs": 52720,
+      "endMs": 60000,
+      "text": "Or 3,834 pounds if you want an en-suite. That's with your own small bathroom."
+    },
+    {
+      "startMs": 60800,
+      "endMs": 63520,
+      "text": "Student: I see. That's more than I expected."
+    },
+    {
+      "startMs": 64240,
+      "endMs": 71440,
+      "text": "Darren: It does include heating. That's quite a saving because energy costs can be high, especially in winter."
+    },
+    {
+      "startMs": 73280,
+      "endMs": 79360,
+      "text": "Student: Does it include meals as well? Darren: No. All our rooms are self catering now."
+    },
+    {
+      "startMs": 80080,
+      "endMs": 83840,
+      "text": "There's a shared kitchen on each corridor where you can cook if you want to,"
+    },
+    {
+      "startMs": 84480,
+      "endMs": 87200,
+      "text": "or there are plenty of places to eat out on campus."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 91040,
+      "text": "Student: Okay. And you said that's the price for the whole year?"
+    },
+    {
+      "startMs": 91680,
+      "endMs": 99440,
+      "text": "Darren: Well, you pay annually, but actually it's for 36 weeks. It doesn't include holidays. You have"
+    },
+    {
+      "startMs": 99440,
+      "endMs": 106880,
+      "text": "to vacate the room then."
+    },
+    {
+      "startMs": 106880,
+      "endMs": 114000,
+      "text": "Student: Oh, I need somewhere to stay in the holidays. I can't afford to go home."
+    },
+    {
+      "startMs": 114000,
+      "endMs": 120000,
+      "text": "The flights are too expensive. Darren: Well, there is another option. Several families who either work"
+    },
+    {
+      "startMs": 120000,
+      "endMs": 127920,
+      "text": "at the college or have children studying here offer visiting students a room in their homes."
+    },
+    {
+      "startMs": 128720,
+      "endMs": 135440,
+      "text": "Oh? We call this arrangement home welcome, and we've still got a few places left at the moment."
+    },
+    {
+      "startMs": 135440,
+      "endMs": 141280,
+      "text": "You pay £150 per week, and that includes breakfast, a packed lunch, and dinner,"
+    },
+    {
+      "startMs": 141840,
+      "endMs": 149920,
+      "text": "as well as heating. Student: Is there a contract? Do you have to stay for the whole year?"
+    },
+    {
+      "startMs": 149920,
+      "endMs": 158720,
+      "text": "Darren: No, it's flexible. Student: It sounds really good, but I'm not sure. I really want to be a little more"
+    },
+    {
+      "startMs": 158720,
+      "endMs": 161760,
+      "text": "independent. Before you hear the rest of the conversation, you have some time to look at"
+    },
+    {
+      "startMs": 189360,
+      "endMs": 195120,
+      "text": "Now listen and answer questions 5 to 10."
+    },
+    {
+      "startMs": 198800,
+      "endMs": 206560,
+      "text": "Student: What about finding somewhere to live off campus? Darren: Yes, you can rent a property in town privately."
+    },
+    {
+      "startMs": 207280,
+      "endMs": 212880,
+      "text": "You might want to rent a room in a shared house. You'd have a room of your own and share the"
+    },
+    {
+      "startMs": 212880,
+      "endMs": 217520,
+      "text": "kitchen and bathroom with other students. Student: What about if I don't want to share?"
+    },
+    {
+      "startMs": 218400,
+      "endMs": 224080,
+      "text": "Darren: You can get what we call a studio. They're often quite small, but they'll have everything you need."
+    },
+    {
+      "startMs": 224800,
+      "endMs": 231920,
+      "text": "Student: Right, how much would those two options cost? Darren: Well, prices vary, depending on which part of town"
+    },
+    {
+      "startMs": 231920,
+      "endMs": 239840,
+      "text": "the property is in. Generally speaking, the cheapest is around £275 a month for each student."
+    },
+    {
+      "startMs": 240320,
+      "endMs": 249840,
+      "text": "Student: Oh, that's not too bad. Darren: Yes, but it can also be as high as £490 and then you'll have to pay all"
+    },
+    {
+      "startMs": 249840,
+      "endMs": 257280,
+      "text": "your other bills. Student: What sort of amount would I be looking at for those?"
+    },
+    {
+      "startMs": 257280,
+      "endMs": 266560,
+      "text": "Darren: Well, last year students were paying on average about £43 per month each for gas and electricity. This year it'll probably be"
+    },
+    {
+      "startMs": 266560,
+      "endMs": 275120,
+      "text": "somewhere in the region of £48. Student: That's a lot. Darren: Yes, they've gone up quite a bit and on top of that,"
+    },
+    {
+      "startMs": 275120,
+      "endMs": 283120,
+      "text": "you have to pay for water and that'll probably be around £9. Student: That didn't occur to me and I guess"
+    },
+    {
+      "startMs": 283120,
+      "endMs": 289680,
+      "text": "I'd have to pay for transportation too. Darren: That's right. Most of these properties are quite a long"
+    },
+    {
+      "startMs": 289680,
+      "endMs": 297600,
+      "text": "way from the college. Student: It just gets worse and worse. What's the minimum contract on this type of"
+    },
+    {
+      "startMs": 297600,
+      "endMs": 304960,
+      "text": "accommodation? Darren: Six months. And you have to pay a deposit, but of course you can stay there over"
+    },
+    {
+      "startMs": 304960,
+      "endMs": 312240,
+      "text": "the holidays. Student: That's true. Darren: And you'd have to provide references. They want two from someone in this"
+    },
+    {
+      "startMs": 312240,
+      "endMs": 319600,
+      "text": "country. Student: I see. That's not a problem."
+    },
+    {
+      "startMs": 319600,
+      "endMs": 324880,
+      "text": "Darren: If you do choose this option, we can't find the property"
+    },
+    {
+      "startMs": 324880,
+      "endMs": 333520,
+      "text": "for you. You'd have to go through the estate agent which manages the property for the owner."
+    },
+    {
+      "startMs": 333520,
+      "endMs": 343520,
+      "text": "Student: Right. Thanks. Well, I think I'd like to see what's available privately. Could you give me the estate"
+    },
+    {
+      "startMs": 343520,
+      "endMs": 351520,
+      "text": "agent details? That is the end of section one. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 45,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

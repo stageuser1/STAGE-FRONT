@@ -1,0 +1,504 @@
+{
+  "id": "p2-54-plan-of-silverton-villa",
+  "title": "Plan of Silverton Villa",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-5e92c42ca21a",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 259.187,
+    "checksum": "sha256:c7d141758f348b4fecec7f38676ce17c8e3bfe61b916a0d12dc3d8d1a32734ee"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Question 11–15",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "When did the Silverton family arrive in the park?",
+          "options": [
+            {
+              "id": "A",
+              "text": "1904"
+            },
+            {
+              "id": "B",
+              "text": "1907"
+            },
+            {
+              "id": "C",
+              "text": "1911"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "What is Silverton National Park famous for?",
+          "options": [
+            {
+              "id": "A",
+              "text": "trees"
+            },
+            {
+              "id": "B",
+              "text": "waterfall"
+            },
+            {
+              "id": "C",
+              "text": "birds"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "13",
+          "text": "Why is Silverton Villa special?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A limited number in the park"
+            },
+            {
+              "id": "B",
+              "text": "Designed by a famous architect"
+            },
+            {
+              "id": "C",
+              "text": "First one to use solar energy"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "If you pay extra money, the manager will:",
+          "options": [
+            {
+              "id": "A",
+              "text": "clean the garden for you"
+            },
+            {
+              "id": "B",
+              "text": "rent the villa out for you"
+            },
+            {
+              "id": "C",
+              "text": "check the villa regularly"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "What feature do Type B villas have?",
+          "options": [
+            {
+              "id": "A",
+              "text": "two levels"
+            },
+            {
+              "id": "B",
+              "text": "four bedrooms"
+            },
+            {
+              "id": "C",
+              "text": "three basements"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Question 16–20",
+      "instruction": "Label the map below, A-F.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "art gallery",
+          "answer": "E"
+        },
+        {
+          "id": "17",
+          "text": "day water spa",
+          "answer": "C"
+        },
+        {
+          "id": "18",
+          "text": "restaurant",
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "hotel",
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "play area",
+          "answer": "D"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-54-plan-of-silverton-villa-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-54-plan-of-silverton-villa-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "C",
+        "13": "A",
+        "14": "B",
+        "15": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "E",
+        "17": "C",
+        "18": "B",
+        "19": "A",
+        "20": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "Welcome everyone and thanks for coming in this information event."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 13500,
+      "text": "My name is Brad Worm. I'm here to tell you how wonderful investment opportunity."
+    },
+    {
+      "startMs": 13500,
+      "endMs": 20500,
+      "text": "The chance is by Villa in a Silverstone Resort in a magnificent Bona Bona National Park."
+    },
+    {
+      "startMs": 20500,
+      "endMs": 25000,
+      "text": "First, let me tell you the history of Silverstone Resort first."
+    },
+    {
+      "startMs": 25000,
+      "endMs": 31500,
+      "text": "The Silverstone family has been living in its beautiful Silverstone Park over 100 years."
+    },
+    {
+      "startMs": 31500,
+      "endMs": 35500,
+      "text": "They settled here back in 1904."
+    },
+    {
+      "startMs": 35500,
+      "endMs": 41500,
+      "text": "Until now, they are the only private landowners in the National Park."
+    },
+    {
+      "startMs": 41500,
+      "endMs": 46000,
+      "text": "And they established the hotel here in 1911."
+    },
+    {
+      "startMs": 46000,
+      "endMs": 51500,
+      "text": "The Bona Bona is not created in the National Park until 1907."
+    },
+    {
+      "startMs": 51500,
+      "endMs": 55500,
+      "text": "Three years after Silverstone family arrived."
+    },
+    {
+      "startMs": 55500,
+      "endMs": 61000,
+      "text": "Today, the park covers almost all the oldest trees in Australia."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 65000,
+      "text": "But it is well known for its diverse range of birds."
+    },
+    {
+      "startMs": 65000,
+      "endMs": 68500,
+      "text": "There are over 160 species here."
+    },
+    {
+      "startMs": 68500,
+      "endMs": 73500,
+      "text": "Well, we don't have a high water for that other parks are famous for."
+    },
+    {
+      "startMs": 73500,
+      "endMs": 78000,
+      "text": "We do have other attractions such as tree talk, walking trails,"
+    },
+    {
+      "startMs": 78000,
+      "endMs": 81500,
+      "text": "and wonderful caves to explore."
+    },
+    {
+      "startMs": 81500,
+      "endMs": 85500,
+      "text": "So, what is so special about our villas?"
+    },
+    {
+      "startMs": 85500,
+      "endMs": 92000,
+      "text": "The architects did a fantastic job blending the villa into the surrounding environment"
+    },
+    {
+      "startMs": 92000,
+      "endMs": 95500,
+      "text": "and making sure that they are energy efficient."
+    },
+    {
+      "startMs": 95500,
+      "endMs": 99500,
+      "text": "So, they are all equipped with solar panels."
+    },
+    {
+      "startMs": 99500,
+      "endMs": 106500,
+      "text": "But I believe what makes it truly unique is that only a few villas ever been built here."
+    },
+    {
+      "startMs": 106500,
+      "endMs": 111000,
+      "text": "So, not all people have the opportunity to live here."
+    },
+    {
+      "startMs": 111000,
+      "endMs": 116000,
+      "text": "Once you board our villa, you don't need to worry about gardening."
+    },
+    {
+      "startMs": 116000,
+      "endMs": 120500,
+      "text": "As part of your contract, we take care of that for you."
+    },
+    {
+      "startMs": 120500,
+      "endMs": 123000,
+      "text": "And for a small additional fee."
+    },
+    {
+      "startMs": 123000,
+      "endMs": 127000,
+      "text": "When you are not using the villa, you are going to have a secure income"
+    },
+    {
+      "startMs": 127000,
+      "endMs": 133000,
+      "text": "by living and organising the short term holiday rental service by us."
+    },
+    {
+      "startMs": 133000,
+      "endMs": 137000,
+      "text": "Now, let me tell you some of the features of the villas."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 140000,
+      "text": "We offer a choice of two designs."
+    },
+    {
+      "startMs": 140000,
+      "endMs": 143500,
+      "text": "And all the villas located in a mountains."
+    },
+    {
+      "startMs": 143500,
+      "endMs": 145500,
+      "text": "It can get a bit colder here."
+    },
+    {
+      "startMs": 145500,
+      "endMs": 152000,
+      "text": "So, type A villas features a fireplace for those cold and winter night."
+    },
+    {
+      "startMs": 152000,
+      "endMs": 157000,
+      "text": "The type B villas are located in the same area but much larger."
+    },
+    {
+      "startMs": 157000,
+      "endMs": 162500,
+      "text": "These villas have living room downstairs and three bedrooms upstairs."
+    },
+    {
+      "startMs": 162500,
+      "endMs": 166000,
+      "text": "There's a large family sized bathroom too."
+    },
+    {
+      "startMs": 166000,
+      "endMs": 172000,
+      "text": "Now, I'm sure that you are keen to find out the details of this fantastic investment."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 178000,
+      "text": "So, if you can all turn your map of the resort, I will tell you the locations and surroundings of the villas."
+    },
+    {
+      "startMs": 178000,
+      "endMs": 183000,
+      "text": "If you look at the map, you will see the villas on the right at the bottom."
+    },
+    {
+      "startMs": 183000,
+      "endMs": 189000,
+      "text": "To the left of this, you will see a long, low buildings with a thick trees next to it."
+    },
+    {
+      "startMs": 189000,
+      "endMs": 191000,
+      "text": "And that's our up gallery."
+    },
+    {
+      "startMs": 191000,
+      "endMs": 195500,
+      "text": "You will find some fine landscape buildings there by local painters."
+    },
+    {
+      "startMs": 195500,
+      "endMs": 201500,
+      "text": "Between the villas and the pond, there's a very old building once it's traversed and found its hand."
+    },
+    {
+      "startMs": 201500,
+      "endMs": 206500,
+      "text": "It's now a day spa operating in the hair and a beauty treatment."
+    },
+    {
+      "startMs": 206500,
+      "endMs": 210000,
+      "text": "There are some advantages of living in its resort."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 215000,
+      "text": "Like this one, imagine yourself going to a wood-winning restaurant in the villa."
+    },
+    {
+      "startMs": 215000,
+      "endMs": 219000,
+      "text": "Just walk past the pond and it's very easy to find here."
+    },
+    {
+      "startMs": 219000,
+      "endMs": 222000,
+      "text": "As you can see, the restaurant is facing the pond."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 226000,
+      "text": "And it can sit and look around the water, which is live up at night."
+    },
+    {
+      "startMs": 226000,
+      "endMs": 232000,
+      "text": "The first building that most visitors see in the resort is the hotel, because it's opposite the car park."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 235000,
+      "text": "Now, is there anything else or problem?"
+    },
+    {
+      "startMs": 235000,
+      "endMs": 240000,
+      "text": "I guess the children's play area, very important for the little ones."
+    },
+    {
+      "startMs": 240000,
+      "endMs": 245000,
+      "text": "And it is near the villas, walk from the villas towards the picnic area."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 251000,
+      "text": "And it can come across this area where it can sit under the big trees and watch the kids play."
+    },
+    {
+      "startMs": 251000,
+      "endMs": 255000,
+      "text": "So, I hope this is much the idea of where's everything located."
+    },
+    {
+      "startMs": 255000,
+      "endMs": 259000,
+      "text": "And I'm sure you'll get plenty of time to think about it."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 55,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

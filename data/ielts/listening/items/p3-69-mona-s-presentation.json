@@ -1,0 +1,503 @@
+{
+  "id": "p3-69-mona-s-presentation",
+  "title": "Mona's Presentation",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-12653a070dfb",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 365.088,
+    "checksum": "sha256:29efd5d84d6ca686fbf510dbc42a37b1ac0c5139fa0c5c7c49ce3905c8990ed8"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21-26.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Mona's presentation topic is about",
+          "options": [
+            {
+              "id": "A",
+              "text": "design development from 1800s"
+            },
+            {
+              "id": "B",
+              "text": "design development and social advancement"
+            },
+            {
+              "id": "C",
+              "text": "design development and art movement"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "Mona doesn't want to just talk about one topic because",
+          "options": [
+            {
+              "id": "A",
+              "text": "She is afraid of her tutor's response"
+            },
+            {
+              "id": "B",
+              "text": "She wants to give a complete talk"
+            },
+            {
+              "id": "C",
+              "text": "She thinks it would be too simple"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "What does Ted say about Mona's topic?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Very detailed"
+            },
+            {
+              "id": "B",
+              "text": "Too old"
+            },
+            {
+              "id": "C",
+              "text": "Too broad"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "24",
+          "text": "What is Mona's viewpoint on computers?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They have improved work efficiency"
+            },
+            {
+              "id": "B",
+              "text": "They have influenced traditional media"
+            },
+            {
+              "id": "C",
+              "text": "They have changed people's sense of style"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "25",
+          "text": "What does Ted think of 'purism'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It's important for architecture"
+            },
+            {
+              "id": "B",
+              "text": "It saves a lot of effort"
+            },
+            {
+              "id": "C",
+              "text": "He admires it in arts"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "26",
+          "text": "What does Ted suggest Mona?",
+          "options": [
+            {
+              "id": "A",
+              "text": "meet one of his friends"
+            },
+            {
+              "id": "B",
+              "text": "read more books"
+            },
+            {
+              "id": "C",
+              "text": "visit a museum"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 27-30",
+      "instruction": "Choose FOUR letters from the box and complete the flow chart, A-F, next to questions 27-30.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "text handouts"
+        },
+        {
+          "id": "B",
+          "text": "questions"
+        },
+        {
+          "id": "C",
+          "text": "an outline"
+        },
+        {
+          "id": "D",
+          "text": "an introduction"
+        },
+        {
+          "id": "E",
+          "text": "statement"
+        },
+        {
+          "id": "F",
+          "text": "explain"
+        },
+        {
+          "id": "G",
+          "text": "research"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Step 1. Write _____.",
+          "answer": "D"
+        },
+        {
+          "id": "28",
+          "text": "Step 2. _____.  further on the topic",
+          "answer": "G"
+        },
+        {
+          "id": "29",
+          "text": "Step 3. Put a _____.  for every picture and support it",
+          "answer": "E"
+        },
+        {
+          "id": "30",
+          "text": "Step 5. Write _____.",
+          "answer": "A"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Step 1. Write 27. ______",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Step 2. 28. ______ further on the topic",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Step 3. Put a 29. ______ for every picture and support it",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Step 4. Every slide illustrates a thought, all the thoughts link together",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Step 5. Write 30. ______",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "A",
+        "23": "C",
+        "24": "B",
+        "25": "A",
+        "26": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "27": "D",
+        "28": "G",
+        "29": "E",
+        "30": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 16000,
+      "text": "You will hear two students named Mona and Ted talking about a presentation on design development."
+    },
+    {
+      "startMs": 16000,
+      "endMs": 21000,
+      "text": "First, you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 57000,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 57000,
+      "endMs": 62000,
+      "text": "Mona: Ted, you've looked at my presentation, haven't you? What do you think of it?"
+    },
+    {
+      "startMs": 62000,
+      "endMs": 68000,
+      "text": "Ted: Hey, Mona. Yes, I have. Before giving you some advice, I have a question."
+    },
+    {
+      "startMs": 68000,
+      "endMs": 75000,
+      "text": "Why didn't you write about the development of design and its influence or connection with social advancement or even art movement?"
+    },
+    {
+      "startMs": 75000,
+      "endMs": 79000,
+      "text": "In my opinion, this direction would have more significance."
+    },
+    {
+      "startMs": 79000,
+      "endMs": 89000,
+      "text": "Mona: Actually, I just want to focus on the history of design. I'm particularly interested in its history from the 1800s. That's why I wrote about it."
+    },
+    {
+      "startMs": 89000,
+      "endMs": 92000,
+      "text": "Ted: I see. It could save some effort."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 101000,
+      "text": "Mona: Not really. I've covered different areas of design such as building, clothing and products. It's a lot of work."
+    },
+    {
+      "startMs": 101000,
+      "endMs": 105000,
+      "text": "Ted: Right. Is it because you want to give a comprehensive talk?"
+    },
+    {
+      "startMs": 105000,
+      "endMs": 113000,
+      "text": "Mona: To be honest, I was worried about my teacher's reaction. If I only talk about one area, she might think I've been lazy."
+    },
+    {
+      "startMs": 113000,
+      "endMs": 124000,
+      "text": "Ted: You know what? Even though it's okay to talk about different aspects, I think the topic is too broad. It would be hard for the listeners to focus on any specific area."
+    },
+    {
+      "startMs": 125000,
+      "endMs": 132000,
+      "text": "Mona: You are right. I only have about 45 minutes for the talk. Maybe I should narrow the range."
+    },
+    {
+      "startMs": 132000,
+      "endMs": 141000,
+      "text": "Ted: That would be much better. And you can use computer technology to assist you in your presentation, like using the CAD or other computer software."
+    },
+    {
+      "startMs": 141000,
+      "endMs": 151000,
+      "text": "Mona: I'm not sure. Although computer technology can improve the visual effects of my presentation, I'd rather use the traditional way since I'm talking about the history of design."
+    },
+    {
+      "startMs": 151000,
+      "endMs": 157000,
+      "text": "I guess traditional media is more affected by computers, rather than designing industry."
+    },
+    {
+      "startMs": 157000,
+      "endMs": 165000,
+      "text": "Ted: That makes sense. You could do it your own way. As for the content, you mentioned purism, and you said it can save people's effort."
+    },
+    {
+      "startMs": 165000,
+      "endMs": 169000,
+      "text": "I don't really agree with that. I think it's not really easy to achieve."
+    },
+    {
+      "startMs": 169000,
+      "endMs": 176000,
+      "text": "On the other hand, I do think it's important to apply this concept in architecture. I mean the building should look simple and elegant."
+    },
+    {
+      "startMs": 176000,
+      "endMs": 181000,
+      "text": "Mona: That's a good point. Ted, what do you think I should do to further improve my talk?"
+    },
+    {
+      "startMs": 181000,
+      "endMs": 189000,
+      "text": "Ted: Well, I think you have read enough books about it. So it's not the theories that you lack. Why don't you visit the design museum in the north of the city?"
+    },
+    {
+      "startMs": 189000,
+      "endMs": 197000,
+      "text": "One of my friends went there last month, and he said it was worth it. I'm sure it can give you some inspiration."
+    },
+    {
+      "startMs": 197000,
+      "endMs": 204000,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27-30."
+    },
+    {
+      "startMs": 204000,
+      "endMs": 227000,
+      "text": "Now listen and answer questions 27-30."
+    },
+    {
+      "startMs": 228000,
+      "endMs": 234000,
+      "text": "Mona: How do you usually prepare for a presentation? You have done it many times, right?"
+    },
+    {
+      "startMs": 234000,
+      "endMs": 242000,
+      "text": "Ted: You can say that. When I prepare for a presentation, I would first try to come up with an introduction telling the audience what my topic is."
+    },
+    {
+      "startMs": 242000,
+      "endMs": 247000,
+      "text": "It's very important to grasp people's attention and let them know what you want to talk about."
+    },
+    {
+      "startMs": 247000,
+      "endMs": 252000,
+      "text": "Mona: Okay, I think so. A good beginning can mean everything."
+    },
+    {
+      "startMs": 252000,
+      "endMs": 262000,
+      "text": "Ted: Exactly. Maybe you could use a story to start. Step two, I would research deeper into the topic and give the audience something new."
+    },
+    {
+      "startMs": 262000,
+      "endMs": 271000,
+      "text": "Mona: Yeah, that's what I've been working on. I always try to look for more related information online. I want them to learn something from my presentation."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 278000,
+      "text": "Ted: Since you work so hard, they will like it. I noticed that you use a lot of pictures in your slides."
+    },
+    {
+      "startMs": 278000,
+      "endMs": 285000,
+      "text": "What I would do is put a statement under each picture so the audience would know what exactly the pictures are about."
+    },
+    {
+      "startMs": 285000,
+      "endMs": 292000,
+      "text": "Mona: I just thought it would be more impressive to use only pictures. All right, I will add that."
+    },
+    {
+      "startMs": 292000,
+      "endMs": 302000,
+      "text": "Ted: In the next step, you should try illustrating slide by slide. Each slide should only contain one thought or idea so all of these thoughts will link together in your illustration."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 305000,
+      "text": "Mona：This step would need a lot of practice."
+    },
+    {
+      "startMs": 305000,
+      "endMs": 312000,
+      "text": "Ted：Exactly. A lot of practices needed before you stand in front of the real audience is one final step you should not forget."
+    },
+    {
+      "startMs": 312000,
+      "endMs": 317000,
+      "text": "I suggest you prepare some text handouts with important details."
+    },
+    {
+      "startMs": 317000,
+      "endMs": 319000,
+      "text": "Mona: What are they for?"
+    },
+    {
+      "startMs": 319000,
+      "endMs": 323000,
+      "text": "Ted: The audience can reflect on what you talk about in and after your presentation."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 329000,
+      "text": "Mona: I've never thought about that. Thank you so much. Ted, you're a great help."
+    },
+    {
+      "startMs": 329000,
+      "endMs": 332000,
+      "text": "Ted: No problem, Mona."
+    },
+    {
+      "startMs": 332000,
+      "endMs": 339000,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 362000,
+      "endMs": 364000,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 44,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

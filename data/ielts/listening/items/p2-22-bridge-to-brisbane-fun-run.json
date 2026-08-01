@@ -1,0 +1,448 @@
+{
+  "id": "p2-22-bridge-to-brisbane-fun-run",
+  "title": "Bridge to Brisbane Fun Run",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-44b2a29f97ba",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 355.32,
+    "checksum": "sha256:df6f47c2cab4a9f1e7c915b98c5e856dfde8f006456bfc56c5b7c6cf82d48f34"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–14.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "On the day of the race the speaker recommends parking",
+          "options": [
+            {
+              "id": "A",
+              "text": "in the sports ground."
+            },
+            {
+              "id": "B",
+              "text": "by the river."
+            },
+            {
+              "id": "C",
+              "text": "in the shopping centre."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "The timing chip should be attached to",
+          "options": [
+            {
+              "id": "A",
+              "text": "the shirt or singlet."
+            },
+            {
+              "id": "B",
+              "text": "a shoe."
+            },
+            {
+              "id": "C",
+              "text": "the wristband."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "Which group will run first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "yellow"
+            },
+            {
+              "id": "B",
+              "text": "red"
+            },
+            {
+              "id": "C",
+              "text": "purple"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "The race organisers still need to find volunteers to help with",
+          "options": [
+            {
+              "id": "A",
+              "text": "giving first aid."
+            },
+            {
+              "id": "B",
+              "text": "handing out water."
+            },
+            {
+              "id": "C",
+              "text": "starting the race."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 15–20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "Stage",
+          "answer": "F"
+        },
+        {
+          "id": "16",
+          "text": "T-shirt Stand",
+          "answer": "A"
+        },
+        {
+          "id": "17",
+          "text": "Bag Collection Area",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "Information Centre",
+          "answer": "H"
+        },
+        {
+          "id": "19",
+          "text": "Prize Draw Box",
+          "answer": "G"
+        },
+        {
+          "id": "20",
+          "text": "Water station",
+          "answer": "I"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-22-bridge-to-brisbane-fun-run-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-22-bridge-to-brisbane-fun-run-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "B",
+        "13": "A",
+        "14": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "15": "F",
+        "16": "A",
+        "17": "B",
+        "18": "H",
+        "19": "G",
+        "20": "I"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8400,
+      "text": "2. You will hear a co-ordinator talking to volunteer helpers before a race involving"
+    },
+    {
+      "startMs": 8400,
+      "endMs": 16640,
+      "text": "a large number of people. First, you have some time to look at questions 11-14 on page"
+    },
+    {
+      "startMs": 16640,
+      "endMs": 17280,
+      "text": "3. 3."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 56160,
+      "text": "Now, listen carefully and answer questions 11-14."
+    },
+    {
+      "startMs": 56160,
+      "endMs": 61280,
+      "text": "Thank you for all volunteering to help us with the Bridge to Brisbane Fun Run. The purpose"
+    },
+    {
+      "startMs": 61280,
+      "endMs": 66560,
+      "text": "of this meeting is to give you some information about your duties on race day. Some of you"
+    },
+    {
+      "startMs": 66560,
+      "endMs": 71520,
+      "text": "are asking about where you can park on the day. Unfortunately, some of the usual places,"
+    },
+    {
+      "startMs": 71520,
+      "endMs": 75840,
+      "text": "down by the river, for example, will be out of bounds because we will need extra space"
+    },
+    {
+      "startMs": 75840,
+      "endMs": 81760,
+      "text": "for emergency vehicles. Probably the best option is the Jack Gray Sports Field in Barker Street."
+    },
+    {
+      "startMs": 82480,
+      "endMs": 87440,
+      "text": "Although the closest parking lot is the Metro shopping complex, I would advise you not to park"
+    },
+    {
+      "startMs": 87440,
+      "endMs": 93040,
+      "text": "there as they tend to tell away people who aren't customers. At the start line, most of you will"
+    },
+    {
+      "startMs": 93040,
+      "endMs": 97520,
+      "text": "be checking that runners have the necessary gear, especially their electronic timing chip,"
+    },
+    {
+      "startMs": 97520,
+      "endMs": 102960,
+      "text": "the race number and the identity wristband. Make sure that the number is attached to the front"
+    },
+    {
+      "startMs": 102960,
+      "endMs": 108960,
+      "text": "of the running shirt or single it, not the back. The timing chip, which records the runner's time,"
+    },
+    {
+      "startMs": 108960,
+      "endMs": 113280,
+      "text": "needs to be clipped onto one of their shoes and check that they are wearing their wristband."
+    },
+    {
+      "startMs": 114800,
+      "endMs": 119440,
+      "text": "Some of you will be responsible for organising the starting groups. It's very important that"
+    },
+    {
+      "startMs": 119440,
+      "endMs": 125600,
+      "text": "runners start in a particular order. There is a system of colour codes. The red group are walkers"
+    },
+    {
+      "startMs": 125600,
+      "endMs": 130320,
+      "text": "and people with baby strollers. The purple group are runners that expect to finish in at less"
+    },
+    {
+      "startMs": 130320,
+      "endMs": 136480,
+      "text": "than one hour and the yellow group are our elite athletes. We'd like them to start the race"
+    },
+    {
+      "startMs": 136480,
+      "endMs": 140880,
+      "text": "and we'd like the other groups to follow after that, with the red group and the strollers at the"
+    },
+    {
+      "startMs": 140880,
+      "endMs": 147600,
+      "text": "very back. This is for their own safety. Now, we are still short on volunteers for the race date,"
+    },
+    {
+      "startMs": 147600,
+      "endMs": 151920,
+      "text": "so if you have any friends or family members who might be interested, please let us know."
+    },
+    {
+      "startMs": 152560,
+      "endMs": 156960,
+      "text": "We're probably okay for people to help with the start, but we'll still desperately need"
+    },
+    {
+      "startMs": 156960,
+      "endMs": 162400,
+      "text": "volunteers along the race course to distribute water bottles to the runners. A few of you have"
+    },
+    {
+      "startMs": 162400,
+      "endMs": 166800,
+      "text": "offered to help with first aid, but the good people of St John's ambulance have donated their"
+    },
+    {
+      "startMs": 166800,
+      "endMs": 175600,
+      "text": "services, so that won't be necessary. Before you hear the rest of the talk, you have some time"
+    },
+    {
+      "startMs": 175600,
+      "endMs": 179520,
+      "text": "to look at questions 15 to 20 on page 4."
+    },
+    {
+      "startMs": 192400,
+      "endMs": 213920,
+      "text": "Now listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 214880,
+      "endMs": 222800,
+      "text": "Now, I'll show you the layout of the race village, which is where the race ends. Can you all see"
+    },
+    {
+      "startMs": 222800,
+      "endMs": 228400,
+      "text": "them up? If you look at the bottom right hand side, you'll see where the runners enter the village"
+    },
+    {
+      "startMs": 228400,
+      "endMs": 234240,
+      "text": "next to the corporate catering section. As you continue along the course, you'll see the stage on"
+    },
+    {
+      "startMs": 234240,
+      "endMs": 240480,
+      "text": "the right. That's where the winners will receive their medals. Now, can you all see the finish line"
+    },
+    {
+      "startMs": 240480,
+      "endMs": 245760,
+      "text": "near the centre? After they finish the race, the runners can take one of two paths. It doesn't"
+    },
+    {
+      "startMs": 245760,
+      "endMs": 251280,
+      "text": "matter which one to get their finishes t-shirts from the t-shirt stand at the end of those paths."
+    },
+    {
+      "startMs": 252160,
+      "endMs": 257440,
+      "text": "Many of you will be stationed at the end of the race. After they finish, the runners will also"
+    },
+    {
+      "startMs": 257440,
+      "endMs": 262320,
+      "text": "want their belongings and all bags are kept in the building on Bowen Road. It's quite close to"
+    },
+    {
+      "startMs": 262320,
+      "endMs": 268400,
+      "text": "the exit in the top left hand corner of your map. Now, some of you will have an important role"
+    },
+    {
+      "startMs": 268480,
+      "endMs": 272960,
+      "text": "working in the information centre. That's the building in the centre of the map, not far from"
+    },
+    {
+      "startMs": 272960,
+      "endMs": 279040,
+      "text": "the finish line. It's just below it on your map. And one other thing, can you all please remind the"
+    },
+    {
+      "startMs": 279040,
+      "endMs": 284320,
+      "text": "runners to enter in the prize draw for the new car? The entry box is between the shade tents and"
+    },
+    {
+      "startMs": 284320,
+      "endMs": 291040,
+      "text": "the corporate catering buildings. Okay, let's see now. What else do I need to point out? Ah, yes,"
+    },
+    {
+      "startMs": 291040,
+      "endMs": 296720,
+      "text": "the runners are always thirsty. And the main water station in the village is just beside the third"
+    },
+    {
+      "startMs": 296720,
+      "endMs": 301600,
+      "text": "exit through to Gregory Terrace. Can you see it there to the left of the corporate catering area?"
+    },
+    {
+      "startMs": 302560,
+      "endMs": 306000,
+      "text": "So everyone, please direct the race finishes there to get their free bottle water."
+    },
+    {
+      "startMs": 309440,
+      "endMs": 315520,
+      "text": "That is the end of section two. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 326720,
+      "endMs": 349120,
+      "text": "Now turn to section three on page five."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 46,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

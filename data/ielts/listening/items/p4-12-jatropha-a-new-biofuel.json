@@ -1,0 +1,510 @@
+{
+  "id": "p4-12-jatropha-a-new-biofuel",
+  "title": "Jatropha- a new biofuel",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-d7001a94e57f",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 503.064,
+    "checksum": "sha256:e49c7ca2158cc45e8e51f20322d9c4f8c6c93d4d84f9adfe40ea5d01f08b0122"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. Jatropha: a new biofuel The plant jatropha is originally from Central America can grow in poor 31. __________ can survive 32. __________ for several years can stop 33. __________ of land Its seeds can be used to produce diesel oil produce far more fuel than soybean or 34. __________ leave a residue after processing – used to make electricity produce energy which is renewable, unlike fossil fuels Uses of jatropha in Africa for water pumps and fridges made into 35. __________ used as fencing the 36. __________ are boiled and used to treat malaria for problems with 37. __________ European companies' claims about jatropha It could help stop poverty among rural populations It could be used in current diesel engines The plants use up lots of 38. __________ Problems with jatropha some seeds are toxic to people and animals unreliable oil productivity Other criticisms of biofuels Widespread production of biofuels could result in: high food prices in poor countries environmental damage caused by loss of rainforest and 39. __________ adding to the problem of 40. __________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "can grow in poor 31. __________",
+          "answer": "soil"
+        },
+        {
+          "id": "32",
+          "text": "can survive 32. __________ for several years",
+          "answer": "drought"
+        },
+        {
+          "id": "33",
+          "text": "can stop 33. __________ of land",
+          "answer": "erosion"
+        },
+        {
+          "id": "34",
+          "text": "produce far more fuel than soybean or 34. __________",
+          "answer": "corn"
+        },
+        {
+          "id": "35",
+          "text": "made into 35. __________",
+          "answer": "candles"
+        },
+        {
+          "id": "36",
+          "text": "the 36. __________ are boiled and used to treat malaria",
+          "answer": "leaves"
+        },
+        {
+          "id": "37",
+          "text": "for problems with 37. __________",
+          "answer": "digestion"
+        },
+        {
+          "id": "38",
+          "text": "The plants use up lots of 38. __________",
+          "answer": "carbon dioxide"
+        },
+        {
+          "id": "39",
+          "text": "environmental damage caused by loss of rainforest and 39. __________",
+          "answer": "wildlife"
+        },
+        {
+          "id": "40",
+          "text": "adding to the problem of 40. __________",
+          "answer": "global warming"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Jatropha: a new biofuel",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The plant jatropha",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "is originally from Central America",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "can grow in poor 31. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "can survive 32. __________ for several years",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "can stop 33. __________ of land",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Its seeds",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "can be used to produce diesel oil",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "produce far more fuel than soybean or 34. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "leave a residue after processing – used to make electricity",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "produce energy which is renewable, unlike fossil fuels",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Uses of jatropha in Africa",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "for water pumps and fridges",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "made into 35. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "used as fencing",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "the 36. __________ are boiled and used to treat malaria",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "for problems with 37. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "European companies' claims about jatropha",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "It could help stop poverty among rural populations",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It could be used in current diesel engines",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The plants use up lots of 38. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problems with jatropha",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "some seeds are toxic to people and animals",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "unreliable oil productivity",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Other criticisms of biofuels",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Widespread production of biofuels could result in:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "high food prices in poor countries",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "environmental damage caused by loss of rainforest and 39. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "adding to the problem of 40. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "soil",
+        "32": "drought",
+        "33": "erosion",
+        "34": "corn",
+        "35": "candles",
+        "36": "leaves",
+        "37": "digestion",
+        "38": "carbon dioxide",
+        "39": "wildlife",
+        "40": "global warming"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11320,
+      "text": "Good afternoon. As you know, the world is running out of fossil fuels, that is crude oil,"
+    },
+    {
+      "startMs": 11320,
+      "endMs": 18480,
+      "text": "coal and natural gas. It's an alternative, certain plants are now being considered as biofuels,"
+    },
+    {
+      "startMs": 18480,
+      "endMs": 23960,
+      "text": "which are fuels made from organic plant material. These are possible sources of energy once"
+    },
+    {
+      "startMs": 23960,
+      "endMs": 31240,
+      "text": "the fossil fuels have gone forever. Well, one such plant goes by the name of Jatrafa. It was first a"
+    },
+    {
+      "startMs": 31240,
+      "endMs": 37400,
+      "text": "native of Central America, and it's now found across the world. A few things that make this plant"
+    },
+    {
+      "startMs": 37400,
+      "endMs": 43240,
+      "text": "especially attractive is that it can survive in very poor quality and fertile soil, as it does,"
+    },
+    {
+      "startMs": 43240,
+      "endMs": 49640,
+      "text": "for example, alongside train tracks in India, on the line between Mumbai and Delhi. And for"
+    },
+    {
+      "startMs": 49640,
+      "endMs": 55720,
+      "text": "up to three years, it's resistant to drought. That's right. It can do without rain for that long."
+    },
+    {
+      "startMs": 56600,
+      "endMs": 61880,
+      "text": "And even if it's not actually a plant that people can eat, it's still worth having it on your land"
+    },
+    {
+      "startMs": 61880,
+      "endMs": 66840,
+      "text": "as it prevents erosion. And we looked at the dangerous consequences of that in a previous lecture."
+    },
+    {
+      "startMs": 67640,
+      "endMs": 74200,
+      "text": "Furthermore, Jatrafa seeds can be slowly distilled to produce diesel oil, and it's this kind of fuel,"
+    },
+    {
+      "startMs": 74200,
+      "endMs": 80680,
+      "text": "of course, that's of interest to scientists and power companies. After processing, the seeds"
+    },
+    {
+      "startMs": 80680,
+      "endMs": 87000,
+      "text": "can yield up to four times the oil that soybean can, and ten times the amount compared to corn,"
+    },
+    {
+      "startMs": 87000,
+      "endMs": 92680,
+      "text": "so you can see why it's causing such interest. And not much is wasted in the processing procedure,"
+    },
+    {
+      "startMs": 92680,
+      "endMs": 99080,
+      "text": "either. After the oil has been extracted from the seeds, the residue is processed into biomass,"
+    },
+    {
+      "startMs": 99080,
+      "endMs": 104920,
+      "text": "which can run power stations, which in turn can provide electricity for thousands of local homes."
+    },
+    {
+      "startMs": 106280,
+      "endMs": 112120,
+      "text": "Also, whereas our fossil fuels cannot be replaced, the energy produced by biofuels,"
+    },
+    {
+      "startMs": 112120,
+      "endMs": 118040,
+      "text": "such as Jatrafa, is renewable. It's not going to run out because the plants just go on growing."
+    },
+    {
+      "startMs": 119240,
+      "endMs": 124440,
+      "text": "There's no doubt that it is a remarkable plant, and one that has been very beneficial to man."
+    },
+    {
+      "startMs": 125000,
+      "endMs": 130760,
+      "text": "In various African communities, it's been used to operate water pumps and refrigerate midsons."
+    },
+    {
+      "startMs": 131560,
+      "endMs": 137880,
+      "text": "It can be used to produce candles, or as a fencing plant to keep some animals enclosed,"
+    },
+    {
+      "startMs": 137880,
+      "endMs": 144600,
+      "text": "and some animals out. It can also treat a number of health problems, for example, the boiled leaves"
+    },
+    {
+      "startMs": 144600,
+      "endMs": 151000,
+      "text": "can do much to relieve the suffering of people with malaria, and some Jatrafa species have seeds"
+    },
+    {
+      "startMs": 151000,
+      "endMs": 156920,
+      "text": "which are used to treat digestion problems. Anyway, that's not what the European corporations"
+    },
+    {
+      "startMs": 156920,
+      "endMs": 163160,
+      "text": "who are buying vast amounts of land for Jatrafa plantations are focusing on. They claim that people"
+    },
+    {
+      "startMs": 163160,
+      "endMs": 168520,
+      "text": "who are dependent on rural economies will benefit from growing Jatrafa, and that it will help them"
+    },
+    {
+      "startMs": 168520,
+      "endMs": 174840,
+      "text": "bring an end to poverty by providing a long-term local industry. They also point out that few"
+    },
+    {
+      "startMs": 174840,
+      "endMs": 180760,
+      "text": "or no modifications would be necessary in modern diesel engines, since they were originally designed"
+    },
+    {
+      "startMs": 180920,
+      "endMs": 187400,
+      "text": "to run on biofuels, such as peanut oil and ethanol anyway. Of course, when the plants are"
+    },
+    {
+      "startMs": 187400,
+      "endMs": 193320,
+      "text": "burnt, they release carbon dioxide, but they absorb great amounts when they're growing,"
+    },
+    {
+      "startMs": 193320,
+      "endMs": 199800,
+      "text": "making them a considerably greener alternative to fossil fuels. But not everyone shares the excitement"
+    },
+    {
+      "startMs": 199800,
+      "endMs": 206840,
+      "text": "over Jatrafa, nor other biofuels. In Western Australia, Jatrafa has in fact been banned since the"
+    },
+    {
+      "startMs": 206840,
+      "endMs": 213400,
+      "text": "seeds of some species are toxic, and it only takes three or four to kill a person, and animals"
+    },
+    {
+      "startMs": 213400,
+      "endMs": 219800,
+      "text": "are also very vulnerable. Furthermore, skeptics also point out that as there are many species of"
+    },
+    {
+      "startMs": 219800,
+      "endMs": 227800,
+      "text": "Jatrafa, its oil productivity is unreliable. Aside from this, critics of Jatrafa and other biofuels"
+    },
+    {
+      "startMs": 227800,
+      "endMs": 234040,
+      "text": "claim that farmers now have a strong economic incentive to grow them rather than food crops."
+    },
+    {
+      "startMs": 234680,
+      "endMs": 240040,
+      "text": "Poor countries would be particularly affected because they would have to rely on imported foods"
+    },
+    {
+      "startMs": 240040,
+      "endMs": 245960,
+      "text": "to survive, and people would end up having to pay greatly inflated prices for basic foods."
+    },
+    {
+      "startMs": 246920,
+      "endMs": 253160,
+      "text": "There's also the concern over environmental damage. In order to provide land for palm oil or"
+    },
+    {
+      "startMs": 253160,
+      "endMs": 258840,
+      "text": "sugar cane plantations, for instance, companies are cutting down vast areas of rainforest which"
+    },
+    {
+      "startMs": 258840,
+      "endMs": 265000,
+      "text": "can never be replaced, and thus in turn results in the disappearance of wildlife which depended on"
+    },
+    {
+      "startMs": 265000,
+      "endMs": 271640,
+      "text": "that habitat. You can also imagine that such deforestation makes a considerable contribution to global"
+    },
+    {
+      "startMs": 271640,
+      "endMs": 278600,
+      "text": "warming. Furthermore, opponents also reject the idea that biofuels are a carbon neutral source of"
+    },
+    {
+      "startMs": 278600,
+      "endMs": 279240,
+      "text": "energy."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 44,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

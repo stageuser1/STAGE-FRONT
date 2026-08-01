@@ -1,0 +1,430 @@
+{
+  "id": "p4-31-red-king-crab",
+  "title": "Red King Crab",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-87f3924dcb27",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 309.189,
+    "checksum": "sha256:5e455803e437258f594371df15c730aae802ce5b0d7544404981bb83b7ff1d45"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. The Red King Crab Introduction The Red King Crab is migrating into European waters from the far 31. _________. Its rapid spread threatens local marine species such as 32. _________, which it preys on. Physical characteristics The Red King Crab has a deep red 33. _________, that develops after several molts. Juvenile crabs often remain in 34. _________ waters where predators are fewer. Migration behaviour When travelling in large groups, the crabs damage long stretches of 35. _________. During 36. _________, they tend to move into deeper water. Impact on people Fishermen complain that their 37. _________ are frequently damaged. Some communities are concerned about the effect on their local 38. _________. Management and control In the 1960s, Soviet 39. _________ intentionally introduced the Red King Crab to boost fishery production. Today, environmental 40. _________ warn that its ecological impact may be greater than expected.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The Red King Crab is migrating into European waters from the far 31. _________.",
+          "answer": "south"
+        },
+        {
+          "id": "32",
+          "text": "Its rapid spread threatens local marine species such as 32. _________, which it preys on.",
+          "answer": "octopuses"
+        },
+        {
+          "id": "33",
+          "text": "The Red King Crab has a deep red 33. _________, that develops after several molts.",
+          "answer": "shell"
+        },
+        {
+          "id": "34",
+          "text": "Juvenile crabs often remain in 34. _________ waters where predators are fewer.",
+          "answer": "shallow"
+        },
+        {
+          "id": "35",
+          "text": "When travelling in large groups, the crabs damage long stretches of 35. _________.",
+          "answer": "coastlines"
+        },
+        {
+          "id": "36",
+          "text": "During 36. _________, they tend to move into deeper water.",
+          "answer": "winter"
+        },
+        {
+          "id": "37",
+          "text": "Fishermen complain that their 37. _________ are frequently damaged.",
+          "answer": "nets"
+        },
+        {
+          "id": "38",
+          "text": "Some communities are concerned about the effect on their local 38. _________.",
+          "answer": "shore"
+        },
+        {
+          "id": "39",
+          "text": "In the 1960s, Soviet 39. _________ intentionally introduced the Red King Crab to boost fishery production.",
+          "answer": "engineers"
+        },
+        {
+          "id": "40",
+          "text": "Today, environmental 40. _________ warn that its ecological impact may be greater than expected.",
+          "answer": "scientists"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Red King Crab",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Introduction",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Red King Crab is migrating into European waters from the far 31. _________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Its rapid spread threatens local marine species such as 32. _________, which it preys on.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Physical characteristics",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Red King Crab has a deep red 33. _________, that develops after several molts.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Juvenile crabs often remain in 34. _________ waters where predators are fewer.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Migration behaviour",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "When travelling in large groups, the crabs damage long stretches of 35. _________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "During 36. _________, they tend to move into deeper water.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Impact on people",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Fishermen complain that their 37. _________ are frequently damaged.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some communities are concerned about the effect on their local 38. _________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Management and control",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In the 1960s, Soviet 39. _________ intentionally introduced the Red King Crab to boost fishery production.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Today, environmental 40. _________ warn that its ecological impact may be greater than expected.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "south",
+        "32": "octopuses",
+        "33": "shell",
+        "34": "shallow",
+        "35": "coastlines",
+        "36": "winter",
+        "37": "nets",
+        "38": "shore",
+        "39": "engineers",
+        "40": "scientists"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7480,
+      "text": "Good morning, everyone. Today's lecture is about the arrival and growing influence of"
+    },
+    {
+      "startMs": 7480,
+      "endMs": 14920,
+      "text": "an unusual crab species in northern waters. I'll begin with some general observations"
+    },
+    {
+      "startMs": 14920,
+      "endMs": 23040,
+      "text": "before moving into behaviour, impacts and long-term management. To start, local fishermen say"
+    },
+    {
+      "startMs": 23040,
+      "endMs": 29400,
+      "text": "the creature has started showing up in spots where it was never recorded before."
+    },
+    {
+      "startMs": 29400,
+      "endMs": 34680,
+      "text": "Cling devices placed on several individuals revealed they originally travelled from an"
+    },
+    {
+      "startMs": 34680,
+      "endMs": 42520,
+      "text": "area located further south, although the reasons for leaving that region are still debated."
+    },
+    {
+      "startMs": 42520,
+      "endMs": 48840,
+      "text": "Some oceanographers believe changes in water layers may have encouraged this new movement."
+    },
+    {
+      "startMs": 48840,
+      "endMs": 56120,
+      "text": "Along with the shift in location, one worrying trend is the noticeable drop in octopuses,"
+    },
+    {
+      "startMs": 56120,
+      "endMs": 61840,
+      "text": "which disappear quickly whenever the crab population increases."
+    },
+    {
+      "startMs": 61840,
+      "endMs": 67240,
+      "text": "Dive groups have reported fewer sightings on their usual routes, even in places that"
+    },
+    {
+      "startMs": 67240,
+      "endMs": 72880,
+      "text": "used to be reliable. Guides say visitors often ask why these clever"
+    },
+    {
+      "startMs": 72880,
+      "endMs": 79720,
+      "text": "animals are becoming harder to spot. Moving on, people who work at the harbour sometimes"
+    },
+    {
+      "startMs": 79720,
+      "endMs": 87120,
+      "text": "find discarded pieces of its shell, usually washed up after storms. These fragments feel"
+    },
+    {
+      "startMs": 87120,
+      "endMs": 94920,
+      "text": "surprisingly dense when handled, much heavier than most expect. The texture is so rugged"
+    },
+    {
+      "startMs": 94920,
+      "endMs": 100840,
+      "text": "that some compare it to building material rather than something from a living creature."
+    },
+    {
+      "startMs": 100840,
+      "endMs": 106120,
+      "text": "In addition to this, younger crabs tend to remain in shallow inlets because these places"
+    },
+    {
+      "startMs": 106120,
+      "endMs": 113320,
+      "text": "offer hiding spots from larger predators. Seaweed clusters and rock edges create small"
+    },
+    {
+      "startMs": 113320,
+      "endMs": 120200,
+      "text": "pockets where they can rest safely. Only after they grow stronger do they begin moving toward"
+    },
+    {
+      "startMs": 120200,
+      "endMs": 126720,
+      "text": "deeper channels. When we look at their movement patterns in some northern villages, people"
+    },
+    {
+      "startMs": 126720,
+      "endMs": 132920,
+      "text": "have noticed long tracks along the waters edge after large groups have passed through."
+    },
+    {
+      "startMs": 132920,
+      "endMs": 140480,
+      "text": "These patterns often appear on exposed coastlines, especially in places where tides are strong."
+    },
+    {
+      "startMs": 140480,
+      "endMs": 146000,
+      "text": "Photographers sometimes wait for these rare gatherings to capture unusual images. As the"
+    },
+    {
+      "startMs": 146000,
+      "endMs": 151560,
+      "text": "year progresses during the colder months, local crews often change their work routines"
+    },
+    {
+      "startMs": 151560,
+      "endMs": 157880,
+      "text": "because the animals become harder to find. As winter approaches, the crabs usually shift"
+    },
+    {
+      "startMs": 157880,
+      "endMs": 164840,
+      "text": "into darker, deeper waters where conditions are more stable. This movement makes it challenging"
+    },
+    {
+      "startMs": 164840,
+      "endMs": 173640,
+      "text": "for researchers to continue monitoring them. Now, in terms of human activity, a number of crews"
+    },
+    {
+      "startMs": 173640,
+      "endMs": 180200,
+      "text": "mentioned that certain items on board have been causing unexpected delays during routine work."
+    },
+    {
+      "startMs": 181400,
+      "endMs": 187320,
+      "text": "One recurring issue involves the nets, which often return in a condition that requires"
+    },
+    {
+      "startMs": 187320,
+      "endMs": 194200,
+      "text": "extra time to sort out. Because of this, some teams have begun experimenting with new equipment"
+    },
+    {
+      "startMs": 194200,
+      "endMs": 201320,
+      "text": "to avoid interruptions. At the same time, several groups in the area have been debating how recent"
+    },
+    {
+      "startMs": 201320,
+      "endMs": 207880,
+      "text": "changes in the sea might influence different activities on shore. Some believe these shifts could"
+    },
+    {
+      "startMs": 207880,
+      "endMs": 213800,
+      "text": "eventually reach the wider economy, though no one agrees on what that outcome might look like."
+    },
+    {
+      "startMs": 214040,
+      "endMs": 221000,
+      "text": "A few remain optimistic, suggesting that unexpected benefits could appear over time."
+    },
+    {
+      "startMs": 222200,
+      "endMs": 228520,
+      "text": "Finally, documents from decades ago describe a carefully organized operation that introduced"
+    },
+    {
+      "startMs": 228520,
+      "endMs": 235800,
+      "text": "the species into unfamiliar waters. According to those notes, a group of engineers handled the"
+    },
+    {
+      "startMs": 235800,
+      "endMs": 242840,
+      "text": "practical side of the initiative during its early stages. The long-term effects of their involvement"
+    },
+    {
+      "startMs": 242840,
+      "endMs": 248920,
+      "text": "were not considered at the time. In recent years, several research groups have reviewed"
+    },
+    {
+      "startMs": 248920,
+      "endMs": 255640,
+      "text": "new data about how the species is spreading. A number of scientists argue that some surrounding"
+    },
+    {
+      "startMs": 255640,
+      "endMs": 263400,
+      "text": "habitats may struggle if certain trends continue. Others think the situation can be stabilized"
+    },
+    {
+      "startMs": 263400,
+      "endMs": 270680,
+      "text": "with consistent monitoring and periodic adjustments. That concludes today's talk. Thank you for"
+    },
+    {
+      "startMs": 270680,
+      "endMs": 271320,
+      "text": "listening."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 41,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

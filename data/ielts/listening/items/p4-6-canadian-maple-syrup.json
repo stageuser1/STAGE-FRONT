@@ -1,0 +1,585 @@
+{
+  "id": "p4-6-canadian-maple-syrup",
+  "title": "Canadian Maple Syrup",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-34de51ecb72e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 509.088,
+    "checksum": "sha256:cd4ac14ce941fbd9a77070bc82232e558ce27ec33fe48250a5ebce6126354172"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Canadian maple syrup Description It is a sweet liquid poured over pancakes etc. The production of sap needs a climate where night and day temperatures are very 31. __________ History Folk stories claim that maple syrup was first used to cook 32. __________ Sap collection in spring developed into a First Nations 33. __________ The sap was collected in buckets. The sap was concentrated into syrup by: using hot stones to produce 34. __________ leaving it outside at night and then removing the layer of 35. __________ on top. Uses First Nations people drank the fresh sap to give them energy. European settlers put the syrup in various types of 36. __________ They also used it for drinks and for candy. Its use for making sugar declined after 1880, when the 37. __________ on Caribbean sugar was removed. Threats Natural Harvests may be affected by storms and destructive 38. __________ Climate change may also affect sap production. Social Maple syrup is expensive and faces considerable 39. __________ The obesity issue is affecting sales. Reasons for optimism Maple syrup is an important export. It is quite 40. __________ compared with other sweeteners. Its taste is the main reason for its popularity.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The production of sap needs a climate where night and day temperatures are very 31. __________",
+          "answer": "different"
+        },
+        {
+          "id": "32",
+          "text": "Folk stories claim that maple syrup was first used to cook 32. __________",
+          "answer": "meat"
+        },
+        {
+          "id": "33",
+          "text": "Sap collection in spring developed into a First Nations 33. __________",
+          "answer": "tradition"
+        },
+        {
+          "id": "34",
+          "text": "using hot stones to produce 34. __________",
+          "answer": "steam"
+        },
+        {
+          "id": "35",
+          "text": "leaving it outside at night and then removing the layer of 35. __________ on top.",
+          "answer": "ice"
+        },
+        {
+          "id": "36",
+          "text": "European settlers put the syrup in various types of 36. __________",
+          "answer": "medicine"
+        },
+        {
+          "id": "37",
+          "text": "Its use for making sugar declined after 1880, when the 37. __________ on Caribbean sugar was removed.",
+          "answer": "tax"
+        },
+        {
+          "id": "38",
+          "text": "Harvests may be affected by storms and destructive 38. __________",
+          "answer": "insects"
+        },
+        {
+          "id": "39",
+          "text": "Maple syrup is expensive and faces considerable 39. __________",
+          "answer": "competition"
+        },
+        {
+          "id": "40",
+          "text": "It is quite 40. __________ compared with other sweeteners.",
+          "answer": "healthy"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Canadian maple syrup",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Description",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "It is a sweet liquid poured over pancakes etc.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The production of sap needs a climate where night and day temperatures are very 31. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "History",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Folk stories claim that maple syrup was first used to cook 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Sap collection in spring developed into a First Nations 33. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The sap was collected in buckets.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The sap was concentrated into syrup by:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "using hot stones to produce 34. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "leaving it outside at night and then removing the layer of 35. __________ on top.",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Uses",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "First Nations people drank the fresh sap to give them energy.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "European settlers put the syrup in various types of 36. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They also used it for drinks and for candy.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Its use for making sugar declined after 1880, when the 37. __________ on Caribbean sugar was removed.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Threats",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Natural",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Harvests may be affected by storms and destructive 38. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Climate change may also affect sap production.",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Social",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Maple syrup is expensive and faces considerable 39. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "The obesity issue is affecting sales.",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Reasons for optimism",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Maple syrup is an important export.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It is quite 40. __________ compared with other sweeteners.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Its taste is the main reason for its popularity.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "different",
+        "32": "meat",
+        "33": "tradition",
+        "34": "steam",
+        "35": "ice",
+        "36": "medicine",
+        "37": "tax",
+        "38": "insects",
+        "39": "competition",
+        "40": "healthy"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8200,
+      "text": "Section 4."
+    },
+    {
+      "startMs": 8200,
+      "endMs": 14040,
+      "text": "You will hear a lecture on a very popular Canadian food product called maple syrup."
+    },
+    {
+      "startMs": 14040,
+      "endMs": 19720,
+      "text": "First, you have some time to look at questions 31 to 40 on page 7."
+    },
+    {
+      "startMs": 31000,
+      "endMs": 33000,
+      "text": "You"
+    },
+    {
+      "startMs": 33000,
+      "endMs": 38000,
+      "text": "will hear a lecture on a very popular Canadian food product called maple syrup."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 78000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 82000,
+      "text": "Maple syrup can be described as very sweet."
+    },
+    {
+      "startMs": 82000,
+      "endMs": 86000,
+      "text": "Canadians pour it generously over things like pancakes for breakfast."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 92000,
+      "text": "The syrup is produced from the maple tree and it actually comes from the tree's sap,"
+    },
+    {
+      "startMs": 92000,
+      "endMs": 98000,
+      "text": "which is the watery substance that comes out of the trunk of the tree when this is cut."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 104000,
+      "text": "In order for enough sap to be produced, very special climate conditions are needed."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 110000,
+      "text": "In spring, the temperatures need to drop to well below zero at night,"
+    },
+    {
+      "startMs": 110000,
+      "endMs": 119000,
+      "text": "but then they need to rise sharply during the day, so they're hugely different over a 24-hour period."
+    },
+    {
+      "startMs": 119000,
+      "endMs": 125000,
+      "text": "And that's exactly what happens in Northeastern Canada every spring."
+    },
+    {
+      "startMs": 125000,
+      "endMs": 136000,
+      "text": "The indigenous peoples of North America, known as the First Nations, discovered the maple secret long before the Europeans arrived."
+    },
+    {
+      "startMs": 136000,
+      "endMs": 142000,
+      "text": "Early folk stories say it was first discovered by a chief, who threw his tomahawk,"
+    },
+    {
+      "startMs": 142000,
+      "endMs": 147000,
+      "text": "which is similar to an axe, into the trunk of a tree."
+    },
+    {
+      "startMs": 147000,
+      "endMs": 150000,
+      "text": "Clear sap started to run from the cut."
+    },
+    {
+      "startMs": 150000,
+      "endMs": 160000,
+      "text": "His wife used this sap to boil meat, and the heat turned it into a sweet syrup, which they found delicious."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 170000,
+      "text": "Whether or not that story is true, we do know that the maple tree was very important to First Nations peoples for hundreds of years."
+    },
+    {
+      "startMs": 170000,
+      "endMs": 175000,
+      "text": "Collecting the sap each spring became a tradition among them."
+    },
+    {
+      "startMs": 175000,
+      "endMs": 182000,
+      "text": "Whole families would migrate to the areas where the maple trees grew, and set up camp there."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 186000,
+      "text": "They collected the sap from the trees using buckets."
+    },
+    {
+      "startMs": 186000,
+      "endMs": 193000,
+      "text": "Then they needed to concentrate the sap, removing some of the water from it to create syrup."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 196000,
+      "text": "They had two ways of doing this."
+    },
+    {
+      "startMs": 196000,
+      "endMs": 203000,
+      "text": "One way was to drop hot stones from a fire into the buckets to create steam."
+    },
+    {
+      "startMs": 203000,
+      "endMs": 209000,
+      "text": "If repeated often enough, this would eventually concentrate the syrup."
+    },
+    {
+      "startMs": 209000,
+      "endMs": 218000,
+      "text": "Another method that they used to concentrate the syrup was to leave the sap outside overnight, exposed to freezing temperatures."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 227000,
+      "text": "This would mean that a thick layer of ice would form on top, which could be discarded, leaving the sugary sap below."
+    },
+    {
+      "startMs": 227000,
+      "endMs": 236000,
+      "text": "Again, this process could be repeated over several days, and eventually a sweet brown syrup was produced."
+    },
+    {
+      "startMs": 236000,
+      "endMs": 241000,
+      "text": "The First Nations people had various uses for the sap and syrup."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 248000,
+      "text": "They drank the sap fresh from the tree as a tonic, knowing that it was an important source of energy."
+    },
+    {
+      "startMs": 248000,
+      "endMs": 256000,
+      "text": "But for the most part, they reduced the syrup further, and then cooled it, so that it crystallized into sugar."
+    },
+    {
+      "startMs": 256000,
+      "endMs": 261000,
+      "text": "This was easy to carry, and kept indefinitely."
+    },
+    {
+      "startMs": 261000,
+      "endMs": 271000,
+      "text": "European settlers who arrived in Canada began to learn about the syrup from First Nations peoples, and further expanded its uses."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 276000,
+      "text": "For example, they incorporated it into medicine of different kinds."
+    },
+    {
+      "startMs": 276000,
+      "endMs": 282000,
+      "text": "They also discovered that by adding yeast to the sap, they could make a maple drink."
+    },
+    {
+      "startMs": 282000,
+      "endMs": 288000,
+      "text": "And by throwing the hot syrup into the snow, they could make a toffee-like candy."
+    },
+    {
+      "startMs": 288000,
+      "endMs": 294000,
+      "text": "But, like the First Nations, they turned most of their sap into maple sugar."
+    },
+    {
+      "startMs": 294000,
+      "endMs": 307000,
+      "text": "For most people, it was the only type of sugar they could afford, since the only alternative was the sugar imported from the Caribbean, which was made from sugar cane, and this was very expensive."
+    },
+    {
+      "startMs": 307000,
+      "endMs": 317000,
+      "text": "However, after 1880, the Canadian government decided to stop charging tax on Caribbean sugar, and this made it much cheaper."
+    },
+    {
+      "startMs": 317000,
+      "endMs": 330000,
+      "text": "That meant it was no longer cost-effective to produce maple sugar, and so syrup-making became the only viable industry remaining for Canadians, and that's what we've been doing ever since."
+    },
+    {
+      "startMs": 330000,
+      "endMs": 343000,
+      "text": "At present, maple syrup is enjoying a boom. In the last two decades, production has doubled in Canada."
+    },
+    {
+      "startMs": 343000,
+      "endMs": 358000,
+      "text": "However, serious threats remain. Like any agricultural product, the harvest is subject to such things as major storms, or the arrival of invasive insects, both of which have happened,"
+    },
+    {
+      "startMs": 358000,
+      "endMs": 371000,
+      "text": "and these could destroy everything. It is predicted with some certainty that, in the longer term, climate change will also have an adverse effect on the sap run."
+    },
+    {
+      "startMs": 371000,
+      "endMs": 374000,
+      "text": "Then there are the social factors."
+    },
+    {
+      "startMs": 374000,
+      "endMs": 382000,
+      "text": "Producing maple syrup is a very labor-intensive process, making it an expensive purchase."
+    },
+    {
+      "startMs": 382000,
+      "endMs": 390000,
+      "text": "And of equal concern is the fact that nowadays there's a lot of competition from cheaper, artificially flavored brands."
+    },
+    {
+      "startMs": 390000,
+      "endMs": 401000,
+      "text": "Furthermore, we're at a time when obesity is a major issue, making a product that is 67% sugar increasingly difficult to sell."
+    },
+    {
+      "startMs": 401000,
+      "endMs": 405000,
+      "text": "Nevertheless, there are reasons to be optimistic."
+    },
+    {
+      "startMs": 405000,
+      "endMs": 413000,
+      "text": "Producers are developing markets abroad. Our syrup is currently being exported to over 50 countries."
+    },
+    {
+      "startMs": 413000,
+      "endMs": 424000,
+      "text": "Back here at home, chefs use it enthusiastically. It's certainly high in calories, but it also contains proteins, minerals, and antioxidants."
+    },
+    {
+      "startMs": 424000,
+      "endMs": 431000,
+      "text": "As such, it is still relatively healthy when you compare it with sugar or corn syrup."
+    },
+    {
+      "startMs": 431000,
+      "endMs": 438000,
+      "text": "Canadians are proud of maple syrup and its deep roots in our history and geography."
+    },
+    {
+      "startMs": 438000,
+      "endMs": 449000,
+      "text": "However, the primary reason for maple syrup success around the world remains its taste. There's nothing quite like it."
+    },
+    {
+      "startMs": 449000,
+      "endMs": 456000,
+      "text": "That is the end of section 4. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 479000,
+      "endMs": 482000,
+      "text": "You"
+    },
+    {
+      "startMs": 509000,
+      "endMs": 511000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 58,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

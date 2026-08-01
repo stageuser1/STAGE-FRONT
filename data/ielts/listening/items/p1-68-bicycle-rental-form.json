@@ -1,0 +1,437 @@
+{
+  "id": "p1-68-bicycle-rental-form",
+  "title": "Bicycle Rental Form",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-e4a1158cbc95",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 509.064,
+    "checksum": "sha256:96e1fd0b620c7fc158a4f88548870469c84c0d30ad23b4025e58787bf17bdeb4"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10.",
+      "instruction": "Complete the form below. Write ONE WORD ONLY for each answer. Bicycle Rental Form Type of bicycle Special price: £ 2. __________ (and £40 as a 3. __________) What the special price includes: insurance as against 4. __________ a good lock a city map Two 5. __________: head and tail Not included in the price: Rent a 7. __________ kit at £3 The shop has a 8. __________ for repeat customers Tomorrow, the shop closes at 9. __________ Shop Address: 28 10. __________ Street",
+      "questions": [
+        {
+          "id": "1",
+          "text": "1. __________",
+          "answer": "classic"
+        },
+        {
+          "id": "2",
+          "text": "£ 2. __________ (and £40 as a 3. __________)",
+          "answer": "52"
+        },
+        {
+          "id": "3",
+          "text": "£ 2. __________ (and £40 as a 3. __________)",
+          "answer": "deposit"
+        },
+        {
+          "id": "4",
+          "text": "insurance as against 4. __________",
+          "answer": "damage"
+        },
+        {
+          "id": "5",
+          "text": "Two 5. __________: head and tail",
+          "answer": "lights"
+        },
+        {
+          "id": "6",
+          "text": "6. __________",
+          "answer": "helmet"
+        },
+        {
+          "id": "7",
+          "text": "Rent a 7. __________ kit at £3",
+          "answer": "repair"
+        },
+        {
+          "id": "8",
+          "text": "The shop has a 8. __________ for repeat customers",
+          "answer": "reduction"
+        },
+        {
+          "id": "9",
+          "text": "Tomorrow, the shop closes at 9. __________",
+          "answer": "6:15/6.15"
+        },
+        {
+          "id": "10",
+          "text": "Shop Address: 28 10. __________ Street",
+          "answer": "Cliffton"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the form below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Bicycle Rental Form",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Type of bicycle",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "1. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Special price:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "£ 2. __________ (and £40 as a 3. __________)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "What the special price includes:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "insurance as against 4. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a good lock",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a city map",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Two 5. __________: head and tail",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Not included in the price:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "6. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Rent a 7. __________ kit at £3",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The shop has a 8. __________ for repeat customers",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Tomorrow, the shop closes at 9. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Shop Address: 28 10. __________ Street",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "classic",
+        "2": "52",
+        "3": "deposit",
+        "4": "damage",
+        "5": "lights",
+        "6": "helmet",
+        "7": "repair",
+        "8": "reduction",
+        "9": "6:15/6.15",
+        "10": "Cliffton"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13200,
+      "text": "[Narrator]: You will hear a telephone conversation between a man and a bicycle rental shop assistant."
+    },
+    {
+      "startMs": 13200,
+      "endMs": 18400,
+      "text": "Now look at the questions one to ten and answer all these questions."
+    },
+    {
+      "startMs": 18400,
+      "endMs": 23640,
+      "text": "[Molly]: Hello, fast cycle rentals. This is Molly speaking. How can I assist you today?"
+    },
+    {
+      "startMs": 23640,
+      "endMs": 28600,
+      "text": "[Woman]: Hi Molly, I'm planning to explore the city over the weekend and thought renting a bike"
+    },
+    {
+      "startMs": 28600,
+      "endMs": 32360,
+      "text": "would be convenient. Could you tell me what options you have?"
+    },
+    {
+      "startMs": 32360,
+      "endMs": 38600,
+      "text": "[Molly]: Absolutely. For casual city rides we usually recommend the classic bicycle."
+    },
+    {
+      "startMs": 38600,
+      "endMs": 43400,
+      "text": "It's a basic model, lightweight and easy to pedal on flat surfaces."
+    },
+    {
+      "startMs": 43400,
+      "endMs": 49320,
+      "text": "Unless you're tackling hills or rough terrain, you won't need a mountain or hybrid bike."
+    },
+    {
+      "startMs": 49320,
+      "endMs": 55080,
+      "text": "[Woman]: No, I'll just be sticking to the main roads and paths. The classic one sounds fine."
+    },
+    {
+      "startMs": 55080,
+      "endMs": 60040,
+      "text": "[Molly]: Perfect. You're in luck. We currently have a promotional offer."
+    },
+    {
+      "startMs": 60840,
+      "endMs": 67080,
+      "text": "The rental fee is £52 for the day, which is a reduction from our usual rate of 65."
+    },
+    {
+      "startMs": 67800,
+      "endMs": 72120,
+      "text": "[Woman]: That's reasonable. Do I need to leave a deposit or anything like that?"
+    },
+    {
+      "startMs": 72760,
+      "endMs": 79880,
+      "text": "[Molly]: Yes, we do require a £40 deposit. It's fully refundable as long as the bike comes back undamaged."
+    },
+    {
+      "startMs": 80840,
+      "endMs": 86120,
+      "text": "So you'd be paying £92 up front, but 40 of that comes back when you return it."
+    },
+    {
+      "startMs": 87080,
+      "endMs": 89880,
+      "text": "[Woman]: Got it. And what's included in that price?"
+    },
+    {
+      "startMs": 90760,
+      "endMs": 96200,
+      "text": "[Molly]: Well, several things. First of all, we offer insurance that covers damage,"
+    },
+    {
+      "startMs": 96200,
+      "endMs": 99880,
+      "text": "so you're protected if the frame gets scratched or the gears get slightly bent."
+    },
+    {
+      "startMs": 100520,
+      "endMs": 105240,
+      "text": "That won't apply to theft or major accidents, though. Only minor wear and tear."
+    },
+    {
+      "startMs": 106200,
+      "endMs": 110200,
+      "text": "[Woman]: That's good to know. Is any safety equipment included?"
+    },
+    {
+      "startMs": 110200,
+      "endMs": 115560,
+      "text": "[Molly]: A helmet isn't part of the standard package, but you can rent one for £7 if needed."
+    },
+    {
+      "startMs": 116200,
+      "endMs": null,
+      "text": "It's not mandatory, but we recommend it for your own safety, especially if you're riding in traffic."
+    },
+    {
+      "startMs": 123800,
+      "endMs": null,
+      "text": "[Woman]: Right. I'll probably get one just to be safe."
+    },
+    {
+      "startMs": 127400,
+      "endMs": null,
+      "text": "[Molly]: As part of the rental, we'll give you a city map, which marks all the cycle-friendly streets"
+    },
+    {
+      "startMs": 132920,
+      "endMs": null,
+      "text": "and scenic routes. Also, the bike will come with lights at both the front and rear."
+    },
+    {
+      "startMs": 139160,
+      "endMs": null,
+      "text": "Very important if you're planning to ride in the evening."
+    },
+    {
+      "startMs": 142280,
+      "endMs": null,
+      "text": "[Woman]: That's very helpful. Do you have anything for repairs in case something goes wrong?"
+    },
+    {
+      "startMs": 147480,
+      "endMs": null,
+      "text": "[Molly]: Yes, we do offer an optional repair kit. It's a small pouch with basic tools,"
+    },
+    {
+      "startMs": 152840,
+      "endMs": null,
+      "text": "a mini-pump, tire patches and a spanner, and we rent it out for just £3."
+    },
+    {
+      "startMs": 158840,
+      "endMs": null,
+      "text": "It's particularly useful if you're riding outside the city centre."
+    },
+    {
+      "startMs": 163080,
+      "endMs": null,
+      "text": "[Woman]: I'll take that too, just in case. Do you offer any kind of loyalty scheme or return customer benefit?"
+    },
+    {
+      "startMs": 169800,
+      "endMs": null,
+      "text": "[Molly]: Actually, yes. If you rent from us again, we'll apply a reduction on your future hire."
+    },
+    {
+      "startMs": 175400,
+      "endMs": null,
+      "text": "We really value returning clients."
+    },
+    {
+      "startMs": 178440,
+      "endMs": null,
+      "text": "[Woman]: That's a great incentive. Also, what time do you close tomorrow?"
+    },
+    {
+      "startMs": 183480,
+      "endMs": null,
+      "text": "[Molly]: Normally, we shut the shop at 5.30, but tomorrow we'll be extending our hours and closing at"
+    },
+    {
+      "startMs": 188600,
+      "endMs": null,
+      "text": "6.15 instead. We're expecting more visitors due to the local weekend market."
+    },
+    {
+      "startMs": 194360,
+      "endMs": null,
+      "text": "[Woman]: Great. I'll try to come by before that. And what's your address?"
+    },
+    {
+      "startMs": 198360,
+      "endMs": null,
+      "text": "[Molly]: Sure. We're at number 28 Cliffton Street. That's spelled C-L-I-F-F-T-O-N."
+    },
+    {
+      "startMs": 205880,
+      "endMs": null,
+      "text": "It's just off the main square right next to the post office. You can't miss it."
+    },
+    {
+      "startMs": 210920,
+      "endMs": null,
+      "text": "[Woman]: Perfect. Thanks so much for all the info, Molly."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "[Molly]: No problem at all. We'll have everything ready when you arrive."
+    },
+    {
+      "startMs": null,
+      "endMs": null,
+      "text": "See you soon."
+    },
+    {
+      "startMs": 11287240,
+      "endMs": 490040,
+      "text": "[Narrator]: You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 42,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": [
+      "One or more transcript cues have unparsed timestamps"
+    ]
+  }
+}

@@ -1,0 +1,490 @@
+{
+  "id": "p4-33-calotype-photography",
+  "title": "Calotype photography",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-1528ebafca0e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 491.088,
+    "checksum": "sha256:a005c94c62c21f86bdd3aca3b7df95a50639e738f73e7dc0b8b68be77e2c97f8"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Calotype photography in Britain and France aFrom Daguerreotype to Calotype Daguerreotype was the first commercial photographic process. Daguerreotype had a problem: the use of copper made it 31. ______ William Talbot began looking for an alternative approach in the 1840s. Talbot was not originally a photographer but an artist who specialised in 32. ______ Talbot used paper instead of copper. These calotype photographs were more 33. ______ because they weren’t so sharp. French Calotype In 1851, the first society for photographers was created. Gustave Le Gray became fascinated by calotype photography. He carried out experiments and produced the first 34. ______ using a camera. He developed equipment that was easier to use outside the 35. ______ Calotype became famous because Le Gray produced 36. ______ about it. People thought photography was more reliable than drawing. It was used to record the work done on old 37. ______ Photography was not ‘art’, according to 38. ______ Summary Photography was thought of as a 39. ______, so reflected the culture of the 1850s. The use of new materials, particularly 40. ______, led to new techniques.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Daguerreotype had a problem: the use of copper made it 31. ______",
+          "answer": "expensive"
+        },
+        {
+          "id": "32",
+          "text": "Talbot was not originally a photographer but an artist who specialised in 32. ______",
+          "answer": "painting"
+        },
+        {
+          "id": "33",
+          "text": "These calotype photographs were more 33. ______ because they weren’t so sharp.",
+          "answer": "realistic"
+        },
+        {
+          "id": "34",
+          "text": "He carried out experiments and produced the first 34. ______ using a camera.",
+          "answer": "enlargements"
+        },
+        {
+          "id": "35",
+          "text": "He developed equipment that was easier to use outside the 35. ______",
+          "answer": "studio"
+        },
+        {
+          "id": "36",
+          "text": "Calotype became famous because Le Gray produced 36. ______ about it.",
+          "answer": "books"
+        },
+        {
+          "id": "37",
+          "text": "It was used to record the work done on old 37. ______",
+          "answer": "buildings"
+        },
+        {
+          "id": "38",
+          "text": "Photography was not ‘art’, according to 38. ______",
+          "answer": "critics"
+        },
+        {
+          "id": "39",
+          "text": "Photography was thought of as a 39. ______, so reflected the culture of the 1850s.",
+          "answer": "science"
+        },
+        {
+          "id": "40",
+          "text": "The use of new materials, particularly 40. ______, led to new techniques.",
+          "answer": "glass"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Calotype photography in Britain and France",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "aFrom Daguerreotype to Calotype",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Daguerreotype was the first commercial photographic process.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Daguerreotype had a problem: the use of copper made it 31. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "William Talbot began looking for an alternative approach in the 1840s.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Talbot was not originally a photographer but an artist who specialised in 32. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Talbot used paper instead of copper.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "These calotype photographs were more 33. ______ because they weren’t so sharp.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "French Calotype",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In 1851, the first society for photographers was created.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Gustave Le Gray became fascinated by calotype photography.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "He carried out experiments and produced the first 34. ______ using a camera.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "He developed equipment that was easier to use outside the 35. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Calotype became famous because Le Gray produced 36. ______ about it.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People thought photography was more reliable than drawing.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It was used to record the work done on old 37. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Photography was not ‘art’, according to 38. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Summary",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Photography was thought of as a 39. ______, so reflected the culture of the 1850s.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The use of new materials, particularly 40. ______, led to new techniques.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "expensive",
+        "32": "painting",
+        "33": "realistic",
+        "34": "enlargements",
+        "35": "studio",
+        "36": "books",
+        "37": "buildings",
+        "38": "critics",
+        "39": "science",
+        "40": "glass"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9840,
+      "text": "Part 4 You will hear part of a lecture about"
+    },
+    {
+      "startMs": 9840,
+      "endMs": 18280,
+      "text": "an early form of photography that developed in Britain and France called Cala type photography."
+    },
+    {
+      "startMs": 18280,
+      "endMs": 21840,
+      "text": "First you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 77000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 81000,
+      "text": "Morning everyone."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 86000,
+      "text": "Welcome back to this series of lectures on the development of photography."
+    },
+    {
+      "startMs": 87000,
+      "endMs": 92000,
+      "text": "Last week we looked at a type of photography called daguerreotype."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 96000,
+      "text": "The first commercially successful photographic process."
+    },
+    {
+      "startMs": 96000,
+      "endMs": 104000,
+      "text": "Today we're going to look at how this was gradually replaced by a technique called Cala type."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 109000,
+      "text": "daguerreotype was a major breakthrough but there were problems with it."
+    },
+    {
+      "startMs": 110000,
+      "endMs": 118000,
+      "text": "In particular because the image was produced on a copper sheet it was expensive to create each photograph."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 127000,
+      "text": "As a result during the 1840s a man named William Talbot began looking for an alternative approach."
+    },
+    {
+      "startMs": 127000,
+      "endMs": 135000,
+      "text": "Talbot eventually became an influential figure but he always said he was not a professional photographer."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 142000,
+      "text": "In fact he trained as an artist. His greatest interest was painting."
+    },
+    {
+      "startMs": 142000,
+      "endMs": 148000,
+      "text": "And he only became involved with photography as a secondary interest."
+    },
+    {
+      "startMs": 148000,
+      "endMs": 155000,
+      "text": "Talbot spent many years trying to solve the problems associated with daguerreotype photography."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 162000,
+      "text": "He tried a number of different approaches and it took some time to find a successful alternative."
+    },
+    {
+      "startMs": 162000,
+      "endMs": 174000,
+      "text": "But on the end what he did was instead of producing each photograph on a sheet of copper he produced them on paper and at the time this was a great advance."
+    },
+    {
+      "startMs": 174000,
+      "endMs": 182000,
+      "text": "Talbot's technique which he called Cala type photography had other advantages as well."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 189000,
+      "text": "Maybe the most important was that the pictures themselves weren't as sharp as the ones produced before."
+    },
+    {
+      "startMs": 189000,
+      "endMs": 202000,
+      "text": "The sharpness had been a problem because it distorted everything but this new Cala type process produced images that were realistic compared to all earlier photographs."
+    },
+    {
+      "startMs": 202000,
+      "endMs": 210000,
+      "text": "Cala type photography was invented in Britain but it was also popular with French photographers."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 218000,
+      "text": "The 1850s were a time of rapid development in France and photography was used to record these changes."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 233000,
+      "text": "One example of how important photography had become occurred in 1851 when the French government established a society to promote the interests of photographers, something that hadn't happened before."
+    },
+    {
+      "startMs": 233000,
+      "endMs": 241000,
+      "text": "To begin with there were five members and maybe the most important was a man called Gustave Le Grey."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 246000,
+      "text": "Le Grey became increasingly fascinated by the Cala type process."
+    },
+    {
+      "startMs": 246000,
+      "endMs": 255000,
+      "text": "Most of all he wanted to produce different types of image so began a series of experiments to see how this might be done."
+    },
+    {
+      "startMs": 255000,
+      "endMs": 265000,
+      "text": "His greatest success was when he designed the first camera that was able to create enlargements, an important step forward."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 273000,
+      "text": "Another of Le Grey's innovations was his work on the size of the equipment necessary to take photographs."
+    },
+    {
+      "startMs": 273000,
+      "endMs": 280000,
+      "text": "Originally it was very heavy and difficult to move about but Le Grey made it lighter and smaller."
+    },
+    {
+      "startMs": 280000,
+      "endMs": 290000,
+      "text": "This meant he could take photographs outdoors more easily rather than being limited to the studio which had sometimes been the case until then."
+    },
+    {
+      "startMs": 291000,
+      "endMs": 298000,
+      "text": "Le Grey produced numerous photographs during this period and was highly regarded among fellow photographers."
+    },
+    {
+      "startMs": 298000,
+      "endMs": 310000,
+      "text": "But his work also became famous among the general public because he wrote a very popular series of books describing the Cala type process and giving examples of his work."
+    },
+    {
+      "startMs": 311000,
+      "endMs": 326000,
+      "text": "The simple fact was that people liked photography. They thought it was reliable, especially compared to drawing where the human hand might alter or exaggerate things."
+    },
+    {
+      "startMs": 326000,
+      "endMs": 339000,
+      "text": "This had various consequences, one of which was that photography was now often used to record the huge program of renovation work of historical buildings in France during the 1850s."
+    },
+    {
+      "startMs": 340000,
+      "endMs": 344000,
+      "text": "The camera doesn't lie, so people said."
+    },
+    {
+      "startMs": 344000,
+      "endMs": 354000,
+      "text": "As a result, the Cala type process was admired not only by photographers but increasingly by the government and by mainstream society."
+    },
+    {
+      "startMs": 354000,
+      "endMs": 362000,
+      "text": "However, debates still remained about whether photography could truly be called an art form like sculpture or drawing."
+    },
+    {
+      "startMs": 362000,
+      "endMs": 372000,
+      "text": "Certainly, although the public liked it and the opinion of critics, photography could not be compared to other established forms of art."
+    },
+    {
+      "startMs": 372000,
+      "endMs": 378000,
+      "text": "So, in summary, what can we say about Cala type photography during this period?"
+    },
+    {
+      "startMs": 378000,
+      "endMs": 386000,
+      "text": "One thing to re-emphasise is that the 1850s were a period of great development in Britain and France."
+    },
+    {
+      "startMs": 386000,
+      "endMs": 398000,
+      "text": "The culture in both countries admired all new technological advances and photography represented these ideas because it was considered to be a science by most people."
+    },
+    {
+      "startMs": 398000,
+      "endMs": 405000,
+      "text": "However, photographers didn't stop experimenting with new materials to improve the quality of their work."
+    },
+    {
+      "startMs": 405000,
+      "endMs": 414000,
+      "text": "Most of all, they were searching for ways to make images more permanent because Cala type photographs tended to fade over time."
+    },
+    {
+      "startMs": 415000,
+      "endMs": 421000,
+      "text": "And in the end, they found that if the image was produced on glass, it lasted much longer."
+    },
+    {
+      "startMs": 421000,
+      "endMs": 428000,
+      "text": "So, Cala type photography was slowly replaced by other techniques which had greater meaning."
+    },
+    {
+      "startMs": 430000,
+      "endMs": 437000,
+      "text": "That is the end of part four. You now have one minute to check your answers to part four."
+    },
+    {
+      "startMs": 444000,
+      "endMs": 447000,
+      "text": "You"
+    },
+    {
+      "startMs": 474000,
+      "endMs": 477000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 49,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

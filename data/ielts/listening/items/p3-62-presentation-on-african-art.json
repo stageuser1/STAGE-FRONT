@@ -1,0 +1,774 @@
+{
+  "id": "p3-62-presentation-on-african-art",
+  "title": "Presentation on African Art",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-92aa7dcc1829",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 521.088,
+    "checksum": "sha256:5fd715a9a79f25a4a7f00cf26a6bb3f92ef29c04d35572e3c8d7c42b6ae16cb0"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–24",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What first attracted Terence to the topic of Ife sculptures?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He read several journal articles."
+            },
+            {
+              "id": "B",
+              "text": "He attended an exhibition."
+            },
+            {
+              "id": "C",
+              "text": "He spent some time in Nigeria."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "In his presentation Terence will focus on sculptures featuring",
+          "options": [
+            {
+              "id": "A",
+              "text": "abstract designs."
+            },
+            {
+              "id": "B",
+              "text": "fish and wild animals."
+            },
+            {
+              "id": "C",
+              "text": "people."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "23",
+          "text": "How did Terence finance his trip to Ife?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He received money from an arts organisation."
+            },
+            {
+              "id": "B",
+              "text": "His mother and father paid for him."
+            },
+            {
+              "id": "C",
+              "text": "He wrote about the trip for a newspaper."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "What was most memorable for Terence about his trip?",
+          "options": [
+            {
+              "id": "A",
+              "text": "helping at an archaeological site"
+            },
+            {
+              "id": "B",
+              "text": "the professor he met"
+            },
+            {
+              "id": "C",
+              "text": "the artists he got to know"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "25-26",
+      "title": "Questions 25 and 26",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO additions will Terence make to the part of the presentation on the sculptures?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "enlarged pictures of the sculptures"
+        },
+        {
+          "id": "B",
+          "text": "more material about the subjects"
+        },
+        {
+          "id": "C",
+          "text": "more about his personal opinion of the art works"
+        },
+        {
+          "id": "D",
+          "text": "extra information about the techniques used"
+        },
+        {
+          "id": "E",
+          "text": "additional information about the artists"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Which TWO additions will Terence make to the part of the presentation on the sculptures?",
+          "answer": "A"
+        },
+        {
+          "id": "26",
+          "text": "Which TWO additions will Terence make to the part of the presentation on the sculptures?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "27-28",
+      "title": "Questions 27 and 28",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO additions will Terence make to the section on history?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "data about the kings in the Ife area"
+        },
+        {
+          "id": "B",
+          "text": "extra information about the surrounding region"
+        },
+        {
+          "id": "C",
+          "text": "examination of the beliefs of the Ife people"
+        },
+        {
+          "id": "D",
+          "text": "an explanation of the development of modern Ife"
+        },
+        {
+          "id": "E",
+          "text": "more details of past activities of the Ife people"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Which TWO additions will Terence make to the section on history?",
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "Which TWO additions will Terence make to the section on history?",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "29-30",
+      "title": "Questions 29 and 30",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO features of his research in Nigeria will Terence discuss in his presentation?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "the influence of the sculptures on western artists"
+        },
+        {
+          "id": "B",
+          "text": "the uncertainty over who made the sculptures"
+        },
+        {
+          "id": "C",
+          "text": "the sources of the materials used for the sculptures"
+        },
+        {
+          "id": "D",
+          "text": "the problems he faced in collecting information"
+        },
+        {
+          "id": "E",
+          "text": "the original discovery of the sculptures"
+        }
+      ],
+      "questions": [
+        {
+          "id": "29",
+          "text": "Which TWO features of his research in Nigeria will Terence discuss in his presentation?",
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "Which TWO features of his research in Nigeria will Terence discuss in his presentation?",
+          "answer": "E"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "C",
+        "23": "A",
+        "24": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "25_26": [
+          "A",
+          "D"
+        ],
+        "27_28": [
+          "B",
+          "C"
+        ],
+        "29_30": [
+          "B",
+          "E"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "25": "A",
+        "26": "D",
+        "27": "B",
+        "28": "C",
+        "29": "B",
+        "30": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12680,
+      "text": "You will hear a conversation between an art history student called Terrance and his"
+    },
+    {
+      "startMs": 12680,
+      "endMs": 18400,
+      "text": "tutor about the student's plan for a class presentation."
+    },
+    {
+      "startMs": 18400,
+      "endMs": 22320,
+      "text": "First you have some time to look at questions 21 to 24."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 56760,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 56760,
+      "endMs": 66560,
+      "text": "Tutor: Okay Terrance, now I've looked through your preliminary outline and notes for the"
+    },
+    {
+      "startMs": 66560,
+      "endMs": 70960,
+      "text": "presentation on the art of the Efe region in Africa."
+    },
+    {
+      "startMs": 70960,
+      "endMs": 73160,
+      "text": "That's in Nigeria right?"
+    },
+    {
+      "startMs": 73160,
+      "endMs": 74160,
+      "text": "Terrance: Yes."
+    },
+    {
+      "startMs": 74160,
+      "endMs": 79360,
+      "text": "I'm concentrating on Efe sculptures from the 12th to the 15th century."
+    },
+    {
+      "startMs": 79360,
+      "endMs": 82760,
+      "text": "Tutor: How did you get interested in that?"
+    },
+    {
+      "startMs": 82760,
+      "endMs": 87760,
+      "text": "I know there have been some recent articles in the journals about African sculpture."
+    },
+    {
+      "startMs": 87760,
+      "endMs": 93560,
+      "text": "Terrance: Well, I've read most of those now, but initially I got my introduction to this at a special"
+    },
+    {
+      "startMs": 93560,
+      "endMs": 96640,
+      "text": "display at the City Museum a few years ago."
+    },
+    {
+      "startMs": 96640,
+      "endMs": 101760,
+      "text": "I just happened to be there and saw these works and thought they were fantastic."
+    },
+    {
+      "startMs": 101760,
+      "endMs": 105640,
+      "text": "And I even went to Nigeria last summer to see more of them."
+    },
+    {
+      "startMs": 105640,
+      "endMs": 111440,
+      "text": "Tutor: I've seen the photos for your presentation and I must say the sculptures are gorgeous"
+    },
+    {
+      "startMs": 111440,
+      "endMs": 115200,
+      "text": "portrayals of what appear to be kings and queens."
+    },
+    {
+      "startMs": 115200,
+      "endMs": 120320,
+      "text": "Terrance: Yes, I decided to concentrate on those as they're the most typical."
+    },
+    {
+      "startMs": 120320,
+      "endMs": 124040,
+      "text": "They're interesting because they're so naturalistic."
+    },
+    {
+      "startMs": 124040,
+      "endMs": 129200,
+      "text": "Unlike the abstract figures we often associate with African art, there's also a lovely sculpture"
+    },
+    {
+      "startMs": 129200,
+      "endMs": 135440,
+      "text": "of a mudfish and one of the scaly crocodile, but I didn't get very good pictures of those"
+    },
+    {
+      "startMs": 135440,
+      "endMs": 137480,
+      "text": "so I won't spend long on them."
+    },
+    {
+      "startMs": 137480,
+      "endMs": 138480,
+      "text": "Tutor: Right."
+    },
+    {
+      "startMs": 138480,
+      "endMs": 143280,
+      "text": "So what was the city of Efe like when these works were made?"
+    },
+    {
+      "startMs": 143280,
+      "endMs": 145240,
+      "text": "It's on the Niger River, isn't it?"
+    },
+    {
+      "startMs": 145240,
+      "endMs": 146240,
+      "text": "Terrance: Yeah."
+    },
+    {
+      "startMs": 146240,
+      "endMs": 151600,
+      "text": "The boat traffic's what made it a centre of commerce then as it still is today, but nowadays"
+    },
+    {
+      "startMs": 151600,
+      "endMs": 154800,
+      "text": "it's better known as the home of a big university."
+    },
+    {
+      "startMs": 154800,
+      "endMs": 159080,
+      "text": "Tutor: Speaking of modern day, Efe, tell me about your trip."
+    },
+    {
+      "startMs": 159080,
+      "endMs": 162880,
+      "text": "Terrance: I was incredibly lucky to be able to get enough money to go."
+    },
+    {
+      "startMs": 162880,
+      "endMs": 167000,
+      "text": "My parents encouraged me, but they couldn't afford to send me."
+    },
+    {
+      "startMs": 167000,
+      "endMs": 171240,
+      "text": "I applied for a grant from the Arts Council and in the end I got it."
+    },
+    {
+      "startMs": 171240,
+      "endMs": 175920,
+      "text": "I also wrote a series of articles about my trip for the local newspaper, but I didn't"
+    },
+    {
+      "startMs": 175920,
+      "endMs": 177520,
+      "text": "get any money for that."
+    },
+    {
+      "startMs": 177520,
+      "endMs": 179920,
+      "text": "I was just pleased to get them published."
+    },
+    {
+      "startMs": 179920,
+      "endMs": 181960,
+      "text": "Tutor: And the highlight of the trip?"
+    },
+    {
+      "startMs": 181960,
+      "endMs": 186640,
+      "text": "Terrance: That had to be meeting a professor, working on the site in Efe, who had been a young boy"
+    },
+    {
+      "startMs": 186640,
+      "endMs": 192720,
+      "text": "when they first discovered the sculptures by accident, to building site in 1938."
+    },
+    {
+      "startMs": 192720,
+      "endMs": 195160,
+      "text": "He had been working at the site."
+    },
+    {
+      "startMs": 195160,
+      "endMs": 200280,
+      "text": "Of course, I also got to talk to lots of artists who were working there today, and I got"
+    },
+    {
+      "startMs": 200280,
+      "endMs": 206760,
+      "text": "to try my hand at making a little sculpture myself."
+    },
+    {
+      "startMs": 206760,
+      "endMs": 212200,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 25"
+    },
+    {
+      "startMs": 212200,
+      "endMs": 212920,
+      "text": "to 30."
+    },
+    {
+      "startMs": 225160,
+      "endMs": 248560,
+      "text": "Now, listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 248560,
+      "endMs": 256480,
+      "text": "Tutor: Well, let's see what you might do to improve what you're planning for your presentation."
+    },
+    {
+      "startMs": 256480,
+      "endMs": 261760,
+      "text": "Terrance: About the sculptures themselves, I think I need to add as much as possible about the details"
+    },
+    {
+      "startMs": 261760,
+      "endMs": 263680,
+      "text": "of the way they were made."
+    },
+    {
+      "startMs": 263680,
+      "endMs": 268760,
+      "text": "Of course, I can't add anything about the artists who made them, because nobody really"
+    },
+    {
+      "startMs": 268760,
+      "endMs": 270600,
+      "text": "knows anything about them."
+    },
+    {
+      "startMs": 270600,
+      "endMs": 272320,
+      "text": "Tutor: All good points."
+    },
+    {
+      "startMs": 272320,
+      "endMs": 277480,
+      "text": "And you've certainly said enough about what the sculptures depict, what the subjects"
+    },
+    {
+      "startMs": 277480,
+      "endMs": 278480,
+      "text": "are."
+    },
+    {
+      "startMs": 278480,
+      "endMs": 283960,
+      "text": "That's well-covered, but I'd make some bigger photos of them so you can clearly see the"
+    },
+    {
+      "startMs": 283960,
+      "endMs": 286760,
+      "text": "fine detail, okay?"
+    },
+    {
+      "startMs": 286760,
+      "endMs": 291720,
+      "text": "And I would limit my personal reactions to these works of art if I were you."
+    },
+    {
+      "startMs": 291720,
+      "endMs": 294560,
+      "text": "I know you think they're fantastic."
+    },
+    {
+      "startMs": 294560,
+      "endMs": 295560,
+      "text": "Terrance: You're right."
+    },
+    {
+      "startMs": 295560,
+      "endMs": 298640,
+      "text": "I'll contain my enthusiasm."
+    },
+    {
+      "startMs": 298640,
+      "endMs": 302960,
+      "text": "What about the section of the presentation, which I call history?"
+    },
+    {
+      "startMs": 302960,
+      "endMs": 307440,
+      "text": "I'd like to go into more depth about the history of that whole area, you know, in the"
+    },
+    {
+      "startMs": 307440,
+      "endMs": 309800,
+      "text": "countries around Nigeria."
+    },
+    {
+      "startMs": 309800,
+      "endMs": 315560,
+      "text": "Tutor: That would make the presentation stronger, but I think you've covered the situation regarding"
+    },
+    {
+      "startMs": 315560,
+      "endMs": 320800,
+      "text": "the rulers of the country quite well, and you've got plenty already about what the"
+    },
+    {
+      "startMs": 320800,
+      "endMs": 326200,
+      "text": "ethay people were doing then and the way their society was structured."
+    },
+    {
+      "startMs": 326200,
+      "endMs": 331120,
+      "text": "And in fact, I think you could cut out a bit about modern Nigerian history because it's"
+    },
+    {
+      "startMs": 331120,
+      "endMs": 332440,
+      "text": "not relevant."
+    },
+    {
+      "startMs": 332440,
+      "endMs": 335080,
+      "text": "Terrance: I agree, that doesn't fit."
+    },
+    {
+      "startMs": 335080,
+      "endMs": 339760,
+      "text": "But perhaps I should concentrate more on the religious beliefs since all these sculptures"
+    },
+    {
+      "startMs": 339760,
+      "endMs": 342560,
+      "text": "do seem to have some kind of religious association."
+    },
+    {
+      "startMs": 342560,
+      "endMs": 343560,
+      "text": "Tutor: Good."
+    },
+    {
+      "startMs": 343560,
+      "endMs": 346520,
+      "text": "I can lend you a book on that."
+    },
+    {
+      "startMs": 346520,
+      "endMs": 352000,
+      "text": "Now probably the part the class will find most interesting is the report of your trip"
+    },
+    {
+      "startMs": 352000,
+      "endMs": 355800,
+      "text": "to Nigeria and the research you did there."
+    },
+    {
+      "startMs": 355800,
+      "endMs": 359760,
+      "text": "So I gather you managed to use the university library in ethay."
+    },
+    {
+      "startMs": 359760,
+      "endMs": 360760,
+      "text": "Terrance: Yes."
+    },
+    {
+      "startMs": 360760,
+      "endMs": 365520,
+      "text": "As soon as I'd explained why I wanted the information, that was no problem."
+    },
+    {
+      "startMs": 365520,
+      "endMs": 367800,
+      "text": "They couldn't have been more helpful."
+    },
+    {
+      "startMs": 367800,
+      "endMs": 372040,
+      "text": "There were some interesting accounts of how the first sculptures were found and what"
+    },
+    {
+      "startMs": 372040,
+      "endMs": 375480,
+      "text": "happened to them, which I want to include."
+    },
+    {
+      "startMs": 375480,
+      "endMs": 380640,
+      "text": "What struck me when I saw the sculptures in Nigeria is the extent to which 20th century"
+    },
+    {
+      "startMs": 380640,
+      "endMs": 386200,
+      "text": "European artists were influenced by them, but that's beyond the scope of my presentation,"
+    },
+    {
+      "startMs": 386200,
+      "endMs": 387200,
+      "text": "I think."
+    },
+    {
+      "startMs": 387200,
+      "endMs": 388200,
+      "text": "Tutor: Yes."
+    },
+    {
+      "startMs": 388200,
+      "endMs": 391960,
+      "text": "What about the sources of the materials they used?"
+    },
+    {
+      "startMs": 391960,
+      "endMs": 393880,
+      "text": "You don't mention that anywhere."
+    },
+    {
+      "startMs": 393880,
+      "endMs": 397040,
+      "text": "Terrance: I didn't manage to find out much about that."
+    },
+    {
+      "startMs": 397040,
+      "endMs": 400960,
+      "text": "I want to cover the theories about who the original sculptors were though."
+    },
+    {
+      "startMs": 400960,
+      "endMs": 405520,
+      "text": "Tutor: Yes, the idea that a lot of them may have been made by the same person."
+    },
+    {
+      "startMs": 405520,
+      "endMs": 406520,
+      "text": "That's very interesting."
+    },
+    {
+      "startMs": 406520,
+      "endMs": 408200,
+      "text": "Terrance: It is, isn't it?"
+    },
+    {
+      "startMs": 408200,
+      "endMs": 409200,
+      "text": "Right."
+    },
+    {
+      "startMs": 409200,
+      "endMs": 410840,
+      "text": "Well, thanks for all the advice."
+    },
+    {
+      "startMs": 410840,
+      "endMs": 415440,
+      "text": "No, I think I need to work."
+    },
+    {
+      "startMs": 415440,
+      "endMs": 418080,
+      "text": "That is the end of part three."
+    },
+    {
+      "startMs": 418080,
+      "endMs": 422120,
+      "text": "You now have 30 seconds to check your answers to part three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 95,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

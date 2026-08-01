@@ -1,0 +1,556 @@
+{
+  "id": "p2-85-cocoa-beans",
+  "title": "Cocoa Beans",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-c0e884b65e57",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 566.592,
+    "checksum": "sha256:a0750f86dfa54cca66075a7d0bf60c58f97a0229417385d3d4812f554f03b3aa"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 11–16",
+      "instruction": "Complete the flow chart below. Write ONE WORD ONLY for each answer. Cocoa Beans Chocolate beans are 11. __________ and then bags are shipped. ↓ Bags are then 12. __________ and weighed by machines. ↓ Next, chocolate beans are 13. __________ in a hopper. ↓ After being roasted at a high temperature ↓ Boiled chocolate beans are 14. __________ and cracked. ↓ Roasted beans needs to be 15. __________ ↓ Roasted beans are 16. __________ in the pocket.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Chocolate beans are 11. __________ and then bags are shipped.",
+          "answer": "Harvested"
+        },
+        {
+          "id": "12",
+          "text": "Bags are then 12. __________ and weighed by machines.",
+          "answer": "Opened"
+        },
+        {
+          "id": "13",
+          "text": "Next, chocolate beans are 13. __________ in a hopper.",
+          "answer": "Cleaned"
+        },
+        {
+          "id": "14",
+          "text": "Boiled chocolate beans are 14. __________ and cracked.",
+          "answer": "Expanded"
+        },
+        {
+          "id": "15",
+          "text": "Roasted beans needs to be 15. __________",
+          "answer": "Cooled"
+        },
+        {
+          "id": "16",
+          "text": "Roasted beans are 16. __________ in the pocket.",
+          "answer": "Sealed"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the flow chart below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Cocoa Beans",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Chocolate beans are 11. __________ and then bags are shipped.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Bags are then 12. __________ and weighed by machines.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Next, chocolate beans are 13. __________ in a hopper.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "After being roasted at a high temperature",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Boiled chocolate beans are 14. __________ and cracked.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Roasted beans needs to be 15. __________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Roasted beans are 16. __________ in the pocket.",
+          "list": false,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 17–20",
+      "instruction": "Choose the correct letter from the box A–D, next to Questions 17–20.",
+      "options": [
+        {
+          "id": "A",
+          "text": "intense"
+        },
+        {
+          "id": "B",
+          "text": "mild"
+        },
+        {
+          "id": "C",
+          "text": "chocolaty"
+        },
+        {
+          "id": "D",
+          "text": "smoky"
+        }
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "First Crack",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "Green Beans",
+          "answer": "D"
+        },
+        {
+          "id": "19",
+          "text": "French Roast",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "Espresso Smoky",
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "11": "Harvested",
+        "12": "Opened",
+        "13": "Cleaned",
+        "14": "Expanded",
+        "15": "Cooled",
+        "16": "Sealed"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "17": "B",
+        "18": "D",
+        "19": "C",
+        "20": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12600,
+      "text": "Section 2. You'll hear a talk between a host and a professor called Allison Downing about"
+    },
+    {
+      "startMs": 12600,
+      "endMs": 19600,
+      "text": "Coco Beans. First, you have some time to look at questions 11 to 16."
+    },
+    {
+      "startMs": 42600,
+      "endMs": 56600,
+      "text": "Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 56600,
+      "endMs": 62600,
+      "text": "Host: Hello and welcome to today's talk. Here with me is the famous botanist, Professor"
+    },
+    {
+      "startMs": 62600,
+      "endMs": 70400,
+      "text": "Allison Downing. So, Allison, tell us something about Coco Beans. Coco Beans, also called"
+    },
+    {
+      "startMs": 70400,
+      "endMs": 76400,
+      "text": "Professor: Coco Beans, are the primary constituent in making chocolate, grown in tropical areas in"
+    },
+    {
+      "startMs": 76400,
+      "endMs": 83400,
+      "text": "South and Central America, West Africa and Asia. The Coco tree is often raised on small family-owned"
+    },
+    {
+      "startMs": 83400,
+      "endMs": 90400,
+      "text": "farms. When the harvested pots are open to expose the beans, the pulp and Coco seeds are removed"
+    },
+    {
+      "startMs": 90400,
+      "endMs": 97400,
+      "text": "and the rind is discarded. The pulp and seeds are then piled in heaps, placed in bins or laid out"
+    },
+    {
+      "startMs": 97400,
+      "endMs": 104400,
+      "text": "on grates for several days. During this time, the seeds and pulp undergo a process called"
+    },
+    {
+      "startMs": 104400,
+      "endMs": 111400,
+      "text": "sweating, where the thick pulp liquefies as it ferments. The fermented pulp trickles away,"
+    },
+    {
+      "startMs": 111400,
+      "endMs": 117400,
+      "text": "leaving Coco seeds behind to be collected. This is when the beans are harvested and then"
+    },
+    {
+      "startMs": 117400,
+      "endMs": 124400,
+      "text": "the bags holding them are ready to be transported. But the most important step in processing the"
+    },
+    {
+      "startMs": 124400,
+      "endMs": 131400,
+      "text": "Coco bean is cleaning it. Once the beans are unloaded from the railroad cars, the packages"
+    },
+    {
+      "startMs": 131400,
+      "endMs": 138400,
+      "text": "are opened and then weighed by machines. Then the pots are split and the seeds or beans are"
+    },
+    {
+      "startMs": 138400,
+      "endMs": 144400,
+      "text": "covered with a sweet white pulp or mucilage. On arrival at the factory, the Coco beans are"
+    },
+    {
+      "startMs": 144400,
+      "endMs": 149900,
+      "text": "sorted and put in a hopper to be cleaned more rigorously. The wet beans are then transported"
+    },
+    {
+      "startMs": 149900,
+      "endMs": 155900,
+      "text": "to a facility so they can be fermented and dried. They are fermented for four to seven"
+    },
+    {
+      "startMs": 155900,
+      "endMs": 162900,
+      "text": "days and must be mixed every two days. They are dried for five to fourteen days, depending"
+    },
+    {
+      "startMs": 162900,
+      "endMs": 169900,
+      "text": "on the climate conditions. The fermented beans are dried by spreading them out over a large"
+    },
+    {
+      "startMs": 169900,
+      "endMs": 177900,
+      "text": "surface and constantly raking them. Then the beans are ready to be roasted. Now, roasting"
+    },
+    {
+      "startMs": 177900,
+      "endMs": 184900,
+      "text": "takes place at a high temperature and then the beans are boiled in a heated chamber. During"
+    },
+    {
+      "startMs": 184900,
+      "endMs": 191900,
+      "text": "the roasting process, the beans will be expanded and cracked. But prior to this, the beans"
+    },
+    {
+      "startMs": 191900,
+      "endMs": 199400,
+      "text": "are trodden and shuffled about using bare human feet. During this process, red clay mixed with"
+    },
+    {
+      "startMs": 199400,
+      "endMs": 206400,
+      "text": "water is sprinkled over the beans to obtain a finer color, polish and protection against"
+    },
+    {
+      "startMs": 206400,
+      "endMs": 213400,
+      "text": "molds during shipment to factories in the United States, the Netherlands, the United Kingdom"
+    },
+    {
+      "startMs": 213400,
+      "endMs": 219400,
+      "text": "and other countries. Now, back to what I was saying. After the beans are cracked, they need"
+    },
+    {
+      "startMs": 219400,
+      "endMs": 227400,
+      "text": "to be cooled. Then the roasted beans are sealed in pockets."
+    },
+    {
+      "startMs": 227400,
+      "endMs": 233400,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions seventeen"
+    },
+    {
+      "startMs": 233400,
+      "endMs": 256400,
+      "text": "to twenty. Now listen and answer questions seventeen to twenty."
+    },
+    {
+      "startMs": 256400,
+      "endMs": 267400,
+      "text": "Host: Well, that is not a simple process, is it? But someone told me that different roasting levels"
+    },
+    {
+      "startMs": 267400,
+      "endMs": 274400,
+      "text": "of coffee can lead to different kinds of flavors. Yes, roasting coffee transforms the chemical"
+    },
+    {
+      "startMs": 274400,
+      "endMs": 280400,
+      "text": "Professor: and physical properties of green coffee beans into roasted coffee products. The roasting"
+    },
+    {
+      "startMs": 280400,
+      "endMs": 286400,
+      "text": "process is what produces the characteristic flavor of coffee by causing the green coffee"
+    },
+    {
+      "startMs": 286400,
+      "endMs": 293400,
+      "text": "beans to change in taste. Unroasted beans contain similar, if not, higher levels of acids,"
+    },
+    {
+      "startMs": 293400,
+      "endMs": 300400,
+      "text": "protein, sugars and caffeine as those that have been roasted. But lack the taste of roasted"
+    },
+    {
+      "startMs": 300400,
+      "endMs": 306400,
+      "text": "coffee beans due to the may-lard and other chemical reactions that occur during roasting."
+    },
+    {
+      "startMs": 306400,
+      "endMs": 312400,
+      "text": "The vast majority of coffee is roasted commercially on a large scale, but small scale"
+    },
+    {
+      "startMs": 312400,
+      "endMs": 318400,
+      "text": "commercial roasting has grown significantly with the trend toward single origin coffees"
+    },
+    {
+      "startMs": 318400,
+      "endMs": 324400,
+      "text": "served at specialty shops. Some coffee drinkers even roast coffee at home as a hobby"
+    },
+    {
+      "startMs": 324400,
+      "endMs": 330400,
+      "text": "in order to both experiment with the flavor profile of the beans and ensure the freshest possible"
+    },
+    {
+      "startMs": 330400,
+      "endMs": 337400,
+      "text": "roast. So here I'm going to introduce some of these roasted coffee beans and their special"
+    },
+    {
+      "startMs": 337400,
+      "endMs": 344400,
+      "text": "flavors. Now, the first crack is lighter-bodied and has a higher acidity level with no obvious"
+    },
+    {
+      "startMs": 344400,
+      "endMs": 350400,
+      "text": "roast flavor and is popular for its special mild taste. This level of roast is ideal for"
+    },
+    {
+      "startMs": 350400,
+      "endMs": 356400,
+      "text": "tasting a full original character of the coffee. The green beans are raw, unroasted coffee"
+    },
+    {
+      "startMs": 356400,
+      "endMs": 362400,
+      "text": "beans. They are strictly hard beans with a smoky flavor and a slightly acidic."
+    },
+    {
+      "startMs": 362400,
+      "endMs": 368400,
+      "text": "We've also got French roast and the flavor that comes across in French roast coffee usually"
+    },
+    {
+      "startMs": 368400,
+      "endMs": 373400,
+      "text": "has more to do with the roasting process than the actual quality of the beans."
+    },
+    {
+      "startMs": 373400,
+      "endMs": 379400,
+      "text": "By the time the beans are dark enough to qualify as French, most of their original flavor has"
+    },
+    {
+      "startMs": 379400,
+      "endMs": 385400,
+      "text": "dissipated. In its place come the flavors of caramelizing sugar, bittersweet coffee and"
+    },
+    {
+      "startMs": 385400,
+      "endMs": 392400,
+      "text": "often a bit of chocolate. And finally, espresso smoky. That is, coffee brewed by forcing a small"
+    },
+    {
+      "startMs": 392400,
+      "endMs": 397400,
+      "text": "amount of nearly boiling water under pressure through finely ground coffee beans."
+    },
+    {
+      "startMs": 397400,
+      "endMs": 403400,
+      "text": "Espresso is generally thicker than coffee brewed through other methods, has a higher concentration"
+    },
+    {
+      "startMs": 403400,
+      "endMs": 409400,
+      "text": "of suspended and dissolved solids and has creamer on top. As a result of the pressurized brewing"
+    },
+    {
+      "startMs": 409400,
+      "endMs": 415400,
+      "text": "process, the flavors and chemicals in a typical cup of espresso are very concentrated."
+    },
+    {
+      "startMs": 415400,
+      "endMs": 422400,
+      "text": "Espresso is also the base for other drinks, such as café latte, cappuccino, café macchato,"
+    },
+    {
+      "startMs": 422400,
+      "endMs": 426400,
+      "text": "café mocha, flat white or café americano."
+    },
+    {
+      "startMs": 429400,
+      "endMs": 436400,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 439400,
+      "endMs": 446400,
+      "text": "Now turn to section 3."
+    },
+    {
+      "startMs": 469400,
+      "endMs": 476400,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 499400,
+      "endMs": 506400,
+      "text": ". 。"
+    },
+    {
+      "startMs": 529400,
+      "endMs": 536400,
+      "text": ". 。"
+    },
+    {
+      "startMs": 559400,
+      "endMs": 566400,
+      "text": ". 。"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 63,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

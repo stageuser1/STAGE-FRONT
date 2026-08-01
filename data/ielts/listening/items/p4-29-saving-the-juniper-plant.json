@@ -1,0 +1,455 @@
+{
+  "id": "p4-29-saving-the-juniper-plant",
+  "title": "Saving the juniper plant",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-479290d6afd0",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 323.064,
+    "checksum": "sha256:be752b85a11d413d43b5c376b3be8680ca1f9a82e0a851254d29fbc5178c6e11"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. Saving the juniper plant Background Juniper was one of the first plants to colonise Britain after the last 31. _____ Its smoke is virtually 32. _____ so juniper wood was used as fuel in illegal activities. Oils from the plant were used to prevent 33. _____ spreading. Nowadays, its berries are widely used to 34. _____ food and drink. Ecology Juniper plants also support several species of insects and 35. _____ Problems In current juniper populations, ratios of the 36. _____ are poor. Many of the bushes in each group are of the same age so 37. _____ of whole populations is rapid. Solutions Plantlife is trialling novel techniques across 38. _____ areas of England. One measure is to introduce 39. _____ for seedlings.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Juniper was one of the first plants to colonise Britain after the last 31. _____",
+          "answer": "Ice age"
+        },
+        {
+          "id": "32",
+          "text": "Its smoke is virtually 32. _____ so juniper wood was used as fuel in illegal activities.",
+          "answer": "Invisible"
+        },
+        {
+          "id": "33",
+          "text": "Oils from the plant were used to prevent 33. _____ spreading.",
+          "answer": "Infection"
+        },
+        {
+          "id": "34",
+          "text": "Nowadays, its berries are widely used to 34. _____ food and drink.",
+          "answer": "Flavour/Flavor"
+        },
+        {
+          "id": "35",
+          "text": "Juniper plants also support several species of insects and 35. _____",
+          "answer": "Fungus"
+        },
+        {
+          "id": "36",
+          "text": "In current juniper populations, ratios of the 36. _____ are poor.",
+          "answer": "Sexes"
+        },
+        {
+          "id": "37",
+          "text": "Many of the bushes in each group are of the same age so 37. _____ of whole populations is rapid.",
+          "answer": "Extinction"
+        },
+        {
+          "id": "38",
+          "text": "Plantlife is trialling novel techniques across 38. _____ areas of England.",
+          "answer": "Lowland"
+        },
+        {
+          "id": "39",
+          "text": "One measure is to introduce 39. _____ for seedlings.",
+          "answer": "Shelters"
+        },
+        {
+          "id": "40",
+          "text": "A further step is to plant 40. _____ from healthy bushes.",
+          "answer": "Cuttings"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Saving the juniper plant",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Juniper was one of the first plants to colonise Britain after the last 31. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Its smoke is virtually 32. _____ so juniper wood was used as fuel in illegal activities.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Oils from the plant were used to prevent 33. _____ spreading.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Nowadays, its berries are widely used to 34. _____ food and drink.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Ecology",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Juniper plants also support several species of insects and 35. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problems",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In current juniper populations, ratios of the 36. _____ are poor.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Many of the bushes in each group are of the same age so 37. _____ of whole populations is rapid.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Solutions",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Plantlife is trialling novel techniques across 38. _____ areas of England.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "One measure is to introduce 39. _____ for seedlings.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A further step is to plant 40. _____ from healthy bushes.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Ice age",
+        "32": "Invisible",
+        "33": "Infection",
+        "34": "Flavour/Flavor",
+        "35": "Fungus",
+        "36": "Sexes",
+        "37": "Extinction",
+        "38": "Lowland",
+        "39": "Shelters",
+        "40": "Cuttings"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5520,
+      "text": "Now turn to section 4."
+    },
+    {
+      "startMs": 5520,
+      "endMs": 10440,
+      "text": "Section 4 You will hear an environmental study student"
+    },
+    {
+      "startMs": 10440,
+      "endMs": 16320,
+      "text": "giving a presentation about his project on saving an endangered species of plant."
+    },
+    {
+      "startMs": 16320,
+      "endMs": 19480,
+      "text": "Now you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 49760,
+      "text": "For my presentation I am going to summarize what I have found out about efforts to save"
+    },
+    {
+      "startMs": 49760,
+      "endMs": 53200,
+      "text": "one plant species, the Juniper bush."
+    },
+    {
+      "startMs": 53200,
+      "endMs": 57800,
+      "text": "It once flourished in Britain and throughout the world's temperate zones."
+    },
+    {
+      "startMs": 57800,
+      "endMs": 62120,
+      "text": "But over the last few decades has declined considerably."
+    },
+    {
+      "startMs": 62120,
+      "endMs": 67320,
+      "text": "Before I go on to explain the steps being taken to save it in England, let me start by"
+    },
+    {
+      "startMs": 67320,
+      "endMs": 72760,
+      "text": "looking at some background information and why the Juniper has been so important in"
+    },
+    {
+      "startMs": 72760,
+      "endMs": 78520,
+      "text": "cultural, as well as ecological terms, historically and in the present day."
+    },
+    {
+      "startMs": 78520,
+      "endMs": 84880,
+      "text": "Firstly, I want to emphasise the fact that Juniper is a very ancient plant."
+    },
+    {
+      "startMs": 84880,
+      "endMs": 89680,
+      "text": "It has been discovered that it was actually amongst the first species of plants to establish"
+    },
+    {
+      "startMs": 89680,
+      "endMs": 94960,
+      "text": "itself in Britain in the period following the most recent ice age."
+    },
+    {
+      "startMs": 94960,
+      "endMs": 100000,
+      "text": "And as I say, it has a much valued place in British culture."
+    },
+    {
+      "startMs": 100000,
+      "endMs": 105520,
+      "text": "It was used widely as a fuel during the Middle Ages because when burnt, the smoke given"
+    },
+    {
+      "startMs": 105520,
+      "endMs": 112080,
+      "text": "off is all but invisible and so any illicit activities involving fire could go on without"
+    },
+    {
+      "startMs": 112080,
+      "endMs": 117400,
+      "text": "being detected, for example, cooking game hunted illegally."
+    },
+    {
+      "startMs": 117400,
+      "endMs": 123480,
+      "text": "It also has valuable medicinal properties, particularly during large epidemics, oils"
+    },
+    {
+      "startMs": 123480,
+      "endMs": 128440,
+      "text": "were extracted from the Juniper wood and sprayed in the air to try to prevent the spread"
+    },
+    {
+      "startMs": 128440,
+      "endMs": 131520,
+      "text": "of infection in hospital wards."
+    },
+    {
+      "startMs": 131520,
+      "endMs": 137880,
+      "text": "And these days, perhaps its most well-known use is in cuisine, cooking, where its berries"
+    },
+    {
+      "startMs": 137880,
+      "endMs": 145560,
+      "text": "are a much valued ingredient, used to flavour a variety of meat dishes and also drinks."
+    },
+    {
+      "startMs": 145560,
+      "endMs": 151400,
+      "text": "Turning now to ecological issues, Juniper bushes play an important role in supporting other"
+    },
+    {
+      "startMs": 151400,
+      "endMs": 153360,
+      "text": "living things."
+    },
+    {
+      "startMs": 153360,
+      "endMs": 158320,
+      "text": "If Juniper bushes are wiped out, this would radically affect many different insects and"
+    },
+    {
+      "startMs": 158320,
+      "endMs": 163840,
+      "text": "also fungus species, we simply cannot afford to let this species die out."
+    },
+    {
+      "startMs": 168880,
+      "endMs": 174880,
+      "text": "So, why is the Juniper plant declining at such a rapid rate?"
+    },
+    {
+      "startMs": 174880,
+      "endMs": 182000,
+      "text": "Well, a survey conducted in the North and West of Britain in 2004 to 5 showed that a major"
+    },
+    {
+      "startMs": 182000,
+      "endMs": 189080,
+      "text": "problem is the fact that in present-day populations, ratios between the sexes are unbalanced and"
+    },
+    {
+      "startMs": 189080,
+      "endMs": 194240,
+      "text": "without a proper mix of male and female bushes don't get pollinated."
+    },
+    {
+      "startMs": 194640,
+      "endMs": 201200,
+      "text": "Also, the survey found that in a lot of these populations, the plants are the same age,"
+    },
+    {
+      "startMs": 201200,
+      "endMs": 207040,
+      "text": "so this means that bushes grow old and start to die at similar times, leading to swift"
+    },
+    {
+      "startMs": 207040,
+      "endMs": 210240,
+      "text": "extinction of whole populations."
+    },
+    {
+      "startMs": 210240,
+      "endMs": 216840,
+      "text": "Now, the charity Plantlife is trying to do something to halt the decline in Juniper species."
+    },
+    {
+      "startMs": 216840,
+      "endMs": 222680,
+      "text": "It's currently trying out two new major salvage techniques, this time focusing on lowland"
+    },
+    {
+      "startMs": 222800,
+      "endMs": 225000,
+      "text": "regions of England."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 230360,
+      "text": "The first thing it's trying is to provide shelters for the seedlings in areas where Juniper"
+    },
+    {
+      "startMs": 230360,
+      "endMs": 233680,
+      "text": "populations are fairly well established."
+    },
+    {
+      "startMs": 233680,
+      "endMs": 239320,
+      "text": "These, of course, are designed to help protect the plants at their most vulnerable stage."
+    },
+    {
+      "startMs": 239320,
+      "endMs": 245000,
+      "text": "A further measure is that in areas where colonies have all but died out, numbers are being"
+    },
+    {
+      "startMs": 245000,
+      "endMs": 250840,
+      "text": "bolstered by the planting of cuttings which have been taken from healthy bushes elsewhere."
+    },
+    {
+      "startMs": 251160,
+      "endMs": 256720,
+      "text": "Now, I hope I've given a clear picture of the problems facing this culturally and"
+    },
+    {
+      "startMs": 256720,
+      "endMs": 263400,
+      "text": "ecologically valuable plant, and of the measures being taken by Plantlife to tackle them."
+    },
+    {
+      "startMs": 263400,
+      "endMs": 267000,
+      "text": "If anyone has any questions, I'd be happy."
+    },
+    {
+      "startMs": 270200,
+      "endMs": 272600,
+      "text": "That is the end of section 4."
+    },
+    {
+      "startMs": 272600,
+      "endMs": 275200,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 47,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "id": "p4-59-transhumance",
+  "title": "Transhumance",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-587914724f31",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 418.056,
+    "checksum": "sha256:a3f43a924b217e9b1fe4f54be7db3b7ec404b30ee7df8d93de605077cd3e3f44"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Transhumance Two Types of Transhumance fixed: mainly in countries with predictable seasons, e.g. Switzerland nomadic: in areas with unpredictable climatic conditions, e.g. Somalia Study on the Movement of Pastoralists for fixed transhumance, the pattern of movement is described as 31. __________ while for nomadic transhumance, the pattern is more complex and varied Differences in terms of Homes fixed transhumance live in a semi-permanent shelter on high ground such as 32. __________ nomadic transhumance always stay in portable shelters, e.g. homes of the Gabra people carried on 33. __________ Number of People Involved for fixed transhumance, only 34. __________ pastoralists make the journey however, all nomadic transhumance migrate with their livestock Diet and Goods people who do not leave the valleys may become 35. __________ exchange animals with other communities for 36. __________ herds provide all needs—food and 37. __________ Research in Algeria in North Africa they traditionally arrive in time to help local residents with the 38. __________ their homes are 39. __________, which are temporary shelters a better term to describe this type of transhumance might be 40. __________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "for fixed transhumance, the pattern of movement is described as 31. __________",
+          "answer": "Vertical"
+        },
+        {
+          "id": "32",
+          "text": "fixed transhumance live in a semi-permanent shelter on high ground such as 32. __________",
+          "answer": "Cabin"
+        },
+        {
+          "id": "33",
+          "text": "nomadic transhumance always stay in portable shelters, e.g. homes of the Gabra people carried on 33. __________",
+          "answer": "Camel"
+        },
+        {
+          "id": "34",
+          "text": "for fixed transhumance, only 34. __________ pastoralists make the journey",
+          "answer": "Young"
+        },
+        {
+          "id": "35",
+          "text": "people who do not leave the valleys may become 35. __________",
+          "answer": "Farmers"
+        },
+        {
+          "id": "36",
+          "text": "exchange animals with other communities for 36. __________",
+          "answer": "Grain"
+        },
+        {
+          "id": "37",
+          "text": "herds provide all needs—food and 37. __________",
+          "answer": "Clothing"
+        },
+        {
+          "id": "38",
+          "text": "they traditionally arrive in time to help local residents with the 38. __________",
+          "answer": "Harvest"
+        },
+        {
+          "id": "39",
+          "text": "their homes are 39. __________, which are temporary shelters",
+          "answer": "Tents"
+        },
+        {
+          "id": "40",
+          "text": "a better term to describe this type of transhumance might be 40. __________",
+          "answer": "Intermediate"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Transhumance",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Two Types of Transhumance",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "fixed: mainly in countries with predictable seasons, e.g. Switzerland",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "nomadic: in areas with unpredictable climatic conditions, e.g. Somalia",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Study on the Movement of Pastoralists",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "for fixed transhumance, the pattern of movement is described as 31. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "while for nomadic transhumance, the pattern is more complex and varied",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Differences in terms of Homes",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "fixed transhumance live in a semi-permanent shelter on high ground such as 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "nomadic transhumance always stay in portable shelters, e.g. homes of the Gabra people carried on 33. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Number of People Involved",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "for fixed transhumance, only 34. __________ pastoralists make the journey",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "however, all nomadic transhumance migrate with their livestock",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Diet and Goods",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "people who do not leave the valleys may become 35. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "exchange animals with other communities for 36. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "herds provide all needs—food and 37. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Research in Algeria in North Africa",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "they traditionally arrive in time to help local residents with the 38. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "their homes are 39. __________, which are temporary shelters",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a better term to describe this type of transhumance might be 40. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Vertical",
+        "32": "Cabin",
+        "33": "Camel",
+        "34": "Young",
+        "35": "Farmers",
+        "36": "Grain",
+        "37": "Clothing",
+        "38": "Harvest",
+        "39": "Tents",
+        "40": "Intermediate"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13060,
+      "text": "Now, turn to Section 4."
+    },
+    {
+      "startMs": 13060,
+      "endMs": 17380,
+      "text": "Section 4 You will hear a lecturer in development studies"
+    },
+    {
+      "startMs": 17380,
+      "endMs": 19860,
+      "text": "talking about transhumance."
+    },
+    {
+      "startMs": 19860,
+      "endMs": 24300,
+      "text": "That is the way groups of people move from place to place with their animals."
+    },
+    {
+      "startMs": 24300,
+      "endMs": 28860,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 54300,
+      "endMs": 84100,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 85100,
+      "endMs": 88100,
+      "text": "Good afternoon, everyone."
+    },
+    {
+      "startMs": 88100,
+      "endMs": 94100,
+      "text": "Today, I'm going to talk about what may be a new concept to you, the movement of people with their"
+    },
+    {
+      "startMs": 94100,
+      "endMs": 96100,
+      "text": "herds of animals from place to place."
+    },
+    {
+      "startMs": 96100,
+      "endMs": 99100,
+      "text": "This is known as transhumance."
+    },
+    {
+      "startMs": 99100,
+      "endMs": 106100,
+      "text": "These people are pastoralists and their animals include cows, sheep, goats, horses,"
+    },
+    {
+      "startMs": 106100,
+      "endMs": 108100,
+      "text": "camels and reindeer."
+    },
+    {
+      "startMs": 108500,
+      "endMs": 115100,
+      "text": "Now, researchers sometimes make a distinction between two types of transhumance, fixed and nomadic,"
+    },
+    {
+      "startMs": 115100,
+      "endMs": 120100,
+      "text": "and talk about various factors which differentiate between them."
+    },
+    {
+      "startMs": 120100,
+      "endMs": 125100,
+      "text": "The first and most important distinction they make is to do with the climate."
+    },
+    {
+      "startMs": 125100,
+      "endMs": 131100,
+      "text": "Fixed transhumance occurs in countries such as Switzerland, where seasons are predictable"
+    },
+    {
+      "startMs": 131100,
+      "endMs": 134100,
+      "text": "in terms of weather and timing."
+    },
+    {
+      "startMs": 134100,
+      "endMs": 140100,
+      "text": "And nomadic transhumance, on the other hand, is generally practiced in areas where climatic"
+    },
+    {
+      "startMs": 140100,
+      "endMs": 143100,
+      "text": "conditions are difficult to predict."
+    },
+    {
+      "startMs": 143100,
+      "endMs": 150100,
+      "text": "An example of such a location is Somalia, as the anticipated rains often just don't appear."
+    },
+    {
+      "startMs": 150100,
+      "endMs": 157100,
+      "text": "Secondly, researchers sometimes look at the type of journey that pastoralists make, their movement."
+    },
+    {
+      "startMs": 157100,
+      "endMs": 164100,
+      "text": "For fixed transhumance, the pattern is sometimes known as vertical, because it typically consists"
+    },
+    {
+      "startMs": 164100,
+      "endMs": 171100,
+      "text": "of a journey from lower ground in the winter season to higher ground in the summer and vice versa."
+    },
+    {
+      "startMs": 171100,
+      "endMs": 178100,
+      "text": "In the wild, of course, animals frequently follow these kinds of migration patterns themselves."
+    },
+    {
+      "startMs": 178100,
+      "endMs": 185100,
+      "text": "Nomadic transhumance generally takes place over a longer distance, and it's far more complex."
+    },
+    {
+      "startMs": 185100,
+      "endMs": 195100,
+      "text": "The actual pattern varies from year to year, and it's determined primarily by the animal's needs for grass and also for water."
+    },
+    {
+      "startMs": 195100,
+      "endMs": 199100,
+      "text": "Another distinction is sometimes made in terms of homes."
+    },
+    {
+      "startMs": 199100,
+      "endMs": 206100,
+      "text": "In the case of fixed transhumance, the group will typically have permanent homes in the valley and a shelter,"
+    },
+    {
+      "startMs": 206100,
+      "endMs": 213100,
+      "text": "which is semi-permanent in the mountains, such as a cabin, to offer some protection from the weather."
+    },
+    {
+      "startMs": 213100,
+      "endMs": 219100,
+      "text": "In nomadic transhumance, however, the pastoralists always live in temporary shelters,"
+    },
+    {
+      "startMs": 219100,
+      "endMs": 226100,
+      "text": "which are transported by their livestock from place to place, and are usually light and portable."
+    },
+    {
+      "startMs": 226100,
+      "endMs": 233100,
+      "text": "In Northern Kenya, for example, the Gabra pastoralist carries the frame of his home on his camel,"
+    },
+    {
+      "startMs": 233100,
+      "endMs": 237100,
+      "text": "and then covers it with branches when he stops for the night."
+    },
+    {
+      "startMs": 237100,
+      "endMs": 242100,
+      "text": "A fourth factor often mentioned is the number of people taking part."
+    },
+    {
+      "startMs": 242100,
+      "endMs": 248100,
+      "text": "In the case of fixed transhumance, only the people who actually look after the herds travel."
+    },
+    {
+      "startMs": 248100,
+      "endMs": 255100,
+      "text": "These are normally the young ones because they can withstand adverse physical conditions more easily."
+    },
+    {
+      "startMs": 255100,
+      "endMs": 261100,
+      "text": "By contrast, in nomadic transhumance, the whole group moves with their livestock."
+    },
+    {
+      "startMs": 261100,
+      "endMs": 267100,
+      "text": "The last points of comparison often made by researchers are diet and goods."
+    },
+    {
+      "startMs": 267100,
+      "endMs": 275100,
+      "text": "In fixed transhumance, those who do not move from the valleys often start working as farmers, cultivating the land."
+    },
+    {
+      "startMs": 275100,
+      "endMs": 282100,
+      "text": "They build up contacts with other communities, and in some cases, they may also trade animals for grain."
+    },
+    {
+      "startMs": 282100,
+      "endMs": 286100,
+      "text": "In nomadic transhumance, there are fewer contacts."
+    },
+    {
+      "startMs": 286100,
+      "endMs": 291100,
+      "text": "The group are generally regarded as providers of all their own needs,"
+    },
+    {
+      "startMs": 291100,
+      "endMs": 298100,
+      "text": "and they obtain food such as cheese and meat, and also their clothing from their herds."
+    },
+    {
+      "startMs": 303100,
+      "endMs": 311100,
+      "text": "Another example is found in Algeria in North Africa, to see how far this model applies to transhumance there."
+    },
+    {
+      "startMs": 311100,
+      "endMs": 316100,
+      "text": "Fixed transhumance from valley to mountain pastures is common in the area,"
+    },
+    {
+      "startMs": 316100,
+      "endMs": 322100,
+      "text": "but some recent pastoralists also take their herds on longer journeys at the end of spring,"
+    },
+    {
+      "startMs": 322100,
+      "endMs": 329100,
+      "text": "from the Sahara in the south to the plains in the north, where there is more abundant rainfall."
+    },
+    {
+      "startMs": 329100,
+      "endMs": 337100,
+      "text": "They have traditionally assisted local farmers with the harvest, which takes place while they are temporarily resident there."
+    },
+    {
+      "startMs": 337100,
+      "endMs": 344100,
+      "text": "We have to decide whether their move would fall within the category of fixed or nomadic transhumance."
+    },
+    {
+      "startMs": 344100,
+      "endMs": 353100,
+      "text": "It is true they live in tents, and these are movable, and temporary right through the year, whether they are in the Sahara or in the north of Algeria."
+    },
+    {
+      "startMs": 353100,
+      "endMs": 357100,
+      "text": "So, in considering their homes, they appear nomadic."
+    },
+    {
+      "startMs": 357100,
+      "endMs": 362100,
+      "text": "On the other hand, in relation to their patterns of movement, they do not."
+    },
+    {
+      "startMs": 362100,
+      "endMs": 369100,
+      "text": "They drive their livestock through the same passes and mountains each year, which suggests fixed transhumance."
+    },
+    {
+      "startMs": 369100,
+      "endMs": 379100,
+      "text": "Here, in fact, we have a case showing some features of both types of transhumance, which we might more precisely refer to as intermediate."
+    },
+    {
+      "startMs": 379100,
+      "endMs": 388100,
+      "text": "This all goes to show that you should treat every theory with great care, and not force your case history into a model if it doesn't fit."
+    },
+    {
+      "startMs": 388100,
+      "endMs": 395100,
+      "text": "That is the end of section 4. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 56,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

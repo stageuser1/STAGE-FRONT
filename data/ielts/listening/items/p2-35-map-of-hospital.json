@@ -1,0 +1,451 @@
+{
+  "id": "p2-35-map-of-hospital",
+  "title": "Map of Hospital",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-e1211af6d713",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 437.088,
+    "checksum": "sha256:bd11be0e59eafb0590f1953acfe145055514873c25a23823640033a35e8446ef"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–15.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "How many patients does the hospital consult every year?",
+          "options": [
+            {
+              "id": "A",
+              "text": "3,000"
+            },
+            {
+              "id": "B",
+              "text": "5,000"
+            },
+            {
+              "id": "C",
+              "text": "11,000"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "When can patients meet the female doctor?",
+          "options": [
+            {
+              "id": "A",
+              "text": "on weekday mornings"
+            },
+            {
+              "id": "B",
+              "text": "three days a week"
+            },
+            {
+              "id": "C",
+              "text": "only on Mondays and Fridays"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "Who is the expert on treating hearing loss?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mr. Robert"
+            },
+            {
+              "id": "B",
+              "text": "Mr. Green"
+            },
+            {
+              "id": "C",
+              "text": "Mr. Edwards"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "Where are patients recommended to buy their medicine?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the supermarket in the town"
+            },
+            {
+              "id": "B",
+              "text": "pharmacies nearby the city centre"
+            },
+            {
+              "id": "C",
+              "text": "the health care’s pharmacy"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "15",
+          "text": "What will the patients be asked about whether they are willing to do?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Letting one student attend the consultation"
+            },
+            {
+              "id": "B",
+              "text": "Asking postgraduate students to do treatment"
+            },
+            {
+              "id": "C",
+              "text": "Meeting students in group discussion"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 16–20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "Reception",
+          "answer": "F"
+        },
+        {
+          "id": "17",
+          "text": "Mr. Green’s Room",
+          "answer": "H"
+        },
+        {
+          "id": "18",
+          "text": "Medical Records Office",
+          "answer": "A"
+        },
+        {
+          "id": "19",
+          "text": "Surgery Room",
+          "answer": "D"
+        },
+        {
+          "id": "20",
+          "text": "Manager’s Office",
+          "answer": "C"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-35-map-of-hospital-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-35-map-of-hospital-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "B",
+        "14": "C",
+        "15": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "F",
+        "17": "H",
+        "18": "A",
+        "19": "D",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12000,
+      "text": "Section 2. You will hear part of the talk given by a member of staff at a hospital."
+    },
+    {
+      "startMs": 12000,
+      "endMs": 17000,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 54000,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 55000,
+      "endMs": 61000,
+      "text": "Hello and welcome to the homepage for the Healthy Hearing Medical Clinic and Surgery,"
+    },
+    {
+      "startMs": 61000,
+      "endMs": 67000,
+      "text": "where we'd like to share a little more information about the services we provide and more."
+    },
+    {
+      "startMs": 67000,
+      "endMs": 73000,
+      "text": "Our hospital is one of the leading specialized hospitals in the United Kingdom,"
+    },
+    {
+      "startMs": 73000,
+      "endMs": 78000,
+      "text": "attracting the very best healthcare professionals from around the globe."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 85000,
+      "text": "Not only are we a leading medical practice, but we are also the only hospital in the United Kingdom"
+    },
+    {
+      "startMs": 85000,
+      "endMs": 92000,
+      "text": "dedicated entirely to the treatment of and research into the curing of hearing loss."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 99000,
+      "text": "Our facilities and staff here are renowned across Europe, attracting thousands of patients a year."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 105000,
+      "text": "Our consultations can number anything up to 11,000 patients a year."
+    },
+    {
+      "startMs": 105000,
+      "endMs": 114000,
+      "text": "However, we aim to treat around 5,000 patients a year, so as to maintain and ensure the quality of our services."
+    },
+    {
+      "startMs": 114000,
+      "endMs": 122000,
+      "text": "Our patients are guaranteed the highest standard of care, as well as the use of our first-class facilities."
+    },
+    {
+      "startMs": 122000,
+      "endMs": 130000,
+      "text": "All patients requiring overnight treatment are provided with their own private room with en-suite facilities,"
+    },
+    {
+      "startMs": 130000,
+      "endMs": 139000,
+      "text": "as well as a state-of-the-art entertainment centre, which includes a flat-screen LCD television and PlayStation."
+    },
+    {
+      "startMs": 139000,
+      "endMs": 144000,
+      "text": "Appointments with our healthcare professionals can be made at any time during the week,"
+    },
+    {
+      "startMs": 144000,
+      "endMs": 149000,
+      "text": "with female doctors available between 8 a.m. and 11 a.m."
+    },
+    {
+      "startMs": 149000,
+      "endMs": 158000,
+      "text": "If you need to see a doctor outside of these times, please visit the Out of Hours page of our website for more information."
+    },
+    {
+      "startMs": 158000,
+      "endMs": 166000,
+      "text": "Our doctors are all trained to an exceptionally high standard and practice a vast array of specialities."
+    },
+    {
+      "startMs": 166000,
+      "endMs": 170000,
+      "text": "Mr. Roberts is a fully qualified ear and throat specialist."
+    },
+    {
+      "startMs": 170000,
+      "endMs": 179000,
+      "text": "Mr. Edwards is a pediatric hearing specialist, while Mr. Green specialises in reversing hearing loss."
+    },
+    {
+      "startMs": 179000,
+      "endMs": 187000,
+      "text": "For more details about our people, please visit the staff member's page on our website."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 196000,
+      "text": "During a consultation, doctors will sometimes decide medication is required, for which patients should receive a prescription."
+    },
+    {
+      "startMs": 196000,
+      "endMs": 205000,
+      "text": "There are several pharmacies within the city. However, we recommend that patients use the pharmacy housed within our healthcare facility."
+    },
+    {
+      "startMs": 205000,
+      "endMs": 209000,
+      "text": "Our in-house pharmacy is well-stocked at all times."
+    },
+    {
+      "startMs": 209000,
+      "endMs": 224000,
+      "text": "Our products are competitively priced, and our pharmacists are on hand to help and advise from 8 a.m. until 10 p.m. from Monday to Saturday, and from 9 a.m. until 12 p.m. on Sundays."
+    },
+    {
+      "startMs": 224000,
+      "endMs": 232000,
+      "text": "If you require any help outside of these hours, please see our Out of Hours page on the website."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 245000,
+      "text": "Since the Healthy Hearing Medical Clinic and Surgery also functions as a teaching hospital, we aim to provide our students with every opportunity to expose themselves to medicine in practice."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 253000,
+      "text": "Therefore, we would like to encourage our patients to give their consent for a medical student to attend their consultations."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 263000,
+      "text": "If our patients are not comfortable with this, there will be a form at reception where patients will be able to opt out."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 271000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 283000,
+      "endMs": 296000,
+      "text": "Now listen and answer questions 16 to 20."
+    },
+    {
+      "startMs": 296000,
+      "endMs": 303000,
+      "text": "Now, please look at the map I've given you of the Healthy Hearing Medical Clinic and Surgery."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 310000,
+      "text": "For those not familiar with our practice, reception can be found through the main door at the end of the corridor."
+    },
+    {
+      "startMs": 310000,
+      "endMs": 318000,
+      "text": "If your consultation is booked with Mr. Green, you need to go through the main door and turn right by the nurse's desk."
+    },
+    {
+      "startMs": 318000,
+      "endMs": 322000,
+      "text": "And his office is at the end of the corridor on your left hand side."
+    },
+    {
+      "startMs": 322000,
+      "endMs": 333000,
+      "text": "If you need to alter any of your personal details, please visit our secretary at the office for medical records, which you will find next to the therapy room."
+    },
+    {
+      "startMs": 333000,
+      "endMs": 343000,
+      "text": "If you're awaiting surgery, please first check in with reception before taking the first door on the right after you enter the clinic."
+    },
+    {
+      "startMs": 343000,
+      "endMs": 360000,
+      "text": "Finally, in the event that you feel disappointed with any of the services we have provided, or have any further questions, please locate our manager's office, which can be found near the office for medical records and between two closets."
+    },
+    {
+      "startMs": 361000,
+      "endMs": 376000,
+      "text": "If you have any more questions about the Healthy Hearing Medical Clinic and Surgery, please do not hesitate to contact us on 0-1-256-Triple-1-Triple-1."
+    },
+    {
+      "startMs": 376000,
+      "endMs": 383000,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 390000,
+      "endMs": 416000,
+      "text": "Now turn to section 3."
+    },
+    {
+      "startMs": 416000,
+      "endMs": 436000,
+      "text": "If you have any more questions, please contact us on 0-1-256-Triple-1."
+    },
+    {
+      "startMs": 437000,
+      "endMs": 451000,
+      "text": "If you have any more questions, please contact us on 0-1-256-Triple-1."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 44,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

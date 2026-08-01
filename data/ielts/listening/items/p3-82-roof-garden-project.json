@@ -1,0 +1,747 @@
+{
+  "id": "p3-82-roof-garden-project",
+  "title": "Roof Garden Project",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-9551eb70f06e",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 411.078,
+    "checksum": "sha256:3dc6ee2ef43b289a5342fb3582a8800444f078f3ddc3ddbe74a251a4e142564d"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "21-22",
+      "title": "Questions 21–22",
+      "instruction": "Choose TWO correct answers.",
+      "questionText": "Which TWO possible objections to a roof garden are discussed?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "problems of access"
+        },
+        {
+          "id": "B",
+          "text": "the cost of construction"
+        },
+        {
+          "id": "C",
+          "text": "the time needed to install it"
+        },
+        {
+          "id": "D",
+          "text": "who will look after it"
+        },
+        {
+          "id": "E",
+          "text": "how to support the weight of it"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "Which TWO possible objections to a roof garden are discussed?",
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "Which TWO possible objections to a roof garden are discussed?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "23-24",
+      "title": "Questions 23–24",
+      "instruction": "Choose TWO correct answers.",
+      "questionText": "Which TWO recent developments in roof-garden building are mentioned?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "waterproof barrier materials"
+        },
+        {
+          "id": "B",
+          "text": "drainage systems"
+        },
+        {
+          "id": "C",
+          "text": "tank designs"
+        },
+        {
+          "id": "D",
+          "text": "lightweight construction materials"
+        },
+        {
+          "id": "E",
+          "text": "watering systems"
+        }
+      ],
+      "questions": [
+        {
+          "id": "23",
+          "text": "Which TWO recent developments in roof-garden building are mentioned?",
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "Which TWO recent developments in roof-garden building are mentioned?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 25–30",
+      "instruction": "Label the diagram below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "wall",
+          "answer": "F"
+        },
+        {
+          "id": "26",
+          "text": "electric wire",
+          "answer": "H"
+        },
+        {
+          "id": "27",
+          "text": "fibre optic cable",
+          "answer": "C"
+        },
+        {
+          "id": "28",
+          "text": "wooden post",
+          "answer": "D"
+        },
+        {
+          "id": "29",
+          "text": "glass cap",
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "acrylic rod",
+          "answer": "A"
+        }
+      ],
+      "image": {
+        "assetId": "image-p3-82-roof-garden-project-diagram-png",
+        "filename": "diagram.png",
+        "src": "images/image-p3-82-roof-garden-project-diagram-png-diagram.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "21_22": [
+          "B",
+          "D"
+        ],
+        "23_24": [
+          "A",
+          "E"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "D",
+        "23": "A",
+        "24": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "25": "F",
+        "26": "H",
+        "27": "C",
+        "28": "D",
+        "29": "B",
+        "30": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5000,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 8000,
+      "endMs": 12000,
+      "text": "Tutor: So, let's hear what you're doing for your next project."
+    },
+    {
+      "startMs": 12000,
+      "endMs": 16000,
+      "text": "Student: I've decided to design a roof garden for a supermarket."
+    },
+    {
+      "startMs": 16000,
+      "endMs": 22000,
+      "text": "I've been looking at some on the web and I think that a garden on top of a building is the up and coming thing."
+    },
+    {
+      "startMs": 22000,
+      "endMs": 26000,
+      "text": "Tutor: Okay. So you've done a bit of reading already?"
+    },
+    {
+      "startMs": 27000,
+      "endMs": 30000,
+      "text": "What benefits would there be for the client?"
+    },
+    {
+      "startMs": 30000,
+      "endMs": 36000,
+      "text": "Why do you think a supermarket chain would be willing to meet the expense of construction?"
+    },
+    {
+      "startMs": 36000,
+      "endMs": 39000,
+      "text": "You do realize that would be the first thing they raise."
+    },
+    {
+      "startMs": 39000,
+      "endMs": 49000,
+      "text": "Student: Yes, I know. But I'd explain that in spite of the initially high expense, they would save that much in approximately five years."
+    },
+    {
+      "startMs": 49000,
+      "endMs": 53000,
+      "text": "Well, I'd have to do sums. I mean, calculate specifically."
+    },
+    {
+      "startMs": 53000,
+      "endMs": 56000,
+      "text": "Tutor: Yes, how would the saving come about?"
+    },
+    {
+      "startMs": 56000,
+      "endMs": 59000,
+      "text": "Student: Mainly through lower heating and air-con bills."
+    },
+    {
+      "startMs": 59000,
+      "endMs": 66000,
+      "text": "The extra insulation offered by having a layer of living plants in the soil would make a huge difference."
+    },
+    {
+      "startMs": 66000,
+      "endMs": 73000,
+      "text": "Tutor: Okay. But they might feel the expense of maintenance would be an issue."
+    },
+    {
+      "startMs": 73000,
+      "endMs": 77000,
+      "text": "After all, supermarkets don't normally employ gardeners."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 84000,
+      "text": "Student: What I thought was if they made it a community garden, rather than a simple low-maintenance green roof."
+    },
+    {
+      "startMs": 84000,
+      "endMs": 86000,
+      "text": "Tutor: So there'd be public access?"
+    },
+    {
+      "startMs": 86000,
+      "endMs": 87000,
+      "text": "Student: Oh, yes."
+    },
+    {
+      "startMs": 87000,
+      "endMs": 90000,
+      "text": "Then there'd be a sense of ownership in the local community."
+    },
+    {
+      "startMs": 90000,
+      "endMs": 96000,
+      "text": "And people could take responsibility for it instead of the supermarket paying a commercial company."
+    },
+    {
+      "startMs": 96000,
+      "endMs": 99000,
+      "text": "And it would really boost their public relations."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 101000,
+      "text": "Tutor: That's a good point."
+    },
+    {
+      "startMs": 101000,
+      "endMs": 105000,
+      "text": "And have you been looking into how roof gardens are built?"
+    },
+    {
+      "startMs": 105000,
+      "endMs": 108000,
+      "text": "Student: No, it is. I'm still exploring that."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 114000,
+      "text": "But if I take advantage of the latest technologies for roof gardens, it shouldn't be too difficult."
+    },
+    {
+      "startMs": 114000,
+      "endMs": 117000,
+      "text": "But in any case, you have to use lightweight materials."
+    },
+    {
+      "startMs": 117000,
+      "endMs": 121000,
+      "text": "Tutor: But that's a matter of making the right choices."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 125000,
+      "text": "You can even use quite traditional ones such as wood for the planting areas."
+    },
+    {
+      "startMs": 125000,
+      "endMs": 130000,
+      "text": "Student: Yes, that's what I thought. It'll look good and it isn't too heavy."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 138000,
+      "text": "Tutor: But for the basic construction, the issue you have to address first is the material used between the building and the garden."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 145000,
+      "text": "Student: You mean the barrier fabric, which ensures there's no chance of rainwater leaking down into the building?"
+    },
+    {
+      "startMs": 145000,
+      "endMs": 149000,
+      "text": "Tutor: Yes. Nowadays that is very good and quite easily sourced."
+    },
+    {
+      "startMs": 149000,
+      "endMs": 154000,
+      "text": "Student: Then on the other hand, there's the business of water within the roof garden itself."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 156000,
+      "text": "Tutor: You mean drainage?"
+    },
+    {
+      "startMs": 156000,
+      "endMs": 160000,
+      "text": "That's an important feature of the construction in any roof design."
+    },
+    {
+      "startMs": 160000,
+      "endMs": 166000,
+      "text": "Student: Yes, but I think most drainage issues have been well understood for quite a long time."
+    },
+    {
+      "startMs": 166000,
+      "endMs": 167000,
+      "text": "Tutor: Okay."
+    },
+    {
+      "startMs": 167000,
+      "endMs": 175000,
+      "text": "But another thing is with plants in an exposed situation, you usually need to find ways to optimize rainfall."
+    },
+    {
+      "startMs": 175000,
+      "endMs": 181000,
+      "text": "Student: Yes, because rainwater is best for the garden, if you can store it for when it's needed."
+    },
+    {
+      "startMs": 181000,
+      "endMs": 186000,
+      "text": "What I've been looking at are some buildings which use fairly conventional storage tanks,"
+    },
+    {
+      "startMs": 186000,
+      "endMs": 192000,
+      "text": "the kind that have been in use for decades, but have them linked to modern automatic watering systems."
+    },
+    {
+      "startMs": 192000,
+      "endMs": 194000,
+      "text": "Tutor: Sounds complicated."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 197000,
+      "text": "Student: It's less so in practice than it sounds, I think."
+    },
+    {
+      "startMs": 197000,
+      "endMs": 202000,
+      "text": "I've been researching them and actually the latest ones definitely work very well"
+    },
+    {
+      "startMs": 202000,
+      "endMs": 207000,
+      "text": "and they can be electronically regulated to suit the local microclimate."
+    },
+    {
+      "startMs": 207000,
+      "endMs": 209000,
+      "text": "Tutor: That sounds interesting."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 213000,
+      "text": "You seem to have been doing some thorough research."
+    },
+    {
+      "startMs": 213000,
+      "endMs": 216000,
+      "text": "Make sure you reference all your sources when you write it up."
+    },
+    {
+      "startMs": 216000,
+      "endMs": 218000,
+      "text": "Student: Yes, sure."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 223000,
+      "text": "There's one more aspect I'd just like to run past you if there's time."
+    },
+    {
+      "startMs": 223000,
+      "endMs": 226000,
+      "text": "I want to include a light feature in the design."
+    },
+    {
+      "startMs": 226000,
+      "endMs": 227000,
+      "text": "Tutor: Of course."
+    },
+    {
+      "startMs": 227000,
+      "endMs": 229000,
+      "text": "Student: I've got a sketch here."
+    },
+    {
+      "startMs": 229000,
+      "endMs": 231000,
+      "text": "Tutor: Let's have a look then."
+    },
+    {
+      "startMs": 233000,
+      "endMs": 238000,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions 25"
+    },
+    {
+      "startMs": 238000,
+      "endMs": 240000,
+      "text": "to 30."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 244000,
+      "text": "Pause the recording for 30 seconds."
+    },
+    {
+      "startMs": 249000,
+      "endMs": 254000,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 256000,
+      "endMs": 261000,
+      "text": "Student: Well, I was really impressed by something I saw on a roof in Cornwall"
+    },
+    {
+      "startMs": 261000,
+      "endMs": 264000,
+      "text": "and I'd like to design something similar."
+    },
+    {
+      "startMs": 265000,
+      "endMs": 273000,
+      "text": "You have an area of planting and I'm thinking of installing this lighting"
+    },
+    {
+      "startMs": 273000,
+      "endMs": 277000,
+      "text": "in an area filled with low-growing evergreen shrubs."
+    },
+    {
+      "startMs": 279000,
+      "endMs": 285000,
+      "text": "Tutor: You'd have to have lights and things well away from anywhere children might be."
+    },
+    {
+      "startMs": 285000,
+      "endMs": 291000,
+      "text": "But I can see this could be very effective if a bit complicated."
+    },
+    {
+      "startMs": 291000,
+      "endMs": 293000,
+      "text": "How would it work?"
+    },
+    {
+      "startMs": 293000,
+      "endMs": 296000,
+      "text": "Student: On this drawing, this is a section view."
+    },
+    {
+      "startMs": 296000,
+      "endMs": 297000,
+      "text": "Tutor: Hmm."
+    },
+    {
+      "startMs": 297000,
+      "endMs": 299000,
+      "text": "You have this low wall on the right."
+    },
+    {
+      "startMs": 299000,
+      "endMs": 301000,
+      "text": "Student：Yes, that's it."
+    },
+    {
+      "startMs": 301000,
+      "endMs": 307000,
+      "text": "This is just one element and these areas would be repeated all round the planted area."
+    },
+    {
+      "startMs": 307000,
+      "endMs": 312000,
+      "text": "I think this will probably be a wooden wall using reclaimed timbers"
+    },
+    {
+      "startMs": 312000,
+      "endMs": 315000,
+      "text": "with an angled ceramic top surface."
+    },
+    {
+      "startMs": 315000,
+      "endMs": 318000,
+      "text": "Tutor: Perhaps even ridge tiles, like they use on roofs?"
+    },
+    {
+      "startMs": 318000,
+      "endMs": 320000,
+      "text": "Student: Ah, yes."
+    },
+    {
+      "startMs": 320000,
+      "endMs": 322000,
+      "text": "That'd be just the sort of thing."
+    },
+    {
+      "startMs": 322000,
+      "endMs": 325000,
+      "text": "And that would make it weatherproof."
+    },
+    {
+      "startMs": 325000,
+      "endMs": 329000,
+      "text": "And then the heavy-duty electric wiring comes up through the floor"
+    },
+    {
+      "startMs": 329000,
+      "endMs": 333000,
+      "text": "just outside the planted area and into the wall."
+    },
+    {
+      "startMs": 333000,
+      "endMs": 338000,
+      "text": "Then it's brought through to a projector low in the side of the wall"
+    },
+    {
+      "startMs": 338000,
+      "endMs": 342000,
+      "text": "and that sends a beam of light along the fiber optic cable."
+    },
+    {
+      "startMs": 342000,
+      "endMs": 345000,
+      "text": "Tutor: So there's no electricity in the actual lights."
+    },
+    {
+      "startMs": 345000,
+      "endMs": 349000,
+      "text": "The fiber optic goes across the surface of the soil in the planting area."
+    },
+    {
+      "startMs": 349000,
+      "endMs": 351000,
+      "text": "Student: Yes, that's the beauty of it."
+    },
+    {
+      "startMs": 351000,
+      "endMs": 352000,
+      "text": "Tutor: Hmm."
+    },
+    {
+      "startMs": 352000,
+      "endMs": 355000,
+      "text": "Student: The shrubs will soon grow to cover it up, of course."
+    },
+    {
+      "startMs": 355000,
+      "endMs": 358000,
+      "text": "And then the cable goes past a wooden post,"
+    },
+    {
+      "startMs": 358000,
+      "endMs": 363000,
+      "text": "which is between the shrubs and can be a support for them as they grow bigger."
+    },
+    {
+      "startMs": 363000,
+      "endMs": 367000,
+      "text": "And then runs up into each element of the installation."
+    },
+    {
+      "startMs": 367000,
+      "endMs": 371000,
+      "text": "Tutor: So the light beam is carried up to the top of each element"
+    },
+    {
+      "startMs": 371000,
+      "endMs": 375000,
+      "text": "and illuminates a kind of conical glass cap."
+    },
+    {
+      "startMs": 375000,
+      "endMs": 376000,
+      "text": "Student: Hmm."
+    },
+    {
+      "startMs": 376000,
+      "endMs": 377000,
+      "text": "Tutor: I see."
+    },
+    {
+      "startMs": 377000,
+      "endMs": 380000,
+      "text": "Is that the bit which would glow in the dark?"
+    },
+    {
+      "startMs": 380000,
+      "endMs": 381000,
+      "text": "Student: Yes."
+    },
+    {
+      "startMs": 381000,
+      "endMs": 384000,
+      "text": "Tutor: And what's the cap supported on?"
+    },
+    {
+      "startMs": 384000,
+      "endMs": 386000,
+      "text": "Is it a wall?"
+    },
+    {
+      "startMs": 386000,
+      "endMs": 387000,
+      "text": "Student: No."
+    },
+    {
+      "startMs": 387000,
+      "endMs": 393000,
+      "text": "It's a slender acrylic rod, like the stem of a flower or mushroom"
+    },
+    {
+      "startMs": 393000,
+      "endMs": 396000,
+      "text": "which the cable runs up inside of."
+    },
+    {
+      "startMs": 396000,
+      "endMs": 400000,
+      "text": "Tutor: Well, I'll be interested to see the final drawings."
+    },
+    {
+      "startMs": 400000,
+      "endMs": 401000,
+      "text": "Student: Oh, thank you."
+    },
+    {
+      "startMs": 401000,
+      "endMs": 405000,
+      "text": "I'm looking forward to putting it all together."
+    },
+    {
+      "startMs": 406000,
+      "endMs": 410000,
+      "text": "That is the end of section 3."
+    },
+    {
+      "startMs": 410000,
+      "endMs": 414000,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "diagram.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 104,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "id": "p3-4-handwriting",
+  "title": "Handwriting",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-905a71f96106",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 508.08,
+    "checksum": "sha256:5826fee8604bfa78ebbdf7da3a2b7fe0ffb56ef1c6f8b8609808662d9d86c8b4"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "21-22",
+      "title": "Questions 21 and 22.",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO benefits for children of learning to write did both students find surprising?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "improved fine motor skills"
+        },
+        {
+          "id": "B",
+          "text": "improved memory"
+        },
+        {
+          "id": "C",
+          "text": "improved concentration"
+        },
+        {
+          "id": "D",
+          "text": "improved imagination"
+        },
+        {
+          "id": "E",
+          "text": ". improved spatial awareness"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "Which TWO benefits for children of learning to write did both students find surprising?",
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "Which TWO benefits for children of learning to write did both students find surprising?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "23-24",
+      "title": "Questions 23 and 24.",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to correct?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "not spacing letters correctly"
+        },
+        {
+          "id": "B",
+          "text": "not writing in a straight line"
+        },
+        {
+          "id": "C",
+          "text": "applying too much pressure when writing"
+        },
+        {
+          "id": "D",
+          "text": "confusing letter shapes/writing very slowly"
+        },
+        {
+          "id": "E",
+          "text": "not holding the pencil correctly"
+        }
+      ],
+      "questions": [
+        {
+          "id": "23",
+          "text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to correct?",
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to correct?",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 25–30.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "25",
+          "text": "What does the woman say about using laptops to teach writing to children with dyslexia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Children often lack motivation to learn that way."
+            },
+            {
+              "id": "B",
+              "text": "Children become fluent relatively quickly."
+            },
+            {
+              "id": "C",
+              "text": "Children react more positively if they make a mistake."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "The woman thinks that",
+          "options": [
+            {
+              "id": "A",
+              "text": "cursive writing disadvantages a certain group of children."
+            },
+            {
+              "id": "B",
+              "text": "print writing is associated with lower academic performance."
+            },
+            {
+              "id": "C",
+              "text": "most teachers in the UK prefer a traditional approach to handwriting."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "27",
+          "text": "According to the students, what impact does poor handwriting have on exam performance?",
+          "options": [
+            {
+              "id": "A",
+              "text": "There is evidence to suggest grades are affected by poor handwriting."
+            },
+            {
+              "id": "B",
+              "text": "Neat handwriting is less important now than it used to be."
+            },
+            {
+              "id": "C",
+              "text": "Candidates write more slowly and produce shorter answers."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "What prediction does the man make about the future of handwriting?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Touch typing will be taught before writing by hand."
+            },
+            {
+              "id": "B",
+              "text": "Children will continue to learn to write by hand."
+            },
+            {
+              "id": "C",
+              "text": "People will do all handwriting on digital devices."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "29",
+          "text": "The woman is concerned that relying on digital devices has made it difficult for her to",
+          "options": [
+            {
+              "id": "A",
+              "text": "take detailed notes."
+            },
+            {
+              "id": "B",
+              "text": "spell and punctuate."
+            },
+            {
+              "id": "C",
+              "text": "read old documents."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "How do the students feel about their own handwriting?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Though legible, it could be more stylish."
+            },
+            {
+              "id": "B",
+              "text": "Children will continue to learn to write by hand."
+            },
+            {
+              "id": "C",
+              "text": "Embarrassed they have let the habit lapse."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "25": "C",
+        "26": "A",
+        "27": "A",
+        "28": "B",
+        "29": "B",
+        "30": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "21_22": [
+          "C",
+          "E"
+        ],
+        "23_24": [
+          "A",
+          "C"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "E",
+        "23": "A",
+        "24": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12600,
+      "text": "Part 3. You will hear two education students discussing an assignment on teaching handwriting"
+    },
+    {
+      "startMs": 12600,
+      "endMs": 19160,
+      "text": "to children. First, you have some time to look at questions 21 to 24."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 52760,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 52760,
+      "endMs": 55760,
+      "text": "Man: How are you getting on with the assignment on handwriting?"
+    },
+    {
+      "startMs": 55760,
+      "endMs": 63760,
+      "text": "Woman: Not too bad. You know, I haven't realised that children benefit in so many ways from learning to write."
+    },
+    {
+      "startMs": 63760,
+      "endMs": 70640,
+      "text": "It's such an important skill and yet most people think handwriting is less important than in the past"
+    },
+    {
+      "startMs": 70640,
+      "endMs": 74120,
+      "text": "because people hardly ever write by hand these days."
+    },
+    {
+      "startMs": 74120,
+      "endMs": 80880,
+      "text": "Man: Yes, and all the evidence suggests children should learn to write by hand before they learn to type."
+    },
+    {
+      "startMs": 80880,
+      "endMs": 83000,
+      "text": "Not least because it helps their memory."
+    },
+    {
+      "startMs": 83000,
+      "endMs": 89160,
+      "text": "Woman: That's right. The physical act of writing helps children to remember letters."
+    },
+    {
+      "startMs": 89160,
+      "endMs": 92480,
+      "text": "That seems pretty obvious when you think about it."
+    },
+    {
+      "startMs": 92480,
+      "endMs": 96600,
+      "text": "Man: What's less obvious is how it helps develop their concentration."
+    },
+    {
+      "startMs": 96600,
+      "endMs": 99600,
+      "text": "They have to sit still and focus on one thing."
+    },
+    {
+      "startMs": 99600,
+      "endMs": 103960,
+      "text": "Woman: Yeah, that aspect of handwriting had never occurred to me before."
+    },
+    {
+      "startMs": 103960,
+      "endMs": 110160,
+      "text": "Man: Hmm, same here. I'm not sure I understand how it improves children's imagination, though."
+    },
+    {
+      "startMs": 110160,
+      "endMs": 120080,
+      "text": "Woman: Well, there was that study which showed that primary age children generated more ideas when they were writing by hand than using a keyboard."
+    },
+    {
+      "startMs": 120080,
+      "endMs": 122120,
+      "text": "I would have guessed that would be the case."
+    },
+    {
+      "startMs": 122120,
+      "endMs": 128720,
+      "text": "Man: Hmm, yeah. I'd never associated spatial awareness with handwriting either."
+    },
+    {
+      "startMs": 128720,
+      "endMs": 135200,
+      "text": "I thought spatial awareness was more to do with knowing where you are in relation to objects or other people."
+    },
+    {
+      "startMs": 135200,
+      "endMs": 137280,
+      "text": "Woman: Hmm, I thought that too."
+    },
+    {
+      "startMs": 137280,
+      "endMs": 144080,
+      "text": "But good spatial awareness is essential for writing because you have to space words correctly."
+    },
+    {
+      "startMs": 144080,
+      "endMs": 150320,
+      "text": "It's not just fine motor skills that improve through writing as I'd always assumed."
+    },
+    {
+      "startMs": 150320,
+      "endMs": 157040,
+      "text": "Man: Handwriting is so much harder for children with dyspraxia who have problems coordinating movement."
+    },
+    {
+      "startMs": 157040,
+      "endMs": 160680,
+      "text": "It's good there are lots of things you can do in the classroom to help them."
+    },
+    {
+      "startMs": 160680,
+      "endMs": 164040,
+      "text": "They need so much more support with letter formation."
+    },
+    {
+      "startMs": 164040,
+      "endMs": 168200,
+      "text": "You need to play lots of games to help them distinguish letter shapes."
+    },
+    {
+      "startMs": 168200,
+      "endMs": 169800,
+      "text": "It takes a lot of patience."
+    },
+    {
+      "startMs": 169800,
+      "endMs": 176320,
+      "text": "Woman: Yeah, I like the idea of using one of those pens that lights up if you press too hard."
+    },
+    {
+      "startMs": 176320,
+      "endMs": 178640,
+      "text": "That seems like a really simple solution."
+    },
+    {
+      "startMs": 178640,
+      "endMs": 180640,
+      "text": "Man: Yes, absolutely."
+    },
+    {
+      "startMs": 180640,
+      "endMs": 186320,
+      "text": "I'm not sure there's much you can do about children with dyspraxia writing very slowly."
+    },
+    {
+      "startMs": 186320,
+      "endMs": 194000,
+      "text": "It's more important to focus on accuracy and as they get more confident, I think they eventually speed up."
+    },
+    {
+      "startMs": 194120,
+      "endMs": 198600,
+      "text": "Woman: One quite simple thing you can do is to use grid paper."
+    },
+    {
+      "startMs": 198600,
+      "endMs": 204200,
+      "text": "So they write each letter in a box and that trains them to space the letters correctly."
+    },
+    {
+      "startMs": 204200,
+      "endMs": 209800,
+      "text": "Man: Indeed, that's more important for legibility than trying to get them to write in a straight line."
+    },
+    {
+      "startMs": 212920,
+      "endMs": 219640,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30."
+    },
+    {
+      "startMs": 254000,
+      "endMs": 277840,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 277840,
+      "endMs": 282840,
+      "text": "Man: For some children, it might be better to teach them to write on a laptop rather than"
+    },
+    {
+      "startMs": 282840,
+      "endMs": 286520,
+      "text": "by hand, like children with dyslexia."
+    },
+    {
+      "startMs": 286520,
+      "endMs": 290680,
+      "text": "They often really struggle with handwriting and some just give up."
+    },
+    {
+      "startMs": 290680,
+      "endMs": 295480,
+      "text": "Woman: Yeah, it's not as frustrating for them if they get things wrong."
+    },
+    {
+      "startMs": 295480,
+      "endMs": 299080,
+      "text": "On a keyboard, they can be more willing to have a go."
+    },
+    {
+      "startMs": 299080,
+      "endMs": 303160,
+      "text": "But I read that developing fluency isn't any faster."
+    },
+    {
+      "startMs": 303160,
+      "endMs": 304480,
+      "text": "Man: That's right."
+    },
+    {
+      "startMs": 304480,
+      "endMs": 310520,
+      "text": "Did you read that article on the benefits of teaching print rather than cursive handwriting,"
+    },
+    {
+      "startMs": 310520,
+      "endMs": 311920,
+      "text": "where the letters are joined up?"
+    },
+    {
+      "startMs": 311920,
+      "endMs": 312920,
+      "text": "Woman: Yes."
+    },
+    {
+      "startMs": 312920,
+      "endMs": 319640,
+      "text": "Well, in the past, cursive writing was certainly considered more stylish and educated, but not"
+    },
+    {
+      "startMs": 319640,
+      "endMs": 320640,
+      "text": "anymore."
+    },
+    {
+      "startMs": 320640,
+      "endMs": 326480,
+      "text": "Teachers' attitudes have changed because it's been proved that cursive is more difficult"
+    },
+    {
+      "startMs": 326480,
+      "endMs": 331840,
+      "text": "to learn, especially for children with learning difficulties who find joining up letters"
+    },
+    {
+      "startMs": 331840,
+      "endMs": 333160,
+      "text": "really challenging."
+    },
+    {
+      "startMs": 333160,
+      "endMs": 334560,
+      "text": "Man: I agree."
+    },
+    {
+      "startMs": 334560,
+      "endMs": 340560,
+      "text": "I was always worried that my poor handwriting affected my exam results, and now research"
+    },
+    {
+      "startMs": 340560,
+      "endMs": 343480,
+      "text": "shows that I was right to worry."
+    },
+    {
+      "startMs": 343480,
+      "endMs": 348840,
+      "text": "I'm sure a lot of students think it's unfair that they're being judged on their handwriting,"
+    },
+    {
+      "startMs": 348840,
+      "endMs": 350560,
+      "text": "not just their knowledge."
+    },
+    {
+      "startMs": 350560,
+      "endMs": 354280,
+      "text": "Woman: Marks are definitely affected if examiners can't read the script."
+    },
+    {
+      "startMs": 354280,
+      "endMs": 358960,
+      "text": "That's why it's always been so important to teach children to write legibly."
+    },
+    {
+      "startMs": 358960,
+      "endMs": 363560,
+      "text": "Do you think the role of handwriting will change in the future?"
+    },
+    {
+      "startMs": 363560,
+      "endMs": 364560,
+      "text": "Man: Hmm."
+    },
+    {
+      "startMs": 364560,
+      "endMs": 367080,
+      "text": "I can't see that changing much."
+    },
+    {
+      "startMs": 367080,
+      "endMs": 371520,
+      "text": "Touch typing still isn't taught in most schools, which is a shame."
+    },
+    {
+      "startMs": 371520,
+      "endMs": 376400,
+      "text": "But maybe that won't be necessary in the future, because people will also be able to write"
+    },
+    {
+      "startMs": 376400,
+      "endMs": 379000,
+      "text": "by hand on digital devices."
+    },
+    {
+      "startMs": 379000,
+      "endMs": 383520,
+      "text": "Anyway, teachers understand the value of handwriting."
+    },
+    {
+      "startMs": 383520,
+      "endMs": 385600,
+      "text": "It's a basic life skill."
+    },
+    {
+      "startMs": 385600,
+      "endMs": 386600,
+      "text": "Woman: True."
+    },
+    {
+      "startMs": 386600,
+      "endMs": 392840,
+      "text": "However, the fact is that people are writing by hand less and less and relying on digital"
+    },
+    {
+      "startMs": 392840,
+      "endMs": 393840,
+      "text": "devices."
+    },
+    {
+      "startMs": 393840,
+      "endMs": 396080,
+      "text": "That does cause some problems."
+    },
+    {
+      "startMs": 396080,
+      "endMs": 397080,
+      "text": "Man: Hmm."
+    },
+    {
+      "startMs": 397080,
+      "endMs": 398920,
+      "text": "You mean like note-taking."
+    },
+    {
+      "startMs": 398920,
+      "endMs": 401080,
+      "text": "There are lots of apps for that."
+    },
+    {
+      "startMs": 401080,
+      "endMs": 404480,
+      "text": "Woman: And for reading historical documents, apparently."
+    },
+    {
+      "startMs": 404480,
+      "endMs": 411320,
+      "text": "But my mum is shocked by my awful spelling and the fact that my punctuation is really inconsistent."
+    },
+    {
+      "startMs": 411320,
+      "endMs": 414280,
+      "text": "I think you can put that down to lack of practice."
+    },
+    {
+      "startMs": 414280,
+      "endMs": 415960,
+      "text": "Man: I expect so."
+    },
+    {
+      "startMs": 415960,
+      "endMs": 419040,
+      "text": "Personally, I miss writing by hand."
+    },
+    {
+      "startMs": 419040,
+      "endMs": 421480,
+      "text": "I hardly ever write anything now."
+    },
+    {
+      "startMs": 421480,
+      "endMs": 427920,
+      "text": "I remember my grandparents had such beautiful handwriting, and it was so individual."
+    },
+    {
+      "startMs": 427920,
+      "endMs": 431760,
+      "text": "Nobody I know would be able to identify my handwriting now."
+    },
+    {
+      "startMs": 431760,
+      "endMs": 432760,
+      "text": "It's a shame."
+    },
+    {
+      "startMs": 432760,
+      "endMs": 433760,
+      "text": "Woman: I know."
+    },
+    {
+      "startMs": 433760,
+      "endMs": 434760,
+      "text": "I feel the same way."
+    },
+    {
+      "startMs": 434760,
+      "endMs": 440600,
+      "text": "I used to write a diary by hand, and now I do that digitally."
+    },
+    {
+      "startMs": 440600,
+      "endMs": 443560,
+      "text": "It just seems less effort to do it that way."
+    },
+    {
+      "startMs": 443560,
+      "endMs": 444560,
+      "text": "Man: Hmm."
+    },
+    {
+      "startMs": 444560,
+      "endMs": 450120,
+      "text": "So it's not just a problem."
+    },
+    {
+      "startMs": 450120,
+      "endMs": 452640,
+      "text": "That is the end of Part 3."
+    },
+    {
+      "startMs": 452640,
+      "endMs": 456520,
+      "text": "You now have 30 seconds to check your answers to Part 3."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 91,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

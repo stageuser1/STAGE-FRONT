@@ -1,0 +1,560 @@
+{
+  "id": "p4-84-the-invasion-of-plants",
+  "title": "The Invasion of Plants",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-9a0aa5fed98a",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 340.056,
+    "checksum": "sha256:65ba6197562c566549915f4d362c3733b92075e9801b1205024fea5c751c35e5"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. The Invasion of Plants General Features Some species take over a 31. ________ Mainly enter new environment with the help of birds and 32. ________ Three Species Common Broom Original from: 33. ________ Economic problem: affect commodity industries like 34. ________ Biological control such as 35. ________ Japanese Barberry In 1975, seeds invaded USA from 36. ________ Typical feature: yellow 37. ________ Common Buckthorn Leaves: 38. ________, dark, green Spreading via: during the course of birds' long 39. ________ Unlike sea buckthorn, which is used as treatment to serious 40. ________ problems",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Some species take over a 31. ________",
+          "answer": "garden"
+        },
+        {
+          "id": "32",
+          "text": "Mainly enter new environment with the help of birds and 32. ________",
+          "answer": "humans"
+        },
+        {
+          "id": "33",
+          "text": "Original from: 33. ________",
+          "answer": "Europe"
+        },
+        {
+          "id": "34",
+          "text": "Economic problem: affect commodity industries like 34. ________",
+          "answer": "timber"
+        },
+        {
+          "id": "35",
+          "text": "Biological control such as 35. ________",
+          "answer": "insects"
+        },
+        {
+          "id": "36",
+          "text": "In 1975, seeds invaded USA from 36. ________",
+          "answer": "Russia"
+        },
+        {
+          "id": "37",
+          "text": "Typical feature: yellow 37. ________",
+          "answer": "flowers"
+        },
+        {
+          "id": "38",
+          "text": "Leaves: 38. ________, dark, green",
+          "answer": "smooth"
+        },
+        {
+          "id": "39",
+          "text": "Spreading via: during the course of birds' long 39. ________",
+          "answer": "migration"
+        },
+        {
+          "id": "40",
+          "text": "Unlike sea buckthorn, which is used as treatment to serious 40. ________ problems",
+          "answer": "digestive"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Invasion of Plants",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "General Features",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Some species take over a 31. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Mainly enter new environment with the help of birds and 32. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Three Species",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Common Broom",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Original from: 33. ________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Economic problem: affect commodity industries like 34. ________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Biological control such as 35. ________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Japanese Barberry",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In 1975, seeds invaded USA from 36. ________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Typical feature: yellow 37. ________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Common Buckthorn",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Leaves: 38. ________, dark, green",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Spreading via: during the course of birds' long 39. ________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Unlike sea buckthorn, which is used as treatment to serious 40. ________ problems",
+          "list": true,
+          "level": 1
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "garden",
+        "32": "humans",
+        "33": "Europe",
+        "34": "timber",
+        "35": "insects",
+        "36": "Russia",
+        "37": "flowers",
+        "38": "smooth",
+        "39": "migration",
+        "40": "digestive"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2560,
+      "text": "Section 4."
+    },
+    {
+      "startMs": 2560,
+      "endMs": 7560,
+      "text": "You will hear part of a lecture about the research on the invasion of a plant called"
+    },
+    {
+      "startMs": 7560,
+      "endMs": 8560,
+      "text": "buckthorn."
+    },
+    {
+      "startMs": 8560,
+      "endMs": 13840,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 72640,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 72640,
+      "endMs": 75400,
+      "text": "Welcome to today's biology lecture."
+    },
+    {
+      "startMs": 75400,
+      "endMs": 79080,
+      "text": "We are going to talk about a couple of invasive plants."
+    },
+    {
+      "startMs": 79080,
+      "endMs": 80960,
+      "text": "What is an invasive species?"
+    },
+    {
+      "startMs": 80960,
+      "endMs": 86280,
+      "text": "Well, an invasive plant has the ability to spread aggressively outside its native range"
+    },
+    {
+      "startMs": 86280,
+      "endMs": 88560,
+      "text": "in a new habitat."
+    },
+    {
+      "startMs": 88560,
+      "endMs": 93200,
+      "text": "Invasive plants can even cause economic or environmental harm."
+    },
+    {
+      "startMs": 93200,
+      "endMs": 100120,
+      "text": "At the same time, they threaten local plants by competing for nutrients, light and water."
+    },
+    {
+      "startMs": 100120,
+      "endMs": 104520,
+      "text": "Invasive species have contributed to the decline of many endangered and threatened species"
+    },
+    {
+      "startMs": 104520,
+      "endMs": 106560,
+      "text": "in the US."
+    },
+    {
+      "startMs": 106560,
+      "endMs": 111040,
+      "text": "As many of you have noticed in your own life, some of these species out-compete other"
+    },
+    {
+      "startMs": 111040,
+      "endMs": 114200,
+      "text": "plants and take over a whole garden."
+    },
+    {
+      "startMs": 114200,
+      "endMs": 118840,
+      "text": "So they have become a serious problem that both the government and the public must deal"
+    },
+    {
+      "startMs": 118840,
+      "endMs": 120240,
+      "text": "with."
+    },
+    {
+      "startMs": 120240,
+      "endMs": 124720,
+      "text": "These species are often brought out of their native range by humans or birds."
+    },
+    {
+      "startMs": 124720,
+      "endMs": 129280,
+      "text": "They are knowingly carry the seeds with them to a new environment."
+    },
+    {
+      "startMs": 129280,
+      "endMs": 135800,
+      "text": "Now let's take a look at some invasive species and see how they are affecting native environment."
+    },
+    {
+      "startMs": 135800,
+      "endMs": 141000,
+      "text": "Common broom or Scotch broom is a plant native to western and central Europe."
+    },
+    {
+      "startMs": 141000,
+      "endMs": 144360,
+      "text": "It typically grows to one to three meters tall."
+    },
+    {
+      "startMs": 144360,
+      "endMs": 146760,
+      "text": "It is found in sunny sites."
+    },
+    {
+      "startMs": 146760,
+      "endMs": 153280,
+      "text": "In America, this species has become an ecologically destructive plant, especially in grassland shrubs"
+    },
+    {
+      "startMs": 153280,
+      "endMs": 154920,
+      "text": "and woodlands."
+    },
+    {
+      "startMs": 154920,
+      "endMs": 159560,
+      "text": "It has a competitive advantage over native trees and shrubs in North America."
+    },
+    {
+      "startMs": 159560,
+      "endMs": 165720,
+      "text": "And since its introduction, it has caused not only ecological but also economic problems."
+    },
+    {
+      "startMs": 165720,
+      "endMs": 169400,
+      "text": "It even affected the performance of the commodity industry."
+    },
+    {
+      "startMs": 169400,
+      "endMs": 174040,
+      "text": "It is estimated that it is responsible for the lost timber production which was worth"
+    },
+    {
+      "startMs": 174040,
+      "endMs": 178200,
+      "text": "15 million US dollars last year in Oregon."
+    },
+    {
+      "startMs": 178200,
+      "endMs": 183200,
+      "text": "As common broom can cause such a big problem, how can we control it?"
+    },
+    {
+      "startMs": 183200,
+      "endMs": 188400,
+      "text": "One way to start is by targeting the common broom plants that are producing fruits."
+    },
+    {
+      "startMs": 188400,
+      "endMs": 192840,
+      "text": "Then we need to remove these fruit bearing trees and that will reduce the amount of seeds"
+    },
+    {
+      "startMs": 192840,
+      "endMs": 195680,
+      "text": "added to the soil each year."
+    },
+    {
+      "startMs": 195680,
+      "endMs": 201880,
+      "text": "Another way is biological control, like introducing some insects from its place of origin."
+    },
+    {
+      "startMs": 201880,
+      "endMs": 207440,
+      "text": "They will disturb the growth of this invasive plant."
+    },
+    {
+      "startMs": 207440,
+      "endMs": 215880,
+      "text": "Next, there is Japanese Barbary, which is native to Japan and eastern Asia."
+    },
+    {
+      "startMs": 215880,
+      "endMs": 219680,
+      "text": "It tolerates a wide range of soil and moisture conditions."
+    },
+    {
+      "startMs": 219680,
+      "endMs": 225640,
+      "text": "It is found along woodland edges, road sides, stream banks, old fields and forests."
+    },
+    {
+      "startMs": 225640,
+      "endMs": 231360,
+      "text": "This species was brought to America from Russia in 1975 and it is now widely seen throughout"
+    },
+    {
+      "startMs": 231360,
+      "endMs": 232960,
+      "text": "the US."
+    },
+    {
+      "startMs": 232960,
+      "endMs": 236760,
+      "text": "It has yellow flowers and bears bright red fruits."
+    },
+    {
+      "startMs": 236760,
+      "endMs": 239920,
+      "text": "It is used widely as landscape and hedge material."
+    },
+    {
+      "startMs": 239920,
+      "endMs": 243320,
+      "text": "It has been replacing native species in America."
+    },
+    {
+      "startMs": 243320,
+      "endMs": 249440,
+      "text": "Furthermore, the plant can change soil condition and cause diseases to plants like wheat."
+    },
+    {
+      "startMs": 249440,
+      "endMs": 254720,
+      "text": "In recent years, Japanese Barbary has been recognized as an invasive species in many parts"
+    },
+    {
+      "startMs": 254720,
+      "endMs": 257200,
+      "text": "of the eastern United States."
+    },
+    {
+      "startMs": 257200,
+      "endMs": 263280,
+      "text": "A variety of techniques, including both mechanical and chemical controls, may be effective in dealing"
+    },
+    {
+      "startMs": 263280,
+      "endMs": 268360,
+      "text": "with this species, but the exact method should be tailored to the specific conditions on"
+    },
+    {
+      "startMs": 268360,
+      "endMs": 270160,
+      "text": "the site."
+    },
+    {
+      "startMs": 270160,
+      "endMs": 276600,
+      "text": "Buckthorn or common buckthorn is a species of tree-like plant, which usually grows 2-3"
+    },
+    {
+      "startMs": 276600,
+      "endMs": 281840,
+      "text": "meters tall, but it occasionally reaches up to 10 meters tall."
+    },
+    {
+      "startMs": 281840,
+      "endMs": 284960,
+      "text": "It has smooth dark green leaves."
+    },
+    {
+      "startMs": 284960,
+      "endMs": 290080,
+      "text": "Common buckthorn produces berry-like black fruits in late summer and autumn."
+    },
+    {
+      "startMs": 290080,
+      "endMs": 294600,
+      "text": "It is invasive in many parts of the western part of the United States."
+    },
+    {
+      "startMs": 294600,
+      "endMs": 301120,
+      "text": "It is native to Europe and it was introduced to North America in the early 19th century."
+    },
+    {
+      "startMs": 301120,
+      "endMs": 304760,
+      "text": "It causes damage to local soil and plants."
+    },
+    {
+      "startMs": 304760,
+      "endMs": 308840,
+      "text": "Buckthorn can spread widely with the help of birds that eat its fruits."
+    },
+    {
+      "startMs": 308840,
+      "endMs": 314000,
+      "text": "They then carry the seeds long distances along their path of migration."
+    },
+    {
+      "startMs": 314000,
+      "endMs": 316120,
+      "text": "What can we do to control it?"
+    },
+    {
+      "startMs": 316120,
+      "endMs": 320520,
+      "text": "First, we need to learn how to identify common buckthorn."
+    },
+    {
+      "startMs": 320520,
+      "endMs": 324480,
+      "text": "It is different from sea buckthorn, which is a plant that can be used to treat serious"
+    },
+    {
+      "startMs": 324480,
+      "endMs": 325920,
+      "text": "digestive problems."
+    },
+    {
+      "startMs": 325920,
+      "endMs": 330600,
+      "text": "Then, we should avoid using it in gardens and landscape."
+    },
+    {
+      "startMs": 330600,
+      "endMs": 336680,
+      "text": "You can contact the invading species hotline if you find common buckthorn in the wild."
+    },
+    {
+      "startMs": 336680,
+      "endMs": 338680,
+      "text": "So let's look at some pictures of these."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 67,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

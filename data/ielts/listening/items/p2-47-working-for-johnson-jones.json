@@ -1,0 +1,606 @@
+{
+  "id": "p2-47-working-for-johnson-jones",
+  "title": "Working for Johnson Jones",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-859ccec09c6e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 498.096,
+    "checksum": "sha256:51fc20b74d78ad589a2cbbfb81d584ae6e94b26ef00e712f4741c1268d275d05"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–15",
+      "instruction": "Choose the correct letter, A, B or C",
+      "questions": [
+        {
+          "id": "11",
+          "text": "What does Mark say first attracts people to working for Johnson Jones?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the pay"
+            },
+            {
+              "id": "B",
+              "text": "the staff discount"
+            },
+            {
+              "id": "C",
+              "text": "the working hours"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "Mark says the company is one of the country’s most successful retailers because it",
+          "options": [
+            {
+              "id": "A",
+              "text": "is focused on long term planning."
+            },
+            {
+              "id": "B",
+              "text": "provides excellent customer service."
+            },
+            {
+              "id": "C",
+              "text": "offers value for money."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "Mark says that because Johnson Jones is a partnership, the staff",
+          "options": [
+            {
+              "id": "A",
+              "text": "are better trained."
+            },
+            {
+              "id": "B",
+              "text": "have better job security."
+            },
+            {
+              "id": "C",
+              "text": "are given more responsibility."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "What is the typical annual bonus that partners receive?",
+          "options": [
+            {
+              "id": "A",
+              "text": "8%"
+            },
+            {
+              "id": "B",
+              "text": "15%"
+            },
+            {
+              "id": "C",
+              "text": "20%"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "To qualify for the leisure and holiday facilities, partners must have worked for the company for",
+          "options": [
+            {
+              "id": "A",
+              "text": "one year."
+            },
+            {
+              "id": "B",
+              "text": "six months."
+            },
+            {
+              "id": "C",
+              "text": "three months."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 16–20",
+      "instruction": "Choose FIVE answers from the box and write the correct letter A–G.",
+      "options": [
+        {
+          "id": "A",
+          "text": "available for celebrations and parties"
+        },
+        {
+          "id": "B",
+          "text": "suitable for families with children"
+        },
+        {
+          "id": "C",
+          "text": "regularly used by senior management"
+        },
+        {
+          "id": "D",
+          "text": "also supplies food to the company’s supermarkets"
+        },
+        {
+          "id": "E",
+          "text": "spa facilities available"
+        },
+        {
+          "id": "F",
+          "text": "similar to being in someone’s home"
+        },
+        {
+          "id": "G",
+          "text": "good for short breaks"
+        }
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "The Grange",
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "Meadow House",
+          "answer": "F"
+        },
+        {
+          "id": "18",
+          "text": "Coombe Manor",
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "The Barn",
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "The Stable",
+          "answer": "G"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "C",
+        "14": "B",
+        "15": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "16": "C",
+        "17": "F",
+        "18": "B",
+        "19": "A",
+        "20": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7560,
+      "text": "Section 2."
+    },
+    {
+      "startMs": 7560,
+      "endMs": 13700,
+      "text": "You will hear a manager called Mark Bergen, who works for a large retailer called Johnson"
+    },
+    {
+      "startMs": 13700,
+      "endMs": 17680,
+      "text": "Jones, giving a talk at a recruitment fair."
+    },
+    {
+      "startMs": 17680,
+      "endMs": 23980,
+      "text": "First, you have some time to look at questions 11 to 15 on page 3."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 52920,
+      "text": "You will hear a manager call from Johnson Jones, giving a talk at a recruitment fair."
+    },
+    {
+      "startMs": 52920,
+      "endMs": 67040,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 67040,
+      "endMs": 68280,
+      "text": "Good morning."
+    },
+    {
+      "startMs": 68280,
+      "endMs": 70120,
+      "text": "My name is Mark Bergen."
+    },
+    {
+      "startMs": 70120,
+      "endMs": 76160,
+      "text": "I'm a human resources manager at Johnson Jones and I'm here to tell you about what it's"
+    },
+    {
+      "startMs": 76160,
+      "endMs": 81280,
+      "text": "like working for one of the country's best employers."
+    },
+    {
+      "startMs": 81280,
+      "endMs": 90240,
+      "text": "The company has 225 department stores and owns a further 150 supermarkets."
+    },
+    {
+      "startMs": 90240,
+      "endMs": 99520,
+      "text": "At our latest store opening, we had over 9,000 applicants for 750 posts."
+    },
+    {
+      "startMs": 99520,
+      "endMs": 103760,
+      "text": "So why do so many people want to work for us?"
+    },
+    {
+      "startMs": 103760,
+      "endMs": 109400,
+      "text": "Well, the first thing that attracts them isn't so much the salary, although that is a"
+    },
+    {
+      "startMs": 109400,
+      "endMs": 117840,
+      "text": "little above average, it's the idea of getting a massive 25% off everything from washing"
+    },
+    {
+      "startMs": 117840,
+      "endMs": 121200,
+      "text": "machines to designer handbags."
+    },
+    {
+      "startMs": 121200,
+      "endMs": 126000,
+      "text": "People are prepared to put in long hours to get those kinds of perks."
+    },
+    {
+      "startMs": 126000,
+      "endMs": 133720,
+      "text": "Johnson Jones has been going strong for nearly 150 years and has outlived many of its strongest"
+    },
+    {
+      "startMs": 133720,
+      "endMs": 135040,
+      "text": "competitors."
+    },
+    {
+      "startMs": 135040,
+      "endMs": 140160,
+      "text": "Of course, this has something to do with the high quality products that we sell and"
+    },
+    {
+      "startMs": 140160,
+      "endMs": 147200,
+      "text": "our motto better for less, which means customers know they are getting good value for money."
+    },
+    {
+      "startMs": 147200,
+      "endMs": 149720,
+      "text": "But we're not alone in that."
+    },
+    {
+      "startMs": 149720,
+      "endMs": 154480,
+      "text": "Where we are different is in our approach to making a profit."
+    },
+    {
+      "startMs": 154480,
+      "endMs": 161080,
+      "text": "Other companies think in the short term, whereas we always take a more strategic view,"
+    },
+    {
+      "startMs": 161080,
+      "endMs": 164880,
+      "text": "looking three or five years ahead."
+    },
+    {
+      "startMs": 164880,
+      "endMs": 169160,
+      "text": "The company isn't owned by a family or shareholders."
+    },
+    {
+      "startMs": 169160,
+      "endMs": 176440,
+      "text": "It's a partnership, which means it's owned by its full-time employees, who are all partners"
+    },
+    {
+      "startMs": 176440,
+      "endMs": 179320,
+      "text": "and have a share in the company."
+    },
+    {
+      "startMs": 179320,
+      "endMs": 185280,
+      "text": "In return for the very generous benefits they get, they're expected to put in extra effort"
+    },
+    {
+      "startMs": 185280,
+      "endMs": 188640,
+      "text": "and take an active role in running the company."
+    },
+    {
+      "startMs": 188640,
+      "endMs": 193880,
+      "text": "This means they're involved in things like making decisions about pension contributions,"
+    },
+    {
+      "startMs": 193880,
+      "endMs": 196200,
+      "text": "for example."
+    },
+    {
+      "startMs": 196200,
+      "endMs": 201360,
+      "text": "Another very attractive reason for working for us is the annual bonus, which we get as"
+    },
+    {
+      "startMs": 201360,
+      "endMs": 203840,
+      "text": "a percentage of our salary."
+    },
+    {
+      "startMs": 203840,
+      "endMs": 210240,
+      "text": "Last year it was 15%, about two months salary, which is pretty standard."
+    },
+    {
+      "startMs": 210240,
+      "endMs": 218600,
+      "text": "It can go down to 8%, but that's unusual, and a couple of times it's even been above 20%."
+    },
+    {
+      "startMs": 218600,
+      "endMs": 224600,
+      "text": "Some people use it to pay off loans, others save it for a deposit on a house."
+    },
+    {
+      "startMs": 224600,
+      "endMs": 230200,
+      "text": "The most popular benefit for partners are the subsidized holiday centers, which are owned"
+    },
+    {
+      "startMs": 230200,
+      "endMs": 231920,
+      "text": "by the company."
+    },
+    {
+      "startMs": 231920,
+      "endMs": 235800,
+      "text": "Once a year partners can book in for up to two weeks."
+    },
+    {
+      "startMs": 235800,
+      "endMs": 241920,
+      "text": "It's for anyone, from cleaners to directors, with a minimum of three months service."
+    },
+    {
+      "startMs": 241920,
+      "endMs": 246480,
+      "text": "After six months service, partners are entitled to offer their subsidy on the cost of their"
+    },
+    {
+      "startMs": 246480,
+      "endMs": 250720,
+      "text": "stay."
+    },
+    {
+      "startMs": 250720,
+      "endMs": 256800,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16-20 on"
+    },
+    {
+      "startMs": 256800,
+      "endMs": 257760,
+      "text": "page 4."
+    },
+    {
+      "startMs": 276480,
+      "endMs": 290520,
+      "text": "Now listen and answer questions 16-20."
+    },
+    {
+      "startMs": 290520,
+      "endMs": 295440,
+      "text": "Let me just give you an idea of what's on offer at the holiday centers."
+    },
+    {
+      "startMs": 295440,
+      "endMs": 301720,
+      "text": "The Grange, which is the largest of the holiday centers, is used for conferences by the company,"
+    },
+    {
+      "startMs": 301720,
+      "endMs": 305640,
+      "text": "and the board of directors always have their annual meeting there."
+    },
+    {
+      "startMs": 305640,
+      "endMs": 310240,
+      "text": "It's all very informal, not like a normal conference centre."
+    },
+    {
+      "startMs": 310240,
+      "endMs": 316440,
+      "text": "Meadow House is located in Kent, which is famous for its apples and other fruit, and it's"
+    },
+    {
+      "startMs": 316440,
+      "endMs": 318680,
+      "text": "a large country house."
+    },
+    {
+      "startMs": 318680,
+      "endMs": 324720,
+      "text": "What's unusual about it is that, unlike other hotels, you have access to the kitchen, so"
+    },
+    {
+      "startMs": 324720,
+      "endMs": 328360,
+      "text": "it feels more like staying with a friend."
+    },
+    {
+      "startMs": 328360,
+      "endMs": 331240,
+      "text": "Coombe Manor is a working farm."
+    },
+    {
+      "startMs": 331240,
+      "endMs": 337800,
+      "text": "There are loads of cows and sheep, none of which actually end up on our supermarket shelves."
+    },
+    {
+      "startMs": 337800,
+      "endMs": 345360,
+      "text": "It's a paradise for kids, as there's plenty of space to run wild and also an indoor pool."
+    },
+    {
+      "startMs": 345360,
+      "endMs": 350320,
+      "text": "You can choose to stay in cottages or camp by the lake."
+    },
+    {
+      "startMs": 350320,
+      "endMs": 356200,
+      "text": "The Barn is where I recently celebrated my 25th wedding anniversary."
+    },
+    {
+      "startMs": 356200,
+      "endMs": 361440,
+      "text": "You can rent the whole place out for a large group of up to 40 friends."
+    },
+    {
+      "startMs": 361440,
+      "endMs": 367080,
+      "text": "We got all our food delivered from the nearest Johnson Jones supermarket, so there was no"
+    },
+    {
+      "startMs": 367080,
+      "endMs": 368880,
+      "text": "cooking to be done."
+    },
+    {
+      "startMs": 368880,
+      "endMs": 369880,
+      "text": "Perfect."
+    },
+    {
+      "startMs": 369880,
+      "endMs": 375480,
+      "text": "All that was missing was the spa, which should be opening next year."
+    },
+    {
+      "startMs": 375480,
+      "endMs": 380680,
+      "text": "The Stable is often hard to get into because it's so popular, that's partly because"
+    },
+    {
+      "startMs": 380680,
+      "endMs": 387760,
+      "text": "it's right on the beach with beautiful sea views and only an hour by train from London."
+    },
+    {
+      "startMs": 387760,
+      "endMs": 389760,
+      "text": "Ideal for weekends."
+    },
+    {
+      "startMs": 389760,
+      "endMs": 395440,
+      "text": "The company's sailing club is located there, which was started by the company's founder"
+    },
+    {
+      "startMs": 395440,
+      "endMs": 398360,
+      "text": "in 1885."
+    },
+    {
+      "startMs": 398360,
+      "endMs": 404280,
+      "text": "So I'm sure you'll all agree that there really is."
+    },
+    {
+      "startMs": 404280,
+      "endMs": 406680,
+      "text": "That is the end of section 2."
+    },
+    {
+      "startMs": 406680,
+      "endMs": 409200,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 436680,
+      "endMs": 443080,
+      "text": "Now turn to section 3 on page 5."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 73,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

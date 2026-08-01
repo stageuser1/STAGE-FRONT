@@ -1,0 +1,433 @@
+{
+  "id": "p2-59-the-bike-renting-centre",
+  "title": "The Bike Renting Centre",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-0312b75d967a",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 321.588,
+    "checksum": "sha256:e03b73991e1974ee43db0e1bec62b81a76fe1b4afd7fc1865e4be77c08ea1f5b"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Question 11–15",
+      "instruction": "Choose FIVE answers from the box and complete the flow chart, A–G, next to Questions 11–15.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "helmet"
+        },
+        {
+          "id": "B",
+          "text": "light"
+        },
+        {
+          "id": "C",
+          "text": "screen"
+        },
+        {
+          "id": "D",
+          "text": "keyboard"
+        },
+        {
+          "id": "E",
+          "text": "button"
+        },
+        {
+          "id": "F",
+          "text": "alarm"
+        },
+        {
+          "id": "G",
+          "text": "lock"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Go to the station, and touch the _____. .",
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "Input the password number, click the _____.  and open the 13.  of the bike.",
+          "answer": "E"
+        },
+        {
+          "id": "14",
+          "text": "Put on a _____.  before setting off.",
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "The _____.  will show whether the bike is locked.",
+          "answer": "B"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Steps",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Go to the station, and touch the 11. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Input the password number, click the 12. ________ and open the 13. ________ of the bike.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Safety measures",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Put on a 14. ________ before setting off.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "After usage, put the bike back in the rack.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The 15. ________ will show whether the bike is locked.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Question 16–20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "coffee bar",
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "meeting room",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "maintenance office",
+          "answer": "D"
+        },
+        {
+          "id": "19",
+          "text": "locker room",
+          "answer": "E"
+        },
+        {
+          "id": "20",
+          "text": "staff toilet",
+          "answer": "H"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-59-the-bike-renting-centre-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-59-the-bike-renting-centre-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "E",
+        "14": "A",
+        "15": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "C",
+        "17": "B",
+        "18": "D",
+        "19": "E",
+        "20": "H"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10000,
+      "text": "Part Two. You will hear a hostess talking on a radio program to her audience about how to rent a bike."
+    },
+    {
+      "startMs": 10000,
+      "endMs": 16000,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 56000,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 56000,
+      "endMs": 62000,
+      "text": "Hello listeners, it's your host Sarah here again on the award-winning program How to."
+    },
+    {
+      "startMs": 62000,
+      "endMs": 71000,
+      "text": "Last week we looked intentionally on how to rent a car, and today we would be discussing how to rent a bike in the little town of Chuga."
+    },
+    {
+      "startMs": 71000,
+      "endMs": 79000,
+      "text": "As usual, we are not advertising for any company, but we just want to help our listeners know the best way to go about renting a bike."
+    },
+    {
+      "startMs": 79000,
+      "endMs": 86000,
+      "text": "We bring you the easiest and best methods of doing things, so let's go right in."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 94000,
+      "text": "From wherever you are, you drive or walk to the bike station, you then put your finger on the screen of a bike."
+    },
+    {
+      "startMs": 94000,
+      "endMs": 103000,
+      "text": "Make sure you use your bare hand, gloves or clothes cannot be recognised, but don't touch the alarm on the side as it's quite sensitive."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 113000,
+      "text": "Next, input the password number, which is unique each time and can be applied for all systems, and then you would see a button appear."
+    },
+    {
+      "startMs": 113000,
+      "endMs": 118000,
+      "text": "Once it appears, just click it and then undo the lock of the bike."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 126000,
+      "text": "Please note that payment has to have been made prior to this or at least half payment by cash to the bike company."
+    },
+    {
+      "startMs": 126000,
+      "endMs": 132000,
+      "text": "Remember that the cashier would ask for your proof of payment before directing you to where the bikes are."
+    },
+    {
+      "startMs": 132000,
+      "endMs": 138000,
+      "text": "Once you get the bike, it is important you understand a few safety measures before setting out."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 147000,
+      "text": "On this programme, we always emphasise the fact that life is important to us, and as a matter of fact, we still need you around here."
+    },
+    {
+      "startMs": 147000,
+      "endMs": 151000,
+      "text": "So, make sure you do not ride without your helmet."
+    },
+    {
+      "startMs": 151000,
+      "endMs": 155000,
+      "text": "Also, make sure that if you have a passenger, they have one too."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 162000,
+      "text": "We have been receiving far too many reports of bike accidents that resulted in deaths from head injuries."
+    },
+    {
+      "startMs": 162000,
+      "endMs": 168000,
+      "text": "So please let us all adhere to these safety measures. They are for our own good."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 175000,
+      "text": "After riding safely and returning, you can return the bike to the rack and make sure that it is well placed."
+    },
+    {
+      "startMs": 175000,
+      "endMs": 182000,
+      "text": "Then lock the bike, and you would know when it is properly locked by the light which would turn on."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 189000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 213000,
+      "endMs": 219000,
+      "text": "Now listen and answer questions 16 to 20."
+    },
+    {
+      "startMs": 219000,
+      "endMs": 224000,
+      "text": "So, here we are at our improved bike renting centre."
+    },
+    {
+      "startMs": 224000,
+      "endMs": 230000,
+      "text": "The renovation is not yet complete, but I am sure you will agree that it looks a lot better than before."
+    },
+    {
+      "startMs": 230000,
+      "endMs": 236000,
+      "text": "We hope that the new layout and amenities will convince people to begin cycling again."
+    },
+    {
+      "startMs": 236000,
+      "endMs": 240000,
+      "text": "In the middle of the facility is the bicycle area."
+    },
+    {
+      "startMs": 240000,
+      "endMs": 245000,
+      "text": "Now, guests can select a bike rather than just being handed one by staff."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 250000,
+      "text": "Another complaint before was that there was nowhere for customers to take a rest."
+    },
+    {
+      "startMs": 250000,
+      "endMs": 256000,
+      "text": "So, on the right side of the facility, just two doors down from the ATM is the coffee bar."
+    },
+    {
+      "startMs": 256000,
+      "endMs": 259000,
+      "text": "It's spacious enough to fit 20 people."
+    },
+    {
+      "startMs": 259000,
+      "endMs": 263000,
+      "text": "We also have a much bigger meeting room located by the fountain."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 267000,
+      "text": "It is mostly for discussing bicycle races."
+    },
+    {
+      "startMs": 267000,
+      "endMs": 272000,
+      "text": "Situated next to the ATM is the maintenance office."
+    },
+    {
+      "startMs": 272000,
+      "endMs": 279000,
+      "text": "What's cool about it is that there are glass walls that allow guests to see the staff repair the bikes."
+    },
+    {
+      "startMs": 279000,
+      "endMs": 284000,
+      "text": "The locker room for guests is on the left side just before the exit."
+    },
+    {
+      "startMs": 284000,
+      "endMs": 293000,
+      "text": "In the past, guests had to leave their personal belongings in their car or with a friend, but now there's a locker available for all riders."
+    },
+    {
+      "startMs": 293000,
+      "endMs": 298000,
+      "text": "However, it is just to keep their things. The changing area is next door."
+    },
+    {
+      "startMs": 298000,
+      "endMs": 303000,
+      "text": "Don't worry, there is a divider to separate the men from the women."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 309000,
+      "text": "As for the employees, there is a staff toilet next to the exit on the right side."
+    },
+    {
+      "startMs": 309000,
+      "endMs": 315000,
+      "text": "Aside from the usual toilet and think, there is even a shower for employees' depression."
+    },
+    {
+      "startMs": 315000,
+      "endMs": 322000,
+      "text": "That is the end of part two. You now have half a minute to check your answers to part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 9,
+    "answerCount": 9,
+    "transcriptCount": 42,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

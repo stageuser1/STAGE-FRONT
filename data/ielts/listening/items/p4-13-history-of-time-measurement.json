@@ -1,0 +1,504 @@
+{
+  "id": "p4-13-history-of-time-measurement",
+  "title": "History of time-measurement",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-23e03c31ca01",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 411.713,
+    "checksum": "sha256:17d83297c5e75f9eeba58470e5a0208528f443351620dc538ea8a3dc51da1877"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-35.",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. History of time-measurement Primitive measurements by observing Two time keepers: The 31. __________ Natural events, such as winds and rains, rivers flooding, plants flowering, and the cycles of breeding or 32. __________ behaviour. Precise measurements They became important for organising activities for: The oldest time keepers were discovered in Mesopotamia and 35. __________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The 31. __________",
+          "answer": "Sun’s position"
+        },
+        {
+          "id": "32",
+          "text": "Natural events, such as winds and rains, rivers flooding, plants flowering, and the cycles of breeding or 32. __________ behaviour.",
+          "answer": "Migration"
+        },
+        {
+          "id": "33",
+          "text": "33. __________",
+          "answer": "Religion"
+        },
+        {
+          "id": "34",
+          "text": "34. __________",
+          "answer": "Government/the government"
+        },
+        {
+          "id": "35",
+          "text": "The oldest time keepers were discovered in Mesopotamia and 35. __________",
+          "answer": "North africa"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "History of time-measurement",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Primitive measurements by observing",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Two time keepers:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The 31. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Natural events, such as winds and rains, rivers flooding, plants flowering, and the cycles of breeding or 32. __________ behaviour.",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Precise measurements",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "They became important for organising activities for:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "33. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "34. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "The oldest time keepers were discovered in Mesopotamia and 35. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 36-40.",
+      "instruction": "Complete the table below. Write ONE WORD ONLY for each answer. Time Keeper Disadvantages The sundial In different parts of the year, the time for day 36. __________ The clepsydra (Water clock) The changing pressure and 37. __________ were what the flow of water still relied on. The 38. __________ The time duration was 39. __________ Fire candle clock The burning 40. __________ or the rate of burning, was subject to the candle’s wax.",
+      "questions": [
+        {
+          "id": "36",
+          "text": "In different parts of the year, the time for day 36. __________",
+          "answer": "Varied"
+        },
+        {
+          "id": "37",
+          "text": "The changing pressure and 37. __________ were what the flow of water still relied on.",
+          "answer": "Temperature"
+        },
+        {
+          "id": "38",
+          "text": "The 38. __________",
+          "answer": "Sandglasses"
+        },
+        {
+          "id": "39",
+          "text": "The time duration was 39. __________",
+          "answer": "Limited"
+        },
+        {
+          "id": "40",
+          "text": "The burning 40. __________ or the rate of burning, was subject to the candle’s wax.",
+          "answer": "Time"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the table below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Time Keeper",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Disadvantages",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "The sundial",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "In different parts of the year, the time for day 36. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "The clepsydra (Water clock)",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "The changing pressure and 37. __________ were what the flow of water still relied on.",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "The 38. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "The time duration was 39. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Fire candle clock",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "The burning 40. __________ or the rate of burning, was subject to the candle’s wax.",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Sun’s position",
+        "32": "Migration",
+        "33": "Religion",
+        "34": "Government/the government",
+        "35": "North africa",
+        "36": "Varied",
+        "37": "Temperature",
+        "38": "Sandglasses",
+        "39": "Limited",
+        "40": "Time"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "Section 4. You will hear part of a lecture about time measurement."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 14000,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 58000,
+      "text": "Now, listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 69000,
+      "text": "Good morning, everyone. Today, I'm going to talk about the research project I've been involved in on time measurement."
+    },
+    {
+      "startMs": 69000,
+      "endMs": 77000,
+      "text": "Do you know how time is measured? Consider how we measure length and how, with time, we encounter a difficulty."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 86000,
+      "text": "Before we could grasp it, it would flip through our fingers. In fact, as we can see, we are forced to have the resource to measure something else."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 96000,
+      "text": "The movement of something in space or a set of movements in space, all the methods that have been employed so far really measure time by a motion in space."
+    },
+    {
+      "startMs": 96000,
+      "endMs": 104000,
+      "text": "The measurement of time is no easy matter, a scientific unit, the only arrived at, after much thought and reflection."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 108000,
+      "text": "As the most primitive form of measurement, the sun seems to be natural."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 115000,
+      "text": "Ever since man first noticed the regular movements of the sun and stars, we have wondered about the passage of time."
+    },
+    {
+      "startMs": 115000,
+      "endMs": 120000,
+      "text": "Prehistoric people first recorded time according to the sun's position."
+    },
+    {
+      "startMs": 120000,
+      "endMs": 128000,
+      "text": "To start off, let us take noon, which is when the sun is on the meridian at the highest point of its course across the heavens,"
+    },
+    {
+      "startMs": 128000,
+      "endMs": 139000,
+      "text": "and when it casts the shortest shadow, but this measurement, which was regarded as a major one in ancient times, was less important than the natural events that occurred."
+    },
+    {
+      "startMs": 140000,
+      "endMs": 151000,
+      "text": "The earliest natural events that had been recognized were in the heavens, but during the course of the year, there were many other events that indicated significant changes in the environment."
+    },
+    {
+      "startMs": 151000,
+      "endMs": 162000,
+      "text": "Seasonal winds and rains, the flooding of rivers, the flowering of trees and plants, and the breeding cycles or migration of animals, all led to natural divisions of the year,"
+    },
+    {
+      "startMs": 162000,
+      "endMs": 168000,
+      "text": "and the further observation and local customs led to the recognition of the season."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 176000,
+      "text": "Years later, precise measurements were invented, because the passage of time was extremely important for astronomers and priests,"
+    },
+    {
+      "startMs": 176000,
+      "endMs": 184000,
+      "text": "who were responsible for determining the exact hour for daily rituals and for important religious festivals."
+    },
+    {
+      "startMs": 184000,
+      "endMs": 198000,
+      "text": "Apart from the connection with religion, accurate time measurement was also related to the government, since they divided the day or the night into different periods in order to regulate work and various events."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 203000,
+      "text": "For thousands of years, devices had been used to measure and keep track of time."
+    },
+    {
+      "startMs": 203000,
+      "endMs": 211000,
+      "text": "The current sex-agessimal system of time measurements dates back to approximately 2000 BCE from the Sumerians."
+    },
+    {
+      "startMs": 211000,
+      "endMs": 225000,
+      "text": "It was found that the earliest ancient time keepers were mainly invented and used in Mesopotamia, where the water clock was introduced from, as well as in North Africa, especially in the area of ancient Egypt."
+    },
+    {
+      "startMs": 234000,
+      "endMs": 247000,
+      "text": "So, now I'd like to introduce you to some of the most well-known ancient time keepers, as well as the disadvantages of them, for which they were replaced by various new forms of clocks that were used afterwards."
+    },
+    {
+      "startMs": 247000,
+      "endMs": 262000,
+      "text": "A sun dial is a device that tells the time of day by the apparent positioning of the sun in the sky. In the narrowest sense of the word, it consists of a flat plate and a norm on which casts a shadow onto the dial."
+    },
+    {
+      "startMs": 262000,
+      "endMs": 271000,
+      "text": "As the sun appears to move across the sky, the shadow aligns with different hour lines which are marked on the dial to indicate the time of day."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 282000,
+      "text": "However, it was quickly noted that the length of the day varied at different times of the year, therefore there could have been a difference between clock time and sun dial time."
+    },
+    {
+      "startMs": 282000,
+      "endMs": 288000,
+      "text": "In addition, the sun dial was of no use at night, so a water clock was invented."
+    },
+    {
+      "startMs": 288000,
+      "endMs": 301000,
+      "text": "The water clock, or Clepsidra, appeared to have been invented around 1,500 BCE and was a device which relied on the steady flow of water from or into a container."
+    },
+    {
+      "startMs": 301000,
+      "endMs": 315000,
+      "text": "Measurements could be marked on the container or on a receptacle for the water. It was reliable, but the water flow still depended on the variation of pressure and temperature from the top of water in the container."
+    },
+    {
+      "startMs": 315000,
+      "endMs": 323000,
+      "text": "As the technology of glass blowing developed from some time in the 14th century, it became possible to make sandglasses."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 335000,
+      "text": "Originally, they were used as a measurement for periods of time like lamps or candles, but as clocks became more accurate, they were calibrated to measure specific periods of time."
+    },
+    {
+      "startMs": 335000,
+      "endMs": 341000,
+      "text": "The drawback, however, as you can imagine, was the limited length of time they could measure."
+    },
+    {
+      "startMs": 341000,
+      "endMs": 345000,
+      "text": "The last time keeper to be introduced is the fire candle clock."
+    },
+    {
+      "startMs": 345000,
+      "endMs": 353000,
+      "text": "Candle clocks took advantage of a simple concept, the slow and consistent nature of a burning wax candle."
+    },
+    {
+      "startMs": 353000,
+      "endMs": 358000,
+      "text": "By utilizing this process, our ancestors were able to keep steady track of the time."
+    },
+    {
+      "startMs": 358000,
+      "endMs": 364000,
+      "text": "The clocks were created by engraving the length of the candle with evenly spaced markings."
+    },
+    {
+      "startMs": 364000,
+      "endMs": 371000,
+      "text": "Each marking represented a single unit of time, and as the wax burned down, each hour would disappear."
+    },
+    {
+      "startMs": 371000,
+      "endMs": 378000,
+      "text": "However, the drafts and the variable quality of the wax mainly influenced the time of burning."
+    },
+    {
+      "startMs": 378000,
+      "endMs": 388000,
+      "text": "Like oil lamps, candles were used to mark the passage of time from one event to another rather than tell the time of day."
+    },
+    {
+      "startMs": 388000,
+      "endMs": 395000,
+      "text": "That is the end of section 4. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 40,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "id": "p1-32-washing-machine-warranty",
+  "title": "Washing Machine Warranty",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-0a00374cbff8",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 315.84,
+    "checksum": "sha256:d341917b4c9d814c90dfd12082b522f25aa0e0067084d9ea4d4a651bf41e834c"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 1-10.",
+      "instruction": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Washing Machine Warranty Personal details Name: Judie Smith Reference number: 1. _________ Time of purchase: 2 _________ Current address: 120 3. _________, Oxford Postcode: 4. _________ Problems The floor was wet because of the 5. _________ The washing machine was out of control and the woman 6. _________ immediately The floor is made of 7. _________ Arrangement for the repair work Ask a 8. _________ to repair the washing machine The repairman is available 9. _________ The woman’s house is opposite the 10. _________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Reference number: 1. _________",
+          "answer": "CWX576884"
+        },
+        {
+          "id": "2",
+          "text": "Time of purchase: 2 _________",
+          "answer": "nine months/9 months/9 months ago"
+        },
+        {
+          "id": "3",
+          "text": "Current address: 120 3. _________, Oxford",
+          "answer": "Middle Street"
+        },
+        {
+          "id": "4",
+          "text": "Postcode: 4. _________",
+          "answer": "GO194KE"
+        },
+        {
+          "id": "5",
+          "text": "The floor was wet because of the 5. _________",
+          "answer": "Water"
+        },
+        {
+          "id": "6",
+          "text": "The washing machine was out of control and the woman 6. _________ immediately",
+          "answer": "Switched off"
+        },
+        {
+          "id": "7",
+          "text": "The floor is made of 7. _________",
+          "answer": "Wood"
+        },
+        {
+          "id": "8",
+          "text": "Ask a 8. _________ to repair the washing machine",
+          "answer": "Client engineer"
+        },
+        {
+          "id": "9",
+          "text": "The repairman is available 9. _________",
+          "answer": "Next Tuesday"
+        },
+        {
+          "id": "10",
+          "text": "The woman’s house is opposite the 10. _________",
+          "answer": "Post Office"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Washing Machine Warranty",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Personal details",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Name: Judie Smith",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Reference number: 1. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Time of purchase: 2 _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Current address: 120 3. _________, Oxford",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Postcode: 4. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Problems",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The floor was wet because of the 5. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The washing machine was out of control and the woman 6. _________ immediately",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The floor is made of 7. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Arrangement for the repair work",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Ask a 8. _________ to repair the washing machine",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The repairman is available 9. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The woman’s house is opposite the 10. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "CWX576884",
+        "2": "nine months/9 months/9 months ago",
+        "3": "Middle Street",
+        "4": "GO194KE",
+        "5": "Water",
+        "6": "Switched off",
+        "7": "Wood",
+        "8": "Client engineer",
+        "9": "Next Tuesday",
+        "10": "Post Office"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9720,
+      "text": "[Narrator]: Test 3. This is the IELTS listening test. You will hear a number of different recordings"
+    },
+    {
+      "startMs": 9720,
+      "endMs": 15100,
+      "text": "[Narrator]: and you will have to answer questions on what you hear. There will be time for you to"
+    },
+    {
+      "startMs": 15100,
+      "endMs": 21720,
+      "text": "[Narrator]: read the instructions and questions and you will have a chance to check your work. All"
+    },
+    {
+      "startMs": 21720,
+      "endMs": 28160,
+      "text": "[Narrator]: the recordings will be played once only. The test is in four parts. At the end of the"
+    },
+    {
+      "startMs": 28160,
+      "endMs": 34400,
+      "text": "[Narrator]: test, you will be given ten minutes to transfer your answers to the answer sheet."
+    },
+    {
+      "startMs": 34400,
+      "endMs": 44920,
+      "text": "[Narrator]: Now turn to Part 1 Part 1. You will hear a woman calling about"
+    },
+    {
+      "startMs": 44920,
+      "endMs": 60000,
+      "text": "[Narrator]: repairing her broken washing machine. First, you have some time to look at questions 1 to 4."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 77400,
+      "text": "[Narrator]: Now listen carefully and answer questions 1 to 4."
+    },
+    {
+      "startMs": 77400,
+      "endMs": 81640,
+      "text": "[Roger]: Good morning. This is the customer service department of Kingswell washing machine. Roger speaking, how may I help you?"
+    },
+    {
+      "startMs": 81640,
+      "endMs": 84600,
+      "text": "[Judie]: Good morning. I am calling about"
+    },
+    {
+      "startMs": 84600,
+      "endMs": 88360,
+      "text": "the washing machine I bought from the mall several months ago. There is something wrong"
+    },
+    {
+      "startMs": 88360,
+      "endMs": 91400,
+      "text": "with it at the moment. So, what do I have to do?"
+    },
+    {
+      "startMs": 91400,
+      "endMs": 95800,
+      "text": "[Roger]: Ok. First, I need to get a few details about this. Could you give me your name please?"
+    },
+    {
+      "startMs": 95800,
+      "endMs": 100600,
+      "text": "[Judie]: Yes. It is Judie Smith. [Roger]: Ok. I need one more thing. There is a reference"
+    },
+    {
+      "startMs": 100600,
+      "endMs": 104640,
+      "text": "number. It should be in the top right hand corner of the warranty card we gave you."
+    },
+    {
+      "startMs": 104640,
+      "endMs": 112400,
+      "text": "[Judie]: Let me have a look. Oh, here it is. It is CWX-576-884."
+    },
+    {
+      "startMs": 112400,
+      "endMs": 117960,
+      "text": "[Roger]: Thanks. Well, I need to make sure if your washing machine is still within the warranty period."
+    },
+    {
+      "startMs": 117960,
+      "endMs": 123880,
+      "text": "So when did you buy it? [Judie]: Oh, sure. I remember I bought it last summer. So, it was about nine months ago."
+    },
+    {
+      "startMs": 123880,
+      "endMs": 129760,
+      "text": "And the card here says this washing machine has a two-year warranty,"
+    },
+    {
+      "startMs": 129760,
+      "endMs": 134360,
+      "text": "so it is definitely within the period. [Roger]: Of course it is madam. Alright, then I need"
+    },
+    {
+      "startMs": 134360,
+      "endMs": 139880,
+      "text": "your address. [Judie]: My old address or my current one? [Roger]: Your current one, as we will send in"
+    },
+    {
+      "startMs": 139880,
+      "endMs": 146680,
+      "text": "someone to fix the washing machine for you. [Judie]: It is 120 Middle Street Oxford."
+    },
+    {
+      "startMs": 146680,
+      "endMs": 157720,
+      "text": "[Roger]: And the postcode? [Judie]: It is G-O-194-K-E."
+    },
+    {
+      "startMs": 187320,
+      "endMs": 195800,
+      "text": "[Roger]: Now, I need to know the exact problem of"
+    },
+    {
+      "startMs": 195800,
+      "endMs": 200000,
+      "text": "the washing machine. Could you describe it in detail? [Judie]: Actually, the washing machine did"
+    },
+    {
+      "startMs": 200000,
+      "endMs": 205280,
+      "text": "work very well until last weekend. I put some clothes into it, and it worked normally"
+    },
+    {
+      "startMs": 205280,
+      "endMs": 210080,
+      "text": "at first. Then I just got down to doing some gardening. But after about 30 minutes when"
+    },
+    {
+      "startMs": 210080,
+      "endMs": 215680,
+      "text": "I came back to the house, I found it was leaking. The water had soaked the entire floor."
+    },
+    {
+      "startMs": 215680,
+      "endMs": 280120,
+      "text": "[Roger]: I am sorry to hear that, madam. So did you do anything to make the leaking stop?"
+    },
+    {
+      "startMs": 280120,
+      "endMs": 224440,
+      "text": "[Judie]: At that moment the washing machine was totally out of control. And the alarm on it also"
+    },
+    {
+      "startMs": 224440,
+      "endMs": 228840,
+      "text": "started to sound. I thought there was not much point in pressing any button on the machine."
+    },
+    {
+      "startMs": 228840,
+      "endMs": 233440,
+      "text": "So I just switched off the machine straight away. Then it stopped leaking at once, thank"
+    },
+    {
+      "startMs": 233440,
+      "endMs": 236760,
+      "text": "goodness. [Roger]: Well, I think that was the only thing you could do."
+    },
+    {
+      "startMs": 236760,
+      "endMs": 242480,
+      "text": "[Judie]: Oh, then I found my floor was nearly a disaster. As it is made of wood rather than marble,"
+    },
+    {
+      "startMs": 242480,
+      "endMs": 247320,
+      "text": "it could not be soaked in water for a long time. So what I did in the next two hours was"
+    },
+    {
+      "startMs": 247320,
+      "endMs": 252480,
+      "text": "wiping up the water on the floor. [Roger]: Right. [Judie]: Later, I tried the washing machine once more,"
+    },
+    {
+      "startMs": 252480,
+      "endMs": 257480,
+      "text": "but the problem still existed. [Roger]: Well, I've taken down all the related information. Later"
+    },
+    {
+      "startMs": 257480,
+      "endMs": 260480,
+      "text": "we'll send a client engineer to your house to fix it."
+    },
+    {
+      "startMs": 260480,
+      "endMs": 264800,
+      "text": "[Judie]: Okay. Could you arrange the repair work as soon as possible, as I'm too busy at work"
+    },
+    {
+      "startMs": 264800,
+      "endMs": 268520,
+      "text": "to do the laundry by hand? [Roger]: How about this Saturday?"
+    },
+    {
+      "startMs": 268520,
+      "endMs": 275240,
+      "text": "I have to check the schedule of the repair man. Oh, sorry, madam. Saturday has been occupied. The earliest day we can arrange for you is next Tuesday. Is that okay with you?"
+    },
+    {
+      "startMs": 275240,
+      "endMs": 279560,
+      "text": "The earliest day we can arrange for you is next Tuesday. Is that okay with you?"
+    },
+    {
+      "startMs": 279560,
+      "endMs": 286360,
+      "text": "[Judie]: Fine. I can take a leave from work that day. Anyway, thanks. Oh, my house is easy to find."
+    },
+    {
+      "startMs": 286360,
+      "endMs": 289720,
+      "text": "It's near the central market just across from the post office."
+    },
+    {
+      "startMs": 289720,
+      "endMs": 293880,
+      "text": "[Roger]: All right. And the last thing, could you tell me your phone number please?"
+    },
+    {
+      "startMs": 293880,
+      "endMs": 302440,
+      "text": "[Judie]: Sure. It's 3864-1757. [Roger]: Okay. I've got it. The repairman will contact you before he comes."
+    },
+    {
+      "startMs": 302440,
+      "endMs": 305880,
+      "text": "[Judie]: Okay. Thank you very much. [Roger]: You're welcome. Bye. [Judie]: Bye."
+    },
+    {
+      "startMs": 305880,
+      "endMs": 315240,
+      "text": "[Narrator]: That is the end of part one. You now have one minute to check your answers to part one."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 48,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

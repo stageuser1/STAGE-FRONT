@@ -1,0 +1,246 @@
+{
+  "id": "p3-9-treadle-irrigation-pump",
+  "title": "Treadle irrigation pump",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-bba123f7a0e6",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 211.14,
+    "checksum": "sha256:ef02f400d320903365be92fbb3c12d590301dab632a4b3819dcba45d800ab778"
+  },
+  "groups": [
+    {
+      "type": "map",
+      "title": "Questions 26-30",
+      "instruction": "Label the diagram below, from A-F.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "inlet pipe",
+          "answer": "D"
+        },
+        {
+          "id": "27",
+          "text": "treadle",
+          "answer": "E"
+        },
+        {
+          "id": "28",
+          "text": "cylinder",
+          "answer": "B"
+        },
+        {
+          "id": "29",
+          "text": "piston",
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "discharge pipe",
+          "answer": "C"
+        }
+      ],
+      "image": {
+        "assetId": "image-p3-9-treadle-irrigation-pump-diagram-png",
+        "filename": "diagram.png",
+        "src": "images/image-p3-9-treadle-irrigation-pump-diagram-png-diagram.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "26": "D",
+        "27": "E",
+        "28": "B",
+        "29": "A",
+        "30": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10880,
+      "text": "Let's take a detailed look at how this traditional irrigation machine works, focusing on its"
+    },
+    {
+      "startMs": 10880,
+      "endMs": 13440,
+      "text": "five main components."
+    },
+    {
+      "startMs": 13440,
+      "endMs": 17040,
+      "text": "First, the inlet pipe."
+    },
+    {
+      "startMs": 17040,
+      "endMs": 20520,
+      "text": "This is the part through which water enters the machine."
+    },
+    {
+      "startMs": 20520,
+      "endMs": 25760,
+      "text": "You'll find it positioned low to the ground right at the back end of the system."
+    },
+    {
+      "startMs": 25760,
+      "endMs": 32480,
+      "text": "It's connected to a nearby water source, such as a river or pond, and its main role is"
+    },
+    {
+      "startMs": 32480,
+      "endMs": 36080,
+      "text": "to draw water into the pumping mechanism."
+    },
+    {
+      "startMs": 36080,
+      "endMs": 39680,
+      "text": "Without it, the machine wouldn't be able to function."
+    },
+    {
+      "startMs": 39680,
+      "endMs": 42800,
+      "text": "Next, we have the treadle."
+    },
+    {
+      "startMs": 42800,
+      "endMs": 50160,
+      "text": "This is the long pedal that runs along the top of the machine and extends toward the back."
+    },
+    {
+      "startMs": 50160,
+      "endMs": 55160,
+      "text": "Farmers use it by stepping on it repeatedly, which drives the system."
+    },
+    {
+      "startMs": 55160,
+      "endMs": 60880,
+      "text": "The pressure from their foot moves other parts of the machine, allowing water to be lifted"
+    },
+    {
+      "startMs": 60880,
+      "endMs": 63760,
+      "text": "and pushed forward."
+    },
+    {
+      "startMs": 63760,
+      "endMs": 66200,
+      "text": "Now let's look at the cylinder."
+    },
+    {
+      "startMs": 66200,
+      "endMs": 70960,
+      "text": "This is one of the two vertical chambers in the centre of the machine."
+    },
+    {
+      "startMs": 70960,
+      "endMs": 74160,
+      "text": "It's shaped like a tall tube."
+    },
+    {
+      "startMs": 74160,
+      "endMs": 79480,
+      "text": "As the treadle is pushed, the cylinder fills with water and helps pressurise it."
+    },
+    {
+      "startMs": 79480,
+      "endMs": 83040,
+      "text": "Inside the cylinder, we find the piston."
+    },
+    {
+      "startMs": 83040,
+      "endMs": 88200,
+      "text": "This part moves up and down rapidly to create the suction needed to pull water into the"
+    },
+    {
+      "startMs": 88200,
+      "endMs": 91120,
+      "text": "cylinder and then push it out."
+    },
+    {
+      "startMs": 91120,
+      "endMs": 95840,
+      "text": "It's a rod-like device connected to the treadle by a series of levers."
+    },
+    {
+      "startMs": 95840,
+      "endMs": 98960,
+      "text": "Finally, the discharge pipe."
+    },
+    {
+      "startMs": 98960,
+      "endMs": 103360,
+      "text": "This pipe is located on the side near the base of the machine."
+    },
+    {
+      "startMs": 103360,
+      "endMs": 108920,
+      "text": "Once the water is pressurised, it exits through the discharge pipe and flows into channels"
+    },
+    {
+      "startMs": 108920,
+      "endMs": 110520,
+      "text": "that carry it to the fields."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "diagram.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 5,
+    "answerCount": 5,
+    "transcriptCount": 25,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "id": "p1-28-conforming-an-apartment",
+  "title": "Conforming An Apartment",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-0569d91797a2",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 251.688,
+    "checksum": "sha256:a081b2fe39182bc5d8bf8678418ecc5fdb9dc3031681e63f367e0870c64edf39"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10.",
+      "instruction": "Write ONE WORD ONLY for each answer Conforming an apartment General Information The 1. ________ of the city of Toronto is a popular place to live. The area has a well-known 2. ________. There are several 3. ________ in the area. Apartment: things to check Kitchen Check there is not a bad 4. ________ in the fridge. Living room Make sure the 5. ________ is OK on the balcony door. Look at the condition of the 6. ________ in the room. Bathroom Check for a 7. ________ under the sink. Bedroom Check for the amount of 8. ________ outside. Building facilities Find the location of the 9. ________ (possibly in the basement). Check that every floor has a place for 10. ________.",
+      "questions": [
+        {
+          "id": "1",
+          "text": "The 1. ________ of the city of Toronto is a popular place to live.",
+          "answer": "west"
+        },
+        {
+          "id": "2",
+          "text": "The area has a well-known 2. ________.",
+          "answer": "market"
+        },
+        {
+          "id": "3",
+          "text": "There are several 3. ________ in the area.",
+          "answer": "parks"
+        },
+        {
+          "id": "4",
+          "text": "Check there is not a bad 4. ________ in the fridge.",
+          "answer": "smell"
+        },
+        {
+          "id": "5",
+          "text": "Make sure the 5. ________ is OK on the balcony door.",
+          "answer": "lock"
+        },
+        {
+          "id": "6",
+          "text": "Look at the condition of the 6. ________ in the room.",
+          "answer": "paint"
+        },
+        {
+          "id": "7",
+          "text": "Check for a 7. ________ under the sink.",
+          "answer": "leak"
+        },
+        {
+          "id": "8",
+          "text": "Check for the amount of 8. ________ outside.",
+          "answer": "noise"
+        },
+        {
+          "id": "9",
+          "text": "Find the location of the 9. ________ (possibly in the basement).",
+          "answer": "laundry"
+        },
+        {
+          "id": "10",
+          "text": "Check that every floor has a place for 10. ________.",
+          "answer": "garbage"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write ONE WORD ONLY for each answer",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Conforming an apartment",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "General Information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The 1. ________ of the city of Toronto is a popular place to live.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The area has a well-known 2. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "There are several 3. ________ in the area.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Apartment: things to check",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Kitchen",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Check there is not a bad 4. ________ in the fridge.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Living room",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Make sure the 5. ________ is OK on the balcony door.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Look at the condition of the 6. ________ in the room.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Bathroom",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Check for a 7. ________ under the sink.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Bedroom",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Check for the amount of 8. ________ outside.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Building facilities",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Find the location of the 9. ________ (possibly in the basement).",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Check that every floor has a place for 10. ________.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "west",
+        "2": "market",
+        "3": "parks",
+        "4": "smell",
+        "5": "lock",
+        "6": "paint",
+        "7": "leak",
+        "8": "noise",
+        "9": "laundry",
+        "10": "garbage"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9920,
+      "text": "[Jenny]: Hi, Altef. I'm your settlement worker and I'm called Jenny. It's great to meet you."
+    },
+    {
+      "startMs": 9920,
+      "endMs": 14320,
+      "text": "Welcome to our city. You'll love Toronto. [Altef]: I'm sure I will."
+    },
+    {
+      "startMs": 14320,
+      "endMs": 20600,
+      "text": "[Jenny]: I have some general recommendations. First, Toronto is a big place. A lot of people who"
+    },
+    {
+      "startMs": 20600,
+      "endMs": 26400,
+      "text": "come here choose to live in the West. [Altef]: I see. Is there a reason for that?"
+    },
+    {
+      "startMs": 26400,
+      "endMs": 32680,
+      "text": "[Jenny]: Well, yes. There's a great market in the neighborhood. All the local people know about it."
+    },
+    {
+      "startMs": 32680,
+      "endMs": 38600,
+      "text": "[Altef]: That would be good for us. [Jenny]: And I understand you have young children."
+    },
+    {
+      "startMs": 38600,
+      "endMs": 39920,
+      "text": "[Altef]: That's right."
+    },
+    {
+      "startMs": 39920,
+      "endMs": 46480,
+      "text": "[Jenny]: So another advantage of this area is that it has quite a few parks where children can play."
+    },
+    {
+      "startMs": 46480,
+      "endMs": 50320,
+      "text": "[Altef]: Oh, that's great. They really like being outside."
+    },
+    {
+      "startMs": 50320,
+      "endMs": 55680,
+      "text": "[Jenny]: I actually know of an apartment in the area that's available. I'll arrange for you to see"
+    },
+    {
+      "startMs": 55680,
+      "endMs": 61760,
+      "text": "it. But first, let's look at the floor plan and I'll tell you what to check when you see it."
+    },
+    {
+      "startMs": 61760,
+      "endMs": 67760,
+      "text": "This room here is the kitchen. Be sure to open the refrigerator."
+    },
+    {
+      "startMs": 67760,
+      "endMs": 74080,
+      "text": "[Altef]: To see if it's working properly. [Jenny]: Yes. And to make sure that there's no nasty smell."
+    },
+    {
+      "startMs": 74080,
+      "endMs": 76400,
+      "text": "[Altef]: Oh, anything else?"
+    },
+    {
+      "startMs": 76400,
+      "endMs": 82960,
+      "text": "[Jenny]: Well, it would be good to check the electrical situation. There's nothing worse than not having enough plugs."
+    },
+    {
+      "startMs": 83520,
+      "endMs": 89280,
+      "text": "You'll need at least four. [Altef]: I'll look for those. What's this on the plan?"
+    },
+    {
+      "startMs": 89280,
+      "endMs": 95760,
+      "text": "[Jenny]: Well, now that's the living room. And this is where you go outside to a small balcony."
+    },
+    {
+      "startMs": 96640,
+      "endMs": 100240,
+      "text": "Have a look at the door lock. Be sure it's not broken."
+    },
+    {
+      "startMs": 100240,
+      "endMs": 104800,
+      "text": "[Altef]: I will. It'll be nice to have our own place to sit outside when we want."
+    },
+    {
+      "startMs": 104800,
+      "endMs": 112240,
+      "text": "[Jenny]: Yes, it's very nice on a summer evening after dinner. And I'll have a good look around the living room."
+    },
+    {
+      "startMs": 112960,
+      "endMs": 116960,
+      "text": "The condition of the room is important because it's your main living area."
+    },
+    {
+      "startMs": 117760,
+      "endMs": 122160,
+      "text": "Look at the paint in particular. It may be time to redo it."
+    },
+    {
+      "startMs": 122160,
+      "endMs": 127840,
+      "text": "[Altef]: I'll check that. [Narrator]: Now, listen and answer a question seven to ten."
+    },
+    {
+      "startMs": 129680,
+      "endMs": 137600,
+      "text": "[Jenny]: Now, Altef. This hall leads to the bathroom. When you look at that, do check below the sink. Often that's the place you'll find a leak."
+    },
+    {
+      "startMs": 138480,
+      "endMs": 144800,
+      "text": "And the tiles in the bathroom should be in good shape."
+    },
+    {
+      "startMs": 144800,
+      "endMs": 153200,
+      "text": "[Altef]: I agree. Then this room must be one of the bedrooms. And this must be the closet. My wife wants a large one."
+    },
+    {
+      "startMs": 153200,
+      "endMs": 161520,
+      "text": "[Jenny]: I'm sure. We all want lots of room for our clothes. You'll also want to look outside the bedroom window."
+    },
+    {
+      "startMs": 162080,
+      "endMs": 167440,
+      "text": "It overlooks the street and there might be a lot of noise at all times of the day and night."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 174400,
+      "text": "We're in a very busy city. [Altef]: I see. That would be a problem for my wife and the boys too."
+    },
+    {
+      "startMs": 175040,
+      "endMs": 176880,
+      "text": "I'll definitely remember to check that."
+    },
+    {
+      "startMs": 188000,
+      "endMs": 182160,
+      "text": "Jenny, what other things are in the building? [Jenny]: You mean the facilities?"
+    },
+    {
+      "startMs": 182160,
+      "endMs": 185360,
+      "text": "[Altef]: Yes. For example, where will we do our laundry?"
+    },
+    {
+      "startMs": 186240,
+      "endMs": 191520,
+      "text": "[Jenny]: With a building of this type, it's probably in the basement, but it doesn't say."
+    },
+    {
+      "startMs": 192080,
+      "endMs": 197600,
+      "text": "So you'll need to check where it is. You know what's also really good to check for?"
+    },
+    {
+      "startMs": 198480,
+      "endMs": 205040,
+      "text": "[Altef]: No, what? [Jenny]: You need to check that there's a garbage room on every floor. Then you don't need to go"
+    },
+    {
+      "startMs": 205040,
+      "endMs": 212160,
+      "text": "outside. [Altef]: Right. [Jenny]: Well, that's everything for now. Good luck, Altef. We'll talk later today."
+    },
+    {
+      "startMs": 212160,
+      "endMs": 214240,
+      "text": "[Altef]: Thanks for your help, Jenny."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 37,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

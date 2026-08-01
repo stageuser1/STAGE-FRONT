@@ -1,0 +1,491 @@
+{
+  "id": "p3-60-stone-point",
+  "title": "Stone Point",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-0125dd51e15b",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 481.08,
+    "checksum": "sha256:ccd14c70796140cd6fe14fff51d1b388ab4cb21d1a70d95e7397f3043a30d5af"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–24",
+      "instruction": "Choose the correct letter A, B or C",
+      "questions": [
+        {
+          "id": "21",
+          "text": "According to Liz, Stone Point played a key role in local history because",
+          "options": [
+            {
+              "id": "A",
+              "text": "it was used for defence or attack purposes."
+            },
+            {
+              "id": "B",
+              "text": "it was the landing point for the first Maori settlers."
+            },
+            {
+              "id": "C",
+              "text": "it was developed as a commercial port."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "Scott and Liz agree that Maori originally chose to inhabit Stone Point because of",
+          "options": [
+            {
+              "id": "A",
+              "text": "its rich soil."
+            },
+            {
+              "id": "B",
+              "text": "the supply of fish."
+            },
+            {
+              "id": "C",
+              "text": "available building materials."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "Scott and Liz agree that using Maori terminology in their presentation",
+          "options": [
+            {
+              "id": "A",
+              "text": "will be of interest to international students."
+            },
+            {
+              "id": "B",
+              "text": "is required as a component of their research."
+            },
+            {
+              "id": "C",
+              "text": "would be best avoided."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "24",
+          "text": "When Scott mentions the engines at Stone Point, Liz advises him to",
+          "options": [
+            {
+              "id": "A",
+              "text": "focus on the human aspect instead."
+            },
+            {
+              "id": "B",
+              "text": "check the accuracy of specific dates."
+            },
+            {
+              "id": "C",
+              "text": "explain complex technical language."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25–30",
+      "instruction": "Choose SIX answers from the box and write the correct letter, A–H, next to questions 25–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "provide further description"
+        },
+        {
+          "id": "B",
+          "text": "find images"
+        },
+        {
+          "id": "C",
+          "text": "set up an interview"
+        },
+        {
+          "id": "D",
+          "text": "check author’s details"
+        },
+        {
+          "id": "E",
+          "text": "check the exact location"
+        },
+        {
+          "id": "F",
+          "text": "obtain official permission"
+        },
+        {
+          "id": "G",
+          "text": "be more objective"
+        },
+        {
+          "id": "H",
+          "text": "reduce it in length"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Early Maori inhabitation of Stone Point",
+          "answer": "D"
+        },
+        {
+          "id": "26",
+          "text": "The use of Stone Point as a lookout point",
+          "answer": "B"
+        },
+        {
+          "id": "27",
+          "text": "The reconstruction of the fort",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "Modernisation of the fort in the 1930s–40s",
+          "answer": "F"
+        },
+        {
+          "id": "29",
+          "text": "Uses of Stone Point from 1950s to the present day",
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "The use of Stone Point as a public park",
+          "answer": "E"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "B",
+        "23": "C",
+        "24": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "D",
+        "26": "B",
+        "27": "A",
+        "28": "F",
+        "29": "C",
+        "30": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13200,
+      "text": "Section 3. You will hear part of a discussion between two students, Liz from New Zealand"
+    },
+    {
+      "startMs": 13200,
+      "endMs": 20040,
+      "text": "and Scott from the UK, who are working on a presentation about a key historical site"
+    },
+    {
+      "startMs": 20040,
+      "endMs": 24480,
+      "text": "in New Zealand. First, you have some time to look at questions"
+    },
+    {
+      "startMs": 24480,
+      "endMs": 27640,
+      "text": "21-24 on page 5."
+    },
+    {
+      "startMs": 54480,
+      "endMs": 64080,
+      "text": "Now listen carefully and answer questions 21-24."
+    },
+    {
+      "startMs": 64080,
+      "endMs": 71920,
+      "text": "Liz: Hi Scott, here are my notes. Scott：Let's sort this presentation out then. The first thing"
+    },
+    {
+      "startMs": 71920,
+      "endMs": 76800,
+      "text": "I found out about Stone Point is it's an extinct volcanic cone. You probably know that already"
+    },
+    {
+      "startMs": 76800,
+      "endMs": 81560,
+      "text": "being a New Zealander. Liz: Yes, and there are two other cones nearby, which also overlook"
+    },
+    {
+      "startMs": 81560,
+      "endMs": 85800,
+      "text": "the harbor. Scott: Right. Liz：Yeah, the first settlers of New Zealand,"
+    },
+    {
+      "startMs": 85800,
+      "endMs": 91560,
+      "text": "the Māori, sailed to New Zealand thousands of years after these volcanoes erupted. I"
+    },
+    {
+      "startMs": 91560,
+      "endMs": 97240,
+      "text": "think the tutor allocated us this topic though because of Stone Point's significant historical"
+    },
+    {
+      "startMs": 97240,
+      "endMs": 103800,
+      "text": "role. It's been used by both Māori and European settlers as a place to shelter from attack"
+    },
+    {
+      "startMs": 103800,
+      "endMs": 109280,
+      "text": "or launch an attack for centuries. Scott: Yeah, and the fact it was an ideal place for building"
+    },
+    {
+      "startMs": 109280,
+      "endMs": 114160,
+      "text": "a village, it would have been quite a sheltered spot. Liz：I suppose the Māori settled there"
+    },
+    {
+      "startMs": 114160,
+      "endMs": 118920,
+      "text": "because they thought the volcanic soil would help the crops grow. Scott: Well, they would have"
+    },
+    {
+      "startMs": 118920,
+      "endMs": 123360,
+      "text": "realised the benefits of the soil after a few good harvest, but initially the fishing"
+    },
+    {
+      "startMs": 123360,
+      "endMs": 128800,
+      "text": "opportunities would have been the attraction. Liz: You're right. Scott：Actually, I also read that"
+    },
+    {
+      "startMs": 128800,
+      "endMs": 135560,
+      "text": "Māori regards Stone Point as taonga. I believe that means a treasured thing. Liz: Wow, your"
+    },
+    {
+      "startMs": 135560,
+      "endMs": 142200,
+      "text": "Māori vocabulary is improving, Scott. Hmm, we do have to deal with Stone Point's cultural"
+    },
+    {
+      "startMs": 142200,
+      "endMs": 147760,
+      "text": "value for Māori. That's still part of its historical significance, but we need to keep"
+    },
+    {
+      "startMs": 147760,
+      "endMs": 153760,
+      "text": "most Māori terminology out of the presentation. Otherwise, a lot of the international students"
+    },
+    {
+      "startMs": 153760,
+      "endMs": 159480,
+      "text": "won't be able to follow us. Scott: That's a shame, I'm sure they'd be interested. I mean, I am,"
+    },
+    {
+      "startMs": 159480,
+      "endMs": 164080,
+      "text": "but yeah, we wouldn't be able to explain it in the time allowed, so I guess we have to stick"
+    },
+    {
+      "startMs": 164080,
+      "endMs": 170960,
+      "text": "to English. Anyway, European migrants turned Stone Point into a lookout point for ships."
+    },
+    {
+      "startMs": 170960,
+      "endMs": 176520,
+      "text": "Then it became a fort, an army base in the late 1880s, and then during the World Wars,"
+    },
+    {
+      "startMs": 176520,
+      "endMs": 182600,
+      "text": "the fort was modernised again. Liz：It's also been a public park sometimes. Scott: I'd prefer to"
+    },
+    {
+      "startMs": 182600,
+      "endMs": 187680,
+      "text": "devote more of the presentation to the military use of Stone Point. There are some great websites"
+    },
+    {
+      "startMs": 187680,
+      "endMs": 194320,
+      "text": "about the engines they installed. Liz: Sorry, I wouldn't go into the technical side if I were you."
+    },
+    {
+      "startMs": 194320,
+      "endMs": 200080,
+      "text": "If you start describing mechanical stuff, people will switch off. I think it's more interesting"
+    },
+    {
+      "startMs": 200080,
+      "endMs": 206560,
+      "text": "to look at the impact Stone Point had on the people's lives at the time. I mean, for example,"
+    },
+    {
+      "startMs": 206560,
+      "endMs": 212640,
+      "text": "there were about 25 years when they used local prisoners to build the tunnels and the underground"
+    },
+    {
+      "startMs": 212640,
+      "endMs": 218560,
+      "text": "rooms. They lived there too. Scott: Yeah, I guess if we can find some first-hand accounts."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 228720,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30"
+    },
+    {
+      "startMs": 228720,
+      "endMs": 229760,
+      "text": "on page 6."
+    },
+    {
+      "startMs": 242640,
+      "endMs": 264320,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 264720,
+      "endMs": 274640,
+      "text": "Liz: Okay, so let's make a checklist of things to do. For the early Māori inhabitation section,"
+    },
+    {
+      "startMs": 274640,
+      "endMs": 279920,
+      "text": "we have to look at the material we've used again and make sure we know who the writers were and"
+    },
+    {
+      "startMs": 279920,
+      "endMs": 286080,
+      "text": "when they wrote it. Scott: Yes, that needs work. And for the part about Stone Point being used as a lookout"
+    },
+    {
+      "startMs": 286080,
+      "endMs": 290960,
+      "text": "point, I'm sure we can locate some drawings of how Stone Point looked then and the kind of ships"
+    },
+    {
+      "startMs": 291760,
+      "endMs": 298080,
+      "text": "coming in. Liz: Nice. And what else? We haven't got a lot of detail for the reconstruction of the fort."
+    },
+    {
+      "startMs": 298080,
+      "endMs": 302720,
+      "text": "We should add some more information about what it was the prisoners were adding to it."
+    },
+    {
+      "startMs": 302720,
+      "endMs": 309200,
+      "text": "Scott: Okay, I'll do that bit too. Liz：So I'll deal with the section regarding the modernisation that happened"
+    },
+    {
+      "startMs": 309200,
+      "endMs": 315840,
+      "text": "in the 1930s and 40s. I mean, that's a bit where we have the most visible evidence of historic"
+    },
+    {
+      "startMs": 315840,
+      "endMs": 322240,
+      "text": "buildings. I'll ring the Department of Conservation and see if they'll agree to let me film the site."
+    },
+    {
+      "startMs": 323120,
+      "endMs": 326800,
+      "text": "Maybe allow me access to some of the tunnels the public don't see."
+    },
+    {
+      "startMs": 326800,
+      "endMs": 332160,
+      "text": "Scott： Okay, for the 1950s onwards, could you also arrange a meeting with someone from the Department"
+    },
+    {
+      "startMs": 332160,
+      "endMs": 338320,
+      "text": "of Conservation to ask them about their restoration work? Liz: I could try. Oh, and just about its use"
+    },
+    {
+      "startMs": 338320,
+      "endMs": 344160,
+      "text": "as a public park today. Where is the boundary exactly? Does it go all the way to the beach?"
+    },
+    {
+      "startMs": 344160,
+      "endMs": 350560,
+      "text": "Scott: Not sure. I'll check that out. Liz: Great. I suppose it would finish off the presentation nicely"
+    },
+    {
+      "startMs": 350560,
+      "endMs": 352960,
+      "text": "if we explain the future plans for the site."
+    },
+    {
+      "startMs": 356480,
+      "endMs": 362160,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 374160,
+      "endMs": 395760,
+      "text": "Now turn to section 4 on page 7."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 52,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

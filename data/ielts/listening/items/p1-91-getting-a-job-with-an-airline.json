@@ -1,0 +1,900 @@
+{
+  "id": "p1-91-getting-a-job-with-an-airline",
+  "title": "Getting a job with an airline",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-5b0fa8bd4a09",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 507.072,
+    "checksum": "sha256:372e344ed52d75a6da9f1aabbab4cb530344d5f65d40e33b22a9a9fb2cee417d"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Getting a job with an airline Example Job: cabin crew attendant Duties include giving the safety demonstration some responsibility for 1. __________ from sales during the flight serving food Requirements must be over age 19 and at least 2. __________ cm tall basic academic requirements: English and 3. __________ at least one other 4. __________ is desirable must be able to 5. __________ Training will include what to do in case of 6. __________ during a flight awareness of different 7. __________ Application the airline is called 8. __________ can download application form from website mention experience of: dealing with questions from supermarket customers working in a 9. __________ (voluntary work) Other information you don’t have to buy a 10. __________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "some responsibility for 1. __________ from sales during the flight",
+          "answer": "money"
+        },
+        {
+          "id": "2",
+          "text": "must be over age 19 and at least 2. __________ cm tall",
+          "answer": "168"
+        },
+        {
+          "id": "3",
+          "text": "basic academic requirements: English and 3. __________",
+          "answer": "maths/math/mathematics"
+        },
+        {
+          "id": "4",
+          "text": "at least one other 4. __________ is desirable",
+          "answer": "language"
+        },
+        {
+          "id": "5",
+          "text": "must be able to 5. __________",
+          "answer": "swim"
+        },
+        {
+          "id": "6",
+          "text": "what to do in case of 6. __________ during a flight",
+          "answer": "illness"
+        },
+        {
+          "id": "7",
+          "text": "awareness of different 7. __________",
+          "answer": "cultures"
+        },
+        {
+          "id": "8",
+          "text": "the airline is called 8. __________",
+          "answer": "EURONTAS"
+        },
+        {
+          "id": "9",
+          "text": "working in a 9. __________ (voluntary work)",
+          "answer": "team"
+        },
+        {
+          "id": "10",
+          "text": "you don’t have to buy a 10. __________",
+          "answer": "uniform"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Getting a job with an airline",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Example",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Job: cabin crew attendant",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Duties include",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "giving the safety demonstration",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "some responsibility for 1. __________ from sales during the flight",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "serving food",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Requirements",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "must be over age 19 and at least 2. __________ cm tall",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "basic academic requirements: English and 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "at least one other 4. __________ is desirable",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "must be able to 5. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Training will include",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "what to do in case of 6. __________ during a flight",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "awareness of different 7. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Application",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "the airline is called 8. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "can download application form from website",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "mention experience of:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "dealing with questions from supermarket customers",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "working in a 9. __________ (voluntary work)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Other information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "you don’t have to buy a 10. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "money",
+        "2": "168",
+        "3": "maths/math/mathematics",
+        "4": "language",
+        "5": "swim",
+        "6": "illness",
+        "7": "cultures",
+        "8": "EURONTAS",
+        "9": "team",
+        "10": "uniform"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12160,
+      "text": "IELTS Listening Version 57262"
+    },
+    {
+      "startMs": 12160,
+      "endMs": 17480,
+      "text": "You will hear a number of different recordings, and you will have to answer questions on what"
+    },
+    {
+      "startMs": 17480,
+      "endMs": 19480,
+      "text": "you hear."
+    },
+    {
+      "startMs": 19480,
+      "endMs": 25320,
+      "text": "There will be time for you to read the instructions and questions, and you will have a chance to"
+    },
+    {
+      "startMs": 25320,
+      "endMs": 27440,
+      "text": "check your work."
+    },
+    {
+      "startMs": 27440,
+      "endMs": 31600,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 31600,
+      "endMs": 35000,
+      "text": "The test is in four sections."
+    },
+    {
+      "startMs": 35000,
+      "endMs": 38240,
+      "text": "Write all your answers in the listening question booklet."
+    },
+    {
+      "startMs": 38240,
+      "endMs": 44720,
+      "text": "At the end of the test, you will be given ten minutes to transfer your answers to an"
+    },
+    {
+      "startMs": 44720,
+      "endMs": 47840,
+      "text": "answer sheet."
+    },
+    {
+      "startMs": 47840,
+      "endMs": 52200,
+      "text": "Now turn to section one on page two of your question booklet."
+    },
+    {
+      "startMs": 57680,
+      "endMs": 59800,
+      "text": "Section one."
+    },
+    {
+      "startMs": 59800,
+      "endMs": 65120,
+      "text": "You will hear a young woman phoning a friend who works for an airline to ask for advice"
+    },
+    {
+      "startMs": 65120,
+      "endMs": 67720,
+      "text": "about getting a job."
+    },
+    {
+      "startMs": 67720,
+      "endMs": 72840,
+      "text": "First you have some time to look at questions one to five on page two."
+    },
+    {
+      "startMs": 87440,
+      "endMs": 102760,
+      "text": "You will see that there is an example that has been done for you."
+    },
+    {
+      "startMs": 102760,
+      "endMs": 109200,
+      "text": "On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 109200,
+      "endMs": 110200,
+      "text": "Greg: Hello."
+    },
+    {
+      "startMs": 110200,
+      "endMs": 112200,
+      "text": "Ellie: Oh, hello."
+    },
+    {
+      "startMs": 113200,
+      "endMs": 115480,
+      "text": "Oh, hello."
+    },
+    {
+      "startMs": 115480,
+      "endMs": 117520,
+      "text": "This is Ellie Fisher."
+    },
+    {
+      "startMs": 117520,
+      "endMs": 119040,
+      "text": "We were at school together."
+    },
+    {
+      "startMs": 119040,
+      "endMs": 120840,
+      "text": "Greg: Oh, hi, Ellie."
+    },
+    {
+      "startMs": 120840,
+      "endMs": 122000,
+      "text": "How are you?"
+    },
+    {
+      "startMs": 122000,
+      "endMs": 123840,
+      "text": "What are you doing these days?"
+    },
+    {
+      "startMs": 123840,
+      "endMs": 130680,
+      "text": "Ellie: Well, actually, I'm looking for a job, and I was wondering about applying to an airline,"
+    },
+    {
+      "startMs": 130680,
+      "endMs": 133680,
+      "text": "you know, looking after the passengers."
+    },
+    {
+      "startMs": 133680,
+      "endMs": 136000,
+      "text": "And I heard you're doing something like that."
+    },
+    {
+      "startMs": 136000,
+      "endMs": 138800,
+      "text": "Greg: Yeah, I'm working as a cabin crew attendant."
+    },
+    {
+      "startMs": 142640,
+      "endMs": 150800,
+      "text": "The job mentioned is a cabin crew attendant, so attendant has been written in the space."
+    },
+    {
+      "startMs": 150800,
+      "endMs": 152760,
+      "text": "Now we shall begin."
+    },
+    {
+      "startMs": 152760,
+      "endMs": 157640,
+      "text": "You should answer the questions as you listen, because you will not hear the recording a"
+    },
+    {
+      "startMs": 157640,
+      "endMs": 159960,
+      "text": "second time."
+    },
+    {
+      "startMs": 159960,
+      "endMs": 164960,
+      "text": "Listen carefully and answer questions one to five."
+    },
+    {
+      "startMs": 164960,
+      "endMs": 167960,
+      "text": "Greg: Hello."
+    },
+    {
+      "startMs": 168040,
+      "endMs": 170240,
+      "text": "Ellie: Oh, hello."
+    },
+    {
+      "startMs": 170240,
+      "endMs": 172320,
+      "text": "This is Ellie Fisher."
+    },
+    {
+      "startMs": 172320,
+      "endMs": 174000,
+      "text": "We were at school together."
+    },
+    {
+      "startMs": 174000,
+      "endMs": 175640,
+      "text": "Greg: Oh, hi, Ellie."
+    },
+    {
+      "startMs": 175640,
+      "endMs": 176800,
+      "text": "How are you?"
+    },
+    {
+      "startMs": 176800,
+      "endMs": 178800,
+      "text": "What are you doing these days?"
+    },
+    {
+      "startMs": 178800,
+      "endMs": 185480,
+      "text": "Ellie: Well, actually, I'm looking for a job, and I was wondering about applying to an airline."
+    },
+    {
+      "startMs": 185480,
+      "endMs": 188200,
+      "text": "You know, looking after the passengers."
+    },
+    {
+      "startMs": 188200,
+      "endMs": 190920,
+      "text": "And I heard you're doing something like that."
+    },
+    {
+      "startMs": 190920,
+      "endMs": 194320,
+      "text": "Greg: Yeah, I'm working as a cabin crew attendant."
+    },
+    {
+      "startMs": 194320,
+      "endMs": 195640,
+      "text": "Ellie: Right."
+    },
+    {
+      "startMs": 195680,
+      "endMs": 198280,
+      "text": "So, what does that involve?"
+    },
+    {
+      "startMs": 198280,
+      "endMs": 203680,
+      "text": "Greg: Well, you might have to give them the initial safety demonstration before takeoff, for example."
+    },
+    {
+      "startMs": 203680,
+      "endMs": 206960,
+      "text": "You've probably seen that when you've made a journey by air."
+    },
+    {
+      "startMs": 206960,
+      "endMs": 211600,
+      "text": "Ellie: Actually, I've never flown, but I'd love to."
+    },
+    {
+      "startMs": 211600,
+      "endMs": 214000,
+      "text": "That's why I'd like a job with an airline."
+    },
+    {
+      "startMs": 214000,
+      "endMs": 215320,
+      "text": "Greg: Oh, right."
+    },
+    {
+      "startMs": 215320,
+      "endMs": 220440,
+      "text": "And during the flight, you'd also be going round to see if anyone wants to buy anything."
+    },
+    {
+      "startMs": 220440,
+      "endMs": 222560,
+      "text": "Ellie: So, I'd be dealing with money."
+    },
+    {
+      "startMs": 222560,
+      "endMs": 223520,
+      "text": "Greg: That's right."
+    },
+    {
+      "startMs": 223520,
+      "endMs": 225400,
+      "text": "You'd be responsible for that."
+    },
+    {
+      "startMs": 225440,
+      "endMs": 229120,
+      "text": "And then, of course, you'd be serving meals and snacks and things."
+    },
+    {
+      "startMs": 229120,
+      "endMs": 230440,
+      "text": "Ellie: OK."
+    },
+    {
+      "startMs": 230440,
+      "endMs": 232400,
+      "text": "So, can anyone apply?"
+    },
+    {
+      "startMs": 232400,
+      "endMs": 234720,
+      "text": "Greg: Well, there are certain requirements."
+    },
+    {
+      "startMs": 234720,
+      "endMs": 238560,
+      "text": "You must be at least 19 years old, and there's also a minimum height."
+    },
+    {
+      "startMs": 238560,
+      "endMs": 241160,
+      "text": "That's 168 centimeters."
+    },
+    {
+      "startMs": 241160,
+      "endMs": 244360,
+      "text": "That's to make sure you can reach the higher cupboards in the plane."
+    },
+    {
+      "startMs": 244360,
+      "endMs": 245600,
+      "text": "Ellie: Right."
+    },
+    {
+      "startMs": 245600,
+      "endMs": 249920,
+      "text": "I'm 169 centimeters, I think."
+    },
+    {
+      "startMs": 249920,
+      "endMs": 252080,
+      "text": "What about qualifications?"
+    },
+    {
+      "startMs": 252080,
+      "endMs": 254600,
+      "text": "Greg: You need to show that you have a good level of English."
+    },
+    {
+      "startMs": 254600,
+      "endMs": 257880,
+      "text": "That's written and spoken, and also maths."
+    },
+    {
+      "startMs": 257880,
+      "endMs": 258880,
+      "text": "Ellie: OK."
+    },
+    {
+      "startMs": 258880,
+      "endMs": 263080,
+      "text": "Well, I passed my exams in both those subjects, fortunately."
+    },
+    {
+      "startMs": 263080,
+      "endMs": 265880,
+      "text": "Greg: And it's an advantage, if you can speak another language,"
+    },
+    {
+      "startMs": 265880,
+      "endMs": 268600,
+      "text": "although for cabin crew, it's not essential."
+    },
+    {
+      "startMs": 268600,
+      "endMs": 270520,
+      "text": "Ellie: I can speak Spanish."
+    },
+    {
+      "startMs": 270520,
+      "endMs": 273200,
+      "text": "I did that at school until I was 16."
+    },
+    {
+      "startMs": 273200,
+      "endMs": 276040,
+      "text": "Greg: Excellent. That'll be very useful."
+    },
+    {
+      "startMs": 276040,
+      "endMs": 278160,
+      "text": "Ellie: And I'm pretty fit."
+    },
+    {
+      "startMs": 278160,
+      "endMs": 280360,
+      "text": "I don't have any medical problems."
+    },
+    {
+      "startMs": 280360,
+      "endMs": 281360,
+      "text": "Greg: OK."
+    },
+    {
+      "startMs": 281360,
+      "endMs": 283440,
+      "text": "Oh, and can you swim?"
+    },
+    {
+      "startMs": 283440,
+      "endMs": 284440,
+      "text": "Ellie: Yes."
+    },
+    {
+      "startMs": 284440,
+      "endMs": 287120,
+      "text": "Greg: Good, because that's another requirement."
+    },
+    {
+      "startMs": 290120,
+      "endMs": 292800,
+      "text": "Before you hear the rest of the conversation,"
+    },
+    {
+      "startMs": 292800,
+      "endMs": 298000,
+      "text": "you have some time to look at questions 6 to 10 on page 2."
+    },
+    {
+      "startMs": 314440,
+      "endMs": 327160,
+      "text": "Now, listen and answer questions 6 to 10."
+    },
+    {
+      "startMs": 327160,
+      "endMs": 334440,
+      "text": "Greg: Now, if you're accepted, you'll get a six week training course."
+    },
+    {
+      "startMs": 334440,
+      "endMs": 335440,
+      "text": "Ellie: Right."
+    },
+    {
+      "startMs": 335440,
+      "endMs": 339920,
+      "text": "Greg: So that'll cover all aspects of the job, all the basic things you need to know,"
+    },
+    {
+      "startMs": 339920,
+      "endMs": 344120,
+      "text": "and then some special things, like what action to take if a passenger suddenly"
+    },
+    {
+      "startMs": 344120,
+      "endMs": 347360,
+      "text": "has some sort of illness while you're in the air, for example."
+    },
+    {
+      "startMs": 347360,
+      "endMs": 348600,
+      "text": "Ellie: Right."
+    },
+    {
+      "startMs": 348600,
+      "endMs": 351960,
+      "text": "I suppose you can't always count on a doctor being on board."
+    },
+    {
+      "startMs": 351960,
+      "endMs": 353040,
+      "text": "Greg: No."
+    },
+    {
+      "startMs": 353040,
+      "endMs": 355560,
+      "text": "And then you'll have to do a lot of work during the training"
+    },
+    {
+      "startMs": 355560,
+      "endMs": 359640,
+      "text": "on becoming aware of the variety of cultures that your passengers may come from,"
+    },
+    {
+      "startMs": 359640,
+      "endMs": 361320,
+      "text": "and the implications of that."
+    },
+    {
+      "startMs": 361320,
+      "endMs": 363600,
+      "text": "Ellie: That's really interesting, actually."
+    },
+    {
+      "startMs": 363600,
+      "endMs": 365080,
+      "text": "OK."
+    },
+    {
+      "startMs": 365080,
+      "endMs": 368120,
+      "text": "Well, I'd definitely like to apply."
+    },
+    {
+      "startMs": 368120,
+      "endMs": 371560,
+      "text": "What airline do you actually work for?"
+    },
+    {
+      "startMs": 371560,
+      "endMs": 374320,
+      "text": "Greg: It's a small airline called Eurontas."
+    },
+    {
+      "startMs": 374320,
+      "endMs": 381480,
+      "text": "That's E-U-R-O-N-T-A-S."
+    },
+    {
+      "startMs": 381480,
+      "endMs": 384360,
+      "text": "Ellie: Is that N or M in the middle?"
+    },
+    {
+      "startMs": 384360,
+      "endMs": 385880,
+      "text": "Greg: N for November."
+    },
+    {
+      "startMs": 385880,
+      "endMs": 386800,
+      "text": "Ellie: OK."
+    },
+    {
+      "startMs": 386800,
+      "endMs": 388480,
+      "text": "Greg: They're good people to work for."
+    },
+    {
+      "startMs": 388480,
+      "endMs": 390160,
+      "text": "Have a look at their website."
+    },
+    {
+      "startMs": 390160,
+      "endMs": 392960,
+      "text": "You can download the application form from there."
+    },
+    {
+      "startMs": 392960,
+      "endMs": 394400,
+      "text": "Ellie: Right."
+    },
+    {
+      "startMs": 394400,
+      "endMs": 397880,
+      "text": "I don't have much in the way of experience, though."
+    },
+    {
+      "startMs": 397880,
+      "endMs": 400800,
+      "text": "Greg: Well, what have you done since leaving school?"
+    },
+    {
+      "startMs": 400840,
+      "endMs": 403760,
+      "text": "Ellie: I worked in a supermarket for a bit."
+    },
+    {
+      "startMs": 403760,
+      "endMs": 408760,
+      "text": "On the information desk, I was helping deal with queries from customers."
+    },
+    {
+      "startMs": 408760,
+      "endMs": 410320,
+      "text": "Greg: OK, put that down."
+    },
+    {
+      "startMs": 410320,
+      "endMs": 413560,
+      "text": "That's one of the most important aspects of the job, in fact."
+    },
+    {
+      "startMs": 413560,
+      "endMs": 415000,
+      "text": "Ellie: Oh, right."
+    },
+    {
+      "startMs": 415000,
+      "endMs": 420840,
+      "text": "And last year, I also did some voluntary work as part of a team."
+    },
+    {
+      "startMs": 420840,
+      "endMs": 422640,
+      "text": "Should I put that down, too?"
+    },
+    {
+      "startMs": 422640,
+      "endMs": 423560,
+      "text": "Greg: Of course."
+    },
+    {
+      "startMs": 423560,
+      "endMs": 427200,
+      "text": "That's something else they'll be looking for, being able to work with others."
+    },
+    {
+      "startMs": 427200,
+      "endMs": 428320,
+      "text": "Ellie: Right."
+    },
+    {
+      "startMs": 428320,
+      "endMs": 431520,
+      "text": "Greg: And a lot of airlines expect you to pay for your own uniform."
+    },
+    {
+      "startMs": 431520,
+      "endMs": 435200,
+      "text": "But the good thing about this airline is that they provide it for you."
+    },
+    {
+      "startMs": 435200,
+      "endMs": 436520,
+      "text": "Ellie: Great."
+    },
+    {
+      "startMs": 436520,
+      "endMs": 438200,
+      "text": "Well, thanks so much, Greg."
+    },
+    {
+      "startMs": 438200,
+      "endMs": 439200,
+      "text": "I really..."
+    },
+    {
+      "startMs": 442200,
+      "endMs": 444960,
+      "text": "That is the end of section one."
+    },
+    {
+      "startMs": 444960,
+      "endMs": 448520,
+      "text": "You'll now have half a minute to check your answers."
+    },
+    {
+      "startMs": 458320,
+      "endMs": 482040,
+      "text": "Now turn to section two on page three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 128,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

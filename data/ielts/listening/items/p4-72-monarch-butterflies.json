@@ -1,0 +1,445 @@
+{
+  "id": "p4-72-monarch-butterflies",
+  "title": "Monarch Butterflies",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-39c53467eefb",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 303.696,
+    "checksum": "sha256:d7648038421cdfdc32e18138342454fbeb1bbd0278b52460cd091ad402fbb929"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31–40",
+      "instruction": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Monarch Butterflies Hibernation Butterfly species adopt different hibernation patterns during their life cycle. Butterflies named “Banded Hair Freak” hibernate in the form of an 31. __________. Slow metabolism can help them to sort out some problems in winter. There are few predators because they can only survive in 34. __________ weather. Migration Monarch butterflies move to 35. __________ in winter. To avoid cold temperature, they migrate to the south in large groups. The survival skill can help them last for up to 36. __________ during a long journey. Monarch butterflies fly in daytime and stay in 37. __________ during night. Researchers found out that they orient by flying along the 38. __________. They also follow the direction of the 39. __________ for navigational aid. During migration, they mainly feed on flowers and cannot reproduce. Recently, the annual arrival of the monarchs can be a good interest to 40. __________ in the region.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Butterflies named “Banded Hair Freak” hibernate in the form of an 31. __________.",
+          "answer": "Egg"
+        },
+        {
+          "id": "32",
+          "text": "A species called “Dapple White” accumulates 32. __________ from larval stage.",
+          "answer": "Energy"
+        },
+        {
+          "id": "33",
+          "text": "A substance is produced in the blood which may function as 33. __________.",
+          "answer": "anti-freeze/antifreeze"
+        },
+        {
+          "id": "34",
+          "text": "There are few predators because they can only survive in 34. __________ weather.",
+          "answer": "warm"
+        },
+        {
+          "id": "35",
+          "text": "Monarch butterflies move to 35. __________ in winter.",
+          "answer": "North America"
+        },
+        {
+          "id": "36",
+          "text": "The survival skill can help them last for up to 36. __________ during a long journey.",
+          "answer": "6 months/six months"
+        },
+        {
+          "id": "37",
+          "text": "Monarch butterflies fly in daytime and stay in 37. __________ during night.",
+          "answer": "Trees"
+        },
+        {
+          "id": "38",
+          "text": "Researchers found out that they orient by flying along the 38. __________.",
+          "answer": "Rivers"
+        },
+        {
+          "id": "39",
+          "text": "They also follow the direction of the 39. __________ for navigational aid.",
+          "answer": "Sun"
+        },
+        {
+          "id": "40",
+          "text": "Recently, the annual arrival of the monarchs can be a good interest to 40. __________ in the region.",
+          "answer": "Tourists"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Monarch Butterflies",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Hibernation",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Butterfly species adopt different hibernation patterns during their life cycle.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Butterflies named “Banded Hair Freak” hibernate in the form of an 31. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A species called “Dapple White” accumulates 32. __________ from larval stage.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Slow metabolism can help them to sort out some problems in winter.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A substance is produced in the blood which may function as 33. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "There are few predators because they can only survive in 34. __________ weather.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Migration",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Monarch butterflies move to 35. __________ in winter.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "To avoid cold temperature, they migrate to the south in large groups.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The survival skill can help them last for up to 36. __________ during a long journey.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Monarch butterflies fly in daytime and stay in 37. __________ during night.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Researchers found out that they orient by flying along the 38. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They also follow the direction of the 39. __________ for navigational aid.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "During migration, they mainly feed on flowers and cannot reproduce.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Recently, the annual arrival of the monarchs can be a good interest to 40. __________ in the region.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Egg",
+        "32": "Energy",
+        "33": "anti-freeze/antifreeze",
+        "34": "warm",
+        "35": "North America",
+        "36": "6 months/six months",
+        "37": "Trees",
+        "38": "Rivers",
+        "39": "Sun",
+        "40": "Tourists"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7400,
+      "text": "Section 4. You will hear a biology freshman at a university presenting his research findings"
+    },
+    {
+      "startMs": 7400,
+      "endMs": 13640,
+      "text": "on the survival strategies used by butterflies. First, you have some time to look at questions"
+    },
+    {
+      "startMs": 13640,
+      "endMs": 15280,
+      "text": "31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 51880,
+      "text": "Now, listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 51880,
+      "endMs": 57680,
+      "text": "We were required to do the investigation regarding survival strategies of particular animals,"
+    },
+    {
+      "startMs": 57680,
+      "endMs": 62320,
+      "text": "but I chose to study how the butterflies will do for survival when cold weather and food"
+    },
+    {
+      "startMs": 62320,
+      "endMs": 67560,
+      "text": "shortage could easily influence their life cycle. I concentrated on a number of main"
+    },
+    {
+      "startMs": 67560,
+      "endMs": 73960,
+      "text": "strategies butterflies adopt to handle these harsh conditions, hibernation and migration."
+    },
+    {
+      "startMs": 73960,
+      "endMs": 79880,
+      "text": "First, let's talk about the hibernation, which means a long-term sleep in which an animal's"
+    },
+    {
+      "startMs": 79880,
+      "endMs": 85720,
+      "text": "metabolism slows to conserve strength. Various butterfly species have formed different"
+    },
+    {
+      "startMs": 85720,
+      "endMs": 92000,
+      "text": "patterns of hibernation at continuous periods of their life cycle. For example, the banded"
+    },
+    {
+      "startMs": 92000,
+      "endMs": 98520,
+      "text": "hair freak hardly hibernates in its full-grown adult form, but as an egg, and another species,"
+    },
+    {
+      "startMs": 98520,
+      "endMs": 104760,
+      "text": "the dappled white, breathes during the winter in a crystallized stage, and during this time,"
+    },
+    {
+      "startMs": 104760,
+      "endMs": 109560,
+      "text": "it's able to draw on the energy it's accumulated earlier on in its larval stage. Though the"
+    },
+    {
+      "startMs": 109560,
+      "endMs": 113840,
+      "text": "slowing of the metabolism in hibernation functions with many of the difficulties faced"
+    },
+    {
+      "startMs": 113840,
+      "endMs": 119480,
+      "text": "in winter, it can't prevent them all. In addition, some butterflies have extra plans to"
+    },
+    {
+      "startMs": 119480,
+      "endMs": 126320,
+      "text": "survival. For instance, they develop a substance in their blood, usually in glycerol or sorbitol,"
+    },
+    {
+      "startMs": 126320,
+      "endMs": 131880,
+      "text": "which serve as antifreeze, thereby adding extra resistance against lower temperatures."
+    },
+    {
+      "startMs": 131880,
+      "endMs": 137040,
+      "text": "Actually, there is a positive side to the cold weather, fewer predators exist to cause"
+    },
+    {
+      "startMs": 137040,
+      "endMs": 142760,
+      "text": "problems. This is because they're mainly active in warm weather. So, now let's move on"
+    },
+    {
+      "startMs": 142760,
+      "endMs": 148400,
+      "text": "to the second type of survival strategy the butterflies used in winter. Migration, that"
+    },
+    {
+      "startMs": 148400,
+      "endMs": 153160,
+      "text": "means moving to regions with a more suitable environment. I'm going to start this topic"
+    },
+    {
+      "startMs": 153160,
+      "endMs": 159400,
+      "text": "with a detailed study about particular cases of migratory species, the Monarch butterfly."
+    },
+    {
+      "startMs": 159400,
+      "endMs": 164960,
+      "text": "Many butterfly species found in various zones of the world migrate, like the Red Admiral,"
+    },
+    {
+      "startMs": 164960,
+      "endMs": 169880,
+      "text": "a British butterfly which winters in North Africa, but the Monarch butterfly is the sole"
+    },
+    {
+      "startMs": 169880,
+      "endMs": 175600,
+      "text": "example to do this in North America. At any stage of the life cycle, the Monarch cannot"
+    },
+    {
+      "startMs": 175600,
+      "endMs": 180800,
+      "text": "survive in the low winter temperatures. So, when it gets cold, the Monarchs begin to gather"
+    },
+    {
+      "startMs": 180800,
+      "endMs": 186520,
+      "text": "in huge groups and fly south. They can travel up to three and a half thousand miles, but"
+    },
+    {
+      "startMs": 186520,
+      "endMs": 192320,
+      "text": "only the last summer generation of Monarchs migrate. Normal generations only live for a maximum"
+    },
+    {
+      "startMs": 192320,
+      "endMs": 199520,
+      "text": "of ten days. In fact, the last migration generation, as reported, do for six months, which enables"
+    },
+    {
+      "startMs": 199520,
+      "endMs": 205000,
+      "text": "them to take such a long journey. These huge teams of migrating Monarchs only fly during"
+    },
+    {
+      "startMs": 205000,
+      "endMs": 212000,
+      "text": "daylight hours, and at night they usually have a rest in trees. Again, often in vast groups."
+    },
+    {
+      "startMs": 212000,
+      "endMs": 216760,
+      "text": "Research is now being done into what encourages them to reach the destination. It has been"
+    },
+    {
+      "startMs": 216760,
+      "endMs": 221200,
+      "text": "known for years that they find their way on the journey by following rivers. And there"
+    },
+    {
+      "startMs": 221200,
+      "endMs": 227320,
+      "text": "are a few of these along the migratory route. However, the new research indicates that they"
+    },
+    {
+      "startMs": 227320,
+      "endMs": 233440,
+      "text": "may also treat the sun as a navigational aid. During this time, they are able to feed, mainly"
+    },
+    {
+      "startMs": 233440,
+      "endMs": 238680,
+      "text": "from a type of flower called milkweed, but they are not able to reproduce during this period."
+    },
+    {
+      "startMs": 238680,
+      "endMs": 245680,
+      "text": "The Monarchs head in their lineage to a particular region in Mexico, known as the Pierre Asiquois."
+    },
+    {
+      "startMs": 245680,
+      "endMs": 250800,
+      "text": "The Monarchs are anticipated with great interest within the region. And over recent years, their"
+    },
+    {
+      "startMs": 250800,
+      "endMs": 256320,
+      "text": "annual arrival has gained great popularity among tourists. However, their habitat has been"
+    },
+    {
+      "startMs": 256320,
+      "endMs": 257800,
+      "text": "increasingly threatened."
+    },
+    {
+      "startMs": 257800,
+      "endMs": 265960,
+      "text": "That is the end of section 4. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 286320,
+      "endMs": 300480,
+      "text": "That is the end of the listening test. In the IELTS test, you will now have 10 minutes"
+    },
+    {
+      "startMs": 300480,
+      "endMs": 303280,
+      "text": "to transfer your answers to the answer sheet."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 44,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

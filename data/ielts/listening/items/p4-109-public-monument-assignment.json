@@ -1,0 +1,660 @@
+{
+  "id": "p4-109-public-monument-assignment",
+  "title": "Public Monument Assignment",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-3871c5173a15",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 487.392,
+    "checksum": "sha256:49ac2b50e89cd3f105f454b076e4270cdeeeef6bffb8d7dbbd939ea12a0b2b66"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Public Monument Assignment Section one Identify the monument and justify your choice Comment on the 31. _____ of the monument Add information about its: geographical location historical context Illustrate assignment with: photos (with captions) End with: record of architect's achiever Section two: Design and construction Include information about The 34. _____of any particular style on the design The 35. _____ used in construction Specialist 36. _____ required Section three: Assessment of design. Content should include: personal assessment results of your survey Use personal assessment and survey to consider the 37. _____ for building the monument the monument's 38. _____ effect on members of the public how well the monument suits its 39. _____ Remember! Credit given for good 40. _____",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Comment on the 31. _____ of the monument",
+          "answer": "Success"
+        },
+        {
+          "id": "32",
+          "text": "32. _____significance",
+          "answer": "Social"
+        },
+        {
+          "id": "33",
+          "text": "33. _____",
+          "answer": "Plans"
+        },
+        {
+          "id": "34",
+          "text": "The 34. _____of any particular style on the design",
+          "answer": "Influence"
+        },
+        {
+          "id": "35",
+          "text": "The 35. _____ used in construction",
+          "answer": "Materials"
+        },
+        {
+          "id": "36",
+          "text": "Specialist 36. _____ required",
+          "answer": "Skills"
+        },
+        {
+          "id": "37",
+          "text": "the 37. _____ for building the monument",
+          "answer": "Reason"
+        },
+        {
+          "id": "38",
+          "text": "the monument's 38. _____ effect on members of the public",
+          "answer": "Emotional"
+        },
+        {
+          "id": "39",
+          "text": "how well the monument suits its 39. _____",
+          "answer": "Environment"
+        },
+        {
+          "id": "40",
+          "text": "Credit given for good 40. _____",
+          "answer": "Analysis"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Public Monument Assignment",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Section one",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Identify the monument and justify your choice",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Comment on the 31. _____ of the monument",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Add information about its:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "geographical location",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "32. _____significance",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "historical context",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Illustrate assignment with:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "33. _____",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "photos (with captions)",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "End with: record of architect's achiever",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Section two: Design and construction",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Include information about",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The 34. _____of any particular style on the design",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "The 35. _____ used in construction",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Specialist 36. _____ required",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Section three: Assessment of design.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Content should include:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "personal assessment",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "results of your survey",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Use personal assessment and survey to consider",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "the 37. _____ for building the monument",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "the monument's 38. _____ effect on members of the public",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "how well the monument suits its 39. _____",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Remember!",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Credit given for good 40. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Success",
+        "32": "Social",
+        "33": "Plans",
+        "34": "Influence",
+        "35": "Materials",
+        "36": "Skills",
+        "37": "Reason",
+        "38": "Emotional",
+        "39": "Environment",
+        "40": "Analysis"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11000,
+      "text": "Now turn to Section 4 on page 7."
+    },
+    {
+      "startMs": 11000,
+      "endMs": 13000,
+      "text": "Section 4"
+    },
+    {
+      "startMs": 13000,
+      "endMs": 18080,
+      "text": "You will hear a university lecturer talking to his students about an architectural studies"
+    },
+    {
+      "startMs": 18080,
+      "endMs": 20080,
+      "text": "assignment."
+    },
+    {
+      "startMs": 20080,
+      "endMs": 25600,
+      "text": "First you have some time to look at questions 31 to 40 on pages 7 and 8."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 76000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 76000,
+      "endMs": 83840,
+      "text": "Okay, before this morning's lecture on successful design of public buildings, I want to draw your"
+    },
+    {
+      "startMs": 83840,
+      "endMs": 86720,
+      "text": "attention to your next assignment."
+    },
+    {
+      "startMs": 86720,
+      "endMs": 92480,
+      "text": "So your assignment is on public monuments and by that I mean any structure or statue"
+    },
+    {
+      "startMs": 92480,
+      "endMs": 97360,
+      "text": "that is built to remind us of important events or of historic figures."
+    },
+    {
+      "startMs": 97360,
+      "endMs": 100800,
+      "text": "The assignment should be divided into three sections."
+    },
+    {
+      "startMs": 100800,
+      "endMs": 106000,
+      "text": "At the beginning of Section 1 you should identify the monument you're examining and say"
+    },
+    {
+      "startMs": 106000,
+      "endMs": 107960,
+      "text": "why you've chosen it."
+    },
+    {
+      "startMs": 107960,
+      "endMs": 110840,
+      "text": "Include a comment on whether you think the monument works."
+    },
+    {
+      "startMs": 110840,
+      "endMs": 113800,
+      "text": "By that I mean its success."
+    },
+    {
+      "startMs": 113800,
+      "endMs": 115280,
+      "text": "You may think it's wonderful."
+    },
+    {
+      "startMs": 115280,
+      "endMs": 119120,
+      "text": "You may think it's a public eyesore, something that people hate looking at."
+    },
+    {
+      "startMs": 119120,
+      "endMs": 124680,
+      "text": "Next, you should also include in this first section information about where the monument"
+    },
+    {
+      "startMs": 124680,
+      "endMs": 131400,
+      "text": "was built, its geographical site, and also a discussion of its social importance, how"
+    },
+    {
+      "startMs": 131400,
+      "endMs": 135320,
+      "text": "relevant it was for the people of the time."
+    },
+    {
+      "startMs": 135320,
+      "endMs": 141000,
+      "text": "You should also include information on when it was built, its historical background, and"
+    },
+    {
+      "startMs": 141000,
+      "endMs": 144720,
+      "text": "make sure you illustrate the assignment appropriately too."
+    },
+    {
+      "startMs": 144720,
+      "endMs": 146680,
+      "text": "I shall expect that."
+    },
+    {
+      "startMs": 146680,
+      "endMs": 152600,
+      "text": "Insert any plans you can find and make sure any photographs you use have captions and are"
+    },
+    {
+      "startMs": 152600,
+      "endMs": 157240,
+      "text": "clearly referred to in the text or they will be meaningless."
+    },
+    {
+      "startMs": 157240,
+      "endMs": 162320,
+      "text": "To end this section you should include something about the record of the person who designed"
+    },
+    {
+      "startMs": 162320,
+      "endMs": 166680,
+      "text": "the monument, showing how the monument relates to his or her other work."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 173000,
+      "text": "Right."
+    },
+    {
+      "startMs": 173000,
+      "endMs": 177320,
+      "text": "In section two of the assignment you'll need to give a detailed account of the design"
+    },
+    {
+      "startMs": 177320,
+      "endMs": 179600,
+      "text": "and construction of the monument."
+    },
+    {
+      "startMs": 179600,
+      "endMs": 185960,
+      "text": "Firstly, I'll want to read about any particular influence you think is apparent in the design."
+    },
+    {
+      "startMs": 185960,
+      "endMs": 191600,
+      "text": "More often than not there will be something in it that links it to an established style,"
+    },
+    {
+      "startMs": 191600,
+      "endMs": 194000,
+      "text": "classical Greek for example."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 200480,
+      "text": "Or it may reflect a movement like Bauhaus or Art Nouveau, you design."
+    },
+    {
+      "startMs": 200480,
+      "endMs": 206720,
+      "text": "Secondly, I want information about the choice of materials, not only those which were used,"
+    },
+    {
+      "startMs": 206720,
+      "endMs": 211560,
+      "text": "but reasons why they may have been selected from others that were available at the time"
+    },
+    {
+      "startMs": 211560,
+      "endMs": 214800,
+      "text": "and in the area where the designer worked."
+    },
+    {
+      "startMs": 214800,
+      "endMs": 219800,
+      "text": "Next, I'll want to mention of any particular skills that were necessary in the construction"
+    },
+    {
+      "startMs": 219800,
+      "endMs": 221840,
+      "text": "too."
+    },
+    {
+      "startMs": 221840,
+      "endMs": 225320,
+      "text": "The third section is the most important one."
+    },
+    {
+      "startMs": 225800,
+      "endMs": 228920,
+      "text": "Here you'll go into much more critical detail."
+    },
+    {
+      "startMs": 228920,
+      "endMs": 233880,
+      "text": "To add to your own comments you'll need to carry out a survey for this section to be"
+    },
+    {
+      "startMs": 233880,
+      "endMs": 237320,
+      "text": "as comprehensive and rounded as possible."
+    },
+    {
+      "startMs": 237320,
+      "endMs": 240320,
+      "text": "Ask yourself and others the following questions."
+    },
+    {
+      "startMs": 240320,
+      "endMs": 244320,
+      "text": "Firstly, was the reason for erecting the monument a valid one."
+    },
+    {
+      "startMs": 244320,
+      "endMs": 249400,
+      "text": "For example, was it one that ordinary members of the public, the man or woman on the street,"
+    },
+    {
+      "startMs": 249400,
+      "endMs": 254600,
+      "text": "can readily relate to and did it justify how much public money it cost?"
+    },
+    {
+      "startMs": 254600,
+      "endMs": 260720,
+      "text": "Was it a waste or does it represent a sound cultural investment?"
+    },
+    {
+      "startMs": 260720,
+      "endMs": 263680,
+      "text": "Then think about its emotional impact."
+    },
+    {
+      "startMs": 263680,
+      "endMs": 266600,
+      "text": "When someone looks at it, how do they feel?"
+    },
+    {
+      "startMs": 266600,
+      "endMs": 269680,
+      "text": "Angry, sad, indifferent?"
+    },
+    {
+      "startMs": 269680,
+      "endMs": 274640,
+      "text": "And don't forget to consider how well the monument sits in its environment."
+    },
+    {
+      "startMs": 274640,
+      "endMs": 278040,
+      "text": "Does it harmonize with it or does it clash with it?"
+    },
+    {
+      "startMs": 278040,
+      "endMs": 279760,
+      "text": "And is that important?"
+    },
+    {
+      "startMs": 279760,
+      "endMs": 282920,
+      "text": "Does it add to the effect or take away from it?"
+    },
+    {
+      "startMs": 283480,
+      "endMs": 285920,
+      "text": "Right, those guidelines should help."
+    },
+    {
+      "startMs": 285920,
+      "endMs": 292000,
+      "text": "Oh, and remember, it is important to weigh up carefully how to make the maximum impact"
+    },
+    {
+      "startMs": 292000,
+      "endMs": 295960,
+      "text": "in this kind of critique within the number of words allowable."
+    },
+    {
+      "startMs": 295960,
+      "endMs": 299920,
+      "text": "You don't get extra marks for lots of factual information."
+    },
+    {
+      "startMs": 299920,
+      "endMs": 303440,
+      "text": "You get those for a well-constructed analysis."
+    },
+    {
+      "startMs": 303440,
+      "endMs": 308920,
+      "text": "That's what counts, and that needs to be based on your personal opinion."
+    },
+    {
+      "startMs": 309920,
+      "endMs": 313920,
+      "text": "That is the end of section 4."
+    },
+    {
+      "startMs": 313920,
+      "endMs": 317920,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 338920,
+      "endMs": 350920,
+      "text": "That is the end of the listening test."
+    },
+    {
+      "startMs": 350920,
+      "endMs": 355920,
+      "text": "You now have 10 minutes to transfer your answers to the listening answer sheet."
+    },
+    {
+      "startMs": 368920,
+      "endMs": 371920,
+      "text": "You"
+    },
+    {
+      "startMs": 398920,
+      "endMs": 401920,
+      "text": "You"
+    },
+    {
+      "startMs": 428920,
+      "endMs": 431920,
+      "text": "You"
+    },
+    {
+      "startMs": 458920,
+      "endMs": 461920,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 69,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

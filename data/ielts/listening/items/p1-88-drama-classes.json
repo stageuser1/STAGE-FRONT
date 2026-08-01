@@ -1,0 +1,765 @@
+{
+  "id": "p1-88-drama-classes",
+  "title": "Drama Classes",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-356fff195578",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 358.666,
+    "checksum": "sha256:dd039a4736ad85b6d629c61ea1969a083b62fb15e4e7ff0812deca81e45ddb06"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 1-3",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "1",
+          "text": "The teacher praised student Emma for",
+          "options": [
+            {
+              "id": "A",
+              "text": "her good performance in public show."
+            },
+            {
+              "id": "B",
+              "text": "setting a good example for others."
+            },
+            {
+              "id": "C",
+              "text": "settling in quickly"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "2",
+          "text": "Why has the timetable for drama class changed?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Because of falling enrollment."
+            },
+            {
+              "id": "B",
+              "text": "Because the class size is too big."
+            },
+            {
+              "id": "C",
+              "text": "Because of the availability of music room."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "3",
+          "text": "What is the new time for the drama class?",
+          "options": [
+            {
+              "id": "A",
+              "text": "3:15 pm"
+            },
+            {
+              "id": "B",
+              "text": "4:15 pm"
+            },
+            {
+              "id": "C",
+              "text": "4:45 pm"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 4-6",
+      "instruction": "Write the correct letter from the box, A-E, next to Questions 4-6.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The course is full."
+        },
+        {
+          "id": "B",
+          "text": "The course fee is too expensive."
+        },
+        {
+          "id": "C",
+          "text": "She has another activity at that time."
+        },
+        {
+          "id": "D",
+          "text": "She has another activity that evening."
+        },
+        {
+          "id": "E",
+          "text": "The class is too late."
+        }
+      ],
+      "questions": [
+        {
+          "id": "4",
+          "text": "Dance Class",
+          "answer": "A"
+        },
+        {
+          "id": "5",
+          "text": "Singing Class",
+          "answer": "D"
+        },
+        {
+          "id": "6",
+          "text": "Vocal Class",
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 7-10",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Information on Music Class The class teaches children to play instruments and how to write 7. ______ Cost of the course: $ 8. ______ Date Emma starts the course: 9. ______ Teacher: Jamal 10. ______",
+      "questions": [
+        {
+          "id": "7",
+          "text": "The class teaches children to play instruments and how to write 7. ______",
+          "answer": "Music"
+        },
+        {
+          "id": "8",
+          "text": "Cost of the course: $ 8. ______",
+          "answer": "85/eighty-five"
+        },
+        {
+          "id": "9",
+          "text": "Date Emma starts the course: 9. ______",
+          "answer": "14th September/September 14th/September 14/14 September"
+        },
+        {
+          "id": "10",
+          "text": "Teacher: Jamal 10. ______",
+          "answer": "Curtis"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Information on Music Class",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The class teaches children to play instruments and how to write 7. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Cost of the course: $ 8. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Date Emma starts the course: 9. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Teacher: Jamal 10. ______",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "7": "Music",
+        "8": "85/eighty-five",
+        "9": "14th September/September 14th/September 14/14 September",
+        "10": "Curtis"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "1": "B",
+        "2": "B",
+        "3": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "4": "A",
+        "5": "D",
+        "6": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6280,
+      "text": "You should answer the questions as you listen, because you will not hear the recording"
+    },
+    {
+      "startMs": 6280,
+      "endMs": 8840,
+      "text": "a second time."
+    },
+    {
+      "startMs": 8840,
+      "endMs": 13120,
+      "text": "Listen carefully and answer questions one to three."
+    },
+    {
+      "startMs": 13120,
+      "endMs": 14120,
+      "text": "Teacher: Good afternoon."
+    },
+    {
+      "startMs": 14120,
+      "endMs": 18720,
+      "text": "May I speak to Emma's parent?"
+    },
+    {
+      "startMs": 18720,
+      "endMs": 19720,
+      "text": "Father: Afternoon."
+    },
+    {
+      "startMs": 19720,
+      "endMs": 20720,
+      "text": "I'm her father."
+    },
+    {
+      "startMs": 20720,
+      "endMs": 22720,
+      "text": "Who am I speaking to?"
+    },
+    {
+      "startMs": 22720,
+      "endMs": 26680,
+      "text": "Teacher: This is Emma's teacher, Jane Carson, calling from the Arts Centre."
+    },
+    {
+      "startMs": 26680,
+      "endMs": 30840,
+      "text": "I'm just calling to talk about her drama class at the centre."
+    },
+    {
+      "startMs": 30840,
+      "endMs": 32840,
+      "text": "Father: Oh, thank you for calling."
+    },
+    {
+      "startMs": 32840,
+      "endMs": 35320,
+      "text": "How's Emma doing in drama class?"
+    },
+    {
+      "startMs": 35320,
+      "endMs": 39720,
+      "text": "You know, she just transferred here last month, unlike the others in her class who have"
+    },
+    {
+      "startMs": 39720,
+      "endMs": 42920,
+      "text": "been taking the course the whole semester since June."
+    },
+    {
+      "startMs": 42920,
+      "endMs": 46680,
+      "text": "So I'm a bit worried that she might not fit in so well."
+    },
+    {
+      "startMs": 46680,
+      "endMs": 48080,
+      "text": "Teacher: There's no need to worry."
+    },
+    {
+      "startMs": 48080,
+      "endMs": 51800,
+      "text": "She exhibits a strong performance in her drama class."
+    },
+    {
+      "startMs": 51800,
+      "endMs": 52800,
+      "text": "Father: Is that so?"
+    },
+    {
+      "startMs": 53240,
+      "endMs": 60000,
+      "text": "Teacher: Yes, she didn't adapt to the new environment as quickly as I originally expected and seemed"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 65440,
+      "text": "a bit shy at first, but a few days later she made a couple of friends and became more"
+    },
+    {
+      "startMs": 65440,
+      "endMs": 68880,
+      "text": "talkative and also more involved in class."
+    },
+    {
+      "startMs": 68880,
+      "endMs": 74600,
+      "text": "Emma really is a role model for others because she has always been an active participant"
+    },
+    {
+      "startMs": 74600,
+      "endMs": 75880,
+      "text": "during class."
+    },
+    {
+      "startMs": 75880,
+      "endMs": 79320,
+      "text": "She voices her own ideas and is very creative."
+    },
+    {
+      "startMs": 79320,
+      "endMs": 81400,
+      "text": "Father: I didn't expect that."
+    },
+    {
+      "startMs": 81400,
+      "endMs": 85720,
+      "text": "But I can tell that she really enjoys the course because she's been talking about it"
+    },
+    {
+      "startMs": 85720,
+      "endMs": 88240,
+      "text": "at home frequently these past few weeks."
+    },
+    {
+      "startMs": 88240,
+      "endMs": 89920,
+      "text": "Teacher: That's great to hear."
+    },
+    {
+      "startMs": 89920,
+      "endMs": 92000,
+      "text": "Interest is always the best teacher."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 97040,
+      "text": "I also have to inform you that there's been an adjustment in the timetable of the drama"
+    },
+    {
+      "startMs": 97040,
+      "endMs": 98680,
+      "text": "class next term."
+    },
+    {
+      "startMs": 98680,
+      "endMs": 99680,
+      "text": "Father: Why is that?"
+    },
+    {
+      "startMs": 99680,
+      "endMs": 104640,
+      "text": "Teacher: It's not that the music room that we currently use isn't available."
+    },
+    {
+      "startMs": 104640,
+      "endMs": 109840,
+      "text": "As there are too many in rolling for the coming semester, increased class size means"
+    },
+    {
+      "startMs": 109840,
+      "endMs": 116200,
+      "text": "that space is limited to how the whole class, also the new classroom we use, is not available"
+    },
+    {
+      "startMs": 116200,
+      "endMs": 121680,
+      "text": "during the current time frame, so I'm afraid we have to change the time for it."
+    },
+    {
+      "startMs": 121680,
+      "endMs": 125160,
+      "text": "Father: I see, so when would it be?"
+    },
+    {
+      "startMs": 125160,
+      "endMs": 130600,
+      "text": "Teacher: As you know, the current class begins at 315, but the new time of the drama class would"
+    },
+    {
+      "startMs": 130600,
+      "endMs": 132440,
+      "text": "be a quarter to five."
+    },
+    {
+      "startMs": 132440,
+      "endMs": 136040,
+      "text": "Father: I'm afraid I have errands to run during that time."
+    },
+    {
+      "startMs": 136040,
+      "endMs": 141560,
+      "text": "Teacher: On the other campus, the class still begins at 315, but for the campus, Emma goes to."
+    },
+    {
+      "startMs": 141560,
+      "endMs": 144560,
+      "text": "It is the only time available for drama class."
+    },
+    {
+      "startMs": 144560,
+      "endMs": 146040,
+      "text": "Father: Oh, I see."
+    },
+    {
+      "startMs": 146040,
+      "endMs": 149120,
+      "text": "I have to make adjustments to my course schedule then."
+    },
+    {
+      "startMs": 149120,
+      "endMs": 152840,
+      "text": "No problem."
+    },
+    {
+      "startMs": 152840,
+      "endMs": 158600,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions"
+    },
+    {
+      "startMs": 158600,
+      "endMs": 160080,
+      "text": "four to ten."
+    },
+    {
+      "startMs": 166040,
+      "endMs": 186960,
+      "text": "Now listen and answer questions four to ten."
+    },
+    {
+      "startMs": 186960,
+      "endMs": 191520,
+      "text": "Father: Miss Carson, I'm thinking about signing Emma up for another art course."
+    },
+    {
+      "startMs": 191520,
+      "endMs": 193720,
+      "text": "I'm thinking about dance class."
+    },
+    {
+      "startMs": 193720,
+      "endMs": 199520,
+      "text": "Teacher: Dance class is a popular course here, a great choice for a child to shape up and have fun,"
+    },
+    {
+      "startMs": 199520,
+      "endMs": 202800,
+      "text": "but unfortunately it is oversubscribed at the moment."
+    },
+    {
+      "startMs": 202800,
+      "endMs": 205320,
+      "text": "I have to put you on the waiting list."
+    },
+    {
+      "startMs": 205320,
+      "endMs": 206480,
+      "text": "Father: That's too bad."
+    },
+    {
+      "startMs": 206480,
+      "endMs": 208240,
+      "text": "What else can I choose from then?"
+    },
+    {
+      "startMs": 208240,
+      "endMs": 209640,
+      "text": "Could you give me some advice?"
+    },
+    {
+      "startMs": 209640,
+      "endMs": 210640,
+      "text": "Teacher: Sure."
+    },
+    {
+      "startMs": 210640,
+      "endMs": 213360,
+      "text": "Emma could take singing class as well."
+    },
+    {
+      "startMs": 213360,
+      "endMs": 215760,
+      "text": "This would improve her musicality."
+    },
+    {
+      "startMs": 215760,
+      "endMs": 216760,
+      "text": "Father: Sounds good."
+    },
+    {
+      "startMs": 216760,
+      "endMs": 217760,
+      "text": "When is that?"
+    },
+    {
+      "startMs": 217760,
+      "endMs": 220560,
+      "text": "Teacher: It is held every Friday evening."
+    },
+    {
+      "startMs": 220560,
+      "endMs": 221720,
+      "text": "Father: That's too bad."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 225040,
+      "text": "Emma already has a swimming class earlier that evening."
+    },
+    {
+      "startMs": 225040,
+      "endMs": 228440,
+      "text": "It will be too late for her to come home if she takes this course."
+    },
+    {
+      "startMs": 228440,
+      "endMs": 231040,
+      "text": "Teacher: There is also a vocal course available."
+    },
+    {
+      "startMs": 231040,
+      "endMs": 232600,
+      "text": "Emma's got a great voice."
+    },
+    {
+      "startMs": 232600,
+      "endMs": 234920,
+      "text": "I'm sure she'll stand out in the class."
+    },
+    {
+      "startMs": 234920,
+      "endMs": 236320,
+      "text": "Father: Tell me about it."
+    },
+    {
+      "startMs": 236320,
+      "endMs": 240440,
+      "text": "The vocal course starts at 4.30pm every Tuesday."
+    },
+    {
+      "startMs": 240440,
+      "endMs": 242000,
+      "text": "Teacher: It isn't fully booked yet."
+    },
+    {
+      "startMs": 242000,
+      "endMs": 246040,
+      "text": "Great teacher, experienced and beloved by students."
+    },
+    {
+      "startMs": 246040,
+      "endMs": 248320,
+      "text": "The price is a bit higher though."
+    },
+    {
+      "startMs": 248320,
+      "endMs": 249320,
+      "text": "Father: How much is it?"
+    },
+    {
+      "startMs": 249320,
+      "endMs": 251200,
+      "text": "It's $110."
+    },
+    {
+      "startMs": 251240,
+      "endMs": 252960,
+      "text": "Oh, that's too much."
+    },
+    {
+      "startMs": 252960,
+      "endMs": 254720,
+      "text": "Way over our budget."
+    },
+    {
+      "startMs": 254720,
+      "endMs": 257640,
+      "text": "We have to cover the extra cost if we choose it."
+    },
+    {
+      "startMs": 257640,
+      "endMs": 260680,
+      "text": "Teacher: Or maybe Emma could take music class."
+    },
+    {
+      "startMs": 260680,
+      "endMs": 262000,
+      "text": "Father: What is it about?"
+    },
+    {
+      "startMs": 262000,
+      "endMs": 264560,
+      "text": "Learning about songs and musicals?"
+    },
+    {
+      "startMs": 264560,
+      "endMs": 268200,
+      "text": "Teacher: Well, the students have the opportunity to play different instruments"
+    },
+    {
+      "startMs": 268200,
+      "endMs": 271120,
+      "text": "like the piano, drum and so on."
+    },
+    {
+      "startMs": 271120,
+      "endMs": 275200,
+      "text": "They can also learn to write music under professional guidance."
+    },
+    {
+      "startMs": 275200,
+      "endMs": 278160,
+      "text": "Father: That's exactly what Emma is eager to learn."
+    },
+    {
+      "startMs": 278160,
+      "endMs": 279640,
+      "text": "How much would it cost?"
+    },
+    {
+      "startMs": 279640,
+      "endMs": 284400,
+      "text": "Teacher: It was $63 last term, but this term it is $85."
+    },
+    {
+      "startMs": 284400,
+      "endMs": 287200,
+      "text": "$22 more than the original price."
+    },
+    {
+      "startMs": 287200,
+      "endMs": 288800,
+      "text": "Father: We can afford that."
+    },
+    {
+      "startMs": 288800,
+      "endMs": 290320,
+      "text": "When does the course begin?"
+    },
+    {
+      "startMs": 290320,
+      "endMs": 293120,
+      "text": "Teacher: The course starts on September the 7th."
+    },
+    {
+      "startMs": 293120,
+      "endMs": 294920,
+      "text": "Father: Can we start one week later?"
+    },
+    {
+      "startMs": 294920,
+      "endMs": 296400,
+      "text": "On September the 14th?"
+    },
+    {
+      "startMs": 296400,
+      "endMs": 298160,
+      "text": "My daughter will be on a trip to France"
+    },
+    {
+      "startMs": 298160,
+      "endMs": 300120,
+      "text": "with her mum on the 7th."
+    },
+    {
+      "startMs": 300120,
+      "endMs": 304080,
+      "text": "Teacher: No problem, and the teacher for the class is Jamal Curtis."
+    },
+    {
+      "startMs": 304080,
+      "endMs": 308280,
+      "text": "Just contact him if you have any further questions regarding the course."
+    },
+    {
+      "startMs": 308280,
+      "endMs": 311400,
+      "text": "Father: Jamal Curtis, how do you select Curtis?"
+    },
+    {
+      "startMs": 311400,
+      "endMs": 316040,
+      "text": "Teacher: Oh, it's C-U-R-T-I-S."
+    },
+    {
+      "startMs": 316040,
+      "endMs": 317040,
+      "text": "Father: Thank you."
+    },
+    {
+      "startMs": 319560,
+      "endMs": 322240,
+      "text": "That is the end of section one."
+    },
+    {
+      "startMs": 322240,
+      "endMs": 326040,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 338280,
+      "endMs": 358280,
+      "text": "Now turn to section two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 103,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

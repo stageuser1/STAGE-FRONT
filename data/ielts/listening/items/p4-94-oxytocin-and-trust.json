@@ -1,0 +1,585 @@
+{
+  "id": "p4-94-oxytocin-and-trust",
+  "title": "Oxytocin and Trust",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-3b85e90f63e0",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 380.656,
+    "checksum": "sha256:3cdffbea6f08854c9bedd9af621d5259c2fcab0e0481754875ababc4292b1650"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Oxytocin and Trust Trust relies on the stranger's 31. __________ The understanding of trust can reduce 32. __________ How to measure trust People's ability of recognizing a person's 33. __________ Oxytocin will be released when 34. __________ occurs Experiments: two participants The first participant decides whether to lend the money or not. The second participant has no 35. __________ to return the money Trust involves a 36. __________ so it is conditional. If animals have 37. __________ they will be seen to have oxytocin Nash equilibrium Participants have no 38. __________ that the other person would change his or her decision. People under stress have 39. __________ levels of oxytocin. Oxytocin is a social 40. __________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Trust relies on the stranger's 31. __________",
+          "answer": "Kindness"
+        },
+        {
+          "id": "32",
+          "text": "The understanding of trust can reduce 32. __________",
+          "answer": "Poverty"
+        },
+        {
+          "id": "33",
+          "text": "People's ability of recognizing a person's 33. __________",
+          "answer": "Face"
+        },
+        {
+          "id": "34",
+          "text": "Oxytocin will be released when 34. __________ occurs",
+          "answer": "Interaction"
+        },
+        {
+          "id": "35",
+          "text": "The second participant has no 35. __________ to return the money",
+          "answer": "Obligation"
+        },
+        {
+          "id": "36",
+          "text": "Trust involves a 36. __________ so it is conditional.",
+          "answer": "Process"
+        },
+        {
+          "id": "37",
+          "text": "If animals have 37. __________ they will be seen to have oxytocin",
+          "answer": "Cooperation"
+        },
+        {
+          "id": "38",
+          "text": "Participants have no 38. __________ that the other person would change his or her decision.",
+          "answer": "Expectations"
+        },
+        {
+          "id": "39",
+          "text": "People under stress have 39. __________ levels of oxytocin.",
+          "answer": "High"
+        },
+        {
+          "id": "40",
+          "text": "Oxytocin is a social 40. __________",
+          "answer": "Glue"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Oxytocin and Trust",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Trust relies on the stranger's 31. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The understanding of trust can reduce 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "How to measure trust",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "People's ability of recognizing a person's 33. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Oxytocin will be released when 34. __________ occurs",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Experiments: two participants",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The first participant decides whether to lend the money or not.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The second participant has no 35. __________ to return the money",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Trust involves a 36. __________ so it is conditional.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "If animals have 37. __________ they will be seen to have oxytocin",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Nash equilibrium",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Participants have no 38. __________ that the other person would change his or her decision.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People under stress have 39. __________ levels of oxytocin.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Oxytocin is a social 40. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Kindness",
+        "32": "Poverty",
+        "33": "Face",
+        "34": "Interaction",
+        "35": "Obligation",
+        "36": "Process",
+        "37": "Cooperation",
+        "38": "Expectations",
+        "39": "High",
+        "40": "Glue"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 4820,
+      "text": "Section 4."
+    },
+    {
+      "startMs": 4820,
+      "endMs": 9580,
+      "text": "You will hear parts of a lecture about oxytocin and trust."
+    },
+    {
+      "startMs": 9580,
+      "endMs": 14220,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 37000,
+      "text": "You have some time to look at a lecture about oxytocin and trust."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 72480,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 72480,
+      "endMs": 77240,
+      "text": "The development of trust is an essential social tool, allowing people to form productive"
+    },
+    {
+      "startMs": 77240,
+      "endMs": 82480,
+      "text": "and meaningful relationships both at a professional and personal level."
+    },
+    {
+      "startMs": 82480,
+      "endMs": 88040,
+      "text": "Trust is indispensable in friendship, love, families and organisations and plays a key"
+    },
+    {
+      "startMs": 88040,
+      "endMs": 91680,
+      "text": "role in economic exchange and politics."
+    },
+    {
+      "startMs": 91680,
+      "endMs": 98640,
+      "text": "Much recent evidence indicates that trust contributes to economic, political and social success."
+    },
+    {
+      "startMs": 98640,
+      "endMs": 102680,
+      "text": "When we make contacts with strangers such as doing business with the clients who we meet"
+    },
+    {
+      "startMs": 102680,
+      "endMs": 107560,
+      "text": "for the first time, our trust in them can only rely on their kindness."
+    },
+    {
+      "startMs": 107560,
+      "endMs": 112360,
+      "text": "So from our own judgement, all the comments from other people, we can have a rough idea"
+    },
+    {
+      "startMs": 112360,
+      "endMs": 115480,
+      "text": "if the stranger is trustworthy."
+    },
+    {
+      "startMs": 115480,
+      "endMs": 120560,
+      "text": "Trust is important because it is the basis around which all human relationships evolve."
+    },
+    {
+      "startMs": 120560,
+      "endMs": 124000,
+      "text": "Without trust, there can be no relationship."
+    },
+    {
+      "startMs": 124000,
+      "endMs": 128600,
+      "text": "Trust can come naturally or it can be manifested."
+    },
+    {
+      "startMs": 128600,
+      "endMs": 132600,
+      "text": "If you find trust of this magnitude in life, then you are lucky."
+    },
+    {
+      "startMs": 132600,
+      "endMs": 139200,
+      "text": "Also, you can always count on them to protect through all, if not most, of life's perils."
+    },
+    {
+      "startMs": 139200,
+      "endMs": 144120,
+      "text": "Trust is important because if you don't trust someone, then they are not available."
+    },
+    {
+      "startMs": 144120,
+      "endMs": 149040,
+      "text": "Believe it or not, reducing the chance of suffering from poverty is to understand trust"
+    },
+    {
+      "startMs": 149040,
+      "endMs": 153760,
+      "text": "because when you trust other people, you can have more support and resources."
+    },
+    {
+      "startMs": 153760,
+      "endMs": 159480,
+      "text": "However, our ability to trust others varies from individual to individual, just like different"
+    },
+    {
+      "startMs": 159480,
+      "endMs": 163720,
+      "text": "people's ability of recognising a person's face is not the same."
+    },
+    {
+      "startMs": 163720,
+      "endMs": 166840,
+      "text": "Bonds of trust are also extremely fragile."
+    },
+    {
+      "startMs": 166840,
+      "endMs": 172600,
+      "text": "A single act of betrayal, such as a marital affair, can instantly erase years of trustworthy"
+    },
+    {
+      "startMs": 172600,
+      "endMs": 174080,
+      "text": "behaviour."
+    },
+    {
+      "startMs": 174080,
+      "endMs": 180440,
+      "text": "The consequences of such breaches in confidence can be disastrous and not only for a relationship."
+    },
+    {
+      "startMs": 180440,
+      "endMs": 186520,
+      "text": "The study demonstrates how oxytocin can facilitate social interactions after trust has been violated"
+    },
+    {
+      "startMs": 186520,
+      "endMs": 191880,
+      "text": "by potentially lowering defence mechanisms associated with social risks and by overcoming"
+    },
+    {
+      "startMs": 191880,
+      "endMs": 196480,
+      "text": "negative feedback that is important for adapting behaviour in the future."
+    },
+    {
+      "startMs": 196480,
+      "endMs": 202760,
+      "text": "Luckily, oxytocin in our body has the ability to inspire trust in and among people."
+    },
+    {
+      "startMs": 202760,
+      "endMs": 211840,
+      "text": "This chemical is released whenever interaction happens between people."
+    },
+    {
+      "startMs": 211840,
+      "endMs": 217440,
+      "text": "To study social interactions, economists and more recently neuroscientists take advantage"
+    },
+    {
+      "startMs": 217440,
+      "endMs": 220000,
+      "text": "of a simple experiment."
+    },
+    {
+      "startMs": 220000,
+      "endMs": 223160,
+      "text": "Two participants play the so-called Trust Game."
+    },
+    {
+      "startMs": 223160,
+      "endMs": 227520,
+      "text": "The first participant is faced with a decision to keep a sum of money or share it with the"
+    },
+    {
+      "startMs": 227520,
+      "endMs": 232000,
+      "text": "second participant who has no obligation to give the money back."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 235720,
+      "text": "He would get more money if the second person returns it."
+    },
+    {
+      "startMs": 235720,
+      "endMs": 240880,
+      "text": "In this game, the first person is left with an important social dilemma to trust or not"
+    },
+    {
+      "startMs": 240880,
+      "endMs": 242520,
+      "text": "to trust."
+    },
+    {
+      "startMs": 242520,
+      "endMs": 249360,
+      "text": "Although it is more profitable to trust, doing so leaves the investor at risk of betrayal."
+    },
+    {
+      "startMs": 249360,
+      "endMs": 253680,
+      "text": "Trust is not something that naturally occurs when two people meet for the first time."
+    },
+    {
+      "startMs": 253680,
+      "endMs": 256320,
+      "text": "It involves a process."
+    },
+    {
+      "startMs": 256320,
+      "endMs": 261240,
+      "text": "One person has to show the quality of being trustworthy to the other person."
+    },
+    {
+      "startMs": 261240,
+      "endMs": 264920,
+      "text": "This can be achieved by certain behaviours and communication."
+    },
+    {
+      "startMs": 264920,
+      "endMs": 267400,
+      "text": "Therefore, trust is conditional."
+    },
+    {
+      "startMs": 267400,
+      "endMs": 270720,
+      "text": "People should not take it for granted."
+    },
+    {
+      "startMs": 270720,
+      "endMs": 273840,
+      "text": "Oxytocin does not only exist in human beings."
+    },
+    {
+      "startMs": 273840,
+      "endMs": 279120,
+      "text": "Animals also have this gift and it can be seen when they have cooperation with each other."
+    },
+    {
+      "startMs": 279120,
+      "endMs": 283680,
+      "text": "Oxytocin in monkeys, for example, allow them to work together to find food and to fight"
+    },
+    {
+      "startMs": 283680,
+      "endMs": 285680,
+      "text": "against enemies."
+    },
+    {
+      "startMs": 285680,
+      "endMs": 289800,
+      "text": "The Nash Equilibrium's Game Theory, the first participant will make the best decision"
+    },
+    {
+      "startMs": 289800,
+      "endMs": 295520,
+      "text": "he can, with no expectations that the second participant would change his decision."
+    },
+    {
+      "startMs": 295520,
+      "endMs": 298040,
+      "text": "The second participant will do the same."
+    },
+    {
+      "startMs": 298040,
+      "endMs": 301680,
+      "text": "So the outcome depends on the decision of the other person."
+    },
+    {
+      "startMs": 301680,
+      "endMs": 305760,
+      "text": "This game is similar to the one we just talked about."
+    },
+    {
+      "startMs": 305760,
+      "endMs": 309600,
+      "text": "The Oxytocin level doesn't stay the same in a person's body."
+    },
+    {
+      "startMs": 309600,
+      "endMs": 313040,
+      "text": "Studies have found that people who are under a lot of stress would have high levels of"
+    },
+    {
+      "startMs": 313040,
+      "endMs": 315040,
+      "text": "oxytocin."
+    },
+    {
+      "startMs": 315600,
+      "endMs": 321200,
+      "text": "Oxytocin causes a substantial increase in trust among humans, thereby greatly increasing"
+    },
+    {
+      "startMs": 321200,
+      "endMs": 324560,
+      "text": "the benefits from social interactions."
+    },
+    {
+      "startMs": 324560,
+      "endMs": 329040,
+      "text": "It's also noted that the effect of oxytocin on trust is not due to a general increase"
+    },
+    {
+      "startMs": 329040,
+      "endMs": 331280,
+      "text": "in the readiness to bear risks."
+    },
+    {
+      "startMs": 331280,
+      "endMs": 336480,
+      "text": "On the contrary, oxytocin specifically affects an individual's willingness to accept social"
+    },
+    {
+      "startMs": 336480,
+      "endMs": 340080,
+      "text": "risks arising through interpersonal interactions."
+    },
+    {
+      "startMs": 340080,
+      "endMs": 346800,
+      "text": "After some up, oxytocin is like a kind of social glue that is helpful in social bonding."
+    },
+    {
+      "startMs": 346800,
+      "endMs": 351240,
+      "text": "Further research is needed to explore oxytocin and trust, and how this hormone can be used"
+    },
+    {
+      "startMs": 351240,
+      "endMs": 355800,
+      "text": "to strengthen our trust in others and even treat mental disorders that specifically"
+    },
+    {
+      "startMs": 355800,
+      "endMs": 359720,
+      "text": "relate to deficiencies in social behaviour."
+    },
+    {
+      "startMs": 359720,
+      "endMs": 364400,
+      "text": "Next we're going to talk about..."
+    },
+    {
+      "startMs": 364400,
+      "endMs": 367120,
+      "text": "That is the end of section 4."
+    },
+    {
+      "startMs": 367120,
+      "endMs": 370040,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 73,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

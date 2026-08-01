@@ -1,0 +1,516 @@
+{
+  "id": "p3-44-food-waste",
+  "title": "Food Waste",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-9d8540948c88",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 628.056,
+    "checksum": "sha256:73627c28be3acf5ef78c0e76e3714cb270cc2641eab13d58c4a7a332b296fb18"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–25.",
+      "instruction": "Choose the correct letter; A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What point does Robert make about the 2013 study in Britain?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It focused more on packaging than wasted food."
+            },
+            {
+              "id": "B",
+              "text": "It proved that households produced more waste than restaurants."
+            },
+            {
+              "id": "C",
+              "text": "It included liquid waste as well as solid waste."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "The speakers agree that food waste reports should emphasise the connection between carbon dioxide emissions and",
+          "options": [
+            {
+              "id": "A",
+              "text": "food production."
+            },
+            {
+              "id": "B",
+              "text": "transport of food to landfill sites."
+            },
+            {
+              "id": "C",
+              "text": "distribution of food products."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "Television programmes now tend to focus on",
+          "options": [
+            {
+              "id": "A",
+              "text": "the nutritional value of food products."
+            },
+            {
+              "id": "B",
+              "text": "the origin of food products."
+            },
+            {
+              "id": "C",
+              "text": "the chemicals found in food products."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "For Anna, the most significant point about food waste is",
+          "options": [
+            {
+              "id": "A",
+              "text": "the moral aspect."
+            },
+            {
+              "id": "B",
+              "text": "the environmental impact."
+            },
+            {
+              "id": "C",
+              "text": "the economic effect."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "25",
+          "text": "Anna and Robert decide to begin their presentation by",
+          "options": [
+            {
+              "id": "A",
+              "text": "handing out a questionnaire."
+            },
+            {
+              "id": "B",
+              "text": "providing statistical evidence."
+            },
+            {
+              "id": "C",
+              "text": "showing images of wasted food."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 26–30.",
+      "instruction": "Choose FIVE answers from the box and write the correct letter, A–G, next to Questions 26–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "it should save time"
+        },
+        {
+          "id": "B",
+          "text": "it will create new jobs"
+        },
+        {
+          "id": "C",
+          "text": "it will benefit local communities"
+        },
+        {
+          "id": "D",
+          "text": "it will make money"
+        },
+        {
+          "id": "E",
+          "text": "it will encourage personal responsibility"
+        },
+        {
+          "id": "F",
+          "text": "it will be easy to advertise"
+        },
+        {
+          "id": "G",
+          "text": "it will involve very little cost"
+        }
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "edible patch",
+          "answer": "G"
+        },
+        {
+          "id": "27",
+          "text": "ripeness centre",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "waste tracking technology",
+          "answer": "D"
+        },
+        {
+          "id": "29",
+          "text": "smartphone application",
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "food waste composting",
+          "answer": "E"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "A",
+        "23": "B",
+        "24": "C",
+        "25": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "26": "G",
+        "27": "A",
+        "28": "D",
+        "29": "C",
+        "30": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12000,
+      "text": "You will hear two students discussing a presentation they are going to give."
+    },
+    {
+      "startMs": 12000,
+      "endMs": 16000,
+      "text": "First, you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 54000,
+      "text": "Anna: Hi, Robert. Robert: Hi. Sorry I'm late. I was just printing off some pages about food waste in Britain."
+    },
+    {
+      "startMs": 54000,
+      "endMs": 61000,
+      "text": "Anna: Do you want to include Britain in the presentation? I thought we were concentrating on the USA."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 69000,
+      "text": "Robert: Well, it is a global problem, so I thought we ought to provide some statistics that show that."
+    },
+    {
+      "startMs": 69000,
+      "endMs": 73000,
+      "text": "Anna: Fair enough. What did you find out?"
+    },
+    {
+      "startMs": 73000,
+      "endMs": 87000,
+      "text": "Robert: Well, I was looking at a British study from 2013. It basically concluded that 12 billion pounds worth of food and drink was thrown away each year."
+    },
+    {
+      "startMs": 87000,
+      "endMs": 96000,
+      "text": "All of it ending up in landfill sites. Over 8 million tons. And that wasn't including packaging."
+    },
+    {
+      "startMs": 96000,
+      "endMs": 109000,
+      "text": "Anna：An incredible amount. Robert：Yes. And they were only looking at what households threw away. So there's no information about restaurants and the catering industry."
+    },
+    {
+      "startMs": 109000,
+      "endMs": 121000,
+      "text": "But one thing the study did investigate was the amount of milk and soft drinks that were wasted. And I think it was probably quite unique in that respect."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 133000,
+      "text": "Anna: Interesting. You know, in the other European reports I've read, there's one thing they have in common when they talk about carbon dioxide emissions."
+    },
+    {
+      "startMs": 133000,
+      "endMs": 145000,
+      "text": "Robert: I know what you are going to say. They never refer to the fuel that farms and factories require to produce the food. And the carbon dioxide that releases?"
+    },
+    {
+      "startMs": 145000,
+      "endMs": 154000,
+      "text": "Anna: Exactly. We could really cut down on carbon emissions if less food was supplied in the first place."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 164000,
+      "text": "To my mind, the reports talk too much about the carbon dioxide produced by the trucks that deliver the fresh goods to the shops and take the waste away."
+    },
+    {
+      "startMs": 164000,
+      "endMs": 169000,
+      "text": "They forget about one of the key causes of carbon dioxide."
+    },
+    {
+      "startMs": 169000,
+      "endMs": 178000,
+      "text": "Robert：Absolutely. If the reports are actually going to be useful to people, they need to be more comprehensive."
+    },
+    {
+      "startMs": 178000,
+      "endMs": 190000,
+      "text": "Anna：Who do you mean by people? Robert: Well, the government, industries, people making television programs. Have you seen any documentaries about food waste?"
+    },
+    {
+      "startMs": 190000,
+      "endMs": 202000,
+      "text": "Anna: Not that I remember. Robert: My point exactly. These days they all seem to be focusing on where your meat, fruit, and vegetables are sourced from."
+    },
+    {
+      "startMs": 202000,
+      "endMs": 212000,
+      "text": "We're being encouraged to buy locally, not from overseas. That's probably a good thing, but I'd still like to see something about waste."
+    },
+    {
+      "startMs": 212000,
+      "endMs": 223000,
+      "text": "Anna：Yes, it's the same with magazine articles. It's all about fat and sugar content and the kind of additives and coloring in food."
+    },
+    {
+      "startMs": 223000,
+      "endMs": 230000,
+      "text": "But nothing about how it reaches your table and what happens after it ends up in the bin."
+    },
+    {
+      "startMs": 230000,
+      "endMs": 241000,
+      "text": "Robert：Well, we've only got 15 minutes for this presentation, so I think we'll have to limit what we say about the consequences of food waste."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 254000,
+      "text": "What do we want to concentrate on? Anna：Well, I know some of the other presentations are looking at food and farming methods and what they do to the environment."
+    },
+    {
+      "startMs": 254000,
+      "endMs": 266000,
+      "text": "So I think we'll avoid that. And the fact that in some countries, people can't afford the food grown on their own farms. That was covered last term."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 269000,
+      "text": "Robert: Okay, we don't want to repeat stuff."
+    },
+    {
+      "startMs": 269000,
+      "endMs": 279000,
+      "text": "Anna: What concerns me above all else is that in a recession, governments should be encouraging business to find ways to cut costs."
+    },
+    {
+      "startMs": 279000,
+      "endMs": 289000,
+      "text": "Apparently, supermarkets in the USA lose about 11% of their fruit to waste. That's throwing money away."
+    },
+    {
+      "startMs": 289000,
+      "endMs": 296000,
+      "text": "Robert: All right, we'll focus on that problem. It should get the others attention anyway."
+    },
+    {
+      "startMs": 296000,
+      "endMs": 306000,
+      "text": "Now, how do you want to begin the presentation? Let's not start with statistics, though, because that's what everybody does."
+    },
+    {
+      "startMs": 306000,
+      "endMs": 317000,
+      "text": "Anna: I agree. How about we give the other students a set of questions to answer about what they suspect they waste every day?"
+    },
+    {
+      "startMs": 317000,
+      "endMs": 326000,
+      "text": "Robert: I'm fine with that. Probably a better option than showing pictures of landfill sites. It'll be more personalized that way."
+    },
+    {
+      "startMs": 326000,
+      "endMs": 329000,
+      "text": "Anna: All right. Now, let's start."
+    },
+    {
+      "startMs": 347000,
+      "endMs": 363000,
+      "text": "Now, listen and answer questions 26 to 30."
+    },
+    {
+      "startMs": 363000,
+      "endMs": 372000,
+      "text": "Robert: Okay. Shall we now have a look at the projects that different researchers and organizations are working on?"
+    },
+    {
+      "startMs": 372000,
+      "endMs": 390000,
+      "text": "Anna: For me, the project I really liked was the one at Tufts University, you know, where they've invented tiny edible patches to stick on fresh foods that show you what level of bacteria is present, and so whether you can still eat it."
+    },
+    {
+      "startMs": 390000,
+      "endMs": 397000,
+      "text": "Robert: It's a great idea as it tells you if you need to hurry up and eat the food before it goes off."
+    },
+    {
+      "startMs": 397000,
+      "endMs": 403000,
+      "text": "The other good thing about the patches is that apparently they'll be cheap to manufacture."
+    },
+    {
+      "startMs": 403000,
+      "endMs": 411000,
+      "text": "Anna：Good. Then the other thing I thought was great was the Massachusetts Institute of Technology Project."
+    },
+    {
+      "startMs": 411000,
+      "endMs": 413000,
+      "text": "Robert: I hadn't seen that."
+    },
+    {
+      "startMs": 413000,
+      "endMs": 426000,
+      "text": "Anna：Well, they've developed these sensors that can detect tiny amounts of ethylene. Ethylene is the natural plant hormone in fruit that makes them turn ripe, apparently."
+    },
+    {
+      "startMs": 426000,
+      "endMs": 439000,
+      "text": "The researchers think that they can attach the sensors to cardboard boxes and then supermarkets can scan the sensors with a portable device to see how ripe the fruit inside is."
+    },
+    {
+      "startMs": 439000,
+      "endMs": 447000,
+      "text": "That's got to be a quicker way to check for ripeness than taking each box off the shelf and opening it."
+    },
+    {
+      "startMs": 447000,
+      "endMs": 452000,
+      "text": "Robert: Definitely, and I thought that lean path was worth mentioning too."
+    },
+    {
+      "startMs": 452000,
+      "endMs": 464000,
+      "text": "Their waste tracking technology means that caterers can see how much food is being wasted and why. That'll increase profits for them eventually."
+    },
+    {
+      "startMs": 464000,
+      "endMs": 475000,
+      "text": "Anna：Yes. And did you read about 0 percent? They've produced this smartphone application that allows restaurants to send donation alerts to food charities."
+    },
+    {
+      "startMs": 475000,
+      "endMs": 481000,
+      "text": "The charities can then pick up the unwanted food and distribute it to people in need."
+    },
+    {
+      "startMs": 481000,
+      "endMs": 490000,
+      "text": "Robert: In the long run, that'll definitely benefit poorer families in the neighborhood. No kids should go to school hungry."
+    },
+    {
+      "startMs": 490000,
+      "endMs": 501000,
+      "text": "Anna: I agree. And I read that quite a few local governments in the USA are thinking about introducing compulsory composting in their states."
+    },
+    {
+      "startMs": 501000,
+      "endMs": 507000,
+      "text": "So you can't put any food waste into your rubbish bins. Just the compost bin."
+    },
+    {
+      "startMs": 507000,
+      "endMs": 520000,
+      "text": "Robert: Well, I guess that means a bit more work for people. I mean they have to separate the organic and inorganic waste themselves before they take it out to the compost bin."
+    },
+    {
+      "startMs": 520000,
+      "endMs": 524000,
+      "text": "And you know how lazy some people are."
+    },
+    {
+      "startMs": 524000,
+      "endMs": 537000,
+      "text": "But I guess if we all start composting, we'd be doing something positive about the problem of food waste ourselves rather than relying on the government to sort it out."
+    },
+    {
+      "startMs": 537000,
+      "endMs": 544000,
+      "text": "Having said that, not everyone has a garden."
+    },
+    {
+      "startMs": 544000,
+      "endMs": 551000,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 574000,
+      "endMs": 581000,
+      "text": "Now turn to section 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 55,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

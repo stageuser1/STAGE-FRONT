@@ -1,0 +1,580 @@
+{
+  "id": "p4-112-the-berbers",
+  "title": "The Berbers",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-2fe67f15d5f6",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 511.056,
+    "checksum": "sha256:3db656217236aa7f08d4a504dd7032eab427b7d6f07991d21f68de4318f9c382"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. The Berbers lived in various countries in North Africa were driven from their homes during the 12th century began to lead a nomadic life, moving across 31. ____________ and mountains Different Berber Lifestyles Some Berbers, known as 32. ____________ nomads, moved twice a year. Some Berbers were completely nomadic. Some Berbers settled by oases, producing fruit, vegetables, and 33. ____________ to cook with. People and belongings were carried by 34. ____________. Settled Berbers lived in houses. Nomadic Berbers used tents. Settled communities organised themselves by holding regular meetings in the 35. ____________ of the village. The Tuaregs If goatskins were unavailable, tents were made from 36. ____________ or palm-leaf mats. Tuareg labourers were the descendants of 37. ____________. Adult men always wore a 38. ____________ veil. Some Tuaregs moved to Burkina Faso with their 39. ____________. Tuaregs and Timbuktu Timbuktu was settled by Tuaregs around 1000 years ago. The city built wealth on the salt and gold trades. Some Tuaregs now work as 40. ____________ for the Malian Department of Tourism.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "began to lead a nomadic life, moving across 31. ____________ and mountains",
+          "answer": "Deserts"
+        },
+        {
+          "id": "32",
+          "text": "Some Berbers, known as 32. ____________ nomads, moved twice a year.",
+          "answer": "seasonal"
+        },
+        {
+          "id": "33",
+          "text": "Some Berbers settled by oases, producing fruit, vegetables, and 33. ____________ to cook with.",
+          "answer": "olive oil"
+        },
+        {
+          "id": "34",
+          "text": "People and belongings were carried by 34. ____________.",
+          "answer": "camels"
+        },
+        {
+          "id": "35",
+          "text": "Settled communities organised themselves by holding regular meetings in the 35. ____________ of the village.",
+          "answer": "square"
+        },
+        {
+          "id": "36",
+          "text": "If goatskins were unavailable, tents were made from 36. ____________ or palm-leaf mats.",
+          "answer": "grass"
+        },
+        {
+          "id": "37",
+          "text": "Tuareg labourers were the descendants of 37. ____________.",
+          "answer": "slaves"
+        },
+        {
+          "id": "38",
+          "text": "Adult men always wore a 38. ____________ veil.",
+          "answer": "dark blue"
+        },
+        {
+          "id": "39",
+          "text": "Some Tuaregs moved to Burkina Faso with their 39. ____________.",
+          "answer": "animals"
+        },
+        {
+          "id": "40",
+          "text": "Some Tuaregs now work as 40. ____________ for the Malian Department of Tourism.",
+          "answer": "guides"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Berbers",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "lived in various countries in North Africa",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "were driven from their homes during the 12th century",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "began to lead a nomadic life, moving across 31. ____________ and mountains",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Different Berber Lifestyles",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Some Berbers, known as 32. ____________ nomads, moved twice a year.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some Berbers were completely nomadic.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some Berbers settled by oases, producing fruit, vegetables, and 33. ____________ to cook with.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People and belongings were carried by 34. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Settled Berbers lived in houses.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Nomadic Berbers used tents.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Settled communities organised themselves by holding regular meetings in the 35. ____________ of the village.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The Tuaregs",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "If goatskins were unavailable, tents were made from 36. ____________ or palm-leaf mats.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Tuareg labourers were the descendants of 37. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Adult men always wore a 38. ____________ veil.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some Tuaregs moved to Burkina Faso with their 39. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Tuaregs and Timbuktu",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Timbuktu was settled by Tuaregs around 1000 years ago.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The city built wealth on the salt and gold trades.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some Tuaregs now work as 40. ____________ for the Malian Department of Tourism.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Deserts",
+        "32": "seasonal",
+        "33": "olive oil",
+        "34": "camels",
+        "35": "square",
+        "36": "grass",
+        "37": "slaves",
+        "38": "dark blue",
+        "39": "animals",
+        "40": "guides"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10180,
+      "text": "You will hear part of a lecture on rural development."
+    },
+    {
+      "startMs": 10180,
+      "endMs": 15160,
+      "text": "First you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 15160,
+      "endMs": 16900,
+      "text": "Good morning everyone."
+    },
+    {
+      "startMs": 16900,
+      "endMs": 20920,
+      "text": "Now you'll remember that last week we looked at the migration of people from the interior"
+    },
+    {
+      "startMs": 20920,
+      "endMs": 26560,
+      "text": "of West Africa to various coastal towns with special reference to Ghana."
+    },
+    {
+      "startMs": 26960,
+      "endMs": 32720,
+      "text": "Today we're going to focus on the people known as the Berbers who live in North Africa."
+    },
+    {
+      "startMs": 32720,
+      "endMs": 38240,
+      "text": "The Berbers inhabited this part of Africa as long ago as the 7th century and their society"
+    },
+    {
+      "startMs": 38240,
+      "endMs": 44640,
+      "text": "was based on tribes which were scattered throughout a number of countries, Algeria, Morocco,"
+    },
+    {
+      "startMs": 44640,
+      "endMs": 46640,
+      "text": "Libya and Mali."
+    },
+    {
+      "startMs": 46640,
+      "endMs": 53200,
+      "text": "However, at some point in the 12th century the area was invaded by Bedouin Arabs."
+    },
+    {
+      "startMs": 53200,
+      "endMs": 56400,
+      "text": "These people destroyed the Berbers' peasant economy."
+    },
+    {
+      "startMs": 56400,
+      "endMs": 61520,
+      "text": "As a result many Berbers left their settlements to lead a nomadic life by wandering with"
+    },
+    {
+      "startMs": 61520,
+      "endMs": 66080,
+      "text": "their animals through the deserts and across the different mountains."
+    },
+    {
+      "startMs": 66080,
+      "endMs": 71280,
+      "text": "Over the centuries many Berbers migrated to other countries like Spain and France to"
+    },
+    {
+      "startMs": 71280,
+      "endMs": 76400,
+      "text": "work as labourers, taking with them their culture and traditions and their descendants"
+    },
+    {
+      "startMs": 76400,
+      "endMs": 79520,
+      "text": "remained there until this day."
+    },
+    {
+      "startMs": 79520,
+      "endMs": 82480,
+      "text": "Not all the Berbers led a fully nomadic life."
+    },
+    {
+      "startMs": 82480,
+      "endMs": 88560,
+      "text": "There were three different groups, some became farmers cultivating the lowlands in the winter"
+    },
+    {
+      "startMs": 88560,
+      "endMs": 92560,
+      "text": "and grazing their flocks of animals in the mountains during the summer."
+    },
+    {
+      "startMs": 92560,
+      "endMs": 95640,
+      "text": "They are called seasonal nomads."
+    },
+    {
+      "startMs": 95640,
+      "endMs": 102400,
+      "text": "Some Berbers who led a completely nomadic life tended to move from one oasis to another."
+    },
+    {
+      "startMs": 102400,
+      "endMs": 108800,
+      "text": "A third group settled by the oasis and grew fruit and vegetables like dates and eggplants"
+    },
+    {
+      "startMs": 108880,
+      "endMs": 112800,
+      "text": "as well as making olive oil which they used for cooking."
+    },
+    {
+      "startMs": 112800,
+      "endMs": 119680,
+      "text": "Traditionally Berbers kept cattle, sheep and goats together with oxen, mules and horses."
+    },
+    {
+      "startMs": 119680,
+      "endMs": 125120,
+      "text": "Now in the Sahel region of North Africa, that's the area south of the Sahara desert."
+    },
+    {
+      "startMs": 125120,
+      "endMs": 129680,
+      "text": "The region became and still is becoming increasingly dry and arid."
+    },
+    {
+      "startMs": 129680,
+      "endMs": 137120,
+      "text": "So the Berbers relied more and more on camels for transporting their families and their goods."
+    },
+    {
+      "startMs": 137120,
+      "endMs": 140880,
+      "text": "How did these different groups of people survive in such harsh conditions?"
+    },
+    {
+      "startMs": 141760,
+      "endMs": 143520,
+      "text": "Where did they live?"
+    },
+    {
+      "startMs": 143520,
+      "endMs": 150000,
+      "text": "Well, Berbers who stayed put in one place built single-story stone houses for protection"
+    },
+    {
+      "startMs": 150000,
+      "endMs": 151520,
+      "text": "by quarrying the local rock."
+    },
+    {
+      "startMs": 152560,
+      "endMs": 158000,
+      "text": "Whereas nomadic Berbers carried their homes with them and erected temporary tents,"
+    },
+    {
+      "startMs": 158000,
+      "endMs": 163440,
+      "text": "Settled Berbers developed various small-scale industries such as pottery making and weaving,"
+    },
+    {
+      "startMs": 164080,
+      "endMs": 166640,
+      "text": "but these tasks were generally left to the Berber women."
+    },
+    {
+      "startMs": 167840,
+      "endMs": 172880,
+      "text": "As you might expect though, the life of a settled community was governed by the men"
+    },
+    {
+      "startMs": 172880,
+      "endMs": 176880,
+      "text": "who met regularly in the village square to discuss affairs and make decisions."
+    },
+    {
+      "startMs": 178640,
+      "endMs": 184720,
+      "text": "Now let's turn to the Tuaregs who belong to a nomadic Berber group and move mainly in the central"
+    },
+    {
+      "startMs": 184720,
+      "endMs": 188000,
+      "text": "and western Sahara desert north of the River Niger."
+    },
+    {
+      "startMs": 188960,
+      "endMs": 194960,
+      "text": "The word Tuareg comes from the Arabic Tawarek and means God-forsaken."
+    },
+    {
+      "startMs": 196400,
+      "endMs": 200400,
+      "text": "Desert Tuaregs carried tents made of strips of goat skins sewn together."
+    },
+    {
+      "startMs": 201200,
+      "endMs": 204480,
+      "text": "As many as 40 skins were needed to make a complete tent."
+    },
+    {
+      "startMs": 205440,
+      "endMs": 210240,
+      "text": "If the skins weren't available, they wove mats made of grass or palm leaves"
+    },
+    {
+      "startMs": 210240,
+      "endMs": 214400,
+      "text": "and hung them over a frame so that the tent looked like a humped dome."
+    },
+    {
+      "startMs": 214720,
+      "endMs": 222320,
+      "text": "Tuareg society was traditionally very feudal and organized as a strict hierarchy ranging"
+    },
+    {
+      "startMs": 222320,
+      "endMs": 228560,
+      "text": "from nobles or aristocrats downwards to laborers whose ancestors had once been slaves."
+    },
+    {
+      "startMs": 229920,
+      "endMs": 234640,
+      "text": "Tuaregs were famous for their warlike qualities and fierce independence."
+    },
+    {
+      "startMs": 235360,
+      "endMs": 242080,
+      "text": "In fact, one of the greatest insults was to suggest to a Tuareg that his father had died in his bed"
+    },
+    {
+      "startMs": 242080,
+      "endMs": 247040,
+      "text": "and not while fighting. Tuareg men were sometimes called blue men,"
+    },
+    {
+      "startMs": 247680,
+      "endMs": 251440,
+      "text": "as all adult males wore a dark blue veil in the presence of women,"
+    },
+    {
+      "startMs": 251440,
+      "endMs": 257040,
+      "text": "strangers and in-laws. Legend had it that a Tuareg man couldn't be recognized"
+    },
+    {
+      "startMs": 257040,
+      "endMs": 262320,
+      "text": "unless he was wearing this veil. But this custom of the veil began to disappear"
+    },
+    {
+      "startMs": 262320,
+      "endMs": 266000,
+      "text": "as more and more Tuaregs became urbanized and moved to the towns."
+    },
+    {
+      "startMs": 266400,
+      "endMs": 272880,
+      "text": "I mentioned earlier how dry the Sahel region has become and there have been very severe droughts"
+    },
+    {
+      "startMs": 272880,
+      "endMs": 278960,
+      "text": "over the past 30 years. This has meant that the number of Tuaregs living in the area has declined."
+    },
+    {
+      "startMs": 279840,
+      "endMs": 284640,
+      "text": "Those whose animals were fortunate enough to survive have moved away from the southern Sahara"
+    },
+    {
+      "startMs": 284640,
+      "endMs": 289040,
+      "text": "into Burkina Faso in order to find new grazing lands for their herds."
+    },
+    {
+      "startMs": 290240,
+      "endMs": 295440,
+      "text": "If there's one city which people associate with the Sahara desert, it's probably Timbuktu."
+    },
+    {
+      "startMs": 296480,
+      "endMs": 301920,
+      "text": "But what most people don't know is that Timbuktu was founded by Tuareg nomads"
+    },
+    {
+      "startMs": 301920,
+      "endMs": 308720,
+      "text": "almost a thousand years ago. The city became the focal point of the Trans-Saharan caravan routes."
+    },
+    {
+      "startMs": 309840,
+      "endMs": 315360,
+      "text": "North African merchants flocked there to do business and trading in gold and salt flourished."
+    },
+    {
+      "startMs": 316400,
+      "endMs": 323840,
+      "text": "For many years Timbuktu was considered inaccessible. But today what is left of the city attracts"
+    },
+    {
+      "startMs": 323840,
+      "endMs": 330400,
+      "text": "a small number of tourists. The tourism department of the Mali government employs some Tuaregs"
+    },
+    {
+      "startMs": 330400,
+      "endMs": 335520,
+      "text": "who act as guides. Essential really when you realize that it's only the Tuaregs"
+    },
+    {
+      "startMs": 335520,
+      "endMs": 339520,
+      "text": "who can find their way around the desert using the sand dunes as landmarks."
+    },
+    {
+      "startMs": 341520,
+      "endMs": 348400,
+      "text": "Right I'll take questions now before I go on to discuss Tamashek, the language spoken by the Tuaregs"
+    },
+    {
+      "startMs": 348400,
+      "endMs": 350160,
+      "text": "which also has an alphabet called"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 66,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

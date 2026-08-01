@@ -1,0 +1,405 @@
+{
+  "id": "p4-11-a-u-v",
+  "title": "A.U.V.",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-8a88d539488c",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 235.488,
+    "checksum": "sha256:0a0c488092c392adccaeafb113a24f66ba3a91afbb4e022f991ac51788392717"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Write ONE WORD ONLY for each answer. Autonomous Underwater Vehicle (A.U.V.) Description looks like a small 31. ______________ acts like a 32. ______________ Functions Can be used to measure: water pressure level of 33. ______________ in water water temperature water 34. ______________ Measurements are used to help us understand: ocean behaves the impact the ocean has on the 35. ______________ The benefits easy to launch isn’t connected to a boat by 36. ______________ What are the disadvantages not fast-moving can’t be used to assess 37. ______________ levels in water How does the A.U.V. work It measures and records data as it moves to the 39. ______________ It sends the data from an antenna in the 40. ______________ wing-tip.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "looks like a small 31. ______________",
+          "answer": "aeroplane/airplane"
+        },
+        {
+          "id": "32",
+          "text": "acts like a 32. ______________",
+          "answer": "robot"
+        },
+        {
+          "id": "33",
+          "text": "level of 33. ______________ in water",
+          "answer": "salt"
+        },
+        {
+          "id": "34",
+          "text": "water 34. ______________",
+          "answer": "quality"
+        },
+        {
+          "id": "35",
+          "text": "the impact the ocean has on the 35. ______________",
+          "answer": "climate"
+        },
+        {
+          "id": "36",
+          "text": "isn’t connected to a boat by 36. ______________",
+          "answer": "cables"
+        },
+        {
+          "id": "37",
+          "text": "can’t be used to assess 37. ______________ levels in water",
+          "answer": "chemical"
+        },
+        {
+          "id": "38",
+          "text": "38. ______________ is pumped between two bladders.",
+          "answer": "oil"
+        },
+        {
+          "id": "39",
+          "text": "It measures and records data as it moves to the 39. ______________",
+          "answer": "surface"
+        },
+        {
+          "id": "40",
+          "text": "It sends the data from an antenna in the 40. ______________ wing-tip.",
+          "answer": "right"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Autonomous Underwater Vehicle (A.U.V.)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Description",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "looks like a small 31. ______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "acts like a 32. ______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Functions",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Can be used to measure:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "water pressure",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "level of 33. ______________ in water",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "water temperature",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "water 34. ______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Measurements are used to help us understand:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "ocean behaves",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "the impact the ocean has on the 35. ______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The benefits",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "easy to launch",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "isn’t connected to a boat by 36. ______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "What are the disadvantages",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "not fast-moving",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "can’t be used to assess 37. ______________ levels in water",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "How does the A.U.V. work",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "38. ______________ is pumped between two bladders.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It measures and records data as it moves to the 39. ______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It sends the data from an antenna in the 40. ______________ wing-tip.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "aeroplane/airplane",
+        "32": "robot",
+        "33": "salt",
+        "34": "quality",
+        "35": "climate",
+        "36": "cables",
+        "37": "chemical",
+        "38": "oil",
+        "39": "surface",
+        "40": "right"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5840,
+      "text": "Autonomous underwater vehicle, or AUV."
+    },
+    {
+      "startMs": 5840,
+      "endMs": 10800,
+      "text": "It actually resembles a miniature aeroplane that moves deep in the ocean."
+    },
+    {
+      "startMs": 10800,
+      "endMs": 15760,
+      "text": "It's not large enough to have a human crew aboard, and so its behavior is really that"
+    },
+    {
+      "startMs": 15760,
+      "endMs": 17120,
+      "text": "of a robot."
+    },
+    {
+      "startMs": 17120,
+      "endMs": 22840,
+      "text": "The AUV is programmed to calculate and record a range of data, depending on the mission"
+    },
+    {
+      "startMs": 22840,
+      "endMs": 26040,
+      "text": "it is carrying out at any one time."
+    },
+    {
+      "startMs": 26040,
+      "endMs": 31300,
+      "text": "In previous missions, it has been programmed to record water pressure, as well as how much"
+    },
+    {
+      "startMs": 31300,
+      "endMs": 33640,
+      "text": "salt there is in the water."
+    },
+    {
+      "startMs": 33640,
+      "endMs": 38800,
+      "text": "On a more recent mission around Bermuda, an AUV was equipped with a special instrument"
+    },
+    {
+      "startMs": 38800,
+      "endMs": 42680,
+      "text": "that showed the temperature of the ocean at different depths."
+    },
+    {
+      "startMs": 42680,
+      "endMs": 46240,
+      "text": "It can also assess the quality of the water in general."
+    },
+    {
+      "startMs": 46240,
+      "endMs": 52360,
+      "text": "So as you see, it is quite a versatile and useful little piece of equipment."
+    },
+    {
+      "startMs": 52360,
+      "endMs": 58040,
+      "text": "We use its measurements to determine and increase our understanding of ocean behaviors,"
+    },
+    {
+      "startMs": 58040,
+      "endMs": 62280,
+      "text": "as well as its role in and influence on our climate."
+    },
+    {
+      "startMs": 62280,
+      "endMs": 65360,
+      "text": "This instrument also has many other benefits."
+    },
+    {
+      "startMs": 65360,
+      "endMs": 68480,
+      "text": "It can be launched and used relatively quickly."
+    },
+    {
+      "startMs": 68480,
+      "endMs": 73040,
+      "text": "Also, there is no need for cables to physically link it to a boat."
+    },
+    {
+      "startMs": 73040,
+      "endMs": 75040,
+      "text": "There are disadvantages, though."
+    },
+    {
+      "startMs": 75040,
+      "endMs": 81080,
+      "text": "AUVs move at only modest speeds up to 25 centimeters per second."
+    },
+    {
+      "startMs": 81080,
+      "endMs": 86960,
+      "text": "In addition, the AUV structure cannot collect water samples, so other equipment must be"
+    },
+    {
+      "startMs": 86960,
+      "endMs": 90720,
+      "text": "used to conduct a chemical analysis of the water."
+    },
+    {
+      "startMs": 90720,
+      "endMs": 95040,
+      "text": "Now I'm sure you're all wondering how the AUV actually works."
+    },
+    {
+      "startMs": 95040,
+      "endMs": 99480,
+      "text": "First, let's see how an AUV actually moves."
+    },
+    {
+      "startMs": 99480,
+      "endMs": 103680,
+      "text": "Well, it moves by pumping oil between two bladders."
+    },
+    {
+      "startMs": 103680,
+      "endMs": 106640,
+      "text": "This helps the AUV to sink or float."
+    },
+    {
+      "startMs": 106640,
+      "endMs": 112120,
+      "text": "The AUV records the data and measurements that it has been programmed to take while it"
+    },
+    {
+      "startMs": 112120,
+      "endMs": 114600,
+      "text": "rises to the surface."
+    },
+    {
+      "startMs": 114600,
+      "endMs": 120560,
+      "text": "At the beginning and end of each dive, it obtains records and transmits its position by exposing"
+    },
+    {
+      "startMs": 120560,
+      "endMs": 124880,
+      "text": "an antenna embedded within the tip of the right wing."
+    },
+    {
+      "startMs": 124880,
+      "endMs": 125880,
+      "text": "Okay?"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 30,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

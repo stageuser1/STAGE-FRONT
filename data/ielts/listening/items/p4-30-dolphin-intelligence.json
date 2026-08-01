@@ -1,0 +1,535 @@
+{
+  "id": "p4-30-dolphin-intelligence",
+  "title": "Dolphin Intelligence",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-06890f493a07",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 481.056,
+    "checksum": "sha256:3ee02c97c532000b93d271d40e638d8090335bf94c2a2c2e0696e397a891ac57"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Dolphin Intelligence Point 1: Not highly intelligent Research on the size of dolphin brains Dolphins cannot find a way of escaping barriers such as fishing 31. _________ for catching tuna. People wrongly thought dolphins to be smart and happy as they often have a 32. _________. Small-brained animals such as pigeons and 33. _________ can perform various complex tasks. Pigeons are 34. _________ of themselves. Pigeons are trained to conditional responses and 35. _________ reactions. Counter argument Fatty cells in dolphin brains are linked to protective function and problem-solving skills. Point 2: highly intelligent Research on dolphin behaviour Billy can imitate the keepers’ 36. _________ through other dolphins. Karen hides a 37. _________ for more food. For the past century, dolphins have been seen as 38. _________ animals. Each dolphin produces a unique sound, like the 39. _________. They touch each other to make up after a 40. _________.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Dolphins cannot find a way of escaping barriers such as fishing 31. _________ for catching tuna.",
+          "answer": "nets"
+        },
+        {
+          "id": "32",
+          "text": "People wrongly thought dolphins to be smart and happy as they often have a 32. _________.",
+          "answer": "smile"
+        },
+        {
+          "id": "33",
+          "text": "Small-brained animals such as pigeons and 33. _________ can perform various complex tasks.",
+          "answer": "rats"
+        },
+        {
+          "id": "34",
+          "text": "Pigeons are 34. _________ of themselves.",
+          "answer": "aware"
+        },
+        {
+          "id": "35",
+          "text": "Pigeons are trained to conditional responses and 35. _________ reactions.",
+          "answer": "instinctive"
+        },
+        {
+          "id": "36",
+          "text": "Billy can imitate the keepers’ 36. _________ through other dolphins.",
+          "answer": "walking"
+        },
+        {
+          "id": "37",
+          "text": "Karen hides a 37. _________ for more food.",
+          "answer": "newspaper"
+        },
+        {
+          "id": "38",
+          "text": "For the past century, dolphins have been seen as 38. _________ animals.",
+          "answer": "social"
+        },
+        {
+          "id": "39",
+          "text": "Each dolphin produces a unique sound, like the 39. _________.",
+          "answer": "whistle"
+        },
+        {
+          "id": "40",
+          "text": "They touch each other to make up after a 40. _________.",
+          "answer": "fight"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Dolphin Intelligence",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Point 1: Not highly intelligent",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Research on the size of dolphin brains",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Dolphins cannot find a way of escaping barriers such as fishing 31. _________ for catching tuna.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People wrongly thought dolphins to be smart and happy as they often have a 32. _________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Small-brained animals such as pigeons and 33. _________ can perform various complex tasks.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Pigeons are 34. _________ of themselves.",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Pigeons are trained to conditional responses and 35. _________ reactions.",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Counter argument",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Fatty cells in dolphin brains are linked to protective function and problem-solving skills.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Point 2: highly intelligent",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Research on dolphin behaviour",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Billy can imitate the keepers’ 36. _________ through other dolphins.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Karen hides a 37. _________ for more food.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "For the past century, dolphins have been seen as 38. _________ animals.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Each dolphin produces a unique sound, like the 39. _________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They touch each other to make up after a 40. _________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "nets",
+        "32": "smile",
+        "33": "rats",
+        "34": "aware",
+        "35": "instinctive",
+        "36": "walking",
+        "37": "newspaper",
+        "38": "social",
+        "39": "whistle",
+        "40": "fight"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 18280,
+      "text": "You will hear part of a biology lecture about dolphins and have views divide over their"
+    },
+    {
+      "startMs": 18280,
+      "endMs": 25280,
+      "text": "level of intelligence. First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 48280,
+      "endMs": 78120,
+      "text": "Now listen carefully and answer questions"
+    },
+    {
+      "startMs": 78120,
+      "endMs": 83120,
+      "text": "31 to 40."
+    },
+    {
+      "startMs": 108120,
+      "endMs": 115120,
+      "text": "And certain species, like bottlenose dolphins, have brains even bigger than humans. However,"
+    },
+    {
+      "startMs": 115120,
+      "endMs": 122120,
+      "text": "some current tests suggest that they do not possess the same cognitive abilities as humans,"
+    },
+    {
+      "startMs": 122120,
+      "endMs": 129120,
+      "text": "despite having a similar brain size. For instance, dolphins are often trapped in gill nets,"
+    },
+    {
+      "startMs": 129120,
+      "endMs": 136120,
+      "text": "originally intended for tunifying. These entanglement cases have led to unnecessary injury"
+    },
+    {
+      "startMs": 136120,
+      "endMs": 143120,
+      "text": "or deaths of dolphins, gradually depleting their numbers. Clearly, dolphins don't realize"
+    },
+    {
+      "startMs": 143120,
+      "endMs": 149120,
+      "text": "that they could just jump over these vertical barriers and swim to safety."
+    },
+    {
+      "startMs": 149120,
+      "endMs": 156120,
+      "text": "People often mistakenly view dolphins' eternal smile as signs of intelligence and joy."
+    },
+    {
+      "startMs": 156120,
+      "endMs": 162120,
+      "text": "Actually, this is not a facial expression at all, but a fixed design of their head."
+    },
+    {
+      "startMs": 162120,
+      "endMs": 169120,
+      "text": "Unlike human beings with greater than 40 facial muscles, dolphins have no such powers"
+    },
+    {
+      "startMs": 169120,
+      "endMs": 176120,
+      "text": "with which to form an expression. On the other hand, small-brained animals are sometimes"
+    },
+    {
+      "startMs": 176120,
+      "endMs": 184120,
+      "text": "underrated for their level of intelligence. Pigeons and rats are typical examples of small-brained animals"
+    },
+    {
+      "startMs": 184120,
+      "endMs": 190120,
+      "text": "which can perform tasks so complex that most humans would have trouble with them."
+    },
+    {
+      "startMs": 190120,
+      "endMs": 195120,
+      "text": "Over the last few decades, scientists have conducted countless studies"
+    },
+    {
+      "startMs": 195120,
+      "endMs": 201120,
+      "text": "on the cognitive abilities of these overlooked animals with quite surprising results."
+    },
+    {
+      "startMs": 201120,
+      "endMs": 206120,
+      "text": "Pigeons are aware of their bodies when they see their reflections in the mirror."
+    },
+    {
+      "startMs": 206120,
+      "endMs": 213120,
+      "text": "Pigeons are also trained under specific conditions and gradually form instinctive reactions."
+    },
+    {
+      "startMs": 214120,
+      "endMs": 222120,
+      "text": "In an experiment in 2009, a group of 12 pigeons was given a reward like food and water"
+    },
+    {
+      "startMs": 222120,
+      "endMs": 228120,
+      "text": "every time they pecked a key on a laptop. All birds successfully performed the trick."
+    },
+    {
+      "startMs": 228120,
+      "endMs": 236120,
+      "text": "These test results indicate that brain size is probably not the sole factor in determining intelligence."
+    },
+    {
+      "startMs": 237120,
+      "endMs": 244120,
+      "text": "Another argument steers the attention to the correlation between intelligence and the constituents of brains"
+    },
+    {
+      "startMs": 244120,
+      "endMs": 251120,
+      "text": "rather than their sheer sizes. It's been found that dolphin brains are comprised chiefly of fatty cells"
+    },
+    {
+      "startMs": 251120,
+      "endMs": 258120,
+      "text": "which serve as a protective barrier between the systemic blood and the extra cellular environment"
+    },
+    {
+      "startMs": 258120,
+      "endMs": 264120,
+      "text": "of the central nervous system. They are also essential components of nerve cell membranes"
+    },
+    {
+      "startMs": 264120,
+      "endMs": 267120,
+      "text": "affecting problem-solving skills performance."
+    },
+    {
+      "startMs": 272120,
+      "endMs": 277120,
+      "text": "Now, the second mainstream view is that dolphins are highly intelligent."
+    },
+    {
+      "startMs": 277120,
+      "endMs": 282120,
+      "text": "Research into the behavior of dolphins in the wild and in captivity"
+    },
+    {
+      "startMs": 282120,
+      "endMs": 287120,
+      "text": "has yielded incredible data on the intelligence of these marine mammals."
+    },
+    {
+      "startMs": 287120,
+      "endMs": 293120,
+      "text": "Studies show that dolphins not only have the ability to learn as individuals"
+    },
+    {
+      "startMs": 293120,
+      "endMs": 299120,
+      "text": "but those individuals can then pass their new knowledge on to others."
+    },
+    {
+      "startMs": 299120,
+      "endMs": 305120,
+      "text": "Let's take a look at some typical examples. Among these are tested with Billy,"
+    },
+    {
+      "startMs": 305120,
+      "endMs": 312120,
+      "text": "a dolphin trapped in a sea lock and rescued. Billy spent three weeks in rehabilitation"
+    },
+    {
+      "startMs": 312120,
+      "endMs": 319120,
+      "text": "and was released back into the wild. There, researchers noticed that Billy had started tailwalking"
+    },
+    {
+      "startMs": 319120,
+      "endMs": 325120,
+      "text": "a skill only mastered by captive dolphins who imitated the keepers. walking"
+    },
+    {
+      "startMs": 325120,
+      "endMs": 334120,
+      "text": "Billy had not been trained to tailwalk but had learned the skills simply by observing other dolphins in the rehab centre."
+    },
+    {
+      "startMs": 334120,
+      "endMs": 339120,
+      "text": "Another study involves a female dolphin named Karen."
+    },
+    {
+      "startMs": 339120,
+      "endMs": 345120,
+      "text": "Karen was given a test in which she was rewarded with a fish for every piece of litter"
+    },
+    {
+      "startMs": 345120,
+      "endMs": 352120,
+      "text": "she brought to researchers to maximise its bounty. She quickly learnt to take a newspaper"
+    },
+    {
+      "startMs": 352120,
+      "endMs": 358120,
+      "text": "keep it at the bottom of a tank and tear off smaller pieces to get more fish."
+    },
+    {
+      "startMs": 358120,
+      "endMs": 366120,
+      "text": "Over the past hundred years, researchers have proven that dolphins are extremely social species"
+    },
+    {
+      "startMs": 21966000,
+      "endMs": 22200000,
+      "text": "and have evolved to have highly developed brains."
+    },
+    {
+      "startMs": 22200000,
+      "endMs": 22740000,
+      "text": "These factors are the most significant contributors to their intelligence and become the means of survival for dolphins."
+    },
+    {
+      "startMs": 22740000,
+      "endMs": 23100000,
+      "text": "In 2008, researchers tracked a group of around 400 dolphins."
+    },
+    {
+      "startMs": 23100000,
+      "endMs": 23520000,
+      "text": "One female dolphin in the group was having a lot of trouble swimming and kept flipping upside down"
+    },
+    {
+      "startMs": 23520000,
+      "endMs": 23820000,
+      "text": "or sinking into the water. The other dolphins crowded around it."
+    },
+    {
+      "startMs": 23820000,
+      "endMs": 24120000,
+      "text": "They paddled side by side with the injured female on their backs."
+    },
+    {
+      "startMs": 24120000,
+      "endMs": 24540000,
+      "text": "By keeping the wounded female above water, they may have helped it to breathe avoiding drowning."
+    },
+    {
+      "startMs": 24540000,
+      "endMs": 24780000,
+      "text": "So how do they communicate with each other?"
+    },
+    {
+      "startMs": 24780000,
+      "endMs": 25260000,
+      "text": "Well, scientists have discovered through observation and meticulous testing that every dolphin has a different sound"
+    },
+    {
+      "startMs": 25260000,
+      "endMs": 25560000,
+      "text": "resembling the whistle that other dolphins recognise as a particular individual."
+    },
+    {
+      "startMs": 25560000,
+      "endMs": 26160000,
+      "text": "Dolphins can emit a wide variety of sounds. The frequency levels range ten times beyond what humans can hear."
+    },
+    {
+      "startMs": 26160000,
+      "endMs": 26520000,
+      "text": "But of course, there are other means of communication for dolphins besides sound."
+    },
+    {
+      "startMs": 26520000,
+      "endMs": 27120000,
+      "text": "During mating season, male dolphins stroke females with flippers after a fight to affirm social bonds."
+    },
+    {
+      "startMs": 27120000,
+      "endMs": 27540000,
+      "text": "That is the end of part four. You now have one minute to check your answers to part four."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 57,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

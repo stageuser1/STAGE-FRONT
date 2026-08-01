@@ -1,0 +1,696 @@
+{
+  "id": "p1-17-birthday-party-arrangement",
+  "title": "Birthday Party Arrangement",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-2db68bc031e5",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 514.08,
+    "checksum": "sha256:0fdd175a1ae3fedee4b8addd61cdc4e903dc3fcf09cbc5dff57d068f549b12af"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 1-6.",
+      "instruction": "Choose the correct letter, A, B, C or D, next to questions 1–6.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Royal Hotel"
+        },
+        {
+          "id": "B",
+          "text": "Star Hotel"
+        },
+        {
+          "id": "C",
+          "text": "Winchester Hotel"
+        },
+        {
+          "id": "D",
+          "text": "all three hotels"
+        }
+      ],
+      "questions": [
+        {
+          "id": "1",
+          "text": "sea view",
+          "answer": "B"
+        },
+        {
+          "id": "2",
+          "text": "disabled access",
+          "answer": "D"
+        },
+        {
+          "id": "3",
+          "text": "indoor play area",
+          "answer": "C"
+        },
+        {
+          "id": "4",
+          "text": "choice of food",
+          "answer": "A"
+        },
+        {
+          "id": "5",
+          "text": "private dining room",
+          "answer": "A"
+        },
+        {
+          "id": "6",
+          "text": "group discount",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 7-10.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Things to do immediately Send a 7 _____ Make the 8 _____ to the Winchester Hotel Things to do later Find out who needs help with 9 _____ Tell people not to bring any 10 _____",
+      "questions": [
+        {
+          "id": "7",
+          "text": "Send a 7 _____",
+          "answer": "deposit"
+        },
+        {
+          "id": "8",
+          "text": "Make the 8 _____ to the Winchester Hotel",
+          "answer": "invitations"
+        },
+        {
+          "id": "9",
+          "text": "Find out who needs help with 9 _____",
+          "answer": "transport"
+        },
+        {
+          "id": "10",
+          "text": "Tell people not to bring any 10 _____",
+          "answer": "presents"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Things to do immediately",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Send a 7 _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Make the 8 _____ to the Winchester Hotel",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Things to do later",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Find out who needs help with 9 _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Tell people not to bring any 10 _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "7": "deposit",
+        "8": "invitations",
+        "9": "transport",
+        "10": "presents"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "1": "B",
+        "2": "D",
+        "3": "C",
+        "4": "A",
+        "5": "A",
+        "6": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 19000,
+      "text": "Announcer: You will hear a number of different recordings, and you will have to answer questions on what you hear."
+    },
+    {
+      "startMs": 19000,
+      "endMs": 26000,
+      "text": "There will be time for you to read the instructions and questions, and you will have a chance to check your work."
+    },
+    {
+      "startMs": 26000,
+      "endMs": 29000,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 29000,
+      "endMs": 32000,
+      "text": "The test is in four sections."
+    },
+    {
+      "startMs": 32000,
+      "endMs": 36000,
+      "text": "Write all your answers in the listening question booklet. 6 000:00:36,000 --> 00:00:44,000 At the end of the test, you will be given ten minutes to transfer your answers to an answer sheet."
+    },
+    {
+      "startMs": 44000,
+      "endMs": 53000,
+      "text": "Now turn to section one on page two of your question booklet."
+    },
+    {
+      "startMs": 53000,
+      "endMs": 56000,
+      "text": "Section one."
+    },
+    {
+      "startMs": 56000,
+      "endMs": 63000,
+      "text": "You will hear a brother and sister talking on the phone about arrangements for their father's 80th birthday party."
+    },
+    {
+      "startMs": 63000,
+      "endMs": 69000,
+      "text": "First you have some time to look at questions one to six on page two."
+    },
+    {
+      "startMs": 84000,
+      "endMs": 97000,
+      "text": "You will see that there is an example that has been done for you."
+    },
+    {
+      "startMs": 97000,
+      "endMs": 104000,
+      "text": "On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 106000,
+      "text": "Rob: Hello."
+    },
+    {
+      "startMs": 106000,
+      "endMs": 108000,
+      "text": "Margaret: Hello Rob, Margaret here."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 112000,
+      "text": "I'm just calling about the arrangements for dad's 80th birthday party."
+    },
+    {
+      "startMs": 112000,
+      "endMs": 115000,
+      "text": "Rob: Right, I have run around the rest of the family."
+    },
+    {
+      "startMs": 115000,
+      "endMs": 119000,
+      "text": "Most people do intend to come, even though it's a long journey."
+    },
+    {
+      "startMs": 119000,
+      "endMs": 122000,
+      "text": "Have you made any progress with the venue?"
+    },
+    {
+      "startMs": 122000,
+      "endMs": 126000,
+      "text": "Margaret: Yes, there are three possible hotels we could use for the party."
+    },
+    {
+      "startMs": 126000,
+      "endMs": 130000,
+      "text": "The Royal, the Star and the Winchester."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 131000,
+      "text": "Rob: Oh good."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 136000,
+      "text": "If we can make a decision now, you can probably book straight away on the internet, can't you?"
+    },
+    {
+      "startMs": 136000,
+      "endMs": 138000,
+      "text": "Margaret: Well, only the Star."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 145000,
+      "text": "I'd have to make a telephone booking at the others, but that'd be okay too."
+    },
+    {
+      "startMs": 145000,
+      "endMs": 154000,
+      "text": "Announcer: The only hotel that takes online bookings is the Star Hotel, so the letter B has been written in the space."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 156000,
+      "text": "Now we shall begin."
+    },
+    {
+      "startMs": 156000,
+      "endMs": 162000,
+      "text": "You should answer the questions as you listen, because you will not hear the recording a second time."
+    },
+    {
+      "startMs": 162000,
+      "endMs": 168000,
+      "text": "Listen carefully and answer a questions one to six."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 170000,
+      "text": "Rob: Hello."
+    },
+    {
+      "startMs": 170000,
+      "endMs": 172000,
+      "text": "Margaret: Hello Rob, Margaret here."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 176000,
+      "text": "I'm just calling about the arrangements for dad's 80th birthday party."
+    },
+    {
+      "startMs": 176000,
+      "endMs": 179000,
+      "text": "Rob: Right, I have run around the rest of the family."
+    },
+    {
+      "startMs": 179000,
+      "endMs": 183000,
+      "text": "Most people do intend to come, even though it's a long journey."
+    },
+    {
+      "startMs": 183000,
+      "endMs": 186000,
+      "text": "Have you made any progress with the venue?"
+    },
+    {
+      "startMs": 186000,
+      "endMs": 190000,
+      "text": "Margaret: Yes, there are three possible hotels we could use for the party."
+    },
+    {
+      "startMs": 190000,
+      "endMs": 193000,
+      "text": "The Royal, the Star and the Winchester."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 194000,
+      "text": "Rob: Oh good."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 199000,
+      "text": "If we can make a decision now, you can probably book straight away on the internet, can't you?"
+    },
+    {
+      "startMs": 199000,
+      "endMs": 201000,
+      "text": "Margaret: Well, only the Star."
+    },
+    {
+      "startMs": 201000,
+      "endMs": 205000,
+      "text": "I'd have to make a telephone booking at the others, but that'd be okay too."
+    },
+    {
+      "startMs": 205000,
+      "endMs": 206000,
+      "text": "Rob: Okay."
+    },
+    {
+      "startMs": 206000,
+      "endMs": 208000,
+      "text": "So which one do you think?"
+    },
+    {
+      "startMs": 208000,
+      "endMs": 210000,
+      "text": "Margaret: I'm not sure."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 214000,
+      "text": "They're all fairly suitable, and they're in really nice locations."
+    },
+    {
+      "startMs": 214000,
+      "endMs": 217000,
+      "text": "The Star looks right out over the bay."
+    },
+    {
+      "startMs": 217000,
+      "endMs": 219000,
+      "text": "It's on a cliff top."
+    },
+    {
+      "startMs": 219000,
+      "endMs": 222000,
+      "text": "Then the Winchester is in lovely countryside too."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 225000,
+      "text": "Rob: Yes, it's in the valley, isn't it?"
+    },
+    {
+      "startMs": 225000,
+      "endMs": 226000,
+      "text": "Margaret: Yes."
+    },
+    {
+      "startMs": 226000,
+      "endMs": 228000,
+      "text": "Rob: What about Mum's wheelchair?"
+    },
+    {
+      "startMs": 228000,
+      "endMs": 232000,
+      "text": "How easy would it be for her to get in and out of these places?"
+    },
+    {
+      "startMs": 232000,
+      "endMs": 239000,
+      "text": "Margaret: Well, I know that the Winchester would be fine, and the Star, because I've been there with her before."
+    },
+    {
+      "startMs": 239000,
+      "endMs": 245000,
+      "text": "I wasn't sure about the Royal, because I seemed to remember it had a lot of steps, so I checked."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 251000,
+      "text": "And apparently it's had ramps installed recently, so there wouldn't be any problem there either."
+    },
+    {
+      "startMs": 251000,
+      "endMs": 252000,
+      "text": "Rob: Oh."
+    },
+    {
+      "startMs": 252000,
+      "endMs": 254000,
+      "text": "And what about the kids?"
+    },
+    {
+      "startMs": 254000,
+      "endMs": 257000,
+      "text": "Which one do you think would be most suitable for them?"
+    },
+    {
+      "startMs": 257000,
+      "endMs": 260000,
+      "text": "Have they got play areas or anything?"
+    },
+    {
+      "startMs": 260000,
+      "endMs": 264000,
+      "text": "Margaret：The Royal hasn't got anything, but the Winchester has one."
+    },
+    {
+      "startMs": 264000,
+      "endMs": 268000,
+      "text": "It's on the ground floor, they said, not far from the dining room."
+    },
+    {
+      "startMs": 268000,
+      "endMs": 274000,
+      "text": "The Stars got one too, but it isn't undercover, and we don't know what the weather will be like, do we?"
+    },
+    {
+      "startMs": 275000,
+      "endMs": 278000,
+      "text": "Then there's the birthday meal itself."
+    },
+    {
+      "startMs": 278000,
+      "endMs": 281000,
+      "text": "The Royal's the only one where there'd be a choice."
+    },
+    {
+      "startMs": 281000,
+      "endMs": 284000,
+      "text": "The other two have a set menu at lunchtime."
+    },
+    {
+      "startMs": 284000,
+      "endMs": 289000,
+      "text": "Mind you, they all do very good food apparently, so the quality should be fine."
+    },
+    {
+      "startMs": 289000,
+      "endMs": 296000,
+      "text": "Rob: I don't think it really matters whether there's a variety or not, but I think we need to have our own room, don't you?"
+    },
+    {
+      "startMs": 296000,
+      "endMs": 299000,
+      "text": "Margaret: The only one that can provide that is the Royal."
+    },
+    {
+      "startMs": 299000,
+      "endMs": 308000,
+      "text": "The Winchester and the Star only have one dining room, so we'd just be sitting with the other guests, but in a separate area of the room."
+    },
+    {
+      "startMs": 308000,
+      "endMs": 311000,
+      "text": "Rob: That's not quite the same, is it?"
+    },
+    {
+      "startMs": 311000,
+      "endMs": 315000,
+      "text": "Margaret: No, but the other thing to consider is the price."
+    },
+    {
+      "startMs": 315000,
+      "endMs": 318000,
+      "text": "Normally there's not much difference between them."
+    },
+    {
+      "startMs": 318000,
+      "endMs": 326000,
+      "text": "Perhaps the Stars slightly cheaper than the other two, but the Winchester is offering quite a good reduction because there's so many of us."
+    },
+    {
+      "startMs": 326000,
+      "endMs": 331000,
+      "text": "The Star and the Royal would just charge their standard rates."
+    },
+    {
+      "startMs": 331000,
+      "endMs": 337000,
+      "text": "Rob: So, taking everything into consideration, which one do you think we should go for?"
+    },
+    {
+      "startMs": 337000,
+      "endMs": 340000,
+      "text": "Margaret: The Winchester, unless you..."
+    },
+    {
+      "startMs": 340000,
+      "endMs": 345000,
+      "text": "Rob: Okay, that's fine by me. You've obviously gone into everything very carefully."
+    },
+    {
+      "startMs": 347000,
+      "endMs": 355000,
+      "text": "Announcer: Before you hear the rest of the conversation, you have some time to look at questions seven to ten on page three."
+    },
+    {
+      "startMs": 356000,
+      "endMs": 366000,
+      "text": "Now listen and answer questions seven to ten."
+    },
+    {
+      "startMs": 386000,
+      "endMs": 391000,
+      "text": "Rob: You've done nearly all the work so far, so what can I do now to help?"
+    },
+    {
+      "startMs": 391000,
+      "endMs": 394000,
+      "text": "Margaret: Well, could you manage the finances?"
+    },
+    {
+      "startMs": 394000,
+      "endMs": 397000,
+      "text": "Rob: Of course. Do they want the whole amount in advance?"
+    },
+    {
+      "startMs": 397000,
+      "endMs": 402000,
+      "text": "Margaret: Just a deposit. I'll find out how much and let you know."
+    },
+    {
+      "startMs": 402000,
+      "endMs": 406000,
+      "text": "Then if you could send that straight away to secure the booking."
+    },
+    {
+      "startMs": 406000,
+      "endMs": 407000,
+      "text": "Rob: Fine."
+    },
+    {
+      "startMs": 407000,
+      "endMs": 409000,
+      "text": "Margaret：And I'll go and buy some invitations."
+    },
+    {
+      "startMs": 409000,
+      "endMs": 415000,
+      "text": "Rob: Oh, don't do that. I can produce them. I've got a program on my computer. It's easy."
+    },
+    {
+      "startMs": 415000,
+      "endMs": 417000,
+      "text": "Margaret: Okay, thanks."
+    },
+    {
+      "startMs": 417000,
+      "endMs": 423000,
+      "text": "Rob: Then, once we've had the replies, I'll call everyone who's coming to find out if they want transport."
+    },
+    {
+      "startMs": 423000,
+      "endMs": 428000,
+      "text": "Margaret: Great. I can help out with that. Pick people up from the station or whatever."
+    },
+    {
+      "startMs": 428000,
+      "endMs": 429000,
+      "text": "Rob: Okay."
+    },
+    {
+      "startMs": 429000,
+      "endMs": 434000,
+      "text": "Margaret: Oh, yes. And could you stress that Dad doesn't want presents?"
+    },
+    {
+      "startMs": 434000,
+      "endMs": 439000,
+      "text": "He keeps reminding me. He says there's nothing he really needs."
+    },
+    {
+      "startMs": 439000,
+      "endMs": 445000,
+      "text": "Rob: Okay. I'll try to discourage them, but you know what people are like."
+    },
+    {
+      "startMs": 445000,
+      "endMs": 450000,
+      "text": "Anything else? Shall I do?"
+    },
+    {
+      "startMs": 450000,
+      "endMs": 456000,
+      "text": "Announcer: That is the end of section one. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 469000,
+      "endMs": 489000,
+      "text": "Now turn to section two, on page four."
+    },
+    {
+      "startMs": 499000,
+      "endMs": 502000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 96,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

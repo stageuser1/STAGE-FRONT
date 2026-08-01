@@ -1,0 +1,647 @@
+{
+  "id": "p3-66-psws",
+  "title": "PSWs",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-18f54dc28165",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 498.072,
+    "checksum": "sha256:79bf5a9cdea3ef709d236e45c75e2049e043aa57bfef2c03776a8d38502b5ff5"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "21-22",
+      "title": "Questions 21 and 22",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which are the TWO main duties for Personal Support Workers (PSWs)?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "talking with clients"
+        },
+        {
+          "id": "B",
+          "text": "helping clients to eat and drink"
+        },
+        {
+          "id": "C",
+          "text": "helping with physical needs"
+        },
+        {
+          "id": "D",
+          "text": "ensuring clients are well and safe"
+        },
+        {
+          "id": "E",
+          "text": "managing clients' pills"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "Which are the TWO main duties for Personal Support Workers (PSWs)?",
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "Which are the TWO main duties for Personal Support Workers (PSWs)?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "23-24",
+      "title": "Questions 23 and 24",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which are the TWO requirements to do the PSW programme?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "high school completion"
+        },
+        {
+          "id": "B",
+          "text": "a maths course"
+        },
+        {
+          "id": "C",
+          "text": "a language qualification"
+        },
+        {
+          "id": "D",
+          "text": "a clear driving record"
+        },
+        {
+          "id": "E",
+          "text": "First Aid training"
+        }
+      ],
+      "questions": [
+        {
+          "id": "23",
+          "text": "Which are the TWO requirements to do the PSW programme?",
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "Which are the TWO requirements to do the PSW programme?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25-30.",
+      "instruction": "Choose SIX answers from the box and write the correct letter, A–G, next to questions 25–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "independent living"
+        },
+        {
+          "id": "B",
+          "text": "the ageing process stages"
+        },
+        {
+          "id": "C",
+          "text": "PSWs’ role in health care"
+        },
+        {
+          "id": "D",
+          "text": "workplace communication"
+        },
+        {
+          "id": "E",
+          "text": "memory stimulation activities"
+        },
+        {
+          "id": "F",
+          "text": "handling stress"
+        },
+        {
+          "id": "G",
+          "text": "biological systems"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Understanding is Essential",
+          "answer": "D"
+        },
+        {
+          "id": "26",
+          "text": "Foundations",
+          "answer": "C"
+        },
+        {
+          "id": "27",
+          "text": "The Way We Work",
+          "answer": "G"
+        },
+        {
+          "id": "28",
+          "text": "Residence Care",
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "Dynamics",
+          "answer": "F"
+        },
+        {
+          "id": "30",
+          "text": "The Power Within",
+          "answer": "E"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "21_22": [
+          "C",
+          "D"
+        ],
+        "23_24": [
+          "A",
+          "E"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "D",
+        "23": "A",
+        "24": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "D",
+        "26": "C",
+        "27": "G",
+        "28": "A",
+        "29": "F",
+        "30": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13480,
+      "text": "[Narrator]: You will hear a discussion between two students about taking a course to become a personal"
+    },
+    {
+      "startMs": 13480,
+      "endMs": 15280,
+      "text": "support worker."
+    },
+    {
+      "startMs": 15280,
+      "endMs": 20960,
+      "text": "First, you have some time to look at questions 21 to 24."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 46120,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 46120,
+      "endMs": 53320,
+      "text": "[Jason]: Becky, hi, what are you doing here at the college?"
+    },
+    {
+      "startMs": 53320,
+      "endMs": 57920,
+      "text": "[Becky]: Hi Jason, just using the library, what about you?"
+    },
+    {
+      "startMs": 57920,
+      "endMs": 62720,
+      "text": "[Jason]: I'm taking the PSW program, you know, personal support worker."
+    },
+    {
+      "startMs": 62720,
+      "endMs": 67240,
+      "text": "[Becky]: You're kidding, I've just qualified as a PSW."
+    },
+    {
+      "startMs": 67240,
+      "endMs": 68240,
+      "text": "[Jason]: Really?"
+    },
+    {
+      "startMs": 68240,
+      "endMs": 70720,
+      "text": "I'd love to talk to you about the program."
+    },
+    {
+      "startMs": 70720,
+      "endMs": 77000,
+      "text": "[Becky]: Okay, well, first off, the main duties they taught me here were exactly what I needed"
+    },
+    {
+      "startMs": 77000,
+      "endMs": 78160,
+      "text": "on the job."
+    },
+    {
+      "startMs": 78160,
+      "endMs": 80640,
+      "text": "[Jason]: You mean like bathing and dressing people?"
+    },
+    {
+      "startMs": 80640,
+      "endMs": 86920,
+      "text": "[Becky]: Yes, young and old need this, you'll work with people of all ages from young people"
+    },
+    {
+      "startMs": 86920,
+      "endMs": 90000,
+      "text": "with disabilities to seniors."
+    },
+    {
+      "startMs": 90000,
+      "endMs": 95200,
+      "text": "But you know, nothing really prepares you for how alone many people are."
+    },
+    {
+      "startMs": 95200,
+      "endMs": 100160,
+      "text": "They crave conversation, and I don't mind chatting with them while I work, though that's"
+    },
+    {
+      "startMs": 100160,
+      "endMs": 102840,
+      "text": "not officially in my job description."
+    },
+    {
+      "startMs": 102840,
+      "endMs": 106360,
+      "text": "[Jason]: I think I'd like to focus on seniors care."
+    },
+    {
+      "startMs": 106360,
+      "endMs": 111440,
+      "text": "And with the country's older population growing, maybe I'll get a job fast."
+    },
+    {
+      "startMs": 111440,
+      "endMs": 114000,
+      "text": "Do we have to be responsible for any medications?"
+    },
+    {
+      "startMs": 114000,
+      "endMs": 116560,
+      "text": "[Becky]: No, that's not for us to do."
+    },
+    {
+      "startMs": 116560,
+      "endMs": 120440,
+      "text": "And while you will prepare meals, you won't feed people."
+    },
+    {
+      "startMs": 120440,
+      "endMs": 125320,
+      "text": "[Becky]: But working to keep clients healthy and able to live on their own without risk as long"
+    },
+    {
+      "startMs": 125320,
+      "endMs": 128360,
+      "text": "as possible is always the goal."
+    },
+    {
+      "startMs": 128360,
+      "endMs": 133880,
+      "text": "And we're recognizing that with life spans increasing, long term care facilities won't"
+    },
+    {
+      "startMs": 133880,
+      "endMs": 137280,
+      "text": "be able to keep up with the number of people who will need care."
+    },
+    {
+      "startMs": 137280,
+      "endMs": 141800,
+      "text": "[Jason]: I almost didn't meet the requirements for entry into the PSW program."
+    },
+    {
+      "startMs": 141800,
+      "endMs": 147720,
+      "text": "I was one core short getting my high school diploma, so I had to go back to summer school."
+    },
+    {
+      "startMs": 147720,
+      "endMs": 180440,
+      "text": "I took science because I'm no good at math. Oh, and speaking of not getting in, having my first aid certificate was a real piece of luck. I would have been turned down without that, too. [Becky]: And I would have had a problem with immunizations except that I traveled the year before. And when the doctor checked my records, they were up to date. I also had to hand in a written essay on why I wanted to be a PSW."
+    },
+    {
+      "startMs": 180440,
+      "endMs": 183200,
+      "text": "[Narrator]: Before you hear the rest of the discussion, you have some time to look at questions 25"
+    },
+    {
+      "startMs": 183200,
+      "endMs": 183960,
+      "text": "to 30."
+    },
+    {
+      "startMs": 199680,
+      "endMs": 222240,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 222240,
+      "endMs": 227160,
+      "text": "[Jason]: So Becky, what did you think about the courses you had to take in the personal support worker"
+    },
+    {
+      "startMs": 227160,
+      "endMs": 228160,
+      "text": "program?"
+    },
+    {
+      "startMs": 228160,
+      "endMs": 233880,
+      "text": "[Becky]: Well, I used to think I got my points across pretty well with people until I took the"
+    },
+    {
+      "startMs": 233880,
+      "endMs": 237040,
+      "text": "understanding is essential course."
+    },
+    {
+      "startMs": 237040,
+      "endMs": 241920,
+      "text": "For starters, it taught me how to express myself much more effectively."
+    },
+    {
+      "startMs": 241920,
+      "endMs": 248320,
+      "text": "I also learned a lot about preparing clear reports for my supervisors and dealing in a"
+    },
+    {
+      "startMs": 248320,
+      "endMs": 254800,
+      "text": "better way with people in general, you know, like giving facts without personal views."
+    },
+    {
+      "startMs": 254800,
+      "endMs": 258520,
+      "text": "You'll find that you need those skills every single day."
+    },
+    {
+      "startMs": 258520,
+      "endMs": 261080,
+      "text": "[Jason]: I'm enjoying the foundations course."
+    },
+    {
+      "startMs": 261080,
+      "endMs": 265960,
+      "text": "I'm taking it now and I'm getting a lot out of it because support workers are a newer"
+    },
+    {
+      "startMs": 265960,
+      "endMs": 267840,
+      "text": "level of care in the province."
+    },
+    {
+      "startMs": 267840,
+      "endMs": 273480,
+      "text": "I think we absolutely have to understand how we fit into the overall system."
+    },
+    {
+      "startMs": 273480,
+      "endMs": 276560,
+      "text": "It's a great place to voice your opinions freely."
+    },
+    {
+      "startMs": 276560,
+      "endMs": 278320,
+      "text": "Some are quite personal."
+    },
+    {
+      "startMs": 278320,
+      "endMs": 281560,
+      "text": "Did you have to take a course called the way we work?"
+    },
+    {
+      "startMs": 281560,
+      "endMs": 285000,
+      "text": "I didn't know psychology was part of the program."
+    },
+    {
+      "startMs": 285000,
+      "endMs": 290320,
+      "text": "[Becky]: That course was a favorite of mine, but it's probably not what you're thinking, Jason."
+    },
+    {
+      "startMs": 290320,
+      "endMs": 294920,
+      "text": "It's about what happens on the inside of the body and covers the functions that keep"
+    },
+    {
+      "startMs": 294920,
+      "endMs": 297600,
+      "text": "our bodies operating well."
+    },
+    {
+      "startMs": 297600,
+      "endMs": 301360,
+      "text": "Even if you're not a PSW, the course is really interesting."
+    },
+    {
+      "startMs": 301360,
+      "endMs": 303840,
+      "text": "I learned so much."
+    },
+    {
+      "startMs": 303840,
+      "endMs": 306080,
+      "text": "[Jason]: What do you think about residence care?"
+    },
+    {
+      "startMs": 306080,
+      "endMs": 310520,
+      "text": "I know the thinking now is that long-term care facilities aren't the answer for our"
+    },
+    {
+      "startMs": 310520,
+      "endMs": 312680,
+      "text": "aging population."
+    },
+    {
+      "startMs": 312680,
+      "endMs": 313680,
+      "text": "[Becky]: Right."
+    },
+    {
+      "startMs": 313680,
+      "endMs": 319000,
+      "text": "This course zeroes in on the changes people can make to their homes so they can stay there,"
+    },
+    {
+      "startMs": 319000,
+      "endMs": 322000,
+      "text": "like installing higher toilets, for example."
+    },
+    {
+      "startMs": 322000,
+      "endMs": 324560,
+      "text": "You'll also learn about specialized equipment."
+    },
+    {
+      "startMs": 324560,
+      "endMs": 329400,
+      "text": "People can get to help themselves, safety bars for the shower and so on."
+    },
+    {
+      "startMs": 329400,
+      "endMs": 333200,
+      "text": "[Jason]: Do any of the courses focus on the families of our clients?"
+    },
+    {
+      "startMs": 333200,
+      "endMs": 337200,
+      "text": "After all, any kind of illness or disability affects everybody."
+    },
+    {
+      "startMs": 337200,
+      "endMs": 338200,
+      "text": "[Becky]: So true."
+    },
+    {
+      "startMs": 338200,
+      "endMs": 339720,
+      "text": "And yes, there is one."
+    },
+    {
+      "startMs": 339720,
+      "endMs": 341400,
+      "text": "It's called dynamics."
+    },
+    {
+      "startMs": 341400,
+      "endMs": 343760,
+      "text": "You usually get that in your last term."
+    },
+    {
+      "startMs": 343760,
+      "endMs": 347920,
+      "text": "You'll learn different strategies to help relieve some of the anxiety and strain that"
+    },
+    {
+      "startMs": 347920,
+      "endMs": 349520,
+      "text": "happens within the family."
+    },
+    {
+      "startMs": 349520,
+      "endMs": 352240,
+      "text": "I got a lot out of that course."
+    },
+    {
+      "startMs": 352240,
+      "endMs": 356960,
+      "text": "It's the only one that focuses on emotions rather than facts."
+    },
+    {
+      "startMs": 356960,
+      "endMs": 362040,
+      "text": "I think giving people this kind of help is just as valuable as any kind of expensive"
+    },
+    {
+      "startMs": 362040,
+      "endMs": 364440,
+      "text": "equipment they buy to help themselves."
+    },
+    {
+      "startMs": 364440,
+      "endMs": 368120,
+      "text": "[Jason]: The course I'm really looking forward to is the power within."
+    },
+    {
+      "startMs": 368120,
+      "endMs": 370520,
+      "text": "[Becky]: Oh, it's terrific."
+    },
+    {
+      "startMs": 370520,
+      "endMs": 374200,
+      "text": "Getting old has quite an impact on the mind, as you know."
+    },
+    {
+      "startMs": 374200,
+      "endMs": 380560,
+      "text": "But you'll be taught ways to help clients keep the mind active so they're not so forgetful."
+    },
+    {
+      "startMs": 380560,
+      "endMs": 384240,
+      "text": "You'd be surprised how much improvement you can see in clients when you apply these"
+    },
+    {
+      "startMs": 384240,
+      "endMs": 388480,
+      "text": "methods."
+    },
+    {
+      "startMs": 388480,
+      "endMs": 390960,
+      "text": "[Narrator]: That is the end of part three."
+    },
+    {
+      "startMs": 390960,
+      "endMs": 394680,
+      "text": "We now have 30 seconds to check your answers to part three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 82,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

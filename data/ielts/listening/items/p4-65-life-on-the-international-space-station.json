@@ -1,0 +1,590 @@
+{
+  "id": "p4-65-life-on-the-international-space-station",
+  "title": "Life on the International Space Station",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-53424374bc35",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 466.056,
+    "checksum": "sha256:4ae4846aed0c90d88ba3d37214fbb4d93642c14861b0bbe1b57e58a3d9d39de2"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Life on the International Space Station Background Station was occupied by international teams of scientists over several months. Research was done on living conditions. Early impressions The air smelt 31. ______ The temperature was easy to adjust. The food had enough 32. ______ Problems Difficulties with air filters caused lack of 34. ______ It was difficult to keep cabin objects secure. Systems were incompatible e.g. there were problems when mixing 35. ______ because of the preservatives The 36. ______ available were not always suitable for their purpose It was difficult to access the 37. ______ for equipment maintenance Suggested improvements Systems and equipment should undergo more extensive 38. ______ In language training, astronauts needed practice in understanding the controller’s 39. ______ There should be less emphasis on 40. ______ and more on other issues",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The air smelt 31. ______",
+          "answer": "fresh"
+        },
+        {
+          "id": "32",
+          "text": "The food had enough 32. ______",
+          "answer": "variety"
+        },
+        {
+          "id": "33",
+          "text": "33. ______ was efficient.",
+          "answer": "communication"
+        },
+        {
+          "id": "34",
+          "text": "Difficulties with air filters caused lack of 34. ______",
+          "answer": "sleep"
+        },
+        {
+          "id": "35",
+          "text": "e.g. there were problems when mixing 35. ______ because of the preservatives",
+          "answer": "water"
+        },
+        {
+          "id": "36",
+          "text": "The 36. ______ available were not always suitable for their purpose",
+          "answer": "tools"
+        },
+        {
+          "id": "37",
+          "text": "It was difficult to access the 37. ______ for equipment maintenance",
+          "answer": "instructions"
+        },
+        {
+          "id": "38",
+          "text": "Systems and equipment should undergo more extensive 38. ______",
+          "answer": "testing"
+        },
+        {
+          "id": "39",
+          "text": "In language training, astronauts needed practice in understanding the controller’s 39. ______",
+          "answer": "accent"
+        },
+        {
+          "id": "40",
+          "text": "There should be less emphasis on 40. ______ and more on other issues",
+          "answer": "safety"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Life on the International Space Station",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Station was occupied by international teams of scientists over several months.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Research was done on living conditions.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Early impressions",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The air smelt 31. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The temperature was easy to adjust.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The food had enough 32. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "33. ______ was efficient.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problems",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Difficulties with air filters caused lack of 34. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It was difficult to keep cabin objects secure.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Systems were incompatible",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "e.g. there were problems when mixing 35. ______ because of the preservatives",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "The 36. ______ available were not always suitable for their purpose",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It was difficult to access the 37. ______ for equipment maintenance",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Suggested improvements",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Systems and equipment should undergo more extensive 38. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In language training, astronauts needed practice in understanding the controller’s 39. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "There should be less emphasis on 40. ______ and more on other issues",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "fresh",
+        "32": "variety",
+        "33": "communication",
+        "34": "sleep",
+        "35": "water",
+        "36": "tools",
+        "37": "instructions",
+        "38": "testing",
+        "39": "accent",
+        "40": "safety"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13000,
+      "text": "You will hear an engineering student giving a presentation about a research project on"
+    },
+    {
+      "startMs": 13000,
+      "endMs": 17000,
+      "text": "design features of the International Space Station."
+    },
+    {
+      "startMs": 17000,
+      "endMs": 21500,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 32500,
+      "text": "You"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 80000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 80000,
+      "endMs": 85000,
+      "text": "For my presentation, I'm going to summarize the findings of a research project on"
+    },
+    {
+      "startMs": 85000,
+      "endMs": 90000,
+      "text": "the International Space Station in the early days of its operation."
+    },
+    {
+      "startMs": 90000,
+      "endMs": 92000,
+      "text": "It's teething problems as it were."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 96000,
+      "text": "I'll start by giving a little background information."
+    },
+    {
+      "startMs": 96000,
+      "endMs": 101000,
+      "text": "The Space Station crew were essentially a constantly changing team of scientists"
+    },
+    {
+      "startMs": 101000,
+      "endMs": 106000,
+      "text": "from different countries who lived on the Space Station for several months at a time."
+    },
+    {
+      "startMs": 106000,
+      "endMs": 112000,
+      "text": "And they conducted a number of experiments including some studies of living conditions in space"
+    },
+    {
+      "startMs": 112000,
+      "endMs": 115000,
+      "text": "which is what I'm going to be looking at now."
+    },
+    {
+      "startMs": 115000,
+      "endMs": 121000,
+      "text": "So, what was life like on board in the very confined conditions of the Space Station?"
+    },
+    {
+      "startMs": 121000,
+      "endMs": 128000,
+      "text": "Well, the early impressions recorded by the astronauts were very different from what people had expected."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 132000,
+      "text": "They'd expected that the air would smell stale or artificial."
+    },
+    {
+      "startMs": 132000,
+      "endMs": 138000,
+      "text": "But the astronauts found that it was fresh, so that was one very positive finding."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 144000,
+      "text": "And although they were in such a confined space and people worried that it would get very hot,"
+    },
+    {
+      "startMs": 144000,
+      "endMs": 152000,
+      "text": "in fact, they found that it was very easy to turn the temperature up or down in order to keep it within a comfortable range."
+    },
+    {
+      "startMs": 152000,
+      "endMs": 155000,
+      "text": "The feedback on the food was also positive."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 160000,
+      "text": "Astronauts on previous Space stations had described the meals as boring."
+    },
+    {
+      "startMs": 160000,
+      "endMs": 165000,
+      "text": "But the International Space Station meals were praised for their variety."
+    },
+    {
+      "startMs": 165000,
+      "endMs": 169000,
+      "text": "So, that was another good piece of feedback."
+    },
+    {
+      "startMs": 169000,
+      "endMs": 174000,
+      "text": "And something, which is taken for granted today, but was a key morale booster in those days,"
+    },
+    {
+      "startMs": 174000,
+      "endMs": 178000,
+      "text": "was communication between the Space Station and Earth,"
+    },
+    {
+      "startMs": 178000,
+      "endMs": 181000,
+      "text": "which the astronaut said was clear and reliable."
+    },
+    {
+      "startMs": 181000,
+      "endMs": 188000,
+      "text": "So, in the early days, it seems that the mood was overall very positive."
+    },
+    {
+      "startMs": 188000,
+      "endMs": 197000,
+      "text": "However, after a few days, the difficulties and frustrations became clearer."
+    },
+    {
+      "startMs": 197000,
+      "endMs": 202000,
+      "text": "Above all, the crew complained about the constant noise caused by the air filters,"
+    },
+    {
+      "startMs": 202000,
+      "endMs": 208000,
+      "text": "which used to rattle and buzz 24 hours a day, interrupting their sleep."
+    },
+    {
+      "startMs": 208000,
+      "endMs": 212000,
+      "text": "As well as that, the astronauts complained that the Velcro fasteners,"
+    },
+    {
+      "startMs": 212000,
+      "endMs": 216000,
+      "text": "which were positioned all over the station, didn't work well."
+    },
+    {
+      "startMs": 216000,
+      "endMs": 222000,
+      "text": "And so, a lot of the time, objects weren't secure in the cabin, but floated about."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 227000,
+      "text": "A particularly serious problem was that the systems used on the Space Station"
+    },
+    {
+      "startMs": 227000,
+      "endMs": 230000,
+      "text": "had been developed in a number of different countries,"
+    },
+    {
+      "startMs": 230000,
+      "endMs": 233000,
+      "text": "and they didn't always work well together."
+    },
+    {
+      "startMs": 233000,
+      "endMs": 238000,
+      "text": "For example, it was impossible to mix the water produced from different systems,"
+    },
+    {
+      "startMs": 238000,
+      "endMs": 241000,
+      "text": "because it contained different sorts of preservatives,"
+    },
+    {
+      "startMs": 241000,
+      "endMs": 244000,
+      "text": "and these reacted together and blocked the pipes."
+    },
+    {
+      "startMs": 244000,
+      "endMs": 248000,
+      "text": "Another problem was connected to repairs."
+    },
+    {
+      "startMs": 248000,
+      "endMs": 253000,
+      "text": "At the best of times, these took up an inordinate amount of time on the station,"
+    },
+    {
+      "startMs": 253000,
+      "endMs": 258000,
+      "text": "and the crew complained that many of the tools that they'd been provided with"
+    },
+    {
+      "startMs": 258000,
+      "endMs": 261000,
+      "text": "weren't suitable for the jobs they had to do."
+    },
+    {
+      "startMs": 261000,
+      "endMs": 268000,
+      "text": "So, they had to improvise, which meant that jobs took a lot longer than they needed to."
+    },
+    {
+      "startMs": 268000,
+      "endMs": 274000,
+      "text": "Another related problem was to do with access to equipment that needed maintaining."
+    },
+    {
+      "startMs": 274000,
+      "endMs": 278000,
+      "text": "Because the instructions on the equipment were often located in places,"
+    },
+    {
+      "startMs": 278000,
+      "endMs": 282000,
+      "text": "where they were difficult to read, like on the back of equipment,"
+    },
+    {
+      "startMs": 282000,
+      "endMs": 286000,
+      "text": "it was often difficult or impossible to read them."
+    },
+    {
+      "startMs": 286000,
+      "endMs": 292000,
+      "text": "So, having identified these problems, the researchers came up with a number of suggestions"
+    },
+    {
+      "startMs": 292000,
+      "endMs": 296000,
+      "text": "about how conditions could be improved on subsequent missions."
+    },
+    {
+      "startMs": 296000,
+      "endMs": 302000,
+      "text": "First, it became clear that although there had been a great deal of consultation with the crews,"
+    },
+    {
+      "startMs": 302000,
+      "endMs": 308000,
+      "text": "the systems and equipment on the space station needed much more wide-ranging testing."
+    },
+    {
+      "startMs": 308000,
+      "endMs": 313000,
+      "text": "Then, the whole issue of language training came under review."
+    },
+    {
+      "startMs": 313000,
+      "endMs": 320000,
+      "text": "Astronauts from different countries had to be able to talk to the controllers on Earth and to understand them."
+    },
+    {
+      "startMs": 320000,
+      "endMs": 326000,
+      "text": "Now, although they'd had extensive language training, the astronauts sometimes had problems"
+    },
+    {
+      "startMs": 326000,
+      "endMs": 332000,
+      "text": "comprehending what was said because they weren't familiar with the accent of the speaker."
+    },
+    {
+      "startMs": 332000,
+      "endMs": 337000,
+      "text": "And this sometimes led to quite dangerous misunderstandings."
+    },
+    {
+      "startMs": 337000,
+      "endMs": 341000,
+      "text": "Finally, and this is the point I found most surprising,"
+    },
+    {
+      "startMs": 341000,
+      "endMs": 347000,
+      "text": "the researchers felt that the designers of the space station were paying too much attention to safety,"
+    },
+    {
+      "startMs": 347000,
+      "endMs": 350000,
+      "text": "rather than considering operating issues."
+    },
+    {
+      "startMs": 350000,
+      "endMs": 354000,
+      "text": "That is, how the station could be run comfortably and smoothly."
+    },
+    {
+      "startMs": 354000,
+      "endMs": 359000,
+      "text": "And the recommendation was to make changes here at quite a fundamental level."
+    },
+    {
+      "startMs": 359000,
+      "endMs": 363000,
+      "text": "So, those were the main points I covered in the..."
+    },
+    {
+      "startMs": 365000,
+      "endMs": 367000,
+      "text": "That is the end of part four."
+    },
+    {
+      "startMs": 367000,
+      "endMs": 371000,
+      "text": "You now have one minute to check your answers to part four."
+    },
+    {
+      "startMs": 377000,
+      "endMs": 379000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 407000,
+      "endMs": 434000,
+      "text": "That is the end of the listening test."
+    },
+    {
+      "startMs": 434000,
+      "endMs": 441000,
+      "text": "In the IELTS test, you would now have ten minutes to transfer your answers to the answer sheet. 69<"
+    },
+    {
+      "startMs": 464000,
+      "endMs": 466000,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 69,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,525 @@
+{
+  "id": "p1-80-driver-support",
+  "title": "Driver Support",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-884e678e8300",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 322.296,
+    "checksum": "sha256:83a6f30bf5f1ffbe1761b1b189d0e99627e153955e84b543c4dd1644aea6972e"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Driver Support Personal Information Name: John Blake Address: 116, 1. _______ Road, Salisbury Postcode: 2. _______ Details of the Car Make and model: Honda Accord Registration number: 3. _______ Current colour: 4. _______ Details of the Incident One problem: short of 5. _______ Current location: stuck in the 6. _______ close to a 7. _______ Another problem (his mother): suffering from a 8. _______ problem Responses Length of time for mechanics to come: 9. _______ Get a 10. _______ corner to look after his mother",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Address: 116, 1. _______ Road, Salisbury",
+          "answer": "Charlecote"
+        },
+        {
+          "id": "2",
+          "text": "Postcode: 2. _______",
+          "answer": "SE13AL"
+        },
+        {
+          "id": "3",
+          "text": "Registration number: 3. _______",
+          "answer": "S232TAT"
+        },
+        {
+          "id": "4",
+          "text": "Current colour: 4. _______",
+          "answer": "green"
+        },
+        {
+          "id": "5",
+          "text": "One problem: short of 5. _______",
+          "answer": "oil/fuel"
+        },
+        {
+          "id": "6",
+          "text": "Current location: stuck in the 6. _______ close to a 7. _______",
+          "answer": "mud"
+        },
+        {
+          "id": "7",
+          "text": "Current location: stuck in the 6. _______ close to a 7. _______",
+          "answer": "bridge"
+        },
+        {
+          "id": "8",
+          "text": "Another problem (his mother): suffering from a 8. _______ problem",
+          "answer": "back"
+        },
+        {
+          "id": "9",
+          "text": "Length of time for mechanics to come: 9. _______",
+          "answer": "40 minutes"
+        },
+        {
+          "id": "10",
+          "text": "Get a 10. _______ corner to look after his mother",
+          "answer": "warm"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Driver Support",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Personal Information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Name: John Blake",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Address: 116, 1. _______ Road, Salisbury",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Postcode: 2. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Details of the Car",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Make and model: Honda Accord",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Registration number: 3. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Current colour: 4. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Details of the Incident",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "One problem: short of 5. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Current location: stuck in the 6. _______ close to a 7. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Another problem (his mother): suffering from a 8. _______ problem",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Responses",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Length of time for mechanics to come: 9. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Get a 10. _______ corner to look after his mother",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Charlecote",
+        "2": "SE13AL",
+        "3": "S232TAT",
+        "4": "green",
+        "5": "oil/fuel",
+        "6": "mud",
+        "7": "bridge",
+        "8": "back",
+        "9": "40 minutes",
+        "10": "warm"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5000,
+      "text": "Driver: Hi there, I'm John Blake."
+    },
+    {
+      "startMs": 5000,
+      "endMs": 8000,
+      "text": "A friend of mine recommended your service."
+    },
+    {
+      "startMs": 8000,
+      "endMs": 11000,
+      "text": "I'm in need of assistance."
+    },
+    {
+      "startMs": 11000,
+      "endMs": 16000,
+      "text": "My friend mentioned that you have tow trucks capable of safely pulling cars."
+    },
+    {
+      "startMs": 16000,
+      "endMs": 19000,
+      "text": "Operator: Nice to meet you, John."
+    },
+    {
+      "startMs": 19000,
+      "endMs": 26000,
+      "text": "Before we proceed, we'll need your contact details to fill out our service form and dispatch our staff."
+    },
+    {
+      "startMs": 26000,
+      "endMs": 28000,
+      "text": "Driver: Sure."
+    },
+    {
+      "startMs": 28000,
+      "endMs": 33000,
+      "text": "I live at 116, Charlecote Road in Salisbury."
+    },
+    {
+      "startMs": 33000,
+      "endMs": 36000,
+      "text": "C-H-A-R-L-E-C-O-T-E. C-H-A-R-L-E-C-O-T-E。"
+    },
+    {
+      "startMs": 36000,
+      "endMs": 40000,
+      "text": "Operator: Thank you for providing your address, John."
+    },
+    {
+      "startMs": 40000,
+      "endMs": 43000,
+      "text": "This will help us keep your information up to date."
+    },
+    {
+      "startMs": 43000,
+      "endMs": 50000,
+      "text": "Could you also provide me with your postcode so that we can send you detailed service information by email?"
+    },
+    {
+      "startMs": 50000,
+      "endMs": 54000,
+      "text": "Driver: My postcode is SE13AL."
+    },
+    {
+      "startMs": 54000,
+      "endMs": 57000,
+      "text": "Operator: Perfect, we have that noted down."
+    },
+    {
+      "startMs": 57000,
+      "endMs": 61000,
+      "text": "Now, could you please let me know the make of your car?"
+    },
+    {
+      "startMs": 61000,
+      "endMs": 66000,
+      "text": "This will help us send mechanics with relevant experience."
+    },
+    {
+      "startMs": 66000,
+      "endMs": 69000,
+      "text": "Driver: I drive a Honda Accord."
+    },
+    {
+      "startMs": 69000,
+      "endMs": 71000,
+      "text": "I bought it last year."
+    },
+    {
+      "startMs": 71000,
+      "endMs": 73000,
+      "text": "It's brand new."
+    },
+    {
+      "startMs": 73000,
+      "endMs": 77000,
+      "text": "Operator: Great, we have that information on file now."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 83000,
+      "text": "Lastly, could you please provide me with the registration number of your car?"
+    },
+    {
+      "startMs": 83000,
+      "endMs": 87000,
+      "text": "This will make it easier for us to locate your vehicle."
+    },
+    {
+      "startMs": 87000,
+      "endMs": 92000,
+      "text": "Driver: The registration number is S232TAT."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 95000,
+      "text": "Operator: Thank you, it's been noted down."
+    },
+    {
+      "startMs": 95000,
+      "endMs": 100000,
+      "text": "If it's helpful, could you also tell us the color of your car?"
+    },
+    {
+      "startMs": 100000,
+      "endMs": 105000,
+      "text": "Driver: The car was originally red, but my wife recently painted it green."
+    },
+    {
+      "startMs": 105000,
+      "endMs": 108000,
+      "text": "Operator: Thank you for sharing that detail, John."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 112000,
+      "text": "It will definitely help with vehicle identification."
+    },
+    {
+      "startMs": 113000,
+      "endMs": 117000,
+      "text": "Now, could you please briefly explain what happened?"
+    },
+    {
+      "startMs": 117000,
+      "endMs": 121000,
+      "text": "Driver: It's possible that my vehicle is running low on oil."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 128000,
+      "text": "I only realized it after I began driving on the motorway and couldn't find a gas station."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 131000,
+      "text": "That's when I decided to exit the motorway."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 133000,
+      "text": "Operator: I see."
+    },
+    {
+      "startMs": 133000,
+      "endMs": 136000,
+      "text": "We'll make sure to bring some fuel."
+    },
+    {
+      "startMs": 136000,
+      "endMs": 138000,
+      "text": "Please continue."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 146000,
+      "text": "Driver: I wasn't familiar with the road conditions, and when I was searching for a station to refuel my car, I got it stuck in the mud."
+    },
+    {
+      "startMs": 146000,
+      "endMs": 149000,
+      "text": "Operator: I'm sorry to hear that."
+    },
+    {
+      "startMs": 149000,
+      "endMs": 152000,
+      "text": "Are you currently in a safe location?"
+    },
+    {
+      "startMs": 152000,
+      "endMs": 155000,
+      "text": "Driver: Yes, I'm near a bridge."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 161000,
+      "text": "I spotted a road sign around 100 meters away indicating that it's Albany Road."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 165000,
+      "text": "Operator: All right, let's organize assistance for you."
+    },
+    {
+      "startMs": 165000,
+      "endMs": 167000,
+      "text": "Is there any urgency?"
+    },
+    {
+      "startMs": 167000,
+      "endMs": 172000,
+      "text": "Driver: Yes, my mother has a back injury and is unable to move."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 176000,
+      "text": "I wanted to call an ambulance, but she refused."
+    },
+    {
+      "startMs": 176000,
+      "endMs": 179000,
+      "text": "She believes she will recover soon."
+    },
+    {
+      "startMs": 179000,
+      "endMs": 183000,
+      "text": "Operator: I'm sorry to hear about your mother's condition."
+    },
+    {
+      "startMs": 183000,
+      "endMs": 186000,
+      "text": "Let me dispatch help right away."
+    },
+    {
+      "startMs": 186000,
+      "endMs": 193000,
+      "text": "Given the distance, it will take our mechanics approximately 40 minutes to reach your location."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 197000,
+      "text": "Driver: Thank you, although it's quite a distance."
+    },
+    {
+      "startMs": 197000,
+      "endMs": 203000,
+      "text": "I can't spot any convenience stores nearby, and the wind is really strong today."
+    },
+    {
+      "startMs": 203000,
+      "endMs": 205000,
+      "text": "Operator: I understand."
+    },
+    {
+      "startMs": 205000,
+      "endMs": 208000,
+      "text": "Please make sure your mother is comfortable."
+    },
+    {
+      "startMs": 208000,
+      "endMs": 213000,
+      "text": "My suggestion is to find a warm place where you can take care of her."
+    },
+    {
+      "startMs": 213000,
+      "endMs": 217000,
+      "text": "Your mother's well-being is our top priority."
+    },
+    {
+      "startMs": 217000,
+      "endMs": 221000,
+      "text": "Driver: Thank you for your understanding and prompt response."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 225000,
+      "text": "I really appreciate your support."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 229000,
+      "text": "I'll keep you informed of any updates or changes."
+    },
+    {
+      "startMs": 251000,
+      "endMs": 254000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 281000,
+      "endMs": 284000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 311000,
+      "endMs": 314000,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 60,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "id": "p4-49-architecture-in-new-zealand-in-1960s",
+  "title": "Architecture in New Zealand in 1960s",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-02a28761946b",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 496.656,
+    "checksum": "sha256:57e0d2e3d7d8ad2d37a0588dcc7575469f5e00f0898e2eba0c8f841726581039"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Architecture in New Zealand in 1960s Traditional architecture The climate was an important consideration for the 31. ______ design. The primary building material was 32. ______ Most buildings had a 33. ______ shape. Changes in the 1960s Paid closer attention to the building 35. ______ Examples Sir Miles Warren incorporated brutalism and gave up the use of 36. ______ Every new house has a 37. ______ Lockwood houses were criticised for having the same 38. ______ Value of architecture in 1960s Industrial or business buildings look like 39. ______ Apart from colours, designers also focused on 40. ______ to make buildings visually attractive.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The climate was an important consideration for the 31. ______ design.",
+          "answer": "roof"
+        },
+        {
+          "id": "32",
+          "text": "The primary building material was 32. ______",
+          "answer": "wood"
+        },
+        {
+          "id": "33",
+          "text": "Most buildings had a 33. ______ shape.",
+          "answer": "square"
+        },
+        {
+          "id": "34",
+          "text": "A transition to 34. ______ as a material",
+          "answer": "concrete"
+        },
+        {
+          "id": "35",
+          "text": "Paid closer attention to the building 35. ______",
+          "answer": "cost"
+        },
+        {
+          "id": "36",
+          "text": "Sir Miles Warren incorporated brutalism and gave up the use of 36. ______",
+          "answer": "stone"
+        },
+        {
+          "id": "37",
+          "text": "Every new house has a 37. ______",
+          "answer": "garage"
+        },
+        {
+          "id": "38",
+          "text": "Lockwood houses were criticised for having the same 38. ______",
+          "answer": "layout"
+        },
+        {
+          "id": "39",
+          "text": "Industrial or business buildings look like 39. ______",
+          "answer": "towers"
+        },
+        {
+          "id": "40",
+          "text": "Apart from colours, designers also focused on 40. ______ to make buildings visually attractive.",
+          "answer": "shadow"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Architecture in New Zealand in 1960s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Traditional architecture",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The climate was an important consideration for the 31. ______ design.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The primary building material was 32. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Most buildings had a 33. ______ shape.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Changes in the 1960s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A transition to 34. ______ as a material",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Paid closer attention to the building 35. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Examples",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Sir Miles Warren incorporated brutalism and gave up the use of 36. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Every new house has a 37. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Lockwood houses were criticised for having the same 38. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Value of architecture in 1960s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Industrial or business buildings look like 39. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Apart from colours, designers also focused on 40. ______ to make buildings visually attractive.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "roof",
+        "32": "wood",
+        "33": "square",
+        "34": "concrete",
+        "35": "cost",
+        "36": "stone",
+        "37": "garage",
+        "38": "layout",
+        "39": "towers",
+        "40": "shadow"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6000,
+      "text": "Architects in New Zealand in the early 20th century were big fans of traditional styles."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 11000,
+      "text": "At that time, they often looked to European models for inspiration"
+    },
+    {
+      "startMs": 11000,
+      "endMs": 15000,
+      "text": "and perceived building design from a traditional perspective."
+    },
+    {
+      "startMs": 15000,
+      "endMs": 21000,
+      "text": "The climate, for example, was the top concern when designing the roof."
+    },
+    {
+      "startMs": 21000,
+      "endMs": 25000,
+      "text": "Weather conditions across the country can vary significantly"
+    },
+    {
+      "startMs": 25000,
+      "endMs": 29000,
+      "text": "and regions with frequent rain needed special attention."
+    },
+    {
+      "startMs": 29000,
+      "endMs": 34000,
+      "text": "In areas where the annual precipitation is high, ensuring water could drain efficiently"
+    },
+    {
+      "startMs": 34000,
+      "endMs": 39000,
+      "text": "was essential for protecting the structure and longevity of the building."
+    },
+    {
+      "startMs": 39000,
+      "endMs": 43000,
+      "text": "Therefore, proper drainage systems had to be considered."
+    },
+    {
+      "startMs": 43000,
+      "endMs": 48000,
+      "text": "Wood was the most popular choice for house building, mainly due to its availability,"
+    },
+    {
+      "startMs": 48000,
+      "endMs": 51000,
+      "text": "cost effectiveness and ease of use."
+    },
+    {
+      "startMs": 51000,
+      "endMs": 55000,
+      "text": "Other materials either weren't affordable or simply weren't accessible"
+    },
+    {
+      "startMs": 55000,
+      "endMs": 59000,
+      "text": "in rural parts of the country at the time."
+    },
+    {
+      "startMs": 59000,
+      "endMs": 64000,
+      "text": "The majority of traditional buildings are square in shape and this wasn't by accident."
+    },
+    {
+      "startMs": 64000,
+      "endMs": 67000,
+      "text": "It was a strategic choice."
+    },
+    {
+      "startMs": 67000,
+      "endMs": 73000,
+      "text": "Straight lines and right angles are easier to construct and more space efficient."
+    },
+    {
+      "startMs": 73000,
+      "endMs": 78000,
+      "text": "Architects believed this approach helped to maximize utilization of interior space,"
+    },
+    {
+      "startMs": 78000,
+      "endMs": 83000,
+      "text": "especially in areas where plots of land were relatively small."
+    },
+    {
+      "startMs": 83000,
+      "endMs": 88000,
+      "text": "Additionally, avoiding unusual shapes like curves and diagonal corners"
+    },
+    {
+      "startMs": 88000,
+      "endMs": 93000,
+      "text": "made furnishing the interiors much more straightforward."
+    },
+    {
+      "startMs": 93000,
+      "endMs": 98000,
+      "text": "Complex forms not only wasted valuable room but also posed problems"
+    },
+    {
+      "startMs": 98000,
+      "endMs": 102000,
+      "text": "when arranging furniture or installing fixtures."
+    },
+    {
+      "startMs": 102000,
+      "endMs": 109000,
+      "text": "As the country progressed, there were several changes New Zealand architects embraced in the 1960s."
+    },
+    {
+      "startMs": 109000,
+      "endMs": 116000,
+      "text": "These changes reflected not only a shift in design philosophy but also improvements in technology"
+    },
+    {
+      "startMs": 116000,
+      "endMs": 119000,
+      "text": "and construction methods."
+    },
+    {
+      "startMs": 119000,
+      "endMs": 124000,
+      "text": "The first was a shift to concrete as a material which gradually replaced timber"
+    },
+    {
+      "startMs": 124000,
+      "endMs": 127000,
+      "text": "in many modern buildings."
+    },
+    {
+      "startMs": 127000,
+      "endMs": 132000,
+      "text": "This transition was made possible by construction techniques introduced by immigrants"
+    },
+    {
+      "startMs": 132000,
+      "endMs": 138000,
+      "text": "from Europe and Japan who brought with them advanced machinery and engineering knowledge."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 145000,
+      "text": "At the same time, New Zealand, like many other nations, was dealing with financial constraints"
+    },
+    {
+      "startMs": 145000,
+      "endMs": 148000,
+      "text": "following global events."
+    },
+    {
+      "startMs": 148000,
+      "endMs": 155000,
+      "text": "Because of the economic impact of the Second World War, resources had to be used wisely."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 160000,
+      "text": "As a result, both private developers and government-backed construction projects"
+    },
+    {
+      "startMs": 160000,
+      "endMs": 164000,
+      "text": "were focused on the cost of construction."
+    },
+    {
+      "startMs": 164000,
+      "endMs": 171000,
+      "text": "Minimizing expense while maximizing utility became the dominant goal during this period."
+    },
+    {
+      "startMs": 171000,
+      "endMs": 174000,
+      "text": "That's one of the key factors they considered."
+    },
+    {
+      "startMs": 174000,
+      "endMs": 178000,
+      "text": "They pursued economical designs."
+    },
+    {
+      "startMs": 178000,
+      "endMs": 186000,
+      "text": "Somiles Warren's architecture offers a classic example of this country's architectural styles at that time."
+    },
+    {
+      "startMs": 186000,
+      "endMs": 195000,
+      "text": "He became well known for modernizing the traditional aesthetic and for using geometric forms in innovative ways."
+    },
+    {
+      "startMs": 195000,
+      "endMs": 204000,
+      "text": "In many of his works, he integrated repetitive block-like shapes into his works, a feature that became a hallmark of his style."
+    },
+    {
+      "startMs": 204000,
+      "endMs": 210000,
+      "text": "This approach came to be associated with a trend in architecture called brutalism,"
+    },
+    {
+      "startMs": 210000,
+      "endMs": 215000,
+      "text": "which emphasized raw materials and strong bold structures."
+    },
+    {
+      "startMs": 215000,
+      "endMs": 219000,
+      "text": "At the same time, the use of natural materials was changing."
+    },
+    {
+      "startMs": 219000,
+      "endMs": 229000,
+      "text": "He, like others, abandoned some expensive materials such as stone, not just for economic reasons, but also for practicality and mass construction."
+    },
+    {
+      "startMs": 229000,
+      "endMs": 238000,
+      "text": "Meanwhile, car ownership was on the rise, and families were becoming increasingly reliant on private vehicles for commuting and daily tasks."
+    },
+    {
+      "startMs": 238000,
+      "endMs": 244000,
+      "text": "As a result, equipping each new house with a garage gradually became trendy."
+    },
+    {
+      "startMs": 244000,
+      "endMs": 254000,
+      "text": "This change was seen not just as a convenience, but as a necessity that architects needed to incorporate into every design for suburban homes."
+    },
+    {
+      "startMs": 254000,
+      "endMs": 264000,
+      "text": "Among other modern housing styles, Lockwood Homes, which featured identical walls, stood out for their uniformity and efficient production."
+    },
+    {
+      "startMs": 264000,
+      "endMs": 271000,
+      "text": "These homes were mass-produced and became popular for their quick assembly and affordability."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 276000,
+      "text": "They also gained in popularity, especially among working-class families."
+    },
+    {
+      "startMs": 276000,
+      "endMs": 280000,
+      "text": "However, the design was not without its critics."
+    },
+    {
+      "startMs": 280000,
+      "endMs": 290000,
+      "text": "Some architects and homeowners felt it lacked variety and personal expression, and the buildings were also criticised for this characteristic."
+    },
+    {
+      "startMs": 290000,
+      "endMs": 297000,
+      "text": "A sameness that didn't allow much room for individuality or creativity in layout."
+    },
+    {
+      "startMs": 297000,
+      "endMs": 309000,
+      "text": "Still, few people would have doubts about the architectural changes of this era, especially considering how widespread and influential they became."
+    },
+    {
+      "startMs": 310000,
+      "endMs": 320000,
+      "text": "In urban centres, industrial or business complexes have been designed to resemble towers, a departure from earlier, more horizontal layouts."
+    },
+    {
+      "startMs": 320000,
+      "endMs": 328000,
+      "text": "These tall structures helped maximise space in crowded city districts and symbolised economic development."
+    },
+    {
+      "startMs": 328000,
+      "endMs": 338000,
+      "text": "This has happened elsewhere in some industrialised countries, following similar trends seen in places like the UK and Japan."
+    },
+    {
+      "startMs": 339000,
+      "endMs": 350000,
+      "text": "In addition to the overall shape, which served a functional purpose, architects also concentrated on the visual appeal of some tall designs, such as shadow and colours."
+    },
+    {
+      "startMs": 350000,
+      "endMs": 363000,
+      "text": "These finer aesthetic elements helped modern buildings feel less sterile and more engaging to the eye, improving both their beauty and their emotional impact on residents and visitors alike."
+    },
+    {
+      "startMs": 368000,
+      "endMs": 370000,
+      "text": "Thank you for your time."
+    },
+    {
+      "startMs": 398000,
+      "endMs": 400000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 428000,
+      "endMs": 430000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 458000,
+      "endMs": 460000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 488000,
+      "endMs": 490000,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 64,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

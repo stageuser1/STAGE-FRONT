@@ -1,0 +1,495 @@
+{
+  "id": "p4-53-early-gold-mining-in-the-otago-region",
+  "title": "Early gold mining in the Otago region",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-cdf0de0d014c",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 338.472,
+    "checksum": "sha256:e248986913de36e0f57bfb5ca2544456c13dac4bfa0e15bd282f2dd5f7079ac1"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Early gold mining in the Otago region, New Zealand Background 1852: there was a brief gold rush. Late 1850s: local governments offered a 31. ____________ to experienced gold prospectors. May 1861: miner Gabriel Read found gold in a 32. ____________. Who took part in the gold rush? Mainly young single men or men leaving families at home. Women opened 33. ____________ for the miners. Businessmen offered services, e.g. hardware stores and 34. ____________. What were early mining towns like? At first, the buildings were made of canvas and timber, and later 35. ____________. What difficulties did miners face at the gold fields? The freezing temperatures and unexpected 36. ____________. What benefits and problems did gold bring to the Otago region? Growth of the Otago town of Dunedin led to complaints about: The increasing price of 38. ____________. Problems with sanitation. The gold also resulted in: Investment in shipping. The first New Zealand 39. ____________. The need for experienced workers, in particular 40. ____________.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Late 1850s: local governments offered a 31. ____________ to experienced gold prospectors.",
+          "answer": "reward"
+        },
+        {
+          "id": "32",
+          "text": "May 1861: miner Gabriel Read found gold in a 32. ____________.",
+          "answer": "river"
+        },
+        {
+          "id": "33",
+          "text": "Women opened 33. ____________ for the miners.",
+          "answer": "hotels"
+        },
+        {
+          "id": "34",
+          "text": "Businessmen offered services, e.g. hardware stores and 34. ____________.",
+          "answer": "banks"
+        },
+        {
+          "id": "35",
+          "text": "At first, the buildings were made of canvas and timber, and later 35. ____________.",
+          "answer": "concrete"
+        },
+        {
+          "id": "36",
+          "text": "The freezing temperatures and unexpected 36. ____________.",
+          "answer": "flooding"
+        },
+        {
+          "id": "37",
+          "text": "A poor diet of tea and 37. ____________.",
+          "answer": "flour"
+        },
+        {
+          "id": "38",
+          "text": "The increasing price of 38. ____________.",
+          "answer": "land"
+        },
+        {
+          "id": "39",
+          "text": "The first New Zealand 39. ____________.",
+          "answer": "university"
+        },
+        {
+          "id": "40",
+          "text": "The need for experienced workers, in particular 40. ____________.",
+          "answer": "engineers"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Early gold mining in the Otago region, New Zealand",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "1852: there was a brief gold rush.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Late 1850s: local governments offered a 31. ____________ to experienced gold prospectors.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "May 1861: miner Gabriel Read found gold in a 32. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Who took part in the gold rush?",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Mainly young single men or men leaving families at home.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Women opened 33. ____________ for the miners.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Businessmen offered services, e.g. hardware stores and 34. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "What were early mining towns like?",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "At first, the buildings were made of canvas and timber, and later 35. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "What difficulties did miners face at the gold fields?",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The freezing temperatures and unexpected 36. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A poor diet of tea and 37. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "What benefits and problems did gold bring to the Otago region?",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Growth of the Otago town of Dunedin led to complaints about:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The increasing price of 38. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problems with sanitation.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The gold also resulted in:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Investment in shipping.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The first New Zealand 39. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The need for experienced workers, in particular 40. ____________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "reward",
+        "32": "river",
+        "33": "hotels",
+        "34": "banks",
+        "35": "concrete",
+        "36": "flooding",
+        "37": "flour",
+        "38": "land",
+        "39": "university",
+        "40": "engineers"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10560,
+      "text": "Well, today we're focusing on New Zealand in the 1860s, and in particular, how the"
+    },
+    {
+      "startMs": 10560,
+      "endMs": 16240,
+      "text": "discovery of gold transformed the country. At that time, gold had created great wealth"
+    },
+    {
+      "startMs": 16240,
+      "endMs": 22520,
+      "text": "in North America and Australia, and, naturally, New Zealand was hoping for the same success."
+    },
+    {
+      "startMs": 22520,
+      "endMs": 27320,
+      "text": "People knew there was gold in New Zealand. Some had been found in 1852 leading to a brief"
+    },
+    {
+      "startMs": 27320,
+      "endMs": 31360,
+      "text": "gold rush in which people had come from all parts of the world to see if they could dig"
+    },
+    {
+      "startMs": 31360,
+      "endMs": 36840,
+      "text": "up any for themselves. But now, New Zealand needed experienced gold prospectors, people"
+    },
+    {
+      "startMs": 36840,
+      "endMs": 41840,
+      "text": "who knew where to look for the stuff, to find in other areas. So what the local government"
+    },
+    {
+      "startMs": 41840,
+      "endMs": 46760,
+      "text": "started doing in the late 1850s was promising a reward of these prospectors discovered"
+    },
+    {
+      "startMs": 46760,
+      "endMs": 52160,
+      "text": "gold anywhere in their province. The man who eventually answered the call was Australian"
+    },
+    {
+      "startMs": 52160,
+      "endMs": 59120,
+      "text": "minor called Gabrielle Reed, who came to Otago in May 1861. The story goes that he was"
+    },
+    {
+      "startMs": 59120,
+      "endMs": 65120,
+      "text": "walking outside his tent at night when he saw gold shining like stars in a nearby river."
+    },
+    {
+      "startMs": 65120,
+      "endMs": 69560,
+      "text": "It didn't take long for word of his fine to spread, and soon thousands were coming to Otago"
+    },
+    {
+      "startMs": 69560,
+      "endMs": 75760,
+      "text": "to take part in the gold rush. Who were these people? Well, the men that came were predominantly"
+    },
+    {
+      "startMs": 75760,
+      "endMs": 80240,
+      "text": "laborers and tradesmen, and often very young, although some were married and left their"
+    },
+    {
+      "startMs": 80240,
+      "endMs": 85520,
+      "text": "families back in the countries they came from. But women did come too, to the towns that"
+    },
+    {
+      "startMs": 85520,
+      "endMs": 90800,
+      "text": "suddenly sprang up by the gold fields. They made a living by starting up hotels, simple"
+    },
+    {
+      "startMs": 90800,
+      "endMs": 95720,
+      "text": "ones of course where new arrivals would often stay. And then there were businessmen, who"
+    },
+    {
+      "startMs": 95720,
+      "endMs": 100240,
+      "text": "knew there was money to be made by setting up services like hardware stores that sold"
+    },
+    {
+      "startMs": 100240,
+      "endMs": 107080,
+      "text": "mining and camping equipment, and of course banks where gold could be deposited. In fact,"
+    },
+    {
+      "startMs": 107080,
+      "endMs": 112400,
+      "text": "the businessmen often did better than the miners. So, as I mentioned before, where there"
+    },
+    {
+      "startMs": 112400,
+      "endMs": 117800,
+      "text": "was a gold field, a town began to grow too. At first, the buildings were constructed in"
+    },
+    {
+      "startMs": 117800,
+      "endMs": 123400,
+      "text": "a temporary fashion, just made out of materials such as canvas and timber. But later, once"
+    },
+    {
+      "startMs": 123400,
+      "endMs": 129040,
+      "text": "supplies started arriving, it was concrete, so the structures became more permanent. But"
+    },
+    {
+      "startMs": 129040,
+      "endMs": 134040,
+      "text": "the fact was, the gold fields were often in very isolated areas, so life was very difficult"
+    },
+    {
+      "startMs": 134040,
+      "endMs": 139160,
+      "text": "for these people. The miners were often working at the bottom of deep gorges, so they had"
+    },
+    {
+      "startMs": 139160,
+      "endMs": 143880,
+      "text": "to cope with freezing temperatures, and also sudden flooding when winter ice melted in"
+    },
+    {
+      "startMs": 143880,
+      "endMs": 150600,
+      "text": "the mountains. If this wasn't bad enough, the miners also had to deal with another problem."
+    },
+    {
+      "startMs": 150600,
+      "endMs": 155560,
+      "text": "Because they had to carry everything with them, they had a very poor diet. They mostly drank"
+    },
+    {
+      "startMs": 155560,
+      "endMs": 161080,
+      "text": "tea, and the main thing they had to eat was flour, which they cooked in different ways."
+    },
+    {
+      "startMs": 161400,
+      "endMs": 167480,
+      "text": "That's all that was available. Anyway, some miners were lucky, others not. But the"
+    },
+    {
+      "startMs": 167480,
+      "endMs": 172280,
+      "text": "gold that was found certainly brought many benefits to the Otago region, and also a couple"
+    },
+    {
+      "startMs": 172280,
+      "endMs": 178360,
+      "text": "of problems. First of all, the town of Dunedin was suddenly transformed into the biggest city in"
+    },
+    {
+      "startMs": 178360,
+      "endMs": 183960,
+      "text": "New Zealand. Some of the original residents complained about how the value of land was increasing,"
+    },
+    {
+      "startMs": 183960,
+      "endMs": 188680,
+      "text": "and about the inadequate sanitation. You can imagine how crowded it might have felt with the"
+    },
+    {
+      "startMs": 188680,
+      "endMs": 195400,
+      "text": "sudden influx of thousands of immigrants. But overall, the gold brought many positive changes"
+    },
+    {
+      "startMs": 195400,
+      "endMs": 200120,
+      "text": "to the city. There was immense investment in growth in the shipping industry, just what the"
+    },
+    {
+      "startMs": 200120,
+      "endMs": 205800,
+      "text": "region needed. Another unexpected benefit of this wealth was that it provided the funds for the"
+    },
+    {
+      "startMs": 205800,
+      "endMs": 212120,
+      "text": "first university in the country. As well as this, as the industry developed, there was a great"
+    },
+    {
+      "startMs": 212120,
+      "endMs": 217000,
+      "text": "demand for workers of all sorts, but most of all there was demand for experienced and skilled"
+    },
+    {
+      "startMs": 217000,
+      "endMs": 222440,
+      "text": "engineers. They often started their own companies, and many of these companies are still operating"
+    },
+    {
+      "startMs": 222440,
+      "endMs": 226840,
+      "text": "today. What we will discover next week is that these companies are still..."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 41,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

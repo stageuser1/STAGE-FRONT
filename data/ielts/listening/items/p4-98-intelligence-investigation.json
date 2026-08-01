@@ -1,0 +1,385 @@
+{
+  "id": "p4-98-intelligence-investigation",
+  "title": "Intelligence Investigation",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-cb28ab121e06",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 171.864,
+    "checksum": "sha256:49a351b6834f43c65b69445dd164b5ec5db9855f8e8b04ad548ca54706dffc6f"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40",
+      "instruction": "Write ONE WORD ONLY for each answer. Intelligence Investigation Theory from a psychologist-Spearman: IQ is passed down from parents, keeping the same through each one's 31. _____ Intelligence can't be changed since it was believed a genetic 32. _____ The evidence originated from the research of 33. _____ Theory from other psychologists: Children grew up in the same family tend to go through similar 34. _____ Children moved to another culture witnessed a great 35. _____ in the research. Theory from Howard Gardner: there are at least 7 different types of intelligence, such as linguistic, logical and 36. _____ skills. Various cognitive skills like speech, are regulated by various circuits in the 37. _____ Some people are not good at identifying others' 38. _____ Conclusion When a sense of rhythm is developed, you can unexpectedly improve your music, dancing and 39. _____ To remember a chemical formular or physical law, the best way is to make it into a 40. _____",
+      "questions": [
+        {
+          "id": "31",
+          "text": "IQ is passed down from parents, keeping the same through each one's 31. _____",
+          "answer": "Life"
+        },
+        {
+          "id": "32",
+          "text": "Intelligence can't be changed since it was believed a genetic 32. _____",
+          "answer": "Feature"
+        },
+        {
+          "id": "33",
+          "text": "The evidence originated from the research of 33. _____",
+          "answer": "Twins"
+        },
+        {
+          "id": "34",
+          "text": "Children grew up in the same family tend to go through similar 34. _____",
+          "answer": "Experiences"
+        },
+        {
+          "id": "35",
+          "text": "Children moved to another culture witnessed a great 35. _____ in the research.",
+          "answer": "Improvement"
+        },
+        {
+          "id": "36",
+          "text": "there are at least 7 different types of intelligence, such as linguistic, logical and 36. _____ skills.",
+          "answer": "Musical"
+        },
+        {
+          "id": "37",
+          "text": "Various cognitive skills like speech, are regulated by various circuits in the 37. _____",
+          "answer": "Brain"
+        },
+        {
+          "id": "38",
+          "text": "Some people are not good at identifying others' 38. _____",
+          "answer": "Face"
+        },
+        {
+          "id": "39",
+          "text": "When a sense of rhythm is developed, you can unexpectedly improve your music, dancing and 39. _____",
+          "answer": "Spelling"
+        },
+        {
+          "id": "40",
+          "text": "To remember a chemical formular or physical law, the best way is to make it into a 40. _____",
+          "answer": "Song"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Intelligence Investigation",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Theory from a psychologist-Spearman:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "IQ is passed down from parents, keeping the same through each one's 31. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Intelligence can't be changed since it was believed a genetic 32. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The evidence originated from the research of 33. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Theory from other psychologists:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Children grew up in the same family tend to go through similar 34. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Children moved to another culture witnessed a great 35. _____ in the research.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Theory from Howard Gardner:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "there are at least 7 different types of intelligence, such as linguistic, logical and 36. _____ skills.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Various cognitive skills like speech, are regulated by various circuits in the 37. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some people are not good at identifying others' 38. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Conclusion",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "When a sense of rhythm is developed, you can unexpectedly improve your music, dancing and 39. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "To remember a chemical formular or physical law, the best way is to make it into a 40. _____",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Life",
+        "32": "Feature",
+        "33": "Twins",
+        "34": "Experiences",
+        "35": "Improvement",
+        "36": "Musical",
+        "37": "Brain",
+        "38": "Face",
+        "39": "Spelling",
+        "40": "Song"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7320,
+      "text": "Today, I'm going to consider three series of intelligence early psychologist states,"
+    },
+    {
+      "startMs": 7320,
+      "endMs": 13600,
+      "text": "such as Spearmad in the 1920s, believed that each individual has a single general level"
+    },
+    {
+      "startMs": 13600,
+      "endMs": 19320,
+      "text": "of intelligence known as IQ, according to the theory we are born with a certain level"
+    },
+    {
+      "startMs": 19320,
+      "endMs": 26680,
+      "text": "of intelligence, which is inherited from our parents, and our intelligence remains constant"
+    },
+    {
+      "startMs": 26680,
+      "endMs": 28960,
+      "text": "throughout our life."
+    },
+    {
+      "startMs": 28960,
+      "endMs": 35240,
+      "text": "It follows that any intelligence tests we do at any time will give broadly similar"
+    },
+    {
+      "startMs": 35240,
+      "endMs": 36240,
+      "text": "results."
+    },
+    {
+      "startMs": 36240,
+      "endMs": 41360,
+      "text": "If this is true, it suggests that they are asin the much you can do to make yourself"
+    },
+    {
+      "startMs": 41360,
+      "endMs": 45440,
+      "text": "more intelligent, since it's genetic feature."
+    },
+    {
+      "startMs": 45440,
+      "endMs": 50240,
+      "text": "Most of the evidence for the genetic origin of the intelligence has come from studies"
+    },
+    {
+      "startMs": 50240,
+      "endMs": 55360,
+      "text": "of twins, which shows considerable similarity in their intelligence."
+    },
+    {
+      "startMs": 55360,
+      "endMs": 61560,
+      "text": "However, other psychologists have interpreted the findings of this research differently."
+    },
+    {
+      "startMs": 61560,
+      "endMs": 67960,
+      "text": "The theory says that similarity in intelligence between the subjects used in such a studies"
+    },
+    {
+      "startMs": 67960,
+      "endMs": 72080,
+      "text": "may have an environmental rather than genetic origin."
+    },
+    {
+      "startMs": 72080,
+      "endMs": 77680,
+      "text": "These psychologists that point out the children and brought up in the same family are likely"
+    },
+    {
+      "startMs": 77680,
+      "endMs": 81040,
+      "text": "to have experiences which are very similar."
+    },
+    {
+      "startMs": 81040,
+      "endMs": 86920,
+      "text": "But some research into children who have moved home and lived in another culture from"
+    },
+    {
+      "startMs": 86920,
+      "endMs": 92880,
+      "text": "the after few years, there was a significant improvement in the results."
+    },
+    {
+      "startMs": 92880,
+      "endMs": 99680,
+      "text": "In the 1990s, Harvard Garden claimed that there are at least seven separate intelligence"
+    },
+    {
+      "startMs": 99680,
+      "endMs": 105920,
+      "text": "such as linguistic and logical skills, and also, at least traditional ones, such as"
+    },
+    {
+      "startMs": 105920,
+      "endMs": 109120,
+      "text": "the category of musical abilities."
+    },
+    {
+      "startMs": 109120,
+      "endMs": 115040,
+      "text": "Such in neuropsychology suggests that different cooperative abilities such as a speech may"
+    },
+    {
+      "startMs": 115040,
+      "endMs": 120480,
+      "text": "be partially independent of each other and controlled by different circuits within the"
+    },
+    {
+      "startMs": 120480,
+      "endMs": 121480,
+      "text": "brain."
+    },
+    {
+      "startMs": 121480,
+      "endMs": 126680,
+      "text": "Support for this theory comes from the fact that some people show weakness in one particular"
+    },
+    {
+      "startMs": 126680,
+      "endMs": 132600,
+      "text": "area, for instance, some find it very difficult to recognise someone's face."
+    },
+    {
+      "startMs": 132600,
+      "endMs": 136240,
+      "text": "Well they may have no problem remembering names."
+    },
+    {
+      "startMs": 136240,
+      "endMs": 143040,
+      "text": "These apparent variation in strength and weaknesses, within one person, support garden's"
+    },
+    {
+      "startMs": 143040,
+      "endMs": 148320,
+      "text": "view, and the intelligence is multiple rather than general."
+    },
+    {
+      "startMs": 148320,
+      "endMs": 154160,
+      "text": "If you develop a sense of rhythm, this can improve not only music and dance as you expect,"
+    },
+    {
+      "startMs": 154160,
+      "endMs": 159440,
+      "text": "but also areas that aren't obviously linked, spelling for instance."
+    },
+    {
+      "startMs": 159440,
+      "endMs": 165480,
+      "text": "If you need to learn a chemical formula or law of physics by heart, turn it into a song,"
+    },
+    {
+      "startMs": 165480,
+      "endMs": 170960,
+      "text": "and it doesn't matter at all if you are out of a key, but it will be easier for you to"
+    },
+    {
+      "startMs": 170960,
+      "endMs": 171560,
+      "text": "learn it."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 34,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

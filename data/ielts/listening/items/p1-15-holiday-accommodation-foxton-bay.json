@@ -1,0 +1,605 @@
+{
+  "id": "p1-15-holiday-accommodation-foxton-bay",
+  "title": "Holiday Accommodation Foxton Bay",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-36781929651e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 237.672,
+    "checksum": "sha256:23ff5ff0b1600ee90a9b3cb025198af2e297df7b8727c653798146f0c4eb966a"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10.",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Holiday Accommodation Foxton Bay Location: Near a beach, which is beautiful and 1. ______ Amenities: a swimming pool, which can be 2. ______ so swimmers feel comfortable tennis courts Accommodation: Self-catering cottages with: two bedrooms a kitchen with facilities such as a 4. ______ a living room with TV and a collection of family 5. ______ a welcome pack includes 6. ______ , tea, and other beverages Other Information: takes 7. ______ minutes to drive to the nearest town a 8. ______ is a five-minute drive from the holiday park the nearest town has: good restaurants by the harbour amusement parks and a 9. ______ Cost: For the week beginning 22 August: 10. £ ______",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Near a beach, which is beautiful and 1. ______",
+          "answer": "safe"
+        },
+        {
+          "id": "2",
+          "text": "a swimming pool, which can be 2. ______ so swimmers feel comfortable",
+          "answer": "heated"
+        },
+        {
+          "id": "3",
+          "text": "3. ______ hire services",
+          "answer": "bicycle"
+        },
+        {
+          "id": "4",
+          "text": "a kitchen with facilities such as a 4. ______",
+          "answer": "microwave"
+        },
+        {
+          "id": "5",
+          "text": "a living room with TV and a collection of family 5. ______",
+          "answer": "games"
+        },
+        {
+          "id": "6",
+          "text": "a welcome pack includes 6. ______ , tea, and other beverages",
+          "answer": "milk"
+        },
+        {
+          "id": "7",
+          "text": "takes 7. ______ minutes to drive to the nearest town",
+          "answer": "40"
+        },
+        {
+          "id": "8",
+          "text": "a 8. ______ is a five-minute drive from the holiday park",
+          "answer": "supermarket"
+        },
+        {
+          "id": "9",
+          "text": "amusement parks and a 9. ______",
+          "answer": "cinema"
+        },
+        {
+          "id": "10",
+          "text": "For the week beginning 22 August: 10. £ ______",
+          "answer": "915"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Holiday Accommodation Foxton Bay",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Location:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Near a beach, which is beautiful and 1. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Amenities:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "a swimming pool, which can be 2. ______ so swimmers feel comfortable",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "tennis courts",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "3. ______ hire services",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Accommodation:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Self-catering cottages with:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "two bedrooms",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a kitchen with facilities such as a 4. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a living room with TV and a collection of family 5. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a welcome pack includes 6. ______ , tea, and other beverages",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Other Information:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "takes 7. ______ minutes to drive to the nearest town",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a 8. ______ is a five-minute drive from the holiday park",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "the nearest town has:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "good restaurants by the harbour",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "amusement parks and a 9. ______",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Cost:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "For the week beginning 22 August: 10. £ ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "safe",
+        "2": "heated",
+        "3": "bicycle",
+        "4": "microwave",
+        "5": "games",
+        "6": "milk",
+        "7": "40",
+        "8": "supermarket",
+        "9": "cinema",
+        "10": "915"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11020,
+      "text": "Guest: Hello, I'm looking to book a holiday for my family."
+    },
+    {
+      "startMs": 11020,
+      "endMs": 13660,
+      "text": "Do you have any recommendations?"
+    },
+    {
+      "startMs": 13660,
+      "endMs": 15420,
+      "text": "Receptionist: Absolutely."
+    },
+    {
+      "startMs": 15420,
+      "endMs": 20900,
+      "text": "We have a wonderful holiday resort, called Foxton Bay, that is perfect for families."
+    },
+    {
+      "startMs": 20900,
+      "endMs": 23100,
+      "text": "Guest: Is it close to the beach?"
+    },
+    {
+      "startMs": 23100,
+      "endMs": 145500,
+      "text": "We love spending time by the sea."
+    },
+    {
+      "startMs": 25500,
+      "endMs": 29120,
+      "text": "Receptionist: Yes, it's located near a beautiful beach."
+    },
+    {
+      "startMs": 29120,
+      "endMs": 213900,
+      "text": "They have professional lifeguards who provide peace of mind for visitors."
+    },
+    {
+      "startMs": 33900,
+      "endMs": 36700,
+      "text": "It's indeed a safe place to visit."
+    },
+    {
+      "startMs": 36700,
+      "endMs": 38780,
+      "text": "Guest: That sounds perfect."
+    },
+    {
+      "startMs": 38780,
+      "endMs": 41860,
+      "text": "What other facilities does the resort offer?"
+    },
+    {
+      "startMs": 41860,
+      "endMs": 45880,
+      "text": "Receptionist: Along with the beach, we have a swimming pool that can be heated for a more comfortable"
+    },
+    {
+      "startMs": 45880,
+      "endMs": 51540,
+      "text": "swimming experience, especially during cooler climates or colder seasons."
+    },
+    {
+      "startMs": 51540,
+      "endMs": 53340,
+      "text": "Guest: That's wonderful."
+    },
+    {
+      "startMs": 53340,
+      "endMs": 55980,
+      "text": "Are there any other activities we can enjoy?"
+    },
+    {
+      "startMs": 55980,
+      "endMs": 57660,
+      "text": "Receptionist: Absolutely."
+    },
+    {
+      "startMs": 57660,
+      "endMs": 61180,
+      "text": "We also have tennis courts for our guests to enjoy."
+    },
+    {
+      "startMs": 61180,
+      "endMs": 66140,
+      "text": "Additionally, we offer bicycle rentals for convenient transportation."
+    },
+    {
+      "startMs": 66140,
+      "endMs": 70180,
+      "text": "There are some fabulous cycling lanes near our center, where you can take in the beautiful"
+    },
+    {
+      "startMs": 70180,
+      "endMs": 72180,
+      "text": "scenery."
+    },
+    {
+      "startMs": 72180,
+      "endMs": 74140,
+      "text": "Guest: That's fantastic."
+    },
+    {
+      "startMs": 74140,
+      "endMs": 76980,
+      "text": "What are the accommodation options like?"
+    },
+    {
+      "startMs": 76980,
+      "endMs": 81380,
+      "text": "Receptionist: We offer self catering cottages, with two bedrooms, each equipped with a fully equipped"
+    },
+    {
+      "startMs": 81380,
+      "endMs": 84420,
+      "text": "kitchen, including a microwave."
+    },
+    {
+      "startMs": 84420,
+      "endMs": 88140,
+      "text": "You can prepare any dishes you like during your stay."
+    },
+    {
+      "startMs": 88140,
+      "endMs": 89940,
+      "text": "Guest: That's wonderful."
+    },
+    {
+      "startMs": 89940,
+      "endMs": 92380,
+      "text": "Are there any other amenities available?"
+    },
+    {
+      "startMs": 92380,
+      "endMs": 97620,
+      "text": "Receptionist: Yes, we also have a cozy living room with a TV, offering numerous channels for your"
+    },
+    {
+      "startMs": 97620,
+      "endMs": 98780,
+      "text": "entertainment."
+    },
+    {
+      "startMs": 98780,
+      "endMs": 104460,
+      "text": "Additionally, we provide a selection of family games that cater to different ages."
+    },
+    {
+      "startMs": 104460,
+      "endMs": 106940,
+      "text": "Guest: That's exactly what we need."
+    },
+    {
+      "startMs": 106940,
+      "endMs": 109900,
+      "text": "Will there be any provisions when we arrive?"
+    },
+    {
+      "startMs": 109900,
+      "endMs": 111700,
+      "text": "Receptionist: Certainly."
+    },
+    {
+      "startMs": 111700,
+      "endMs": 116660,
+      "text": "When you arrive, we'll greet you with a welcome pack of beverages, including milk, tea,"
+    },
+    {
+      "startMs": 116660,
+      "endMs": 118620,
+      "text": "and other drinks."
+    },
+    {
+      "startMs": 118620,
+      "endMs": 120460,
+      "text": "Guest: That's a nice touch."
+    },
+    {
+      "startMs": 120460,
+      "endMs": 124340,
+      "text": "Are there any attractions or nearby towns that we can explore?"
+    },
+    {
+      "startMs": 124340,
+      "endMs": 126420,
+      "text": "Receptionist: Absolutely."
+    },
+    {
+      "startMs": 126420,
+      "endMs": 131380,
+      "text": "There are several nearby towns, with various attractions, that you can explore."
+    },
+    {
+      "startMs": 131380,
+      "endMs": 136500,
+      "text": "The closest town is just a 40 minutes drive away, making it easily accessible."
+    },
+    {
+      "startMs": 136500,
+      "endMs": 140020,
+      "text": "Guest: Is there a store nearby where we can buy groceries if needed?"
+    },
+    {
+      "startMs": 140300,
+      "endMs": 144980,
+      "text": "Receptionist: Yes, there's a supermarket, conveniently located, just a five minute drive, from the"
+    },
+    {
+      "startMs": 144980,
+      "endMs": 146980,
+      "text": "holiday park."
+    },
+    {
+      "startMs": 146980,
+      "endMs": 151340,
+      "text": "It's perfect for our guests, especially if they want to have a barbecue party, or need"
+    },
+    {
+      "startMs": 151340,
+      "endMs": 153900,
+      "text": "to stock up on essentials."
+    },
+    {
+      "startMs": 153900,
+      "endMs": 156140,
+      "text": "Guest: That's very convenient."
+    },
+    {
+      "startMs": 156140,
+      "endMs": 158340,
+      "text": "What about dining options?"
+    },
+    {
+      "startMs": 158340,
+      "endMs": 160900,
+      "text": "Are there any restaurants nearby?"
+    },
+    {
+      "startMs": 160900,
+      "endMs": 166100,
+      "text": "Receptionist: The nearest town has a fantastic selection of restaurants, situated by the harbor."
+    },
+    {
+      "startMs": 166100,
+      "endMs": 170460,
+      "text": "You'll find a variety of cuisines, to choose from, and you can enjoy delicious food,"
+    },
+    {
+      "startMs": 170460,
+      "endMs": 173180,
+      "text": "while taking in the beautiful sea view."
+    },
+    {
+      "startMs": 173180,
+      "endMs": 177380,
+      "text": "Guest: That sounds lovely, but we don't want to travel too far for dinner."
+    },
+    {
+      "startMs": 177380,
+      "endMs": 179180,
+      "text": "Is there anything closer?"
+    },
+    {
+      "startMs": 179180,
+      "endMs": 184060,
+      "text": "Receptionist: Actually, this town also has large amusement parks, that are perfect for families with"
+    },
+    {
+      "startMs": 184060,
+      "endMs": 185060,
+      "text": "children."
+    },
+    {
+      "startMs": 185060,
+      "endMs": 190740,
+      "text": "Additionally, there is a cinema, if you're looking for entertainment options nearby."
+    },
+    {
+      "startMs": 190740,
+      "endMs": 192740,
+      "text": "Guest: That's fantastic."
+    },
+    {
+      "startMs": 192740,
+      "endMs": 195380,
+      "text": "What are the prices like for a week's stay?"
+    },
+    {
+      "startMs": 195380,
+      "endMs": 200060,
+      "text": "Receptionist: The regular price, for a week's stay, is 945 pounds."
+    },
+    {
+      "startMs": 200060,
+      "endMs": 205660,
+      "text": "However, for the week beginning August 22nd, we are currently offering a discount, bringing"
+    },
+    {
+      "startMs": 205660,
+      "endMs": 209300,
+      "text": "the price down to 915 pounds."
+    },
+    {
+      "startMs": 209300,
+      "endMs": 215980,
+      "text": "And if you choose to stay one week later, the price will be even lower at 845 pounds."
+    },
+    {
+      "startMs": 215980,
+      "endMs": 217900,
+      "text": "Guest: That's a great deal."
+    },
+    {
+      "startMs": 217900,
+      "endMs": 221380,
+      "text": "We'll take the week beginning August 22nd, then."
+    },
+    {
+      "startMs": 221380,
+      "endMs": 224820,
+      "text": "We need to be back before the new school term starts."
+    },
+    {
+      "startMs": 224820,
+      "endMs": 227140,
+      "text": "How do we proceed with the booking?"
+    },
+    {
+      "startMs": 227140,
+      "endMs": 228140,
+      "text": "Receptionist: Wonderful."
+    },
+    {
+      "startMs": 228140,
+      "endMs": 231380,
+      "text": "I'll take your details, and process the booking for you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 68,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

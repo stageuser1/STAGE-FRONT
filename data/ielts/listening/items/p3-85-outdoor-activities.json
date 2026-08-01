@@ -1,0 +1,714 @@
+{
+  "id": "p3-85-outdoor-activities",
+  "title": "Outdoor Activities",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-f851232d133d",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 517.08,
+    "checksum": "sha256:0ef23606ab94a2b6965a8b41626bb203ad37218415d92230b4fe135c52b83a5d"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "21-22",
+      "title": "Questions 21 and 22",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "What do the speakers agree are the two reasons why children play outdoors less now than in the past?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "Concerns about traffic"
+        },
+        {
+          "id": "B",
+          "text": "Limited outdoor play facilities"
+        },
+        {
+          "id": "C",
+          "text": "Increased time spent online"
+        },
+        {
+          "id": "D",
+          "text": "Preference for indoor play"
+        },
+        {
+          "id": "E",
+          "text": "Reduction in free time"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "What do the speakers agree are the two reasons why children play outdoors less now than in the past?",
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "What do the speakers agree are the two reasons why children play outdoors less now than in the past?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "23-24",
+      "title": "Questions 23 and 24.",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "In his assignment, which two aspects of outdoor play does Ravi want to focus on?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "How it helps children to evaluate risk"
+        },
+        {
+          "id": "B",
+          "text": "How it broadens their horizons"
+        },
+        {
+          "id": "C",
+          "text": "How it aids children’s muscular development"
+        },
+        {
+          "id": "D",
+          "text": "How it improves children’s digestion"
+        },
+        {
+          "id": "E",
+          "text": "How it teaches children about the environment"
+        }
+      ],
+      "questions": [
+        {
+          "id": "23",
+          "text": "In his assignment, which two aspects of outdoor play does Ravi want to focus on?",
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "In his assignment, which two aspects of outdoor play does Ravi want to focus on?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "25-26",
+      "title": "Questions 25 and 26.",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "According to Ravi, in which two ways are children’s periods of outdoor play now different from a generation ago?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "They are less dangerous."
+        },
+        {
+          "id": "B",
+          "text": "They involve fewer children."
+        },
+        {
+          "id": "C",
+          "text": "They usually last a shorter time."
+        },
+        {
+          "id": "D",
+          "text": "They include fewer made-up games."
+        },
+        {
+          "id": "E",
+          "text": "They involve fewer chasing games."
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "According to Ravi, in which two ways are children’s periods of outdoor play now different from a generation ago?",
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "According to Ravi, in which two ways are children’s periods of outdoor play now different from a generation ago?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 27-30.",
+      "instruction": "Choose the correct letter: A, B, or C.",
+      "questions": [
+        {
+          "id": "27",
+          "text": "Ravi thinks parents should be more concerned about the decline of outdoor play because",
+          "options": [
+            {
+              "id": "A",
+              "text": "It affects family relationships."
+            },
+            {
+              "id": "B",
+              "text": "It leads to health problems later in life."
+            },
+            {
+              "id": "C",
+              "text": "It makes childhood less enjoyable."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "What does Ravi say that schools should do with regard to outdoor play?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Revise their aims."
+            },
+            {
+              "id": "B",
+              "text": "Spend more money on it."
+            },
+            {
+              "id": "C",
+              "text": "Listen to the views of parents."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "What did Smith and Barker say about children in rural areas?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They tend not to be allowed on farmland."
+            },
+            {
+              "id": "B",
+              "text": "They receive more supervision outdoors."
+            },
+            {
+              "id": "C",
+              "text": "They spend more time outdoors than city children."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "What problem does Dr Chang highlight about Smith and Barker’s research?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Its findings are inconclusive."
+            },
+            {
+              "id": "B",
+              "text": "It is too old to be useful."
+            },
+            {
+              "id": "C",
+              "text": "Its focus is limited."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "27": "B",
+        "28": "A",
+        "29": "A",
+        "30": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "21_22": [
+          "A",
+          "E"
+        ],
+        "23_24": [
+          "A",
+          "D"
+        ],
+        "25_26": [
+          "C",
+          "D"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "E",
+        "23": "A",
+        "24": "D",
+        "25": "C",
+        "26": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 15600,
+      "text": "[Narrator]: You will hear a student called Ravi talking to his tutor, Dr. Cheng, about research he"
+    },
+    {
+      "startMs": 15600,
+      "endMs": 21360,
+      "text": "is doing for an assignment on children playing outdoors."
+    },
+    {
+      "startMs": 21360,
+      "endMs": 24840,
+      "text": "Just you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 51360,
+      "endMs": 68680,
+      "text": "[Dr. Cheng]: Right Ravi, tell me how the research for your assignment about children's outdoor"
+    },
+    {
+      "startMs": 68680,
+      "endMs": 70160,
+      "text": "play is going."
+    },
+    {
+      "startMs": 70160,
+      "endMs": 76840,
+      "text": "[Ravi]: Yes, well I've been reading about why children spend less time playing outside now than 20"
+    },
+    {
+      "startMs": 76840,
+      "endMs": 78800,
+      "text": "or 30 years ago."
+    },
+    {
+      "startMs": 78800,
+      "endMs": 84200,
+      "text": "[Dr. Cheng]: So is it just because of the amount of online time that children have now, which obviously"
+    },
+    {
+      "startMs": 84200,
+      "endMs": 85880,
+      "text": "happens indoors?"
+    },
+    {
+      "startMs": 85880,
+      "endMs": 92520,
+      "text": "[Ravi]: Well, if that was the case, there'd be a correlation between high internet use and low levels"
+    },
+    {
+      "startMs": 92520,
+      "endMs": 94600,
+      "text": "of outdoor play."
+    },
+    {
+      "startMs": 94600,
+      "endMs": 99520,
+      "text": "And it's nothing to do with whether there are adequate facilities outside, playgrounds"
+    },
+    {
+      "startMs": 99520,
+      "endMs": 103520,
+      "text": "for example, as any open space will do."
+    },
+    {
+      "startMs": 103520,
+      "endMs": 109040,
+      "text": "There's perhaps no single more important factor than parental worries about the dangers"
+    },
+    {
+      "startMs": 109040,
+      "endMs": 111560,
+      "text": "of vehicles on the streets."
+    },
+    {
+      "startMs": 111560,
+      "endMs": 117280,
+      "text": "[Dr. Cheng]: But it could also be that children today prefer playing indoors to outdoors?"
+    },
+    {
+      "startMs": 117280,
+      "endMs": 121920,
+      "text": "[Ravi]: Well a study in Tokyo suggests it's the other way around."
+    },
+    {
+      "startMs": 121920,
+      "endMs": 128120,
+      "text": "But children are spending more time in structured activities and out of school clubs than before."
+    },
+    {
+      "startMs": 128120,
+      "endMs": 133480,
+      "text": "And this has a knock on effect on what's left for outdoor play."
+    },
+    {
+      "startMs": 133480,
+      "endMs": 138640,
+      "text": "[Dr. Cheng]: Your premise is that outdoor play is good."
+    },
+    {
+      "startMs": 138640,
+      "endMs": 142040,
+      "text": "What exactly do you want to focus on in your assignment?"
+    },
+    {
+      "startMs": 142040,
+      "endMs": 147800,
+      "text": "[Ravi]: Well, not so much on things that apply to exercise in general, like children's muscles"
+    },
+    {
+      "startMs": 147800,
+      "endMs": 150840,
+      "text": "getting stronger because they run around."
+    },
+    {
+      "startMs": 150840,
+      "endMs": 156640,
+      "text": "And not on what seems, for instance, self-evident, that outdoor play helps children to concentrate"
+    },
+    {
+      "startMs": 156640,
+      "endMs": 158560,
+      "text": "on things other than lessons."
+    },
+    {
+      "startMs": 158560,
+      "endMs": 159760,
+      "text": "[Dr. Cheng]: Sure."
+    },
+    {
+      "startMs": 159800,
+      "endMs": 165760,
+      "text": "[Ravi]: I'd like to investigate some of the more unexpected benefits like to children's digestion."
+    },
+    {
+      "startMs": 165760,
+      "endMs": 169320,
+      "text": "This is because fresh air tends to stimulate hunger."
+    },
+    {
+      "startMs": 169320,
+      "endMs": 174520,
+      "text": "Perhaps leaving to one side the question of whether climbing trees helps educate children"
+    },
+    {
+      "startMs": 174520,
+      "endMs": 176360,
+      "text": "about the natural world."
+    },
+    {
+      "startMs": 176360,
+      "endMs": 179120,
+      "text": "[Dr. Cheng]: No, not really relevant."
+    },
+    {
+      "startMs": 179120,
+      "endMs": 184600,
+      "text": "What sort of decisions do outdoor games and activities force children to make?"
+    },
+    {
+      "startMs": 184600,
+      "endMs": 189720,
+      "text": "[Ravi]: Well, for example, how they decide how dangerous something might be."
+    },
+    {
+      "startMs": 189720,
+      "endMs": 192480,
+      "text": "I'd like to outline the main findings on that."
+    },
+    {
+      "startMs": 192480,
+      "endMs": 193800,
+      "text": "[Dr. Cheng]: Okay."
+    },
+    {
+      "startMs": 193800,
+      "endMs": 198800,
+      "text": "And as you're arguing that there's been a shift in play patterns over the last generation"
+    },
+    {
+      "startMs": 198800,
+      "endMs": 202240,
+      "text": "or so, how are you going to substantiate this?"
+    },
+    {
+      "startMs": 202240,
+      "endMs": 203240,
+      "text": "[Ravi]: Yes."
+    },
+    {
+      "startMs": 203240,
+      "endMs": 208840,
+      "text": "Surveys have compared parents' recollections of their childhood play 30 years ago with"
+    },
+    {
+      "startMs": 208840,
+      "endMs": 211200,
+      "text": "what their children do now."
+    },
+    {
+      "startMs": 211200,
+      "endMs": 216040,
+      "text": "And the nature of what children do when they are playing outdoors has changed."
+    },
+    {
+      "startMs": 216040,
+      "endMs": 217560,
+      "text": "[Dr. Cheng]: How exactly?"
+    },
+    {
+      "startMs": 217560,
+      "endMs": 223600,
+      "text": "[Ravi]: Well, surprisingly, it's not so much how often children play outside or preferences for"
+    },
+    {
+      "startMs": 223600,
+      "endMs": 225800,
+      "text": "large or small groups."
+    },
+    {
+      "startMs": 225800,
+      "endMs": 230080,
+      "text": "But the fact that the play sessions don't go on for as long."
+    },
+    {
+      "startMs": 230080,
+      "endMs": 235640,
+      "text": "And games involving one child running after another who tries to get away, these are"
+    },
+    {
+      "startMs": 235640,
+      "endMs": 238360,
+      "text": "still as popular as ever."
+    },
+    {
+      "startMs": 238360,
+      "endMs": 242000,
+      "text": "But one thing that is declined is improvised games."
+    },
+    {
+      "startMs": 242000,
+      "endMs": 245040,
+      "text": "And I'd like to examine why this might be."
+    },
+    {
+      "startMs": 245040,
+      "endMs": 246920,
+      "text": "[Dr. Cheng]: Interesting."
+    },
+    {
+      "startMs": 246920,
+      "endMs": 248920,
+      "text": "And what about safety?"
+    },
+    {
+      "startMs": 248920,
+      "endMs": 253760,
+      "text": "[Ravi]: Well, from my reading, serious accidents are still rare."
+    },
+    {
+      "startMs": 253760,
+      "endMs": 261360,
+      "text": "More kids hurt themselves falling out of bed than out of trees."
+    },
+    {
+      "startMs": 261360,
+      "endMs": 266560,
+      "text": "[Narrator]: Before you hear the rest of the discussion, you have some time to look at questions 27"
+    },
+    {
+      "startMs": 266560,
+      "endMs": 267120,
+      "text": "to 30."
+    },
+    {
+      "startMs": 275040,
+      "endMs": 304360,
+      "text": "Now, listen and answer a questions 27 to 30."
+    },
+    {
+      "startMs": 304360,
+      "endMs": 309760,
+      "text": "[Ravi]: I think that a client of outdoor play is a problem which should worry parents."
+    },
+    {
+      "startMs": 309760,
+      "endMs": 313040,
+      "text": "I mean, perhaps the children themselves don't miss it."
+    },
+    {
+      "startMs": 313040,
+      "endMs": 316440,
+      "text": "They may be happy to spend lots of time indoors."
+    },
+    {
+      "startMs": 316440,
+      "endMs": 322800,
+      "text": "But the links between inactivity and physical problems when their adults are so well established"
+    },
+    {
+      "startMs": 322800,
+      "endMs": 327560,
+      "text": "that I think kids should be encouraged to spend more time outdoors with their brothers"
+    },
+    {
+      "startMs": 327560,
+      "endMs": 329840,
+      "text": "and sisters and friends."
+    },
+    {
+      "startMs": 329840,
+      "endMs": 331440,
+      "text": "[Dr. Cheng]: What about schools?"
+    },
+    {
+      "startMs": 331440,
+      "endMs": 337000,
+      "text": "[Ravi]: Well, what I think they should do differently regarding outdoor play and it wouldn't actually"
+    },
+    {
+      "startMs": 337000,
+      "endMs": 343760,
+      "text": "require a great deal of expenditure is base their policy on different outcomes, like developing"
+    },
+    {
+      "startMs": 343760,
+      "endMs": 349800,
+      "text": "children's confidence, not just thinking about exam results, although I don't know how"
+    },
+    {
+      "startMs": 349800,
+      "endMs": 352600,
+      "text": "it would go down with the parents."
+    },
+    {
+      "startMs": 352600,
+      "endMs": 357000,
+      "text": "[Dr. Cheng]: And do children get more contact with nature in rural areas?"
+    },
+    {
+      "startMs": 357000,
+      "endMs": 360560,
+      "text": "[Ravi]: There's research on this by Smith and Barker."
+    },
+    {
+      "startMs": 360560,
+      "endMs": 366560,
+      "text": "Intuitively, you'd expect children in rural areas to spend more time out in the open, but"
+    },
+    {
+      "startMs": 366560,
+      "endMs": 371200,
+      "text": "in fact, they are generally told to keep off agricultural land."
+    },
+    {
+      "startMs": 371200,
+      "endMs": 375520,
+      "text": "Plus, there are difficulties with supervision outside towns and cities."
+    },
+    {
+      "startMs": 375520,
+      "endMs": 376520,
+      "text": "[Dr. Cheng]: Right."
+    },
+    {
+      "startMs": 376520,
+      "endMs": 382160,
+      "text": "And Smith and Barker's paper was published in 2001."
+    },
+    {
+      "startMs": 382160,
+      "endMs": 389840,
+      "text": "Not the most up-to-date, but still valid to use, but you'll need to stipulate very precisely"
+    },
+    {
+      "startMs": 389840,
+      "endMs": 395800,
+      "text": "that their focus was, if I remember correctly, just on rural areas."
+    },
+    {
+      "startMs": 395800,
+      "endMs": 401880,
+      "text": "So you'd need to consider how far their restricted findings might be applicable to urban areas"
+    },
+    {
+      "startMs": 401880,
+      "endMs": 402880,
+      "text": "as well."
+    },
+    {
+      "startMs": 402880,
+      "endMs": 403880,
+      "text": "[Ravi]: OK."
+    },
+    {
+      "startMs": 403880,
+      "endMs": 404880,
+      "text": "[Dr. Cheng]: Right."
+    },
+    {
+      "startMs": 404880,
+      "endMs": 409440,
+      "text": "So now I'd suggest you produce an overview of what you're going to cover."
+    },
+    {
+      "startMs": 413160,
+      "endMs": 416000,
+      "text": "[Narrator]: That is the end of part three."
+    },
+    {
+      "startMs": 416000,
+      "endMs": 419760,
+      "text": "You now have 30 seconds to check your answers to part three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 83,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

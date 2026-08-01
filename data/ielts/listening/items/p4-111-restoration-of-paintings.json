@@ -1,0 +1,530 @@
+{
+  "id": "p4-111-restoration-of-paintings",
+  "title": "Restoration of Paintings",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-a7b903a536c1",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 231.84,
+    "checksum": "sha256:69018a7fe3a0fdbc2a70add10af5e6c611f48702e9ce61a4f9a6db92ee0169ea"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40.",
+      "instruction": "Write ONE WORD ONLY for each answer to following questions below. The Restoration of Paintings Various Damage Ripping canvas was caused by over stretching of putting into a 31._______ Brightness changes due to accumulated 32______on top of painting Paint's color fades when exposed to the light of the 33_______ Method of storage leads to the emerge of 34______in the paint Varied 35_______causes sticky paint Restoration Process Restorers applied 36________on the back of canvas to make it stronger. Tools such as 37______are used to examine the painting completely. Cleaning Tools Restorers use sponges made from 38._______to clean the work softly Old paintings were covered with varnish, 39_______can't be used for cleaning The most common liquid used in cleaning is human 40_______",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Ripping canvas was caused by over stretching of putting into a 31._______",
+          "answer": "frame"
+        },
+        {
+          "id": "32",
+          "text": "Brightness changes due to accumulated 32______on top of painting",
+          "answer": "dirt"
+        },
+        {
+          "id": "33",
+          "text": "Paint's color fades when exposed to the light of the 33_______",
+          "answer": "sun"
+        },
+        {
+          "id": "34",
+          "text": "Method of storage leads to the emerge of 34______in the paint",
+          "answer": "crack"
+        },
+        {
+          "id": "35",
+          "text": "Varied 35_______causes sticky paint",
+          "answer": "temperature"
+        },
+        {
+          "id": "36",
+          "text": "Restorers applied 36________on the back of canvas to make it stronger.",
+          "answer": "wax"
+        },
+        {
+          "id": "37",
+          "text": "Tools such as 37______are used to examine the painting completely.",
+          "answer": "microscopes"
+        },
+        {
+          "id": "38",
+          "text": "Restorers use sponges made from 38._______to clean the work softly",
+          "answer": "cotton"
+        },
+        {
+          "id": "39",
+          "text": "Old paintings were covered with varnish, 39_______can't be used for cleaning",
+          "answer": "chemicals"
+        },
+        {
+          "id": "40",
+          "text": "The most common liquid used in cleaning is human 40_______",
+          "answer": "saliva"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write ONE WORD ONLY for each answer to following questions below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Restoration of Paintings",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Various Damage",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Ripping canvas was caused by over stretching of putting into a 31._______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Brightness changes due to accumulated 32______on top of painting",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Paint's color fades when exposed to the light of the 33_______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Method of storage leads to the emerge of 34______in the paint",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Varied 35_______causes sticky paint",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Restoration Process",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Restorers applied 36________on the back of canvas to make it stronger.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Tools such as 37______are used to examine the painting completely.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Cleaning Tools",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Restorers use sponges made from 38._______to clean the work softly",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Old paintings were covered with varnish, 39_______can't be used for cleaning",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The most common liquid used in cleaning is human 40_______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "frame",
+        "32": "dirt",
+        "33": "sun",
+        "34": "crack",
+        "35": "temperature",
+        "36": "wax",
+        "37": "microscopes",
+        "38": "cotton",
+        "39": "chemicals",
+        "40": "saliva"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5320,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 5320,
+      "endMs": 9360,
+      "text": "Welcome to today's lecture about Restoration of Paintings."
+    },
+    {
+      "startMs": 9360,
+      "endMs": 14040,
+      "text": "We all know that no matter how carefully a painting is stored or handled, it can be"
+    },
+    {
+      "startMs": 14040,
+      "endMs": 15040,
+      "text": "damaged."
+    },
+    {
+      "startMs": 15040,
+      "endMs": 20920,
+      "text": "It's the job of restoring to fix this damage, but to do so, and return a painting to the"
+    },
+    {
+      "startMs": 20920,
+      "endMs": 26760,
+      "text": "original appearance, we need to know about a material that artists have used when creating"
+    },
+    {
+      "startMs": 26760,
+      "endMs": 27760,
+      "text": "it."
+    },
+    {
+      "startMs": 27760,
+      "endMs": 34000,
+      "text": "So, the first stage through Stora is determining what kind of paint that applied to what kind"
+    },
+    {
+      "startMs": 34000,
+      "endMs": 35680,
+      "text": "of surface."
+    },
+    {
+      "startMs": 35680,
+      "endMs": 40720,
+      "text": "The Restoration process also involves the determines of what kind of damages have been"
+    },
+    {
+      "startMs": 40720,
+      "endMs": 43080,
+      "text": "done to the artwork."
+    },
+    {
+      "startMs": 43080,
+      "endMs": 48600,
+      "text": "The Arseverage Damage is concluded, when the artist is preparing to hang on and display,"
+    },
+    {
+      "startMs": 48600,
+      "endMs": 53520,
+      "text": "he or she have to stretch the canvas to fit it over a frame."
+    },
+    {
+      "startMs": 53520,
+      "endMs": 56680,
+      "text": "And this can result in the ripping of the canvas."
+    },
+    {
+      "startMs": 56680,
+      "endMs": 61880,
+      "text": "Our Stora needs to be able to fix this kind of problem and hopefully make preparation"
+    },
+    {
+      "startMs": 61880,
+      "endMs": 63400,
+      "text": "from the beginning."
+    },
+    {
+      "startMs": 63400,
+      "endMs": 65640,
+      "text": "And another thing is time."
+    },
+    {
+      "startMs": 65640,
+      "endMs": 70360,
+      "text": "This can be excessive damage to the art, or a year of painting can change from being"
+    },
+    {
+      "startMs": 70360,
+      "endMs": 72680,
+      "text": "quite bright to appearing doubt."
+    },
+    {
+      "startMs": 72680,
+      "endMs": 77160,
+      "text": "This is often due to the collection of dirt on the surface of the work."
+    },
+    {
+      "startMs": 77160,
+      "endMs": 79160,
+      "text": "This all needs to be removed."
+    },
+    {
+      "startMs": 79160,
+      "endMs": 83560,
+      "text": "It was almost the common task that Stora's performed."
+    },
+    {
+      "startMs": 83560,
+      "endMs": 87320,
+      "text": "Another problem with the paintings is fading with the colors."
+    },
+    {
+      "startMs": 87320,
+      "endMs": 92400,
+      "text": "If a painting is hardly in a round place, particularly in the tanning of the sun, this"
+    },
+    {
+      "startMs": 92400,
+      "endMs": 95360,
+      "text": "fades the paint and its appearance."
+    },
+    {
+      "startMs": 95360,
+      "endMs": 99600,
+      "text": "This happens not just hanging in the painting, also in storing them."
+    },
+    {
+      "startMs": 99600,
+      "endMs": 105400,
+      "text": "When artists want to store the painting, it's common for them to roll it up for storage."
+    },
+    {
+      "startMs": 105400,
+      "endMs": 108560,
+      "text": "This process can result in a crack in the paint."
+    },
+    {
+      "startMs": 108560,
+      "endMs": 113320,
+      "text": "Some artists such as Picasso said he might disagree, but it's possible that the paint"
+    },
+    {
+      "startMs": 113320,
+      "endMs": 119080,
+      "text": "could cut off from the canvas entirely, something that short broke artists wouldn't like."
+    },
+    {
+      "startMs": 119080,
+      "endMs": 124960,
+      "text": "It's important that when we restoring the paintings to consider how they react to things"
+    },
+    {
+      "startMs": 124960,
+      "endMs": 129200,
+      "text": "in your environment, for example the paint can become sticky."
+    },
+    {
+      "startMs": 129200,
+      "endMs": 134040,
+      "text": "This can be very serious problem, which can be caused by even the minimum change of"
+    },
+    {
+      "startMs": 134040,
+      "endMs": 138760,
+      "text": "temperature, that this is something else to watch for."
+    },
+    {
+      "startMs": 138760,
+      "endMs": 143440,
+      "text": "A lot of damage to artworks because of the restorers themselves."
+    },
+    {
+      "startMs": 143440,
+      "endMs": 148880,
+      "text": "Restorers used to try to make canvas stronger, and they put something onto the work."
+    },
+    {
+      "startMs": 148880,
+      "endMs": 153680,
+      "text": "Part of its processing brought the putting wax on the back of the canvas, but this leaves"
+    },
+    {
+      "startMs": 153680,
+      "endMs": 156640,
+      "text": "the visible marks to the surface of the paintings."
+    },
+    {
+      "startMs": 156640,
+      "endMs": 162360,
+      "text": "Hopefully, nowadays we can prove scientific knowledge, restoration can avoid making similar"
+    },
+    {
+      "startMs": 162360,
+      "endMs": 164640,
+      "text": "errors."
+    },
+    {
+      "startMs": 164640,
+      "endMs": 169680,
+      "text": "Restorers have several tools of exposures, some are high-tech, others are surprisingly"
+    },
+    {
+      "startMs": 169680,
+      "endMs": 170680,
+      "text": "low-tech."
+    },
+    {
+      "startMs": 170680,
+      "endMs": 175960,
+      "text": "It's not that common to see a restorer examine a name painting to use the certain tool"
+    },
+    {
+      "startMs": 175960,
+      "endMs": 180440,
+      "text": "to eliminate the mind and live it under the surface of the paint, but it's important"
+    },
+    {
+      "startMs": 180440,
+      "endMs": 185080,
+      "text": "to analyze what kind of paint or materials that artists are used."
+    },
+    {
+      "startMs": 185080,
+      "endMs": 190600,
+      "text": "Restorers often use microscopes so they can analyze the materials thoroughly."
+    },
+    {
+      "startMs": 190600,
+      "endMs": 195960,
+      "text": "For restoration, involves cleaning the surface of the painting, restorers use sponge made"
+    },
+    {
+      "startMs": 195960,
+      "endMs": 198760,
+      "text": "from cotton to gently clean the work."
+    },
+    {
+      "startMs": 198760,
+      "endMs": 203680,
+      "text": "It might be curious about what is used to clean the paintings, because some of the very"
+    },
+    {
+      "startMs": 203680,
+      "endMs": 209040,
+      "text": "old paintings are covered with varnish, chemicals cannot be used for cleaning, due to the fact"
+    },
+    {
+      "startMs": 209040,
+      "endMs": 212920,
+      "text": "that they can remove a damage to the varnish layer."
+    },
+    {
+      "startMs": 212920,
+      "endMs": 216680,
+      "text": "But restorers have to use something to clean the paintings."
+    },
+    {
+      "startMs": 216680,
+      "endMs": 219480,
+      "text": "This is where the low-tech tools come in."
+    },
+    {
+      "startMs": 219480,
+      "endMs": 223400,
+      "text": "The most common liquid used in cleaning is a human saliva."
+    },
+    {
+      "startMs": 223400,
+      "endMs": 226680,
+      "text": "It does a great job of cleaning the painting."
+    },
+    {
+      "startMs": 226680,
+      "endMs": 228440,
+      "text": "It doesn't cause damage."
+    },
+    {
+      "startMs": 228440,
+      "endMs": 231440,
+      "text": "Now I'll start by looking at the function of cleaning."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 57,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

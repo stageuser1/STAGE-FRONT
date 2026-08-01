@@ -1,0 +1,490 @@
+{
+  "id": "p4-25-office-design",
+  "title": "Office Design",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-e29db5eaf4e0",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 338.064,
+    "checksum": "sha256:38c6ae937650d1340806b548f3cfc066e544b4eea57d5364eae08fe046b50287"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Office Design Early 20th Century workers employed to do 31. __________ were arranged in rows 1960s to present Variations in design of open-plan offices: first, workers had individual 32. __________ later, they had cubicles with high or low 33. __________ nowadays, workers may have to 34. __________ a work area Survey results Attitudes of employees to open-plan designs: there is a lack of 35. __________ and 36. __________ they pose a risk to our 37. __________ (staff records support this) Attitudes of employers to open-plan designs: they significantly reduce rent and 38. __________ costs they improve teamwork and communication they can make 39. __________ staff easier In reality, employees are unhappy and they are often distracted by the 40. __________ in the office.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "workers employed to do 31. __________ were arranged in rows",
+          "answer": "typing"
+        },
+        {
+          "id": "32",
+          "text": "first, workers had individual 32. __________",
+          "answer": "desks"
+        },
+        {
+          "id": "33",
+          "text": "later, they had cubicles with high or low 33. __________",
+          "answer": "screens"
+        },
+        {
+          "id": "34",
+          "text": "nowadays, workers may have to 34. __________ a work area",
+          "answer": "share"
+        },
+        {
+          "id": "35",
+          "text": "there is a lack of 35. __________ and 36. __________",
+          "answer": "privacy"
+        },
+        {
+          "id": "36",
+          "text": "there is a lack of 35. __________ and 36. __________",
+          "answer": "security"
+        },
+        {
+          "id": "37",
+          "text": "they pose a risk to our 37. __________ (staff records support this)",
+          "answer": "health"
+        },
+        {
+          "id": "38",
+          "text": "they significantly reduce rent and 38. __________ costs",
+          "answer": "energy"
+        },
+        {
+          "id": "39",
+          "text": "they can make 39. __________ staff easier",
+          "answer": "training"
+        },
+        {
+          "id": "40",
+          "text": "In reality, employees are unhappy and they are often distracted by the 40. __________ in the office.",
+          "answer": "noise"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Office Design",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Early 20th Century",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "workers employed to do 31. __________ were arranged in rows",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1960s to present",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Variations in design of open-plan offices:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "first, workers had individual 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "later, they had cubicles with high or low 33. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "nowadays, workers may have to 34. __________ a work area",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Survey results",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Attitudes of employees to open-plan designs:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "there is a lack of 35. __________ and 36. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "they pose a risk to our 37. __________ (staff records support this)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Attitudes of employers to open-plan designs:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "they significantly reduce rent and 38. __________ costs",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "they improve teamwork and communication",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "they can make 39. __________ staff easier",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In reality, employees are unhappy and they are often distracted by the 40. __________ in the office.",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "typing",
+        "32": "desks",
+        "33": "screens",
+        "34": "share",
+        "35": "privacy",
+        "36": "security",
+        "37": "health",
+        "38": "energy",
+        "39": "training",
+        "40": "noise"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 14440,
+      "text": "You will hear part of a talk about recent research into the design of workplaces."
+    },
+    {
+      "startMs": 14440,
+      "endMs": 20200,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 75920,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 75920,
+      "endMs": 80480,
+      "text": "Hello everyone."
+    },
+    {
+      "startMs": 80480,
+      "endMs": 86760,
+      "text": "I recently completed some important research into the way office space is designed and its"
+    },
+    {
+      "startMs": 86760,
+      "endMs": 89000,
+      "text": "impact on employees."
+    },
+    {
+      "startMs": 89000,
+      "endMs": 93120,
+      "text": "The open plan office had been the norm for offices around the world."
+    },
+    {
+      "startMs": 93120,
+      "endMs": 95320,
+      "text": "I'm sure you can picture one."
+    },
+    {
+      "startMs": 95320,
+      "endMs": 101280,
+      "text": "A big room with maybe 50 or 100 workers sitting at their workstations."
+    },
+    {
+      "startMs": 101280,
+      "endMs": 107560,
+      "text": "You might think open plan designs are a recent phenomenon, but they actually came about"
+    },
+    {
+      "startMs": 107560,
+      "endMs": 115080,
+      "text": "in the early 20th century when businesses needed large numbers of people to do typing."
+    },
+    {
+      "startMs": 115080,
+      "endMs": 120560,
+      "text": "These employees, usually women, used to have to sit in rows working away at their type"
+    },
+    {
+      "startMs": 120560,
+      "endMs": 124200,
+      "text": "writers under the watchful eye of their supervisor."
+    },
+    {
+      "startMs": 124200,
+      "endMs": 130600,
+      "text": "Over the years, designers have come up with several variations on the open theme."
+    },
+    {
+      "startMs": 130600,
+      "endMs": 134840,
+      "text": "In particular, this has been achieved through furnishings."
+    },
+    {
+      "startMs": 134840,
+      "endMs": 138360,
+      "text": "The early designs featured separate desks."
+    },
+    {
+      "startMs": 138360,
+      "endMs": 143200,
+      "text": "A subsequent design introduced the concept of the cubicle."
+    },
+    {
+      "startMs": 143200,
+      "endMs": 149360,
+      "text": "This can have either high screens that workers can't see over or a screen just low enough"
+    },
+    {
+      "startMs": 149360,
+      "endMs": 152040,
+      "text": "to keep a lookout for the manager."
+    },
+    {
+      "startMs": 152040,
+      "endMs": 158400,
+      "text": "And nowadays, with the increase in large call centres, a phenomenon known as hot desking"
+    },
+    {
+      "startMs": 158400,
+      "endMs": 160000,
+      "text": "is common."
+    },
+    {
+      "startMs": 160000,
+      "endMs": 166880,
+      "text": "In this system, employees working on different shifts are asked to share the same workstation."
+    },
+    {
+      "startMs": 166880,
+      "endMs": 171800,
+      "text": "As you can imagine, this is not very popular with staff, as there is little opportunity"
+    },
+    {
+      "startMs": 171800,
+      "endMs": 179680,
+      "text": "to personalise your workspace."
+    },
+    {
+      "startMs": 179680,
+      "endMs": 186880,
+      "text": "In fact, my research shows that employees in general dislike the open plan design."
+    },
+    {
+      "startMs": 186880,
+      "endMs": 192520,
+      "text": "As a part of my research, I conducted a survey of the staff in several large companies"
+    },
+    {
+      "startMs": 192520,
+      "endMs": 194920,
+      "text": "with open plan offices."
+    },
+    {
+      "startMs": 194920,
+      "endMs": 199120,
+      "text": "The employees all voiced similar concerns about the design."
+    },
+    {
+      "startMs": 199120,
+      "endMs": 205040,
+      "text": "Firstly, they felt that the open plan took away their privacy, but many also felt the"
+    },
+    {
+      "startMs": 205040,
+      "endMs": 208560,
+      "text": "need to carry their valuables with them at all times."
+    },
+    {
+      "startMs": 208560,
+      "endMs": 214520,
+      "text": "So to some extent, they also felt there was less security with these designs."
+    },
+    {
+      "startMs": 214520,
+      "endMs": 219040,
+      "text": "Another common complaint may be something for employers to consider when choosing this"
+    },
+    {
+      "startMs": 219040,
+      "endMs": 225240,
+      "text": "type of design, and this was that these types of office space are bad for the health."
+    },
+    {
+      "startMs": 225240,
+      "endMs": 230920,
+      "text": "I was intrigued by this possibility, but looking at staff records, it does seem to be"
+    },
+    {
+      "startMs": 230920,
+      "endMs": 233120,
+      "text": "borne out."
+    },
+    {
+      "startMs": 233120,
+      "endMs": 238040,
+      "text": "So if this design is so unpopular, why is it so commonplace?"
+    },
+    {
+      "startMs": 238040,
+      "endMs": 243760,
+      "text": "Well, the answer to that is in the benefits that the employers feel this type of design"
+    },
+    {
+      "startMs": 243760,
+      "endMs": 244760,
+      "text": "has."
+    },
+    {
+      "startMs": 244760,
+      "endMs": 251400,
+      "text": "Of course, there is the obvious benefit that this design significantly reduces costs, both"
+    },
+    {
+      "startMs": 251400,
+      "endMs": 256840,
+      "text": "in terms of rent and even in terms of energy use."
+    },
+    {
+      "startMs": 256840,
+      "endMs": 263320,
+      "text": "Employers also argue that an open plan design leads to better teamwork and communication."
+    },
+    {
+      "startMs": 263320,
+      "endMs": 268840,
+      "text": "They also feel that new staff can learn from observing other workers, so this design"
+    },
+    {
+      "startMs": 268840,
+      "endMs": 271880,
+      "text": "can actually help in training staff."
+    },
+    {
+      "startMs": 271880,
+      "endMs": 278440,
+      "text": "However, the complaints voiced by employees seem to suggest that the disadvantages far"
+    },
+    {
+      "startMs": 278440,
+      "endMs": 280760,
+      "text": "outweigh the advantages."
+    },
+    {
+      "startMs": 280760,
+      "endMs": 286720,
+      "text": "The reality is that unhappy workers are unlikely to work well together, and there is plenty"
+    },
+    {
+      "startMs": 286720,
+      "endMs": 292800,
+      "text": "of evidence to suggest workers are frequently distracted from their work by the noise that"
+    },
+    {
+      "startMs": 292800,
+      "endMs": 294880,
+      "text": "is all around them."
+    },
+    {
+      "startMs": 294880,
+      "endMs": 300320,
+      "text": "What is clear is that, as designers, we need to think carefully about the impact that"
+    },
+    {
+      "startMs": 300320,
+      "endMs": 308760,
+      "text": "our design has both on the staff involved and the work that they do."
+    },
+    {
+      "startMs": 308760,
+      "endMs": 311560,
+      "text": "It is the end of Part 4."
+    },
+    {
+      "startMs": 311560,
+      "endMs": 315440,
+      "text": "You now have one minute to check your answers to Part 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 52,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

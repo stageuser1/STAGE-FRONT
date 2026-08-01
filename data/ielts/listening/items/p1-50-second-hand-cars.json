@@ -1,0 +1,800 @@
+{
+  "id": "p1-50-second-hand-cars",
+  "title": "Second-hand Cars",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-2096d9e867f9",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 474.072,
+    "checksum": "sha256:8e96f97c81eb5823a3c872b8d52e8e6d6a6430bdbbf06d1199227535c01a0eb8"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 1–10",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Second-hand Cars Cars Available Noda (silver) One 1. ________ is broken Comina (white) Used to belong to the 2. ________ Telsta (orange) It’s an 3. ________ model Has got new 4. ________ Abrada (red) Only 5. ________ years old Other Information Garage address: 6. ________ Road, Mitchell Day/Time: on 7. ________ at 9:30am Ask for: 8. ________ Smith Parking available: outside the 9. ________ What to bring: 10. ________ (for a test drive)",
+      "questions": [
+        {
+          "id": "1",
+          "text": "One 1. ________ is broken",
+          "answer": "light"
+        },
+        {
+          "id": "2",
+          "text": "Used to belong to the 2. ________",
+          "answer": "manager"
+        },
+        {
+          "id": "3",
+          "text": "It’s an 3. ________ model",
+          "answer": "automatic"
+        },
+        {
+          "id": "4",
+          "text": "Has got new 4. ________",
+          "answer": "tires/tyres"
+        },
+        {
+          "id": "5",
+          "text": "Only 5. ________ years old",
+          "answer": "8/eight"
+        },
+        {
+          "id": "6",
+          "text": "Garage address: 6. ________ Road, Mitchell",
+          "answer": "station"
+        },
+        {
+          "id": "7",
+          "text": "Day/Time: on 7. ________ at 9:30am",
+          "answer": "Thursday"
+        },
+        {
+          "id": "8",
+          "text": "Ask for: 8. ________ Smith",
+          "answer": "GERALD"
+        },
+        {
+          "id": "9",
+          "text": "Parking available: outside the 9. ________",
+          "answer": "supermarket"
+        },
+        {
+          "id": "10",
+          "text": "What to bring: 10. ________ (for a test drive)",
+          "answer": "identification"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Second-hand Cars",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Cars Available",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Noda (silver)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "One 1. ________ is broken",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Comina (white)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Used to belong to the 2. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Telsta (orange)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "It’s an 3. ________ model",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Has got new 4. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Abrada (red)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Only 5. ________ years old",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Other Information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Garage address: 6. ________ Road, Mitchell",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Day/Time: on 7. ________ at 9:30am",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Ask for: 8. ________ Smith",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Parking available: outside the 9. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "What to bring: 10. ________ (for a test drive)",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "light",
+        "2": "manager",
+        "3": "automatic",
+        "4": "tires/tyres",
+        "5": "8/eight",
+        "6": "station",
+        "7": "Thursday",
+        "8": "GERALD",
+        "9": "supermarket",
+        "10": "identification"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12160,
+      "text": "IELTS Listening Version 5 4165"
+    },
+    {
+      "startMs": 12160,
+      "endMs": 17480,
+      "text": "You will hear a number of different recordings, and you will have to answer questions on what"
+    },
+    {
+      "startMs": 17480,
+      "endMs": 19480,
+      "text": "you hear."
+    },
+    {
+      "startMs": 19480,
+      "endMs": 25320,
+      "text": "There will be time for you to read the instructions and questions, and you will have a chance to"
+    },
+    {
+      "startMs": 25320,
+      "endMs": 27400,
+      "text": "check your work."
+    },
+    {
+      "startMs": 27400,
+      "endMs": 31560,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 31560,
+      "endMs": 34960,
+      "text": "The test is in four sections."
+    },
+    {
+      "startMs": 34960,
+      "endMs": 38200,
+      "text": "Write all your answers in the listening question booklet."
+    },
+    {
+      "startMs": 38200,
+      "endMs": 44680,
+      "text": "At the end of the test, you will be given ten minutes to transfer your answers to an"
+    },
+    {
+      "startMs": 44680,
+      "endMs": 47800,
+      "text": "answer sheet."
+    },
+    {
+      "startMs": 47800,
+      "endMs": 52200,
+      "text": "Now turn to section one on page two of your question booklet."
+    },
+    {
+      "startMs": 57560,
+      "endMs": 59800,
+      "text": "Section one."
+    },
+    {
+      "startMs": 59800,
+      "endMs": 65120,
+      "text": "You will hear a woman talking on the phone to a car salesman about some second hand cars"
+    },
+    {
+      "startMs": 65120,
+      "endMs": 67640,
+      "text": "he has for sale."
+    },
+    {
+      "startMs": 67640,
+      "endMs": 72800,
+      "text": "First you have some time to look at questions one to five on page two."
+    },
+    {
+      "startMs": 87400,
+      "endMs": 102720,
+      "text": "You will see that there is an example that has been done for you."
+    },
+    {
+      "startMs": 102720,
+      "endMs": 109160,
+      "text": "On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 109160,
+      "endMs": 117360,
+      "text": "Woman: Hello, I heard your advert on the radio about the sale you're having, and I wanted to"
+    },
+    {
+      "startMs": 117360,
+      "endMs": 119280,
+      "text": "find out about your cars."
+    },
+    {
+      "startMs": 119280,
+      "endMs": 124000,
+      "text": "Salesman: Well you've called the right place, so how much do you want to spend?"
+    },
+    {
+      "startMs": 124000,
+      "endMs": 133560,
+      "text": "Woman: I'd like to spend about $4,000, but definitely no more than $4,300."
+    },
+    {
+      "startMs": 133560,
+      "endMs": 142160,
+      "text": "The maximum the woman would like to spend is $4,300, so $4,300 has been written in the"
+    },
+    {
+      "startMs": 142160,
+      "endMs": 144440,
+      "text": "space."
+    },
+    {
+      "startMs": 144440,
+      "endMs": 146400,
+      "text": "Now we shall begin."
+    },
+    {
+      "startMs": 146400,
+      "endMs": 151280,
+      "text": "You should answer the questions as you listen because you will not hear the recording"
+    },
+    {
+      "startMs": 151280,
+      "endMs": 153680,
+      "text": "a second time."
+    },
+    {
+      "startMs": 153680,
+      "endMs": 160520,
+      "text": "Listen carefully and answer questions one to five."
+    },
+    {
+      "startMs": 160520,
+      "endMs": 165920,
+      "text": "Woman: Hello, I heard your advert on the radio about the sale you're having and I wanted to"
+    },
+    {
+      "startMs": 165920,
+      "endMs": 167880,
+      "text": "find out about your cars."
+    },
+    {
+      "startMs": 167880,
+      "endMs": 172040,
+      "text": "Salesman: Well you've called the right place, so how much do you want to spend?"
+    },
+    {
+      "startMs": 172520,
+      "endMs": 178880,
+      "text": "Woman: I'd like to spend about $4,000, but definitely no more than $4,300."
+    },
+    {
+      "startMs": 178880,
+      "endMs": 183720,
+      "text": "Salesman: Okay, for that price we've got some nice cars, I've got a lovely Noda."
+    },
+    {
+      "startMs": 183720,
+      "endMs": 185120,
+      "text": "Do you know that model?"
+    },
+    {
+      "startMs": 185120,
+      "endMs": 187800,
+      "text": "Woman: Yes, what color is it?"
+    },
+    {
+      "startMs": 187800,
+      "endMs": 192120,
+      "text": "I know it sounds unimportant, but there are certain colours I don't want."
+    },
+    {
+      "startMs": 192120,
+      "endMs": 194600,
+      "text": "Salesman: Well this one is silver."
+    },
+    {
+      "startMs": 194600,
+      "endMs": 200560,
+      "text": "Woman: That's good, because I don't want a dark colour like black, as they get too hot in summer,"
+    },
+    {
+      "startMs": 200560,
+      "endMs": 202200,
+      "text": "so is it in good condition?"
+    },
+    {
+      "startMs": 202200,
+      "endMs": 207040,
+      "text": "Salesman: It's just had a state of the art stereo put in, and although one light is damaged, we'd"
+    },
+    {
+      "startMs": 207040,
+      "endMs": 209640,
+      "text": "repair that for you if you decided to buy it."
+    },
+    {
+      "startMs": 209640,
+      "endMs": 211040,
+      "text": "Woman: Oh, that's good of you."
+    },
+    {
+      "startMs": 211040,
+      "endMs": 213880,
+      "text": "Salesman: I've also got a Comina, it's a white one."
+    },
+    {
+      "startMs": 213880,
+      "endMs": 217720,
+      "text": "It's slightly more expensive than the Noda, but it's a good car."
+    },
+    {
+      "startMs": 217720,
+      "endMs": 221640,
+      "text": "I know it quite well because it was owned by our manager here, so I used to get to drive"
+    },
+    {
+      "startMs": 221640,
+      "endMs": 223040,
+      "text": "it quite a bit."
+    },
+    {
+      "startMs": 223040,
+      "endMs": 226520,
+      "text": "Woman: The Comina is okay, but it's a little on the big side."
+    },
+    {
+      "startMs": 226520,
+      "endMs": 228800,
+      "text": "Salesman: Well, how about a Telsta?"
+    },
+    {
+      "startMs": 228800,
+      "endMs": 231880,
+      "text": "They're smaller, but not too small."
+    },
+    {
+      "startMs": 231880,
+      "endMs": 233720,
+      "text": "We've got an orange one of those."
+    },
+    {
+      "startMs": 233720,
+      "endMs": 236520,
+      "text": "Actually, what kind of model were you after?"
+    },
+    {
+      "startMs": 236520,
+      "endMs": 238000,
+      "text": "This one's an automatic."
+    },
+    {
+      "startMs": 238000,
+      "endMs": 239000,
+      "text": "Woman: Great."
+    },
+    {
+      "startMs": 239000,
+      "endMs": 244120,
+      "text": "They are so much easier to drive than the manual model, although I'm fine with either."
+    },
+    {
+      "startMs": 244120,
+      "endMs": 249600,
+      "text": "Salesman: And another good feature is that the previous owner only replaced its tyres last month."
+    },
+    {
+      "startMs": 249600,
+      "endMs": 255160,
+      "text": "Woman: That will save some money, and anything to do with the wheels is so important for safety."
+    },
+    {
+      "startMs": 255160,
+      "endMs": 256320,
+      "text": "It might be worth a look."
+    },
+    {
+      "startMs": 256320,
+      "endMs": 257320,
+      "text": "Salesman: Okay."
+    },
+    {
+      "startMs": 257320,
+      "endMs": 260960,
+      "text": "Now, let's look at what else we've got in your price range."
+    },
+    {
+      "startMs": 260960,
+      "endMs": 262440,
+      "text": "How about an Abrada?"
+    },
+    {
+      "startMs": 262440,
+      "endMs": 263440,
+      "text": "It's a red one."
+    },
+    {
+      "startMs": 263440,
+      "endMs": 266200,
+      "text": "It's the newest of the cars for sale in your bracket."
+    },
+    {
+      "startMs": 266200,
+      "endMs": 267200,
+      "text": "Woman: How old is it?"
+    },
+    {
+      "startMs": 267200,
+      "endMs": 270440,
+      "text": "I doubt I could afford anything less than ten years old."
+    },
+    {
+      "startMs": 270440,
+      "endMs": 272040,
+      "text": "Salesman: Well, you might be surprised."
+    },
+    {
+      "startMs": 272040,
+      "endMs": 275320,
+      "text": "There was only one previous owner, and they had it eight years."
+    },
+    {
+      "startMs": 275320,
+      "endMs": 277880,
+      "text": "All the others are at least nine years old."
+    },
+    {
+      "startMs": 277880,
+      "endMs": 278880,
+      "text": "Woman: Hmm."
+    },
+    {
+      "startMs": 278880,
+      "endMs": 283880,
+      "text": "Now, that's a possibility."
+    },
+    {
+      "startMs": 283880,
+      "endMs": 289040,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions six"
+    },
+    {
+      "startMs": 289040,
+      "endMs": 291080,
+      "text": "to ten on page two."
+    },
+    {
+      "startMs": 313880,
+      "endMs": 320880,
+      "text": "Now, listen, and answer questions six to ten."
+    },
+    {
+      "startMs": 320880,
+      "endMs": 321880,
+      "text": "Woman: Okay."
+    },
+    {
+      "startMs": 321880,
+      "endMs": 327200,
+      "text": "Well, I'm interested in a couple of those."
+    },
+    {
+      "startMs": 327200,
+      "endMs": 328800,
+      "text": "Could I come and take a look at them?"
+    },
+    {
+      "startMs": 328800,
+      "endMs": 329800,
+      "text": "Salesman: Sure."
+    },
+    {
+      "startMs": 329800,
+      "endMs": 330800,
+      "text": "We're open seven days a week."
+    },
+    {
+      "startMs": 330800,
+      "endMs": 332480,
+      "text": "Do you know where we are?"
+    },
+    {
+      "startMs": 332480,
+      "endMs": 333480,
+      "text": "Woman: I think so."
+    },
+    {
+      "startMs": 333480,
+      "endMs": 336440,
+      "text": "You're on Station Road in Mitchell, right?"
+    },
+    {
+      "startMs": 336440,
+      "endMs": 339320,
+      "text": "I usually go past your place when I'm on the bus."
+    },
+    {
+      "startMs": 339320,
+      "endMs": 340320,
+      "text": "Salesman: That's right."
+    },
+    {
+      "startMs": 340320,
+      "endMs": 341320,
+      "text": "You can't miss us."
+    },
+    {
+      "startMs": 341320,
+      "endMs": 342720,
+      "text": "What day would suit you?"
+    },
+    {
+      "startMs": 342760,
+      "endMs": 347920,
+      "text": "Don't leave it too long as these cars are likely to go quickly at these prices."
+    },
+    {
+      "startMs": 347920,
+      "endMs": 352440,
+      "text": "Woman: Well, I couldn't get there before Wednesday, and even that might be pushing it."
+    },
+    {
+      "startMs": 352440,
+      "endMs": 353840,
+      "text": "How does Thursday sound?"
+    },
+    {
+      "startMs": 353840,
+      "endMs": 354800,
+      "text": "Salesman: Sounds good."
+    },
+    {
+      "startMs": 354800,
+      "endMs": 358640,
+      "text": "I usually don't work then or Fridays, but I am this week."
+    },
+    {
+      "startMs": 358640,
+      "endMs": 359560,
+      "text": "Woman: That's good."
+    },
+    {
+      "startMs": 359560,
+      "endMs": 361480,
+      "text": "I'd prefer to deal with you."
+    },
+    {
+      "startMs": 361480,
+      "endMs": 364280,
+      "text": "Woman: Okay, so would nine thirty in the morning be okay?"
+    },
+    {
+      "startMs": 364280,
+      "endMs": 365280,
+      "text": "Salesman: No worries."
+    },
+    {
+      "startMs": 365280,
+      "endMs": 367760,
+      "text": "When you arrive, ask for Gerald Smith."
+    },
+    {
+      "startMs": 367760,
+      "endMs": 371360,
+      "text": "That's G-E-R-A-L-D."
+    },
+    {
+      "startMs": 371360,
+      "endMs": 372120,
+      "text": "Woman: Okay."
+    },
+    {
+      "startMs": 372160,
+      "endMs": 375880,
+      "text": "Salesman: Now, will you be coming by car or public transport?"
+    },
+    {
+      "startMs": 375880,
+      "endMs": 378440,
+      "text": "Woman: I'll probably come with my dad in his car."
+    },
+    {
+      "startMs": 378440,
+      "endMs": 380400,
+      "text": "He knows all about this sort of thing."
+    },
+    {
+      "startMs": 380400,
+      "endMs": 383280,
+      "text": "Salesman: Well, you should be able to park at the supermarket."
+    },
+    {
+      "startMs": 383280,
+      "endMs": 386440,
+      "text": "Parking can be a bit hard with all the businesses around here"
+    },
+    {
+      "startMs": 386440,
+      "endMs": 388480,
+      "text": "and all our cars out the front."
+    },
+    {
+      "startMs": 388480,
+      "endMs": 389440,
+      "text": "Woman: Great."
+    },
+    {
+      "startMs": 389440,
+      "endMs": 391960,
+      "text": "Now, is there anything I need to bring with me?"
+    },
+    {
+      "startMs": 391960,
+      "endMs": 393520,
+      "text": "Salesman: Let me think."
+    },
+    {
+      "startMs": 393520,
+      "endMs": 395640,
+      "text": "If you want to take the car for a test drive,"
+    },
+    {
+      "startMs": 395640,
+      "endMs": 397920,
+      "text": "you'll need to have identification with you."
+    },
+    {
+      "startMs": 397920,
+      "endMs": 401680,
+      "text": "I mean, otherwise you could just drive off and never come back."
+    },
+    {
+      "startMs": 401720,
+      "endMs": 402520,
+      "text": "Woman: Okay."
+    },
+    {
+      "startMs": 402520,
+      "endMs": 403640,
+      "text": "That's easy."
+    },
+    {
+      "startMs": 403640,
+      "endMs": 404480,
+      "text": "Salesman: Perfect."
+    },
+    {
+      "startMs": 404480,
+      "endMs": 405640,
+      "text": "See you later this week."
+    },
+    {
+      "startMs": 408960,
+      "endMs": 411720,
+      "text": "That is the end of section one."
+    },
+    {
+      "startMs": 411720,
+      "endMs": 415440,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 431680,
+      "endMs": 448680,
+      "text": "Now turn to section two on page three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 114,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

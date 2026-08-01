@@ -551,6 +551,8 @@ function toListeningSet(set: StaticListeningSet): ListeningSet {
     frequency: set.frequency,
     audioUrl: set.audioUrl,
     durationSec: set.durationSec,
+    audioMetadata: set.audioMetadata,
+    transcriptRef: set.transcriptRef,
     questionGroups: set.questionGroups,
   } satisfies ListeningSet;
 }
@@ -674,7 +676,13 @@ export class StaticListeningSource implements ListeningSetSource {
         if (!this.listeningManifestUrl) return new Map();
 
         try {
-          const response = await fetch(this.listeningManifestUrl);
+          // A hard deadline, not just error handling: cross-region OSS
+          // requests can hang for minutes, and an unresolved fetch here
+          // stalls every page that needs the manifest. On timeout the item
+          // JSON's own asset ids produce identical audio URLs.
+          const response = await fetch(this.listeningManifestUrl, {
+            signal: AbortSignal.timeout(5_000),
+          });
           if (!response.ok) return new Map();
 
           const manifest = (await response.json()) as ListeningManifest;

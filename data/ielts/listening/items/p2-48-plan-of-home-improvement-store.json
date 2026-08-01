@@ -1,0 +1,506 @@
+{
+  "id": "p2-48-plan-of-home-improvement-store",
+  "title": "Plan of Home Improvement Store",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-8db620b229f0",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 489.072,
+    "checksum": "sha256:516d572054f173945a05daf5b5f146937f5e5ee01b36d883843fce7fae0623e0"
+  },
+  "groups": [
+    {
+      "type": "map",
+      "title": "Questions 11–15",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Paint",
+          "answer": "H"
+        },
+        {
+          "id": "12",
+          "text": "Kitchen",
+          "answer": "C"
+        },
+        {
+          "id": "13",
+          "text": "Children’s play area",
+          "answer": "G"
+        },
+        {
+          "id": "14",
+          "text": "Shower and bath",
+          "answer": "E"
+        },
+        {
+          "id": "15",
+          "text": "Garden",
+          "answer": "D"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-48-plan-of-home-improvement-store-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-48-plan-of-home-improvement-store-map-png-map.png"
+      }
+    },
+    {
+      "type": "single",
+      "title": "Questions 16–20",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "16",
+          "text": "What makes the Home Improvement Store special?",
+          "options": [
+            {
+              "id": "A",
+              "text": "their low prices"
+            },
+            {
+              "id": "B",
+              "text": "their wide range of products"
+            },
+            {
+              "id": "C",
+              "text": "their customer service"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "17",
+          "text": "What should staff promote to customers?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the catalogue"
+            },
+            {
+              "id": "B",
+              "text": "the magazine"
+            },
+            {
+              "id": "C",
+              "text": "the website"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "What do the current staff like best about working in the store?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the general staff discounts"
+            },
+            {
+              "id": "B",
+              "text": "the good atmosphere"
+            },
+            {
+              "id": "C",
+              "text": "the flexible working time"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "19",
+          "text": "What will the next workshop be about?",
+          "options": [
+            {
+              "id": "A",
+              "text": "how to grow plants"
+            },
+            {
+              "id": "B",
+              "text": "how to fix a fence"
+            },
+            {
+              "id": "C",
+              "text": "how to paint a room"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "20",
+          "text": "What special deal does the company offer when people buy a new kitchen?",
+          "options": [
+            {
+              "id": "A",
+              "text": "free appliance"
+            },
+            {
+              "id": "B",
+              "text": "free delivery"
+            },
+            {
+              "id": "C",
+              "text": "free installation"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "16": "A",
+        "17": "B",
+        "18": "C",
+        "19": "B",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "11": "H",
+        "12": "C",
+        "13": "G",
+        "14": "E",
+        "15": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12080,
+      "text": "Part 2. You will hear the supervisor of a home improvement store giving a tour of the store"
+    },
+    {
+      "startMs": 12080,
+      "endMs": 20460,
+      "text": "to some new staff. First, you have some time to look at questions 11-15 on page 4."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 53720,
+      "text": "Now listen carefully and answer questions 11-15."
+    },
+    {
+      "startMs": 53720,
+      "endMs": 59000,
+      "text": "Welcome to today's staff orientation at the home improvement store. My name is John."
+    },
+    {
+      "startMs": 59000,
+      "endMs": 64160,
+      "text": "I look after new staff and I'll be with you here in the training room all morning."
+    },
+    {
+      "startMs": 64160,
+      "endMs": 70000,
+      "text": "We are the biggest hardware store in the country and, as home improvement is now so popular,"
+    },
+    {
+      "startMs": 70000,
+      "endMs": 74400,
+      "text": "hundreds of customers visit our store each week to buy products to improve every part"
+    },
+    {
+      "startMs": 74400,
+      "endMs": 80040,
+      "text": "of their house, inside or out. First, let me introduce you to the most popular sections"
+    },
+    {
+      "startMs": 80040,
+      "endMs": 85640,
+      "text": "of our super store. Can you all take a look at the store plan you have in front of you?"
+    },
+    {
+      "startMs": 85640,
+      "endMs": 91640,
+      "text": "We stock every kind of flooring, including carpets, wooden flooring and tiling. Our"
+    },
+    {
+      "startMs": 91640,
+      "endMs": 98040,
+      "text": "paint department is next to flooring, that's it in the bottom right hand corner of the map."
+    },
+    {
+      "startMs": 98040,
+      "endMs": 104680,
+      "text": "We offer advice to customers on colour combinations for inside or outside before they purchase."
+    },
+    {
+      "startMs": 104680,
+      "endMs": 109120,
+      "text": "We've become well known in the last few years for selling the latest kitchen designs"
+    },
+    {
+      "startMs": 109120,
+      "endMs": 115560,
+      "text": "for all budgets and we also stock quality appliances recommended by top chefs. These products"
+    },
+    {
+      "startMs": 115560,
+      "endMs": 120920,
+      "text": "can be found right in the middle of the store, just next to electrical goods."
+    },
+    {
+      "startMs": 120920,
+      "endMs": 126360,
+      "text": "You may not be aware that one reason we are such a popular store is our great cafe,"
+    },
+    {
+      "startMs": 126360,
+      "endMs": 131680,
+      "text": "which serves cheap, nutritious lunches. That's in the top right of your map. Staff should"
+    },
+    {
+      "startMs": 131680,
+      "endMs": 137200,
+      "text": "also make customers aware of the children's play area, which is between the cafe and flooring,"
+    },
+    {
+      "startMs": 137200,
+      "endMs": 142040,
+      "text": "so mum and dad can get something to eat or drink or even continue their shopping while"
+    },
+    {
+      "startMs": 142040,
+      "endMs": 145400,
+      "text": "the kids are safe with our trained childcare workers."
+    },
+    {
+      "startMs": 145400,
+      "endMs": 152800,
+      "text": "Now, what else should I mention? Ah, yes. We recently moved our stock of showers and baths"
+    },
+    {
+      "startMs": 152800,
+      "endMs": 158280,
+      "text": "from the left side of the store to the area along the back wall next to the tool section."
+    },
+    {
+      "startMs": 158280,
+      "endMs": 163360,
+      "text": "We offer practical advice to customers about their bathrooms before they buy, such as where"
+    },
+    {
+      "startMs": 163360,
+      "endMs": 171080,
+      "text": "to locate a new toilet or shower. I have left my favourite area till last. Gardens. It's"
+    },
+    {
+      "startMs": 171080,
+      "endMs": 176760,
+      "text": "marked on the left side of the map after the staff area and before the tool section. There"
+    },
+    {
+      "startMs": 176760,
+      "endMs": 183840,
+      "text": "you'll find our extensive range of plants, flowers and related products inside or outside."
+    },
+    {
+      "startMs": 183840,
+      "endMs": 188840,
+      "text": "If you get to work there, I'm sure you'll find it a very pleasant section to work in."
+    },
+    {
+      "startMs": 188840,
+      "endMs": 195360,
+      "text": "Right. Well, that's it for the store plan."
+    },
+    {
+      "startMs": 195360,
+      "endMs": 202320,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16-20 on page"
+    },
+    {
+      "startMs": 202320,
+      "endMs": 213600,
+      "text": "5. Now, listen and answer questions 16-20."
+    },
+    {
+      "startMs": 213600,
+      "endMs": 218120,
+      "text": "Now, there is some other general information I need to give you before you start your specific"
+    },
+    {
+      "startMs": 218120,
+      "endMs": 224600,
+      "text": "training. The first thing staff need to know is what makes us different to our competitors."
+    },
+    {
+      "startMs": 224600,
+      "endMs": 229880,
+      "text": "Our main advantage, due to our size, is that we can cut our costs and offer the best"
+    },
+    {
+      "startMs": 229880,
+      "endMs": 235480,
+      "text": "deals. Of course, we are proud of the great service we provide to our customers, especially"
+    },
+    {
+      "startMs": 235480,
+      "endMs": 241160,
+      "text": "through our help desk. We also have an excellent choice of goods so that we can provide plenty"
+    },
+    {
+      "startMs": 241160,
+      "endMs": 246080,
+      "text": "of options to our customers, but of course, that isn't unique to us."
+    },
+    {
+      "startMs": 246080,
+      "endMs": 251040,
+      "text": "The home improvement store has 60 stores nationwide and we promote our stores and products"
+    },
+    {
+      "startMs": 251040,
+      "endMs": 257520,
+      "text": "in a range of different ways. First, there's our catalogue, which lists all our items."
+    },
+    {
+      "startMs": 257520,
+      "endMs": 263640,
+      "text": "It's been around for years, but we still have a policy of staff used only. The most important"
+    },
+    {
+      "startMs": 263640,
+      "endMs": 268360,
+      "text": "marketing material, and the one you want to ensure is given to every customer, is our"
+    },
+    {
+      "startMs": 268360,
+      "endMs": 274640,
+      "text": "store magazine, showing the latest products, workshops and offers. The website is being"
+    },
+    {
+      "startMs": 274640,
+      "endMs": 280440,
+      "text": "redeveloped at the moment, so customers can't access it right now."
+    },
+    {
+      "startMs": 280440,
+      "endMs": 285960,
+      "text": "The home improvement store is a great place to work. Like most of the staff, I'm sure you'll"
+    },
+    {
+      "startMs": 285960,
+      "endMs": 292360,
+      "text": "appreciate the fact that you can choose your hours to fit your lifestyle, family or study."
+    },
+    {
+      "startMs": 292360,
+      "endMs": 296840,
+      "text": "We hope you'll find that there's a nice atmosphere here. We are thinking of introducing"
+    },
+    {
+      "startMs": 296840,
+      "endMs": 303080,
+      "text": "a staff discount on our products, so that would be a real benefit to all staff. Every"
+    },
+    {
+      "startMs": 303080,
+      "endMs": 309400,
+      "text": "weekend, we offer workshops to help customers carry out their own home improvements."
+    },
+    {
+      "startMs": 309400,
+      "endMs": 315520,
+      "text": "Workshops range from indoor painting to outdoor gardening and plant ideas. This coming weekend,"
+    },
+    {
+      "startMs": 315520,
+      "endMs": 321120,
+      "text": "there'll be one on mending a broken fence. Please remind customers of the workshops,"
+    },
+    {
+      "startMs": 321120,
+      "endMs": 324480,
+      "text": "especially if there is one related to your section."
+    },
+    {
+      "startMs": 324480,
+      "endMs": 330680,
+      "text": "Finally, I wanted to let you know about a special deal for people renovating their kitchen."
+    },
+    {
+      "startMs": 330680,
+      "endMs": 335320,
+      "text": "As you know, we sell all products and appliances connected to the kitchen and we also have"
+    },
+    {
+      "startMs": 335320,
+      "endMs": 340880,
+      "text": "a delivery service. If customers buy one of our total kitchen designs, we will install"
+    },
+    {
+      "startMs": 340880,
+      "endMs": 349400,
+      "text": "it free of charge. So, let's take a short break and then we'll start."
+    },
+    {
+      "startMs": 349400,
+      "endMs": 354920,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 55,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

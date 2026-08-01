@@ -1,0 +1,464 @@
+{
+  "id": "p2-71-outdoor-education-cente",
+  "title": "Outdoor Education Cente",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-8c6e5fa301ec",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 324.771,
+    "checksum": "sha256:15680516db81f9c09add93c7ebc62d543f93b8f11372d70713be1801d0b5acd7"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Question 11-16.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "A trip to the outdoor education center will help the children",
+          "options": [
+            {
+              "id": "A",
+              "text": "create good relationships"
+            },
+            {
+              "id": "B",
+              "text": "manage without adult supervision"
+            },
+            {
+              "id": "C",
+              "text": "react positively to new challenges"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "To prepare their children for the trip, parents should",
+          "options": [
+            {
+              "id": "A",
+              "text": "let them try sleeping in a tent at home"
+            },
+            {
+              "id": "B",
+              "text": "make sure they get enough sleep before they leave"
+            },
+            {
+              "id": "C",
+              "text": "tell them that they will be in a tent with their friends"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "What do parents need to put in their children's backpack?",
+          "options": [
+            {
+              "id": "A",
+              "text": "plastic bags"
+            },
+            {
+              "id": "B",
+              "text": "snacks and biscuits"
+            },
+            {
+              "id": "C",
+              "text": "a small amount of money"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "What are children allowed to bring on the trip?",
+          "options": [
+            {
+              "id": "A",
+              "text": "electronic games"
+            },
+            {
+              "id": "B",
+              "text": "cell phones"
+            },
+            {
+              "id": "C",
+              "text": "penknives"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "How are parents selected to attend the trip?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The first ten parents to sign up will be able to go"
+            },
+            {
+              "id": "B",
+              "text": "Parents' name will be chosen from a box"
+            },
+            {
+              "id": "C",
+              "text": "Preference will be given to parents with camping skills"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "16",
+          "text": "Payment for the trip",
+          "options": [
+            {
+              "id": "A",
+              "text": "must be handed to the child's teacher"
+            },
+            {
+              "id": "B",
+              "text": "can be left at the school office"
+            },
+            {
+              "id": "C",
+              "text": "should be made directly to the outdoor education center"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Question 17-20.",
+      "instruction": "Label the map below, A-G.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "Woodcarving studio",
+          "answer": "E"
+        },
+        {
+          "id": "18",
+          "text": "Emergency meeting point",
+          "answer": "A"
+        },
+        {
+          "id": "19",
+          "text": "Conservation center",
+          "answer": "F"
+        },
+        {
+          "id": "20",
+          "text": "Arts and crafts room",
+          "answer": "B"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-71-outdoor-education-cente-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-71-outdoor-education-cente-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "B",
+        "13": "A",
+        "14": "B",
+        "15": "A",
+        "16": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "17": "E",
+        "18": "A",
+        "19": "F",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 14000,
+      "text": "Now turn to Section 2. Section 2. You will hear a principal of a school talking to a group of parents about a three-day trip for pupils to an outdoor education center."
+    },
+    {
+      "startMs": 14000,
+      "endMs": 25000,
+      "text": "First, you have some time to look at questions 11 to 16. Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 25000,
+      "endMs": 36000,
+      "text": "Good evening. It's good to see so many parents here. Let me begin by explaining why we go to the outdoor education center."
+    },
+    {
+      "startMs": 36000,
+      "endMs": 48000,
+      "text": "Well, by age 10 we feel the children are ready for a trip away from home, but still in a safe environment and under the guidance of a familiar adult."
+    },
+    {
+      "startMs": 48000,
+      "endMs": 57000,
+      "text": "At the school we strongly believe children should be encouraged to try different things and not give up when it gets difficult."
+    },
+    {
+      "startMs": 57000,
+      "endMs": 62000,
+      "text": "And that's what the center is all about, having a go."
+    },
+    {
+      "startMs": 62000,
+      "endMs": 74000,
+      "text": "Anyway, to start with the sleeping arrangement. For some children this will be their first time in a tent and away from home, so please prepare them."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 80000,
+      "text": "You can do this just by making sure they have some early nights before we go."
+    },
+    {
+      "startMs": 80000,
+      "endMs": 89000,
+      "text": "Another thing? There's space for three children per tent, so we can't guarantee your child will be in with their best friends."
+    },
+    {
+      "startMs": 89000,
+      "endMs": 98000,
+      "text": "So do make them aware of this. Now, you should have received a list with the clothing the children will need in their backpack."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 111000,
+      "text": "But there are some extras. Please provide a packet of biscuits or maybe fruit bars, but these need to go in the box in the school hall, not with the children."
+    },
+    {
+      "startMs": 111000,
+      "endMs": 119000,
+      "text": "Actually, what we do need in the backpacks are bags for cleaning up and for wet clothing, so plastic ones please."
+    },
+    {
+      "startMs": 119000,
+      "endMs": 126000,
+      "text": "A torch is a good idea, but don't worry about putting money in because there's nothing to buy."
+    },
+    {
+      "startMs": 126000,
+      "endMs": 131000,
+      "text": "While we're on the subject, let's talk about some other items."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 139000,
+      "text": "Cell phones are permitted, but they must be switched off at night and also off during the teaching sessions."
+    },
+    {
+      "startMs": 139000,
+      "endMs": 148000,
+      "text": "Also, for wood carving activities, knives will be provided by the center, so children shouldn't bring them from home."
+    },
+    {
+      "startMs": 148000,
+      "endMs": 157000,
+      "text": "Electronic games are banned, so rather than bring one of these, children should bring quiet board games."
+    },
+    {
+      "startMs": 157000,
+      "endMs": 168000,
+      "text": "Turning to the question of parent attendance, in the past we've had too many volunteers, so we've written names on bits of paper and pulled them out of the box."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 172000,
+      "text": "But then some parents have changed their minds."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 182000,
+      "text": "So, if you're absolutely sure you can come, put your name down on the sign-up form and the first ten will be asked to come."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 187000,
+      "text": "Experience isn't required, we just want you to lend a hand."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 193000,
+      "text": "Now, I'm afraid the fee for the trip needs to be paid by the 15th."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 198000,
+      "text": "Payment to the center is made by the school, not by parents."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 207000,
+      "text": "And your teacher will be giving your child a form with the school's bank account details if you want to use them to make payments."
+    },
+    {
+      "startMs": 207000,
+      "endMs": 213000,
+      "text": "Otherwise, please leave payment in an envelope in the box at the school office."
+    },
+    {
+      "startMs": 213000,
+      "endMs": 220000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 17 to 20."
+    },
+    {
+      "startMs": 220000,
+      "endMs": 225000,
+      "text": "Now, listen and answer questions 17 to 20."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 228000,
+      "text": "Right, let's have a look at the center."
+    },
+    {
+      "startMs": 228000,
+      "endMs": 236000,
+      "text": "I hope you all have a leaflet with the map on the back, and we'd like you to show this to your children before they go."
+    },
+    {
+      "startMs": 236000,
+      "endMs": 241000,
+      "text": "Now, if you look at the map, you will see the entrance at the bottom."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 246000,
+      "text": "Okay, so just through the entrance you will see reception."
+    },
+    {
+      "startMs": 246000,
+      "endMs": 249000,
+      "text": "Now, the woodcarving studio."
+    },
+    {
+      "startMs": 249000,
+      "endMs": 253000,
+      "text": "So, you see where the main hall is located."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 264000,
+      "text": "Well, to the right of the hall and opposite the kitchen is the new barbecue area, and it's right next to that overlooking Forest Road."
+    },
+    {
+      "startMs": 264000,
+      "endMs": 269000,
+      "text": "It's crucial that children know where the emergency meeting point is."
+    },
+    {
+      "startMs": 269000,
+      "endMs": 276000,
+      "text": "If you look to the top of the map and to the north of Forest Road, that's the location."
+    },
+    {
+      "startMs": 276000,
+      "endMs": 280000,
+      "text": "It's on the same side of the river as the tents."
+    },
+    {
+      "startMs": 280000,
+      "endMs": 285000,
+      "text": "There's a lot going on at the river. For example, the conservation center."
+    },
+    {
+      "startMs": 285000,
+      "endMs": 290000,
+      "text": "See the building marked kayaks on the right side of the riverbank?"
+    },
+    {
+      "startMs": 290000,
+      "endMs": 296000,
+      "text": "Well, the conservation center is between the two bridges just below it."
+    },
+    {
+      "startMs": 296000,
+      "endMs": 304000,
+      "text": "I should also mention that if your child is not a confident swimmer, there are life jackets hanging all along the riverbank."
+    },
+    {
+      "startMs": 304000,
+      "endMs": 313000,
+      "text": "If your child likes drawing and painting, the arts and crafts room is to the right of the river a little further up from the kayaks."
+    },
+    {
+      "startMs": 313000,
+      "endMs": 317000,
+      "text": "Okay, so are there any questions so far?"
+    },
+    {
+      "startMs": 317000,
+      "endMs": 324000,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 44,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

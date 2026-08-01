@@ -1,0 +1,631 @@
+{
+  "id": "p2-36-eye-saver-charity",
+  "title": "Eye Saver Charity",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-f6d539c1426d",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 467.088,
+    "checksum": "sha256:2325cf2bcf5d9809e93df12fd5fdbeb4561f3d2de6cdb63274342edebf7cd7c5"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–16",
+      "instruction": "Choose the correct letter, A, B, or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "When was Eyesaver founded?",
+          "options": [
+            {
+              "id": "A",
+              "text": "15 years ago"
+            },
+            {
+              "id": "B",
+              "text": "30 years ago"
+            },
+            {
+              "id": "C",
+              "text": "60 years ago"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "What was the original aim of the program?",
+          "options": [
+            {
+              "id": "A",
+              "text": "to offer common equipment"
+            },
+            {
+              "id": "B",
+              "text": "to offer medication to children with eye diseases"
+            },
+            {
+              "id": "C",
+              "text": "to offer operational help to people who had eye problems"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "The main funding comes from",
+          "options": [
+            {
+              "id": "A",
+              "text": "a monthly donation."
+            },
+            {
+              "id": "B",
+              "text": "donation from rich people."
+            },
+            {
+              "id": "C",
+              "text": "money collected on the street."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "What does the speaker expect listeners to provide?",
+          "options": [
+            {
+              "id": "A",
+              "text": "glasses for the patients"
+            },
+            {
+              "id": "B",
+              "text": "money donation"
+            },
+            {
+              "id": "C",
+              "text": "voluntary work"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "What is the main purpose of this program?",
+          "options": [
+            {
+              "id": "A",
+              "text": "to show people their donation can make a difference"
+            },
+            {
+              "id": "B",
+              "text": "to show people how easily eye problems can be cured"
+            },
+            {
+              "id": "C",
+              "text": "to educate people about common eye diseases"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "16",
+          "text": "Eyesaver advertises for the program through",
+          "options": [
+            {
+              "id": "A",
+              "text": "computers."
+            },
+            {
+              "id": "B",
+              "text": "recordings."
+            },
+            {
+              "id": "C",
+              "text": "training."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 17–20",
+      "instruction": "Write the correct letter, A–F, next to Question 17–20.",
+      "options": [
+        {
+          "id": "A",
+          "text": "gain more donation"
+        },
+        {
+          "id": "B",
+          "text": "involve more children in need"
+        },
+        {
+          "id": "C",
+          "text": "earn support from colleges"
+        },
+        {
+          "id": "D",
+          "text": "help look for equipment manufacturers"
+        },
+        {
+          "id": "E",
+          "text": "take the reputation to a higher level"
+        },
+        {
+          "id": "F",
+          "text": "recruit and support staff"
+        }
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "National Vision Funding Group",
+          "answer": "E"
+        },
+        {
+          "id": "18",
+          "text": "Eye for the Future",
+          "answer": "D"
+        },
+        {
+          "id": "19",
+          "text": "Sam's Eyecare Institution",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "Youth Health",
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "C",
+        "14": "A",
+        "15": "A",
+        "16": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "17": "E",
+        "18": "D",
+        "19": "C",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 14840,
+      "text": "Section 2."
+    },
+    {
+      "startMs": 14840,
+      "endMs": 20800,
+      "text": "You will hear a man introducing a charity to a group of listeners."
+    },
+    {
+      "startMs": 20800,
+      "endMs": 27520,
+      "text": "First, you have some time to look at questions 11 to 16."
+    },
+    {
+      "startMs": 50800,
+      "endMs": 65480,
+      "text": "Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 65480,
+      "endMs": 69280,
+      "text": "Hello everyone, thanks for attending tonight's event."
+    },
+    {
+      "startMs": 69280,
+      "endMs": 74120,
+      "text": "Let me start with the early history of our charity, Eyesaver."
+    },
+    {
+      "startMs": 74120,
+      "endMs": 78840,
+      "text": "Eyesaver was founded by retired optometrist Timothy Gaines."
+    },
+    {
+      "startMs": 78840,
+      "endMs": 82680,
+      "text": "I have spent much of my working life at Eyesaver."
+    },
+    {
+      "startMs": 82680,
+      "endMs": 88520,
+      "text": "I am 60 years old now and I started working for this organisation 15 years ago when I left"
+    },
+    {
+      "startMs": 88520,
+      "endMs": 92600,
+      "text": "a corporate position to help people with eye problems."
+    },
+    {
+      "startMs": 92600,
+      "endMs": 97400,
+      "text": "Now our charity has been helping people for three decades."
+    },
+    {
+      "startMs": 97400,
+      "endMs": 102200,
+      "text": "You may know that we are now doing various other things to help people with eye problems."
+    },
+    {
+      "startMs": 102200,
+      "endMs": 106800,
+      "text": "That includes medications for children with eye diseases and operational help to those"
+    },
+    {
+      "startMs": 106800,
+      "endMs": 110200,
+      "text": "in the public who have eye problems."
+    },
+    {
+      "startMs": 110200,
+      "endMs": 115000,
+      "text": "But when Mr Gaines just founded Eyesaver, he wanted the programme to be able to offer"
+    },
+    {
+      "startMs": 115000,
+      "endMs": 119520,
+      "text": "common eye equipment to those who needed it."
+    },
+    {
+      "startMs": 119520,
+      "endMs": 124240,
+      "text": "We receive occasional donations from corporations and charity groups."
+    },
+    {
+      "startMs": 124240,
+      "endMs": 129720,
+      "text": "Now we have over 1,500 volunteers who work on the streets with the little red donation"
+    },
+    {
+      "startMs": 129720,
+      "endMs": 134960,
+      "text": "boxes which many of you are familiar with and this is the main source of funding for"
+    },
+    {
+      "startMs": 134960,
+      "endMs": 135960,
+      "text": "us."
+    },
+    {
+      "startMs": 136040,
+      "endMs": 142080,
+      "text": "Besides, we are planning to work to secure donations from wealthy benefactors."
+    },
+    {
+      "startMs": 142080,
+      "endMs": 146880,
+      "text": "Many people are passionate about charity causes and have been inquiring how to donate money"
+    },
+    {
+      "startMs": 146880,
+      "endMs": 147880,
+      "text": "to us."
+    },
+    {
+      "startMs": 147880,
+      "endMs": 150080,
+      "text": "I really appreciate that."
+    },
+    {
+      "startMs": 150080,
+      "endMs": 154640,
+      "text": "But our main need is to collect glasses for our patients."
+    },
+    {
+      "startMs": 154640,
+      "endMs": 159320,
+      "text": "Many of you have multiple pairs of old glasses in your possession and we encourage you to"
+    },
+    {
+      "startMs": 159320,
+      "endMs": 164640,
+      "text": "gather these pairs which you no longer need and donate them to our cause."
+    },
+    {
+      "startMs": 164640,
+      "endMs": 169800,
+      "text": "In doing this, you'll be able to make sure that someone else can see better."
+    },
+    {
+      "startMs": 169800,
+      "endMs": 174360,
+      "text": "Most of us cannot imagine a life in which we are unable to see well."
+    },
+    {
+      "startMs": 174360,
+      "endMs": 180520,
+      "text": "This is why your eyeglass donations are so critical to our mission and, as a side note,"
+    },
+    {
+      "startMs": 180520,
+      "endMs": 185640,
+      "text": "we offer full-time positions let me know if you are interested."
+    },
+    {
+      "startMs": 185640,
+      "endMs": 190640,
+      "text": "Our goal is to make people aware that even the smallest of donations can help change"
+    },
+    {
+      "startMs": 190640,
+      "endMs": 192640,
+      "text": "a person's life."
+    },
+    {
+      "startMs": 192640,
+      "endMs": 196880,
+      "text": "So your donation can be a turning point for them."
+    },
+    {
+      "startMs": 196880,
+      "endMs": 201320,
+      "text": "The other day, when I was talking to some people on the street, they were surprised to find"
+    },
+    {
+      "startMs": 201320,
+      "endMs": 205160,
+      "text": "out how easily some eye problems can be cured."
+    },
+    {
+      "startMs": 205160,
+      "endMs": 210400,
+      "text": "And I am proud to say that our next program will aim at educating people about common eye"
+    },
+    {
+      "startMs": 210400,
+      "endMs": 211560,
+      "text": "diseases."
+    },
+    {
+      "startMs": 211560,
+      "endMs": 215960,
+      "text": "We are able to prevent many fatal eye problems."
+    },
+    {
+      "startMs": 215960,
+      "endMs": 222320,
+      "text": "In order to publicise our charity program, we surely need to do some advertising."
+    },
+    {
+      "startMs": 222320,
+      "endMs": 227720,
+      "text": "When we first started our program, we used computers to create awareness for our cause."
+    },
+    {
+      "startMs": 227720,
+      "endMs": 232680,
+      "text": "For instance, promoting seminars in which we informed people as to how they could help"
+    },
+    {
+      "startMs": 232680,
+      "endMs": 235680,
+      "text": "us to solve eye problems."
+    },
+    {
+      "startMs": 235680,
+      "endMs": 241920,
+      "text": "But in recent years, the main means of advertising our program is through audio recordings."
+    },
+    {
+      "startMs": 241920,
+      "endMs": 245600,
+      "text": "We have found it cost-efficient and effective."
+    },
+    {
+      "startMs": 245600,
+      "endMs": 249880,
+      "text": "It's good to know that many of our staff are recommending our program to their friends"
+    },
+    {
+      "startMs": 249880,
+      "endMs": 251320,
+      "text": "and colleagues."
+    },
+    {
+      "startMs": 251320,
+      "endMs": 258760,
+      "text": "But I am afraid that our training cannot show people the whole picture of our program."
+    },
+    {
+      "startMs": 258760,
+      "endMs": 265880,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 17-20."
+    },
+    {
+      "startMs": 281320,
+      "endMs": 292040,
+      "text": "Now listen and answer questions 17-20."
+    },
+    {
+      "startMs": 292040,
+      "endMs": 298240,
+      "text": "Finally, I would like to tell you about some organisations which have played important"
+    },
+    {
+      "startMs": 298240,
+      "endMs": 302800,
+      "text": "roles in the development and success of Eyesaver."
+    },
+    {
+      "startMs": 302800,
+      "endMs": 307760,
+      "text": "Our affiliation with the National Vision Funding Group has allowed us to gain fame and"
+    },
+    {
+      "startMs": 307760,
+      "endMs": 310480,
+      "text": "to become even more significant."
+    },
+    {
+      "startMs": 310480,
+      "endMs": 315680,
+      "text": "So many people around the country are coming for our services."
+    },
+    {
+      "startMs": 315680,
+      "endMs": 322080,
+      "text": "Our association with the Eye for the Future organisation has allowed us to run cooperative ads by which"
+    },
+    {
+      "startMs": 322080,
+      "endMs": 325520,
+      "text": "we seek producers of equipment to work with us."
+    },
+    {
+      "startMs": 325520,
+      "endMs": 331680,
+      "text": "Meanwhile, some of our staff has been sent to this organisation for some special training."
+    },
+    {
+      "startMs": 331680,
+      "endMs": 334720,
+      "text": "Their skills should be improved very soon."
+    },
+    {
+      "startMs": 335200,
+      "endMs": 341360,
+      "text": "Also, we have had a long time co-operation with Sam's Eyecare Institution."
+    },
+    {
+      "startMs": 341360,
+      "endMs": 346120,
+      "text": "Our relationship with it has given us the opportunity to link with many different academic"
+    },
+    {
+      "startMs": 346120,
+      "endMs": 352840,
+      "text": "institutions, including colleges and universities with good reputation."
+    },
+    {
+      "startMs": 352840,
+      "endMs": 357200,
+      "text": "And we have a similar friendship with a group called Youth Health."
+    },
+    {
+      "startMs": 357200,
+      "endMs": 362040,
+      "text": "Our connection with that group allows us to link directly with young kids since this"
+    },
+    {
+      "startMs": 362040,
+      "endMs": 364800,
+      "text": "is a crucial stage in their growth."
+    },
+    {
+      "startMs": 364800,
+      "endMs": 370000,
+      "text": "We plan to contact with some colleges and hope that with their help more college students"
+    },
+    {
+      "startMs": 370000,
+      "endMs": 372520,
+      "text": "could get to know our programme."
+    },
+    {
+      "startMs": 372520,
+      "endMs": 378960,
+      "text": "So as you can see, we have all bases covered in linking with students as we have affiliations"
+    },
+    {
+      "startMs": 378960,
+      "endMs": 384600,
+      "text": "directly with both administrators and the students themselves."
+    },
+    {
+      "startMs": 384600,
+      "endMs": 387560,
+      "text": "Thank you so much for your attention today."
+    },
+    {
+      "startMs": 387560,
+      "endMs": 392640,
+      "text": "As we try to stamp out eye problems, we will appreciate your donations no matter how"
+    },
+    {
+      "startMs": 392640,
+      "endMs": 395520,
+      "text": "large or how small."
+    },
+    {
+      "startMs": 395520,
+      "endMs": 403320,
+      "text": "We believe, with our efforts, the world will be brighter and more beautiful."
+    },
+    {
+      "startMs": 403320,
+      "endMs": 406320,
+      "text": "That's the end of section 2."
+    },
+    {
+      "startMs": 406320,
+      "endMs": 409560,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 417560,
+      "endMs": 442480,
+      "text": "Now turn to section 3."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 76,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

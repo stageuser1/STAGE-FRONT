@@ -1,0 +1,635 @@
+{
+  "id": "p1-106-lifeguard-application",
+  "title": "Lifeguard Application",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-1beebcb592b7",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 364.572,
+    "checksum": "sha256:bfd248b11bde561e933362119f6dc119236e4dfd013549e5b5d15112496b6dba"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 1-10.",
+      "instruction": "Write NO MORE THAN TWO WORDS/OR A NUMBER for each answer. Lifeguard Application Name: John Murphy Street address: 45 1. _________ Court Contact phone number: 2. _________ Current part-time job: 3. _________ Previous job at Ridgemont High School: 4. _________ Additional relevant work experience: 5. _________ Relevant skills/qualifications: CPR certification & 6. _________ CPR certification expiration date: 7. _________ Preferred weekly shift: 8. _________ Time available to start work: 9. _________ o’clock Advertisement source: 10. _________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Street address: 45 1. _________ Court",
+          "answer": "Elsinore"
+        },
+        {
+          "id": "2",
+          "text": "Contact phone number: 2. _________",
+          "answer": "077896245"
+        },
+        {
+          "id": "3",
+          "text": "Current part-time job: 3. _________",
+          "answer": "waiter"
+        },
+        {
+          "id": "4",
+          "text": "Previous job at Ridgemont High School: 4. _________",
+          "answer": "baseball coach"
+        },
+        {
+          "id": "5",
+          "text": "Additional relevant work experience: 5. _________",
+          "answer": "rescue diver"
+        },
+        {
+          "id": "6",
+          "text": "Relevant skills/qualifications: CPR certification & 6. _________",
+          "answer": "diving experience"
+        },
+        {
+          "id": "7",
+          "text": "CPR certification expiration date: 7. _________",
+          "answer": "October"
+        },
+        {
+          "id": "8",
+          "text": "Preferred weekly shift: 8. _________",
+          "answer": "Saturday mornings"
+        },
+        {
+          "id": "9",
+          "text": "Time available to start work: 9. _________ o’clock",
+          "answer": "6/six"
+        },
+        {
+          "id": "10",
+          "text": "Advertisement source: 10. _________",
+          "answer": "radio"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write NO MORE THAN TWO WORDS/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Lifeguard Application",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Name: John Murphy",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Street address: 45 1. _________ Court",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Contact phone number: 2. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Current part-time job: 3. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Previous job at Ridgemont High School: 4. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Additional relevant work experience: 5. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Relevant skills/qualifications: CPR certification & 6. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "CPR certification expiration date: 7. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Preferred weekly shift: 8. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Time available to start work: 9. _________ o’clock",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Advertisement source: 10. _________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Elsinore",
+        "2": "077896245",
+        "3": "waiter",
+        "4": "baseball coach",
+        "5": "rescue diver",
+        "6": "diving experience",
+        "7": "October",
+        "8": "Saturday mornings",
+        "9": "6/six",
+        "10": "radio"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6560,
+      "text": "[Narrator]: Test 2 You will hear a number of different recordings"
+    },
+    {
+      "startMs": 6560,
+      "endMs": 10740,
+      "text": "and you will have to answer questions on what you hear."
+    },
+    {
+      "startMs": 10740,
+      "endMs": 16840,
+      "text": "There will be time for you to read the instructions and questions and you will have a chance to"
+    },
+    {
+      "startMs": 16840,
+      "endMs": 18840,
+      "text": "check your work."
+    },
+    {
+      "startMs": 18840,
+      "endMs": 22400,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 22400,
+      "endMs": 24920,
+      "text": "The test is in four sections."
+    },
+    {
+      "startMs": 24920,
+      "endMs": 30720,
+      "text": "At the end of the test, you will be given ten minutes to transfer your answers to an answer"
+    },
+    {
+      "startMs": 30720,
+      "endMs": 34560,
+      "text": "sheet."
+    },
+    {
+      "startMs": 34560,
+      "endMs": 37560,
+      "text": "Now turn to section 1."
+    },
+    {
+      "startMs": 37560,
+      "endMs": 41400,
+      "text": "Section 1 You will hear a telephone conversation between"
+    },
+    {
+      "startMs": 41400,
+      "endMs": 46200,
+      "text": "an employer from the Wild June Sparrow Resort and an applicant."
+    },
+    {
+      "startMs": 46200,
+      "endMs": 75680,
+      "text": "First, you have some time to look at questions 1 to 5."
+    },
+    {
+      "startMs": 75680,
+      "endMs": 79560,
+      "text": "You will see that there is an example which has been done for you."
+    },
+    {
+      "startMs": 79560,
+      "endMs": 84680,
+      "text": "On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 84680,
+      "endMs": 89000,
+      "text": "[Ed]: Hello, is this John Murphy?"
+    },
+    {
+      "startMs": 89000,
+      "endMs": 91000,
+      "text": "[John]: Hi, yes it is."
+    },
+    {
+      "startMs": 91000,
+      "endMs": 96480,
+      "text": "[Ed]: Hi John, this is Ed Heisenberg from the Wild June Sparrow Resort calling about your"
+    },
+    {
+      "startMs": 96480,
+      "endMs": 99280,
+      "text": "application for our lifeguard position."
+    },
+    {
+      "startMs": 99280,
+      "endMs": 101400,
+      "text": "Do you have a few minutes to talk?"
+    },
+    {
+      "startMs": 101400,
+      "endMs": 102720,
+      "text": "[John]: Yes, absolutely."
+    },
+    {
+      "startMs": 105760,
+      "endMs": 111600,
+      "text": "[Narrator]: The employer says that he is calling about the application for their lifeguard position."
+    },
+    {
+      "startMs": 111600,
+      "endMs": 115320,
+      "text": "So, lifeguard has been written in the space."
+    },
+    {
+      "startMs": 115320,
+      "endMs": 116840,
+      "text": "Now we shall begin."
+    },
+    {
+      "startMs": 116840,
+      "endMs": 121400,
+      "text": "You should answer the questions as you listen because you will not hear the recording"
+    },
+    {
+      "startMs": 121400,
+      "endMs": 123320,
+      "text": "a second time."
+    },
+    {
+      "startMs": 123320,
+      "endMs": 129840,
+      "text": "Listen carefully and answer questions 1 to 5."
+    },
+    {
+      "startMs": 129840,
+      "endMs": 131520,
+      "text": "[Ed]: Hello, is this John Murphy?"
+    },
+    {
+      "startMs": 131520,
+      "endMs": 133120,
+      "text": "[John]: Hi, yes it is."
+    },
+    {
+      "startMs": 133360,
+      "endMs": 138800,
+      "text": "[Ed]: Hi John, this is Ed Heisenberg from the Wild June Sparrow Resort calling about your"
+    },
+    {
+      "startMs": 138800,
+      "endMs": 141600,
+      "text": "application for our lifeguard position."
+    },
+    {
+      "startMs": 141600,
+      "endMs": 143760,
+      "text": "Do you have a few minutes to talk?"
+    },
+    {
+      "startMs": 143760,
+      "endMs": 145320,
+      "text": "[John]: Yes, absolutely."
+    },
+    {
+      "startMs": 145320,
+      "endMs": 147320,
+      "text": "[Ed]: Great, could you give me your address?"
+    },
+    {
+      "startMs": 147320,
+      "endMs": 152160,
+      "text": "[John]: Sure, my address is 45 Elsinore Court."
+    },
+    {
+      "startMs": 152160,
+      "endMs": 153760,
+      "text": "[Ed]: I am sorry, was that Eleanor?"
+    },
+    {
+      "startMs": 153760,
+      "endMs": 155200,
+      "text": "Could you spell that for me?"
+    },
+    {
+      "startMs": 155200,
+      "endMs": 161160,
+      "text": "[John]: Sure, it is Elsinore, E-L-S-I-N-O-R-E."
+    },
+    {
+      "startMs": 161160,
+      "endMs": 162160,
+      "text": "[Ed]: Okay, thanks."
+    },
+    {
+      "startMs": 162160,
+      "endMs": 165560,
+      "text": "And is this the number we should reach you at in the future?"
+    },
+    {
+      "startMs": 165560,
+      "endMs": 168360,
+      "text": "O-D-W-9-W-8-5767?"
+    },
+    {
+      "startMs": 168360,
+      "endMs": 170360,
+      "text": "[John]: No, that is my home phone."
+    },
+    {
+      "startMs": 170360,
+      "endMs": 173160,
+      "text": "But let me give you my mobile number instead."
+    },
+    {
+      "startMs": 173160,
+      "endMs": 176960,
+      "text": "0-77-896-245."
+    },
+    {
+      "startMs": 176960,
+      "endMs": 178360,
+      "text": "Call me on that one."
+    },
+    {
+      "startMs": 178360,
+      "endMs": 179960,
+      "text": "[Ed]: Okay, I will make a note of that."
+    },
+    {
+      "startMs": 179960,
+      "endMs": 181760,
+      "text": "Could you tell me your availability?"
+    },
+    {
+      "startMs": 181760,
+      "endMs": 185960,
+      "text": "[John]: Sure, I am usually available during afternoons or weekends."
+    },
+    {
+      "startMs": 185960,
+      "endMs": 190960,
+      "text": "I would prefer not to be scheduled on weeknights because I work part-time as a waiter."
+    },
+    {
+      "startMs": 190960,
+      "endMs": 194960,
+      "text": "[Ed]: That shouldn't be a problem since we don't stay open very late anyway."
+    },
+    {
+      "startMs": 194960,
+      "endMs": 197560,
+      "text": "And do you have any other employment experience?"
+    },
+    {
+      "startMs": 197560,
+      "endMs": 200360,
+      "text": "[John]: Yes, I have worked at a few other places."
+    },
+    {
+      "startMs": 200360,
+      "endMs": 205160,
+      "text": "I was the baseball coach at Richmond High School last season."
+    },
+    {
+      "startMs": 205160,
+      "endMs": 206160,
+      "text": "[Ed]: I see."
+    },
+    {
+      "startMs": 206160,
+      "endMs": 210960,
+      "text": "And do you have any other experience that you would like us to note on your application?"
+    },
+    {
+      "startMs": 210960,
+      "endMs": 214960,
+      "text": "[John]: Yes, last year I worked at the beach as a rescue diver."
+    },
+    {
+      "startMs": 214960,
+      "endMs": 216160,
+      "text": "[Ed]: Rescue diver?"
+    },
+    {
+      "startMs": 216160,
+      "endMs": 217560,
+      "text": "That sounds intense."
+    },
+    {
+      "startMs": 217560,
+      "endMs": 222560,
+      "text": "[John]: Well, it's really just like being a lifeguard except in the ocean instead of pool."
+    },
+    {
+      "startMs": 222560,
+      "endMs": 226560,
+      "text": "So kind of like being a lifeguard at the world's largest pool."
+    },
+    {
+      "startMs": 226560,
+      "endMs": 229560,
+      "text": "[Ed]: I see."
+    },
+    {
+      "startMs": 248560,
+      "endMs": 259560,
+      "text": "Now listen and answer questions 6-10."
+    },
+    {
+      "startMs": 259560,
+      "endMs": 265560,
+      "text": "[Ed]: So could you tell me about the relevant skills you have?"
+    },
+    {
+      "startMs": 265560,
+      "endMs": 268560,
+      "text": "I'm guessing a lot given your experience."
+    },
+    {
+      "startMs": 268560,
+      "endMs": 272560,
+      "text": "[John]: I'm CPR certified and have two years of diving experience."
+    },
+    {
+      "startMs": 272560,
+      "endMs": 276560,
+      "text": "[Ed]: Great, it sounds like you are well qualified for this position."
+    },
+    {
+      "startMs": 276560,
+      "endMs": 279560,
+      "text": "When does your CPR certification expire?"
+    },
+    {
+      "startMs": 279560,
+      "endMs": 286560,
+      "text": "[John]: Hmm, I think in November, but let me quickly check my CPR card."
+    },
+    {
+      "startMs": 286560,
+      "endMs": 288560,
+      "text": "Actually, it expires in October."
+    },
+    {
+      "startMs": 288560,
+      "endMs": 294560,
+      "text": "[Ed]: Okay, so regardless you have it through the end of the summer, when is your ideal time to work?"
+    },
+    {
+      "startMs": 294560,
+      "endMs": 301560,
+      "text": "[John]: Since I work in the restaurant on weeknights, I like weekends best, specifically Saturday mornings."
+    },
+    {
+      "startMs": 301560,
+      "endMs": 306560,
+      "text": "[Ed]: I see, we do already have a lot of staff available on Saturdays,"
+    },
+    {
+      "startMs": 306560,
+      "endMs": 310560,
+      "text": "but I do need an early morning shift lifeguard."
+    },
+    {
+      "startMs": 310560,
+      "endMs": 312560,
+      "text": "How early could you work Saturday morning?"
+    },
+    {
+      "startMs": 312560,
+      "endMs": 316560,
+      "text": "[John]: I can get there by 6 o'clock if need be."
+    },
+    {
+      "startMs": 316560,
+      "endMs": 319560,
+      "text": "[Ed]: You'll be happy to know we open a little later than that,"
+    },
+    {
+      "startMs": 319560,
+      "endMs": 322560,
+      "text": "but I'll put you down for Saturday mornings here."
+    },
+    {
+      "startMs": 322560,
+      "endMs": 325560,
+      "text": "[John]: Oh, awesome, I can't wait to get started."
+    },
+    {
+      "startMs": 325560,
+      "endMs": 328560,
+      "text": "[Ed]: How about you come in next Saturday, the 12th?"
+    },
+    {
+      "startMs": 328560,
+      "endMs": 329560,
+      "text": "[John]: That sounds good."
+    },
+    {
+      "startMs": 329560,
+      "endMs": 334560,
+      "text": "[Ed]: Great, we can figure out other shifts for you to work when you come in then."
+    },
+    {
+      "startMs": 334560,
+      "endMs": 338560,
+      "text": "One last thing, just out of curiosity, where did you hear about us?"
+    },
+    {
+      "startMs": 338560,
+      "endMs": 342560,
+      "text": "[John]: I heard your ad on the radio while I was driving this morning."
+    },
+    {
+      "startMs": 342560,
+      "endMs": 347560,
+      "text": "[Ed]: You know, I think you're the first person who has responded to our radio ads."
+    },
+    {
+      "startMs": 347560,
+      "endMs": 350560,
+      "text": "It's almost always people who have seen us in the newspaper."
+    },
+    {
+      "startMs": 350560,
+      "endMs": 354560,
+      "text": "[John]: Yeah, I don't have time to read through the newspaper every morning."
+    },
+    {
+      "startMs": 354560,
+      "endMs": 357560,
+      "text": "I've plenty of time in the car to listen to radio ads."
+    },
+    {
+      "startMs": 357560,
+      "endMs": 363560,
+      "text": "[Ed]: That makes sense. Well, thanks for your time and we'll look forward to seeing you on the 12th."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 87,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

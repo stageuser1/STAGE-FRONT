@@ -1,0 +1,648 @@
+{
+  "id": "p1-14-notes-on-island-hotel",
+  "title": "Notes on island hotel",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-ff40cd4f9e3d",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 325.779,
+    "checksum": "sha256:dfb9d95403d88fa237ebeae21532cbdad671fdefa9147cd7de6c13b696eb476b"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Notes on island hotel Type of room required: Double room Time The length of stay: approximately 2 weeks Starting date: 25th April Temperature Up to 1. __________ °C Erratic weather Transport Pick-up service is provided. Normally transfer to the airport takes about 2 __________. Facilities en-suite facilities and a 3. __________ gym and spa facilities a large outdoor swimming pool three standard 4. __________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Up to 1. __________ °C",
+          "answer": "19"
+        },
+        {
+          "id": "2",
+          "text": "Normally transfer to the airport takes about 2 __________.",
+          "answer": "40 minutes"
+        },
+        {
+          "id": "3",
+          "text": "en-suite facilities and a 3. __________",
+          "answer": "Balcony"
+        },
+        {
+          "id": "4",
+          "text": "three standard 4. __________",
+          "answer": "Tennis courts"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Notes on island hotel",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Type of room required: Double room",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Time",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The length of stay: approximately 2 weeks",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Starting date: 25th April",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Temperature",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Up to 1. __________ °C",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Erratic weather",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Transport",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Pick-up service is provided.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Normally transfer to the airport takes about 2 __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Facilities",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "en-suite facilities and a 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "gym and spa facilities",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a large outdoor swimming pool",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "three standard 4. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 5–10",
+      "instruction": "Complete the table below. Write NO MORE THAN TWO WORDS. Days Entertainment activities Transportation Tuesdays • Learning to make 5. __________ • Having a 6. __________ concert • Mini bus Wednesdays • Enjoying mountain view • Exploring a tropical 8. __________ • 7. __________ • Shuttle bus Thursdays • Having a fancy dinner • Watching a spectacular display of 9. __________ • 10. __________",
+      "questions": [
+        {
+          "id": "5",
+          "text": "• Learning to make 5. __________",
+          "answer": "Fish dishes"
+        },
+        {
+          "id": "6",
+          "text": "• Having a 6. __________ concert",
+          "answer": "Piano"
+        },
+        {
+          "id": "8",
+          "text": "• Exploring a tropical 8. __________",
+          "answer": "Garden/Cretan Garden"
+        },
+        {
+          "id": "7",
+          "text": "• 7. __________",
+          "answer": "Helicopter"
+        },
+        {
+          "id": "9",
+          "text": "• Watching a spectacular display of 9. __________",
+          "answer": "Fireworks"
+        },
+        {
+          "id": "10",
+          "text": "• 10. __________",
+          "answer": "Cable car"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the table below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Days",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "Entertainment activities",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "Transportation",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "Tuesdays",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "• Learning to make 5. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• Having a 6. __________ concert",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• Mini bus",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "Wednesdays",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "• Enjoying mountain view",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• Exploring a tropical 8. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• 7. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "• Shuttle bus",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "Thursdays",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "• Having a fancy dinner",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• Watching a spectacular display of 9. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• 10. __________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 3
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "19",
+        "2": "40 minutes",
+        "3": "Balcony",
+        "4": "Tennis courts",
+        "5": "Fish dishes",
+        "6": "Piano",
+        "7": "Helicopter",
+        "8": "Garden/Cretan Garden",
+        "9": "Fireworks",
+        "10": "Cable car"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "Listen carefully and answer questions one to four."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 14320,
+      "text": "Receptionist: Good afternoon. You're through to reception at the Island Hotel in Crete. How may I help"
+    },
+    {
+      "startMs": 14320,
+      "endMs": 15320,
+      "text": "you today?"
+    },
+    {
+      "startMs": 15320,
+      "endMs": 21720,
+      "text": "Guest: Yes, hello there. I'm hoping to book a double room for my wife and myself for about two"
+    },
+    {
+      "startMs": 21720,
+      "endMs": 27960,
+      "text": "weeks from the 25th of April of this year. Firstly, could you tell me whether it's particularly"
+    },
+    {
+      "startMs": 27960,
+      "endMs": 29960,
+      "text": "hot during this time?"
+    },
+    {
+      "startMs": 29960,
+      "endMs": 35360,
+      "text": "Receptionist: Yes, of course, sir. During late April and early May, the daytime temperature shouldn't"
+    },
+    {
+      "startMs": 35360,
+      "endMs": 41440,
+      "text": "exceed 19 degrees Celsius, but the weather has been rather erratic and difficult to predict"
+    },
+    {
+      "startMs": 41440,
+      "endMs": 45640,
+      "text": "in recent years, so I am unable to say for certain."
+    },
+    {
+      "startMs": 45640,
+      "endMs": 51560,
+      "text": "Guest: Okay, that sounds good. My wife doesn't like going outside when it's very hot. I haven't"
+    },
+    {
+      "startMs": 51560,
+      "endMs": 57000,
+      "text": "booked flights yet, but I must say that I'm unfamiliar with Crete and its transport system."
+    },
+    {
+      "startMs": 57000,
+      "endMs": 59720,
+      "text": "Does the hotel provide an airport shuttle service?"
+    },
+    {
+      "startMs": 59720,
+      "endMs": 66120,
+      "text": "Receptionist: Yes, sir. We provide a complimentary airport pickup service for all our guests. It takes"
+    },
+    {
+      "startMs": 66120,
+      "endMs": 73040,
+      "text": "about 40 minutes to get here from the airport, but it's at least 60 minutes at rush hours,"
+    },
+    {
+      "startMs": 73040,
+      "endMs": 77040,
+      "text": "and you will be provided with a fully air-conditioned shuttle bus."
+    },
+    {
+      "startMs": 77040,
+      "endMs": 82280,
+      "text": "Guest: Okay, excellent. In that case, do you have any rooms available for the dates I gave you?"
+    },
+    {
+      "startMs": 82280,
+      "endMs": 87280,
+      "text": "Receptionist: I shall have a look on the system now for you, sir, bear with me just a moment."
+    },
+    {
+      "startMs": 87280,
+      "endMs": 93720,
+      "text": "Yes, sir. I can see now that we have several rooms available. Would you prefer a garden"
+    },
+    {
+      "startMs": 93720,
+      "endMs": 95720,
+      "text": "view or a sea view?"
+    },
+    {
+      "startMs": 95720,
+      "endMs": 100400,
+      "text": "Guest: Well, ideally, I would like a sea view room with a balcony, but of course that depends"
+    },
+    {
+      "startMs": 100400,
+      "endMs": 102280,
+      "text": "on the difference in price."
+    },
+    {
+      "startMs": 102280,
+      "endMs": 109040,
+      "text": "Receptionist: Not to worry, sir. All of our standard double rooms have en-suite facilities and a balcony."
+    },
+    {
+      "startMs": 109040,
+      "endMs": 114640,
+      "text": "If you would like one of our sea view rooms, there is a premium of 60 euros per night."
+    },
+    {
+      "startMs": 114640,
+      "endMs": 121160,
+      "text": "Guest: Okay, so could you tell me the total nightly rate for a standard double room with a sea view?"
+    },
+    {
+      "startMs": 121160,
+      "endMs": 128880,
+      "text": "Receptionist: Yes, of course, sir. For the spring months, our rate is 216 euros per night. For 14 nights"
+    },
+    {
+      "startMs": 128880,
+      "endMs": 133840,
+      "text": "altogether, this will come to 3,024 euros."
+    },
+    {
+      "startMs": 134840,
+      "endMs": 141840,
+      "text": "Guest: I also read on your website that the hotel has gym and spa facilities. Are there any other facilities on offer?"
+    },
+    {
+      "startMs": 141840,
+      "endMs": 149840,
+      "text": "Receptionist: Yes, we have a large outdoor infinity pool overlooking the ocean, with luxury sunbeds and a poolside bar."
+    },
+    {
+      "startMs": 149840,
+      "endMs": 155840,
+      "text": "We also have three full-size tennis courts, where we run a popular doubles tournament,"
+    },
+    {
+      "startMs": 155840,
+      "endMs": 160840,
+      "text": "with the winner receiving two all-inclusive spa day vouchers."
+    },
+    {
+      "startMs": 160840,
+      "endMs": 166840,
+      "text": "Guest: Goodness, I shall have to brush up on my tennis skills."
+    },
+    {
+      "startMs": 166840,
+      "endMs": 174840,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions 5 to 10."
+    },
+    {
+      "startMs": 191840,
+      "endMs": 199840,
+      "text": "Now listen and answer questions 5 to 10."
+    },
+    {
+      "startMs": 199840,
+      "endMs": 204840,
+      "text": "Guest: Are there any other activities organised by the hotel that we can partake in?"
+    },
+    {
+      "startMs": 204840,
+      "endMs": 213840,
+      "text": "It's just that it's our wedding anniversary on 30 June, and I would like to provide my wife with a perfect romantic getaway."
+    },
+    {
+      "startMs": 213840,
+      "endMs": 217840,
+      "text": "Receptionist: I can assure you, sir, that your wife won't be disappointed."
+    },
+    {
+      "startMs": 217840,
+      "endMs": 222840,
+      "text": "Ours is a five-star resort, which is renowned for its luxury and beauty."
+    },
+    {
+      "startMs": 222840,
+      "endMs": 228840,
+      "text": "In terms of activities, the hotel provides thrice-weekly entertainment."
+    },
+    {
+      "startMs": 228840,
+      "endMs": 235840,
+      "text": "On Tuesdays, guests will take a minibus and partake in learning to cook succulent fish dishes,"
+    },
+    {
+      "startMs": 235840,
+      "endMs": 238840,
+      "text": "with our Michelin-starred chef Enrique."
+    },
+    {
+      "startMs": 239840,
+      "endMs": 244840,
+      "text": "The class will take place in a beautiful valley deep in the Cretan Hills,"
+    },
+    {
+      "startMs": 244840,
+      "endMs": 251840,
+      "text": "where guests will be treated to an intimate piano performance by our in-house concert pianist Pedro."
+    },
+    {
+      "startMs": 251840,
+      "endMs": 259840,
+      "text": "On Wednesdays, a select number of guests will be fortunate enough to explore the mountains by helicopter,"
+    },
+    {
+      "startMs": 259840,
+      "endMs": 265840,
+      "text": "before being transported to a tropical Cretan garden by shuttle bus."
+    },
+    {
+      "startMs": 265840,
+      "endMs": 273840,
+      "text": "Finally, on Thursdays, after a fancy dinner, we provide a spectacular fireworks display,"
+    },
+    {
+      "startMs": 273840,
+      "endMs": 277840,
+      "text": "which guests can view from the comfort of a cable car."
+    },
+    {
+      "startMs": 277840,
+      "endMs": 280840,
+      "text": "Guest: Oh wow, that all sounds absolutely wonderful."
+    },
+    {
+      "startMs": 280840,
+      "endMs": 286840,
+      "text": "I shall book the room now, and then I need to look at flights so as not to become extortionate."
+    },
+    {
+      "startMs": 286840,
+      "endMs": 290840,
+      "text": "Would you like to take my details now or later?"
+    },
+    {
+      "startMs": 292840,
+      "endMs": 294840,
+      "text": "That is the end of section one."
+    },
+    {
+      "startMs": 294840,
+      "endMs": 298840,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 307840,
+      "endMs": 310840,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 52,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

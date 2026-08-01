@@ -1,0 +1,595 @@
+{
+  "id": "p3-6-biogas-plant",
+  "title": "Biogas Plant",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-f17c085098c9",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 522.072,
+    "checksum": "sha256:c7f86feff2d1954499e8015c7749c07ee05e98e91da61ed0dbcbd8ff175fb322"
+  },
+  "groups": [
+    {
+      "type": "map",
+      "title": "Questions 21–25",
+      "instruction": "Label the diagram below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "Waste container",
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "Slurry",
+          "answer": "G"
+        },
+        {
+          "id": "23",
+          "text": "Water inlet",
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "Gas",
+          "answer": "E"
+        },
+        {
+          "id": "25",
+          "text": "Overflow tank",
+          "answer": "F"
+        }
+      ],
+      "image": {
+        "assetId": "image-p3-6-biogas-plant-diagram-png",
+        "filename": "diagram.png",
+        "src": "images/image-p3-6-biogas-plant-diagram-png-diagram.png"
+      }
+    },
+    {
+      "type": "matching",
+      "title": "Questions 26–30",
+      "instruction": "Complete the flow chart below.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identify sequence"
+        },
+        {
+          "id": "B",
+          "text": "Ask questions"
+        },
+        {
+          "id": "C",
+          "text": "Copy"
+        },
+        {
+          "id": "D",
+          "text": "Demonstrate meaning"
+        },
+        {
+          "id": "E",
+          "text": "Distribute worksheet"
+        },
+        {
+          "id": "F",
+          "text": "Draw pictures"
+        },
+        {
+          "id": "G",
+          "text": "Present sentences"
+        }
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "Teacher: _____.",
+          "answer": "D"
+        },
+        {
+          "id": "27",
+          "text": "Teacher: _____.",
+          "answer": "G"
+        },
+        {
+          "id": "28",
+          "text": "Pupils: _____.  and expand",
+          "answer": "C"
+        },
+        {
+          "id": "29",
+          "text": "Pupils: _____.",
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "Teacher: _____.",
+          "answer": "E"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Teacher: Introduce word",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Pupils: look and listen",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Teacher: 26. _____",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Pupils: look and listen",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Teacher: Present question",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Pupils: respond",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Teacher: 27. _____",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Pupils: 28. _____ and expand",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Teacher: Display pictures",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Pupils: 29. _____",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Teacher: 30. _____",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 5,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Pupils: write",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 5,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Teacher: Monitor pupils",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 6,
+          "col": 0,
+          "cols": 2
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "26": "D",
+        "27": "G",
+        "28": "C",
+        "29": "A",
+        "30": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "G",
+        "23": "A",
+        "24": "E",
+        "25": "F"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13400,
+      "text": "You will hear a trainee teacher called Eve talking to her university tutor about her"
+    },
+    {
+      "startMs": 13400,
+      "endMs": 16700,
+      "text": "preparations for teaching practice."
+    },
+    {
+      "startMs": 16700,
+      "endMs": 21200,
+      "text": "Before you listen, you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 51000,
+      "text": "Now, listen and answer questions 21 to 25."
+    },
+    {
+      "startMs": 51000,
+      "endMs": 56000,
+      "text": "Tutor: Hello, Eve. Come in and sit down. How's it going?"
+    },
+    {
+      "startMs": 56000,
+      "endMs": 60000,
+      "text": "Eve: Hi, thanks. I'm looking forward to my teaching practice next week."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 68000,
+      "text": "Tutor: Good. Now, you've got two classes, haven't you? Year three and Year six. Have you done your lesson plans?"
+    },
+    {
+      "startMs": 68000,
+      "endMs": 75000,
+      "text": "Eve: Well, I've decided to take the topic of renewable energy. I haven't done a lesson plan for Year six yet,"
+    },
+    {
+      "startMs": 75000,
+      "endMs": 80000,
+      "text": "but I thought I'd base their lesson on an example of very simple technology."
+    },
+    {
+      "startMs": 80000,
+      "endMs": 85000,
+      "text": "So, I've brought this diagram to show you. I got it from the internet."
+    },
+    {
+      "startMs": 85000,
+      "endMs": 93000,
+      "text": "Tutor: Let's see. A biogas plant. So, this is equipment for producing fuel from organic waste."
+    },
+    {
+      "startMs": 93000,
+      "endMs": 99000,
+      "text": "Eve: Yes. The smaller container on the left is where you put the waste you've collected."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 104000,
+      "text": "Tutor: Right. And from there, it's piped into the larger tank."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 109000,
+      "text": "Eve: That's right. And that's slurry on the base of the larger tank."
+    },
+    {
+      "startMs": 109000,
+      "endMs": 113000,
+      "text": "Tutor: Right. And what exactly is slurry?"
+    },
+    {
+      "startMs": 113000,
+      "endMs": 117000,
+      "text": "Eve: It's a mixture of organic waste and water."
+    },
+    {
+      "startMs": 117000,
+      "endMs": 121000,
+      "text": "Tutor: So, is that pipe at the bottom where the water comes in?"
+    },
+    {
+      "startMs": 121000,
+      "endMs": 128000,
+      "text": "Eve: Yes, it is. As the slurry mixture digests, it produces gas, and that rises to the top of the dome."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 135000,
+      "text": "Then, when it's needed, it can be piped off for use as fuel in homes or factories. It's very simple."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 140000,
+      "text": "Tutor: I suppose there's some kind of safety valve to prevent pressure buildup."
+    },
+    {
+      "startMs": 140000,
+      "endMs": 144000,
+      "text": "Eve: That's the overflow tank. That container on the right."
+    },
+    {
+      "startMs": 144000,
+      "endMs": 148000,
+      "text": "As the slurry expands, some of it flows into that."
+    },
+    {
+      "startMs": 148000,
+      "endMs": 153000,
+      "text": "And then, once some of the gas has been piped off, the slurry level goes down again."
+    },
+    {
+      "startMs": 153000,
+      "endMs": 156000,
+      "text": "And the overflow tank empties again."
+    },
+    {
+      "startMs": 156000,
+      "endMs": 161000,
+      "text": "Tutor: I see. Well, I think that's suitably simple for the age level it's for."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 163000,
+      "text": "I look forward to seeing the whole lesson plan."
+    },
+    {
+      "startMs": 163000,
+      "endMs": 167000,
+      "text": "Eve: Thanks. And can I show you my ideas for the year three lesson?"
+    },
+    {
+      "startMs": 167000,
+      "endMs": 171000,
+      "text": "Tutor: Of course. Let's look."
+    },
+    {
+      "startMs": 171000,
+      "endMs": 178000,
+      "text": "Before you listen to the rest of the conversation, you have some time to look at questions 26 to 30."
+    },
+    {
+      "startMs": 197000,
+      "endMs": 206000,
+      "text": "Now listen and answer questions 26 to 30."
+    },
+    {
+      "startMs": 206000,
+      "endMs": 215000,
+      "text": "Eve: I thought I'd introduce the topic by writing the word energy on the board and reinforcing the spelling and the pronunciation."
+    },
+    {
+      "startMs": 215000,
+      "endMs": 221000,
+      "text": "Then I'll do a little mime, you know, run on the spot or something to convey the sense."
+    },
+    {
+      "startMs": 221000,
+      "endMs": 224000,
+      "text": "Tutor: I'd keep it brief at this stage."
+    },
+    {
+      "startMs": 224000,
+      "endMs": 233000,
+      "text": "Eve: Yes, I will. Then I'll wipe the word off and write the question, where does energy come from and see what the pupils come up with?"
+    },
+    {
+      "startMs": 233000,
+      "endMs": 240000,
+      "text": "Tutor: Fine. I suggest that you just brainstorm at this stage and don't reject any of their suggestions."
+    },
+    {
+      "startMs": 240000,
+      "endMs": 243000,
+      "text": "Eve: Yes. That's what I was going to do."
+    },
+    {
+      "startMs": 243000,
+      "endMs": 252000,
+      "text": "Then I've produced a set of simple statements like, energy makes cars move along the road and energy makes our bodies grow."
+    },
+    {
+      "startMs": 252000,
+      "endMs": 254000,
+      "text": "There are eight altogether."
+    },
+    {
+      "startMs": 254000,
+      "endMs": 259000,
+      "text": "Tutor: Are you going to give them out as a handout or write them up on the board?"
+    },
+    {
+      "startMs": 259000,
+      "endMs": 264000,
+      "text": "Eve: First, them up on the board and then I'll read them out loud."
+    },
+    {
+      "startMs": 264000,
+      "endMs": 267000,
+      "text": "And I'll get the pupils to copy them out in their notebooks."
+    },
+    {
+      "startMs": 267000,
+      "endMs": 273000,
+      "text": "I'll also ask them to think up one more similar statement by themselves and add it to the list."
+    },
+    {
+      "startMs": 273000,
+      "endMs": 275000,
+      "text": "Tutor: Good idea."
+    },
+    {
+      "startMs": 275000,
+      "endMs": 286000,
+      "text": "Eve: After that, I thought I'd vary things a bit by sticking some pictures up of things like the sun and plants and food and petrol and a running child."
+    },
+    {
+      "startMs": 286000,
+      "endMs": 293000,
+      "text": "And I'll get the pupils to work out what order the pictures should come in in terms of the energy chain."
+    },
+    {
+      "startMs": 293000,
+      "endMs": 299000,
+      "text": "Tutor: I think that's a very good idea. You could move the pictures around as the pupils give you directions."
+    },
+    {
+      "startMs": 299000,
+      "endMs": 302000,
+      "text": "Eve: Yes. I think they'd enjoy that."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 309000,
+      "text": "And to finish off, I've made a gap fill exercise to give out. They'll be doing that individually."
+    },
+    {
+      "startMs": 309000,
+      "endMs": 313000,
+      "text": "And while they're writing, I'll walk round and check their work."
+    },
+    {
+      "startMs": 313000,
+      "endMs": 322000,
+      "text": "Tutor: Good. And have you worked out the timing of all that? It'll probably take you right through to the end of the lesson."
+    },
+    {
+      "startMs": 322000,
+      "endMs": 328000,
+      "text": "That is the end of Part 3. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 352000,
+      "endMs": 355000,
+      "text": "You"
+    },
+    {
+      "startMs": 382000,
+      "endMs": 385000,
+      "text": "You"
+    },
+    {
+      "startMs": 412000,
+      "endMs": 415000,
+      "text": "You"
+    },
+    {
+      "startMs": 442000,
+      "endMs": 445000,
+      "text": "You"
+    },
+    {
+      "startMs": 472000,
+      "endMs": 475000,
+      "text": "You"
+    },
+    {
+      "startMs": 502000,
+      "endMs": 505000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "diagram.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 57,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

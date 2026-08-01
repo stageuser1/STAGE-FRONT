@@ -1,0 +1,606 @@
+{
+  "id": "p3-46-trademark",
+  "title": "Trademark",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-33ddc9efcac9",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 426.744,
+    "checksum": "sha256:a43cfa22bf49290f04e8389f422b30dbeadb6f7dd9c9e9f8f3fe071f75595fe9"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Question 21-26",
+      "instruction": "Choose SIX answers from the box A-H, next to questions 21-26",
+      "options": [
+        {
+          "id": "A",
+          "text": "need to sign an additional contract"
+        },
+        {
+          "id": "B",
+          "text": "automatically applied"
+        },
+        {
+          "id": "C",
+          "text": "has no time limit"
+        },
+        {
+          "id": "D",
+          "text": "need assistance from specialists"
+        },
+        {
+          "id": "E",
+          "text": "not applicable overseas"
+        },
+        {
+          "id": "F",
+          "text": "increase the value of the company"
+        },
+        {
+          "id": "G",
+          "text": "cheap to apply for"
+        },
+        {
+          "id": "H",
+          "text": "make the products unique"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "copyright",
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "patent",
+          "answer": "D"
+        },
+        {
+          "id": "23",
+          "text": "trademarks",
+          "answer": "F"
+        },
+        {
+          "id": "24",
+          "text": "design",
+          "answer": "H"
+        },
+        {
+          "id": "25",
+          "text": "circuit",
+          "answer": "E"
+        },
+        {
+          "id": "26",
+          "text": "trade secret",
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Question 27-30",
+      "instruction": "Complete the flow chart below.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "the commercialization committee"
+        },
+        {
+          "id": "B",
+          "text": "a business manager"
+        },
+        {
+          "id": "C",
+          "text": "a research leader"
+        },
+        {
+          "id": "D",
+          "text": "an external expert"
+        },
+        {
+          "id": "E",
+          "text": "a program leader"
+        },
+        {
+          "id": "F",
+          "text": "a project leader"
+        },
+        {
+          "id": "G",
+          "text": "an industry representative"
+        },
+        {
+          "id": "H",
+          "text": "a delivery manager"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Quarterly research report is written up by the _____.",
+          "answer": "F"
+        },
+        {
+          "id": "28",
+          "text": "Deliver the report to _____.  to make amendments",
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "In the review meeting, _____.  will check all the amendments",
+          "answer": "H"
+        },
+        {
+          "id": "30",
+          "text": "The final decision will be sent to the _____.  to analyze the cost of the whole process.",
+          "answer": "B"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "The process of intellectual property management",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Quarterly research report is written up by the 27. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Identify whether it is patentable",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Deliver the report to 28. ______ to make amendments",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the review meeting, 29. ______ will check all the amendments",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The final decision will be sent to the 30. ______ to analyze the cost of the whole process.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "D",
+        "23": "F",
+        "24": "H",
+        "25": "E",
+        "26": "A",
+        "27": "F",
+        "28": "A",
+        "29": "H",
+        "30": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8000,
+      "text": "Now turn to Section 3."
+    },
+    {
+      "startMs": 8000,
+      "endMs": 9000,
+      "text": "Section 3."
+    },
+    {
+      "startMs": 9000,
+      "endMs": 17000,
+      "text": "You will hear two business students talking about the research they have done into one area of business."
+    },
+    {
+      "startMs": 17000,
+      "endMs": 23000,
+      "text": "First, you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 58000,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 59000,
+      "endMs": 65000,
+      "text": "Student A: Okay, so let's look at what topic we've got for the next tutorial."
+    },
+    {
+      "startMs": 65000,
+      "endMs": 68000,
+      "text": "Oh, intellectual property."
+    },
+    {
+      "startMs": 68000,
+      "endMs": 73000,
+      "text": "That's anything that you produce from your own ideas or creative activity."
+    },
+    {
+      "startMs": 73000,
+      "endMs": 75000,
+      "text": "It's like the property of your mind."
+    },
+    {
+      "startMs": 75000,
+      "endMs": 82000,
+      "text": "Student B: And we have to look at the different ways of legally protecting these ideas and inventions."
+    },
+    {
+      "startMs": 82000,
+      "endMs": 86000,
+      "text": "Student A: Right, we need to know what they are and be able to talk about them."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 88000,
+      "text": "You want to start with copyright?"
+    },
+    {
+      "startMs": 88000,
+      "endMs": 92000,
+      "text": "Student B: Yeah, it's the one I knew a bit about already."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 98000,
+      "text": "It's your right as the author or inventor lasting for 70 years after your death."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 101000,
+      "text": "It's free and you don't even have to apply for it."
+    },
+    {
+      "startMs": 101000,
+      "endMs": 104000,
+      "text": "Student A: But it doesn't fit every situation does it?"
+    },
+    {
+      "startMs": 104000,
+      "endMs": 108000,
+      "text": "Okay, what about some other kinds of registration?"
+    },
+    {
+      "startMs": 108000,
+      "endMs": 111000,
+      "text": "Hmm, I did some research on patents."
+    },
+    {
+      "startMs": 111000,
+      "endMs": 117000,
+      "text": "Student B: Right, a patent means no one else can financially benefit from your invention."
+    },
+    {
+      "startMs": 117000,
+      "endMs": 121000,
+      "text": "Student A: Right, it seems to be very costly to apply for."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 127000,
+      "text": "So you really need to know what you've invented is worth going through all the rigmarole for."
+    },
+    {
+      "startMs": 127000,
+      "endMs": 131000,
+      "text": "Student B: Well, I don't think it's something you can do without professional help."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 134000,
+      "text": "It's a very complicated process."
+    },
+    {
+      "startMs": 134000,
+      "endMs": 137000,
+      "text": "Student A: Let's have a look at trademarks next."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 139000,
+      "text": "We are both quite familiar with these."
+    },
+    {
+      "startMs": 139000,
+      "endMs": 144000,
+      "text": "I mean, just think how well known the logos of some companies are."
+    },
+    {
+      "startMs": 144000,
+      "endMs": 147000,
+      "text": "They seem to really instill trust in a brand."
+    },
+    {
+      "startMs": 147000,
+      "endMs": 151000,
+      "text": "And so they add millions of dollars to how much a company's worth."
+    },
+    {
+      "startMs": 151000,
+      "endMs": 158000,
+      "text": "Student B: And from what I've discovered, it doesn't seem to cost much to register trademarks either."
+    },
+    {
+      "startMs": 158000,
+      "endMs": 162000,
+      "text": "Okay, so what's next? Ah, design."
+    },
+    {
+      "startMs": 162000,
+      "endMs": 169000,
+      "text": "This has quite a specific meaning as it relates to how something looks and not how it works."
+    },
+    {
+      "startMs": 169000,
+      "endMs": 176000,
+      "text": "I read it's standard for the big corporations that make mobile phones to register the design of their handsets,"
+    },
+    {
+      "startMs": 176000,
+      "endMs": 179000,
+      "text": "so they remain quite distinctive."
+    },
+    {
+      "startMs": 179000,
+      "endMs": 182000,
+      "text": "Student A: That's interesting. I wasn't aware of that."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 186000,
+      "text": "So how does design differ from the next category of protection?"
+    },
+    {
+      "startMs": 186000,
+      "endMs": 188000,
+      "text": "Student B: You mean circuit?"
+    },
+    {
+      "startMs": 188000,
+      "endMs": 195000,
+      "text": "Well, circuits are a type of protection that safeguards original layout design for things like computer chips."
+    },
+    {
+      "startMs": 195000,
+      "endMs": 198000,
+      "text": "So it's fairly narrow in its meaning."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 203000,
+      "text": "And it is quite limited as it can only be enforced in this country."
+    },
+    {
+      "startMs": 203000,
+      "endMs": 207000,
+      "text": "Student A: Yeah, the blueprint could be copied and reproduced in other countries."
+    },
+    {
+      "startMs": 207000,
+      "endMs": 210000,
+      "text": "And the owner has no legal protection."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 213000,
+      "text": "So my view is, what's the point?"
+    },
+    {
+      "startMs": 213000,
+      "endMs": 216000,
+      "text": "Student B: Maybe in time it will be recognized elsewhere."
+    },
+    {
+      "startMs": 216000,
+      "endMs": 220000,
+      "text": "Student A: I find the next category quite interesting."
+    },
+    {
+      "startMs": 220000,
+      "endMs": 225000,
+      "text": "When I think of trade secrets, I immediately think of Granny May's cookies."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 233000,
+      "text": "They've deliberately not patented their special recipes so that the other manufacturers don't know what the ingredients are."
+    },
+    {
+      "startMs": 233000,
+      "endMs": 235000,
+      "text": "Hard for them to discover."
+    },
+    {
+      "startMs": 235000,
+      "endMs": 245000,
+      "text": "Student B: Yeah, but it must be difficult to maintain a trade secret because you have to make sure that all staff sign an agreement and stick to it if they leave."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 247000,
+      "text": "Student A: That's true."
+    },
+    {
+      "startMs": 247000,
+      "endMs": 256000,
+      "text": "Okay, so we're happy with what we've discussed with different types of intellectual property."
+    },
+    {
+      "startMs": 256000,
+      "endMs": 264000,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30."
+    },
+    {
+      "startMs": 275000,
+      "endMs": 290000,
+      "text": "Now listen and answer questions 27 to 30."
+    },
+    {
+      "startMs": 290000,
+      "endMs": 297000,
+      "text": "Student A: Next, we have to write up the process that one company uses to manage its intellectual property."
+    },
+    {
+      "startMs": 297000,
+      "endMs": 308000,
+      "text": "Student B: Yeah, in the company we looked at, there were certainly a lot of people involved in this process from the research leader through to the commercialization committee."
+    },
+    {
+      "startMs": 308000,
+      "endMs": 314000,
+      "text": "Student A: Right. Well, it all gets initiated by the quarterly research report."
+    },
+    {
+      "startMs": 314000,
+      "endMs": 318000,
+      "text": "This is produced by the, let me look at my notes."
+    },
+    {
+      "startMs": 318000,
+      "endMs": 320000,
+      "text": "The project leader."
+    },
+    {
+      "startMs": 320000,
+      "endMs": 325000,
+      "text": "They have to write up the report with details of how they are meeting their research deadlines."
+    },
+    {
+      "startMs": 325000,
+      "endMs": 330000,
+      "text": "Student B: And they put details in it about changes in intellectual property, don't they?"
+    },
+    {
+      "startMs": 330000,
+      "endMs": 336000,
+      "text": "Things like they now realize that they are researching something that may be patentable after all."
+    },
+    {
+      "startMs": 336000,
+      "endMs": 340000,
+      "text": "And they have to identify this as early as possible."
+    },
+    {
+      "startMs": 340000,
+      "endMs": 345000,
+      "text": "Student A: And do they send the report to an external expert at this stage?"
+    },
+    {
+      "startMs": 345000,
+      "endMs": 353000,
+      "text": "Student B: No, they send it on to the commercialization committee, which consists of the program leader and an industry representative."
+    },
+    {
+      "startMs": 353000,
+      "endMs": 358000,
+      "text": "They review the report, bearing amendments to the intellectual property."
+    },
+    {
+      "startMs": 358000,
+      "endMs": 371000,
+      "text": "Student A: Right. Then from that review meeting, all the amendments are brought together and gone through by the delivery officer who works out the most beneficial way to register the intellectual property."
+    },
+    {
+      "startMs": 371000,
+      "endMs": 379000,
+      "text": "Student B: Yes, this stage can take quite a long time. The project leader must get really frustrated by all this."
+    },
+    {
+      "startMs": 379000,
+      "endMs": 385000,
+      "text": "If I've got this right, they then let the business manager know what has been decided."
+    },
+    {
+      "startMs": 385000,
+      "endMs": 391000,
+      "text": "And it's at this point that the intellectual property gets taken out of the control of the research area,"
+    },
+    {
+      "startMs": 391000,
+      "endMs": 396000,
+      "text": "and it becomes more to do with the financial or commercial issues of registration."
+    },
+    {
+      "startMs": 396000,
+      "endMs": 405000,
+      "text": "Student A: Exactly. So if they feel that their proposal fits within the allocated budget for intellectual property,"
+    },
+    {
+      "startMs": 405000,
+      "endMs": 413000,
+      "text": "and a likely return on the investment is worth it, they will then need to engage the help of a specialist in the field."
+    },
+    {
+      "startMs": 413000,
+      "endMs": 419000,
+      "text": "It's extremely likely that they will find themselves."
+    },
+    {
+      "startMs": 419000,
+      "endMs": 426000,
+      "text": "That is the end of section three. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 73,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

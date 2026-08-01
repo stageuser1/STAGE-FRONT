@@ -1,0 +1,515 @@
+{
+  "id": "p2-52-home-features-and-buying-advice",
+  "title": "Home Features and Buying Advice",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-807856adef4c",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 340.488,
+    "checksum": "sha256:5fa6c8fc19deec9e10047ea3d7eb8808f3dfda3751c412decb470f971b6aa365"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "11-12",
+      "title": "Questions 11 and 12",
+      "instruction": "Choose TWO letters, A -E.",
+      "questionText": "Why does the speaker recommend the first house?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "good location"
+        },
+        {
+          "id": "B",
+          "text": "trendy design"
+        },
+        {
+          "id": "C",
+          "text": "low price"
+        },
+        {
+          "id": "D",
+          "text": "newly decorated"
+        },
+        {
+          "id": "E",
+          "text": "suitable for family with children"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Why does the speaker recommend the first house?",
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "Why does the speaker recommend the first house?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Question 13",
+      "instruction": "Choose the correct letter A, B or C.",
+      "questions": [
+        {
+          "id": "13",
+          "text": "When could potential buyers visit the first house?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wednesday lunchtime"
+            },
+            {
+              "id": "B",
+              "text": "Every afternoon"
+            },
+            {
+              "id": "C",
+              "text": "All weekends"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 14-16",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "questions": [
+        {
+          "id": "14",
+          "text": "master room",
+          "answer": "C"
+        },
+        {
+          "id": "15",
+          "text": "bathroom",
+          "answer": "A"
+        },
+        {
+          "id": "16",
+          "text": "guest room",
+          "answer": "D"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-52-home-features-and-buying-advice-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-52-home-features-and-buying-advice-map-png-map.png"
+      }
+    },
+    {
+      "type": "fill",
+      "title": "Questions 17-20",
+      "instruction": "Complete the table below. Write NO MORE THAN TWO WORDS for each answer. The second house Advantages Disadvantages has a large 17. ______ only has 19. ______ convenient for its 18. ______ no 20. ______",
+      "questions": [
+        {
+          "id": "17",
+          "text": "has a large 17. ______",
+          "answer": "parking lot"
+        },
+        {
+          "id": "19",
+          "text": "only has 19. ______",
+          "answer": "two bedrooms"
+        },
+        {
+          "id": "18",
+          "text": "convenient for its 18. ______",
+          "answer": "central location"
+        },
+        {
+          "id": "20",
+          "text": "no 20. ______",
+          "answer": "garage"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the table below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The second house",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Advantages",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Disadvantages",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "has a large 17. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "only has 19. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "convenient for its 18. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "no 20. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "17": "parking lot",
+        "18": "central location",
+        "19": "two bedrooms",
+        "20": "garage"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "13": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "11_12": [
+          "A",
+          "E"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "14": "C",
+        "15": "A",
+        "16": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6000,
+      "text": "Part 2."
+    },
+    {
+      "startMs": 6000,
+      "endMs": 11600,
+      "text": "You will hear a real estate agent giving information to a couple who want to buy a house."
+    },
+    {
+      "startMs": 11600,
+      "endMs": 15840,
+      "text": "First, you have some time to look at questions 11-13."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 42000,
+      "text": "Now, listen carefully and to answer questions 11-13."
+    },
+    {
+      "startMs": 42000,
+      "endMs": 49640,
+      "text": "Hello, Mr. and Mrs. Clark. I believe you are doing well. I am Tom, the sales manager of"
+    },
+    {
+      "startMs": 49640,
+      "endMs": 56120,
+      "text": "Housed Inc. and I got your mail requesting for a house that would suit your specifications."
+    },
+    {
+      "startMs": 56120,
+      "endMs": 61240,
+      "text": "I have been able to do some work and have come up with two options that I think should"
+    },
+    {
+      "startMs": 61240,
+      "endMs": 67680,
+      "text": "fit what you are looking for. The first house is situated on Allen Street and the owner"
+    },
+    {
+      "startMs": 67680,
+      "endMs": 73240,
+      "text": "told me that he bought the house largely because of where it is located. The house was"
+    },
+    {
+      "startMs": 73240,
+      "endMs": 79480,
+      "text": "decorated a few years ago, but I think it still looks new to a large extent."
+    },
+    {
+      "startMs": 79480,
+      "endMs": 85320,
+      "text": "Anyways, you might dislike the old-fashioned design of the house which was modeled to"
+    },
+    {
+      "startMs": 85320,
+      "endMs": 91880,
+      "text": "the original owner's taste. Of course, you can arrange decorations of your own. I just"
+    },
+    {
+      "startMs": 91880,
+      "endMs": 97600,
+      "text": "have to inform you beforehand. I looked through your profile and it said that you have a large"
+    },
+    {
+      "startMs": 97600,
+      "endMs": 103600,
+      "text": "family of six. I felt this house could be more appropriate for you with children than"
+    },
+    {
+      "startMs": 103600,
+      "endMs": 110440,
+      "text": "just young couples as it has eight rooms, including four bedrooms. According to your"
+    },
+    {
+      "startMs": 110440,
+      "endMs": 117720,
+      "text": "budget, although the house is a bit pricey, the price hasn't exceeded your limit yet."
+    },
+    {
+      "startMs": 117720,
+      "endMs": 123560,
+      "text": "It's very reasonable, though, for a house on Allen Street. The owner had initially fixed"
+    },
+    {
+      "startMs": 123560,
+      "endMs": 129920,
+      "text": "every afternoon for potential buyers to visit. Then he shifted it to all weekends, but"
+    },
+    {
+      "startMs": 129920,
+      "endMs": 135840,
+      "text": "by yesterday, he informed me that he would be allowing only Wednesdays during lunchtime"
+    },
+    {
+      "startMs": 135840,
+      "endMs": 143080,
+      "text": "for visits, so it means we have to go either tomorrow or next week."
+    },
+    {
+      "startMs": 143080,
+      "endMs": 149160,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 14-20."
+    },
+    {
+      "startMs": 159920,
+      "endMs": 187920,
+      "text": "Now, listen and to answer questions 14-20."
+    },
+    {
+      "startMs": 189920,
+      "endMs": 197680,
+      "text": "OK, onto the next house. I was able to get the layout of this building to help you understand"
+    },
+    {
+      "startMs": 197680,
+      "endMs": 204880,
+      "text": "it better. The house is situated on Pearl Street just around the corner. It is a well-planned"
+    },
+    {
+      "startMs": 204880,
+      "endMs": 211560,
+      "text": "and designed house. In the southeast of the house, you can see the master room, whereas"
+    },
+    {
+      "startMs": 211560,
+      "endMs": 217960,
+      "text": "the dining room is in the north-western corner. There is a bathroom in the south-western"
+    },
+    {
+      "startMs": 217960,
+      "endMs": 224680,
+      "text": "corner of the house that is modern and well-equipped. It provides adequate storage for the whole"
+    },
+    {
+      "startMs": 224680,
+      "endMs": 231800,
+      "text": "family. As for the bedroom, which is kept especially for visitors, it is in the direct"
+    },
+    {
+      "startMs": 231800,
+      "endMs": 238360,
+      "text": "south of the house, just between the bathroom and the master room. You will see the kitchen"
+    },
+    {
+      "startMs": 238360,
+      "endMs": 245040,
+      "text": "to your left when you just step in the house. Of course, I should give as much information"
+    },
+    {
+      "startMs": 245040,
+      "endMs": 253200,
+      "text": "as I can so as to help you in the decision-making process. The second house has both advantages"
+    },
+    {
+      "startMs": 253200,
+      "endMs": 260800,
+      "text": "and disadvantages and you should know well about them. First, the premises are quite lovely"
+    },
+    {
+      "startMs": 260800,
+      "endMs": 267240,
+      "text": "and there is a small garden just behind the main building. Also, you do not have to manage"
+    },
+    {
+      "startMs": 267240,
+      "endMs": 274760,
+      "text": "space with other neighbours since there is a big parking lot, unlike the first house."
+    },
+    {
+      "startMs": 274760,
+      "endMs": 282000,
+      "text": "As you can see, north of the house, you have a lot of banks and to the east and west,"
+    },
+    {
+      "startMs": 282000,
+      "endMs": 288800,
+      "text": "there are a good number of companies and malls. It is very compact and easily accessible"
+    },
+    {
+      "startMs": 288800,
+      "endMs": 297200,
+      "text": "due to its central location. Again, in contrast to the first house, there are only two bedrooms"
+    },
+    {
+      "startMs": 297200,
+      "endMs": 303040,
+      "text": "and this would have been good for a young couple with a small family size. However, for"
+    },
+    {
+      "startMs": 303040,
+      "endMs": 310600,
+      "text": "a family size like yours, I really am not sure. But if necessary, perhaps you could turn"
+    },
+    {
+      "startMs": 310600,
+      "endMs": 317280,
+      "text": "the storeroom into a bedroom, then there will be three bedrooms. The last problem is that"
+    },
+    {
+      "startMs": 317280,
+      "endMs": 324200,
+      "text": "it lacks a garage, which is a very important feature for residents here as every household"
+    },
+    {
+      "startMs": 324200,
+      "endMs": 330400,
+      "text": "has at least one car and there are few public car parks in this area. This is all I have"
+    },
+    {
+      "startMs": 330400,
+      "endMs": 334800,
+      "text": "for now and..."
+    },
+    {
+      "startMs": 334800,
+      "endMs": 338400,
+      "text": "That is the end of part two. You now have half a minute to check your"
+    },
+    {
+      "startMs": 338400,
+      "endMs": 340000,
+      "text": "runs as to part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 45,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

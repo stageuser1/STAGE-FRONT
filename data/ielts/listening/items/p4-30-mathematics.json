@@ -1,0 +1,400 @@
+{
+  "id": "p4-30-mathematics",
+  "title": "Mathematics",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-ee375cf446aa",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 246.906,
+    "checksum": "sha256:bd7dbca0606c305df3fdf1af2f5062b352a7be7f1c2414e4919660e53a489a40"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Home & Daily Life When buying a 31. __________ you must calculate the floor area. Newspapers often present information in the form of 32. __________. Money Management Every household needs to control its 33. __________. People should try to 34. __________ future expenses like holidays. Analysing Data Researchers often study a 35. __________ of people to represent the whole population. Reliable results depend on trustworthy 36. __________ of information. Using Technology The spread of the 37. __________ has made Maths more accessible. Exploring Society Governments use statistics such as 39. __________ rates to plan services. Explaining Information",
+      "questions": [
+        {
+          "id": "31",
+          "text": "When buying a 31. __________ you must calculate the floor area.",
+          "answer": "Covering"
+        },
+        {
+          "id": "32",
+          "text": "Newspapers often present information in the form of 32. __________.",
+          "answer": "Graphs"
+        },
+        {
+          "id": "33",
+          "text": "Every household needs to control its 33. __________.",
+          "answer": "Budget"
+        },
+        {
+          "id": "34",
+          "text": "People should try to 34. __________ future expenses like holidays.",
+          "answer": "Estimate"
+        },
+        {
+          "id": "35",
+          "text": "Researchers often study a 35. __________ of people to represent the whole population.",
+          "answer": "Sample"
+        },
+        {
+          "id": "36",
+          "text": "Reliable results depend on trustworthy 36. __________ of information.",
+          "answer": "Sources"
+        },
+        {
+          "id": "37",
+          "text": "The spread of the 37. __________ has made Maths more accessible.",
+          "answer": "Computers"
+        },
+        {
+          "id": "38",
+          "text": "A misleading 38. __________ can give the wrong impression of data.",
+          "answer": "Chart"
+        },
+        {
+          "id": "39",
+          "text": "Governments use statistics such as 39. __________ rates to plan services.",
+          "answer": "Birth"
+        },
+        {
+          "id": "40",
+          "text": "A simple 40. __________ of numbers can make complex facts easy to understand.",
+          "answer": "Table"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A better way to learn mathematics",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Home & Daily Life",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "When buying a 31. __________ you must calculate the floor area.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Newspapers often present information in the form of 32. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Money Management",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Every household needs to control its 33. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People should try to 34. __________ future expenses like holidays.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Analysing Data",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Researchers often study a 35. __________ of people to represent the whole population.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Reliable results depend on trustworthy 36. __________ of information.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Using Technology",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The spread of the 37. __________ has made Maths more accessible.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A misleading 38. __________ can give the wrong impression of data.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Exploring Society",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Governments use statistics such as 39. __________ rates to plan services.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Explaining Information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A simple 40. __________ of numbers can make complex facts easy to understand.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Covering",
+        "32": "Graphs",
+        "33": "Budget",
+        "34": "Estimate",
+        "35": "Sample",
+        "36": "Sources",
+        "37": "Computers",
+        "38": "Chart",
+        "39": "Birth",
+        "40": "Table"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "So today I want to show you how mathematics can be approached in a more practical and"
+    },
+    {
+      "startMs": 7000,
+      "endMs": 14480,
+      "text": "engaging way. The lecture is divided into six sections, each illustrating how numbers"
+    },
+    {
+      "startMs": 14480,
+      "endMs": 22440,
+      "text": "influence our daily lives and decision making. To begin, let's consider our homes. Imagine"
+    },
+    {
+      "startMs": 22440,
+      "endMs": 27600,
+      "text": "you're renovating a room. You'll need to know the surface area of the floor before you"
+    },
+    {
+      "startMs": 27600,
+      "endMs": 33720,
+      "text": "buy any covering. Without these calculations, you may spend too much or too little and"
+    },
+    {
+      "startMs": 33720,
+      "endMs": 38680,
+      "text": "the shop assistant won't be able to cut the right amount of carpet for you."
+    },
+    {
+      "startMs": 38680,
+      "endMs": 45320,
+      "text": "Another example comes from the media. Open any newspaper and you'll find visual illustrations"
+    },
+    {
+      "startMs": 45320,
+      "endMs": 52240,
+      "text": "of trends in unemployment, climate or health. These pictures aren't random decoration."
+    },
+    {
+      "startMs": 52240,
+      "endMs": 58440,
+      "text": "They are graphs designed to summarise numbers in a way the general public can understand."
+    },
+    {
+      "startMs": 58440,
+      "endMs": 64440,
+      "text": "The second area relates to money. Every household faces the challenge of balancing income"
+    },
+    {
+      "startMs": 64440,
+      "endMs": 71440,
+      "text": "and expenditure. Creating a financial plan, often called a household budget, allows people"
+    },
+    {
+      "startMs": 71440,
+      "endMs": 76640,
+      "text": "to decide how much they can safely spend. But it's not just about tracking what you already"
+    },
+    {
+      "startMs": 76640,
+      "endMs": 82960,
+      "text": "use. You also need to make predictions about the future. For example, if you're planning"
+    },
+    {
+      "startMs": 82960,
+      "endMs": 88240,
+      "text": "a holiday, you must try to estimate how much it will cost in advance. Otherwise, you"
+    },
+    {
+      "startMs": 88240,
+      "endMs": 94320,
+      "text": "may end up in debt. Now let's turn to research."
+    },
+    {
+      "startMs": 94320,
+      "endMs": 99880,
+      "text": "Scientists and social researchers rarely examine an entire population. Instead, they focus"
+    },
+    {
+      "startMs": 99880,
+      "endMs": 105840,
+      "text": "on a smaller group that represents the whole. This limited set of people or objects is known"
+    },
+    {
+      "startMs": 105920,
+      "endMs": 112480,
+      "text": "as a sample and it provides insight without overwhelming the researcher. Of course, no"
+    },
+    {
+      "startMs": 112480,
+      "endMs": 117640,
+      "text": "matter how carefully the investigation is carried out, its reliability depends on where"
+    },
+    {
+      "startMs": 117640,
+      "endMs": 123240,
+      "text": "the information comes from. If you base your conclusions on weak or biased sources, the"
+    },
+    {
+      "startMs": 123240,
+      "endMs": 130320,
+      "text": "findings may be meaningless. The fourth area is technology. In the past, calculations"
+    },
+    {
+      "startMs": 130320,
+      "endMs": 136280,
+      "text": "were done with pen and paper, which was slow and error prone. Today, computers connected"
+    },
+    {
+      "startMs": 136280,
+      "endMs": 141320,
+      "text": "through the internet can process enormous amounts of data instantly, helping us analyze"
+    },
+    {
+      "startMs": 141320,
+      "endMs": 147960,
+      "text": "everything from traffic patterns to consumer spending. However, technology is not perfect."
+    },
+    {
+      "startMs": 147960,
+      "endMs": 153200,
+      "text": "Consider the diagrams we use to communicate numerical information. If a chart is poorly"
+    },
+    {
+      "startMs": 153200,
+      "endMs": 159160,
+      "text": "designed, for instance, if it uses the wrong scale or distorts proportions, it can lead"
+    },
+    {
+      "startMs": 159160,
+      "endMs": 165840,
+      "text": "the reader to completely false conclusions. Moving on to society, governments depend heavily"
+    },
+    {
+      "startMs": 165840,
+      "endMs": 172400,
+      "text": "on numbers to plan for the future. For example, by studying changes in birth rates, officials"
+    },
+    {
+      "startMs": 172400,
+      "endMs": 177760,
+      "text": "can decide how many schools will be required in ten years' time or how many hospitals"
+    },
+    {
+      "startMs": 177760,
+      "endMs": 184440,
+      "text": "will be needed in twenty, without this information long-term planning would be impossible."
+    },
+    {
+      "startMs": 184440,
+      "endMs": 191160,
+      "text": "Finally, mathematics is also about clarity. Suppose you want to present a large collection"
+    },
+    {
+      "startMs": 191160,
+      "endMs": 197760,
+      "text": "of statistics in the simplest way. Instead of writing long sentences, you can organize"
+    },
+    {
+      "startMs": 197760,
+      "endMs": 204200,
+      "text": "the numbers into a table, which allows readers to see the pattern immediately. So, mathematics"
+    },
+    {
+      "startMs": 204200,
+      "endMs": 206240,
+      "text": "is a powerful tool we rely on."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 34,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

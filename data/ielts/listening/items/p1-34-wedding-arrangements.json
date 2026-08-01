@@ -1,0 +1,742 @@
+{
+  "id": "p1-34-wedding-arrangements",
+  "title": "Wedding arrangements",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-cd70887fe0cb",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 492.96,
+    "checksum": "sha256:78d6b9e30cf638de27a2765b1203935e4742af1cf7653296b3eb0af40f96c044"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10.",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Wedding arrangements Available date: 1st June The Oxford Suite has a dining room with a good view of the 1. _____ a private garden for 2. _____ and for the wedding ceremony an area suitable for dancing The wedding package includes use of the Oxford Suite a three-course meal room arranged with 3. _____ tables table 4. _____ included white tablecloths and chairs personalized printed 5. _____ a late-evening buffet with a choice of 6. _____ and hot drinks Music: hotel will organize a band (not included in price) Total cost of package: £ 7. _____ Can also recommend a 8. _____ supplier (new company) Wedding coordinator Sarah 9. _____ Date arranged for visit",
+      "questions": [
+        {
+          "id": "1",
+          "text": "a dining room with a good view of the 1. _____",
+          "answer": "City"
+        },
+        {
+          "id": "2",
+          "text": "a private garden for 2. _____ and for the wedding ceremony",
+          "answer": "photos"
+        },
+        {
+          "id": "3",
+          "text": "room arranged with 3. _____ tables",
+          "answer": "round"
+        },
+        {
+          "id": "4",
+          "text": "table 4. _____ included",
+          "answer": "decorations"
+        },
+        {
+          "id": "5",
+          "text": "personalized printed 5. _____",
+          "answer": "menu"
+        },
+        {
+          "id": "6",
+          "text": "a late-evening buffet with a choice of 6. _____ and hot drinks",
+          "answer": "sandwiches"
+        },
+        {
+          "id": "7",
+          "text": "£ 7. _____",
+          "answer": "5995/5,995"
+        },
+        {
+          "id": "8",
+          "text": "Can also recommend a 8. _____ supplier (new company)",
+          "answer": "cake"
+        },
+        {
+          "id": "9",
+          "text": "Sarah 9. _____",
+          "answer": "izard"
+        },
+        {
+          "id": "10",
+          "text": "10. _____ at 11.30 a.m.",
+          "answer": "15th October/15 October/October 15th/October 15"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Wedding arrangements",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Available date: 1st June",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Oxford Suite has",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "a dining room with a good view of the 1. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a private garden for 2. _____ and for the wedding ceremony",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "an area suitable for dancing",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The wedding package includes",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "use of the Oxford Suite",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a three-course meal",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "room arranged with 3. _____ tables",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "table 4. _____ included",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "white tablecloths and chairs",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "personalized printed 5. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a late-evening buffet with a choice of 6. _____ and hot drinks",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Music: hotel will organize a band (not included in price)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Total cost of package:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "£ 7. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Can also recommend a 8. _____ supplier (new company)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Wedding coordinator",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Sarah 9. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Date arranged for visit",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "10. _____ at 11.30 a.m.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "City",
+        "2": "photos",
+        "3": "round",
+        "4": "decorations",
+        "5": "menu",
+        "6": "sandwiches",
+        "7": "5995/5,995",
+        "8": "cake",
+        "9": "izard",
+        "10": "15th October/15 October/October 15th/October 15"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 18880,
+      "text": "[Narrator]: Now listen carefully and answer questions one to five."
+    },
+    {
+      "startMs": 18880,
+      "endMs": 22880,
+      "text": "[Hotel Staff]: Hello, Clarence House."
+    },
+    {
+      "startMs": 22880,
+      "endMs": 23880,
+      "text": "[Debbie]: Oh hello."
+    },
+    {
+      "startMs": 23880,
+      "endMs": 29960,
+      "text": "I'm getting married next year and I understand your license to hold weddings at the hotel"
+    },
+    {
+      "startMs": 30600,
+      "endMs": 32440,
+      "text": "[Hotel Staff]: Yes, we are."
+    },
+    {
+      "startMs": 32440,
+      "endMs": 34840,
+      "text": "Can I ask what date you were thinking of?"
+    },
+    {
+      "startMs": 34840,
+      "endMs": 38840,
+      "text": "[Debbie]: Either the 1st or the 7th of June."
+    },
+    {
+      "startMs": 38840,
+      "endMs": 42040,
+      "text": "[Hotel Staff]: Right, let me see."
+    },
+    {
+      "startMs": 42040,
+      "endMs": 48840,
+      "text": "Oh, I'm afraid we already have a booking for the 7th, but we still have availability on June"
+    },
+    {
+      "startMs": 48840,
+      "endMs": 50040,
+      "text": "the 1st."
+    },
+    {
+      "startMs": 50040,
+      "endMs": 61000,
+      "text": "[Debbie]: That would be fine. [Hotel Staff]: So, how many guests are you going to be inviting? [Debbie]: About 80. [Hotel Staff]: So for that number, we'd recommend the Oxford suite."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 63320,
+      "text": "I don't know if you've been to the hotel."
+    },
+    {
+      "startMs": 63320,
+      "endMs": 64320,
+      "text": "[Debbie]: Yes."
+    },
+    {
+      "startMs": 64320,
+      "endMs": 69760,
+      "text": "In fact, I went to a wedding there a few years ago and I was really impressed."
+    },
+    {
+      "startMs": 69760,
+      "endMs": 70760,
+      "text": "[Hotel Staff]: Very good."
+    },
+    {
+      "startMs": 70760,
+      "endMs": 74240,
+      "text": "[Debbie]: I think we're in the Oxford suite then."
+    },
+    {
+      "startMs": 74240,
+      "endMs": 79240,
+      "text": "The room where we were eating had big windows with really good views."
+    },
+    {
+      "startMs": 79240,
+      "endMs": 82000,
+      "text": "You could see right across the city."
+    },
+    {
+      "startMs": 82000,
+      "endMs": 83320,
+      "text": "[Hotel Staff]: That's it."
+    },
+    {
+      "startMs": 83320,
+      "endMs": 88600,
+      "text": "If you'd have exclusive access to the garden, it'll be at its best in June."
+    },
+    {
+      "startMs": 88600,
+      "endMs": 90880,
+      "text": "[Debbie]: So we could have the photos there."
+    },
+    {
+      "startMs": 90880,
+      "endMs": 91880,
+      "text": "[Hotel Staff]: Sure."
+    },
+    {
+      "startMs": 91880,
+      "endMs": 95440,
+      "text": "In fact, you can even have the ceremony there if you want."
+    },
+    {
+      "startMs": 95440,
+      "endMs": 97160,
+      "text": "It makes a lovely background."
+    },
+    {
+      "startMs": 97160,
+      "endMs": 99640,
+      "text": "[Debbie]: Oh, I hadn't thought of that."
+    },
+    {
+      "startMs": 99640,
+      "endMs": 103160,
+      "text": "Yes, that's certainly an idea."
+    },
+    {
+      "startMs": 103160,
+      "endMs": 105520,
+      "text": "And is there somewhere for dancing?"
+    },
+    {
+      "startMs": 105520,
+      "endMs": 106520,
+      "text": "[Hotel Staff]: Yes."
+    },
+    {
+      "startMs": 106520,
+      "endMs": 109400,
+      "text": "There's plenty of space in the middle of the dining room."
+    },
+    {
+      "startMs": 109400,
+      "endMs": 110400,
+      "text": "[Debbie]: Oh, yeah."
+    },
+    {
+      "startMs": 110400,
+      "endMs": 112360,
+      "text": "I remember now."
+    },
+    {
+      "startMs": 112360,
+      "endMs": 117600,
+      "text": "[Hotel Staff]: So just to give you an idea, would you like me to tell you about our special wedding"
+    },
+    {
+      "startMs": 117600,
+      "endMs": 118600,
+      "text": "package?"
+    },
+    {
+      "startMs": 118600,
+      "endMs": 119600,
+      "text": "[Debbie]: Sure."
+    },
+    {
+      "startMs": 119600,
+      "endMs": 120600,
+      "text": "[Hotel Staff]: Right."
+    },
+    {
+      "startMs": 120600,
+      "endMs": 126960,
+      "text": "So for 80 guests, you'd have the exclusive use of the Oxford suite, as I said, and then"
+    },
+    {
+      "startMs": 126960,
+      "endMs": 128120,
+      "text": "a meal."
+    },
+    {
+      "startMs": 128120,
+      "endMs": 133760,
+      "text": "So that would be in the dining room and that would be a sit-down meal with three courses."
+    },
+    {
+      "startMs": 133760,
+      "endMs": 135560,
+      "text": "[Debbie]: And how's the room arranged?"
+    },
+    {
+      "startMs": 135560,
+      "endMs": 139080,
+      "text": "I seem to remember you have round tables."
+    },
+    {
+      "startMs": 139080,
+      "endMs": 140160,
+      "text": "[Hotel Staff]: That's right."
+    },
+    {
+      "startMs": 140160,
+      "endMs": 142720,
+      "text": "Most people prefer them to long tables."
+    },
+    {
+      "startMs": 142720,
+      "endMs": 146320,
+      "text": "[Debbie]: Long tables aren't really very friendly, are they?"
+    },
+    {
+      "startMs": 146320,
+      "endMs": 149480,
+      "text": "And what about decorations on the tables?"
+    },
+    {
+      "startMs": 149480,
+      "endMs": 151560,
+      "text": "[Hotel Staff]: They're included in the package."
+    },
+    {
+      "startMs": 151560,
+      "endMs": 155960,
+      "text": "And we have white linen tablecloths and white chair covers."
+    },
+    {
+      "startMs": 155960,
+      "endMs": 161280,
+      "text": "And we also include an individually designed menu specially printed for you."
+    },
+    {
+      "startMs": 161280,
+      "endMs": 165200,
+      "text": "It's something that people can take away to remember the occasion."
+    },
+    {
+      "startMs": 165200,
+      "endMs": 167920,
+      "text": "That's something we've just started doing this year."
+    },
+    {
+      "startMs": 167920,
+      "endMs": 172560,
+      "text": "[Debbie]: All right."
+    },
+    {
+      "startMs": 172560,
+      "endMs": 178560,
+      "text": "[Narrator]: Before you hear the rest of the conversation, you have some time to look at question 6-10."
+    },
+    {
+      "startMs": 197920,
+      "endMs": 216160,
+      "text": "[Hotel Staff]: And then towards the end of the evening, when everyone's beginning to run out of energy,"
+    },
+    {
+      "startMs": 216160,
+      "endMs": 222400,
+      "text": "we bring in a buffet, nothing too complicated, just a selection of sandwiches together with"
+    },
+    {
+      "startMs": 222400,
+      "endMs": 224240,
+      "text": "tea or coffee."
+    },
+    {
+      "startMs": 224240,
+      "endMs": 226240,
+      "text": "That's always very popular."
+    },
+    {
+      "startMs": 226480,
+      "endMs": 227520,
+      "text": "[Debbie]: Right."
+    },
+    {
+      "startMs": 286480,
+      "endMs": 229120,
+      "text": "And we want some music. Is that included in the package?"
+    },
+    {
+      "startMs": 229120,
+      "endMs": 231280,
+      "text": "[Hotel Staff]: No."
+    },
+    {
+      "startMs": 231280,
+      "endMs": 235680,
+      "text": "But we could probably get you a DJ."
+    },
+    {
+      "startMs": 235680,
+      "endMs": 239040,
+      "text": "Or we know of a very good band if you'd prefer that."
+    },
+    {
+      "startMs": 239040,
+      "endMs": 241520,
+      "text": "[Debbie]: Yes, that'd be better, actually."
+    },
+    {
+      "startMs": 241520,
+      "endMs": 244720,
+      "text": "Something to get everyone on their feet."
+    },
+    {
+      "startMs": 244720,
+      "endMs": 245680,
+      "text": "Good."
+    },
+    {
+      "startMs": 245680,
+      "endMs": 250880,
+      "text": "So apart from the music, you said that's an all-inclusive package."
+    },
+    {
+      "startMs": 250880,
+      "endMs": 254400,
+      "text": "So how much does that package come to?"
+    },
+    {
+      "startMs": 254400,
+      "endMs": 259120,
+      "text": "[Hotel Staff]: £5,995."
+    },
+    {
+      "startMs": 259120,
+      "endMs": 263360,
+      "text": "[Debbie]: That's a bit more than the package they quoted for me at the Stanley Hotel."
+    },
+    {
+      "startMs": 263360,
+      "endMs": 266480,
+      "text": "There's was £4,500."
+    },
+    {
+      "startMs": 266480,
+      "endMs": 267840,
+      "text": "[Hotel Staff]: Yes."
+    },
+    {
+      "startMs": 267840,
+      "endMs": 270800,
+      "text": "But I think if you look at what you're getting for the money,"
+    },
+    {
+      "startMs": 270800,
+      "endMs": 273520,
+      "text": "you'll find where the best value."
+    },
+    {
+      "startMs": 273520,
+      "endMs": 275760,
+      "text": "And it is a big day after all."
+    },
+    {
+      "startMs": 275760,
+      "endMs": 278560,
+      "text": "[Debbie]: Yes, you're probably right."
+    },
+    {
+      "startMs": 278560,
+      "endMs": 280640,
+      "text": "Oh, and I nearly forgot."
+    },
+    {
+      "startMs": 280720,
+      "endMs": 284720,
+      "text": "I'm looking for someone who can make me a really special cake."
+    },
+    {
+      "startMs": 284720,
+      "endMs": 286320,
+      "text": "Can you suggest one?"
+    },
+    {
+      "startMs": 286320,
+      "endMs": 287600,
+      "text": "[Hotel Staff]: Certainly."
+    },
+    {
+      "startMs": 287600,
+      "endMs": 290160,
+      "text": "There's a new company that we've started using."
+    },
+    {
+      "startMs": 290160,
+      "endMs": 291200,
+      "text": "They're very good."
+    },
+    {
+      "startMs": 291920,
+      "endMs": 296480,
+      "text": "In fact, our wedding coordinator will be able to give you all sorts of advice."
+    },
+    {
+      "startMs": 297120,
+      "endMs": 301120,
+      "text": "We can offer you a free consultation and a tour of the venue."
+    },
+    {
+      "startMs": 301120,
+      "endMs": 304560,
+      "text": "[Debbie]: Yes, well, I'd definitely be interested."
+    },
+    {
+      "startMs": 304560,
+      "endMs": 305440,
+      "text": "[Hotel Staff]: Right."
+    },
+    {
+      "startMs": 305440,
+      "endMs": 309440,
+      "text": "Well, the coordinator's name is Sarah Izard."
+    },
+    {
+      "startMs": 309440,
+      "endMs": 313120,
+      "text": "That's I-Z-A-R-D."
+    },
+    {
+      "startMs": 314080,
+      "endMs": 316800,
+      "text": "Now, when would you like to meet her?"
+    },
+    {
+      "startMs": 317680,
+      "endMs": 321680,
+      "text": "She's available from nine to five most weekdays,"
+    },
+    {
+      "startMs": 321680,
+      "endMs": 323680,
+      "text": "or later, if that's more convenient."
+    },
+    {
+      "startMs": 325520,
+      "endMs": 329280,
+      "text": "[Debbie]: I'm free on the 12th of October in the morning,"
+    },
+    {
+      "startMs": 329280,
+      "endMs": 332320,
+      "text": "sometime, or the 15th of October."
+    },
+    {
+      "startMs": 332960,
+      "endMs": 334560,
+      "text": "[Hotel Staff]: That would be better, thanks."
+    },
+    {
+      "startMs": 335360,
+      "endMs": 337520,
+      "text": "Should we say 11.30?"
+    },
+    {
+      "startMs": 337520,
+      "endMs": 338720,
+      "text": "[Debbie]: Fine."
+    },
+    {
+      "startMs": 338720,
+      "endMs": 341920,
+      "text": "[Hotel Staff]: Can I just take your name and a contact number?"
+    },
+    {
+      "startMs": 341920,
+      "endMs": 343520,
+      "text": "[Debbie]: Sure. It's Debbie."
+    },
+    {
+      "startMs": 347120,
+      "endMs": null,
+      "text": "[Narrator]: That is the end of part one."
+    },
+    {
+      "startMs": 349680,
+      "endMs": null,
+      "text": "You now have one minute to check your answers to part one."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 97,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": [
+      "One or more transcript cues have unparsed timestamps"
+    ]
+  }
+}

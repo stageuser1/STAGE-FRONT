@@ -1,0 +1,575 @@
+{
+  "id": "p2-10-driving-license",
+  "title": "Driving License",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-dd94f436688b",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 391.176,
+    "checksum": "sha256:3177a9db8dda39b513b2a5e3d8b7f1fa26c978ee0d0688483468abf6c34ff766"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–15",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "What is the basic requirement for applying for a UK driving licence?",
+          "options": [
+            {
+              "id": "A",
+              "text": "a medical report."
+            },
+            {
+              "id": "B",
+              "text": "a valid licence from another country."
+            },
+            {
+              "id": "C",
+              "text": "current residency in the UK."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "What is true about the translation of original licences?",
+          "options": [
+            {
+              "id": "A",
+              "text": "applicants need to go to a recognised organisation."
+            },
+            {
+              "id": "B",
+              "text": "it is not always necessary for foreigners when applying for a UK licence."
+            },
+            {
+              "id": "C",
+              "text": "applicants need to pay an extra fee for translation services."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "When applying for a UK licence, which type of photos will NOT be approved?",
+          "options": [
+            {
+              "id": "A",
+              "text": "photos in which the applicant is wearing glasses."
+            },
+            {
+              "id": "B",
+              "text": "photos with a cream background."
+            },
+            {
+              "id": "C",
+              "text": "photos that are undersized."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "What does the speaker think of the license checking service?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the process is too slow."
+            },
+            {
+              "id": "B",
+              "text": "the application form is confusing."
+            },
+            {
+              "id": "C",
+              "text": "some of the steps are unnecessary."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "What does the speaker recommend about making an application?",
+          "options": [
+            {
+              "id": "A",
+              "text": "choosing a quiet location."
+            },
+            {
+              "id": "B",
+              "text": "visiting the nearest branch."
+            },
+            {
+              "id": "C",
+              "text": "completing the forms online."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 16–20",
+      "instruction": "What is the current feature of traffic management in each of the following cities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "good signage"
+        },
+        {
+          "id": "B",
+          "text": "multiple access roads"
+        },
+        {
+          "id": "C",
+          "text": "police control points"
+        },
+        {
+          "id": "D",
+          "text": "ring roads"
+        },
+        {
+          "id": "E",
+          "text": "one-way streets"
+        },
+        {
+          "id": "F",
+          "text": "effective traffic lights"
+        },
+        {
+          "id": "G",
+          "text": "additional lanes"
+        },
+        {
+          "id": "H",
+          "text": "pedestrianised areas"
+        }
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "London",
+          "answer": "A"
+        },
+        {
+          "id": "17",
+          "text": "Edinburgh",
+          "answer": "F"
+        },
+        {
+          "id": "18",
+          "text": "Cardiff",
+          "answer": "G"
+        },
+        {
+          "id": "19",
+          "text": "Manchester",
+          "answer": "D"
+        },
+        {
+          "id": "20",
+          "text": "Oxford",
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "A",
+        "13": "B",
+        "14": "A",
+        "15": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "16": "A",
+        "17": "F",
+        "18": "G",
+        "19": "D",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9640,
+      "text": "Part 2."
+    },
+    {
+      "startMs": 9640,
+      "endMs": 15280,
+      "text": "You will hear a traffic police officer talking to a group of listeners about driving license"
+    },
+    {
+      "startMs": 15280,
+      "endMs": 19600,
+      "text": "application and traffic conditions in the UK."
+    },
+    {
+      "startMs": 19600,
+      "endMs": 48520,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 48520,
+      "endMs": 53600,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 53600,
+      "endMs": 61320,
+      "text": "Hello, I'm Edward and I'm here to tell you about road conditions in various areas of"
+    },
+    {
+      "startMs": 61320,
+      "endMs": 62320,
+      "text": "the UK."
+    },
+    {
+      "startMs": 62320,
+      "endMs": 67520,
+      "text": "I'm also going to tell you about driver's licenses in the UK."
+    },
+    {
+      "startMs": 67520,
+      "endMs": 72640,
+      "text": "If you have never had a driver's license or you have one from another country and you"
+    },
+    {
+      "startMs": 72640,
+      "endMs": 77640,
+      "text": "want to get a UK license, you must be a UK resident."
+    },
+    {
+      "startMs": 77640,
+      "endMs": 83080,
+      "text": "You will need to show a medical report when your UK license needs to be renewed."
+    },
+    {
+      "startMs": 83080,
+      "endMs": 88480,
+      "text": "If you are trying to translate your original foreign driving license to apply for a UK"
+    },
+    {
+      "startMs": 88480,
+      "endMs": 93560,
+      "text": "license, which is a must if you want to be able to drive here, you will need to visit"
+    },
+    {
+      "startMs": 93560,
+      "endMs": 96120,
+      "text": "an official agency."
+    },
+    {
+      "startMs": 96120,
+      "endMs": 100600,
+      "text": "These are scattered throughout the London area and are well equipped to assist you with"
+    },
+    {
+      "startMs": 100600,
+      "endMs": 106920,
+      "text": "any questions you might have and any services they offer are included in your license fee."
+    },
+    {
+      "startMs": 106920,
+      "endMs": 112360,
+      "text": "If you already have a translated license but need some personal information updating,"
+    },
+    {
+      "startMs": 112360,
+      "endMs": 116480,
+      "text": "you do not need to pay for the update, they'll do it for free."
+    },
+    {
+      "startMs": 116480,
+      "endMs": 121800,
+      "text": "When you are getting a new driving license, you may need to have a new photo taken as some"
+    },
+    {
+      "startMs": 121800,
+      "endMs": 124000,
+      "text": "photos are rejected."
+    },
+    {
+      "startMs": 124000,
+      "endMs": 130400,
+      "text": "It's actually okay if your photo is too small since we can get it enlarged with our printer."
+    },
+    {
+      "startMs": 130400,
+      "endMs": 135840,
+      "text": "The majority of rejected photos are the ones that were taken with a cream backdrop instead"
+    },
+    {
+      "startMs": 135840,
+      "endMs": 139240,
+      "text": "of a monotone grey background."
+    },
+    {
+      "startMs": 139240,
+      "endMs": 144480,
+      "text": "We've now found that photos with the latter allow us to identify the license holder much"
+    },
+    {
+      "startMs": 144480,
+      "endMs": 146120,
+      "text": "more easily."
+    },
+    {
+      "startMs": 146120,
+      "endMs": 150640,
+      "text": "If you are wearing glasses on the previous photo, you don't need to worry about it since"
+    },
+    {
+      "startMs": 150640,
+      "endMs": 152560,
+      "text": "it is still allowed."
+    },
+    {
+      "startMs": 152560,
+      "endMs": 157400,
+      "text": "If you are not sure whether your previous license is still valid, then the license checking"
+    },
+    {
+      "startMs": 157400,
+      "endMs": 159160,
+      "text": "service is for you."
+    },
+    {
+      "startMs": 159160,
+      "endMs": 163200,
+      "text": "The procedures are quite clear and you just have to follow them."
+    },
+    {
+      "startMs": 163200,
+      "endMs": 169280,
+      "text": "Ideally, I would like to see the process going faster since it can take hours to finish."
+    },
+    {
+      "startMs": 169280,
+      "endMs": 174280,
+      "text": "From my standpoint, it will help if all the applicants bring the necessary identification"
+    },
+    {
+      "startMs": 174280,
+      "endMs": 180960,
+      "text": "with them, then all they have to do is just fill in the forms accordingly, step by step."
+    },
+    {
+      "startMs": 180960,
+      "endMs": 186440,
+      "text": "I'm often asked whether I have a personal recommendation about the fastest or cheapest"
+    },
+    {
+      "startMs": 186440,
+      "endMs": 192120,
+      "text": "place to get all this done, but I think it really depends on where you are."
+    },
+    {
+      "startMs": 192120,
+      "endMs": 197360,
+      "text": "They can all get busy at some point and when it is quiet at one branch, it may be busy"
+    },
+    {
+      "startMs": 197360,
+      "endMs": 200440,
+      "text": "in another, so take your pick."
+    },
+    {
+      "startMs": 200440,
+      "endMs": 206440,
+      "text": "All I would say is that there is absolutely no difference in price, it's a standard fee."
+    },
+    {
+      "startMs": 206440,
+      "endMs": 211920,
+      "text": "The only advice I would give is that the quickest way to complete an application is to fill out"
+    },
+    {
+      "startMs": 211920,
+      "endMs": 217520,
+      "text": "the form on the internet and then bring a print copy with you to the agency location"
+    },
+    {
+      "startMs": 217520,
+      "endMs": 221840,
+      "text": "of your choice."
+    },
+    {
+      "startMs": 221840,
+      "endMs": 244400,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16-20."
+    },
+    {
+      "startMs": 244400,
+      "endMs": 250800,
+      "text": "Now listen carefully and answer questions 16-20."
+    },
+    {
+      "startMs": 250800,
+      "endMs": 258120,
+      "text": "Next, people frequently ask me what I think of the road conditions in some of our cities."
+    },
+    {
+      "startMs": 258120,
+      "endMs": 263960,
+      "text": "London is obviously the biggest and busiest and there are lots of parking restrictions,"
+    },
+    {
+      "startMs": 263960,
+      "endMs": 270080,
+      "text": "one-way systems and so on, but on the whole I find the traffic signs are very clear."
+    },
+    {
+      "startMs": 270080,
+      "endMs": 276280,
+      "text": "In Edinburgh, most people use digital maps to get to know local traffic and road conditions,"
+    },
+    {
+      "startMs": 276280,
+      "endMs": 280360,
+      "text": "which can be estimated through different traffic flow lines."
+    },
+    {
+      "startMs": 280360,
+      "endMs": 285880,
+      "text": "It is a city of lights, traffic lights, but they're extremely efficient as they're timed"
+    },
+    {
+      "startMs": 285880,
+      "endMs": 289640,
+      "text": "perfectly to get the traffic flowing smoothly."
+    },
+    {
+      "startMs": 289640,
+      "endMs": 294880,
+      "text": "That's important because pedestrian areas and crossings are always packed with people"
+    },
+    {
+      "startMs": 294880,
+      "endMs": 298560,
+      "text": "on foot, which needs strong regulation."
+    },
+    {
+      "startMs": 298560,
+      "endMs": 302840,
+      "text": "The city of Cardiff has tackled traffic flow in a different way."
+    },
+    {
+      "startMs": 302840,
+      "endMs": 308680,
+      "text": "It recently completed a road expansion scheme and the extra lanes of the dual carriageway"
+    },
+    {
+      "startMs": 308680,
+      "endMs": 310960,
+      "text": "are easing congestion."
+    },
+    {
+      "startMs": 310960,
+      "endMs": 313440,
+      "text": "It's a similar story in Manchester."
+    },
+    {
+      "startMs": 313440,
+      "endMs": 318440,
+      "text": "Instead of going through the town centre, most vehicles choose ring roads, so as to"
+    },
+    {
+      "startMs": 318440,
+      "endMs": 321320,
+      "text": "avoid the downtown congestion."
+    },
+    {
+      "startMs": 321320,
+      "endMs": 326520,
+      "text": "It can still happen though, so there's a possibility that the city will introduce checkpoints"
+    },
+    {
+      "startMs": 326520,
+      "endMs": 331800,
+      "text": "where the police can intervene to direct traffic at peak periods."
+    },
+    {
+      "startMs": 331800,
+      "endMs": 338360,
+      "text": "And finally, they say all roads lead to Rome, and you could say that about Oxford."
+    },
+    {
+      "startMs": 338360,
+      "endMs": 343760,
+      "text": "I like the many options for getting in and out of the city because drivers can always"
+    },
+    {
+      "startMs": 343760,
+      "endMs": 346280,
+      "text": "find alternative routes."
+    },
+    {
+      "startMs": 346280,
+      "endMs": 351200,
+      "text": "The other cities in the UK are..."
+    },
+    {
+      "startMs": 351200,
+      "endMs": 353400,
+      "text": "That is the end of part two."
+    },
+    {
+      "startMs": 353400,
+      "endMs": 357480,
+      "text": "You now have 30 seconds to check your answers to part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 66,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

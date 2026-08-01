@@ -1,0 +1,720 @@
+{
+  "id": "p4-44-elephant-research",
+  "title": "Elephant research",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-a7c7a6bc9965",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 528.144,
+    "checksum": "sha256:e6836105fd02bfaf2e6c4726da7ee50c10df30d44296e4609849e7266a4599a9"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Elephant research in Amboseli Methodology The elephant population has been studied for almost forty years. Records of many elephants’ dates of birth and also of their 31. __________ have been kept. Play-back of elephant calls and DNA analysis were also used. Findings The social system of elephants has many 32. __________. Two elephants worked together to get food using a 33. __________. Some moved to a new area when there was a lack of 34. __________. They may move the 35. __________ of another elephant after death. Their brain 36. __________ is quite high in comparison with that of their body. Male elephants The way they 37. __________ is one obvious change. Older males make better mates: older females recognize 38. __________. What still needs to be discovered How elephants use smell – difficult to study this in the 39. __________. How 40. __________ elephants are to one another.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Records of many elephants’ dates of birth and also of their 31. __________ have been kept.",
+          "answer": "mother"
+        },
+        {
+          "id": "32",
+          "text": "The social system of elephants has many 32. __________.",
+          "answer": "layers"
+        },
+        {
+          "id": "33",
+          "text": "Two elephants worked together to get food using a 33. __________.",
+          "answer": "rope"
+        },
+        {
+          "id": "34",
+          "text": "Some moved to a new area when there was a lack of 34. __________.",
+          "answer": "rain"
+        },
+        {
+          "id": "35",
+          "text": "They may move the 35. __________ of another elephant after death.",
+          "answer": "bones"
+        },
+        {
+          "id": "36",
+          "text": "Their brain 36. __________ is quite high in comparison with that of their body.",
+          "answer": "weight"
+        },
+        {
+          "id": "37",
+          "text": "The way they 37. __________ is one obvious change.",
+          "answer": "walk"
+        },
+        {
+          "id": "38",
+          "text": "Older males make better mates: older females recognize 38. __________.",
+          "answer": "danger"
+        },
+        {
+          "id": "39",
+          "text": "How elephants use smell – difficult to study this in the 39. __________.",
+          "answer": "wild"
+        },
+        {
+          "id": "40",
+          "text": "How 40. __________ elephants are to one another.",
+          "answer": "sensitive"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Elephant research in Amboseli",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Methodology",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The elephant population has been studied for almost forty years.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Records of many elephants’ dates of birth and also of their 31. __________ have been kept.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Play-back of elephant calls and DNA analysis were also used.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Findings",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The social system of elephants has many 32. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Two elephants worked together to get food using a 33. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some moved to a new area when there was a lack of 34. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They may move the 35. __________ of another elephant after death.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Their brain 36. __________ is quite high in comparison with that of their body.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Male elephants",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The way they 37. __________ is one obvious change.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Older males make better mates: older females recognize 38. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "What still needs to be discovered",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "How elephants use smell – difficult to study this in the 39. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "How 40. __________ elephants are to one another.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "mother",
+        "32": "layers",
+        "33": "rope",
+        "34": "rain",
+        "35": "bones",
+        "36": "weight",
+        "37": "walk",
+        "38": "danger",
+        "39": "wild",
+        "40": "sensitive"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2000,
+      "text": "You"
+    },
+    {
+      "startMs": 30000,
+      "endMs": 32000,
+      "text": "You"
+    },
+    {
+      "startMs": 32000,
+      "endMs": 59560,
+      "text": "Good morning."
+    },
+    {
+      "startMs": 59560,
+      "endMs": 61960,
+      "text": "My name is Caroline Stewart and I'd like to"
+    },
+    {
+      "startMs": 61960,
+      "endMs": 64020,
+      "text": "give you an overview of the research we've been"
+    },
+    {
+      "startMs": 64020,
+      "endMs": 66000,
+      "text": "carrying out to learn more about the"
+    },
+    {
+      "startMs": 66000,
+      "endMs": 68120,
+      "text": "elephants living in the Amboseli National"
+    },
+    {
+      "startMs": 68120,
+      "endMs": 72040,
+      "text": "Park in Kenya. Let me start by telling you a"
+    },
+    {
+      "startMs": 72040,
+      "endMs": 74680,
+      "text": "little about the methodology we use. We've"
+    },
+    {
+      "startMs": 74680,
+      "endMs": 76600,
+      "text": "been studying this population of elephants"
+    },
+    {
+      "startMs": 76600,
+      "endMs": 78960,
+      "text": "for nearly 40 years and we've collected a"
+    },
+    {
+      "startMs": 78960,
+      "endMs": 81200,
+      "text": "wealth of information about individual"
+    },
+    {
+      "startMs": 81200,
+      "endMs": 83600,
+      "text": "elephants. We now have a database of"
+    },
+    {
+      "startMs": 83600,
+      "endMs": 86920,
+      "text": "2,500 elephants from the area and we know"
+    },
+    {
+      "startMs": 86920,
+      "endMs": 89200,
+      "text": "the month and year of their birth as well"
+    },
+    {
+      "startMs": 89200,
+      "endMs": 91960,
+      "text": "as who was the mother of each one. More"
+    },
+    {
+      "startMs": 91960,
+      "endMs": 93920,
+      "text": "recently, one of my colleagues has been"
+    },
+    {
+      "startMs": 93920,
+      "endMs": 95440,
+      "text": "examining the pattern of elephant"
+    },
+    {
+      "startMs": 95440,
+      "endMs": 97560,
+      "text": "relationships within and between the"
+    },
+    {
+      "startMs": 97560,
+      "endMs": 100320,
+      "text": "families in more detail. He's done this"
+    },
+    {
+      "startMs": 100320,
+      "endMs": 102960,
+      "text": "by using audio equipment to record and"
+    },
+    {
+      "startMs": 102960,
+      "endMs": 105080,
+      "text": "then play back the calls that are made by"
+    },
+    {
+      "startMs": 105080,
+      "endMs": 107960,
+      "text": "the elephants. And in addition to that, for"
+    },
+    {
+      "startMs": 107960,
+      "endMs": 110600,
+      "text": "some time we've been using DNA analysis to"
+    },
+    {
+      "startMs": 110600,
+      "endMs": 112960,
+      "text": "investigate these relationships. The"
+    },
+    {
+      "startMs": 112960,
+      "endMs": 115920,
+      "text": "findings were significant. For example, for"
+    },
+    {
+      "startMs": 115920,
+      "endMs": 118080,
+      "text": "a long time we'd suspected that elephants"
+    },
+    {
+      "startMs": 118080,
+      "endMs": 120880,
+      "text": "live in a very complex social system and"
+    },
+    {
+      "startMs": 120880,
+      "endMs": 122840,
+      "text": "one thing we found from our research is"
+    },
+    {
+      "startMs": 122840,
+      "endMs": 124760,
+      "text": "that this social system is made up of a"
+    },
+    {
+      "startMs": 124760,
+      "endMs": 127200,
+      "text": "large number of different layers, not"
+    },
+    {
+      "startMs": 127200,
+      "endMs": 129600,
+      "text": "just parent and child, but also brother"
+    },
+    {
+      "startMs": 129600,
+      "endMs": 133120,
+      "text": "and sister and so on. Another important"
+    },
+    {
+      "startMs": 133120,
+      "endMs": 134960,
+      "text": "discovery was that elephants can be very"
+    },
+    {
+      "startMs": 134960,
+      "endMs": 138480,
+      "text": "cooperative as much as chimps in fact. We"
+    },
+    {
+      "startMs": 138480,
+      "endMs": 140480,
+      "text": "conducted an experiment in which two of"
+    },
+    {
+      "startMs": 140480,
+      "endMs": 142640,
+      "text": "the elephants brought food within reach"
+    },
+    {
+      "startMs": 142640,
+      "endMs": 145040,
+      "text": "by pulling simultaneously on the ends"
+    },
+    {
+      "startMs": 145040,
+      "endMs": 147760,
+      "text": "of a rope. It was a surprise even to us"
+    },
+    {
+      "startMs": 148000,
+      "endMs": 150640,
+      "text": "that they managed to do it. Another"
+    },
+    {
+      "startMs": 150640,
+      "endMs": 152720,
+      "text": "finding was just how flexible elephants"
+    },
+    {
+      "startMs": 152720,
+      "endMs": 156000,
+      "text": "can be. They may live in smaller or larger"
+    },
+    {
+      "startMs": 156000,
+      "endMs": 157840,
+      "text": "groups depending on environmental"
+    },
+    {
+      "startMs": 157840,
+      "endMs": 160720,
+      "text": "conditions. So for example, an adult"
+    },
+    {
+      "startMs": 160720,
+      "endMs": 163040,
+      "text": "female and her calves might leave their"
+    },
+    {
+      "startMs": 163040,
+      "endMs": 166000,
+      "text": "larger groups for days or weeks. A good"
+    },
+    {
+      "startMs": 166000,
+      "endMs": 168240,
+      "text": "example of this was two years ago when"
+    },
+    {
+      "startMs": 168240,
+      "endMs": 170640,
+      "text": "there was not enough rain. Many left the"
+    },
+    {
+      "startMs": 170640,
+      "endMs": 173040,
+      "text": "herd and moved to new areas in order to"
+    },
+    {
+      "startMs": 173040,
+      "endMs": 175680,
+      "text": "survive. We also discovered that"
+    },
+    {
+      "startMs": 175760,
+      "endMs": 178880,
+      "text": "elephants can show emotion. For example,"
+    },
+    {
+      "startMs": 178880,
+      "endMs": 181040,
+      "text": "when an elephant dies, the others may"
+    },
+    {
+      "startMs": 181040,
+      "endMs": 183760,
+      "text": "stroke and rearrange the bones, although"
+    },
+    {
+      "startMs": 183760,
+      "endMs": 187360,
+      "text": "why they do it is still a mystery. Elephants"
+    },
+    {
+      "startMs": 187360,
+      "endMs": 189760,
+      "text": "are very intelligent creatures. We've"
+    },
+    {
+      "startMs": 189760,
+      "endMs": 191760,
+      "text": "dedicated a whole chapter to this in our"
+    },
+    {
+      "startMs": 191760,
+      "endMs": 194480,
+      "text": "new book as the findings are so important."
+    },
+    {
+      "startMs": 194480,
+      "endMs": 196400,
+      "text": "For example, when we looked at the elephant's"
+    },
+    {
+      "startMs": 196400,
+      "endMs": 198400,
+      "text": "brain, we found that its weight was quite"
+    },
+    {
+      "startMs": 198400,
+      "endMs": 200560,
+      "text": "high compared with that of its body, which"
+    },
+    {
+      "startMs": 200560,
+      "endMs": 203840,
+      "text": "is significant. Early on in the research,"
+    },
+    {
+      "startMs": 203840,
+      "endMs": 207120,
+      "text": "we discovered that bull elephants, i.e. males,"
+    },
+    {
+      "startMs": 207120,
+      "endMs": 209440,
+      "text": "go through periods of significant change,"
+    },
+    {
+      "startMs": 209440,
+      "endMs": 213040,
+      "text": "which is called musth. This serves to advertise"
+    },
+    {
+      "startMs": 213040,
+      "endMs": 215520,
+      "text": "the male's virility to other females,"
+    },
+    {
+      "startMs": 215520,
+      "endMs": 217520,
+      "text": "letting them know he's healthy and would be a"
+    },
+    {
+      "startMs": 217520,
+      "endMs": 220560,
+      "text": "good father, but it also warns other males"
+    },
+    {
+      "startMs": 220560,
+      "endMs": 223280,
+      "text": "to stay away. One of the most obvious"
+    },
+    {
+      "startMs": 223280,
+      "endMs": 225920,
+      "text": "changes is in how they walk, though there"
+    },
+    {
+      "startMs": 225920,
+      "endMs": 229120,
+      "text": "are others. However, one of our most"
+    },
+    {
+      "startMs": 229120,
+      "endMs": 230960,
+      "text": "important discoveries is that it is"
+    },
+    {
+      "startMs": 230960,
+      "endMs": 232800,
+      "text": "crucial for elephants to live for a long"
+    },
+    {
+      "startMs": 232800,
+      "endMs": 236000,
+      "text": "time. If you are a male, you probably"
+    },
+    {
+      "startMs": 236000,
+      "endMs": 239040,
+      "text": "won't be a successful mate unless you do."
+    },
+    {
+      "startMs": 239040,
+      "endMs": 241280,
+      "text": "If you are a female, the older and more"
+    },
+    {
+      "startMs": 241280,
+      "endMs": 243360,
+      "text": "experienced you are, the more likely it is"
+    },
+    {
+      "startMs": 243360,
+      "endMs": 246240,
+      "text": "that you'll be aware of danger when it approaches."
+    },
+    {
+      "startMs": 246240,
+      "endMs": 249920,
+      "text": "For example, an elephant may be able to cope with one lion,"
+    },
+    {
+      "startMs": 249920,
+      "endMs": 252800,
+      "text": "but may have problems if there are three of them."
+    },
+    {
+      "startMs": 252800,
+      "endMs": 255120,
+      "text": "Age helps elephants know when it's best to walk"
+    },
+    {
+      "startMs": 255120,
+      "endMs": 258720,
+      "text": "away or to stand and fight."
+    },
+    {
+      "startMs": 258880,
+      "endMs": 262720,
+      "text": "There's a huge amount that's still waiting"
+    },
+    {
+      "startMs": 262720,
+      "endMs": 265680,
+      "text": "to be discovered. For example, we know very"
+    },
+    {
+      "startMs": 265680,
+      "endMs": 267200,
+      "text": "little about the part that's played in the"
+    },
+    {
+      "startMs": 267200,
+      "endMs": 269680,
+      "text": "life of elephants by their sense of smell,"
+    },
+    {
+      "startMs": 269680,
+      "endMs": 272000,
+      "text": "although we suspect that it must be important,"
+    },
+    {
+      "startMs": 272000,
+      "endMs": 274880,
+      "text": "because this sense is very well developed."
+    },
+    {
+      "startMs": 274880,
+      "endMs": 276880,
+      "text": "It's very hard to conduct research in this area"
+    },
+    {
+      "startMs": 276880,
+      "endMs": 278800,
+      "text": "in the wild, because there are so many"
+    },
+    {
+      "startMs": 278800,
+      "endMs": 282080,
+      "text": "variables involved. Another area we know"
+    },
+    {
+      "startMs": 282080,
+      "endMs": 284560,
+      "text": "little about is illustrated by a time I"
+    },
+    {
+      "startMs": 284560,
+      "endMs": 286560,
+      "text": "observed a young elephant reaching out"
+    },
+    {
+      "startMs": 286560,
+      "endMs": 288880,
+      "text": "towards an electric fence. His mother's"
+    },
+    {
+      "startMs": 288880,
+      "endMs": 290880,
+      "text": "whole body posture displayed alarm at the"
+    },
+    {
+      "startMs": 290880,
+      "endMs": 293600,
+      "text": "danger he was in. This is an example of how"
+    },
+    {
+      "startMs": 293600,
+      "endMs": 295840,
+      "text": "one elephant can be sensitive towards the"
+    },
+    {
+      "startMs": 295840,
+      "endMs": 298640,
+      "text": "feelings or situation of another, but we"
+    },
+    {
+      "startMs": 298640,
+      "endMs": 301440,
+      "text": "don't know how much it happens."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 98,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

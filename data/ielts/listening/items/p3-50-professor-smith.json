@@ -1,0 +1,541 @@
+{
+  "id": "p3-50-professor-smith",
+  "title": "Professor Smith",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-01006b164466",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 373.056,
+    "checksum": "sha256:84f3b1dd122388380c4f2d74b757d5bd836dcf27205dbde5f93b7d8c503d2654"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 21-26",
+      "instruction": "Choose the correct letter from the box, A, B, or C, next to questions 21-26",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peter"
+        },
+        {
+          "id": "B",
+          "text": "Lynne"
+        },
+        {
+          "id": "C",
+          "text": "Both Peter and Lynne"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "It brings teaching problems when based on old methods",
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "Students should be cautious about applying for an online course",
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "Computer can be applied to certain courses",
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "The opinion about personal contact is not helpful",
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "Online course comes with technological development",
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "Online course should have more time flexibility",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 27-30",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "27",
+          "text": "What does Professor Smith think of the usage of the Internet on campus?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The students depend heavily on the internet."
+            },
+            {
+              "id": "B",
+              "text": "Schools could make better use of computer."
+            },
+            {
+              "id": "C",
+              "text": "Teachers should encourage students to use computers."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "What's the meaning of Professor Smith's term \"divided\"?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Students tend to avoid using the computer."
+            },
+            {
+              "id": "B",
+              "text": "Students don't have access to the computer."
+            },
+            {
+              "id": "C",
+              "text": "Students are encouraged to use other useful resources."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "29",
+          "text": "What kind of help does Professor Smith think students should get?",
+          "options": [
+            {
+              "id": "A",
+              "text": "classmates' help"
+            },
+            {
+              "id": "B",
+              "text": "online help"
+            },
+            {
+              "id": "C",
+              "text": "teachers' help"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "What is Professor Smith's view on the purpose of introducing the computers in school?",
+          "options": [
+            {
+              "id": "A",
+              "text": "for computer companies selling computers more easily"
+            },
+            {
+              "id": "B",
+              "text": "for cutting other fees"
+            },
+            {
+              "id": "C",
+              "text": "a simple way to make profit"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "27": "A",
+        "28": "B",
+        "29": "B",
+        "30": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "B",
+        "23": "A",
+        "24": "A",
+        "25": "C",
+        "26": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13640,
+      "text": "Part 3. You will hear two students named Peter and Lynn discussing Professor John Smith's"
+    },
+    {
+      "startMs": 13640,
+      "endMs": 21400,
+      "text": "article about online course. First you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 57840,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 57840,
+      "endMs": 63720,
+      "text": "Peter: Again I just finished reading Professor Smith's article about the benefits of online courses."
+    },
+    {
+      "startMs": 63720,
+      "endMs": 65600,
+      "text": "What are your thoughts on the article?"
+    },
+    {
+      "startMs": 65600,
+      "endMs": 70720,
+      "text": "Lynn: Hi Peter, when I read that article, it was clear to me that Professor Smith does not"
+    },
+    {
+      "startMs": 70720,
+      "endMs": 75820,
+      "text": "favour the traditional methods of classroom teaching. Although I can certainly acknowledge"
+    },
+    {
+      "startMs": 75820,
+      "endMs": 80600,
+      "text": "that there are some advantages to online course, I would say that internet courses are"
+    },
+    {
+      "startMs": 80600,
+      "endMs": 83800,
+      "text": "not always the best means for teaching and learning."
+    },
+    {
+      "startMs": 83800,
+      "endMs": 87960,
+      "text": "Peter: I think it's about time to revolutionize the old teaching style though."
+    },
+    {
+      "startMs": 87960,
+      "endMs": 92320,
+      "text": "Lynn: But I would hope that students consider the negatives of online learning before enrolling"
+    },
+    {
+      "startMs": 92320,
+      "endMs": 94080,
+      "text": "in online courses."
+    },
+    {
+      "startMs": 94080,
+      "endMs": 99800,
+      "text": "Peter: This shouldn't be a big issue since online courses are so common these days. At least,"
+    },
+    {
+      "startMs": 99800,
+      "endMs": 104560,
+      "text": "I won't struggle so much. And Professor Smith points out that computer learning is"
+    },
+    {
+      "startMs": 104560,
+      "endMs": 109120,
+      "text": "well suited for some courses, especially the technical courses."
+    },
+    {
+      "startMs": 109120,
+      "endMs": 112240,
+      "text": "Lynn: Unfortunately, that theory doesn't work for me."
+    },
+    {
+      "startMs": 112240,
+      "endMs": 118240,
+      "text": "Peter: But a shame, I got an A for that online computing course last year. Anyway, next part"
+    },
+    {
+      "startMs": 118240,
+      "endMs": 123760,
+      "text": "is personal interaction. I think the personal interaction offered by traditional teaching"
+    },
+    {
+      "startMs": 123760,
+      "endMs": 128840,
+      "text": "is overrated in the article and doesn't have much value. I think it's a distraction"
+    },
+    {
+      "startMs": 128840,
+      "endMs": 132760,
+      "text": "and that time could be better spent on the subject matter of the course."
+    },
+    {
+      "startMs": 132760,
+      "endMs": 138720,
+      "text": "Lynn: Oh, I disagree. Strongly, Peter, you're dismissing the benefits of face-to-face interaction"
+    },
+    {
+      "startMs": 138720,
+      "endMs": 143760,
+      "text": "between students and teachers in traditional classroom settings. The article says that"
+    },
+    {
+      "startMs": 143760,
+      "endMs": 148000,
+      "text": "learning is a two-way street, and it's much easier for students to learn if they can"
+    },
+    {
+      "startMs": 148000,
+      "endMs": 151200,
+      "text": "ask questions and have discussions with their teachers."
+    },
+    {
+      "startMs": 151200,
+      "endMs": 157600,
+      "text": "Peter: I'm still not sure about that, but online courses can foster students' technological skills."
+    },
+    {
+      "startMs": 157600,
+      "endMs": 162800,
+      "text": "In learning the subject matter online, students will gain the technical know-how they'll need"
+    },
+    {
+      "startMs": 162800,
+      "endMs": 166360,
+      "text": "in their future endeavors. Lynn: I can't agree more."
+    },
+    {
+      "startMs": 166360,
+      "endMs": 170600,
+      "text": "Lynn: What do you think Professor Smith means when he says online courses should be flexible"
+    },
+    {
+      "startMs": 170600,
+      "endMs": 171600,
+      "text": "in time?"
+    },
+    {
+      "startMs": 171600,
+      "endMs": 177000,
+      "text": "Peter: That's essential. The point of learning online is to allow those who can't attend courses"
+    },
+    {
+      "startMs": 177000,
+      "endMs": 180920,
+      "text": "at fixed time. Lynn: I agree."
+    },
+    {
+      "startMs": 180920,
+      "endMs": 188160,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27-30."
+    },
+    {
+      "startMs": 196360,
+      "endMs": 214280,
+      "text": "Now listen and answer questions 27-30."
+    },
+    {
+      "startMs": 214280,
+      "endMs": 219200,
+      "text": "Lynn: The second part of the article shares some thoughts about the use of internet on campus,"
+    },
+    {
+      "startMs": 219200,
+      "endMs": 221520,
+      "text": "and kind of lost in that part."
+    },
+    {
+      "startMs": 221520,
+      "endMs": 226240,
+      "text": "Peter: Well, I think what he's trying to say is that students are already accustomed to doing"
+    },
+    {
+      "startMs": 226240,
+      "endMs": 231200,
+      "text": "their research on the internet, although some people say computers could be better used"
+    },
+    {
+      "startMs": 231200,
+      "endMs": 237120,
+      "text": "for other purposes. He emphasizes that many teachers are already instructing students"
+    },
+    {
+      "startMs": 237120,
+      "endMs": 239840,
+      "text": "to use the computer as a research tool."
+    },
+    {
+      "startMs": 239840,
+      "endMs": 244960,
+      "text": "Lynn: Thanks for clarifying that. What about the next part saying that students are divided?"
+    },
+    {
+      "startMs": 244960,
+      "endMs": 246800,
+      "text": "Do you know what that means?"
+    },
+    {
+      "startMs": 246800,
+      "endMs": 252160,
+      "text": "Peter：Well, it's certainly not that some students are afraid to use computers. They're already"
+    },
+    {
+      "startMs": 252160,
+      "endMs": 253760,
+      "text": "well accustomed to that."
+    },
+    {
+      "startMs": 253760,
+      "endMs": 259040,
+      "text": "Lynn: You're right about that. Most students already use the internet as their primary source"
+    },
+    {
+      "startMs": 259040,
+      "endMs": 261360,
+      "text": "for news and information."
+    },
+    {
+      "startMs": 261360,
+      "endMs": 266880,
+      "text": "Peter：Professor Smith probably intends to say that computers are not easily accessible and available"
+    },
+    {
+      "startMs": 266880,
+      "endMs": 268480,
+      "text": "to all students."
+    },
+    {
+      "startMs": 268480,
+      "endMs": 275440,
+      "text": "Lynn: Yes, not all students can afford computers, and as Professor Smith note, with online courses,"
+    },
+    {
+      "startMs": 275440,
+      "endMs": 278720,
+      "text": "the student support system is already in place."
+    },
+    {
+      "startMs": 278720,
+      "endMs": 282800,
+      "text": "Instead of asking fellow students all the professor for assistance,"
+    },
+    {
+      "startMs": 282800,
+      "endMs": 286960,
+      "text": "students would be able to get any information they need online,"
+    },
+    {
+      "startMs": 286960,
+      "endMs": 290000,
+      "text": "and this assistance would be available immediately."
+    },
+    {
+      "startMs": 290000,
+      "endMs": 294800,
+      "text": "Peter: So, why do you think Professor Smith is recommending the use of computers as the"
+    },
+    {
+      "startMs": 294800,
+      "endMs": 299840,
+      "text": "school's main means of educating students? Do you think he is interested in reducing"
+    },
+    {
+      "startMs": 299840,
+      "endMs": 303760,
+      "text": "some of the fees associated with traditional classroom courses?"
+    },
+    {
+      "startMs": 303760,
+      "endMs": 308240,
+      "text": "Lynn: I think it's all about the money. He is promoting online courses simply because he"
+    },
+    {
+      "startMs": 308240,
+      "endMs": 311120,
+      "text": "thinks it will enable the school to make more money."
+    },
+    {
+      "startMs": 311120,
+      "endMs": 312960,
+      "text": "Peter: I never thought of it that way."
+    },
+    {
+      "startMs": 312960,
+      "endMs": 316320,
+      "text": "Lynn: Many schools already have limited space for classrooms,"
+    },
+    {
+      "startMs": 316320,
+      "endMs": 319360,
+      "text": "if the school board wants to enroll more students,"
+    },
+    {
+      "startMs": 319360,
+      "endMs": 324480,
+      "text": "they can do that through distance learning mode. Instead of recruiting more teachers,"
+    },
+    {
+      "startMs": 324480,
+      "endMs": 329280,
+      "text": "the same course resources can be sold to both online and offline students."
+    },
+    {
+      "startMs": 329280,
+      "endMs": 334480,
+      "text": "Plus, some computer companies are willing to financially support the schools that promote"
+    },
+    {
+      "startMs": 334480,
+      "endMs": 339280,
+      "text": "this type of learning. Peter: I see, this is profitable in every sense."
+    },
+    {
+      "startMs": 339280,
+      "endMs": 343120,
+      "text": "All right, now we'll have something to write about in the research paper."
+    },
+    {
+      "startMs": 345040,
+      "endMs": 349200,
+      "text": "That's the end of part three. You now have 30 seconds,"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 66,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

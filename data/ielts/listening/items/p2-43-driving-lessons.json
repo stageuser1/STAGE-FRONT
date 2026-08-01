@@ -1,0 +1,593 @@
+{
+  "id": "p2-43-driving-lessons",
+  "title": "Driving Lessons",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-99d9b2abc2c3",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 455.088,
+    "checksum": "sha256:88e2016faa8d5c6eb753149480a56abe856276ac380571c47406170cd67288eb"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 11–16",
+      "instruction": "Complete the flow chart below.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 months’ probation"
+        },
+        {
+          "id": "B",
+          "text": "Circuit-based"
+        },
+        {
+          "id": "C",
+          "text": "Provisional licence"
+        },
+        {
+          "id": "D",
+          "text": "Renewable after one year"
+        },
+        {
+          "id": "E",
+          "text": "Revision"
+        },
+        {
+          "id": "F",
+          "text": "Road-based"
+        },
+        {
+          "id": "G",
+          "text": "Road safety check"
+        },
+        {
+          "id": "H",
+          "text": "RTD test"
+        },
+        {
+          "id": "I",
+          "text": "Trial test"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "_____.  (classroom)",
+          "answer": "E"
+        },
+        {
+          "id": "12",
+          "text": "_____.",
+          "answer": "I"
+        },
+        {
+          "id": "13",
+          "text": "_____.",
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "Training and assessment (_____. )",
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "_____.",
+          "answer": "H"
+        },
+        {
+          "id": "16",
+          "text": "Full driving licence (_____. )",
+          "answer": "A"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Driving lessons",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Theory course",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Lessons (classroom or online)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "11. __________ (classroom)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "12. __________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Road Traffic Department (RTD) test",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "13. __________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Practical course",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Training and assessment (14. __________)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Training and assessment (on the highways)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Trial test",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "15. __________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Full driving licence (16. __________)",
+          "list": false,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 17–20",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "17",
+          "text": "If you want to do the theory course, you",
+          "options": [
+            {
+              "id": "A",
+              "text": "have to reserve a place."
+            },
+            {
+              "id": "B",
+              "text": "can get details on the internet."
+            },
+            {
+              "id": "C",
+              "text": "must pay the whole cost in advance."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "What does the woman say about the theory classes?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are available in more than one language"
+            },
+            {
+              "id": "B",
+              "text": "All the necessary materials are provided."
+            },
+            {
+              "id": "C",
+              "text": "Trainees stay together for the whole course."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "19",
+          "text": "What does the woman say about the practical course?",
+          "options": [
+            {
+              "id": "A",
+              "text": "You must attend a session every day."
+            },
+            {
+              "id": "B",
+              "text": "You are allowed to drive your own car"
+            },
+            {
+              "id": "C",
+              "text": "You can book at certain shops."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "There is no charge for a cancelled practical",
+          "options": [
+            {
+              "id": "A",
+              "text": "session if the instructor agrees to reschedule it."
+            },
+            {
+              "id": "B",
+              "text": "the required amount of notice is given."
+            },
+            {
+              "id": "C",
+              "text": "a medical certificate is produced"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "17": "B",
+        "18": "A",
+        "19": "C",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "E",
+        "12": "I",
+        "13": "C",
+        "14": "B",
+        "15": "H",
+        "16": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13480,
+      "text": "Part 2. You will hear an employee of a driving school, answering a telephone inquiry about training"
+    },
+    {
+      "startMs": 13480,
+      "endMs": 20120,
+      "text": "to take a driving test. First you have some time to look at questions 11 to 16."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 58000,
+      "text": "Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 58000,
+      "endMs": 64440,
+      "text": "Staff: Safety Driving Center. Hello. Caller: Hello. Can you give me some information about driving lessons?"
+    },
+    {
+      "startMs": 64440,
+      "endMs": 72080,
+      "text": "Staff: Yes. There are two courses, one on theory and one practical course, and most people do the"
+    },
+    {
+      "startMs": 72080,
+      "endMs": 78480,
+      "text": "two courses simultaneously. The first part of the theory course consists of a series"
+    },
+    {
+      "startMs": 78480,
+      "endMs": 84680,
+      "text": "of lessons and you can do these either at the center in one of our classrooms or via the"
+    },
+    {
+      "startMs": 84680,
+      "endMs": 91000,
+      "text": "internet. You work through the material at your own pace but there's a tutor on hand to help"
+    },
+    {
+      "startMs": 91000,
+      "endMs": 98520,
+      "text": "whenever you need it. At the second stage we review what we've covered so far. We do this in the"
+    },
+    {
+      "startMs": 98520,
+      "endMs": 105080,
+      "text": "classroom. We don't deliver it online so you have to come into the center."
+    },
+    {
+      "startMs": 105080,
+      "endMs": 113400,
+      "text": "At the end of this lesson there's a test but this is just for practice. It's not a proper RTD test."
+    },
+    {
+      "startMs": 113400,
+      "endMs": 120280,
+      "text": "If you're satisfied with your performance on this you can go on to the next stage and if you're not you can go back"
+    },
+    {
+      "startMs": 120280,
+      "endMs": 128200,
+      "text": "to stage one and follow the lessons again. The third stage is the real test, the one set and"
+    },
+    {
+      "startMs": 128200,
+      "endMs": 136920,
+      "text": "administered by the RTD. That's the Road Traffic Department. Provided you pass that test you then"
+    },
+    {
+      "startMs": 136920,
+      "endMs": 143160,
+      "text": "get your provisional driving license which you need before you can venture onto public highways."
+    },
+    {
+      "startMs": 144600,
+      "endMs": 151000,
+      "text": "The practical course starts off here at the test center and it consists of training and"
+    },
+    {
+      "startMs": 151000,
+      "endMs": 158280,
+      "text": "assessment on our specially designed circuit. This allows you to get driving experience immediately"
+    },
+    {
+      "startMs": 158280,
+      "endMs": 165080,
+      "text": "but in a safe environment. At the next stage you continue with training and assessment but on"
+    },
+    {
+      "startMs": 165080,
+      "endMs": 172120,
+      "text": "public highways. Obviously you can't do this until you've obtained your provisional license"
+    },
+    {
+      "startMs": 172120,
+      "endMs": 176920,
+      "text": "to show that you've got some knowledge of traffic regulations and road safety."
+    },
+    {
+      "startMs": 177720,
+      "endMs": 184680,
+      "text": "Then when both you and your instructor think you're ready you do a trial test and if that goes"
+    },
+    {
+      "startMs": 184680,
+      "endMs": 194360,
+      "text": "well you go straight on to do the official test run by the RTD. Finally provided that you're successful"
+    },
+    {
+      "startMs": 194360,
+      "endMs": 199960,
+      "text": "in both parts of the course, the theory and the practice, you get your driving license."
+    },
+    {
+      "startMs": 200520,
+      "endMs": 206040,
+      "text": "You're then on probation for a year and as long as you don't have any problems in that time"
+    },
+    {
+      "startMs": 206040,
+      "endMs": 208680,
+      "text": "your license will be endorsed for future use."
+    },
+    {
+      "startMs": 212280,
+      "endMs": 218680,
+      "text": "Before you hear the rest of the conversation you have some time to look at question 17 to 20."
+    },
+    {
+      "startMs": 224360,
+      "endMs": 252600,
+      "text": "Now listen and answer question 17 to 20."
+    },
+    {
+      "startMs": 254360,
+      "endMs": 258600,
+      "text": "Caller: Can you tell me how to enroll?"
+    },
+    {
+      "startMs": 258600,
+      "endMs": 264520,
+      "text": "Staff: Yes, it's quite easy. For the theory course there's no need to book and if you're going to do"
+    },
+    {
+      "startMs": 264520,
+      "endMs": 269320,
+      "text": "classroom based lessons you can just turn up here at the center and pay as you go."
+    },
+    {
+      "startMs": 269960,
+      "endMs": 276280,
+      "text": "We run six sessions a day and if you go to our website you'll find the start times for each session."
+    },
+    {
+      "startMs": 277000,
+      "endMs": 281880,
+      "text": "If you don't have internet access you can pick up a leaflet from the center here with that"
+    },
+    {
+      "startMs": 281880,
+      "endMs": 290200,
+      "text": "information. As for the classes themselves all our theory classes are run by experienced tutors"
+    },
+    {
+      "startMs": 290200,
+      "endMs": 294600,
+      "text": "and they're offered in a number of different languages as well as in English."
+    },
+    {
+      "startMs": 295320,
+      "endMs": 301800,
+      "text": "We deliver the content using PowerPoint but there's still a place for pen and paper tasks"
+    },
+    {
+      "startMs": 301800,
+      "endMs": 307880,
+      "text": "and we ask you to bring your own stationery to the lessons. You choose the particular stage of"
+    },
+    {
+      "startMs": 307880,
+      "endMs": 313720,
+      "text": "the course that you want each time. Some people attend more frequently than others and so they"
+    },
+    {
+      "startMs": 313720,
+      "endMs": 319560,
+      "text": "progress through the course at a faster rate. Caller: What about enrolling on the practical course?"
+    },
+    {
+      "startMs": 320120,
+      "endMs": 327480,
+      "text": "Staff: That's a bit more complicated and you do have to book in advance but you can do that via our website"
+    },
+    {
+      "startMs": 327480,
+      "endMs": 333240,
+      "text": "or at the customer service desk here at the center or you can book at one of our self-service"
+    },
+    {
+      "startMs": 333240,
+      "endMs": 339160,
+      "text": "kiosks. You'll find them in some of the big stores in the city so it's very convenient whatever"
+    },
+    {
+      "startMs": 339160,
+      "endMs": 346520,
+      "text": "your situation is. You can attend between one and seven sessions a week so you can decide whether"
+    },
+    {
+      "startMs": 346520,
+      "endMs": 353000,
+      "text": "you want to do the course intensively or spread it out more. Some driving schools allow you to"
+    },
+    {
+      "startMs": 353000,
+      "endMs": 361160,
+      "text": "drive your own car but for safety and insurance reasons we don't. You can cancel lessons in the"
+    },
+    {
+      "startMs": 361160,
+      "endMs": 367480,
+      "text": "same way that you book them but in order to avoid incurring a penalty you have to do that at least"
+    },
+    {
+      "startMs": 367480,
+      "endMs": 373880,
+      "text": "72 hours in advance of your appointment. When you make a cancellation in less than the required"
+    },
+    {
+      "startMs": 373880,
+      "endMs": 380200,
+      "text": "period you can try and transfer your session to someone else. If another trainee then agrees to"
+    },
+    {
+      "startMs": 380200,
+      "endMs": 385880,
+      "text": "take the session over your payment for the cancelled session can be credited back to your account."
+    },
+    {
+      "startMs": 386520,
+      "endMs": 392520,
+      "text": "Otherwise we can't give a refund for any reason and even a medical certificate"
+    },
+    {
+      "startMs": 392520,
+      "endMs": 395240,
+      "text": "isn't accepted as grounds for granting one."
+    },
+    {
+      "startMs": 398760,
+      "endMs": 404920,
+      "text": "That is the end of part two. You now have 30 seconds to check your answers to part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 51,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

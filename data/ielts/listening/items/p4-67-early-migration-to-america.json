@@ -1,0 +1,405 @@
+{
+  "id": "p4-67-early-migration-to-america",
+  "title": "Early Migration to America",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-2176ef28dd41",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 311.796,
+    "checksum": "sha256:dc62fa896f79e4af9f914d608b541200ff99f2d9bcb9928df4a239dc477f9c28"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below Write ONE WORD ONLY for each answer. Early Migration to America Human Migration and Environmental Conditions Humans migrated from Northern Asia to Alaska via a land bridge The area consists of a dry grassland plain up to 2000 km² The winter is cold and long with strong winds but free from 31. _____ The earliest group of humans followed 32. _____ to Alaska Anthropologists found similar shaped 33. _____ in people in Northern Asia and in North America The land is covered with glaciers, which makes it difficult to find 34. _____ Archaeological Evidence and Excavations The other evidence was in the form of 35. _____ for hunting Some scientists believe first settlers moved from north to south But no 36. _____ have been found to support the theory Excavations revealed dozens of people living in some huts by a stream Scientists found a variety of 37. _____ in the sea, such as seaweed Alternative Theories and Doubts However, some archaeologists did not believe the first humans arrived via Alaska They thought the 38. _____ was too bad for humans to survive in They doubt the 39. _____ skills of the early people for such a long voyage People believe the theory due to there is a strong 40. _____ in the Pacific Ocean",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The winter is cold and long with strong winds but free from 31. _____",
+          "answer": "ice"
+        },
+        {
+          "id": "32",
+          "text": "The earliest group of humans followed 32. _____ to Alaska",
+          "answer": "animals"
+        },
+        {
+          "id": "33",
+          "text": "Anthropologists found similar shaped 33. _____ in people in Northern Asia and in North America",
+          "answer": "teeth"
+        },
+        {
+          "id": "34",
+          "text": "The land is covered with glaciers, which makes it difficult to find 34. _____",
+          "answer": "resources"
+        },
+        {
+          "id": "35",
+          "text": "The other evidence was in the form of 35. _____ for hunting",
+          "answer": "weapons"
+        },
+        {
+          "id": "36",
+          "text": "But no 36. _____ have been found to support the theory",
+          "answer": "boats"
+        },
+        {
+          "id": "37",
+          "text": "Scientists found a variety of 37. _____ in the sea, such as seaweed",
+          "answer": "plants"
+        },
+        {
+          "id": "38",
+          "text": "They thought the 38. _____ was too bad for humans to survive in",
+          "answer": "climate"
+        },
+        {
+          "id": "39",
+          "text": "They doubt the 39. _____ skills of the early people for such a long voyage",
+          "answer": "navigational"
+        },
+        {
+          "id": "40",
+          "text": "People believe the theory due to there is a strong 40. _____ in the Pacific Ocean",
+          "answer": "current"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Early Migration to America",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Human Migration and Environmental Conditions",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Humans migrated from Northern Asia to Alaska via a land bridge",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The area consists of a dry grassland plain up to 2000 km²",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The winter is cold and long with strong winds but free from 31. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The earliest group of humans followed 32. _____ to Alaska",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Anthropologists found similar shaped 33. _____ in people in Northern Asia and in North America",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The land is covered with glaciers, which makes it difficult to find 34. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Archaeological Evidence and Excavations",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The other evidence was in the form of 35. _____ for hunting",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some scientists believe first settlers moved from north to south",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "But no 36. _____ have been found to support the theory",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Excavations revealed dozens of people living in some huts by a stream",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Scientists found a variety of 37. _____ in the sea, such as seaweed",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Alternative Theories and Doubts",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "However, some archaeologists did not believe the first humans arrived via Alaska",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They thought the 38. _____ was too bad for humans to survive in",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They doubt the 39. _____ skills of the early people for such a long voyage",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People believe the theory due to there is a strong 40. _____ in the Pacific Ocean",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "ice",
+        "32": "animals",
+        "33": "teeth",
+        "34": "resources",
+        "35": "weapons",
+        "36": "boats",
+        "37": "plants",
+        "38": "climate",
+        "39": "navigational",
+        "40": "current"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11000,
+      "text": "Now turn to Section 4. Section 4. You will hear an anthropology lecturer talking about early migration to the Americas."
+    },
+    {
+      "startMs": 11000,
+      "endMs": 17000,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 17000,
+      "endMs": 22000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 22000,
+      "endMs": 34000,
+      "text": "Scientists from several different disciplines, anthropology, archaeology, and geology all agree that at some stage there was human migration from Asia to the Americas."
+    },
+    {
+      "startMs": 34000,
+      "endMs": 41000,
+      "text": "But they disagree over when, how, or why these humans first came to the Americas."
+    },
+    {
+      "startMs": 41000,
+      "endMs": 50000,
+      "text": "I'll run through some of the evidence briefly and try to explain the time frame, method, and reason for these migrations."
+    },
+    {
+      "startMs": 50000,
+      "endMs": 61000,
+      "text": "For a long time, most scientists had accepted that the original route into the Americas was from Northern Asia to Alaska, in the far North America."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 72000,
+      "text": "Evidence suggests that humans arrived via a land bridge. This consisted of a dry grassland plane about 2,000 kilometers wide."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 82000,
+      "text": "They think this environment would have been similar to present day tundra, with long cool winters and perpetual winds, but crucially no ice."
+    },
+    {
+      "startMs": 82000,
+      "endMs": 90000,
+      "text": "Geologists estimate that the land bridge existed between 75,000 and 14,000 years ago."
+    },
+    {
+      "startMs": 90000,
+      "endMs": 97000,
+      "text": "The theory is that these first humans were hunting animals which they followed into what is now Alaska."
+    },
+    {
+      "startMs": 97000,
+      "endMs": 104000,
+      "text": "Biological evidence, as well as archaeological remains, have been found which support this theory."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 114000,
+      "text": "For example, anthropologists have found a high incidence of similarly shaped teeth in people in Northern Asia and in North America."
+    },
+    {
+      "startMs": 114000,
+      "endMs": 123000,
+      "text": "The archaeological evidence also indicates that from Alaska, in North America, people began to travel farther south."
+    },
+    {
+      "startMs": 123000,
+      "endMs": 138000,
+      "text": "The problem is, no one's sure yet what route people took, or how humans would have been able to survive because much of the land would have still been covered in glaciers, and it would have been very hard to find resources."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 145000,
+      "text": "The other problem with this theory was that the evidence from Alaska only dated back 13,000 years."
+    },
+    {
+      "startMs": 145000,
+      "endMs": 155000,
+      "text": "This was in the form of weapons used for hunting, but evidence found at human settlements and other parts of the Americas dated further back than this."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 162000,
+      "text": "The most significant of these settlements is on Monteverde site in Chile, in South America."
+    },
+    {
+      "startMs": 162000,
+      "endMs": 174000,
+      "text": "Evidence from the site includes biological remains which date back over 14,000 years, making Monteverde the earliest known human settlement in the Americas."
+    },
+    {
+      "startMs": 174000,
+      "endMs": 182000,
+      "text": "This meant the date of the arrival of humans in Alaska had to be revised backwards by about 2,000 years."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 195000,
+      "text": "Some scientists also think that the first settlers moved down in haste from North to South America on the Pacific side, and findings at Monteverde would seem to support this view."
+    },
+    {
+      "startMs": 195000,
+      "endMs": 205000,
+      "text": "Although no boats have been discovered yet to support this theory, we all know that earlier people in other parts of the world had made use of this technology."
+    },
+    {
+      "startMs": 205000,
+      "endMs": 218000,
+      "text": "The site at Monteverde was discovered in 1976, and excavations revealed a small settlement of 20 to 30 people living in a dozen huts along a small stream."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 231000,
+      "text": "Scientists were surprised to discover nine species of marine plants, including seaweed, material that the Monteverdeans must have brought from the sea, which is over 60 kilometers away."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 241000,
+      "text": "A variety of other items, including flat pebbles, were also found, which suggests the group had a tradition of exploring the sea."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 254000,
+      "text": "However, there are still a number of prominent archaeologists who don't accept that the first humans arrived via Alaska, and have put forward a theory of trans-oceanic migration instead."
+    },
+    {
+      "startMs": 254000,
+      "endMs": 266000,
+      "text": "They say that at this time, the climate in Alaska would have been too inhospitable for humans to survive in, and so the first people must have arrived across the Pacific Ocean."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 270000,
+      "text": "Again, there's a lot of controversy surrounding this theory."
+    },
+    {
+      "startMs": 270000,
+      "endMs": 277000,
+      "text": "Many scientists doubt that people at this time had the navigational expertise for such a long voyage."
+    },
+    {
+      "startMs": 277000,
+      "endMs": 286000,
+      "text": "However, this idea does offer an alternative explanation as to how people were able to settle as far south as Monteverde."
+    },
+    {
+      "startMs": 286000,
+      "endMs": 298000,
+      "text": "People who support this theory believe that crossing the Pacific would have been possible because of a powerful current in the Pacific Ocean, which would have carried boats from Japan to America."
+    },
+    {
+      "startMs": 298000,
+      "endMs": 304000,
+      "text": "Again, there's no real evidence to support this theory, but some archaeologists believe."
+    },
+    {
+      "startMs": 304000,
+      "endMs": 311000,
+      "text": "That is the end of section 4. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 33,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,541 @@
+{
+  "id": "p3-99-elephants-and-farms",
+  "title": "Elephants and Farms",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-4b0c6b5a7ff8",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 337.737,
+    "checksum": "sha256:23a12f1283e890ecfdf28b1102964f89b1da5dbe115c4b496205e57f2849c4a6"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "21-22",
+      "title": "Questions 21-22.",
+      "instruction": "Choose TWO letters A-E.",
+      "questionText": "What are the TWO results happened as elephants stepping on farmer's field?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "farmers moved away from the affected areas"
+        },
+        {
+          "id": "B",
+          "text": "some farmers' homes were destroyed"
+        },
+        {
+          "id": "C",
+          "text": "farmers have less support for elephant conservation"
+        },
+        {
+          "id": "D",
+          "text": "farmers tried to protect their families"
+        },
+        {
+          "id": "E",
+          "text": "elephants became aggressive towards the farmers"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "What are the TWO results happened as elephants stepping on farmer's field?",
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "What are the TWO results happened as elephants stepping on farmer's field?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "23-24",
+      "title": "Questions 23-24.",
+      "instruction": "Choose TWO letters A-E",
+      "questionText": "What TWO impacts could be made by bees to elephants?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "they can hurt the skin of the adult elephants"
+        },
+        {
+          "id": "B",
+          "text": "they like to attack the sensitive parts of the elephants"
+        },
+        {
+          "id": "C",
+          "text": "elephants are not afraid of bees"
+        },
+        {
+          "id": "D",
+          "text": "young elephants are affected negatively"
+        },
+        {
+          "id": "E",
+          "text": "they have little effect on elephants"
+        }
+      ],
+      "questions": [
+        {
+          "id": "23",
+          "text": "What TWO impacts could be made by bees to elephants?",
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "What TWO impacts could be made by bees to elephants?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 25-30.",
+      "instruction": "Choose the correct letter A, B or C",
+      "questions": [
+        {
+          "id": "25",
+          "text": "What is result of the experiment of hanging a container of bees by the farms?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the trees with bees were trampled down by elephants"
+            },
+            {
+              "id": "B",
+              "text": "the elephants started to look for the trees with bees"
+            },
+            {
+              "id": "C",
+              "text": "it can be used for protecting farmer's crops"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "How did the elephants respond to the audio recording of bees?",
+          "options": [
+            {
+              "id": "A",
+              "text": "they were not aware of the danger"
+            },
+            {
+              "id": "B",
+              "text": "they ran away quickly and kept looking back"
+            },
+            {
+              "id": "C",
+              "text": "they stopped and looked for the source of the sound"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "27",
+          "text": "The reason why one herd of elephants didn't run away",
+          "options": [
+            {
+              "id": "A",
+              "text": "they didn't hear the sound clear"
+            },
+            {
+              "id": "B",
+              "text": "they never had the experience before"
+            },
+            {
+              "id": "C",
+              "text": "they didn't pay attention to the recording"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "What surprised the researchers when elephants heard the recording?",
+          "options": [
+            {
+              "id": "A",
+              "text": "some elephants reacted to it immediately"
+            },
+            {
+              "id": "B",
+              "text": "they were scared for only 10 seconds"
+            },
+            {
+              "id": "C",
+              "text": "most elephants didn't take any action"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "What is the drawback of the application of bee recording?",
+          "options": [
+            {
+              "id": "A",
+              "text": "finding suitable power to run the device"
+            },
+            {
+              "id": "B",
+              "text": "training suitable people to set out the device"
+            },
+            {
+              "id": "C",
+              "text": "the battery can't last long time"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "What is the other effective method as a deterrent to elephants?",
+          "options": [
+            {
+              "id": "A",
+              "text": "hanging cowbells"
+            },
+            {
+              "id": "B",
+              "text": "setting up electric fences"
+            },
+            {
+              "id": "C",
+              "text": "growing chili peppers"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "25": "C",
+        "26": "B",
+        "27": "B",
+        "28": "A",
+        "29": "B",
+        "30": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "21_22": [
+          "C",
+          "E"
+        ],
+        "23_24": [
+          "B",
+          "D"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "E",
+        "23": "B",
+        "24": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7480,
+      "text": "Section 3. You will hear two students called Ruth and Edward discussing their assignment"
+    },
+    {
+      "startMs": 7480,
+      "endMs": 14320,
+      "text": "about a conservation issue involving elephants in Kenya. First, you have some time to look"
+    },
+    {
+      "startMs": 14320,
+      "endMs": 23920,
+      "text": "at questions 21 to 24. Now, listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 24560,
+      "endMs": 30400,
+      "text": "Ruth: Right, Edward. I've got some notes here for our conservation assignment. I had a look at the"
+    },
+    {
+      "startMs": 30400,
+      "endMs": 37040,
+      "text": "research you mentioned in Kenya. I hadn't realized that farmers were having so many problems with"
+    },
+    {
+      "startMs": 37040,
+      "endMs": 44160,
+      "text": "elephants eating their crops there. Edward: Yes, the trouble is when elephants get into farmers' fields and"
+    },
+    {
+      "startMs": 44160,
+      "endMs": 50560,
+      "text": "destroy their crops, that has all sorts of other results. Ruth: I don't suppose the farmers can just get"
+    },
+    {
+      "startMs": 50560,
+      "endMs": 57120,
+      "text": "up and go somewhere else. Edward: No, but it's a real problem because farmers are shooting the elephants"
+    },
+    {
+      "startMs": 57120,
+      "endMs": 64080,
+      "text": "to keep their crops safe. And then the other elephants are affected and become very hostile to humans."
+    },
+    {
+      "startMs": 64080,
+      "endMs": 69040,
+      "text": "But you can see for the farmers it's not homes and families that have been threatened."
+    },
+    {
+      "startMs": 69040,
+      "endMs": 74800,
+      "text": "Ruth: And it's understandable that farmers don't feel like supporting elephant conservation"
+    },
+    {
+      "startMs": 74800,
+      "endMs": 81440,
+      "text": "if their own livelihood is being destroyed. You feel you have the right to defend your property. Edward: Exactly."
+    },
+    {
+      "startMs": 81440,
+      "endMs": 87440,
+      "text": "So I thought for our assignment we can start with the problem then introduce the"
+    },
+    {
+      "startMs": 87440,
+      "endMs": 95200,
+      "text": "solutions they've been experimenting with. Ruth: So now we get on to the bees. I never thought elephants"
+    },
+    {
+      "startMs": 95200,
+      "endMs": 102720,
+      "text": "would be afraid of bees. But I suppose even if you're as big as an elephant a bee sting can still hurt."
+    },
+    {
+      "startMs": 103360,
+      "endMs": 109920,
+      "text": "Edward: Well I think it depends. Bees can't sting through the thick skin on an adult elephant's body"
+    },
+    {
+      "startMs": 109920,
+      "endMs": 116960,
+      "text": "but they target the sensitive areas like near the eyes. Ruth: Oh that must really hurt and I heard they"
+    },
+    {
+      "startMs": 116960,
+      "endMs": 124000,
+      "text": "get right inside the elephant's trunk and sting there. Edward: Yes and then there are the baby elephants,"
+    },
+    {
+      "startMs": 124000,
+      "endMs": 130640,
+      "text": "the calves which have thinner skin so they can be really badly affected especially if they get"
+    },
+    {
+      "startMs": 130640,
+      "endMs": 138240,
+      "text": "attacked by a whole swarm of bees. Ruth: So elephants with babies may be threatened by bees even if they"
+    },
+    {
+      "startMs": 138240,
+      "endMs": 145200,
+      "text": "don't get stung themselves."
+    },
+    {
+      "startMs": 145200,
+      "endMs": 152720,
+      "text": "Before you hear the rest of the discussion you have some time to read questions 25 to 30."
+    },
+    {
+      "startMs": 153360,
+      "endMs": 163040,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 163040,
+      "endMs": 171280,
+      "text": "Edward: Okay, so next we can go on to describe the experiments based on this fear that elephants have"
+    },
+    {
+      "startMs": 171280,
+      "endMs": 177360,
+      "text": "of bees. So there was one way they hung containers full of bees in trees near the farms and they"
+    },
+    {
+      "startMs": 177360,
+      "endMs": 185360,
+      "text": "listened in trees without containers and they found the elephants trampled down the trees that"
+    },
+    {
+      "startMs": 185360,
+      "endMs": 190880,
+      "text": "didn't have any containers and stayed well away from the ones with the bees in."
+    },
+    {
+      "startMs": 190880,
+      "endMs": 198320,
+      "text": "Ruth: Okay, so did you read the articles about the experiment where it was done with the audio recording of bees instead"
+    },
+    {
+      "startMs": 198320,
+      "endMs": 204400,
+      "text": "of real bees? Edward: No. Ruth: Well, they've got a recording of a swarm of angry bees and they played it to"
+    },
+    {
+      "startMs": 204400,
+      "endMs": 211920,
+      "text": "herds of elephants out in the wild and they all stopped what they were doing immediately and stood"
+    },
+    {
+      "startMs": 211920,
+      "endMs": 218320,
+      "text": "erect with their heads up and their ears extended. Edward: They must have been really aware there was danger"
+    },
+    {
+      "startMs": 218320,
+      "endMs": 224960,
+      "text": "somewhere. Ruth: But not the sort of danger that they can face up to and charge, so they dashed off in the"
+    },
+    {
+      "startMs": 224960,
+      "endMs": 232240,
+      "text": "opposite direction. They kept turning their heads around."
+    },
+    {
+      "startMs": 232240,
+      "endMs": 239600,
+      "text": "Edward: Presumably looking for the swarm of bees which wasn't there. Ruth: Yes, and researchers tested 18 different herds of the elephants and all but"
+    },
+    {
+      "startMs": 239600,
+      "endMs": 246720,
+      "text": "one responded in the same way. Edward: Maybe that herd just didn't hear it properly."
+    },
+    {
+      "startMs": 246720,
+      "endMs": 252560,
+      "text": "It seems a very small exception to the main finding. Ruth: I think researchers actually concluded that this particular herd lacked"
+    },
+    {
+      "startMs": 252560,
+      "endMs": 261120,
+      "text": "any experience of bees. They'd never encountered any so they weren't afraid of the recording. Edward: Right."
+    },
+    {
+      "startMs": 261120,
+      "endMs": 268000,
+      "text": "Oh so that was the reason. Ruth: Exactly. But what surprised the researchers was, from the"
+    },
+    {
+      "startMs": 268000,
+      "endMs": 274960,
+      "text": "17 herds that did take action when they heard the recording, they found almost 50% of the herds"
+    },
+    {
+      "startMs": 274960,
+      "endMs": 281760,
+      "text": "did this very quickly within 10 seconds of hearing the recording. Edward: Oh that's interesting."
+    },
+    {
+      "startMs": 281760,
+      "endMs": 288720,
+      "text": "Ruth: Right. So playing the recordings of bees could be a good deterrent to elephants but it's not all"
+    },
+    {
+      "startMs": 288720,
+      "endMs": 295760,
+      "text": "that straightforward actually. Edward: Yes, you've got to have the electricity to run the machinery."
+    },
+    {
+      "startMs": 295760,
+      "endMs": 301120,
+      "text": "Ruth: No, that's okay. It can run on batteries, but the whole thing's quite difficult for electrical outlet"
+    },
+    {
+      "startMs": 301120,
+      "endMs": 307680,
+      "text": "which might be easy and then someone's got to set it all out and make sure it's working."
+    },
+    {
+      "startMs": 307680,
+      "endMs": 313920,
+      "text": "That's not difficult but it's really a job."
+    },
+    {
+      "startMs": 313920,
+      "endMs": 321280,
+      "text": "Edward: They're trying other methods as well like electric fences to keep the elephants away from the crops. They haven't had much success but when they"
+    },
+    {
+      "startMs": 321280,
+      "endMs": 328480,
+      "text": "hang cowbells on the fences that seemed to scare them off."
+    },
+    {
+      "startMs": 328480,
+      "endMs": 336720,
+      "text": "Ruth: Yes, I've read they tried chili peppers as a deterrent too but that didn't scare the elephants at all. Edward: Right, so I think we've got plenty"
+    },
+    {
+      "startMs": 336720,
+      "endMs": 336720,
+      "text": "of information."
+    },
+    {
+      "startMs": 336720,
+      "endMs": 336720,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 50,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "id": "p1-7-notes-on-a-part-time-society",
+  "title": "Notes on A Part time Society",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-3fde0688ac52",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 489.576,
+    "checksum": "sha256:169d0bce37493f8c92d97491726ca4c958aff7f5e3bb8fea1b1dae199ecc346a"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer. Notes on A Part time Society Example Name of society: Leighton Location: 1. ________ house Want: 2. ________ actors and singers (no experience required) Transportation: shuttle services (need someone who is able to 3. ________ ) Meeting time: 6:00–8:00 pm every 4. ________. Close time: during 5. ________. Membership fee (including 6. ________.) £40 for employed members (under 30 years of age) £60 for employed members (30–60 years of age) £7. ________ for retired or unemployed members (over 60 years of age) Minimum joining age Most members are Friendly fond of culture and music Charity The children’s 10. ______ will get the money raised by the annual dinner.",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Location: 1. ________ house",
+          "answer": "club"
+        },
+        {
+          "id": "2",
+          "text": "Want: 2. ________ actors and singers (no experience required)",
+          "answer": "male"
+        },
+        {
+          "id": "3",
+          "text": "Transportation: shuttle services (need someone who is able to 3. ________ )",
+          "answer": "drive"
+        },
+        {
+          "id": "4",
+          "text": "Meeting time: 6:00–8:00 pm every 4. ________.",
+          "answer": "Tuesday"
+        },
+        {
+          "id": "5",
+          "text": "Close time: during 5. ________.",
+          "answer": "August"
+        },
+        {
+          "id": "6",
+          "text": "Membership fee (including 6. ________.)",
+          "answer": "dinner"
+        },
+        {
+          "id": "7",
+          "text": "£7. ________ for retired or unemployed members (over 60 years of age)",
+          "answer": "25"
+        },
+        {
+          "id": "8",
+          "text": "8. ________",
+          "answer": "16"
+        },
+        {
+          "id": "9",
+          "text": "9. ________ authors looking for new experiences to write about in their books",
+          "answer": "modern"
+        },
+        {
+          "id": "10",
+          "text": "The children’s 10. ______ will get the money raised by the annual dinner.",
+          "answer": "hospital"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the table below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Notes on A Part time Society",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Example",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Name of society: Leighton",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Location: 1. ________ house",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Want: 2. ________ actors and singers (no experience required)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Transportation: shuttle services (need someone who is able to 3. ________ )",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Meeting time: 6:00–8:00 pm every 4. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Close time: during 5. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Membership fee (including 6. ________.)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "£40 for employed members (under 30 years of age)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "£60 for employed members (30–60 years of age)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "£7. ________ for retired or unemployed members (over 60 years of age)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Minimum joining age",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "8. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Most members are",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Friendly",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "fond of culture and music",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "9. ________ authors looking for new experiences to write about in their books",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Charity",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The children’s 10. ______ will get the money raised by the annual dinner.",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "club",
+        "2": "male",
+        "3": "drive",
+        "4": "Tuesday",
+        "5": "August",
+        "6": "dinner",
+        "7": "25",
+        "8": "16",
+        "9": "modern",
+        "10": "hospital"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 25660,
+      "text": "You will hear a man who has just retired, telephoning a part-time society to ask about membership and activities."
+    },
+    {
+      "startMs": 25660,
+      "endMs": 33460,
+      "text": "First, you have some time to look at questions 1 to 5."
+    },
+    {
+      "startMs": 56660,
+      "endMs": 69660,
+      "text": "You will see there is an example that has been done for you. On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 71660,
+      "endMs": 75660,
+      "text": "Staff: Hello, this is the Leighton Society. How can I help?"
+    },
+    {
+      "startMs": 75660,
+      "endMs": 80660,
+      "text": "Caller: Oh, hello. I'm just phoning you because I'm interested in becoming a member of your society."
+    },
+    {
+      "startMs": 80660,
+      "endMs": 84660,
+      "text": "And I was wondering if you could give me some more information."
+    },
+    {
+      "startMs": 86660,
+      "endMs": 93660,
+      "text": "The name of the society is Leighton, so Leighton has been written in the space."
+    },
+    {
+      "startMs": 94660,
+      "endMs": 104660,
+      "text": "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time."
+    },
+    {
+      "startMs": 105660,
+      "endMs": 109660,
+      "text": "Listen carefully and answer questions 1 to 5."
+    },
+    {
+      "startMs": 112660,
+      "endMs": 115660,
+      "text": "Staff: Hello, this is the Leighton Society. How can I help?"
+    },
+    {
+      "startMs": 116660,
+      "endMs": 123660,
+      "text": "Caller: Oh, hello. I'm just phoning you because I'm interested in becoming a member of your society. And I was wondering if you could give me some more information."
+    },
+    {
+      "startMs": 124660,
+      "endMs": 126660,
+      "text": "Staff: Of course, what would you like to know?"
+    },
+    {
+      "startMs": 126660,
+      "endMs": 135660,
+      "text": "Caller: Well, first of all, I'd like to know where you hold the club meetings. As I'm not very mobile anymore, and I'm looking for somewhere that's within walking distance of my house."
+    },
+    {
+      "startMs": 136660,
+      "endMs": 138660,
+      "text": "Are you still down at the old boat house?"
+    },
+    {
+      "startMs": 138660,
+      "endMs": 143660,
+      "text": "Staff: No, we moved away from there a while ago. Meetings are now held at the club house."
+    },
+    {
+      "startMs": 144660,
+      "endMs": 149660,
+      "text": "Caller: Oh, brilliant. That's only five minutes from me. Do you require members to have any skills or experience?"
+    },
+    {
+      "startMs": 150660,
+      "endMs": 159660,
+      "text": "Staff: No, there was no experience required. We have plenty of female singers and actresses, but we don't have many men who can play the male roles."
+    },
+    {
+      "startMs": 160660,
+      "endMs": 166660,
+      "text": "We are looking to resolve this, and are especially interested in recruiting male actors and singers."
+    },
+    {
+      "startMs": 167660,
+      "endMs": 173660,
+      "text": "Caller: I've never sung professionally, but I'm very keen on it, and I've been told that I'm talented, so I think this would be a good fit."
+    },
+    {
+      "startMs": 174660,
+      "endMs": 177660,
+      "text": "Do you organise coaches to transport members to practice at the theatre?"
+    },
+    {
+      "startMs": 177660,
+      "endMs": 184660,
+      "text": "Staff: Unfortunately, the club does not have sufficient funds to organise transportation, though this is something we are working towards."
+    },
+    {
+      "startMs": 185660,
+      "endMs": 189660,
+      "text": "We are currently looking for members who can drive so that we can organise car sharing."
+    },
+    {
+      "startMs": 190660,
+      "endMs": 195660,
+      "text": "Members who are able to shuttle people in their cars will obviously be compensated for their petrol usage."
+    },
+    {
+      "startMs": 196660,
+      "endMs": 201660,
+      "text": "Caller: I don't drive, but I'll be happy to contribute some money in order to use the shuttle services."
+    },
+    {
+      "startMs": 202660,
+      "endMs": 205660,
+      "text": "Staff: Yes, that is no problem. Are you aware of when the meetings take place?"
+    },
+    {
+      "startMs": 206660,
+      "endMs": 209660,
+      "text": "Caller: No, I couldn't find the meeting times on your website."
+    },
+    {
+      "startMs": 210660,
+      "endMs": 213660,
+      "text": "Staff: We hold meetings from 6 to 8pm every Tuesday."
+    },
+    {
+      "startMs": 214660,
+      "endMs": 220660,
+      "text": "Caller: Ah, that's lucky. I go to a debating club every Wednesday, so I'm glad that it's on a different night so I can attend both."
+    },
+    {
+      "startMs": 221660,
+      "endMs": 222660,
+      "text": "Do you operate year round?"
+    },
+    {
+      "startMs": 223660,
+      "endMs": 231660,
+      "text": "Staff: We used to close during December for the Christmas period, but we found that a lot of members wanted to continue their practices during this time."
+    },
+    {
+      "startMs": 231660,
+      "endMs": 240660,
+      "text": "We operate for most of the year, but we do, however, close for August because the weather gets so hot that we are unable to practice comfortably."
+    },
+    {
+      "startMs": 241660,
+      "endMs": 245660,
+      "text": "This may change when we have enough funds to operate the air conditioning."
+    },
+    {
+      "startMs": 248660,
+      "endMs": 254660,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10."
+    },
+    {
+      "startMs": 261660,
+      "endMs": 282660,
+      "text": "Now listen and answer questions 6 to 10."
+    },
+    {
+      "startMs": 282660,
+      "endMs": 291660,
+      "text": "Caller: OK, I also wanted to ask how much the membership fee is and what is included with it."
+    },
+    {
+      "startMs": 292660,
+      "endMs": 298660,
+      "text": "Staff: Our membership fee is inexpensive and it includes many benefits that certainly make the costs worth it."
+    },
+    {
+      "startMs": 299660,
+      "endMs": 306660,
+      "text": "For example, we hold an annual event where members can meet each other and converse about topics that they have in common."
+    },
+    {
+      "startMs": 306660,
+      "endMs": 313660,
+      "text": "We find that this is very popular as the dinner is truly superb and included with your membership fee."
+    },
+    {
+      "startMs": 314660,
+      "endMs": 317660,
+      "text": "Caller: Wow, that sounds great. And how much does membership cost?"
+    },
+    {
+      "startMs": 318660,
+      "endMs": 322660,
+      "text": "Staff: We have a couple of membership rates depending on your age and situation."
+    },
+    {
+      "startMs": 323660,
+      "endMs": 334660,
+      "text": "For employed members under the age of 30, the fee is £40 while it costs £60 for members aged between 30 and 60, which of these categories do you fit into?"
+    },
+    {
+      "startMs": 335660,
+      "endMs": 341660,
+      "text": "Caller: Oh, I don't fit into either of those. I'm 65 years old and retired so I'm no longer employed."
+    },
+    {
+      "startMs": 342660,
+      "endMs": 351660,
+      "text": "Staff: That's no problem at all. You qualify for the lowest price membership fee of £25, which applies to those who are either unemployed or retired."
+    },
+    {
+      "startMs": 352660,
+      "endMs": 361660,
+      "text": "Caller: Wow, that's really affordable. I was thinking of bringing my grandson along to some of the practices, so what would the membership cost for him? He's 14."
+    },
+    {
+      "startMs": 362660,
+      "endMs": 371660,
+      "text": "Staff: I'm afraid that the club is for adults only. That is to say, we don't allow members who are aged 16 and under. He is welcome to join in two years time though."
+    },
+    {
+      "startMs": 372660,
+      "endMs": 376660,
+      "text": "Caller: Oh, that's a shame. I guess I can wait and buy him a membership for his birthday present."
+    },
+    {
+      "startMs": 377660,
+      "endMs": 378660,
+      "text": "Staff: Yes, what a good idea."
+    },
+    {
+      "startMs": 379660,
+      "endMs": 385660,
+      "text": "Caller: I was hoping I could bring him with me so I have someone there to talk to and worried that I won't have anything in common with the other members."
+    },
+    {
+      "startMs": 386660,
+      "endMs": 392660,
+      "text": "Staff: I'm sure you'll fit in just fine. All our members are very friendly and interested in culture and music."
+    },
+    {
+      "startMs": 393660,
+      "endMs": 399660,
+      "text": "Most of the people involved are modern authors looking for new experiences to write about in their books."
+    },
+    {
+      "startMs": 400660,
+      "endMs": 403660,
+      "text": "You could read some of their books so you have something to discuss with them."
+    },
+    {
+      "startMs": 404660,
+      "endMs": 412660,
+      "text": "Caller: That's a good suggestion. I'll definitely do that. I'm really looking forward to attending the annual dinner, so I can meet new people and hopefully make some friends."
+    },
+    {
+      "startMs": 413660,
+      "endMs": 424660,
+      "text": "Staff: Absolutely. Everyone has a great night and it's all for charity as all of the money raised from this event is donated to the children's hospital so they can buy toys and clothes."
+    },
+    {
+      "startMs": 425660,
+      "endMs": 432660,
+      "text": "Caller: Wow, what a great cause. Well, I will definitely be popping in soon to arrange my membership. Thank you for all of your help."
+    },
+    {
+      "startMs": 433660,
+      "endMs": 435660,
+      "text": "Staff: No problem at all. Goodbye."
+    },
+    {
+      "startMs": 436660,
+      "endMs": 437660,
+      "text": "Caller: Bye."
+    },
+    {
+      "startMs": 437660,
+      "endMs": 445660,
+      "text": "That is the end of section one. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 467660,
+      "endMs": 474660,
+      "text": "Please wait for the answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 58,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

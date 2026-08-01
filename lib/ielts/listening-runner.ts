@@ -66,7 +66,8 @@ export function reduce(attempt: Attempt, action: AttemptAction): Attempt {
 
 /**
  * Every question number in the set, ascending. Form completion contributes one
- * per blank segment; the other group types are one question each.
+ * per blank segment; expanded instruction groups contribute one per numbered
+ * question, while legacy groups contribute their single `questionNo`.
  */
 export function questionNumbers(set: ListeningSet): number[] {
   const numbers: number[] = [];
@@ -76,6 +77,10 @@ export function questionNumbers(set: ListeningSet): number[] {
         for (const segment of row.segments) {
           if (segment.kind === "blank") numbers.push(segment.questionNo);
         }
+      }
+    } else if ("questions" in group && group.questions && group.questions.length > 0) {
+      for (const question of group.questions) {
+        numbers.push(question.questionNo);
       }
     } else {
       numbers.push(group.questionNo);

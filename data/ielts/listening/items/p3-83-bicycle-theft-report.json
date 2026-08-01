@@ -1,0 +1,581 @@
+{
+  "id": "p3-83-bicycle-theft-report",
+  "title": "Bicycle Theft Report",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-ca7fc22e6826",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 492.576,
+    "checksum": "sha256:bf8ea70c5d8a3179177ffdd1fd678455b9e4e975b8aacc6705b2ef0bb3a368e6"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "21-22",
+      "title": "Questions 21–22",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO benefits of cycling do Josh and Mia agree society accepts?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "improves the tourism industry"
+        },
+        {
+          "id": "B",
+          "text": "provides safety benefits for pedestrians"
+        },
+        {
+          "id": "C",
+          "text": "reduces congestion on the roads"
+        },
+        {
+          "id": "D",
+          "text": "keeps the air clean"
+        },
+        {
+          "id": "E",
+          "text": "encourages healthier lifestyles"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "Which TWO benefits of cycling do Josh and Mia agree society accepts?",
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "Which TWO benefits of cycling do Josh and Mia agree society accepts?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "23-24",
+      "title": "Questions 23–24",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO aspects does their report section on the theft problem include?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "types of bicycle locks recommended"
+        },
+        {
+          "id": "B",
+          "text": "the cost of bicycle insurance"
+        },
+        {
+          "id": "C",
+          "text": "statistics about the number of bicycles stolen"
+        },
+        {
+          "id": "D",
+          "text": "the effect of theft fear on cycling levels"
+        },
+        {
+          "id": "E",
+          "text": "ways of reducing bicycle theft"
+        }
+      ],
+      "questions": [
+        {
+          "id": "23",
+          "text": "Which TWO aspects does their report section on the theft problem include?",
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Which TWO aspects does their report section on the theft problem include?",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25–30",
+      "instruction": "Choose SIX answers from the box and write the correct letter, A–H, next to questions 25–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "can be used very quickly"
+        },
+        {
+          "id": "B",
+          "text": "is lightweight"
+        },
+        {
+          "id": "C",
+          "text": "is particularly strong"
+        },
+        {
+          "id": "D",
+          "text": "is brightly coloured"
+        },
+        {
+          "id": "E",
+          "text": "renders the bike unrideable if tampered with"
+        },
+        {
+          "id": "F",
+          "text": "makes the thief identifiable"
+        },
+        {
+          "id": "G",
+          "text": "protects the bike frame only"
+        },
+        {
+          "id": "H",
+          "text": "protects all parts of the bike"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "handlebar",
+          "answer": "E"
+        },
+        {
+          "id": "26",
+          "text": "seat",
+          "answer": "B"
+        },
+        {
+          "id": "27",
+          "text": "smart",
+          "answer": "F"
+        },
+        {
+          "id": "28",
+          "text": "snake",
+          "answer": "D"
+        },
+        {
+          "id": "29",
+          "text": "pit",
+          "answer": "H"
+        },
+        {
+          "id": "30",
+          "text": "axa",
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "21_22": [
+          "C",
+          "D"
+        ],
+        "23_24": [
+          "B",
+          "C"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "D",
+        "23": "B",
+        "24": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "E",
+        "26": "B",
+        "27": "F",
+        "28": "D",
+        "29": "H",
+        "30": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5520,
+      "text": "Mia: We said we'd plan the outline of that report we've got to write about bicycle theft, remember?"
+    },
+    {
+      "startMs": 5520,
+      "endMs": 13760,
+      "text": "Josh: Hi Mia, yes, let's do it now. Dr Marshall said we should start with a section on the benefits of cycling"
+    },
+    {
+      "startMs": 13760,
+      "endMs": 17520,
+      "text": "as a general background before we discuss the issue of theft."
+    },
+    {
+      "startMs": 17520,
+      "endMs": 22320,
+      "text": "Mia: Okay, shall we identify the benefits of cycling for society?"
+    },
+    {
+      "startMs": 22320,
+      "endMs": 23440,
+      "text": "Josh: Yes, let's."
+    },
+    {
+      "startMs": 23440,
+      "endMs": 29840,
+      "text": "Mia: I wondered whether cycling reduces congestion on the roads, but I'm not convinced about it."
+    },
+    {
+      "startMs": 29920,
+      "endMs": 31040,
+      "text": "What do you think?"
+    },
+    {
+      "startMs": 31040,
+      "endMs": 35920,
+      "text": "Josh: Oh, it must do. I'm sure we can find some data to support that."
+    },
+    {
+      "startMs": 35920,
+      "endMs": 38560,
+      "text": "Mia: Okay, and I wondered about tourism."
+    },
+    {
+      "startMs": 39200,
+      "endMs": 43200,
+      "text": "By the sound of it, more visitors are hiring bikes these days."
+    },
+    {
+      "startMs": 43200,
+      "endMs": 48000,
+      "text": "Josh: Maybe, but a lot more of them like to hire a car instead."
+    },
+    {
+      "startMs": 48000,
+      "endMs": 51120,
+      "text": "So I don't think that's a valid point, really."
+    },
+    {
+      "startMs": 51120,
+      "endMs": 56480,
+      "text": "Mia: Okay, should we say something about the safety benefits for pedestrians?"
+    },
+    {
+      "startMs": 56560,
+      "endMs": 62560,
+      "text": "Josh: You mean as versus cars, but cyclists can be a nuisance to pedestrians,"
+    },
+    {
+      "startMs": 62560,
+      "endMs": 64960,
+      "text": "especially if they cycle on the pavements."
+    },
+    {
+      "startMs": 64960,
+      "endMs": 66800,
+      "text": "Mia: Okay, let's forget that."
+    },
+    {
+      "startMs": 66800,
+      "endMs": 71040,
+      "text": "Josh: But I don't think there's any doubt that bike use helps us to keep the air clean."
+    },
+    {
+      "startMs": 71760,
+      "endMs": 73040,
+      "text": "Mia: Agreed."
+    },
+    {
+      "startMs": 73040,
+      "endMs": 75920,
+      "text": "Josh: Fine. Well, we've got a plan."
+    },
+    {
+      "startMs": 76720,
+      "endMs": 81360,
+      "text": "Mia: The next sections got to be about the problem, bicycle theft, that is."
+    },
+    {
+      "startMs": 82160,
+      "endMs": 85120,
+      "text": "Josh: I suggest that we make it very objective."
+    },
+    {
+      "startMs": 85840,
+      "endMs": 91120,
+      "text": "I mean, by referring to research, I've already got a few facts and figures."
+    },
+    {
+      "startMs": 91680,
+      "endMs": 99680,
+      "text": "For instance, in the UK, over 376,000 bicycles a year are stolen."
+    },
+    {
+      "startMs": 99680,
+      "endMs": 106080,
+      "text": "Mia: Wow. It'd be interesting to know how many people whose bikes are stolen actually buy a new one."
+    },
+    {
+      "startMs": 106960,
+      "endMs": 110000,
+      "text": "Josh: I'll check to see whether there's been any research into that."
+    },
+    {
+      "startMs": 110000,
+      "endMs": 113760,
+      "text": "Mia: Okay. The government set targets for cycle use."
+    },
+    {
+      "startMs": 114320,
+      "endMs": 116880,
+      "text": "And I've read that these won't be met now."
+    },
+    {
+      "startMs": 116880,
+      "endMs": 121680,
+      "text": "It seems that just the threat of having a bike stolen discourages a lot of people from"
+    },
+    {
+      "startMs": 121680,
+      "endMs": 127440,
+      "text": "travelling by bike. It's the second biggest deterrent after fears about road safety.骑自行车出行。这是仅次于道路安全担忧的第二大阻碍因素。"
+    },
+    {
+      "startMs": 127440,
+      "endMs": 130800,
+      "text": "Josh: Yes, I suppose bikes aren't that cheap."
+    },
+    {
+      "startMs": 130800,
+      "endMs": 136000,
+      "text": "And as far as I know, insurance cover is so expensive, it isn't worth having."
+    },
+    {
+      "startMs": 136000,
+      "endMs": 139680,
+      "text": "Mia: How much does insurance cost? I mean, for an average bike."
+    },
+    {
+      "startMs": 139680,
+      "endMs": 141760,
+      "text": "Josh: Hmm, I'm not sure."
+    },
+    {
+      "startMs": 141760,
+      "endMs": 146080,
+      "text": "Mia: Okay, let me look into that. It'll be good to include some figures."
+    },
+    {
+      "startMs": 146080,
+      "endMs": 152960,
+      "text": "Josh: Right. I know that in the UK, 17% of cyclists have their bike stolen,"
+    },
+    {
+      "startMs": 152960,
+      "endMs": 158000,
+      "text": "which is why insurance costs are high. It's a lot more common than car theft."
+    },
+    {
+      "startMs": 161520,
+      "endMs": 167840,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30,"
+    },
+    {
+      "startMs": 167840,
+      "endMs": 169920,
+      "text": "on page 7."
+    },
+    {
+      "startMs": 198320,
+      "endMs": 202800,
+      "text": "Now listen and answer a questions 25 to 30."
+    },
+    {
+      "startMs": 206320,
+      "endMs": 212960,
+      "text": "Mia: Okay. Well, now we've got to look at those different bicycle locks and think about their design"
+    },
+    {
+      "startMs": 212960,
+      "endMs": 216000,
+      "text": "features. Have you got a copy of the details?"
+    },
+    {
+      "startMs": 216000,
+      "endMs": 223520,
+      "text": "Josh: Uh, yes. Here. Shall we decide on a particular feature that we like in each case?"
+    },
+    {
+      "startMs": 224480,
+      "endMs": 226720,
+      "text": "What about this handlebar lock?"
+    },
+    {
+      "startMs": 226720,
+      "endMs": 229920,
+      "text": "Mia: Oh, I've never seen one like that. Have you?"
+    },
+    {
+      "startMs": 229920,
+      "endMs": 231520,
+      "text": "It looks complicated."
+    },
+    {
+      "startMs": 231520,
+      "endMs": 237440,
+      "text": "Josh: Yes, it does. But the brilliant thing is, you have to break the handlebars to remove it."
+    },
+    {
+      "startMs": 237440,
+      "endMs": 242240,
+      "text": "Mia: Hmm, clever idea. So then the thief hasn't gained anything."
+    },
+    {
+      "startMs": 242240,
+      "endMs": 245360,
+      "text": "Josh: Right. Then there's this seat lock."
+    },
+    {
+      "startMs": 246000,
+      "endMs": 249680,
+      "text": "Mia: I think the fact that it isn't heavy is a bonus, don't you?"
+    },
+    {
+      "startMs": 249760,
+      "endMs": 252720,
+      "text": "Josh: Oh, yes. My bike lock weighs a ton."
+    },
+    {
+      "startMs": 252720,
+      "endMs": 258720,
+      "text": "Mia: Okay. Well, what about the smart lock? It's not particularly sturdy,"
+    },
+    {
+      "startMs": 259360,
+      "endMs": 263360,
+      "text": "but if anyone breaks it, it sprays permanent black ink onto them."
+    },
+    {
+      "startMs": 263360,
+      "endMs": 267600,
+      "text": "Josh: Yes, and on the bike as well. It helps the police to track it."
+    },
+    {
+      "startMs": 267600,
+      "endMs": 269360,
+      "text": "Mia: I like that idea. Josh: Me too."
+    },
+    {
+      "startMs": 270080,
+      "endMs": 273920,
+      "text": "Okay. What do you think of the snake lock?"
+    },
+    {
+      "startMs": 273920,
+      "endMs": 278160,
+      "text": "Mia: I don't think it's particularly strong, but it looks good."
+    },
+    {
+      "startMs": 278160,
+      "endMs": 281200,
+      "text": "Josh: Yes, it's the only one that's brightly coloured."
+    },
+    {
+      "startMs": 281920,
+      "endMs": 283440,
+      "text": "I'd like to get one myself."
+    },
+    {
+      "startMs": 284000,
+      "endMs": 285840,
+      "text": "Mia: And then the pit lock."
+    },
+    {
+      "startMs": 286640,
+      "endMs": 291280,
+      "text": "Let's see. That's a bit different to the others because it's got lots of components."
+    },
+    {
+      "startMs": 292080,
+      "endMs": 294240,
+      "text": "It must weigh quite a lot."
+    },
+    {
+      "startMs": 294240,
+      "endMs": 299840,
+      "text": "Josh: But you attach it to both wheels and the frame and the seat and the handlebars."
+    },
+    {
+      "startMs": 300400,
+      "endMs": 304000,
+      "text": "It stops thieves from taking any of those bits separately."
+    },
+    {
+      "startMs": 304080,
+      "endMs": 308560,
+      "text": "Mia: That's a good idea. You often see bikes that have had a wheel stolen or something."
+    },
+    {
+      "startMs": 309200,
+      "endMs": 314480,
+      "text": "Josh: Then there's the axle lock. Apparently, it's so straightforward that you can lock"
+    },
+    {
+      "startMs": 314480,
+      "endMs": 318400,
+      "text": "any bike with it in under 10 seconds. Mia: I could do with one of those."
+    },
+    {
+      "startMs": 324160,
+      "endMs": 329840,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 334000,
+      "endMs": 361680,
+      "text": "Now turn to section 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 68,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

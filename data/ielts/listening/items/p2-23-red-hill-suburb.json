@@ -1,0 +1,443 @@
+{
+  "id": "p2-23-red-hill-suburb",
+  "title": "Red Hill Suburb",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-31057eb89191",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 514.08,
+    "checksum": "sha256:8e28527b712b26d493cbd25f065c0bae769de6b9b1a038cc57923bd6c3b2f9dc"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–13",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Community groups are mainly concerned about",
+          "options": [
+            {
+              "id": "A",
+              "text": "pedestrian safety."
+            },
+            {
+              "id": "B",
+              "text": "traffic jams."
+            },
+            {
+              "id": "C",
+              "text": "increased pollution."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "It has been decided that the overhead power lines will be",
+          "options": [
+            {
+              "id": "A",
+              "text": "extended"
+            },
+            {
+              "id": "B",
+              "text": "buried"
+            },
+            {
+              "id": "C",
+              "text": "repaired"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "The expenses related to the power lines will be paid for by",
+          "options": [
+            {
+              "id": "A",
+              "text": "the council."
+            },
+            {
+              "id": "B",
+              "text": "the power company."
+            },
+            {
+              "id": "C",
+              "text": "local businesses."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 14–20",
+      "instruction": "Label the map below. Write the correct letter, A–H, next to questions 14–20.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "14",
+          "text": "tree",
+          "answer": "C"
+        },
+        {
+          "id": "15",
+          "text": "wider footpaths",
+          "answer": "D"
+        },
+        {
+          "id": "16",
+          "text": "coloured road surface",
+          "answer": "G"
+        },
+        {
+          "id": "17",
+          "text": "new sign",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "traffic lights",
+          "answer": "F"
+        },
+        {
+          "id": "19",
+          "text": "artwork",
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "children’s playground",
+          "answer": "E"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-23-red-hill-suburb-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-23-red-hill-suburb-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "B",
+        "13": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "14": "C",
+        "15": "D",
+        "16": "G",
+        "17": "B",
+        "18": "F",
+        "19": "A",
+        "20": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9600,
+      "text": "Section 2 You will hear a man being interviewed"
+    },
+    {
+      "startMs": 9600,
+      "endMs": 15280,
+      "text": "on local radio about a plan to improve a suburb called Red Hill."
+    },
+    {
+      "startMs": 15280,
+      "endMs": 20560,
+      "text": "First, you have some time to look at questions 11 to 13."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 54000,
+      "text": "Now listen carefully and answer questions 11 to 13."
+    },
+    {
+      "startMs": 54000,
+      "endMs": 58720,
+      "text": "Carol: Good morning and welcome again to Your City Today."
+    },
+    {
+      "startMs": 58720,
+      "endMs": 63360,
+      "text": "With me today is Graham Campbell, a councillor from the City Council."
+    },
+    {
+      "startMs": 63360,
+      "endMs": 68320,
+      "text": "He will be telling us about the plan to improve the fast growing suburb of Red Hill."
+    },
+    {
+      "startMs": 68320,
+      "endMs": 70320,
+      "text": "Good morning Graham and welcome to the show."
+    },
+    {
+      "startMs": 70320,
+      "endMs": 71680,
+      "text": "Graham: Good morning Carol."
+    },
+    {
+      "startMs": 71680,
+      "endMs": 77600,
+      "text": "Carol: Now Graham, I understand that there has been a lot of community consultation for the new plan."
+    },
+    {
+      "startMs": 77600,
+      "endMs": 82400,
+      "text": "Graham: Yes, we've tried to address some of the concerns that local groups told us about."
+    },
+    {
+      "startMs": 82400,
+      "endMs": 85840,
+      "text": "People we've heard from are mainly worried about traffic in the area"
+    },
+    {
+      "startMs": 85840,
+      "endMs": 90000,
+      "text": "and in particular the increasing speed of cars near schools."
+    },
+    {
+      "startMs": 90960,
+      "endMs": 93920,
+      "text": "They feel that it's only a matter of time before there's an accident"
+    },
+    {
+      "startMs": 93920,
+      "endMs": 98880,
+      "text": "as a lot of children walk to the school so we're trying to do something about that."
+    },
+    {
+      "startMs": 100000,
+      "endMs": 103360,
+      "text": "Another area of concern is the overhead power lines."
+    },
+    {
+      "startMs": 103360,
+      "endMs": 108240,
+      "text": "These are very old and a lot of people we spoke to asked if something could be done about them."
+    },
+    {
+      "startMs": 108960,
+      "endMs": 114000,
+      "text": "Well, I'm happy to report that the power company have agreed to move the power lines"
+    },
+    {
+      "startMs": 114000,
+      "endMs": 120880,
+      "text": "underground at a cost of $800,000. I think that will really improve the look of the area"
+    },
+    {
+      "startMs": 120880,
+      "endMs": 122000,
+      "text": "as well as being safer."
+    },
+    {
+      "startMs": 122000,
+      "endMs": 123520,
+      "text": "Carol: Hmm, that's good to know."
+    },
+    {
+      "startMs": 124400,
+      "endMs": 128480,
+      "text": "But will that mean an increase in rates for the local businesses in that area?"
+    },
+    {
+      "startMs": 129120,
+      "endMs": 134240,
+      "text": "Graham: Well, the power company have agreed to bear the cost of this themselves after a lot of discussion"
+    },
+    {
+      "startMs": 134240,
+      "endMs": 139840,
+      "text": "with the council. This is wonderful news as the council now has some extra funds for us to put"
+    },
+    {
+      "startMs": 139840,
+      "endMs": 142960,
+      "text": "into other things like tree planting and artwork."
+    },
+    {
+      "startMs": 146640,
+      "endMs": 152800,
+      "text": "Before you hear the rest of the interview, you have some time to look at questions 14 to 20."
+    },
+    {
+      "startMs": 170480,
+      "endMs": 192080,
+      "text": "Now listen and answer questions 14 to 20."
+    },
+    {
+      "startMs": 192800,
+      "endMs": 200400,
+      "text": "Graham: Now, we've also put together a map which we sent out to all the residents in the area."
+    },
+    {
+      "startMs": 200960,
+      "endMs": 203120,
+      "text": "And on the map, we've marked the proposed changes."
+    },
+    {
+      "startMs": 204080,
+      "endMs": 208720,
+      "text": "Firstly, we'll plant mature pine trees to provide shelter and shade just to the right of the"
+    },
+    {
+      "startMs": 208720,
+      "endMs": 215280,
+      "text": "supermarket in Days Road. In order to address the traffic problems, the pavements on the corner"
+    },
+    {
+      "startMs": 215280,
+      "endMs": 221120,
+      "text": "of Carbury and Thomas Street will be widened. This will help to reduce the speed of vehicles"
+    },
+    {
+      "startMs": 221120,
+      "endMs": 226160,
+      "text": "entering Thomas Street. We think it's very important to separate the local residential"
+    },
+    {
+      "startMs": 226160,
+      "endMs": 231600,
+      "text": "streets from the main road, so the road where the entrance to Thomas Street from Days Road"
+    },
+    {
+      "startMs": 231600,
+      "endMs": 237360,
+      "text": "will be painted red. This should mark it more clearly and act as a signal for traffic to slow down."
+    },
+    {
+      "startMs": 238800,
+      "endMs": 243680,
+      "text": "One way of making sure that the pedestrians are safe is to increase signage at the intersections."
+    },
+    {
+      "startMs": 244560,
+      "endMs": 249120,
+      "text": "A clear sign will be erected at the junction of Evelyn Street and Hill Street"
+    },
+    {
+      "startMs": 249200,
+      "endMs": 254880,
+      "text": "to enable traffic to exit at all times. Something we're planning to do to help control the flow of"
+    },
+    {
+      "startMs": 254880,
+      "endMs": 260000,
+      "text": "traffic in the area is to install traffic lights halfway down Hill Street where it crosses"
+    },
+    {
+      "startMs": 260000,
+      "endMs": 265920,
+      "text": "Days Road. Now, we haven't only thought about the cars and traffic, of course,"
+    },
+    {
+      "startMs": 265920,
+      "endMs": 270240,
+      "text": "there's also something for the children. We're going to get school children in the area to"
+    },
+    {
+      "startMs": 270240,
+      "endMs": 276480,
+      "text": "research a local story, the life of a local sports hero, perhaps. And an artist will incorporate"
+    },
+    {
+      "startMs": 276480,
+      "endMs": 281040,
+      "text": "that story into paintings on the wall of a building on the other side of Hill Street from the"
+    },
+    {
+      "startMs": 281040,
+      "endMs": 287360,
+      "text": "supermarket. And finally, we've agreed to build a new children's playground, which will be at the"
+    },
+    {
+      "startMs": 287360,
+      "endMs": 294480,
+      "text": "other end of Hill Street close to the intersection with Carbury Street. Carol: Wonderful. Now, what's the next"
+    },
+    {
+      "startMs": 294480,
+      "endMs": 306160,
+      "text": "stage? Graham: Well, the final plan. That is the end of section two. You now have half a minute to check"
+    },
+    {
+      "startMs": 306160,
+      "endMs": 306960,
+      "text": "your answers."
+    },
+    {
+      "startMs": 336160,
+      "endMs": 338960,
+      "text": "Now turn to section three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 48,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,600 @@
+{
+  "id": "p4-67-the-evolution-and-cultivation-of-vegetables",
+  "title": "The Evolution and Cultivation of Vegetables",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-078cc419d3df",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 482.088,
+    "checksum": "sha256:01ff0843e8f768cc8ec72c63cebfa1d0dd9d6f1df85a1ed9e663017eee279c9c"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. The Evolution and Cultivation of Vegetables Background In many countries, the 31. __________ plays a role in regulating the production and distribution of vegetables. One of the biggest challenges for vegetable farmers is controlling the growth of unwanted plants known as 32. __________. The 33. __________ of a plant, including its stem and leaves, is essential for providing support and transporting nutrients. Environmental Factors in Vegetable Growth Vegetables with high moisture content require a sufficient supply of 34. __________ to grow properly. Some vegetables are typically planted in early 36. __________, as the weather conditions are ideal for their growth. Other Scientific Aspects The 37. __________ of vegetable cultivation dates back thousands of years to ancient civilizations. Exposure to adequate 38. __________ is essential for photosynthesis, allowing vegetables to develop properly. Carrots and potatoes are examples of vegetables that grow underground and develop from a 39. __________ system. The 40. __________ of certain vegetables, such as peppers and tomatoes, can vary depending on their ripeness and variety.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "In many countries, the 31. __________ plays a role in regulating the production and distribution of vegetables.",
+          "answer": "government"
+        },
+        {
+          "id": "32",
+          "text": "One of the biggest challenges for vegetable farmers is controlling the growth of unwanted plants known as 32. __________.",
+          "answer": "weeds"
+        },
+        {
+          "id": "33",
+          "text": "The 33. __________ of a plant, including its stem and leaves, is essential for providing support and transporting nutrients.",
+          "answer": "structure"
+        },
+        {
+          "id": "34",
+          "text": "Vegetables with high moisture content require a sufficient supply of 34. __________ to grow properly.",
+          "answer": "water"
+        },
+        {
+          "id": "35",
+          "text": "A modern agricultural 35. __________ has made it easier to harvest vegetables efficiently on large farms.",
+          "answer": "machine"
+        },
+        {
+          "id": "36",
+          "text": "Some vegetables are typically planted in early 36. __________, as the weather conditions are ideal for their growth.",
+          "answer": "spring"
+        },
+        {
+          "id": "37",
+          "text": "The 37. __________ of vegetable cultivation dates back thousands of years to ancient civilizations.",
+          "answer": "history"
+        },
+        {
+          "id": "38",
+          "text": "Exposure to adequate 38. __________ is essential for photosynthesis, allowing vegetables to develop properly.",
+          "answer": "sunlight"
+        },
+        {
+          "id": "39",
+          "text": "Carrots and potatoes are examples of vegetables that grow underground and develop from a 39. __________ system.",
+          "answer": "root"
+        },
+        {
+          "id": "40",
+          "text": "The 40. __________ of certain vegetables, such as peppers and tomatoes, can vary depending on their ripeness and variety.",
+          "answer": "taste/flavour/flavor"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Evolution and Cultivation of Vegetables",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In many countries, the 31. __________ plays a role in regulating the production and distribution of vegetables.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "One of the biggest challenges for vegetable farmers is controlling the growth of unwanted plants known as 32. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The 33. __________ of a plant, including its stem and leaves, is essential for providing support and transporting nutrients.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Environmental Factors in Vegetable Growth",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Vegetables with high moisture content require a sufficient supply of 34. __________ to grow properly.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A modern agricultural 35. __________ has made it easier to harvest vegetables efficiently on large farms.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some vegetables are typically planted in early 36. __________, as the weather conditions are ideal for their growth.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Other Scientific Aspects",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The 37. __________ of vegetable cultivation dates back thousands of years to ancient civilizations.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Exposure to adequate 38. __________ is essential for photosynthesis, allowing vegetables to develop properly.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Carrots and potatoes are examples of vegetables that grow underground and develop from a 39. __________ system.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The 40. __________ of certain vegetables, such as peppers and tomatoes, can vary depending on their ripeness and variety.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "government",
+        "32": "weeds",
+        "33": "structure",
+        "34": "water",
+        "35": "machine",
+        "36": "spring",
+        "37": "history",
+        "38": "sunlight",
+        "39": "root",
+        "40": "taste/flavour/flavor"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11120,
+      "text": "Vegetables have been a staple in human diets for thousands of years, and their cultivation"
+    },
+    {
+      "startMs": 11120,
+      "endMs": 13920,
+      "text": "has evolved significantly over time."
+    },
+    {
+      "startMs": 13920,
+      "endMs": 22720,
+      "text": "Today, their production is regulated in various ways to ensure both quality and sustainability."
+    },
+    {
+      "startMs": 22720,
+      "endMs": 30160,
+      "text": "To begin with, in many countries, the regulation and oversight of vegetable farming are handled"
+    },
+    {
+      "startMs": 30160,
+      "endMs": 33120,
+      "text": "by the government."
+    },
+    {
+      "startMs": 33120,
+      "endMs": 39240,
+      "text": "Authorities set regulations to ensure food safety, control pesticide use, and establish"
+    },
+    {
+      "startMs": 39240,
+      "endMs": 41720,
+      "text": "fair pricing policies."
+    },
+    {
+      "startMs": 41720,
+      "endMs": 48720,
+      "text": "Additionally, governments may provide subsidies or grants to farmers to encourage sustainable"
+    },
+    {
+      "startMs": 48720,
+      "endMs": 51600,
+      "text": "agricultural practices."
+    },
+    {
+      "startMs": 51600,
+      "endMs": 57600,
+      "text": "Without such oversight, small-scale farmers might struggle to compete with large agricultural"
+    },
+    {
+      "startMs": 57600,
+      "endMs": 63680,
+      "text": "corporations, leading to reduced diversity in vegetable production."
+    },
+    {
+      "startMs": 63680,
+      "endMs": 68680,
+      "text": "Despite regulations, vegetable farming comes with several challenges."
+    },
+    {
+      "startMs": 68680,
+      "endMs": 74080,
+      "text": "One of the most persistent problems growers face is the presence of weeds."
+    },
+    {
+      "startMs": 74080,
+      "endMs": 80120,
+      "text": "These unwanted plants compete with crops for essential nutrients, sunlight, and water,"
+    },
+    {
+      "startMs": 80120,
+      "endMs": 84160,
+      "text": "often reducing overall yield."
+    },
+    {
+      "startMs": 84160,
+      "endMs": 89920,
+      "text": "Farmers rely on a combination of manual weeding, herbicides, and crop rotation techniques"
+    },
+    {
+      "startMs": 89920,
+      "endMs": 92240,
+      "text": "to control them effectively."
+    },
+    {
+      "startMs": 92240,
+      "endMs": 99800,
+      "text": "However, excessive use of chemicals to eliminate weeds can negatively impact soil quality and"
+    },
+    {
+      "startMs": 99800,
+      "endMs": 102800,
+      "text": "the surrounding ecosystem."
+    },
+    {
+      "startMs": 102800,
+      "endMs": 109080,
+      "text": "Beyond external challenges, the overall structure of a tree or any kind of plants is of great"
+    },
+    {
+      "startMs": 109080,
+      "endMs": 114080,
+      "text": "importance in its ability to grow and remain healthy."
+    },
+    {
+      "startMs": 114080,
+      "endMs": 120560,
+      "text": "A plant stem and leaves provide vital support, allowing it to transport nutrients and water"
+    },
+    {
+      "startMs": 120560,
+      "endMs": 122800,
+      "text": "efficiently."
+    },
+    {
+      "startMs": 122800,
+      "endMs": 128400,
+      "text": "Some vegetables, like tomatoes, require additional structural support in the form of stakes or"
+    },
+    {
+      "startMs": 128400,
+      "endMs": 132240,
+      "text": "trellises to prevent damage as they grow."
+    },
+    {
+      "startMs": 132240,
+      "endMs": 137920,
+      "text": "This is particularly important for climbing vegetables, such as beans and cucumbers, which"
+    },
+    {
+      "startMs": 137920,
+      "endMs": 143360,
+      "text": "rely on a stable framework to maximize their exposure to sunlight."
+    },
+    {
+      "startMs": 143360,
+      "endMs": 150840,
+      "text": "Now, let's consider the environmental factors that influence vegetable growth."
+    },
+    {
+      "startMs": 150840,
+      "endMs": 155760,
+      "text": "Vegetables with high moisture content such as lettuce, cucumbers, and zucchinis depend"
+    },
+    {
+      "startMs": 155760,
+      "endMs": 159600,
+      "text": "on a reliable source of water for healthy growth."
+    },
+    {
+      "startMs": 159600,
+      "endMs": 165080,
+      "text": "Insufficient hydration can lead to poor growth, reduced yield, and a lack of flavor in the"
+    },
+    {
+      "startMs": 165080,
+      "endMs": 166960,
+      "text": "final product."
+    },
+    {
+      "startMs": 166960,
+      "endMs": 173800,
+      "text": "Farmers often use irrigation systems to regulate water supply, particularly in regions with"
+    },
+    {
+      "startMs": 173800,
+      "endMs": 176480,
+      "text": "low rainfall."
+    },
+    {
+      "startMs": 176480,
+      "endMs": 181840,
+      "text": "Another key aspect of modern agriculture is the use of specialized equipment."
+    },
+    {
+      "startMs": 181840,
+      "endMs": 187720,
+      "text": "The introduction of an advanced machine for harvesting has significantly improved efficiency,"
+    },
+    {
+      "startMs": 187720,
+      "endMs": 191920,
+      "text": "especially for large-scale vegetable farms."
+    },
+    {
+      "startMs": 191920,
+      "endMs": 197680,
+      "text": "These machines can quickly gather crops, such as potatoes, carrots, and onions, reducing"
+    },
+    {
+      "startMs": 197680,
+      "endMs": 199880,
+      "text": "the need for manual labour."
+    },
+    {
+      "startMs": 199880,
+      "endMs": 204800,
+      "text": "However, while they improve productivity, they may not always be suitable for delicate"
+    },
+    {
+      "startMs": 204800,
+      "endMs": 208880,
+      "text": "vegetables that require careful handling."
+    },
+    {
+      "startMs": 208880,
+      "endMs": 213800,
+      "text": "Timing also plays a crucial role in vegetable cultivation."
+    },
+    {
+      "startMs": 213800,
+      "endMs": 220560,
+      "text": "Many crops, including spinach, peas, and radishes, are ideally sown at the beginning of spring,"
+    },
+    {
+      "startMs": 220560,
+      "endMs": 226840,
+      "text": "as the moderate temperatures and increased rainfall during this period create ideal growing"
+    },
+    {
+      "startMs": 226840,
+      "endMs": 228480,
+      "text": "conditions."
+    },
+    {
+      "startMs": 228480,
+      "endMs": 235360,
+      "text": "Some vegetables, like onions and garlic, require a longer growing season, and are typically"
+    },
+    {
+      "startMs": 235360,
+      "endMs": 240680,
+      "text": "planted in the autumn to be harvested the following year."
+    },
+    {
+      "startMs": 240680,
+      "endMs": 246120,
+      "text": "Understanding the best planting time for each type of vegetable is essential for ensuring"
+    },
+    {
+      "startMs": 246120,
+      "endMs": 248000,
+      "text": "successful harvests."
+    },
+    {
+      "startMs": 248640,
+      "endMs": 253560,
+      "text": "Now, let's explore some scientific aspects related to vegetable cultivation."
+    },
+    {
+      "startMs": 253560,
+      "endMs": 258920,
+      "text": "The history of cultivating vegetables has its roots in ancient civilizations from thousands"
+    },
+    {
+      "startMs": 258920,
+      "endMs": 264480,
+      "text": "of years ago, such as Mesopotamia, Egypt, and China."
+    },
+    {
+      "startMs": 264480,
+      "endMs": 269760,
+      "text": "Early agricultural societies selectively bred plants for desirable traits, leading to"
+    },
+    {
+      "startMs": 269760,
+      "endMs": 273960,
+      "text": "the domestication of many vegetables we consume today."
+    },
+    {
+      "startMs": 273960,
+      "endMs": 279520,
+      "text": "Over time, improvements in farming techniques, such as crop rotation and soil enrichment,"
+    },
+    {
+      "startMs": 279520,
+      "endMs": 284520,
+      "text": "have contributed to higher yields and better quality produce."
+    },
+    {
+      "startMs": 284520,
+      "endMs": 288800,
+      "text": "Another fundamental factor in plant growth is sunlight."
+    },
+    {
+      "startMs": 288800,
+      "endMs": 294880,
+      "text": "This natural resource is essential for photosynthesis, allowing plants to convert light energy"
+    },
+    {
+      "startMs": 294880,
+      "endMs": 297200,
+      "text": "into food."
+    },
+    {
+      "startMs": 297200,
+      "endMs": 303080,
+      "text": "Without adequate exposure to sunlight, vegetables may grow weak, producing smaller or misshapen"
+    },
+    {
+      "startMs": 303080,
+      "endMs": 305360,
+      "text": "crops."
+    },
+    {
+      "startMs": 305360,
+      "endMs": 311120,
+      "text": "Farmers often adjust planting arrangements to maximize sun exposure, ensuring that taller"
+    },
+    {
+      "startMs": 311120,
+      "endMs": 314800,
+      "text": "plants do not overshadow smaller ones."
+    },
+    {
+      "startMs": 314800,
+      "endMs": 319620,
+      "text": "Greenhouse technology has also been developed to regulate light conditions, allowing for"
+    },
+    {
+      "startMs": 319620,
+      "endMs": 324520,
+      "text": "year-round vegetable production even in colder climates."
+    },
+    {
+      "startMs": 324520,
+      "endMs": 328280,
+      "text": "Some vegetables have unique growth characteristics."
+    },
+    {
+      "startMs": 328280,
+      "endMs": 336280,
+      "text": "For example, carrots, potatoes, and beets develop underground and depend on an extensive root"
+    },
+    {
+      "startMs": 336280,
+      "endMs": 340440,
+      "text": "system to absorb nutrients from the soil."
+    },
+    {
+      "startMs": 340440,
+      "endMs": 345840,
+      "text": "Root vegetables are often rich in vitamins and minerals, making them an essential part"
+    },
+    {
+      "startMs": 345840,
+      "endMs": 347720,
+      "text": "of a balanced diet."
+    },
+    {
+      "startMs": 347720,
+      "endMs": 353200,
+      "text": "However, their growth can be affected by soil conditions, requiring farmers to rotate"
+    },
+    {
+      "startMs": 353200,
+      "endMs": 356800,
+      "text": "crops regularly to maintain soil health."
+    },
+    {
+      "startMs": 356800,
+      "endMs": 362640,
+      "text": "Finally, one of the most distinctive qualities of vegetables is their taste."
+    },
+    {
+      "startMs": 362640,
+      "endMs": 369280,
+      "text": "The flavor of vegetables like tomatoes, peppers, and cucumbers can vary significantly depending"
+    },
+    {
+      "startMs": 369280,
+      "endMs": 374240,
+      "text": "on ripeness, soil composition, and climate conditions."
+    },
+    {
+      "startMs": 374240,
+      "endMs": 380440,
+      "text": "For instance, a tomato grown in nutrient-rich soil under full sunlight will likely have"
+    },
+    {
+      "startMs": 380440,
+      "endMs": 381600,
+      "text": "a sweeter taste."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 77,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

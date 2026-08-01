@@ -1,0 +1,598 @@
+{
+  "id": "p3-48-maori-carving",
+  "title": "Maori Carving",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-e68c9f9e43c7",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 449.064,
+    "checksum": "sha256:21ec7e1c80e0e4b45ff3591b3e5ccd32b180ca0cdfe21b6dc2c8051dbd2fa4ff"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–25",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Amy and Mike agree that the greenstone tikis",
+          "options": [
+            {
+              "id": "A",
+              "text": "take great skill to produce."
+            },
+            {
+              "id": "B",
+              "text": "are fascinating curved shapes."
+            },
+            {
+              "id": "C",
+              "text": "have interesting stories behind them."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "According to Amy, why are so few genuine old tikis found on archaeological dig sites?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Not many people know about them."
+            },
+            {
+              "id": "B",
+              "text": "They tend to be stolen by treasure hunters."
+            },
+            {
+              "id": "C",
+              "text": "The majority become inherited items."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "23",
+          "text": "The Maori people considered tikis to be",
+          "options": [
+            {
+              "id": "A",
+              "text": "decorative items."
+            },
+            {
+              "id": "B",
+              "text": "religious objects."
+            },
+            {
+              "id": "C",
+              "text": "tribal symbols."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Tikis are classified into one type or the other by",
+          "options": [
+            {
+              "id": "A",
+              "text": "where they originated."
+            },
+            {
+              "id": "B",
+              "text": "the materials used."
+            },
+            {
+              "id": "C",
+              "text": "the position of the body."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "25",
+          "text": "How can modern reproductions be easily distinguished from genuine Maori carvings?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The materials differ."
+            },
+            {
+              "id": "B",
+              "text": "They are too regular in shape."
+            },
+            {
+              "id": "C",
+              "text": "They are of different sizes."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 26–30",
+      "instruction": "Choose FIVE answers from the box and write the correct letter, A–E, next to Questions 26–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sandstone block"
+        },
+        {
+          "id": "B",
+          "text": "Plant glue"
+        },
+        {
+          "id": "C",
+          "text": "Stone scoring tool"
+        },
+        {
+          "id": "D",
+          "text": "Bone point"
+        },
+        {
+          "id": "E",
+          "text": "Stick drill"
+        }
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "creating a blank",
+          "answer": "C"
+        },
+        {
+          "id": "27",
+          "text": "smoothing the surface",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "carving details",
+          "answer": "D"
+        },
+        {
+          "id": "29",
+          "text": "making holes",
+          "answer": "E"
+        },
+        {
+          "id": "30",
+          "text": "fixing coloured decorations",
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "C",
+        "23": "B",
+        "24": "C",
+        "25": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "26": "C",
+        "27": "A",
+        "28": "D",
+        "29": "E",
+        "30": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13000,
+      "text": "You will hear two students named Amy and Mike discussing Maori Carvings."
+    },
+    {
+      "startMs": 13000,
+      "endMs": 19000,
+      "text": "First, you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 51000,
+      "text": "Now listen carefully and answer questions 21 to 25."
+    },
+    {
+      "startMs": 51000,
+      "endMs": 57000,
+      "text": "Amy: Hi, Mike. Aren't these New Zealand carvings we've been studying in class fascinating?"
+    },
+    {
+      "startMs": 57000,
+      "endMs": 64000,
+      "text": "Mike: Oh, hi, Amy. Oh, the Maori greenstone tikis. They're all a bit organic for my taste."
+    },
+    {
+      "startMs": 64000,
+      "endMs": 67000,
+      "text": "You know, all curves and twisting shapes."
+    },
+    {
+      "startMs": 67000,
+      "endMs": 74000,
+      "text": "I like modern stuff, geometric shapes, but I can see the skill involved in making them."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 78000,
+      "text": "Amy: But the stories behind the tikis are what make them interesting."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 83000,
+      "text": "Besides, I imagine it would be difficult to create geometric patterns."
+    },
+    {
+      "startMs": 83000,
+      "endMs": 87000,
+      "text": "The shape of each tiki seems to follow the natural contours of the stone."
+    },
+    {
+      "startMs": 87000,
+      "endMs": 93000,
+      "text": "It's extremely hard, and it requires expertise and time to shape."
+    },
+    {
+      "startMs": 93000,
+      "endMs": 99000,
+      "text": "Mike: That's true. I suppose that's why modern greenstone carvings are so expensive."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 103000,
+      "text": "But there aren't that many genuine old ones around."
+    },
+    {
+      "startMs": 103000,
+      "endMs": 110000,
+      "text": "Archaeologists rarely discover such treasures, which is odd, given they are such a huge part of Maori culture."
+    },
+    {
+      "startMs": 110000,
+      "endMs": 117000,
+      "text": "I wonder if archaeological dig sites were raided, and the tikis were taken to sell?"
+    },
+    {
+      "startMs": 117000,
+      "endMs": 122000,
+      "text": "Amy: I believe it's because the owners valued them, and so preserved them."
+    },
+    {
+      "startMs": 122000,
+      "endMs": 131000,
+      "text": "Many of them would have been passed down through the generations and remain in the possession of the families today, like heirlooms."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 133000,
+      "text": "Do you know what they were used for?"
+    },
+    {
+      "startMs": 133000,
+      "endMs": 137000,
+      "text": "Mike: I thought they were just an art form, or a means of decoration."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 145000,
+      "text": "But Professor Matiu says that the Maori believed tikis were sacred, and could be used as a pathway to their ancestors."
+    },
+    {
+      "startMs": 145000,
+      "endMs": 150000,
+      "text": "They believed the dead could speak to them through these talismans."
+    },
+    {
+      "startMs": 150000,
+      "endMs": 153000,
+      "text": "Amy: So they don't represent tribes or anything?"
+    },
+    {
+      "startMs": 153000,
+      "endMs": 157000,
+      "text": "Interesting. How many different kinds are there?"
+    },
+    {
+      "startMs": 157000,
+      "endMs": 160000,
+      "text": "There must be hundreds of variations."
+    },
+    {
+      "startMs": 160000,
+      "endMs": 166000,
+      "text": "Mike: There are other greenstone carvings beside tikis, although I can't remember all their names."
+    },
+    {
+      "startMs": 166000,
+      "endMs": 171000,
+      "text": "Traditional tikis themselves can be divided into two distinct groups though."
+    },
+    {
+      "startMs": 171000,
+      "endMs": 174000,
+      "text": "Amy: Can they be divided by the materials?"
+    },
+    {
+      "startMs": 174000,
+      "endMs": 181000,
+      "text": "I've seen some with metal features, or is it to do with size, or where they were made?"
+    },
+    {
+      "startMs": 181000,
+      "endMs": 187000,
+      "text": "Mike: Actually, it is the ways that their feet, heads and hands are placed that make the major difference."
+    },
+    {
+      "startMs": 188000,
+      "endMs": 194000,
+      "text": "Amy: Is it easy to discern the difference between the ancient stones and more modern reproductions?"
+    },
+    {
+      "startMs": 194000,
+      "endMs": 196000,
+      "text": "Are the styles very different?"
+    },
+    {
+      "startMs": 196000,
+      "endMs": 204000,
+      "text": "Mike: Modern reproductions usually use a different type of stone, although they may be of the same design."
+    },
+    {
+      "startMs": 204000,
+      "endMs": 207000,
+      "text": "They may also be of a smaller size."
+    },
+    {
+      "startMs": 207000,
+      "endMs": 214000,
+      "text": "But it's actually quite easy to tell if you are buying a genuine carving or a mass-produced souvenir."
+    },
+    {
+      "startMs": 214000,
+      "endMs": 215000,
+      "text": "Amy: How?"
+    },
+    {
+      "startMs": 215000,
+      "endMs": 221000,
+      "text": "Mike: Nowadays, they are produced by machine, using lasers even, so they have no blemishes."
+    },
+    {
+      "startMs": 221000,
+      "endMs": 227000,
+      "text": "In genuine carvings, they aren't always perfect, because the Maori used simple hand tools."
+    },
+    {
+      "startMs": 227000,
+      "endMs": 232000,
+      "text": "For example, the hole that the cord is fed through isn't perfectly round."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 234000,
+      "text": "Amy: That makes sense."
+    },
+    {
+      "startMs": 237000,
+      "endMs": 244000,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 26-30."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 255000,
+      "text": "Now listen carefully and answer questions 26-30."
+    },
+    {
+      "startMs": 276000,
+      "endMs": 283000,
+      "text": "Amy: Actually, it's amazing that they produce such detailed tikis with such simple tools and materials."
+    },
+    {
+      "startMs": 283000,
+      "endMs": 285000,
+      "text": "Talk me through the process."
+    },
+    {
+      "startMs": 285000,
+      "endMs": 289000,
+      "text": "I know the basic shape is carved from New Zealand greenstone."
+    },
+    {
+      "startMs": 289000,
+      "endMs": 293000,
+      "text": "Mike: Yes, but first they had to get a blank of the right size."
+    },
+    {
+      "startMs": 293000,
+      "endMs": 298000,
+      "text": "Amy: You mean a piece of stone of the right size and basic shape?"
+    },
+    {
+      "startMs": 298000,
+      "endMs": 299000,
+      "text": "Mike: That's right."
+    },
+    {
+      "startMs": 299000,
+      "endMs": 306000,
+      "text": "They used a hard stone tool, something rough, to wear a groove into a piece of greenstone."
+    },
+    {
+      "startMs": 306000,
+      "endMs": 310000,
+      "text": "After they'd scored it with that, they could just snap it in two."
+    },
+    {
+      "startMs": 310000,
+      "endMs": 313000,
+      "text": "I guess they could have used some kind of hammer though."
+    },
+    {
+      "startMs": 313000,
+      "endMs": 319000,
+      "text": "They repeated the process until they had a piece of stone suitable for what they wanted to carve."
+    },
+    {
+      "startMs": 319000,
+      "endMs": 322000,
+      "text": "Usually flat pieces for tikis."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 329000,
+      "text": "Amy: Right, because they're fairly small and quite thin, then they started carving."
+    },
+    {
+      "startMs": 329000,
+      "endMs": 331000,
+      "text": "Mike: Not right away."
+    },
+    {
+      "startMs": 331000,
+      "endMs": 337000,
+      "text": "Before they could start carving, they needed an absolutely smooth flat surface."
+    },
+    {
+      "startMs": 337000,
+      "endMs": 344000,
+      "text": "Nowadays, when we want to do something like that, we'd clamp the stone in a vise and use a sander."
+    },
+    {
+      "startMs": 344000,
+      "endMs": 353000,
+      "text": "But they used a heavy block of sandstone and rubbed the piece of greenstone on it over and over to prepare it for carving."
+    },
+    {
+      "startMs": 353000,
+      "endMs": 356000,
+      "text": "Amy: It must have been very time consuming."
+    },
+    {
+      "startMs": 356000,
+      "endMs": 361000,
+      "text": "So how did they cut out the little details like hands and feet?"
+    },
+    {
+      "startMs": 361000,
+      "endMs": 363000,
+      "text": "Mike: They had carving tools."
+    },
+    {
+      "startMs": 363000,
+      "endMs": 368000,
+      "text": "They used small chips of stone glued and tied onto a wooden handle."
+    },
+    {
+      "startMs": 368000,
+      "endMs": 373000,
+      "text": "Then they also used a piece of sharpened bone made into a point."
+    },
+    {
+      "startMs": 373000,
+      "endMs": 376000,
+      "text": "Amy: Is that what they used to make the holes?"
+    },
+    {
+      "startMs": 376000,
+      "endMs": 380000,
+      "text": "Mike: Actually, they had a special tool to make holes."
+    },
+    {
+      "startMs": 380000,
+      "endMs": 385000,
+      "text": "It was a stick tied between two heavy pebbles with a point at the end."
+    },
+    {
+      "startMs": 385000,
+      "endMs": 391000,
+      "text": "They would wrap string around it, pull it back and forth to wear a hole into the tiki."
+    },
+    {
+      "startMs": 391000,
+      "endMs": 398000,
+      "text": "They used the same technique to make round shapes too, but didn't make the hole go all the way through."
+    },
+    {
+      "startMs": 398000,
+      "endMs": 404000,
+      "text": "Amy: And I've seen some tikis with coloured eyes or decorations. Are they painted?"
+    },
+    {
+      "startMs": 404000,
+      "endMs": 413000,
+      "text": "Mike: Mostly they are inlaid with different coloured stone or mother of pearl from shells or sometimes dyed pieces of bone."
+    },
+    {
+      "startMs": 413000,
+      "endMs": 418000,
+      "text": "They were fixed in place using tarata gum, a sticky plant resin."
+    },
+    {
+      "startMs": 418000,
+      "endMs": 422000,
+      "text": "They used plants to make the natural strings too."
+    },
+    {
+      "startMs": 422000,
+      "endMs": 426000,
+      "text": "Amy: That's right, the Maori were very resourceful weren't they?"
+    },
+    {
+      "startMs": 426000,
+      "endMs": 428000,
+      "text": "Mike: They certainly were."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 73,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

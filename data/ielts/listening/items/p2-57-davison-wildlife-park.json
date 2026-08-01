@@ -1,0 +1,617 @@
+{
+  "id": "p2-57-davison-wildlife-park",
+  "title": "Davison Wildlife Park",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-45b26daf3ee5",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 452.088,
+    "checksum": "sha256:be7e84295d75540ae295695f2924ba35010002812b3df101fd17f46af4ba6a00"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–13",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Where is the information board?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At the reception"
+            },
+            {
+              "id": "B",
+              "text": "Inside the cottage"
+            },
+            {
+              "id": "C",
+              "text": "On the beach"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "Which sport do customers have to book in advance?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Beach soccer"
+            },
+            {
+              "id": "B",
+              "text": "Water-skiing"
+            },
+            {
+              "id": "C",
+              "text": "Scuba diving"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "What does the cave tour ticket price include",
+          "options": [
+            {
+              "id": "A",
+              "text": "shoes"
+            },
+            {
+              "id": "B",
+              "text": "a map of cave"
+            },
+            {
+              "id": "C",
+              "text": "Safety helmet"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 14–17",
+      "instruction": "Fill in the blank with no more than 3 words and/or a number. Davison Wildlife Park is a great place for 14. _________ Children are allowed to 15. ________ Red kangaroos are larger than 16. _______ Crocodiles can live for at least 17. ________",
+      "questions": [
+        {
+          "id": "14",
+          "text": "Davison Wildlife Park is a great place for 14. _________",
+          "answer": "families"
+        },
+        {
+          "id": "15",
+          "text": "Children are allowed to 15. ________",
+          "answer": "feed the animals"
+        },
+        {
+          "id": "16",
+          "text": "Red kangaroos are larger than 16. _______",
+          "answer": "adults"
+        },
+        {
+          "id": "17",
+          "text": "Crocodiles can live for at least 17. ________",
+          "answer": "50 years/fifty years"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Fill in the blank with no more than 3 words and/or a number.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Davison Wildlife Park is a great place for 14. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Children are allowed to 15. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Red kangaroos are larger than 16. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Crocodiles can live for at least 17. ________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "18-20",
+      "title": "Questions 18–20",
+      "instruction": "Choose THREE correct answers.",
+      "questionText": "Which THREE activities are popular now for tourists in inland region?",
+      "limit": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "visiting EMU farm"
+        },
+        {
+          "id": "B",
+          "text": "visiting cheese factory"
+        },
+        {
+          "id": "C",
+          "text": "fruit picking"
+        },
+        {
+          "id": "D",
+          "text": "hill hiking"
+        },
+        {
+          "id": "E",
+          "text": "barbecue and bonfire"
+        },
+        {
+          "id": "F",
+          "text": "following nature trails"
+        },
+        {
+          "id": "G",
+          "text": "buying souvenirs"
+        }
+      ],
+      "questions": [
+        {
+          "id": "18",
+          "text": "Which THREE activities are popular now for tourists in inland region?",
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "Which THREE activities are popular now for tourists in inland region?",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "Which THREE activities are popular now for tourists in inland region?",
+          "answer": "G"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "14": "families",
+        "15": "feed the animals",
+        "16": "adults",
+        "17": "50 years/fifty years"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "B",
+        "13": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "18_20": [
+          "B",
+          "C",
+          "G"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "18": "B",
+        "19": "C",
+        "20": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11520,
+      "text": "You will hear a man, sharing his experiences with the oceanic island travelling."
+    },
+    {
+      "startMs": 11520,
+      "endMs": 16320,
+      "text": "First, you have some time to look at questions 11 to 17."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 55080,
+      "text": "Now listen carefully and answer questions 11 to 17."
+    },
+    {
+      "startMs": 55080,
+      "endMs": 62520,
+      "text": "Hello, my name is Damon and I would like to share my experiences of oceanic island travelling."
+    },
+    {
+      "startMs": 62520,
+      "endMs": 67920,
+      "text": "First of all, some of you have been asking me how oceanic island travelling keeps its"
+    },
+    {
+      "startMs": 67920,
+      "endMs": 72200,
+      "text": "tour group members updated while they are on the travel trip."
+    },
+    {
+      "startMs": 72200,
+      "endMs": 77640,
+      "text": "Please note that the information board is updated daily and we encourage you to check"
+    },
+    {
+      "startMs": 77640,
+      "endMs": 83600,
+      "text": "it every morning before you begin your day on the beach in the cottage or participating"
+    },
+    {
+      "startMs": 83600,
+      "endMs": 89320,
+      "text": "in any of the many activities offered, so please remember to check it at the reception"
+    },
+    {
+      "startMs": 89320,
+      "endMs": 94080,
+      "text": "area in the front of the visitor centre of the resort."
+    },
+    {
+      "startMs": 94080,
+      "endMs": 98680,
+      "text": "You are probably aware of the many different activities offered on our trips."
+    },
+    {
+      "startMs": 98680,
+      "endMs": 102560,
+      "text": "There is something you should know before booking."
+    },
+    {
+      "startMs": 102560,
+      "endMs": 109240,
+      "text": "Reservations are not necessary for most activities, such as sand soccer, beach volleyball and even"
+    },
+    {
+      "startMs": 109240,
+      "endMs": 110720,
+      "text": "scuba diving."
+    },
+    {
+      "startMs": 110720,
+      "endMs": 116040,
+      "text": "However, if you are planning to participate in our water skiing activity, we encourage"
+    },
+    {
+      "startMs": 116040,
+      "endMs": 122560,
+      "text": "you to book that activity at least 48 hours beforehand as we hire an outside group to"
+    },
+    {
+      "startMs": 122560,
+      "endMs": 129160,
+      "text": "conduct this activity and we need to notify them of how many participants will be involved."
+    },
+    {
+      "startMs": 129160,
+      "endMs": 135000,
+      "text": "One of the many activities available to the guests is the Mystery Cave Tour."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 139880,
+      "text": "Some people interested in participating in those tours don't know what the ticket"
+    },
+    {
+      "startMs": 139880,
+      "endMs": 142040,
+      "text": "price includes."
+    },
+    {
+      "startMs": 142040,
+      "endMs": 145920,
+      "text": "The ticket price includes transportation to the caves."
+    },
+    {
+      "startMs": 145920,
+      "endMs": 151760,
+      "text": "All participants are required to wear a safety helmet inside the caves and the ticket has"
+    },
+    {
+      "startMs": 151760,
+      "endMs": 154600,
+      "text": "covered that for you."
+    },
+    {
+      "startMs": 154600,
+      "endMs": 159520,
+      "text": "If you are joining this tour, you will need to wear some comfortable shoes as there will"
+    },
+    {
+      "startMs": 159520,
+      "endMs": 162800,
+      "text": "be some walking involved with this tour."
+    },
+    {
+      "startMs": 162800,
+      "endMs": 168400,
+      "text": "If you are interested to see a map of the Mystery Cave in advance of your trip, you can"
+    },
+    {
+      "startMs": 168400,
+      "endMs": 172400,
+      "text": "see it on the Oceanic Island Travelling website."
+    },
+    {
+      "startMs": 172400,
+      "endMs": 177160,
+      "text": "Of course, we will offer you a map of the cave if you need it during the tour, but it"
+    },
+    {
+      "startMs": 177160,
+      "endMs": 180240,
+      "text": "will cost an extra fee."
+    },
+    {
+      "startMs": 180240,
+      "endMs": 186000,
+      "text": "For those of you interested in visiting the Davison Wildlife Park, you should know that"
+    },
+    {
+      "startMs": 186000,
+      "endMs": 189600,
+      "text": "the park is an excellent site for families."
+    },
+    {
+      "startMs": 189600,
+      "endMs": 194200,
+      "text": "Although it does attract a lot of zoologists to do some research."
+    },
+    {
+      "startMs": 194200,
+      "endMs": 200000,
+      "text": "Again, transportation to the park is included in your ticket price."
+    },
+    {
+      "startMs": 200000,
+      "endMs": 206320,
+      "text": "And please note that children aged 12 and under receive a discounted ticket price."
+    },
+    {
+      "startMs": 206320,
+      "endMs": 212920,
+      "text": "In the wildlife park, children can often watch elephant shows which are really an attraction,"
+    },
+    {
+      "startMs": 212920,
+      "endMs": 217120,
+      "text": "but now some elephants are ill and they need some time to recover."
+    },
+    {
+      "startMs": 217400,
+      "endMs": 221360,
+      "text": "Still, there is another activity that should entertain kids."
+    },
+    {
+      "startMs": 221360,
+      "endMs": 224080,
+      "text": "They are allowed to feed the animals."
+    },
+    {
+      "startMs": 224080,
+      "endMs": 227760,
+      "text": "This activity is extremely popular with kids."
+    },
+    {
+      "startMs": 227760,
+      "endMs": 233200,
+      "text": "Among the most popular animals at the zoo are the collection of red kangaroos."
+    },
+    {
+      "startMs": 233200,
+      "endMs": 238760,
+      "text": "The size of these kangaroos is similar to that of black bears, but generally, they are"
+    },
+    {
+      "startMs": 238760,
+      "endMs": 245400,
+      "text": "bigger than adults, and if you are lucky, you might even be able to see some baby kangaroos"
+    },
+    {
+      "startMs": 245480,
+      "endMs": 247400,
+      "text": "while you are visiting."
+    },
+    {
+      "startMs": 247400,
+      "endMs": 251720,
+      "text": "The crocodiles are also very popular at the wildlife park."
+    },
+    {
+      "startMs": 251720,
+      "endMs": 257120,
+      "text": "These prehistoric animals have a lifespan of over 50 years."
+    },
+    {
+      "startMs": 257120,
+      "endMs": 262040,
+      "text": "A male crocodile can even be expected to live to the age of 80."
+    },
+    {
+      "startMs": 262040,
+      "endMs": 266640,
+      "text": "You won't get as close to the crocodiles as you will to some of the other animals in"
+    },
+    {
+      "startMs": 266640,
+      "endMs": 269720,
+      "text": "the park as they are somewhat dangerous."
+    },
+    {
+      "startMs": 269720,
+      "endMs": 276840,
+      "text": "You will be able to view these animals from a distance in their natural habitats."
+    },
+    {
+      "startMs": 276840,
+      "endMs": 296240,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 18-20."
+    },
+    {
+      "startMs": 296240,
+      "endMs": 302720,
+      "text": "Now listen and answer questions 18-20."
+    },
+    {
+      "startMs": 302720,
+      "endMs": 308240,
+      "text": "For those of you that have previously participated in this tour, please know that some of the"
+    },
+    {
+      "startMs": 308240,
+      "endMs": 314040,
+      "text": "activities which were previously available are no longer available and have been replaced"
+    },
+    {
+      "startMs": 314040,
+      "endMs": 316760,
+      "text": "with new activities."
+    },
+    {
+      "startMs": 316760,
+      "endMs": 322760,
+      "text": "The barbecue and the bonfire are now restricted by ordinance due to fire precautions in"
+    },
+    {
+      "startMs": 322760,
+      "endMs": 325040,
+      "text": "the area."
+    },
+    {
+      "startMs": 325040,
+      "endMs": 330200,
+      "text": "Instead of going hiking on the hills, most of our tourists prefer to visit many of the"
+    },
+    {
+      "startMs": 330200,
+      "endMs": 336120,
+      "text": "gift shops in the area to buy souvenirs for themselves or for family and friends who"
+    },
+    {
+      "startMs": 336120,
+      "endMs": 338880,
+      "text": "are not on the tour."
+    },
+    {
+      "startMs": 338880,
+      "endMs": 344680,
+      "text": "The EMU Farm, which has previously been a popular place to visit, is now temporarily closed"
+    },
+    {
+      "startMs": 344680,
+      "endMs": 345680,
+      "text": "for business."
+    },
+    {
+      "startMs": 345680,
+      "endMs": 352720,
+      "text": "But, newly available to you is a popular trip offered to the Nelson cheese factory in"
+    },
+    {
+      "startMs": 352720,
+      "endMs": 359760,
+      "text": "which visitors can take a tour and learn all about the process of manufacturing cheese."
+    },
+    {
+      "startMs": 359760,
+      "endMs": 366200,
+      "text": "And finally, a visit to the St. John's Fruit Farm is another very popular day trip."
+    },
+    {
+      "startMs": 366200,
+      "endMs": 371360,
+      "text": "The fruit farm is within walking distance of our cottages and you can get there by minibus"
+    },
+    {
+      "startMs": 371360,
+      "endMs": 377800,
+      "text": "this time, but will have a few nature trails that go past the cottages in the future."
+    },
+    {
+      "startMs": 377800,
+      "endMs": 384680,
+      "text": "At the farm, you will be able to pick strawberries and apples in the farm's orchards and fields."
+    },
+    {
+      "startMs": 384680,
+      "endMs": 388560,
+      "text": "Many tourists enjoy this activity a lot."
+    },
+    {
+      "startMs": 388560,
+      "endMs": 395320,
+      "text": "We don't have hill hiking in the area, but we do have tours that involve in other destinations."
+    },
+    {
+      "startMs": 395320,
+      "endMs": 399920,
+      "text": "Contact me if you are interested."
+    },
+    {
+      "startMs": 399920,
+      "endMs": 402880,
+      "text": "That is the end of section 2."
+    },
+    {
+      "startMs": 402880,
+      "endMs": 405960,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 72,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,510 @@
+{
+  "id": "p4-102-sea-urchins",
+  "title": "Sea Urchins",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-089e9fc75736",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 269.892,
+    "checksum": "sha256:02eeee7511f1ff8263e0c6d604b3ec9a5520348db9fc6ebdda2ae266d83a7278"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40.",
+      "instruction": "Comple the sentence below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER. Sea Urchins Physical Features: Feeds on 31. _______ Covered in 32. _______ that protect it. Economic Value: Once regarded to be a 33. _______ Scientists concerned 35. _______ of urchin population due to overhunting. Life cycle research: No evidence of 36. _______ Maximum of life span: up to 37. _______ old After 22 years old, it grows 38. _______ per year. It is still able to 39. _______ when it is old. The growth sea urchin is unconnected to 40. _______ and other external factors.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Feeds on 31. _______",
+          "answer": "plants"
+        },
+        {
+          "id": "32",
+          "text": "Covered in 32. _______ that protect it.",
+          "answer": "spines"
+        },
+        {
+          "id": "33",
+          "text": "Once regarded to be a 33. _______",
+          "answer": "pest"
+        },
+        {
+          "id": "34",
+          "text": "34. _______ is an important market for exporting Urchins from California.",
+          "answer": "Asia/Japan"
+        },
+        {
+          "id": "35",
+          "text": "Scientists concerned 35. _______ of urchin population due to overhunting.",
+          "answer": "decline"
+        },
+        {
+          "id": "36",
+          "text": "No evidence of 36. _______",
+          "answer": "aging"
+        },
+        {
+          "id": "37",
+          "text": "Maximum of life span: up to 37. _______ old",
+          "answer": "200 years"
+        },
+        {
+          "id": "38",
+          "text": "After 22 years old, it grows 38. _______ per year.",
+          "answer": "0.1 centimeters"
+        },
+        {
+          "id": "39",
+          "text": "It is still able to 39. _______ when it is old.",
+          "answer": "breed"
+        },
+        {
+          "id": "40",
+          "text": "The growth sea urchin is unconnected to 40. _______ and other external factors.",
+          "answer": "ocean conditions"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Comple the sentence below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Sea Urchins",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Physical Features:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Feeds on 31. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Covered in 32. _______ that protect it.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Economic Value:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Once regarded to be a 33. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "34. _______ is an important market for exporting Urchins from California.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Scientists concerned 35. _______ of urchin population due to overhunting.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Life cycle research:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "No evidence of 36. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Maximum of life span: up to 37. _______ old",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "After 22 years old, it grows 38. _______ per year.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It is still able to 39. _______ when it is old.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The growth sea urchin is unconnected to 40. _______ and other external factors.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "plants",
+        "32": "spines",
+        "33": "pest",
+        "34": "Asia/Japan",
+        "35": "decline",
+        "36": "aging",
+        "37": "200 years",
+        "38": "0.1 centimeters",
+        "39": "breed",
+        "40": "ocean conditions"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7960,
+      "text": "The sea urchin is found across the ocean floor so weren't wide, but rarely in a quarter"
+    },
+    {
+      "startMs": 7960,
+      "endMs": 10080,
+      "text": "polar regions."
+    },
+    {
+      "startMs": 10080,
+      "endMs": 15200,
+      "text": "Sea urchins are commonly found along the rocky ocean floor in both shallow and deeper"
+    },
+    {
+      "startMs": 15200,
+      "endMs": 21720,
+      "text": "water, and sea urchins are also commonly found living coral reefs, and sea urchin mainly"
+    },
+    {
+      "startMs": 21720,
+      "endMs": 25880,
+      "text": "feeds on plants on coral and rocks."
+    },
+    {
+      "startMs": 25880,
+      "endMs": 31500,
+      "text": "They are preyed by many predators that live their marine environment."
+    },
+    {
+      "startMs": 31500,
+      "endMs": 36840,
+      "text": "Sea urchins have around shaped the body, with the lost spines, that come off it, which"
+    },
+    {
+      "startMs": 36840,
+      "endMs": 42800,
+      "text": "are used for protection, to move around, and to jump food particles floating around in"
+    },
+    {
+      "startMs": 42800,
+      "endMs": 44520,
+      "text": "the water."
+    },
+    {
+      "startMs": 44520,
+      "endMs": 47800,
+      "text": "Sea urchins have five bare-to-roes of tiny tube of feet."
+    },
+    {
+      "startMs": 47800,
+      "endMs": 52840,
+      "text": "The feet of sea urchin have suckers which help sea urchin to move, capture food, and"
+    },
+    {
+      "startMs": 52840,
+      "endMs": 56560,
+      "text": "to hold onto the ocean floor."
+    },
+    {
+      "startMs": 56560,
+      "endMs": 62240,
+      "text": "Urchins will once consider a pest, because their large habitat for kelp severely affected"
+    },
+    {
+      "startMs": 62240,
+      "endMs": 69040,
+      "text": "the kelp harvest, but this changed in the 1970s when another use was discovered, as"
+    },
+    {
+      "startMs": 69040,
+      "endMs": 71120,
+      "text": "a delicious food."
+    },
+    {
+      "startMs": 71120,
+      "endMs": 76160,
+      "text": "With access to proper processing and overnight shipping to markets, the sea urchin got"
+    },
+    {
+      "startMs": 76200,
+      "endMs": 78080,
+      "text": "outrushed again."
+    },
+    {
+      "startMs": 78080,
+      "endMs": 84040,
+      "text": "Urchins are now California's largest export item from the ocean, thanks to the steady market"
+    },
+    {
+      "startMs": 84040,
+      "endMs": 85840,
+      "text": "from Asia."
+    },
+    {
+      "startMs": 85840,
+      "endMs": 91120,
+      "text": "They are estimated 10,000 or more people who provide income for their families, either"
+    },
+    {
+      "startMs": 91120,
+      "endMs": 96680,
+      "text": "directly or indirectly from the sea urchin industry in the state of California."
+    },
+    {
+      "startMs": 96680,
+      "endMs": 102560,
+      "text": "Due to intense demand for US sea urchin in Japan, today the creature is so aggressively"
+    },
+    {
+      "startMs": 102560,
+      "endMs": 108800,
+      "text": "haunted that scientists have began to worry about the number of population actually declined,"
+    },
+    {
+      "startMs": 108800,
+      "endMs": 111440,
+      "text": "which is in danger in the sea urchin supply."
+    },
+    {
+      "startMs": 111440,
+      "endMs": 117960,
+      "text": "In California, it is now the largest export item from the ocean, valued at over 75 million"
+    },
+    {
+      "startMs": 117960,
+      "endMs": 122440,
+      "text": "dollars per year, most of which comes from Japan."
+    },
+    {
+      "startMs": 122440,
+      "endMs": 127280,
+      "text": "Sea urchins are remarkable organisms that can quickly record damage to the spines and"
+    },
+    {
+      "startMs": 127280,
+      "endMs": 128520,
+      "text": "feet."
+    },
+    {
+      "startMs": 128520,
+      "endMs": 135920,
+      "text": "Some species also live extraordinary old age, and even more remarkably no sign of aging,"
+    },
+    {
+      "startMs": 135920,
+      "endMs": 143760,
+      "text": "such as decline in regenerative capacity or increase in Asia-related immortality."
+    },
+    {
+      "startMs": 143760,
+      "endMs": 148200,
+      "text": "In a paper recently published in the Aging Cell, the scientist has shown new light on"
+    },
+    {
+      "startMs": 148200,
+      "endMs": 153960,
+      "text": "the process in sea urchins, bracing the prospects of the physical decline that typically"
+    },
+    {
+      "startMs": 153960,
+      "endMs": 157320,
+      "text": "accompanied aging is not inevitable."
+    },
+    {
+      "startMs": 157320,
+      "endMs": 162240,
+      "text": "The new study has concluded that sea urchin, a small spiny creature that lives in the shallow"
+    },
+    {
+      "startMs": 162240,
+      "endMs": 166400,
+      "text": "coastal waters, is among the longest living animals on Earth."
+    },
+    {
+      "startMs": 166400,
+      "endMs": 173040,
+      "text": "They can live to be 100 years old and some may reach 200 years in good health."
+    },
+    {
+      "startMs": 173040,
+      "endMs": 178520,
+      "text": "The red sea urchin, in fact, does grow fairly quickly when it's young."
+    },
+    {
+      "startMs": 178520,
+      "endMs": 184400,
+      "text": "At the age of two years, it can grow from 2 centimeters to 4 centimeters in one year."
+    },
+    {
+      "startMs": 184400,
+      "endMs": 189760,
+      "text": "By the time the sea urchin is a teenager, it grows slowly, dramatically."
+    },
+    {
+      "startMs": 189760,
+      "endMs": 195480,
+      "text": "At the age of 22, researchers have found it to grow each year from about 12 centimeters"
+    },
+    {
+      "startMs": 195480,
+      "endMs": 203280,
+      "text": "to only 12.1 centimeters, which means only 0.1 centimeters bigger than a year before."
+    },
+    {
+      "startMs": 203280,
+      "endMs": 211000,
+      "text": "But somewhat remarkably, it appears never really stop growing, it's just very, very slow."
+    },
+    {
+      "startMs": 211000,
+      "endMs": 217080,
+      "text": "The evidence suggests that 100-year-old red sea urchin is just as apt to live another"
+    },
+    {
+      "startMs": 217080,
+      "endMs": 221320,
+      "text": "year or produce as a 10-year-old sea urchin."
+    },
+    {
+      "startMs": 221320,
+      "endMs": 227760,
+      "text": "The more mature red sea urchins, in fact, appear to be the producers of sperm and eggs and"
+    },
+    {
+      "startMs": 227760,
+      "endMs": 232360,
+      "text": "are perfectly able to breed even when incredibly old."
+    },
+    {
+      "startMs": 232360,
+      "endMs": 238040,
+      "text": "Radio-carbon testing in its time of a situation provided a very strong and independent test of"
+    },
+    {
+      "startMs": 238040,
+      "endMs": 240600,
+      "text": "growth rates and age."
+    },
+    {
+      "startMs": 240600,
+      "endMs": 246360,
+      "text": "Among other things, it confirms that in older sea urchins, there's a very steady, very"
+    },
+    {
+      "startMs": 246360,
+      "endMs": 252360,
+      "text": "consistent growth as quite independent of ocean conditions or other variables."
+    },
+    {
+      "startMs": 252360,
+      "endMs": 258320,
+      "text": "And once they're near the adult size, our research indicates that they do not have growth."
+    },
+    {
+      "startMs": 258320,
+      "endMs": 260760,
+      "text": "With the speeches, it's pretty simple."
+    },
+    {
+      "startMs": 260760,
+      "endMs": 262920,
+      "text": "The bigger they are, the older they are."
+    },
+    {
+      "startMs": 268040,
+      "endMs": 275040,
+      "text": "The bigger they are, the more mature red sea urchins, the more mature red sea urchins are."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 54,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

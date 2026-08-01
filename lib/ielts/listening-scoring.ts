@@ -13,6 +13,12 @@
  *    from the runtime shape of the submitted answer. An answer of the wrong
  *    shape is marked wrong; it does not switch the marking scheme and it does
  *    not throw.
+ * 4. A rule may belong to a shared instruction group through `groupId`, but
+ *    scoring remains question-based. This lets a block such as 17–18 produce
+ *    two independently reportable marks without losing their common context.
+ * 5. Matching answers can be stable option IDs. `answerKind` documents that
+ *    representation; the comparison still uses the same declared
+ *    normalization pipeline as other single-value rules.
  */
 import type {
   Answer,
@@ -75,6 +81,10 @@ function isMultiCorrect(value: string | string[], rule: ScoringRule): boolean {
   if (!Array.isArray(value)) return false;
   if (value.length === 0) return false;
 
+  if (rule.selectCount !== undefined && value.length !== rule.selectCount) {
+    return false;
+  }
+
   const given = normalizedSorted(value, rule.normalize);
 
   // Duplicates are never collapsed. Deduping first would mark ["A","A"] as the
@@ -99,11 +109,20 @@ function isTextCorrect(value: string | string[], rule: ScoringRule): boolean {
   );
 }
 
+function isOptionIdCorrect(value: string | string[], rule: ScoringRule): boolean {
+  // Option IDs are already the submitted answer value. They still go through
+  // the rule's normalization steps so IDs remain robust to case/whitespace
+  // policies supplied by a source adapter.
+  return isTextCorrect(value, rule);
+}
+
 function isCorrect(answer: Answer | undefined, rule: ScoringRule): boolean {
   if (answer === undefined) return false;
   return rule.mode === "multi"
     ? isMultiCorrect(answer.value, rule)
-    : isTextCorrect(answer.value, rule);
+    : rule.answerKind === "optionId"
+      ? isOptionIdCorrect(answer.value, rule)
+      : isTextCorrect(answer.value, rule);
 }
 
 /** What the review screen prints back to the candidate: never normalized. */

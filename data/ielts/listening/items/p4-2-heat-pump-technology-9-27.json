@@ -1,0 +1,420 @@
+{
+  "id": "p4-2-heat-pump-technology-9-27",
+  "title": "Heat Pump Technology (9.27纸笔)",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-48792d44b023",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 484.08,
+    "checksum": "sha256:2810ec4d6f11ad7b5d819b64f9733b6a8b9fe307a4eb02dfb5e92fffbe179ecf"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Heat Pump Technology Background Aim in the UK is to reduce carbon emissions from energy consumed in 31 ____________ by approximately 25%. Most popular ‘green’ energy: 32 ____________ Little investment in heat pumps in the UK due to lack of 33 ____________ in using them. What is a heat pump? Heat pumps serve the same purpose as a 34 ____________ Most heat pumps get heat from the earth or the 35 ____________ Water is heated to 60°C to destroy 36 ____________ The Field Trial Central heating systems monitored: 37 ____________ and under-floor heating. Key Conclusions: Installation: Need to provide improved 38 ____________ in pump-fitting technique. Customers needed to be told about regulating the controls. Need for a 40 ____________ to coordinate the installation.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Aim in the UK is to reduce carbon emissions from energy consumed in 31 ____________ by approximately 25%.",
+          "answer": "Homes"
+        },
+        {
+          "id": "32",
+          "text": "Most popular ‘green’ energy: 32 ____________",
+          "answer": "Solar"
+        },
+        {
+          "id": "33",
+          "text": "Little investment in heat pumps in the UK due to lack of 33 ____________ in using them.",
+          "answer": "Experience"
+        },
+        {
+          "id": "34",
+          "text": "Heat pumps serve the same purpose as a 34 ____________",
+          "answer": "Boiler"
+        },
+        {
+          "id": "35",
+          "text": "Most heat pumps get heat from the earth or the 35 ____________",
+          "answer": "Air"
+        },
+        {
+          "id": "36",
+          "text": "Water is heated to 60°C to destroy 36 ____________",
+          "answer": "Bacteria"
+        },
+        {
+          "id": "37",
+          "text": "Central heating systems monitored: 37 ____________ and under-floor heating.",
+          "answer": "Radiators"
+        },
+        {
+          "id": "38",
+          "text": "Installation: Need to provide improved 38 ____________ in pump-fitting technique.",
+          "answer": "Training"
+        },
+        {
+          "id": "39",
+          "text": "39 ____________ designs performed best.",
+          "answer": "Simple"
+        },
+        {
+          "id": "40",
+          "text": "Need for a 40 ____________ to coordinate the installation.",
+          "answer": "Supervisor"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Heat Pump Technology",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Aim in the UK is to reduce carbon emissions from energy consumed in 31 ____________ by approximately 25%.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Most popular ‘green’ energy: 32 ____________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Little investment in heat pumps in the UK due to lack of 33 ____________ in using them.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "What is a heat pump?",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Heat pumps serve the same purpose as a 34 ____________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Most heat pumps get heat from the earth or the 35 ____________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Water is heated to 60°C to destroy 36 ____________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The Field Trial",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "83 sites across the UK.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Central heating systems monitored: 37 ____________ and under-floor heating.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Key Conclusions:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Installation: Need to provide improved 38 ____________ in pump-fitting technique.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "39 ____________ designs performed best.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Customers needed to be told about regulating the controls.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Need for a 40 ____________ to coordinate the installation.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Homes",
+        "32": "Solar",
+        "33": "Experience",
+        "34": "Boiler",
+        "35": "Air",
+        "36": "Bacteria",
+        "37": "Radiators",
+        "38": "Training",
+        "39": "Simple",
+        "40": "Supervisor"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 18000,
+      "text": "You will hear a student who studying energy technology reporting on a field trial of heat pumps."
+    },
+    {
+      "startMs": 18000,
+      "endMs": 24000,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 32000,
+      "text": "You"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 89000,
+      "text": "I'm going to talk about a field trial that was carried out on heat pumps, but first some background."
+    },
+    {
+      "startMs": 89000,
+      "endMs": 95000,
+      "text": "The UK has adopted a very ambitious target for reducing carbon emissions."
+    },
+    {
+      "startMs": 95000,
+      "endMs": 108000,
+      "text": "27% of British carbon dioxide emissions come from the energy used in homes, so around a quarter of all reductions must also come from that sector rather than industry."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 117000,
+      "text": "So it's not surprising that the government, private companies and independent agencies have been looking into green energy alternatives."
+    },
+    {
+      "startMs": 117000,
+      "endMs": 127000,
+      "text": "At present, the most popular green energy from a range which includes wind, biomass heating and ground heat is solar."
+    },
+    {
+      "startMs": 127000,
+      "endMs": 131000,
+      "text": "This has been the most readily accepted by the public."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 136000,
+      "text": "However, the field trial I've looked at researched heat pump technology."
+    },
+    {
+      "startMs": 136000,
+      "endMs": 145000,
+      "text": "Heat pump technology is relatively new to the UK market and because there is such limited experience of this technology,"
+    },
+    {
+      "startMs": 145000,
+      "endMs": 148000,
+      "text": "people have been reluctant to invest in it."
+    },
+    {
+      "startMs": 148000,
+      "endMs": 156000,
+      "text": "So a field trial was needed to monitor this in a sample of heat pumps in real situations."
+    },
+    {
+      "startMs": 156000,
+      "endMs": 165000,
+      "text": "The heat pumps in this trial are used for the same reason you'd use a boiler, but rather than burning a fuel to produce heat,"
+    },
+    {
+      "startMs": 165000,
+      "endMs": 177000,
+      "text": "they move heat from a low temperature heat source and pump it to a higher temperature where it can be used to provide central heating or domestic hot water."
+    },
+    {
+      "startMs": 177000,
+      "endMs": 187000,
+      "text": "Most heat pumps take heat from either the ground or the air, but water from ponds or rivers may occasionally be used."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 199000,
+      "text": "The general advice in the UK is that the temperature of the hot water stored in a cylinder should be periodically put up to 60 degrees centigrade to kill off bacteria."
+    },
+    {
+      "startMs": 199000,
+      "endMs": 215000,
+      "text": "It is sometimes necessary to use an electric immersion heater to achieve this temperature, as most heat pump installations will be designed to produce domestic hot water at temperatures between 50 and 55 degrees centigrade."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 231000,
+      "text": "For this field trial, 83 UK sites were monitored and they provided a wide spectrum of performance results, even in installations that seemed similar."
+    },
+    {
+      "startMs": 231000,
+      "endMs": 240000,
+      "text": "Some installations performed as well as heat pumps studied in European field trials, but many failed to meet these levels."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 250000,
+      "text": "This field trial monitored two central heating systems, radiators and the increasingly popular underfloor systems."
+    },
+    {
+      "startMs": 250000,
+      "endMs": 259000,
+      "text": "The observations of the field trial led to some key conclusions. One was that heat pumps are sensitive pieces of equipment."
+    },
+    {
+      "startMs": 259000,
+      "endMs": 265000,
+      "text": "In some of the early installations there were problems because the engineers hadn't fitted the heat pump correctly."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 272000,
+      "text": "This observation emphasises the need for better training for everyone involved in the installation."
+    },
+    {
+      "startMs": 272000,
+      "endMs": 282000,
+      "text": "Many different systems were monitored in the field trial, and it was found that in most cases designs which were simple were more efficient."
+    },
+    {
+      "startMs": 282000,
+      "endMs": 288000,
+      "text": "So this is something which both pump manufacturers and installers should bear in mind."
+    },
+    {
+      "startMs": 288000,
+      "endMs": 295000,
+      "text": "Many customers mistakenly came to the conclusion that their system wasn't working as well as they'd expected."
+    },
+    {
+      "startMs": 295000,
+      "endMs": 303000,
+      "text": "However, when this was further investigated it was found that they had not realised how to regulate the controls properly."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 314000,
+      "text": "There had been a failure to explain this insufficient detail to the householders, and it was often the case that for the installation all sorts of workmen might be involved."
+    },
+    {
+      "startMs": 314000,
+      "endMs": 321000,
+      "text": "For example, a ground works contractor, a plumber, a heat pump installer and an electrician."
+    },
+    {
+      "startMs": 321000,
+      "endMs": 328000,
+      "text": "It was obvious that a supervisor should be appointed to oversee and be responsible for the whole installation."
+    },
+    {
+      "startMs": 328000,
+      "endMs": 332000,
+      "text": "So what are the implications of this technology?"
+    },
+    {
+      "startMs": 335000,
+      "endMs": 342000,
+      "text": "That is the end of part four. You now have one minute to check your answers to part four."
+    },
+    {
+      "startMs": 344000,
+      "endMs": 347000,
+      "text": "Thank you very much."
+    },
+    {
+      "startMs": 374000,
+      "endMs": 377000,
+      "text": "You"
+    },
+    {
+      "startMs": 404000,
+      "endMs": 407000,
+      "text": "You"
+    },
+    {
+      "startMs": 434000,
+      "endMs": 437000,
+      "text": "You"
+    },
+    {
+      "startMs": 464000,
+      "endMs": 467000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 38,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

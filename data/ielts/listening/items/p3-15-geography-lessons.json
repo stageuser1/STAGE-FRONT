@@ -1,0 +1,734 @@
+{
+  "id": "p3-15-geography-lessons",
+  "title": "Geography Lessons",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-b5a3bf463b81",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 434.064,
+    "checksum": "sha256:79fbdea2cfeb4d92f1227f21df29b4e2d186ab7e2ae8666db5562755b4647d7e"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "21-22",
+      "title": "Questions 21 and 22",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO topics were the aims of the geography lesson related to?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "global inter dependency"
+        },
+        {
+          "id": "B",
+          "text": "manufacturing methods"
+        },
+        {
+          "id": "C",
+          "text": "the environmental impact of trade"
+        },
+        {
+          "id": "D",
+          "text": "transport systems"
+        },
+        {
+          "id": "E",
+          "text": "the development of writing tools"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "Which TWO topics were the aims of the geography lesson related to?",
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "Which TWO topics were the aims of the geography lesson related to?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "23-24",
+      "title": "Questions 23 and 24",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO problems do Dean and Hannah identify in their lesson?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "the materials"
+        },
+        {
+          "id": "B",
+          "text": "the student grouping"
+        },
+        {
+          "id": "C",
+          "text": "the lesson structure"
+        },
+        {
+          "id": "D",
+          "text": "the teacher coordination"
+        },
+        {
+          "id": "E",
+          "text": "the timing"
+        }
+      ],
+      "questions": [
+        {
+          "id": "23",
+          "text": "Which TWO problems do Dean and Hannah identify in their lesson?",
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Which TWO problems do Dean and Hannah identify in their lesson?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25–30",
+      "instruction": "Complete the flow-chart below.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "export routes"
+        },
+        {
+          "id": "B",
+          "text": "future"
+        },
+        {
+          "id": "C",
+          "text": "talk"
+        },
+        {
+          "id": "D",
+          "text": "homework"
+        },
+        {
+          "id": "E",
+          "text": "worksheet"
+        },
+        {
+          "id": "F",
+          "text": "history"
+        },
+        {
+          "id": "G",
+          "text": "producers"
+        },
+        {
+          "id": "H",
+          "text": "methods of transport"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Locate the top _____.  on a world map.",
+          "answer": "G"
+        },
+        {
+          "id": "26",
+          "text": "Discuss the pros and cons of different _____.",
+          "answer": "H"
+        },
+        {
+          "id": "27",
+          "text": "In groups, discuss countries’ possible _____.  to the USA.",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "Complete a _____.  about pencil distribution within the USA.",
+          "answer": "E"
+        },
+        {
+          "id": "29",
+          "text": "Share ideas about the _____.  of pencils.",
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "Prepare a _____.",
+          "answer": "C"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Geography lesson plan: student activities",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Examine a pencil and discuss where the component materials come from.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "⬇️",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Locate the top 25. _____ on a world map.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "⬇️",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Discuss the pros and cons of different 26. _____",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "⬇️",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In groups, discuss countries’ possible 27. _____ to the USA.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "⬇️",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Complete a 28. _____ about pencil distribution within the USA.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "⬇️",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Share ideas about the 29. _____ of pencils.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "⬇️",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Prepare a 30. _____",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "21_22": [
+          "A",
+          "D"
+        ],
+        "23_24": [
+          "B",
+          "E"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "D",
+        "23": "B",
+        "24": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "G",
+        "26": "H",
+        "27": "A",
+        "28": "E",
+        "29": "B",
+        "30": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7320,
+      "text": "Section 3."
+    },
+    {
+      "startMs": 7320,
+      "endMs": 13560,
+      "text": "You will hear two trainee teachers called Dean and Hannah talking about their recent teaching"
+    },
+    {
+      "startMs": 13560,
+      "endMs": 16760,
+      "text": "practice in an elementary school."
+    },
+    {
+      "startMs": 16760,
+      "endMs": 22760,
+      "text": "First, you have some time to look at questions 21 to 24 on page 5."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 48560,
+      "text": "Now, listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 48560,
+      "endMs": 53560,
+      "text": "Hannah: Hi Dean, did you have a good weekend?"
+    },
+    {
+      "startMs": 53560,
+      "endMs": 58640,
+      "text": "Dean: Yes, it was good to relax after a whole week of teaching practice."
+    },
+    {
+      "startMs": 58640,
+      "endMs": 60960,
+      "text": "I really enjoyed the experience though."
+    },
+    {
+      "startMs": 60960,
+      "endMs": 65000,
+      "text": "Hannah: Yes, so did I, and I think it went well."
+    },
+    {
+      "startMs": 65000,
+      "endMs": 70720,
+      "text": "Anyway, are you okay to talk about the report we've got to write on the geography lesson"
+    },
+    {
+      "startMs": 70720,
+      "endMs": 72280,
+      "text": "we taught together?"
+    },
+    {
+      "startMs": 72280,
+      "endMs": 77600,
+      "text": "I was thinking we could make notes now and then divide the actual writing up between us."
+    },
+    {
+      "startMs": 77600,
+      "endMs": 79800,
+      "text": "Dean: Sure, good idea."
+    },
+    {
+      "startMs": 79800,
+      "endMs": 82080,
+      "text": "Let's begin with our lesson, shall we?"
+    },
+    {
+      "startMs": 82080,
+      "endMs": 87920,
+      "text": "Hannah: Right, well, I know the main one was getting the class to think about how people in different"
+    },
+    {
+      "startMs": 87920,
+      "endMs": 93240,
+      "text": "parts of the world are connected to each other through the things they buy and sell."
+    },
+    {
+      "startMs": 93240,
+      "endMs": 98800,
+      "text": "Dean: Yes, we took that from the syllabus for grade 4 and then we decided to use pencils as our"
+    },
+    {
+      "startMs": 98800,
+      "endMs": 103560,
+      "text": "example because they're relatively simple and design and everyone's used a pencil at"
+    },
+    {
+      "startMs": 103560,
+      "endMs": 105080,
+      "text": "some time or other."
+    },
+    {
+      "startMs": 105080,
+      "endMs": 107440,
+      "text": "We should include that information too."
+    },
+    {
+      "startMs": 107440,
+      "endMs": 112280,
+      "text": "Hannah: Right, and we also wanted to get the class thinking about how things are moved around"
+    },
+    {
+      "startMs": 112280,
+      "endMs": 117840,
+      "text": "in the world in different ways, from the farms and the mines to the factories and then"
+    },
+    {
+      "startMs": 117840,
+      "endMs": 119200,
+      "text": "the stores."
+    },
+    {
+      "startMs": 119200,
+      "endMs": 122920,
+      "text": "That wasn't in the core syllabus, I think we added that ourselves."
+    },
+    {
+      "startMs": 122920,
+      "endMs": 125080,
+      "text": "Dean: Yes, I think you're right."
+    },
+    {
+      "startMs": 125080,
+      "endMs": 131520,
+      "text": "Hannah: Okay, then the last section of the report contains a post-lesson analysis."
+    },
+    {
+      "startMs": 131520,
+      "endMs": 137320,
+      "text": "Dean: We have to mention any problems we identified in our lesson when we taught it, so any ideas?"
+    },
+    {
+      "startMs": 137320,
+      "endMs": 142840,
+      "text": "Hannah: Well, I know we were really satisfied with our handouts and worksheets."
+    },
+    {
+      "startMs": 142840,
+      "endMs": 148240,
+      "text": "We both thought they'd been at just the right level for the class and I don't know about"
+    },
+    {
+      "startMs": 148240,
+      "endMs": 151440,
+      "text": "you, but I think we worked well as a team."
+    },
+    {
+      "startMs": 151440,
+      "endMs": 156240,
+      "text": "Dean: Absolutely, neither of us was too dominant and we supported each other."
+    },
+    {
+      "startMs": 156240,
+      "endMs": 161520,
+      "text": "Personally, the thing I think we didn't get right was the way we paced things."
+    },
+    {
+      "startMs": 161520,
+      "endMs": 165960,
+      "text": "Some things seem to be rushed and others seem to drag out too long."
+    },
+    {
+      "startMs": 165960,
+      "endMs": 168360,
+      "text": "I don't know how you feel about that."
+    },
+    {
+      "startMs": 168360,
+      "endMs": 169920,
+      "text": "Hannah: The same as you."
+    },
+    {
+      "startMs": 169920,
+      "endMs": 174560,
+      "text": "If we did the same lesson again, I'd want to make some adjustments to that, but keep the"
+    },
+    {
+      "startMs": 174560,
+      "endMs": 176760,
+      "text": "same basic lesson plan."
+    },
+    {
+      "startMs": 176760,
+      "endMs": 181440,
+      "text": "Dean: Okay, we see eye to eye on that, but there's one other thing."
+    },
+    {
+      "startMs": 181440,
+      "endMs": 186120,
+      "text": "At the time, I seemed to remember we both thought that organizing the children in sets"
+    },
+    {
+      "startMs": 186120,
+      "endMs": 192040,
+      "text": "of six didn't work very well and that pairs would have been better for certain tasks,"
+    },
+    {
+      "startMs": 192040,
+      "endMs": 194480,
+      "text": "so that the shire kids got more chance to contribute."
+    },
+    {
+      "startMs": 194480,
+      "endMs": 203040,
+      "text": "Hannah: Yes, I remember that too, and we should put it into our report as well."
+    },
+    {
+      "startMs": 203040,
+      "endMs": 208320,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 25"
+    },
+    {
+      "startMs": 208320,
+      "endMs": 210520,
+      "text": "to 30 on page 6."
+    },
+    {
+      "startMs": 224480,
+      "endMs": 247880,
+      "text": "Now, listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 247880,
+      "endMs": 251560,
+      "text": "Dean: Now should we go over our lesson plan together before we write the report?"
+    },
+    {
+      "startMs": 251560,
+      "endMs": 253480,
+      "text": "It seems ages ago now."
+    },
+    {
+      "startMs": 253480,
+      "endMs": 260440,
+      "text": "Hannah: Well, the whole lesson was based on the production and distribution of pencils."
+    },
+    {
+      "startMs": 260440,
+      "endMs": 265960,
+      "text": "First we gave out the pencils and got the students to decide what they're made of."
+    },
+    {
+      "startMs": 265960,
+      "endMs": 270240,
+      "text": "Then when they'd come up with all five of the component materials, we talked about which"
+    },
+    {
+      "startMs": 270240,
+      "endMs": 273280,
+      "text": "countries produce most of these materials."
+    },
+    {
+      "startMs": 273280,
+      "endMs": 278680,
+      "text": "Dean: Oh, yes, and we got volunteers to come to the front and mark the location of those"
+    },
+    {
+      "startMs": 278680,
+      "endMs": 280480,
+      "text": "on a map of the world."
+    },
+    {
+      "startMs": 280480,
+      "endMs": 283280,
+      "text": "I remember they were really keen to volunteer."
+    },
+    {
+      "startMs": 283280,
+      "endMs": 286640,
+      "text": "We had to stop them from calling the answers out loud."
+    },
+    {
+      "startMs": 286640,
+      "endMs": 287640,
+      "text": "Hannah: Right."
+    },
+    {
+      "startMs": 287640,
+      "endMs": 293560,
+      "text": "Then we brainstormed all the different ways of getting goods from one place to another,"
+    },
+    {
+      "startMs": 293560,
+      "endMs": 297920,
+      "text": "and what the advantages and disadvantages of each one would be."
+    },
+    {
+      "startMs": 297920,
+      "endMs": 301480,
+      "text": "Hannah: I remember one girl talking about using horses."
+    },
+    {
+      "startMs": 301480,
+      "endMs": 302480,
+      "text": "Dean: That's right."
+    },
+    {
+      "startMs": 302480,
+      "endMs": 305120,
+      "text": "She seemed to be a bit stuck in the past."
+    },
+    {
+      "startMs": 305120,
+      "endMs": 306880,
+      "text": "It was hard not to smile."
+    },
+    {
+      "startMs": 306880,
+      "endMs": 307880,
+      "text": "Hannah: Yes."
+    },
+    {
+      "startMs": 307880,
+      "endMs": 313680,
+      "text": "After that, we put them in small groups, and each group represented each of the countries"
+    },
+    {
+      "startMs": 313680,
+      "endMs": 315080,
+      "text": "on the map."
+    },
+    {
+      "startMs": 315080,
+      "endMs": 320360,
+      "text": "They had to use their atlases to decide an intenery for sending their raw materials to"
+    },
+    {
+      "startMs": 320360,
+      "endMs": 325600,
+      "text": "the USA, specifying the different ports and places on the way there."
+    },
+    {
+      "startMs": 325600,
+      "endMs": 326600,
+      "text": "Dean: That's right."
+    },
+    {
+      "startMs": 326600,
+      "endMs": 329320,
+      "text": "And by the time they'd done that, it was break time."
+    },
+    {
+      "startMs": 329320,
+      "endMs": 334960,
+      "text": "Hannah: And after the break, they had to imagine they were pencil manufacturers in Chicago and"
+    },
+    {
+      "startMs": 334960,
+      "endMs": 339800,
+      "text": "fill in details on a worksheet about how they dispatched their pencils to different parts"
+    },
+    {
+      "startMs": 339800,
+      "endMs": 340800,
+      "text": "of the country."
+    },
+    {
+      "startMs": 340800,
+      "endMs": 341800,
+      "text": "Dean: Oh, yes."
+    },
+    {
+      "startMs": 341800,
+      "endMs": 342800,
+      "text": "OK."
+    },
+    {
+      "startMs": 342800,
+      "endMs": 349280,
+      "text": "Hannah: And then we had a class discussion about whether people will still be using pencils in 2050,"
+    },
+    {
+      "startMs": 349280,
+      "endMs": 353480,
+      "text": "and whether the design of pencils is likely to change."
+    },
+    {
+      "startMs": 353480,
+      "endMs": 359480,
+      "text": "And to round the lesson off, the kids had to spend 10 minutes planning a short presentation"
+    },
+    {
+      "startMs": 359480,
+      "endMs": 363280,
+      "text": "for another class of up possible developments."
+    },
+    {
+      "startMs": 363280,
+      "endMs": 364280,
+      "text": "And that was it."
+    },
+    {
+      "startMs": 364280,
+      "endMs": 365280,
+      "text": "Dean:Good."
+    },
+    {
+      "startMs": 365280,
+      "endMs": 370640,
+      "text": "So I'll write up that part."
+    },
+    {
+      "startMs": 370640,
+      "endMs": 373360,
+      "text": "That is the end of section 3."
+    },
+    {
+      "startMs": 373360,
+      "endMs": 376120,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 394280,
+      "endMs": 409560,
+      "text": "Now turn to section 4 on page 7."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 84,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -2,6 +2,19 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /**
+   * The Listening dataset is read from disk with `fs` at request time, which
+   * output file tracing cannot see. Without this, a serverless render of the
+   * listening routes (e.g. an unknown setId falling through to on-demand
+   * rendering) throws ENOENT because the JSON items are missing from the
+   * function bundle.
+   */
+  outputFileTracingIncludes: {
+    "/ielts-lab/listening": ["./data/ielts/listening/items/**"],
+    "/ielts-lab/practice/listening/[setId]": [
+      "./data/ielts/listening/items/**",
+    ],
+  },
+  /**
    * Per-page budget for static generation.
    *
    * This was 300s — five times Next's default — because the pre-R1 school

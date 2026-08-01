@@ -1,0 +1,485 @@
+{
+  "id": "p4-78-history-of-music-in-britain",
+  "title": "History of Music in Britain",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-cc52c6bdfcf5",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 441.48,
+    "checksum": "sha256:432e460d2aea315bc5bfc2f6a709e76ecc174d34123380f4c57c8f04ad200ec5"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. History of Music in Britain In the 18th century During the Industrial Revolution people moved to cities to work in the 31. __________. In the 1850s, the culture was influenced greatly by 32. __________ from different countries. Originally music reflected the work life of different 33. __________ in those days. Different songs were created in the same 34. __________, although people were from a variety of nations. The songs written by the workers during this period mainly came from their feelings about harsh 35. __________. Some small musical works were composed by people who were protesting against difficult living conditions. The musical trends were led by 36. __________ performers. In the 19th century During this period, some musical groups had expanded their popularity among 37. __________. In the late 1870s, the 38. __________ came into contact with these flourishing musical traditions. Some music produced by these groups is still preserved in museums. Nowadays These musical genres still exert an influence on 39. __________ culture. Enthusiastic fans are still collecting and keeping the 40. __________ of music from those days.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "During the Industrial Revolution people moved to cities to work in the 31. __________.",
+          "answer": "factories"
+        },
+        {
+          "id": "32",
+          "text": "In the 1850s, the culture was influenced greatly by 32. __________ from different countries.",
+          "answer": "immigration"
+        },
+        {
+          "id": "33",
+          "text": "Originally music reflected the work life of different 33. __________ in those days.",
+          "answer": "industries"
+        },
+        {
+          "id": "34",
+          "text": "Different songs were created in the same 34. __________, although people were from a variety of nations.",
+          "answer": "language"
+        },
+        {
+          "id": "35",
+          "text": "The songs written by the workers during this period mainly came from their feelings about harsh 35. __________.",
+          "answer": "jobs"
+        },
+        {
+          "id": "36",
+          "text": "The musical trends were led by 36. __________ performers.",
+          "answer": "young"
+        },
+        {
+          "id": "37",
+          "text": "During this period, some musical groups had expanded their popularity among 37. __________.",
+          "answer": "audiences/the poor"
+        },
+        {
+          "id": "38",
+          "text": "In the late 1870s, the 38. __________ came into contact with these flourishing musical traditions.",
+          "answer": "middle class"
+        },
+        {
+          "id": "39",
+          "text": "These musical genres still exert an influence on 39. __________ culture.",
+          "answer": "classical"
+        },
+        {
+          "id": "40",
+          "text": "Enthusiastic fans are still collecting and keeping the 40. __________ of music from those days.",
+          "answer": "recordings"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "History of Music in Britain",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In the 18th century",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "During the Industrial Revolution people moved to cities to work in the 31. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the 1850s, the culture was influenced greatly by 32. __________ from different countries.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Originally music reflected the work life of different 33. __________ in those days.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Different songs were created in the same 34. __________, although people were from a variety of nations.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The songs written by the workers during this period mainly came from their feelings about harsh 35. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some small musical works were composed by people who were protesting against difficult living conditions.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The musical trends were led by 36. __________ performers.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In the 19th century",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "During this period, some musical groups had expanded their popularity among 37. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the late 1870s, the 38. __________ came into contact with these flourishing musical traditions.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some music produced by these groups is still preserved in museums.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Nowadays",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "These musical genres still exert an influence on 39. __________ culture.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Enthusiastic fans are still collecting and keeping the 40. __________ of music from those days.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "factories",
+        "32": "immigration",
+        "33": "industries",
+        "34": "language",
+        "35": "jobs",
+        "36": "young",
+        "37": "audiences/the poor",
+        "38": "middle class",
+        "39": "classical",
+        "40": "recordings"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 16340,
+      "text": "4. You will hear a talk on research into music. First, you have some time to look at"
+    },
+    {
+      "startMs": 16340,
+      "endMs": 18540,
+      "text": "the questions 31 to 40."
+    },
+    {
+      "startMs": 76340,
+      "endMs": 96220,
+      "text": "Today we are going to delve into the fascinating history of music in Britain and the evolution"
+    },
+    {
+      "startMs": 96220,
+      "endMs": 101180,
+      "text": "that it experienced throughout the duration of the 18th and 19th centuries. During the"
+    },
+    {
+      "startMs": 101180,
+      "endMs": 106600,
+      "text": "2nd half of the 18th century Britain experienced an industrial revolution during which its manufacturing"
+    },
+    {
+      "startMs": 106600,
+      "endMs": 112380,
+      "text": "industry underwent a major transition from hand production methods to the use of machinery."
+    },
+    {
+      "startMs": 112380,
+      "endMs": 116860,
+      "text": "This sudden boom in the industry grew thousands of people into the cities, where they knew"
+    },
+    {
+      "startMs": 116860,
+      "endMs": 122620,
+      "text": "they'd be able to find jobs in the factories, working with or maintaining the machinery."
+    },
+    {
+      "startMs": 122620,
+      "endMs": 126940,
+      "text": "This sudden influx of people into the cities did not just come from the surrounding countryside"
+    },
+    {
+      "startMs": 126940,
+      "endMs": 133660,
+      "text": "but also from other poorer nations in search of a better life. Between 1800 and 1900 the population"
+    },
+    {
+      "startMs": 133660,
+      "endMs": 139020,
+      "text": "of England increased by four times. This mass immigration from different nations and areas"
+    },
+    {
+      "startMs": 139020,
+      "endMs": 144620,
+      "text": "of the country resulted in a variety of cultural influences meeting and mixing to form a new"
+    },
+    {
+      "startMs": 144620,
+      "endMs": 150340,
+      "text": "more diverse culture. With this new culture came a new style of music. Prior to the industrial"
+    },
+    {
+      "startMs": 150340,
+      "endMs": 155620,
+      "text": "revolution, music had originally been risen to reflect the hard labour-intensive life"
+    },
+    {
+      "startMs": 155620,
+      "endMs": 160860,
+      "text": "in all kinds of industries when all work had to be done by hand. Most people resided in"
+    },
+    {
+      "startMs": 160860,
+      "endMs": 165580,
+      "text": "small rural communities where their lives revolved around farming. Life for the average"
+    },
+    {
+      "startMs": 165580,
+      "endMs": 171340,
+      "text": "person was difficult, as incomes were meager and malnourishment and disease were common."
+    },
+    {
+      "startMs": 171340,
+      "endMs": 175860,
+      "text": "Despite the difference in nationalities of the people and the variety of musical genres,"
+    },
+    {
+      "startMs": 175860,
+      "endMs": 181380,
+      "text": "all of the music shared one common language. English. As many were unable to write, the"
+    },
+    {
+      "startMs": 181380,
+      "endMs": 186060,
+      "text": "songs were a means for the people to give voice to their experiences and feelings about"
+    },
+    {
+      "startMs": 186060,
+      "endMs": 191460,
+      "text": "their hard and laborious jobs. Most of the music written by the workers during this period"
+    },
+    {
+      "startMs": 191460,
+      "endMs": 196700,
+      "text": "has been lost as a result of illiteracy and the wear of time."
+    },
+    {
+      "startMs": 196700,
+      "endMs": 201500,
+      "text": "Now you may be asking yourselves how these small musical works were formed. The roots of"
+    },
+    {
+      "startMs": 201500,
+      "endMs": 206340,
+      "text": "most of these groups can mostly be traced back to the younger members of the working classes,"
+    },
+    {
+      "startMs": 206340,
+      "endMs": 211340,
+      "text": "who were perhaps rebelling against the inferiority of their living and working conditions compared"
+    },
+    {
+      "startMs": 211340,
+      "endMs": 216940,
+      "text": "to those of the upper classes. Young performers would often leave these musical trends, usually"
+    },
+    {
+      "startMs": 216940,
+      "endMs": 223140,
+      "text": "possessing a great talent for singing or playing particular handmade instruments. As time"
+    },
+    {
+      "startMs": 223140,
+      "endMs": 228180,
+      "text": "progressed into the 19th century, these musical groups had gained much notoriety and would"
+    },
+    {
+      "startMs": 228180,
+      "endMs": 233660,
+      "text": "hold small performances in the street for all to watch. It was perhaps their blind optimism"
+    },
+    {
+      "startMs": 233660,
+      "endMs": 239060,
+      "text": "and rebellious spirit that led them to become so popular with their audiences, which were"
+    },
+    {
+      "startMs": 239060,
+      "endMs": 244020,
+      "text": "usually made up of the poorest of the poor. Despite efforts by the upper classes to put an end"
+    },
+    {
+      "startMs": 244020,
+      "endMs": 250260,
+      "text": "to these musical traditions, they continued to gain popularity and flourish. By the late 1870s,"
+    },
+    {
+      "startMs": 250260,
+      "endMs": 255060,
+      "text": "they had evolved past the barrier of the social echelons and gained access to the middle class."
+    },
+    {
+      "startMs": 255060,
+      "endMs": 260340,
+      "text": "Performances were held in proper establishment such as village halls and some were even"
+    },
+    {
+      "startMs": 260340,
+      "endMs": 265940,
+      "text": "ticketed with audiences paying a fee for the privilege of watching. Music produced by these groups"
+    },
+    {
+      "startMs": 265940,
+      "endMs": 271620,
+      "text": "were better recorded and some is still preserved today in museums. The music of these groups may"
+    },
+    {
+      "startMs": 271620,
+      "endMs": 276980,
+      "text": "not exist in the present day, but its influences are still clear if you look closely enough. In"
+    },
+    {
+      "startMs": 276980,
+      "endMs": 282020,
+      "text": "classical culture, for example, many of the themes and theatrical performances are still based"
+    },
+    {
+      "startMs": 282020,
+      "endMs": 287220,
+      "text": "on the lives and experiences of the working classes, both prior to and following the industrial"
+    },
+    {
+      "startMs": 287220,
+      "endMs": 292980,
+      "text": "revolution. The novel entitled, Lame is Arab by Hugh Victor Hugo, for example, is a novel about"
+    },
+    {
+      "startMs": 293140,
+      "endMs": 299060,
+      "text": "the French working classes and is still widely popular today. The original recordings of the music"
+    },
+    {
+      "startMs": 299060,
+      "endMs": 305620,
+      "text": "risen during these periods are now hugely valuable due to the demand from avid collectors and enthusiastic"
+    },
+    {
+      "startMs": 305620,
+      "endMs": 311940,
+      "text": "fans. Many of these recordings are publicly owned and displayed in museum exhibits. However,"
+    },
+    {
+      "startMs": 311940,
+      "endMs": 317860,
+      "text": "a selection are still privately owned and occasionally appear for sale in auctions, often reaching"
+    },
+    {
+      "startMs": 318100,
+      "endMs": 323940,
+      "text": "prices in the hundreds of thousands. Well, that just about wraps the lecture up for today,"
+    },
+    {
+      "startMs": 323940,
+      "endMs": 334740,
+      "text": "so if anyone has any questions, that is the end of section 4. You now have half a minute to check"
+    },
+    {
+      "startMs": 334740,
+      "endMs": 335700,
+      "text": "your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 47,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

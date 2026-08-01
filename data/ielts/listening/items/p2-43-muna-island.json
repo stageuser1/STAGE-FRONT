@@ -1,0 +1,568 @@
+{
+  "id": "p2-43-muna-island",
+  "title": "Muna Island",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-18804ca5d8bf",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 472.08,
+    "checksum": "sha256:b1a622e00413a98710bcf00db05a1bca9e941b553b4411dc7c720f129d78d6c7"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-20.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "How much should visitors tip taxi drivers on the island?",
+          "options": [
+            {
+              "id": "A",
+              "text": "as much as they feel right"
+            },
+            {
+              "id": "B",
+              "text": "no tip at all"
+            },
+            {
+              "id": "C",
+              "text": "10% tip"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "What is mentioned about the medical service on the island?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It will be charged."
+            },
+            {
+              "id": "B",
+              "text": "Visitors should contact their insurance company."
+            },
+            {
+              "id": "C",
+              "text": "Visitors have to find the hotel doctor."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "The tour guide says the tap water",
+          "options": [
+            {
+              "id": "A",
+              "text": "contains no mineral."
+            },
+            {
+              "id": "B",
+              "text": "is unsafe."
+            },
+            {
+              "id": "C",
+              "text": "has an unusual taste."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "What point is made about bottled water?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It is expensive."
+            },
+            {
+              "id": "B",
+              "text": "The bottle is not always sealed."
+            },
+            {
+              "id": "C",
+              "text": "It isn't sold everywhere."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "What feature is mentioned about the bus on the island?",
+          "options": [
+            {
+              "id": "A",
+              "text": "frequent"
+            },
+            {
+              "id": "B",
+              "text": "not punctual"
+            },
+            {
+              "id": "C",
+              "text": "not comfortable"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "16",
+          "text": "How can visitors know the destination of the bus on the island?",
+          "options": [
+            {
+              "id": "A",
+              "text": "find it in front of the bus"
+            },
+            {
+              "id": "B",
+              "text": "check it with the driver"
+            },
+            {
+              "id": "C",
+              "text": "find it at the bus stop"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "17",
+          "text": "What does the tour guide advise visitors to do before renting a car?",
+          "options": [
+            {
+              "id": "A",
+              "text": "find a taxi company"
+            },
+            {
+              "id": "B",
+              "text": "go to the hotel reception"
+            },
+            {
+              "id": "C",
+              "text": "compare the price in advance"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "18",
+          "text": "When they rent a car, it's important for visitors to know",
+          "options": [
+            {
+              "id": "A",
+              "text": "the mileage is limited."
+            },
+            {
+              "id": "B",
+              "text": "what is included in the price."
+            },
+            {
+              "id": "C",
+              "text": "fuel is included in the price."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "How can visitors find a taxi easily?",
+          "options": [
+            {
+              "id": "A",
+              "text": "call the taxi company"
+            },
+            {
+              "id": "B",
+              "text": "look for a taxi in advance"
+            },
+            {
+              "id": "C",
+              "text": "stop a taxi on the street"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "What is suggested by the tour guide about the taxi fee?",
+          "options": [
+            {
+              "id": "A",
+              "text": "make sure no extra money is asked"
+            },
+            {
+              "id": "B",
+              "text": "check what is included in the fee"
+            },
+            {
+              "id": "C",
+              "text": "agree the price with the driver in advance"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "A",
+        "13": "C",
+        "14": "B",
+        "15": "C",
+        "16": "B",
+        "17": "C",
+        "18": "B",
+        "19": "C",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9840,
+      "text": "Part 2."
+    },
+    {
+      "startMs": 9840,
+      "endMs": 15200,
+      "text": "You will hear an introduction from a tour guide about suggestions for an island."
+    },
+    {
+      "startMs": 15200,
+      "endMs": 19560,
+      "text": "First, you have some time to look at questions 11-14."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 57120,
+      "text": "Now, listen carefully and answer questions 11-14."
+    },
+    {
+      "startMs": 57120,
+      "endMs": 62880,
+      "text": "Hello everyone, I'm Hazel, the guide from Travel Eye Agency."
+    },
+    {
+      "startMs": 62880,
+      "endMs": 67680,
+      "text": "Since we mentioned the trip to Moona Island in the last program,"
+    },
+    {
+      "startMs": 67680,
+      "endMs": 72720,
+      "text": "we've received several online messages from those who have been there."
+    },
+    {
+      "startMs": 72720,
+      "endMs": 78480,
+      "text": "As a result, we've collected some helpful do's and don'ts for new visitors,"
+    },
+    {
+      "startMs": 78480,
+      "endMs": 85600,
+      "text": "which will hopefully help you to know the island better and enjoy your stay to the fullest."
+    },
+    {
+      "startMs": 85680,
+      "endMs": 88640,
+      "text": "The first suggestion is about tips."
+    },
+    {
+      "startMs": 88640,
+      "endMs": 93840,
+      "text": "Although tipping is required in most circumstances in Moona Island,"
+    },
+    {
+      "startMs": 93840,
+      "endMs": 97440,
+      "text": "the amount you should give differs significantly."
+    },
+    {
+      "startMs": 97440,
+      "endMs": 103680,
+      "text": "If you take a taxi, there is no set rate on how much you should leave to the driver."
+    },
+    {
+      "startMs": 103680,
+      "endMs": 109280,
+      "text": "Someone may give a generous tip if he thinks the service is fantastic."
+    },
+    {
+      "startMs": 109280,
+      "endMs": 111600,
+      "text": "It's up to you entirely."
+    },
+    {
+      "startMs": 111600,
+      "endMs": 116880,
+      "text": "However, if you go to the hairdressers or enjoy a meal in the restaurant"
+    },
+    {
+      "startMs": 116880,
+      "endMs": 123600,
+      "text": "and the bill comes with no service charge, a 10% tip is advisable."
+    },
+    {
+      "startMs": 123600,
+      "endMs": 128000,
+      "text": "Moona Island has got relatively good medical service."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 135520,
+      "text": "If you get sick, the quickest way is to ask the hotel to arrange an English speaking doctor for you."
+    },
+    {
+      "startMs": 135520,
+      "endMs": 139440,
+      "text": "But remember, it's not a complimentary service."
+    },
+    {
+      "startMs": 139440,
+      "endMs": 146000,
+      "text": "The other alternative is to visit the local clinic and you have to prepare for the charge as well."
+    },
+    {
+      "startMs": 146640,
+      "endMs": 151680,
+      "text": "I should remind you that the medical service on the island can be pricey,"
+    },
+    {
+      "startMs": 152320,
+      "endMs": 155760,
+      "text": "so it's better to buy your insurance before you leave."
+    },
+    {
+      "startMs": 157360,
+      "endMs": 162320,
+      "text": "When you visit Moona Island, you'll see the notice nearly everywhere."
+    },
+    {
+      "startMs": 162960,
+      "endMs": 168880,
+      "text": "Tap water is safe to drink, but you might not get used to its weird taste"
+    },
+    {
+      "startMs": 168880,
+      "endMs": 176160,
+      "text": "because it contains minerals. In this case, you can buy bottled water sold in every shop,"
+    },
+    {
+      "startMs": 176160,
+      "endMs": 179840,
+      "text": "but you'd better make sure the sealed lid is untouched,"
+    },
+    {
+      "startMs": 179840,
+      "endMs": 183440,
+      "text": "as the locals often put tap water into the bottle."
+    },
+    {
+      "startMs": 186480,
+      "endMs": 192640,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 15 to 20."
+    },
+    {
+      "startMs": 198880,
+      "endMs": 226560,
+      "text": "Now listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 229600,
+      "endMs": 233920,
+      "text": "Then I'll focus on transportation in Moona Island."
+    },
+    {
+      "startMs": 233920,
+      "endMs": 239680,
+      "text": "The bus is the most commonly used means of transportation for local residents."
+    },
+    {
+      "startMs": 240320,
+      "endMs": 244800,
+      "text": "Although there aren't many bus lines, they're always on time."
+    },
+    {
+      "startMs": 245440,
+      "endMs": 252800,
+      "text": "However, some people complained that the road was so bumpy that they even got nausea and dizziness."
+    },
+    {
+      "startMs": 253520,
+      "endMs": 259520,
+      "text": "As a result, it's not a good choice if you want to sit peacefully and relax on the way."
+    },
+    {
+      "startMs": 260160,
+      "endMs": 267360,
+      "text": "And another thing is, before you jump on the bus, inquire of the driver about where the bus will go."
+    },
+    {
+      "startMs": 268000,
+      "endMs": 275760,
+      "text": "Unlike most cities here in Moona Island, you cannot find the destination shown in front of the bus"
+    },
+    {
+      "startMs": 275760,
+      "endMs": 281840,
+      "text": "or at the bus stop. Maybe you found the bus service is not so enjoyable."
+    },
+    {
+      "startMs": 282640,
+      "endMs": 285440,
+      "text": "In that case, you can always rent a car."
+    },
+    {
+      "startMs": 286160,
+      "endMs": 293200,
+      "text": "If you choose this way, I advise you to prepare well beforehand. Although some taxi companies"
+    },
+    {
+      "startMs": 293200,
+      "endMs": 300240,
+      "text": "provide car rental services, many visitors sometimes find nobody answering the phone."
+    },
+    {
+      "startMs": 300800,
+      "endMs": 308080,
+      "text": "So leave this way when you are in a hurry. It's wise to compare several car rental companies"
+    },
+    {
+      "startMs": 308080,
+      "endMs": 312160,
+      "text": "online beforehand, as the price may vary a lot."
+    },
+    {
+      "startMs": 312880,
+      "endMs": 322560,
+      "text": "Booking via hotel may be overcharged. As it contains a 10% commission, so it's also not advisable."
+    },
+    {
+      "startMs": 323280,
+      "endMs": 329920,
+      "text": "More importantly, don't forget to check with the company what the price covers in detail."
+    },
+    {
+      "startMs": 330480,
+      "endMs": 336320,
+      "text": "Like daily rental expenses, car insurance, commission, etc."
+    },
+    {
+      "startMs": 336960,
+      "endMs": 342240,
+      "text": "It usually includes unlimited mileage too, but fuel is excluded."
+    },
+    {
+      "startMs": 343760,
+      "endMs": 348960,
+      "text": "If you don't want to drive, a taxi is the quickest and most comfortable way,"
+    },
+    {
+      "startMs": 349520,
+      "endMs": 355920,
+      "text": "although few are available on Moona Island. If you want to find a taxi quickly,"
+    },
+    {
+      "startMs": 355920,
+      "endMs": 363360,
+      "text": "it's not a good idea to reserve through the taxi company, as sometimes you'll have quite a wait,"
+    },
+    {
+      "startMs": 363440,
+      "endMs": 370320,
+      "text": "especially in the rush hour. The easiest way is just waving your hands on the street to stop"
+    },
+    {
+      "startMs": 370320,
+      "endMs": 376880,
+      "text": "the taxi. Otherwise, the driver will drive away directly after he drops off the gas."
+    },
+    {
+      "startMs": 377680,
+      "endMs": 385200,
+      "text": "Oh, another thing is, I have to remind you that there is no meter for taxis in Moona Island,"
+    },
+    {
+      "startMs": 385200,
+      "endMs": 392000,
+      "text": "so before you jump in the taxi, you'd better negotiate with the driver about how much you're"
+    },
+    {
+      "startMs": 392000,
+      "endMs": 399200,
+      "text": "going to pay. For example, if you take a taxi from the airport at night, it may cost you,"
+    },
+    {
+      "startMs": 399920,
+      "endMs": 408160,
+      "text": "so confirm the price before you get in. Okay, that's all about the tips for Moona Island"
+    },
+    {
+      "startMs": 408160,
+      "endMs": 412080,
+      "text": "that I want to share today. And are there any questions?"
+    },
+    {
+      "startMs": 415200,
+      "endMs": 421760,
+      "text": "That is the end of part two. You now have half a minute to check your answers to part"
+    },
+    {
+      "startMs": 421760,
+      "endMs": 422400,
+      "text": "two. 。"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 59,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

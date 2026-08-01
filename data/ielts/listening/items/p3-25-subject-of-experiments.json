@@ -1,0 +1,474 @@
+{
+  "id": "p3-25-subject-of-experiments",
+  "title": "Subject of Experiments",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-96de92c8e680",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 463.08,
+    "checksum": "sha256:21d1d99463de6cd494d0ca141bac2c84e12f6bc68b161b8236a8ef3537008053"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Question 21–26",
+      "instruction": "What is said about each of the following experiments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "very boring"
+        },
+        {
+          "id": "B",
+          "text": "too difficult"
+        },
+        {
+          "id": "C",
+          "text": "specialised equipment needed"
+        },
+        {
+          "id": "D",
+          "text": "very expensive"
+        },
+        {
+          "id": "E",
+          "text": "immediate results"
+        },
+        {
+          "id": "F",
+          "text": "useful practice for maths"
+        },
+        {
+          "id": "G",
+          "text": "cheap to do"
+        },
+        {
+          "id": "H",
+          "text": "takes longer than usual to do"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "Steam engine",
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "Breakfast cereals",
+          "answer": "G"
+        },
+        {
+          "id": "23",
+          "text": "Bouncing balls",
+          "answer": "F"
+        },
+        {
+          "id": "24",
+          "text": "Making paper",
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "tie-dyeing",
+          "answer": "H"
+        },
+        {
+          "id": "26",
+          "text": "Glue from milk",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Question 27-30",
+      "instruction": "Label the diagram below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Metal container",
+          "answer": "D"
+        },
+        {
+          "id": "28",
+          "text": "Integral strainer",
+          "answer": "F"
+        },
+        {
+          "id": "29",
+          "text": "Drip tip",
+          "answer": "G"
+        },
+        {
+          "id": "30",
+          "text": "Pottery container",
+          "answer": "C"
+        }
+      ],
+      "image": {
+        "assetId": "image-p3-25-subject-of-experiments-diagram-png",
+        "filename": "diagram.png",
+        "src": "images/image-p3-25-subject-of-experiments-diagram-png-diagram.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "G",
+        "23": "F",
+        "24": "A",
+        "25": "H",
+        "26": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "27": "D",
+        "28": "F",
+        "29": "G",
+        "30": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9540,
+      "text": "Section 3. You will hear two primary school trainee teachers called Stefan and Magda discussing"
+    },
+    {
+      "startMs": 9540,
+      "endMs": 16060,
+      "text": "their placements for science teaching. First, you have some time to look at questions"
+    },
+    {
+      "startMs": 16060,
+      "endMs": 19260,
+      "text": "21 to 26 on page 6."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 54580,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 54580,
+      "endMs": 62940,
+      "text": "Stefan: Hi Magda, how was your placement? Magda: It went really well. The kids really enjoyed the"
+    },
+    {
+      "startMs": 62940,
+      "endMs": 67740,
+      "text": "science I did with them. Stefan: So did mine. I think they found it very motivating."
+    },
+    {
+      "startMs": 67740,
+      "endMs": 73620,
+      "text": "Magda: Yes, the program we had to teach was much better than the old-style science experiments"
+    },
+    {
+      "startMs": 73620,
+      "endMs": 77500,
+      "text": "we did at school. Stefan: Yes, though I don't understand why the children"
+    },
+    {
+      "startMs": 77500,
+      "endMs": 82260,
+      "text": "should have to build a model of a steam engine. I tried it with the kids, but I couldn't"
+    },
+    {
+      "startMs": 82260,
+      "endMs": 88100,
+      "text": "get it to work. Magda: Me neither, and it really shows it's hard to get any real results."
+    },
+    {
+      "startMs": 88100,
+      "endMs": 93260,
+      "text": "Yes, and it's usually the children's parents rather than the kids themselves who favour"
+    },
+    {
+      "startMs": 93260,
+      "endMs": 97660,
+      "text": "that type of experiment. So what experiments did you do?"
+    },
+    {
+      "startMs": 97660,
+      "endMs": 104620,
+      "text": "Magda: Well, one day a discussion started in class about breakfast cereals, about which one was"
+    },
+    {
+      "startMs": 104620,
+      "endMs": 109220,
+      "text": "best. One child then said that we should test them in class."
+    },
+    {
+      "startMs": 109220,
+      "endMs": 115580,
+      "text": "Stefan: That's a nice idea. Magda: Yes, and it wasn't expensive. We brought four different brands of cereal"
+    },
+    {
+      "startMs": 115580,
+      "endMs": 121740,
+      "text": "and had everyone evaluate them for taste, appearance and soginess in milk."
+    },
+    {
+      "startMs": 121740,
+      "endMs": 127620,
+      "text": "Stefan: And are you going to tell me which one one? Magda: No, I'll let you do it yourself. It obviously"
+    },
+    {
+      "startMs": 127620,
+      "endMs": 134620,
+      "text": "isn't difficult to set up. Another experiment we did, the sports teachers idea actually,"
+    },
+    {
+      "startMs": 134620,
+      "endMs": 141660,
+      "text": "was to spend a morning seeing how high various balls bounced. For example, do new tennis"
+    },
+    {
+      "startMs": 141660,
+      "endMs": 147500,
+      "text": "balls bounce higher than old ones, and do basket balls that are fully inflated bounce"
+    },
+    {
+      "startMs": 147500,
+      "endMs": 151860,
+      "text": "better than flatter ones? Stefan: And I guess you got some interesting data?"
+    },
+    {
+      "startMs": 151860,
+      "endMs": 157660,
+      "text": "Magda: We did, and they had to make a chart to plot the results. It really improved their grasp"
+    },
+    {
+      "startMs": 157660,
+      "endMs": 163980,
+      "text": "of charts and graphs and calculation. Apparently they'd had problems understanding the point"
+    },
+    {
+      "startMs": 163980,
+      "endMs": 168660,
+      "text": "of graphs in the past. Stefan: Did all your experiments work out okay?"
+    },
+    {
+      "startMs": 168660,
+      "endMs": 175300,
+      "text": "Magda: Well, we had one lesson on making paper from grass. The children made a terrible mess"
+    },
+    {
+      "startMs": 175300,
+      "endMs": 181620,
+      "text": "in the classroom. Whatever they did didn't work, and it wasn't because it was difficult."
+    },
+    {
+      "startMs": 181620,
+      "endMs": 188220,
+      "text": "I think it was because it didn't engage them at all. It didn't seem to motivate them."
+    },
+    {
+      "startMs": 188220,
+      "endMs": 193820,
+      "text": "Stefan: My tidying experiment went well. They had to get a piece of material and twist it into"
+    },
+    {
+      "startMs": 193820,
+      "endMs": 199060,
+      "text": "a rope and then die it. The children did end up with blue and green hands for a few days,"
+    },
+    {
+      "startMs": 199060,
+      "endMs": 203180,
+      "text": "though. Magda: But don't you need to spend more than one lesson on that?"
+    },
+    {
+      "startMs": 203180,
+      "endMs": 208900,
+      "text": "Stefan: Yes, we did it over three classes. The children really loved it, though, and one suggested"
+    },
+    {
+      "startMs": 208900,
+      "endMs": 214980,
+      "text": "we make scarves from the result. I declined, as my sewing skills aren't up too much."
+    },
+    {
+      "startMs": 214980,
+      "endMs": 221340,
+      "text": "Magda: I guess the one experiment that everyone loved in my class was making glue from milk."
+    },
+    {
+      "startMs": 221340,
+      "endMs": 226940,
+      "text": "I thought it would be a complete failure, but in fact it worked brilliantly. One reason"
+    },
+    {
+      "startMs": 226940,
+      "endMs": 232660,
+      "text": "I suspect is that they got feedback straight away. Some children get really restless if"
+    },
+    {
+      "startMs": 232660,
+      "endMs": 235540,
+      "text": "they have to wait for anything interesting to happen."
+    },
+    {
+      "startMs": 235540,
+      "endMs": 248860,
+      "text": "Stefan: Yes, I think that's always a good idea. Really helps to make it a success."
+    },
+    {
+      "startMs": 248860,
+      "endMs": 255500,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27-30"
+    },
+    {
+      "startMs": 255500,
+      "endMs": 276820,
+      "text": "on page 7."
+    },
+    {
+      "startMs": 276820,
+      "endMs": 283980,
+      "text": "Now listen and answer questions 27-30."
+    },
+    {
+      "startMs": 283980,
+      "endMs": 287740,
+      "text": "Magda：I see you've got a diagram there for one of your experiments."
+    },
+    {
+      "startMs": 287740,
+      "endMs": 292900,
+      "text": "Stefan: Yes, it was an idea I got from the internet. It was very easy and straightforward to set"
+    },
+    {
+      "startMs": 292900,
+      "endMs": 299580,
+      "text": "up. The idea is to make a condenser to extract essences from plants. The large containers"
+    },
+    {
+      "startMs": 299580,
+      "endMs": 300900,
+      "text": "made of metal."
+    },
+    {
+      "startMs": 300900,
+      "endMs": 304140,
+      "text": "Magda：Right, and that holds the hot water."
+    },
+    {
+      "startMs": 304140,
+      "endMs": 309620,
+      "text": "Stefan: That's right, and it has a strainer which sits inside it. This is where you put the plant"
+    },
+    {
+      "startMs": 309620,
+      "endMs": 316220,
+      "text": "matter. We use plants like rosemary, as the essence you can extract is quite strong."
+    },
+    {
+      "startMs": 316220,
+      "endMs": 319140,
+      "text": "Magda：So what's the container right at the top?"
+    },
+    {
+      "startMs": 319140,
+      "endMs": 324860,
+      "text": "Stefan: It's made of glass. It's where we put the ice. The glass container has a drip tip at"
+    },
+    {
+      "startMs": 324860,
+      "endMs": 326260,
+      "text": "the bottom."
+    },
+    {
+      "startMs": 326260,
+      "endMs": 327660,
+      "text": "Magda：What's that for?"
+    },
+    {
+      "startMs": 327660,
+      "endMs": 329860,
+      "text": "Stefan: It's where the essence collects."
+    },
+    {
+      "startMs": 329860,
+      "endMs": 331900,
+      "text": "Magda：Where does the essence go then?"
+    },
+    {
+      "startMs": 331900,
+      "endMs": 335300,
+      "text": "Stefan: Into the dish at the bottom. It's made of pottery."
+    },
+    {
+      "startMs": 335300,
+      "endMs": 341500,
+      "text": "Magda：Sounds good. I might try it with my class."
+    },
+    {
+      "startMs": 341500,
+      "endMs": 346940,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "diagram.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 56,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

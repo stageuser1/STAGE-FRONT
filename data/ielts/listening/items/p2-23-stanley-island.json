@@ -1,0 +1,439 @@
+{
+  "id": "p2-23-stanley-island",
+  "title": "Stanley Island",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-7cbe8cf61f9e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 240.408,
+    "checksum": "sha256:f7726ab9ccc4fe903c191bcb79dcb528a063ccd6aaa4618b942540768190fdb9"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Question 11",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "At the present time, Stanley Island can be reached by",
+          "options": [
+            {
+              "id": "A",
+              "text": "hovercraft."
+            },
+            {
+              "id": "B",
+              "text": "plane."
+            },
+            {
+              "id": "C",
+              "text": "ferry."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 12–15",
+      "instruction": "Choose the correct letter from the box, A, B or C, next to questions 12–15.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The North Coast"
+        },
+        {
+          "id": "B",
+          "text": "The South Coast"
+        },
+        {
+          "id": "C",
+          "text": "The East Coast"
+        }
+      ],
+      "questions": [
+        {
+          "id": "12",
+          "text": "golf courses",
+          "answer": "C"
+        },
+        {
+          "id": "13",
+          "text": "family hotels",
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "self-catering flats",
+          "answer": "C"
+        },
+        {
+          "id": "15",
+          "text": "nature walks",
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 16–20",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. Advice to Visitors Bring your own 16. _____ and insect spray It may not be possible to use your 17. _____ in the western area Don't drink water from 18. _____ Be careful of the 19. _____ as they bite Try the local 20. _____",
+      "questions": [
+        {
+          "id": "16",
+          "text": "Bring your own 16. _____ and insect spray",
+          "answer": "medication"
+        },
+        {
+          "id": "17",
+          "text": "It may not be possible to use your 17. _____ in the western area",
+          "answer": "mobile phone"
+        },
+        {
+          "id": "18",
+          "text": "Don't drink water from 18. _____",
+          "answer": "rivers"
+        },
+        {
+          "id": "19",
+          "text": "Be careful of the 19. _____ as they bite",
+          "answer": "monkeys"
+        },
+        {
+          "id": "20",
+          "text": "Try the local 20. _____",
+          "answer": "seafood"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Advice to Visitors",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Bring your own 16. _____ and insect spray",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It may not be possible to use your 17. _____ in the western area",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Don't drink water from 18. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Be careful of the 19. _____ as they bite",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Try the local 20. _____",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "16": "medication",
+        "17": "mobile phone",
+        "18": "rivers",
+        "19": "monkeys",
+        "20": "seafood"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "12": "C",
+        "13": "B",
+        "14": "C",
+        "15": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9280,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 9280,
+      "endMs": 14240,
+      "text": "Welcome once again to the show where we give you travel tips on popular tourist destinations"
+    },
+    {
+      "startMs": 14240,
+      "endMs": 16240,
+      "text": "in the Pacific region."
+    },
+    {
+      "startMs": 16240,
+      "endMs": 20840,
+      "text": "And today our focus is on beautiful Stanley Island."
+    },
+    {
+      "startMs": 20840,
+      "endMs": 26880,
+      "text": "Now before we get started, a word of warning, the sea plane service to the island was discontinued"
+    },
+    {
+      "startMs": 26880,
+      "endMs": 32960,
+      "text": "last week, so for the next month at least the sole link to the island is provided by"
+    },
+    {
+      "startMs": 32960,
+      "endMs": 40280,
+      "text": "the old ferry service since plans to run a hovercraft service to the island have been delayed."
+    },
+    {
+      "startMs": 40280,
+      "endMs": 43720,
+      "text": "So what is there to see and do on Stanley Island?"
+    },
+    {
+      "startMs": 43720,
+      "endMs": 49600,
+      "text": "Well the main tourist areas are on the north, south and east coasts of the island."
+    },
+    {
+      "startMs": 49600,
+      "endMs": 55760,
+      "text": "As far as recreation goes, in the south you'll find several leisure park lands such as Water"
+    },
+    {
+      "startMs": 55760,
+      "endMs": 61120,
+      "text": "World and Fantasy Island, which seem well equipped and reasonably priced."
+    },
+    {
+      "startMs": 61120,
+      "endMs": 65840,
+      "text": "If it's golf you're after, the 18-hole course in the south of the island is currently"
+    },
+    {
+      "startMs": 65840,
+      "endMs": 71520,
+      "text": "being turned into a conference centre, but don't despair, there are two excellent courses"
+    },
+    {
+      "startMs": 71520,
+      "endMs": 75760,
+      "text": "just 30 minutes away on the east coast."
+    },
+    {
+      "startMs": 75760,
+      "endMs": 81040,
+      "text": "The south of the island has many large resorts and hotels with plenty of children's activities"
+    },
+    {
+      "startMs": 81040,
+      "endMs": 82760,
+      "text": "and clubs."
+    },
+    {
+      "startMs": 82760,
+      "endMs": 88840,
+      "text": "This part of the island caters mainly for those seeking luxury to medium-class accommodation,"
+    },
+    {
+      "startMs": 88840,
+      "endMs": 94200,
+      "text": "but the east coast has basic apartment complexes with fully equipped kitchens so that at least"
+    },
+    {
+      "startMs": 94200,
+      "endMs": 96880,
+      "text": "you can cook for yourself."
+    },
+    {
+      "startMs": 96880,
+      "endMs": 101680,
+      "text": "For those who like to get back to nature, you'll probably find the south coast rather"
+    },
+    {
+      "startMs": 101680,
+      "endMs": 103120,
+      "text": "overdeveloped."
+    },
+    {
+      "startMs": 103120,
+      "endMs": 109640,
+      "text": "The rainforest areas on the west coast are largely inaccessible because of the surrounding mountains,"
+    },
+    {
+      "startMs": 109640,
+      "endMs": 114800,
+      "text": "but those on the north coast are within easy reach and a local agency runs guided"
+    },
+    {
+      "startMs": 114800,
+      "endMs": 117520,
+      "text": "treks through the jungle."
+    },
+    {
+      "startMs": 117520,
+      "endMs": 124760,
+      "text": "If you're into water sports, all of the areas have something to offer."
+    },
+    {
+      "startMs": 124760,
+      "endMs": 130640,
+      "text": "Before you hear the rest of the program, you have some time to look at questions 16-20."
+    },
+    {
+      "startMs": 139640,
+      "endMs": 162840,
+      "text": "Now listen and answer questions 16-20."
+    },
+    {
+      "startMs": 162840,
+      "endMs": 168240,
+      "text": "Now here are a few bits of advice for those visiting the island for the first time."
+    },
+    {
+      "startMs": 168240,
+      "endMs": 171640,
+      "text": "To make your stay safer and more enjoyable."
+    },
+    {
+      "startMs": 171640,
+      "endMs": 177000,
+      "text": "The island is generally safe, but it's as well to take a few precautions."
+    },
+    {
+      "startMs": 177000,
+      "endMs": 179960,
+      "text": "If you're on any medication, bring this with you."
+    },
+    {
+      "startMs": 179960,
+      "endMs": 182840,
+      "text": "It may not be available on the island."
+    },
+    {
+      "startMs": 182840,
+      "endMs": 188520,
+      "text": "And it's also a good idea for everyone to pack some insect spray in their luggage."
+    },
+    {
+      "startMs": 188520,
+      "endMs": 193040,
+      "text": "If you're thinking of going into the more mountainous region in the west of the island,"
+    },
+    {
+      "startMs": 193040,
+      "endMs": 195680,
+      "text": "let someone know where you're going."
+    },
+    {
+      "startMs": 195680,
+      "endMs": 201240,
+      "text": "And remember, the reception for your mobile phone may be unreliable, so don't depend on"
+    },
+    {
+      "startMs": 201240,
+      "endMs": 202840,
+      "text": "that."
+    },
+    {
+      "startMs": 202840,
+      "endMs": 206680,
+      "text": "Take your own water, don't drink out of rivers."
+    },
+    {
+      "startMs": 206680,
+      "endMs": 213320,
+      "text": "You're likely to come across lots of monkeys, they're cute, but watch out as they can bite."
+    },
+    {
+      "startMs": 213320,
+      "endMs": 219640,
+      "text": "Finally, when you're back in the more inhabited areas, take a break from steak and do try the"
+    },
+    {
+      "startMs": 219640,
+      "endMs": 221280,
+      "text": "local seafood."
+    },
+    {
+      "startMs": 221280,
+      "endMs": 226960,
+      "text": "It's fresh and very good value."
+    },
+    {
+      "startMs": 226960,
+      "endMs": 229160,
+      "text": "That is the end of part 2."
+    },
+    {
+      "startMs": 229160,
+      "endMs": 233040,
+      "text": "You now have 45 seconds to check your answers to part 2."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 44,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

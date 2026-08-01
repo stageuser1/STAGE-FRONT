@@ -1,0 +1,854 @@
+{
+  "id": "p1-22-poppy-reserve",
+  "title": "Poppy Reserve",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-0fc35479bb38",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 451.896,
+    "checksum": "sha256:f6526c4c1fe6d0437b227b020693d3971337af508ba0f03901a01a2cbdfa6b80"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–5.",
+      "instruction": "Write ONE WORD ONLY for each answer. Poppy Reserve The poppies will be at their best at the end of the 1. ________. The poppies on the hills are 2. ________ in colour. The reserve is located to the 3. ________ of Lakeside. The best time for photography is mid-afternoon. Wear 4. ________ because of rattlesnakes. The reserve is a 5. ________ park.",
+      "questions": [
+        {
+          "id": "1",
+          "text": "The poppies will be at their best at the end of the 1. ________.",
+          "answer": "Month"
+        },
+        {
+          "id": "2",
+          "text": "The poppies on the hills are 2. ________ in colour.",
+          "answer": "Orange"
+        },
+        {
+          "id": "3",
+          "text": "The reserve is located to the 3. ________ of Lakeside.",
+          "answer": "East"
+        },
+        {
+          "id": "4",
+          "text": "Wear 4. ________ because of rattlesnakes.",
+          "answer": "Trousers"
+        },
+        {
+          "id": "5",
+          "text": "The reserve is a 5. ________ park.",
+          "answer": "State"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Poppy Reserve",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The poppies will be at their best at the end of the 1. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The poppies on the hills are 2. ________ in colour.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The reserve is located to the 3. ________ of Lakeside.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The best time for photography is mid-afternoon.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Wear 4. ________ because of rattlesnakes.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The reserve is a 5. ________ park.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 6–10.",
+      "instruction": "Write ONE WORD AND/OR A NUMBER. Tour Start time Duration Highlights Photography The 6. _____ tour every hour from 7:30 a.m. viewpoints, film, and the 7. ________ panoramic pictures The Wildflower tour every two hours from 8:00 a.m. poppy, cream cup, and sage close-up tips The Wildlife tour 1.5 hours coyote, quail, roadrunners bring tripod and a 10. ________ lens",
+      "questions": [
+        {
+          "id": "6",
+          "text": "The 6. _____ tour",
+          "answer": "General"
+        },
+        {
+          "id": "7",
+          "text": "viewpoints, film, and the 7. ________",
+          "answer": "Museum"
+        },
+        {
+          "id": "8",
+          "text": "8. ________",
+          "answer": "1 hour"
+        },
+        {
+          "id": "9",
+          "text": "9. _____ a.m. or 7:00 p.m.",
+          "answer": "5:30/5.30"
+        },
+        {
+          "id": "10",
+          "text": "bring tripod and a 10. ________ lens",
+          "answer": "Zoom"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Tour",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 5
+        },
+        {
+          "text": "Start time",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 5
+        },
+        {
+          "text": "Duration",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 2,
+          "cols": 5
+        },
+        {
+          "text": "Highlights",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 3,
+          "cols": 5
+        },
+        {
+          "text": "Photography",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 4,
+          "cols": 5
+        },
+        {
+          "text": "The 6. _____ tour",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 5
+        },
+        {
+          "text": "every hour from 7:30 a.m.",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 5
+        },
+        {
+          "text": "30 minutes",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 2,
+          "cols": 5
+        },
+        {
+          "text": "viewpoints, film, and the 7. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 3,
+          "cols": 5
+        },
+        {
+          "text": "panoramic pictures",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 4,
+          "cols": 5
+        },
+        {
+          "text": "The Wildflower tour",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 5
+        },
+        {
+          "text": "every two hours from 8:00 a.m.",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 5
+        },
+        {
+          "text": "8. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 2,
+          "cols": 5
+        },
+        {
+          "text": "poppy, cream cup, and sage",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 3,
+          "cols": 5
+        },
+        {
+          "text": "close-up tips",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 4,
+          "cols": 5
+        },
+        {
+          "text": "The Wildlife tour",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 5
+        },
+        {
+          "text": "9. _____ a.m. or 7:00 p.m.",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 5
+        },
+        {
+          "text": "1.5 hours",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 5
+        },
+        {
+          "text": "coyote, quail, roadrunners",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 3,
+          "cols": 5
+        },
+        {
+          "text": "bring tripod and a 10. ________ lens",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 4,
+          "cols": 5
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Month",
+        "2": "Orange",
+        "3": "East",
+        "4": "Trousers",
+        "5": "State",
+        "6": "General",
+        "7": "Museum",
+        "8": "1 hour",
+        "9": "5:30/5.30",
+        "10": "Zoom"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 23480,
+      "text": "[Narrator]: You will hear a number of different recordings, and you will have to answer questions on what"
+    },
+    {
+      "startMs": 23480,
+      "endMs": 25280,
+      "text": "you hear."
+    },
+    {
+      "startMs": 25280,
+      "endMs": 29960,
+      "text": "There will be time for you to read the instructions and questions, and you will have a chance"
+    },
+    {
+      "startMs": 29960,
+      "endMs": 32400,
+      "text": "to check your work."
+    },
+    {
+      "startMs": 32400,
+      "endMs": 36880,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 36880,
+      "endMs": 40240,
+      "text": "The test is in four parts."
+    },
+    {
+      "startMs": 40240,
+      "endMs": 44480,
+      "text": "Write all your answers in the listening question booklet."
+    },
+    {
+      "startMs": 44480,
+      "endMs": 49840,
+      "text": "At the end of the test, you will be given ten minutes to transfer your answers to an answer"
+    },
+    {
+      "startMs": 49840,
+      "endMs": 52440,
+      "text": "sheet."
+    },
+    {
+      "startMs": 52440,
+      "endMs": 61960,
+      "text": "Now turn to part one on page two of your question booklet."
+    },
+    {
+      "startMs": 61960,
+      "endMs": 62960,
+      "text": "Part one"
+    },
+    {
+      "startMs": 62960,
+      "endMs": 69360,
+      "text": "You will hear a telephone conversation between a woman and a park ranger."
+    },
+    {
+      "startMs": 69360,
+      "endMs": 72840,
+      "text": "First you have some time to look at questions one to five."
+    },
+    {
+      "startMs": 82440,
+      "endMs": 105400,
+      "text": "Now listen carefully and answer questions one to five."
+    },
+    {
+      "startMs": 105400,
+      "endMs": 108120,
+      "text": "[Park Ranger]: Almond Valley Poppy Reserve may help you."
+    },
+    {
+      "startMs": 108120,
+      "endMs": 110480,
+      "text": "[Woman]: Is the nature reserve open now?"
+    },
+    {
+      "startMs": 110480,
+      "endMs": 115960,
+      "text": "[Park Ranger]: Yes, we are actually open all year, although this is the best time of year to see the wild"
+    },
+    {
+      "startMs": 115960,
+      "endMs": 116960,
+      "text": "flowers."
+    },
+    {
+      "startMs": 116960,
+      "endMs": 119120,
+      "text": "[Woman]: Are the poppies blooming yet?"
+    },
+    {
+      "startMs": 119120,
+      "endMs": 120120,
+      "text": "[Park Ranger]: Absolutely."
+    },
+    {
+      "startMs": 120120,
+      "endMs": 124560,
+      "text": "They started to bloom last week and are already beautiful, but they should peak and be"
+    },
+    {
+      "startMs": 124560,
+      "endMs": 126960,
+      "text": "in full bloom at the end of the month."
+    },
+    {
+      "startMs": 126960,
+      "endMs": 130920,
+      "text": "[Woman]: Oh, I was planning on coming at the end of this week."
+    },
+    {
+      "startMs": 130920,
+      "endMs": 132320,
+      "text": "Is that too early?"
+    },
+    {
+      "startMs": 132320,
+      "endMs": 133760,
+      "text": "[Park Ranger]: No, not at all."
+    },
+    {
+      "startMs": 133760,
+      "endMs": 136200,
+      "text": "The hills are already covered with orange poppies."
+    },
+    {
+      "startMs": 136200,
+      "endMs": 138680,
+      "text": "[Woman]: I thought poppies were red."
+    },
+    {
+      "startMs": 138680,
+      "endMs": 140040,
+      "text": "[Park Ranger]: Not in California."
+    },
+    {
+      "startMs": 140080,
+      "endMs": 142280,
+      "text": "I've never seen a red poppy here."
+    },
+    {
+      "startMs": 142280,
+      "endMs": 145120,
+      "text": "[Woman]: The poppy reserve is in Ocean County, right?"
+    },
+    {
+      "startMs": 145120,
+      "endMs": 146120,
+      "text": "[Park Ranger]: Right."
+    },
+    {
+      "startMs": 146120,
+      "endMs": 149240,
+      "text": "From lakeside, you'll need to drive about an hour east."
+    },
+    {
+      "startMs": 149240,
+      "endMs": 151560,
+      "text": "[Woman]: What time does the reserve open?"
+    },
+    {
+      "startMs": 151560,
+      "endMs": 154640,
+      "text": "[Park Ranger]: The reserve is open from sunrise to sunset."
+    },
+    {
+      "startMs": 154640,
+      "endMs": 158800,
+      "text": "It's best to come early in the morning to beat the crowds, but for the best photography,"
+    },
+    {
+      "startMs": 158800,
+      "endMs": 162440,
+      "text": "you might want to consider a mid-afternoon visit on a weekday."
+    },
+    {
+      "startMs": 162440,
+      "endMs": 166360,
+      "text": "[Woman]: I heard that there are a lot of rattlesnakes in the desert."
+    },
+    {
+      "startMs": 166360,
+      "endMs": 168920,
+      "text": "Is it dangerous to walk about?"
+    },
+    {
+      "startMs": 168920,
+      "endMs": 170960,
+      "text": "[Park Ranger]: This wildlife is quite safe."
+    },
+    {
+      "startMs": 170960,
+      "endMs": 176080,
+      "text": "There are very few people bitten by rattlesnakes, so we do recommend wearing trousers just"
+    },
+    {
+      "startMs": 176080,
+      "endMs": 177760,
+      "text": "to be on the safe side."
+    },
+    {
+      "startMs": 177760,
+      "endMs": 178920,
+      "text": "[Woman]: All right."
+    },
+    {
+      "startMs": 178920,
+      "endMs": 182760,
+      "text": "I was hoping that I might have the chance to see some wildlife too."
+    },
+    {
+      "startMs": 182760,
+      "endMs": 186560,
+      "text": "Oh, how much is the admission to the reserve?"
+    },
+    {
+      "startMs": 186560,
+      "endMs": 188040,
+      "text": "[Park Ranger]: It's $5."
+    },
+    {
+      "startMs": 188040,
+      "endMs": 191600,
+      "text": "[Woman]: Can I use my national park pass to enter the reserve?"
+    },
+    {
+      "startMs": 191600,
+      "endMs": 196200,
+      "text": "[Park Ranger]: Unfortunately not, since it is a state park, not a national park."
+    },
+    {
+      "startMs": 196200,
+      "endMs": 197760,
+      "text": "[Woman]: All right."
+    },
+    {
+      "startMs": 197800,
+      "endMs": 201480,
+      "text": "I heard from a friend that there is a nature tour available."
+    },
+    {
+      "startMs": 201480,
+      "endMs": 202920,
+      "text": "Can you tell me about it?"
+    },
+    {
+      "startMs": 202920,
+      "endMs": 206240,
+      "text": "[Park Ranger]: Certainly, but can you excuse me just a sec?"
+    },
+    {
+      "startMs": 206240,
+      "endMs": 207560,
+      "text": "I'll be right back."
+    },
+    {
+      "startMs": 207560,
+      "endMs": 208560,
+      "text": "[Woman]: OK."
+    },
+    {
+      "startMs": 227760,
+      "endMs": 246600,
+      "text": "[Narrator]: Now listen and answer questions 6 to 10."
+    },
+    {
+      "startMs": 246600,
+      "endMs": 247840,
+      "text": "[Park Ranger]: Hello?"
+    },
+    {
+      "startMs": 247840,
+      "endMs": 252440,
+      "text": "[Woman]: Yes, I'm still here."
+    },
+    {
+      "startMs": 252440,
+      "endMs": 256280,
+      "text": "[Park Ranger]: Now, you are interested in the nature tours, right?"
+    },
+    {
+      "startMs": 256280,
+      "endMs": 258600,
+      "text": "[Woman]: Oh, there's more than one."
+    },
+    {
+      "startMs": 258600,
+      "endMs": 259600,
+      "text": "[Park Ranger]: Yes."
+    },
+    {
+      "startMs": 259600,
+      "endMs": 263520,
+      "text": "We have the general tour, which is the one your friend may have taken."
+    },
+    {
+      "startMs": 263520,
+      "endMs": 266560,
+      "text": "But we also have two more specialized tours."
+    },
+    {
+      "startMs": 266560,
+      "endMs": 269760,
+      "text": "Starting at 7.30 a.m. is our general tour."
+    },
+    {
+      "startMs": 269760,
+      "endMs": 271880,
+      "text": "That's early for some people, I know."
+    },
+    {
+      "startMs": 271880,
+      "endMs": 274000,
+      "text": "It's offered every hour, too."
+    },
+    {
+      "startMs": 274000,
+      "endMs": 277320,
+      "text": "But it's a great time, and it only lasts 30 minutes."
+    },
+    {
+      "startMs": 277320,
+      "endMs": 280200,
+      "text": "[Woman]: Is that the tour that takes you to the vista points?"
+    },
+    {
+      "startMs": 280200,
+      "endMs": 285680,
+      "text": "[Park Ranger]: Yes, that is one of the highlights, along with a film introducing the park and the museum."
+    },
+    {
+      "startMs": 285680,
+      "endMs": 288440,
+      "text": "You're welcome to tour the museum at your leisure."
+    },
+    {
+      "startMs": 288440,
+      "endMs": 293040,
+      "text": "It's a great tour for those who just want to take panoramic pictures with automatic cameras."
+    },
+    {
+      "startMs": 293040,
+      "endMs": 298600,
+      "text": "[Woman]: Well, if I come all that way, I'd like to have a more detailed tour."
+    },
+    {
+      "startMs": 298600,
+      "endMs": 304640,
+      "text": "[Park Ranger]: Then you are in luck because we have a wonderful wildflower tour every two hours from 8 a.m."
+    },
+    {
+      "startMs": 304640,
+      "endMs": 308960,
+      "text": "It lasts one hour, and the volunteer will give you information about many of the flowers"
+    },
+    {
+      "startMs": 308960,
+      "endMs": 310480,
+      "text": "on the reserve."
+    },
+    {
+      "startMs": 310480,
+      "endMs": 313840,
+      "text": "[Woman]: Besides the poppies, will cream cups be in bloom?"
+    },
+    {
+      "startMs": 313880,
+      "endMs": 317160,
+      "text": "[Park Ranger]: Yes, and you will see lots of sage, too."
+    },
+    {
+      "startMs": 317160,
+      "endMs": 321520,
+      "text": "We have a volunteer who is really good at giving tips on close-up photography."
+    },
+    {
+      "startMs": 321520,
+      "endMs": 323760,
+      "text": "[Woman]: You mentioned another tour."
+    },
+    {
+      "startMs": 323760,
+      "endMs": 329920,
+      "text": "[Park Ranger]: Yes, the last one is the wildlife tour, but it is offered at very limited times."
+    },
+    {
+      "startMs": 329920,
+      "endMs": 333360,
+      "text": "[Woman]: Is that because most of the wildlife is nocturnal?"
+    },
+    {
+      "startMs": 333360,
+      "endMs": 339480,
+      "text": "[Park Ranger]: Yes, so we offer this tour only two times, 5.30 a.m. or 7.00 p.m."
+    },
+    {
+      "startMs": 339480,
+      "endMs": 345040,
+      "text": "[Woman]: Wow, that early, but don't the snakes and lizards like the sun?"
+    },
+    {
+      "startMs": 345040,
+      "endMs": 346040,
+      "text": "[Park Ranger]: Right."
+    },
+    {
+      "startMs": 346040,
+      "endMs": 349720,
+      "text": "First let me say it takes about an hour and a half, but you will have the opportunity to"
+    },
+    {
+      "startMs": 349720,
+      "endMs": 354040,
+      "text": "see other animals like coyotes, quail, and roadrunners."
+    },
+    {
+      "startMs": 354040,
+      "endMs": 358400,
+      "text": "You have to get here before the crowds arrive or after most of them leave."
+    },
+    {
+      "startMs": 358400,
+      "endMs": 359800,
+      "text": "[Woman]: Well, that makes sense."
+    },
+    {
+      "startMs": 359800,
+      "endMs": 363080,
+      "text": "Does it require a lot of walking?"
+    },
+    {
+      "startMs": 363080,
+      "endMs": 368320,
+      "text": "[Park Ranger]: More like a lot of standing, but most of the time you will be at one or two locations."
+    },
+    {
+      "startMs": 368320,
+      "endMs": 372640,
+      "text": "So we recommend bringing a tripod and zoom lens if you want to take pictures."
+    },
+    {
+      "startMs": 372640,
+      "endMs": 375160,
+      "text": "[Woman]: Well, thank you very much."
+    },
+    {
+      "startMs": 375160,
+      "endMs": 378440,
+      "text": "You've been extremely helpful and informative."
+    },
+    {
+      "startMs": 378440,
+      "endMs": 379440,
+      "text": "[Park Ranger]: You're welcome."
+    },
+    {
+      "startMs": 379440,
+      "endMs": 380680,
+      "text": "Glad I could be of service."
+    },
+    {
+      "startMs": 380680,
+      "endMs": 381680,
+      "text": "[Woman]: Goodbye."
+    },
+    {
+      "startMs": 381680,
+      "endMs": 382440,
+      "text": "[Park Ranger]: Goodbye."
+    },
+    {
+      "startMs": 382440,
+      "endMs": 388160,
+      "text": "[Narrator]: That is the end of Part 1."
+    },
+    {
+      "startMs": 388160,
+      "endMs": 391760,
+      "text": "You now have one minute to check your answers to Part 1."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 97,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -21,3 +21,6 @@ tmp/
 
 # Downloaded raw source files (question recalls etc.) - not committed
 data/raw/
+
+# Local Listening media fallback (~714MB); production serves these from OSS
+public/ielts/listening/

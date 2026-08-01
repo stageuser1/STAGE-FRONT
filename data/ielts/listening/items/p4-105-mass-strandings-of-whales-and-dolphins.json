@@ -1,0 +1,545 @@
+{
+  "id": "p4-105-mass-strandings-of-whales-and-dolphins",
+  "title": "Mass Strandings of Whales and Dolphins",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-f60f9c647d2c",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 482.088,
+    "checksum": "sha256:44237cdbc4d621acb33637e5a7e994ae6f0bf12130b865229f6d8e2027896e34"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. Mass Strandings of Whales and Dolphins Mass strandings: situations where groups of whales, dolphins, etc. swim onto the beach and die Common in areas where: the 31. __________ can change quickly. Several other theories: Parasites: e.g. some parasites can affect marine animals' 32. __________, which they depend on for navigation Toxins: Poisons from 33. __________ and animals, which are commonly consumed by whales e.g. Cape Cod (1988) – whales were killed by saxitoxin Accidental Strandings Animals may follow prey ashore, e.g. Thurston (1995) The majority of animals were not 34. __________ when they stranded Human Activity The Bahamas (2000) stranding was unusual because the whales were all 36. __________ were not in a 37. __________ Group Behavior More strandings in the most 38. __________ species of whales Further Reading: Marine Mammals Ashore (Connor) gives information about stranding 40. __________.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "the 31. __________ can change quickly.",
+          "answer": "tide"
+        },
+        {
+          "id": "32",
+          "text": "Parasites: e.g. some parasites can affect marine animals' 32. __________, which they depend on for navigation",
+          "answer": "ears/hearing"
+        },
+        {
+          "id": "33",
+          "text": "Toxins: Poisons from 33. __________ and animals, which are commonly consumed by whales e.g. Cape Cod (1988) – whales were killed by saxitoxin",
+          "answer": "plants"
+        },
+        {
+          "id": "34",
+          "text": "The majority of animals were not 34. __________ when they stranded",
+          "answer": "feeding"
+        },
+        {
+          "id": "35",
+          "text": "35. __________ from military tests are linked to some recent strandings",
+          "answer": "noises"
+        },
+        {
+          "id": "36",
+          "text": "were all 36. __________",
+          "answer": "healthy"
+        },
+        {
+          "id": "37",
+          "text": "were not in a 37. __________",
+          "answer": "group"
+        },
+        {
+          "id": "38",
+          "text": "More strandings in the most 38. __________ species of whales",
+          "answer": "social"
+        },
+        {
+          "id": "39",
+          "text": "1994 dolphin stranding – only the 39. __________ was ill",
+          "answer": "leader"
+        },
+        {
+          "id": "40",
+          "text": "Marine Mammals Ashore (Connor) gives information about stranding 40. __________.",
+          "answer": "networks"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Mass Strandings of Whales and Dolphins Mass strandings:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "situations where groups of whales, dolphins, etc. swim onto the beach and die",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Common in areas where:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "the 31. __________ can change quickly.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Several other theories:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Parasites: e.g. some parasites can affect marine animals' 32. __________, which they depend on for navigation",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Toxins: Poisons from 33. __________ and animals, which are commonly consumed by whales e.g. Cape Cod (1988) – whales were killed by saxitoxin",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Accidental Strandings",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Animals may follow prey ashore, e.g. Thurston (1995)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The majority of animals were not 34. __________ when they stranded",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Human Activity",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "35. __________ from military tests are linked to some recent strandings",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The Bahamas (2000) stranding was unusual because the whales",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "were all 36. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "were not in a 37. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Group Behavior",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "More strandings in the most 38. __________ species of whales",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1994 dolphin stranding – only the 39. __________ was ill",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Further Reading:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Marine Mammals Ashore (Connor) gives information about stranding 40. __________.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "tide",
+        "32": "ears/hearing",
+        "33": "plants",
+        "34": "feeding",
+        "35": "noises",
+        "36": "healthy",
+        "37": "group",
+        "38": "social",
+        "39": "leader",
+        "40": "networks"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8080,
+      "text": "Section 4."
+    },
+    {
+      "startMs": 8080,
+      "endMs": 14680,
+      "text": "You will hear part of a lecture about a problem related to the behaviour of certain sea creatures."
+    },
+    {
+      "startMs": 14680,
+      "endMs": 20640,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 79520,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 79520,
+      "endMs": 81720,
+      "text": "Good afternoon everyone."
+    },
+    {
+      "startMs": 81720,
+      "endMs": 86960,
+      "text": "Well with some of you about to go out on field work, it's timely that in this afternoon"
+    },
+    {
+      "startMs": 86960,
+      "endMs": 91960,
+      "text": "session I'll be sharing some ideas about the reasons why groups of whales and dolphins"
+    },
+    {
+      "startMs": 91960,
+      "endMs": 97880,
+      "text": "sometimes swim ashore from the sea right onto the beach and, most often, die in what"
+    },
+    {
+      "startMs": 97880,
+      "endMs": 100880,
+      "text": "are known as mass strandings."
+    },
+    {
+      "startMs": 100880,
+      "endMs": 105960,
+      "text": "Unfortunately, this type of event is a frequent occurrence in some of the locations that"
+    },
+    {
+      "startMs": 105960,
+      "endMs": 112880,
+      "text": "you'll be travelling to, where sometimes the tide goes out suddenly, confusing the animals."
+    },
+    {
+      "startMs": 113120,
+      "endMs": 118400,
+      "text": "However, there are many other theories about the causes of mass strandings."
+    },
+    {
+      "startMs": 118400,
+      "endMs": 122960,
+      "text": "The first is that the behaviour is linked to parasites."
+    },
+    {
+      "startMs": 122960,
+      "endMs": 128000,
+      "text": "It's often found that stranded animals were infested with large numbers of parasites."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 133840,
+      "text": "For instance, a type of worm is commonly found in the ears of dead whales."
+    },
+    {
+      "startMs": 133840,
+      "endMs": 139360,
+      "text": "Since marine animals rely heavily on their hearing to navigate, this type of infestation"
+    },
+    {
+      "startMs": 139360,
+      "endMs": 143200,
+      "text": "has the potential to be very harmful."
+    },
+    {
+      "startMs": 143200,
+      "endMs": 148080,
+      "text": "Another theory is related to toxins or poisons."
+    },
+    {
+      "startMs": 148080,
+      "endMs": 152960,
+      "text": "These have also been found to contribute to the death of many marine animals."
+    },
+    {
+      "startMs": 152960,
+      "endMs": 159320,
+      "text": "Many toxins, as I'm sure you're aware, originate from plants or animals."
+    },
+    {
+      "startMs": 159320,
+      "endMs": 164400,
+      "text": "The whale ingests these toxins in its normal feeding behaviour, but whether these poisons"
+    },
+    {
+      "startMs": 164400,
+      "endMs": 171360,
+      "text": "directly or indirectly lead to stranding and death, seems to depend upon the toxin involved."
+    },
+    {
+      "startMs": 171360,
+      "endMs": 178000,
+      "text": "In 1988, for example, 14 humpback whales examined after stranding along the beaches of Cape"
+    },
+    {
+      "startMs": 178000,
+      "endMs": 184720,
+      "text": "Cod were found to have been poisoned after eating tuna that contained saxitoxin,"
+    },
+    {
+      "startMs": 184720,
+      "endMs": 188960,
+      "text": "the same toxin that can be fatal in humans."
+    },
+    {
+      "startMs": 189280,
+      "endMs": 198240,
+      "text": "Alternatively, it has also been suggested that some animals strand accidentally by following"
+    },
+    {
+      "startMs": 198240,
+      "endMs": 201760,
+      "text": "their prey ashore in the confusion of the chase."
+    },
+    {
+      "startMs": 201760,
+      "endMs": 208320,
+      "text": "In 1995, David Thurston monitored pilot whales that beached after following squid ashore."
+    },
+    {
+      "startMs": 209040,
+      "endMs": 214320,
+      "text": "However, this idea does not seem to hold true for the majority of mass strandings,"
+    },
+    {
+      "startMs": 214320,
+      "endMs": 219520,
+      "text": "because examination of the animal's stomach contents revealed that most had not been feeding"
+    },
+    {
+      "startMs": 219520,
+      "endMs": 225760,
+      "text": "as they stranded. There are also some new theories which link strandings to humans."
+    },
+    {
+      "startMs": 226560,
+      "endMs": 231200,
+      "text": "A growing concern is that loud noises in the ocean cause strandings."
+    },
+    {
+      "startMs": 231840,
+      "endMs": 236720,
+      "text": "Noises such as those caused by military exercises are of particular concern,"
+    },
+    {
+      "startMs": 236720,
+      "endMs": 240640,
+      "text": "and have been pinpointed as the cause of some strandings of late."
+    },
+    {
+      "startMs": 241600,
+      "endMs": 246240,
+      "text": "One of these, a mass stranding of whales in 2000 in the Bahamas,"
+    },
+    {
+      "startMs": 246240,
+      "endMs": 250880,
+      "text": "coincided closely with experiments using a new submarine detection system."
+    },
+    {
+      "startMs": 251840,
+      "endMs": 256720,
+      "text": "There were several factors that made this stranding stand out as different from previous strandings."
+    },
+    {
+      "startMs": 257840,
+      "endMs": 260320,
+      "text": "This led researchers to look for a new cause."
+    },
+    {
+      "startMs": 261360,
+      "endMs": 264480,
+      "text": "For one, all the stranded animals were healthy."
+    },
+    {
+      "startMs": 265200,
+      "endMs": 270560,
+      "text": "In addition, the animals were spread out along 38 kilometers of coast,"
+    },
+    {
+      "startMs": 271120,
+      "endMs": 275280,
+      "text": "whereas it's more common for the animals to be found in a group when mass strandings occur."
+    },
+    {
+      "startMs": 276880,
+      "endMs": 279840,
+      "text": "A final theory is related to group behavior,"
+    },
+    {
+      "startMs": 280640,
+      "endMs": 285200,
+      "text": "and suggests that sea mammals cannot distinguish between sick and healthy leaders,"
+    },
+    {
+      "startMs": 285840,
+      "endMs": 289600,
+      "text": "and will follow sick leaders, even to an inevitable death."
+    },
+    {
+      "startMs": 290560,
+      "endMs": 296560,
+      "text": "This is a particularly interesting theory, since the whales that are thought to be most social,"
+    },
+    {
+      "startMs": 296560,
+      "endMs": 300240,
+      "text": "the toothed whales, are the group that strand the most frequently."
+    },
+    {
+      "startMs": 301280,
+      "endMs": 306560,
+      "text": "The theory is also supported by evidence from a dolphin stranding in 1994."
+    },
+    {
+      "startMs": 307360,
+      "endMs": 311280,
+      "text": "Examination of the dead animals revealed that, apart from the leader,"
+    },
+    {
+      "startMs": 311280,
+      "endMs": 314400,
+      "text": "all the others had been healthy at the time of their death."
+    },
+    {
+      "startMs": 315120,
+      "endMs": 321760,
+      "text": "Without one consistent theory, however, it is very hard for us to do anything about this"
+    },
+    {
+      "startMs": 321760,
+      "endMs": 325360,
+      "text": "phenomenon, except to assist animals where and when we can."
+    },
+    {
+      "startMs": 326400,
+      "endMs": 329920,
+      "text": "Stranding networks have been established around the world,"
+    },
+    {
+      "startMs": 329920,
+      "endMs": 334720,
+      "text": "to aid in rescuing animals and collecting samples from those that could not be helped."
+    },
+    {
+      "startMs": 335680,
+      "endMs": 339360,
+      "text": "I recommend John Connor's Marine Mammals Ashore,"
+    },
+    {
+      "startMs": 339360,
+      "endMs": 343920,
+      "text": "as an excellent starting point if you're interested in finding out more about these networks,"
+    },
+    {
+      "startMs": 344400,
+      "endMs": 345840,
+      "text": "or establishing one yourself."
+    },
+    {
+      "startMs": 349280,
+      "endMs": 351200,
+      "text": "That is the end of section 4."
+    },
+    {
+      "startMs": 352480,
+      "endMs": 355680,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 374720,
+      "endMs": 379920,
+      "text": "That is the end of the listening test."
+    },
+    {
+      "startMs": 389920,
+      "endMs": 397280,
+      "text": "In the IELTS test, you would now have 10 minutes to transfer your answers to the answer sheet."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 60,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

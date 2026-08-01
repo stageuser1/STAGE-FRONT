@@ -1,0 +1,635 @@
+{
+  "id": "p1-55-swimming-lessons",
+  "title": "Swimming Lessons",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-b0ea63fe94ac",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 453.072,
+    "checksum": "sha256:9e762db1f1fee696c5570fe51f4d90b129c08ae635bb7a233256e67a34d6a268"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Swimming Lessons Classes available Water Babies For babies of three months upwards Focus: water familiarisation using 1. __________ Cost: £3.80 per lesson Beginners For people with no experience of swimming opening the eyes underwater swimming five metres Intermediate learning main swimming strokes introduction to 3. __________ swimming underwater Cost: £61 per course maximum of 12 pupils per class class is for 5. __________ Advances more efficient techniques improving 6. __________ competitions Other information Date when Intermediate course begins: Tuesday 7. __________ (need to register soon) Time: 7.30 p.m. Participants will be provided with a swimming 8. __________ Bring change for the 9. __________ Benefits of swimming Health benefits Improvement in 10. __________ Could save a life",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Focus: water familiarisation using 1. __________",
+          "answer": "toys"
+        },
+        {
+          "id": "2",
+          "text": "2. __________ techniques",
+          "answer": "breathing"
+        },
+        {
+          "id": "3",
+          "text": "introduction to 3. __________",
+          "answer": "diving"
+        },
+        {
+          "id": "4",
+          "text": "4. __________ in the water",
+          "answer": "safety"
+        },
+        {
+          "id": "5",
+          "text": "class is for 5. __________",
+          "answer": "adults"
+        },
+        {
+          "id": "6",
+          "text": "improving 6. __________",
+          "answer": "speed"
+        },
+        {
+          "id": "7",
+          "text": "Date when Intermediate course begins: Tuesday 7. __________",
+          "answer": "January 13th/January 13/13 January/13th January"
+        },
+        {
+          "id": "8",
+          "text": "Participants will be provided with a swimming 8. __________",
+          "answer": "hat"
+        },
+        {
+          "id": "9",
+          "text": "Bring change for the 9. __________",
+          "answer": "locker"
+        },
+        {
+          "id": "10",
+          "text": "Improvement in 10. __________",
+          "answer": "confidence"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Swimming Lessons",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Classes available",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Water Babies",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "For babies of three months upwards",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Focus: water familiarisation using 1. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Cost: £3.80 per lesson",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Beginners",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "For people with no experience of swimming",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "2. __________ techniques",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "opening the eyes underwater",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "swimming five metres",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Intermediate",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "learning main swimming strokes",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "introduction to 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "swimming underwater",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "4. __________ in the water",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Cost: £61 per course",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "maximum of 12 pupils per class",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "class is for 5. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Advances",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "more efficient techniques",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "improving 6. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "competitions",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Other information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Date when Intermediate course begins: Tuesday 7. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "(need to register soon)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Time: 7.30 p.m.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Participants will be provided with a swimming 8. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Bring change for the 9. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Benefits of swimming",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Health benefits",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Improvement in 10. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Could save a life",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "toys",
+        "2": "breathing",
+        "3": "diving",
+        "4": "safety",
+        "5": "adults",
+        "6": "speed",
+        "7": "January 13th/January 13/13 January/13th January",
+        "8": "hat",
+        "9": "locker",
+        "10": "confidence"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 15000,
+      "text": "Section 1. You will hear a man telephoning to ask for information about swimming lessons."
+    },
+    {
+      "startMs": 15000,
+      "endMs": 21000,
+      "text": "First, you have some time to look at questions 1 to 6 on page 2."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 55000,
+      "text": "You will see that there is an example that has been done for you."
+    },
+    {
+      "startMs": 55000,
+      "endMs": 64000,
+      "text": "On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 64000,
+      "endMs": 67000,
+      "text": "Staff: Hello, City Swim School."
+    },
+    {
+      "startMs": 67000,
+      "endMs": 74000,
+      "text": "Caller: Oh, hello. I wanted to ask about swimming lessons. That's in a class, not individual."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 78000,
+      "text": "Staff: Right. Well, we do group lessons at various levels."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 86000,
+      "text": "To start off with, we have what we call the water babies class."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 94000,
+      "text": "The first class is called water babies, so babies has been written in the space."
+    },
+    {
+      "startMs": 94000,
+      "endMs": 104000,
+      "text": "Now we shall begin. You should answer the questions as you listen because you will not hear the recording a second time."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 111000,
+      "text": "Listen carefully and answer questions 1 to 6."
+    },
+    {
+      "startMs": 111000,
+      "endMs": 121000,
+      "text": "Staff: Hello, City Swim School. Caller: Oh, hello. I wanted to ask about swimming lessons. That's in a class, not individual."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 130000,
+      "text": "Staff: Right. Well, we do group lessons at various levels. To start off with, we have what we call the water babies class."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 135000,
+      "text": "That's for babies of three months and over. Caller: Really, as young as that."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 138000,
+      "text": "Staff: Yes, that's really the best time to start."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 147000,
+      "text": "Caller: Right. Well, we do have a baby, so I'll make a note of that. What do they actually do in the lessons?"
+    },
+    {
+      "startMs": 147000,
+      "endMs": 155000,
+      "text": "Staff: Well, the main aim is just to familiarise them with the water, so they feel it is there. They get the children to enjoy themselves."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 160000,
+      "text": "They have lots of toys and things they can use to play with in the water."
+    },
+    {
+      "startMs": 160000,
+      "endMs": 164000,
+      "text": "Caller: Right. And how much do the lessons cost?"
+    },
+    {
+      "startMs": 164000,
+      "endMs": 173000,
+      "text": "Staff: They're held on Tuesday mornings and each lesson costs £3.80. It's not really a course as such."
+    },
+    {
+      "startMs": 173000,
+      "endMs": 181000,
+      "text": "Caller: Okay. Well, I'll talk to my wife about that. But I was actually ringing about lessons for me."
+    },
+    {
+      "startMs": 181000,
+      "endMs": 184000,
+      "text": "Staff: Okay. So, are you a beginner?"
+    },
+    {
+      "startMs": 184000,
+      "endMs": 187000,
+      "text": "Caller: Not exactly, but I'm not very good."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 193000,
+      "text": "Staff: Well, the beginner's classes are really for people who don't have any experience of swimming."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 201000,
+      "text": "They aim to teach you techniques for breathing in the water, and they get you to do things like put your head underwater and open your eyes."
+    },
+    {
+      "startMs": 201000,
+      "endMs": 204000,
+      "text": "Caller: Okay. I can do that."
+    },
+    {
+      "startMs": 204000,
+      "endMs": 209000,
+      "text": "Staff: And by the end of the course, they aim to have you swimming five metres."
+    },
+    {
+      "startMs": 209000,
+      "endMs": 212000,
+      "text": "Caller: I think I can probably just about do that."
+    },
+    {
+      "startMs": 212000,
+      "endMs": 217000,
+      "text": "Staff: Okay. So, you'd be better in the intermediate class then."
+    },
+    {
+      "startMs": 217000,
+      "endMs": 224000,
+      "text": "That's where you learn the main swimming strokes, front stroke, back stroke and so on."
+    },
+    {
+      "startMs": 224000,
+      "endMs": 226000,
+      "text": "Caller: What about diving?"
+    },
+    {
+      "startMs": 226000,
+      "endMs": 232000,
+      "text": "Staff: Yes, they teach you how to do that. And you'd also do some underwater swimming."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 234000,
+      "text": "Caller: Not with a tank or anything."
+    },
+    {
+      "startMs": 234000,
+      "endMs": 239000,
+      "text": "Staff: Oh no, not scuba, just ordinary underwater swimming."
+    },
+    {
+      "startMs": 239000,
+      "endMs": 248000,
+      "text": "And in the intermediate course, you also look at water safety, both in the pool and when swimming in other places."
+    },
+    {
+      "startMs": 248000,
+      "endMs": 255000,
+      "text": "Caller: Okay. Well, that sounds the right level for me, I think. So, how much does that cost?"
+    },
+    {
+      "startMs": 255000,
+      "endMs": 259000,
+      "text": "Staff: 61 pounds for a course. That's ten lessons."
+    },
+    {
+      "startMs": 259000,
+      "endMs": 263000,
+      "text": "Caller: Can you tell me a bit more about the class? How many people would there be in it?"
+    },
+    {
+      "startMs": 263000,
+      "endMs": 269000,
+      "text": "Staff: Well, the intermediate class is usually around eight to ten. That's what we aim at."
+    },
+    {
+      "startMs": 269000,
+      "endMs": 272000,
+      "text": "Though occasionally it might go up to twelve."
+    },
+    {
+      "startMs": 272000,
+      "endMs": 276000,
+      "text": "Caller: Okay. That sounds quite a reasonable size, not too many."
+    },
+    {
+      "startMs": 276000,
+      "endMs": 279000,
+      "text": "And the class is for adults, is it?"
+    },
+    {
+      "startMs": 279000,
+      "endMs": 280000,
+      "text": "Staff: Yes."
+    },
+    {
+      "startMs": 280000,
+      "endMs": 284000,
+      "text": "Caller: Okay. And just out of interest, is there an advanced class?"
+    },
+    {
+      "startMs": 284000,
+      "endMs": 291000,
+      "text": "Staff: Yes. They focus on developing more efficient swimming techniques and on working on your speed."
+    },
+    {
+      "startMs": 291000,
+      "endMs": 295000,
+      "text": "And they also prepare you for competitive swimming."
+    },
+    {
+      "startMs": 295000,
+      "endMs": 302000,
+      "text": "Caller: Okay. Now, I think I'd want to start with the intermediate one, really."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 311000,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions seven to ten on page three."
+    },
+    {
+      "startMs": 321000,
+      "endMs": 336000,
+      "text": "Now listen and answer questions seven to ten."
+    },
+    {
+      "startMs": 336000,
+      "endMs": 342000,
+      "text": "Caller: Now, is there anything special I need to know?"
+    },
+    {
+      "startMs": 342000,
+      "endMs": 348000,
+      "text": "Staff: Well, the classes are on Tuesdays and the first lesson is on January the 13th."
+    },
+    {
+      "startMs": 348000,
+      "endMs": 357000,
+      "text": "So you need to register before then. January the 8th is the latest, but it's filling up quickly, so I'd do it straight away."
+    },
+    {
+      "startMs": 357000,
+      "endMs": 363000,
+      "text": "You can pick up a form here or get one off the internet. And classes are at 7.30pm."
+    },
+    {
+      "startMs": 363000,
+      "endMs": 369000,
+      "text": "Caller: Right. Then I just roll up with my swimming trunks. Do I have to bring my own towel?"
+    },
+    {
+      "startMs": 369000,
+      "endMs": 374000,
+      "text": "Staff: That's right. We provide all participants with a swimming hat, though."
+    },
+    {
+      "startMs": 374000,
+      "endMs": 377000,
+      "text": "Caller: Oh. I don't usually wear one."
+    },
+    {
+      "startMs": 377000,
+      "endMs": 384000,
+      "text": "Staff: Well, we do insist on it, actually. It helps the instructor to identify you, apart from anything else."
+    },
+    {
+      "startMs": 384000,
+      "endMs": 388000,
+      "text": "Oh, and don't forget you need a 20p coin for the locker."
+    },
+    {
+      "startMs": 388000,
+      "endMs": 393000,
+      "text": "Caller: Oh, okay. Right. Well, I've been meaning to do this for ages."
+    },
+    {
+      "startMs": 393000,
+      "endMs": 398000,
+      "text": "I really need to get some more exercise and everyone says swimming is good for your health."
+    },
+    {
+      "startMs": 398000,
+      "endMs": 403000,
+      "text": "Staff: Yes. And a lot of people find it improves their confidence, too."
+    },
+    {
+      "startMs": 403000,
+      "endMs": 407000,
+      "text": "And of course it could save your life, or even someone else's."
+    },
+    {
+      "startMs": 407000,
+      "endMs": 412000,
+      "text": "Caller: That's right. Okay. Well, thanks very much. Goodbye."
+    },
+    {
+      "startMs": 412000,
+      "endMs": 415000,
+      "text": "Staff: Goodbye."
+    },
+    {
+      "startMs": 415000,
+      "endMs": 422000,
+      "text": "That is the end of section 1. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 65,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

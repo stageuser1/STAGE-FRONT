@@ -1,0 +1,420 @@
+{
+  "id": "p4-24-african-clawed-frog",
+  "title": "African Clawed Frog",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-c8626d16137b",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 430.08,
+    "checksum": "sha256:1319dd75da55efdbb305b89cc1d0445d7ce295581b8e54c6bf9340baa62e8a87"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. African Clawed Frog (Xenopus Laevis) Description: They have no tongue or external ears. Their skin is 31. ________. The mucus on their skin is for 32. ________. Male frogs are 33. ________ the size of female frogs. Habitats: They prefer 34. ________ water. They live in oases or glacier-covered lakes. They live in a condition with a high level of 35. ________. In the condition of drought, they can survive in 36. ________ for a long period of time. Diet: They use the sense of 37. ________ to capture food. They use their claws to tear apart ample food. They use their front feet and a unique 38. ________ system when feeding. Other information: People in some states of the USA regard them as 39. ________. The mucus on their skin has 40. ________ properties.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Their skin is 31. ________.",
+          "answer": "smooth"
+        },
+        {
+          "id": "32",
+          "text": "The mucus on their skin is for 32. ________.",
+          "answer": "protection"
+        },
+        {
+          "id": "33",
+          "text": "Male frogs are 33. ________ the size of female frogs.",
+          "answer": "half"
+        },
+        {
+          "id": "34",
+          "text": "They prefer 34. ________ water.",
+          "answer": "still"
+        },
+        {
+          "id": "35",
+          "text": "They live in a condition with a high level of 35. ________.",
+          "answer": "salt"
+        },
+        {
+          "id": "36",
+          "text": "In the condition of drought, they can survive in 36. ________ for a long period of time.",
+          "answer": "mud"
+        },
+        {
+          "id": "37",
+          "text": "They use the sense of 37. ________ to capture food.",
+          "answer": "smell"
+        },
+        {
+          "id": "38",
+          "text": "They use their front feet and a unique 38. ________ system when feeding.",
+          "answer": "pump"
+        },
+        {
+          "id": "39",
+          "text": "People in some states of the USA regard them as 39. ________.",
+          "answer": "pest"
+        },
+        {
+          "id": "40",
+          "text": "The mucus on their skin has 40. ________ properties.",
+          "answer": "antibiotic"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "African Clawed Frog (Xenopus Laevis)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Description:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "They have no tongue or external ears.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Their skin is 31. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The mucus on their skin is for 32. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Male frogs are 33. ________ the size of female frogs.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Habitats:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "They prefer 34. ________ water.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They live in oases or glacier-covered lakes.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They live in a condition with a high level of 35. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the condition of drought, they can survive in 36. ________ for a long period of time.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Diet:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "They use the sense of 37. ________ to capture food.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They use their claws to tear apart ample food.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They use their front feet and a unique 38. ________ system when feeding.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Other information:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "People in some states of the USA regard them as 39. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The mucus on their skin has 40. ________ properties.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "smooth",
+        "32": "protection",
+        "33": "half",
+        "34": "still",
+        "35": "salt",
+        "36": "mud",
+        "37": "smell",
+        "38": "pump",
+        "39": "pest",
+        "40": "antibiotic"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13240,
+      "text": "Part 4."
+    },
+    {
+      "startMs": 13240,
+      "endMs": 20400,
+      "text": "You will hear part of a biology lecture about an animal called the African Claude frog."
+    },
+    {
+      "startMs": 20400,
+      "endMs": 25760,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 50400,
+      "endMs": 75880,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 75880,
+      "endMs": 91880,
+      "text": "Today, I'd like to look at another type of amphibian, the African Claude frog, whose Latin name is Xenopus Levis."
+    },
+    {
+      "startMs": 91880,
+      "endMs": 99880,
+      "text": "Its name is derived from the three short claws on each hind foot, which it uses to tear apart its food."
+    },
+    {
+      "startMs": 100880,
+      "endMs": 106880,
+      "text": "The Latin word Xenopus means strange foot and Levis means smooth."
+    },
+    {
+      "startMs": 106880,
+      "endMs": 117880,
+      "text": "I'll start with a general description. The African Claude frog is a species of frog that can be commonly found in the eastern and southern parts of Africa."
+    },
+    {
+      "startMs": 117880,
+      "endMs": 123880,
+      "text": "They have a flattened head and body, but no tongue or external ears."
+    },
+    {
+      "startMs": 124880,
+      "endMs": 133880,
+      "text": "As the Latin name suggests, African Claude frogs have smooth skin, unlike the toad, whose skin always has a rough texture."
+    },
+    {
+      "startMs": 133880,
+      "endMs": 145880,
+      "text": "The body of African Claude frogs is covered with mucus, which can give their sensitive skin protection, thus playing an indispensable role in their survival."
+    },
+    {
+      "startMs": 146880,
+      "endMs": 156880,
+      "text": "Male and female African Claude frogs can be easily distinguished through several characteristics, and the major one is their size."
+    },
+    {
+      "startMs": 156880,
+      "endMs": 174880,
+      "text": "Generally, male frogs are about half as big as females. Specifically, female frogs are usually 4.5 inches long, weighing around 7 ounces, while males are generally 2.5 inches long and 2 ounces heavy."
+    },
+    {
+      "startMs": 174880,
+      "endMs": 188880,
+      "text": "Then, let's turn to their habitats. African Claude frogs are entirely aquatic frogs, so they live in water all their life, whether they are tadpoles or adult frogs."
+    },
+    {
+      "startMs": 188880,
+      "endMs": 198880,
+      "text": "Although they can live in a wide range of freshwater environments, they particularly like stillwater, instead of fast-flowing streams."
+    },
+    {
+      "startMs": 198880,
+      "endMs": 209880,
+      "text": "During the summer, African Claude frogs are mainly found in warm rivers, and during the rainy season, they tend to move into flooded forests."
+    },
+    {
+      "startMs": 209880,
+      "endMs": 220880,
+      "text": "In the wild, African Claude frogs are highly adaptable to changes in the environment around them, whether in oasis or glacier-covered lakes."
+    },
+    {
+      "startMs": 220880,
+      "endMs": 238880,
+      "text": "Besides, they can even survive in water with high salt levels. It is because African Claude frogs have a unique physiological mechanism in their body that could automatically regulate the balance of water inside and outside their body."
+    },
+    {
+      "startMs": 238880,
+      "endMs": 253880,
+      "text": "In dry weather, African Claude frogs always borrow themselves into mud, where they can survive for more than a year. They are incredibly hardy and long-lived, with an average lifespan of 5 to 15 years."
+    },
+    {
+      "startMs": 253880,
+      "endMs": 271880,
+      "text": "Some are even recorded to have lived for 20 to 25 years. However, African Claude frogs are susceptible to the pollution of the water, even though they are not listed as endangered species."
+    },
+    {
+      "startMs": 272880,
+      "endMs": 282880,
+      "text": "Now let's talk about the diet of African Claude frogs. They are carnivores that like hunting insects, spiders, worms, fish etc."
+    },
+    {
+      "startMs": 282880,
+      "endMs": 293880,
+      "text": "African Claude frogs depend on the sense of smell to detect their prey. They first use the claws on their hind feet to tear pieces of ample food."
+    },
+    {
+      "startMs": 293880,
+      "endMs": 312880,
+      "text": "Then the front feet, which are not webbed, play an important role in feeding. African Claude frogs use their front feet to push food into their mouths, and meanwhile a distinctive pump system is used to draw or suck food in their mouths."
+    },
+    {
+      "startMs": 313880,
+      "endMs": 333880,
+      "text": "So we can see African Claude frogs are voracious predators and can quickly adapt to many habitats. Therefore, in some parts of the world, African Claude frogs act like invasive species, which will negatively affect other species in the fresh water ecosystems."
+    },
+    {
+      "startMs": 333880,
+      "endMs": 356880,
+      "text": "The evidence shows that they have devastated the populations of native frogs and other creatures by eating their young. As a result, African Claude frogs are illegal to own, transport, or sell without any permit in some states of America, like California, Washington, Arizona etc."
+    },
+    {
+      "startMs": 356880,
+      "endMs": 366880,
+      "text": "Where African Claude frogs have been seen as a type of pest. However, it's legal to own African Claude frogs in Canada."
+    },
+    {
+      "startMs": 366880,
+      "endMs": 380880,
+      "text": "But not many people know that African Claude frogs are also used in medicine. As we mentioned before, the skin of African Claude frogs is covered with mucous, which has properties of antibiotic."
+    },
+    {
+      "startMs": 380880,
+      "endMs": 390880,
+      "text": "This chemical can help kill bacteria and cure the infection, and is widely used by both the medical profession and the general public."
+    },
+    {
+      "startMs": 390880,
+      "endMs": 397880,
+      "text": "So we shouldn't ignore the medical value of African Claude frogs."
+    },
+    {
+      "startMs": 397880,
+      "endMs": 405880,
+      "text": "That is the end of Part 4. You now have one minute to check your answers to Part 4."
+    },
+    {
+      "startMs": 427880,
+      "endMs": 435880,
+      "text": "The end of Part 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 31,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

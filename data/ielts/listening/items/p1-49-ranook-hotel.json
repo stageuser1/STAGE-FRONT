@@ -1,0 +1,375 @@
+{
+  "id": "p1-49-ranook-hotel",
+  "title": "Ranook Hotel",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-f7b0942015cb",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 215.144,
+    "checksum": "sha256:17eadf4ffd961b09eb04788b85ce06fb93de64ed0f9670fb5543edaa6b9b7d4a"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below Write ONE WORD AND/OR A NUMBER for each answer Ranook Hotel Booking information Name of the room selected: 1. __________ Contact number: 2. __________ Name: Ethan 3. __________ Booking date: 4. __________ Price per night: $ 5. __________ Room information Type of package: 7. __________ Location: in the 8. __________ Requirement: close to a 9. __________ Item provided: a 10. __________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Name of the room selected: 1. __________",
+          "answer": "power"
+        },
+        {
+          "id": "2",
+          "text": "Contact number: 2. __________",
+          "answer": "0416334082"
+        },
+        {
+          "id": "3",
+          "text": "Name: Ethan 3. __________",
+          "answer": "ASCOT"
+        },
+        {
+          "id": "4",
+          "text": "Booking date: 4. __________",
+          "answer": "July 6th/July 6/6 July/6th July"
+        },
+        {
+          "id": "5",
+          "text": "Price per night: $ 5. __________",
+          "answer": "250"
+        },
+        {
+          "id": "6",
+          "text": "A good view of a 6. __________",
+          "answer": "river"
+        },
+        {
+          "id": "7",
+          "text": "Type of package: 7. __________",
+          "answer": "value"
+        },
+        {
+          "id": "8",
+          "text": "Location: in the 8. __________",
+          "answer": "east"
+        },
+        {
+          "id": "9",
+          "text": "Requirement: close to a 9. __________",
+          "answer": "beach"
+        },
+        {
+          "id": "10",
+          "text": "Item provided: a 10. __________",
+          "answer": "map"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Ranook Hotel",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Booking information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Name of the room selected: 1. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Contact number: 2. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Name: Ethan 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Booking date: 4. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Price per night: $ 5. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Room information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A good view of a 6. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Type of package: 7. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Location: in the 8. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Requirement: close to a 9. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Item provided: a 10. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "power",
+        "2": "0416334082",
+        "3": "ASCOT",
+        "4": "July 6th/July 6/6 July/6th July",
+        "5": "250",
+        "6": "river",
+        "7": "value",
+        "8": "east",
+        "9": "beach",
+        "10": "map"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 15400,
+      "text": "Guest: Hello, I'm looking to book a hotel room for an upcoming trip."
+    },
+    {
+      "startMs": 15400,
+      "endMs": 16400,
+      "text": "Receptionist: Welcome."
+    },
+    {
+      "startMs": 16400,
+      "endMs": 21680,
+      "text": "We're delighted to assist you with your reservation at Ranook Hotel."
+    },
+    {
+      "startMs": 21680,
+      "endMs": 26880,
+      "text": "We offer a variety of room options, including the garden room for business travelers, the"
+    },
+    {
+      "startMs": 26880,
+      "endMs": 33080,
+      "text": "executive room, and a power room, ideal for families with extra beds or a sofa bed."
+    },
+    {
+      "startMs": 33080,
+      "endMs": 36240,
+      "text": "Guest: I believe the power room will be perfect for my family."
+    },
+    {
+      "startMs": 36240,
+      "endMs": 38480,
+      "text": "Receptionist: Excellent choice."
+    },
+    {
+      "startMs": 38480,
+      "endMs": 42400,
+      "text": "Could you please provide me with your telephone number so we can keep you updated on your"
+    },
+    {
+      "startMs": 42400,
+      "endMs": 43400,
+      "text": "booking?"
+    },
+    {
+      "startMs": 43400,
+      "endMs": 44400,
+      "text": "Guest: Certainly."
+    },
+    {
+      "startMs": 44400,
+      "endMs": 51200,
+      "text": "My number is 0, 4, 1, 6, double 3, 4, 0, 8, 2."
+    },
+    {
+      "startMs": 51200,
+      "endMs": 52800,
+      "text": "Receptionist: Thank you."
+    },
+    {
+      "startMs": 52800,
+      "endMs": 54480,
+      "text": "And may I have your name for the booking?"
+    },
+    {
+      "startMs": 54480,
+      "endMs": 56480,
+      "text": "Guest: I'm Ethan Ascot."
+    },
+    {
+      "startMs": 56480,
+      "endMs": 59480,
+      "text": "A-S-C-O-T. A-S-C-O-T。"
+    },
+    {
+      "startMs": 59480,
+      "endMs": 61400,
+      "text": "Receptionist: When do you plan to check in and out?"
+    },
+    {
+      "startMs": 61400,
+      "endMs": 66240,
+      "text": "Guest: We'll check in on July 6 when our family holiday begins and check out on July 8."
+    },
+    {
+      "startMs": 66240,
+      "endMs": 75800,
+      "text": "Receptionist: The room rate for tonight is $250 at a discounted rate, reduced from the original price of $265."
+    },
+    {
+      "startMs": 75800,
+      "endMs": 78040,
+      "text": "Do you have any specific room preferences?"
+    },
+    {
+      "startMs": 78040,
+      "endMs": 83120,
+      "text": "Guest: I'd love a room with a view of the river, a change from my usual work environment."
+    },
+    {
+      "startMs": 84120,
+      "endMs": 88000,
+      "text": "Receptionist: We'll ensure your room meets that requirement."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 93400,
+      "text": "We also offer two packages, the luxurious package with a three day trip near the hotel"
+    },
+    {
+      "startMs": 93400,
+      "endMs": 97800,
+      "text": "and a value package where you can plan your own activities."
+    },
+    {
+      "startMs": 97800,
+      "endMs": 100760,
+      "text": "It's more economical and suitable for families."
+    },
+    {
+      "startMs": 100760,
+      "endMs": 102640,
+      "text": "Guest: I'll opt for the second one."
+    },
+    {
+      "startMs": 102640,
+      "endMs": 105200,
+      "text": "Could you also tell me the hotel's location?"
+    },
+    {
+      "startMs": 105200,
+      "endMs": 106200,
+      "text": "Receptionist: Certainly."
+    },
+    {
+      "startMs": 106200,
+      "endMs": 112600,
+      "text": "We're located in the east of the city, approximately a 20 km drive from the city center."
+    },
+    {
+      "startMs": 113400,
+      "endMs": 116000,
+      "text": "Is there anything else you need assistance with?"
+    },
+    {
+      "startMs": 116000,
+      "endMs": 119000,
+      "text": "Guest: I was hoping to be near a beach for leisurely walks."
+    },
+    {
+      "startMs": 119000,
+      "endMs": 120840,
+      "text": "Receptionist: You're in luck."
+    },
+    {
+      "startMs": 120840,
+      "endMs": 126400,
+      "text": "We're a seaside hotel, so you can enjoy relaxing beach walks easily."
+    },
+    {
+      "startMs": 126400,
+      "endMs": 130400,
+      "text": "We'll provide you with a map to explore nearby scenic spots effortlessly."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 33,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

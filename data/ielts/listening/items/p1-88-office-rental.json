@@ -1,0 +1,715 @@
+{
+  "id": "p1-88-office-rental",
+  "title": "Office Rental",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-941e5c19c511",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 424.931,
+    "checksum": "sha256:21729a4a71244735d8beaab06ec47b088b4e8b8fbcafc265754af699e14048bf"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER Office Rental Example Address: 21 North Avenue Type of company: 1. ______ Full name: Jonathan Smith Position: 2. ______ Location: near the 3. ______ No. of people: 30 Preferred size of the area: 4. ______ ft² Requirements: 24-hour 5. ______ Preferred facilities: a (an) 7. ______ to cook in a (an) 8. ______ away from the workspace No. of power sockets: 40 Daily exercise: a (an) 9. ______ Unnecessary: 10. ______ Other requirements: WIFI Arrangement of viewing: 3 p.m on Thursday",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Type of company: 1. ______",
+          "answer": "Advertising"
+        },
+        {
+          "id": "2",
+          "text": "Position: 2. ______",
+          "answer": "Regional Manager"
+        },
+        {
+          "id": "3",
+          "text": "Location: near the 3. ______",
+          "answer": "Station"
+        },
+        {
+          "id": "4",
+          "text": "Preferred size of the area: 4. ______ ft²",
+          "answer": "10000/10,000"
+        },
+        {
+          "id": "5",
+          "text": "24-hour 5. ______",
+          "answer": "Security"
+        },
+        {
+          "id": "6",
+          "text": "6. ______ on ground floor",
+          "answer": "Reception"
+        },
+        {
+          "id": "7",
+          "text": "a (an) 7. ______ to cook in",
+          "answer": "Kitchen"
+        },
+        {
+          "id": "8",
+          "text": "a (an) 8. ______ away from the workspace",
+          "answer": "Basement"
+        },
+        {
+          "id": "9",
+          "text": "Daily exercise: a (an) 9. ______",
+          "answer": "Gym"
+        },
+        {
+          "id": "10",
+          "text": "Unnecessary: 10. ______",
+          "answer": "Furniture"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Office Rental",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Example Address: 21 North Avenue",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Type of company: 1. ______",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Full name: Jonathan Smith",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Position: 2. ______",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Location: near the 3. ______",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "No. of people: 30",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Preferred size of the area: 4. ______ ft²",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Requirements:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "24-hour 5. ______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "6. ______ on ground floor",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Preferred facilities:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "a (an) 7. ______ to cook in",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a (an) 8. ______ away from the workspace",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "No. of power sockets: 40",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Daily exercise: a (an) 9. ______",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Unnecessary: 10. ______",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Other requirements: WIFI",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Arrangement of viewing: 3 p.m on Thursday",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Advertising",
+        "2": "Regional Manager",
+        "3": "Station",
+        "4": "10000/10,000",
+        "5": "Security",
+        "6": "Reception",
+        "7": "Kitchen",
+        "8": "Basement",
+        "9": "Gym",
+        "10": "Furniture"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 4720,
+      "text": "Agent: Hello, how can I help you today?"
+    },
+    {
+      "startMs": 4720,
+      "endMs": 6040,
+      "text": "Caller: Ah yes, hello."
+    },
+    {
+      "startMs": 6040,
+      "endMs": 9920,
+      "text": "I'm just phoning you as I have seen an advertisement on your website for a property"
+    },
+    {
+      "startMs": 9920,
+      "endMs": 12120,
+      "text": "that I'm interested in renting."
+    },
+    {
+      "startMs": 12120,
+      "endMs": 16600,
+      "text": "If possible, I'd like to find out some more information before I organise a viewing."
+    },
+    {
+      "startMs": 16600,
+      "endMs": 18200,
+      "text": "Agent: No problem at all."
+    },
+    {
+      "startMs": 18200,
+      "endMs": 22000,
+      "text": "What is the address of the property that you'd like to inquire about?"
+    },
+    {
+      "startMs": 22000,
+      "endMs": 24000,
+      "text": "Caller: It's 21 North Avenue."
+    },
+    {
+      "startMs": 24000,
+      "endMs": 27120,
+      "text": "Agent: Okay, what is it that you'd like to know?"
+    },
+    {
+      "startMs": 27120,
+      "endMs": 31120,
+      "text": "Caller: First of all, I'd like to know what facilities the office has, as I need to make sure that"
+    },
+    {
+      "startMs": 31120,
+      "endMs": 34240,
+      "text": "it'll be suitable for my advertising company."
+    },
+    {
+      "startMs": 34240,
+      "endMs": 35240,
+      "text": "Agent: I see."
+    },
+    {
+      "startMs": 35240,
+      "endMs": 40960,
+      "text": "The office contains a large open plan space with a wide frontage onto a busy street with"
+    },
+    {
+      "startMs": 40960,
+      "endMs": 43120,
+      "text": "lots of passers-by."
+    },
+    {
+      "startMs": 43120,
+      "endMs": 46320,
+      "text": "So your business would have a really good street presence."
+    },
+    {
+      "startMs": 46320,
+      "endMs": 51120,
+      "text": "There was also a toilet and newly refurbished kitchen equipped with dishwasher and oven."
+    },
+    {
+      "startMs": 51120,
+      "endMs": 53080,
+      "text": "Caller: Wow, that sounds great."
+    },
+    {
+      "startMs": 53080,
+      "endMs": 55920,
+      "text": "I'd definitely like to register my interest."
+    },
+    {
+      "startMs": 56000,
+      "endMs": 57280,
+      "text": "Agent: Okay, perfect."
+    },
+    {
+      "startMs": 57280,
+      "endMs": 61320,
+      "text": "I just need to take some details from you, if that's okay."
+    },
+    {
+      "startMs": 61320,
+      "endMs": 63320,
+      "text": "What is your full name?"
+    },
+    {
+      "startMs": 63320,
+      "endMs": 64320,
+      "text": "Caller: Jonathan Smith. Caller：Jonathan Smith。"
+    },
+    {
+      "startMs": 64320,
+      "endMs": 68320,
+      "text": "Agent: And what position do you hold in your company, Jonathan?"
+    },
+    {
+      "startMs": 68320,
+      "endMs": 72960,
+      "text": "Caller: Until recently I was sales manager, however I've recently been promoted to regional manager,"
+    },
+    {
+      "startMs": 72960,
+      "endMs": 75440,
+      "text": "so I'll be in charge of running our new office."
+    },
+    {
+      "startMs": 75440,
+      "endMs": 77480,
+      "text": "Can I ask where the office is located?"
+    },
+    {
+      "startMs": 77480,
+      "endMs": 78480,
+      "text": "Agent: Yes, of course."
+    },
+    {
+      "startMs": 78480,
+      "endMs": 83440,
+      "text": "It's located downtown just around the corner from Royal Square Shopping Centre."
+    },
+    {
+      "startMs": 83840,
+      "endMs": 87200,
+      "text": "Caller: Hmm, that's a bit too far out of the centre for my liking."
+    },
+    {
+      "startMs": 87200,
+      "endMs": 90840,
+      "text": "I'd much prefer to be located in close proximity to the station."
+    },
+    {
+      "startMs": 90840,
+      "endMs": 93560,
+      "text": "Do you have any property located in that vicinity?"
+    },
+    {
+      "startMs": 93560,
+      "endMs": 97360,
+      "text": "Agent: It would help me to narrow down the results if you could tell me how many employees you"
+    },
+    {
+      "startMs": 97360,
+      "endMs": 100080,
+      "text": "intend to have working in the office."
+    },
+    {
+      "startMs": 100080,
+      "endMs": 105840,
+      "text": "Caller: Our branch is made up of 30 employees and we'd like some extra space for meetings and presentations."
+    },
+    {
+      "startMs": 105840,
+      "endMs": 111480,
+      "text": "Agent: Most average office spaces are around 8,000 square feet, but it sounds like you would need"
+    },
+    {
+      "startMs": 111480,
+      "endMs": 113320,
+      "text": "more space than that."
+    },
+    {
+      "startMs": 113320,
+      "endMs": 117680,
+      "text": "I think that 10,000 square feet would be more suitable for your needs."
+    },
+    {
+      "startMs": 117680,
+      "endMs": 123360,
+      "text": "Now, let's see, we have 10 properties that match those criteria, so let's try and narrow"
+    },
+    {
+      "startMs": 123360,
+      "endMs": 127160,
+      "text": "it down."
+    },
+    {
+      "startMs": 127160,
+      "endMs": 132440,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions"
+    },
+    {
+      "startMs": 132440,
+      "endMs": 133640,
+      "text": "5 to 10."
+    },
+    {
+      "startMs": 141480,
+      "endMs": 169560,
+      "text": "Now, listen and answer questions 5 to 10."
+    },
+    {
+      "startMs": 169560,
+      "endMs": 171960,
+      "text": "Agent: Do you have any other requirements?"
+    },
+    {
+      "startMs": 171960,
+      "endMs": 177800,
+      "text": "Caller: Well, we'll need access to the office 12 hours a day, but security should be 24 hour."
+    },
+    {
+      "startMs": 177800,
+      "endMs": 182120,
+      "text": "We don't hold any money on the premises, but it's crucial that we protect our customer"
+    },
+    {
+      "startMs": 182120,
+      "endMs": 183960,
+      "text": "information against theft."
+    },
+    {
+      "startMs": 183960,
+      "endMs": 185960,
+      "text": "Agent: Okay, anything else?"
+    },
+    {
+      "startMs": 185960,
+      "endMs": 190440,
+      "text": "Caller: Yes, ideally I'd prefer the new office to be split over two levels so that the working"
+    },
+    {
+      "startMs": 190440,
+      "endMs": 193240,
+      "text": "office area is kept separate from street level."
+    },
+    {
+      "startMs": 193240,
+      "endMs": 197600,
+      "text": "That will enable us to locate a reception at ground floor level to welcome customers when"
+    },
+    {
+      "startMs": 197600,
+      "endMs": 199520,
+      "text": "they arrive."
+    },
+    {
+      "startMs": 199520,
+      "endMs": 202360,
+      "text": "Agent: And are there any particular facilities that you need?"
+    },
+    {
+      "startMs": 202360,
+      "endMs": 206400,
+      "text": "Caller: Our employees work very hard throughout the day, and I want to make sure that they're"
+    },
+    {
+      "startMs": 206400,
+      "endMs": 207400,
+      "text": "well nourished."
+    },
+    {
+      "startMs": 207400,
+      "endMs": 213160,
+      "text": "It would therefore be ideal if I could provide them with a kitchen to cook hot meals at lunchtime."
+    },
+    {
+      "startMs": 213160,
+      "endMs": 217560,
+      "text": "Agent: Would you want the kitchen to be located at first floor level with the office?"
+    },
+    {
+      "startMs": 217560,
+      "endMs": 221120,
+      "text": "Caller: No, I don't want the office to be filled with the smell of food."
+    },
+    {
+      "startMs": 221120,
+      "endMs": 224360,
+      "text": "It would be better if the new office had a basement where we could locate the kitchen"
+    },
+    {
+      "startMs": 224360,
+      "endMs": 228520,
+      "text": "and staff room area to keep it at arm's length from the workspace."
+    },
+    {
+      "startMs": 228880,
+      "endMs": 233280,
+      "text": "Agent: Okay, I have now narrowed the search to two available properties."
+    },
+    {
+      "startMs": 233280,
+      "endMs": 238280,
+      "text": "Do you have any other requirements that could narrow our search down to one result?"
+    },
+    {
+      "startMs": 238280,
+      "endMs": 242000,
+      "text": "Caller: All of our office staff will be working at desktop computers, so I'll need the office"
+    },
+    {
+      "startMs": 242000,
+      "endMs": 246640,
+      "text": "to be equipped with at least 40 power sockets if possible."
+    },
+    {
+      "startMs": 246640,
+      "endMs": 247640,
+      "text": "Agent: Anything else?"
+    },
+    {
+      "startMs": 247640,
+      "endMs": 252200,
+      "text": "Caller: Studies have shown that exercise is very important for maintaining happiness and healthy"
+    },
+    {
+      "startMs": 252200,
+      "endMs": 253800,
+      "text": "brain function."
+    },
+    {
+      "startMs": 253800,
+      "endMs": 258280,
+      "text": "In an office environment, it's very difficult to get sufficient daily exercise."
+    },
+    {
+      "startMs": 258280,
+      "endMs": 262560,
+      "text": "So it would be great if they had access to a nearby exercise area."
+    },
+    {
+      "startMs": 262560,
+      "endMs": 267800,
+      "text": "Agent: One of the available offices is located next door to a gym. Would this be suitable?"
+    },
+    {
+      "startMs": 267800,
+      "endMs": 268800,
+      "text": "Caller: Yes, absolutely."
+    },
+    {
+      "startMs": 268800,
+      "endMs": 271560,
+      "text": "A gym is exactly what I was thinking of."
+    },
+    {
+      "startMs": 271560,
+      "endMs": 272560,
+      "text": "Agent: Brilliant."
+    },
+    {
+      "startMs": 272560,
+      "endMs": 275120,
+      "text": "Do you need the office to be furnished?"
+    },
+    {
+      "startMs": 275120,
+      "endMs": 276320,
+      "text": "Caller: I don't think so."
+    },
+    {
+      "startMs": 276320,
+      "endMs": 280840,
+      "text": "I already have some furniture, so I would prefer to bring this myself."
+    },
+    {
+      "startMs": 280840,
+      "endMs": 284240,
+      "text": "Agent: That's no problem at all."
+    },
+    {
+      "startMs": 284240,
+      "endMs": 289680,
+      "text": "Caller: And before I forget, we will definitely require Wi-Fi access, as much of our work and customer"
+    },
+    {
+      "startMs": 289680,
+      "endMs": 292200,
+      "text": "recruitment is carried out online."
+    },
+    {
+      "startMs": 292200,
+      "endMs": 293200,
+      "text": "Agent: No problem."
+    },
+    {
+      "startMs": 293200,
+      "endMs": 296320,
+      "text": "It sounds like the property will suit your needs perfectly."
+    },
+    {
+      "startMs": 296320,
+      "endMs": 301240,
+      "text": "I've taken the liberty of booking you a viewing at 3pm on Thursday, so you can see it"
+    },
+    {
+      "startMs": 301240,
+      "endMs": 302240,
+      "text": "for yourself."
+    },
+    {
+      "startMs": 302240,
+      "endMs": 305640,
+      "text": "Is there anything else I can help you with today?"
+    },
+    {
+      "startMs": 305640,
+      "endMs": 307960,
+      "text": "Caller: No, I think that's all the information I need."
+    },
+    {
+      "startMs": 307960,
+      "endMs": 310000,
+      "text": "Thanks very much for your help."
+    },
+    {
+      "startMs": 310000,
+      "endMs": 311000,
+      "text": "Agent: No problem."
+    },
+    {
+      "startMs": 311000,
+      "endMs": 312520,
+      "text": "It's been my pleasure to be of assistance."
+    },
+    {
+      "startMs": 312520,
+      "endMs": 313040,
+      "text": "Goodbye."
+    },
+    {
+      "startMs": 315240,
+      "endMs": 319560,
+      "text": "That is the end of section 1."
+    },
+    {
+      "startMs": 319560,
+      "endMs": 322800,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 344240,
+      "endMs": 357200,
+      "text": "Now turn to section 2."
+    },
+    {
+      "startMs": 357200,
+      "endMs": 358560,
+      "text": "Please wait for the answers."
+    },
+    {
+      "startMs": 404240,
+      "endMs": 405240,
+      "text": "Thank you very much."
+    },
+    {
+      "startMs": 405240,
+      "endMs": 406240,
+      "text": "Thank you very much."
+    },
+    {
+      "startMs": 406240,
+      "endMs": 407240,
+      "text": "Bye."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 95,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

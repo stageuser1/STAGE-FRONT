@@ -1,0 +1,405 @@
+{
+  "id": "p4-20-ancient-cave-art-symbols",
+  "title": "Ancient cave art symbols",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-4d516e13d29b",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 418.992,
+    "checksum": "sha256:2a7d95c02073d5df85e9b7b925eaba5c052cb69791620382a55b7a8a3e10e6fc"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Ancient cave art symbols The most common symbols include: Simple shapes, e.g. dots and a 31. _________ More complex shapes, e.g. a wavy line to represent a 32. _________ How the hand symbol was made The paint was made by mixing charcoal with 33. _________ and saliva. The paint was applied using something similar to a 34. _________ Applying paint made an unusual 35. _________ and also caused lightheadedness. The importance of the symbols: Researchers are developing a database to help identify any patterns. The symbols are likely to be a 36. _________ used by different groups. What researchers disagree about Some researchers say the symbols were part of the ‘Great Leap Forward’ which also included innovations such as the first 38. _________ Others say the discovery in Africa of earlier artefacts such as types of 39. _________ disproves the theory. It is likely that some art painted on 40. _________ did not survive.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Simple shapes, e.g. dots and a 31. _________",
+          "answer": "Triangle"
+        },
+        {
+          "id": "32",
+          "text": "More complex shapes, e.g. a wavy line to represent a 32. _________",
+          "answer": "Horse"
+        },
+        {
+          "id": "33",
+          "text": "The paint was made by mixing charcoal with 33. _________ and saliva.",
+          "answer": "Fat"
+        },
+        {
+          "id": "34",
+          "text": "The paint was applied using something similar to a 34. _________",
+          "answer": "Straw"
+        },
+        {
+          "id": "35",
+          "text": "Applying paint made an unusual 35. _________ and also caused lightheadedness.",
+          "answer": "Noise"
+        },
+        {
+          "id": "36",
+          "text": "The symbols are likely to be a 36. _________ used by different groups.",
+          "answer": "Code"
+        },
+        {
+          "id": "37",
+          "text": "A sequence of five of the symbols has been found on cave walls in Spain and on a 37. _________ made from a deer’s teeth.",
+          "answer": "Necklace"
+        },
+        {
+          "id": "38",
+          "text": "Some researchers say the symbols were part of the ‘Great Leap Forward’ which also included innovations such as the first 38. _________",
+          "answer": "Boat"
+        },
+        {
+          "id": "39",
+          "text": "Others say the discovery in Africa of earlier artefacts such as types of 39. _________ disproves the theory.",
+          "answer": "Arrows"
+        },
+        {
+          "id": "40",
+          "text": "It is likely that some art painted on 40. _________ did not survive.",
+          "answer": "Wood"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Ancient cave art symbols",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The most common symbols include:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Simple shapes, e.g. dots and a 31. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "More complex shapes, e.g. a wavy line to represent a 32. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "How the hand symbol was made",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The paint was made by mixing charcoal with 33. _________ and saliva.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The paint was applied using something similar to a 34. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Applying paint made an unusual 35. _________ and also caused lightheadedness.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The importance of the symbols:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Researchers are developing a database to help identify any patterns.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The symbols are likely to be a 36. _________ used by different groups.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A sequence of five of the symbols has been found on cave walls in Spain and on a 37. _________ made from a deer’s teeth.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "What researchers disagree about",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Some researchers say the symbols were part of the ‘Great Leap Forward’ which also included innovations such as the first 38. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Others say the discovery in Africa of earlier artefacts such as types of 39. _________ disproves the theory.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It is likely that some art painted on 40. _________ did not survive.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Triangle",
+        "32": "Horse",
+        "33": "Fat",
+        "34": "Straw",
+        "35": "Noise",
+        "36": "Code",
+        "37": "Necklace",
+        "38": "Boat",
+        "39": "Arrows",
+        "40": "Wood"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 6000,
+      "endMs": 21000,
+      "text": "Hello everyone, my presentation today is about the cave paintings produced by prehistoric artists about 30,000 years ago and in particular the symbols that appear in or near these paintings."
+    },
+    {
+      "startMs": 21000,
+      "endMs": 31000,
+      "text": "These symbols are found deep in caves in many countries around the world, but the ones I'm going to talk about today are mainly European."
+    },
+    {
+      "startMs": 31000,
+      "endMs": 35000,
+      "text": "Firstly, a little about the most common symbols."
+    },
+    {
+      "startMs": 35000,
+      "endMs": 44000,
+      "text": "The symbols that have been discovered are of different shapes and sizes. Some are easily recognizable as they're quite simple."
+    },
+    {
+      "startMs": 44000,
+      "endMs": 55000,
+      "text": "The most basic are just a series of dots, but they may also include forms such as the triangle. However, other symbols are more complex."
+    },
+    {
+      "startMs": 55000,
+      "endMs": 70000,
+      "text": "A case in point is the wavy line. This is sometimes used on its own, but the same wavy line is also used as part of a larger picture of a horse, so we think this is what the wavy line represents."
+    },
+    {
+      "startMs": 71000,
+      "endMs": 76000,
+      "text": "One very important symbol is what's called the hand symbol."
+    },
+    {
+      "startMs": 76000,
+      "endMs": 92000,
+      "text": "This frequently appears on the walls of caves. I'll talk about it in a bit more detail. Firstly, how it was made. The paint itself was made up from a variety of things that cave artists would have had access to."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 105000,
+      "text": "They had fire, so charcoal was one ingredient. Another was the fat from the animals they would have hunted, and lastly, the saliva from their own mouths."
+    },
+    {
+      "startMs": 105000,
+      "endMs": 117000,
+      "text": "Then there's a question of how they actually applied the runny paint onto the walls of the cave. It certainly wouldn't have been easy. They would have had to use something hollow."
+    },
+    {
+      "startMs": 117000,
+      "endMs": 130000,
+      "text": "In fact, it's likely to have looked like a straw, you know, like the kind we use for drinking nowadays. They'd have sucked the paint up into it, then blown it out."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 146000,
+      "text": "Researchers have recently recreated both the paint and the processes used to make the hand symbols. The artist would have first put his hand flat against the wall, then blown the paint onto the wall creating an outline of the hand."
+    },
+    {
+      "startMs": 146000,
+      "endMs": 156000,
+      "text": "The researchers who've tried to recreate the process have said that not only is it a difficult technique to master, but also that a strange noise is produced."
+    },
+    {
+      "startMs": 156000,
+      "endMs": 168000,
+      "text": "It also led them to feel light-headed, so we can only imagine that these cave artists felt the same."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 182000,
+      "text": "I'm sure you'll agree that these symbols are really interesting, but they're also of vital importance. Researchers have now identified a total of 26 symbols commonly used in France and Spain."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 197000,
+      "text": "We only have this knowledge thanks to a database that's been created, and which is being added to all the time. It clearly demonstrates that many symbols are often used in particular combinations, even if they're in different places."
+    },
+    {
+      "startMs": 197000,
+      "endMs": 209000,
+      "text": "This is significant, as it looks like different tribes of cave people who lived and traveled through the area at that time would have seen these markings as well as adding to them."
+    },
+    {
+      "startMs": 209000,
+      "endMs": 220000,
+      "text": "Although researchers don't believe that these symbols are a language as such, they are happy to call them a type of code. There is evidence to support this idea."
+    },
+    {
+      "startMs": 220000,
+      "endMs": 235000,
+      "text": "One sequence of five symbols is particularly common in caves in Spain. Exactly the same sequence of five symbols has been found carved into a necklace made from the teeth of a red deer."
+    },
+    {
+      "startMs": 235000,
+      "endMs": 253000,
+      "text": "So it appears that this combination of symbols may have had a special meaning. Of course, many of these explanations are theory as opposed to hard facts, which is why there is disagreement among researchers about the significance of what we're seeing."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 271000,
+      "text": "One theory is called the Great Leap Forward. The idea is that around 35,000 years ago there was a sudden increase in creativity which led to the invention of the boat among other things. However, not everyone agrees."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 286000,
+      "text": "In fact, many scientists believe that what has been found in Africa seems to indicate that this increase in creativity happened much earlier, around 70 to 90,000 years ago and more gradually."
+    },
+    {
+      "startMs": 286000,
+      "endMs": 296000,
+      "text": "One example of an artifact that is offered to support the idea is the discovery of different sorts of arrows, which would have been used for hunting."
+    },
+    {
+      "startMs": 296000,
+      "endMs": 306000,
+      "text": "These scientists suggest that the reason more symbols haven't been found from this earlier time is because they would have been painted on things that did not survive, such as wood."
+    },
+    {
+      "startMs": 306000,
+      "endMs": 319000,
+      "text": "In fact, we are very lucky that caves have protected these specimens as well as they have, or we might never have known what these artists were capable of."
+    },
+    {
+      "startMs": 319000,
+      "endMs": 326000,
+      "text": "That is the end of Part 4. You now have one minute to check your answers to Part 4."
+    },
+    {
+      "startMs": 349000,
+      "endMs": 352000,
+      "text": "You"
+    },
+    {
+      "startMs": 379000,
+      "endMs": 382000,
+      "text": "You"
+    },
+    {
+      "startMs": 409000,
+      "endMs": 412000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 30,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

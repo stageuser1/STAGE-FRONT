@@ -1,0 +1,577 @@
+{
+  "id": "p2-114-walking-holiday",
+  "title": "Walking Holiday",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-311e784d02c4",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 501.072,
+    "checksum": "sha256:efc2ddafb4db24aae6f63b77f22debf154b17a426577a6413c960d386d3efd9a"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–14",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Approximately how many passengers does the ferry hold?",
+          "options": [
+            {
+              "id": "A",
+              "text": "160"
+            },
+            {
+              "id": "B",
+              "text": "600"
+            },
+            {
+              "id": "C",
+              "text": "2000"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "Which items should the tourists pack in a separate bag?",
+          "options": [
+            {
+              "id": "A",
+              "text": "food"
+            },
+            {
+              "id": "B",
+              "text": "reading material"
+            },
+            {
+              "id": "C",
+              "text": "medicines"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "The hostel in La Vega de Liebana has",
+          "options": [
+            {
+              "id": "A",
+              "text": "good washing facilities."
+            },
+            {
+              "id": "B",
+              "text": "a games room."
+            },
+            {
+              "id": "C",
+              "text": "a number of single bedroom"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "Residents at the hostel are not allowed to",
+          "options": [
+            {
+              "id": "A",
+              "text": "take furniture out of the hostel building."
+            },
+            {
+              "id": "B",
+              "text": "enter the hostel after a certain time."
+            },
+            {
+              "id": "C",
+              "text": "smoke in the hostel gardens."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 15–17",
+      "instruction": "Complete the notes below. Write NO MORE THAN THREE WORDS for each answer. Clothes and equipment Bring: boots with thick soles spare 15. __________ light waterproofs suncream: strength 16. __________ a 17. __________ folder for map, etc.",
+      "questions": [
+        {
+          "id": "15",
+          "text": "spare 15. __________",
+          "answer": "socks"
+        },
+        {
+          "id": "16",
+          "text": "suncream: strength 16. __________",
+          "answer": "total block"
+        },
+        {
+          "id": "17",
+          "text": "a 17. __________ folder for map, etc.",
+          "answer": "plastic"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN THREE WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Clothes and equipment",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Bring:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "boots with thick soles",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "spare 15. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "light waterproofs",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "suncream: strength 16. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a 17. __________ folder for map, etc.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "18-20",
+      "title": "Questions 18–20",
+      "instruction": "Choose THREE letters, A–G.",
+      "questionText": "Which THREE of the following features of the area in Spain does the speaker talk about?",
+      "limit": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "altitude"
+        },
+        {
+          "id": "B",
+          "text": "coastline"
+        },
+        {
+          "id": "C",
+          "text": "economy"
+        },
+        {
+          "id": "D",
+          "text": "temperatures"
+        },
+        {
+          "id": "E",
+          "text": "vegetation"
+        },
+        {
+          "id": "F",
+          "text": "wildlife"
+        }
+      ],
+      "questions": [
+        {
+          "id": "18",
+          "text": "Which THREE of the following features of the area in Spain does the speaker talk about?",
+          "answer": "A"
+        },
+        {
+          "id": "19",
+          "text": "Which THREE of the following features of the area in Spain does the speaker talk about?",
+          "answer": "E"
+        },
+        {
+          "id": "20",
+          "text": "Which THREE of the following features of the area in Spain does the speaker talk about?",
+          "answer": "F"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "15": "socks",
+        "16": "total block",
+        "17": "plastic"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "B",
+        "13": "A",
+        "14": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "18_20": [
+          "A",
+          "E",
+          "F"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "18": "A",
+        "19": "E",
+        "20": "F"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11720,
+      "text": "Section 2. You will hear a tour guide talking to some tourists who are going on a walking holiday"
+    },
+    {
+      "startMs": 11720,
+      "endMs": 13080,
+      "text": "in Spain."
+    },
+    {
+      "startMs": 13080,
+      "endMs": 19360,
+      "text": "First, you have some time to look at questions 11-14 on page 3."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 52520,
+      "text": "Now, listen carefully and answer questions 11-14."
+    },
+    {
+      "startMs": 52520,
+      "endMs": 54120,
+      "text": "Well good evening everyone."
+    },
+    {
+      "startMs": 54120,
+      "endMs": 59040,
+      "text": "My name is Gary Payne and I'll be the leader for your walking holiday in Spain."
+    },
+    {
+      "startMs": 59040,
+      "endMs": 63000,
+      "text": "The purpose of this evening's meeting is for us all to get to know each other in advance"
+    },
+    {
+      "startMs": 63000,
+      "endMs": 66840,
+      "text": "and for you to ask any questions you may have about the holiday."
+    },
+    {
+      "startMs": 66840,
+      "endMs": 71400,
+      "text": "So I'll begin by telling you a little bit about what to expect."
+    },
+    {
+      "startMs": 71400,
+      "endMs": 76960,
+      "text": "Now the ferry crossing from England to Santander in Spain takes about 24 hours."
+    },
+    {
+      "startMs": 76960,
+      "endMs": 81720,
+      "text": "We'll be sailing on the Prince Regent which was first launched in the 1980s as well as"
+    },
+    {
+      "startMs": 81720,
+      "endMs": 89200,
+      "text": "the crew of 160. It can accommodate about 2,000 people and 600 cars. And it sails at an"
+    },
+    {
+      "startMs": 89200,
+      "endMs": 94960,
+      "text": "average speed of 37 kilometres an hour. There'll be an on-board map on one of the decks which"
+    },
+    {
+      "startMs": 94960,
+      "endMs": 98320,
+      "text": "charts the ship's progress during the voyage."
+    },
+    {
+      "startMs": 98320,
+      "endMs": 102800,
+      "text": "Although our minibus will be on one of the vehicle decks in the boat, access to these decks"
+    },
+    {
+      "startMs": 102800,
+      "endMs": 107120,
+      "text": "is prohibited during the crossing so when you leave our bus you'll have to take everything"
+    },
+    {
+      "startMs": 107120,
+      "endMs": 112040,
+      "text": "that you're likely to need with you like toiletries or books and magazines."
+    },
+    {
+      "startMs": 112040,
+      "endMs": 117080,
+      "text": "In fact it's probably a good idea to put these things in a separate bag beforehand."
+    },
+    {
+      "startMs": 117080,
+      "endMs": 122280,
+      "text": "You shouldn't need snacks on board as meals are provided and they're quite substantial."
+    },
+    {
+      "startMs": 122280,
+      "endMs": 126800,
+      "text": "And if you don't feel well or get a headache you can get tablets from me. I always carry"
+    },
+    {
+      "startMs": 126800,
+      "endMs": 129120,
+      "text": "an adequate supply."
+    },
+    {
+      "startMs": 129120,
+      "endMs": 134360,
+      "text": "Now once we're in Spain we'll be based at a hostel in a small village called La Vega de"
+    },
+    {
+      "startMs": 134360,
+      "endMs": 140800,
+      "text": "Liebana, about 120 kilometres from Santander. It's a very picturesque area that's retained"
+    },
+    {
+      "startMs": 140800,
+      "endMs": 144240,
+      "text": "a lot of its traditional industry and culture."
+    },
+    {
+      "startMs": 144240,
+      "endMs": 149920,
+      "text": "The hostel accommodation's fairly simple. There are bunk beds and each room holds four to"
+    },
+    {
+      "startMs": 149920,
+      "endMs": 155600,
+      "text": "eight people. But the bathrooms and showers are of a high standard. The hostel residents"
+    },
+    {
+      "startMs": 155600,
+      "endMs": 160760,
+      "text": "have the use of tennis courts nearby if you feel like a game. We'll be given breakfast"
+    },
+    {
+      "startMs": 160760,
+      "endMs": 163840,
+      "text": "and an evening meal at the hostel."
+    },
+    {
+      "startMs": 163840,
+      "endMs": 170400,
+      "text": "In general the hostel is relaxed but there are a few rules which the owners enforce strictly."
+    },
+    {
+      "startMs": 170400,
+      "endMs": 175440,
+      "text": "Smoking is not allowed anywhere inside the building and food and drink is banned in"
+    },
+    {
+      "startMs": 175440,
+      "endMs": 180680,
+      "text": "the dormitories. Any chairs or tables which you take outside into the gardens must be"
+    },
+    {
+      "startMs": 180680,
+      "endMs": 186480,
+      "text": "returned every evening to their original place. And finally the doors are locked after midnight"
+    },
+    {
+      "startMs": 186480,
+      "endMs": 199640,
+      "text": "out of consideration for other guests who are trying to sleep."
+    },
+    {
+      "startMs": 199640,
+      "endMs": 200640,
+      "text": "On page 4"
+    },
+    {
+      "startMs": 216480,
+      "endMs": 233080,
+      "text": "Now listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 233080,
+      "endMs": 238160,
+      "text": "Now that's enough about travel and accommodation. But before I move on I should say something"
+    },
+    {
+      "startMs": 238160,
+      "endMs": 242840,
+      "text": "briefly about equipment. There's a list in the guidebook you've been sent but I'll"
+    },
+    {
+      "startMs": 242840,
+      "endMs": 249680,
+      "text": "just elaborate on one or two items. First boots. Make sure that the ones you bring"
+    },
+    {
+      "startMs": 249680,
+      "endMs": 255320,
+      "text": "have thick soles that's the most important thing. Don't bring trainers for walking in"
+    },
+    {
+      "startMs": 255320,
+      "endMs": 259760,
+      "text": "apart from anything else they're dangerous because they slip. It's important to bring"
+    },
+    {
+      "startMs": 259760,
+      "endMs": 266360,
+      "text": "spare socks. Then about waterproofs. I'd strongly advise you not to come with anything"
+    },
+    {
+      "startMs": 266360,
+      "endMs": 271800,
+      "text": "heavy you know with a thick lining. The ideal things are those lightweight ones because"
+    },
+    {
+      "startMs": 271800,
+      "endMs": 276880,
+      "text": "they fold up small and although they do keep the wind out they don't make you too hot."
+    },
+    {
+      "startMs": 276880,
+      "endMs": 284360,
+      "text": "Right? Next sun cream this is absolutely essential and regarding the strength make sure you"
+    },
+    {
+      "startMs": 284360,
+      "endMs": 290720,
+      "text": "get what's known as total block. Even factor 25 isn't good enough for those latitudes"
+    },
+    {
+      "startMs": 290720,
+      "endMs": 297360,
+      "text": "in July. Then let's see bring a folder to keep your map and other papers in you know one"
+    },
+    {
+      "startMs": 297440,
+      "endMs": 303120,
+      "text": "of those plastic ones. It's not very likely to rain but if it does you'll find it soaks"
+    },
+    {
+      "startMs": 303120,
+      "endMs": 309040,
+      "text": "everything. So that's the practicalities over. Now let me tell you a little bit about"
+    },
+    {
+      "startMs": 309040,
+      "endMs": 315080,
+      "text": "the area in Spain where we'll be walking. The Picos de Europa. It's a very popular area"
+    },
+    {
+      "startMs": 315080,
+      "endMs": 320240,
+      "text": "for tourists because of its spectacular peaks. Although there are only 25 kilometers from"
+    },
+    {
+      "startMs": 320240,
+      "endMs": 327920,
+      "text": "the sea the highest peaks are more than 2,600 meters high and have year round snow caps."
+    },
+    {
+      "startMs": 327920,
+      "endMs": 332840,
+      "text": "On the highest peaks you've got alpine plants that are only free of this snow cover for"
+    },
+    {
+      "startMs": 332840,
+      "endMs": 338400,
+      "text": "a few months a year. Then you've got meadows that are full of wild flowers at certain times"
+    },
+    {
+      "startMs": 338400,
+      "endMs": 344200,
+      "text": "of the year. Then the northern slopes are covered by woodlands giving homes to rare species"
+    },
+    {
+      "startMs": 344200,
+      "endMs": 349120,
+      "text": "such as wolves and bears. And because of the variety of plant life which"
+    },
+    {
+      "startMs": 349120,
+      "endMs": 356720,
+      "text": "survives in that part of Europe due to the traditional way of life there."
+    },
+    {
+      "startMs": 356720,
+      "endMs": 362280,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 379120,
+      "endMs": 395800,
+      "text": "Now turn to section 3 on page 5."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 58,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "id": "p2-60-60-plan-of-spa-only-map",
+  "title": "60. Plan of SPA (only map)",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-6f608975e5b4",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 131.58,
+    "checksum": "sha256:a3d83dc08b18fdfab90ab8312b10948259fcc7238b747ab6cf0628daa49cdca5"
+  },
+  "groups": [
+    {
+      "type": "map",
+      "title": "Question 15-20.",
+      "instruction": "Complete the map below with A-I.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "Main pool",
+          "answer": "A"
+        },
+        {
+          "id": "16",
+          "text": "Chess board",
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "Spa shop",
+          "answer": "H"
+        },
+        {
+          "id": "18",
+          "text": "Picnic area",
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "Treatment rooms",
+          "answer": "F"
+        },
+        {
+          "id": "20",
+          "text": "Shower room",
+          "answer": "G"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-60-60-plan-of-spa-only-map-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-60-60-plan-of-spa-only-map-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "15": "A",
+        "16": "C",
+        "17": "H",
+        "18": "B",
+        "19": "F",
+        "20": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 4000,
+      "text": "Now listen and answer a questions 15 to 20."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 13000,
+      "text": "So, let me give you each a plan of the spa to help you find your way around."
+    },
+    {
+      "startMs": 13000,
+      "endMs": 19000,
+      "text": "So at present, we're in the circular entrance hall, at the bottom of the map with a street behind us."
+    },
+    {
+      "startMs": 19000,
+      "endMs": 28000,
+      "text": "So if you want to find the main pool, well, that's outside, so you go right down the corridor from the main entrance, then out into the garden."
+    },
+    {
+      "startMs": 28000,
+      "endMs": 37000,
+      "text": "You'll see tables out there to your right by the cafe. The pools on your left can't be hidden by the trees. It's a lovely setting."
+    },
+    {
+      "startMs": 37000,
+      "endMs": 47000,
+      "text": "One thing I must mention that you wouldn't expect, there's a stone chessboard in the garden. There is stone chessmen there too, and you can sit and play."
+    },
+    {
+      "startMs": 47000,
+      "endMs": 54000,
+      "text": "It's just past the terrace, right in the far corner of the garden. It's a beautiful quiet spot."
+    },
+    {
+      "startMs": 54000,
+      "endMs": 69000,
+      "text": "If you find you need something like sunscreen, there's a spa shop in the main building. The door opens directly off the entrance hall, and you can get most things there, even postcards. It's open until 5 o'clock."
+    },
+    {
+      "startMs": 69000,
+      "endMs": 77000,
+      "text": "If you're looking for somewhere to sit and have a snack, we have a picnic area. It's out in the garden, and it's quite secluded."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 85000,
+      "text": "It's by the fountain at the back of the garden, on the far side of the terrace. It should be lovely there today in the sunshine."
+    },
+    {
+      "startMs": 85000,
+      "endMs": 98000,
+      "text": "Then if you're heading off a treatment or a massage, the treatment rooms are all down the corridor. That's not the corridor to the garden, but the one that goes straight from the entrance hall past the fitness room."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 102000,
+      "text": "The door to the treatment rooms is at the end of that corridor."
+    },
+    {
+      "startMs": 102000,
+      "endMs": 109000,
+      "text": "One final thing, we do ask you to take a shower if you're going to be using any of the facilities."
+    },
+    {
+      "startMs": 109000,
+      "endMs": 119000,
+      "text": "To get to the shower rooms, walk in the direction of the garden, but before you get there, turn right. They're down there, opposite the changing rooms."
+    },
+    {
+      "startMs": 119000,
+      "endMs": 121000,
+      "text": "Right, well..."
+    },
+    {
+      "startMs": 124000,
+      "endMs": 131000,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 6,
+    "answerCount": 6,
+    "transcriptCount": 16,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

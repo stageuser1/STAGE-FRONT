@@ -1,0 +1,531 @@
+{
+  "id": "p2-3-the-elmsden-way",
+  "title": "The Elmsden Way",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-8106564aa7cc",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 341.064,
+    "checksum": "sha256:d54f0b330199a65bfe129f90d61958e04b3558533088830970a48c15da212a7f"
+  },
+  "groups": [
+    {
+      "type": "map",
+      "title": "Questions 11-14.",
+      "instruction": "Label the map below",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Rocks",
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "Colleen Nature Reserve",
+          "answer": "E"
+        },
+        {
+          "id": "13",
+          "text": "Ashington China Factory",
+          "answer": "F"
+        },
+        {
+          "id": "14",
+          "text": "Langton Forest",
+          "answer": "I"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-3-the-elmsden-way-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-3-the-elmsden-way-map-png-map.png"
+      }
+    },
+    {
+      "type": "single",
+      "title": "Questions 15-20.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "15",
+          "text": "What kind of warning does the speaker give to cyclists?",
+          "options": [
+            {
+              "id": "A",
+              "text": "there may be traffic jams"
+            },
+            {
+              "id": "B",
+              "text": "avoid wet cycle paths"
+            },
+            {
+              "id": "C",
+              "text": "there may be animals in the way"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "16",
+          "text": "The starting point of Elmsden station is",
+          "options": [
+            {
+              "id": "A",
+              "text": "very busy"
+            },
+            {
+              "id": "B",
+              "text": "more modern"
+            },
+            {
+              "id": "C",
+              "text": "re-opened recently"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "What can people do at the visitor’s centre?",
+          "options": [
+            {
+              "id": "A",
+              "text": "rent a bike"
+            },
+            {
+              "id": "B",
+              "text": "buy refreshments"
+            },
+            {
+              "id": "C",
+              "text": "learn local history"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "18",
+          "text": "To commute between Langton and Elmston by train, you need to",
+          "options": [
+            {
+              "id": "A",
+              "text": "book in advance"
+            },
+            {
+              "id": "B",
+              "text": "go on weekends"
+            },
+            {
+              "id": "C",
+              "text": "pay additional charges"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "What should you be aware of when visiting River Elm?",
+          "options": [
+            {
+              "id": "A",
+              "text": "it takes a long time"
+            },
+            {
+              "id": "B",
+              "text": "the waterfall is inaccessible"
+            },
+            {
+              "id": "C",
+              "text": "go by bike"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "Where can you get the information if you want to join the local route?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the local newspaper"
+            },
+            {
+              "id": "B",
+              "text": "the station website"
+            },
+            {
+              "id": "C",
+              "text": "national cycling network"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "15": "C",
+        "16": "C",
+        "17": "A",
+        "18": "B",
+        "19": "A",
+        "20": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "E",
+        "13": "F",
+        "14": "I"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11800,
+      "text": "Now listen carefully and answer questions 11 to 14."
+    },
+    {
+      "startMs": 11800,
+      "endMs": 14200,
+      "text": "Welcome to our holiday special."
+    },
+    {
+      "startMs": 14200,
+      "endMs": 20800,
+      "text": "Today I'll be talking about a new cycle route in this area called the Amstern Way."
+    },
+    {
+      "startMs": 20800,
+      "endMs": 25480,
+      "text": "It's well sign-posted so you can see exactly where to go."
+    },
+    {
+      "startMs": 25480,
+      "endMs": 28720,
+      "text": "And it's an easy route with no steep hills."
+    },
+    {
+      "startMs": 28720,
+      "endMs": 37520,
+      "text": "It's 35 kilometers long from Amstern to Lowington and consists partly of cycle paths and partly roads."
+    },
+    {
+      "startMs": 37520,
+      "endMs": 42800,
+      "text": "Let me outline the route briefly starting at Amstern Railway Station."
+    },
+    {
+      "startMs": 42800,
+      "endMs": 48880,
+      "text": "The first part is a cycle path running eastwards, roughly parallel to the rail track."
+    },
+    {
+      "startMs": 48880,
+      "endMs": 55560,
+      "text": "Almost immediately the railway curves away and goes around the southern side of a little lake."
+    },
+    {
+      "startMs": 55600,
+      "endMs": 59320,
+      "text": "But the cycle path takes the northern route around the lake."
+    },
+    {
+      "startMs": 59320,
+      "endMs": 63160,
+      "text": "Keep your eyes open for the swans that nest there."
+    },
+    {
+      "startMs": 63160,
+      "endMs": 71280,
+      "text": "The path then joins the road and the next landmark is a group of massive rocks which tower over the countryside."
+    },
+    {
+      "startMs": 71280,
+      "endMs": 77000,
+      "text": "You will see them to the east of the road just before the road goes under the railway."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 79240,
+      "text": "They are very impressive."
+    },
+    {
+      "startMs": 79240,
+      "endMs": 86320,
+      "text": "Soon you'll come to a fork in the road where you're going to leave the road and head off toward the river."
+    },
+    {
+      "startMs": 86320,
+      "endMs": 94480,
+      "text": "But if you want to make a detour to Colleen Nature Reserve, go straight on instead of leaving the road here."
+    },
+    {
+      "startMs": 94480,
+      "endMs": 99120,
+      "text": "Continuing along the cycle path, you'll reach the river cleave."
+    },
+    {
+      "startMs": 99120,
+      "endMs": 102440,
+      "text": "The cycle path follows the river southwards."
+    },
+    {
+      "startMs": 102440,
+      "endMs": 109440,
+      "text": "After a bit, you'll see the Ashington China Factory which closed in 1962."
+    },
+    {
+      "startMs": 109440,
+      "endMs": 118480,
+      "text": "When you get there, there's a bridge over the river and you carry on with Langton Forest to the south and farmland to the north."
+    },
+    {
+      "startMs": 118480,
+      "endMs": 123160,
+      "text": "The route ends at Langton Village where you'll find a railway station."
+    },
+    {
+      "startMs": 123160,
+      "endMs": 129280,
+      "text": "So you can either catch the train here or cycle back to Amstern."
+    },
+    {
+      "startMs": 129280,
+      "endMs": 138240,
+      "text": "Before you hear the rest of the program, you have some time to look at questions 15 to 20 into 20."
+    },
+    {
+      "startMs": 138240,
+      "endMs": 143040,
+      "text": "Now listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 143040,
+      "endMs": 149800,
+      "text": "One point to remember when you're cycling on the Amstern way is that you should keep your eyes open for sheep"
+    },
+    {
+      "startMs": 149800,
+      "endMs": 155040,
+      "text": "which occasionally stray onto the cycle path from a joining fields."
+    },
+    {
+      "startMs": 155040,
+      "endMs": 158400,
+      "text": "So be careful to avoid accidents."
+    },
+    {
+      "startMs": 158400,
+      "endMs": 164280,
+      "text": "The path is well constructed, so it's not affected by wet or muddy conditions."
+    },
+    {
+      "startMs": 164280,
+      "endMs": 174800,
+      "text": "There might be the odd car or tractor when you're cycling on roads, but most traffic has been diverted to the main road that bypasses the whole area."
+    },
+    {
+      "startMs": 174800,
+      "endMs": 178560,
+      "text": "Now, a bit more about some of the places you'll see."
+    },
+    {
+      "startMs": 178560,
+      "endMs": 187400,
+      "text": "The starting point, Amstern Station, was quite busy in the early 20th century with services to several major cities."
+    },
+    {
+      "startMs": 187400,
+      "endMs": 190520,
+      "text": "But it was closed in the 1950s."
+    },
+    {
+      "startMs": 190520,
+      "endMs": 200400,
+      "text": "And actually, a small company was set up to turn it into a sort of railway museum, maintaining it in the style of the 1950s."
+    },
+    {
+      "startMs": 200400,
+      "endMs": 206400,
+      "text": "And the station was ready for trains to start using it again earlier this year."
+    },
+    {
+      "startMs": 206400,
+      "endMs": 210000,
+      "text": "It's only used by a few local trains though."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 218480,
+      "text": "There's a visitor's center at the station which has a small exhibition about the history of railway transport all over the world,"
+    },
+    {
+      "startMs": 218480,
+      "endMs": 223280,
+      "text": "and a facility for hiring bikes if you don't have one of your own."
+    },
+    {
+      "startMs": 223280,
+      "endMs": 229320,
+      "text": "There's also a small shop just across the road from the station that sells refreshments."
+    },
+    {
+      "startMs": 229320,
+      "endMs": 239720,
+      "text": "As I said, you can cycle to Langton and return to Amstern by train or the other way around because you can take your cycle on the train."
+    },
+    {
+      "startMs": 239760,
+      "endMs": 241720,
+      "text": "There's no need to book."
+    },
+    {
+      "startMs": 241720,
+      "endMs": 245000,
+      "text": "There's plenty of room and no extra charge."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 248360,
+      "text": "However, the service is very limited."
+    },
+    {
+      "startMs": 248360,
+      "endMs": 253720,
+      "text": "And the trains between these two places don't run on weekdays."
+    },
+    {
+      "startMs": 253720,
+      "endMs": 258960,
+      "text": "If you want to see the river Elm, there's a footpath from Amstern Station."
+    },
+    {
+      "startMs": 258960,
+      "endMs": 262920,
+      "text": "And you can safely leave your bike in the car park there."
+    },
+    {
+      "startMs": 262920,
+      "endMs": 265560,
+      "text": "Leave yourself plenty of time though."
+    },
+    {
+      "startMs": 265600,
+      "endMs": 269840,
+      "text": "Going down is easy, but the climb up is very steep."
+    },
+    {
+      "startMs": 269840,
+      "endMs": 274160,
+      "text": "So the walk back up to the top can take quite a while."
+    },
+    {
+      "startMs": 274160,
+      "endMs": 276240,
+      "text": "But it's worth the effort."
+    },
+    {
+      "startMs": 276240,
+      "endMs": 278600,
+      "text": "The scenery is wonderful."
+    },
+    {
+      "startMs": 278600,
+      "endMs": 284000,
+      "text": "And the footpath runs right next to the river down to a waterfall."
+    },
+    {
+      "startMs": 284000,
+      "endMs": 291080,
+      "text": "Finally, if you'd like to do some more cycling in the area, there are lots of other cycle paths."
+    },
+    {
+      "startMs": 291080,
+      "endMs": 299960,
+      "text": "We'll be talking on the radio about them, and you'll be able to get full details in the Saturday edition of the local paper."
+    },
+    {
+      "startMs": 299960,
+      "endMs": 308840,
+      "text": "The National Cycle Network also has some details on their website, although I have to say they don't have many local ones yet."
+    },
+    {
+      "startMs": 308840,
+      "endMs": 310840,
+      "text": "But that may change."
+    },
+    {
+      "startMs": 310840,
+      "endMs": 317040,
+      "text": "So we'll be telling you more about that is the end of section two."
+    },
+    {
+      "startMs": 317040,
+      "endMs": 320600,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 57,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

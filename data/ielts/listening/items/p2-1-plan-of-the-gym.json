@@ -1,0 +1,439 @@
+{
+  "id": "p2-1-plan-of-the-gym",
+  "title": "Plan of the Gym",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-51e1439fd787",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 340.512,
+    "checksum": "sha256:2d8cf105919c3e5d7b457ef15ed7135b92f421fd4ff47f01d30247f9565d0218"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "11-12",
+      "title": "Questions 11-12.",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO parts of the gym are closed for part of the day?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "The cafe"
+        },
+        {
+          "id": "B",
+          "text": "The weights room"
+        },
+        {
+          "id": "C",
+          "text": "The reception desk"
+        },
+        {
+          "id": "D",
+          "text": "The childcare centre"
+        },
+        {
+          "id": "E",
+          "text": "The shop"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Which TWO parts of the gym are closed for part of the day?",
+          "answer": "D"
+        },
+        {
+          "id": "12",
+          "text": "Which TWO parts of the gym are closed for part of the day?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "13-14",
+      "title": "Questions 13-14.",
+      "instruction": "Choose TWO letters, A-E.",
+      "questionText": "Which TWO facilities have recently been updated?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "The change rooms"
+        },
+        {
+          "id": "B",
+          "text": "The sauna"
+        },
+        {
+          "id": "C",
+          "text": "The treadmills"
+        },
+        {
+          "id": "D",
+          "text": "The car park"
+        },
+        {
+          "id": "E",
+          "text": "The yoga studio"
+        }
+      ],
+      "questions": [
+        {
+          "id": "13",
+          "text": "Which TWO facilities have recently been updated?",
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "Which TWO facilities have recently been updated?",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 15-20.",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "Personal trainers’ office",
+          "answer": "F"
+        },
+        {
+          "id": "16",
+          "text": "Pool",
+          "answer": "G"
+        },
+        {
+          "id": "17",
+          "text": "Stretch area",
+          "answer": "C"
+        },
+        {
+          "id": "18",
+          "text": "Men’s changing room",
+          "answer": "H"
+        },
+        {
+          "id": "19",
+          "text": "Weights room",
+          "answer": "B"
+        },
+        {
+          "id": "20",
+          "text": "Café",
+          "answer": "A"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-1-plan-of-the-gym-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-1-plan-of-the-gym-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "11_12": [
+          "D",
+          "E"
+        ],
+        "13_14": [
+          "A",
+          "C"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "11": "D",
+        "12": "E",
+        "13": "A",
+        "14": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "15": "F",
+        "16": "G",
+        "17": "C",
+        "18": "H",
+        "19": "B",
+        "20": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 29960,
+      "text": "Welcome to the tour of our gem, nothing but fitness."
+    },
+    {
+      "startMs": 29960,
+      "endMs": 40960,
+      "text": "Note out, you know a little of what our gem has to go in terms of fitness, but as you'll discover, we have much more than just running machines and weights on offer."
+    },
+    {
+      "startMs": 40960,
+      "endMs": 48960,
+      "text": "The gems open from 5.30am, nice and early in the morning, to 10pm at night."
+    },
+    {
+      "startMs": 48960,
+      "endMs": 56960,
+      "text": "So these hours give you plenty of time to fit in your workouts in our weights and cardio rooms, or with your personal trainers."
+    },
+    {
+      "startMs": 56960,
+      "endMs": 60960,
+      "text": "Now obviously, reception is open whenever the gem is."
+    },
+    {
+      "startMs": 60960,
+      "endMs": 71960,
+      "text": "We have a child care centre on site for mums and dads wanting to fit a workout into your busy day, but it's only open in the mornings, so you'll need to plan your workout around that."
+    },
+    {
+      "startMs": 71960,
+      "endMs": 84960,
+      "text": "For those of you too busy to eat properly at home, there's a cafe on site offering healthy and delicious meals that start serving as soon as the gem opens and doesn't shut until we close at night."
+    },
+    {
+      "startMs": 84960,
+      "endMs": 94960,
+      "text": "Of course, to workout comfortably, you need suitable clothing. We have a shop here for those of you who like to pick up some new shoes or workout gear."
+    },
+    {
+      "startMs": 94960,
+      "endMs": 100960,
+      "text": "The staff there will be happy to cut you out from midday onwards, so do have a look at what's on offer."
+    },
+    {
+      "startMs": 100960,
+      "endMs": 105960,
+      "text": "We're a modern gem, and we're always updating our facilities."
+    },
+    {
+      "startMs": 105960,
+      "endMs": 113960,
+      "text": "Actually, the gems just replaced all our treadmoles with the latest models, so if you're a runner, try them out."
+    },
+    {
+      "startMs": 113960,
+      "endMs": 124960,
+      "text": "After you've finished your run, you might want to improve your flexibility by taking one of our yoga classes in the comfortable yoga studio, or relax in the traditional sauna."
+    },
+    {
+      "startMs": 124960,
+      "endMs": 133960,
+      "text": "You'll notice the change rooms when you enter the gem. They've just been renovated and are now very luxurious and spacious."
+    },
+    {
+      "startMs": 133960,
+      "endMs": 140960,
+      "text": "As the gems in the centre of the city parkings always a problem, even with our free passes for members."
+    },
+    {
+      "startMs": 140960,
+      "endMs": 145960,
+      "text": "You'll be glad to hear that an overhaul of the carparks planned for next year."
+    },
+    {
+      "startMs": 145960,
+      "endMs": 152960,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 15 to 20."
+    },
+    {
+      "startMs": 152960,
+      "endMs": 156960,
+      "text": "Now, let's talk about where things are."
+    },
+    {
+      "startMs": 156960,
+      "endMs": 159960,
+      "text": "We're standing in the entrance to the building."
+    },
+    {
+      "startMs": 159960,
+      "endMs": 163960,
+      "text": "Some of you have meetings with your personal trainers today."
+    },
+    {
+      "startMs": 163960,
+      "endMs": 169960,
+      "text": "To find them, walk past the right side of reception and enter the Cardio's studio."
+    },
+    {
+      "startMs": 169960,
+      "endMs": 175960,
+      "text": "Their office is on the right, just after you go past the manager's office."
+    },
+    {
+      "startMs": 175960,
+      "endMs": 179960,
+      "text": "It's a warm day, so why not head to the pool?"
+    },
+    {
+      "startMs": 179960,
+      "endMs": 186960,
+      "text": "The easiest way to get there is from the entrance, go around the left side of reception and enter the Cardio's studio,"
+    },
+    {
+      "startMs": 186960,
+      "endMs": 191960,
+      "text": "and then you'll see that the third door on the left is the way into the shop."
+    },
+    {
+      "startMs": 191960,
+      "endMs": 198960,
+      "text": "Go into the shop and you'll see there are two more doors. You want the one opposite you as you walk in."
+    },
+    {
+      "startMs": 198960,
+      "endMs": 205960,
+      "text": "Go through that door and you'll see the pool, which runs along the west side of the building."
+    },
+    {
+      "startMs": 205960,
+      "endMs": 210960,
+      "text": "Stretching after exercises essential, so you'll need the stretch area."
+    },
+    {
+      "startMs": 210960,
+      "endMs": 216960,
+      "text": "To find it, from the entrance, head to the back of the Cardio's studio."
+    },
+    {
+      "startMs": 216960,
+      "endMs": 222960,
+      "text": "You'll see two doors facing you, and it's the one on the right."
+    },
+    {
+      "startMs": 222960,
+      "endMs": 228960,
+      "text": "As we've only got men here today, I'll point out only where your change rooms are."
+    },
+    {
+      "startMs": 228960,
+      "endMs": 234960,
+      "text": "From the entrance, go up the left side of the Cardio's studio and you want the middle door."
+    },
+    {
+      "startMs": 234960,
+      "endMs": 238960,
+      "text": "That's the room just before you reach the shop."
+    },
+    {
+      "startMs": 238960,
+      "endMs": 242960,
+      "text": "If you're looking to bulk up, the wait room will be important."
+    },
+    {
+      "startMs": 242960,
+      "endMs": 244960,
+      "text": "It's easy to find."
+    },
+    {
+      "startMs": 244960,
+      "endMs": 251960,
+      "text": "From the entrance, walk past the left side of reception and through the Cardio's studio to the back of the building."
+    },
+    {
+      "startMs": 251960,
+      "endMs": 254960,
+      "text": "The wait room is through the door on the left."
+    },
+    {
+      "startMs": 254960,
+      "endMs": 259960,
+      "text": "The first aid room is beside it, although hopefully you won't need to go in there."
+    },
+    {
+      "startMs": 259960,
+      "endMs": 263960,
+      "text": "After this, you might want to have a drink in our cafe."
+    },
+    {
+      "startMs": 263960,
+      "endMs": 268960,
+      "text": "Go to this shop, and this time take the door to your right, not the one opposite,"
+    },
+    {
+      "startMs": 268960,
+      "endMs": 273960,
+      "text": "and this leads to the cafe with a nice view of the river."
+    },
+    {
+      "startMs": 293960,
+      "endMs": 296960,
+      "text": "You"
+    },
+    {
+      "startMs": 323960,
+      "endMs": 326960,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 42,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

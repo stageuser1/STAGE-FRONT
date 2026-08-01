@@ -1,0 +1,556 @@
+{
+  "id": "p2-42-map-of-biblio-stack",
+  "title": "Map of Biblio Stack",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-06d0d7720301",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 346.003,
+    "checksum": "sha256:33ea35ff6228d0021bf24bea51feef4985faf350d98c2e8e0d179bd59870cad5"
+  },
+  "groups": [
+    {
+      "type": "map",
+      "title": "Questions 11-15.",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Seating area",
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "Cushions",
+          "answer": "F"
+        },
+        {
+          "id": "13",
+          "text": "Computer bench",
+          "answer": "D"
+        },
+        {
+          "id": "14",
+          "text": "Café bar",
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "Newspapers",
+          "answer": "H"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-42-map-of-biblio-stack-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-42-map-of-biblio-stack-map-png-map.png"
+      }
+    },
+    {
+      "type": "single",
+      "title": "Questions 16-20.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "16",
+          "text": "The bookshop aims to",
+          "options": [
+            {
+              "id": "A",
+              "text": "sell as many books as possible"
+            },
+            {
+              "id": "B",
+              "text": "create an energetic environment"
+            },
+            {
+              "id": "C",
+              "text": "attract people to remain in the shop"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "Children’s books are located",
+          "options": [
+            {
+              "id": "A",
+              "text": "ground floor"
+            },
+            {
+              "id": "B",
+              "text": "highest level"
+            },
+            {
+              "id": "C",
+              "text": "midway up"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "For parents to relax",
+          "options": [
+            {
+              "id": "A",
+              "text": "train floor-staff to take care of children"
+            },
+            {
+              "id": "B",
+              "text": "free nursery"
+            },
+            {
+              "id": "C",
+              "text": "professional child care"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "19",
+          "text": "Regular book reading",
+          "options": [
+            {
+              "id": "A",
+              "text": "to sell more books"
+            },
+            {
+              "id": "B",
+              "text": "author gathering"
+            },
+            {
+              "id": "C",
+              "text": "bring more money by charging"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "Poetry workshop",
+          "options": [
+            {
+              "id": "A",
+              "text": "encourage their works to be published"
+            },
+            {
+              "id": "B",
+              "text": "to become a professional poet"
+            },
+            {
+              "id": "C",
+              "text": "to read them in public"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "16": "C",
+        "17": "B",
+        "18": "C",
+        "19": "A",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "F",
+        "13": "D",
+        "14": "A",
+        "15": "H"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2920,
+      "text": "Part 2."
+    },
+    {
+      "startMs": 2920,
+      "endMs": 9300,
+      "text": "You will hear the manager of a bookshop called Bibliostack, talking to a group of young people"
+    },
+    {
+      "startMs": 9300,
+      "endMs": 12200,
+      "text": "about the way the bookshop is organized."
+    },
+    {
+      "startMs": 12200,
+      "endMs": 17060,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 47380,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 47380,
+      "endMs": 54380,
+      "text": "Good morning everyone and a big welcome to Bibliostack."
+    },
+    {
+      "startMs": 54380,
+      "endMs": 58220,
+      "text": "Firstly, I'll explain the plan of the store to you."
+    },
+    {
+      "startMs": 58220,
+      "endMs": 64040,
+      "text": "The building is on seven floors and is circular, as you can see, and we're here on the ground"
+    },
+    {
+      "startMs": 64040,
+      "endMs": 66880,
+      "text": "floor in its entrance hall."
+    },
+    {
+      "startMs": 66880,
+      "endMs": 76380,
+      "text": "Right in the centre of this floor, but behind the bookshelf, so you can't see it very well from here, it's our main seating area where people are encouraged to sit and read for"
+    },
+    {
+      "startMs": 76380,
+      "endMs": 77980,
+      "text": "as long as they like."
+    },
+    {
+      "startMs": 77980,
+      "endMs": 82320,
+      "text": "But they're under no pressure to buy what they're reading, that's not how we operate."
+    },
+    {
+      "startMs": 82320,
+      "endMs": 86960,
+      "text": "And if you look to your immediate left past the first double row of shelves, you'll see"
+    },
+    {
+      "startMs": 86960,
+      "endMs": 90460,
+      "text": "piles of coloured cushions in front of the window there."
+    },
+    {
+      "startMs": 90460,
+      "endMs": 94040,
+      "text": "We provide those so that people can sit wherever they want."
+    },
+    {
+      "startMs": 94040,
+      "endMs": 98280,
+      "text": "Lots of people like to sit close to the bookshelves, and if they want to sit on the floor there,"
+    },
+    {
+      "startMs": 98280,
+      "endMs": 100980,
+      "text": "we want them to be as comfortable as possible."
+    },
+    {
+      "startMs": 100980,
+      "endMs": 106400,
+      "text": "On your right between the two larger bookshelves, you'll see the computer bench, where our visitors"
+    },
+    {
+      "startMs": 106400,
+      "endMs": 109160,
+      "text": "can search through our entire catalogue."
+    },
+    {
+      "startMs": 109160,
+      "endMs": 114360,
+      "text": "We pride ourselves in being the largest bookshop in the country, so our sales assistants"
+    },
+    {
+      "startMs": 114360,
+      "endMs": 118240,
+      "text": "can't possibly know all the available titles."
+    },
+    {
+      "startMs": 118240,
+      "endMs": 122440,
+      "text": "Although the room in front of you is dominated by the bookshelves, at the far end, just"
+    },
+    {
+      "startMs": 122440,
+      "endMs": 127640,
+      "text": "in front of the lift, you'll see that we provide a small cafe bar here too."
+    },
+    {
+      "startMs": 127640,
+      "endMs": 130960,
+      "text": "And just to your right, there's a door to the cloakroom, where people can leave their"
+    },
+    {
+      "startMs": 130960,
+      "endMs": 132280,
+      "text": "coats."
+    },
+    {
+      "startMs": 132280,
+      "endMs": 138200,
+      "text": "Then after that, there's a stand where we keep a selection of local and national newspapers."
+    },
+    {
+      "startMs": 138200,
+      "endMs": 142160,
+      "text": "Customers are welcome to browse through them, and we also have some for sale."
+    },
+    {
+      "startMs": 142160,
+      "endMs": 146240,
+      "text": "We really want people to feel as though they're browsing through books in the comfort of"
+    },
+    {
+      "startMs": 146240,
+      "endMs": 154720,
+      "text": "their own home."
+    },
+    {
+      "startMs": 154720,
+      "endMs": 160360,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 172160,
+      "endMs": 199280,
+      "text": "Now listen and answer questions 16 to 20."
+    },
+    {
+      "startMs": 202160,
+      "endMs": 207960,
+      "text": "Right, now I suggest we walk slowly up through the building, and I'll give you more information"
+    },
+    {
+      "startMs": 207960,
+      "endMs": 209280,
+      "text": "as we go."
+    },
+    {
+      "startMs": 209280,
+      "endMs": 211480,
+      "text": "We're open 12 hours a day."
+    },
+    {
+      "startMs": 211480,
+      "endMs": 215520,
+      "text": "We don't mind if people spend the whole day here, but leave without buying anything."
+    },
+    {
+      "startMs": 215520,
+      "endMs": 220280,
+      "text": "Of course we hope they'll buy something, but our purpose is to draw people in, to provide the kind of environment which makes them want to stay and read."
+    },
+    {
+      "startMs": 220280,
+      "endMs": 224360,
+      "text": "the kind of environment which makes them want to stay and read."
+    },
+    {
+      "startMs": 224360,
+      "endMs": 228480,
+      "text": "Look at how busy each floor is, but how quiet."
+    },
+    {
+      "startMs": 228480,
+      "endMs": 232080,
+      "text": "You may be wondering whether there are any children in the building."
+    },
+    {
+      "startMs": 232080,
+      "endMs": 236440,
+      "text": "We debated about locating children's books on the ground floor or halfway up the building like the third or fourth floor, but in the end we decided to put them on the very top level, and I can assure you it's not the least bit quiet up there."
+    },
+    {
+      "startMs": 236440,
+      "endMs": 240880,
+      "text": "like the third or fourth floor, but in the end we decided to put them on the very top"
+    },
+    {
+      "startMs": 240880,
+      "endMs": 245280,
+      "text": "level, and I can assure you it's not the least bit quiet up there."
+    },
+    {
+      "startMs": 245280,
+      "endMs": 249600,
+      "text": "Of course many parents would prefer to spend time on other floors, and so we provide a"
+    },
+    {
+      "startMs": 249600,
+      "endMs": 255200,
+      "text": "supervised area for children under two in the basement, so parents can wander around the"
+    },
+    {
+      "startMs": 255200,
+      "endMs": 257920,
+      "text": "shop for a few hours and not worry."
+    },
+    {
+      "startMs": 257920,
+      "endMs": 262000,
+      "text": "They do have to pay for this service, because although we thought about using some of our own assistance, we decided to employ qualified nursery staff for parents' complete peace"
+    },
+    {
+      "startMs": 262000,
+      "endMs": 267120,
+      "text": "own assistance, we decided to employ qualified nursery staff for parents' complete peace"
+    },
+    {
+      "startMs": 267120,
+      "endMs": 268120,
+      "text": "of mind."
+    },
+    {
+      "startMs": 268120,
+      "endMs": 273200,
+      "text": "Now, we're just passing the fiction section, and you've probably noticed a small crowd"
+    },
+    {
+      "startMs": 273200,
+      "endMs": 275200,
+      "text": "of people beginning to gather."
+    },
+    {
+      "startMs": 275200,
+      "endMs": 279040,
+      "text": "That's because a well-known author is going to read from her latest novel."
+    },
+    {
+      "startMs": 279040,
+      "endMs": 283200,
+      "text": "We try to hold events like this at least once or twice a week, and as you can imagine,"
+    },
+    {
+      "startMs": 283200,
+      "endMs": 284680,
+      "text": "they're very popular."
+    },
+    {
+      "startMs": 284680,
+      "endMs": 288640,
+      "text": "We don't make a charge for people to attend, but we obviously hope that some of them will want to purchase the book after listening to part of it being read aloud."
+    },
+    {
+      "startMs": 288640,
+      "endMs": 292600,
+      "text": "want to purchase the book after listening to part of it being read aloud."
+    },
+    {
+      "startMs": 292600,
+      "endMs": 296880,
+      "text": "Other events which are proving to be very popular are our workshops."
+    },
+    {
+      "startMs": 296880,
+      "endMs": 301880,
+      "text": "Last week we held a poetry workshop, and people came along with poems that they'd written."
+    },
+    {
+      "startMs": 301880,
+      "endMs": 306000,
+      "text": "One of the country's best-known poets ran the workshop, and the participants read their poems aloud to him."
+    },
+    {
+      "startMs": 306000,
+      "endMs": 307680,
+      "text": "poems aloud to him."
+    },
+    {
+      "startMs": 307680,
+      "endMs": 312640,
+      "text": "He was kind and encouraging, and many people felt inspired by his advice."
+    },
+    {
+      "startMs": 312640,
+      "endMs": 316800,
+      "text": "It's extremely difficult to earn your living as a professional poet, and even published poets have other jobs."
+    },
+    {
+      "startMs": 316800,
+      "endMs": 319400,
+      "text": "poets have other jobs."
+    },
+    {
+      "startMs": 319400,
+      "endMs": 326000,
+      "text": "Now we're going to take a look at our section on audiobooks."
+    },
+    {
+      "startMs": 326000,
+      "endMs": 328600,
+      "text": "That is the end of part two."
+    },
+    {
+      "startMs": 328600,
+      "endMs": 332600,
+      "text": "You now have 30 seconds to check your answers to part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 65,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

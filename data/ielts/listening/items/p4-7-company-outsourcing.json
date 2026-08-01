@@ -1,0 +1,680 @@
+{
+  "id": "p4-7-company-outsourcing",
+  "title": "Company Outsourcing",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-b861025e51d9",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 508.056,
+    "checksum": "sha256:6dcd64d51d1c5c0b2d43734f348b15837f73b93f161e96c6f7e522dd3d75df59"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. Company Outsourcing Case Study TCP Technologies Manager: Manjeet Khanna Main target: to create a 31. _________ environment Grading for staff Every month grades are published on an 32. _________ The cultural openness increased the quantity of incoming contracted opportunities. The cultural openness improved the level of 33. _________ of the company. The increased rate of staff satisfaction has led to growth of 32% in the 34. _________ Recent interview Manjeet’s motto is 35. _________ Benefits of management style The rate of staff turnover has been reduced. Grades are not used for 37. _________ Features of managing style Personally, the manager wrote emails to respond to the complaints. The complaint form known as a 38. _________ has access to all employees online. The manager can receive any complaints concerning air conditioning, food quality and 39. _________ entitlement.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Main target: to create a 31. _________ environment",
+          "answer": "democratic"
+        },
+        {
+          "id": "32",
+          "text": "Every month grades are published on an 32. _________",
+          "answer": "internal website"
+        },
+        {
+          "id": "33",
+          "text": "The cultural openness improved the level of 33. _________ of the company.",
+          "answer": "transparency"
+        },
+        {
+          "id": "34",
+          "text": "The increased rate of staff satisfaction has led to growth of 32% in the 34. _________",
+          "answer": "income/company’s income"
+        },
+        {
+          "id": "35",
+          "text": "Manjeet’s motto is 35. _________",
+          "answer": "employee first"
+        },
+        {
+          "id": "36",
+          "text": "A 36. _________ can be from any other company.",
+          "answer": "solution"
+        },
+        {
+          "id": "37",
+          "text": "Grades are not used for 37. _________",
+          "answer": "promotion"
+        },
+        {
+          "id": "38",
+          "text": "The complaint form known as a 38. _________ has access to all employees online.",
+          "answer": "ticket"
+        },
+        {
+          "id": "39",
+          "text": "The manager can receive any complaints concerning air conditioning, food quality and 39. _________ entitlement.",
+          "answer": "vacation"
+        },
+        {
+          "id": "40",
+          "text": "A 40. _________ on the anonymous complaint was introduced in the new system.",
+          "answer": "ban"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Company Outsourcing",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Case Study TCP Technologies",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Manager: Manjeet Khanna",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Main target: to create a 31. _________ environment",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Grading for staff",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Every month grades are published on an 32. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The cultural openness increased the quantity of incoming contracted opportunities.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The cultural openness improved the level of 33. _________ of the company.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The increased rate of staff satisfaction has led to growth of 32% in the 34. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Recent interview",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A company is not one entity comprised of components, but a living organism composed of cells.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Manjeet’s motto is 35. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Benefits of management style",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The rate of staff turnover has been reduced.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A 36. _________ can be from any other company.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Grades are not used for 37. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Features of managing style",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Personally, the manager wrote emails to respond to the complaints.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The complaint form known as a 38. _________ has access to all employees online.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The manager can receive any complaints concerning air conditioning, food quality and 39. _________ entitlement.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A 40. _________ on the anonymous complaint was introduced in the new system.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "democratic",
+        "32": "internal website",
+        "33": "transparency",
+        "34": "income/company’s income",
+        "35": "employee first",
+        "36": "solution",
+        "37": "promotion",
+        "38": "ticket",
+        "39": "vacation",
+        "40": "ban"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8240,
+      "text": "Section 4."
+    },
+    {
+      "startMs": 8240,
+      "endMs": 12320,
+      "text": "You will hear a talk about the practice of company outsourcing."
+    },
+    {
+      "startMs": 12320,
+      "endMs": 17640,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 55120,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 55120,
+      "endMs": 66240,
+      "text": "Now, listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 66240,
+      "endMs": 71600,
+      "text": "Welcome class to your very first lecture in this series on Business in the Modern World"
+    },
+    {
+      "startMs": 71600,
+      "endMs": 75640,
+      "text": "conducted by myself, Dr Toby Bennett."
+    },
+    {
+      "startMs": 75640,
+      "endMs": 82680,
+      "text": "Today, we will be looking into the practice of company outsourcing using TCP technologies"
+    },
+    {
+      "startMs": 82680,
+      "endMs": 84080,
+      "text": "as a case study."
+    },
+    {
+      "startMs": 84720,
+      "endMs": 90240,
+      "text": "Now, for those of you who are unfamiliar with this practice, I will give you a summative"
+    },
+    {
+      "startMs": 90240,
+      "endMs": 92240,
+      "text": "definition."
+    },
+    {
+      "startMs": 92240,
+      "endMs": 97640,
+      "text": "Company outsourcing involves the contracting of various business activities by one company"
+    },
+    {
+      "startMs": 97640,
+      "endMs": 99640,
+      "text": "to another."
+    },
+    {
+      "startMs": 99640,
+      "endMs": 104600,
+      "text": "This practice will sometimes occur from a Western company to a party based in a third-world"
+    },
+    {
+      "startMs": 104600,
+      "endMs": 111080,
+      "text": "country, the rationale being to make significant financial savings on lower international"
+    },
+    {
+      "startMs": 111080,
+      "endMs": 115400,
+      "text": "labour rates and to potentially increase quality."
+    },
+    {
+      "startMs": 115400,
+      "endMs": 124440,
+      "text": "Now, our case study for today is TCP technologies, a party located in India that receives outsource"
+    },
+    {
+      "startMs": 124440,
+      "endMs": 127840,
+      "text": "tasks from Western companies."
+    },
+    {
+      "startMs": 127840,
+      "endMs": 134000,
+      "text": "The manager of TCP technologies is a man called Manjeet Karna, who has personally developed"
+    },
+    {
+      "startMs": 134000,
+      "endMs": 140360,
+      "text": "a series of aims and philosophies by which the company is expected to operate."
+    },
+    {
+      "startMs": 140360,
+      "endMs": 145640,
+      "text": "He claims that the most important of these philosophies is to create a workplace where"
+    },
+    {
+      "startMs": 145640,
+      "endMs": 151440,
+      "text": "each individual member has the opportunity to contribute their opinion to the operations"
+    },
+    {
+      "startMs": 151440,
+      "endMs": 153560,
+      "text": "of the company."
+    },
+    {
+      "startMs": 153560,
+      "endMs": 160120,
+      "text": "That is to say that he found it important to develop a democratic environment."
+    },
+    {
+      "startMs": 160120,
+      "endMs": 166280,
+      "text": "As a means of ensuring quality from every individual at TCP technologies, a grading system"
+    },
+    {
+      "startMs": 166360,
+      "endMs": 173360,
+      "text": "has been developed that encourages and ethos of hard work and recognizes accomplishment."
+    },
+    {
+      "startMs": 173360,
+      "endMs": 179400,
+      "text": "This grading of individuals is based upon a series of factors such as turnover, hours 28<00:02:59,400 --> 00:03:02,960 worked and efficiency."
+    },
+    {
+      "startMs": 182960,
+      "endMs": 188360,
+      "text": "Every month Karna publishes the grades on an internal website where staff can access"
+    },
+    {
+      "startMs": 188360,
+      "endMs": 193960,
+      "text": "not only their own grades but also compare it to others."
+    },
+    {
+      "startMs": 193960,
+      "endMs": 199240,
+      "text": "A spirit of playful competitiveness has developed through this method which has resulted in"
+    },
+    {
+      "startMs": 199240,
+      "endMs": 204600,
+      "text": "increased efficiency and turnover across the company."
+    },
+    {
+      "startMs": 204600,
+      "endMs": 210920,
+      "text": "Karna also saw it as essential to develop a culturally diverse group of employees"
+    },
+    {
+      "startMs": 210920,
+      "endMs": 216080,
+      "text": "as a means of presenting a multifaceted image that would appeal to a host of potential"
+    },
+    {
+      "startMs": 216080,
+      "endMs": 219920,
+      "text": "employees from across the globe."
+    },
+    {
+      "startMs": 219920,
+      "endMs": 225680,
+      "text": "This cultural openness has not only increased the quantity of incoming contracted opportunities"
+    },
+    {
+      "startMs": 225680,
+      "endMs": 232520,
+      "text": "by 7%, but has also benefited the company itself significantly."
+    },
+    {
+      "startMs": 232520,
+      "endMs": 238320,
+      "text": "A level of transparency now exists that had not before been apparent."
+    },
+    {
+      "startMs": 238320,
+      "endMs": 244120,
+      "text": "According to questionnaires carried out recently, these newly introduced measures have significantly"
+    },
+    {
+      "startMs": 244120,
+      "endMs": 249480,
+      "text": "increased the rates of staff satisfaction, which has subsequently led to an increase"
+    },
+    {
+      "startMs": 249480,
+      "endMs": 253560,
+      "text": "of 32% in the company's income. 32%。"
+    },
+    {
+      "startMs": 253560,
+      "endMs": 258240,
+      "text": "These figures are truly admirable and serve as a testament to the measures that Karna"
+    },
+    {
+      "startMs": 258240,
+      "endMs": 263440,
+      "text": "has introduced to the workplace at TCP technologies."
+    },
+    {
+      "startMs": 263440,
+      "endMs": 267440,
+      "text": "In a recent interview published by the economist, he declared,"
+    },
+    {
+      "startMs": 267480,
+      "endMs": 272680,
+      "text": "the figures speak for themselves, my system works."
+    },
+    {
+      "startMs": 272680,
+      "endMs": 278120,
+      "text": "When asked if he had any advice for companies on methods, they could employ to streamline"
+    },
+    {
+      "startMs": 278120,
+      "endMs": 282160,
+      "text": "workflow and increase turnover, he replied,"
+    },
+    {
+      "startMs": 282160,
+      "endMs": 284040,
+      "text": "it's simple really."
+    },
+    {
+      "startMs": 284040,
+      "endMs": 289920,
+      "text": "A company must see itself not as one entity comprised of nameless components,"
+    },
+    {
+      "startMs": 289920,
+      "endMs": 294800,
+      "text": "but instead as a living organism composed of cells."
+    },
+    {
+      "startMs": 294800,
+      "endMs": 298520,
+      "text": "Each one essential to the functioning of the whole."
+    },
+    {
+      "startMs": 298520,
+      "endMs": 303120,
+      "text": "I suggest that the motto by which your management operates will be,"
+    },
+    {
+      "startMs": 303120,
+      "endMs": 306920,
+      "text": "employe first."
+    },
+    {
+      "startMs": 310120,
+      "endMs": 314880,
+      "text": "Many benefits have been reaped from the aforementioned changes in management style,"
+    },
+    {
+      "startMs": 314880,
+      "endMs": 318840,
+      "text": "such as a significant decrease in staff turnover."
+    },
+    {
+      "startMs": 318880,
+      "endMs": 323560,
+      "text": "This improvement alone has solved many problems that had before"
+    },
+    {
+      "startMs": 323560,
+      "endMs": 326040,
+      "text": "stunted the growth of the company."
+    },
+    {
+      "startMs": 326040,
+      "endMs": 330720,
+      "text": "A lot of these improvements came from the realization that the solution"
+    },
+    {
+      "startMs": 330720,
+      "endMs": 335720,
+      "text": "does not have to be produced internally, but can come from any other company."
+    },
+    {
+      "startMs": 335720,
+      "endMs": 340760,
+      "text": "The grading system also immeasurably enhanced the dynamics of the company."
+    },
+    {
+      "startMs": 340760,
+      "endMs": 344960,
+      "text": "The fact that this measuring system is solely produced for staff members"
+    },
+    {
+      "startMs": 345000,
+      "endMs": 350880,
+      "text": "and inaccessible by management means that it cannot be used as a judging criterion"
+    },
+    {
+      "startMs": 350880,
+      "endMs": 353120,
+      "text": "for promotion."
+    },
+    {
+      "startMs": 353120,
+      "endMs": 358840,
+      "text": "It has proven itself a relaxed and informal means of stimulating workflow."
+    },
+    {
+      "startMs": 358840,
+      "endMs": 362560,
+      "text": "When asked about specific features of his managing style,"
+    },
+    {
+      "startMs": 362560,
+      "endMs": 367200,
+      "text": "Karna mentioned that it is important for him to respond personally"
+    },
+    {
+      "startMs": 367200,
+      "endMs": 371320,
+      "text": "to any complaints filed by staff members."
+    },
+    {
+      "startMs": 371360,
+      "endMs": 375480,
+      "text": "Having found the existing complaints process slow and ineffective,"
+    },
+    {
+      "startMs": 375480,
+      "endMs": 380720,
+      "text": "he introduced a new online system that created a direct line of communication"
+    },
+    {
+      "startMs": 380720,
+      "endMs": 385480,
+      "text": "between Karna and all employees of the company."
+    },
+    {
+      "startMs": 385480,
+      "endMs": 389120,
+      "text": "The complaint form, dubbed by Karna as a ticket,"
+    },
+    {
+      "startMs": 389120,
+      "endMs": 394600,
+      "text": "eradicates the middleman, is easily accessible to all employees online"
+    },
+    {
+      "startMs": 394600,
+      "endMs": 398560,
+      "text": "and has an interface that can be instinctively navigated."
+    },
+    {
+      "startMs": 398600,
+      "endMs": 402960,
+      "text": "Any staff related complaint, such as those relating to air conditioning"
+    },
+    {
+      "startMs": 402960,
+      "endMs": 409440,
+      "text": "and food quality, can be submitted directly to Karna via this online system."
+    },
+    {
+      "startMs": 409440,
+      "endMs": 412760,
+      "text": "Entitlement to vacation is also a popular issue,"
+    },
+    {
+      "startMs": 412760,
+      "endMs": 415440,
+      "text": "discussed through this forum."
+    },
+    {
+      "startMs": 415440,
+      "endMs": 419760,
+      "text": "The main benefit of using the system is that staff must include their personal"
+    },
+    {
+      "startMs": 419760,
+      "endMs": 425320,
+      "text": "details on the ticket before they are able to submit it."
+    },
+    {
+      "startMs": 425360,
+      "endMs": 430520,
+      "text": "In the past, anonymous complaints had been the root of much confusion"
+    },
+    {
+      "startMs": 430520,
+      "endMs": 433640,
+      "text": "and caused many wasted work hours,"
+    },
+    {
+      "startMs": 433640,
+      "endMs": 439160,
+      "text": "so the new system has put a ban on this form of complaint."
+    },
+    {
+      "startMs": 439160,
+      "endMs": 441880,
+      "text": "That wraps up the lecture for today."
+    },
+    {
+      "startMs": 441880,
+      "endMs": 445680,
+      "text": "Please remember that attendance is mandatory."
+    },
+    {
+      "startMs": 448800,
+      "endMs": 451680,
+      "text": "That is the end of section 4."
+    },
+    {
+      "startMs": 451680,
+      "endMs": 454840,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 481680,
+      "endMs": 485840,
+      "text": "That is the end of the listening test."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 86,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

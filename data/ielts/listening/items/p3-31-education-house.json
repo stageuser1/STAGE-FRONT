@@ -1,0 +1,575 @@
+{
+  "id": "p3-31-education-house",
+  "title": "Education House",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-399d41f263aa",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 422.088,
+    "checksum": "sha256:eb5bb4cc73351ac8813b7d3e721e5cc8ccf761196ca008dfa295958827c900b4"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 21–26.",
+      "instruction": "Choose SIX answers from the box and write the correct letter, A–I, next to questions 21–26.",
+      "options": [
+        {
+          "id": "A",
+          "text": "fresh air is removed"
+        },
+        {
+          "id": "B",
+          "text": "fresh air is pulled in"
+        },
+        {
+          "id": "C",
+          "text": "heat loss is reduced"
+        },
+        {
+          "id": "D",
+          "text": "rainwater is checked"
+        },
+        {
+          "id": "E",
+          "text": "rainwater is used"
+        },
+        {
+          "id": "F",
+          "text": "old air is removed"
+        },
+        {
+          "id": "G",
+          "text": "temperature is checked"
+        },
+        {
+          "id": "H",
+          "text": "water temperature is reduced"
+        },
+        {
+          "id": "I",
+          "text": "water is stored"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "Cooling Tower",
+          "answer": "F"
+        },
+        {
+          "id": "22",
+          "text": "Weather Station",
+          "answer": "G"
+        },
+        {
+          "id": "23",
+          "text": "Shower Tower",
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Tank",
+          "answer": "H"
+        },
+        {
+          "id": "25",
+          "text": "Balcony",
+          "answer": "E"
+        },
+        {
+          "id": "26",
+          "text": "Windows",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 27–30.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "27",
+          "text": "What do John and Debbie think will surprise visitors to the Education House building?",
+          "options": [
+            {
+              "id": "A",
+              "text": "how high the building is"
+            },
+            {
+              "id": "B",
+              "text": "where the main entrance is"
+            },
+            {
+              "id": "C",
+              "text": "what is on the outside walls"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "What is their reaction to the findings on staff productivity in the building?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They think the findings are predictable."
+            },
+            {
+              "id": "B",
+              "text": "They believe more research should be done."
+            },
+            {
+              "id": "C",
+              "text": "They suggest the findings are reported in the media."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "What do they think about the 'edge space' in the building?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It might be unpopular with staff."
+            },
+            {
+              "id": "B",
+              "text": "It is a surprising part of the design."
+            },
+            {
+              "id": "C",
+              "text": "It is an area for managers."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "What could be a problem for the building's water system?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the reaction of the staff"
+            },
+            {
+              "id": "B",
+              "text": "the completion date"
+            },
+            {
+              "id": "C",
+              "text": "the possible health hazards"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "27": "B",
+        "28": "A",
+        "29": "B",
+        "30": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "21": "F",
+        "22": "G",
+        "23": "B",
+        "24": "H",
+        "25": "E",
+        "26": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10700,
+      "text": "Section 3 You will hear two industrial design students"
+    },
+    {
+      "startMs": 10700,
+      "endMs": 17000,
+      "text": "called John and Debbie discussing research for a presentation on a new building."
+    },
+    {
+      "startMs": 17000,
+      "endMs": 24000,
+      "text": "First, you have some time to look at questions 21 to 26 on page 5."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59000,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 63000,
+      "text": "Debbie: Hi, John."
+    },
+    {
+      "startMs": 63000,
+      "endMs": 66000,
+      "text": "John: Hi, Debbie. Should we get ready for our presentation?"
+    },
+    {
+      "startMs": 66000,
+      "endMs": 72000,
+      "text": "Debbie: Yes. Well, we have to give a presentation to our seminar group about Education House,"
+    },
+    {
+      "startMs": 72000,
+      "endMs": 77000,
+      "text": "the new government building that uses cooling, heating and water in an environmentally friendly way."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 82000,
+      "text": "John：Let's start with a diagram of the building so the other students can see what it looks like."
+    },
+    {
+      "startMs": 82000,
+      "endMs": 89000,
+      "text": "Debbie：Well, here's a very simplified diagram with symbols to represent key areas of the design."
+    },
+    {
+      "startMs": 89000,
+      "endMs": 92000,
+      "text": "John：Shall we look at it and see if we can explain the different processes?"
+    },
+    {
+      "startMs": 92000,
+      "endMs": 97000,
+      "text": "Debbie: Yes, firstly, on the left-hand side of the roof, there's a cooling tower."
+    },
+    {
+      "startMs": 97000,
+      "endMs": 102000,
+      "text": "John: Yes, this is where hot stale air from inside the building rises naturally up a chimney."
+    },
+    {
+      "startMs": 102000,
+      "endMs": 106000,
+      "text": "Are there exhaust fans mounted on the roof that push the air out?"
+    },
+    {
+      "startMs": 106000,
+      "endMs": 112000,
+      "text": "Debbie: Okay, moving along the top of the roof to the right-hand side, we have the weather station."
+    },
+    {
+      "startMs": 112000,
+      "endMs": 115000,
+      "text": "This monitors how cool the outside air is."
+    },
+    {
+      "startMs": 115000,
+      "endMs": 122000,
+      "text": "Once this is assessed, then the information is fed to computers and these activate the necessary heating or cooling processes."
+    },
+    {
+      "startMs": 122000,
+      "endMs": 126000,
+      "text": "John: Okay. Let's talk now about the cooling processes."
+    },
+    {
+      "startMs": 126000,
+      "endMs": 132000,
+      "text": "Debbie: On the right-hand side of the building below the timber shutters is the part they call the shower tower."
+    },
+    {
+      "startMs": 132000,
+      "endMs": 138000,
+      "text": "John: This is where water falls through a three-story tube sucking in air from outside as it falls."
+    },
+    {
+      "startMs": 138000,
+      "endMs": 142000,
+      "text": "The unusual thing about it is this fresh air actually helps to cool the building."
+    },
+    {
+      "startMs": 142000,
+      "endMs": 144000,
+      "text": "Debbie: Yes, it's amazing, really."
+    },
+    {
+      "startMs": 144000,
+      "endMs": 152000,
+      "text": "Okay, below ground level in the basement on the right-hand side is a tank which forms another part of the cooling process."
+    },
+    {
+      "startMs": 152000,
+      "endMs": 155000,
+      "text": "The tank is full of small metal balls."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 163000,
+      "text": "Water passes through this tank. Each time it does this, the balls absorb the heat from the water making it cooler without using any energy."
+    },
+    {
+      "startMs": 163000,
+      "endMs": 165000,
+      "text": "John: What should we talk about next?"
+    },
+    {
+      "startMs": 165000,
+      "endMs": 168000,
+      "text": "Debbie: Well, you see the balcony below the light shelf."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 169000,
+      "text": "John: What happens there?"
+    },
+    {
+      "startMs": 169000,
+      "endMs": 176000,
+      "text": "Debbie: Rainwater is fed down from the roof and this is where it's used to water the plants that cover the outside wall."
+    },
+    {
+      "startMs": 176000,
+      "endMs": 180000,
+      "text": "John: What about the square above the light shelf? It represents a window, doesn't it?"
+    },
+    {
+      "startMs": 180000,
+      "endMs": 186000,
+      "text": "Debbie: Yes, that's important to point out because the upper floor windows get more daylight than the lower floor ones."
+    },
+    {
+      "startMs": 186000,
+      "endMs": 190000,
+      "text": "The windows at the top of the building are smaller than those at the bottom."
+    },
+    {
+      "startMs": 190000,
+      "endMs": 198000,
+      "text": "This means energy is saved higher up in the building because not as much heat is wasted through large windows."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 207000,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27-30 on page 6."
+    },
+    {
+      "startMs": 229000,
+      "endMs": 242000,
+      "text": "Now listen and answer questions 27-30."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 250000,
+      "text": "John: Let's continue the presentation by giving our opinions on some of the features of the building."
+    },
+    {
+      "startMs": 250000,
+      "endMs": 253000,
+      "text": "Let's talk about what we thought was surprising about the building."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 257000,
+      "text": "Debbie: Yes, it's not out of the ordinary in terms of size."
+    },
+    {
+      "startMs": 257000,
+      "endMs": 260000,
+      "text": "I mean, it's well under the height of the surrounding buildings."
+    },
+    {
+      "startMs": 260000,
+      "endMs": 265000,
+      "text": "Also, in the past, I think people would have been surprised by the vegetation on the facades."
+    },
+    {
+      "startMs": 265000,
+      "endMs": 267000,
+      "text": "But that's become quite common now."
+    },
+    {
+      "startMs": 267000,
+      "endMs": 272000,
+      "text": "John: That's right, but we both agreed that the access to the building through a shopping arcade is quite unusual."
+    },
+    {
+      "startMs": 272000,
+      "endMs": 277000,
+      "text": "Debbie: Yes, the way in is behind a small cafe, which is not what you'd expect."
+    },
+    {
+      "startMs": 277000,
+      "endMs": 281000,
+      "text": "Now, should we mention the findings on staff productivity in the building?"
+    },
+    {
+      "startMs": 281000,
+      "endMs": 287000,
+      "text": "According to one article, the access to greenery in vegetation is increasing productivity by relieving stress."
+    },
+    {
+      "startMs": 287000,
+      "endMs": 289000,
+      "text": "John: Yes, I remember that article."
+    },
+    {
+      "startMs": 289000,
+      "endMs": 294000,
+      "text": "Debbie: Researchers have been monitoring this for a couple of years now, so the results are clear."
+    },
+    {
+      "startMs": 294000,
+      "endMs": 298000,
+      "text": "But to be honest, I think it's pretty obvious that you feel calmer seeing greenery around you."
+    },
+    {
+      "startMs": 298000,
+      "endMs": 301000,
+      "text": "John: Yes, we've been reading that in newspapers for ages, haven't we?"
+    },
+    {
+      "startMs": 301000,
+      "endMs": 303000,
+      "text": "So I wouldn't bother to mention it."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 307000,
+      "text": "Debbie: Okay, so we haven't mentioned the edge space yet."
+    },
+    {
+      "startMs": 307000,
+      "endMs": 313000,
+      "text": "You know, the place that's been marked for social interaction between workers, where you can have a coffee and a chat."
+    },
+    {
+      "startMs": 313000,
+      "endMs": 314000,
+      "text": "What are your thoughts about it?"
+    },
+    {
+      "startMs": 314000,
+      "endMs": 317000,
+      "text": "John: Well, I'm just amazed the management allowed it."
+    },
+    {
+      "startMs": 317000,
+      "endMs": 320000,
+      "text": "I'm sure all the staff love to get away from their desks, I would."
+    },
+    {
+      "startMs": 320000,
+      "endMs": 324000,
+      "text": "I'm just not sure how much work I'd get done if I had an edge space to go to."
+    },
+    {
+      "startMs": 324000,
+      "endMs": 326000,
+      "text": "Debbie: I agree."
+    },
+    {
+      "startMs": 326000,
+      "endMs": 329000,
+      "text": "Okay, let's think about the water system now."
+    },
+    {
+      "startMs": 329000,
+      "endMs": 334000,
+      "text": "They want to supply 100% of their own non-drinking water needs by recycling water."
+    },
+    {
+      "startMs": 334000,
+      "endMs": 339000,
+      "text": "And it looks like they are on target to complete the stage of the project by early next year."
+    },
+    {
+      "startMs": 339000,
+      "endMs": 343000,
+      "text": "But you know, I don't think the staff are going to respond well to this."
+    },
+    {
+      "startMs": 343000,
+      "endMs": 344000,
+      "text": "John: I agree."
+    },
+    {
+      "startMs": 344000,
+      "endMs": 351000,
+      "text": "People just don't like using too much recycled water, even though it's been proven to pose no health risks whatsoever."
+    },
+    {
+      "startMs": 351000,
+      "endMs": 354000,
+      "text": "Debbie: Well, I've really enjoyed researching this building."
+    },
+    {
+      "startMs": 357000,
+      "endMs": 359000,
+      "text": "That is the end of section 3."
+    },
+    {
+      "startMs": 359000,
+      "endMs": 363000,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 389000,
+      "endMs": 396000,
+      "text": "Now turn to section 4 on page 7."
+    },
+    {
+      "startMs": 419000,
+      "endMs": 422000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 68,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

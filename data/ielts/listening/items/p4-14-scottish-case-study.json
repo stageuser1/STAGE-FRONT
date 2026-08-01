@@ -1,0 +1,485 @@
+{
+  "id": "p4-14-scottish-case-study",
+  "title": "Scottish Case Study",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-e476336efa3d",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 500.088,
+    "checksum": "sha256:f8c6d20b4f69e12d9cddfec17a5bb3525e0668fc3fb2b999280bb87093570c8e"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. New engineering designs: Scottish case study Project to renovate and link two canals in Scotland Historical background 1790: opening of the Forth and Clyde Canal (Scotland’s 31. __________ canal) 1822: opening of the Union Canal The two canals allowed boats to cross the 32. __________ part of Scotland Locks (steps) connected the two canals near Falkirk 1842: competition from a new 33. __________ 1930s: the locks were demolished Millennium project Aim: to improve Scotland’s 34. __________ The long-term goal – to strengthen the Scottish 35. __________ Involved restoration of the two canals Problem: one canal is 35m lower than the other The Falkirk Wheel (a mechanical lift) Completed in 2002 Two large tanks are attached to the ends of an arm The tanks are designed to remain in a 36. __________ position The weight of the tanks with their contents is always 37. __________ Little energy is needed to rotate the arm Visual quality – resembles a 38. __________ Manufacturing All the parts were constructed off-site 1,200 tonnes of 39. __________ were used Joints were bolted and welded to reduce the effects of 40. __________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "1790: opening of the Forth and Clyde Canal (Scotland’s 31. __________ canal)",
+          "answer": "oldest"
+        },
+        {
+          "id": "32",
+          "text": "The two canals allowed boats to cross the 32. __________ part of Scotland",
+          "answer": "central"
+        },
+        {
+          "id": "33",
+          "text": "1842: competition from a new 33. __________",
+          "answer": "railway"
+        },
+        {
+          "id": "34",
+          "text": "Aim: to improve Scotland’s 34. __________",
+          "answer": "transport"
+        },
+        {
+          "id": "35",
+          "text": "The long-term goal – to strengthen the Scottish 35. __________",
+          "answer": "economy"
+        },
+        {
+          "id": "36",
+          "text": "The tanks are designed to remain in a 36. __________ position",
+          "answer": "horizontal"
+        },
+        {
+          "id": "37",
+          "text": "The weight of the tanks with their contents is always 37. __________",
+          "answer": "equal"
+        },
+        {
+          "id": "38",
+          "text": "Visual quality – resembles a 38. __________",
+          "answer": "sculpture"
+        },
+        {
+          "id": "39",
+          "text": "1,200 tonnes of 39. __________ were used",
+          "answer": "steel"
+        },
+        {
+          "id": "40",
+          "text": "Joints were bolted and welded to reduce the effects of 40. __________",
+          "answer": "stress"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "New engineering designs: Scottish case study",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Project to renovate and link two canals in Scotland",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Historical background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "1790: opening of the Forth and Clyde Canal (Scotland’s 31. __________ canal)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1822: opening of the Union Canal",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The two canals allowed boats to cross the 32. __________ part of Scotland",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Locks (steps) connected the two canals near Falkirk",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "1842: competition from a new 33. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1930s: the locks were demolished",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Millennium project",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Aim: to improve Scotland’s 34. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The long-term goal – to strengthen the Scottish 35. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Involved restoration of the two canals",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problem: one canal is 35m lower than the other",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The Falkirk Wheel (a mechanical lift)",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Completed in 2002",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Two large tanks are attached to the ends of an arm",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The tanks are designed to remain in a 36. __________ position",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A boat sails into each tank",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The weight of the tanks with their contents is always 37. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Little energy is needed to rotate the arm",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Visual quality – resembles a 38. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Manufacturing",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "All the parts were constructed off-site",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1,200 tonnes of 39. __________ were used",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Joints were bolted and welded to reduce the effects of 40. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "oldest",
+        "32": "central",
+        "33": "railway",
+        "34": "transport",
+        "35": "economy",
+        "36": "horizontal",
+        "37": "equal",
+        "38": "sculpture",
+        "39": "steel",
+        "40": "stress"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12260,
+      "text": "Good morning, everyone. In the last lecture we discussed innovation in engineering design,"
+    },
+    {
+      "startMs": 12260,
+      "endMs": 18340,
+      "text": "and today I want to look at a case study. I'll be talking about an engineering project"
+    },
+    {
+      "startMs": 18340,
+      "endMs": 25260,
+      "text": "which was recently carried out in Scotland to restore two old waterways, canals in fact,"
+    },
+    {
+      "startMs": 25260,
+      "endMs": 31180,
+      "text": "and then link them together. I'll talk about the design features, but first I'll tell"
+    },
+    {
+      "startMs": 31180,
+      "endMs": 37340,
+      "text": "you a little bit about the historical background of the project. One of these canals called"
+    },
+    {
+      "startMs": 37340,
+      "endMs": 45540,
+      "text": "the Forth and Clyde opened in 1790, and it's the oldest of Scotland's canals. The other,"
+    },
+    {
+      "startMs": 45540,
+      "endMs": 52780,
+      "text": "the Union Canal opened in 1822. Although the two canals were built at different levels,"
+    },
+    {
+      "startMs": 52780,
+      "endMs": 59420,
+      "text": "together they enabled vessels to travel from west to east across central Scotland. This is"
+    },
+    {
+      "startMs": 59420,
+      "endMs": 65260,
+      "text": "because the canals were connected near a town called Falkirk by a complicated system of locks,"
+    },
+    {
+      "startMs": 65260,
+      "endMs": 71540,
+      "text": "which have steps and gates allowing boats to move from one level to another. However,"
+    },
+    {
+      "startMs": 71540,
+      "endMs": 78820,
+      "text": "from 1842, the two canals faced serious competition when the railway opened which served the same"
+    },
+    {
+      "startMs": 78900,
+      "endMs": 86420,
+      "text": "cross-country route. After that, their use declined steadily, and in the 1930s the locks at"
+    },
+    {
+      "startMs": 86420,
+      "endMs": 93380,
+      "text": "Falkirk were demolished. Times change, however. Moving on now to the turn of the millennium,"
+    },
+    {
+      "startMs": 94180,
+      "endMs": 100980,
+      "text": "Scotland embarked on an ambitious new project. The aim was to upgrade the country's infrastructure,"
+    },
+    {
+      "startMs": 100980,
+      "endMs": 107060,
+      "text": "especially in the area of transport. There was a multi-million pound budget for this."
+    },
+    {
+      "startMs": 107860,
+      "endMs": 115140,
+      "text": "It was a very big investment indeed. And in fact, the whole project was just one part of a long"
+    },
+    {
+      "startMs": 115140,
+      "endMs": 121780,
+      "text": "term plan which had been developed to stimulate the national economy. And amongst other things,"
+    },
+    {
+      "startMs": 121780,
+      "endMs": 128580,
+      "text": "it involved restoring the two old canals and bringing them back into use. However, there was"
+    },
+    {
+      "startMs": 128580,
+      "endMs": 135300,
+      "text": "one major challenge as I mentioned just now. The Forth and Clyde Canal lies below the level"
+    },
+    {
+      "startMs": 135300,
+      "endMs": 141300,
+      "text": "of the Union Canal. There's a 35-meter difference, and the lock had been destroyed."
+    },
+    {
+      "startMs": 142180,
+      "endMs": 149940,
+      "text": "So the problem was how to get boats from one level to the other. Whatever kind of solution was chosen,"
+    },
+    {
+      "startMs": 149940,
+      "endMs": 156180,
+      "text": "it was felt that it should be really innovative and imaginative. A fitting way to mark the"
+    },
+    {
+      "startMs": 156180,
+      "endMs": 162180,
+      "text": "beginning of a new millennium. The resulting structure was a mechanical lift for boats,"
+    },
+    {
+      "startMs": 162900,
+      "endMs": 169380,
+      "text": "and because it rotates, it was called the Falkirk Wheel. The Falkirk Wheel was completed"
+    },
+    {
+      "startMs": 169380,
+      "endMs": 177620,
+      "text": "in 2002. And it was the first structure of its kind, an engineering innovation. The structure"
+    },
+    {
+      "startMs": 177620,
+      "endMs": 185140,
+      "text": "consists of two very large tanks, each large enough to contain a boat, in fact. These are fixed"
+    },
+    {
+      "startMs": 185140,
+      "endMs": 192500,
+      "text": "onto opposite sides of a vertical arm. Basically, what happens is that the arm lowers one boat from"
+    },
+    {
+      "startMs": 192500,
+      "endMs": 199380,
+      "text": "the higher canal to the canal below. And at the same time, it raises another boat from the lower"
+    },
+    {
+      "startMs": 199380,
+      "endMs": 206980,
+      "text": "canal to the level of the upper canal. How does this work? Well, the tanks are mounted in such a way"
+    },
+    {
+      "startMs": 206980,
+      "endMs": 213860,
+      "text": "that they stay in a horizontal plane. As one boat, together with the water that it floats in,"
+    },
+    {
+      "startMs": 213860,
+      "endMs": 219940,
+      "text": "sails into the upper tank, another floating boat simultaneously enters the lower tank."
+    },
+    {
+      "startMs": 220900,
+      "endMs": 226180,
+      "text": "The system works on scientific principles, which ensure that the weight of each boat plus"
+    },
+    {
+      "startMs": 226180,
+      "endMs": 232900,
+      "text": "the water that it floats in will be equal to the other. So, once the boats have entered the tank,"
+    },
+    {
+      "startMs": 232900,
+      "endMs": 239860,
+      "text": "the arm rotates. And because the tanks are in balance, only a very small amount of energy is"
+    },
+    {
+      "startMs": 239860,
+      "endMs": 247300,
+      "text": "required for this rotation. Engineers generally agree that the Falkirk Wheel is highly functional."
+    },
+    {
+      "startMs": 248020,
+      "endMs": 255940,
+      "text": "It's also visually stunning. It's an unusual shape. It looks very attractive with a lot of curves."
+    },
+    {
+      "startMs": 255940,
+      "endMs": 263060,
+      "text": "In fact, it almost looks like a sculpture. So, where was the Falkirk Wheel manufactured?"
+    },
+    {
+      "startMs": 263780,
+      "endMs": 270820,
+      "text": "Well, it was produced entirely off-site at a place in England about 370 kilometers away."
+    },
+    {
+      "startMs": 271860,
+      "endMs": 280980,
+      "text": "It was constructed from steel, 1,200 tons of it. It was also very strong. For example,"
+    },
+    {
+      "startMs": 280980,
+      "endMs": 287060,
+      "text": "the joints were bolted together as well as being welded. This was because a lot of stress would"
+    },
+    {
+      "startMs": 287060,
+      "endMs": 294180,
+      "text": "be placed on them by the weight of the boats and the water. Over 15,000 bolts were used and"
+    },
+    {
+      "startMs": 294180,
+      "endMs": 301060,
+      "text": "each one was tightened by hand. Of course, since it's been in use, the design has been tested on"
+    },
+    {
+      "startMs": 301060,
+      "endMs": 304100,
+      "text": "an ongoing basis. And it may be..."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 43,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

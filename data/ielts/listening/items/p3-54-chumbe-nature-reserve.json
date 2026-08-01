@@ -1,0 +1,469 @@
+{
+  "id": "p3-54-chumbe-nature-reserve",
+  "title": "Chumbe Nature Reserve",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-0651b9cbacfb",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 503.064,
+    "checksum": "sha256:4570b1bbaceeaeabded6d8d93a3aa9de9ea25ff11161ba91e079549a9d32487d"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21-24.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "The natural resources at Chumbe have increased since",
+          "options": [
+            {
+              "id": "A",
+              "text": "more students have been involved in conservation."
+            },
+            {
+              "id": "B",
+              "text": "the island gained protection under the law."
+            },
+            {
+              "id": "C",
+              "text": "new species were brought in from other places."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "What do we learn about the background to Chumbe’s education programme?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It was the idea of one of the Chumbe rangers."
+            },
+            {
+              "id": "B",
+              "text": "It was privately funded for the first year."
+            },
+            {
+              "id": "C",
+              "text": "It was designed to relate to the school curriculum."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "23",
+          "text": "The evaluation team reported that",
+          "options": [
+            {
+              "id": "A",
+              "text": "some of the island’s resources still required better management."
+            },
+            {
+              "id": "B",
+              "text": "both teachers and pupils had benefited from the field trips."
+            },
+            {
+              "id": "C",
+              "text": "no changes to the education programme were necessary."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "What materials have the Chumbe staff already produced?",
+          "options": [
+            {
+              "id": "A",
+              "text": "a pack for students to use while they are on the field trip"
+            },
+            {
+              "id": "B",
+              "text": "a pack for teachers to use to follow up on the field trip"
+            },
+            {
+              "id": "C",
+              "text": "a pack to help teachers and students prepare for the field trip"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "25-26",
+      "title": "Questions 25 and 26",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO topics does the presentation to schools include?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "what to bring"
+        },
+        {
+          "id": "B",
+          "text": "nature reserve rules"
+        },
+        {
+          "id": "C",
+          "text": "how to get to Chumbe"
+        },
+        {
+          "id": "D",
+          "text": "first aid procedures"
+        },
+        {
+          "id": "E",
+          "text": "use of equipment"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Which TWO topics does the presentation to schools include?",
+          "answer": "B"
+        },
+        {
+          "id": "26",
+          "text": "Which TWO topics does the presentation to schools include?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "27-28",
+      "title": "Questions 27 and 28",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO effects have changes to the education programme had?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "Schools arrive on time more often."
+        },
+        {
+          "id": "B",
+          "text": "Teachers have less preparation to do."
+        },
+        {
+          "id": "C",
+          "text": "Pupils feel more confident."
+        },
+        {
+          "id": "D",
+          "text": "The itinerary can be standardised."
+        },
+        {
+          "id": "E",
+          "text": "The selection of pupils is easier."
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Which TWO effects have changes to the education programme had?",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "Which TWO effects have changes to the education programme had?",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "29-30",
+      "title": "Questions 29 and 30",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO things will Susan do during the rest of her stay?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "read the evaluation report"
+        },
+        {
+          "id": "B",
+          "text": "take some photos"
+        },
+        {
+          "id": "C",
+          "text": "interview teachers"
+        },
+        {
+          "id": "D",
+          "text": "join one of the school groups"
+        },
+        {
+          "id": "E",
+          "text": "copy the materials pack"
+        }
+      ],
+      "questions": [
+        {
+          "id": "29",
+          "text": "Which TWO things will Susan do during the rest of her stay?",
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "Which TWO things will Susan do during the rest of her stay?",
+          "answer": "D"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "C",
+        "23": "B",
+        "24": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "25_26": [
+          "B",
+          "E"
+        ],
+        "27_28": [
+          "A",
+          "C"
+        ],
+        "29_30": [
+          "C",
+          "D"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "25": "B",
+        "26": "E",
+        "27": "A",
+        "28": "C",
+        "29": "C",
+        "30": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 30000,
+      "text": "[Edward]: Hello, Susan. My name's Edward. [Susan]: Hello. Uh, thank you for agreeing to talk to me. I sent you a letter. [Edward]: Yes. [Susan]: I'm doing an education course and I'm looking at how local institutions interact with their community. I was a tourist here in Chumbe a few years ago. And when I read about your science program for schools, I thought I could use it as a case study. [Edward]: Fine."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 60000,
+      "text": "Go ahead and tell us what you want to know. [Susan]: Well, I know that since I first came here, you've expanded your activities. [Edward]: Yes, we have a Chumbe has always been important because it's a coral island and it's got a wide variety of wildlife species. But a few years ago, it became even richer in natural resources. [Susan]: Is that because there were increased safeguards? [Edward]: Yes. We were officially designated a nature reserve. And now we've got more people coming from all over the world to"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 90000,
+      "text": "study here in our ongoing research program. [Susan]: Can you tell me about the background to the schools program? I know it started in 2004. And I think it was intended to link directly into the schools ecology syllabus. [Edward]: That's right. We responded to an approach by a local primary school teacher. He asked if he could bring his pupils here to do some nature studies with our Rangers. Then we started organizing field trips for other schools. We got government funding. Initially for 12 months."
+    },
+    {
+      "startMs": 90000,
+      "endMs": 119000,
+      "text": "That period was eventually extended, but the government sent a team to do a formal evaluation first. [Susan]: Do you mind just telling me briefly what their report said? [Edward]: They found that in general, the field trips had been enjoyable and stimulating and they'd been effective in raising awareness both in the children and also in their teachers of the natural environment and the need to manage resources carefully. [Susan]: Great. And did they suggest any changes?"
+    },
+    {
+      "startMs": 119000,
+      "endMs": 137000,
+      "text": "[Edward]: Not exactly. They told us what the problems were and then they left it up to us to decide how to solve them. For example, the feedback suggested that the field trips could be even more beneficial if schools had materials to give them a better grounding in life sciences. [Susan]: I see."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 150000,
+      "text": "[Edward]: So our staff here in Chumbe started producing materials for schools. We're already distributing an information pack that we produced for using class prior to the field trips and that material seems to be working well."
+    },
+    {
+      "startMs": 150000,
+      "endMs": 158000,
+      "text": "And we've also begun work on another pack about coral reefs, specifically for teachers, which will be trialing in September."
+    },
+    {
+      "startMs": 158000,
+      "endMs": 165000,
+      "text": "[Narrator]: Before you hear the rest of the discussion, you have some time to look at questions 25 to 30."
+    },
+    {
+      "startMs": 165000,
+      "endMs": 176000,
+      "text": "[Edward]: The feedback also told us that schools weren't certain what to expect when they came on the trips. So we decided to institute a preparatory visit by our staff to give a presentation."
+    },
+    {
+      "startMs": 176000,
+      "endMs": 193000,
+      "text": "[Susan]: What does that involve? [Edward]: About a month beforehand, members of our education team meet teachers and pupils and talk them through a sample itinerary for their field trip. They also explain how they have to behave because we have to be very careful about health and safety."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 198000,
+      "text": "[Susan]: And I suppose you also have to make sure that the resources themselves don't suffer any damage."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 208000,
+      "text": "[Edward]: Exactly. Another thing the team does is explain the correct handling of snorkeling apparatus and children are allowed to try it out. We take it all along to the meeting."
+    },
+    {
+      "startMs": 208000,
+      "endMs": 213000,
+      "text": "[Susan]: And now that you've introduced these changes, will there be another evaluation?"
+    },
+    {
+      "startMs": 213000,
+      "endMs": 227000,
+      "text": "[Edward]: Eventually, yes. But we've already had some very positive feedback informally. Teachers have told us they feel better prepared for the trip and have a better idea what to expect and that the pupils feel less nervous about the trips."
+    },
+    {
+      "startMs": 227000,
+      "endMs": 231000,
+      "text": "And there've been a couple of unanticipated benefits too."
+    },
+    {
+      "startMs": 231000,
+      "endMs": 240000,
+      "text": "Staff here say that the preparatory visits help them to gauge the level of the pupils in terms of their understanding of conservation issues."
+    },
+    {
+      "startMs": 240000,
+      "endMs": 244000,
+      "text": "[Susan]: So you can tailor your programme more effectively to the needs of each group?"
+    },
+    {
+      "startMs": 244000,
+      "endMs": 257000,
+      "text": "[Edward]: Yes. And also because our Rangers have a chance to explain about the tides and the fact that the coral reef can only be visited on foot at specific times, scores have been getting here much more punctually."
+    },
+    {
+      "startMs": 257000,
+      "endMs": 262000,
+      "text": "[Susan]: Great. Well, thank you for filling me in. That was very useful."
+    },
+    {
+      "startMs": 262000,
+      "endMs": 269000,
+      "text": "[Edward]: Is there anything else we can help you with? [Susan]: Could I possibly see the formal evaluation report you mentioned?"
+    },
+    {
+      "startMs": 269000,
+      "endMs": 274000,
+      "text": "[Edward]: Yes. I can arrange to get you a copy. Do you want the materials packed too?"
+    },
+    {
+      "startMs": 274000,
+      "endMs": 285000,
+      "text": "[Susan]: Oh, that'd be great. Then I can take them back with me. I won't read them here. I've only got a couple of days and I'd like to ask a few of the teachers who've been here some questions if possible."
+    },
+    {
+      "startMs": 286000,
+      "endMs": 293000,
+      "text": "[Edward]: We'll give you some contact details. But if you've got time, wouldn't you like to participate in one of the field trips?"
+    },
+    {
+      "startMs": 293000,
+      "endMs": 296000,
+      "text": "We've got a new group arriving here this afternoon."
+    },
+    {
+      "startMs": 296000,
+      "endMs": 302000,
+      "text": "[Susan]: I'd really appreciate that. I was going to ask if I could just take some photos of them, but this would be even better."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 305000,
+      "text": "And my camera is not working right anyway."
+    },
+    {
+      "startMs": 305000,
+      "endMs": 308000,
+      "text": "[Edward]: Good. Well, why don't you come and have lunch with us?"
+    },
+    {
+      "startMs": 315000,
+      "endMs": 318000,
+      "text": "[Narrator]: You"
+    },
+    {
+      "startMs": 345000,
+      "endMs": 348000,
+      "text": "You"
+    },
+    {
+      "startMs": 375000,
+      "endMs": 378000,
+      "text": "You"
+    },
+    {
+      "startMs": 405000,
+      "endMs": 408000,
+      "text": "You"
+    },
+    {
+      "startMs": 435000,
+      "endMs": 438000,
+      "text": "You"
+    },
+    {
+      "startMs": 465000,
+      "endMs": 468000,
+      "text": "You"
+    },
+    {
+      "startMs": 495000,
+      "endMs": 498000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 34,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

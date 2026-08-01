@@ -1,0 +1,405 @@
+{
+  "id": "p4-52-underwater-archaeological-sites",
+  "title": "Underwater Archaeological Sites",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-38103bf0b73b",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 499.08,
+    "checksum": "sha256:7029dae90098faf9fa428fe450bc58232d8b3f956d1e6d8035a8c8b55dc98baf"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Underwater Archaeological Sites General Information The Maoris are an example of a society that never developed a 31. ________ form of communication. Discoveries at underwater sites have helped scholars better understand the everyday 32. ________ of ancient communities. Shipwrecks In recent excavations, experts have applied advanced 33. ________ to improve the accuracy of findings. One commonly identified cause of many wrecks is damage caused by a violent 34. ________. Learn from it Some findings have been used to produce a 35. ________ gallery to showcase life on board sunken vessels. Due to difficult access and preservation issues, the amount of 36. ________ conducted was quite restricted. Examples There was one wreck where the crew used a 37. ________ as a defense against pirate attacks. Among the materials found was a 38. ________ that detailed the ship’s intended route. Valuable cargo, especially items like 39. ________, was a major motivation for early explorers. Various luxury goods were discovered, including jewellery and old 40. ________.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "The Maoris are an example of a society that never developed a 31. ________ form of communication.",
+          "answer": "written"
+        },
+        {
+          "id": "32",
+          "text": "Discoveries at underwater sites have helped scholars better understand the everyday 32. ________ of ancient communities.",
+          "answer": "lifestyle"
+        },
+        {
+          "id": "33",
+          "text": "In recent excavations, experts have applied advanced 33. ________ to improve the accuracy of findings.",
+          "answer": "technology"
+        },
+        {
+          "id": "34",
+          "text": "One commonly identified cause of many wrecks is damage caused by a violent 34. ________.",
+          "answer": "storm"
+        },
+        {
+          "id": "35",
+          "text": "Some findings have been used to produce a 35. ________ gallery to showcase life on board sunken vessels.",
+          "answer": "film"
+        },
+        {
+          "id": "36",
+          "text": "Due to difficult access and preservation issues, the amount of 36. ________ conducted was quite restricted.",
+          "answer": "research"
+        },
+        {
+          "id": "37",
+          "text": "There was one wreck where the crew used a 37. ________ as a defense against pirate attacks.",
+          "answer": "gun"
+        },
+        {
+          "id": "38",
+          "text": "Among the materials found was a 38. ________ that detailed the ship’s intended route.",
+          "answer": "map"
+        },
+        {
+          "id": "39",
+          "text": "Valuable cargo, especially items like 39. ________, was a major motivation for early explorers.",
+          "answer": "gold"
+        },
+        {
+          "id": "40",
+          "text": "Various luxury goods were discovered, including jewellery and old 40. ________.",
+          "answer": "coins"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Underwater Archaeological Sites",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "General Information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Maoris are an example of a society that never developed a 31. ________ form of communication.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Discoveries at underwater sites have helped scholars better understand the everyday 32. ________ of ancient communities.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Shipwrecks",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In recent excavations, experts have applied advanced 33. ________ to improve the accuracy of findings.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "One commonly identified cause of many wrecks is damage caused by a violent 34. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Learn from it",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Some findings have been used to produce a 35. ________ gallery to showcase life on board sunken vessels.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Due to difficult access and preservation issues, the amount of 36. ________ conducted was quite restricted.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Examples",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "There was one wreck where the crew used a 37. ________ as a defense against pirate attacks.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Among the materials found was a 38. ________ that detailed the ship’s intended route.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Valuable cargo, especially items like 39. ________, was a major motivation for early explorers.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Various luxury goods were discovered, including jewellery and old 40. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "written",
+        "32": "lifestyle",
+        "33": "technology",
+        "34": "storm",
+        "35": "film",
+        "36": "research",
+        "37": "gun",
+        "38": "map",
+        "39": "gold",
+        "40": "coins"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10640,
+      "text": "In today's lecture, we'll be examining the role of underwater archaeological sites in"
+    },
+    {
+      "startMs": 10640,
+      "endMs": 17960,
+      "text": "uncovering details about ancient civilizations that might otherwise have been lost to time."
+    },
+    {
+      "startMs": 17960,
+      "endMs": 23760,
+      "text": "These sites are particularly significant for studying cultures that left little to no"
+    },
+    {
+      "startMs": 23760,
+      "endMs": 25240,
+      "text": "formal records."
+    },
+    {
+      "startMs": 26120,
+      "endMs": 31320,
+      "text": "A good example is the Maurees of New Zealand, whose history was passed down"
+    },
+    {
+      "startMs": 31320,
+      "endMs": 38920,
+      "text": "orally rather than through written documents. In fact, they are frequently recognized as a society"
+    },
+    {
+      "startMs": 38920,
+      "endMs": 45720,
+      "text": "that lacked any form of written script. This made physical discoveries all the more important."
+    },
+    {
+      "startMs": 47160,
+      "endMs": 53000,
+      "text": "What's fascinating is how much we can learn about people's daily routines and social behavior"
+    },
+    {
+      "startMs": 53080,
+      "endMs": 60040,
+      "text": "from these remains. The arrangement of objects on board, for instance, can offer clues"
+    },
+    {
+      "startMs": 60040,
+      "endMs": 67000,
+      "text": "about the lifestyle of those who sailed centuries ago. The process of studying these shipwrecks"
+    },
+    {
+      "startMs": 67000,
+      "endMs": 70680,
+      "text": "has changed dramatically thanks to advancements in equipment."
+    },
+    {
+      "startMs": 71960,
+      "endMs": 78840,
+      "text": "Researchers now rely heavily on underwater drones, sonar scanners, and imaging software."
+    },
+    {
+      "startMs": 79720,
+      "endMs": 85720,
+      "text": "Collectively, this modern technology has made excavation more precise and far less invasive."
+    },
+    {
+      "startMs": 86840,
+      "endMs": 92120,
+      "text": "Now, when we talk about causes of shipwrecks, it's easy to imagine warfare or piracy."
+    },
+    {
+      "startMs": 92920,
+      "endMs": 97640,
+      "text": "But, more often than not, the wrecks occurred due to natural forces."
+    },
+    {
+      "startMs": 98920,
+      "endMs": 105400,
+      "text": "One of the most commonly cited causes is exposure to a violent storm, which ships at the time"
+    },
+    {
+      "startMs": 105560,
+      "endMs": 111880,
+      "text": "were not well equipped to withstand. Interestingly, the material recovered is sometimes"
+    },
+    {
+      "startMs": 111880,
+      "endMs": 117880,
+      "text": "used for more than just academic research. Museums and film producers often collaborate to"
+    },
+    {
+      "startMs": 117880,
+      "endMs": 123960,
+      "text": "create immersive exhibitions. In one recent case, artifacts were used in the making of a"
+    },
+    {
+      "startMs": 123960,
+      "endMs": 130440,
+      "text": "historical film gallery that visually narrated life on board a 17th-century trading vessel."
+    },
+    {
+      "startMs": 130760,
+      "endMs": 138680,
+      "text": "That said, researchers frequently face barriers in these investigations. In many locations,"
+    },
+    {
+      "startMs": 138680,
+      "endMs": 144680,
+      "text": "fragile ecosystems, unpredictable tides, and limited access have severely restricted the"
+    },
+    {
+      "startMs": 144680,
+      "endMs": 151480,
+      "text": "amount of research that can be conducted on site. One particularly compelling case involved a ship"
+    },
+    {
+      "startMs": 151480,
+      "endMs": 157400,
+      "text": "that appeared to be equipped for combat. The wreckage included what was believed to be a gun"
+    },
+    {
+      "startMs": 157480,
+      "endMs": 165240,
+      "text": "used to defend against pirate raids. A rare find that adds a dramatic dimension to our understanding"
+    },
+    {
+      "startMs": 165240,
+      "endMs": 172840,
+      "text": "of maritime risks. Equally intriguing was the discovery of a navigational map still partially"
+    },
+    {
+      "startMs": 172840,
+      "endMs": 178280,
+      "text": "intact, which outlined the ship's intended course through trade routes active at the time."
+    },
+    {
+      "startMs": 179320,
+      "endMs": 185000,
+      "text": "These maps not only reveal destinations, but also show the maritime knowledge of the era."
+    },
+    {
+      "startMs": 185880,
+      "endMs": 191640,
+      "text": "So why were these voyages made in the first place? Well, much of it came down to profit."
+    },
+    {
+      "startMs": 192440,
+      "endMs": 197960,
+      "text": "Many of these vessels were transporting precious materials, particularly gold,"
+    },
+    {
+      "startMs": 197960,
+      "endMs": 204840,
+      "text": "which was in high demand across expanding empires. And finally, it's not unusual for wrecks"
+    },
+    {
+      "startMs": 204840,
+      "endMs": 211320,
+      "text": "to yield personal and luxury items. In several cases, archaeologists have uncovered treasure"
+    },
+    {
+      "startMs": 211320,
+      "endMs": 217640,
+      "text": "collections featuring fine jewelry and antique coins, shedding light on both wealth and craftsmanship"
+    },
+    {
+      "startMs": 217640,
+      "endMs": 218520,
+      "text": "of the period."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 34,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

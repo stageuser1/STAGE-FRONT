@@ -1,0 +1,574 @@
+{
+  "id": "p2-53-waste-sorting",
+  "title": "Waste sorting",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-c7df3438a4c2",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 310.86,
+    "checksum": "sha256:439a06b59df41a14e784a219a058da73eeb06669b9ee63cc423fd3bd4414192f"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 11-20",
+      "instruction": "Fill in the form below. Write ONE WORD AND/OR A NUMBER for each answer. Waste sorting, collection and disposal Waste sorting: Necessary characteristics of dustbins Solid and 11. _____ Three kinds: recyclable garbage (blue or green bin) unrecoverable garbage (yellow bin) toxic waste (red bin) waste collection Commercial waste collection: It mainly refers to 12. _____ waste. Warning Signs state not to 13. _____ blue/green bin Those 14. _____ metals will cause environmental pollution Waste disposal Household waste collection: All kitchen garbage should be put into a 15. _____ bag Garbage disposal plant is situated in an 16. _____ space or field The waste is disposed of at least once every 17. _____ The dustbin should be cleared at nights because of 18. _____ The waste is mainly produced by 19. _____, industry, retail and offices. Please do not dispose of 20. _____ in any of the bins.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Solid and 11. _____",
+          "answer": "Waterproof"
+        },
+        {
+          "id": "12",
+          "text": "It mainly refers to 12. _____ waste.",
+          "answer": "Building"
+        },
+        {
+          "id": "13",
+          "text": "Warning Signs state not to 13. _____ blue/green bin",
+          "answer": "Overfill"
+        },
+        {
+          "id": "14",
+          "text": "Those 14. _____ metals will cause environmental pollution",
+          "answer": "Heavy"
+        },
+        {
+          "id": "15",
+          "text": "All kitchen garbage should be put into a 15. _____ bag",
+          "answer": "Plastic"
+        },
+        {
+          "id": "16",
+          "text": "Garbage disposal plant is situated in an 16. _____ space or",
+          "answer": "Open"
+        },
+        {
+          "id": "17",
+          "text": "The waste is disposed of at least once every 17. _____",
+          "answer": "4 weeks"
+        },
+        {
+          "id": "18",
+          "text": "The dustbin should be cleared at nights because of 18. _____",
+          "answer": "Traffic"
+        },
+        {
+          "id": "19",
+          "text": "The waste is mainly produced by 19. _____, industry, retail and offices.",
+          "answer": "Businesses"
+        },
+        {
+          "id": "20",
+          "text": "Please do not dispose of 20. _____ in any of the bins.",
+          "answer": "Stones"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Fill in the form below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Waste sorting, collection and disposal",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 1
+        },
+        {
+          "text": "Waste sorting: Necessary characteristics of dustbins",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 1
+        },
+        {
+          "text": "Solid and 11. _____",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Three kinds:",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "recyclable garbage (blue or green bin)",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "unrecoverable garbage (yellow bin)",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "toxic waste (red bin)",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "waste collection",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Commercial waste collection:",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "It mainly refers to 12. _____ waste.",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Warning Signs state not to 13. _____ blue/green bin",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Those 14. _____ metals will cause environmental pollution",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Waste disposal",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Household waste collection:",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "All kitchen garbage should be put into a 15. _____ bag",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Garbage disposal plant is situated in an 16. _____ space or",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "field",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "The waste is disposed of at least once every 17. _____",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "The dustbin should be cleared at nights because of 18. _____",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "The waste is mainly produced by 19. _____, industry, retail and offices.",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Please do not dispose of 20. _____ in any of the bins.",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "11": "Waterproof",
+        "12": "Building",
+        "13": "Overfill",
+        "14": "Heavy",
+        "15": "Plastic",
+        "16": "Open",
+        "17": "4 weeks",
+        "18": "Traffic",
+        "19": "Businesses",
+        "20": "Stones"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2000,
+      "text": "Section 2"
+    },
+    {
+      "startMs": 2000,
+      "endMs": 5600,
+      "text": "You'll hear a talk about the waste collection in Baltimore."
+    },
+    {
+      "startMs": 5600,
+      "endMs": 10000,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 42000,
+      "text": "Now, listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 42000,
+      "endMs": 48000,
+      "text": "Hi folks, my name is Loretta Johnston and I'm here from the Baltimore Department of Public Waste."
+    },
+    {
+      "startMs": 48000,
+      "endMs": 51000,
+      "text": "Thank you for coming out to our community meeting tonight."
+    },
+    {
+      "startMs": 51000,
+      "endMs": 56000,
+      "text": "I've got a few words to say about the waste collection here in Baltimore."
+    },
+    {
+      "startMs": 56000,
+      "endMs": 59000,
+      "text": "First, there's the sorted collection bins themselves."
+    },
+    {
+      "startMs": 59000,
+      "endMs": 65000,
+      "text": "They're made of sturdy solid material, so none of your trash can seep out or punk to the bin."
+    },
+    {
+      "startMs": 65000,
+      "endMs": 72000,
+      "text": "Also, since these things sit out on the curb overnight, rain or shine, they have to be waterproof."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 75000,
+      "text": "We can't have water getting up in it and filling up the bin."
+    },
+    {
+      "startMs": 75000,
+      "endMs": 80000,
+      "text": "Remember to pay attention to which bin is which, and sort your waste accordingly."
+    },
+    {
+      "startMs": 80000,
+      "endMs": 84000,
+      "text": "You should have a blue or green bin for recyclable garbage,"
+    },
+    {
+      "startMs": 84000,
+      "endMs": 89000,
+      "text": "a yellow bin for unicyclable garbage, and a red bin for toxic waste."
+    },
+    {
+      "startMs": 89000,
+      "endMs": 93000,
+      "text": "Our city-wide waste management is divided into two services."
+    },
+    {
+      "startMs": 93000,
+      "endMs": 98000,
+      "text": "The first is commercial waste collection, or trash collection from buildings."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 103000,
+      "text": "The majority of building waste is paper, which goes in the blue or green bins."
+    },
+    {
+      "startMs": 103000,
+      "endMs": 108000,
+      "text": "You'll notice in your office buildings there are signs that warn you not to overfill these bins."
+    },
+    {
+      "startMs": 109000,
+      "endMs": 116000,
+      "text": "All that paper adds up, and an overflowing bin is infinitely harder for collectors to carry to the truck and empty."
+    },
+    {
+      "startMs": 116000,
+      "endMs": 121000,
+      "text": "Aside from paper, another large source of building waste is metals."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 125000,
+      "text": "Metal, such as tin and aluminium, can be put in the yellow recycle bins."
+    },
+    {
+      "startMs": 125000,
+      "endMs": 130000,
+      "text": "But metals like lead and copper should be disposed of in the red bins."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 137000,
+      "text": "These heavy metals are harmful to the environment, and exacerbate our city's existing pollution problem."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 141000,
+      "text": "That's about all the information you need for building waste."
+    },
+    {
+      "startMs": 141000,
+      "endMs": 149000,
+      "text": "Moving on to the second service, House All Waste Collection is probably what you primarily think of when you think of what we do here."
+    },
+    {
+      "startMs": 149000,
+      "endMs": 154000,
+      "text": "Many of the same guidelines apply, the sorting is the same, etc."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 158000,
+      "text": "Please remember to keep garbage like kitchen waste in a plastic bag."
+    },
+    {
+      "startMs": 158000,
+      "endMs": 165000,
+      "text": "It makes collection easier and lessens the abominable rotten trash smell."
+    },
+    {
+      "startMs": 165000,
+      "endMs": 172000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 195000,
+      "text": "Now listen and answer questions 16 to 20."
+    },
+    {
+      "startMs": 195000,
+      "endMs": 202000,
+      "text": "So, after we take your trash away, what happens to it?"
+    },
+    {
+      "startMs": 202000,
+      "endMs": 211000,
+      "text": "We take all the garbage to one of a number of garbage disposal plants, each of which is located in the middle of an open space of some sort."
+    },
+    {
+      "startMs": 211000,
+      "endMs": 216000,
+      "text": "No one wants to have their home or office right next door to a waste disposal plant, right?"
+    },
+    {
+      "startMs": 216000,
+      "endMs": 221000,
+      "text": "Waste is collected and then disposed of once every four weeks."
+    },
+    {
+      "startMs": 221000,
+      "endMs": 228000,
+      "text": "A lot of trash can build up in that time, so we're in the process of developing a plan to fund collection more frequently."
+    },
+    {
+      "startMs": 228000,
+      "endMs": 235000,
+      "text": "Ideally, it would be collected weekly, but we will likely have to settle for buy weekly."
+    },
+    {
+      "startMs": 235000,
+      "endMs": 240000,
+      "text": "The garbage trucks make their rounds to clear the bins at night in order to avoid traffic."
+    },
+    {
+      "startMs": 240000,
+      "endMs": 245000,
+      "text": "I'm sure you've seen how much waste your own household produces in a given week."
+    },
+    {
+      "startMs": 246000,
+      "endMs": 252000,
+      "text": "Now imagine all the trash produced by all the households in Baltimore. It's a lot, right?"
+    },
+    {
+      "startMs": 252000,
+      "endMs": 257000,
+      "text": "It may surprise you that this amount is only marginal compared to commercial waste."
+    },
+    {
+      "startMs": 257000,
+      "endMs": 264000,
+      "text": "Yep, the main waste producers are actually businesses, industrial facilities, retail and offices."
+    },
+    {
+      "startMs": 264000,
+      "endMs": 270000,
+      "text": "Hard to believe humans produce that much waste, right? No wonder we have pollution problems."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 277000,
+      "text": "Anyway, after all incoming waste is sorted, recyclables are sent to a recycling plant,"
+    },
+    {
+      "startMs": 277000,
+      "endMs": 283000,
+      "text": "while garbage and toxic waste are transported to their respective areas of the plant for treatment."
+    },
+    {
+      "startMs": 283000,
+      "endMs": 289000,
+      "text": "Items such as stones, which should not be disposed of in our bins, are separated out and discarded."
+    },
+    {
+      "startMs": 289000,
+      "endMs": 296000,
+      "text": "Once the trash has undergone the treatment process, it is compacted and disposed of with all the other trash."
+    },
+    {
+      "startMs": 296000,
+      "endMs": 303000,
+      "text": "And finally, when the landfill space is full, it is buried deep underground, and in time something new is built on the land."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 308000,
+      "text": "That's everything about waste collection. Thank you for listening. Are there any questions?"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 48,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

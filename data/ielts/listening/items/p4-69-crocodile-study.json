@@ -1,0 +1,575 @@
+{
+  "id": "p4-69-crocodile-study",
+  "title": "Crocodile Study",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-b13387045d07",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 495.072,
+    "checksum": "sha256:01399771968a8a5686994a3c7da5ff0e1fc3194f177a3c4b5351ee6dda34f170"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Crocodile Study Background Type of crocodile studied: crocodiles found in salt water Location of study: Northern Territory, Australia Significance of study: unique because it was the first time a 31. __________ had been used to track crocodiles Previous studies done using 32. __________ stressful method, also unreliable due to loss of the 33. __________ Reasons for study the management of crocodiles by the government may not be effective Research questions How far can crocodiles travel? How easily can crocodiles 34. __________? Challenge crocodiles are difficult to observe because they avoid 35. __________ Details of study number of crocodiles involved: three method: crocodiles were measured and tagged then relocated using a 36. __________ monitoring: scientists got data from a transmitter located on the crocodile’s 37. __________ Results of study Each crocodile first stayed at the site for a few weeks, moving in a random way Then took the most 38. __________ way home Conclusions When travelling long distances, crocodiles may use their own senses and the position of the 39. __________ a similar system to 40. __________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Significance of study: unique because it was the first time a 31. __________ had been used to track crocodiles",
+          "answer": "satellite"
+        },
+        {
+          "id": "32",
+          "text": "done using 32. __________",
+          "answer": "radio"
+        },
+        {
+          "id": "33",
+          "text": "stressful method, also unreliable due to loss of the 33. __________",
+          "answer": "signal"
+        },
+        {
+          "id": "34",
+          "text": "How easily can crocodiles 34. __________?",
+          "answer": "navigate"
+        },
+        {
+          "id": "35",
+          "text": "crocodiles are difficult to observe because they avoid 35. __________",
+          "answer": "people"
+        },
+        {
+          "id": "36",
+          "text": "method: crocodiles were measured and tagged then relocated using a 36. __________",
+          "answer": "helicopter"
+        },
+        {
+          "id": "37",
+          "text": "monitoring: scientists got data from a transmitter located on the crocodile’s 37. __________",
+          "answer": "head"
+        },
+        {
+          "id": "38",
+          "text": "Then took the most 38. __________ way home",
+          "answer": "direct"
+        },
+        {
+          "id": "39",
+          "text": "their own senses and the position of the 39. __________",
+          "answer": "sun"
+        },
+        {
+          "id": "40",
+          "text": "a similar system to 40. __________",
+          "answer": "birds"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Crocodile Study",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Type of crocodile studied: crocodiles found in salt water",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Location of study: Northern Territory, Australia",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Significance of study: unique because it was the first time a 31. __________ had been used to track crocodiles",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Previous studies",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "done using 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "stressful method, also unreliable due to loss of the 33. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Reasons for study",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "the management of crocodiles by the government may not be effective",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Research questions",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "How far can crocodiles travel?",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "How easily can crocodiles 34. __________?",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Challenge",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "crocodiles are difficult to observe because they avoid 35. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Details of study",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "number of crocodiles involved: three",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "method: crocodiles were measured and tagged then relocated using a 36. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "monitoring: scientists got data from a transmitter located on the crocodile’s 37. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Results of study",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Each crocodile first stayed at the site for a few weeks, moving in a random way",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Then took the most 38. __________ way home",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Conclusions",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A change in policy is needed",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "When travelling long distances, crocodiles may use",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "their own senses and the position of the 39. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "a similar system to 40. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "satellite",
+        "32": "radio",
+        "33": "signal",
+        "34": "navigate",
+        "35": "people",
+        "36": "helicopter",
+        "37": "head",
+        "38": "direct",
+        "39": "sun",
+        "40": "birds"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6760,
+      "text": "Section 4."
+    },
+    {
+      "startMs": 6760,
+      "endMs": 12000,
+      "text": "You will hear part of a presentation on recent Crocodile Research in Australia."
+    },
+    {
+      "startMs": 12000,
+      "endMs": 60000,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 74440,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 74440,
+      "endMs": 80120,
+      "text": "Hello everybody, I've just arrived back from my field trip and Professor Martin has asked"
+    },
+    {
+      "startMs": 80120,
+      "endMs": 84120,
+      "text": "me to tell you about it today in our research forum."
+    },
+    {
+      "startMs": 84120,
+      "endMs": 89120,
+      "text": "As many of you know already, my dissertation relates to crocodile behavior."
+    },
+    {
+      "startMs": 89120,
+      "endMs": 94720,
+      "text": "My specialty is the saltwater crocodile, which is much larger than the fresh water crocodile."
+    },
+    {
+      "startMs": 94720,
+      "endMs": 99640,
+      "text": "I've just come back from the Northern Territory, where I've been part of a groundbreaking"
+    },
+    {
+      "startMs": 99640,
+      "endMs": 102440,
+      "text": "study observing crocodile movements."
+    },
+    {
+      "startMs": 102440,
+      "endMs": 108040,
+      "text": "It's not the only time crocodile movements have been followed, but this study is unique"
+    },
+    {
+      "startMs": 108040,
+      "endMs": 111280,
+      "text": "because we tracked crocodiles using a satellite."
+    },
+    {
+      "startMs": 111280,
+      "endMs": 116680,
+      "text": "Up until now, studies like this one have only been able to track crocodile movements using"
+    },
+    {
+      "startMs": 116680,
+      "endMs": 118000,
+      "text": "radio."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 122440,
+      "text": "Not only was this method more stressful for the animal, which had to be caught several"
+    },
+    {
+      "startMs": 122440,
+      "endMs": 128080,
+      "text": "times, but it was also not very reliable as the signal was often lost."
+    },
+    {
+      "startMs": 128080,
+      "endMs": 132560,
+      "text": "So, you might be wondering why we chose to track crocodiles."
+    },
+    {
+      "startMs": 132560,
+      "endMs": 138520,
+      "text": "Well, crocodile attacks on people and livestock are rare, but when they do happen, the government"
+    },
+    {
+      "startMs": 138520,
+      "endMs": 143640,
+      "text": "believes that the problem crocodile should be relocated rather than killed."
+    },
+    {
+      "startMs": 143640,
+      "endMs": 147880,
+      "text": "But can we be sure that the crocodile won't simply return to the place where it came"
+    },
+    {
+      "startMs": 147880,
+      "endMs": 148880,
+      "text": "from?"
+    },
+    {
+      "startMs": 148880,
+      "endMs": 153160,
+      "text": "So we designed a study to try to answer these questions."
+    },
+    {
+      "startMs": 153160,
+      "endMs": 159200,
+      "text": "We wanted to establish, firstly, how far crocodiles can travel over a period of time."
+    },
+    {
+      "startMs": 159200,
+      "endMs": 165160,
+      "text": "The second thing that we wanted to know was how easy is it for crocodiles to navigate?"
+    },
+    {
+      "startMs": 165160,
+      "endMs": 169800,
+      "text": "Could they find their own way home again if they were moved to another location?"
+    },
+    {
+      "startMs": 169800,
+      "endMs": 175160,
+      "text": "Of course, the biggest challenge when observing crocodiles is that they are very secretive"
+    },
+    {
+      "startMs": 175160,
+      "endMs": 176160,
+      "text": "animals."
+    },
+    {
+      "startMs": 176160,
+      "endMs": 183280,
+      "text": "They stay well away from people if they can, which makes them really difficult to follow."
+    },
+    {
+      "startMs": 183280,
+      "endMs": 190360,
+      "text": "I'll give you some information about the design of the study now."
+    },
+    {
+      "startMs": 190360,
+      "endMs": 195200,
+      "text": "There were three crocodiles in our study, all from the Northern Territory, and measuring"
+    },
+    {
+      "startMs": 195200,
+      "endMs": 199000,
+      "text": "between three and four and a half meters in length."
+    },
+    {
+      "startMs": 199000,
+      "endMs": 204240,
+      "text": "The crocodiles were captured, measured and tagged, and then taken by helicopter to new"
+    },
+    {
+      "startMs": 204240,
+      "endMs": 209360,
+      "text": "locations up to 400 kilometers away from where they were found."
+    },
+    {
+      "startMs": 209360,
+      "endMs": 213640,
+      "text": "We were then able to use the tracking data to monitor their movements."
+    },
+    {
+      "startMs": 213640,
+      "endMs": 218640,
+      "text": "We used a specially designed transmitter, which we attached to each animal's head."
+    },
+    {
+      "startMs": 218640,
+      "endMs": 222760,
+      "text": "The transmitter collected the data and related back to us."
+    },
+    {
+      "startMs": 222760,
+      "endMs": 226000,
+      "text": "The results of our study were quite astounding."
+    },
+    {
+      "startMs": 226000,
+      "endMs": 231000,
+      "text": "After they were released, each crocodile remained in the release site for some weeks, making"
+    },
+    {
+      "startMs": 231000,
+      "endMs": 234000,
+      "text": "random movements around the site each day."
+    },
+    {
+      "startMs": 234000,
+      "endMs": 239000,
+      "text": "But then, they each swam home, traveling by the most direct route."
+    },
+    {
+      "startMs": 239000,
+      "endMs": 245600,
+      "text": "These crocodiles showed remarkable navigational skills and stamina to swim such long voyages."
+    },
+    {
+      "startMs": 245600,
+      "endMs": 249200,
+      "text": "So, what conclusions did we draw from this?"
+    },
+    {
+      "startMs": 249200,
+      "endMs": 255000,
+      "text": "Well, we proved that crocodiles are clearly capable of making marathon swims to find their"
+    },
+    {
+      "startMs": 255000,
+      "endMs": 256000,
+      "text": "home."
+    },
+    {
+      "startMs": 256000,
+      "endMs": 259880,
+      "text": "This meant that the current policy should be reconsidered."
+    },
+    {
+      "startMs": 259880,
+      "endMs": 263680,
+      "text": "You might be wondering how the crocodiles managed to get home."
+    },
+    {
+      "startMs": 263680,
+      "endMs": 268600,
+      "text": "We concluded that they used factors such as sight and smell, as well as their position"
+    },
+    {
+      "startMs": 268600,
+      "endMs": 271040,
+      "text": "to the sun to point their way."
+    },
+    {
+      "startMs": 271040,
+      "endMs": 275600,
+      "text": "It's a little known fact that crocodiles are more closely related to birds than they"
+    },
+    {
+      "startMs": 275600,
+      "endMs": 277480,
+      "text": "are to any other reptile."
+    },
+    {
+      "startMs": 277480,
+      "endMs": 283840,
+      "text": "So, we believe it's possible that they use the same system to negotiate long journeys."
+    },
+    {
+      "startMs": 283840,
+      "endMs": 291680,
+      "text": "Now that the study has been completed, that is the end of section 4."
+    },
+    {
+      "startMs": 291680,
+      "endMs": 294480,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 53,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

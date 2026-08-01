@@ -1,0 +1,573 @@
+{
+  "id": "p2-51-spring-festival",
+  "title": "Spring Festival",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-5b81c76d0492",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 373.056,
+    "checksum": "sha256:af83bff9cfd5945bb5535c087ed317521e0e9459301a8b6b25f74a1e2573e03d"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 11–18",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Spring Festival Event Location Date and Time Other Information Firework display Near the 11. ________ Pack a 12. ________ and blanket Display of 13. ________ Central Park daily Buses run from the town centre every 14. ________ minutes The 15. ________ Show Exhibition Centre 10-15 September ‘Grow Your Imagination’ in the 16. ________ 11-19 September ‘Swing in Spring’ in the 17. ________ 17-18 September Saturday matinee performance at 18. ________",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Near the 11. ________",
+          "answer": "lake"
+        },
+        {
+          "id": "12",
+          "text": "Pack a 12. ________ and blanket",
+          "answer": "picnic"
+        },
+        {
+          "id": "13",
+          "text": "Display of 13. ________",
+          "answer": "flowers"
+        },
+        {
+          "id": "14",
+          "text": "Buses run from the town centre every 14. ________ minutes",
+          "answer": "20"
+        },
+        {
+          "id": "15",
+          "text": "The 15. ________ Show",
+          "answer": "motor"
+        },
+        {
+          "id": "16",
+          "text": "in the 16. ________",
+          "answer": "art gallery"
+        },
+        {
+          "id": "17",
+          "text": "in the 17. ________",
+          "answer": "concert hall"
+        },
+        {
+          "id": "18",
+          "text": "Saturday matinee performance at 18. ________",
+          "answer": "2.30/2:30"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Spring Festival",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Event",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "Location",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "Date and Time",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "Other Information",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 3,
+          "cols": 4
+        },
+        {
+          "text": "Firework display",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "Near the 11. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "4 September 9 p.m.",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "Pack a 12. ________ and blanket",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 3,
+          "cols": 4
+        },
+        {
+          "text": "Display of 13. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "Central Park",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "daily",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "Buses run from the town centre every 14. ________ minutes",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 3,
+          "cols": 4
+        },
+        {
+          "text": "The 15. ________ Show",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "Exhibition Centre",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "10-15 September",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "9 a.m.–10 p.m.",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "‘Grow Your Imagination’",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "in the 16. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "11-19 September",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "‘Swing in Spring’",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 5,
+          "col": 0,
+          "cols": 4
+        },
+        {
+          "text": "in the 17. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 5,
+          "col": 1,
+          "cols": 4
+        },
+        {
+          "text": "17-18 September",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 5,
+          "col": 2,
+          "cols": 4
+        },
+        {
+          "text": "Saturday matinee performance at 18. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 5,
+          "col": 3,
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Question 19 and 20",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "19",
+          "text": "In the Spring Festival competition, you can win",
+          "options": [
+            {
+              "id": "A",
+              "text": "a family pass to ‘Balloons Down Under’"
+            },
+            {
+              "id": "B",
+              "text": "a cheque for $200"
+            },
+            {
+              "id": "C",
+              "text": "a flight in a hot air balloon"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "You can get an entry form for the competition from",
+          "options": [
+            {
+              "id": "A",
+              "text": "the radio station"
+            },
+            {
+              "id": "B",
+              "text": "the newspaper"
+            },
+            {
+              "id": "C",
+              "text": "the Festival’s website"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "11": "lake",
+        "12": "picnic",
+        "13": "flowers",
+        "14": "20",
+        "15": "motor",
+        "16": "art gallery",
+        "17": "concert hall",
+        "18": "2.30/2:30"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "19": "C",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 16820,
+      "text": "Now turn to Section 2 on page 3."
+    },
+    {
+      "startMs": 16820,
+      "endMs": 18820,
+      "text": "Section 2"
+    },
+    {
+      "startMs": 18820,
+      "endMs": 24980,
+      "text": "You will hear a woman talking on a radio program about a festival that is about to take place."
+    },
+    {
+      "startMs": 24980,
+      "endMs": 30820,
+      "text": "First you have some time to look at questions 11 to 18 on page 3."
+    },
+    {
+      "startMs": 54980,
+      "endMs": 79980,
+      "text": "I have in the studio with me Mary Smith from Yorktown Tourism, who is here to tell us about some of the events happening in our state capital over the next three weeks at the Spring Festival."
+    },
+    {
+      "startMs": 79980,
+      "endMs": 82980,
+      "text": "So Mary, what can we expect to see?"
+    },
+    {
+      "startMs": 82980,
+      "endMs": 86980,
+      "text": "Well, it's such an exciting time to be in Yorktown."
+    },
+    {
+      "startMs": 86980,
+      "endMs": 96980,
+      "text": "To kick off the Spring Festival, there will be a huge firework display down by the lake starting at 9pm this Saturday the 4th of September."
+    },
+    {
+      "startMs": 96980,
+      "endMs": 106980,
+      "text": "Over 10,000 fireworks will be set off, all choreographed to music and broadcast simultaneously here on Radio Yorkie."
+    },
+    {
+      "startMs": 106980,
+      "endMs": 110980,
+      "text": "You should get there early if you want to get close to the action."
+    },
+    {
+      "startMs": 110980,
+      "endMs": 116980,
+      "text": "So bring along a picnic and a blanket as it could get chilly in the evening."
+    },
+    {
+      "startMs": 116980,
+      "endMs": 127980,
+      "text": "One of the things that attracts visitors to the festival from all over the country is the amazing collection of flowers on show in Central Park throughout the festival."
+    },
+    {
+      "startMs": 127980,
+      "endMs": 136980,
+      "text": "Special buses will run from the town centre to the show at 20 minute intervals for those of you who prefer to take public transport."
+    },
+    {
+      "startMs": 136980,
+      "endMs": 150980,
+      "text": "If you're interested in seeing the latest in cars from the fastest to the most expensive, then head over to the Motor Show at the Exhibition Centre from the 10th to the 15th of September."
+    },
+    {
+      "startMs": 150980,
+      "endMs": 157980,
+      "text": "It'll be open daily from 9am until 10pm, so you can even pop there after work."
+    },
+    {
+      "startMs": 157980,
+      "endMs": 172980,
+      "text": "Do you like photography? Then go along to Grow Your Imagination, an exhibition of photographs of famous gardens which will be held at the art gallery from the 11th to the 19th of September."
+    },
+    {
+      "startMs": 172980,
+      "endMs": 177980,
+      "text": "Come and be inspired by some of the world's most beautiful gardens."
+    },
+    {
+      "startMs": 177980,
+      "endMs": 183980,
+      "text": "I've had a sneak preview of some of the photographs and they are magnificent."
+    },
+    {
+      "startMs": 183980,
+      "endMs": 197980,
+      "text": "If music is more your scene, then you should come and hear the Australian Philharmonic Orchestra performing Swing in Spring at the concert hall on Friday the 17th and Saturday the 18th of September."
+    },
+    {
+      "startMs": 197980,
+      "endMs": 202980,
+      "text": "It's a celebration of dance music from the 1940s and 50s."
+    },
+    {
+      "startMs": 202980,
+      "endMs": 211980,
+      "text": "There'll be three performances, both evenings start at 7pm and a matinee performance at 2.30 on the Saturday."
+    },
+    {
+      "startMs": 211980,
+      "endMs": 219980,
+      "text": "So get your dancing shoes on and head there. It's guaranteed to get your feet tapping."
+    },
+    {
+      "startMs": 219980,
+      "endMs": 226980,
+      "text": "Before you hear the rest of the program, you have some time to look at questions 19 and 20 on page 4."
+    },
+    {
+      "startMs": 226980,
+      "endMs": 249980,
+      "text": "Now listen and answer questions 19 and 20."
+    },
+    {
+      "startMs": 249980,
+      "endMs": 263980,
+      "text": "Those are just a few of the attractions on offer but for something a little different you could try Balloons Down Under which is the largest gathering of hot air balloons in the southern hemisphere."
+    },
+    {
+      "startMs": 263980,
+      "endMs": 272980,
+      "text": "It's well worth it because there'll be over 25 balloons of all shapes and sizes which is a truly amazing sight."
+    },
+    {
+      "startMs": 272980,
+      "endMs": 281980,
+      "text": "I'm also happy to announce that one lucky person will get the chance to go up in one of these balloons absolutely free."
+    },
+    {
+      "startMs": 281980,
+      "endMs": 291980,
+      "text": "That's the prize in our special spring festival competition. It would normally cost you $200 so it's not a bad prize, eh?"
+    },
+    {
+      "startMs": 291980,
+      "endMs": 300980,
+      "text": "I'm sure you all want a chance to win so you'll need to fill out the entry form in today's edition of the Yorktown News."
+    },
+    {
+      "startMs": 300980,
+      "endMs": 305980,
+      "text": "Don't forget to include your phone number and send it to Radio Yorkie."
+    },
+    {
+      "startMs": 305980,
+      "endMs": 312980,
+      "text": "Make sure your entry reaches us by 5pm on Thursday 9th September."
+    },
+    {
+      "startMs": 312980,
+      "endMs": 322980,
+      "text": "Then to see if you've won, just check out the festival's website on Saturday 11th September where we'll publish the name of the lucky winner."
+    },
+    {
+      "startMs": 322980,
+      "endMs": 327980,
+      "text": "It's such a fantastic prize so hurry up and get your entry in."
+    },
+    {
+      "startMs": 327980,
+      "endMs": 335980,
+      "text": "So there you have it, just a few of the special events happening here in Yorktown over the Spring Festival."
+    },
+    {
+      "startMs": 335980,
+      "endMs": 338980,
+      "text": "And if you'd like any more details about the festival."
+    },
+    {
+      "startMs": 342980,
+      "endMs": 347980,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 36,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

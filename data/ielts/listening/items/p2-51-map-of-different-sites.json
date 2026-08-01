@@ -1,0 +1,436 @@
+{
+  "id": "p2-51-map-of-different-sites",
+  "title": "Map of Different Sites",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-2ec937081604",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 341.1,
+    "checksum": "sha256:8d7207f1a1ee5044b7fa6ab413e3a50656ee4e91cf2924d949002bcfe3ce51b8"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 11-16",
+      "instruction": "What is each of the following sites famous for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "trip on the railway"
+        },
+        {
+          "id": "B",
+          "text": "horse-drawn ride"
+        },
+        {
+          "id": "C",
+          "text": "exciting trip in the air"
+        },
+        {
+          "id": "D",
+          "text": "travel by helicopter"
+        },
+        {
+          "id": "E",
+          "text": "factories making food with natural ingredients"
+        },
+        {
+          "id": "F",
+          "text": "animal-shaped baked food"
+        },
+        {
+          "id": "G",
+          "text": "indigenous culture in the U.S"
+        },
+        {
+          "id": "H",
+          "text": "modern art museum"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Jackson Town",
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "Belleville",
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "Albany",
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "Fort Scott",
+          "answer": "F"
+        },
+        {
+          "id": "15",
+          "text": "Rawlins",
+          "answer": "E"
+        },
+        {
+          "id": "16",
+          "text": "Greensville",
+          "answer": "G"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 17-20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "kindergarten",
+          "answer": "H"
+        },
+        {
+          "id": "18",
+          "text": "craft shop",
+          "answer": "A"
+        },
+        {
+          "id": "19",
+          "text": "Wickson's School",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "cake factory",
+          "answer": "F"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-51-map-of-different-sites-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-51-map-of-different-sites-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "C",
+        "14": "F",
+        "15": "E",
+        "16": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "17": "H",
+        "18": "A",
+        "19": "C",
+        "20": "F"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9000,
+      "text": "Part 2. You will hear a woman introducing different sites to a group of tourists."
+    },
+    {
+      "startMs": 9000,
+      "endMs": 15000,
+      "text": "First you have some time to look at questions 11 to 16."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 74000,
+      "text": "Good morning tourists, I am Jane and welcome to Hampshire. I am very happy to see you all here and I can promise you a very nice time here."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 81000,
+      "text": "We would be visiting six different places which are renowned for different activities of their own."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 85000,
+      "text": "We would begin from Jackson Town, which is known for its buggy ride."
+    },
+    {
+      "startMs": 85000,
+      "endMs": 92000,
+      "text": "Rather than sit in a train, you will sit in a small, lightweight carriage pulled by a single horse."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 97000,
+      "text": "It was named after Sanya Jackson who was famous for her generosity in the region."
+    },
+    {
+      "startMs": 97000,
+      "endMs": 100000,
+      "text": "The locals even built a museum for her."
+    },
+    {
+      "startMs": 100000,
+      "endMs": 105000,
+      "text": "Belleville would be our next stop. We'll get there by helicopter."
+    },
+    {
+      "startMs": 105000,
+      "endMs": 112000,
+      "text": "Oh, I almost forgot that this mode of transportation has been suspended because of the variable weather."
+    },
+    {
+      "startMs": 112000,
+      "endMs": 117000,
+      "text": "We will get there by taking a jolly train ride, which is a highlight in this area."
+    },
+    {
+      "startMs": 117000,
+      "endMs": 123000,
+      "text": "The people here are very friendly and would always try to make you feel as comfortable as possible."
+    },
+    {
+      "startMs": 123000,
+      "endMs": 130000,
+      "text": "They entertain their guests with local delicacies like cakes and pastries which are quite famous in this area."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 137000,
+      "text": "Albany is a very lively and playful place, so get ready for some good and hearty laughs."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 143000,
+      "text": "It is usually fun to watch some people screaming during a balloon trip which is quite popular there."
+    },
+    {
+      "startMs": 143000,
+      "endMs": 150000,
+      "text": "Albany also features cool relaxation spots where you can just take time to cool off and enjoy yourself."
+    },
+    {
+      "startMs": 150000,
+      "endMs": 156000,
+      "text": "Fort Scott is where we have Jackson's biscuits, which is famous for its teddy bear shapes."
+    },
+    {
+      "startMs": 156000,
+      "endMs": 159000,
+      "text": "There you can get to see how they're pieced together."
+    },
+    {
+      "startMs": 159000,
+      "endMs": 164000,
+      "text": "The location also has a small refreshment section where you can grab a bite."
+    },
+    {
+      "startMs": 164000,
+      "endMs": 167000,
+      "text": "The chiffon cakes there are just palatable."
+    },
+    {
+      "startMs": 167000,
+      "endMs": 169000,
+      "text": "Rawlings has many factories there."
+    },
+    {
+      "startMs": 169000,
+      "endMs": 173000,
+      "text": "Among these factories, the ones that make cakes are gaining more fame than others."
+    },
+    {
+      "startMs": 173000,
+      "endMs": 179000,
+      "text": "Their cakes are made from pure cream, cheese, eggs and sugar, no food additive."
+    },
+    {
+      "startMs": 179000,
+      "endMs": 187000,
+      "text": "I always advise our tourists to get some for themselves and their families as their products will never disappoint you."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 195000,
+      "text": "Rawlings Council has decided to combine their products with the native culture in the future, which will be a strong selling point."
+    },
+    {
+      "startMs": 195000,
+      "endMs": 201000,
+      "text": "Greensville boasts about its native American culture which is widely known."
+    },
+    {
+      "startMs": 201000,
+      "endMs": 208000,
+      "text": "A lot of artifacts have been collected around here and now kept in the local art museum for studies and tourists, sake."
+    },
+    {
+      "startMs": 208000,
+      "endMs": 215000,
+      "text": "A lot of people who had been looking for their roots have been able to make a sort of connection by coming to this place."
+    },
+    {
+      "startMs": 215000,
+      "endMs": 220000,
+      "text": "The museum has been around for decades and it was recently renovated."
+    },
+    {
+      "startMs": 220000,
+      "endMs": 225000,
+      "text": "However, the story has not changed."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 232000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 17 to 20."
+    },
+    {
+      "startMs": 245000,
+      "endMs": 258000,
+      "text": "Now listen and answer questions 17 to 20."
+    },
+    {
+      "startMs": 258000,
+      "endMs": 262000,
+      "text": "Now let me briefly talk about other buildings and sites in Greensville."
+    },
+    {
+      "startMs": 262000,
+      "endMs": 265000,
+      "text": "Please take a look at the map which I gave you earlier."
+    },
+    {
+      "startMs": 265000,
+      "endMs": 272000,
+      "text": "Greensville has a good kindergarten for younger children and it is situated just to the north of Monument Street."
+    },
+    {
+      "startMs": 272000,
+      "endMs": 277000,
+      "text": "It has well-trained teachers and a conducive environment for learning."
+    },
+    {
+      "startMs": 277000,
+      "endMs": 285000,
+      "text": "As it's receiving an increasing number of children, the City Council has decided to move it to a larger site on Oak Road this November."
+    },
+    {
+      "startMs": 285000,
+      "endMs": 288000,
+      "text": "The new spot is uncertain though."
+    },
+    {
+      "startMs": 288000,
+      "endMs": 292000,
+      "text": "We also have a craft shop which is at the end of Ash Road."
+    },
+    {
+      "startMs": 292000,
+      "endMs": 298000,
+      "text": "The craft shop is for displaying all types of art and drawings, paintings and the likes."
+    },
+    {
+      "startMs": 298000,
+      "endMs": 304000,
+      "text": "It is a key feature of Greensville due to its art exhibitions which run three times a year."
+    },
+    {
+      "startMs": 304000,
+      "endMs": 310000,
+      "text": "Wixson's school used to be situated at the intersection of Oak Road and George Avenue."
+    },
+    {
+      "startMs": 310000,
+      "endMs": 314000,
+      "text": "But the site wasn't big enough as the number of students kept growing."
+    },
+    {
+      "startMs": 314000,
+      "endMs": 321000,
+      "text": "So the larger piece of land right beside the old location has become the new site for the school since last year."
+    },
+    {
+      "startMs": 321000,
+      "endMs": 325000,
+      "text": "It is important to note that the school has been around for a while."
+    },
+    {
+      "startMs": 325000,
+      "endMs": 330000,
+      "text": "There are well-experienced teachers to help students develop at their own pace."
+    },
+    {
+      "startMs": 330000,
+      "endMs": 337000,
+      "text": "The cake factory that we spoke about is actually between Monument Street and Maple Street just by the roadside."
+    },
+    {
+      "startMs": 337000,
+      "endMs": 341000,
+      "text": "The people of Greensville are very hospitable."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 48,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

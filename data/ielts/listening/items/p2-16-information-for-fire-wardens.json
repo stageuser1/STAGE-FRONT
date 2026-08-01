@@ -1,0 +1,436 @@
+{
+  "id": "p2-16-information-for-fire-wardens",
+  "title": "Information for Fire Wardens",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-fd34c3b69ea8",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 393.096,
+    "checksum": "sha256:17396e475a0de737a0f4647dfe48b16bc5b041a9638614bd61c30751dbddc03a"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–14",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "The company is having this meeting about fire procedures because",
+          "options": [
+            {
+              "id": "A",
+              "text": "employees did badly in the last annual fire drill."
+            },
+            {
+              "id": "B",
+              "text": "there have been changes in the building layout."
+            },
+            {
+              "id": "C",
+              "text": "new staff have joined the company."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "There has been a recent upgrade to",
+          "options": [
+            {
+              "id": "A",
+              "text": "the sprinkler system."
+            },
+            {
+              "id": "B",
+              "text": "the fire extinguishers."
+            },
+            {
+              "id": "C",
+              "text": "the alarm system."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "13",
+          "text": "During the minor fire in January, some staff working in the factory",
+          "options": [
+            {
+              "id": "A",
+              "text": "were unable to read fire notices."
+            },
+            {
+              "id": "B",
+              "text": "left fire doors open."
+            },
+            {
+              "id": "C",
+              "text": "were unwilling to start the fire alarm."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "In the fire in January, the problem with office staff was that they",
+          "options": [
+            {
+              "id": "A",
+              "text": "refused to leave personal items behind."
+            },
+            {
+              "id": "B",
+              "text": "moved too slowly during the evacuation."
+            },
+            {
+              "id": "C",
+              "text": "did not move far away enough from the building."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 15–20",
+      "instruction": "Choose the correct letter from the box, A, B or C, next to Questions 15–20.",
+      "options": [
+        {
+          "id": "A",
+          "text": "It should be a priority for fire wardens"
+        },
+        {
+          "id": "B",
+          "text": "It will be dealt with by an external specialist"
+        },
+        {
+          "id": "C",
+          "text": "It does not require attention"
+        }
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "ensuring there are no obstacles in fire escape routes",
+          "answer": "A"
+        },
+        {
+          "id": "16",
+          "text": "checking that fire doors are easily opened",
+          "answer": "A"
+        },
+        {
+          "id": "17",
+          "text": "showing staff how to look after each other",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "training staff to use fire extinguishers correctly",
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "checking that staff are aware of evacuation points",
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "checking that flammable liquids are properly stored",
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "C",
+        "13": "C",
+        "14": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "15": "A",
+        "16": "A",
+        "17": "B",
+        "18": "B",
+        "19": "A",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 14480,
+      "text": "Part 2. You will hear a company manager talking to staff about procedures to follow if a fire"
+    },
+    {
+      "startMs": 14480,
+      "endMs": 23040,
+      "text": "breaks out at work. First, you have some time to look at questions 11-14 on page 3."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59520,
+      "text": "Now, listen carefully and answer questions 11-14."
+    },
+    {
+      "startMs": 60080,
+      "endMs": 67920,
+      "text": "Hello, and thanks to everyone for being on time. The meeting will be fairly short and will"
+    },
+    {
+      "startMs": 67920,
+      "endMs": 73520,
+      "text": "only be looking at fire procedures. I had a similar meeting with the senior fire officers earlier"
+    },
+    {
+      "startMs": 73520,
+      "endMs": 77840,
+      "text": "today, but you're all here because you've volunteered to act as fire wardens for your own"
+    },
+    {
+      "startMs": 77840,
+      "endMs": 82560,
+      "text": "particular department, and for some of you this will be your first time in the role."
+    },
+    {
+      "startMs": 83280,
+      "endMs": 87520,
+      "text": "Although you'll probably have taken part in several fire drills since you've been here,"
+    },
+    {
+      "startMs": 88160,
+      "endMs": 92880,
+      "text": "but now the construction workers finished and we have a couple of new corridors and stairways,"
+    },
+    {
+      "startMs": 92880,
+      "endMs": 99040,
+      "text": "we need the meeting to update everyone. And before I forget, you might have noticed a bit of"
+    },
+    {
+      "startMs": 99040,
+      "endMs": 105200,
+      "text": "upgrading last week. The hand held fire extinguishers, the standard ones on the wall,"
+    },
+    {
+      "startMs": 105200,
+      "endMs": 109760,
+      "text": "the report says they're all working well, as is the overhead sprinkler system,"
+    },
+    {
+      "startMs": 110560,
+      "endMs": 115360,
+      "text": "but the old alarm system has been replaced and should be a lot more reliable."
+    },
+    {
+      "startMs": 115440,
+      "endMs": 121280,
+      "text": "Anyway, as fire wardens, you have a number of responsibilities."
+    },
+    {
+      "startMs": 122400,
+      "endMs": 128880,
+      "text": "Okay, those wardens responsible for the factory buildings, you'll remember we had a minor fire"
+    },
+    {
+      "startMs": 128880,
+      "endMs": 134800,
+      "text": "back in January. Luckily, the fire doors around the room stopped most of the smoke from getting out,"
+    },
+    {
+      "startMs": 134800,
+      "endMs": 141040,
+      "text": "but the alarm should have been pressed a lot earlier. From what I understand, staff felt somewhat"
+    },
+    {
+      "startMs": 141040,
+      "endMs": 146640,
+      "text": "reluctant to activate it themselves and were looking for someone senior, so please ensure that"
+    },
+    {
+      "startMs": 146640,
+      "endMs": 152320,
+      "text": "everyone knows it's their responsibility to take action immediately. Can you also make sure that"
+    },
+    {
+      "startMs": 152320,
+      "endMs": 159280,
+      "text": "if anyone new has been hired since then, that they've read the fire notices? And wardens for"
+    },
+    {
+      "startMs": 159280,
+      "endMs": 165120,
+      "text": "office departments, you'll also have to have a word with your staff. When the fire alarm went off"
+    },
+    {
+      "startMs": 165120,
+      "endMs": 170480,
+      "text": "in January in that minor fire, people got out of the office building pretty quickly. That was fine,"
+    },
+    {
+      "startMs": 171040,
+      "endMs": 176480,
+      "text": "but once they were out, they stood right in front of the doors, so if the fire crews had needed to"
+    },
+    {
+      "startMs": 176480,
+      "endMs": 181520,
+      "text": "access the offices, they would have been prevented. Good to see that everyone had left their bags"
+    },
+    {
+      "startMs": 181520,
+      "endMs": 190320,
+      "text": "and stuff behind though. Before you hear the rest of the talk, you have some time to look at"
+    },
+    {
+      "startMs": 190320,
+      "endMs": 193600,
+      "text": "questions 15 to 20 on page 4."
+    },
+    {
+      "startMs": 221040,
+      "endMs": 227600,
+      "text": "Now listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 231200,
+      "endMs": 237600,
+      "text": "Okay, next on the agenda, there's a few aspects of fire safety that we need to go through with"
+    },
+    {
+      "startMs": 237600,
+      "endMs": 243600,
+      "text": "all you wardens. Firstly, we want to make sure that when we have the next fire drill, there's nothing"
+    },
+    {
+      "startMs": 243600,
+      "endMs": 249440,
+      "text": "blocking the way in the escape routes. No obstacles, I mean, so please have a look at that as soon as"
+    },
+    {
+      "startMs": 249440,
+      "endMs": 255280,
+      "text": "possible. We want to be able to get outside very quickly. One thing that should definitely be on"
+    },
+    {
+      "startMs": 255280,
+      "endMs": 260400,
+      "text": "your to-do list is making sure no one's locked the fire doors and that it's easy enough to get through"
+    },
+    {
+      "startMs": 260400,
+      "endMs": 266240,
+      "text": "them. Now, you might remember that last year we had a fire officer come and visit and show us what"
+    },
+    {
+      "startMs": 266240,
+      "endMs": 271520,
+      "text": "to do if we see a colleague starting to suffer from the effects of smoke inhalation. Well, the same"
+    },
+    {
+      "startMs": 271520,
+      "endMs": 277360,
+      "text": "officer is coming back to lead another session. Another issue is how to handle the fire extinguishers."
+    },
+    {
+      "startMs": 277840,
+      "endMs": 282400,
+      "text": "Someone from the local fire department has booked in to teach people how to do that. I think"
+    },
+    {
+      "startMs": 282400,
+      "endMs": 286800,
+      "text": "it would be a good idea if fire wardens and department staff attended those sessions."
+    },
+    {
+      "startMs": 288240,
+      "endMs": 295280,
+      "text": "Let's see what else is on the list. Oh, yes, the evacuation points. The green area behind the main"
+    },
+    {
+      "startMs": 295280,
+      "endMs": 300640,
+      "text": "car park, the pavement on Hunter Street, and the unused area behind the factory car park."
+    },
+    {
+      "startMs": 301440,
+      "endMs": 306880,
+      "text": "Fire wardens need to make sure all staff are familiar with these locations for evacuation,"
+    },
+    {
+      "startMs": 306880,
+      "endMs": 309840,
+      "text": "so please send our emails directly after the meeting."
+    },
+    {
+      "startMs": 311360,
+      "endMs": 316400,
+      "text": "And the last point is to do with flammable liquids. I believe there have been a few concerns"
+    },
+    {
+      "startMs": 316400,
+      "endMs": 319680,
+      "text": "about where they were being stored in the warehouse, but that's been resolved now."
+    },
+    {
+      "startMs": 320480,
+      "endMs": 324320,
+      "text": "However, if anyone has anything else to report, do let me know."
+    },
+    {
+      "startMs": 327760,
+      "endMs": 333840,
+      "text": "That is the end of section two. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 45,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

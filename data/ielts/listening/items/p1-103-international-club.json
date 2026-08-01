@@ -1,0 +1,400 @@
+{
+  "id": "p1-103-international-club",
+  "title": "International Club",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-cde9a3f7bf9a",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 540.288,
+    "checksum": "sha256:2d38cfabb66f24e9cac49131b2b817716daf984218bfaf544a75c4ea212c04b4"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10.",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. International Club Club has members from about 30 countries Membership costs 1. £__________ for a year Regular events International folk dancing every Monday at 8.30 p.m. in the University Centre: the 2. __________ hall no need to bring a 3. __________ people needed for the 4. __________ Meal on the 5. __________ Sunday of every month in the University Centre: the canteen on the 6. __________ floor Summer events July 2: Great Hampton 7. __________ July 16: 15 km walk for a 8. __________ (in Stannard Hills) Aug 7: garden party - could go 9. __________ outdoors if weather allows Sept 4: trip to the 10. __________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Membership costs 1. £__________ for a year",
+          "answer": "8.50"
+        },
+        {
+          "id": "2",
+          "text": "in the University Centre: the 2. __________ hall",
+          "answer": "main"
+        },
+        {
+          "id": "3",
+          "text": "no need to bring a 3. __________",
+          "answer": "partner"
+        },
+        {
+          "id": "4",
+          "text": "people needed for the 4. __________",
+          "answer": "band"
+        },
+        {
+          "id": "5",
+          "text": "on the 5. __________ Sunday of every month",
+          "answer": "second"
+        },
+        {
+          "id": "6",
+          "text": "in the University Centre: the canteen on the 6. __________ floor",
+          "answer": "top"
+        },
+        {
+          "id": "7",
+          "text": "July 2: Great Hampton 7. __________",
+          "answer": "carnival"
+        },
+        {
+          "id": "8",
+          "text": "July 16: 15 km walk for a 8. __________ (in Stannard Hills)",
+          "answer": "charity"
+        },
+        {
+          "id": "9",
+          "text": "Aug 7: garden party - could go 9. __________ outdoors if weather allows",
+          "answer": "swimming"
+        },
+        {
+          "id": "10",
+          "text": "Sept 4: trip to the 10. __________",
+          "answer": "theater/theatre"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "International Club",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Club has members from about 30 countries",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Membership costs 1. £__________ for a year",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Regular events",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "International folk dancing",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "every Monday at 8.30 p.m.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "in the University Centre: the 2. __________ hall",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "no need to bring a 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "people needed for the 4. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Meal",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "on the 5. __________ Sunday of every month",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "in the University Centre: the canteen on the 6. __________ floor",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Summer events",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "July 2: Great Hampton 7. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "July 16: 15 km walk for a 8. __________ (in Stannard Hills)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Aug 7: garden party - could go 9. __________ outdoors if weather allows",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Sept 4: trip to the 10. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "8.50",
+        "2": "main",
+        "3": "partner",
+        "4": "band",
+        "5": "second",
+        "6": "top",
+        "7": "carnival",
+        "8": "charity",
+        "9": "swimming",
+        "10": "theater/theatre"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2000,
+      "text": "[Narrator]: You"
+    },
+    {
+      "startMs": 30000,
+      "endMs": 32000,
+      "text": "You"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 80000,
+      "text": "[Julie]: Hello, could I speak to Mr. John Gertelstone, please [John]: speaking. [Julie]: Oh, hi. My name is Julie Bloom. I'm studying here in the UK for a year and a friend told me you organize an international club where people of different nationalities can meet up."
+    },
+    {
+      "startMs": 80000,
+      "endMs": 89000,
+      "text": "[John]: That's right. The club was founded over 50 years ago and at present we've got members from approximately 30 countries."
+    },
+    {
+      "startMs": 89000,
+      "endMs": 118000,
+      "text": "What's the name of your friend? [Julie]: Louise. She's back in the States now. [John]: Oh Louise. I remember her. So are you from the States, too, Julie? [Julie]: Yes, from California. [John]: Great. Well, let's see what I can tell you about the club. It doesn't cost a lot to become a member. You can join for two months for two pounds 50 or it's eight pounds 50 for 12 months. [Julie]: And is it only for university students?"
+    },
+    {
+      "startMs": 118000,
+      "endMs": 130000,
+      "text": "[John]: No, we're open to anyone. We have quite a few members from the language schools in town and also local people who are interested in meeting people from other countries."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 143000,
+      "text": "[Julie]: Okay. So what sorts of things do you do? [John]: Well, one thing we organize on a regular basis is dancing. That's a great way to get to know people. [Julie]: Do you mean like disco?"
+    },
+    {
+      "startMs": 143000,
+      "endMs": 161000,
+      "text": "[John]: No, we don't do disco. We do folk dances. Some from Europe, but some from further afield. Everyone really enjoys them. We meet on Monday evenings at 830. Do you know the university center? [Julie]: Yes, I think so."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 171000,
+      "text": "[John]: We meet there in the main hall. Don't get confused with the old hall, where there's a ballroom dancing group. They're nothing to do with us."
+    },
+    {
+      "startMs": 171000,
+      "endMs": 179000,
+      "text": "[Julie]: And can I just show up? [John]: Sure, everyone's welcome. [Julie]: And do I need to come along with a partner for the dancing?"
+    },
+    {
+      "startMs": 179000,
+      "endMs": 191000,
+      "text": "[John]: You don't have to, though, you can if you want to. I'm sure you'll have a good time. We have live music for some sessions. I don't suppose you play a musical instrument, do you?"
+    },
+    {
+      "startMs": 191000,
+      "endMs": 210000,
+      "text": "[Julie]: I play the violin, but I'm not very good. [John]: Well, we're looking for some people to join the band. If you're interested, why don't you call Mike? His numbers 01356890674."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 212000,
+      "text": "[Julie]: Okay, thanks."
+    },
+    {
+      "startMs": 212000,
+      "endMs": 221000,
+      "text": "[John]: Then we also have a meal together regularly. That's once a month, and it's always on a Sunday, the second one of the month."
+    },
+    {
+      "startMs": 221000,
+      "endMs": 226000,
+      "text": "[Julie]: Oh, so that'll be this coming Sunday. And where's that held?"
+    },
+    {
+      "startMs": 226000,
+      "endMs": 239000,
+      "text": "[John]: In the university center again in the canteen, we used to have it in the restaurant on the ground floor, but that's closed at weekends now, unfortunately, so we're up on the top floor."
+    },
+    {
+      "startMs": 239000,
+      "endMs": 252000,
+      "text": "They do very reasonably priced meals, things like baked potatoes and pizza. [Julie]: And can I just show up there? [John]: Absolutely."
+    },
+    {
+      "startMs": 252000,
+      "endMs": 259000,
+      "text": "[Narrator]: Before you hear the rest of the conversation, you have some time to look at question 7 to 10."
+    },
+    {
+      "startMs": 259000,
+      "endMs": 266000,
+      "text": "Now listen and answer question 7 to 10."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 285000,
+      "text": "[John]: Then we have some special summer events, too. On July the second, we're going to a place called Great Hampton about half an hour's drive away to take part in the carnival they hold there every year. It's always a good day out, especially if it's a sunny day."
+    },
+    {
+      "startMs": 285000,
+      "endMs": 294000,
+      "text": "[Julie]: Oh, Louise said she went on that last year. She said it was really good, and it would be nice to go somewhere out of town."
+    },
+    {
+      "startMs": 294000,
+      "endMs": 309000,
+      "text": "[John]: Well, in that case, you might be interested in our event on July the 16th. That's a walk in the standard hills. We do about 15 kilometres, so it's a decent walk and it's for charity."
+    },
+    {
+      "startMs": 309000,
+      "endMs": 311000,
+      "text": "[Julie]: Sounds a pretty long way."
+    },
+    {
+      "startMs": 311000,
+      "endMs": 323000,
+      "text": "[John]: Then on August the 7th, we're having a garden party at the home of one of our organisers. She has an outdoor pool, so if the weather's warm enough, you'll be able to go swimming."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 326000,
+      "text": "[Julie]: Okay, hard to imagine that today."
+    },
+    {
+      "startMs": 326000,
+      "endMs": 334000,
+      "text": "[John]: Well, the summer hasn't really started yet. Then our last summer events on September the 4th."
+    },
+    {
+      "startMs": 334000,
+      "endMs": 344000,
+      "text": "Last year, we went to a castle, but this year we're going to the theatre. We do ask members to let us know in advance for that so we can book."
+    },
+    {
+      "startMs": 344000,
+      "endMs": 347000,
+      "text": "[Julie]: Well, I definitely like to join."
+    },
+    {
+      "startMs": 374000,
+      "endMs": 377000,
+      "text": "[Narrator]: You"
+    },
+    {
+      "startMs": 404000,
+      "endMs": 407000,
+      "text": "You"
+    },
+    {
+      "startMs": 434000,
+      "endMs": 437000,
+      "text": "You"
+    },
+    {
+      "startMs": 464000,
+      "endMs": 467000,
+      "text": "You"
+    },
+    {
+      "startMs": 494000,
+      "endMs": 497000,
+      "text": "You"
+    },
+    {
+      "startMs": 524000,
+      "endMs": 527000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 34,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

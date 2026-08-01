@@ -170,7 +170,9 @@ function summarize(set: ListeningSet): ListeningSetSummary {
   return {
     id: set.id,
     title: set.title,
-    titleZh: set.titleZh,
+    // The library summary still renders a string even though full ListeningSet
+    // metadata may omit a Chinese title.
+    titleZh: set.titleZh ?? "",
     part: set.part,
     frequency: set.frequency,
     questionCount: questionNumbers(set).length,

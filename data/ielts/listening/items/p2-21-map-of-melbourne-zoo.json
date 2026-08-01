@@ -1,0 +1,485 @@
+{
+  "id": "p2-21-map-of-melbourne-zoo",
+  "title": "Map of Melbourne Zoo",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-a8cc2da989d3",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 415.08,
+    "checksum": "sha256:cd3afa8b58776baeb724c7c68d9a1470a14da450be6deb7d0d4191cff0dfbc3a"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-15",
+      "instruction": "Choose the correct answer.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "What is the new activity in the zoo in November?",
+          "options": [
+            {
+              "id": "A",
+              "text": "evening tours"
+            },
+            {
+              "id": "B",
+              "text": "bonfire nights for adults"
+            },
+            {
+              "id": "C",
+              "text": "various parties"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "What is the most popular species in the zoo?",
+          "options": [
+            {
+              "id": "A",
+              "text": "kangaroo"
+            },
+            {
+              "id": "B",
+              "text": "koala"
+            },
+            {
+              "id": "C",
+              "text": "sheepdog"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "What is the key to feeding kangaroos?",
+          "options": [
+            {
+              "id": "A",
+              "text": "feeding more than one at a time"
+            },
+            {
+              "id": "B",
+              "text": "gently touching the baby kangaroos"
+            },
+            {
+              "id": "C",
+              "text": "standing up straight when feeding"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "Why is the wild dog area closed?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The wild dogs are unwell."
+            },
+            {
+              "id": "B",
+              "text": "The enclosure is under repair."
+            },
+            {
+              "id": "C",
+              "text": "The dogs have not arrived."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "Where can visitors get discount tickets this year?",
+          "options": [
+            {
+              "id": "A",
+              "text": "at the café"
+            },
+            {
+              "id": "B",
+              "text": "on the official website"
+            },
+            {
+              "id": "C",
+              "text": "at the gift shop"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 16-20.",
+      "instruction": "Label the map below, A-G.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "Arena",
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "Educational hall",
+          "answer": "E"
+        },
+        {
+          "id": "18",
+          "text": "Picnic spot",
+          "answer": "A"
+        },
+        {
+          "id": "19",
+          "text": "Photo printing shop",
+          "answer": "D"
+        },
+        {
+          "id": "20",
+          "text": "Gift shop",
+          "answer": "B"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-21-map-of-melbourne-zoo-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-21-map-of-melbourne-zoo-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "B",
+        "13": "C",
+        "14": "B",
+        "15": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "C",
+        "17": "E",
+        "18": "A",
+        "19": "D",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12000,
+      "text": "Part 2. You will hear a man talking to a group of people about the Melbourne Zoo."
+    },
+    {
+      "startMs": 12000,
+      "endMs": 17000,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 48000,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 48000,
+      "endMs": 55000,
+      "text": "Good day everyone. Welcome to the Melbourne Zoo. My name is Mark and I'd like to welcome you today."
+    },
+    {
+      "startMs": 55000,
+      "endMs": 60000,
+      "text": "If you have a moment, I'd like to give you some information about our zoo before you enter."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 64000,
+      "text": "Please feel free to ask me any questions at the end of my talk."
+    },
+    {
+      "startMs": 64000,
+      "endMs": 68000,
+      "text": "As you know, it's November now and that means longer days."
+    },
+    {
+      "startMs": 68000,
+      "endMs": 75000,
+      "text": "I have some good news for you. Anyone who hates getting up early in the morning can now enter the zoo after dinner."
+    },
+    {
+      "startMs": 75000,
+      "endMs": 81000,
+      "text": "Because of the time of year, we are offering a two hour mini tour after 7pm."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 88000,
+      "text": "Seeing the animals at a different time of day will be a fascinating experience for many of you and I encourage you to sign up."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 94000,
+      "text": "Unfortunately, due to a fire last month, we no longer allow bonfire nights."
+    },
+    {
+      "startMs": 94000,
+      "endMs": 100000,
+      "text": "By the way, we have been planning two parties for Christmas next month. We'll post the details on our website."
+    },
+    {
+      "startMs": 100000,
+      "endMs": 106000,
+      "text": "It should be a lot of fun. So let me tell you a little about our residents here at the zoo."
+    },
+    {
+      "startMs": 106000,
+      "endMs": 114000,
+      "text": "Despite what was recently reported in the media, the most popular animal around here is not the kangaroo or even the sheep dog."
+    },
+    {
+      "startMs": 114000,
+      "endMs": 123000,
+      "text": "No, our star animal here is without doubt the koala. They are sedentary creatures and can sleep for up to 20 hours a day."
+    },
+    {
+      "startMs": 123000,
+      "endMs": 130000,
+      "text": "So you'll have to keep an eye out for them. You should be able to spot some of them in the tree tops hiding behind branches."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 139000,
+      "text": "But if you're lucky, you might see one run across your path. Of course, we do have kangaroos. They are truly fascinating creatures."
+    },
+    {
+      "startMs": 139000,
+      "endMs": 146000,
+      "text": "It might interest you to know that they are the only large animals that use hopping as a means of locomotion."
+    },
+    {
+      "startMs": 146000,
+      "endMs": 158000,
+      "text": "They are generally very friendly. And while we have no problems with people feeding them, we always tell our guests that it's important to stand with an upright posture when giving them food."
+    },
+    {
+      "startMs": 158000,
+      "endMs": 164000,
+      "text": "The kangaroos may interpret you bending over as a sign of aggression. So please be careful."
+    },
+    {
+      "startMs": 164000,
+      "endMs": 170000,
+      "text": "Also, no matter how cute the babies are, any physical contact should be avoided."
+    },
+    {
+      "startMs": 170000,
+      "endMs": 178000,
+      "text": "The adults are quite protective of their young while they are still in the pouch. So please refrain from the urge to give them a pat."
+    },
+    {
+      "startMs": 178000,
+      "endMs": 187000,
+      "text": "They aren't greedy animals and will generally stop eating once they are full. So if you have some extra food, you might need to find another one to feed."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 194000,
+      "text": "As you may have heard, our wild dog pen is temporarily closed, but it should reopen soon."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 202000,
+      "text": "You'll be happy to know that our dogs are all fine and in good health, and I think they are quite excited about their new home."
+    },
+    {
+      "startMs": 202000,
+      "endMs": 210000,
+      "text": "Right now, we are fixing the fences. They are wild animals after all, and we need to consider public safety before opening the exhibit."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 213000,
+      "text": "But please come back to see them when we are finished."
+    },
+    {
+      "startMs": 213000,
+      "endMs": 221000,
+      "text": "Speaking of return visits, if you enjoy our zoo and want to come back, you may be interested in getting a discount ticket."
+    },
+    {
+      "startMs": 221000,
+      "endMs": 227000,
+      "text": "We use to sell them at the entrance of the zoo as well as on our website, but the website is currently under maintenance."
+    },
+    {
+      "startMs": 227000,
+      "endMs": 232000,
+      "text": "So the coupons are available only at the cafe near the gift shop for this year."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 236000,
+      "text": "So if you are interested, make your way over there once you are ready."
+    },
+    {
+      "startMs": 236000,
+      "endMs": 241000,
+      "text": "Be informed, there are a lot of tourists around today, so the earlier, the better."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 251000,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 283000,
+      "text": "Now listen carefully and answer questions 16 to 20."
+    },
+    {
+      "startMs": 283000,
+      "endMs": 291000,
+      "text": "Now, if I can bring your attention to the map of our zoo, I'll provide a brief description of the grounds so that no one gets lost."
+    },
+    {
+      "startMs": 291000,
+      "endMs": 297000,
+      "text": "If you'd like to see some of our animals up close, then you should visit one of our shows in the arena."
+    },
+    {
+      "startMs": 297000,
+      "endMs": 302000,
+      "text": "We have a show every half hour, so you're sure to see something."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 309000,
+      "text": "We are at the entrance. To get there, cross the bridge and go straight to the end of the path, and you'll find it to your right."
+    },
+    {
+      "startMs": 309000,
+      "endMs": 317000,
+      "text": "For those who are looking for a quieter place to learn about the history of our zoo, in the north of the zoo, we have an educational hold ready for you."
+    },
+    {
+      "startMs": 317000,
+      "endMs": 321000,
+      "text": "It's easy to find, just to the west of the toilets."
+    },
+    {
+      "startMs": 321000,
+      "endMs": 327000,
+      "text": "With such beautiful weather right now, I know many of you would love to spend the afternoon having a picnic."
+    },
+    {
+      "startMs": 327000,
+      "endMs": 336000,
+      "text": "There is a great spot for you in the zoo. It's the area surrounding the Botanic Garden, and it's also facing the river. The view is fantastic there."
+    },
+    {
+      "startMs": 336000,
+      "endMs": 346000,
+      "text": "Some of you may recall that our photo printing site was in the north-eastern corner of the zoo. It has now been moved to the building next to the bridge."
+    },
+    {
+      "startMs": 346000,
+      "endMs": 353000,
+      "text": "Finally, I'm sure you've noticed that it's quite warm today. If you're not up for walking, don't worry."
+    },
+    {
+      "startMs": 353000,
+      "endMs": 362000,
+      "text": "We have bike sheds at different locations across the zoo, and the bikes are free for our guests, so just grab one and take it for a ride."
+    },
+    {
+      "startMs": 362000,
+      "endMs": 370000,
+      "text": "Once you've got your bike, it's only a five minute ride to the gift shop, and the exit is just beside it. You can't miss it."
+    },
+    {
+      "startMs": 370000,
+      "endMs": 375000,
+      "text": "Please note that cycling is only permitted on the designated parts."
+    },
+    {
+      "startMs": 375000,
+      "endMs": 385000,
+      "text": "Alright, that is the end of my talk. I hope you have a great time visiting all the animals. Take as many pictures as you like, and don't forget to share them with your friends."
+    },
+    {
+      "startMs": 385000,
+      "endMs": 390000,
+      "text": "Now, does anyone have any questions?"
+    },
+    {
+      "startMs": 390000,
+      "endMs": 395000,
+      "text": "That is the end of part two. You now have 30 seconds."
+    },
+    {
+      "startMs": 405000,
+      "endMs": 408000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 51,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

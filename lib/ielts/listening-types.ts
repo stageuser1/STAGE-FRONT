@@ -7,9 +7,8 @@
  * components need the row types and the labels; only the source needs the data.
  *
  * Every question in a set carries a stable, unique, 1-based `questionNo`. For
- * form completion the number lives on the blank segment, so a row can mix fixed
- * text and numbered gaps; for the other four group types it lives on the group,
- * because each of those groups is exactly one question.
+ * form completion the number lives on the blank segment, while instruction
+ * groups such as a multiple-choice block may carry several numbered questions.
  */
 
 export type ListeningPart = 1 | 2 | 3 | 4;
@@ -17,6 +16,8 @@ export type ListeningPart = 1 | 2 | 3 | 4;
 export const LISTENING_PARTS: readonly ListeningPart[] = [1, 2, 3, 4];
 
 export type ListeningFrequency = "high" | "mid" | "low";
+
+export type FormLayout = "table" | "notes" | "sentence" | "form";
 
 // No label maps here. Display copy for parts and frequency bands is a UI
 // decision and belongs to the batch that renders it, not to the contracts.
@@ -41,6 +42,8 @@ export interface FormRow {
 
 export interface FormCompletionGroup {
   type: "form_completion";
+  /** The printed layout variant; omitted by the original fixture. */
+  layout?: FormLayout;
   instruction: string;
   formTitle: string;
   rows: FormRow[];
@@ -56,15 +59,45 @@ export interface ChoiceOption {
   text: string;
 }
 
+/** One numbered question inside a shared single-choice instruction block. */
+export interface McqSingleQuestion {
+  questionNo: number;
+  prompt: string;
+  options: ChoiceOption[];
+}
+
 export interface McqSingleGroup {
   type: "mcq_single";
+  instruction?: string;
+  /** Expanded representation for groups containing more than one number. */
+  questions?: McqSingleQuestion[];
   questionNo: number;
   question: string;
   options: ChoiceOption[];
 }
 
+/** One numbered question inside a shared multiple-choice instruction block. */
+export interface McqMultiQuestion {
+  questionNo: number;
+  prompt: string;
+  /** The options visible to this numbered question. */
+  options: ChoiceOption[];
+  /** How many options this numbered question requires. */
+  selectCount: number;
+}
+
 export interface McqMultiGroup {
   type: "mcq_multi";
+  /** Shared instruction, such as “Questions 17–18. Choose TWO answers.” */
+  instruction?: string;
+  /** Expanded representation for groups containing more than one number. */
+  questions?: McqMultiQuestion[];
+
+  /**
+   * Compatibility projection for the current single-question renderer. When
+   * `questions` is present, it is authoritative and these fields represent
+   * its first question for older consumers.
+   */
   questionNo: number;
   question: string;
   options: ChoiceOption[];
@@ -74,17 +107,49 @@ export interface McqMultiGroup {
 
 export interface MapLabellingGroup {
   type: "map_labelling";
+  instruction?: string;
+  /** Expanded representation for maps with several numbered labels. */
+  questions?: MapLabellingQuestion[];
   questionNo: number;
   question: string;
   labels: string[];
   imageUrl?: string;
 }
 
+export interface MapLabellingQuestion {
+  questionNo: number;
+  prompt: string;
+  labels: string[];
+  imageUrl?: string;
+}
+
+export interface MatchingOption {
+  id: string;
+  text: string;
+}
+
+/** One numbered question inside a shared matching instruction block. */
+export interface MatchingQuestion {
+  questionNo: number;
+  prompt: string;
+  /** Optional per-question option override. */
+  options?: MatchingOption[];
+}
+
 export interface MatchingGroup {
   type: "matching";
+  instruction?: string;
+  /** Expanded representation for matching blocks with multiple numbers. */
+  questions?: MatchingQuestion[];
   questionNo: number;
   question: string;
+  /**
+   * Legacy display projection used by the current renderer. New data must
+   * also carry `optionItems`, which is the lossless representation.
+   */
   options: string[];
+  /** Stable identity plus display text for every matching option. */
+  optionItems?: MatchingOption[];
 }
 
 export type QuestionGroup =
@@ -101,12 +166,19 @@ export type QuestionGroup =
 export interface ListeningSet {
   id: string;
   title: string;
-  titleZh: string;
+  titleZh?: string | null;
   part: ListeningPart;
   frequency: ListeningFrequency;
   audioUrl: string;
   durationSec: number;
+  audioMetadata?: ListeningAudioMetadata;
+  transcriptRef?: string | null;
   questionGroups: QuestionGroup[];
+}
+
+export interface ListeningAudioMetadata {
+  container?: string;
+  checksum?: string;
 }
 
 /**
@@ -117,6 +189,7 @@ export interface ListeningSet {
 export interface ListeningSetSummary {
   id: string;
   title: string;
+  /** Library rows still render a string; full set metadata may be nullable. */
   titleZh: string;
   part: ListeningPart;
   frequency: ListeningFrequency;
@@ -164,8 +237,13 @@ export type NormalizeStep =
  */
 export type ScoringMode = "text" | "single" | "multi";
 
+/** Whether an accepted value is typed text or the stable id of an option. */
+export type ScoringAnswerKind = "text" | "optionId";
+
 export interface ScoringRule {
   questionNo: number;
+  /** Shared instruction-group identity, when the source has one. */
+  groupId?: string;
   /**
    * Declares how this question is marked. Scoring dispatches on this and never
    * on the runtime shape of the submitted answer: a rule that says `multi` is
@@ -179,6 +257,10 @@ export interface ScoringRule {
    * For `multi`, the whole array is the one correct set.
    */
   accepted: string[];
+  /** Matching rules use option IDs; legacy rules default to submitted values. */
+  answerKind?: ScoringAnswerKind;
+  /** Optional explicit cardinality for a multi-answer question. */
+  selectCount?: number;
   /** Applied in this order, to the given answer and to each accepted value. */
   normalize: NormalizeStep[];
 }

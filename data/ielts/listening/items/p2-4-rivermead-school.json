@@ -1,0 +1,524 @@
+{
+  "id": "p2-4-rivermead-school",
+  "title": "Rivermead School",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-9934a5baa672",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 421.056,
+    "checksum": "sha256:18c0b638b72e95567cfb62dacf0e20344d829ebf7699d879bc3b06d8e4be4cd7"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–14",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "What is the main aim of the school’s new theatre?",
+          "options": [
+            {
+              "id": "A",
+              "text": "to gain an international reputation"
+            },
+            {
+              "id": "B",
+              "text": "to give local people access to good performances"
+            },
+            {
+              "id": "C",
+              "text": "to provide support for talented amateur actors"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "The first season’s theatre programme will include",
+          "options": [
+            {
+              "id": "A",
+              "text": "plays by modern writers"
+            },
+            {
+              "id": "B",
+              "text": "displays by Chinese acrobats"
+            },
+            {
+              "id": "C",
+              "text": "concerts performed by schoolchildren"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "Most of theatre’s funding will come from",
+          "options": [
+            {
+              "id": "A",
+              "text": "sponsors"
+            },
+            {
+              "id": "B",
+              "text": "government grants"
+            },
+            {
+              "id": "C",
+              "text": "ticket sales"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "Which facility at the school is open to the public on a limited basis only?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the sports hall"
+            },
+            {
+              "id": "B",
+              "text": "the museum"
+            },
+            {
+              "id": "C",
+              "text": "the cafeteria"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 15–20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "Theatre",
+          "answer": "C"
+        },
+        {
+          "id": "16",
+          "text": "New car park",
+          "answer": "E"
+        },
+        {
+          "id": "17",
+          "text": "Bus stop",
+          "answer": "G"
+        },
+        {
+          "id": "18",
+          "text": "Sports hall",
+          "answer": "H"
+        },
+        {
+          "id": "19",
+          "text": "Cafeteria",
+          "answer": "F"
+        },
+        {
+          "id": "20",
+          "text": "Museum",
+          "answer": "B"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-4-rivermead-school-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-4-rivermead-school-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "C",
+        "14": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "15": "C",
+        "16": "E",
+        "17": "G",
+        "18": "H",
+        "19": "F",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12360,
+      "text": "You will hear the head teacher of Rivermead School talking to a group of journalists"
+    },
+    {
+      "startMs": 12360,
+      "endMs": 17760,
+      "text": "about facilities at the school that are open to the general public."
+    },
+    {
+      "startMs": 17760,
+      "endMs": 21720,
+      "text": "First you have some time to look at questions 11 to 14."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59880,
+      "text": "Now listen carefully and answer questions 11 to 14."
+    },
+    {
+      "startMs": 59880,
+      "endMs": 65000,
+      "text": "What I'd like to do at this meeting is to tell you a bit about the facilities that River"
+    },
+    {
+      "startMs": 65000,
+      "endMs": 68680,
+      "text": "Mead School offers people in the community."
+    },
+    {
+      "startMs": 68680,
+      "endMs": 74920,
+      "text": "I'd like to start by talking about the new theatre that we've just opened in our school."
+    },
+    {
+      "startMs": 74920,
+      "endMs": 80880,
+      "text": "Its mission is to maximise opportunities for local audiences to experience productions"
+    },
+    {
+      "startMs": 80880,
+      "endMs": 83640,
+      "text": "of the highest quality."
+    },
+    {
+      "startMs": 83640,
+      "endMs": 88800,
+      "text": "Amongst other things this will involve offering a place where professional drama companies"
+    },
+    {
+      "startMs": 88800,
+      "endMs": 91600,
+      "text": "in the area can perform."
+    },
+    {
+      "startMs": 91600,
+      "endMs": 98280,
+      "text": "But there'll also be opportunities to host national and international companies, both those"
+    },
+    {
+      "startMs": 98280,
+      "endMs": 104840,
+      "text": "which are up and coming and those which have already established a reputation."
+    },
+    {
+      "startMs": 104840,
+      "endMs": 110200,
+      "text": "Details of our first season's theatre programme are already online."
+    },
+    {
+      "startMs": 110200,
+      "endMs": 114040,
+      "text": "I hope you'll agree that it looks very exciting."
+    },
+    {
+      "startMs": 114040,
+      "endMs": 119200,
+      "text": "As well as music and dance, there'll be drama from modern writers."
+    },
+    {
+      "startMs": 119200,
+      "endMs": 124520,
+      "text": "And there'll also be a high proportion of shows aimed at children and families."
+    },
+    {
+      "startMs": 124520,
+      "endMs": 129480,
+      "text": "You'll notice that there is one empty space in November."
+    },
+    {
+      "startMs": 129480,
+      "endMs": 135280,
+      "text": "That's because the Chinese state acrobatic troupe have had to cancel their visit."
+    },
+    {
+      "startMs": 135280,
+      "endMs": 140480,
+      "text": "But hopefully we'll be able to announce a replacement very soon."
+    },
+    {
+      "startMs": 140480,
+      "endMs": 145520,
+      "text": "Now, we're often asked about the theatre's sources of funding."
+    },
+    {
+      "startMs": 145520,
+      "endMs": 150800,
+      "text": "Well a limited amount of money will come from various government subsidies, but the bulk"
+    },
+    {
+      "startMs": 150800,
+      "endMs": 156440,
+      "text": "of the revenue will be generated by the sale of tickets, which is one reason why it would"
+    },
+    {
+      "startMs": 156440,
+      "endMs": 161000,
+      "text": "be grateful for your help in promoting the work of the theatre."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 167160,
+      "text": "In addition, there are opportunities for individuals to support the theatre on a regular basis,"
+    },
+    {
+      "startMs": 167160,
+      "endMs": 169960,
+      "text": "through its sponsorship scheme."
+    },
+    {
+      "startMs": 169960,
+      "endMs": 176560,
+      "text": "The benefits to donors include access to rehearsals and to show previews."
+    },
+    {
+      "startMs": 176560,
+      "endMs": 181760,
+      "text": "But the new theatre isn't the only facility which is open to everyone."
+    },
+    {
+      "startMs": 181760,
+      "endMs": 185240,
+      "text": "The school also has a small museum."
+    },
+    {
+      "startMs": 185240,
+      "endMs": 190840,
+      "text": "This holds various objects that were found when the ground was excavated to lay the foundations"
+    },
+    {
+      "startMs": 190840,
+      "endMs": 195880,
+      "text": "for the building, as well as other historical objects."
+    },
+    {
+      "startMs": 195880,
+      "endMs": 197920,
+      "text": "Entrance to this is free."
+    },
+    {
+      "startMs": 197960,
+      "endMs": 201440,
+      "text": "We also have a state-of-the-art sports hall."
+    },
+    {
+      "startMs": 201440,
+      "endMs": 208560,
+      "text": "This is reserved for our students during term time, but anyone can use it in the school holidays."
+    },
+    {
+      "startMs": 208560,
+      "endMs": 211120,
+      "text": "And our cafeteria is worth a visit."
+    },
+    {
+      "startMs": 211120,
+      "endMs": 221280,
+      "text": "It has a varied menu, and it's open all day to visitors, as well as staff and students."
+    },
+    {
+      "startMs": 221280,
+      "endMs": 226840,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 15-20."
+    },
+    {
+      "startMs": 251280,
+      "endMs": 270400,
+      "text": "Right, I'll just point out some things on the map of the school campus I've given you."
+    },
+    {
+      "startMs": 270400,
+      "endMs": 272880,
+      "text": "First of all, the theatre."
+    },
+    {
+      "startMs": 272880,
+      "endMs": 278520,
+      "text": "That's opposite Car Park P2 on the south side."
+    },
+    {
+      "startMs": 278520,
+      "endMs": 283440,
+      "text": "You're not allowed to park anywhere except in the Car Parks."
+    },
+    {
+      "startMs": 283440,
+      "endMs": 289400,
+      "text": "There are two marked on your map, P1 and P2, but there's a new Car Park which has only"
+    },
+    {
+      "startMs": 289400,
+      "endMs": 294080,
+      "text": "just been completed, and that's at the most northern end of the campus."
+    },
+    {
+      "startMs": 294080,
+      "endMs": 297760,
+      "text": "Some people might want to consider coming by bus."
+    },
+    {
+      "startMs": 297760,
+      "endMs": 302280,
+      "text": "There's a good service from the city centre to the school, and the bus stops at the roundabout."
+    },
+    {
+      "startMs": 302280,
+      "endMs": 303600,
+      "text": "about."
+    },
+    {
+      "startMs": 303600,
+      "endMs": 307960,
+      "text": "That's where it turns round to go back, so you have to get off there."
+    },
+    {
+      "startMs": 307960,
+      "endMs": 312360,
+      "text": "It doesn't go up as far as Park Road."
+    },
+    {
+      "startMs": 312360,
+      "endMs": 318760,
+      "text": "Then to get to the sports hall, you take the right fork after the main entrance, and just"
+    },
+    {
+      "startMs": 318760,
+      "endMs": 322040,
+      "text": "keep going past the classroom block."
+    },
+    {
+      "startMs": 322040,
+      "endMs": 327540,
+      "text": "You have to go straight across the roundabout, and it's further on on the right hand side"
+    },
+    {
+      "startMs": 327540,
+      "endMs": 329840,
+      "text": "of that road."
+    },
+    {
+      "startMs": 329840,
+      "endMs": 332200,
+      "text": "Then there's the cafeteria."
+    },
+    {
+      "startMs": 332200,
+      "endMs": 338120,
+      "text": "There are various ways to get there because it's at the junction of Park Road and Rennie's"
+    },
+    {
+      "startMs": 338120,
+      "endMs": 342360,
+      "text": "Drive, on the north side of Park Road."
+    },
+    {
+      "startMs": 342360,
+      "endMs": 347880,
+      "text": "In nice weather you can sit outside to eat and admire the view."
+    },
+    {
+      "startMs": 347880,
+      "endMs": 351440,
+      "text": "Then the museum is fairly central."
+    },
+    {
+      "startMs": 351440,
+      "endMs": 356640,
+      "text": "Just go left after the main entrance, take the first turning on the right, and when you"
+    },
+    {
+      "startMs": 356640,
+      "endMs": 360360,
+      "text": "reach a junction the museum is facing you."
+    },
+    {
+      "startMs": 360360,
+      "endMs": 367120,
+      "text": "That is the end of Part 2."
+    },
+    {
+      "startMs": 367120,
+      "endMs": 370880,
+      "text": "You now have 30 seconds to check your answers to Part 2."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 61,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

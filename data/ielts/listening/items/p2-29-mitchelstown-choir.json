@@ -1,0 +1,560 @@
+{
+  "id": "p2-29-mitchelstown-choir",
+  "title": "Mitchelstown Choir",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-c107967ba74e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 320.472,
+    "checksum": "sha256:b0cb98731660b30c563de9169631e1c2fb0cf8feb271c432b7031c5a122af01c"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 11–15",
+      "instruction": "Choose the correct letter from the box, A, B or C, next to questions 11–15.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mitchelstown Choir"
+        },
+        {
+          "id": "B",
+          "text": "The Blackvale Male Voice Choir"
+        },
+        {
+          "id": "C",
+          "text": "The Caroline Singers"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "They specialise in a particular type of music",
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "They organise social events",
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "They have recently won a competition",
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "They have recently recorded their first CD",
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "They participate in charity events",
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 16–20",
+      "instruction": "Choose the correct letter, A, B or C",
+      "questions": [
+        {
+          "id": "16",
+          "text": "Elizabeth Arnold thinks people join a choir at work because it gives them a chance to",
+          "options": [
+            {
+              "id": "A",
+              "text": "have a break from work."
+            },
+            {
+              "id": "B",
+              "text": "improve their singing."
+            },
+            {
+              "id": "C",
+              "text": "make business contacts."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "17",
+          "text": "How does a company benefit from setting up a choir?",
+          "options": [
+            {
+              "id": "A",
+              "text": "improved relationships between co-workers"
+            },
+            {
+              "id": "B",
+              "text": "less sick leave taken by employees"
+            },
+            {
+              "id": "C",
+              "text": "increased commitment to the company"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "18",
+          "text": "How many members does the John White choir have?",
+          "options": [
+            {
+              "id": "A",
+              "text": "5"
+            },
+            {
+              "id": "B",
+              "text": "12"
+            },
+            {
+              "id": "C",
+              "text": "19"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "19",
+          "text": "When do the choir have their rehearsals?",
+          "options": [
+            {
+              "id": "A",
+              "text": "before work"
+            },
+            {
+              "id": "B",
+              "text": "at lunch-time"
+            },
+            {
+              "id": "C",
+              "text": "after work"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "20",
+          "text": "How does the company support the choir?",
+          "options": [
+            {
+              "id": "A",
+              "text": "by providing concert clothes"
+            },
+            {
+              "id": "B",
+              "text": "by funding social events"
+            },
+            {
+              "id": "C",
+              "text": "by paying for singing classes"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "16": "A",
+        "17": "A",
+        "18": "C",
+        "19": "B",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "A",
+        "13": "B",
+        "14": "A",
+        "15": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 3560,
+      "text": "Now turn to Section 2."
+    },
+    {
+      "startMs": 3560,
+      "endMs": 4840,
+      "text": "Section 2."
+    },
+    {
+      "startMs": 4840,
+      "endMs": 9080,
+      "text": "You will hear a radio program about singing in a choir."
+    },
+    {
+      "startMs": 9080,
+      "endMs": 14880,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 14880,
+      "endMs": 20360,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 20360,
+      "endMs": 26000,
+      "text": "And for our regular spot on things to do in town, here's our reporter Samuel Cooper."
+    },
+    {
+      "startMs": 26040,
+      "endMs": 30600,
+      "text": "It's been fun to write about joining some of our local choirs."
+    },
+    {
+      "startMs": 30600,
+      "endMs": 31600,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 31600,
+      "endMs": 36800,
+      "text": "Well, feeling a bit apprehensive about my ability to sing in tune,"
+    },
+    {
+      "startMs": 36800,
+      "endMs": 41640,
+      "text": "I recently headed off for rehearsals at the town's three biggest choirs."
+    },
+    {
+      "startMs": 41640,
+      "endMs": 48160,
+      "text": "Mitchelstown Choir, the Blackvale Male Voice Choir, and the Caroline Singers."
+    },
+    {
+      "startMs": 48160,
+      "endMs": 52800,
+      "text": "I received a very warm welcome at all three choirs."
+    },
+    {
+      "startMs": 52840,
+      "endMs": 57640,
+      "text": "They are always on the lookout for new and enthusiastic singers."
+    },
+    {
+      "startMs": 57640,
+      "endMs": 64640,
+      "text": "Now, obviously deciding which choir to join will depend to some extent on your taste in music."
+    },
+    {
+      "startMs": 64640,
+      "endMs": 72320,
+      "text": "Blackvale caters for most musical taste as it has a hugely varied repertoire as does Mitchelstown."
+    },
+    {
+      "startMs": 72320,
+      "endMs": 78440,
+      "text": "If you're after a more classical feel, the Caroline Singers tend to focus on madrigals."
+    },
+    {
+      "startMs": 78440,
+      "endMs": 82280,
+      "text": "That's unaccompanied singing without any instruments."
+    },
+    {
+      "startMs": 82440,
+      "endMs": 85800,
+      "text": "If you want to meet people who share an interest in music,"
+    },
+    {
+      "startMs": 85800,
+      "endMs": 89520,
+      "text": "Mitchelstown Choir is a good place to start."
+    },
+    {
+      "startMs": 89520,
+      "endMs": 91720,
+      "text": "Apart from their own performances,"
+    },
+    {
+      "startMs": 91720,
+      "endMs": 97080,
+      "text": "they also arrange group visits to see operas and attend music festivals."
+    },
+    {
+      "startMs": 97080,
+      "endMs": 100400,
+      "text": "So it can be a great way to make friends."
+    },
+    {
+      "startMs": 100400,
+      "endMs": 103240,
+      "text": "But it's not just a chance to develop a skill,"
+    },
+    {
+      "startMs": 103240,
+      "endMs": 106320,
+      "text": "travel or make friends that's on offer."
+    },
+    {
+      "startMs": 106320,
+      "endMs": 109280,
+      "text": "You could win a gold medal too."
+    },
+    {
+      "startMs": 109280,
+      "endMs": 115680,
+      "text": "Mitchelstown are hoping to get to the final at the Melody competition in Atlanta."
+    },
+    {
+      "startMs": 115680,
+      "endMs": 120600,
+      "text": "And Blackvale are the current holders of the Counter-Male Voice Choir Award,"
+    },
+    {
+      "startMs": 120600,
+      "endMs": 126560,
+      "text": "which was presented to them by the director of the London Opera just last month."
+    },
+    {
+      "startMs": 126560,
+      "endMs": 129840,
+      "text": "You can also be a part of a recording deal."
+    },
+    {
+      "startMs": 129840,
+      "endMs": 135400,
+      "text": "Mitchelstown has just joined Blackvale and Caroline Singers as recording artists"
+    },
+    {
+      "startMs": 135400,
+      "endMs": 139720,
+      "text": "for their first CD, due in shops in December."
+    },
+    {
+      "startMs": 139720,
+      "endMs": 141800,
+      "text": "And if all of that isn't enough,"
+    },
+    {
+      "startMs": 141800,
+      "endMs": 147400,
+      "text": "you can also benefit the local community by helping to raise funds for good causes."
+    },
+    {
+      "startMs": 147400,
+      "endMs": 153040,
+      "text": "Mitchelstown regularly performs at functions helping the disabled and the elderly."
+    },
+    {
+      "startMs": 153040,
+      "endMs": 158800,
+      "text": "While Blackvale donates a percentage of its profits to certain local charities."
+    },
+    {
+      "startMs": 158800,
+      "endMs": 161640,
+      "text": "Before you hear the rest of the program,"
+    },
+    {
+      "startMs": 161640,
+      "endMs": 166520,
+      "text": "you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 166520,
+      "endMs": 172000,
+      "text": "Now listen and answer questions 16 to 20."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 177080,
+      "text": "You may feel unable to join a choir because you're worried you'd struggle to find the time"
+    },
+    {
+      "startMs": 177080,
+      "endMs": 181880,
+      "text": "to attend rehearsals because of work or family commitments."
+    },
+    {
+      "startMs": 181880,
+      "endMs": 184960,
+      "text": "Well, there is a solution to that."
+    },
+    {
+      "startMs": 184960,
+      "endMs": 188360,
+      "text": "Start your own choir at work."
+    },
+    {
+      "startMs": 188360,
+      "endMs": 191160,
+      "text": "This has been done in companies large and small,"
+    },
+    {
+      "startMs": 191160,
+      "endMs": 196320,
+      "text": "and I went to find out about the one at the accountants John White."
+    },
+    {
+      "startMs": 196320,
+      "endMs": 202880,
+      "text": "The choir's organizer, Elizabeth Arnold, told me the reason she thinks people like the choir."
+    },
+    {
+      "startMs": 202880,
+      "endMs": 209960,
+      "text": "She said that while the thought of big networking opportunities might be at the back of some people's mind,"
+    },
+    {
+      "startMs": 209960,
+      "endMs": 218000,
+      "text": "it's having the opportunity to switch off and focus on something completely different that they're after."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 222160,
+      "text": "The people that join tend to be fairly competent singers to start with,"
+    },
+    {
+      "startMs": 222160,
+      "endMs": 227920,
+      "text": "because naturally enough, people don't want to look bad in front of their colleagues."
+    },
+    {
+      "startMs": 227920,
+      "endMs": 232720,
+      "text": "Companies like John White encourage their employees to set up choirs at work"
+    },
+    {
+      "startMs": 232720,
+      "endMs": 237400,
+      "text": "because it can help to create a healthier working atmosphere."
+    },
+    {
+      "startMs": 237400,
+      "endMs": 244120,
+      "text": "For example, people who previously didn't get on can find they have something in common,"
+    },
+    {
+      "startMs": 244120,
+      "endMs": 247000,
+      "text": "which is just common sense, really."
+    },
+    {
+      "startMs": 247000,
+      "endMs": 253920,
+      "text": "Elizabeth Arnold also stresses that you don't need a lot of people to get the choir off the ground."
+    },
+    {
+      "startMs": 253920,
+      "endMs": 258240,
+      "text": "They started off four years ago with just five people."
+    },
+    {
+      "startMs": 258240,
+      "endMs": 264960,
+      "text": "That's now risen to 19 while their average attendance at rehearsals is 12."
+    },
+    {
+      "startMs": 264960,
+      "endMs": 268760,
+      "text": "Many people don't have time to go to rehearsals outside work,"
+    },
+    {
+      "startMs": 268760,
+      "endMs": 273240,
+      "text": "however, they find the time to go to them while they're at work."
+    },
+    {
+      "startMs": 273240,
+      "endMs": 280680,
+      "text": "At John White, they found the middle of the day works best because not everyone works the same hours."
+    },
+    {
+      "startMs": 280680,
+      "endMs": 285960,
+      "text": "So scheduling early morning rehearsals can be problematic."
+    },
+    {
+      "startMs": 285960,
+      "endMs": 288920,
+      "text": "The same is true for late afternoon."
+    },
+    {
+      "startMs": 288920,
+      "endMs": 294280,
+      "text": "Supporting their choir is something that John White are very happy to do."
+    },
+    {
+      "startMs": 294280,
+      "endMs": 299360,
+      "text": "Although members pay a joining fee to cover the cost of refreshments at parties"
+    },
+    {
+      "startMs": 299360,
+      "endMs": 304360,
+      "text": "and wear special concert shirts, the company organizes regular sessions"
+    },
+    {
+      "startMs": 304360,
+      "endMs": 309520,
+      "text": "with a professional vocal coach free of charge to members of the choir."
+    },
+    {
+      "startMs": 309520,
+      "endMs": 316560,
+      "text": "So if you'd like more information about the choirs, that is the end of section two."
+    },
+    {
+      "startMs": 316560,
+      "endMs": 320360,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 67,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

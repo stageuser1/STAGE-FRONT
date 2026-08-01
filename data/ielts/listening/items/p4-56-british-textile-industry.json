@@ -1,0 +1,439 @@
+{
+  "id": "p4-56-british-textile-industry",
+  "title": "British textile industry",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-8b3959493c9d",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 416.232,
+    "checksum": "sha256:139e0ff801662491a068e64c4e06dcadbbbdd4b84dea53437c1c1aef643e81d1"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-34",
+      "instruction": "Complete the notes below Write ONE WORD AND OR A NUMBER for each answer. The Development of British Textile Industry Before the 20th century, the number of employees in the industry was 31. _____ Because of the invasion of technology and global trade, companies closed their old 32. _____ facilities. In the 20th century, fashionable clothes were mainly for 33. _____ In the future, the focus of production will be on 34. _____ clothing.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Before the 20th century, the number of employees in the industry was 31. _____",
+          "answer": "1.5 million"
+        },
+        {
+          "id": "32",
+          "text": "Because of the invasion of technology and global trade, companies closed their old 32. _____ facilities.",
+          "answer": "manufacturing"
+        },
+        {
+          "id": "33",
+          "text": "In the 20th century, fashionable clothes were mainly for 33. _____",
+          "answer": "women"
+        },
+        {
+          "id": "34",
+          "text": "In the future, the focus of production will be on 34. _____ clothing.",
+          "answer": "outdoor"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Development of British Textile Industry",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Before the 20th century, the number of employees in the industry was 31. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Because of the invasion of technology and global trade, companies closed their old 32. _____ facilities.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the 20th century, fashionable clothes were mainly for 33. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the future, the focus of production will be on 34. _____ clothing.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 35 and 36",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "35",
+          "text": "An important change occurred to this industry",
+          "options": [
+            {
+              "id": "A",
+              "text": "more workers hired than other industries"
+            },
+            {
+              "id": "B",
+              "text": "products made by small groups of experts"
+            },
+            {
+              "id": "C",
+              "text": "fewer labour workers needed"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "36",
+          "text": "The ever-expanding market",
+          "options": [
+            {
+              "id": "A",
+              "text": "needs more employees with higher linguistic proficiency"
+            },
+            {
+              "id": "B",
+              "text": "needs more designers"
+            },
+            {
+              "id": "C",
+              "text": "needs more engineers"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 37-40",
+      "instruction": "What is each of the following job positions responsible for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "design clothes"
+        },
+        {
+          "id": "B",
+          "text": "products quantity"
+        },
+        {
+          "id": "C",
+          "text": "price policies"
+        },
+        {
+          "id": "D",
+          "text": "overseeing process control"
+        },
+        {
+          "id": "E",
+          "text": "handle complains"
+        },
+        {
+          "id": "F",
+          "text": "identify fabric trend"
+        },
+        {
+          "id": "G",
+          "text": "what to display in the store"
+        }
+      ],
+      "questions": [
+        {
+          "id": "37",
+          "text": "Technologist",
+          "answer": "F"
+        },
+        {
+          "id": "38",
+          "text": "Merchandiser",
+          "answer": "C"
+        },
+        {
+          "id": "39",
+          "text": "Operation manager",
+          "answer": "D"
+        },
+        {
+          "id": "40",
+          "text": "Visual merchandiser",
+          "answer": "G"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "1.5 million",
+        "32": "manufacturing",
+        "33": "women",
+        "34": "outdoor"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "35": "C",
+        "36": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "37": "F",
+        "38": "C",
+        "39": "D",
+        "40": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9000,
+      "text": "Section 4. You will hear part of a lecture related to the history of British textile industry."
+    },
+    {
+      "startMs": 9000,
+      "endMs": 15000,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 36000,
+      "text": "Section 4. You will hear part of the history of British textile industry."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 66000,
+      "text": "Section 4. You will hear part of the history of British textile industry."
+    },
+    {
+      "startMs": 66000,
+      "endMs": 72000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 76000,
+      "text": "Good morning. Welcome to the English History Lecture."
+    },
+    {
+      "startMs": 76000,
+      "endMs": 81000,
+      "text": "In the last few lectures, we have been learning about the Industrial Revolution."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 88000,
+      "text": "Today, we will be looking at the development and transformation of British textile industry."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 99000,
+      "text": "The British textile industry dates back to the Middle Ages and continues to be an important part of the worldwide clothing manufacturing business."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 113000,
+      "text": "In fact, the key of British industry at the beginning of the 18th century was the production of textiles made with wool from the large sheep farming areas in the Midlands and across the country."
+    },
+    {
+      "startMs": 113000,
+      "endMs": 118000,
+      "text": "This was a labour intensive field providing employment throughout Britain."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 137000,
+      "text": "Before the 20th century, about 1.5 million people worked in the textile industry and with the development of technology, more efficient equipment came into being and today, the figure dropped to about 150,000."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 148000,
+      "text": "In the early 20th century, new clothing technology enabled the industry to make more clothing materials such as nylon and polyester."
+    },
+    {
+      "startMs": 148000,
+      "endMs": 159000,
+      "text": "Major changes came to the textile industry during the 20th century with continuing technological innovations in machinery and globalization of the business."
+    },
+    {
+      "startMs": 159000,
+      "endMs": 165000,
+      "text": "So, the textile industry was faced with invasion which it had never met before."
+    },
+    {
+      "startMs": 165000,
+      "endMs": 176000,
+      "text": "Many old manufacturing facilities had to be shut down. The business model that had dominated the industry for centuries was doomed to change."
+    },
+    {
+      "startMs": 176000,
+      "endMs": 188000,
+      "text": "Cotton and wool producers were not the only sources for fibers, as chemical companies created new synthetic fibers that had superior qualities for many uses."
+    },
+    {
+      "startMs": 188000,
+      "endMs": 199000,
+      "text": "The fashion industry grew rapidly during the 20th century too. People had a wide number of choices available in the selection of their clothes."
+    },
+    {
+      "startMs": 199000,
+      "endMs": 210000,
+      "text": "They were more concerned about what they wore and how they looked like, what a person chooses to wear, can reflect his or her personality or interests."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 222000,
+      "text": "When people who have high social status start to wear new or different clothes, a fashion trend may start, but fashionable clothes were mainly made for women."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 229000,
+      "text": "Most men didn't care much about fashion as long as what they wore was comfortable at that time."
+    },
+    {
+      "startMs": 229000,
+      "endMs": 234000,
+      "text": "The textile industry has gone through lots of challenges and changes."
+    },
+    {
+      "startMs": 234000,
+      "endMs": 241000,
+      "text": "In different eras, the textile and fashion industries focus on different clothing styles."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 249000,
+      "text": "Pajamas may be a popular subject during one period of time, while raincoats would be favored during another."
+    },
+    {
+      "startMs": 249000,
+      "endMs": 254000,
+      "text": "In the years to come, the textile producers will aim at outdoor clothing."
+    },
+    {
+      "startMs": 254000,
+      "endMs": 267000,
+      "text": "Since hiking and other outdoor activities have become an essential part of young generations life, and as the technology develops, more and more work can be done by machines."
+    },
+    {
+      "startMs": 267000,
+      "endMs": 271000,
+      "text": "The efficiency has been improving over the years."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 283000,
+      "text": "Unlike many other industries, where work has to be carried out by small groups of professionals, textile industry can take advantage of large-scale mechanized production."
+    },
+    {
+      "startMs": 283000,
+      "endMs": 289000,
+      "text": "Therefore, less labour force is required to finish the same amount of work."
+    },
+    {
+      "startMs": 289000,
+      "endMs": 312000,
+      "text": "A lot of people working in the textile manufacturing business had to look for other jobs, and because of globalization, clothing and fashion industry have crossed national borders, and people from every corner of the world are lining up to buy luxury clothing from France or Italy, due to their top quality and design."
+    },
+    {
+      "startMs": 312000,
+      "endMs": 322000,
+      "text": "As a result, more and more students choose to study fashion design at school and dream of becoming fashion designers when they graduate."
+    },
+    {
+      "startMs": 322000,
+      "endMs": 339000,
+      "text": "But actually, instead of hiring more fashion designers or engineers for manufacturing process, this industry needs more graduates with decent language proficiency, so as to meet the needs of the ever-expanding global market."
+    },
+    {
+      "startMs": 343000,
+      "endMs": 362000,
+      "text": "As I have said, the changes that took place in this industry brought about the changes in the work related to this field, as the clothing industry becomes more and more diverse and comprehensive, many new jobs that have never existed before now emerged."
+    },
+    {
+      "startMs": 362000,
+      "endMs": 372000,
+      "text": "Technologists, for example, are those who study different fabrics and predict their trend, so their work might change the contents of your clothes."
+    },
+    {
+      "startMs": 372000,
+      "endMs": 380000,
+      "text": "Then there's merchandiser, you can probably guess their responsibilities right? They take care of prices."
+    },
+    {
+      "startMs": 380000,
+      "endMs": 389000,
+      "text": "Pricing can largely determine the profit of a product, so they have to carefully consider how much one clothing item is priced."
+    },
+    {
+      "startMs": 389000,
+      "endMs": 403000,
+      "text": "An operation manager is responsible for store management, an observation of inventory levels, as well as new products and their processes from product initiation to the release of the products."
+    },
+    {
+      "startMs": 403000,
+      "endMs": 413000,
+      "text": "However, a visual merchandiser is in charge of creating window and in-store displays of goods for retail stores or department stores."
+    },
+    {
+      "startMs": 413000,
+      "endMs": 416000,
+      "text": "So with..."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 39,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

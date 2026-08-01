@@ -1,0 +1,500 @@
+{
+  "id": "p4-76-impact-of-cars-in-australia",
+  "title": "Impact of cars in Australia",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-8a8bf19d83e2",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 340.479,
+    "checksum": "sha256:a6b4fb2ceab364fe592b448c6911ed2a695a270a7cc605b03dccc3cd9d2601da"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS only for each answer. Impact of Cars in Australia 1940s One person in eight owned a car Buses: Problems – crowded and 32. __________ Advantage – affordable Cars were associated with 33. __________ Problems of car ownership: cost many spare parts were imported restrictions on fuel high 34. __________ on cars Result of pressure from motorists – new 35. __________ in Australia in 1949 1960s Cars were cheaper and more reliable More people lived in the suburbs Main streets were congested and 36. __________ (and usually straight) New streets were built with curves to make drivers slow down 1970s Roads had more 37. __________ More commuters Car use affected the 38. __________ between people New types of 39. __________ were designed to attract motorists 1980s and 1990s Less business in town centres because of introduction of 40. __________ Introduction of drive-in facilities, e.g. restaurants",
+      "questions": [
+        {
+          "id": "31",
+          "text": "31. __________ transport was used for 60% of journeys",
+          "answer": "Public"
+        },
+        {
+          "id": "32",
+          "text": "Problems – crowded and 32. __________",
+          "answer": "Uncomfortable"
+        },
+        {
+          "id": "33",
+          "text": "Cars were associated with 33. __________",
+          "answer": "Freedom"
+        },
+        {
+          "id": "34",
+          "text": "high 34. __________ on cars",
+          "answer": "Taxes"
+        },
+        {
+          "id": "35",
+          "text": "Result of pressure from motorists – new 35. __________ in Australia in 1949",
+          "answer": "Government"
+        },
+        {
+          "id": "36",
+          "text": "Main streets were congested and 36. __________ (and usually straight)",
+          "answer": "Polluted"
+        },
+        {
+          "id": "37",
+          "text": "Roads had more 37. __________",
+          "answer": "Lanes"
+        },
+        {
+          "id": "38",
+          "text": "Car use affected the 38. __________ between people",
+          "answer": "Relationships"
+        },
+        {
+          "id": "39",
+          "text": "New types of 39. __________ were designed to attract motorists",
+          "answer": "Advertisements"
+        },
+        {
+          "id": "40",
+          "text": "Less business in town centres because of introduction of 40. __________",
+          "answer": "Shopping malls"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS only for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Impact of Cars in Australia",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "1940s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "One person in eight owned a car",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "31. __________ transport was used for 60% of journeys",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Buses:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Problems – crowded and 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Advantage – affordable",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Cars were associated with 33. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problems of car ownership:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "cost",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "many spare parts were imported",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "restrictions on fuel",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "high 34. __________ on cars",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Result of pressure from motorists – new 35. __________ in Australia in 1949",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1960s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Cars were cheaper and more reliable",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "More people lived in the suburbs",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Main streets were congested and 36. __________ (and usually straight)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "New streets were built with curves to make drivers slow down",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1970s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Roads had more 37. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "More commuters",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Car use affected the 38. __________ between people",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "New types of 39. __________ were designed to attract motorists",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "1980s and 1990s",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Less business in town centres because of introduction of 40. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Introduction of drive-in facilities, e.g. restaurants",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Public",
+        "32": "Uncomfortable",
+        "33": "Freedom",
+        "34": "Taxes",
+        "35": "Government",
+        "36": "Polluted",
+        "37": "Lanes",
+        "38": "Relationships",
+        "39": "Advertisements",
+        "40": "Shopping malls"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "You will hear a lecture on the influence of the car on urban development."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 11000,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 33000,
+      "text": "You"
+    },
+    {
+      "startMs": 61000,
+      "endMs": 66000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 68000,
+      "endMs": 70000,
+      "text": "Good morning, everyone."
+    },
+    {
+      "startMs": 70000,
+      "endMs": 75000,
+      "text": "Today, in this second lecture of the series, we turn our attention to transportation."
+    },
+    {
+      "startMs": 75000,
+      "endMs": 81000,
+      "text": "In particular, we're going to take a look at the way the motor car influenced urban development in Australia"
+    },
+    {
+      "startMs": 81000,
+      "endMs": 87000,
+      "text": "and changed our lifestyle from the 1940s to the end of the 1990s."
+    },
+    {
+      "startMs": 87000,
+      "endMs": 95000,
+      "text": "The car is so common nowadays that we all take it for granted and we barely think about the major effect it has had on our society."
+    },
+    {
+      "startMs": 95000,
+      "endMs": 99000,
+      "text": "But let's go back for a while to the late 1940s."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 108000,
+      "text": "Although they had been around since the start of the 20th century, only one person in eight owned a car in Australia's major cities at that time."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 114000,
+      "text": "Nearly 60% of journeys were still made by various means of public transport,"
+    },
+    {
+      "startMs": 114000,
+      "endMs": 121000,
+      "text": "and only 15% by car, which is clearly very few compared to statistics now."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 125000,
+      "text": "Buses were very crowded in the days before extensive car use,"
+    },
+    {
+      "startMs": 125000,
+      "endMs": 132000,
+      "text": "and they were also considered to be uncomfortable despite providing a cheap option that most people could afford."
+    },
+    {
+      "startMs": 132000,
+      "endMs": 136000,
+      "text": "Remember, this wasn't long after the Second World War."
+    },
+    {
+      "startMs": 136000,
+      "endMs": 143000,
+      "text": "People were tired of living without things, of making do, and to them cars represented freedom."
+    },
+    {
+      "startMs": 143000,
+      "endMs": 150000,
+      "text": "But even for the wealthy few who did have vehicles, it wasn't easy to run a car at this time."
+    },
+    {
+      "startMs": 150000,
+      "endMs": 157000,
+      "text": "As well as the expense of buying a car, spare parts were difficult to get, as many were imported."
+    },
+    {
+      "startMs": 157000,
+      "endMs": 164000,
+      "text": "Another problem for car owners was that fuel was still rationed, and car taxes were very high."
+    },
+    {
+      "startMs": 164000,
+      "endMs": 171000,
+      "text": "Strong public feeling on issues like these from various pressure groups resulted in a change of government in Australia"
+    },
+    {
+      "startMs": 171000,
+      "endMs": 179000,
+      "text": "after the general election in 1949, which undoubtedly shaped the future of our nation."
+    },
+    {
+      "startMs": 182000,
+      "endMs": 191000,
+      "text": "In the 1960s, cheaper, more reliable cars became available, and this coincided with the rapid expansion of the suburbs."
+    },
+    {
+      "startMs": 191000,
+      "endMs": 198000,
+      "text": "The car enabled these to grow in all directions, far beyond the train lines laid down in the 19th century."
+    },
+    {
+      "startMs": 199000,
+      "endMs": 208000,
+      "text": "For the previous 150 years, the city centre had been a prestigious area, but the addition of cars made the main streets congested."
+    },
+    {
+      "startMs": 208000,
+      "endMs": 212000,
+      "text": "This wasn't the only problem. Now they were polluted as well."
+    },
+    {
+      "startMs": 212000,
+      "endMs": 217000,
+      "text": "Since these streets were usually straight, they tempted motorists to speed."
+    },
+    {
+      "startMs": 217000,
+      "endMs": 223000,
+      "text": "So the layout of newer streets was affected by this change towards private transport."
+    },
+    {
+      "startMs": 223000,
+      "endMs": 233000,
+      "text": "In the newer areas, roads were no longer built straight. Instead, they had curves that were specially designed to force drivers to slow down."
+    },
+    {
+      "startMs": 233000,
+      "endMs": 239000,
+      "text": "This meant they were longer, but this was not a problem because people rarely walked anymore."
+    },
+    {
+      "startMs": 239000,
+      "endMs": 246000,
+      "text": "By the 1970s, the type of roads being built changed, with more lanes in each direction."
+    },
+    {
+      "startMs": 246000,
+      "endMs": 252000,
+      "text": "They were more commuters, because now there was faster access to the city where they worked."
+    },
+    {
+      "startMs": 252000,
+      "endMs": 257000,
+      "text": "By this time, the motorcar was affecting many different areas of life."
+    },
+    {
+      "startMs": 257000,
+      "endMs": 261000,
+      "text": "It even, surprisingly, affected relationships."
+    },
+    {
+      "startMs": 261000,
+      "endMs": 271000,
+      "text": "Before this, meeting anyone who lived beyond walking or cycling distance was impractical, if not impossible. The car brought people together."
+    },
+    {
+      "startMs": 271000,
+      "endMs": 274000,
+      "text": "What other effects did the car have?"
+    },
+    {
+      "startMs": 274000,
+      "endMs": 283000,
+      "text": "The increasing car use changed the way we advertise. Previously, advertisements had been designed to attract slow-moving pedestrians,"
+    },
+    {
+      "startMs": 283000,
+      "endMs": 288000,
+      "text": "so they were located at eye level and designed on a human scale."
+    },
+    {
+      "startMs": 288000,
+      "endMs": 295000,
+      "text": "By the late 1970s, massive advertisements were designed to attract the notice of the passing motorist."
+    },
+    {
+      "startMs": 295000,
+      "endMs": 301000,
+      "text": "In the 1980s and 90s, even the location of shops began to change."
+    },
+    {
+      "startMs": 301000,
+      "endMs": 308000,
+      "text": "We built shopping malls out in the suburbs, which meant that old town centres did far less business."
+    },
+    {
+      "startMs": 308000,
+      "endMs": 318000,
+      "text": "Next, we saw the development of drive-in shopping centres, theatres and even restaurants, which now ensure we get out of our cars as little as possible."
+    },
+    {
+      "startMs": 318000,
+      "endMs": 327000,
+      "text": "Now, I'd like to turn your attention to a few statistics related to car ownership over the same period."
+    },
+    {
+      "startMs": 327000,
+      "endMs": 334000,
+      "text": "That is the end of Part 4. You now have one minute to check your answers to Part 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 44,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

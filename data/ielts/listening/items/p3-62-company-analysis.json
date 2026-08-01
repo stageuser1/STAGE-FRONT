@@ -1,0 +1,586 @@
+{
+  "id": "p3-62-company-analysis",
+  "title": "Company Analysis",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-7017acd7d292",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 433.056,
+    "checksum": "sha256:cd80f65ee523bc21c9ad4fbb5b6ec9719ae5c7df9fd8a93451611455d4cc32bc"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 21–25",
+      "instruction": "Choose the correct letter from A–G",
+      "options": [
+        {
+          "id": "A",
+          "text": "it will save a lot of business time and effort"
+        },
+        {
+          "id": "B",
+          "text": "it is visualized"
+        },
+        {
+          "id": "C",
+          "text": "it does not fit our company"
+        },
+        {
+          "id": "D",
+          "text": "it will take too long"
+        },
+        {
+          "id": "E",
+          "text": "it is easy to use"
+        },
+        {
+          "id": "F",
+          "text": "it is difficult to apply"
+        },
+        {
+          "id": "G",
+          "text": "it is suitable to almost all sized companies"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "PEST",
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "Drill Down",
+          "answer": "D"
+        },
+        {
+          "id": "23",
+          "text": "PMI",
+          "answer": "E"
+        },
+        {
+          "id": "24",
+          "text": "Pareto",
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "SWOT",
+          "answer": "G"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Questions 26–30",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "26",
+          "text": "What does Frances consider as the best strength of the company?",
+          "options": [
+            {
+              "id": "A",
+              "text": "reputation"
+            },
+            {
+              "id": "B",
+              "text": "experienced employees"
+            },
+            {
+              "id": "C",
+              "text": "management"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "27",
+          "text": "What factor did Sam overlook for the future growth of the company?",
+          "options": [
+            {
+              "id": "A",
+              "text": "seek for cheaper suppliers"
+            },
+            {
+              "id": "B",
+              "text": "set up an overseas office"
+            },
+            {
+              "id": "C",
+              "text": "compete with major competitors"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "Which of the following can be the threat to a company?",
+          "options": [
+            {
+              "id": "A",
+              "text": "increasing competition"
+            },
+            {
+              "id": "B",
+              "text": "outdated technology"
+            },
+            {
+              "id": "C",
+              "text": "new legislation"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "29",
+          "text": "What has Sam learned from the research?",
+          "options": [
+            {
+              "id": "A",
+              "text": "using better tools"
+            },
+            {
+              "id": "B",
+              "text": "cost of a success business"
+            },
+            {
+              "id": "C",
+              "text": "gap between reality and theory"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "What is the professor’s suggestion for the report?",
+          "options": [
+            {
+              "id": "A",
+              "text": "give a final determination"
+            },
+            {
+              "id": "B",
+              "text": "reorganize a clear structure"
+            },
+            {
+              "id": "C",
+              "text": "add more detailed information"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "26": "B",
+        "27": "B",
+        "28": "C",
+        "29": "C",
+        "30": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "D",
+        "23": "E",
+        "24": "A",
+        "25": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6000,
+      "text": "Section 3"
+    },
+    {
+      "startMs": 6000,
+      "endMs": 13000,
+      "text": "First, you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 45000,
+      "text": "Now listen carefully and answer questions 21 to 25."
+    },
+    {
+      "startMs": 45000,
+      "endMs": 47000,
+      "text": "Tutor: Hi Frances, Sam."
+    },
+    {
+      "startMs": 47000,
+      "endMs": 53000,
+      "text": "So, how did you go with applying the different theoretical business tools for the report I asked you to write?"
+    },
+    {
+      "startMs": 53000,
+      "endMs": 58000,
+      "text": "Frances: It was interesting and made us really focus on which tool was best to use when analysing a business."
+    },
+    {
+      "startMs": 58000,
+      "endMs": 61000,
+      "text": "Tutor: Good, so tell me what you found out."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 64000,
+      "text": "Frances: We liked the theory behind PEST analysis."
+    },
+    {
+      "startMs": 64000,
+      "endMs": 72000,
+      "text": "That's political, economic, social and technological, although we're not sure if it was very applicable to our case."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 78000,
+      "text": "Some of the other groups had studies for which it worked really well and they said it was easy to use."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 83000,
+      "text": "But I felt it focused too much on the big picture and was unsuitable for our company."
+    },
+    {
+      "startMs": 83000,
+      "endMs": 88000,
+      "text": "Sam: I agree. On the other hand, I enjoyed using the Drill Down method."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 92000,
+      "text": "It was painstaking to do and we seemed to be working on it for ages."
+    },
+    {
+      "startMs": 92000,
+      "endMs": 94000,
+      "text": "But the results were worth waiting for."
+    },
+    {
+      "startMs": 94000,
+      "endMs": 98000,
+      "text": "Frances:: Yes, I liked the way it eventually broke down complex problems."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 102000,
+      "text": "Sam: Yes, I much preferred doing the PMI analysis."
+    },
+    {
+      "startMs": 102000,
+      "endMs": 109000,
+      "text": "It was so straightforward to break down into its three components, plus, minus and interesting implications."
+    },
+    {
+      "startMs": 109000,
+      "endMs": 114000,
+      "text": "You just needed to brainstorm these components and then write them up, fast and effective."
+    },
+    {
+      "startMs": 114000,
+      "endMs": 116000,
+      "text": "And it didn't make your brain hurt doing it."
+    },
+    {
+      "startMs": 116000,
+      "endMs": 121000,
+      "text": "Frances:: I agree. And you don't need any special training at all. Anyone can use it."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 126000,
+      "text": "Tutor: So was there any tool that you thought was superior to the others?"
+    },
+    {
+      "startMs": 126000,
+      "endMs": 133000,
+      "text": "Frances: In my opinion, the one tool that is critical to business, especially for larger companies, is Pareto Analysis."
+    },
+    {
+      "startMs": 133000,
+      "endMs": 139000,
+      "text": "If they apply Pareto Analysis, they would see that by focusing on the critical 20% of their problems,"
+    },
+    {
+      "startMs": 139000,
+      "endMs": 142000,
+      "text": "they could generate 80% of the benefits."
+    },
+    {
+      "startMs": 142000,
+      "endMs": 146000,
+      "text": "This would allow them to work faster and it also reduces their workload."
+    },
+    {
+      "startMs": 146000,
+      "endMs": 149000,
+      "text": "It's all about finding out what their basic problems are."
+    },
+    {
+      "startMs": 149000,
+      "endMs": 154000,
+      "text": "Sam: I agree with Frances about Pareto, but my favourite was the SWOT Analysis."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 159000,
+      "text": "You know, looking at the company's strengths, weaknesses, opportunities and threats."
+    },
+    {
+      "startMs": 159000,
+      "endMs": 167000,
+      "text": "As it can be used in so many different situations, it works in large and small companies and even down to departmental level."
+    },
+    {
+      "startMs": 167000,
+      "endMs": 169000,
+      "text": "It was great for our case study."
+    },
+    {
+      "startMs": 169000,
+      "endMs": 171000,
+      "text": "Frances: Yes, that's true."
+    },
+    {
+      "startMs": 173000,
+      "endMs": 182000,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 26-30 on page 6."
+    },
+    {
+      "startMs": 189000,
+      "endMs": 199000,
+      "text": "Now listen and answer questions 26-30 on page 6."
+    },
+    {
+      "startMs": 212000,
+      "endMs": 222000,
+      "text": "Now listen and answer questions 26-30."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 230000,
+      "text": "Tutor: Okay, I've read your draft report, but can you tell me a bit more about that company you focused on?"
+    },
+    {
+      "startMs": 230000,
+      "endMs": 238000,
+      "text": "Frances: Well, the company we used in our study was a manufacturing company who have relied on distributors to take their product to the end user."
+    },
+    {
+      "startMs": 238000,
+      "endMs": 243000,
+      "text": "We did some analysis examining the possibility of them distributing their own products."
+    },
+    {
+      "startMs": 243000,
+      "endMs": 250000,
+      "text": "Sam: We initially looked at their strengths. The company, although it is small, is well known and has a very good reputation."
+    },
+    {
+      "startMs": 250000,
+      "endMs": 256000,
+      "text": "The management are very committed to increasing the company profits and they are confident this move would be successful."
+    },
+    {
+      "startMs": 256000,
+      "endMs": 264000,
+      "text": "Frances: Right, and the company has quite a lot of staff who have previously worked for distribution companies, so the knowledge is already there."
+    },
+    {
+      "startMs": 264000,
+      "endMs": 269000,
+      "text": "That was something we didn't expect to find and is probably going to help them the most to achieve their goals."
+    },
+    {
+      "startMs": 269000,
+      "endMs": 273000,
+      "text": "Tutor: I was quite impressed by some of the opportunities you detailed."
+    },
+    {
+      "startMs": 273000,
+      "endMs": 278000,
+      "text": "I did think you missed something quite pertinent to their future growth, however."
+    },
+    {
+      "startMs": 278000,
+      "endMs": 279000,
+      "text": "Sam: What was that?"
+    },
+    {
+      "startMs": 279000,
+      "endMs": 284000,
+      "text": "Tutor: You didn't consider the potential for establishing an offshore division."
+    },
+    {
+      "startMs": 284000,
+      "endMs": 288000,
+      "text": "You talked about the company negotiating better terms with its suppliers."
+    },
+    {
+      "startMs": 288000,
+      "endMs": 295000,
+      "text": "Most of these are based abroad, and so if the company had a way of actually distributing the product there,"
+    },
+    {
+      "startMs": 295000,
+      "endMs": 300000,
+      "text": "this could be a tremendous opportunity and give them an edge over their competitors."
+    },
+    {
+      "startMs": 300000,
+      "endMs": 302000,
+      "text": "Frances: That's a good point."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 305000,
+      "text": "So what did you think about the threats we identified?"
+    },
+    {
+      "startMs": 305000,
+      "endMs": 307000,
+      "text": "Tutor: I thought you did a good job."
+    },
+    {
+      "startMs": 307000,
+      "endMs": 315000,
+      "text": "I was really pleased to see that you considered how the government's planned environmental policy could really affect the viability of this venture."
+    },
+    {
+      "startMs": 315000,
+      "endMs": 322000,
+      "text": "With this law being introduced next year, they might need to find new ways of using their existing technology."
+    },
+    {
+      "startMs": 322000,
+      "endMs": 329000,
+      "text": "It's easy to identify what your competitors are doing, but it's the bigger picture that often gets ignored."
+    },
+    {
+      "startMs": 329000,
+      "endMs": 333000,
+      "text": "So Sam, what did you learn from this assignment?"
+    },
+    {
+      "startMs": 333000,
+      "endMs": 334000,
+      "text": "Sam: Heaps."
+    },
+    {
+      "startMs": 334000,
+      "endMs": 339000,
+      "text": "I guess I hadn't realized how much time it takes to ensure your company survives and profits."
+    },
+    {
+      "startMs": 339000,
+      "endMs": 345000,
+      "text": "It was great to study the different tools in books, but applying them in the real world was much harder than I thought."
+    },
+    {
+      "startMs": 345000,
+      "endMs": 347000,
+      "text": "It was a great learning experience."
+    },
+    {
+      "startMs": 347000,
+      "endMs": 350000,
+      "text": "Tutor: I'm glad I could make your assignment relevant."
+    },
+    {
+      "startMs": 350000,
+      "endMs": 352000,
+      "text": "I'm basically happy with your report."
+    },
+    {
+      "startMs": 352000,
+      "endMs": 356000,
+      "text": "You've got the format correct, with the necessary headings, etc."
+    },
+    {
+      "startMs": 356000,
+      "endMs": 360000,
+      "text": "And you've got sufficient details under the different headings."
+    },
+    {
+      "startMs": 360000,
+      "endMs": 365000,
+      "text": "Just remember to state whether or not you think the company should go ahead with a new venture."
+    },
+    {
+      "startMs": 365000,
+      "endMs": 367000,
+      "text": "But you've done a good job so far."
+    },
+    {
+      "startMs": 369000,
+      "endMs": 372000,
+      "text": "That is the end of section 3."
+    },
+    {
+      "startMs": 372000,
+      "endMs": 376000,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 399000,
+      "endMs": 405000,
+      "text": "Now turn to section 4."
+    },
+    {
+      "startMs": 429000,
+      "endMs": 432000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 69,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,526 @@
+{
+  "id": "p3-58-peer-assessment",
+  "title": "Peer Assessment",
+  "part": 3,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-e6a489507d1e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 488.064,
+    "checksum": "sha256:4d6a1db7b1258802413b4b586900bda15ada220d0fdfba29ac8f1d9257021534"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–24",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Sally says many students see peer assessment as",
+          "options": [
+            {
+              "id": "A",
+              "text": "a way for tutors to save time."
+            },
+            {
+              "id": "B",
+              "text": "a useful learning tool."
+            },
+            {
+              "id": "C",
+              "text": "a valuable form of assessment."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "What do Steve and Sally agree is an advantage of peer assessment?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It's more reliable than self-assessment."
+            },
+            {
+              "id": "B",
+              "text": "It increases students’ self-awareness."
+            },
+            {
+              "id": "C",
+              "text": "It builds rapport between students."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "If the peer assessment marks seem incorrect,",
+          "options": [
+            {
+              "id": "A",
+              "text": "students should mark the assignments again."
+            },
+            {
+              "id": "B",
+              "text": "the tutor should check those assignments."
+            },
+            {
+              "id": "C",
+              "text": "the marking criteria should be rewritten."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "How were the presentations in the research project marked?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Students and lecturers marked all the presentations."
+            },
+            {
+              "id": "B",
+              "text": "Students chose which presentations they wanted to mark."
+            },
+            {
+              "id": "C",
+              "text": "Lecturers marked a selection of presentations."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25–30",
+      "instruction": "Write the correct letter, A, B or C, next to questions 25–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "They gave higher marks"
+        },
+        {
+          "id": "B",
+          "text": "They gave lower marks"
+        },
+        {
+          "id": "C",
+          "text": "Their marks were not significantly different"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "male students marking female presenters ………………",
+          "answer": "B"
+        },
+        {
+          "id": "26",
+          "text": "female students marking male presenters ………………",
+          "answer": "C"
+        },
+        {
+          "id": "27",
+          "text": "female students marking female presenters ………………",
+          "answer": "C"
+        },
+        {
+          "id": "28",
+          "text": "younger students marking older presenters ………………",
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "students marking presenters from a different university ………………",
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "students who had helped set criteria ………………",
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "B",
+        "23": "B",
+        "24": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "B",
+        "26": "C",
+        "27": "C",
+        "28": "A",
+        "29": "C",
+        "30": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9680,
+      "text": "Section 3 You will hear two students called Sally"
+    },
+    {
+      "startMs": 9680,
+      "endMs": 16320,
+      "text": "and Steve discussing Sally's project on peer assessment, a system where students mark"
+    },
+    {
+      "startMs": 16320,
+      "endMs": 19000,
+      "text": "each other's work."
+    },
+    {
+      "startMs": 19000,
+      "endMs": 24320,
+      "text": "First you have some time to look at questions 21 to 24 on page 5."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59800,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 60800,
+      "endMs": 66800,
+      "text": "Steve: I can't believe you're still in the library Sally, you've been here all day."
+    },
+    {
+      "startMs": 66800,
+      "endMs": 69800,
+      "text": "Are you still working on your peer assessment project?"
+    },
+    {
+      "startMs": 69800,
+      "endMs": 73800,
+      "text": "Sally: Hi Steve, yes I'm still here and I'm nowhere near finished."
+    },
+    {
+      "startMs": 73800,
+      "endMs": 77800,
+      "text": "I'm still processing the reading I've done on peer assessment."
+    },
+    {
+      "startMs": 77800,
+      "endMs": 82800,
+      "text": "I'm interested to see if students marking each other's work is beneficial."
+    },
+    {
+      "startMs": 82800,
+      "endMs": 86800,
+      "text": "I know a lot of the other students are pretty skeptical about its value"
+    },
+    {
+      "startMs": 86800,
+      "endMs": 89800,
+      "text": "as a way of assessing their performance."
+    },
+    {
+      "startMs": 89800,
+      "endMs": 94800,
+      "text": "They think the tutors are in favour of it because they don't have to spend so long marking."
+    },
+    {
+      "startMs": 94800,
+      "endMs": 98800,
+      "text": "But I disagree, I think we can learn a great deal from it."
+    },
+    {
+      "startMs": 98800,
+      "endMs": 104800,
+      "text": "Steve: Yes, I can see one advantage being that it saves time spent going over things in class."
+    },
+    {
+      "startMs": 104800,
+      "endMs": 110800,
+      "text": "Sally: Well initially it doesn't seem to work that way and it can be quite a time consuming business"
+    },
+    {
+      "startMs": 110800,
+      "endMs": 116800,
+      "text": "because sometimes things have to be marked again if the tutor thinks the student's assessments aren't reliable."
+    },
+    {
+      "startMs": 116800,
+      "endMs": 123800,
+      "text": "The real gain is the fact that the students learn to stand back and assess their own assignments objectively"
+    },
+    {
+      "startMs": 123800,
+      "endMs": 126800,
+      "text": "because they're much more familiar with the marking system."
+    },
+    {
+      "startMs": 126800,
+      "endMs": 131800,
+      "text": "Steve: Yes I can see that, it gives them an opportunity to reflect on their own performance"
+    },
+    {
+      "startMs": 131800,
+      "endMs": 136800,
+      "text": "and how do they feel about having another student mark their work?"
+    },
+    {
+      "startMs": 136800,
+      "endMs": 138800,
+      "text": "Is that good for rapport?"
+    },
+    {
+      "startMs": 138800,
+      "endMs": 142800,
+      "text": "Sally: In some cases yes, in some cases no."
+    },
+    {
+      "startMs": 142800,
+      "endMs": 145800,
+      "text": "I think more research is needed to answer that question."
+    },
+    {
+      "startMs": 145800,
+      "endMs": 151800,
+      "text": "Steve: What happens if a tutor notices that the marks for a particular assignment seem wrong?"
+    },
+    {
+      "startMs": 151800,
+      "endMs": 153800,
+      "text": "Should the students mark them again?"
+    },
+    {
+      "startMs": 153800,
+      "endMs": 155800,
+      "text": "Sally: That might not make any difference."
+    },
+    {
+      "startMs": 155800,
+      "endMs": 159800,
+      "text": "So in that case the tutor would have to remark all those assignments"
+    },
+    {
+      "startMs": 159800,
+      "endMs": 166800,
+      "text": "and then go through the marking criteria really carefully with the students on the next assignment with some sample answers."
+    },
+    {
+      "startMs": 166800,
+      "endMs": 167800,
+      "text": "Steve: Right."
+    },
+    {
+      "startMs": 167800,
+      "endMs": 171800,
+      "text": "Sally: I've been reading about a research project on peer assessment."
+    },
+    {
+      "startMs": 171800,
+      "endMs": 178800,
+      "text": "The researchers invited a group of students from two different universities to attend a one day conference."
+    },
+    {
+      "startMs": 178800,
+      "endMs": 182800,
+      "text": "They also invited some university lecturers to attend."
+    },
+    {
+      "startMs": 182800,
+      "endMs": 187800,
+      "text": "Each student gave a short presentation on a project of their choice."
+    },
+    {
+      "startMs": 187800,
+      "endMs": 194800,
+      "text": "Each of these presentations was assessed individually by all the participants, both students and lecturers."
+    },
+    {
+      "startMs": 194800,
+      "endMs": 205800,
+      "text": "To support their marking, they used a set of assessment guidelines that had been prepared the day before by a random selection of students."
+    },
+    {
+      "startMs": 205800,
+      "endMs": 214800,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30 on page 6."
+    },
+    {
+      "startMs": 224800,
+      "endMs": 250800,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 251800,
+      "endMs": 254800,
+      "text": "Steve: So were the student markers reliable?"
+    },
+    {
+      "startMs": 254800,
+      "endMs": 262800,
+      "text": "Sally: Well, comparisons were made between certain categories of student markers and the group as a whole, including the lecturers."
+    },
+    {
+      "startMs": 262800,
+      "endMs": 267800,
+      "text": "The findings showed that there were some variations in the way different groups marked."
+    },
+    {
+      "startMs": 267800,
+      "endMs": 270800,
+      "text": "Gender did come into play for example."
+    },
+    {
+      "startMs": 270800,
+      "endMs": 275800,
+      "text": "Steve: I expect the male students were more generous when marking female presenters were they?"
+    },
+    {
+      "startMs": 275800,
+      "endMs": 283800,
+      "text": "Sally: Quite the reverse actually. They were harder on the female presenters than on the males, which wasn't what I'd expected either."
+    },
+    {
+      "startMs": 283800,
+      "endMs": 287800,
+      "text": "Steve: Did female students show any bias towards male presenters?"
+    },
+    {
+      "startMs": 287800,
+      "endMs": 289800,
+      "text": "Sally: Interestingly not."
+    },
+    {
+      "startMs": 289800,
+      "endMs": 293800,
+      "text": "Steve: So does that suggest women are fairer and more reliable markers than men?"
+    },
+    {
+      "startMs": 293800,
+      "endMs": 297800,
+      "text": "Sally: Well, I wouldn't go that far. It's only a small sample."
+    },
+    {
+      "startMs": 297800,
+      "endMs": 304800,
+      "text": "But significantly, the results showed that when women marked other women, this didn't affect the grades they gave."
+    },
+    {
+      "startMs": 305800,
+      "endMs": 310800,
+      "text": "Steve: What about age? Were you able to come to any conclusions about that?"
+    },
+    {
+      "startMs": 310800,
+      "endMs": 319800,
+      "text": "Sally: Yes, because we had some mature students presenting and we found the marks awarded to them by their younger peers were rather more generous."
+    },
+    {
+      "startMs": 319800,
+      "endMs": 321800,
+      "text": "Steve: Oh, I wonder why that is."
+    },
+    {
+      "startMs": 321800,
+      "endMs": 331800,
+      "text": "Now, you said there were groups of students from two universities. Did they tend to favour students making presentations from their own universities?"
+    },
+    {
+      "startMs": 331800,
+      "endMs": 336800,
+      "text": "Sally: They didn't seem to influence marking one way or the other, which is quite encouraging."
+    },
+    {
+      "startMs": 336800,
+      "endMs": 341800,
+      "text": "We'd been interested to see if students' personal relationships affected their objectivity."
+    },
+    {
+      "startMs": 341800,
+      "endMs": 348800,
+      "text": "One striking variation though was in the students who'd been asked to help devise the criteria for the marking scheme."
+    },
+    {
+      "startMs": 348800,
+      "endMs": 354800,
+      "text": "They were actually the toughest markers of all, marking consistently below the tutors."
+    },
+    {
+      "startMs": 354800,
+      "endMs": 359800,
+      "text": "Steve: Really? Well, it sounds as if it's generated lots of useful data."
+    },
+    {
+      "startMs": 361800,
+      "endMs": 368800,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 391800,
+      "endMs": 398800,
+      "text": "Now turn to section 4 on page 7."
+    },
+    {
+      "startMs": 421800,
+      "endMs": 424800,
+      "text": "You"
+    },
+    {
+      "startMs": 451800,
+      "endMs": 454800,
+      "text": "You"
+    },
+    {
+      "startMs": 481800,
+      "endMs": 484800,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 63,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

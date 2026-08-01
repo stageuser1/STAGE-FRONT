@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import path from "node:path";
 
 import { ListeningPractice } from "@/components/ielts/listening/ListeningPractice";
-import { FixtureSetSource } from "@/lib/ielts/listening-fixture";
+import { StaticListeningSource } from "@/lib/ielts/listening-static-source";
 import type { ListeningSetSource } from "@/lib/ielts/listening-source";
 import type { ListeningSet, ScoringRule } from "@/lib/ielts/listening-types";
 
@@ -18,10 +19,12 @@ import type { ListeningSet, ScoringRule } from "@/lib/ielts/listening-types";
  *
  * This module is the one place a `ListeningSetSource` is constructed. Every
  * component below it receives data as props or through the attempt context, so
- * swapping `FixtureSetSource` for a Directus-backed source is an edit to the
- * two lines below and to nothing else.
+ * swapping the source implementation is an edit to the two lines below and
+ * to nothing else.
  */
-const source: ListeningSetSource = new FixtureSetSource();
+const source: ListeningSetSource = new StaticListeningSource({
+  dataRoot: path.join(process.cwd(), "data", "ielts", "listening"),
+});
 
 interface PageProps {
   params: Promise<{ setId: string }>;
@@ -80,9 +83,8 @@ export default async function ListeningPracticePage({ params }: PageProps) {
    * `ListeningSetSource` keeps `getScoringRules` separate from `getSet`
    * precisely so a backend that must withhold answers can — that call would
    * move behind a server action invoked on submit, and this page is the seam
-   * where that change is made. Under the fixture there is nothing to withhold:
-   * the material is written for this repository and the set is one practice
-   * paper, not a graded assessment.
+   * where that change is made. Static practice currently follows the same
+   * client-side scoring behavior as the original fixture.
    */
   return <ListeningPractice set={loaded.set} rules={loaded.rules} />;
 }

@@ -1,0 +1,486 @@
+{
+  "id": "p3-19-climate-change-and-allergies",
+  "title": "Climate Change and Allergies",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-9ac72c6b987b",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 487.08,
+    "checksum": "sha256:146f36b2a497d988c2294975f837808c4d0249c0ae608d804d96069b568663a7"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21 – 25",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Why is Beth unconvinced that allergies are linked to vitamin D deficiency?",
+          "options": [
+            {
+              "id": "A",
+              "text": "because people’s diets have improved since the 1950s"
+            },
+            {
+              "id": "B",
+              "text": "because most people get enough vitamin D"
+            },
+            {
+              "id": "C",
+              "text": "because the evidence only applies in Britain"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "Eliot explains that rising CO2 levels",
+          "options": [
+            {
+              "id": "A",
+              "text": "will mean distribution of pollen over a wider area."
+            },
+            {
+              "id": "B",
+              "text": "are having less impact on pollen than milder winters."
+            },
+            {
+              "id": "C",
+              "text": "are responsible for higher quantities of pollen."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "23",
+          "text": "What does Beth say about seasonal changes?",
+          "options": [
+            {
+              "id": "A",
+              "text": "There is no clear short-term trend for the arrival of spring."
+            },
+            {
+              "id": "B",
+              "text": "In general, spring is likely to continue arriving early."
+            },
+            {
+              "id": "C",
+              "text": "Springs are becoming milder and longer."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "What point is made about the plant ragweed?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It is spreading to more countries."
+            },
+            {
+              "id": "B",
+              "text": "It is the most widespread cause of allergies globally."
+            },
+            {
+              "id": "C",
+              "text": "It causes the most severe type of allergy."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "Why is tree pollen a more serious problem in cities?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trees produce more pollen there."
+            },
+            {
+              "id": "B",
+              "text": "There is less to absorb the tree pollen."
+            },
+            {
+              "id": "C",
+              "text": "There is not enough control over tree-planting."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 26 – 30",
+      "instruction": "Choose FIVE answers from the box and write the correct letter, A–G, next to questions 26–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "greatest change recorded for oak pollen"
+        },
+        {
+          "id": "B",
+          "text": "changes identified for two pollen types only"
+        },
+        {
+          "id": "C",
+          "text": "a longer season for grass pollen"
+        },
+        {
+          "id": "D",
+          "text": "earlier start dates for all pollen types"
+        },
+        {
+          "id": "E",
+          "text": "significant change in start date of birch pollen"
+        },
+        {
+          "id": "F",
+          "text": "little difference in start dates"
+        },
+        {
+          "id": "G",
+          "text": "information only available for birch pollen"
+        }
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "Austria",
+          "answer": "G"
+        },
+        {
+          "id": "27",
+          "text": "France",
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "The Netherlands",
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "Switzerland",
+          "answer": "D"
+        },
+        {
+          "id": "30",
+          "text": "UK",
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "C",
+        "23": "A",
+        "24": "A",
+        "25": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "26": "G",
+        "27": "B",
+        "28": "A",
+        "29": "D",
+        "30": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 15760,
+      "text": "You will hear two health science students called Elliot and Beth discussing research on climate"
+    },
+    {
+      "startMs": 15760,
+      "endMs": 25200,
+      "text": "change and allergies. First you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 45760,
+      "endMs": 68080,
+      "text": "Now listen carefully and answer questions 21 to 25. Elliot: Have you had a chance to look at the"
+    },
+    {
+      "startMs": 68080,
+      "endMs": 73680,
+      "text": "information for our project yet, Beth? Beth: I've had a look at most of the stuff on the relationship"
+    },
+    {
+      "startMs": 73680,
+      "endMs": 80800,
+      "text": "between climate change and allergies and the role played by pollen from flowering plants and trees."
+    },
+    {
+      "startMs": 80800,
+      "endMs": 88240,
+      "text": "Elliot: Yeah, me too. The main message is that seasonal allergies seem to be getting worse. In just"
+    },
+    {
+      "startMs": 88240,
+      "endMs": 95360,
+      "text": "the last 20 years the amount of pollen that's produced by the flowers on birch trees has tripled"
+    },
+    {
+      "startMs": 95360,
+      "endMs": 101840,
+      "text": "and one in four people suffers from either hay fever or asthma which is triggered by pollen."
+    },
+    {
+      "startMs": 102640,
+      "endMs": 108720,
+      "text": "Beth: I read something about allergy sufferers being more likely to have a vitamin D deficiency"
+    },
+    {
+      "startMs": 108720,
+      "endMs": 114240,
+      "text": "because we no longer take cod liver oil as a vitamin supplement like many people used to do in"
+    },
+    {
+      "startMs": 114240,
+      "endMs": 121440,
+      "text": "the 1950s in Britain and since then allergies have quadrupled in most European countries"
+    },
+    {
+      "startMs": 122160,
+      "endMs": 128240,
+      "text": "but it was only in Britain that cod liver oil was so popular so that argument doesn't really"
+    },
+    {
+      "startMs": 128240,
+      "endMs": 134640,
+      "text": "make sense. Elliot: No, it doesn't seem that relevant."
+    },
+    {
+      "startMs": 134640,
+      "endMs": 139360,
+      "text": "Beth: What seems to be happening now is that an increasing number of people are getting their first attack in their 40s and 50s."
+    },
+    {
+      "startMs": 140080,
+      "endMs": 144720,
+      "text": "Elliot: That must be because of the link with climate change causing rising temperatures"
+    },
+    {
+      "startMs": 145360,
+      "endMs": 151680,
+      "text": "but CO2 levels are seriously affecting pollen counts too. Beth：As much as milder winters."
+    },
+    {
+      "startMs": 151680,
+      "endMs": 158960,
+      "text": "Elliot: Definitely, CO2 helps stimulate plant growth and several recent studies have shown that when"
+    },
+    {
+      "startMs": 158960,
+      "endMs": 166640,
+      "text": "plants are exposed to more CO2 they produce more pollen."
+    },
+    {
+      "startMs": 166640,
+      "endMs": 173200,
+      "text": "Beth：Really? So people might experience more severe allergic symptoms in future? Elliot: That's right."
+    },
+    {
+      "startMs": 173200,
+      "endMs": 180480,
+      "text": "Beth：And another factor is that the pollen season is changing. Elliot: Yes, scientists are predicting spring will come five weeks earlier by 2130."
+    },
+    {
+      "startMs": 181040,
+      "endMs": 187280,
+      "text": "Beth: That's in the long term but that doesn't mean that spring will come earlier every year. Look at"
+    },
+    {
+      "startMs": 187280,
+      "endMs": 195040,
+      "text": "last winter that was really cold until March and the pollen season was delayed whereas this year"
+    },
+    {
+      "startMs": 195040,
+      "endMs": 201440,
+      "text": "spring came earlier and lasted longer."
+    },
+    {
+      "startMs": 201440,
+      "endMs": 208400,
+      "text": "Elliot: Right and another thing we should mention is ragweed. Beth: As an example of a plant species moving into new areas as a result of climate change."
+    },
+    {
+      "startMs": 208480,
+      "endMs": 215360,
+      "text": "Elliot: Yes, in the US it's already the major allergen affecting millions of people in August and"
+    },
+    {
+      "startMs": 215360,
+      "endMs": 221760,
+      "text": "September but we're starting to see it grow in Europe for the first time which is really worrying"
+    },
+    {
+      "startMs": 221760,
+      "endMs": 228160,
+      "text": "because it's so allergenic."
+    },
+    {
+      "startMs": 228160,
+      "endMs": 234400,
+      "text": "Beth: The problem with tree pollen is also worse in cities because there are so many hard surfaces"
+    },
+    {
+      "startMs": 234400,
+      "endMs": 240400,
+      "text": "around and the pollen doesn't get absorbed so much, just stays in the air."
+    },
+    {
+      "startMs": 240400,
+      "endMs": 246800,
+      "text": "Elliot: Yeah, wasn't the pollen shown to be three times higher in one city? Beth: I think so."
+    },
+    {
+      "startMs": 246800,
+      "endMs": 256800,
+      "text": "So because of this many cities have started to ban the planting of certain types of trees."
+    },
+    {
+      "startMs": 256800,
+      "endMs": 264400,
+      "text": "Before you hear the rest of the discussion you have some time to look at questions 26 to 30."
+    },
+    {
+      "startMs": 264400,
+      "endMs": 293920,
+      "text": "Now listen and answer questions 26 to 30."
+    },
+    {
+      "startMs": 293920,
+      "endMs": 299680,
+      "text": "Beth: So shall we look at the different data tables for seasonal changes"
+    },
+    {
+      "startMs": 299680,
+      "endMs": 308800,
+      "text": "for pollen in Europe? Elliot: Okay, but I think we should just focus on the trees and plants which we have"
+    },
+    {
+      "startMs": 308800,
+      "endMs": 315200,
+      "text": "the most data for. So that's oak trees and birch trees and grass. Beth: Yes, that makes it more manageable."
+    },
+    {
+      "startMs": 315200,
+      "endMs": 323520,
+      "text": "Shall we go through the data for each country in detail and pick out anything interesting? Elliot: All right, so starting with Austria."
+    },
+    {
+      "startMs": 323520,
+      "endMs": 330160,
+      "text": "Well, here we've only got data for birch pollen."
+    },
+    {
+      "startMs": 330160,
+      "endMs": 337440,
+      "text": "I wonder why there's no data for oak or grass. Beth: Hmm, it would be interesting to compare with neighbouring countries."
+    },
+    {
+      "startMs": 337440,
+      "endMs": 344240,
+      "text": "Elliot: True. Beth: The picture in France is unusual. Elliot: Yes, the pollen season starts earlier for both oak and birch,"
+    },
+    {
+      "startMs": 344240,
+      "endMs": 351600,
+      "text": "but it doesn't start any earlier for grass. I wonder why that is."
+    },
+    {
+      "startMs": 351600,
+      "endMs": 360640,
+      "text": "In the Netherlands, we've got complete data for all three plants. Beth: So what does it show?"
+    },
+    {
+      "startMs": 360640,
+      "endMs": 368080,
+      "text": "Grass and birch pollen are only starting a few days earlier, but oak pollen is starting much"
+    },
+    {
+      "startMs": 368080,
+      "endMs": 375360,
+      "text": "earlier, 18 days in fact. Hmm, that's unusual. There's not such a big difference in other countries."
+    },
+    {
+      "startMs": 375360,
+      "endMs": 384320,
+      "text": "Elliot: No, Switzerland's an interesting case. The pollen season starts here earlier than in the past for"
+    },
+    {
+      "startMs": 384320,
+      "endMs": 391680,
+      "text": "oak, birch and grass. Beth: Yeah, from 21 days to 14 days earlier."
+    },
+    {
+      "startMs": 391680,
+      "endMs": 398400,
+      "text": "Elliot: Yeah, the UK shows a different picture again. Beth: Yeah, here the problem is that wet summers have extended the grass pollen season from five"
+    },
+    {
+      "startMs": 398400,
+      "endMs": 408800,
+      "text": "weeks to eight weeks, which is bad news for allergy sufferers. Elliot：Right. Well, I think we should have..."
+    },
+    {
+      "startMs": 402080,
+      "endMs": 408800,
+      "text": "That is the end of part three. You now have 30 seconds to check your answers to part three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 49,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

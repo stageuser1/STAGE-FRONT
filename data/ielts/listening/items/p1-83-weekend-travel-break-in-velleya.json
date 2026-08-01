@@ -1,0 +1,430 @@
+{
+  "id": "p1-83-weekend-travel-break-in-velleya",
+  "title": "Weekend travel break in Velleya",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-c64c5860fd12",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 542.589,
+    "checksum": "sha256:0fbda80583546c1c4160490d9a84d1c73fd3aa984b2c6facecb5e2a299241145"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the form below. Write ONE WORD AND/OR A NUMBER for each answer. Weekend travel break in Velleya Example: Cost of holiday: £280 per person Hotel information Amenities: bathroom, and TV. Each room has a view of the 1. __________ Access to a private 2. __________ (1 km) Activities Friday evening: dinner on the 3. __________ terrace dance or listen to a special 4. __________ after breakfast Saturday morning: have a guided tour to a local 5. __________ visit a studio famous for making 6. __________ ornaments Saturday afternoon: Go to the 7. __________ by coach Sunday morning: Book a free 8. __________ Sunday afternoon: Climb a hill by taking a 9. __________ ride Sunday evening: a barbecue dinner (including grilled 10. __________)",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Each room has a view of the 1. __________",
+          "answer": "Garden"
+        },
+        {
+          "id": "2",
+          "text": "Access to a private 2. __________ (1 km)",
+          "answer": "Beach"
+        },
+        {
+          "id": "3",
+          "text": "dinner on the 3. __________ terrace",
+          "answer": "Rooftop"
+        },
+        {
+          "id": "4",
+          "text": "dance or listen to a special 4. __________ after breakfast",
+          "answer": "Talk"
+        },
+        {
+          "id": "5",
+          "text": "have a guided tour to a local 5. __________",
+          "answer": "Museum"
+        },
+        {
+          "id": "6",
+          "text": "visit a studio famous for making 6. __________ ornaments",
+          "answer": "Glass"
+        },
+        {
+          "id": "7",
+          "text": "Go to the 7. __________ by coach",
+          "answer": "Opera"
+        },
+        {
+          "id": "8",
+          "text": "Book a free 8. __________",
+          "answer": "Massage"
+        },
+        {
+          "id": "9",
+          "text": "Climb a hill by taking a 9. __________ ride",
+          "answer": "Donkey"
+        },
+        {
+          "id": "10",
+          "text": "a barbecue dinner (including grilled 10. __________)",
+          "answer": "Lamb"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the form below. Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Weekend travel break in Velleya",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Example: Cost of holiday: £280 per person",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Hotel information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Amenities: bathroom, and TV.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Each room has a view of the 1. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Access to a private 2. __________ (1 km)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Activities",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Friday evening:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "dinner on the 3. __________ terrace",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "dance or listen to a special 4. __________ after breakfast",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Saturday morning:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "have a guided tour to a local 5. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "visit a studio famous for making 6. __________ ornaments",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Saturday afternoon:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Go to the 7. __________ by coach",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Sunday morning:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Book a free 8. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Sunday afternoon:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Climb a hill by taking a 9. __________ ride",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Sunday evening:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "a barbecue dinner (including grilled 10. __________)",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Garden",
+        "2": "Beach",
+        "3": "Rooftop",
+        "4": "Talk",
+        "5": "Museum",
+        "6": "Glass",
+        "7": "Opera",
+        "8": "Massage",
+        "9": "Donkey",
+        "10": "Lamb"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11520,
+      "text": "Customer: Hi, I'm interested in taking a weekend break in Velleya. Can you provide me with some options?"
+    },
+    {
+      "startMs": 11520,
+      "endMs": 18280,
+      "text": "Agent: Of course, I highly recommend our holiday package, priced at 280 per person. It includes"
+    },
+    {
+      "startMs": 18280,
+      "endMs": 22120,
+      "text": "accommodation, meals, and a range of activities."
+    },
+    {
+      "startMs": 22120,
+      "endMs": 26360,
+      "text": "Customer: That sounds great. What can I expect from the accommodation?"
+    },
+    {
+      "startMs": 26360,
+      "endMs": 32360,
+      "text": "Agent: We have carefully selected a reputable hotel for our clients. Each room is well-appointed"
+    },
+    {
+      "startMs": 32360,
+      "endMs": 39120,
+      "text": "with a private bathroom, TV, and other amenities. Additionally, you'll enjoy a delightful"
+    },
+    {
+      "startMs": 39120,
+      "endMs": 41840,
+      "text": "view of the garden from your room."
+    },
+    {
+      "startMs": 41840,
+      "endMs": 46640,
+      "text": "Customer: That sounds lovely. Are there any other unique features of the hotel?"
+    },
+    {
+      "startMs": 46640,
+      "endMs": 54000,
+      "text": "Agent: Absolutely. The hotel boasts a private beach located just 1 kilometer away. It's the perfect"
+    },
+    {
+      "startMs": 54000,
+      "endMs": 57400,
+      "text": "place to unwind and soak up the sun."
+    },
+    {
+      "startMs": 57400,
+      "endMs": 62040,
+      "text": "Customer: That's fantastic. What activities are included in the package?"
+    },
+    {
+      "startMs": 62040,
+      "endMs": 67120,
+      "text": "Agent: Your holiday starts with a Friday dinner on the rooftop terrace of the hotel, where you"
+    },
+    {
+      "startMs": 67120,
+      "endMs": 70400,
+      "text": "can bask in the breathtaking sunset."
+    },
+    {
+      "startMs": 70400,
+      "endMs": 74960,
+      "text": "Customer: That sounds romantic. Are there any other activities planned?"
+    },
+    {
+      "startMs": 74960,
+      "endMs": 81600,
+      "text": "Agent: Certainly. After dinner, you have two options. You can either join a lively dance session,"
+    },
+    {
+      "startMs": 81600,
+      "endMs": 87440,
+      "text": "which is popular among energetic young people, or attend a talk by a specialist."
+    },
+    {
+      "startMs": 87440,
+      "endMs": 92520,
+      "text": "Customer: I think the second one is better. I'm not sure if I'll have enough energy for the activities"
+    },
+    {
+      "startMs": 92520,
+      "endMs": 97600,
+      "text": "on the following day. What's planned for Saturday morning?"
+    },
+    {
+      "startMs": 97600,
+      "endMs": 103080,
+      "text": "Agent: In the morning, we have a private tour to a museum with a knowledgeable guide. It's"
+    },
+    {
+      "startMs": 103080,
+      "endMs": 108360,
+      "text": "a fantastic opportunity to immerse yourself in the local culture."
+    },
+    {
+      "startMs": 108360,
+      "endMs": 112440,
+      "text": "Customer: That sounds interesting. What about Saturday afternoon?"
+    },
+    {
+      "startMs": 112440,
+      "endMs": 118360,
+      "text": "Agent: Actually, in the morning, we also pay a visit to a studio, which is renowned for using glass"
+    },
+    {
+      "startMs": 118360,
+      "endMs": 125200,
+      "text": "to make an array of ornaments. It is a one-hour trip. Then after lunch, in the afternoon,"
+    },
+    {
+      "startMs": 125200,
+      "endMs": 131000,
+      "text": "we've arranged a coach trip to watch an opera. It will be a delightful cultural experience."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 134200,
+      "text": "Customer: That's a nice addition. What about Sunday morning?"
+    },
+    {
+      "startMs": 134200,
+      "endMs": 139920,
+      "text": "Agent: You have the option to take a leisurely walk nearby, or you can book a complimentary massage"
+    },
+    {
+      "startMs": 139920,
+      "endMs": 145160,
+      "text": "to relax and unwind. It's a service that the hotel specializes in."
+    },
+    {
+      "startMs": 145160,
+      "endMs": 148600,
+      "text": "Customer: I'll definitely do that. My wife loves them."
+    },
+    {
+      "startMs": 148600,
+      "endMs": 154200,
+      "text": "Agent: Great choice. On Sunday afternoon, we have an exciting hill climbing trip"
+    },
+    {
+      "startMs": 154200,
+      "endMs": 160440,
+      "text": "planned. You'll have the opportunity to ride a donkey and enjoy the breathtaking views."
+    },
+    {
+      "startMs": 160440,
+      "endMs": 165080,
+      "text": "Customer: That sounds like an adventure, and what's planned for Sunday evening?"
+    },
+    {
+      "startMs": 165080,
+      "endMs": 170200,
+      "text": "Agent: Sunday evening we'll have a barbecue dinner at a restaurant located at the top of the hill."
+    },
+    {
+      "startMs": 170200,
+      "endMs": 174840,
+      "text": "Our speciality is grilled lamb. It's a must-try dish."
+    },
+    {
+      "startMs": 174840,
+      "endMs": 180800,
+      "text": "Customer: That sounds absolutely delicious. I'm convinced I'll book the holiday package. Thank you for"
+    },
+    {
+      "startMs": 180800,
+      "endMs": 187000,
+      "text": "your assistance. Agent: You're welcome. I'm confident that you'll have an amazing time in Velleya. Let"
+    },
+    {
+      "startMs": 187000,
+      "endMs": 189000,
+      "text": "me assist you with the booking process."
+    },
+    {
+      "startMs": 517000,
+      "endMs": 519000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 37,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

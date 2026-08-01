@@ -1,0 +1,550 @@
+{
+  "id": "p1-100-fruit-picking-part-time-job",
+  "title": "Fruit-picking part-time job",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-87e155941dd3",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 228.502,
+    "checksum": "sha256:c69aa4c913d50cbd376aaaacc14d8a2a2a99233827c9ca96227b37cd0e7f667b"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the form below. Write ONE WORD AND/OR A NUMBER for each answer. Fruit-picking part-time job Surname of the applicant: Sophie Harries Current address: 1. __________ Hostel, Sydney Contact phone number: 0452 832721 Age: 2. __________ Preferred working location: near the 3. __________ Available to work in 4. __________ Preferred to be paid by 5. __________ Type of fruit to pick up: 6. __________ Health condition: used to have a problem with 7. __________ Has medical 8. __________ Doesn't have a license for 9. __________ Accommodation arranged in a close 10. __________",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Current address: 1. __________ Hostel, Sydney",
+          "answer": "Central"
+        },
+        {
+          "id": "2",
+          "text": "Age: 2. __________",
+          "answer": "19"
+        },
+        {
+          "id": "3",
+          "text": "Preferred working location: near the 3. __________",
+          "answer": "coast"
+        },
+        {
+          "id": "4",
+          "text": "Available to work in 4. __________",
+          "answer": "August"
+        },
+        {
+          "id": "5",
+          "text": "Preferred to be paid by 5. __________",
+          "answer": "hour"
+        },
+        {
+          "id": "6",
+          "text": "Type of fruit to pick up: 6. __________",
+          "answer": "mangoes"
+        },
+        {
+          "id": "7",
+          "text": "Health condition: used to have a problem with 7. __________",
+          "answer": "back"
+        },
+        {
+          "id": "8",
+          "text": "Has medical 8. __________",
+          "answer": "insurance"
+        },
+        {
+          "id": "9",
+          "text": "Doesn't have a license for 9. __________",
+          "answer": "trucks"
+        },
+        {
+          "id": "10",
+          "text": "Accommodation arranged in a close 10. __________",
+          "answer": "town"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the form below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Fruit-picking part-time job",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Surname of the applicant: Sophie Harries",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Current address: 1. __________ Hostel, Sydney",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Contact phone number: 0452 832721",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Age: 2. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Preferred working location: near the 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Available to work in 4. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Preferred to be paid by 5. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Type of fruit to pick up: 6. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Health condition: used to have a problem with 7. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Has medical 8. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Doesn't have a license for 9. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Accommodation arranged in a close 10. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Central",
+        "2": "19",
+        "3": "coast",
+        "4": "August",
+        "5": "hour",
+        "6": "mangoes",
+        "7": "back",
+        "8": "insurance",
+        "9": "trucks",
+        "10": "town"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6760,
+      "text": "Staff: Nature Farm speaking, how can I help you?"
+    },
+    {
+      "startMs": 6760,
+      "endMs": 8560,
+      "text": "Applicant: Hi, morning."
+    },
+    {
+      "startMs": 8560,
+      "endMs": 14280,
+      "text": "I'd like to get some information about the part-time job of fruit picking in the advertisement."
+    },
+    {
+      "startMs": 14280,
+      "endMs": 17440,
+      "text": "I was wondering if you still need some extra hands?"
+    },
+    {
+      "startMs": 17440,
+      "endMs": 18440,
+      "text": "Staff: Yes, I do."
+    },
+    {
+      "startMs": 18440,
+      "endMs": 21040,
+      "text": "May I take some of your information first?"
+    },
+    {
+      "startMs": 21040,
+      "endMs": 22360,
+      "text": "What's your name?"
+    },
+    {
+      "startMs": 22360,
+      "endMs": 26920,
+      "text": "Applicant: Sophie Harries, that's H-A-R-R-I-E-S."
+    },
+    {
+      "startMs": 26920,
+      "endMs": 29560,
+      "text": "Staff: Nice to talk with you, Sophie."
+    },
+    {
+      "startMs": 29600,
+      "endMs": 31360,
+      "text": "Where are you currently staying?"
+    },
+    {
+      "startMs": 31360,
+      "endMs": 36800,
+      "text": "Applicant: Well, I'm from London, but now I'm staying at Central Hostel, Sydney."
+    },
+    {
+      "startMs": 36800,
+      "endMs": 39640,
+      "text": "Staff: OK, may I have your contact number?"
+    },
+    {
+      "startMs": 39640,
+      "endMs": 46320,
+      "text": "I can see from the website your number is 0452832727, right?"
+    },
+    {
+      "startMs": 46320,
+      "endMs": 47280,
+      "text": "Applicant: Oh, sorry."
+    },
+    {
+      "startMs": 47280,
+      "endMs": 50440,
+      "text": "The last digit should be 1, not 7."
+    },
+    {
+      "startMs": 50440,
+      "endMs": 51440,
+      "text": "Staff: Got that."
+    },
+    {
+      "startMs": 51440,
+      "endMs": 57320,
+      "text": "And now, you know we only recruit part-time employees over 18, so could I have your age, please?"
+    },
+    {
+      "startMs": 57320,
+      "endMs": 63640,
+      "text": "Applicant: I am 18, but I will have my 19th birthday at the end of this month, so you can put 19."
+    },
+    {
+      "startMs": 63640,
+      "endMs": 64640,
+      "text": "Staff: Cool."
+    },
+    {
+      "startMs": 64640,
+      "endMs": 65960,
+      "text": "Happy birthday, Sophie."
+    },
+    {
+      "startMs": 65960,
+      "endMs": 68400,
+      "text": "Well, let's move on to the real business."
+    },
+    {
+      "startMs": 68400,
+      "endMs": 70640,
+      "text": "We now have two working sites."
+    },
+    {
+      "startMs": 70640,
+      "endMs": 75160,
+      "text": "One is a fruit farm in North Queensland and the other one is near the coast."
+    },
+    {
+      "startMs": 75160,
+      "endMs": 76680,
+      "text": "Which do you prefer?"
+    },
+    {
+      "startMs": 76680,
+      "endMs": 77680,
+      "text": "Applicant: Er, hmm."
+    },
+    {
+      "startMs": 77680,
+      "endMs": 83240,
+      "text": "I think it will be better if I can spend some time on the beach after work, so I guess"
+    },
+    {
+      "startMs": 83240,
+      "endMs": 85920,
+      "text": "the second place sounds best to me."
+    },
+    {
+      "startMs": 85920,
+      "endMs": 87240,
+      "text": "Staff: No problem, Sophie."
+    },
+    {
+      "startMs": 87240,
+      "endMs": 89880,
+      "text": "And do you think you could be ready to join us?"
+    },
+    {
+      "startMs": 89880,
+      "endMs": 94120,
+      "text": "Applicant: It's July now and I'd like to do some travelling around here."
+    },
+    {
+      "startMs": 94120,
+      "endMs": 95120,
+      "text": "What about August?"
+    },
+    {
+      "startMs": 95120,
+      "endMs": 97960,
+      "text": "Staff: Yes, August is the busiest month for us."
+    },
+    {
+      "startMs": 97960,
+      "endMs": 100040,
+      "text": "We're always short of hands."
+    },
+    {
+      "startMs": 100040,
+      "endMs": 103280,
+      "text": "Applicant: And could you please tell me how I will get paid?"
+    },
+    {
+      "startMs": 103280,
+      "endMs": 106720,
+      "text": "Staff: We can pay you by every basket of fruits or by the hour."
+    },
+    {
+      "startMs": 106720,
+      "endMs": 107880,
+      "text": "It's up to you."
+    },
+    {
+      "startMs": 107880,
+      "endMs": 113520,
+      "text": "Applicant: You know, I haven't done fruit picking before, so I guess pay by the hour suits me better."
+    },
+    {
+      "startMs": 113520,
+      "endMs": 115640,
+      "text": "Staff: OK, I've got that."
+    },
+    {
+      "startMs": 115640,
+      "endMs": 121000,
+      "text": "And there are now three types of fruits, bananas, mangoes and avocados, which fruit would"
+    },
+    {
+      "startMs": 121000,
+      "endMs": 122000,
+      "text": "you like to pick?"
+    },
+    {
+      "startMs": 122000,
+      "endMs": 125600,
+      "text": "Applicant: I prefer mangoes, I think it will be easier for me."
+    },
+    {
+      "startMs": 125600,
+      "endMs": 128120,
+      "text": "Staff: Cool, I'm sure you'll enjoy that."
+    },
+    {
+      "startMs": 128120,
+      "endMs": 132200,
+      "text": "OK, now I'd like to ask you a few more questions about yourself."
+    },
+    {
+      "startMs": 132200,
+      "endMs": 136320,
+      "text": "Do you have any medical problems, like high blood pressure, heart disease or anything"
+    },
+    {
+      "startMs": 136320,
+      "endMs": 137320,
+      "text": "like that?"
+    },
+    {
+      "startMs": 137320,
+      "endMs": 142160,
+      "text": "Applicant: Actually, I just had a medical checkup recently, and everything seemed fine."
+    },
+    {
+      "startMs": 142160,
+      "endMs": 147520,
+      "text": "Well, I hurt my back when I played badminton with my roommate last year, but it's OK"
+    },
+    {
+      "startMs": 147520,
+      "endMs": 148520,
+      "text": "now."
+    },
+    {
+      "startMs": 148520,
+      "endMs": 149520,
+      "text": "Staff: Aha, great."
+    },
+    {
+      "startMs": 149520,
+      "endMs": 153800,
+      "text": "And all of our workers are required to have medical insurance in case people hurt themselves"
+    },
+    {
+      "startMs": 153800,
+      "endMs": 156360,
+      "text": "while working, like falling down a ladder."
+    },
+    {
+      "startMs": 156360,
+      "endMs": 157760,
+      "text": "Have you got one now?"
+    },
+    {
+      "startMs": 157760,
+      "endMs": 161800,
+      "text": "Applicant: Yes, and I definitely hope it won't happen during working."
+    },
+    {
+      "startMs": 161800,
+      "endMs": 165040,
+      "text": "Staff: Aha, yet you still need to take much care."
+    },
+    {
+      "startMs": 165040,
+      "endMs": 167560,
+      "text": "By the way, do you have a driver's license?"
+    },
+    {
+      "startMs": 167560,
+      "endMs": 171440,
+      "text": "You know the fruit farm is huge, sometimes you will need to drive a car."
+    },
+    {
+      "startMs": 171720,
+      "endMs": 176400,
+      "text": "Applicant: Yes, I got my driver's license last year, but I'm afraid I don't have a license for"
+    },
+    {
+      "startMs": 176400,
+      "endMs": 178720,
+      "text": "driving large trucks."
+    },
+    {
+      "startMs": 178720,
+      "endMs": 183360,
+      "text": "Staff: No worries, you are not responsible for delivering the picked fruit to the supermarkets."
+    },
+    {
+      "startMs": 183360,
+      "endMs": 185720,
+      "text": "There are some drivers doing that work."
+    },
+    {
+      "startMs": 185720,
+      "endMs": 189040,
+      "text": "And lastly, one more question, where would you like to live?"
+    },
+    {
+      "startMs": 189040,
+      "endMs": 190640,
+      "text": "Applicant: Any options for me?"
+    },
+    {
+      "startMs": 190640,
+      "endMs": 192200,
+      "text": "Staff: Well, two choices."
+    },
+    {
+      "startMs": 192200,
+      "endMs": 197200,
+      "text": "You can either stay in a cottage on the farm, or we can arrange accommodation in a town nearby."
+    },
+    {
+      "startMs": 197200,
+      "endMs": 200560,
+      "text": "Applicant: I don't think I'd like to stay at the workplace all day long."
+    },
+    {
+      "startMs": 200600,
+      "endMs": 203120,
+      "text": "I think the second one is better for me."
+    },
+    {
+      "startMs": 203120,
+      "endMs": 204520,
+      "text": "Staff: Okay, let's do that."
+    },
+    {
+      "startMs": 204520,
+      "endMs": 206520,
+      "text": "Looking forward to seeing you soon."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 68,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

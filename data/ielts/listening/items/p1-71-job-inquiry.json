@@ -1,0 +1,863 @@
+{
+  "id": "p1-71-job-inquiry",
+  "title": "Job Inquiry",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-9e5eb0fb2ca2",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 469.197,
+    "checksum": "sha256:f76b426e92f8a990fd77a17b6f1ecf2113bf2322296d0bcf98d592831426ef70"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. Job Inquiry Type of job required: part-time Position available Details Duty: to provide 2. ______ service Working hours: 3. ______ Requirement: receive 4. _______ without pay Day off: one day a week (request in advance) Requirements: clean and valid license, 6 years experience Working hours: 6. ________ Duty: to take employees to and from work to collect the 7. ________ to pick up the children Day off: 8. ________ Cashier in a 9. ________ Working hours: 17.30 – 22.30 Duty: to sell and dispense tickets to provide refreshments to make 10. ________ Day off: Mondays",
+      "questions": [
+        {
+          "id": "1",
+          "text": "1. ________",
+          "answer": "receptionist"
+        },
+        {
+          "id": "2",
+          "text": "Duty: to provide 2. ______ service",
+          "answer": "quality customer/customer"
+        },
+        {
+          "id": "3",
+          "text": "Working hours: 3. ______",
+          "answer": "early mornings"
+        },
+        {
+          "id": "4",
+          "text": "Requirement: receive 4. _______ without pay",
+          "answer": "training"
+        },
+        {
+          "id": "5",
+          "text": "5. ________",
+          "answer": "driver"
+        },
+        {
+          "id": "6",
+          "text": "Working hours: 6. ________",
+          "answer": "flexible"
+        },
+        {
+          "id": "7",
+          "text": "to collect the 7. ________",
+          "answer": "grocery shopping"
+        },
+        {
+          "id": "8",
+          "text": "Day off: 8. ________",
+          "answer": "weekends"
+        },
+        {
+          "id": "9",
+          "text": "Cashier in a 9. ________",
+          "answer": "cinema"
+        },
+        {
+          "id": "10",
+          "text": "to make 10. ________",
+          "answer": "bookings"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Job Inquiry",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Type of job required: part-time",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Position available",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Details",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "1. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Duty: to provide 2. ______ service",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Working hours: 3. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Requirement: receive 4. _______ without pay",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Day off: one day a week (request in advance)",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "5. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Requirements: clean and valid license, 6 years experience",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Working hours: 6. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Duty:",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "to take employees to and from work",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "to collect the 7. ________",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "to pick up the children",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Day off: 8. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Cashier in a 9. ________",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Working hours: 17.30 – 22.30",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Duty:",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "to sell and dispense tickets",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "to provide refreshments",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "to make 10. ________",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Day off: Mondays",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "receptionist",
+        "2": "quality customer/customer",
+        "3": "early mornings",
+        "4": "training",
+        "5": "driver",
+        "6": "flexible",
+        "7": "grocery shopping",
+        "8": "weekends",
+        "9": "cinema",
+        "10": "bookings"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 3400,
+      "text": "Test 4."
+    },
+    {
+      "startMs": 3400,
+      "endMs": 8280,
+      "text": "You will hear a number of different recordings and you will have to answer questions on what"
+    },
+    {
+      "startMs": 8280,
+      "endMs": 10160,
+      "text": "you hear."
+    },
+    {
+      "startMs": 10160,
+      "endMs": 15640,
+      "text": "There will be time for you to read the instructions and questions and you will have a chance to"
+    },
+    {
+      "startMs": 15640,
+      "endMs": 18280,
+      "text": "check your work."
+    },
+    {
+      "startMs": 18280,
+      "endMs": 21960,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 21960,
+      "endMs": 25240,
+      "text": "The test is in four sections."
+    },
+    {
+      "startMs": 25240,
+      "endMs": 30440,
+      "text": "At the end of the test, you will be given ten minutes to transfer your answers to an"
+    },
+    {
+      "startMs": 30440,
+      "endMs": 34600,
+      "text": "answer sheet."
+    },
+    {
+      "startMs": 34600,
+      "endMs": 37840,
+      "text": "Now turn to section 1."
+    },
+    {
+      "startMs": 37840,
+      "endMs": 39800,
+      "text": "Section 1."
+    },
+    {
+      "startMs": 39800,
+      "endMs": 43800,
+      "text": "You will hear a woman inquiring about a job vacancy."
+    },
+    {
+      "startMs": 43800,
+      "endMs": 48560,
+      "text": "First, you have some time to look at questions 1 to 4."
+    },
+    {
+      "startMs": 55240,
+      "endMs": 65840,
+      "text": "Now we shall begin."
+    },
+    {
+      "startMs": 65840,
+      "endMs": 70720,
+      "text": "You should answer the questions as you listen because you will not hear the recording"
+    },
+    {
+      "startMs": 70720,
+      "endMs": 73200,
+      "text": "a second time."
+    },
+    {
+      "startMs": 73200,
+      "endMs": 83480,
+      "text": "Listen carefully and answer questions 1 to 4."
+    },
+    {
+      "startMs": 83480,
+      "endMs": 84480,
+      "text": "Applicant: Good morning."
+    },
+    {
+      "startMs": 84480,
+      "endMs": 88840,
+      "text": "I am here to inquire as to whether you have any jobs available at the moment."
+    },
+    {
+      "startMs": 88840,
+      "endMs": 91600,
+      "text": "Advisor: Yes, we have several available."
+    },
+    {
+      "startMs": 91600,
+      "endMs": 94120,
+      "text": "What kind of job is it that you are looking for?"
+    },
+    {
+      "startMs": 94120,
+      "endMs": 98720,
+      "text": "Applicant: Well, I will take any part time jobs I can get."
+    },
+    {
+      "startMs": 98720,
+      "endMs": 101720,
+      "text": "I am really strapped for cash at the moment."
+    },
+    {
+      "startMs": 101720,
+      "endMs": 106280,
+      "text": "Advisor: Ok, bear with me while I have a browse on our system."
+    },
+    {
+      "startMs": 106280,
+      "endMs": 108960,
+      "text": "Here we are."
+    },
+    {
+      "startMs": 108960,
+      "endMs": 114440,
+      "text": "We have three vacancies at the moment, all involving quite different roles."
+    },
+    {
+      "startMs": 114440,
+      "endMs": 116120,
+      "text": "Applicant: That sounds promising."
+    },
+    {
+      "startMs": 116120,
+      "endMs": 117760,
+      "text": "What are they?"
+    },
+    {
+      "startMs": 117760,
+      "endMs": 121720,
+      "text": "Advisor: The first one is for a post as a receptionist."
+    },
+    {
+      "startMs": 121720,
+      "endMs": 126880,
+      "text": "It says here that experience in reception or general administration is preferred, but"
+    },
+    {
+      "startMs": 126880,
+      "endMs": 128560,
+      "text": "not essential."
+    },
+    {
+      "startMs": 128560,
+      "endMs": 130800,
+      "text": "Have you worked on a reception desk previously?"
+    },
+    {
+      "startMs": 130800,
+      "endMs": 132800,
+      "text": "Applicant: No, I haven't."
+    },
+    {
+      "startMs": 132800,
+      "endMs": 138080,
+      "text": "I had a baby quite young, and so I have very little work experience."
+    },
+    {
+      "startMs": 138080,
+      "endMs": 140160,
+      "text": "Would you tell me a few more details?"
+    },
+    {
+      "startMs": 140160,
+      "endMs": 142200,
+      "text": "Advisor: Yes, of course."
+    },
+    {
+      "startMs": 142200,
+      "endMs": 148560,
+      "text": "The job will be to mainly provide quality customer service, both over the phone and in person."
+    },
+    {
+      "startMs": 148560,
+      "endMs": 153880,
+      "text": "When customers are waiting, you will be expected to provide them with refreshments and ensure"
+    },
+    {
+      "startMs": 153880,
+      "endMs": 156200,
+      "text": "they have a first rate experience."
+    },
+    {
+      "startMs": 156200,
+      "endMs": 160960,
+      "text": "Applicant: I think I could manage that, and I am a very friendly person."
+    },
+    {
+      "startMs": 160960,
+      "endMs": 161960,
+      "text": "Advisor: That's great."
+    },
+    {
+      "startMs": 161960,
+      "endMs": 165760,
+      "text": "Applicant: Do you have any information about the hours involved?"
+    },
+    {
+      "startMs": 165760,
+      "endMs": 171080,
+      "text": "Advisor: It says here that you will be expected to work several early mornings, four days a week."
+    },
+    {
+      "startMs": 171080,
+      "endMs": 172840,
+      "text": "Applicant: Any other requirements?"
+    },
+    {
+      "startMs": 172840,
+      "endMs": 177840,
+      "text": "Advisor: Yes, you'll have to go through a couple of weeks of unpaid training before qualifying"
+    },
+    {
+      "startMs": 177840,
+      "endMs": 178840,
+      "text": "for the post."
+    },
+    {
+      "startMs": 178840,
+      "endMs": 183560,
+      "text": "Applicant: Hmm, I don't know if I would be able to fully commit to that."
+    },
+    {
+      "startMs": 183560,
+      "endMs": 186480,
+      "text": "Did you say it's four days per week?"
+    },
+    {
+      "startMs": 186480,
+      "endMs": 193880,
+      "text": "Advisor: Yes, it says here four days a week, with another day off per week when requested in advance."
+    },
+    {
+      "startMs": 193880,
+      "endMs": 200200,
+      "text": "It also explicitly states that at least one of your working days must fall on a weekend."
+    },
+    {
+      "startMs": 200200,
+      "endMs": 206800,
+      "text": "Applicant: I'll have to think about that and talk to my babysitter."
+    },
+    {
+      "startMs": 206800,
+      "endMs": 212840,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions 5-10."
+    },
+    {
+      "startMs": 223880,
+      "endMs": 236280,
+      "text": "Now listen and answer questions 5-10."
+    },
+    {
+      "startMs": 236280,
+      "endMs": 242800,
+      "text": "Applicant: Are there any other roles beginning later in the day?"
+    },
+    {
+      "startMs": 242800,
+      "endMs": 247040,
+      "text": "Advisor: Yes, there's an advertisement here for a driver."
+    },
+    {
+      "startMs": 247040,
+      "endMs": 253560,
+      "text": "It says you'll need a clean and valid UK driver's license, with absolutely no exception."
+    },
+    {
+      "startMs": 253560,
+      "endMs": 254880,
+      "text": "Applicant: No problems there."
+    },
+    {
+      "startMs": 254880,
+      "endMs": 260000,
+      "text": "I passed my test first time and have never received any points."
+    },
+    {
+      "startMs": 260000,
+      "endMs": 266000,
+      "text": "Advisor: It also explicitly states that you must be over 25 and have been driving for at least"
+    },
+    {
+      "startMs": 266000,
+      "endMs": 267680,
+      "text": "six years."
+    },
+    {
+      "startMs": 267680,
+      "endMs": 269760,
+      "text": "Applicant: That sounds quite exciting."
+    },
+    {
+      "startMs": 269760,
+      "endMs": 271640,
+      "text": "Is there any more information?"
+    },
+    {
+      "startMs": 271640,
+      "endMs": 277120,
+      "text": "Advisor: Yep, it says here that working hours are flexible and the employers are happy to work"
+    },
+    {
+      "startMs": 277120,
+      "endMs": 281840,
+      "text": "within your personal schedule since they employ multiple drivers."
+    },
+    {
+      "startMs": 281840,
+      "endMs": 283080,
+      "text": "Applicant: That's great."
+    },
+    {
+      "startMs": 283080,
+      "endMs": 288840,
+      "text": "Advisor: The employers ask for a commitment to either mornings 5 days per week, evenings 5 days"
+    },
+    {
+      "startMs": 288840,
+      "endMs": 292520,
+      "text": "per week, or three full working days per week."
+    },
+    {
+      "startMs": 292520,
+      "endMs": 296320,
+      "text": "Applicant: I'm sure I can handle all that without a problem."
+    },
+    {
+      "startMs": 296320,
+      "endMs": 301800,
+      "text": "Advisor: As well as driving the employers to and from work, they will ask you to perform various duties"
+    },
+    {
+      "startMs": 301800,
+      "endMs": 307320,
+      "text": "on their behalf, such as collecting the grocery shopping and picking their children up"
+    },
+    {
+      "startMs": 307320,
+      "endMs": 308640,
+      "text": "from school."
+    },
+    {
+      "startMs": 308640,
+      "endMs": 312080,
+      "text": "Applicant: Do they need me to work a day on the weekend as well?"
+    },
+    {
+      "startMs": 312080,
+      "endMs": 318360,
+      "text": "Advisor: No, it says here that they only require you to work on weekdays, not weekends."
+    },
+    {
+      "startMs": 318360,
+      "endMs": 320160,
+      "text": "Applicant: That sounds interesting."
+    },
+    {
+      "startMs": 320160,
+      "endMs": 325880,
+      "text": "Advisor: Okay, there's only one more left, another customer service-related post."
+    },
+    {
+      "startMs": 325880,
+      "endMs": 331400,
+      "text": "It looks like it requires you to work short hours, quite late at night, so it might not"
+    },
+    {
+      "startMs": 331400,
+      "endMs": 333320,
+      "text": "be suitable for you."
+    },
+    {
+      "startMs": 333320,
+      "endMs": 335160,
+      "text": "Do you want to hear about it anyway?"
+    },
+    {
+      "startMs": 335160,
+      "endMs": 337560,
+      "text": "Applicant: Yeah, I can't do any harm."
+    },
+    {
+      "startMs": 337560,
+      "endMs": 343320,
+      "text": "Advisor: Okay, so it's a post for a cashier in a cinema in the centre of town."
+    },
+    {
+      "startMs": 343320,
+      "endMs": 347880,
+      "text": "I'm sure you've been to the cinema a few times, so you can guess what kind of role it"
+    },
+    {
+      "startMs": 347880,
+      "endMs": 348880,
+      "text": "would be."
+    },
+    {
+      "startMs": 348880,
+      "endMs": 357220,
+      "text": "They're quite short and late shifts between 5.30 and 10.30 most nights, with slightly longer"
+    },
+    {
+      "startMs": 357220,
+      "endMs": 359840,
+      "text": "shifts on Friday and Saturday nights."
+    },
+    {
+      "startMs": 359840,
+      "endMs": 363040,
+      "text": "Applicant: Hmm, can you tell me what the job involves?"
+    },
+    {
+      "startMs": 363040,
+      "endMs": 365200,
+      "text": "Advisor: Yes, sure."
+    },
+    {
+      "startMs": 365200,
+      "endMs": 370400,
+      "text": "It says that you'll be required to sell and dispense tickets and provide refreshments."
+    },
+    {
+      "startMs": 370400,
+      "endMs": 376360,
+      "text": "Also, they ask that you be quick on the computers, since you'll also need to take bookings"
+    },
+    {
+      "startMs": 376360,
+      "endMs": 380760,
+      "text": "over the phone, but you'll receive basic training for that."
+    },
+    {
+      "startMs": 380760,
+      "endMs": 383560,
+      "text": "Applicant: Do they need me to work weekdays as well?"
+    },
+    {
+      "startMs": 383560,
+      "endMs": 389360,
+      "text": "Advisor: Well, it says here that if you request at least a fortnight in advance, they will grant"
+    },
+    {
+      "startMs": 389360,
+      "endMs": 393240,
+      "text": "you a day off on Mondays, but never on a weekend."
+    },
+    {
+      "startMs": 393240,
+      "endMs": 394240,
+      "text": "Applicant: Hmm."
+    },
+    {
+      "startMs": 394480,
+      "endMs": 397800,
+      "text": "I'll think it over and let you know later."
+    },
+    {
+      "startMs": 397800,
+      "endMs": 401240,
+      "text": "Thanks for all your help."
+    },
+    {
+      "startMs": 401240,
+      "endMs": 405240,
+      "text": "That is the end of section 1."
+    },
+    {
+      "startMs": 405240,
+      "endMs": 408160,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 424240,
+      "endMs": 442520,
+      "text": "Now turn to section 2."
+    },
+    {
+      "startMs": 442520,
+      "endMs": 444320,
+      "text": "Section 2."
+    },
+    {
+      "startMs": 444320,
+      "endMs": 450800,
+      "text": "You will hear a representative from an organisation called Connection, giving a talk about a home"
+    },
+    {
+      "startMs": 450800,
+      "endMs": 453120,
+      "text": "stay organisation."
+    },
+    {
+      "startMs": 453120,
+      "endMs": 458000,
+      "text": "First, you have some time to look at questions 11 to 14."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 102,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

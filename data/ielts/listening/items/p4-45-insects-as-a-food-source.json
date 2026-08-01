@@ -1,0 +1,555 @@
+{
+  "id": "p4-45-insects-as-a-food-source",
+  "title": "Insects as a food source",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-0681f6b48935",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 490.08,
+    "checksum": "sha256:64bc78893e40aa7b1f4634d70668997f4ade642ee284f3811c4c1cf343231538"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Insects as a food source Reasons of being a food source They have a lot of protein and contain 31. __________. Their waste products don’t harm the soil or the 32. __________ on farmland. Their production requires less expense and little 33. __________ compared to other animals. Some can be added to animal feed as a kind of 34. __________. The wild versus farming From the wild: it could lead to the loss of a species people may be harmed by the 35. __________ they contain. Insect farms: this can supply the growing demand in the 36. __________ of some countries the 37. __________ of the insects may be affected. The challenges Different kinds of insect require a different temperature to breed. Farmers and researchers are unclear how to deal with 38. __________. Better tanks need to be developed so 39. __________ faster. Farmers need to develop a strategy for 40. __________ the insects.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "They have a lot of protein and contain 31. __________.",
+          "answer": "vitamins"
+        },
+        {
+          "id": "32",
+          "text": "Their waste products don’t harm the soil or the 32. __________ on farmland.",
+          "answer": "rivers"
+        },
+        {
+          "id": "33",
+          "text": "Their production requires less expense and little 33. __________ compared to other animals.",
+          "answer": "space"
+        },
+        {
+          "id": "34",
+          "text": "Some can be added to animal feed as a kind of 34. __________.",
+          "answer": "antibiotic"
+        },
+        {
+          "id": "35",
+          "text": "people may be harmed by the 35. __________ they contain.",
+          "answer": "bacteria"
+        },
+        {
+          "id": "36",
+          "text": "this can supply the growing demand in the 36. __________ of some countries",
+          "answer": "cities"
+        },
+        {
+          "id": "37",
+          "text": "the 37. __________ of the insects may be affected.",
+          "answer": "taste"
+        },
+        {
+          "id": "38",
+          "text": "Farmers and researchers are unclear how to deal with 38. __________.",
+          "answer": "disease"
+        },
+        {
+          "id": "39",
+          "text": "Better tanks need to be developed so 39. __________ faster.",
+          "answer": "cleaning"
+        },
+        {
+          "id": "40",
+          "text": "Farmers need to develop a strategy for 40. __________ the insects.",
+          "answer": "marketing"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Insects as a food source",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Reasons of being a food source",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "They have a lot of protein and contain 31. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Their waste products don’t harm the soil or the 32. __________ on farmland.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Their production requires less expense and little 33. __________ compared to other animals.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some can be added to animal feed as a kind of 34. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The wild versus farming",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "From the wild:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "it could lead to the loss of a species",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "people may be harmed by the 35. __________ they contain.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Insect farms:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "this can supply the growing demand in the 36. __________ of some countries",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "the 37. __________ of the insects may be affected.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The challenges",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Different kinds of insect require a different temperature to breed.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Farmers and researchers are unclear how to deal with 38. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Better tanks need to be developed so 39. __________ faster.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Farmers need to develop a strategy for 40. __________ the insects.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "vitamins",
+        "32": "rivers",
+        "33": "space",
+        "34": "antibiotic",
+        "35": "bacteria",
+        "36": "cities",
+        "37": "taste",
+        "38": "disease",
+        "39": "cleaning",
+        "40": "marketing"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9560,
+      "text": "Section 4 You will hear part of an environmental"
+    },
+    {
+      "startMs": 9560,
+      "endMs": 16640,
+      "text": "studies lecture about the possibility of using insects as a source of food."
+    },
+    {
+      "startMs": 16640,
+      "endMs": 24360,
+      "text": "First you have some time to look at questions 31 to 40 on page 8."
+    },
+    {
+      "startMs": 24360,
+      "endMs": 31760,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 31760,
+      "endMs": 33560,
+      "text": "Good morning."
+    },
+    {
+      "startMs": 33560,
+      "endMs": 37520,
+      "text": "Over the last few weeks we've been talking about the challenges of producing food for"
+    },
+    {
+      "startMs": 37520,
+      "endMs": 39560,
+      "text": "the global population."
+    },
+    {
+      "startMs": 39560,
+      "endMs": 44440,
+      "text": "And there's been a lot of interest recently in new sources of food and one of the most"
+    },
+    {
+      "startMs": 44440,
+      "endMs": 46800,
+      "text": "interesting is insects."
+    },
+    {
+      "startMs": 46800,
+      "endMs": 51440,
+      "text": "Well, why should insects be considered as a food source?"
+    },
+    {
+      "startMs": 51720,
+      "endMs": 57560,
+      "text": "Well, for a start a number of them are full of protein and many also have certain vitamins"
+    },
+    {
+      "startMs": 57560,
+      "endMs": 62800,
+      "text": "which may surprise you, more so than a typical farm animal in fact."
+    },
+    {
+      "startMs": 62800,
+      "endMs": 68200,
+      "text": "And compared to farm animals whose waste products contain a great deal of ammonia, the waste"
+    },
+    {
+      "startMs": 68200,
+      "endMs": 73200,
+      "text": "products of insects are far less acidic and would therefore do very little damage to"
+    },
+    {
+      "startMs": 73200,
+      "endMs": 77320,
+      "text": "the soil or to any of the rivers that run through farmland."
+    },
+    {
+      "startMs": 78040,
+      "endMs": 84040,
+      "text": "Furthermore, when it comes to the production of insects the expense would be very low."
+    },
+    {
+      "startMs": 84040,
+      "endMs": 88600,
+      "text": "No trees need to be chopped down or forest turned to pasture so the space that they would"
+    },
+    {
+      "startMs": 88600,
+      "endMs": 94120,
+      "text": "occupy would be radically smaller than for say cows or sheep."
+    },
+    {
+      "startMs": 94120,
+      "endMs": 98920,
+      "text": "But even if some consumers decided that they'd rather not put insects in their shopping"
+    },
+    {
+      "startMs": 98920,
+      "endMs": 105240,
+      "text": "basket we could also consider how insects might be added to animal feed, the food given"
+    },
+    {
+      "startMs": 105320,
+      "endMs": 107520,
+      "text": "to farm animals."
+    },
+    {
+      "startMs": 107520,
+      "endMs": 112240,
+      "text": "It's already known that some insects, if they were part of the animal feed, would act"
+    },
+    {
+      "startMs": 112240,
+      "endMs": 118320,
+      "text": "as a sort of natural antibiotic within a cow or sheep's digestive system, thus removing"
+    },
+    {
+      "startMs": 118320,
+      "endMs": 120920,
+      "text": "the need for human intervention."
+    },
+    {
+      "startMs": 120920,
+      "endMs": 126920,
+      "text": "This would be a cost effective and environmentally friendly alternative for farmers."
+    },
+    {
+      "startMs": 126920,
+      "endMs": 136440,
+      "text": "However, if consumers do decide that insects are a potential superfood, a way of feeding"
+    },
+    {
+      "startMs": 136440,
+      "endMs": 141560,
+      "text": "the world, then the next question is where do we source them from?"
+    },
+    {
+      "startMs": 141560,
+      "endMs": 146000,
+      "text": "The wild perhaps or should they be bred on insect farms?"
+    },
+    {
+      "startMs": 146000,
+      "endMs": 152200,
+      "text": "Well, if we take from the wild one potential consequence of this is that too many will"
+    },
+    {
+      "startMs": 152200,
+      "endMs": 157080,
+      "text": "be taken and in turn a species could become endangered or extinct."
+    },
+    {
+      "startMs": 157080,
+      "endMs": 161960,
+      "text": "Then for insects which are harvested from the wild we have no way of knowing where they"
+    },
+    {
+      "startMs": 161960,
+      "endMs": 166720,
+      "text": "have been or what they have come in contact with and this could have harmful consequences"
+    },
+    {
+      "startMs": 166720,
+      "endMs": 168880,
+      "text": "for human health."
+    },
+    {
+      "startMs": 168880,
+      "endMs": 173880,
+      "text": "Imagine the scenario if food producers or retailers were supplied with insects that were carrying"
+    },
+    {
+      "startMs": 173880,
+      "endMs": 179440,
+      "text": "bacteria, this is not something we want to add to the food chain."
+    },
+    {
+      "startMs": 179440,
+      "endMs": 184840,
+      "text": "If insects are bred on farms, the problems I've just outlined could be avoided and in"
+    },
+    {
+      "startMs": 184840,
+      "endMs": 190800,
+      "text": "many countries it's already the case that demand for insects is growing, really growing"
+    },
+    {
+      "startMs": 190800,
+      "endMs": 196240,
+      "text": "and it's not in rural areas where you'd expect, but in fact in the cities."
+    },
+    {
+      "startMs": 196240,
+      "endMs": 201720,
+      "text": "In Thailand for example where the demand has really shot up, however, people in countries"
+    },
+    {
+      "startMs": 201720,
+      "endMs": 206680,
+      "text": "where insects are traditionally what people eat, they'll tell you that when insects are"
+    },
+    {
+      "startMs": 206680,
+      "endMs": 211560,
+      "text": "intensively farmed their taste is simply not the same."
+    },
+    {
+      "startMs": 211560,
+      "endMs": 216120,
+      "text": "Ironically this is the same accusation that people have when it comes to the way that cows"
+    },
+    {
+      "startMs": 216120,
+      "endMs": 218760,
+      "text": "and sheep are raised."
+    },
+    {
+      "startMs": 218760,
+      "endMs": 224800,
+      "text": "Insect farmers also face a series of challenges and researchers are keen to assist."
+    },
+    {
+      "startMs": 224800,
+      "endMs": 230160,
+      "text": "First of all when it comes to breeding different insects have different requirements."
+    },
+    {
+      "startMs": 230160,
+      "endMs": 236040,
+      "text": "For a start it's essential to maintain a suitable temperature for many species to reproduce."
+    },
+    {
+      "startMs": 236040,
+      "endMs": 239280,
+      "text": "If this isn't right nothing's going to happen."
+    },
+    {
+      "startMs": 239280,
+      "endMs": 245120,
+      "text": "Another problem is something that often happens when any species is bred in a confined space"
+    },
+    {
+      "startMs": 245120,
+      "endMs": 250080,
+      "text": "and so far researchers and farmers have not come up with any clear or long term effective"
+    },
+    {
+      "startMs": 250080,
+      "endMs": 252080,
+      "text": "solution to it."
+    },
+    {
+      "startMs": 252080,
+      "endMs": 255520,
+      "text": "We're talking about the problem of disease."
+    },
+    {
+      "startMs": 255520,
+      "endMs": 259040,
+      "text": "You don't want a whole colony wiped out in one go."
+    },
+    {
+      "startMs": 259040,
+      "endMs": 262720,
+      "text": "There's also the question of where insects need to be kept."
+    },
+    {
+      "startMs": 262720,
+      "endMs": 267160,
+      "text": "If insects are to be bred as a superfood then the tanks used to house them have to be"
+    },
+    {
+      "startMs": 267160,
+      "endMs": 273160,
+      "text": "better designed and this has to happen so that cleaning takes up less time."
+    },
+    {
+      "startMs": 273160,
+      "endMs": 278280,
+      "text": "If we're talking about mass production we don't want this to be a time consuming activity"
+    },
+    {
+      "startMs": 278280,
+      "endMs": 284560,
+      "text": "and finally like I said before insects have long been part of the diet in some countries"
+    },
+    {
+      "startMs": 284560,
+      "endMs": 287520,
+      "text": "but not so in others."
+    },
+    {
+      "startMs": 287520,
+      "endMs": 293200,
+      "text": "The farmers want to encourage people in say England or France or Germany to eat insects"
+    },
+    {
+      "startMs": 293200,
+      "endMs": 297680,
+      "text": "then they're going to have to develop a strategy and I'm not talking about production"
+    },
+    {
+      "startMs": 297680,
+      "endMs": 299640,
+      "text": "but marketing."
+    },
+    {
+      "startMs": 299640,
+      "endMs": 303640,
+      "text": "Something that'll persuade potential customers to try something different."
+    },
+    {
+      "startMs": 303640,
+      "endMs": 307240,
+      "text": "Well, I've given you a general overview of the situation."
+    },
+    {
+      "startMs": 307240,
+      "endMs": 309360,
+      "text": "Now let's look at some specific examples."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 64,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

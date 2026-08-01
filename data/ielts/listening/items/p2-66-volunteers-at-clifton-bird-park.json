@@ -1,0 +1,596 @@
+{
+  "id": "p2-66-volunteers-at-clifton-bird-park",
+  "title": "Volunteers at Clifton Bird Park",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-3c81183c413e",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 2.047,
+    "checksum": "sha256:6aea346e833bb3dcffbc22215679692530ab9ecf07ba44c141ddf9d8793cfb91"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-15.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "The speaker stresses the importance to Clifton Bird Park of",
+          "options": [
+            {
+              "id": "A",
+              "text": "birds that are now endangered."
+            },
+            {
+              "id": "B",
+              "text": "birds from all over the world."
+            },
+            {
+              "id": "C",
+              "text": "birds that are common in the local area."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "People who volunteer to help with gardening at the park",
+          "options": [
+            {
+              "id": "A",
+              "text": "must work at weekends."
+            },
+            {
+              "id": "B",
+              "text": "need to come at least once a month."
+            },
+            {
+              "id": "C",
+              "text": "will only be required in the busy season."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "According to the speaker, who would be the ideal gardening volunteer?",
+          "options": [
+            {
+              "id": "A",
+              "text": "someone who can work independently."
+            },
+            {
+              "id": "B",
+              "text": "someone who is willing to work in any weather."
+            },
+            {
+              "id": "C",
+              "text": "someone who knows a lot about plants."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "Volunteer guides will mainly be working with",
+          "options": [
+            {
+              "id": "A",
+              "text": "international visitors."
+            },
+            {
+              "id": "B",
+              "text": "local people from Clifton."
+            },
+            {
+              "id": "C",
+              "text": "school groups."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "What is still required for the Maintenance Day at the bird park?",
+          "options": [
+            {
+              "id": "A",
+              "text": "food and drink."
+            },
+            {
+              "id": "B",
+              "text": "transport."
+            },
+            {
+              "id": "C",
+              "text": "tools."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 16–20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "Wooden bridge",
+          "answer": "F"
+        },
+        {
+          "id": "17",
+          "text": "Observation tower",
+          "answer": "H"
+        },
+        {
+          "id": "18",
+          "text": "Visitor cabins",
+          "answer": "C"
+        },
+        {
+          "id": "19",
+          "text": "Nesting boxes",
+          "answer": "E"
+        },
+        {
+          "id": "20",
+          "text": "Boat sheds",
+          "answer": "B"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-66-volunteers-at-clifton-bird-park-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-66-volunteers-at-clifton-bird-park-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "B",
+        "13": "B",
+        "14": "A",
+        "15": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "F",
+        "17": "H",
+        "18": "C",
+        "19": "E",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 4000,
+      "text": "Part 2"
+    },
+    {
+      "startMs": 4000,
+      "endMs": 9000,
+      "text": "You will hear a woman called Sandra Hayes who works at a bird park"
+    },
+    {
+      "startMs": 9000,
+      "endMs": 14000,
+      "text": "Talking to a group of people who want to volunteer there"
+    },
+    {
+      "startMs": 14000,
+      "endMs": 60000,
+      "text": "First you have some time to look at questions 11 to 15"
+    },
+    {
+      "startMs": 30000,
+      "endMs": 57000,
+      "text": "Now listen carefully and answer questions 11 to 15"
+    },
+    {
+      "startMs": 57000,
+      "endMs": 66000,
+      "text": "Hello, my name is Sandra Hayes and I'm from Clifton Bird Park"
+    },
+    {
+      "startMs": 66000,
+      "endMs": 69000,
+      "text": "It's great to see so many possible volunteers here"
+    },
+    {
+      "startMs": 69000,
+      "endMs": 73000,
+      "text": "The park is now a very popular attraction in this area"
+    },
+    {
+      "startMs": 73000,
+      "endMs": 79000,
+      "text": "I think people love coming to see so many different types of birds in a beautiful environment"
+    },
+    {
+      "startMs": 79000,
+      "endMs": 84000,
+      "text": "For some species that we have here, there aren't many still alive in the wild"
+    },
+    {
+      "startMs": 84000,
+      "endMs": 89000,
+      "text": "So a big part of our job is to make sure we help their numbers increase"
+    },
+    {
+      "startMs": 89000,
+      "endMs": 93000,
+      "text": "All the birds are native species"
+    },
+    {
+      "startMs": 93000,
+      "endMs": 97000,
+      "text": "We need volunteers to help the bird park officers with different jobs"
+    },
+    {
+      "startMs": 97000,
+      "endMs": 100000,
+      "text": "One of these is gardening"
+    },
+    {
+      "startMs": 100000,
+      "endMs": 104000,
+      "text": "Obviously summer is the time when we have most visitors"
+    },
+    {
+      "startMs": 104000,
+      "endMs": 107000,
+      "text": "But the park needs looking after all year round"
+    },
+    {
+      "startMs": 107000,
+      "endMs": 110000,
+      "text": "If you want to help, you can choose which day"
+    },
+    {
+      "startMs": 110000,
+      "endMs": 115000,
+      "text": "Although we do already have plenty of volunteers working Saturdays and Sundays"
+    },
+    {
+      "startMs": 115000,
+      "endMs": 121000,
+      "text": "But one day every four weeks is the minimum commitment that we ask for"
+    },
+    {
+      "startMs": 121000,
+      "endMs": 126000,
+      "text": "So, who's the ideal volunteer for gardening work?"
+    },
+    {
+      "startMs": 126000,
+      "endMs": 131000,
+      "text": "If you have expert knowledge about flowers and trees, great"
+    },
+    {
+      "startMs": 131000,
+      "endMs": 134000,
+      "text": "But we're looking more for people who are flexible"
+    },
+    {
+      "startMs": 134000,
+      "endMs": 138000,
+      "text": "In turn up no matter whether it's raining or baking hot"
+    },
+    {
+      "startMs": 138000,
+      "endMs": 142000,
+      "text": "That's what will make you the best person for the job"
+    },
+    {
+      "startMs": 142000,
+      "endMs": 146000,
+      "text": "It's all teamwork so you'll have plenty of support"
+    },
+    {
+      "startMs": 146000,
+      "endMs": 149000,
+      "text": "What about volunteer guides?"
+    },
+    {
+      "startMs": 149000,
+      "endMs": 154000,
+      "text": "A guides role is to point out the birds and talk about the conservation programme"
+    },
+    {
+      "startMs": 154000,
+      "endMs": 159000,
+      "text": "In general it's people and a foreign tour group that you're responsible for"
+    },
+    {
+      "startMs": 159000,
+      "endMs": 164000,
+      "text": "The Clifton residents who come to the park usually know their way around"
+    },
+    {
+      "startMs": 164000,
+      "endMs": 170000,
+      "text": "We get a few teachers bringing in classes but they're the park officers' responsibility"
+    },
+    {
+      "startMs": 170000,
+      "endMs": 176000,
+      "text": "The last thing to mention is the park's maintenance day which is coming up soon"
+    },
+    {
+      "startMs": 176000,
+      "endMs": 181000,
+      "text": "We're hoping to get as many volunteers as possible to come and help tidy things up"
+    },
+    {
+      "startMs": 181000,
+      "endMs": 185000,
+      "text": "If anyone is able to drive some other volunteers to the event"
+    },
+    {
+      "startMs": 185000,
+      "endMs": 189000,
+      "text": "Please let me know because we need help there"
+    },
+    {
+      "startMs": 189000,
+      "endMs": 193000,
+      "text": "The park officers will provide you with spades and drills and hammers"
+    },
+    {
+      "startMs": 193000,
+      "endMs": 197000,
+      "text": "All of that stuff and they'll be offering you some refreshments too"
+    },
+    {
+      "startMs": 197000,
+      "endMs": 201000,
+      "text": "So it should be a good day out"
+    },
+    {
+      "startMs": 202000,
+      "endMs": 210000,
+      "text": "Before you hear the rest of the talk you have some time to look at questions 16 to 20"
+    },
+    {
+      "startMs": 219000,
+      "endMs": 231000,
+      "text": "Now listen and answer a question 16 to 20"
+    },
+    {
+      "startMs": 231000,
+      "endMs": 235000,
+      "text": "So here's a map of Clifton Bird Park"
+    },
+    {
+      "startMs": 235000,
+      "endMs": 240000,
+      "text": "As you can see the railway line runs along the north west of the park"
+    },
+    {
+      "startMs": 240000,
+      "endMs": 244000,
+      "text": "And road access is on that side too from Clifton Lane"
+    },
+    {
+      "startMs": 244000,
+      "endMs": 249000,
+      "text": "We want volunteers to work on a few different areas on maintenance day which is coming up soon"
+    },
+    {
+      "startMs": 249000,
+      "endMs": 253000,
+      "text": "Firstly the wooden bridge I'll explain where that is"
+    },
+    {
+      "startMs": 253000,
+      "endMs": 257000,
+      "text": "You can see Clifton Lane in the main gate into the park"
+    },
+    {
+      "startMs": 257000,
+      "endMs": 262000,
+      "text": "On the southern side of Clifton Lane is one of our car parks and buildings"
+    },
+    {
+      "startMs": 263000,
+      "endMs": 266000,
+      "text": "You can see Clifton Lane in the main gate into the park"
+    },
+    {
+      "startMs": 266000,
+      "endMs": 271000,
+      "text": "On the southern side of Clifton Lane is one of our car parks and below that"
+    },
+    {
+      "startMs": 271000,
+      "endMs": 274000,
+      "text": "There were two similar sized ponds"
+    },
+    {
+      "startMs": 274000,
+      "endMs": 277000,
+      "text": "The wooden bridge runs between those two ponds"
+    },
+    {
+      "startMs": 277000,
+      "endMs": 281000,
+      "text": "We just need to make it a bit stronger"
+    },
+    {
+      "startMs": 281000,
+      "endMs": 286000,
+      "text": "Some volunteers will be doing a bit of painting at the observation tower"
+    },
+    {
+      "startMs": 286000,
+      "endMs": 289000,
+      "text": "The towers in the south east corner of the map"
+    },
+    {
+      "startMs": 289000,
+      "endMs": 293000,
+      "text": "You see there are two different sized ponds there"
+    },
+    {
+      "startMs": 293000,
+      "endMs": 298000,
+      "text": "The towers on the south side of the larger pond at the end of the path"
+    },
+    {
+      "startMs": 298000,
+      "endMs": 301000,
+      "text": "We'll need about three people to help out"
+    },
+    {
+      "startMs": 301000,
+      "endMs": 305000,
+      "text": "We need to replace the windows on the visitor cabins"
+    },
+    {
+      "startMs": 305000,
+      "endMs": 310000,
+      "text": "So on the map you can see our car park on the north side of Clifton Lane"
+    },
+    {
+      "startMs": 310000,
+      "endMs": 315000,
+      "text": "There's the woods and on the left hand side of the map the railway line"
+    },
+    {
+      "startMs": 315000,
+      "endMs": 321000,
+      "text": "The visitors cabins are marked there between the woods and the railway station"
+    },
+    {
+      "startMs": 321000,
+      "endMs": 324000,
+      "text": "You'll also be repairing some nesting boxes"
+    },
+    {
+      "startMs": 324000,
+      "endMs": 326000,
+      "text": "See the picnic area?"
+    },
+    {
+      "startMs": 326000,
+      "endMs": 330000,
+      "text": "The path you want is between there and the big pond"
+    },
+    {
+      "startMs": 330000,
+      "endMs": 333000,
+      "text": "Follow it round all the way to the end"
+    },
+    {
+      "startMs": 333000,
+      "endMs": 339000,
+      "text": "So as we're looking at the map now, the nesting boxes are on the right of that pond"
+    },
+    {
+      "startMs": 339000,
+      "endMs": 341000,
+      "text": "Finally, the boat sheds"
+    },
+    {
+      "startMs": 341000,
+      "endMs": 346000,
+      "text": "Towards the top of the map you've got that small-ish pond quite near the railway line"
+    },
+    {
+      "startMs": 346000,
+      "endMs": 349000,
+      "text": "And there are two places marked up there"
+    },
+    {
+      "startMs": 349000,
+      "endMs": 353000,
+      "text": "The boat sheds are on the same side of the pond as the woods"
+    },
+    {
+      "startMs": 353000,
+      "endMs": 356000,
+      "text": "Not the place marked at the top of the park"
+    },
+    {
+      "startMs": 356000,
+      "endMs": 359000,
+      "text": "What we want you to do"
+    },
+    {
+      "startMs": 361000,
+      "endMs": 364000,
+      "text": "That is the end of part two"
+    },
+    {
+      "startMs": 364000,
+      "endMs": 369000,
+      "text": "You now have 30 seconds to check your answers to part two"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 73,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

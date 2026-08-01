@@ -1,0 +1,641 @@
+{
+  "id": "p3-81-internship-options",
+  "title": "Internship Options",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-62ba9f0db5ad",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 533.064,
+    "checksum": "sha256:7c93fe7ac4fb655221f5eb4b891b017822f4c44c654c4eae0e4bc2ed6fc43702"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–25.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What skills does Peter want to learn?",
+          "options": [
+            {
+              "id": "A",
+              "text": "how to organise ideas"
+            },
+            {
+              "id": "B",
+              "text": "how to handle data"
+            },
+            {
+              "id": "C",
+              "text": "how to write a business proposal"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "What is Peter's main strength?",
+          "options": [
+            {
+              "id": "A",
+              "text": "he is a good leader"
+            },
+            {
+              "id": "B",
+              "text": "he can work long hours"
+            },
+            {
+              "id": "C",
+              "text": "he can communicate well with many people"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "What will the careers officer help Peter with?",
+          "options": [
+            {
+              "id": "A",
+              "text": "CV"
+            },
+            {
+              "id": "B",
+              "text": "personal statement"
+            },
+            {
+              "id": "C",
+              "text": "school application form"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Why did Peter choose the IT business?",
+          "options": [
+            {
+              "id": "A",
+              "text": "to update his knowledge in the area"
+            },
+            {
+              "id": "B",
+              "text": "to be good at presentations"
+            },
+            {
+              "id": "C",
+              "text": "to prepare himself for lectures"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "What will Peter do for the next term?",
+          "options": [
+            {
+              "id": "A",
+              "text": "continue with the same language"
+            },
+            {
+              "id": "B",
+              "text": "change to another language"
+            },
+            {
+              "id": "C",
+              "text": "discontinue the language course"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 26–30",
+      "instruction": "Choose FIVE answers from the box and write the correct letter, A–G, next to Questions 26–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "make business contacts"
+        },
+        {
+          "id": "B",
+          "text": "understand customer relations"
+        },
+        {
+          "id": "C",
+          "text": "learn time management"
+        },
+        {
+          "id": "D",
+          "text": "use a foreign language"
+        },
+        {
+          "id": "E",
+          "text": "travel to another country"
+        },
+        {
+          "id": "F",
+          "text": "receive financial training"
+        },
+        {
+          "id": "G",
+          "text": "learn project management"
+        }
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "SAIC",
+          "answer": "B"
+        },
+        {
+          "id": "27",
+          "text": "Gemini Technologies",
+          "answer": "C"
+        },
+        {
+          "id": "28",
+          "text": "Deloitte",
+          "answer": "F"
+        },
+        {
+          "id": "29",
+          "text": "Kearney",
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "Vortex",
+          "answer": "D"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "B",
+        "23": "B",
+        "24": "A",
+        "25": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "26": "B",
+        "27": "C",
+        "28": "F",
+        "29": "A",
+        "30": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 18000,
+      "text": "[Narrator]: You will hear two students, called Shona, and Peter, discussing their internship options."
+    },
+    {
+      "startMs": 18000,
+      "endMs": 25000,
+      "text": "First, you have some time to look at questions, 21 to 25."
+    },
+    {
+      "startMs": 48000,
+      "endMs": 77000,
+      "text": "Now listen carefully, and answer questions 21 to 25."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 83000,
+      "text": "[Peter]: Hi, Shona."
+    },
+    {
+      "startMs": 83000,
+      "endMs": 89000,
+      "text": "[Shona]: Hi, Peter. Have you made up your mind about which internship program to apply for?"
+    },
+    {
+      "startMs": 89000,
+      "endMs": 91000,
+      "text": "[Peter]: Yes, pretty much."
+    },
+    {
+      "startMs": 91000,
+      "endMs": 99000,
+      "text": "[Shona]: I'm entirely at a loss. I mean, there are so many good ones. Can you give me some tips?"
+    },
+    {
+      "startMs": 99000,
+      "endMs": 100000,
+      "text": "[Peter]: Sure."
+    },
+    {
+      "startMs": 100000,
+      "endMs": 105000,
+      "text": "[Shona]: What is your top priority when weighing up these programs?"
+    },
+    {
+      "startMs": 106000,
+      "endMs": 112000,
+      "text": "[Shona]: Well, I guess I'd go for ones that can help me with the skill set I lack for my future career."
+    },
+    {
+      "startMs": 112000,
+      "endMs": 117000,
+      "text": "[Peter]: I still need a lot of practical training in dealing with statistics."
+    },
+    {
+      "startMs": 117000,
+      "endMs": 125000,
+      "text": "But keep in mind that you don't want to set your goal to grand, like drawing up a business plan. You might end up nowhere."
+    },
+    {
+      "startMs": 125000,
+      "endMs": 132000,
+      "text": "[Shona]: I see. So I want to learn how to organize ideas and present them."
+    },
+    {
+      "startMs": 132000,
+      "endMs": 135000,
+      "text": "[Peter]: Good. Now you've nailed step one."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 137000,
+      "text": "[Shona]: Now what?"
+    },
+    {
+      "startMs": 137000,
+      "endMs": 142000,
+      "text": "[Peter]: You must also consider your strengths for a suitable internship program."
+    },
+    {
+      "startMs": 142000,
+      "endMs": 148000,
+      "text": "Otherwise, you might get rejected, or end up with one that you are incapable of doing."
+    },
+    {
+      "startMs": 148000,
+      "endMs": 151000,
+      "text": "[Shona]: But I have no idea what I'm good at."
+    },
+    {
+      "startMs": 151000,
+      "endMs": 157000,
+      "text": "[Peter]: Communicate with people around you, or whom you've worked with. That's what I did."
+    },
+    {
+      "startMs": 157000,
+      "endMs": 165000,
+      "text": "I thought I was a good team leader, but many people I've worked with for various projects mentioned something else."
+    },
+    {
+      "startMs": 165000,
+      "endMs": 170000,
+      "text": "They admire that I could work around the clock to finish projects on time."
+    },
+    {
+      "startMs": 170000,
+      "endMs": 175000,
+      "text": "And indeed, I'm more focused and perform better when I'm pushed for time."
+    },
+    {
+      "startMs": 175000,
+      "endMs": 180000,
+      "text": "[Shona]: Good point. So what do you plan to do next?"
+    },
+    {
+      "startMs": 180000,
+      "endMs": 185000,
+      "text": "[Peter]: I'll visit the careers officer to help me with the school application form."
+    },
+    {
+      "startMs": 185000,
+      "endMs": 189000,
+      "text": "You know, the one we have to submit before applying to companies."
+    },
+    {
+      "startMs": 189000,
+      "endMs": 194000,
+      "text": "[Shona]: But it is unnecessary to fill it in. It's only optional."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 197000,
+      "text": "[Peter]: Really? I'm glad I heard from you."
+    },
+    {
+      "startMs": 197000,
+      "endMs": 204000,
+      "text": "Then I'll ask the careers officer to look at my personal statement, and give me some tips on polishing it up."
+    },
+    {
+      "startMs": 204000,
+      "endMs": 207000,
+      "text": "[Shona]: Don't you need help with your CV?"
+    },
+    {
+      "startMs": 207000,
+      "endMs": 211000,
+      "text": "[Peter]: No, I'm good. I have already learned to write it in class."
+    },
+    {
+      "startMs": 211000,
+      "endMs": 216000,
+      "text": "[Shona]: That's good. So what kind of company did you choose?"
+    },
+    {
+      "startMs": 216000,
+      "endMs": 219000,
+      "text": "[Peter]: I've decided to apply for an IT company."
+    },
+    {
+      "startMs": 219000,
+      "endMs": 221000,
+      "text": "[Shona]: Why is that?"
+    },
+    {
+      "startMs": 221000,
+      "endMs": 230000,
+      "text": "[Peter]: Well, even though I've learned how the IT industry developed in the past, from different lectures, I know nothing about its latest trends."
+    },
+    {
+      "startMs": 230000,
+      "endMs": 236000,
+      "text": "I'm prepared to work in an IT company and fill in the information gap."
+    },
+    {
+      "startMs": 236000,
+      "endMs": 240000,
+      "text": "[Shona]: I see. What do you plan to do next term?"
+    },
+    {
+      "startMs": 240000,
+      "endMs": 244000,
+      "text": "[Peter]: I think I'll stick to most of the optional modules I've chosen."
+    },
+    {
+      "startMs": 244000,
+      "endMs": 249000,
+      "text": "But regarding the language sessions, I'm doing poorly in Japanese."
+    },
+    {
+      "startMs": 249000,
+      "endMs": 252000,
+      "text": "I'd better drop it before wasting more time."
+    },
+    {
+      "startMs": 252000,
+      "endMs": 255000,
+      "text": "I think I'll learn Spanish instead."
+    },
+    {
+      "startMs": 255000,
+      "endMs": 263000,
+      "text": "[Shona]: Oh, I learned Spanish for a year. I think you'll find it interesting."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 271000,
+      "text": "[Narrator]: Before you hear the rest of the conversation, you have some time to look at questions 26-30."
+    },
+    {
+      "startMs": 293000,
+      "endMs": 316000,
+      "text": "Now listen and answer questions 26-30."
+    },
+    {
+      "startMs": 317000,
+      "endMs": 323000,
+      "text": "[Shona]: Do you know what job opportunities these companies offer in turns?"
+    },
+    {
+      "startMs": 323000,
+      "endMs": 327000,
+      "text": "[Peter]: I've searched online, and browsed some of the schemes."
+    },
+    {
+      "startMs": 327000,
+      "endMs": 329000,
+      "text": "Do you know Saik?"
+    },
+    {
+      "startMs": 329000,
+      "endMs": 336000,
+      "text": "[Shona]: Yes, I heard they offer internship positions, dealing with customer interaction management."
+    },
+    {
+      "startMs": 336000,
+      "endMs": 339000,
+      "text": "But I'm not quite sure what that means."
+    },
+    {
+      "startMs": 339000,
+      "endMs": 344000,
+      "text": "[Peter]: Well, the position offers the chance to become fully aware of customer value,"
+    },
+    {
+      "startMs": 344000,
+      "endMs": 350000,
+      "text": "and keep in touch with customers to keep them highly engaged and satisfied."
+    },
+    {
+      "startMs": 350000,
+      "endMs": 357000,
+      "text": "These include activities such as PR, communications, marketing, and customer service."
+    },
+    {
+      "startMs": 357000,
+      "endMs": 360000,
+      "text": "[Shona]: Sounds like loads of work to do."
+    },
+    {
+      "startMs": 360000,
+      "endMs": 363000,
+      "text": "What about Gemini Technologies?"
+    },
+    {
+      "startMs": 363000,
+      "endMs": 366000,
+      "text": "[Peter]: It's an IT consulting company."
+    },
+    {
+      "startMs": 366000,
+      "endMs": 372000,
+      "text": "Although many employees say it's stressful working there, I want to apply for this one."
+    },
+    {
+      "startMs": 372000,
+      "endMs": 374000,
+      "text": "[Shona]: Why is that?"
+    },
+    {
+      "startMs": 374000,
+      "endMs": 379000,
+      "text": "[Peter]: Actually, the company provides service to improve software architecture."
+    },
+    {
+      "startMs": 379000,
+      "endMs": 383000,
+      "text": "But that's pretty demanding, as a team of software engineers,"
+    },
+    {
+      "startMs": 383000,
+      "endMs": 390000,
+      "text": "has to provide detailed analysis and suggestions for required changes before the deadline."
+    },
+    {
+      "startMs": 390000,
+      "endMs": 398000,
+      "text": "As an observer and participant of a particular project, an intern can learn how to work to a strict deadline."
+    },
+    {
+      "startMs": 398000,
+      "endMs": 404000,
+      "text": "[Shona]: That's not my area of expertise, but I'm sure you'll excel at this."
+    },
+    {
+      "startMs": 404000,
+      "endMs": 408000,
+      "text": "[Peter]: I certainly do hope so. Have you checked out Deloitte?"
+    },
+    {
+      "startMs": 408000,
+      "endMs": 412000,
+      "text": "[Shona]: Of course, that's a renowned accounting firm."
+    },
+    {
+      "startMs": 412000,
+      "endMs": 419000,
+      "text": "And thus, its internships offer excellent learning experiences in this regard."
+    },
+    {
+      "startMs": 419000,
+      "endMs": 424000,
+      "text": "You know, things like examining a company's financial statements,"
+    },
+    {
+      "startMs": 424000,
+      "endMs": 429000,
+      "text": "the income statement, balance sheet, and cash flow statement."
+    },
+    {
+      "startMs": 429000,
+      "endMs": 435000,
+      "text": "I want to give it a try, but I might get rejected, so I need a backup plan."
+    },
+    {
+      "startMs": 435000,
+      "endMs": 438000,
+      "text": "Have you read anything about kerney?"
+    },
+    {
+      "startMs": 438000,
+      "endMs": 441000,
+      "text": "[Peter]: Yes, it is another consulting firm."
+    },
+    {
+      "startMs": 441000,
+      "endMs": 447000,
+      "text": "It provides opportunities to reach out to other business partners, and pay attention to networking."
+    },
+    {
+      "startMs": 447000,
+      "endMs": 450000,
+      "text": "[Shona]: Well, that sounds interesting."
+    },
+    {
+      "startMs": 450000,
+      "endMs": 456000,
+      "text": "[Peter]: I'm thinking about vortex, but I haven't got anything useful from its website."
+    },
+    {
+      "startMs": 456000,
+      "endMs": 458000,
+      "text": "[Shona]: I worked there last summer."
+    },
+    {
+      "startMs": 458000,
+      "endMs": 462000,
+      "text": "It's an international company, with headquarters in Spain."
+    },
+    {
+      "startMs": 462000,
+      "endMs": 465000,
+      "text": "So most of the managers here speak Spanish."
+    },
+    {
+      "startMs": 465000,
+      "endMs": 470000,
+      "text": "Thanks to the internship experience, I became fluent in it."
+    },
+    {
+      "startMs": 470000,
+      "endMs": 475000,
+      "text": "[Peter]: Right. That's not for me."
+    },
+    {
+      "startMs": 475000,
+      "endMs": 478000,
+      "text": "[Narrator]: That is the end of part three."
+    },
+    {
+      "startMs": 478000,
+      "endMs": 483000,
+      "text": "You now have half a minute to check your answers to part three."
+    },
+    {
+      "startMs": 505000,
+      "endMs": 508000,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 80,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

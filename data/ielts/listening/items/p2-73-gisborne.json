@@ -1,0 +1,490 @@
+{
+  "id": "p2-73-gisborne",
+  "title": "Gisborne",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-6ef732a78be2",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 466.08,
+    "checksum": "sha256:029367cb8155f6df2b951ebfc8d38e33f426ad982ac3a95bcaa2292c25c646b6"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–16",
+      "instruction": "Choose the correct letter, A, B or C",
+      "questions": [
+        {
+          "id": "11",
+          "text": "The announcer says that the main topic of today’s talk will be Gisborne’s",
+          "options": [
+            {
+              "id": "A",
+              "text": "economy"
+            },
+            {
+              "id": "B",
+              "text": "history"
+            },
+            {
+              "id": "C",
+              "text": "tourism"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "The Maori name for the Gisborne region signifies",
+          "options": [
+            {
+              "id": "A",
+              "text": "dangerous journey"
+            },
+            {
+              "id": "B",
+              "text": "east coast"
+            },
+            {
+              "id": "C",
+              "text": "sailing boat"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "Early exports from Gisborne came from its",
+          "options": [
+            {
+              "id": "A",
+              "text": "farms"
+            },
+            {
+              "id": "B",
+              "text": "fisheries"
+            },
+            {
+              "id": "C",
+              "text": "forests"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "According to the speaker, what does Gisborne export to Asia nowadays?",
+          "options": [
+            {
+              "id": "A",
+              "text": "oranges and lemons"
+            },
+            {
+              "id": "B",
+              "text": "red and white grapes"
+            },
+            {
+              "id": "C",
+              "text": "seafood and shellfish"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "The Gisborne Summer Concert takes place in",
+          "options": [
+            {
+              "id": "A",
+              "text": "an opera house"
+            },
+            {
+              "id": "B",
+              "text": "a vineyard"
+            },
+            {
+              "id": "C",
+              "text": "a Maori meeting house"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "16",
+          "text": "On wet days in Gisborne the announcer recommends",
+          "options": [
+            {
+              "id": "A",
+              "text": "a cultural display in the museum"
+            },
+            {
+              "id": "B",
+              "text": "a fashion show in the town hall"
+            },
+            {
+              "id": "C",
+              "text": "a photography exhibition in the art gallery"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 17–20",
+      "instruction": "Choose FOUR answers from the box and write the correct letter, A–G, next to questions 17–20.",
+      "options": [
+        {
+          "id": "A",
+          "text": "disabled people"
+        },
+        {
+          "id": "B",
+          "text": "elderly people"
+        },
+        {
+          "id": "C",
+          "text": "recently married couples"
+        },
+        {
+          "id": "D",
+          "text": "pregnant women"
+        },
+        {
+          "id": "E",
+          "text": "secondary school children"
+        },
+        {
+          "id": "F",
+          "text": "young school children"
+        },
+        {
+          "id": "G",
+          "text": "young adults"
+        }
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "Hot Springs Reserve",
+          "answer": "C"
+        },
+        {
+          "id": "18",
+          "text": "Mahia Peninsula",
+          "answer": "G"
+        },
+        {
+          "id": "19",
+          "text": "Motu River Rafting",
+          "answer": "F"
+        },
+        {
+          "id": "20",
+          "text": "Eden Woodlands Park",
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "B",
+        "13": "A",
+        "14": "A",
+        "15": "B",
+        "16": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "17": "C",
+        "18": "G",
+        "19": "F",
+        "20": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 17000,
+      "text": "Now turn to section 2 on page 3."
+    },
+    {
+      "startMs": 17000,
+      "endMs": 22200,
+      "text": "Section 2 You will hear a radio announcer describing"
+    },
+    {
+      "startMs": 22200,
+      "endMs": 26500,
+      "text": "a city in New Zealand called Gisborne."
+    },
+    {
+      "startMs": 26500,
+      "endMs": 33500,
+      "text": "First, you have some time to look at questions 11 to 16 on page 3."
+    },
+    {
+      "startMs": 57500,
+      "endMs": 68500,
+      "text": "Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 71500,
+      "endMs": 74500,
+      "text": "Greetings all you listeners out there."
+    },
+    {
+      "startMs": 74500,
+      "endMs": 77500,
+      "text": "This is National Radio and I'm Kevin Low."
+    },
+    {
+      "startMs": 77500,
+      "endMs": 82500,
+      "text": "This morning I'm going to tell you what's so special about the laid back city of Gisborne."
+    },
+    {
+      "startMs": 83000,
+      "endMs": 91500,
+      "text": "You'll hear a little bit about its past in the old days and a lot about what attractions it has to offer foreign and domestic visitors today."
+    },
+    {
+      "startMs": 91500,
+      "endMs": 102500,
+      "text": "So listen up to learn more about what there is to do in this city and its surrounding region where the economy is booming but the lifestyle remains unspoiled."
+    },
+    {
+      "startMs": 103000,
+      "endMs": 115500,
+      "text": "The Gisborne region is where the legendary canoe sailed by Maori explorers first landed in New Zealand about 1400 years ago after its long and risky voyage over the sea."
+    },
+    {
+      "startMs": 115500,
+      "endMs": 130500,
+      "text": "It is also the easternmost point of the country, which is what inspired its original name Te Tanifiti, which in the Maori language means the coast where the sun rises across the waters."
+    },
+    {
+      "startMs": 131500,
+      "endMs": 142500,
+      "text": "Gisborne was also the place where the European explorer Captain Cook first landed his boat upon discovering New Zealand all the way from England back in 1769."
+    },
+    {
+      "startMs": 142500,
+      "endMs": 151500,
+      "text": "Even in those early days this district was a centre of horticulture thanks to its fertile soil and subtropical climate."
+    },
+    {
+      "startMs": 151500,
+      "endMs": 162500,
+      "text": "Soon after that of course the English settlers arrived and soon Gisborne was shipping its products to larger settlements such as Auckland and Wellington."
+    },
+    {
+      "startMs": 162500,
+      "endMs": 174500,
+      "text": "This began with maize and root crops but quickly expanded to butter, meat and wool from the agricultural settlements in the rich pastoral country near the famous Poverty Bay."
+    },
+    {
+      "startMs": 174500,
+      "endMs": 179500,
+      "text": "Wharves and jetties were built beside the sea to service the coastal traders."
+    },
+    {
+      "startMs": 179500,
+      "endMs": 185500,
+      "text": "Many of these wooden structures can still be seen on Gisborne beaches today."
+    },
+    {
+      "startMs": 185500,
+      "endMs": 191500,
+      "text": "Today Gisborne continues to export fresh produce to other regions of New Zealand."
+    },
+    {
+      "startMs": 191500,
+      "endMs": 202500,
+      "text": "These wares include various award-winning cheeses and of course the delicious lobsters and snapper fish harvested by hand from the local reefs and waters."
+    },
+    {
+      "startMs": 203500,
+      "endMs": 210500,
+      "text": "As for exports to Asian markets there's an increasing demand for the region's oranges and lemons."
+    },
+    {
+      "startMs": 210500,
+      "endMs": 218500,
+      "text": "Gisborne is also becoming well known nationally and internationally as the source of some top quality white and red grapes."
+    },
+    {
+      "startMs": 218500,
+      "endMs": 221500,
+      "text": "Now what's on in Gisborne?"
+    },
+    {
+      "startMs": 221500,
+      "endMs": 227500,
+      "text": "Well first up there's the annual Gisborne concert held every summer time."
+    },
+    {
+      "startMs": 228500,
+      "endMs": 239500,
+      "text": "This is a great experience. It's held at Waiahikia Vineyard which is near the traditional Maori Meeting House or Marae of the same name."
+    },
+    {
+      "startMs": 239500,
+      "endMs": 248500,
+      "text": "They bring in a piano player and opera singers who perform on a purpose-built stage in a kind of natural amphitheater in the middle of the rows of grapes."
+    },
+    {
+      "startMs": 248500,
+      "endMs": 254500,
+      "text": "It's a fantastic concert-like atmosphere, a really good night out."
+    },
+    {
+      "startMs": 254500,
+      "endMs": 256500,
+      "text": "What to do on a rainy day?"
+    },
+    {
+      "startMs": 256500,
+      "endMs": 264500,
+      "text": "I'd suggest a visit to the show called The Beach which is on in Gallery One at Tira Fiti Museum."
+    },
+    {
+      "startMs": 264500,
+      "endMs": 276500,
+      "text": "It's a big display so it also takes up the hall next to Gallery One and it's divided into different sections of the local culture like surfing, camping, fashion and so on."
+    },
+    {
+      "startMs": 276500,
+      "endMs": 283500,
+      "text": "If you buy the book of the exhibition there are some interesting photographs in there."
+    },
+    {
+      "startMs": 283500,
+      "endMs": 293500,
+      "text": "Before you hear the rest of the program you have some time to look at questions 17 to 20 on page 4."
+    },
+    {
+      "startMs": 314500,
+      "endMs": 328500,
+      "text": "Now listen and answer questions 17 to 20."
+    },
+    {
+      "startMs": 331500,
+      "endMs": 334500,
+      "text": "There's a lot else to see in Gisborne as well."
+    },
+    {
+      "startMs": 334500,
+      "endMs": 343500,
+      "text": "You shouldn't miss the Hot Springs Reserve which has warm natural mineral pools and little houses where you can stay amongst the bush."
+    },
+    {
+      "startMs": 343500,
+      "endMs": 351500,
+      "text": "Being very secluded and private, this resort is most favored by newlyweds who often book a cabin for their honeymoon."
+    },
+    {
+      "startMs": 351500,
+      "endMs": 361500,
+      "text": "The water is very therapeutic too. It's apparently good for your health to bathe there, though not recommended for pregnant women or the elderly."
+    },
+    {
+      "startMs": 362500,
+      "endMs": 373500,
+      "text": "Around the corner is Mahia Peninsula, legendary as a New Year's Eve party destination for large crowds of university students after their graduation."
+    },
+    {
+      "startMs": 373500,
+      "endMs": 379500,
+      "text": "The surfing and fishing here is excellent and it's a safe spot for swimming and diving too."
+    },
+    {
+      "startMs": 379500,
+      "endMs": 385500,
+      "text": "Now also good for kids is taking a raft or jet boat ride on the Motu River."
+    },
+    {
+      "startMs": 385500,
+      "endMs": 398500,
+      "text": "This sounds quite wild doesn't it? But in fact this activity is often used by local primary schools who take big groups of young children, several classes at a time out here for a bit of fun while they're on their school camp."
+    },
+    {
+      "startMs": 398500,
+      "endMs": 408500,
+      "text": "No parents required. You can have some time out as this activity is a lot safer than it sounds and is carefully supervised by the rafting company."
+    },
+    {
+      "startMs": 409500,
+      "endMs": 416500,
+      "text": "Finally, don't let's forget the Eden Woodlands Park which is really a huge tree nursery."
+    },
+    {
+      "startMs": 416500,
+      "endMs": 422500,
+      "text": "You can walk for hours here in the peaceful green surroundings along a variety of tracks."
+    },
+    {
+      "startMs": 422500,
+      "endMs": 434500,
+      "text": "There's even a very nice walkway made wide enough for those in wheelchairs so that everyone can go along and enjoy Mother Nature at her best."
+    },
+    {
+      "startMs": 434500,
+      "endMs": 441500,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 464500,
+      "endMs": 466500,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 47,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "id": "p2-70-tourism-in-the-mining-community",
+  "title": "Tourism in the Mining Community",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-fc64c4a51592",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 480.96,
+    "checksum": "sha256:7c414afe0c485ef5998cf963fa0bd8dceee1831d7f5d1ee0d3ce33019bc4416b"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-15",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "What does the speaker say about hard hats?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They must be worn in all areas."
+            },
+            {
+              "id": "B",
+              "text": "A deposit is needed to borrow the hats."
+            },
+            {
+              "id": "C",
+              "text": "They are available in all sizes."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "What does the speaker say about the outside area of the mine?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The road is wet."
+            },
+            {
+              "id": "B",
+              "text": "The ground is uneven in some area."
+            },
+            {
+              "id": "C",
+              "text": "The road is being repaired."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "Visitors who have difficulty in going up and down",
+          "options": [
+            {
+              "id": "A",
+              "text": "can ask for help."
+            },
+            {
+              "id": "B",
+              "text": "have access to all areas."
+            },
+            {
+              "id": "C",
+              "text": "can make use of ramp."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "What is prohibited everywhere?",
+          "options": [
+            {
+              "id": "A",
+              "text": "smoking"
+            },
+            {
+              "id": "B",
+              "text": "taking photos"
+            },
+            {
+              "id": "C",
+              "text": "using mobile phones"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "What does the speaker say about underground tunnels?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The well is lit."
+            },
+            {
+              "id": "B",
+              "text": "The access is limited."
+            },
+            {
+              "id": "C",
+              "text": "Protective clothing is unnecessary."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 16-20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "Mill",
+          "answer": "D"
+        },
+        {
+          "id": "17",
+          "text": "Museum",
+          "answer": "I"
+        },
+        {
+          "id": "18",
+          "text": "Laboratory",
+          "answer": "H"
+        },
+        {
+          "id": "19",
+          "text": "Café",
+          "answer": "G"
+        },
+        {
+          "id": "20",
+          "text": "Toilet",
+          "answer": "E"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-70-tourism-in-the-mining-community-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-70-tourism-in-the-mining-community-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "A",
+        "13": "A",
+        "14": "A",
+        "15": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "D",
+        "17": "I",
+        "18": "H",
+        "19": "G",
+        "20": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5440,
+      "text": "Section 2. You'll hear a talk about tourism in the mining community."
+    },
+    {
+      "startMs": 5440,
+      "endMs": 10560,
+      "text": "First, you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 53840,
+      "text": "Hello. I'm delighted to welcome you to our mining community and very pleased that you're"
+    },
+    {
+      "startMs": 53840,
+      "endMs": 58000,
+      "text": "interested in the oars and pits of this area. I think you'll be pleasantly surprised"
+    },
+    {
+      "startMs": 58000,
+      "endMs": 63440,
+      "text": "with your special experience here. Now, let me start by giving you some warnings on safety rules"
+    },
+    {
+      "startMs": 63440,
+      "endMs": 70480,
+      "text": "and regulations. Rule number one, always wear safety equipment. There is a litany of safety equipment"
+    },
+    {
+      "startMs": 70480,
+      "endMs": 76160,
+      "text": "that mining workers use for their protection from helmets to safety glasses and gloves."
+    },
+    {
+      "startMs": 76160,
+      "endMs": 81360,
+      "text": "It is essential that all workers wear the necessary safety equipment at all times."
+    },
+    {
+      "startMs": 81360,
+      "endMs": 86480,
+      "text": "There have been countless stories of workers being saved by helmets, which are the hard hats that"
+    },
+    {
+      "startMs": 86480,
+      "endMs": 92720,
+      "text": "you can see on the shelf beside you. So, visitors wearing helmets is mandatory in the mining"
+    },
+    {
+      "startMs": 92720,
+      "endMs": 97920,
+      "text": "area, although you are free to take them off when you're in the mining museum and picnic area."
+    },
+    {
+      "startMs": 97920,
+      "endMs": 102400,
+      "text": "You won't need to pay any deposit, though you should return them to the counter once you finish"
+    },
+    {
+      "startMs": 102400,
+      "endMs": 109520,
+      "text": "The helmets are offered in all sizes, so choose a suitable one. All right, our mining"
+    },
+    {
+      "startMs": 109520,
+      "endMs": 115280,
+      "text": "community is currently being refurbished for some of the main area, so please make a note of that,"
+    },
+    {
+      "startMs": 115280,
+      "endMs": 121920,
+      "text": "and you'll know what to look out for. So, when you go in or out of the mine, please pay attention"
+    },
+    {
+      "startMs": 121920,
+      "endMs": 127360,
+      "text": "to the road, for it has just been repaired because of the rough surface and can be really slippery since it's still wet."
+    },
+    {
+      "startMs": 127360,
+      "endMs": 133920,
+      "text": "since it's still wet. The history and process of tin mining are complicated and involve a lot"
+    },
+    {
+      "startMs": 133920,
+      "endMs": 140960,
+      "text": "of special words, but here you will see how it was and still is done. After a short 5 to 10 minute"
+    },
+    {
+      "startMs": 141520,
+      "endMs": 147600,
+      "text": "walk, visitors can track around a numbered route with clear explanations. Most of the tour is in"
+    },
+    {
+      "startMs": 147600,
+      "endMs": 154720,
+      "text": "the open air, so nice weather helps. All areas are clearly posted with signs, but if you have problems"
+    },
+    {
+      "startMs": 154720,
+      "endMs": 160400,
+      "text": "traveling around or climbing up and down, you can turn to the staff here, and we are happy to help."
+    },
+    {
+      "startMs": 160400,
+      "endMs": 166480,
+      "text": "If you're interested, Blue Hills Tin Stream is a working water-powered tin-streaming mill that"
+    },
+    {
+      "startMs": 166560,
+      "endMs": 171920,
+      "text": "gives visitors a very clear idea of how difficult it is to get tin out of rock. I hope you'll enjoy"
+    },
+    {
+      "startMs": 171920,
+      "endMs": 178000,
+      "text": "the informative indoor presentation and this self-guided tour, but you have to bear one thing in mind"
+    },
+    {
+      "startMs": 178000,
+      "endMs": 183680,
+      "text": "that smoking is forbidden throughout the whole community. Though you can take phones and of course"
+    },
+    {
+      "startMs": 183680,
+      "endMs": 189520,
+      "text": "use them, you'll also be surprised that they will be more than just one place to go in the mine."
+    },
+    {
+      "startMs": 190080,
+      "endMs": 195040,
+      "text": "The underground tunnel is now being refurbished and only relevant workers can access it,"
+    },
+    {
+      "startMs": 195040,
+      "endMs": 200560,
+      "text": "but it will soon be all finished and I believe it's a lovely place for you to explore around."
+    },
+    {
+      "startMs": 200560,
+      "endMs": 204000,
+      "text": "Don't forget to wear protective clothing. It's mandatory."
+    },
+    {
+      "startMs": 206720,
+      "endMs": 213440,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 226000,
+      "endMs": 237200,
+      "text": "Now listen and answer questions 16 to 20."
+    },
+    {
+      "startMs": 240480,
+      "endMs": 246720,
+      "text": "Now let's start by seeing where you can go. As you can see on our map in the brochure I've given you,"
+    },
+    {
+      "startMs": 246720,
+      "endMs": 253040,
+      "text": "we are here at the reception block. We have a famous mill which is used for making and processing"
+    },
+    {
+      "startMs": 253040,
+      "endMs": 259600,
+      "text": "materials such as steel and coal. To visit it, just go straight ahead, north along the path in"
+    },
+    {
+      "startMs": 259600,
+      "endMs": 265760,
+      "text": "front of you and you'll find it at the end of the path. Now towards the east, go along the path"
+    },
+    {
+      "startMs": 265760,
+      "endMs": 271120,
+      "text": "from our starting point. Turn left to the corner and then turn right. There is a car park at the"
+    },
+    {
+      "startMs": 271120,
+      "endMs": 278000,
+      "text": "east end of the lane. To the west, there is a museum. Pass the shop around the crossroads"
+    },
+    {
+      "startMs": 278000,
+      "endMs": 283440,
+      "text": "and it is just located at the west end of the road. By the way, the shop is specialised in"
+    },
+    {
+      "startMs": 283440,
+      "endMs": 290240,
+      "text": "selling a variety of all related souvenirs, including keyrings, postcards, tin made, Lewis"
+    },
+    {
+      "startMs": 290240,
+      "endMs": 295920,
+      "text": "Chessman and even Roman soldiers which are made from beautiful pyrite. If you are interested"
+    },
+    {
+      "startMs": 295920,
+      "endMs": 301040,
+      "text": "in the laboratory where scientific experiments, analyses and research are carried out,"
+    },
+    {
+      "startMs": 301040,
+      "endMs": 306800,
+      "text": "it is situated at the southern part of the park opposite to the shop. I bet you'll be happy to hear"
+    },
+    {
+      "startMs": 306880,
+      "endMs": 313280,
+      "text": "that this laboratory is also used for gold and crystal refinement, so don't miss this one for the"
+    },
+    {
+      "startMs": 313280,
+      "endMs": 320720,
+      "text": "sake of it. I assume by this time you'll all need some rest and refreshment. So we have an excellent"
+    },
+    {
+      "startMs": 320720,
+      "endMs": 326400,
+      "text": "cafe which caters for delicious food and beverages at the other side of the road next to the shop."
+    },
+    {
+      "startMs": 326400,
+      "endMs": 332640,
+      "text": "Of course, if you want to spend some time in the fresh air, we have a perfect picnic area which"
+    },
+    {
+      "startMs": 332640,
+      "endMs": 339120,
+      "text": "is just right and northeast of the reception block. Further east, there is a path leading to the"
+    },
+    {
+      "startMs": 339120,
+      "endMs": 345920,
+      "text": "northern part of the park and at the end of it is the toilet. Now most of the visitors would choose"
+    },
+    {
+      "startMs": 345920,
+      "endMs": 352240,
+      "text": "to use the mailbox and send the beautiful postcards to their friends to reach it just."
+    },
+    {
+      "startMs": 355440,
+      "endMs": 361840,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 50,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

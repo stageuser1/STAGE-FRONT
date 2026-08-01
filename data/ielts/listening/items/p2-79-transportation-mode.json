@@ -1,0 +1,369 @@
+{
+  "id": "p2-79-transportation-mode",
+  "title": "Transportation Mode",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-34a41c810f8d",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 326.196,
+    "checksum": "sha256:cf028bc81ddf025ce8eb2e37bd0d8b22cc9c6e983b9bd5c4e3707837b76851f2"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 11-15",
+      "instruction": "Write the correct letter, A, B or C, next to Questions 11-15.",
+      "options": [
+        {
+          "id": "A",
+          "text": "tube"
+        },
+        {
+          "id": "B",
+          "text": "train"
+        },
+        {
+          "id": "C",
+          "text": "bus"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Cheapest",
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "Most convenient",
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "Most comfortable",
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "Fastest",
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "Most frequent service",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 16-20",
+      "instruction": "Label the map below, from A-G.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "Bus Stop",
+          "answer": "B"
+        },
+        {
+          "id": "17",
+          "text": "Train Station",
+          "answer": "E"
+        },
+        {
+          "id": "18",
+          "text": "Tube Entrance",
+          "answer": "G"
+        },
+        {
+          "id": "19",
+          "text": "Transport Ticket Office",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "Taxi Rank",
+          "answer": "A"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-79-transportation-mode-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-79-transportation-mode-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "A",
+        "13": "B",
+        "14": "B",
+        "15": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "B",
+        "17": "E",
+        "18": "G",
+        "19": "C",
+        "20": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9520,
+      "text": "You will hear a man giving some information about transport in London."
+    },
+    {
+      "startMs": 9520,
+      "endMs": 14040,
+      "text": "You now have 30 seconds to read questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 51720,
+      "text": "Hello, can I help you? Oh yes, I was wondering what the best way was for me to get around London."
+    },
+    {
+      "startMs": 51720,
+      "endMs": 60720,
+      "text": "Well, there are a lot of possibilities as you probably realise the main ways to get around are bus, train and tube."
+    },
+    {
+      "startMs": 60720,
+      "endMs": 63720,
+      "text": "The underground."
+    },
+    {
+      "startMs": 63720,
+      "endMs": 66720,
+      "text": "It depends how much you want to spend."
+    },
+    {
+      "startMs": 66720,
+      "endMs": 73720,
+      "text": "All forms of transport offer special tickets such as cheap day returns on the trains and so on."
+    },
+    {
+      "startMs": 73720,
+      "endMs": 80720,
+      "text": "Overall, you'll spend less on the bus as it operates on a basic flat fare for each journey."
+    },
+    {
+      "startMs": 80720,
+      "endMs": 84720,
+      "text": "But of course, it may not go to where you need to travel to."
+    },
+    {
+      "startMs": 84720,
+      "endMs": 91720,
+      "text": "The mainline trains only operate in the outlying areas, though a few cross London."
+    },
+    {
+      "startMs": 91720,
+      "endMs": 98720,
+      "text": "Whereas the tube has stations which are placed in central areas of the city, close to the main sites and shops."
+    },
+    {
+      "startMs": 98720,
+      "endMs": 107720,
+      "text": "Obviously, there are more bus stops, but you will probably have to change buses to get where you want, which can be inconvenient."
+    },
+    {
+      "startMs": 107720,
+      "endMs": 118720,
+      "text": "You will find that the buses are mainly in the central areas, but some tube lines go quite a long way out of London, so you could use this for longer journeys."
+    },
+    {
+      "startMs": 118720,
+      "endMs": 125720,
+      "text": "Having said that, the tubes do get very crowded, so you should use the train if you want to sit down."
+    },
+    {
+      "startMs": 125720,
+      "endMs": 128720,
+      "text": "It does depend where you're travelling to."
+    },
+    {
+      "startMs": 128720,
+      "endMs": 134720,
+      "text": "Well, I'm living on the outskirts, but I have to travel into London to college every day."
+    },
+    {
+      "startMs": 134720,
+      "endMs": 137720,
+      "text": "And then around London when I'm here."
+    },
+    {
+      "startMs": 137720,
+      "endMs": 141720,
+      "text": "Okay, so time is going to be an issue for you."
+    },
+    {
+      "startMs": 141720,
+      "endMs": 148720,
+      "text": "The tube should be fast crossing London, but quite honestly there are so many delays that it's not very efficient."
+    },
+    {
+      "startMs": 148720,
+      "endMs": 154720,
+      "text": "Again, the train has fewer stops, so is probably your quickest option to get to and from college."
+    },
+    {
+      "startMs": 155720,
+      "endMs": 160720,
+      "text": "Of course, which service you use might depend on how frequent it is."
+    },
+    {
+      "startMs": 160720,
+      "endMs": 168720,
+      "text": "I mean, the trains might only be every 20 minutes or whatever, but a timetable is published to save you hanging around."
+    },
+    {
+      "startMs": 168720,
+      "endMs": 179720,
+      "text": "There are a lot of tube trains at busy times of day, but fewer at other times, whereas the buses run every 5 minutes through most of the day, and there are night buses."
+    },
+    {
+      "startMs": 179720,
+      "endMs": 182720,
+      "text": "But you'll need to check out your route first."
+    },
+    {
+      "startMs": 184720,
+      "endMs": 189720,
+      "text": "You now have 30 seconds to read questions 16 to 20."
+    },
+    {
+      "startMs": 214720,
+      "endMs": 224720,
+      "text": "Okay, thanks. How can I get from here to Hackney then?"
+    },
+    {
+      "startMs": 224720,
+      "endMs": 230720,
+      "text": "Right. Well, you can choose. We're here at the information office. Okay."
+    },
+    {
+      "startMs": 230720,
+      "endMs": 237720,
+      "text": "Now next to us on the corner of the High Street and Sweet Street is the bus stop opposite the bank."
+    },
+    {
+      "startMs": 238720,
+      "endMs": 244720,
+      "text": "The bus goes all the way to Hackney, but it is a very indirect route, so it could take ages."
+    },
+    {
+      "startMs": 244720,
+      "endMs": 255720,
+      "text": "If you want to take the train, walk down the High Street towards the city, go past the bank, and on your left is the station, just before you get to the post office."
+    },
+    {
+      "startMs": 255720,
+      "endMs": 265720,
+      "text": "There's a mainline service to Hackney Wick, so if you need to get into the centre of Hackney, you may need to pick up a bus when you get there."
+    },
+    {
+      "startMs": 265720,
+      "endMs": 272720,
+      "text": "Opposite the post office on the corner of Heart Lane is the tube entrance. You'll see the big signs."
+    },
+    {
+      "startMs": 272720,
+      "endMs": 277720,
+      "text": "That's probably the best way to get there, though you may have to change."
+    },
+    {
+      "startMs": 277720,
+      "endMs": 281720,
+      "text": "It's probably best if you go and get a travel card first."
+    },
+    {
+      "startMs": 281720,
+      "endMs": 292720,
+      "text": "To get to the ticket office, you go out of here onto the High Street, then turn into South Street, and the ticket office is on your right opposite the cinema."
+    },
+    {
+      "startMs": 292720,
+      "endMs": 300720,
+      "text": "Of course, you may decide it's quicker to take a taxi, but it's a long way, so I think it'll be very expensive."
+    },
+    {
+      "startMs": 300720,
+      "endMs": 307720,
+      "text": "If you do want to get a cab, then the rank is outside here, just opposite the office."
+    },
+    {
+      "startMs": 315720,
+      "endMs": 319720,
+      "text": "That is the end of part two."
+    },
+    {
+      "startMs": 319720,
+      "endMs": 325720,
+      "text": "You now have 30 seconds to check your answers to part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 39,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

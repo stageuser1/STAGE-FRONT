@@ -1,0 +1,590 @@
+{
+  "id": "p1-96-horseback-trip",
+  "title": "Horseback-trip",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-583226989cb1",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 271.071,
+    "checksum": "sha256:dca5674c95f9df1296897c05cd9798c54abd8ece566a10566b50e47e411bea18"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. Horseback-trip Trip Overview Length of trip: two days Best month to go: September Might see large numbers of 1. __________ Type of accommodation: a 2. __________ Day one Final destination: 3. __________ Evening activity: chance to have a 4. __________ Day two Explore the valley and have lunch by a 5. __________ Afternoon trip to a 6. __________ Tips for the holiday unsuitable if you have 7. __________ problems rocky paths so take 8. __________ Booking details Book online to get a 9. __________ Inform your 10. __________ company about the type of holiday booked",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Might see large numbers of 1. __________",
+          "answer": "Birds"
+        },
+        {
+          "id": "2",
+          "text": "Type of accommodation: a 2. __________",
+          "answer": "Tent"
+        },
+        {
+          "id": "3",
+          "text": "Final destination: 3. __________",
+          "answer": "Mountains"
+        },
+        {
+          "id": "4",
+          "text": "Evening activity: chance to have a 4. __________",
+          "answer": "Swim"
+        },
+        {
+          "id": "5",
+          "text": "Explore the valley and have lunch by a 5. __________",
+          "answer": "Waterfall"
+        },
+        {
+          "id": "6",
+          "text": "Afternoon trip to a 6. __________",
+          "answer": "Cave"
+        },
+        {
+          "id": "7",
+          "text": "unsuitable if you have 7. __________ problems",
+          "answer": "Back"
+        },
+        {
+          "id": "8",
+          "text": "rocky paths so take 8. __________",
+          "answer": "Walking boots"
+        },
+        {
+          "id": "9",
+          "text": "Book online to get a 9. __________",
+          "answer": "Discount"
+        },
+        {
+          "id": "10",
+          "text": "Inform your 10. __________ company about the type of holiday booked",
+          "answer": "Insurance"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Horseback-trip",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Trip Overview",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Length of trip: two days",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Best month to go: September",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Might see large numbers of 1. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Type of accommodation: a 2. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Day one",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Final destination: 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Evening activity: chance to have a 4. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Day two",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Explore the valley and have lunch by a 5. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Afternoon trip to a 6. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Tips for the holiday",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "unsuitable if you have 7. __________ problems",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "rocky paths so take 8. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Booking details",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Book online to get a 9. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Inform your 10. __________ company about the type of holiday booked",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Birds",
+        "2": "Tent",
+        "3": "Mountains",
+        "4": "Swim",
+        "5": "Waterfall",
+        "6": "Cave",
+        "7": "Back",
+        "8": "Walking boots",
+        "9": "Discount",
+        "10": "Insurance"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10500,
+      "text": "Now listen carefully and answer questions one to six."
+    },
+    {
+      "startMs": 10500,
+      "endMs": 13460,
+      "text": "Woman: Hi Greg, great to see you."
+    },
+    {
+      "startMs": 13460,
+      "endMs": 18180,
+      "text": "And thanks for emailing me with the details of the horseback riding trip you went on."
+    },
+    {
+      "startMs": 18180,
+      "endMs": 21180,
+      "text": "I looked at the website and it looks great."
+    },
+    {
+      "startMs": 21180,
+      "endMs": 24380,
+      "text": "Greg: Yeah, I went on the two day mini-break."
+    },
+    {
+      "startMs": 24380,
+      "endMs": 26280,
+      "text": "Is that what you're thinking about?"
+    },
+    {
+      "startMs": 26280,
+      "endMs": 28820,
+      "text": "Woman: Yes, that's the one."
+    },
+    {
+      "startMs": 28820,
+      "endMs": 33200,
+      "text": "Do you think they'd have places now in July or will it be full?"
+    },
+    {
+      "startMs": 33200,
+      "endMs": 36160,
+      "text": "Greg: If you can, hang on till September."
+    },
+    {
+      "startMs": 36160,
+      "endMs": 39360,
+      "text": "That's when I went and it was a really great time to go."
+    },
+    {
+      "startMs": 39360,
+      "endMs": 41560,
+      "text": "It's not so hot for a start."
+    },
+    {
+      "startMs": 41560,
+      "endMs": 43600,
+      "text": "Woman: That'd suit me better anyway."
+    },
+    {
+      "startMs": 43600,
+      "endMs": 49240,
+      "text": "Greg: And also at one point when we stopped for a picnic, I was lying in a field looking up"
+    },
+    {
+      "startMs": 49240,
+      "endMs": 52040,
+      "text": "and saw a huge flock of birds."
+    },
+    {
+      "startMs": 52040,
+      "endMs": 54120,
+      "text": "They were obviously migrating."
+    },
+    {
+      "startMs": 54120,
+      "endMs": 56400,
+      "text": "That's another reason why it's a good time to go."
+    },
+    {
+      "startMs": 56400,
+      "endMs": 57400,
+      "text": "Woman: Oh great."
+    },
+    {
+      "startMs": 57400,
+      "endMs": 61280,
+      "text": "Greg: Oh and another thing, you don't stay in a hotel."
+    },
+    {
+      "startMs": 61280,
+      "endMs": 65720,
+      "text": "You stay in a tent so you don't have to come back to town in the evening."
+    },
+    {
+      "startMs": 65720,
+      "endMs": 67720,
+      "text": "Woman: I'm up for that."
+    },
+    {
+      "startMs": 67720,
+      "endMs": 71000,
+      "text": "So where do you go on the first day?"
+    },
+    {
+      "startMs": 71000,
+      "endMs": 75880,
+      "text": "Greg: Through some amazing wooded valleys full of chestnut and beech trees."
+    },
+    {
+      "startMs": 75880,
+      "endMs": 81000,
+      "text": "But that's just the morning where you're really heading for is the mountains and when"
+    },
+    {
+      "startMs": 81000,
+      "endMs": 84800,
+      "text": "you set out you can only see them in the far distance."
+    },
+    {
+      "startMs": 84800,
+      "endMs": 87980,
+      "text": "You don't actually get there until sunset."
+    },
+    {
+      "startMs": 87980,
+      "endMs": 90180,
+      "text": "Woman: Is it hard work riding all day?"
+    },
+    {
+      "startMs": 90180,
+      "endMs": 91180,
+      "text": "Greg: No."
+    },
+    {
+      "startMs": 91180,
+      "endMs": 97380,
+      "text": "The pace is easy and there are plenty of breaks built in for picnics and even a snooze."
+    },
+    {
+      "startMs": 97380,
+      "endMs": 101940,
+      "text": "But on that first evening when you've been riding all day, you get the opportunity to"
+    },
+    {
+      "startMs": 101940,
+      "endMs": 105420,
+      "text": "go for a swim and you really enjoy that."
+    },
+    {
+      "startMs": 105420,
+      "endMs": 107220,
+      "text": "So relaxing."
+    },
+    {
+      "startMs": 107220,
+      "endMs": 109580,
+      "text": "Woman: And what's on day two?"
+    },
+    {
+      "startMs": 109580,
+      "endMs": 112180,
+      "text": "You said something about the National Park?"
+    },
+    {
+      "startMs": 112180,
+      "endMs": 113180,
+      "text": "Greg: No."
+    },
+    {
+      "startMs": 113180,
+      "endMs": 116180,
+      "text": "Day two, you go up this incredible valley."
+    },
+    {
+      "startMs": 116180,
+      "endMs": 118940,
+      "text": "At the end of it, there's a waterfall."
+    },
+    {
+      "startMs": 118940,
+      "endMs": 121660,
+      "text": "It's an amazing place to stop for lunch."
+    },
+    {
+      "startMs": 121660,
+      "endMs": 124980,
+      "text": "We even spotted an eagle while we were sitting there."
+    },
+    {
+      "startMs": 124980,
+      "endMs": 128700,
+      "text": "And in the afternoon, there's a trip that goes to a cave."
+    },
+    {
+      "startMs": 128700,
+      "endMs": 130460,
+      "text": "You can even ride into it."
+    },
+    {
+      "startMs": 130460,
+      "endMs": 131460,
+      "text": "Woman: Wow."
+    },
+    {
+      "startMs": 131460,
+      "endMs": 132460,
+      "text": "That sounds great."
+    },
+    {
+      "startMs": 132460,
+      "endMs": 137380,
+      "text": "I can't wait."
+    },
+    {
+      "startMs": 137380,
+      "endMs": 141880,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions"
+    },
+    {
+      "startMs": 141880,
+      "endMs": 163600,
+      "text": "7 to 10."
+    },
+    {
+      "startMs": 163600,
+      "endMs": 171000,
+      "text": "Now listen and answer questions 7 to 10."
+    },
+    {
+      "startMs": 171000,
+      "endMs": 172000,
+      "text": "Woman: Okay."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 175680,
+      "text": "So what are your tips for a horseback riding weekend?"
+    },
+    {
+      "startMs": 175680,
+      "endMs": 181940,
+      "text": "Greg: Well, I'd had a sore knee before I went and I was pretty worried about that."
+    },
+    {
+      "startMs": 181940,
+      "endMs": 186680,
+      "text": "It was okay actually, but what you've got to watch for is that you don't have any trouble"
+    },
+    {
+      "startMs": 186680,
+      "endMs": 188520,
+      "text": "with your back."
+    },
+    {
+      "startMs": 188520,
+      "endMs": 190680,
+      "text": "Riding can really aggravate that."
+    },
+    {
+      "startMs": 190680,
+      "endMs": 192800,
+      "text": "Woman: No problem there."
+    },
+    {
+      "startMs": 192800,
+      "endMs": 194920,
+      "text": "And comfortable clothes I guess."
+    },
+    {
+      "startMs": 194920,
+      "endMs": 195920,
+      "text": "Greg: Yeah."
+    },
+    {
+      "startMs": 195920,
+      "endMs": 200840,
+      "text": "But another thing I hadn't realized is that you actually walk the horses down some pretty"
+    },
+    {
+      "startMs": 200840,
+      "endMs": 203480,
+      "text": "steep and uneven paths."
+    },
+    {
+      "startMs": 203480,
+      "endMs": 207920,
+      "text": "So make sure you have walking boots, not just normal riding boots."
+    },
+    {
+      "startMs": 207920,
+      "endMs": 212320,
+      "text": "And even if you're going in the autumn, make sure you don't get sunburned."
+    },
+    {
+      "startMs": 212320,
+      "endMs": 216080,
+      "text": "Even if it looks cloudy, take sunscreen, lots of it."
+    },
+    {
+      "startMs": 216080,
+      "endMs": 219280,
+      "text": "Woman: I think you've convinced me to sign up."
+    },
+    {
+      "startMs": 219280,
+      "endMs": 225920,
+      "text": "When I was looking at the website, I saw that if I register online, I can get a discount."
+    },
+    {
+      "startMs": 225920,
+      "endMs": 229120,
+      "text": "Did you do that or go through a travel agency?"
+    },
+    {
+      "startMs": 229120,
+      "endMs": 231680,
+      "text": "Greg: I registered online of course."
+    },
+    {
+      "startMs": 231680,
+      "endMs": 236000,
+      "text": "Woman: I just have to let my boss know when I want to take time off."
+    },
+    {
+      "startMs": 236000,
+      "endMs": 240920,
+      "text": "And then the other important thing I read was that you have to make sure that your insurance"
+    },
+    {
+      "startMs": 240920,
+      "endMs": 246120,
+      "text": "company know that you're going on an adventure trip to make sure that you're covered in"
+    },
+    {
+      "startMs": 246120,
+      "endMs": 247720,
+      "text": "case anything happens."
+    },
+    {
+      "startMs": 247720,
+      "endMs": 254280,
+      "text": "Greg: I'm sure it won't, but better be safe than sorry."
+    },
+    {
+      "startMs": 254280,
+      "endMs": 256800,
+      "text": "That is the end of part one."
+    },
+    {
+      "startMs": 256800,
+      "endMs": 260440,
+      "text": "You now have one minute to check your answers to part one."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 71,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,792 @@
+{
+  "id": "p1-1-asia-pacific-tours-activity-holidays",
+  "title": "Asia-Pacific Tours Activity Holidays",
+  "part": 1,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-9d71cf96b665",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 482.088,
+    "checksum": "sha256:63a57db9e5e1d18bd3a35408d4843d95d18d02f8762314a26d5e6bb4261a2fba"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer. Asia-Pacific Tours Activity Holidays Tour Details Cost Example Vietnam • a cookery course at a 5-star hotel • either 1. ______ lessons or a one-day trek in the 2. ______ • attend a 3. ______ performance Hong Kong • go to the hills to look at 5. ______ in a country park • followed by 6. ______ in a monastery • visit an 7. ______ factory with the chance to shop £1,320 • visit a museum of traditional 9. ______ • tour of a big 10. ______ market £1,800",
+      "questions": [
+        {
+          "id": "1",
+          "text": "• either 1. ______ lessons or a one-day trek in the 2. ______",
+          "answer": "Diving"
+        },
+        {
+          "id": "2",
+          "text": "• either 1. ______ lessons or a one-day trek in the 2. ______",
+          "answer": "Jungle"
+        },
+        {
+          "id": "3",
+          "text": "• attend a 3. ______ performance",
+          "answer": "Dance"
+        },
+        {
+          "id": "4",
+          "text": "4. £ ______",
+          "answer": "1450"
+        },
+        {
+          "id": "5",
+          "text": "• go to the hills to look at 5. ______ in a country park",
+          "answer": "Birds"
+        },
+        {
+          "id": "6",
+          "text": "• followed by 6. ______ in a monastery",
+          "answer": "Dinner"
+        },
+        {
+          "id": "7",
+          "text": "• visit an 7. ______ factory with the chance to shop",
+          "answer": "Electronics"
+        },
+        {
+          "id": "8",
+          "text": "8. ______",
+          "answer": "Japan"
+        },
+        {
+          "id": "9",
+          "text": "• visit a museum of traditional 9. ______",
+          "answer": "Costume"
+        },
+        {
+          "id": "10",
+          "text": "• tour of a big 10. ______ market",
+          "answer": "Fish"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the table below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Asia-Pacific Tours Activity Holidays",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Tour",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "Details",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "Cost",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "Example",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "Vietnam",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "• a cookery course at a 5-star hotel",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• either 1. ______ lessons or a one-day trek in the 2. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• attend a 3. ______ performance",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "4. £ ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "Hong Kong",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "• go to the hills to look at 5. ______ in a country park",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• followed by 6. ______ in a monastery",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• visit an 7. ______ factory with the chance to shop",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "£1,320",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 2,
+          "cols": 3
+        },
+        {
+          "text": "8. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 3
+        },
+        {
+          "text": "• visit a museum of traditional 9. ______",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "• tour of a big 10. ______ market",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 3
+        },
+        {
+          "text": "£1,800",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 2,
+          "cols": 3
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "Diving",
+        "2": "Jungle",
+        "3": "Dance",
+        "4": "1450",
+        "5": "Birds",
+        "6": "Dinner",
+        "7": "Electronics",
+        "8": "Japan",
+        "9": "Costume",
+        "10": "Fish"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7800,
+      "text": "Section 1."
+    },
+    {
+      "startMs": 7800,
+      "endMs": 12760,
+      "text": "You will hear a telephone conversation between a woman who is looking for information about"
+    },
+    {
+      "startMs": 12760,
+      "endMs": 16760,
+      "text": "holidays and an agent for a tour company."
+    },
+    {
+      "startMs": 16760,
+      "endMs": 22200,
+      "text": "First, you have some time to look at questions 1-7 on page 2."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59880,
+      "text": "You will see that there is an example that has been done for you."
+    },
+    {
+      "startMs": 59880,
+      "endMs": 62000,
+      "text": "done for you."
+    },
+    {
+      "startMs": 62000,
+      "endMs": 70360,
+      "text": "On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 70360,
+      "endMs": 72640,
+      "text": "Agent: Asia-Pacific Tours, can I help you?"
+    },
+    {
+      "startMs": 72640,
+      "endMs": 77520,
+      "text": "Customer: Yes, I've been looking at your website and I'd like some more information about your activity"
+    },
+    {
+      "startMs": 77520,
+      "endMs": 78520,
+      "text": "holidays."
+    },
+    {
+      "startMs": 78520,
+      "endMs": 79520,
+      "text": "Agent: Certainly."
+    },
+    {
+      "startMs": 79520,
+      "endMs": 84960,
+      "text": "Agent: You know of course the prices of the tours include stays in three star hotels and they include"
+    },
+    {
+      "startMs": 84960,
+      "endMs": 85960,
+      "text": "airfares."
+    },
+    {
+      "startMs": 85960,
+      "endMs": 86960,
+      "text": "Customer: Great."
+    },
+    {
+      "startMs": 86960,
+      "endMs": 89400,
+      "text": "Customer: What about your tour of Vietnam?"
+    },
+    {
+      "startMs": 89400,
+      "endMs": 92680,
+      "text": "Customer: My sister went there last year and loved it."
+    },
+    {
+      "startMs": 92680,
+      "endMs": 95800,
+      "text": "Your English?"
+    },
+    {
+      "startMs": 95800,
+      "endMs": 100080,
+      "text": "The first tour the caller asks about is Vietnam."
+    },
+    {
+      "startMs": 100080,
+      "endMs": 105480,
+      "text": "So Vietnam has been written in the space."
+    },
+    {
+      "startMs": 105480,
+      "endMs": 107520,
+      "text": "Now we shall begin."
+    },
+    {
+      "startMs": 107520,
+      "endMs": 111880,
+      "text": "You should answer the questions as you listen because you will not hear the recording"
+    },
+    {
+      "startMs": 111880,
+      "endMs": 114720,
+      "text": "a second time."
+    },
+    {
+      "startMs": 114720,
+      "endMs": 121200,
+      "text": "Listen carefully and answer questions 1-7."
+    },
+    {
+      "startMs": 121200,
+      "endMs": 123320,
+      "text": "Agent: Asia-Pacific Tours, can I help you?"
+    },
+    {
+      "startMs": 123320,
+      "endMs": 127720,
+      "text": "Customer: Yes, I've been looking at your website and I'd like some more information about your"
+    },
+    {
+      "startMs": 127720,
+      "endMs": 129560,
+      "text": "activity holidays."
+    },
+    {
+      "startMs": 129560,
+      "endMs": 130800,
+      "text": "Agent: Certainly."
+    },
+    {
+      "startMs": 130800,
+      "endMs": 135800,
+      "text": "Agent: You know of course the prices of the tours include stays in three star hotels and they include"
+    },
+    {
+      "startMs": 135800,
+      "endMs": 136800,
+      "text": "airfares."
+    },
+    {
+      "startMs": 136800,
+      "endMs": 137800,
+      "text": "Customer: Great."
+    },
+    {
+      "startMs": 137800,
+      "endMs": 140240,
+      "text": "Customer: What about your tour of Vietnam?"
+    },
+    {
+      "startMs": 140240,
+      "endMs": 142880,
+      "text": "Customer: My sister went there last year and loved it."
+    },
+    {
+      "startMs": 142880,
+      "endMs": 148640,
+      "text": "Agent: Yes, it's a really beautiful place and probably our fastest growing destination."
+    },
+    {
+      "startMs": 148640,
+      "endMs": 152560,
+      "text": "Agent: Now that package includes several opportunities to take courses."
+    },
+    {
+      "startMs": 152560,
+      "endMs": 155280,
+      "text": "Customer: Don't you have a cookery course of some kind?"
+    },
+    {
+      "startMs": 155280,
+      "endMs": 156880,
+      "text": "Agent: We certainly do."
+    },
+    {
+      "startMs": 156880,
+      "endMs": 162280,
+      "text": "Agent: If you love eating out in Vietnam like most people do and want to know how to prepare a meal,"
+    },
+    {
+      "startMs": 162280,
+      "endMs": 166120,
+      "text": "you can learn how from a master in a five star hotel."
+    },
+    {
+      "startMs": 166120,
+      "endMs": 169120,
+      "text": "Agent: On another day you have a choice of two activities."
+    },
+    {
+      "startMs": 169120,
+      "endMs": 173000,
+      "text": "Agent: The first is instruction in diving in the South China Sea."
+    },
+    {
+      "startMs": 173000,
+      "endMs": 176200,
+      "text": "Agent: Not a certificate course but just an introduction."
+    },
+    {
+      "startMs": 176200,
+      "endMs": 178000,
+      "text": "Agent: Most people think it's wonderful."
+    },
+    {
+      "startMs": 178000,
+      "endMs": 182960,
+      "text": "Agent: Or if you want to stay dry but still want some exercise, you can spend the day on a trek"
+    },
+    {
+      "startMs": 182960,
+      "endMs": 185280,
+      "text": "through the jungle near the beach."
+    },
+    {
+      "startMs": 185280,
+      "endMs": 188840,
+      "text": "Agent: It's not difficult and everyone seems to enjoy it."
+    },
+    {
+      "startMs": 188840,
+      "endMs": 191360,
+      "text": "Customer: Anything cultural on offer?"
+    },
+    {
+      "startMs": 191360,
+      "endMs": 196480,
+      "text": "Agent: We used to take people to a Vietnamese opera but that didn't prove so popular."
+    },
+    {
+      "startMs": 196480,
+      "endMs": 200640,
+      "text": "Agent: So now we include a dance show and our clients all rave about that."
+    },
+    {
+      "startMs": 200640,
+      "endMs": 202840,
+      "text": "Agent: They say the colours are just magnificent."
+    },
+    {
+      "startMs": 202840,
+      "endMs": 204640,
+      "text": "Customer: Hmm, what's the cost?"
+    },
+    {
+      "startMs": 204640,
+      "endMs": 207240,
+      "text": "Agent: I've just noticed it's now a special price."
+    },
+    {
+      "startMs": 207240,
+      "endMs": 214800,
+      "text": "Agent: The holiday used to be £1,600 but it's just been reduced to £1,450 so you do save quite"
+    },
+    {
+      "startMs": 214800,
+      "endMs": 218560,
+      "text": "a bit and as I said it seems to be our up and coming tour."
+    },
+    {
+      "startMs": 218560,
+      "endMs": 224200,
+      "text": "Customer: Well, let's see, perhaps you could tell me a little about the Hong Kong tour."
+    },
+    {
+      "startMs": 224200,
+      "endMs": 229440,
+      "text": "Customer: I noticed it includes a walk in the hills of one of their country parks where you have"
+    },
+    {
+      "startMs": 229440,
+      "endMs": 232000,
+      "text": "the chance to see birds of all sorts."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 234960,
+      "text": "Agent: Yes, that's a very popular activity."
+    },
+    {
+      "startMs": 234960,
+      "endMs": 238600,
+      "text": "Agent: People don't realise that Hong Kong isn't just a crowded city."
+    },
+    {
+      "startMs": 238600,
+      "endMs": 243080,
+      "text": "Agent: That's a half day activity and you go with a trained escort and it includes dinner in"
+    },
+    {
+      "startMs": 243080,
+      "endMs": 245760,
+      "text": "a monastery where you end your day."
+    },
+    {
+      "startMs": 245760,
+      "endMs": 249400,
+      "text": "Agent: And then we wouldn't want you to miss out all together on shopping so there's another"
+    },
+    {
+      "startMs": 249400,
+      "endMs": 252760,
+      "text": "day when we take you around an electronics factory."
+    },
+    {
+      "startMs": 252760,
+      "endMs": 258000,
+      "text": "Agent: Now that might sound like an odd thing to do but it's actually really fascinating and"
+    },
+    {
+      "startMs": 258000,
+      "endMs": 263560,
+      "text": "not like your usual ceramics factory and you can buy their products there quite cheaply."
+    },
+    {
+      "startMs": 263560,
+      "endMs": 268800,
+      "text": "Agent: Now the whole Hong Kong package is just £1,320 per person."
+    },
+    {
+      "startMs": 268800,
+      "endMs": 273560,
+      "text": "Customer: Sounds interesting."
+    },
+    {
+      "startMs": 273560,
+      "endMs": 278600,
+      "text": "Before you hear the rest of the conversation you have some time to look at questions 8"
+    },
+    {
+      "startMs": 278600,
+      "endMs": 282280,
+      "text": "to 10 on page 2."
+    },
+    {
+      "startMs": 282280,
+      "endMs": 296160,
+      "text": "You all listen?"
+    },
+    {
+      "startMs": 296160,
+      "endMs": 302960,
+      "text": "Now listen and answer questions 8 to 10."
+    },
+    {
+      "startMs": 302960,
+      "endMs": 305480,
+      "text": "Customer: But let me find out about one more place."
+    },
+    {
+      "startMs": 305480,
+      "endMs": 309960,
+      "text": "Customer: I've always wanted to go to Korea but not on this trip."
+    },
+    {
+      "startMs": 309960,
+      "endMs": 315440,
+      "text": "Customer: And I've been to Thailand which I loved but what about your Japan package?"
+    },
+    {
+      "startMs": 315440,
+      "endMs": 316440,
+      "text": "Agent: Good choice."
+    },
+    {
+      "startMs": 316440,
+      "endMs": 321320,
+      "text": "Agent: Well that tour includes a terrific trip to a museum of traditional costume."
+    },
+    {
+      "startMs": 321320,
+      "endMs": 323040,
+      "text": "Agent: The exhibits are gorgeous."
+    },
+    {
+      "startMs": 323040,
+      "endMs": 326040,
+      "text": "Agent: They've got an absolutely priceless collection."
+    },
+    {
+      "startMs": 326040,
+      "endMs": 330440,
+      "text": "Customer: And I think the website says you take your clients to a market don't you?"
+    },
+    {
+      "startMs": 330440,
+      "endMs": 332720,
+      "text": "Customer: A crafts market I think."
+    },
+    {
+      "startMs": 332760,
+      "endMs": 338840,
+      "text": "Agent: Well we do go to a market but it's one that sells fish and it's one of the largest in the world."
+    },
+    {
+      "startMs": 338840,
+      "endMs": 342800,
+      "text": "Agent: And you have the chance to sample the wares in a little restaurant nearby."
+    },
+    {
+      "startMs": 342800,
+      "endMs": 347760,
+      "text": "Agent: We also give you plenty of free time to wander around the city with our guides if you want."
+    },
+    {
+      "startMs": 347760,
+      "endMs": 349840,
+      "text": "Customer: And what's the cost of all that?"
+    },
+    {
+      "startMs": 349840,
+      "endMs": 352200,
+      "text": "Agent: £1,800."
+    },
+    {
+      "startMs": 352200,
+      "endMs": 354360,
+      "text": "Customer: Well you've been ever so helpful."
+    },
+    {
+      "startMs": 354360,
+      "endMs": 359040,
+      "text": "Customer: I've noted all the details down and I'll get back to you when I've made up my mind."
+    },
+    {
+      "startMs": 359040,
+      "endMs": 361840,
+      "text": "Agent: If we can give you any more help, do ring back."
+    },
+    {
+      "startMs": 361840,
+      "endMs": 363320,
+      "text": "Customer: Thanks, I will."
+    },
+    {
+      "startMs": 363320,
+      "endMs": 366320,
+      "text": "Joel Inglitz Joel Inglitz"
+    },
+    {
+      "startMs": 366320,
+      "endMs": 368840,
+      "text": "That is the end of section one."
+    },
+    {
+      "startMs": 368840,
+      "endMs": 371840,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 371840,
+      "endMs": 372840,
+      "text": "Joel Inglitz Joel Inglitz"
+    },
+    {
+      "startMs": 391840,
+      "endMs": 394840,
+      "text": "You"
+    },
+    {
+      "startMs": 421840,
+      "endMs": 424840,
+      "text": "You"
+    },
+    {
+      "startMs": 451840,
+      "endMs": 454840,
+      "text": "You"
+    },
+    {
+      "startMs": 481840,
+      "endMs": 484840,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 96,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

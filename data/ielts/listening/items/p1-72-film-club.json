@@ -1,0 +1,675 @@
+{
+  "id": "p1-72-film-club",
+  "title": "Film club",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-8b5da8d077a6",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 456.072,
+    "checksum": "sha256:4d70bbfd6e7c0d4a0e1933b8745083c94e9b6488a19ce5db2c1ea3aa104097ad"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Film club Membership information Club meets every 2 weeks No 1. __________ limit Student membership costs 2. £________ per season Members get: free entry to club films Members are entitled to 3 hours’ free 4. __________ Films to be shown: Oct 14: Pablo about a child in 5. __________ who runs away from home and wins a 6. __________ competition on TV Oct 28: The Soldier with live 7. __________ accompaniment made in the year 8. __________ type of film: a 9. __________ Nov 11: Tiger cartoon aimed at adults followed by a 10. __________ by the director",
+      "questions": [
+        {
+          "id": "1",
+          "text": "No 1. __________ limit",
+          "answer": "age"
+        },
+        {
+          "id": "2",
+          "text": "Student membership costs 2. £________ per season",
+          "answer": "21.50"
+        },
+        {
+          "id": "3",
+          "text": "3. £________ reduction on other films at cinema",
+          "answer": "2"
+        },
+        {
+          "id": "4",
+          "text": "Members are entitled to 3 hours’ free 4. __________",
+          "answer": "parking"
+        },
+        {
+          "id": "5",
+          "text": "about a child in 5. __________ who runs away from home and wins",
+          "answer": "Argentina"
+        },
+        {
+          "id": "6",
+          "text": "a 6. __________ competition on TV",
+          "answer": "singing"
+        },
+        {
+          "id": "7",
+          "text": "with live 7. __________ accompaniment",
+          "answer": "piano"
+        },
+        {
+          "id": "8",
+          "text": "made in the year 8. __________",
+          "answer": "1922"
+        },
+        {
+          "id": "9",
+          "text": "type of film: a 9. __________",
+          "answer": "comedy"
+        },
+        {
+          "id": "10",
+          "text": "followed by a 10. __________ by the director",
+          "answer": "talk"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Film club",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Membership information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Club meets every 2 weeks",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "No 1. __________ limit",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Student membership costs 2. £________ per season",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Members get:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "free entry to club films",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "3. £________ reduction on other films at cinema",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Members are entitled to 3 hours’ free 4. __________",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Films to be shown:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Oct 14: Pablo",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "about a child in 5. __________ who runs away from home and wins",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "a 6. __________ competition on TV",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Oct 28: The Soldier",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "with live 7. __________ accompaniment",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "made in the year 8. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "type of film: a 9. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Nov 11: Tiger",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "cartoon aimed at adults",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "followed by a 10. __________ by the director",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "age",
+        "2": "21.50",
+        "3": "2",
+        "4": "parking",
+        "5": "Argentina",
+        "6": "singing",
+        "7": "piano",
+        "8": "1922",
+        "9": "comedy",
+        "10": "talk"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11700,
+      "text": "IELTS LISTENING Version 56658"
+    },
+    {
+      "startMs": 11700,
+      "endMs": 16700,
+      "text": "You will hear a number of different recordings, and you will have to answer questions on what"
+    },
+    {
+      "startMs": 16700,
+      "endMs": 18420,
+      "text": "you hear."
+    },
+    {
+      "startMs": 18420,
+      "endMs": 23420,
+      "text": "There will be time for you to read the instructions and questions, and you will have a chance to"
+    },
+    {
+      "startMs": 23420,
+      "endMs": 25740,
+      "text": "check your work."
+    },
+    {
+      "startMs": 25740,
+      "endMs": 30300,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 30300,
+      "endMs": 33900,
+      "text": "The test is in four parts."
+    },
+    {
+      "startMs": 33900,
+      "endMs": 38140,
+      "text": "Write all your answers in the listening question booklet."
+    },
+    {
+      "startMs": 38140,
+      "endMs": 43060,
+      "text": "At the end of the test, you will be given ten minutes to transfer your answers to an"
+    },
+    {
+      "startMs": 43060,
+      "endMs": 46060,
+      "text": "answer sheet."
+    },
+    {
+      "startMs": 46060,
+      "endMs": 55300,
+      "text": "Now turn to part one on page two of your question booklet."
+    },
+    {
+      "startMs": 55300,
+      "endMs": 57220,
+      "text": "Part one."
+    },
+    {
+      "startMs": 57220,
+      "endMs": 62820,
+      "text": "You will hear a teenager asking about joining a film club."
+    },
+    {
+      "startMs": 62820,
+      "endMs": 66260,
+      "text": "First you have some time to look at questions one to four."
+    },
+    {
+      "startMs": 85300,
+      "endMs": 91380,
+      "text": "Now listen carefully and answer questions one to four."
+    },
+    {
+      "startMs": 91380,
+      "endMs": 95620,
+      "text": "Staff: Hi, can I help you?"
+    },
+    {
+      "startMs": 95620,
+      "endMs": 100340,
+      "text": "Teenager: Yeah, I saw on the internet that you have a film club here at the cinema, but there"
+    },
+    {
+      "startMs": 100340,
+      "endMs": 102100,
+      "text": "wasn't a lot about it."
+    },
+    {
+      "startMs": 102100,
+      "endMs": 103580,
+      "text": "Can you tell me a bit more?"
+    },
+    {
+      "startMs": 103580,
+      "endMs": 107540,
+      "text": "Staff: Yes, we're still setting up the web page, sorry about that."
+    },
+    {
+      "startMs": 107540,
+      "endMs": 110380,
+      "text": "We only started the club a few months ago."
+    },
+    {
+      "startMs": 110380,
+      "endMs": 113300,
+      "text": "It's been very popular right from the beginning."
+    },
+    {
+      "startMs": 113300,
+      "endMs": 117540,
+      "text": "We have regular film showings and there are lots of other benefits."
+    },
+    {
+      "startMs": 117540,
+      "endMs": 119740,
+      "text": "Teenager: How often does the club meet?"
+    },
+    {
+      "startMs": 119740,
+      "endMs": 122500,
+      "text": "Staff: Every two weeks, on Thursday nights."
+    },
+    {
+      "startMs": 122500,
+      "endMs": 126220,
+      "text": "Teenager: Okay, and I'm 16, so could I join?"
+    },
+    {
+      "startMs": 126220,
+      "endMs": 129620,
+      "text": "Staff: Sure, people of any age can join."
+    },
+    {
+      "startMs": 129620,
+      "endMs": 133260,
+      "text": "Teenager: Right, so how much does it cost to join?"
+    },
+    {
+      "startMs": 133260,
+      "endMs": 134420,
+      "text": "Staff: Well it depends."
+    },
+    {
+      "startMs": 134420,
+      "endMs": 142420,
+      "text": "The basic charge is £24 a season, but for people eligible for concessions it's £21.50."
+    },
+    {
+      "startMs": 142420,
+      "endMs": 143420,
+      "text": "Teenager: I'm a student."
+    },
+    {
+      "startMs": 143420,
+      "endMs": 145580,
+      "text": "Staff: You'd get the concession rate then."
+    },
+    {
+      "startMs": 145580,
+      "endMs": 146580,
+      "text": "Teenager: That's good."
+    },
+    {
+      "startMs": 146580,
+      "endMs": 152500,
+      "text": "Staff: That entitles you to free entry to the club films and also to £2 off tickets for all"
+    },
+    {
+      "startMs": 152500,
+      "endMs": 158740,
+      "text": "other films on at the cinema, so you'd pay £4.50 instead of £6.50."
+    },
+    {
+      "startMs": 158740,
+      "endMs": 159980,
+      "text": "Teenager: Great, okay."
+    },
+    {
+      "startMs": 159980,
+      "endMs": 164860,
+      "text": "Staff: Now I don't know if this applies to you, but club members are also eligible for three"
+    },
+    {
+      "startMs": 164860,
+      "endMs": 168500,
+      "text": "hours complimentary parking when there's a film on."
+    },
+    {
+      "startMs": 168500,
+      "endMs": 172660,
+      "text": "Teenager: I don't drive, but my girlfriend does, so it might be useful, yes."
+    },
+    {
+      "startMs": 172660,
+      "endMs": 179140,
+      "text": "Okay, well I'd definitely like to join."
+    },
+    {
+      "startMs": 179140,
+      "endMs": 185420,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions 5-10."
+    },
+    {
+      "startMs": 198500,
+      "endMs": 223580,
+      "text": "Now listen and answer questions 5-10."
+    },
+    {
+      "startMs": 223580,
+      "endMs": 227300,
+      "text": "Teenager: Can you give me any information about the next few films you're showing?"
+    },
+    {
+      "startMs": 227300,
+      "endMs": 232580,
+      "text": "Staff: I'm afraid we've run out of leaflets for this season, so I'll tell you about the next"
+    },
+    {
+      "startMs": 232580,
+      "endMs": 237260,
+      "text": "few films and hopefully we'll have all the details on the internet soon."
+    },
+    {
+      "startMs": 237260,
+      "endMs": 243340,
+      "text": "So the next meeting's this Thursday, October the 14th, and that's a film called Pablo."
+    },
+    {
+      "startMs": 243340,
+      "endMs": 245940,
+      "text": "Teenager: Oh, I read the reviews of that."
+    },
+    {
+      "startMs": 245940,
+      "endMs": 248140,
+      "text": "It's set in Argentina, isn't it?"
+    },
+    {
+      "startMs": 248140,
+      "endMs": 250380,
+      "text": "About a child who's run away from home?"
+    },
+    {
+      "startMs": 250380,
+      "endMs": 251380,
+      "text": "Staff: That's right."
+    },
+    {
+      "startMs": 251380,
+      "endMs": 253220,
+      "text": "It just came out recently."
+    },
+    {
+      "startMs": 253220,
+      "endMs": 257860,
+      "text": "Teenager: And the kid somehow gets on TV and he wins a dance competition or something."
+    },
+    {
+      "startMs": 257860,
+      "endMs": 260020,
+      "text": "Staff: A singing competition, yeah."
+    },
+    {
+      "startMs": 260020,
+      "endMs": 262940,
+      "text": "I haven't seen it either, but it tells you on the posters."
+    },
+    {
+      "startMs": 262940,
+      "endMs": 264740,
+      "text": "Teenager: Yes, it sounds really good."
+    },
+    {
+      "startMs": 264740,
+      "endMs": 267260,
+      "text": "Well, I definitely want to see that."
+    },
+    {
+      "startMs": 267260,
+      "endMs": 268580,
+      "text": "What's on after that?"
+    },
+    {
+      "startMs": 268580,
+      "endMs": 274140,
+      "text": "Staff: On October the 28th, there's an American film called The Soldier."
+    },
+    {
+      "startMs": 274140,
+      "endMs": 278420,
+      "text": "That's an old silent movie, but in this showing we have someone who will accompany it on"
+    },
+    {
+      "startMs": 278420,
+      "endMs": 279820,
+      "text": "the piano."
+    },
+    {
+      "startMs": 279820,
+      "endMs": 284500,
+      "text": "Just like they used to in the old cinemas, though it was sometimes an organ accompaniment"
+    },
+    {
+      "startMs": 284500,
+      "endMs": 285500,
+      "text": "in those days."
+    },
+    {
+      "startMs": 285500,
+      "endMs": 288340,
+      "text": "Teenager: It must be a pretty old film, then."
+    },
+    {
+      "startMs": 288340,
+      "endMs": 292900,
+      "text": "When did they release the first talkies, 1926 or 27?"
+    },
+    {
+      "startMs": 292900,
+      "endMs": 300500,
+      "text": "Staff: Yes, this was made in 1922, so well before, though I think they had short feature films"
+    },
+    {
+      "startMs": 300500,
+      "endMs": 303500,
+      "text": "with sound by 1923, actually."
+    },
+    {
+      "startMs": 303500,
+      "endMs": 305300,
+      "text": "Teenager: So what sort of film is it?"
+    },
+    {
+      "startMs": 305300,
+      "endMs": 310780,
+      "text": "Staff: Well, it's billed as a comedy, though you'd think it was a war film from the title."
+    },
+    {
+      "startMs": 310780,
+      "endMs": 315300,
+      "text": "I don't know much about the plot, we don't have much information, but you could always"
+    },
+    {
+      "startMs": 315300,
+      "endMs": 316620,
+      "text": "look it up on the internet."
+    },
+    {
+      "startMs": 316620,
+      "endMs": 318140,
+      "text": "Teenager: Yeah, I'll do that."
+    },
+    {
+      "startMs": 318140,
+      "endMs": 324500,
+      "text": "Staff: Then the next film after that, so that'll be, let's see, the 11th of November is a film"
+    },
+    {
+      "startMs": 324500,
+      "endMs": 329140,
+      "text": "about animals, and it's just called Tiger."
+    },
+    {
+      "startMs": 329140,
+      "endMs": 334180,
+      "text": "And that's a cartoon film, which makes it sound as if it's for children, but actually"
+    },
+    {
+      "startMs": 334180,
+      "endMs": 338660,
+      "text": "it's aimed at adults, and it's really quite frightening in places."
+    },
+    {
+      "startMs": 338660,
+      "endMs": 340700,
+      "text": "I saw it when it first came out."
+    },
+    {
+      "startMs": 340700,
+      "endMs": 341940,
+      "text": "Teenager: What's it about?"
+    },
+    {
+      "startMs": 341940,
+      "endMs": 347100,
+      "text": "Staff: It's got no humans in it at all, it's just about the effect of environmental changes"
+    },
+    {
+      "startMs": 347100,
+      "endMs": 350980,
+      "text": "millions of years ago on the animals who lived then."
+    },
+    {
+      "startMs": 350980,
+      "endMs": 353500,
+      "text": "It's a really strange film."
+    },
+    {
+      "startMs": 353500,
+      "endMs": 357540,
+      "text": "There's a talk afterwards given by the directors, so that should be very popular."
+    },
+    {
+      "startMs": 357540,
+      "endMs": 360220,
+      "text": "You'll need to book early for that, I should think."
+    },
+    {
+      "startMs": 360220,
+      "endMs": 361220,
+      "text": "Teenager: Right."
+    },
+    {
+      "startMs": 361220,
+      "endMs": 362220,
+      "text": "Well, thanks for all that."
+    },
+    {
+      "startMs": 362220,
+      "endMs": 371820,
+      "text": "Now, if you can give me the application form, that is the end of part one."
+    },
+    {
+      "startMs": 371820,
+      "endMs": 375700,
+      "text": "You now have one minute to check your answers to part one."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 86,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

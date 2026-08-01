@@ -1,0 +1,715 @@
+{
+  "id": "p3-20-oral-history",
+  "title": "Oral History",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-705b97db6993",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 421.272,
+    "checksum": "sha256:aad4903f03c6ec373cd60cdbda2099cd4b7baeb28a86bbe255a25cfc9036ff98"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–25",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What source did Mike use for his definition?",
+          "options": [
+            {
+              "id": "A",
+              "text": "a history textbook"
+            },
+            {
+              "id": "B",
+              "text": "an academic article"
+            },
+            {
+              "id": "C",
+              "text": "a lecture handout"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "According to Mike and his tutor, what is the most important contribution of the intern to oral history?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the permanent preservation of recordings"
+            },
+            {
+              "id": "B",
+              "text": "an increase in student interest"
+            },
+            {
+              "id": "C",
+              "text": "wide access to the interviews by the public"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "Mike says he chose his particular topic because",
+          "options": [
+            {
+              "id": "A",
+              "text": "he is a football fan."
+            },
+            {
+              "id": "B",
+              "text": "his father loves football."
+            },
+            {
+              "id": "C",
+              "text": "his friends encouraged him."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "What does Mike say was his best source of information about the team?",
+          "options": [
+            {
+              "id": "A",
+              "text": "doing research in the local newspaper archives"
+            },
+            {
+              "id": "B",
+              "text": "speaking to the team manager"
+            },
+            {
+              "id": "C",
+              "text": "looking at materials in the local library"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "How did Mike find the former players he has arranged to interview?",
+          "options": [
+            {
+              "id": "A",
+              "text": "on the internet"
+            },
+            {
+              "id": "B",
+              "text": "in the team records"
+            },
+            {
+              "id": "C",
+              "text": "in the phone book"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 26–30",
+      "instruction": "What problems with the following aspects of the proposed interviews do the speakers identify?",
+      "options": [
+        {
+          "id": "A",
+          "text": "too unreliable"
+        },
+        {
+          "id": "B",
+          "text": "too short"
+        },
+        {
+          "id": "C",
+          "text": "too noisy"
+        },
+        {
+          "id": "D",
+          "text": "too long"
+        },
+        {
+          "id": "E",
+          "text": "too formal"
+        },
+        {
+          "id": "F",
+          "text": "too factual"
+        },
+        {
+          "id": "G",
+          "text": "too complicated"
+        },
+        {
+          "id": "H",
+          "text": "too vague"
+        }
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "Questions drafted",
+          "answer": "G"
+        },
+        {
+          "id": "27",
+          "text": "Time allotted",
+          "answer": "D"
+        },
+        {
+          "id": "28",
+          "text": "Recording equipment used",
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "Subjects chosen",
+          "answer": "H"
+        },
+        {
+          "id": "30",
+          "text": "Proposed report",
+          "answer": "F"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "A",
+        "23": "B",
+        "24": "A",
+        "25": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "26": "G",
+        "27": "D",
+        "28": "A",
+        "29": "H",
+        "30": "F"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2600,
+      "text": "Part 3."
+    },
+    {
+      "startMs": 2600,
+      "endMs": 9440,
+      "text": "You will hear a discussion between a student called Mike and his tutor about Mike's proposed"
+    },
+    {
+      "startMs": 9440,
+      "endMs": 12560,
+      "text": "project on oral history."
+    },
+    {
+      "startMs": 12560,
+      "endMs": 18960,
+      "text": "First, you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59800,
+      "text": "Now, listen carefully and answer questions 21 to 25."
+    },
+    {
+      "startMs": 59800,
+      "endMs": 65400,
+      "text": "Tutor: Thanks, Mike, for dropping by."
+    },
+    {
+      "startMs": 65400,
+      "endMs": 70000,
+      "text": "I've read the proposal for your project, which is an oral history of the local football"
+    },
+    {
+      "startMs": 70000,
+      "endMs": 76760,
+      "text": "team, particularly the time around 1983 when they won the league championship."
+    },
+    {
+      "startMs": 76760,
+      "endMs": 80640,
+      "text": "But first, how do you define oral history?"
+    },
+    {
+      "startMs": 80640,
+      "endMs": 85880,
+      "text": "Mike: Well, in fact, I used the definition you gave us last year in our research methodology"
+    },
+    {
+      "startMs": 85880,
+      "endMs": 86880,
+      "text": "class."
+    },
+    {
+      "startMs": 86880,
+      "endMs": 89720,
+      "text": "I found the handout in my file."
+    },
+    {
+      "startMs": 89720,
+      "endMs": 95600,
+      "text": "The definition says that oral histories are planned interviews or conversations about"
+    },
+    {
+      "startMs": 95600,
+      "endMs": 101320,
+      "text": "some aspect of the past, which is considered historically or socially important."
+    },
+    {
+      "startMs": 101320,
+      "endMs": 105280,
+      "text": "The interviews are with people who took part in whatever it's about, so there'll be"
+    },
+    {
+      "startMs": 105280,
+      "endMs": 111760,
+      "text": "a record which historians can use later for all those academic articles they write."
+    },
+    {
+      "startMs": 111760,
+      "endMs": 117280,
+      "text": "And although history textbooks are mostly about famous people and important events, oral"
+    },
+    {
+      "startMs": 117280,
+      "endMs": 121720,
+      "text": "history can be about ordinary people doing ordinary things."
+    },
+    {
+      "startMs": 121720,
+      "endMs": 124720,
+      "text": "Oral history really seems to have started in the States."
+    },
+    {
+      "startMs": 124720,
+      "endMs": 125880,
+      "text": "Tutor: You're right."
+    },
+    {
+      "startMs": 125880,
+      "endMs": 131880,
+      "text": "In fact, the first modern oral history interviews were done by a historian in New York."
+    },
+    {
+      "startMs": 131880,
+      "endMs": 137480,
+      "text": "By that time, audio technology had improved so much that it was fairly easy to record"
+    },
+    {
+      "startMs": 137480,
+      "endMs": 138800,
+      "text": "those interviews."
+    },
+    {
+      "startMs": 138800,
+      "endMs": 143280,
+      "text": "Mike: I was also interested in how the internet is contributed to oral history studies."
+    },
+    {
+      "startMs": 143280,
+      "endMs": 147240,
+      "text": "Tutor: Yes, it means that lots of people can access the material."
+    },
+    {
+      "startMs": 147240,
+      "endMs": 148880,
+      "text": "And that's great."
+    },
+    {
+      "startMs": 148880,
+      "endMs": 154200,
+      "text": "Also, the interactive nature of the better websites means that more students get interested"
+    },
+    {
+      "startMs": 154200,
+      "endMs": 155840,
+      "text": "in oral history."
+    },
+    {
+      "startMs": 155840,
+      "endMs": 160400,
+      "text": "Mike: But from what I've read, the real contribution of the internet is that the recording of"
+    },
+    {
+      "startMs": 160400,
+      "endMs": 163200,
+      "text": "the interviews will be preserved forever."
+    },
+    {
+      "startMs": 163200,
+      "endMs": 166040,
+      "text": "In the old days, the tapes were just wear out."
+    },
+    {
+      "startMs": 166040,
+      "endMs": 169400,
+      "text": "And after some years, you couldn't really use them, but not now."
+    },
+    {
+      "startMs": 169400,
+      "endMs": 171400,
+      "text": "Tutor: You're right, of course."
+    },
+    {
+      "startMs": 171400,
+      "endMs": 174880,
+      "text": "Anyhow, let's move on to the subject of your project."
+    },
+    {
+      "startMs": 174880,
+      "endMs": 177600,
+      "text": "Why did you decide to study a sports team?"
+    },
+    {
+      "startMs": 177600,
+      "endMs": 181000,
+      "text": "Mike: Well, actually, I don't even like football very much."
+    },
+    {
+      "startMs": 181000,
+      "endMs": 184480,
+      "text": "And some of my friends think I'm crazy to go for that subject."
+    },
+    {
+      "startMs": 184480,
+      "endMs": 188840,
+      "text": "But my dad is a huge fan, and he might be able to help me."
+    },
+    {
+      "startMs": 188840,
+      "endMs": 191920,
+      "text": "Tutor: And how did you find out background about the team?"
+    },
+    {
+      "startMs": 191920,
+      "endMs": 194320,
+      "text": "You talked to the team manager, I assume?"
+    },
+    {
+      "startMs": 194320,
+      "endMs": 197080,
+      "text": "Mike: Yes, I did manage to track him down."
+    },
+    {
+      "startMs": 197080,
+      "endMs": 202040,
+      "text": "And I looked at all the old news stories about the team in the town newspaper office."
+    },
+    {
+      "startMs": 202040,
+      "endMs": 204840,
+      "text": "That was where I got the most helpful information."
+    },
+    {
+      "startMs": 204840,
+      "endMs": 208160,
+      "text": "I had high hopes that the local library would have lots of stuff."
+    },
+    {
+      "startMs": 208160,
+      "endMs": 211320,
+      "text": "But they don't keep many records for more than 10 years."
+    },
+    {
+      "startMs": 211320,
+      "endMs": 216000,
+      "text": "Tutor: I know that you managed to locate 10 of the original 18 members of the team"
+    },
+    {
+      "startMs": 216000,
+      "endMs": 218600,
+      "text": "using an old-fashioned method, didn't you?"
+    },
+    {
+      "startMs": 218600,
+      "endMs": 221920,
+      "text": "Not a website or anything, just the telephone directory."
+    },
+    {
+      "startMs": 221920,
+      "endMs": 224920,
+      "text": "Mike: Yes, I didn't even need to use the local team's records."
+    },
+    {
+      "startMs": 228280,
+      "endMs": 231040,
+      "text": "Before you hear the rest of the discussion,"
+    },
+    {
+      "startMs": 231040,
+      "endMs": 235200,
+      "text": "you have some time to look at questions 26 to 30."
+    },
+    {
+      "startMs": 235200,
+      "endMs": 265000,
+      "text": "Now, listen and answer questions 26 to 30."
+    },
+    {
+      "startMs": 265000,
+      "endMs": 271400,
+      "text": "Tutor: OK, now I've read your proposal carefully."
+    },
+    {
+      "startMs": 271400,
+      "endMs": 274280,
+      "text": "Overall, your plan seemed excellent."
+    },
+    {
+      "startMs": 274280,
+      "endMs": 277040,
+      "text": "But I want to discuss how you might improve them."
+    },
+    {
+      "startMs": 277040,
+      "endMs": 278040,
+      "text": "Mike: Great."
+    },
+    {
+      "startMs": 278040,
+      "endMs": 280400,
+      "text": "Tutor: I've read through the list of questions you've drafted."
+    },
+    {
+      "startMs": 280400,
+      "endMs": 286040,
+      "text": "I felt most of them are rather complex to be processed as oral questions."
+    },
+    {
+      "startMs": 286040,
+      "endMs": 288480,
+      "text": "You don't have too many, which is good."
+    },
+    {
+      "startMs": 288480,
+      "endMs": 291480,
+      "text": "But you should try to do something about that problem."
+    },
+    {
+      "startMs": 291480,
+      "endMs": 293320,
+      "text": "Mike: Right, I'll work on them."
+    },
+    {
+      "startMs": 294000,
+      "endMs": 297000,
+      "text": "Tutor: And the time you've allotted for each interview."
+    },
+    {
+      "startMs": 297000,
+      "endMs": 300960,
+      "text": "Actually, I think you may have scheduled too much time for each."
+    },
+    {
+      "startMs": 300960,
+      "endMs": 303920,
+      "text": "You want them to be tight, not going on and on."
+    },
+    {
+      "startMs": 303920,
+      "endMs": 305960,
+      "text": "That makes for better results."
+    },
+    {
+      "startMs": 305960,
+      "endMs": 308280,
+      "text": "Mike: I can change the schedule."
+    },
+    {
+      "startMs": 308280,
+      "endMs": 312440,
+      "text": "One thing I'm nervous about is the recording equipment I use."
+    },
+    {
+      "startMs": 312440,
+      "endMs": 314560,
+      "text": "I've got an old recorder."
+    },
+    {
+      "startMs": 314560,
+      "endMs": 317880,
+      "text": "It runs without making too much noise, and it isn't complicated."
+    },
+    {
+      "startMs": 317880,
+      "endMs": 320560,
+      "text": "But it sometimes just doesn't seem to work."
+    },
+    {
+      "startMs": 320560,
+      "endMs": 321840,
+      "text": "It stopped during an interview."
+    },
+    {
+      "startMs": 321840,
+      "endMs": 323280,
+      "text": "I tried out with my dad."
+    },
+    {
+      "startMs": 323280,
+      "endMs": 326880,
+      "text": "Tutor: Well, the important thing is just be ready if anything happens."
+    },
+    {
+      "startMs": 326880,
+      "endMs": 331240,
+      "text": "I'll take some spare batteries, or even an extra recorder."
+    },
+    {
+      "startMs": 331240,
+      "endMs": 335440,
+      "text": "Now, I'm a little concerned with the subjects you've chosen to cover."
+    },
+    {
+      "startMs": 335440,
+      "endMs": 339720,
+      "text": "The topics seem quite general, not very specific."
+    },
+    {
+      "startMs": 339720,
+      "endMs": 344080,
+      "text": "For example, why did they like playing for this team?"
+    },
+    {
+      "startMs": 344080,
+      "endMs": 348280,
+      "text": "You need to talk about more exact things and feelings."
+    },
+    {
+      "startMs": 348280,
+      "endMs": 350760,
+      "text": "That way, your results will be more valuable."
+    },
+    {
+      "startMs": 350760,
+      "endMs": 352720,
+      "text": "Mike: I'll try to refine them."
+    },
+    {
+      "startMs": 352720,
+      "endMs": 356440,
+      "text": "And you know, the plan for my report seems to be just to report back"
+    },
+    {
+      "startMs": 356440,
+      "endMs": 359840,
+      "text": "more or less what the players say, what happened, when,"
+    },
+    {
+      "startMs": 359840,
+      "endMs": 362120,
+      "text": "what they each did, and so on."
+    },
+    {
+      "startMs": 362120,
+      "endMs": 363680,
+      "text": "But I'm not sure about that."
+    },
+    {
+      "startMs": 363680,
+      "endMs": 367320,
+      "text": "Tutor: Yes, although your outline seems long enough,"
+    },
+    {
+      "startMs": 367320,
+      "endMs": 371120,
+      "text": "change it to indicate that you plan to include your own evaluation"
+    },
+    {
+      "startMs": 371120,
+      "endMs": 374360,
+      "text": "of the data you get from your interviewees."
+    },
+    {
+      "startMs": 374360,
+      "endMs": 376560,
+      "text": "Anyhow, best of luck on your project."
+    },
+    {
+      "startMs": 376560,
+      "endMs": 378640,
+      "text": "I look forward to seeing the results."
+    },
+    {
+      "startMs": 378640,
+      "endMs": 379560,
+      "text": "Mike: Thanks for your help."
+    },
+    {
+      "startMs": 379560,
+      "endMs": 386800,
+      "text": "And that is the end of Part 3."
+    },
+    {
+      "startMs": 386800,
+      "endMs": 391080,
+      "text": "You now have 30 seconds to check your answers to Part 3."
+    },
+    {
+      "startMs": 406560,
+      "endMs": 407560,
+      "text": "Thank you very much."
+    },
+    {
+      "startMs": 407560,
+      "endMs": 408560,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 94,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

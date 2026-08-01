@@ -1,0 +1,535 @@
+{
+  "id": "p4-2-human-memory",
+  "title": "Human Memory",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-9e00c9221540",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 375.48,
+    "checksum": "sha256:5da47ec9e00522e5fabce77f76b96fd8902b136296aacc99da2dd85014d268bd"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Human Memory Early Cultures: Before 3000 BC, people were unable to 31. _______ so they relied on memory. Memory helped with navigation and family history. People used memory to identify dangerous foods, such as some types of 32. _______. Ancient Greeks Simonides believed that memories linked to a 33. _______ are easier to recall. In the 1st century, Greeks believed the senses, especially 34. _______, could help memory. Ancient Romans Making a good 35. _______ depended on memory. From 100 BC, they developed techniques to improve memory. Cicero believed people have a memory that can be developed, in addition to their 36. _______ memory. Later European History Scholastics used earlier memory techniques to teach 37. _______. In the 17th century, people believed 38. _______ could provide explanations. In the 19th century, schoolchildren learned facts, such as 39. _______, using repetition. Modern Times In the 1940s, important research on “S”, who worked as a 40. _______, but people started to rely on computers.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Before 3000 BC, people were unable to 31. _______ so they relied on memory.",
+          "answer": "write"
+        },
+        {
+          "id": "32",
+          "text": "People used memory to identify dangerous foods, such as some types of 32. _______.",
+          "answer": "plants"
+        },
+        {
+          "id": "33",
+          "text": "Simonides believed that memories linked to a 33. _______ are easier to recall.",
+          "answer": "place"
+        },
+        {
+          "id": "34",
+          "text": "In the 1st century, Greeks believed the senses, especially 34. _______, could help memory.",
+          "answer": "sight"
+        },
+        {
+          "id": "35",
+          "text": "Making a good 35. _______ depended on memory.",
+          "answer": "speech"
+        },
+        {
+          "id": "36",
+          "text": "From 100 BC, they developed techniques to improve memory. Cicero believed people have a memory that can be developed, in addition to their 36. _______ memory.",
+          "answer": "natural"
+        },
+        {
+          "id": "37",
+          "text": "Scholastics used earlier memory techniques to teach 37. _______.",
+          "answer": "religion"
+        },
+        {
+          "id": "38",
+          "text": "In the 17th century, people believed 38. _______ could provide explanations.",
+          "answer": "science"
+        },
+        {
+          "id": "39",
+          "text": "In the 19th century, schoolchildren learned facts, such as 39. _______, using repetition.",
+          "answer": "dates"
+        },
+        {
+          "id": "40",
+          "text": "In the 1940s, important research on “S”, who worked as a 40. _______, but people started to rely on computers.",
+          "answer": "journalist"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Human Memory",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Early Cultures:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Before 3000 BC, people were unable to 31. _______ so they relied on memory.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Memory helped with navigation and family history.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People used memory to identify dangerous foods, such as some types of 32. _______.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Ancient Greeks",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Simonides believed that memories linked to a 33. _______ are easier to recall.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the 1st century, Greeks believed the senses, especially 34. _______, could help memory.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Ancient Romans",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Making a good 35. _______ depended on memory.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "From 100 BC, they developed techniques to improve memory. Cicero believed people have a memory that can be developed, in addition to their 36. _______ memory.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Later European History",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Scholastics used earlier memory techniques to teach 37. _______.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the 17th century, people believed 38. _______ could provide explanations.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the 19th century, schoolchildren learned facts, such as 39. _______, using repetition.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Modern Times",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In the 1940s, important research on “S”, who worked as a 40. _______, but people started to rely on computers.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "write",
+        "32": "plants",
+        "33": "place",
+        "34": "sight",
+        "35": "speech",
+        "36": "natural",
+        "37": "religion",
+        "38": "science",
+        "39": "dates",
+        "40": "journalist"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 6680,
+      "text": "I'll listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 6680,
+      "endMs": 8160,
+      "text": "Good morning everyone."
+    },
+    {
+      "startMs": 8160,
+      "endMs": 13080,
+      "text": "In today's psychology lecture, I'll be talking about human memory."
+    },
+    {
+      "startMs": 13080,
+      "endMs": 17360,
+      "text": "And what I want to do first is establish the historical context."
+    },
+    {
+      "startMs": 17360,
+      "endMs": 22920,
+      "text": "So I'll outline various ideas about human memory and how they've changed over time."
+    },
+    {
+      "startMs": 22920,
+      "endMs": 26000,
+      "text": "So first, early cultures."
+    },
+    {
+      "startMs": 26000,
+      "endMs": 32360,
+      "text": "Now, in the earliest times, let's say before 3000 years BC, people were dependent on being"
+    },
+    {
+      "startMs": 32360,
+      "endMs": 37200,
+      "text": "able to remember things, perhaps even more than we are today."
+    },
+    {
+      "startMs": 37200,
+      "endMs": 41640,
+      "text": "That's because humans could not write, the skill hadn't been developed."
+    },
+    {
+      "startMs": 41640,
+      "endMs": 44200,
+      "text": "So a good memory was important."
+    },
+    {
+      "startMs": 44200,
+      "endMs": 48920,
+      "text": "For one thing, it helped people navigate in the area around their homes, and it was the"
+    },
+    {
+      "startMs": 48920,
+      "endMs": 53040,
+      "text": "only way to access family history and ancestry."
+    },
+    {
+      "startMs": 53040,
+      "endMs": 57960,
+      "text": "Once more, a good memory might be the difference between life and death."
+    },
+    {
+      "startMs": 57960,
+      "endMs": 62440,
+      "text": "Most people were hunters and gatherers, so it was essential to understand which foods"
+    },
+    {
+      "startMs": 62440,
+      "endMs": 65560,
+      "text": "were poisonous and which were not."
+    },
+    {
+      "startMs": 65560,
+      "endMs": 70000,
+      "text": "This was particularly true of plants because they sometimes looked very similar, and the"
+    },
+    {
+      "startMs": 70000,
+      "endMs": 74640,
+      "text": "only way to store this information and pass it on to the next generation was to remember"
+    },
+    {
+      "startMs": 74640,
+      "endMs": 76240,
+      "text": "it."
+    },
+    {
+      "startMs": 76240,
+      "endMs": 81120,
+      "text": "Unfortunately, because it was so long ago, there's limited information about what techniques"
+    },
+    {
+      "startMs": 81120,
+      "endMs": 83280,
+      "text": "were used to assist memory."
+    },
+    {
+      "startMs": 83280,
+      "endMs": 88760,
+      "text": "Okay, so moving on now to the ancient Greeks, and the Greek poet named Simonides, who"
+    },
+    {
+      "startMs": 88760,
+      "endMs": 96600,
+      "text": "lived around 500 BC, was the man sometimes described as the father of memory training."
+    },
+    {
+      "startMs": 96600,
+      "endMs": 101280,
+      "text": "Simonides' most important idea was that it's much easier to remember information if we"
+    },
+    {
+      "startMs": 101280,
+      "endMs": 103840,
+      "text": "connect it with one particular place."
+    },
+    {
+      "startMs": 103840,
+      "endMs": 109800,
+      "text": "Then, over hundreds of years, other Greek scholars developed his ideas about memory, and a"
+    },
+    {
+      "startMs": 109800,
+      "endMs": 112440,
+      "text": "lot of this information has survived."
+    },
+    {
+      "startMs": 112440,
+      "endMs": 117040,
+      "text": "So we know that, by the first century, the Greeks believed that people could use their"
+    },
+    {
+      "startMs": 117040,
+      "endMs": 121440,
+      "text": "human senses to improve their memory, and this was particularly true when it came to"
+    },
+    {
+      "startMs": 121440,
+      "endMs": 122440,
+      "text": "sight."
+    },
+    {
+      "startMs": 122440,
+      "endMs": 125120,
+      "text": "There was a strong connection there they believed."
+    },
+    {
+      "startMs": 125120,
+      "endMs": 130760,
+      "text": "Well, next I should talk about the ancient Romans, who, like the Greeks, believed memory"
+    },
+    {
+      "startMs": 130760,
+      "endMs": 133520,
+      "text": "training was extremely important."
+    },
+    {
+      "startMs": 133520,
+      "endMs": 139120,
+      "text": "They used memory in many different ways, obviously, but most of all, in ancient Rome, people"
+    },
+    {
+      "startMs": 139120,
+      "endMs": 142960,
+      "text": "thought that one of the greatest skills was the ability to give an impressive speech"
+    },
+    {
+      "startMs": 142960,
+      "endMs": 147600,
+      "text": "in public, and memory was one of the keys to doing that."
+    },
+    {
+      "startMs": 147600,
+      "endMs": 153520,
+      "text": "So this was why, from about 100 BC, the Romans wanted to develop techniques to improve"
+    },
+    {
+      "startMs": 153520,
+      "endMs": 155600,
+      "text": "memory."
+    },
+    {
+      "startMs": 155600,
+      "endMs": 160720,
+      "text": "And an important figure here was Cicero, a Roman political leader."
+    },
+    {
+      "startMs": 160720,
+      "endMs": 165040,
+      "text": "One of Cicero's ideas was that humans actually have two types of memory."
+    },
+    {
+      "startMs": 165760,
+      "endMs": 170400,
+      "text": "There's a memory that can be developed, which he called the artificial memory, and there's"
+    },
+    {
+      "startMs": 170400,
+      "endMs": 174120,
+      "text": "another type of memory which he called natural."
+    },
+    {
+      "startMs": 174120,
+      "endMs": 178800,
+      "text": "And the point is that you can learn techniques to help improve your artificial memory, an"
+    },
+    {
+      "startMs": 178800,
+      "endMs": 187280,
+      "text": "idea that's interested some academics ever since."
+    },
+    {
+      "startMs": 187280,
+      "endMs": 193360,
+      "text": "So moving next to later European history, and the first thing to note is that, during"
+    },
+    {
+      "startMs": 193440,
+      "endMs": 198760,
+      "text": "the Middle Ages, a group of academics called the Scholastics were also interested in"
+    },
+    {
+      "startMs": 198760,
+      "endMs": 200560,
+      "text": "memory techniques."
+    },
+    {
+      "startMs": 200560,
+      "endMs": 205520,
+      "text": "The Scholastics used these techniques when they were instructing pupils about religion,"
+    },
+    {
+      "startMs": 205520,
+      "endMs": 208880,
+      "text": "and this raised the profile of memory techniques."
+    },
+    {
+      "startMs": 208880,
+      "endMs": 215720,
+      "text": "But later, attitudes towards memory began to change, and this started in the 17th century."
+    },
+    {
+      "startMs": 215720,
+      "endMs": 219760,
+      "text": "People began to see memory training as an art form, and that didn't interest them so"
+    },
+    {
+      "startMs": 219760,
+      "endMs": 223840,
+      "text": "much anymore, because they thought that science had the answers to most human questions."
+    },
+    {
+      "startMs": 225120,
+      "endMs": 228400,
+      "text": "This attitude really continued into the 19th century as well."
+    },
+    {
+      "startMs": 229200,
+      "endMs": 233680,
+      "text": "Children weren't taught memory techniques, but were expected to learn lots of facts,"
+    },
+    {
+      "startMs": 233680,
+      "endMs": 237280,
+      "text": "and to do this by constantly repeating things like dates and so on."
+    },
+    {
+      "startMs": 238640,
+      "endMs": 245280,
+      "text": "Okay, so then we come to modern times, and in the 1940s a remarkable series of studies was"
+    },
+    {
+      "startMs": 245360,
+      "endMs": 253040,
+      "text": "conducted with a man known simply as S. Psychologists found that S never made notes about anything,"
+    },
+    {
+      "startMs": 253040,
+      "endMs": 255680,
+      "text": "although he was a journalist and never forgot facts."
+    },
+    {
+      "startMs": 256800,
+      "endMs": 262480,
+      "text": "The researchers concluded that S had an unusual medical condition, which meant he developed"
+    },
+    {
+      "startMs": 262480,
+      "endMs": 268080,
+      "text": "incredible memory skills. This was important as it seemed to support the ideas of the ancient"
+    },
+    {
+      "startMs": 268080,
+      "endMs": 273760,
+      "text": "Greeks and other much earlier scholars, but in the later part of the 20th century, the focus"
+    },
+    {
+      "startMs": 273760,
+      "endMs": 279360,
+      "text": "switched to computers. Okay, well that's the historical context. Let's now turn."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 61,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

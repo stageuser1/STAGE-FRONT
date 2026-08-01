@@ -1,0 +1,641 @@
+{
+  "id": "p3-26-foot-injuries",
+  "title": "Foot Injuries",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-9fb2d5ddd367",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 414.072,
+    "checksum": "sha256:fc38e24c1a001add6e03871dcf8d2ea2b5d8d76458a99638b36b2d4e95b0d7b3"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–26",
+      "instruction": "Choose the correct letter, A, B or C",
+      "questions": [
+        {
+          "id": "21",
+          "text": "John and Cath’s presentation plans are different in",
+          "options": [
+            {
+              "id": "A",
+              "text": "the examples used."
+            },
+            {
+              "id": "B",
+              "text": "the order of information."
+            },
+            {
+              "id": "C",
+              "text": "the main points made."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "What do the students agree about the anatomy section of their presentation?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It would be better if Cath spoke about it."
+            },
+            {
+              "id": "B",
+              "text": "It should be kept quite short."
+            },
+            {
+              "id": "C",
+              "text": "It should be based on information from the internet."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "What do the students agree to include in the last section?",
+          "options": [
+            {
+              "id": "A",
+              "text": "visuals of injuries"
+            },
+            {
+              "id": "B",
+              "text": "demonstrations of treatment"
+            },
+            {
+              "id": "C",
+              "text": "interviews with patients"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "What is said about the different types of heel injury?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Diagnosis is straightforward."
+            },
+            {
+              "id": "B",
+              "text": "They are expensive to treat."
+            },
+            {
+              "id": "C",
+              "text": "Some are more serious than others."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "25",
+          "text": "On the subject of causes of heel injuries, the students agree to",
+          "options": [
+            {
+              "id": "A",
+              "text": "focus on a single reason."
+            },
+            {
+              "id": "B",
+              "text": "reject certain approaches."
+            },
+            {
+              "id": "C",
+              "text": "use a source written by their professor."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "26",
+          "text": "What does Cath say about stretching as a treatment?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It is potentially risky."
+            },
+            {
+              "id": "B",
+              "text": "It is commonly confused with strengthening."
+            },
+            {
+              "id": "C",
+              "text": "It is the least effective part of treatment."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "27-28",
+      "title": "Questions 27 and 28",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO treatment techniques did the female runner find useful for her swollen heel?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "massage"
+        },
+        {
+          "id": "B",
+          "text": "ultrasound"
+        },
+        {
+          "id": "C",
+          "text": "rest"
+        },
+        {
+          "id": "D",
+          "text": "balancing exercises"
+        },
+        {
+          "id": "E",
+          "text": "ice"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Which TWO treatment techniques did the female runner find useful for her swollen heel?",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "Which TWO treatment techniques did the female runner find useful for her swollen heel?",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "29-30",
+      "title": "Questions 29 and 30",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO sports did the male sprinter find most effective during his rehabilitation programme?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "swimming"
+        },
+        {
+          "id": "B",
+          "text": "weight-training"
+        },
+        {
+          "id": "C",
+          "text": "running on grass"
+        },
+        {
+          "id": "D",
+          "text": "cycling"
+        },
+        {
+          "id": "E",
+          "text": "jumping"
+        }
+      ],
+      "questions": [
+        {
+          "id": "29",
+          "text": "Which TWO sports did the male sprinter find most effective during his rehabilitation programme?",
+          "answer": "B"
+        },
+        {
+          "id": "30",
+          "text": "Which TWO sports did the male sprinter find most effective during his rehabilitation programme?",
+          "answer": "D"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "B",
+        "23": "B",
+        "24": "C",
+        "25": "A",
+        "26": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "27_28": [
+          "A",
+          "C"
+        ],
+        "29_30": [
+          "B",
+          "D"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "27": "A",
+        "28": "C",
+        "29": "B",
+        "30": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8360,
+      "text": "Section 3. You will hear two sports physiotherapy students, called John and Cath, preparing"
+    },
+    {
+      "startMs": 8360,
+      "endMs": 16600,
+      "text": "a joint presentation on foot injuries in sports players. First, you have some time to"
+    },
+    {
+      "startMs": 16600,
+      "endMs": 20460,
+      "text": "look at questions 21 to 26 on page 4."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 70500,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 70500,
+      "endMs": 78600,
+      "text": "John: I've had a look at your draft presentation plan and compared it with mine, Cath, and we"
+    },
+    {
+      "startMs": 78600,
+      "endMs": 83680,
+      "text": "seem to have the same basic structure. We've both included the same three main sections,"
+    },
+    {
+      "startMs": 83680,
+      "endMs": 88480,
+      "text": "that's the anatomy of the foot, the injuries and the treatment, and we've organised our"
+    },
+    {
+      "startMs": 88480,
+      "endMs": 93680,
+      "text": "presentations in the same way, but the types of sports we've chosen to illustrate the"
+    },
+    {
+      "startMs": 93680,
+      "endMs": 95680,
+      "text": "possible injuries aren't the same."
+    },
+    {
+      "startMs": 95680,
+      "endMs": 100200,
+      "text": "Cath: I'll deal with the anatomy bit. I've got notes and a handout on that from Professor"
+    },
+    {
+      "startMs": 100200,
+      "endMs": 101600,
+      "text": "Gilligan's lecture."
+    },
+    {
+      "startMs": 101600,
+      "endMs": 107760,
+      "text": "John: Oh, I was hoping to do that. I've downloaded some useful stuff. I do think we should limit"
+    },
+    {
+      "startMs": 107760,
+      "endMs": 112240,
+      "text": "this section though. We don't want to spend much time on anatomy when the main focus is"
+    },
+    {
+      "startMs": 112240,
+      "endMs": 113240,
+      "text": "on the treatment."
+    },
+    {
+      "startMs": 113240,
+      "endMs": 118200,
+      "text": "Cath: That's true, but in the last section, maybe the two of us could show how some of these"
+    },
+    {
+      "startMs": 118200,
+      "endMs": 123280,
+      "text": "therapies actually work. I could be the patient and you could do the treatment."
+    },
+    {
+      "startMs": 123280,
+      "endMs": 128960,
+      "text": "John: Hmm, good idea, because it's hard to find pictures as injuries are mostly internal."
+    },
+    {
+      "startMs": 128960,
+      "endMs": 133040,
+      "text": "It would be good to hear some first-hand accounts from injured athletes too."
+    },
+    {
+      "startMs": 133040,
+      "endMs": 135240,
+      "text": "Cath: Yeah, but we don't have time."
+    },
+    {
+      "startMs": 135240,
+      "endMs": 140640,
+      "text": "John: No. Should we then discuss different types of heel injury? It's worth pointing out that"
+    },
+    {
+      "startMs": 140640,
+      "endMs": 145760,
+      "text": "these vary enormously in how bad they are. It might be just a pulled muscle, or a bone"
+    },
+    {
+      "startMs": 145760,
+      "endMs": 150000,
+      "text": "injury, which needs surgery. Sometimes only an expert can tell the difference."
+    },
+    {
+      "startMs": 150000,
+      "endMs": 154320,
+      "text": "Cath: Excellent. I'll do the slides on that. Leave that one to me."
+    },
+    {
+      "startMs": 154320,
+      "endMs": 156840,
+      "text": "John: Now, what about causes of heel injuries?"
+    },
+    {
+      "startMs": 156840,
+      "endMs": 161440,
+      "text": "Cath：Well, it's easy enough to list them: overuse, improper footwear."
+    },
+    {
+      "startMs": 161440,
+      "endMs": 164400,
+      "text": "John: Yes. Incorrect running style."
+    },
+    {
+      "startMs": 164400,
+      "endMs": 170440,
+      "text": "Cath：They're all relevant, but for simplicity, let's just pick one cause. Say, stuff about"
+    },
+    {
+      "startMs": 170440,
+      "endMs": 172920,
+      "text": "changing your training habit suddenly."
+    },
+    {
+      "startMs": 172920,
+      "endMs": 178120,
+      "text": "John: You mean, like, suddenly doing a lot of mountain training? Yes. That's a good idea."
+    },
+    {
+      "startMs": 178120,
+      "endMs": 181560,
+      "text": "And there was research on that in the latest edition of Physio Journal, wasn't there?"
+    },
+    {
+      "startMs": 181560,
+      "endMs": 183400,
+      "text": "Professor Gilligan recommended it to us."
+    },
+    {
+      "startMs": 183400,
+      "endMs": 190200,
+      "text": "Cath: Great. You can leave the bit on stretching techniques to me. I really like all that stuff."
+    },
+    {
+      "startMs": 190200,
+      "endMs": 192600,
+      "text": "John: So what's going to be your approach there?"
+    },
+    {
+      "startMs": 192600,
+      "endMs": 198400,
+      "text": "Cath: Well, I'll summarize all the various techniques with visual support, and then I'll make the"
+    },
+    {
+      "startMs": 198400,
+      "endMs": 201760,
+      "text": "point that the stretching should be carefully managed."
+    },
+    {
+      "startMs": 201760,
+      "endMs": 206520,
+      "text": "Obviously, you have to be careful not to over-stretch, and to stretch only when your muscles"
+    },
+    {
+      "startMs": 206520,
+      "endMs": 211040,
+      "text": "are warmed up. Otherwise, you could do yourself more harm than good."
+    },
+    {
+      "startMs": 211040,
+      "endMs": 215680,
+      "text": "It's also important that on a supervised programme, stretching is later on combined with"
+    },
+    {
+      "startMs": 215680,
+      "endMs": 221080,
+      "text": "balance exercises, which stretch and also strengthen the muscles."
+    },
+    {
+      "startMs": 221080,
+      "endMs": 225360,
+      "text": "John: Okay, then."
+    },
+    {
+      "startMs": 225360,
+      "endMs": 231280,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27"
+    },
+    {
+      "startMs": 231280,
+      "endMs": 253960,
+      "text": "to 30 on page 5."
+    },
+    {
+      "startMs": 253960,
+      "endMs": 261960,
+      "text": "Now listen and answer questions 27 to 30."
+    },
+    {
+      "startMs": 261960,
+      "endMs": 266200,
+      "text": "John: It's always useful to have some information on case studies at the end, in case we're"
+    },
+    {
+      "startMs": 266200,
+      "endMs": 269560,
+      "text": "short of material. Did you manage to find anything?"
+    },
+    {
+      "startMs": 269560,
+      "endMs": 276200,
+      "text": "Cath: Yes. A female runner in her 30s talking about her treatment for a swollen heel. Initially,"
+    },
+    {
+      "startMs": 276200,
+      "endMs": 281760,
+      "text": "she rested the injury. This did help to reduce the swelling, although it was still a little"
+    },
+    {
+      "startMs": 281760,
+      "endMs": 286760,
+      "text": "bit uncomfortable. Then, she applied an ice pack to the injury twice a day."
+    },
+    {
+      "startMs": 286760,
+      "endMs": 288120,
+      "text": "John: Did that work?"
+    },
+    {
+      "startMs": 288120,
+      "endMs": 294040,
+      "text": "Cath: Well, she persisted with this treatment for the first month, but decided it wasn't helping."
+    },
+    {
+      "startMs": 294040,
+      "endMs": 298800,
+      "text": "After this period, she was shown how to use deep tissue massage techniques, and was surprised"
+    },
+    {
+      "startMs": 298800,
+      "endMs": 302280,
+      "text": "at how much freedom of movement this created in her foot."
+    },
+    {
+      "startMs": 302280,
+      "endMs": 304360,
+      "text": "John: Wasn't she having ultrasound treatment?"
+    },
+    {
+      "startMs": 304360,
+      "endMs": 310400,
+      "text": "Cath: Yes, she was having sessions at the hospital, but she remained unconvinced about its value."
+    },
+    {
+      "startMs": 310400,
+      "endMs": 314400,
+      "text": "She felt the same about the balancing exercises she was prescribed."
+    },
+    {
+      "startMs": 314400,
+      "endMs": 320840,
+      "text": "John: Okay, that's interesting. I looked at the aftercare programme of a male sprinter who was allowed"
+    },
+    {
+      "startMs": 320840,
+      "endMs": 327360,
+      "text": "to do some sports activity as part of his rehabilitation. After four months of treatment, he did"
+    },
+    {
+      "startMs": 327360,
+      "endMs": 331680,
+      "text": "some light running on grass, wearing shoes that gave plenty of support to his injured"
+    },
+    {
+      "startMs": 331680,
+      "endMs": 332680,
+      "text": "heel."
+    },
+    {
+      "startMs": 332680,
+      "endMs": 334720,
+      "text": "Cath: So, it didn't hurt?"
+    },
+    {
+      "startMs": 334720,
+      "endMs": 340520,
+      "text": "John: Well, he found the heel was sore afterwards, and the same happened with some jumping exercises"
+    },
+    {
+      "startMs": 340520,
+      "endMs": 341720,
+      "text": "he was asked to try."
+    },
+    {
+      "startMs": 341720,
+      "endMs": 344000,
+      "text": "Cath: Did he go to the gym and use weights?"
+    },
+    {
+      "startMs": 344000,
+      "endMs": 350640,
+      "text": "John: Yes, after a few weeks. And if he used light weights, he could train without pain."
+    },
+    {
+      "startMs": 350640,
+      "endMs": 356120,
+      "text": "He also tried cycling and found this beneficial as his foot was not making contact with the ground."
+    },
+    {
+      "startMs": 356120,
+      "endMs": 360720,
+      "text": "He expected a similar result with swimming, but found the repetitive kicking motion was"
+    },
+    {
+      "startMs": 360720,
+      "endMs": 362720,
+      "text": "actually aggravating the injury."
+    },
+    {
+      "startMs": 362720,
+      "endMs": 369720,
+      "text": "Cath: Well, both these case studies have value."
+    },
+    {
+      "startMs": 369720,
+      "endMs": 375480,
+      "text": "That is the end of section three. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 392720,
+      "endMs": 408960,
+      "text": "Now, turn to section four on page six."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 70,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

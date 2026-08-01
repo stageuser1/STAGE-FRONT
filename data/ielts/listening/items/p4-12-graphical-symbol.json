@@ -1,0 +1,524 @@
+{
+  "id": "p4-12-graphical-symbol",
+  "title": "Graphical Symbol",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-6aa364ec4f03",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 487.08,
+    "checksum": "sha256:fd72377abb7148ab8024e70aea25f21028d254d725b70f8c848aa705e12d8437"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–36.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. GRAPHICAL SYMBOL “Graphical symbol” includes the logographs in Egyptian hieroglyphic writing and ancient Chinese pictograms found in Africa, the Americas, and Oceania still has something to do with 31. ________ use today Ancient graphic writing systems Researchers obtain a wide range of 32. ________ about past civilisations. Rosetta Stone was found in 1799 when members of Napoleon’s expedition got to Egypt. Frenchman Jean-Francois Champollion determined the phonetic values of the symbols in 1822. In those symbols, 33. ________ are used to depict various meanings. Camera obscura Some charities will 35. ________ many endangered species.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "still has something to do with 31. ________ use today",
+          "answer": "Commercial"
+        },
+        {
+          "id": "32",
+          "text": "Researchers obtain a wide range of 32. ________ about past civilisations.",
+          "answer": "Knowledge"
+        },
+        {
+          "id": "33",
+          "text": "In those symbols, 33. ________ are used to depict various meanings.",
+          "answer": "Lines"
+        },
+        {
+          "id": "34",
+          "text": "34. ________ helps people understand history better.",
+          "answer": "Photography"
+        },
+        {
+          "id": "35",
+          "text": "Some charities will 35. ________ many endangered species.",
+          "answer": "Advertise"
+        },
+        {
+          "id": "36",
+          "text": "A camera was tied to one 36. ________ of a bird.",
+          "answer": "Foot"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "GRAPHICAL SYMBOL",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "“Graphical symbol”",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "includes the logographs in Egyptian hieroglyphic writing and ancient Chinese pictograms",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "found in Africa, the Americas, and Oceania",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "still has something to do with 31. ________ use today",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Ancient graphic writing systems",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Researchers obtain a wide range of 32. ________ about past civilisations.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Rosetta Stone was found in 1799 when members of Napoleon’s expedition got to Egypt.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Frenchman Jean-Francois Champollion determined the phonetic values of the symbols in 1822.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In those symbols, 33. ________ are used to depict various meanings.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Camera obscura",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "34. ________ helps people understand history better.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some charities will 35. ________ many endangered species.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A camera was tied to one 36. ________ of a bird.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 37–40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. More 37. ________ will be included in the future with the development of photography. Companies would like to invest a lot to advertise in 38. ________. Designing appealing 39. ________ is used as a way of effective branding. Graphic writing systems are of great importance in the subject of 40. ________.",
+      "questions": [
+        {
+          "id": "37",
+          "text": "More 37. ________ will be included in the future with the development of photography.",
+          "answer": "Objects"
+        },
+        {
+          "id": "38",
+          "text": "Companies would like to invest a lot to advertise in 38. ________.",
+          "answer": "Newspapers"
+        },
+        {
+          "id": "39",
+          "text": "Designing appealing 39. ________ is used as a way of effective branding.",
+          "answer": "Packaging"
+        },
+        {
+          "id": "40",
+          "text": "Graphic writing systems are of great importance in the subject of 40. ________.",
+          "answer": "Mathematics/math/maths"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "More 37. ________ will be included in the future with the development of photography.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Companies would like to invest a lot to advertise in 38. ________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Designing appealing 39. ________ is used as a way of effective branding.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Graphic writing systems are of great importance in the subject of 40. ________.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Commercial",
+        "32": "Knowledge",
+        "33": "Lines",
+        "34": "Photography",
+        "35": "Advertise",
+        "36": "Foot",
+        "37": "Objects",
+        "38": "Newspapers",
+        "39": "Packaging",
+        "40": "Mathematics/math/maths"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13640,
+      "text": "section 4. You will hear a talk on the research of the graphical symbol. First, you have"
+    },
+    {
+      "startMs": 13640,
+      "endMs": 17160,
+      "text": "some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 73320,
+      "text": "Good morning everyone. Today I'm going to talk about the graphical symbol. A graphic symbol"
+    },
+    {
+      "startMs": 73320,
+      "endMs": 80520,
+      "text": "is a written symbol that is used to represent speech, such as those used in the Greek alphabet."
+    },
+    {
+      "startMs": 80520,
+      "endMs": 86320,
+      "text": "The term graphic symbol encompasses anything from the logographs used in Egyptian hieroglyphic"
+    },
+    {
+      "startMs": 86320,
+      "endMs": 94240,
+      "text": "writing to ancient Chinese pictograms. Early symbols were based on pictographs and ideograms"
+    },
+    {
+      "startMs": 94240,
+      "endMs": 102120,
+      "text": "before they were developed into logographic writing systems. These systems are still in use in some"
+    },
+    {
+      "startMs": 102120,
+      "endMs": 110800,
+      "text": "non literate cultures in Africa, the Americas and Oceania. Indeed, elements of pictography are"
+    },
+    {
+      "startMs": 110800,
+      "endMs": 116640,
+      "text": "still found in modern Chinese characters, and it is often an interesting exercise to trace the"
+    },
+    {
+      "startMs": 116640,
+      "endMs": 124400,
+      "text": "origins of some Chinese characters. Pictographs remain in common commercial use today as signs,"
+    },
+    {
+      "startMs": 124400,
+      "endMs": 132960,
+      "text": "instructions, or statistical diagrams. Road signs and public toilet signs and even flat pack"
+    },
+    {
+      "startMs": 132960,
+      "endMs": 140640,
+      "text": "assembly instructions utilizing pictures are considered pictographic. Ancient graphic"
+    },
+    {
+      "startMs": 140640,
+      "endMs": 146080,
+      "text": "writing systems provide researchers with a wealth of knowledge about past civilizations."
+    },
+    {
+      "startMs": 147600,
+      "endMs": 154400,
+      "text": "In 1799, one of the most important historical discoveries was made by accident when members of"
+    },
+    {
+      "startMs": 154400,
+      "endMs": 160960,
+      "text": "Napoleon's expedition to Egypt found a stone in Rosetta that exhibited three different scripts."
+    },
+    {
+      "startMs": 162160,
+      "endMs": 168560,
+      "text": "The stone, now known as the Rosetta stone, was studied in significant depth by scholars"
+    },
+    {
+      "startMs": 169200,
+      "endMs": 176080,
+      "text": "and was first deciphered by Frenchman Jean-François Champolion in 1822."
+    },
+    {
+      "startMs": 177280,
+      "endMs": 183120,
+      "text": "He was able to correctly determine the phonetic values of the symbols, and later research"
+    },
+    {
+      "startMs": 183120,
+      "endMs": 190080,
+      "text": "has confirmed his findings. In many of these symbols, lines are used to portray a multitude of"
+    },
+    {
+      "startMs": 190080,
+      "endMs": 196880,
+      "text": "meanings and knowledge and understanding of these lines holds the key to comprehension of graphic"
+    },
+    {
+      "startMs": 196880,
+      "endMs": 204320,
+      "text": "writing systems. A key moment in the history of communication was the invention of the camera obscure or camera"
+    },
+    {
+      "startMs": 204320,
+      "endMs": 211120,
+      "text": "obscure or camera. Although the concept can be traced back to the 5th century BC Chinese"
+    },
+    {
+      "startMs": 211120,
+      "endMs": 219200,
+      "text": "philosopher Moarty, the first photographic image was ultimately created in 1826 by Joseph"
+    },
+    {
+      "startMs": 219200,
+      "endMs": 226800,
+      "text": "Nissefor, Nissef. Photography, as it was later known, enables researchers to piece together"
+    },
+    {
+      "startMs": 226800,
+      "endMs": 234240,
+      "text": "and better understand history. Today, photography forms a huge part of everyday life and most"
+    },
+    {
+      "startMs": 234240,
+      "endMs": 240880,
+      "text": "publications contain a vast number of photographs. Photography is used in advertising and is now"
+    },
+    {
+      "startMs": 240880,
+      "endMs": 248160,
+      "text": "becoming a way to increase awareness of existing world issues. For example, animal welfare charities"
+    },
+    {
+      "startMs": 248160,
+      "endMs": 254400,
+      "text": "are increasingly using photography to advertise animals that are at high risk of endangerment."
+    },
+    {
+      "startMs": 255520,
+      "endMs": 261360,
+      "text": "Charity workers are sometimes flown to far-flung locations to document the suffering endured"
+    },
+    {
+      "startMs": 261360,
+      "endMs": 267040,
+      "text": "by high-risk animals in an attempt to raise human awareness of their consumption activities,"
+    },
+    {
+      "startMs": 267760,
+      "endMs": 275760,
+      "text": "and how they impact others. One recent high-profile campaign was undertaken by attaching a camera"
+    },
+    {
+      "startMs": 275840,
+      "endMs": 281920,
+      "text": "to the foot of a bird in order to obtain photographs of the animals in their natural habitats"
+    },
+    {
+      "startMs": 281920,
+      "endMs": 286080,
+      "text": "and understand how often they come into contact with human waste."
+    },
+    {
+      "startMs": 287600,
+      "endMs": 292080,
+      "text": "As soon to be released documentary about the suffering of animals on Midway Island,"
+    },
+    {
+      "startMs": 292720,
+      "endMs": 299360,
+      "text": "shows the full extent to which human consumption is harming animals thousands of miles away from us."
+    },
+    {
+      "startMs": 299360,
+      "endMs": 310080,
+      "text": "As photography continues to progress, with the use of drones now becoming somewhat commonplace,"
+    },
+    {
+      "startMs": 310880,
+      "endMs": 314480,
+      "text": "we should expect more and more objects to be included in the future,"
+    },
+    {
+      "startMs": 315120,
+      "endMs": 321840,
+      "text": "expanding the horizon of photography ever further. Indeed, the downward pressure on traditional"
+    },
+    {
+      "startMs": 321840,
+      "endMs": 328320,
+      "text": "media prices means that media companies are being forced to get creative on how to make a profit."
+    },
+    {
+      "startMs": 329520,
+      "endMs": 334400,
+      "text": "Many have found that the answer to this lies in advertising, and companies are now willing"
+    },
+    {
+      "startMs": 334400,
+      "endMs": 338640,
+      "text": "to devote a large portion of their budgets to advertising in newspapers."
+    },
+    {
+      "startMs": 340000,
+      "endMs": 345120,
+      "text": "By the same token, marketing has become an essential part of a company's business model,"
+    },
+    {
+      "startMs": 345920,
+      "endMs": 353120,
+      "text": "often meaning the success or failure of a company. As a result, much time and money has been"
+    },
+    {
+      "startMs": 353120,
+      "endMs": 358960,
+      "text": "pumped into the development of effective branding, with attractive packaging playing a large role in"
+    },
+    {
+      "startMs": 358960,
+      "endMs": 365760,
+      "text": "this. However, many governments are now seen to be cracking down on marketing and packaging"
+    },
+    {
+      "startMs": 365760,
+      "endMs": 372480,
+      "text": "in an attempt to protect consumers from being misled. In particular, tobacco companies are now"
+    },
+    {
+      "startMs": 372480,
+      "endMs": 379760,
+      "text": "subject to ever increasing regulation. For example, in the United Kingdom, legislation is soon"
+    },
+    {
+      "startMs": 379760,
+      "endMs": 385760,
+      "text": "to pass preventing any form of branding or differentiation on cigarette packaging,"
+    },
+    {
+      "startMs": 385760,
+      "endMs": 393280,
+      "text": "in efforts to curb the harmful effects of smoking. Finally, one must not forget the fundamental"
+    },
+    {
+      "startMs": 393280,
+      "endMs": 401840,
+      "text": "role that graphic writing systems have had to play in mathematics. Graphs, icons, and diagrams"
+    },
+    {
+      "startMs": 401840,
+      "endMs": 408640,
+      "text": "often form the very basis of these branches of academia. Indeed, one needs to look no further"
+    },
+    {
+      "startMs": 408640,
+      "endMs": 415200,
+      "text": "than chemistry's periodic table to see a perfect example of graphic writing systems in use today."
+    },
+    {
+      "startMs": 415760,
+      "endMs": 424160,
+      "text": "That is the end of section 4. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 445760,
+      "endMs": 464800,
+      "text": "That is the end of the listening test. In the IELTS test, you will now have 10 minutes to transfer your answers to the answer sheet."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 54,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

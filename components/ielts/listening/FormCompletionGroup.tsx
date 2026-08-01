@@ -44,7 +44,10 @@ export function FormCompletionGroup({
         </p>
       </div>
 
-      <dl className="border-t border-stage-border">
+      <dl
+        data-form-layout={group.layout ?? "form"}
+        className="border-t border-stage-border"
+      >
         {group.rows.map((row, rowIndex) => (
           <div
             // Position, not the label: two rows of a real form may well carry

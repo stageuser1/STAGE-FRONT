@@ -1,0 +1,408 @@
+{
+  "id": "p1-73-yoga-course",
+  "title": "Yoga Course",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-efde0702e84b",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 205.323,
+    "checksum": "sha256:47161bcf761dd29fb4622e4dabd11b272ce9036991ff212d76f3033737c2c37a"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer. Yoga Course Course information Course starting date: 1. __________ Address of the hotel: in 2. __________ Level of course: 3. __________ Total to pay: £ 4. __________ Programme Activity Information Morning yoga session followed by 30 minutes of 5. __________ Lunch Other activities the activity that requires booking: 8. __________ play 9. __________ for free Yoga practice held 10. __________ the club",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Course starting date: 1. __________",
+          "answer": "June 27th/June 27/27th June/27 June"
+        },
+        {
+          "id": "2",
+          "text": "Address of the hotel: in 2. __________",
+          "answer": "SWAVESEY"
+        },
+        {
+          "id": "3",
+          "text": "Level of course: 3. __________",
+          "answer": "Intermediate"
+        },
+        {
+          "id": "4",
+          "text": "Total to pay: £ 4. __________",
+          "answer": "285"
+        },
+        {
+          "id": "5",
+          "text": "followed by 30 minutes of 5. __________",
+          "answer": "Relaxation"
+        },
+        {
+          "id": "6",
+          "text": "6. __________ food",
+          "answer": "Vegetarian"
+        },
+        {
+          "id": "7",
+          "text": "7. __________ as well as walking",
+          "answer": "Swimming"
+        },
+        {
+          "id": "8",
+          "text": "the activity that requires booking: 8. __________",
+          "answer": "Horse riding"
+        },
+        {
+          "id": "9",
+          "text": "play 9. __________ for free",
+          "answer": "Tennis"
+        },
+        {
+          "id": "10",
+          "text": "held 10. __________ the club",
+          "answer": "Outside"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Yoga Course",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Course information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Course starting date: 1. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Address of the hotel: in 2. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Level of course: 3. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Total to pay: £ 4. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Programme",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Activity",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "Information",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 0,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Morning yoga session",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "followed by 30 minutes of 5. __________",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 1,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Lunch",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "6. __________ food",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 2,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Other activities",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "7. __________ as well as walking",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "the activity that requires booking: 8. __________",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "play 9. __________ for free",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 3,
+          "col": 1,
+          "cols": 2
+        },
+        {
+          "text": "Yoga practice",
+          "list": false,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 0,
+          "cols": 2
+        },
+        {
+          "text": "held 10. __________ the club",
+          "list": true,
+          "level": 0,
+          "table": 1,
+          "row": 4,
+          "col": 1,
+          "cols": 2
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "June 27th/June 27/27th June/27 June",
+        "2": "SWAVESEY",
+        "3": "Intermediate",
+        "4": "285",
+        "5": "Relaxation",
+        "6": "Vegetarian",
+        "7": "Swimming",
+        "8": "Horse riding",
+        "9": "Tennis",
+        "10": "Outside"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8160,
+      "text": "Customer: Hi, there. I'm interested in taking up yoga classes. Can you give me some information"
+    },
+    {
+      "startMs": 8160,
+      "endMs": 15080,
+      "text": "Staff: Hello, sure thing. Our current course will end on June 20th and the coach will need to take a break. The new course will then start on June 27th."
+    },
+    {
+      "startMs": 15080,
+      "endMs": 20840,
+      "text": "Customer：That sounds great. Where are the classes held?"
+    },
+    {
+      "startMs": 20840,
+      "endMs": 24240,
+      "text": "Staff：The course will be delivered at a hotel in Swavesey. Let me spell it, S-W-A-V-E-S-E-Y."
+    },
+    {
+      "startMs": 24240,
+      "endMs": 33120,
+      "text": "We choose this venue because it has enough open floor space for students to comfortably move and practice yoga poses without feeling cramped."
+    },
+    {
+      "startMs": 33120,
+      "endMs": 38080,
+      "text": "Customer: What level is the course for? I'm a beginner, so I don't want to be too advanced."
+    },
+    {
+      "startMs": 38080,
+      "endMs": 48680,
+      "text": "Staff: The course is for intermediate-level students. Unfortunately, beginner's courses and advanced classes are not available at the moment as coaches are taking annual leave."
+    },
+    {
+      "startMs": 48680,
+      "endMs": 63880,
+      "text": "Customer: Okay, thank you. How much does it cost?"
+    },
+    {
+      "startMs": 63880,
+      "endMs": 76080,
+      "text": "Staff: The course charge is £285, which is really competitive. Many course providers usually charge £320 to £350."
+    },
+    {
+      "startMs": 76080,
+      "endMs": 81760,
+      "text": "Customer: That's a great price. Is there anything else I need to know about the classes?"
+    },
+    {
+      "startMs": 81760,
+      "endMs": 87880,
+      "text": "Staff: Morning training lasts for 2 hours and students will train under the supervision of the coach."
+    },
+    {
+      "startMs": 87880,
+      "endMs": 92920,
+      "text": "Training is intensive and the last half hour is used for relaxation."
+    },
+    {
+      "startMs": 92920,
+      "endMs": 99320,
+      "text": "Customer: Do you provide meals? Staff: Yes, lunch is covered in the course fee, but we only provide a variety of vegetarian food."
+    },
+    {
+      "startMs": 99320,
+      "endMs": 104480,
+      "text": "It is conducive to practice."
+    },
+    {
+      "startMs": 104480,
+      "endMs": 107400,
+      "text": "Customer: What else do students do during the day?"
+    },
+    {
+      "startMs": 107400,
+      "endMs": 114400,
+      "text": "Staff: Students will take part in some other activities in the afternoon, including walking and swimming."
+    },
+    {
+      "startMs": 114400,
+      "endMs": 125040,
+      "text": "Engaging in these activities can help to improve heart health, lower blood pressure and reduce the risk of chronic diseases like diabetes and cardiovascular disease."
+    },
+    {
+      "startMs": 125040,
+      "endMs": 130920,
+      "text": "Customer: Can we do anything else? Staff: Yes, you can also try horse riding, but you need to book in advance"
+    },
+    {
+      "startMs": 130920,
+      "endMs": 135720,
+      "text": "because spots are limited. And is there anything else available?"
+    },
+    {
+      "startMs": 135720,
+      "endMs": 140200,
+      "text": "Students can also play tennis, which is free of charge, but they have to bring the racket"
+    },
+    {
+      "startMs": 140200,
+      "endMs": 142040,
+      "text": "themselves."
+    },
+    {
+      "startMs": 142040,
+      "endMs": 145960,
+      "text": "Customer: One last question. Is the yoga class held inside the club?"
+    },
+    {
+      "startMs": 145960,
+      "endMs": 152240,
+      "text": "Staff: No, the yoga class is held outside the club. Practicing yoga in an outdoor setting can"
+    },
+    {
+      "startMs": 152240,
+      "endMs": 157240,
+      "text": "help students to connect with nature and feel more grounded and centered."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 24,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,541 @@
+{
+  "id": "p2-104-riding-for-the-disabled-rda",
+  "title": "Riding for the Disabled (RDA)",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-c3ea0f700936",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 503.064,
+    "checksum": "sha256:0307abc3d34d63c66b8cfcf36500b01ff6eb7822ca958462c8a2737aae6b8e3a"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11 and 12",
+      "instruction": "Choose the correct letter: A, B, or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Joan normally gets up at",
+          "options": [
+            {
+              "id": "A",
+              "text": "5:30 a.m."
+            },
+            {
+              "id": "B",
+              "text": "6:30 a.m."
+            },
+            {
+              "id": "C",
+              "text": "7:30 a.m."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "Joan's first task of the day is to",
+          "options": [
+            {
+              "id": "A",
+              "text": "Clean the horses"
+            },
+            {
+              "id": "B",
+              "text": "Organise her son"
+            },
+            {
+              "id": "C",
+              "text": "Do farm work"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 13 and 14",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Joan's official title in Riding for the Disabled (RDA) is chairperson. In her local district, there are at present twenty-two riders and 13. ______ helpers on the volunteer list, out of whom 14. ________ come regularly.",
+      "questions": [
+        {
+          "id": "13",
+          "text": "In her local district, there are at present twenty-two riders and 13. ______ helpers on the volunteer list, out of whom 14. ________ come regularly.",
+          "answer": "40"
+        },
+        {
+          "id": "14",
+          "text": "In her local district, there are at present twenty-two riders and 13. ______ helpers on the volunteer list, out of whom 14. ________ come regularly.",
+          "answer": "25"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Joan's official title in Riding for the Disabled (RDA) is chairperson.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In her local district, there are at present twenty-two riders and 13. ______ helpers on the volunteer list, out of whom 14. ________ come regularly.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 15–18",
+      "instruction": "Write the correct letter A, B, or C from the box, next to questions 15–18.",
+      "options": [
+        {
+          "id": "A",
+          "text": "She really likes it."
+        },
+        {
+          "id": "B",
+          "text": "She doesn't mind it."
+        },
+        {
+          "id": "C",
+          "text": "She hates it."
+        }
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "Correspondence",
+          "answer": "B"
+        },
+        {
+          "id": "16",
+          "text": "Fundraising",
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "Calling riders",
+          "answer": "A"
+        },
+        {
+          "id": "18",
+          "text": "Organizing accounts",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "19-20",
+      "title": "Questions 19 and 20",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Joan says the two ways the Riding for the Disabled needs to improve are by:",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "Giving special training."
+        },
+        {
+          "id": "B",
+          "text": "Making fundraising more effective."
+        },
+        {
+          "id": "C",
+          "text": "Opening more centres."
+        },
+        {
+          "id": "D",
+          "text": "Providing more helpers."
+        },
+        {
+          "id": "E",
+          "text": "Recognising difficulties of disabled riders."
+        }
+      ],
+      "questions": [
+        {
+          "id": "19",
+          "text": "Joan says the two ways the Riding for the Disabled needs to improve are by:",
+          "answer": "B"
+        },
+        {
+          "id": "20",
+          "text": "Joan says the two ways the Riding for the Disabled needs to improve are by:",
+          "answer": "E"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "13": "40",
+        "14": "25"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "19_20": [
+          "B",
+          "E"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "19": "B",
+        "20": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "15": "B",
+        "16": "C",
+        "17": "A",
+        "18": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10000,
+      "text": "Part 2."
+    },
+    {
+      "startMs": 10000,
+      "endMs": 15600,
+      "text": "You will hear a radio talk on horse riding for disabled people."
+    },
+    {
+      "startMs": 15600,
+      "endMs": 19400,
+      "text": "First you have some time to look at questions 11 to 14."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 52600,
+      "text": "Now listen carefully and answer questions 11 to 14."
+    },
+    {
+      "startMs": 52600,
+      "endMs": 57760,
+      "text": "This week our slot is A Life in the Day of Joan Gilbert."
+    },
+    {
+      "startMs": 57760,
+      "endMs": 71040,
+      "text": "Well I always have the very best intentions of starting the day at 5.30 to give the horses"
+    },
+    {
+      "startMs": 71040,
+      "endMs": 78440,
+      "text": "a really good muck out, but reality intervenes and I finally wake at about 6.30."
+    },
+    {
+      "startMs": 78440,
+      "endMs": 83520,
+      "text": "That probably still sounds very early to you, but for a farm worker which is what my"
+    },
+    {
+      "startMs": 83520,
+      "endMs": 88280,
+      "text": "son is at the moment, that's cutting things pretty fine."
+    },
+    {
+      "startMs": 88280,
+      "endMs": 95000,
+      "text": "Once I've managed to get him safely on his way at about 7 am, I can start turning my attention"
+    },
+    {
+      "startMs": 95000,
+      "endMs": 98640,
+      "text": "to the other important tasks of the day."
+    },
+    {
+      "startMs": 98640,
+      "endMs": 104320,
+      "text": "For about 5 years we've been taking overseas students from the International Centre at"
+    },
+    {
+      "startMs": 104320,
+      "endMs": 109800,
+      "text": "our local college and I have to give them a proper breakfast."
+    },
+    {
+      "startMs": 109800,
+      "endMs": 114920,
+      "text": "Most of our students used to be from the Middle East, but they're no longer coming."
+    },
+    {
+      "startMs": 114920,
+      "endMs": 120680,
+      "text": "So we tend to have Malaysian girls and they like to have a cooked breakfast, much more"
+    },
+    {
+      "startMs": 120680,
+      "endMs": 128000,
+      "text": "than any Europeans we've had, including me and I don't have anything these days."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 133080,
+      "text": "After cooking I finally get round to the poor horses."
+    },
+    {
+      "startMs": 133080,
+      "endMs": 139760,
+      "text": "It's only after this that I can start thinking about what I regard as my most important task."
+    },
+    {
+      "startMs": 139760,
+      "endMs": 142880,
+      "text": "Work for Riding for the Disabled."
+    },
+    {
+      "startMs": 142880,
+      "endMs": 148480,
+      "text": "I've been involved with this organisation on and off for over 20 years, but I've only"
+    },
+    {
+      "startMs": 148480,
+      "endMs": 152880,
+      "text": "recently taken on the job of chairperson."
+    },
+    {
+      "startMs": 152880,
+      "endMs": 158480,
+      "text": "Most of the work seems more secretarial, but that's how charities get organised."
+    },
+    {
+      "startMs": 158480,
+      "endMs": 163960,
+      "text": "In our immediate district we have had as many as 30 riders, but currently we've only"
+    },
+    {
+      "startMs": 163960,
+      "endMs": 166280,
+      "text": "got 22."
+    },
+    {
+      "startMs": 166280,
+      "endMs": 171960,
+      "text": "The number of helpers who have volunteered is actually 40, but we can rely on 25 to"
+    },
+    {
+      "startMs": 171960,
+      "endMs": 175520,
+      "text": "come regularly to help in the different groups."
+    },
+    {
+      "startMs": 175520,
+      "endMs": 180960,
+      "text": "We now have four separate groups which cater for disabled children and adults from 6 to"
+    },
+    {
+      "startMs": 180960,
+      "endMs": 185360,
+      "text": "40 years old."
+    },
+    {
+      "startMs": 185360,
+      "endMs": 191120,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 15 to 20."
+    },
+    {
+      "startMs": 196280,
+      "endMs": 225840,
+      "text": "Now listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 226840,
+      "endMs": 234880,
+      "text": "As I say, I feel that although I no longer have any proper full-time paid employment, I"
+    },
+    {
+      "startMs": 234880,
+      "endMs": 237880,
+      "text": "do have a full and busy life."
+    },
+    {
+      "startMs": 237880,
+      "endMs": 242360,
+      "text": "I'm a housewife which I don't mind because I don't really object to doing things like"
+    },
+    {
+      "startMs": 242360,
+      "endMs": 244280,
+      "text": "washing and cooking."
+    },
+    {
+      "startMs": 244280,
+      "endMs": 249040,
+      "text": "Then there's my own horses which I adore, even the revolting stuff like cleaning out"
+    },
+    {
+      "startMs": 249040,
+      "endMs": 251040,
+      "text": "the stables."
+    },
+    {
+      "startMs": 251040,
+      "endMs": 254920,
+      "text": "The official RDA stuff is a mixed bag really."
+    },
+    {
+      "startMs": 254920,
+      "endMs": 260280,
+      "text": "I don't have major problems with all the letter writing and correspondence which it entails,"
+    },
+    {
+      "startMs": 260280,
+      "endMs": 265800,
+      "text": "but like lots of shy people I find the fundraising horrendous."
+    },
+    {
+      "startMs": 265800,
+      "endMs": 271720,
+      "text": "Other regular RDA duties such as ringing round the riders to fix times etc is one of"
+    },
+    {
+      "startMs": 271720,
+      "endMs": 274600,
+      "text": "the pleasantest aspects of the work."
+    },
+    {
+      "startMs": 274600,
+      "endMs": 280240,
+      "text": "After all that's why I'm involved with charity work, the contact with people."
+    },
+    {
+      "startMs": 280240,
+      "endMs": 287320,
+      "text": "My working day ends with the least enjoyable job of all sorting the accounts."
+    },
+    {
+      "startMs": 287320,
+      "endMs": 293920,
+      "text": "I got involved with RDA because I've always loved horses and I can see disabled people"
+    },
+    {
+      "startMs": 293920,
+      "endMs": 296280,
+      "text": "gaining so much."
+    },
+    {
+      "startMs": 296280,
+      "endMs": 300680,
+      "text": "I know all the medical evidence that shows that it does wonders for muscle building and"
+    },
+    {
+      "startMs": 300680,
+      "endMs": 307240,
+      "text": "so on which is important, but from talking to the riders they say it is the confidence"
+    },
+    {
+      "startMs": 307240,
+      "endMs": 312960,
+      "text": "they gain and also the opportunity to be part of a new and exciting environment which"
+    },
+    {
+      "startMs": 312960,
+      "endMs": 316760,
+      "text": "gives them the greatest benefit."
+    },
+    {
+      "startMs": 316760,
+      "endMs": 323160,
+      "text": "In terms of the RDA organisation itself, I feel it works very well, but we're always"
+    },
+    {
+      "startMs": 323160,
+      "endMs": 325640,
+      "text": "striving to make it better."
+    },
+    {
+      "startMs": 325640,
+      "endMs": 332360,
+      "text": "I wish for example our helpers and the organisers in the various centres could really rationalise"
+    },
+    {
+      "startMs": 332360,
+      "endMs": 339120,
+      "text": "the fundraising efforts which sometimes are very inefficient and it also saddens me how"
+    },
+    {
+      "startMs": 339120,
+      "endMs": 344720,
+      "text": "unaware some of the stables can be about the difficulties faced by people who are disabled."
+    },
+    {
+      "startMs": 344720,
+      "endMs": 352160,
+      "text": "Anyway, I feel very privileged to work with our riders and to see such tangible benefits."
+    },
+    {
+      "startMs": 352160,
+      "endMs": 361040,
+      "text": "It sends me to sleep with a feeling that though the day has been hard, it has been worthwhile."
+    },
+    {
+      "startMs": 361040,
+      "endMs": 363440,
+      "text": "That is the end of part 2."
+    },
+    {
+      "startMs": 363440,
+      "endMs": 367600,
+      "text": "You now have 45 seconds to check your answers to part 2."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 58,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

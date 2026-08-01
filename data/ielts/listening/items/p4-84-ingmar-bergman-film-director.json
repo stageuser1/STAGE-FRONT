@@ -1,0 +1,495 @@
+{
+  "id": "p4-84-ingmar-bergman-film-director",
+  "title": "Ingmar Bergman- Film Director",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-69b436a123a1",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 365.608,
+    "checksum": "sha256:f1a2b56e0684b3ca1edd53bc559f7accda396e49474155c05b7bb702c844e787"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Ingmar Bergman: Film Director Introduction Most films are just entertainment – they lack the 31. _____ that is necessary for great art. Problems with modern commercial films They depend too much on surprise for their effect. Character development is regarded as unimportant and they depend on using successful 32. _____ in the films. Directors are unable to use 33. _____ to create an atmosphere. Directors lack the ability to focus on what is important. Dramatic impact of Bergman's films He had a unique ability to portray 34. _____ Every image has a 35. _____ and contributes to the overall meaning. His stories work at two levels, as drama and as 37. _____ Common themes in Wild Strawberries The connection between journeys and 38. _____ The need to 40. _____ all that life offers",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Most films are just entertainment – they lack the 31. _____ that is necessary for great art.",
+          "answer": "Depth"
+        },
+        {
+          "id": "32",
+          "text": "Character development is regarded as unimportant and they depend on using successful 32. _____ in the films.",
+          "answer": "Actors"
+        },
+        {
+          "id": "33",
+          "text": "Directors are unable to use 33. _____ to create an atmosphere.",
+          "answer": "Light"
+        },
+        {
+          "id": "34",
+          "text": "He had a unique ability to portray 34. _____",
+          "answer": "Emotion"
+        },
+        {
+          "id": "35",
+          "text": "Every image has a 35. _____ and contributes to the overall meaning.",
+          "answer": "Purpose"
+        },
+        {
+          "id": "36",
+          "text": "A character's gestures or facial expressions can be as important as his or her 36. _____",
+          "answer": "Words"
+        },
+        {
+          "id": "37",
+          "text": "His stories work at two levels, as drama and as 37. _____",
+          "answer": "Myth"
+        },
+        {
+          "id": "38",
+          "text": "The connection between journeys and 38. _____",
+          "answer": "Dreams"
+        },
+        {
+          "id": "39",
+          "text": "39. _____ relationships",
+          "answer": "Family"
+        },
+        {
+          "id": "40",
+          "text": "The need to 40. _____ all that life offers",
+          "answer": "Accept"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Ingmar Bergman: Film Director",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Introduction",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Most films are just entertainment – they lack the 31. _____ that is necessary for great art.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problems with modern commercial films",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "They depend too much on surprise for their effect.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Character development is regarded as unimportant and they depend on using successful 32. _____ in the films.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Directors are unable to use 33. _____ to create an atmosphere.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Directors lack the ability to focus on what is important.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Dramatic impact of Bergman's films",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "He had a unique ability to portray 34. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Every image has a 35. _____ and contributes to the overall meaning.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A character's gestures or facial expressions can be as important as his or her 36. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "His stories work at two levels, as drama and as 37. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Common themes in Wild Strawberries",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The connection between journeys and 38. _____",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "39. _____ relationships",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The need to 40. _____ all that life offers",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Depth",
+        "32": "Actors",
+        "33": "Light",
+        "34": "Emotion",
+        "35": "Purpose",
+        "36": "Words",
+        "37": "Myth",
+        "38": "Dreams",
+        "39": "Family",
+        "40": "Accept"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 8640,
+      "text": "4. You will hear part of a lecture on the Swedish film director, Ingmar Bergman, given"
+    },
+    {
+      "startMs": 8640,
+      "endMs": 14840,
+      "text": "to media study students by a film critic. First, you have some time to look at questions"
+    },
+    {
+      "startMs": 14840,
+      "endMs": 60000,
+      "text": "31 to 40."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 74520,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 74520,
+      "endMs": 80240,
+      "text": "You can read a great novel, listen to a great symphony, or go to see a painting by a great"
+    },
+    {
+      "startMs": 80240,
+      "endMs": 86800,
+      "text": "artist, and you'll want to experience it again and again. And every time you do, you'll"
+    },
+    {
+      "startMs": 86800,
+      "endMs": 94520,
+      "text": "learn something new from it. Very few films achieve this. Most of them are mere entertainment"
+    },
+    {
+      "startMs": 94520,
+      "endMs": 100400,
+      "text": "and very few of them could be said to be works of art. They simply don't have the depth"
+    },
+    {
+      "startMs": 100400,
+      "endMs": 105320,
+      "text": "that a work of art has, and this means that you may see them once, but you won't want"
+    },
+    {
+      "startMs": 105320,
+      "endMs": 108080,
+      "text": "to watch them again."
+    },
+    {
+      "startMs": 108080,
+      "endMs": 115000,
+      "text": "Why is it that so many commercial films today have such a limited shelf life? One problem"
+    },
+    {
+      "startMs": 115000,
+      "endMs": 119920,
+      "text": "is that for many films, once you've seen them once and you know what happens, that's"
+    },
+    {
+      "startMs": 119920,
+      "endMs": 126160,
+      "text": "it. They rely on the element of surprise to keep you interested, and once that's lost,"
+    },
+    {
+      "startMs": 126160,
+      "endMs": 130960,
+      "text": "that feeling of what's going to happen next, there's nothing left."
+    },
+    {
+      "startMs": 130960,
+      "endMs": 136520,
+      "text": "In addition, the commercial nature of filmmaking means that rather than focusing on the development"
+    },
+    {
+      "startMs": 136520,
+      "endMs": 142920,
+      "text": "of characters in the film, many films are just becoming vehicles for actors, box office"
+    },
+    {
+      "startMs": 142920,
+      "endMs": 149400,
+      "text": "successes, who essentially play the same part each time. Then, as well as this, many critics"
+    },
+    {
+      "startMs": 149400,
+      "endMs": 154800,
+      "text": "would argue that the greatest black and white films had their own special world with"
+    },
+    {
+      "startMs": 154800,
+      "endMs": 160960,
+      "text": "its own special atmosphere, and that nowadays it's harder to create this because the director"
+    },
+    {
+      "startMs": 160960,
+      "endMs": 164760,
+      "text": "is unable to play with light in the same way."
+    },
+    {
+      "startMs": 164760,
+      "endMs": 170040,
+      "text": "Another problem is that many directors lack the ability to focus the camera on the important"
+    },
+    {
+      "startMs": 170040,
+      "endMs": 176240,
+      "text": "points. There may be impressive visual images, but they don't contribute to the meaning"
+    },
+    {
+      "startMs": 176240,
+      "endMs": 182320,
+      "text": "of the film. 。"
+    },
+    {
+      "startMs": 182320,
+      "endMs": 190120,
+      "text": "Which brings me on to Ingmar Bergman, the great Swedish film director who died in 2007."
+    },
+    {
+      "startMs": 190120,
+      "endMs": 196760,
+      "text": "No other director has equaled Bergman in his ability to convey emotion. His films have"
+    },
+    {
+      "startMs": 196760,
+      "endMs": 203720,
+      "text": "the dramatic force of a work by the world's greatest playwrights such as Ibsen or Shakespeare."
+    },
+    {
+      "startMs": 203720,
+      "endMs": 211080,
+      "text": "Watching Bergman's films is an enriching experience. Nothing is immediately obvious or predictable,"
+    },
+    {
+      "startMs": 211080,
+      "endMs": 215480,
+      "text": "but gradually it becomes clear where he is taking you."
+    },
+    {
+      "startMs": 215480,
+      "endMs": 222560,
+      "text": "If you study a film such as Wild Strawberries, you'll see that every little detail is significant."
+    },
+    {
+      "startMs": 222560,
+      "endMs": 228680,
+      "text": "Each image on the screen is there for a purpose, and gradually builds up an understanding"
+    },
+    {
+      "startMs": 228680,
+      "endMs": 235400,
+      "text": "of the central meaning. With Bergman too, you know that a small gesture made by a character"
+    },
+    {
+      "startMs": 235400,
+      "endMs": 242400,
+      "text": "or the expression on a character's face can tell you just as much as the words uttered."
+    },
+    {
+      "startMs": 242400,
+      "endMs": 247800,
+      "text": "In his film Persona, the central character says nothing, but meaning is conveyed by"
+    },
+    {
+      "startMs": 247800,
+      "endMs": 250840,
+      "text": "what we see on the screen."
+    },
+    {
+      "startMs": 250840,
+      "endMs": 256840,
+      "text": "But Bergman wasn't just a great cinematographer. He was also a great storyteller."
+    },
+    {
+      "startMs": 256840,
+      "endMs": 263280,
+      "text": "Each of his films follows a similar pattern in that the story is organized on two levels."
+    },
+    {
+      "startMs": 263280,
+      "endMs": 269520,
+      "text": "Firstly, on the level of a straightforward, dramatic narrative. But secondly, on the level"
+    },
+    {
+      "startMs": 269520,
+      "endMs": 275640,
+      "text": "of myth, and the story works throughout the film on both these levels."
+    },
+    {
+      "startMs": 275640,
+      "endMs": 281080,
+      "text": "In Bergman's film Wild Strawberries, an old man travels back to the places he knew as"
+    },
+    {
+      "startMs": 281080,
+      "endMs": 288240,
+      "text": "a child and a young man. In the film, we can identify themes that occur again and again"
+    },
+    {
+      "startMs": 288240,
+      "endMs": 294960,
+      "text": "in Bergman's work. First of all, we have the idea of the journey. Part of the journey"
+    },
+    {
+      "startMs": 294960,
+      "endMs": 301720,
+      "text": "is a real one, but linked with that is the theme of dreams, where they can take us and"
+    },
+    {
+      "startMs": 301720,
+      "endMs": 306360,
+      "text": "what we can learn from them. Another theme, which was to be central"
+    },
+    {
+      "startMs": 306360,
+      "endMs": 312120,
+      "text": "to Bergman's work throughout his life, is that of relationships, and in particular,"
+    },
+    {
+      "startMs": 312120,
+      "endMs": 319000,
+      "text": "the ties that join the members of a family together. And finally, as the old man in Wild"
+    },
+    {
+      "startMs": 319000,
+      "endMs": 324680,
+      "text": "Strawberries struggles to make sense of his life, we have another theme which underlies all"
+    },
+    {
+      "startMs": 324680,
+      "endMs": 331560,
+      "text": "his work. No matter how anxious or unhappy his characters may appear to be, and that"
+    },
+    {
+      "startMs": 331560,
+      "endMs": 339000,
+      "text": "is, that we have to accept everything that life can give. It's not a fashionable philosophy,"
+    },
+    {
+      "startMs": 339000,
+      "endMs": 347360,
+      "text": "and it may be why Bergman's films have fallen out of fashion."
+    },
+    {
+      "startMs": 347360,
+      "endMs": 353480,
+      "text": "That is the end of Part 4. You now have one minute to check your answers to Part 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 50,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

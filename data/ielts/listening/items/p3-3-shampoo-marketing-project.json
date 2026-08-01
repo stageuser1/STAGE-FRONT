@@ -1,0 +1,730 @@
+{
+  "id": "p3-3-shampoo-marketing-project",
+  "title": "Shampoo Marketing Project",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-863966a28b0e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 490.08,
+    "checksum": "sha256:556af6b57726bb0285deadb4ac190a863ccaba1807432fd74ebf96f1e90b742a"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–26.",
+      "instruction": "Choose the correct letter, A, B, or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Janet says that over time, shampoo has become",
+          "options": [
+            {
+              "id": "A",
+              "text": "a cheaper product."
+            },
+            {
+              "id": "B",
+              "text": "more hygienic in its effects."
+            },
+            {
+              "id": "C",
+              "text": "a different kind of commodity."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "What does Janet say about ‘bad hair days’?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They really do exist."
+            },
+            {
+              "id": "B",
+              "text": "Women worry about them more than men."
+            },
+            {
+              "id": "C",
+              "text": "Their name is inaccurate."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "What do Janet and Michael say about the chemicals used in shampoos?",
+          "options": [
+            {
+              "id": "A",
+              "text": "All shampoos contain the same chemicals."
+            },
+            {
+              "id": "B",
+              "text": "The chemicals are believed to be dangerous."
+            },
+            {
+              "id": "C",
+              "text": "The presence of the chemicals is rarely publicised."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "24",
+          "text": "According to Janet, printing directly onto shampoo bottles, rather than onto labels,",
+          "options": [
+            {
+              "id": "A",
+              "text": "costs more."
+            },
+            {
+              "id": "B",
+              "text": "looks less attractive."
+            },
+            {
+              "id": "C",
+              "text": "takes a lot longer."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "25",
+          "text": "With regard to environmental issues, Michael and Janet want to investigate",
+          "options": [
+            {
+              "id": "A",
+              "text": "the appearance of shampoo bottles."
+            },
+            {
+              "id": "B",
+              "text": "variations in the weight of shampoo bottles."
+            },
+            {
+              "id": "C",
+              "text": "the source of recycled plastic in shampoo bottles."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "26",
+          "text": "Michael bases his own shampoo purchase decisions on his",
+          "options": [
+            {
+              "id": "A",
+              "text": "loyalty to certain brands."
+            },
+            {
+              "id": "B",
+              "text": "desire to get value for money."
+            },
+            {
+              "id": "C",
+              "text": "willingness to try new products."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 27–30.",
+      "instruction": "According to the speakers, what is the main advertising focus of each of the following shampoo advertisements? Choose FOUR answers from the box and write the correct letter, A–G next to questions 27–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "link to relaxation"
+        },
+        {
+          "id": "B",
+          "text": "enviable lifestyle"
+        },
+        {
+          "id": "C",
+          "text": "natural ingredients"
+        },
+        {
+          "id": "D",
+          "text": "masculine image"
+        },
+        {
+          "id": "E",
+          "text": "product reliability"
+        },
+        {
+          "id": "F",
+          "text": "romantic interest"
+        },
+        {
+          "id": "G",
+          "text": "use by celebrities"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Zing",
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "Splash",
+          "answer": "F"
+        },
+        {
+          "id": "29",
+          "text": "Just go",
+          "answer": "E"
+        },
+        {
+          "id": "30",
+          "text": "Brozene",
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "A",
+        "23": "C",
+        "24": "B",
+        "25": "B",
+        "26": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "27": "B",
+        "28": "F",
+        "29": "E",
+        "30": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12080,
+      "text": "Business students called Janet and Michael, discussing their research into the marketing"
+    },
+    {
+      "startMs": 12080,
+      "endMs": 15520,
+      "text": "of different kinds of shampoo."
+    },
+    {
+      "startMs": 15520,
+      "endMs": 19520,
+      "text": "First you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 72920,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 72920,
+      "endMs": 77440,
+      "text": "Michael: Hi Janet, how are you getting on with the shampoo marketing project?"
+    },
+    {
+      "startMs": 77440,
+      "endMs": 80280,
+      "text": "Janet: Hi Michael, it's interesting."
+    },
+    {
+      "startMs": 80280,
+      "endMs": 84920,
+      "text": "I've read how shampoo marketing has developed over the last hundred years."
+    },
+    {
+      "startMs": 84920,
+      "endMs": 88120,
+      "text": "Michael: Oh, I didn't think we needed to do that."
+    },
+    {
+      "startMs": 88120,
+      "endMs": 90920,
+      "text": "Janet: True, but I'm interested anyway."
+    },
+    {
+      "startMs": 90920,
+      "endMs": 96760,
+      "text": "Basically, what was once sold as an economical way of getting your hair clean has evolved"
+    },
+    {
+      "startMs": 96760,
+      "endMs": 99560,
+      "text": "into a beauty product."
+    },
+    {
+      "startMs": 99560,
+      "endMs": 105640,
+      "text": "And shampoo is interesting because it's a key influence in how we see ourselves."
+    },
+    {
+      "startMs": 105640,
+      "endMs": 108160,
+      "text": "You've heard of bad hair days."
+    },
+    {
+      "startMs": 108160,
+      "endMs": 113080,
+      "text": "Michael: When your hair looks bad, maybe you didn't wash it and you feel bad about it."
+    },
+    {
+      "startMs": 113080,
+      "endMs": 114080,
+      "text": "You heard of them?"
+    },
+    {
+      "startMs": 114080,
+      "endMs": 115080,
+      "text": "Yes."
+    },
+    {
+      "startMs": 115080,
+      "endMs": 116080,
+      "text": "Had one?"
+    },
+    {
+      "startMs": 116080,
+      "endMs": 117080,
+      "text": "No."
+    },
+    {
+      "startMs": 117080,
+      "endMs": 118080,
+      "text": "Don't think they're real."
+    },
+    {
+      "startMs": 118080,
+      "endMs": 119080,
+      "text": "Bad hair days?"
+    },
+    {
+      "startMs": 119080,
+      "endMs": 120080,
+      "text": "Come on."
+    },
+    {
+      "startMs": 120080,
+      "endMs": 126400,
+      "text": "Janet: Well, whatever you want to call them, that's not what research from Yale is suggesting."
+    },
+    {
+      "startMs": 126400,
+      "endMs": 131560,
+      "text": "They're not just imagined and both sexes are equally affected by them."
+    },
+    {
+      "startMs": 131560,
+      "endMs": 136080,
+      "text": "And when they happen, people tend to perform and feel worse than usual."
+    },
+    {
+      "startMs": 136080,
+      "endMs": 137080,
+      "text": "Michael: Right."
+    },
+    {
+      "startMs": 137080,
+      "endMs": 144280,
+      "text": "And I've been reading about shampoo ingredients, chemicals like sodium laurel sulfate,"
+    },
+    {
+      "startMs": 144280,
+      "endMs": 146680,
+      "text": "Janet: methyl chloride."
+    },
+    {
+      "startMs": 146680,
+      "endMs": 152920,
+      "text": "Many of the manufacturers tend to use these or others like them, though they keep it quiet."
+    },
+    {
+      "startMs": 152920,
+      "endMs": 153920,
+      "text": "Michael: Right."
+    },
+    {
+      "startMs": 153920,
+      "endMs": 158160,
+      "text": "When it comes to the product packaging, they're strangely silent about it."
+    },
+    {
+      "startMs": 158160,
+      "endMs": 163480,
+      "text": "Janet: Another area it would be interesting to investigate is the labeling on bottles."
+    },
+    {
+      "startMs": 163480,
+      "endMs": 170640,
+      "text": "Apparently, printing directly onto the bottles costs about 50% less than sticking a printed"
+    },
+    {
+      "startMs": 170640,
+      "endMs": 174520,
+      "text": "label on because it's a much quicker process."
+    },
+    {
+      "startMs": 174520,
+      "endMs": 180640,
+      "text": "But manufacturers are lukewarm about this because it doesn't enhance the visual impact"
+    },
+    {
+      "startMs": 180640,
+      "endMs": 182240,
+      "text": "of the bottle."
+    },
+    {
+      "startMs": 182240,
+      "endMs": 185520,
+      "text": "It comes across as a bit cheap."
+    },
+    {
+      "startMs": 185520,
+      "endMs": 188280,
+      "text": "Michael: We need to think about environmental issues."
+    },
+    {
+      "startMs": 188280,
+      "endMs": 192760,
+      "text": "I was surprised how little recycled plastic goes into the bottles."
+    },
+    {
+      "startMs": 192760,
+      "endMs": 198360,
+      "text": "Janet: I think it's because light colored plastic is more difficult to make from recycled stuff."
+    },
+    {
+      "startMs": 198360,
+      "endMs": 203760,
+      "text": "Michael: Yeah, but manufacturers can make their packaging more environmentally friendly just by making"
+    },
+    {
+      "startMs": 203760,
+      "endMs": 205480,
+      "text": "it less heavy."
+    },
+    {
+      "startMs": 205480,
+      "endMs": 209720,
+      "text": "I'd like to find out whether some of them actually do when we do the research."
+    },
+    {
+      "startMs": 209720,
+      "endMs": 212600,
+      "text": "Janet: Yes, that's worth looking into."
+    },
+    {
+      "startMs": 212600,
+      "endMs": 218040,
+      "text": "Thinking about you as a customer, what's important when choosing shampoo?"
+    },
+    {
+      "startMs": 218040,
+      "endMs": 221200,
+      "text": "Michael: I'm always wary of special offers."
+    },
+    {
+      "startMs": 221200,
+      "endMs": 226680,
+      "text": "When something's flagged as being half price, it rarely is, really."
+    },
+    {
+      "startMs": 226680,
+      "endMs": 232120,
+      "text": "But if there's a make I've never seen before, I'm usually up for giving it a go rather"
+    },
+    {
+      "startMs": 232120,
+      "endMs": 236160,
+      "text": "than sticking to one or two favorite brands all my life."
+    },
+    {
+      "startMs": 236160,
+      "endMs": 240480,
+      "text": "Janet: Interesting."
+    },
+    {
+      "startMs": 240480,
+      "endMs": 245680,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27"
+    },
+    {
+      "startMs": 245680,
+      "endMs": 266840,
+      "text": "to 30."
+    },
+    {
+      "startMs": 266840,
+      "endMs": 273920,
+      "text": "Now listen and answer questions 27 to 30."
+    },
+    {
+      "startMs": 273920,
+      "endMs": 281920,
+      "text": "Janet: Shall we discuss some of these shampoo advertisements then and try and identify what sort of psychological"
+    },
+    {
+      "startMs": 281920,
+      "endMs": 285440,
+      "text": "response each one is trying to get from the viewer?"
+    },
+    {
+      "startMs": 285440,
+      "endMs": 286600,
+      "text": "Michael: Okay."
+    },
+    {
+      "startMs": 286600,
+      "endMs": 288240,
+      "text": "What about Zing?"
+    },
+    {
+      "startMs": 288240,
+      "endMs": 293320,
+      "text": "Janet: Well, it would probably appeal equally to men and women."
+    },
+    {
+      "startMs": 293320,
+      "endMs": 300640,
+      "text": "In the ad we see this happy family, lovely home, healthy, good looking children with clean"
+    },
+    {
+      "startMs": 300640,
+      "endMs": 301640,
+      "text": "hair."
+    },
+    {
+      "startMs": 301640,
+      "endMs": 303880,
+      "text": "Obviously, yes."
+    },
+    {
+      "startMs": 303880,
+      "endMs": 311560,
+      "text": "And I think we're supposed to watch the ad and think, wow, if only my life was like that."
+    },
+    {
+      "startMs": 311560,
+      "endMs": 314000,
+      "text": "Michael: Yeah, I know what you mean."
+    },
+    {
+      "startMs": 314000,
+      "endMs": 319000,
+      "text": "I think the advertisers want the viewers to almost wish they were the people in the ad."
+    },
+    {
+      "startMs": 319000,
+      "endMs": 320000,
+      "text": "Janet: Sure."
+    },
+    {
+      "startMs": 320000,
+      "endMs": 323000,
+      "text": "I mean, that's very common in advertising."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 325400,
+      "text": "Michael: But not universal."
+    },
+    {
+      "startMs": 325400,
+      "endMs": 331400,
+      "text": "You know that ad for Splash shampoo that lasts about five minutes and where there's a story?"
+    },
+    {
+      "startMs": 331400,
+      "endMs": 336960,
+      "text": "Janet: Oh, yes, the commercial about the couple and all through the commercial."
+    },
+    {
+      "startMs": 336960,
+      "endMs": 340360,
+      "text": "It's not clear if they're going to break up or stay together."
+    },
+    {
+      "startMs": 340360,
+      "endMs": 341360,
+      "text": "Michael: Exactly."
+    },
+    {
+      "startMs": 341360,
+      "endMs": 345600,
+      "text": "Well, I think the marketing has been done very cleverly there."
+    },
+    {
+      "startMs": 345600,
+      "endMs": 349720,
+      "text": "I don't think we're supposed to want to be the characters in the commercial, but we're"
+    },
+    {
+      "startMs": 349720,
+      "endMs": 351920,
+      "text": "supposed to get to know them a bit."
+    },
+    {
+      "startMs": 351920,
+      "endMs": 352920,
+      "text": "Janet: Yes."
+    },
+    {
+      "startMs": 352920,
+      "endMs": 355400,
+      "text": "Well, I thought the story was effective."
+    },
+    {
+      "startMs": 355400,
+      "endMs": 359840,
+      "text": "You're glad to learn when it's over that they're obviously going to stay together."
+    },
+    {
+      "startMs": 359840,
+      "endMs": 364920,
+      "text": "But I think the role of the shampoo and the story was a bit thin to say the least."
+    },
+    {
+      "startMs": 364920,
+      "endMs": 365920,
+      "text": "Michael: Hmm."
+    },
+    {
+      "startMs": 365920,
+      "endMs": 366920,
+      "text": "Maybe."
+    },
+    {
+      "startMs": 366920,
+      "endMs": 370920,
+      "text": "I suppose some manufacturers don't want to bore people with all the science."
+    },
+    {
+      "startMs": 370920,
+      "endMs": 371920,
+      "text": "Janet: Sure."
+    },
+    {
+      "startMs": 371920,
+      "endMs": 374920,
+      "text": "Michael: And then there's the Just-go advertisement."
+    },
+    {
+      "startMs": 374920,
+      "endMs": 375920,
+      "text": "Janet: Yes."
+    },
+    {
+      "startMs": 375920,
+      "endMs": 382080,
+      "text": "That had lots of technical information about what the shampoo actually consists of."
+    },
+    {
+      "startMs": 382080,
+      "endMs": 387560,
+      "text": "I suppose they want customers to feel confident that when they buy Just-go, they're at least"
+    },
+    {
+      "startMs": 387560,
+      "endMs": 389560,
+      "text": "making an informed decision."
+    },
+    {
+      "startMs": 389560,
+      "endMs": 390560,
+      "text": "Michael: Yes."
+    },
+    {
+      "startMs": 390560,
+      "endMs": 393640,
+      "text": "They're buying something that will do the job they want it to."
+    },
+    {
+      "startMs": 393640,
+      "endMs": 394640,
+      "text": "Janet: That's it."
+    },
+    {
+      "startMs": 394640,
+      "endMs": 400360,
+      "text": "Michael: I've read one of the most effective shampoo ads in recent times was the one for Brozene."
+    },
+    {
+      "startMs": 400360,
+      "endMs": 407920,
+      "text": "Janet: Yes, but there's no commentary, just images of the shampoo and lots of clean hair."
+    },
+    {
+      "startMs": 407920,
+      "endMs": 414000,
+      "text": "I suppose the effect, though, is very calming with soft music and very peaceful imagery."
+    },
+    {
+      "startMs": 414000,
+      "endMs": 417520,
+      "text": "Michael: Yes, but at the end of the ad, we've hardly learned anything about it."
+    },
+    {
+      "startMs": 417520,
+      "endMs": 419000,
+      "text": "About the product, have we?"
+    },
+    {
+      "startMs": 419000,
+      "endMs": 421000,
+      "text": "Janet: I suppose not."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 95,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

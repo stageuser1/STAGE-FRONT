@@ -1,0 +1,505 @@
+{
+  "id": "p4-47-the-early-history-of-salt",
+  "title": "The Early History of Salt",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-aa764e719ebb",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 475.392,
+    "checksum": "sha256:76cbd4740482727d90b9edaad8eff2c8af824c812f92af7518f92f5afe5967cf"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. The Early History of Salt Introduction Salt is essential for human 31. ________ Ancient Rome The word 32. ________ comes from the Latin word 'solarium argetum', which was used to describe the payment to Roman soldiers. Ancient Sweden Animals were kept in the local 33. ________ at the right time of year. Fresh meat was only available in 34. ________ Salt has been used widely: we can tell from the diet of the 35. ________ in Sweden. Salt source People mainly extract salt from oceans and 37. ________ in the basins. Salt from spring water is more 38. ________ and purer compared to that from sea water. Salt distribution In ancient Sweden Locals needed to protect the 39. ________ by which they imported salt. In other ancient countries People carrying salt around were seen as a natural means of 40. ________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Salt is essential for human 31. ________",
+          "answer": "health"
+        },
+        {
+          "id": "32",
+          "text": "The word 32. ________ comes from the Latin word 'solarium argetum', which was used to describe the payment to Roman soldiers.",
+          "answer": "salary"
+        },
+        {
+          "id": "33",
+          "text": "Animals were kept in the local 33. ________ at the right time of year.",
+          "answer": "forests"
+        },
+        {
+          "id": "34",
+          "text": "Fresh meat was only available in 34. ________",
+          "answer": "October"
+        },
+        {
+          "id": "35",
+          "text": "Salt has been used widely: we can tell from the diet of the 35. ________ in Sweden.",
+          "answer": "King/kings"
+        },
+        {
+          "id": "36",
+          "text": "36. ________ consumption increased rapidly because the food was much too salty.",
+          "answer": "beer"
+        },
+        {
+          "id": "37",
+          "text": "People mainly extract salt from oceans and 37. ________ in the basins.",
+          "answer": "deserts"
+        },
+        {
+          "id": "38",
+          "text": "Salt from spring water is more 38. ________ and purer compared to that from sea water.",
+          "answer": "concentrated"
+        },
+        {
+          "id": "39",
+          "text": "Locals needed to protect the 39. ________ by which they imported salt.",
+          "answer": "shipping"
+        },
+        {
+          "id": "40",
+          "text": "People carrying salt around were seen as a natural means of 40. ________",
+          "answer": "transport"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Early History of Salt",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Introduction",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Salt is essential for human 31. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Ancient Rome",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The word 32. ________ comes from the Latin word 'solarium argetum', which was used to describe the payment to Roman soldiers.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Ancient Sweden",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Animals were kept in the local 33. ________ at the right time of year.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Fresh meat was only available in 34. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Salt has been used widely: we can tell from the diet of the 35. ________ in Sweden.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "36. ________ consumption increased rapidly because the food was much too salty.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Salt source",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "People mainly extract salt from oceans and 37. ________ in the basins.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Salt from spring water is more 38. ________ and purer compared to that from sea water.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Salt distribution",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In ancient Sweden",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Locals needed to protect the 39. ________ by which they imported salt.",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "In other ancient countries",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "People carrying salt around were seen as a natural means of 40. ________",
+          "list": true,
+          "level": 1
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "health",
+        "32": "salary",
+        "33": "forests",
+        "34": "October",
+        "35": "King/kings",
+        "36": "beer",
+        "37": "deserts",
+        "38": "concentrated",
+        "39": "shipping",
+        "40": "transport"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12360,
+      "text": "Part 4. You will hear part of the presentation about the early history of salt. First, you"
+    },
+    {
+      "startMs": 12360,
+      "endMs": 18480,
+      "text": "have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 42360,
+      "endMs": 72160,
+      "text": "Now, listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 72160,
+      "endMs": 81800,
+      "text": "In my presentation, I'm going to talk about salt. In modern times, when we talk about salt,"
+    },
+    {
+      "startMs": 81800,
+      "endMs": 86960,
+      "text": "people may associate it with high blood pressure or increased heart risk and many health"
+    },
+    {
+      "startMs": 86960,
+      "endMs": 92420,
+      "text": "experts warn that we should use less salt in our meals and dishes. However, we should not"
+    },
+    {
+      "startMs": 92420,
+      "endMs": 98600,
+      "text": "ignore its importance in our cuisine and even in early human history. Salt is one of"
+    },
+    {
+      "startMs": 98600,
+      "endMs": 104120,
+      "text": "the oldest, most ubiquitous food seasonings. The taste of salt is one of the basic human"
+    },
+    {
+      "startMs": 104120,
+      "endMs": 111400,
+      "text": "tastes. More importantly, salt plays an indispensable role in the health of human beings. For example,"
+    },
+    {
+      "startMs": 111400,
+      "endMs": 116920,
+      "text": "it regulates the body's acid-based balance. Because of its importance to survival, salt"
+    },
+    {
+      "startMs": 116920,
+      "endMs": 122240,
+      "text": "has often been considered a valuable commodity during human history. This can be tracked 12 0002:02,240 --> 00:02:08,040 all the way back to ancient Greece, ancient Egypt and ancient Rome, when salt was highly"
+    },
+    {
+      "startMs": 128040,
+      "endMs": 134400,
+      "text": "valued and used as a method of trade and currency. In ancient Rome, the busiest road leading"
+    },
+    {
+      "startMs": 134400,
+      "endMs": 141640,
+      "text": "to the city was the Via Salaria, which means the salt route in English. A salt as pay,"
+    },
+    {
+      "startMs": 141640,
+      "endMs": 148120,
+      "text": "which partly consist of salt, was known as Salarium Argentum in Latin, from which we derived"
+    },
+    {
+      "startMs": 148120,
+      "endMs": 154520,
+      "text": "the English word Salary. A salt as Salary was cut if he was not worth his salt, and expression"
+    },
+    {
+      "startMs": 154520,
+      "endMs": 162280,
+      "text": "still used today. In fact, salt was not only the first condiment discovered, but also the first"
+    },
+    {
+      "startMs": 162280,
+      "endMs": 169080,
+      "text": "preservative. We know today that food goes bad because microorganisms in the food multiply"
+    },
+    {
+      "startMs": 169080,
+      "endMs": 175880,
+      "text": "in abundance, and a high salt environment is not conducive to microbial reproduction. Extremely"
+    },
+    {
+      "startMs": 175880,
+      "endMs": 182360,
+      "text": "high concentrations of salt can even kill microorganisms in the food. The ancients certainly didn't know"
+    },
+    {
+      "startMs": 182440,
+      "endMs": 189240,
+      "text": "this, but they did know that salted food can be preserved for a long time. The use of salt as a"
+    },
+    {
+      "startMs": 189240,
+      "endMs": 196440,
+      "text": "preservative can be traced to ancient Sweden. At first, hunting was the principal means of livelihood."
+    },
+    {
+      "startMs": 196440,
+      "endMs": 202440,
+      "text": "In this case, meat supplies were unlikely to be frequent. What's more, fewer animals were"
+    },
+    {
+      "startMs": 202440,
+      "endMs": 208600,
+      "text": "available for hunting. In order to ensure the supply of meat, many families in Sweden began to"
+    },
+    {
+      "startMs": 208600,
+      "endMs": 213640,
+      "text": "raise animals in the surrounding forests during the summer, when the weather was suitable for"
+    },
+    {
+      "startMs": 213640,
+      "endMs": 219720,
+      "text": "animals to survive. These animals were fed every day until about three to four months later."
+    },
+    {
+      "startMs": 219720,
+      "endMs": 225320,
+      "text": "That's in October. They were ready to be butchered for meat, and that was the only month when ancient"
+    },
+    {
+      "startMs": 225320,
+      "endMs": 231160,
+      "text": "Swedish people had fresh meat on their table. Then, with the continuous increase in productivity,"
+    },
+    {
+      "startMs": 231160,
+      "endMs": 236760,
+      "text": "people finally had some meat left. However, how to store the meat had become a headache,"
+    },
+    {
+      "startMs": 236760,
+      "endMs": 243240,
+      "text": "until someone invented a whole new way to preserve food, salting. People tried to keep meat from"
+    },
+    {
+      "startMs": 243240,
+      "endMs": 248840,
+      "text": "going bad by adding some salt to it, and it could be preserved for several months and even years."
+    },
+    {
+      "startMs": 249560,
+      "endMs": 256280,
+      "text": "There was evidence that salt was widely used to preserve meat. Historical documents in 1573"
+    },
+    {
+      "startMs": 256280,
+      "endMs": 264280,
+      "text": "recorded the Swedish king's/kings' everyday meals, mentioning that 175 pounds of meat was consumed each year,"
+    },
+    {
+      "startMs": 264360,
+      "endMs": 271800,
+      "text": "but over 150 pounds was salty. From this, we can clearly see the importance of salt in Sweden at"
+    },
+    {
+      "startMs": 271800,
+      "endMs": 277800,
+      "text": "that time. In addition, the documents also noted the annual sales of beer in Sweden"
+    },
+    {
+      "startMs": 277800,
+      "endMs": 283400,
+      "text": "soared during that period, and this must be related to high levels of salt in their food."
+    },
+    {
+      "startMs": 283560,
+      "endMs": 296520,
+      "text": "Now, let's turn to the sources of salt. Where is salt from? Well, salt is common in nature."
+    },
+    {
+      "startMs": 296520,
+      "endMs": 302280,
+      "text": "It has long been found that salt can be extracted from seawater, mineral deposits,"
+    },
+    {
+      "startMs": 302280,
+      "endMs": 310280,
+      "text": "saline lakes, brine, spring, etc. Among which the two most important ones are oceans and basins."
+    },
+    {
+      "startMs": 311000,
+      "endMs": 317800,
+      "text": "On the floor of the latter often lie deserts, where traces of salt can be found, such as the Sahara."
+    },
+    {
+      "startMs": 318440,
+      "endMs": 323960,
+      "text": "Furthermore, the quality of different salt types varies a lot. For example,"
+    },
+    {
+      "startMs": 323960,
+      "endMs": 331160,
+      "text": "salt from seawater is always mixed with impurities, so after the salt is dried, the sediments and"
+    },
+    {
+      "startMs": 331160,
+      "endMs": 337080,
+      "text": "other chemicals need to be purified before eating. However, this is not the case with salt from"
+    },
+    {
+      "startMs": 337080,
+      "endMs": 343560,
+      "text": "spring water. We can hardly find any impurities and the salt level is much more concentrated."
+    },
+    {
+      "startMs": 344280,
+      "endMs": 351400,
+      "text": "Then, how did people distribute salt around the world? Of course, in modern times, we have various"
+    },
+    {
+      "startMs": 351400,
+      "endMs": 357960,
+      "text": "ways of transporting goods, but in ancient times, it was not the case. Take ancient Sweden,"
+    },
+    {
+      "startMs": 357960,
+      "endMs": 363240,
+      "text": "we mentioned before, as an example. Because of the heavy use of salt in the diet, 48 0006:03,240 --> 00:06:09,080 Sweden could not feed itself and had to import large amounts of salt from other countries."
+    },
+    {
+      "startMs": 369080,
+      "endMs": 374280,
+      "text": "In order to make sure they could buy enough salt from abroad, the Swedish had to attach great"
+    },
+    {
+      "startMs": 374280,
+      "endMs": 380280,
+      "text": "importance to shipping and keep it undamaged, as it was the most crucial way at that time."
+    },
+    {
+      "startMs": 381080,
+      "endMs": 386280,
+      "text": "While in other ancient countries, in order to distribute salt to other places,"
+    },
+    {
+      "startMs": 386280,
+      "endMs": 392040,
+      "text": "groups of men were employed. They put bags of salt on their shoulders or bags and moved them to"
+    },
+    {
+      "startMs": 392040,
+      "endMs": 397080,
+      "text": "the surrounding regions, and gradually these people were considered as a mode of transport in"
+    },
+    {
+      "startMs": 397080,
+      "endMs": 403240,
+      "text": "early times. Later, with the improvement of traffic conditions, salt trade between different regions"
+    },
+    {
+      "startMs": 403240,
+      "endMs": 408920,
+      "text": "was boosted, and long-distance food trade was also promoted, making communication between"
+    },
+    {
+      "startMs": 408920,
+      "endMs": 419240,
+      "text": "different cultures more frequent and... That is the end of Part 4. You now have one minute to check"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 54,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

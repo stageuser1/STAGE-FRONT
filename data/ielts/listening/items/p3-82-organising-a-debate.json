@@ -1,0 +1,621 @@
+{
+  "id": "p3-82-organising-a-debate",
+  "title": "Organising a debate",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-3b090687c6dc",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 490.44,
+    "checksum": "sha256:dae909b09c5073b8f8c1a285d18d77d411c3dbc2312773907e0662a4779c85aa"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–26",
+      "instruction": "Choose the correct letter, A, B, or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Why is Fiona keen to organise a debate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She has attended debates in other departments."
+            },
+            {
+              "id": "B",
+              "text": "She organised debates while at secondary school."
+            },
+            {
+              "id": "C",
+              "text": "She has talked about debating with a friend."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "Fiona says that an advantage of debating is that it can",
+          "options": [
+            {
+              "id": "A",
+              "text": "help students to form opinions."
+            },
+            {
+              "id": "B",
+              "text": "improve students' listening skills."
+            },
+            {
+              "id": "C",
+              "text": "develop students' self-confidence."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "How will the debate topic be selected?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Daniel and Fiona will ask the lecturer to choose one from a list."
+            },
+            {
+              "id": "B",
+              "text": "The other students will select one of Daniel and Fiona’s suggestions."
+            },
+            {
+              "id": "C",
+              "text": "Daniel and Fiona will collect suggestions from the other students."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Fiona and Daniel know the key to a successful debate is for students to",
+          "options": [
+            {
+              "id": "A",
+              "text": "choose a topic that really involves them."
+            },
+            {
+              "id": "B",
+              "text": "plan their speeches carefully."
+            },
+            {
+              "id": "C",
+              "text": "be given positions to defend."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "Daniel thinks it would be good for the students to be in two teams because it would",
+          "options": [
+            {
+              "id": "A",
+              "text": "give everyone a chance to speak."
+            },
+            {
+              "id": "B",
+              "text": "help students with less confidence."
+            },
+            {
+              "id": "C",
+              "text": "share the workload between students."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "What does the lecturer agree to do after the debate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "make comments on students’ written work."
+            },
+            {
+              "id": "B",
+              "text": "help Daniel and Fiona to write a report."
+            },
+            {
+              "id": "C",
+              "text": "set the students an essay on a different topic."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 27–30",
+      "instruction": "Choose FOUR answers from the box and write the correct letter, A–F, next to questions 27–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "ask for suggestions"
+        },
+        {
+          "id": "B",
+          "text": "give a handout of key points"
+        },
+        {
+          "id": "C",
+          "text": "write on the board"
+        },
+        {
+          "id": "D",
+          "text": "provide a photocopy of an article"
+        },
+        {
+          "id": "E",
+          "text": "recommend a textbook"
+        },
+        {
+          "id": "F",
+          "text": "give a demonstration"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "understanding debating procedures",
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "using body language",
+          "answer": "D"
+        },
+        {
+          "id": "29",
+          "text": "accessing resources",
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "asking and answering questions",
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "A",
+        "23": "B",
+        "24": "A",
+        "25": "C",
+        "26": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "27": "B",
+        "28": "D",
+        "29": "A",
+        "30": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2000,
+      "text": "You"
+    },
+    {
+      "startMs": 30000,
+      "endMs": 32000,
+      "text": "You"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 83000,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 83000,
+      "endMs": 89000,
+      "text": "Lecturer: Right now, you wanted to organize a formal discussion of some sort in the class. Is that right, Daniel?"
+    },
+    {
+      "startMs": 89000,
+      "endMs": 95000,
+      "text": "Daniel: Yes, we thought it would be really good to end our psychology course with a formal debate."
+    },
+    {
+      "startMs": 95000,
+      "endMs": 99000,
+      "text": "You know, where there's a statement and people argue for or against it."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 106000,
+      "text": "Lecturer: Good idea. Where did the enthusiasm come from? Have either of you organized debates before?"
+    },
+    {
+      "startMs": 106000,
+      "endMs": 107000,
+      "text": "Fiona? Fiona？"
+    },
+    {
+      "startMs": 107000,
+      "endMs": 115000,
+      "text": "Fiona: No, but one of my friends did in his last year at secondary school and he says he got a lot out of doing it."
+    },
+    {
+      "startMs": 115000,
+      "endMs": 119000,
+      "text": "And I know they have debates in lots of other departments here at the university."
+    },
+    {
+      "startMs": 119000,
+      "endMs": 125000,
+      "text": "Lecturer: I see. So what do you think the students, you and the others, would get out of this?"
+    },
+    {
+      "startMs": 125000,
+      "endMs": 130000,
+      "text": "Fiona: Well, a debate will encourage people to study all sides of the subject matter."
+    },
+    {
+      "startMs": 130000,
+      "endMs": 136000,
+      "text": "And I also think listening to other people's ideas can have a focusing effect on your own."
+    },
+    {
+      "startMs": 136000,
+      "endMs": 143000,
+      "text": "Sometimes you kind of don't know what you truly believe until you hear something you disagree with."
+    },
+    {
+      "startMs": 143000,
+      "endMs": 146000,
+      "text": "Lecturer: Okay, what about the topic for the debate?"
+    },
+    {
+      "startMs": 146000,
+      "endMs": 151000,
+      "text": "Daniel: We've got three to choose from. We'll show you in a minute to check they're okay."
+    },
+    {
+      "startMs": 151000,
+      "endMs": 155000,
+      "text": "At first, we thought we'd ask the other students to suggest something."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 158000,
+      "text": "But we were afraid we'd get 30 different topics."
+    },
+    {
+      "startMs": 158000,
+      "endMs": 163000,
+      "text": "So instead, we brainstormed some, just the two of us, then made a shortlist."
+    },
+    {
+      "startMs": 163000,
+      "endMs": 166000,
+      "text": "And we'll get them to vote for the one they like best."
+    },
+    {
+      "startMs": 166000,
+      "endMs": 167000,
+      "text": "Lecturer: Right."
+    },
+    {
+      "startMs": 167000,
+      "endMs": 172000,
+      "text": "Daniel: But the thing is, if people don't know how debates work, they could feel at a disadvantage."
+    },
+    {
+      "startMs": 172000,
+      "endMs": 176000,
+      "text": "I mean, it wouldn't affect their grades or anything, but it could put them off."
+    },
+    {
+      "startMs": 176000,
+      "endMs": 183000,
+      "text": "Fiona: So we thought we should have a meeting beforehand to make sure everyone's clear about what's involved in a debate."
+    },
+    {
+      "startMs": 183000,
+      "endMs": 185000,
+      "text": "And how to prepare for it."
+    },
+    {
+      "startMs": 185000,
+      "endMs": 187000,
+      "text": "Lecturer: I think that's a good idea."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 191000,
+      "text": "Fiona: And we thought we could establish some key points of a successful debate there."
+    },
+    {
+      "startMs": 191000,
+      "endMs": 196000,
+      "text": "Like that debates are effective methods for considering an issue."
+    },
+    {
+      "startMs": 196000,
+      "endMs": 202000,
+      "text": "And that you need to understand both sides of an argument in order to support one side effectively."
+    },
+    {
+      "startMs": 202000,
+      "endMs": 208000,
+      "text": "We think it'll be best if we can use an issue that the students already have strong opinions about."
+    },
+    {
+      "startMs": 208000,
+      "endMs": 213000,
+      "text": "Daniel: Then some people will be happy to speak in support of it and others to oppose it."
+    },
+    {
+      "startMs": 213000,
+      "endMs": 214000,
+      "text": "Lecturer: Right."
+    },
+    {
+      "startMs": 214000,
+      "endMs": 217000,
+      "text": "What else do you want to do at the meeting?"
+    },
+    {
+      "startMs": 217000,
+      "endMs": 222000,
+      "text": "Daniel: Well, we've got to think about how people will do the background research for the debate."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 225000,
+      "text": "We could organize everyone into two teams."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 229000,
+      "text": "That should save time for the main speakers. They won't have to do it on their own."
+    },
+    {
+      "startMs": 229000,
+      "endMs": 232000,
+      "text": "And we'll need to decide on some rules."
+    },
+    {
+      "startMs": 232000,
+      "endMs": 235000,
+      "text": "Like how long each person speaks for."
+    },
+    {
+      "startMs": 235000,
+      "endMs": 238000,
+      "text": "And to select a chair for the debate. Someone who's really confident."
+    },
+    {
+      "startMs": 238000,
+      "endMs": 239000,
+      "text": "Lecturer: Fine."
+    },
+    {
+      "startMs": 239000,
+      "endMs": 244000,
+      "text": "Now, I think you should have some sort of follow-up to the debate."
+    },
+    {
+      "startMs": 244000,
+      "endMs": 251000,
+      "text": "After it's over, I'd like you to get everyone to write a short essay focusing on what they gain from participating in it."
+    },
+    {
+      "startMs": 251000,
+      "endMs": 257000,
+      "text": "And in turn, that can feed into the work we've been doing on learning and motivation."
+    },
+    {
+      "startMs": 257000,
+      "endMs": 263000,
+      "text": "Fiona: But would you be willing to read them and report back? I mean, give some feedback on them."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 265000,
+      "text": "Lecturer: I wouldn't have made the suggestion if I wasn't."
+    },
+    {
+      "startMs": 265000,
+      "endMs": 266000,
+      "text": "Fiona: Thanks."
+    },
+    {
+      "startMs": 269000,
+      "endMs": 276000,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30."
+    },
+    {
+      "startMs": 281000,
+      "endMs": 302000,
+      "text": "Now listen and answer questions 27 to 30."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 306000,
+      "text": "Lecturer: Okay, now let's think a bit more about the meeting."
+    },
+    {
+      "startMs": 306000,
+      "endMs": 312000,
+      "text": "You need to decide exactly how you'll introduce the students to different features of a debate."
+    },
+    {
+      "startMs": 312000,
+      "endMs": 319000,
+      "text": "Daniel: Well, first of all, we need to inform everyone about what actually happens at a debate. The procedures and so on."
+    },
+    {
+      "startMs": 319000,
+      "endMs": 323000,
+      "text": "We could talk about that and write the main information on the board."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 328000,
+      "text": "Fiona: Or instead of that, we could make a summary of the main stages and hand that out."
+    },
+    {
+      "startMs": 328000,
+      "endMs": 332000,
+      "text": "Daniel: Then talk it through. Yes. Okay, that's better."
+    },
+    {
+      "startMs": 332000,
+      "endMs": 337000,
+      "text": "Fiona: Okay, but we do need to talk about body language as well."
+    },
+    {
+      "startMs": 337000,
+      "endMs": 346000,
+      "text": "Lecturer: Yes, that's a very important tool. I've got an interesting article on that with some good diagrams of techniques for things like eye contact."
+    },
+    {
+      "startMs": 346000,
+      "endMs": 349000,
+      "text": "I'll make some copies for you to give out. Fiona: Great."
+    },
+    {
+      "startMs": 349000,
+      "endMs": 353000,
+      "text": "Daniel: Then we need to think about where people will find the information on the debate topic."
+    },
+    {
+      "startMs": 353000,
+      "endMs": 356000,
+      "text": "So they'll need to know where to look for the information."
+    },
+    {
+      "startMs": 356000,
+      "endMs": 361000,
+      "text": "We could compile a list of sources, textbooks and articles and so on."
+    },
+    {
+      "startMs": 361000,
+      "endMs": 367000,
+      "text": "Fiona: We could, but couldn't people offer their own suggestions and advice on that at the meeting instead?"
+    },
+    {
+      "startMs": 367000,
+      "endMs": 370000,
+      "text": "Lecturer: Yes. Get everyone involved. Daniel: Right."
+    },
+    {
+      "startMs": 370000,
+      "endMs": 374000,
+      "text": "Fiona: What about preparation for asking and answering questions?"
+    },
+    {
+      "startMs": 374000,
+      "endMs": 379000,
+      "text": "We could try to demonstrate that, but I'm not sure how."
+    },
+    {
+      "startMs": 379000,
+      "endMs": 383000,
+      "text": "Daniel: Maybe we could put up a list of points on the board. Then discuss them."
+    },
+    {
+      "startMs": 383000,
+      "endMs": 386000,
+      "text": "Fiona: Yes, that sounds better. Thanks."
+    },
+    {
+      "startMs": 386000,
+      "endMs": 388000,
+      "text": "Lecturer: Okay. Well, let's meet up again."
+    },
+    {
+      "startMs": 391000,
+      "endMs": 394000,
+      "text": "That is the end of part three."
+    },
+    {
+      "startMs": 394000,
+      "endMs": 398000,
+      "text": "You now have 30 seconds to check your answers to part three."
+    },
+    {
+      "startMs": 421000,
+      "endMs": 430000,
+      "text": "Part four."
+    },
+    {
+      "startMs": 430000,
+      "endMs": 439000,
+      "text": "You will hear a chemistry student giving a presentation on the color purple and the development of purple dyes."
+    },
+    {
+      "startMs": 439000,
+      "endMs": 444000,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 451000,
+      "endMs": 454000,
+      "text": "You"
+    },
+    {
+      "startMs": 481000,
+      "endMs": 484000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 74,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

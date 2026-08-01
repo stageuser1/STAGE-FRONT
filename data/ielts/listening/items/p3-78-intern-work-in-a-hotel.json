@@ -1,0 +1,477 @@
+{
+  "id": "p3-78-intern-work-in-a-hotel",
+  "title": "Intern work in a hotel",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-e2c8a378c033",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 315.994,
+    "checksum": "sha256:672b90f539b24d077fa6140127534e098e4c6d7bea1fd25820437cb8b6c0badc"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Question 21-26",
+      "instruction": "Choose SIX answers from the box and write the correct letter, A-G, next to questions 21-26.",
+      "options": [
+        {
+          "id": "A",
+          "text": "How badly organized it was"
+        },
+        {
+          "id": "B",
+          "text": "How tiring it was"
+        },
+        {
+          "id": "C",
+          "text": "How strict it was"
+        },
+        {
+          "id": "D",
+          "text": "How noisy it was"
+        },
+        {
+          "id": "E",
+          "text": "How busy it was"
+        },
+        {
+          "id": "F",
+          "text": "How much patience it needed"
+        },
+        {
+          "id": "G",
+          "text": "How wide the range of work was"
+        }
+      ],
+      "questions": [
+        {
+          "id": "21",
+          "text": "reception",
+          "answer": "G"
+        },
+        {
+          "id": "22",
+          "text": "restaurant",
+          "answer": "C"
+        },
+        {
+          "id": "23",
+          "text": "coffee bar",
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "shop",
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "personal service",
+          "answer": "F"
+        },
+        {
+          "id": "26",
+          "text": "cleaning",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Question 27-30",
+      "instruction": "Choose a correct letter A, B, or C",
+      "questions": [
+        {
+          "id": "27",
+          "text": "What's the advantage of internship?",
+          "options": [
+            {
+              "id": "A",
+              "text": "benefit future career"
+            },
+            {
+              "id": "B",
+              "text": "benefit the dissertation"
+            },
+            {
+              "id": "C",
+              "text": "benefit current study"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "28",
+          "text": "What does Lorna suggest Tom to ask advice from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "tutor"
+            },
+            {
+              "id": "B",
+              "text": "hotel manager"
+            },
+            {
+              "id": "C",
+              "text": "career office"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "29",
+          "text": "Why does tutor want Lorna to do her presentation?",
+          "options": [
+            {
+              "id": "A",
+              "text": "to get her report back"
+            },
+            {
+              "id": "B",
+              "text": "to show that she is able to overcome difficulties"
+            },
+            {
+              "id": "C",
+              "text": "to demonstrate to others how to do the presentation"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "What's Tom's task next?",
+          "options": [
+            {
+              "id": "A",
+              "text": "work on 5-star hotels"
+            },
+            {
+              "id": "B",
+              "text": "use video for a demonstration"
+            },
+            {
+              "id": "C",
+              "text": "business interviews"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "27": "C",
+        "28": "C",
+        "29": "C",
+        "30": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "21": "G",
+        "22": "C",
+        "23": "B",
+        "24": "A",
+        "25": "F",
+        "26": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 4000,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 7600,
+      "endMs": 15040,
+      "text": "Lorna: Hi Tom. I'm exhausted. I've just finished my work experience week at the hotel in the centre of town."
+    },
+    {
+      "startMs": 15040,
+      "endMs": 17840,
+      "text": "Tom: Oh how did it go? Did you do a lot?"
+    },
+    {
+      "startMs": 17840,
+      "endMs": 24000,
+      "text": "Lorna: Yeah. It was a very good program actually because they let me work in all the different departments."
+    },
+    {
+      "startMs": 24000,
+      "endMs": 27120,
+      "text": "Tom: Oh brilliant. So tell me all about it."
+    },
+    {
+      "startMs": 27840,
+      "endMs": 34480,
+      "text": "Lorna: Well first of all they put me on reception for a morning and I thought oh I know what this is all about."
+    },
+    {
+      "startMs": 34480,
+      "endMs": 43120,
+      "text": "It'd just be handing out keys and stuff. How wrong I was. In fact they handled loads of different things there."
+    },
+    {
+      "startMs": 43120,
+      "endMs": 48640,
+      "text": "Special requests, contractors coming in and so on."
+    },
+    {
+      "startMs": 48640,
+      "endMs": 50000,
+      "text": "Tom: What did you do in the afternoon?"
+    },
+    {
+      "startMs": 50720,
+      "endMs": 55920,
+      "text": "Lorna: Well in the afternoon and evening in fact I was in the hotel restaurant."
+    },
+    {
+      "startMs": 56560,
+      "endMs": 62160,
+      "text": "There were loads of staff there so it wasn't too exhausting but the manager really wanted"
+    },
+    {
+      "startMs": 62160,
+      "endMs": 68800,
+      "text": "everything done absolutely precisely, really focused on the guests. You weren't allowed to make"
+    },
+    {
+      "startMs": 68800,
+      "endMs": 76000,
+      "text": "any mistakes. I thought it was a bit over the top actually not very enjoyable to work in."
+    },
+    {
+      "startMs": 76000,
+      "endMs": 80880,
+      "text": "Tom: But they've got a really nice coffee bar at that hotel. Did you get a chance to work in that?"
+    },
+    {
+      "startMs": 80880,
+      "endMs": 86480,
+      "text": "Lorna: Yeah the next morning you're right it is nice. I bet it gets really busy."
+    },
+    {
+      "startMs": 86480,
+      "endMs": 93280,
+      "text": "It wasn't too bad actually but there's a lot of running around so I was worn out afterwards"
+    },
+    {
+      "startMs": 93280,
+      "endMs": 99280,
+      "text": "and then I had to go to work in the shop. It's interesting to see how shops fit into the overall"
+    },
+    {
+      "startMs": 99280,
+      "endMs": 104880,
+      "text": "hotel culture. I never know who goes in those hotel shops but they must be worth it."
+    },
+    {
+      "startMs": 105040,
+      "endMs": 108000,
+      "text": "Tom: I suppose they're owned separately from the hotel though."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 113440,
+      "text": "Lorna: think so anyway there were loads of staff working there but we still couldn't keep up with"
+    },
+    {
+      "startMs": 113440,
+      "endMs": 119520,
+      "text": "the flow of customers because nobody knew where anything was or what they were supposed to be doing."
+    },
+    {
+      "startMs": 120320,
+      "endMs": 126240,
+      "text": "I was quite relieved when it was over. Then the next day I went to see what the"
+    },
+    {
+      "startMs": 126240,
+      "endMs": 132720,
+      "text": "personal services department did. Fascinating. Yes they seemed to mop up everything else"
+    },
+    {
+      "startMs": 132720,
+      "endMs": 138000,
+      "text": "though and you must have to be a certain sort of person because to handle the requests"
+    },
+    {
+      "startMs": 138000,
+      "endMs": 143760,
+      "text": "and some of the people that make them you have to keep calm and polite and be quite imaginative"
+    },
+    {
+      "startMs": 143760,
+      "endMs": 150560,
+      "text": "to find a way around them and resolve them. Absolutely I couldn't do it. It was beyond me."
+    },
+    {
+      "startMs": 150560,
+      "endMs": 155200,
+      "text": "So I just sat and watched and listened. Tom: Didn't you have to go with the domestic staff"
+    },
+    {
+      "startMs": 155680,
+      "endMs": 163760,
+      "text": "cleaning at all? Lorna: Oh yes my last day. I was dreading it. I just thought cleaning all those rooms"
+    },
+    {
+      "startMs": 163760,
+      "endMs": 170480,
+      "text": "would be so repetitive and tedious. Actually the girls that do it are really lively and good fun"
+    },
+    {
+      "startMs": 171280,
+      "endMs": 178000,
+      "text": "but by the end of the morning my ears were ringing. The roar of the vacuum cleaners, trolleys going"
+    },
+    {
+      "startMs": 178080,
+      "endMs": 183600,
+      "text": "up and down and the girls shouting at each other. I was amazed the guests didn't complain."
+    },
+    {
+      "startMs": 187600,
+      "endMs": 193280,
+      "text": "Before you hear the rest of the discussion you have some time to look at questions 27 to 30."
+    },
+    {
+      "startMs": 194640,
+      "endMs": 197520,
+      "text": "Now listen and answer questions 27 to 30."
+    },
+    {
+      "startMs": 197520,
+      "endMs": 210880,
+      "text": "Tom: So what's your assessment overall? Lorna: Well mixed. I mean my dissertation is on a different topic"
+    },
+    {
+      "startMs": 210880,
+      "endMs": 216480,
+      "text": "and I'm not planning to go into the hotel industry but I see it as something that we have to do"
+    },
+    {
+      "startMs": 216480,
+      "endMs": 222800,
+      "text": "to understand certain aspects of this module that we're on."
+    },
+    {
+      "startMs": 222880,
+      "endMs": 227760,
+      "text": "Tom: Yes I'd like to do something like that actually. I think I'll have a word with the tutor to see if he can fix me up with something similar."
+    },
+    {
+      "startMs": 228320,
+      "endMs": 234160,
+      "text": "Lorna: The thing is that will take a while. I think sometimes people call the hotel directly"
+    },
+    {
+      "startMs": 234160,
+      "endMs": 241040,
+      "text": "and see if the manager will take them on. Though actually it gets loads of requests so that might not work"
+    },
+    {
+      "startMs": 241840,
+      "endMs": 246400,
+      "text": "that you might be better to do it directly through the careers office. If you've got time to"
+    },
+    {
+      "startMs": 246480,
+      "endMs": 254800,
+      "text": "walk down there. Tom：Yes I might try my tutor first though. Lorna: Well I've got to go now. I've got to prepare"
+    },
+    {
+      "startMs": 254800,
+      "endMs": 259920,
+      "text": "this presentation on my work experience for next week. Tom: Yeah I guess that's part of the deal that"
+    },
+    {
+      "startMs": 259920,
+      "endMs": 266000,
+      "text": "you have to report back. Lorna: My tutor doesn't get everyone to do a presentation so I don't think so."
+    },
+    {
+      "startMs": 266880,
+      "endMs": 272480,
+      "text": "Apparently he thought my last one was good so I'm more or less doing a demonstration for the class."
+    },
+    {
+      "startMs": 272480,
+      "endMs": 279040,
+      "text": "Some of them have had very little practice in presenting. By the way what are you going to"
+    },
+    {
+      "startMs": 279040,
+      "endMs": 286880,
+      "text": "do for your assignment this term? Tom: Oh difficult. I've got that video I did of hotel work so I think I'll"
+    },
+    {
+      "startMs": 286880,
+      "endMs": 291600,
+      "text": "use a bit of that to look at the way that business hotels are developing as conference centres."
+    },
+    {
+      "startMs": 292400,
+      "endMs": 298000,
+      "text": "I really wanted to do something on those big five star resort hotels. I haven't got the time."
+    },
+    {
+      "startMs": 298640,
+      "endMs": 300560,
+      "text": "Lorna: Oh well good luck."
+    },
+    {
+      "startMs": 304160,
+      "endMs": 310080,
+      "text": "That is the end of part three. You now have 30 seconds to check your answers to part three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 50,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

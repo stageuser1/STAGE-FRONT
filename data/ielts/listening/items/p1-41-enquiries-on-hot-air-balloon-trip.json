@@ -1,0 +1,640 @@
+{
+  "id": "p1-41-enquiries-on-hot-air-balloon-trip",
+  "title": "Enquiries on Hot Air Balloon Trip",
+  "part": 1,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-945081579011",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 500.088,
+    "checksum": "sha256:a2c23e55cb3b0c55806d0c22b3a98bb6000b50999c4679e4da0de1ba9d953917"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1-10.",
+      "instruction": "Complete the form below. Write ONE WORD AND/OR A NUMBER for each answer. Enquiries on Hot Air Balloon Trip The lowest price: 1. £ _______ per person Each participant will be given a free 2. _______ at the end of the flight The exact date can only be booked 3. _______ The balloon can fly a maximum height of 4. _______ metres There are no flights at 5. _______ The best time of year to go is in 6. _______ Flights may be cancelled because of bad weather, e.g. 7. _______ It is advised to wear a jacket and a 8. _______ There is no 9. _______ restriction for adults Participants must be able to 10. _______ throughout the flight",
+      "questions": [
+        {
+          "id": "1",
+          "text": "The lowest price: 1. £ _______ per person",
+          "answer": "125"
+        },
+        {
+          "id": "2",
+          "text": "Each participant will be given a free 2. _______ at the end of the flight",
+          "answer": "certificate"
+        },
+        {
+          "id": "3",
+          "text": "The exact date can only be booked 3. _______",
+          "answer": "online"
+        },
+        {
+          "id": "4",
+          "text": "The balloon can fly a maximum height of 4. _______ metres",
+          "answer": "1800/1,800"
+        },
+        {
+          "id": "5",
+          "text": "There are no flights at 5. _______",
+          "answer": "night"
+        },
+        {
+          "id": "6",
+          "text": "The best time of year to go is in 6. _______",
+          "answer": "autumn"
+        },
+        {
+          "id": "7",
+          "text": "Flights may be cancelled because of bad weather, e.g. 7. _______",
+          "answer": "thunderstorm"
+        },
+        {
+          "id": "8",
+          "text": "It is advised to wear a jacket and a 8. _______",
+          "answer": "helmet"
+        },
+        {
+          "id": "9",
+          "text": "There is no 9. _______ restriction for adults",
+          "answer": "age"
+        },
+        {
+          "id": "10",
+          "text": "Participants must be able to 10. _______ throughout the flight",
+          "answer": "stand"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the form below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Enquiries on Hot Air Balloon Trip",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The lowest price: 1. £ _______ per person",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Each participant will be given a free 2. _______ at the end of the flight",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The exact date can only be booked 3. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The balloon can fly a maximum height of 4. _______ metres",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "There are no flights at 5. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The best time of year to go is in 6. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Flights may be cancelled because of bad weather, e.g. 7. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It is advised to wear a jacket and a 8. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "There is no 9. _______ restriction for adults",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Participants must be able to 10. _______ throughout the flight",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "125",
+        "2": "certificate",
+        "3": "online",
+        "4": "1800/1,800",
+        "5": "night",
+        "6": "autumn",
+        "7": "thunderstorm",
+        "8": "helmet",
+        "9": "age",
+        "10": "stand"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10480,
+      "text": "[Narrator]:Test 3."
+    },
+    {
+      "startMs": 10480,
+      "endMs": 14240,
+      "text": "This is the IELTS listening test."
+    },
+    {
+      "startMs": 14240,
+      "endMs": 20200,
+      "text": "You will hear a number of different recordings, and you will have to answer questions on what"
+    },
+    {
+      "startMs": 20200,
+      "endMs": 21600,
+      "text": "you hear."
+    },
+    {
+      "startMs": 21600,
+      "endMs": 27680,
+      "text": "There will be time for you to read the instructions and questions, and you will have a chance to"
+    },
+    {
+      "startMs": 27680,
+      "endMs": 29680,
+      "text": "check your work."
+    },
+    {
+      "startMs": 29680,
+      "endMs": 33360,
+      "text": "All the recordings will be played once only."
+    },
+    {
+      "startMs": 33360,
+      "endMs": 36120,
+      "text": "The test is in four parts."
+    },
+    {
+      "startMs": 36120,
+      "endMs": 42320,
+      "text": "At the end of the test, you will be given 10 minutes to transfer your answers to the"
+    },
+    {
+      "startMs": 42320,
+      "endMs": 44080,
+      "text": "answer sheet."
+    },
+    {
+      "startMs": 44080,
+      "endMs": 51120,
+      "text": "Now turn to Part 1."
+    },
+    {
+      "startMs": 51120,
+      "endMs": 52920,
+      "text": "Part 1."
+    },
+    {
+      "startMs": 52920,
+      "endMs": 59560,
+      "text": "You will hear a woman phoning a travel agency about hot air balloon rides."
+    },
+    {
+      "startMs": 59560,
+      "endMs": 63880,
+      "text": "First you have some time to look at questions 1 to 5."
+    },
+    {
+      "startMs": 89560,
+      "endMs": 101400,
+      "text": "Now listen carefully, and answer questions 1 to 5."
+    },
+    {
+      "startMs": 101400,
+      "endMs": 105000,
+      "text": "[Jason]: Good morning, smart travel, Jason speaking."
+    },
+    {
+      "startMs": 105000,
+      "endMs": 106680,
+      "text": "[Woman]: Hi, good morning."
+    },
+    {
+      "startMs": 106680,
+      "endMs": 112000,
+      "text": "I saw your advert in today's paper about hot air balloon trips."
+    },
+    {
+      "startMs": 112000,
+      "endMs": 114440,
+      "text": "It sounds pretty exciting."
+    },
+    {
+      "startMs": 114440,
+      "endMs": 116840,
+      "text": "And I wonder how much it costs."
+    },
+    {
+      "startMs": 116840,
+      "endMs": 123640,
+      "text": "[Jason]: Well, the price may vary depending on the location, number of participants, and add-ons."
+    },
+    {
+      "startMs": 123640,
+      "endMs": 129200,
+      "text": "A single ride may cost you up to £280 per person."
+    },
+    {
+      "startMs": 129200,
+      "endMs": 132600,
+      "text": "But if you choose group booking, there is a discount."
+    },
+    {
+      "startMs": 132600,
+      "endMs": 139440,
+      "text": "And the cheapest flight is £125 each, for a group booking of at least 10 people."
+    },
+    {
+      "startMs": 139440,
+      "endMs": 142160,
+      "text": "[Woman]: Oh, that's not too bad."
+    },
+    {
+      "startMs": 142160,
+      "endMs": 144840,
+      "text": "What do you mean by add-ons?"
+    },
+    {
+      "startMs": 144840,
+      "endMs": 150960,
+      "text": "[Jason]: They are optional items, like taking photos for you during the ride, champagne, and sit"
+    },
+    {
+      "startMs": 150960,
+      "endMs": 153760,
+      "text": "down breakfast after the flight."
+    },
+    {
+      "startMs": 153760,
+      "endMs": 159240,
+      "text": "Upon completing the trip, we will provide each participant with a certificate."
+    },
+    {
+      "startMs": 159240,
+      "endMs": 162000,
+      "text": "And that is entirely free of charge."
+    },
+    {
+      "startMs": 162000,
+      "endMs": 164320,
+      "text": "[Woman]: Can I book a ride over the phone?"
+    },
+    {
+      "startMs": 164320,
+      "endMs": 167160,
+      "text": "[Jason]: Yes, that's an option."
+    },
+    {
+      "startMs": 167160,
+      "endMs": 171440,
+      "text": "Reservations can be made one year ahead of your trip by telephone."
+    },
+    {
+      "startMs": 171440,
+      "endMs": 175040,
+      "text": "But to pick a specific date, you must book online."
+    },
+    {
+      "startMs": 175040,
+      "endMs": 179280,
+      "text": "A confirmation email will be sent to you right afterwards."
+    },
+    {
+      "startMs": 179280,
+      "endMs": 181960,
+      "text": "[Woman]: How high can the balloons go?"
+    },
+    {
+      "startMs": 181960,
+      "endMs": 187200,
+      "text": "[Jason]: A hot air balloon's height is limited by the temperature of the air, and how much fuel"
+    },
+    {
+      "startMs": 187200,
+      "endMs": 188960,
+      "text": "it can carry."
+    },
+    {
+      "startMs": 188960,
+      "endMs": 195040,
+      "text": "And the highest altitude ever recorded for a ride is 1,800 metres."
+    },
+    {
+      "startMs": 195040,
+      "endMs": 198240,
+      "text": "But most rides stay below 300 metres."
+    },
+    {
+      "startMs": 198240,
+      "endMs": 201240,
+      "text": "[Woman]: Oh boy, that's impressive."
+    },
+    {
+      "startMs": 201600,
+      "endMs": 204400,
+      "text": "How long is a single ride?"
+    },
+    {
+      "startMs": 204400,
+      "endMs": 208240,
+      "text": "[Jason]: The average hot air balloon ride lasts about an hour."
+    },
+    {
+      "startMs": 208240,
+      "endMs": 214080,
+      "text": "The entire ballooning experience, which includes ground preparation, flight and post-flight"
+    },
+    {
+      "startMs": 214080,
+      "endMs": 219280,
+      "text": "packing up and celebration, may take two to three hours."
+    },
+    {
+      "startMs": 219280,
+      "endMs": 221880,
+      "text": "[Woman]: And what time are the flights?"
+    },
+    {
+      "startMs": 221880,
+      "endMs": 226600,
+      "text": "[Jason]: Our flights generally meet about an hour before sunrise on the day."
+    },
+    {
+      "startMs": 226600,
+      "endMs": 231600,
+      "text": "You will be notified of the exact meeting time the evening before your flight."
+    },
+    {
+      "startMs": 231600,
+      "endMs": 235200,
+      "text": "Night flights are avoided, due to weather conditions."
+    },
+    {
+      "startMs": 235200,
+      "endMs": 239000,
+      "text": "[Woman]: Fair enough"
+    },
+    {
+      "startMs": 239000,
+      "endMs": 245800,
+      "text": "[Narrator]: Before you hear the rest of the conversation, you have some time to look at questions 6-10."
+    },
+    {
+      "startMs": 286800,
+      "endMs": 289800,
+      "text": "And answer questions 6-10."
+    },
+    {
+      "startMs": 292600,
+      "endMs": 296800,
+      "text": "[Woman]: Which month do you recommend for a hot air balloon trip?"
+    },
+    {
+      "startMs": 296800,
+      "endMs": 300200,
+      "text": "[Jason]: Autumn is the best time of year to take the trip."
+    },
+    {
+      "startMs": 300200,
+      "endMs": 305600,
+      "text": "Not only can you see the changing hues of the trees from above, but it is a great way"
+    },
+    {
+      "startMs": 305600,
+      "endMs": 310200,
+      "text": "to spend time with the whole family before it gets too cold."
+    },
+    {
+      "startMs": 310200,
+      "endMs": 311600,
+      "text": "[Woman]: I see."
+    },
+    {
+      "startMs": 311600,
+      "endMs": 318000,
+      "text": "[Jason]: But please note that our flight may be cancelled, and you will be notified by phone the day before."
+    },
+    {
+      "startMs": 318000,
+      "endMs": 319600,
+      "text": "[Woman]: Why is that?"
+    },
+    {
+      "startMs": 319600,
+      "endMs": 325200,
+      "text": "[Jason]: It can be quite dangerous to fly under bad weather conditions, like a thunderstorm."
+    },
+    {
+      "startMs": 325200,
+      "endMs": 329800,
+      "text": "So our experienced pilots will not go under such conditions."
+    },
+    {
+      "startMs": 329800,
+      "endMs": 332600,
+      "text": "[Woman]: What should I wear for the ride?"
+    },
+    {
+      "startMs": 332600,
+      "endMs": 336600,
+      "text": "[Jason]: We suggest wearing comfortable clothing, like a jacket."
+    },
+    {
+      "startMs": 336600,
+      "endMs": 339600,
+      "text": "Multiple layers are always better."
+    },
+    {
+      "startMs": 339600,
+      "endMs": 344000,
+      "text": "Wearing a helmet for safety concerns is also a good idea."
+    },
+    {
+      "startMs": 344000,
+      "endMs": 346200,
+      "text": "Sandals are not permitted."
+    },
+    {
+      "startMs": 346200,
+      "endMs": 350400,
+      "text": "[Woman]: Can children or older people participate?"
+    },
+    {
+      "startMs": 350400,
+      "endMs": 355000,
+      "text": "[Jason]: All children must be above the minimum age of 9 years old."
+    },
+    {
+      "startMs": 355000,
+      "endMs": 359800,
+      "text": "And they have to be accompanied by at least a parent or guardian."
+    },
+    {
+      "startMs": 359800,
+      "endMs": 365400,
+      "text": "However, an adult has no age limit, as long as they meet the health requirements."
+    },
+    {
+      "startMs": 365400,
+      "endMs": 369200,
+      "text": "[Woman]: What exactly are the health requirements?"
+    },
+    {
+      "startMs": 369200,
+      "endMs": 373200,
+      "text": "[Jason]: Participants must at least be in fair physical condition."
+    },
+    {
+      "startMs": 373200,
+      "endMs": 381800,
+      "text": "For example, they shall have no significant knee, hip or back problems, and no recent surgeries or broken bones."
+    },
+    {
+      "startMs": 381800,
+      "endMs": 386200,
+      "text": "They must also stand unassisted for an hour during the flight."
+    },
+    {
+      "startMs": 386200,
+      "endMs": 389800,
+      "text": "It is the required position during the whole flight."
+    },
+    {
+      "startMs": 389800,
+      "endMs": 397800,
+      "text": "As the balloon comes to land, all passengers will need to adopt the landing position, with knees bent in front of them."
+    },
+    {
+      "startMs": 397800,
+      "endMs": 400200,
+      "text": "[Woman]: Are those rides safe?"
+    },
+    {
+      "startMs": 400200,
+      "endMs": 405600,
+      "text": "[Jason]: Hot air balloon companies are required to have a commercial balloon pilot license,"
+    },
+    {
+      "startMs": 405600,
+      "endMs": 411200,
+      "text": "and all our pilots go through rigorous training before they are allowed to fly."
+    },
+    {
+      "startMs": 411200,
+      "endMs": 414400,
+      "text": "It is a relatively gentle activity."
+    },
+    {
+      "startMs": 414400,
+      "endMs": 422400,
+      "text": "However, the impact of a balloon landing can vary drastically, depending on factors like wind speed."
+    },
+    {
+      "startMs": 422400,
+      "endMs": 427000,
+      "text": "Sometimes it is similar to the momentum of jumping off a small chair."
+    },
+    {
+      "startMs": 427000,
+      "endMs": 434000,
+      "text": "If you cannot jump off a small chair, speaking to your doctor before booking a balloon flight is best."
+    },
+    {
+      "startMs": 434000,
+      "endMs": 438000,
+      "text": "[Woman]: Thank you very much. I think that's all I need to know."
+    },
+    {
+      "startMs": 438000,
+      "endMs": 443000,
+      "text": "[Jason]: Thanks for calling. Goodbye."
+    },
+    {
+      "startMs": 443000,
+      "endMs": 451000,
+      "text": "[Narrator]: That is the end of part 1. You now have half a minute to check your answers to part 1."
+    },
+    {
+      "startMs": 457000,
+      "endMs": 460000,
+      "text": "You"
+    },
+    {
+      "startMs": 487000,
+      "endMs": 490000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 88,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

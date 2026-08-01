@@ -1,0 +1,425 @@
+{
+  "id": "p4-80-comparison-of-teaching-methods-of-chinese-and-scottish-teachers",
+  "title": "Comparison of Teaching Methods of Chinese and Scottish Teachers",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-38c74135c41a",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 190.08,
+    "checksum": "sha256:6a9056053ac58d3dc9ea65608d9e0f588bdc6a92653fcea9db4b49df03019418"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the note below. Write ONE WORD ONLY for each answer. Comparison of Teaching Methods of Chinese and Scottish Teachers Support and Collaboration Got help from the 31. __________ in many aspects. Paired up with a Chinese university teacher by 32. __________. Cultural Integration Overseas students need to know the 33. __________ that shows the culture of the host nation. Research For observation, 34. __________ classes were chosen for research. The limitations of the 35. __________ through the year. Teaching Methods Scottish teachers tend to arrange seating in a 36. __________. More 37. __________ was applied in the Scottish class. Chinese teachers focus on 38. __________. Effectiveness and Trust The effectiveness of the 39. __________ chosen for teaching. The research will not be worth it unless the teachers set up 40. __________ between them.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Got help from the 31. __________ in many aspects.",
+          "answer": "manager"
+        },
+        {
+          "id": "32",
+          "text": "Paired up with a Chinese university teacher by 32. __________.",
+          "answer": "email"
+        },
+        {
+          "id": "33",
+          "text": "Overseas students need to know the 33. __________ that shows the culture of the host nation.",
+          "answer": "video"
+        },
+        {
+          "id": "34",
+          "text": "For observation, 34. __________ classes were chosen for research.",
+          "answer": "reading"
+        },
+        {
+          "id": "35",
+          "text": "The limitations of the 35. __________ through the year.",
+          "answer": "timetable"
+        },
+        {
+          "id": "36",
+          "text": "Scottish teachers tend to arrange seating in a 36. __________.",
+          "answer": "circle"
+        },
+        {
+          "id": "37",
+          "text": "More 37. __________ was applied in the Scottish class.",
+          "answer": "translation"
+        },
+        {
+          "id": "38",
+          "text": "Chinese teachers focus on 38. __________.",
+          "answer": "spelling"
+        },
+        {
+          "id": "39",
+          "text": "The effectiveness of the 39. __________ chosen for teaching.",
+          "answer": "material"
+        },
+        {
+          "id": "40",
+          "text": "The research will not be worth it unless the teachers set up 40. __________ between them.",
+          "answer": "trust"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the note below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Comparison of Teaching Methods of Chinese and Scottish Teachers",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Support and Collaboration",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Got help from the 31. __________ in many aspects.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Paired up with a Chinese university teacher by 32. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Cultural Integration",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Overseas students need to know the 33. __________ that shows the culture of the host nation.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Research",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "For observation, 34. __________ classes were chosen for research.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The limitations of the 35. __________ through the year.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Teaching Methods",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Scottish teachers tend to arrange seating in a 36. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "More 37. __________ was applied in the Scottish class.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Chinese teachers focus on 38. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Effectiveness and Trust",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The effectiveness of the 39. __________ chosen for teaching.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The research will not be worth it unless the teachers set up 40. __________ between them.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "manager",
+        "32": "email",
+        "33": "video",
+        "34": "reading",
+        "35": "timetable",
+        "36": "circle",
+        "37": "translation",
+        "38": "spelling",
+        "39": "material",
+        "40": "trust"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11040,
+      "text": "Listening Part 4 Exercise 131."
+    },
+    {
+      "startMs": 11040,
+      "endMs": 15200,
+      "text": "Welcome to today's lecture on the study of teaching methods of Chinese and Scottish"
+    },
+    {
+      "startMs": 15200,
+      "endMs": 16840,
+      "text": "teachers."
+    },
+    {
+      "startMs": 16840,
+      "endMs": 23000,
+      "text": "We will explore several key aspects, including support, collaboration, cultural integration,"
+    },
+    {
+      "startMs": 23000,
+      "endMs": 26320,
+      "text": "research, and the evaluation of teaching practices."
+    },
+    {
+      "startMs": 27120,
+      "endMs": 30960,
+      "text": "Let's begin with support and collaboration."
+    },
+    {
+      "startMs": 30960,
+      "endMs": 35840,
+      "text": "In this study, participants received assistance in navigating their new roles, especially"
+    },
+    {
+      "startMs": 35840,
+      "endMs": 40520,
+      "text": "through the manager, who provided guidance on many practical matters."
+    },
+    {
+      "startMs": 40520,
+      "endMs": 46040,
+      "text": "Furthermore, collaboration was encouraged by partnering with a Chinese university teacher,"
+    },
+    {
+      "startMs": 46040,
+      "endMs": 49400,
+      "text": "and this connection was initiated through email."
+    },
+    {
+      "startMs": 49400,
+      "endMs": 54040,
+      "text": "This partnership facilitated the exchange of different educational approaches and cultural"
+    },
+    {
+      "startMs": 54040,
+      "endMs": 56000,
+      "text": "understanding."
+    },
+    {
+      "startMs": 56000,
+      "endMs": 61160,
+      "text": "Moving on to cultural integration, it's essential for overseas students to gain an understanding"
+    },
+    {
+      "startMs": 61160,
+      "endMs": 64200,
+      "text": "of the host nation's social norms."
+    },
+    {
+      "startMs": 64200,
+      "endMs": 68720,
+      "text": "One effective way to do this is by watching a video that illustrates the cultural context"
+    },
+    {
+      "startMs": 68720,
+      "endMs": 70520,
+      "text": "of the country."
+    },
+    {
+      "startMs": 70520,
+      "endMs": 75320,
+      "text": "This method helps students adapt to their new environment more effectively."
+    },
+    {
+      "startMs": 75320,
+      "endMs": 80760,
+      "text": "For the research setup, specific classes were selected for observational purposes."
+    },
+    {
+      "startMs": 80760,
+      "endMs": 85840,
+      "text": "In particular, reading classes were chosen as the subject of study, providing a clear"
+    },
+    {
+      "startMs": 85840,
+      "endMs": 88880,
+      "text": "window into the instructional methods used."
+    },
+    {
+      "startMs": 88880,
+      "endMs": 93600,
+      "text": "However, one of the obstacles encountered throughout the year was the rigid nature of"
+    },
+    {
+      "startMs": 93600,
+      "endMs": 98640,
+      "text": "the timetable, which posed challenges for scheduling all the necessary observations and"
+    },
+    {
+      "startMs": 98640,
+      "endMs": 100200,
+      "text": "data collection."
+    },
+    {
+      "startMs": 100200,
+      "endMs": 103680,
+      "text": "Now, let's look at the teaching methods."
+    },
+    {
+      "startMs": 103680,
+      "endMs": 108240,
+      "text": "In Scottish classrooms, it was observed that teachers commonly arrange seating in a"
+    },
+    {
+      "startMs": 108240,
+      "endMs": 109720,
+      "text": "circle."
+    },
+    {
+      "startMs": 109720,
+      "endMs": 115760,
+      "text": "This setup encourages greater interaction between students and promotes active participation."
+    },
+    {
+      "startMs": 115760,
+      "endMs": 120840,
+      "text": "Additionally, it was found that translation played a more significant role in the Scottish"
+    },
+    {
+      "startMs": 120840,
+      "endMs": 126080,
+      "text": "classes, likely to assist learners with different language backgrounds."
+    },
+    {
+      "startMs": 126080,
+      "endMs": 131640,
+      "text": "In contrast, the focus in Chinese classrooms was more on spelling, with considerable attention"
+    },
+    {
+      "startMs": 131640,
+      "endMs": 134200,
+      "text": "paid to accuracy in written work."
+    },
+    {
+      "startMs": 134200,
+      "endMs": 138600,
+      "text": "Lastly, we'll touch on effectiveness and trust."
+    },
+    {
+      "startMs": 138600,
+      "endMs": 143800,
+      "text": "The study evaluated the efficiency of the material chosen for instruction, assessing"
+    },
+    {
+      "startMs": 143800,
+      "endMs": 146920,
+      "text": "its appropriateness for the learner's needs."
+    },
+    {
+      "startMs": 146920,
+      "endMs": 151600,
+      "text": "The success of the research, however, depended on the ability of the teachers to build trust"
+    },
+    {
+      "startMs": 151600,
+      "endMs": 153800,
+      "text": "with one another."
+    },
+    {
+      "startMs": 153800,
+      "endMs": 158160,
+      "text": "This mutual confidence was a critical factor in the overall success of the collaborative"
+    },
+    {
+      "startMs": 158160,
+      "endMs": 159240,
+      "text": "efforts."
+    },
+    {
+      "startMs": 159240,
+      "endMs": 164600,
+      "text": "In summary, this research sheds light on the differences in teaching methods across cultures"
+    },
+    {
+      "startMs": 164600,
+      "endMs": 170040,
+      "text": "and highlights the importance of support, collaboration, and trust in educational settings."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 40,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

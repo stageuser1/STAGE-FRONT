@@ -1,0 +1,545 @@
+{
+  "id": "p4-17-fish-farming",
+  "title": "Fish Farming",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-861eca042ffd",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 451.689,
+    "checksum": "sha256:2f1300eed1991bc3693197eed658737d72caa6fbd93cad48a23590c6a56b397b"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Fish Farming Local fish farmers are afraid that genetically modified fish will 31. _______________ into the sea. like to breed fish with special features, like 32. _______________ Other solutions: to build some cages to prevent the fish from 33. _______________ to use 34. _______________ nets to support the frames of the cages Problems facing the local fishermen: lack of land on the 35. _______________ lack of 36. _______________ fish Initiatives taken by the government: encourages public to 37. _______________ local fish farming business helps fish farmers to sell seaweed and oyster Seaweed can be used to make 38. _______________ Oyster is a source of seafood which can supply local 39. _______________ industry saves local fishing business by encouraging aquaculture, recreation and 40. _______________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Local fish farmers are afraid that genetically modified fish will 31. _______________ into the sea.",
+          "answer": "escape"
+        },
+        {
+          "id": "32",
+          "text": "like to breed fish with special features, like 32. _______________",
+          "answer": "tuna"
+        },
+        {
+          "id": "33",
+          "text": "to build some cages to prevent the fish from 33. _______________",
+          "answer": "storms"
+        },
+        {
+          "id": "34",
+          "text": "to use 34. _______________ nets to support the frames of the cages",
+          "answer": "strong"
+        },
+        {
+          "id": "35",
+          "text": "lack of land on the 35. _______________",
+          "answer": "coast"
+        },
+        {
+          "id": "36",
+          "text": "lack of 36. _______________ fish",
+          "answer": "young"
+        },
+        {
+          "id": "37",
+          "text": "encourages public to 37. _______________ local fish farming business",
+          "answer": "support"
+        },
+        {
+          "id": "38",
+          "text": "Seaweed can be used to make 38. _______________",
+          "answer": "cosmetics"
+        },
+        {
+          "id": "39",
+          "text": "Oyster is a source of seafood which can supply local 39. _______________ industry",
+          "answer": "hospitality"
+        },
+        {
+          "id": "40",
+          "text": "saves local fishing business by encouraging aquaculture, recreation and 40. _______________",
+          "answer": "shipping"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Fish Farming",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Local fish farmers are afraid that genetically modified fish will 31. _______________ into the sea.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "like to breed fish with special features, like 32. _______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Other solutions:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "to build some cages to prevent the fish from 33. _______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "to use 34. _______________ nets to support the frames of the cages",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problems facing the local fishermen:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "lack of land on the 35. _______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "lack of 36. _______________ fish",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Initiatives taken by the government:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "encourages public to 37. _______________ local fish farming business",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "helps fish farmers to sell seaweed and oyster",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Seaweed can be used to make 38. _______________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Oyster is a source of seafood which can supply local 39. _______________ industry",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "saves local fishing business by encouraging aquaculture, recreation and 40. _______________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "escape",
+        "32": "tuna",
+        "33": "storms",
+        "34": "strong",
+        "35": "coast",
+        "36": "young",
+        "37": "support",
+        "38": "cosmetics",
+        "39": "hospitality",
+        "40": "shipping"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7280,
+      "text": "Section 4. You will hear part of a lecture about aquaculture and the fishing business."
+    },
+    {
+      "startMs": 7280,
+      "endMs": 12480,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 58000,
+      "text": "Now, listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 58000,
+      "endMs": 66000,
+      "text": "So, what I'm going to talk about to you today is something called aquaculture."
+    },
+    {
+      "startMs": 66000,
+      "endMs": 72000,
+      "text": "It has been responsible for the impressive growth in the supply of fish for human consumption."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 79000,
+      "text": "There's also been a slight improvement in the state of certain fish stocks due to improved fishery management."
+    },
+    {
+      "startMs": 79000,
+      "endMs": 86000,
+      "text": "Aquatic food production has transitioned from being primarily based on the capturing of wild fish"
+    },
+    {
+      "startMs": 86000,
+      "endMs": 90000,
+      "text": "to the culture of increasing numbers of farmed species."
+    },
+    {
+      "startMs": 90000,
+      "endMs": 97000,
+      "text": "In recent years, a type of genetically modified salmon has been farmed in the New England region,"
+    },
+    {
+      "startMs": 97000,
+      "endMs": 100000,
+      "text": "produced by a Massachusetts-based biotech firm."
+    },
+    {
+      "startMs": 100000,
+      "endMs": 107000,
+      "text": "This type of fish is engineered to grow twice as fast as its conventional farm-raised counterpart."
+    },
+    {
+      "startMs": 107000,
+      "endMs": 114000,
+      "text": "As a result, this increases the speed of the local aquaculture industry development."
+    },
+    {
+      "startMs": 114000,
+      "endMs": 118000,
+      "text": "And thus reduces the fishing pressure on wild stock."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 128000,
+      "text": "But local residents have expressed their concerns on the potential negative effects on the ecosystem should those GM fish ever escape into the sea."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 137000,
+      "text": "Stronger, healthier and faster growing, these fish might cannibalise others or out-compete wild-type fish for food."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 146000,
+      "text": "Local decision-makers and regulators have thus pushed forward a number of measures making it impossible for most GM fish to mate."
+    },
+    {
+      "startMs": 146000,
+      "endMs": 152000,
+      "text": "A small percentage is able to breed only within confined pools."
+    },
+    {
+      "startMs": 152000,
+      "endMs": 156000,
+      "text": "Despite the economic boom of genetically engineered fish,"
+    },
+    {
+      "startMs": 156000,
+      "endMs": 161000,
+      "text": "culturing traditional types of fish is still mainstream among fish farmers."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 166000,
+      "text": "Most of them prefer fish with special features, such as tuna."
+    },
+    {
+      "startMs": 166000,
+      "endMs": 170000,
+      "text": "It has a source of high-quality protein with almost no fat."
+    },
+    {
+      "startMs": 170000,
+      "endMs": 179000,
+      "text": "It also contains all essential amino acids required by the body for growth and maintenance of lean muscle tissue."
+    },
+    {
+      "startMs": 179000,
+      "endMs": 185000,
+      "text": "With high nutritional value, this kind of fish will always be popular in the fish market."
+    },
+    {
+      "startMs": 185000,
+      "endMs": 193000,
+      "text": "For the fish farming industry, incidents of fish escaping the farms has been a troubling issue over the years."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 198000,
+      "text": "Due to bad weather, nets that used to hold the fish were often destroyed."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 208000,
+      "text": "Thousands of salmon, worth nearly 220,000 euros, escaped from a fish farm in the Norwegian region in July,"
+    },
+    {
+      "startMs": 208000,
+      "endMs": 212000,
+      "text": "raising fear that they would breed with wild fish stocks."
+    },
+    {
+      "startMs": 212000,
+      "endMs": 216000,
+      "text": "Cages were thus built to withstand storms."
+    },
+    {
+      "startMs": 216000,
+      "endMs": 221000,
+      "text": "The frames of the cages are made of PE, which is dedicated to marine use."
+    },
+    {
+      "startMs": 221000,
+      "endMs": 226000,
+      "text": "This material has trustable strength, resilience and tenacity."
+    },
+    {
+      "startMs": 226000,
+      "endMs": 237000,
+      "text": "To further strengthen it, strong nets without knots are used to support the cylindrical frame."
+    },
+    {
+      "startMs": 237000,
+      "endMs": 243000,
+      "text": "A group of small villages on the island of Zanzibar off the coast of East Africa"
+    },
+    {
+      "startMs": 243000,
+      "endMs": 248000,
+      "text": "have been trying to develop a local aquaculture industry sustainably."
+    },
+    {
+      "startMs": 248000,
+      "endMs": 255000,
+      "text": "They use a land-based production system that is both economically and ecologically sound."
+    },
+    {
+      "startMs": 255000,
+      "endMs": 263000,
+      "text": "Land-based recirculation can control ocean temperature and optimize growth for the fish that are used to warmer water."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 268000,
+      "text": "All organic waste from the fish is held on land."
+    },
+    {
+      "startMs": 268000,
+      "endMs": 275000,
+      "text": "With incoming water sterilized to avoid disease, which has historically plagued ocean-based farms,"
+    },
+    {
+      "startMs": 275000,
+      "endMs": 280000,
+      "text": "the lack of disease means that no drugs are administered to the fish."
+    },
+    {
+      "startMs": 280000,
+      "endMs": 287000,
+      "text": "However, one problem facing the villages is lack of suitable land on the coast for this system."
+    },
+    {
+      "startMs": 287000,
+      "endMs": 293000,
+      "text": "Hotels and beaches open to tourists take up most of the coastal area."
+    },
+    {
+      "startMs": 293000,
+      "endMs": 300000,
+      "text": "Another problem facing local fishermen is the scarcity of young fish used to breed the species."
+    },
+    {
+      "startMs": 300000,
+      "endMs": 305000,
+      "text": "This predicament stems from overfishing during the previous decades."
+    },
+    {
+      "startMs": 305000,
+      "endMs": 310000,
+      "text": "The local commercial fishing industry has been reduced by 50% for this reason,"
+    },
+    {
+      "startMs": 310000,
+      "endMs": 314000,
+      "text": "and the aquaculture industry has yet to thrive."
+    },
+    {
+      "startMs": 314000,
+      "endMs": 321000,
+      "text": "The government has taken a set of initiatives to safeguard native aquaculture and the fishing industry."
+    },
+    {
+      "startMs": 321000,
+      "endMs": 325000,
+      "text": "An open-air seafood market has been launched."
+    },
+    {
+      "startMs": 325000,
+      "endMs": 332000,
+      "text": "Residents are encouraged to support local fish farming businesses by purchasing marine products."
+    },
+    {
+      "startMs": 332000,
+      "endMs": 340000,
+      "text": "As it turns out, there is a public demand for access to locally produced sustainable sources of fresh seafood."
+    },
+    {
+      "startMs": 340000,
+      "endMs": 349000,
+      "text": "Moreover, local fish farmers are aided to market seaweed and oysters, both of which have additional economic values."
+    },
+    {
+      "startMs": 349000,
+      "endMs": 353000,
+      "text": "Seaweed is used in various ways in cosmetics."
+    },
+    {
+      "startMs": 353000,
+      "endMs": 360000,
+      "text": "Seaweed extract is often found on the list of ingredients, constituting creams, soaps,"
+    },
+    {
+      "startMs": 360000,
+      "endMs": 363000,
+      "text": "shampoos, powders and sprays."
+    },
+    {
+      "startMs": 363000,
+      "endMs": 371000,
+      "text": "It is said to be useful in various ways, including the relief of romantic pain and the removal of cellulite."
+    },
+    {
+      "startMs": 371000,
+      "endMs": 377000,
+      "text": "Oyster is a source of seafood popular among the local hospitality industry."
+    },
+    {
+      "startMs": 377000,
+      "endMs": 382000,
+      "text": "Served with caviar and champagne, it is one of the world's ultimate luxury foods,"
+    },
+    {
+      "startMs": 382000,
+      "endMs": 386000,
+      "text": "appealing to gourmets with its succulent and delicate flavour."
+    },
+    {
+      "startMs": 386000,
+      "endMs": 391000,
+      "text": "It thus appears to have the greatest potential for commercial culture,"
+    },
+    {
+      "startMs": 391000,
+      "endMs": 398000,
+      "text": "even though the national and international market has shown demand for marine products in Zanzibar."
+    },
+    {
+      "startMs": 398000,
+      "endMs": 403000,
+      "text": "It is still challenging to survive in the competitive modern fishing industry."
+    },
+    {
+      "startMs": 403000,
+      "endMs": 409000,
+      "text": "The government ought to restore the business by encouraging aquaculture, recreation and shipping."
+    },
+    {
+      "startMs": 409000,
+      "endMs": 416000,
+      "text": "First, it could utilise modern fish farming technology to supply more high quality marine products."
+    },
+    {
+      "startMs": 416000,
+      "endMs": 422000,
+      "text": "Tourism is an effective stimulus to boost its sales and with better shipping capability,"
+    },
+    {
+      "startMs": 422000,
+      "endMs": 427000,
+      "text": "more products can be delivered abroad."
+    },
+    {
+      "startMs": 427000,
+      "endMs": 430000,
+      "text": "That is the end of section 4."
+    },
+    {
+      "startMs": 430000,
+      "endMs": 435000,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 65,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

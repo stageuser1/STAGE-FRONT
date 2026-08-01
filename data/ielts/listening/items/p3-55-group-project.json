@@ -1,0 +1,826 @@
+{
+  "id": "p3-55-group-project",
+  "title": "Group Project",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-fa6e742cbb60",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 459.768,
+    "checksum": "sha256:f019d35301372132a4500e5fc0d850941e50b278309332872120d216ec9579e8"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21-25",
+      "instruction": "Choose the correct answer.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Jen states that Irene has recently",
+          "options": [
+            {
+              "id": "A",
+              "text": "finished planning the experiment."
+            },
+            {
+              "id": "B",
+              "text": "taken an extended break."
+            },
+            {
+              "id": "C",
+              "text": "spent a lot of time in the laboratory."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "What is Bill's attitude toward Kim?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is grateful for her contribution."
+            },
+            {
+              "id": "B",
+              "text": "He thinks she is stylish."
+            },
+            {
+              "id": "C",
+              "text": "He resents her avoiding lab work."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "Jen believes that their project",
+          "options": [
+            {
+              "id": "A",
+              "text": "would be easier for boys good at math."
+            },
+            {
+              "id": "B",
+              "text": "would fail without Kim and Irene's input."
+            },
+            {
+              "id": "C",
+              "text": "is almost done because Kim has finished the data analysis."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Bill and Jen are irritated with Linda because",
+          "options": [
+            {
+              "id": "A",
+              "text": "she is always late with her work."
+            },
+            {
+              "id": "B",
+              "text": "she fails to keep in touch enough."
+            },
+            {
+              "id": "C",
+              "text": "she thinks the project is an easy grade."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "25",
+          "text": "Jen was asked to join the team because she",
+          "options": [
+            {
+              "id": "A",
+              "text": "is popular with everyone on the team."
+            },
+            {
+              "id": "B",
+              "text": "always reads all of her assignments."
+            },
+            {
+              "id": "C",
+              "text": "has private conversations with the professor."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 26-30",
+      "instruction": "Which section will each of the following group members write up?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Abstract"
+        },
+        {
+          "id": "B",
+          "text": "Acknowledgements"
+        },
+        {
+          "id": "C",
+          "text": "Bibliography"
+        },
+        {
+          "id": "D",
+          "text": "Discussion"
+        },
+        {
+          "id": "E",
+          "text": "Literature review"
+        },
+        {
+          "id": "F",
+          "text": "Methodology"
+        },
+        {
+          "id": "G",
+          "text": "Results"
+        }
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "Irene",
+          "answer": "F"
+        },
+        {
+          "id": "27",
+          "text": "Kim",
+          "answer": "G"
+        },
+        {
+          "id": "28",
+          "text": "Jen",
+          "answer": "E"
+        },
+        {
+          "id": "29",
+          "text": "Bill",
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "Linda",
+          "answer": "D"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "A",
+        "23": "B",
+        "24": "B",
+        "25": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "26": "F",
+        "27": "G",
+        "28": "E",
+        "29": "C",
+        "30": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2540,
+      "text": "Part 3."
+    },
+    {
+      "startMs": 2540,
+      "endMs": 8520,
+      "text": "You will hear two graduate students called Jen and Bill discussing the write-up of their"
+    },
+    {
+      "startMs": 8520,
+      "endMs": 11520,
+      "text": "group project."
+    },
+    {
+      "startMs": 11520,
+      "endMs": 15440,
+      "text": "First you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 58520,
+      "text": "Now listen carefully and answer questions 21 to 25."
+    },
+    {
+      "startMs": 58520,
+      "endMs": 59520,
+      "text": "Bill: What's up, Jen?"
+    },
+    {
+      "startMs": 59520,
+      "endMs": 60520,
+      "text": "How are you?"
+    },
+    {
+      "startMs": 60520,
+      "endMs": 61520,
+      "text": "Jen: Oh."
+    },
+    {
+      "startMs": 61520,
+      "endMs": 62520,
+      "text": "Hey, Bill."
+    },
+    {
+      "startMs": 62520,
+      "endMs": 63520,
+      "text": "Bill: Where's everybody else?"
+    },
+    {
+      "startMs": 63520,
+      "endMs": 64520,
+      "text": "Jen: I don't know."
+    },
+    {
+      "startMs": 64520,
+      "endMs": 65520,
+      "text": "You're the first to get here."
+    },
+    {
+      "startMs": 65520,
+      "endMs": 67520,
+      "text": "Bill: Well, I hope they don't take too long."
+    },
+    {
+      "startMs": 67520,
+      "endMs": 69200,
+      "text": "I have a class at noon."
+    },
+    {
+      "startMs": 69200,
+      "endMs": 73080,
+      "text": "Jen: Why don't we at least discuss what we've completed and what's left to do?"
+    },
+    {
+      "startMs": 73080,
+      "endMs": 74240,
+      "text": "Bill: Sounds like a plan."
+    },
+    {
+      "startMs": 74240,
+      "endMs": 76280,
+      "text": "Have you heard anything from Irene?"
+    },
+    {
+      "startMs": 76280,
+      "endMs": 77280,
+      "text": "Jen: Yeah."
+    },
+    {
+      "startMs": 77280,
+      "endMs": 80760,
+      "text": "Irene told me the experiment is just about done."
+    },
+    {
+      "startMs": 80760,
+      "endMs": 83920,
+      "text": "She's been practically living in the lab the past week."
+    },
+    {
+      "startMs": 83920,
+      "endMs": 84920,
+      "text": "Bill: Wow."
+    },
+    {
+      "startMs": 84920,
+      "endMs": 86640,
+      "text": "We owe her a favor, don't we?"
+    },
+    {
+      "startMs": 86640,
+      "endMs": 88440,
+      "text": "Jen: You can say that again."
+    },
+    {
+      "startMs": 88440,
+      "endMs": 89800,
+      "text": "Bill: Has Kim been helping her?"
+    },
+    {
+      "startMs": 89800,
+      "endMs": 92400,
+      "text": "I thought the lab work was not her style."
+    },
+    {
+      "startMs": 92400,
+      "endMs": 98160,
+      "text": "Jen: Well, not so much in the lab, but she has started compiling the data for the analysis."
+    },
+    {
+      "startMs": 98160,
+      "endMs": 99480,
+      "text": "Bill: Kim is terrific."
+    },
+    {
+      "startMs": 99480,
+      "endMs": 101440,
+      "text": "I hate doing stats."
+    },
+    {
+      "startMs": 101440,
+      "endMs": 103200,
+      "text": "I've always been bad at math."
+    },
+    {
+      "startMs": 103200,
+      "endMs": 107480,
+      "text": "Jen: I always thought there wasn't anything to that boys are good at math theory."
+    },
+    {
+      "startMs": 107480,
+      "endMs": 110000,
+      "text": "Bill: Yes, and I'm proof."
+    },
+    {
+      "startMs": 110000,
+      "endMs": 115160,
+      "text": "Jen: Anyway, Kim hasn't actually run the stats for the project yet, since she still has to"
+    },
+    {
+      "startMs": 115160,
+      "endMs": 117960,
+      "text": "wait for the rest of the experiment data."
+    },
+    {
+      "startMs": 117960,
+      "endMs": 121640,
+      "text": "But she's ready to get started when we get the experiment done."
+    },
+    {
+      "startMs": 121640,
+      "endMs": 125280,
+      "text": "Seriously, without Irene and Kim, we'd be in trouble."
+    },
+    {
+      "startMs": 125280,
+      "endMs": 127440,
+      "text": "Bill: Yeah, you're right about that."
+    },
+    {
+      "startMs": 127440,
+      "endMs": 129560,
+      "text": "So what about Linda?"
+    },
+    {
+      "startMs": 129560,
+      "endMs": 130720,
+      "text": "What's she been up to?"
+    },
+    {
+      "startMs": 130720,
+      "endMs": 131720,
+      "text": "Jen: Who knows?"
+    },
+    {
+      "startMs": 131720,
+      "endMs": 134640,
+      "text": "All she ever talks about is her fiance."
+    },
+    {
+      "startMs": 134640,
+      "endMs": 137320,
+      "text": "I haven't seen or heard from her all week."
+    },
+    {
+      "startMs": 137320,
+      "endMs": 139200,
+      "text": "Bill: Well, I hope she turns up soon."
+    },
+    {
+      "startMs": 139200,
+      "endMs": 142240,
+      "text": "We'll need everyone if we're going to get this done on time."
+    },
+    {
+      "startMs": 142240,
+      "endMs": 143240,
+      "text": "Jen: Yeah."
+    },
+    {
+      "startMs": 143240,
+      "endMs": 146880,
+      "text": "And she knows that Professor Cooper is a hard grader of projects."
+    },
+    {
+      "startMs": 146880,
+      "endMs": 151600,
+      "text": "I'm worried that Professor Cooper is not going to give us a passing grade."
+    },
+    {
+      "startMs": 151600,
+      "endMs": 154920,
+      "text": "Anyway, we haven't talked about the introduction yet."
+    },
+    {
+      "startMs": 154920,
+      "endMs": 158200,
+      "text": "Have you finished reading those articles Professor Cooper gave us?"
+    },
+    {
+      "startMs": 158200,
+      "endMs": 161600,
+      "text": "Bill, she gave us those two weeks ago."
+    },
+    {
+      "startMs": 161600,
+      "endMs": 163720,
+      "text": "Bill: Hey, I've been busy."
+    },
+    {
+      "startMs": 163720,
+      "endMs": 165120,
+      "text": "Jen: And I haven't."
+    },
+    {
+      "startMs": 165120,
+      "endMs": 166600,
+      "text": "Come on, Bill."
+    },
+    {
+      "startMs": 166600,
+      "endMs": 169920,
+      "text": "Bill: Jen, you know we all depend on you for that."
+    },
+    {
+      "startMs": 169920,
+      "endMs": 174840,
+      "text": "You're the only person I know that reads every assignment from beginning to end."
+    },
+    {
+      "startMs": 174840,
+      "endMs": 178760,
+      "text": "You and Professor Cooper often have private discussions about readings in the middle"
+    },
+    {
+      "startMs": 178760,
+      "endMs": 179760,
+      "text": "of class. 。"
+    },
+    {
+      "startMs": 179760,
+      "endMs": 182080,
+      "text": "Hey, I'm not complaining."
+    },
+    {
+      "startMs": 182080,
+      "endMs": 184800,
+      "text": "That's why all the rest of us asked you to be on our team."
+    },
+    {
+      "startMs": 184800,
+      "endMs": 187000,
+      "text": "Jen: Oh, so that's why."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 189400,
+      "text": "So it wasn't because I'm popular, huh?"
+    },
+    {
+      "startMs": 189400,
+      "endMs": 191240,
+      "text": "Bill: Hey, you're the best."
+    },
+    {
+      "startMs": 191240,
+      "endMs": 192480,
+      "text": "No one's going to argue that."
+    },
+    {
+      "startMs": 192480,
+      "endMs": 193880,
+      "text": "Jen: Hey, I'm thirsty."
+    },
+    {
+      "startMs": 193880,
+      "endMs": 195400,
+      "text": "You want something to drink?"
+    },
+    {
+      "startMs": 195400,
+      "endMs": 196640,
+      "text": "Bill: No, I'm good."
+    },
+    {
+      "startMs": 196640,
+      "endMs": 201920,
+      "text": "Jen: Okay, I'll be right back."
+    },
+    {
+      "startMs": 201920,
+      "endMs": 207960,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 26-30."
+    },
+    {
+      "startMs": 231920,
+      "endMs": 240400,
+      "text": "Now, listen and answer questions 26-30."
+    },
+    {
+      "startMs": 240400,
+      "endMs": 241880,
+      "text": "Jen: They're still not here?"
+    },
+    {
+      "startMs": 241880,
+      "endMs": 242880,
+      "text": "Bill: Nope."
+    },
+    {
+      "startMs": 242880,
+      "endMs": 244720,
+      "text": "And I've got a class I've got to get to."
+    },
+    {
+      "startMs": 244720,
+      "endMs": 250200,
+      "text": "Jen: Well, let's divide up responsibilities like who's responsible for each section."
+    },
+    {
+      "startMs": 250200,
+      "endMs": 254920,
+      "text": "It only makes sense that Irene writes up all the materials and methods since she spent"
+    },
+    {
+      "startMs": 254920,
+      "endMs": 256200,
+      "text": "the most time with that."
+    },
+    {
+      "startMs": 256200,
+      "endMs": 257200,
+      "text": "Bill: Oh, that's easy."
+    },
+    {
+      "startMs": 257200,
+      "endMs": 259840,
+      "text": "Jen: Hey, didn't you just say we owe her one?"
+    },
+    {
+      "startMs": 259840,
+      "endMs": 261400,
+      "text": "Bill: Yeah, yeah, you're right."
+    },
+    {
+      "startMs": 261400,
+      "endMs": 264320,
+      "text": "Irene can do the methodology section."
+    },
+    {
+      "startMs": 264320,
+      "endMs": 265720,
+      "text": "Jen: Do you want to do the results?"
+    },
+    {
+      "startMs": 265720,
+      "endMs": 266720,
+      "text": "Bill: Not at all."
+    },
+    {
+      "startMs": 266720,
+      "endMs": 268520,
+      "text": "I thought Kim would do that."
+    },
+    {
+      "startMs": 268520,
+      "endMs": 272600,
+      "text": "Jen: Just because she is good at stats doesn't mean she'll be good at writing it up."
+    },
+    {
+      "startMs": 272600,
+      "endMs": 275480,
+      "text": "And besides you are the one good at copy editing."
+    },
+    {
+      "startMs": 275480,
+      "endMs": 276960,
+      "text": "Bill: Well, all the same."
+    },
+    {
+      "startMs": 276960,
+      "endMs": 281560,
+      "text": "I think it'll be easiest if she does the result section, I'll edit the whole report."
+    },
+    {
+      "startMs": 281560,
+      "endMs": 282560,
+      "text": "Jen: Come on."
+    },
+    {
+      "startMs": 282560,
+      "endMs": 284480,
+      "text": "That's asking a lot of you."
+    },
+    {
+      "startMs": 284480,
+      "endMs": 286760,
+      "text": "Bill: Well, what part are you going to do, Jen?"
+    },
+    {
+      "startMs": 286760,
+      "endMs": 288200,
+      "text": "Jen: Isn't that obvious?"
+    },
+    {
+      "startMs": 288200,
+      "endMs": 290400,
+      "text": "Since I'm the one who does all the reading."
+    },
+    {
+      "startMs": 290440,
+      "endMs": 293480,
+      "text": "Bill: I'm sure you'll give us the best literature review, Jen."
+    },
+    {
+      "startMs": 293480,
+      "endMs": 295200,
+      "text": "We're all counting on you for that."
+    },
+    {
+      "startMs": 295200,
+      "endMs": 298760,
+      "text": "Jen: I guess that leaves the discussion section and the bibliography."
+    },
+    {
+      "startMs": 298760,
+      "endMs": 299760,
+      "text": "Bill: Yeah."
+    },
+    {
+      "startMs": 299760,
+      "endMs": 301240,
+      "text": "Can you make suggestions on these?"
+    },
+    {
+      "startMs": 301240,
+      "endMs": 302240,
+      "text": "Jen: OK."
+    },
+    {
+      "startMs": 302240,
+      "endMs": 306400,
+      "text": "But seriously, wouldn't it make more sense if you do the list of references?"
+    },
+    {
+      "startMs": 306400,
+      "endMs": 311240,
+      "text": "There are enough commas, capital letters, and parentheses to keep you happy in there."
+    },
+    {
+      "startMs": 311240,
+      "endMs": 312240,
+      "text": "Bill: Yeah."
+    },
+    {
+      "startMs": 312240,
+      "endMs": 313240,
+      "text": "You got a point."
+    },
+    {
+      "startMs": 313240,
+      "endMs": 316760,
+      "text": "It sure does make sense that I do the bibliography."
+    },
+    {
+      "startMs": 316760,
+      "endMs": 321440,
+      "text": "Jen: I guess Linda could handle the discussion section, even if she hasn't been around much."
+    },
+    {
+      "startMs": 321440,
+      "endMs": 324520,
+      "text": "Bill: Yeah, but isn't that like the most important section?"
+    },
+    {
+      "startMs": 324520,
+      "endMs": 326720,
+      "text": "Jen: Well, what else is she going to do?"
+    },
+    {
+      "startMs": 326720,
+      "endMs": 328040,
+      "text": "Bill: The whole paper."
+    },
+    {
+      "startMs": 328040,
+      "endMs": 329520,
+      "text": "It'll serve her right."
+    },
+    {
+      "startMs": 329520,
+      "endMs": 330920,
+      "text": "Jen: Then we'd all fail."
+    },
+    {
+      "startMs": 330920,
+      "endMs": 331920,
+      "text": "Bill: OK."
+    },
+    {
+      "startMs": 331920,
+      "endMs": 335440,
+      "text": "But I think we all should start messaging her to make sure she gets busy."
+    },
+    {
+      "startMs": 335440,
+      "endMs": 337920,
+      "text": "The discussion section can be long."
+    },
+    {
+      "startMs": 337920,
+      "endMs": 339600,
+      "text": "Jen: What about the abstract?"
+    },
+    {
+      "startMs": 339600,
+      "endMs": 342520,
+      "text": "Bill: You really don't want me to do the abstract, do you?"
+    },
+    {
+      "startMs": 342520,
+      "endMs": 344360,
+      "text": "Jen: That's not the point."
+    },
+    {
+      "startMs": 344360,
+      "endMs": 348040,
+      "text": "I just think that the abstract should be for whoever finishes first."
+    },
+    {
+      "startMs": 348040,
+      "endMs": 349040,
+      "text": "Bill: Right."
+    },
+    {
+      "startMs": 351840,
+      "endMs": 354520,
+      "text": "That is the end of part three."
+    },
+    {
+      "startMs": 354520,
+      "endMs": 358600,
+      "text": "You now have 30 seconds to check your answers to part three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 117,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

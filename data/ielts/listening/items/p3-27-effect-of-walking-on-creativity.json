@@ -1,0 +1,775 @@
+{
+  "id": "p3-27-effect-of-walking-on-creativity",
+  "title": "Effect of Walking on Creativity",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-83a5820faaad",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 475.08,
+    "checksum": "sha256:929cbb8429d7b5e829dd28933c2e97d7f86925a4e047139e5a47280e040ce300"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–26",
+      "instruction": "Choose the correct letter A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Daniel mentions the research about walking and creativity to Katie because",
+          "options": [
+            {
+              "id": "A",
+              "text": "she has read it too."
+            },
+            {
+              "id": "B",
+              "text": "what she says reminds him of it."
+            },
+            {
+              "id": "C",
+              "text": "he thinks she might like to do similar research."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "In the experiments, researchers compared participants' creativity when walking and when",
+          "options": [
+            {
+              "id": "A",
+              "text": "sitting."
+            },
+            {
+              "id": "B",
+              "text": "running."
+            },
+            {
+              "id": "C",
+              "text": "listening to music."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "Daniel says that in each experiment, there was a different",
+          "options": [
+            {
+              "id": "A",
+              "text": "type of control group."
+            },
+            {
+              "id": "B",
+              "text": "pattern of activities."
+            },
+            {
+              "id": "C",
+              "text": "way of selecting participants."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Daniel thinks the experiment with words is",
+          "options": [
+            {
+              "id": "A",
+              "text": "biased in favour of certain people."
+            },
+            {
+              "id": "B",
+              "text": "a good indicator of creativity."
+            },
+            {
+              "id": "C",
+              "text": "open to personal interpretation."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "What is Katie and Daniels attitude to the experiment on focused thinking?",
+          "options": [
+            {
+              "id": "A",
+              "text": "they are doubtful about its aims."
+            },
+            {
+              "id": "B",
+              "text": "they are confused by its methods."
+            },
+            {
+              "id": "C",
+              "text": "they are cautious about its conclusions."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "Katie thinks that the best way forward is to consider",
+          "options": [
+            {
+              "id": "A",
+              "text": "whether other types of exercise affect creativity."
+            },
+            {
+              "id": "B",
+              "text": "the cause of the improvement in creativity."
+            },
+            {
+              "id": "C",
+              "text": "how the results can be applied to creativity in real life."
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 27–30",
+      "instruction": "What is the main physical benefit of each of the following walking situations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "improved balance"
+        },
+        {
+          "id": "B",
+          "text": "greater stamina"
+        },
+        {
+          "id": "C",
+          "text": "better eyesight"
+        },
+        {
+          "id": "D",
+          "text": "lower blood pressure"
+        },
+        {
+          "id": "E",
+          "text": "regular sleeping pat"
+        },
+        {
+          "id": "F",
+          "text": "stronger bones"
+        },
+        {
+          "id": "G",
+          "text": "weight red"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "walking with thin-soled footwear",
+          "answer": "F"
+        },
+        {
+          "id": "28",
+          "text": "walking in the mountains",
+          "answer": "C"
+        },
+        {
+          "id": "29",
+          "text": "walking for the elderly",
+          "answer": "E"
+        },
+        {
+          "id": "30",
+          "text": "walking long distances",
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "A",
+        "23": "B",
+        "24": "A",
+        "25": "C",
+        "26": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "27": "F",
+        "28": "C",
+        "29": "E",
+        "30": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10440,
+      "text": "Section 3 You will hear two psychology students"
+    },
+    {
+      "startMs": 10440,
+      "endMs": 16560,
+      "text": "called Katie and Daniel discussing how taking a walk can affect people's creativity and"
+    },
+    {
+      "startMs": 16560,
+      "endMs": 19160,
+      "text": "physical well-being."
+    },
+    {
+      "startMs": 19160,
+      "endMs": 26160,
+      "text": "First, you have some time to look at questions 21 to 26 on page 5."
+    },
+    {
+      "startMs": 49160,
+      "endMs": 76160,
+      "text": "Now listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 79160,
+      "endMs": 81160,
+      "text": "Katie: Hi Daniel."
+    },
+    {
+      "startMs": 81160,
+      "endMs": 84160,
+      "text": "Daniel: Katie, you look as if you're off somewhere."
+    },
+    {
+      "startMs": 84160,
+      "endMs": 87160,
+      "text": "Katie: Yes, I was just heading out for a walk."
+    },
+    {
+      "startMs": 87160,
+      "endMs": 92400,
+      "text": "Daniel: Funny, I was just reading an article about some research that's been done on the effects"
+    },
+    {
+      "startMs": 92400,
+      "endMs": 95160,
+      "text": "of walking on creativity."
+    },
+    {
+      "startMs": 95160,
+      "endMs": 97160,
+      "text": "Katie: Sounds interesting."
+    },
+    {
+      "startMs": 97160,
+      "endMs": 102840,
+      "text": "Daniel: I've always found walking helped me think, but this article confirms that everybody can"
+    },
+    {
+      "startMs": 102840,
+      "endMs": 103840,
+      "text": "benefit."
+    },
+    {
+      "startMs": 103840,
+      "endMs": 105840,
+      "text": "Katie: Oh, tell me more."
+    },
+    {
+      "startMs": 105840,
+      "endMs": 111840,
+      "text": "Daniel: OK, but I may even do some more research on it at some point, so don't pinch my idea."
+    },
+    {
+      "startMs": 111840,
+      "endMs": 112840,
+      "text": "Katie: Promise."
+    },
+    {
+      "startMs": 112840,
+      "endMs": 120320,
+      "text": "Daniel: Well, in the experiments, the researchers tested participants' creativity by comparing how"
+    },
+    {
+      "startMs": 120320,
+      "endMs": 125760,
+      "text": "many ideas they thought of while they were walking compared to while they were doing"
+    },
+    {
+      "startMs": 125760,
+      "endMs": 126760,
+      "text": "other activities."
+    },
+    {
+      "startMs": 126760,
+      "endMs": 129680,
+      "text": "Katie: What, like listening to music?"
+    },
+    {
+      "startMs": 129680,
+      "endMs": 131840,
+      "text": "Daniel: Nothing like that."
+    },
+    {
+      "startMs": 131840,
+      "endMs": 137960,
+      "text": "But they did analyse the ideas participants came up with when sitting, both outdoors and"
+    },
+    {
+      "startMs": 137960,
+      "endMs": 139800,
+      "text": "inside."
+    },
+    {
+      "startMs": 139800,
+      "endMs": 145280,
+      "text": "What I found surprising was that they didn't compare walking to other forms of exercise,"
+    },
+    {
+      "startMs": 145280,
+      "endMs": 147600,
+      "text": "like running, for example."
+    },
+    {
+      "startMs": 147600,
+      "endMs": 148600,
+      "text": "Katie: Right."
+    },
+    {
+      "startMs": 148600,
+      "endMs": 151960,
+      "text": "So what was the difference between the experiments?"
+    },
+    {
+      "startMs": 151960,
+      "endMs": 157800,
+      "text": "Daniel: Well, in each one, the activities were put together in different ways."
+    },
+    {
+      "startMs": 157800,
+      "endMs": 162760,
+      "text": "All of the experiments specifically focused on the ability of participants to come up"
+    },
+    {
+      "startMs": 162760,
+      "endMs": 164760,
+      "text": "with new ideas."
+    },
+    {
+      "startMs": 164760,
+      "endMs": 168880,
+      "text": "Then the final experiment was a control test of sorts."
+    },
+    {
+      "startMs": 168880,
+      "endMs": 170480,
+      "text": "Katie: Oh, right."
+    },
+    {
+      "startMs": 170480,
+      "endMs": 176760,
+      "text": "Daniel: In one experiment, participants had to think of unusual uses for three everyday objects"
+    },
+    {
+      "startMs": 176760,
+      "endMs": 178240,
+      "text": "within a time limit."
+    },
+    {
+      "startMs": 178240,
+      "endMs": 179720,
+      "text": "Katie: OK."
+    },
+    {
+      "startMs": 179720,
+      "endMs": 183160,
+      "text": "Daniel: And then there was an experiment with words."
+    },
+    {
+      "startMs": 183160,
+      "endMs": 185360,
+      "text": "Katie: What did they ask them to do?"
+    },
+    {
+      "startMs": 185360,
+      "endMs": 188400,
+      "text": "Daniel: Pair words in unusual ways."
+    },
+    {
+      "startMs": 188400,
+      "endMs": 191480,
+      "text": "For example, the word sweet."
+    },
+    {
+      "startMs": 191480,
+      "endMs": 197320,
+      "text": "If participants simply said sweet as sugar, that wasn't creative."
+    },
+    {
+      "startMs": 197320,
+      "endMs": 201680,
+      "text": "But an answer like sweet as a cat with honey on its paws was."
+    },
+    {
+      "startMs": 201680,
+      "endMs": 202680,
+      "text": "Katie: OK."
+    },
+    {
+      "startMs": 202680,
+      "endMs": 205640,
+      "text": "I can see why they'd ask them to do that."
+    },
+    {
+      "startMs": 205640,
+      "endMs": 206640,
+      "text": "Daniel: Really?"
+    },
+    {
+      "startMs": 206640,
+      "endMs": 209960,
+      "text": "I just don't see how the experiment is fair."
+    },
+    {
+      "startMs": 209960,
+      "endMs": 211240,
+      "text": "Katie: Why?"
+    },
+    {
+      "startMs": 211240,
+      "endMs": 214800,
+      "text": "Because the conclusions are based only on the researchers' opinion."
+    },
+    {
+      "startMs": 214800,
+      "endMs": 220080,
+      "text": "Daniel: I think it's more that anyone who'd studied language would be at an advantage."
+    },
+    {
+      "startMs": 220080,
+      "endMs": 221080,
+      "text": "Katie: OK."
+    },
+    {
+      "startMs": 221080,
+      "endMs": 225280,
+      "text": "Was there an experiment about focused thinking?"
+    },
+    {
+      "startMs": 225280,
+      "endMs": 227280,
+      "text": "Daniel: Yeah, there was."
+    },
+    {
+      "startMs": 227280,
+      "endMs": 231480,
+      "text": "It aimed to find out if walking helped focused thinking."
+    },
+    {
+      "startMs": 231480,
+      "endMs": 237480,
+      "text": "Though I wasn't sure that I agreed with their findings, they decided that walking doesn't"
+    },
+    {
+      "startMs": 237480,
+      "endMs": 239680,
+      "text": "help this type of thinking."
+    },
+    {
+      "startMs": 239680,
+      "endMs": 241280,
+      "text": "Katie: What evidence did they have?"
+    },
+    {
+      "startMs": 241280,
+      "endMs": 242880,
+      "text": "Daniel: Well, that's it."
+    },
+    {
+      "startMs": 242920,
+      "endMs": 247960,
+      "text": "I don't think there was enough evidence to support their conclusions, even if their methods"
+    },
+    {
+      "startMs": 247960,
+      "endMs": 248960,
+      "text": "were sound."
+    },
+    {
+      "startMs": 248960,
+      "endMs": 253800,
+      "text": "Katie: Well, I'd certainly hesitate before making such a bold statement."
+    },
+    {
+      "startMs": 253800,
+      "endMs": 256840,
+      "text": "Still, it's a first step, isn't it?"
+    },
+    {
+      "startMs": 256840,
+      "endMs": 262440,
+      "text": "Daniel: I suppose to move forward with this, they'll need to test other ways people keep fit,"
+    },
+    {
+      "startMs": 262440,
+      "endMs": 263960,
+      "text": "like swimming."
+    },
+    {
+      "startMs": 263960,
+      "endMs": 269560,
+      "text": "Katie: That would be useful, but personally, I'd like to know more about the fundamental reason"
+    },
+    {
+      "startMs": 269560,
+      "endMs": 272440,
+      "text": "for the effect on people's creativity."
+    },
+    {
+      "startMs": 272440,
+      "endMs": 273920,
+      "text": "Daniel: That would be good."
+    },
+    {
+      "startMs": 273920,
+      "endMs": 277960,
+      "text": "Then it could be applied more widely in work, for example."
+    },
+    {
+      "startMs": 277960,
+      "endMs": 283920,
+      "text": "Katie: Again, that's secondary, really."
+    },
+    {
+      "startMs": 283920,
+      "endMs": 290840,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27-30"
+    },
+    {
+      "startMs": 290840,
+      "endMs": 291760,
+      "text": "on page 6."
+    },
+    {
+      "startMs": 302440,
+      "endMs": 320120,
+      "text": "Now listen and answer questions 27-30."
+    },
+    {
+      "startMs": 320120,
+      "endMs": 325520,
+      "text": "Daniel: But how would you test walking if you wanted to assess its physical benefits?"
+    },
+    {
+      "startMs": 325520,
+      "endMs": 331520,
+      "text": "Katie: Well, firstly, I'd like to know more about the benefits of different situations."
+    },
+    {
+      "startMs": 331520,
+      "endMs": 333520,
+      "text": "Daniel: What about the effect of footwear?"
+    },
+    {
+      "startMs": 333520,
+      "endMs": 335200,
+      "text": "Katie: Hmm, hadn't thought of that."
+    },
+    {
+      "startMs": 335200,
+      "endMs": 340160,
+      "text": "Daniel: Well, I've read that shoes with thinner soles were found to be better for people's"
+    },
+    {
+      "startMs": 340160,
+      "endMs": 341160,
+      "text": "joints."
+    },
+    {
+      "startMs": 341160,
+      "endMs": 344360,
+      "text": "It even made the skeletal structure tougher."
+    },
+    {
+      "startMs": 344360,
+      "endMs": 345360,
+      "text": "Katie: Interesting."
+    },
+    {
+      "startMs": 345360,
+      "endMs": 347960,
+      "text": "Was that because they lost weight?"
+    },
+    {
+      "startMs": 347960,
+      "endMs": 350280,
+      "text": "Daniel: Not as far as I'm aware."
+    },
+    {
+      "startMs": 350280,
+      "endMs": 352880,
+      "text": "And then there's walking in the mountains."
+    },
+    {
+      "startMs": 352880,
+      "endMs": 354880,
+      "text": "Katie: Walking in the mountains."
+    },
+    {
+      "startMs": 354880,
+      "endMs": 358360,
+      "text": "Hmm, I think I've read something about that."
+    },
+    {
+      "startMs": 358360,
+      "endMs": 362880,
+      "text": "Doesn't altitude help people regulate their sleep patterns?"
+    },
+    {
+      "startMs": 362880,
+      "endMs": 365560,
+      "text": "Daniel: It's more that it improves your vision."
+    },
+    {
+      "startMs": 365560,
+      "endMs": 367760,
+      "text": "Katie: It must be those breathtaking views."
+    },
+    {
+      "startMs": 367760,
+      "endMs": 368760,
+      "text": "Daniel: Yeah."
+    },
+    {
+      "startMs": 368760,
+      "endMs": 373040,
+      "text": "Katie: And what about the effect that walking has for elderly people?"
+    },
+    {
+      "startMs": 373040,
+      "endMs": 375520,
+      "text": "Daniel: Better balance by any chance?"
+    },
+    {
+      "startMs": 375520,
+      "endMs": 377120,
+      "text": "Katie: More than that."
+    },
+    {
+      "startMs": 377120,
+      "endMs": 382440,
+      "text": "It had a positive effect by helping them maintain their body clocks' natural rhythm, both"
+    },
+    {
+      "startMs": 382440,
+      "endMs": 385360,
+      "text": "when going to bed and waking up."
+    },
+    {
+      "startMs": 385360,
+      "endMs": 386680,
+      "text": "Daniel: Right."
+    },
+    {
+      "startMs": 386680,
+      "endMs": 389760,
+      "text": "And what about the effect of walking long distances?"
+    },
+    {
+      "startMs": 389760,
+      "endMs": 395840,
+      "text": "Katie: Well, a person needs to find the balance between their optimum speed and their natural breathing"
+    },
+    {
+      "startMs": 395840,
+      "endMs": 397160,
+      "text": "pattern."
+    },
+    {
+      "startMs": 397160,
+      "endMs": 401920,
+      "text": "Once they're synchronized, they can just keep on going for much longer periods than they"
+    },
+    {
+      "startMs": 401920,
+      "endMs": 402920,
+      "text": "could before."
+    },
+    {
+      "startMs": 402920,
+      "endMs": 403920,
+      "text": "Daniel: Hmm."
+    },
+    {
+      "startMs": 403920,
+      "endMs": 406120,
+      "text": "I can see how that would work."
+    },
+    {
+      "startMs": 406120,
+      "endMs": 407840,
+      "text": "But anyway."
+    },
+    {
+      "startMs": 407840,
+      "endMs": 413480,
+      "text": "That is the end of section three."
+    },
+    {
+      "startMs": 413480,
+      "endMs": 416560,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 443480,
+      "endMs": 449960,
+      "text": "Now turn to section four on page seven."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 104,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

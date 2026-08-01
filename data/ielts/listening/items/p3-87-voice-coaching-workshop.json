@@ -1,0 +1,730 @@
+{
+  "id": "p3-87-voice-coaching-workshop",
+  "title": "Voice Coaching Workshop",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-40e16012af2f",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 409.962,
+    "checksum": "sha256:9762f84decc7efdc2e77563a78f44f4b0368f587da3f6d03fda53c6d2a61590f"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–26",
+      "instruction": "Choose the correct answer.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Ed is giving the voice coaching workshop in order to get",
+          "options": [
+            {
+              "id": "A",
+              "text": "a new job."
+            },
+            {
+              "id": "B",
+              "text": "a qualification."
+            },
+            {
+              "id": "C",
+              "text": "a promotion."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "According to Fiona, the seating pattern that Ed chooses",
+          "options": [
+            {
+              "id": "A",
+              "text": "should be illustrated visually."
+            },
+            {
+              "id": "B",
+              "text": "has to be explained in detail."
+            },
+            {
+              "id": "C",
+              "text": "is not particularly important."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "Fiona and Ed agree that in the first activity, the students",
+          "options": [
+            {
+              "id": "A",
+              "text": "may feel uncomfortable."
+            },
+            {
+              "id": "B",
+              "text": "like to make group contact."
+            },
+            {
+              "id": "C",
+              "text": "must focus on themselves."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "24",
+          "text": "Fiona and Ed agree that in the second activity, Ed should",
+          "options": [
+            {
+              "id": "A",
+              "text": "insist which students work together."
+            },
+            {
+              "id": "B",
+              "text": "tell students to prepare a speech."
+            },
+            {
+              "id": "C",
+              "text": "include a focus on breath control."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "25",
+          "text": "What does Fiona suggest about working in a big space?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It could be outside or inside."
+            },
+            {
+              "id": "B",
+              "text": "It is best to go to somewhere like a park."
+            },
+            {
+              "id": "C",
+              "text": "It is useful for getting actors to shout."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "26",
+          "text": "What does Fiona think of Ed's selection of texts?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It should include more classical texts."
+            },
+            {
+              "id": "B",
+              "text": "It needs to focus on a single emotion."
+            },
+            {
+              "id": "C",
+              "text": "It has to cover a wider range."
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 27–30",
+      "instruction": "Choose FOUR correct answers from the box A–G, next to questions 27–30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "too expensive"
+        },
+        {
+          "id": "B",
+          "text": "too limited"
+        },
+        {
+          "id": "C",
+          "text": "prejudiced"
+        },
+        {
+          "id": "D",
+          "text": "unrealistic"
+        },
+        {
+          "id": "E",
+          "text": "out of date"
+        },
+        {
+          "id": "F",
+          "text": "too detailed"
+        },
+        {
+          "id": "G",
+          "text": "unavailable"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Vocal Instruction",
+          "answer": "E"
+        },
+        {
+          "id": "28",
+          "text": "Improve Your Accent",
+          "answer": "B"
+        },
+        {
+          "id": "29",
+          "text": "Actors' Handbook",
+          "answer": "G"
+        },
+        {
+          "id": "30",
+          "text": "Confident Voice Delivery",
+          "answer": "D"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "A",
+        "23": "C",
+        "24": "C",
+        "25": "A",
+        "26": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "27": "E",
+        "28": "B",
+        "29": "G",
+        "30": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10600,
+      "text": "You will hear a discussion between Fiona, who is the head of a college drama department"
+    },
+    {
+      "startMs": 10600,
+      "endMs": 16060,
+      "text": "and a new tutor called Ed, who is preparing to run a voice coaching workshop for drama"
+    },
+    {
+      "startMs": 16060,
+      "endMs": 17060,
+      "text": "students."
+    },
+    {
+      "startMs": 17060,
+      "endMs": 22800,
+      "text": "First, you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 74000,
+      "text": "Now, listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 78000,
+      "text": "Fiona: Right, Ed."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 81000,
+      "text": "Well, I'm delighted that you've joined the drama department."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 86000,
+      "text": "Now, part of my job is to support you during your probationary year."
+    },
+    {
+      "startMs": 86000,
+      "endMs": 90720,
+      "text": "So, let's ensure that you're clear about what you'll be doing in the first voice coaching"
+    },
+    {
+      "startMs": 90720,
+      "endMs": 92720,
+      "text": "workshop you run next week."
+    },
+    {
+      "startMs": 92720,
+      "endMs": 93720,
+      "text": "Ed: OK."
+    },
+    {
+      "startMs": 93720,
+      "endMs": 98800,
+      "text": "Fiona: I'll be observing you working with the students as you show them how to project their voices"
+    },
+    {
+      "startMs": 98800,
+      "endMs": 99800,
+      "text": "on stage."
+    },
+    {
+      "startMs": 99800,
+      "endMs": 106440,
+      "text": "I'll be evaluating how you cope with the practical activities as well as the theory."
+    },
+    {
+      "startMs": 106440,
+      "endMs": 112120,
+      "text": "And if all goes well, you'll then have finished the final stage of your voice coach diploma."
+    },
+    {
+      "startMs": 112120,
+      "endMs": 113840,
+      "text": "Ed: That'd be great, Fiona."
+    },
+    {
+      "startMs": 113840,
+      "endMs": 118920,
+      "text": "Anyway, I've thought through the workshop and I've done a plan to highlight the key areas"
+    },
+    {
+      "startMs": 118920,
+      "endMs": 120200,
+      "text": "I intend to cover."
+    },
+    {
+      "startMs": 120200,
+      "endMs": 121200,
+      "text": "Fiona: Good."
+    },
+    {
+      "startMs": 121200,
+      "endMs": 122680,
+      "text": "Let's look at your plan."
+    },
+    {
+      "startMs": 122680,
+      "endMs": 123680,
+      "text": "Ed: OK."
+    },
+    {
+      "startMs": 123680,
+      "endMs": 125720,
+      "text": "Fiona: So, let's see."
+    },
+    {
+      "startMs": 125720,
+      "endMs": 128960,
+      "text": "I'm glad you've thought about seating patterns."
+    },
+    {
+      "startMs": 128960,
+      "endMs": 133920,
+      "text": "You say you want to begin with the student sitting in star-shaped patterns."
+    },
+    {
+      "startMs": 133920,
+      "endMs": 135440,
+      "text": "That's fine."
+    },
+    {
+      "startMs": 135440,
+      "endMs": 139160,
+      "text": "There are various seating patterns you can use at this stage."
+    },
+    {
+      "startMs": 139160,
+      "endMs": 145400,
+      "text": "I like trainees sitting cross-legged in a circle, other people like students in rows."
+    },
+    {
+      "startMs": 145400,
+      "endMs": 150080,
+      "text": "But actually, all these can be represented diagrammatically, which would be clearer"
+    },
+    {
+      "startMs": 150080,
+      "endMs": 154000,
+      "text": "than going into lots of detailed explanations like you've done here."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 155000,
+      "text": "Ed: Oh, OK."
+    },
+    {
+      "startMs": 155000,
+      "endMs": 158840,
+      "text": "But it doesn't matter which one I use at the beginning of a workshop."
+    },
+    {
+      "startMs": 158840,
+      "endMs": 161360,
+      "text": "Fiona: It's whatever you feel comfortable with."
+    },
+    {
+      "startMs": 161360,
+      "endMs": 162360,
+      "text": "Ed: Fine."
+    },
+    {
+      "startMs": 162360,
+      "endMs": 166400,
+      "text": "So, in the initial phase, I explain the objectives of the session."
+    },
+    {
+      "startMs": 166400,
+      "endMs": 167400,
+      "text": "Fiona: OK."
+    },
+    {
+      "startMs": 167480,
+      "endMs": 174960,
+      "text": "Then, in the first activity you say they should quickly rise, walk briskly around the room,"
+    },
+    {
+      "startMs": 174960,
+      "endMs": 177240,
+      "text": "weaving in and out to avoid each other."
+    },
+    {
+      "startMs": 177240,
+      "endMs": 178240,
+      "text": "Ed: Yes."
+    },
+    {
+      "startMs": 178240,
+      "endMs": 181960,
+      "text": "I think it's important that they don't get in each other's way and that they learn to"
+    },
+    {
+      "startMs": 181960,
+      "endMs": 187760,
+      "text": "move within a confined space, aware of other people, but primarily concentrating on their"
+    },
+    {
+      "startMs": 187760,
+      "endMs": 189080,
+      "text": "own thoughts."
+    },
+    {
+      "startMs": 189080,
+      "endMs": 190080,
+      "text": "Fiona: Absolutely."
+    },
+    {
+      "startMs": 190080,
+      "endMs": 195000,
+      "text": "But in your plan, you've omitted to mention that in the second activity, you will get"
+    },
+    {
+      "startMs": 195000,
+      "endMs": 197120,
+      "text": "the students to pair off."
+    },
+    {
+      "startMs": 197120,
+      "endMs": 202640,
+      "text": "So you need to rethink that section and include reasons why it's essential for them to listen"
+    },
+    {
+      "startMs": 202640,
+      "endMs": 203880,
+      "text": "to each other talking."
+    },
+    {
+      "startMs": 203880,
+      "endMs": 206840,
+      "text": "It doesn't matter what they actually say."
+    },
+    {
+      "startMs": 206840,
+      "endMs": 211280,
+      "text": "And at the same time, get them to think about their posture because that governs their"
+    },
+    {
+      "startMs": 211280,
+      "endMs": 214920,
+      "text": "lung capacity and most crucially, their breathing."
+    },
+    {
+      "startMs": 214920,
+      "endMs": 215920,
+      "text": "Ed: Right."
+    },
+    {
+      "startMs": 215920,
+      "endMs": 216920,
+      "text": "We'll do."
+    },
+    {
+      "startMs": 216920,
+      "endMs": 217920,
+      "text": "Fiona: OK."
+    },
+    {
+      "startMs": 217920,
+      "endMs": 222920,
+      "text": "Of course, a common issue in the UK is that we rehearse in small rooms, then transfer to"
+    },
+    {
+      "startMs": 222920,
+      "endMs": 224600,
+      "text": "a larger stage."
+    },
+    {
+      "startMs": 224600,
+      "endMs": 230120,
+      "text": "So bearing in mind that voice projection is not shouting, later in the course, you'll"
+    },
+    {
+      "startMs": 230120,
+      "endMs": 232720,
+      "text": "need to work in a much bigger space."
+    },
+    {
+      "startMs": 232720,
+      "endMs": 235320,
+      "text": "Ed: Does it have to be an enclosed space?"
+    },
+    {
+      "startMs": 235320,
+      "endMs": 239560,
+      "text": "I suppose it does because ultimately they're going to work in a theatre."
+    },
+    {
+      "startMs": 239560,
+      "endMs": 245640,
+      "text": "Fiona: Ideally an enclosed space, but there's no reason why you couldn't go somewhere outdoors."
+    },
+    {
+      "startMs": 245640,
+      "endMs": 249840,
+      "text": "Although I'd avoid a very public space like a park."
+    },
+    {
+      "startMs": 249840,
+      "endMs": 250840,
+      "text": "Ed: Right."
+    },
+    {
+      "startMs": 250840,
+      "endMs": 251840,
+      "text": "Thanks."
+    },
+    {
+      "startMs": 251840,
+      "endMs": 258120,
+      "text": "Fiona: Well, your next activity on how to convey emotion on stage is fine, but your selection"
+    },
+    {
+      "startMs": 258120,
+      "endMs": 264800,
+      "text": "of texts for the students to experience emotional depth leaves a little to be desired."
+    },
+    {
+      "startMs": 264800,
+      "endMs": 269320,
+      "text": "It's not enough to include a few extracts that you find enjoyable."
+    },
+    {
+      "startMs": 269320,
+      "endMs": 274320,
+      "text": "You need to consider the different kind of emotion that each extract should present"
+    },
+    {
+      "startMs": 274320,
+      "endMs": 277200,
+      "text": "from sorrow through to ecstasy."
+    },
+    {
+      "startMs": 277200,
+      "endMs": 282280,
+      "text": "And classical stuff is all well and good, but include many more contemporary sources."
+    },
+    {
+      "startMs": 282280,
+      "endMs": 288560,
+      "text": "Ed: I understand."
+    },
+    {
+      "startMs": 288560,
+      "endMs": 294320,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27"
+    },
+    {
+      "startMs": 294320,
+      "endMs": 295080,
+      "text": "to 30."
+    },
+    {
+      "startMs": 307200,
+      "endMs": 323200,
+      "text": "Now listen and answer questions 27 to 30."
+    },
+    {
+      "startMs": 323200,
+      "endMs": 328800,
+      "text": "Fiona: Now out of the 20 books you list, some are more useful than others, and I think you"
+    },
+    {
+      "startMs": 328800,
+      "endMs": 334040,
+      "text": "should flag up the disadvantages so that people don't waste money buying them."
+    },
+    {
+      "startMs": 334040,
+      "endMs": 335800,
+      "text": "Take vocal instruction."
+    },
+    {
+      "startMs": 335800,
+      "endMs": 341240,
+      "text": "I know I recommended it for you to read for its historical perspective, but bear in mind"
+    },
+    {
+      "startMs": 341240,
+      "endMs": 346640,
+      "text": "it was written 30 years ago, and it shows, yeah, agreed."
+    },
+    {
+      "startMs": 346640,
+      "endMs": 352280,
+      "text": "Ed: I thought improve your accent was interesting, but it's very narrow in its outlook, don't"
+    },
+    {
+      "startMs": 352280,
+      "endMs": 353280,
+      "text": "you think?"
+    },
+    {
+      "startMs": 353280,
+      "endMs": 356040,
+      "text": "Fiona: Well, I'm not sure it's interesting."
+    },
+    {
+      "startMs": 356040,
+      "endMs": 360480,
+      "text": "And another one you need to warn people about is the actors handbook."
+    },
+    {
+      "startMs": 360480,
+      "endMs": 365320,
+      "text": "It's an expensive book, very useful, but according to the publishers, they're going to"
+    },
+    {
+      "startMs": 365320,
+      "endMs": 370600,
+      "text": "reissue it with new colour photos, and at the moment it's out of print."
+    },
+    {
+      "startMs": 370600,
+      "endMs": 375040,
+      "text": "There aren't any second-hand copies out there, so tell them not to waste time looking for"
+    },
+    {
+      "startMs": 375040,
+      "endMs": 376040,
+      "text": "it."
+    },
+    {
+      "startMs": 376040,
+      "endMs": 377040,
+      "text": "Ed: Oh, right."
+    },
+    {
+      "startMs": 377040,
+      "endMs": 379120,
+      "text": "I didn't know that."
+    },
+    {
+      "startMs": 379120,
+      "endMs": 384440,
+      "text": "Fiona: There's one more that I want to mention, and that's confident voice delivery."
+    },
+    {
+      "startMs": 384440,
+      "endMs": 390000,
+      "text": "It exaggerates its claims on how to be successful to such an extent that I think it is positively"
+    },
+    {
+      "startMs": 390000,
+      "endMs": 391000,
+      "text": "misleading."
+    },
+    {
+      "startMs": 391000,
+      "endMs": 393480,
+      "text": "But, maybe unbiased."
+    },
+    {
+      "startMs": 394200,
+      "endMs": 397360,
+      "text": "Ed: Okay, I'll make a note of that, thanks."
+    },
+    {
+      "startMs": 397360,
+      "endMs": 401960,
+      "text": "Soot the other."
+    },
+    {
+      "startMs": 401960,
+      "endMs": 404400,
+      "text": "That is the end of part three."
+    },
+    {
+      "startMs": 404400,
+      "endMs": 408560,
+      "text": "You now have 30 seconds to check your answers to part three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 95,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

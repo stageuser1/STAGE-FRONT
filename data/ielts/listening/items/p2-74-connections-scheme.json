@@ -1,0 +1,674 @@
+{
+  "id": "p2-74-connections-scheme",
+  "title": "Connections Scheme",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-edd6fd66d675",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 355.328,
+    "checksum": "sha256:c368e2f8ae0a4b09f4b8eb27adb7f57dd625089a6d424ca4cd68d362ca7f7f2f"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–14",
+      "instruction": "Choose the correct answer.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "People who act as hosts for Connections",
+          "options": [
+            {
+              "id": "A",
+              "text": "are given a little money."
+            },
+            {
+              "id": "B",
+              "text": "do not receive payment."
+            },
+            {
+              "id": "C",
+              "text": "can apply for expenses."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "Connections is for people from other countries who",
+          "options": [
+            {
+              "id": "A",
+              "text": "have difficulty making friends."
+            },
+            {
+              "id": "B",
+              "text": "are looking for temporary work."
+            },
+            {
+              "id": "C",
+              "text": "can offer language support."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "According to the speaker, what can a guest expect to do during their stay?",
+          "options": [
+            {
+              "id": "A",
+              "text": "cook food for their host family"
+            },
+            {
+              "id": "B",
+              "text": "explain their own family traditions."
+            },
+            {
+              "id": "C",
+              "text": "discuss matters of personal interest."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "According to the speaker, a long-term benefit of the Connections scheme could be",
+          "options": [
+            {
+              "id": "A",
+              "text": "an increased understanding between cultures."
+            },
+            {
+              "id": "B",
+              "text": "a programme of weekly visits."
+            },
+            {
+              "id": "C",
+              "text": "more involvement from people of different communities."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 15–20",
+      "instruction": "Complete the flow chart below.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "acknowledgement"
+        },
+        {
+          "id": "B",
+          "text": "decision"
+        },
+        {
+          "id": "C",
+          "text": "identity"
+        },
+        {
+          "id": "D",
+          "text": "an interview"
+        },
+        {
+          "id": "E",
+          "text": "legal status"
+        },
+        {
+          "id": "F",
+          "text": "records"
+        },
+        {
+          "id": "G",
+          "text": "rejection"
+        },
+        {
+          "id": "H",
+          "text": "vetting"
+        }
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "The applicant makes an initial phone call to the _____.  department.",
+          "answer": "H"
+        },
+        {
+          "id": "16",
+          "text": "The applicant sends in a reference to confirm his/her _____. .",
+          "answer": "C"
+        },
+        {
+          "id": "17",
+          "text": "The applicant returns the completed form with two photographs (one for _____.  and one for the family).",
+          "answer": "F"
+        },
+        {
+          "id": "18",
+          "text": "The applicant receives _____.  within seven days.",
+          "answer": "A"
+        },
+        {
+          "id": "19",
+          "text": "The applicant has _____.  with a staff member.",
+          "answer": "D"
+        },
+        {
+          "id": "20",
+          "text": "The applicant receives a final _____.  in writing.",
+          "answer": "B"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "To apply to Connections as a guest",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The applicant makes an initial phone call to the 15. ________ department.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The applicant sends in a reference to confirm his/her 16. ________.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Following approval, an application form is emailed to the applicant.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The applicant returns the completed form with two photographs (one for 17. ________ and one for the family).",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The applicant receives 18. ________ within seven days.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The applicant has 19. ________ with a staff member.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "↓",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The applicant receives a final 20. ________ in writing.",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "C",
+        "14": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "15": "H",
+        "16": "C",
+        "17": "F",
+        "18": "A",
+        "19": "D",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "Now listen carefully and answer questions 11 to 14."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 11000,
+      "text": "Hello."
+    },
+    {
+      "startMs": 11000,
+      "endMs": 17000,
+      "text": "Listeners to this programme will know that we're very keen to foster links within communities"
+    },
+    {
+      "startMs": 17000,
+      "endMs": 20000,
+      "text": "and we think we've hit on a winning idea."
+    },
+    {
+      "startMs": 20000,
+      "endMs": 24000,
+      "text": "I'm going to tell you about a scheme which has been set up as part of our"
+    },
+    {
+      "startMs": 24000,
+      "endMs": 26000,
+      "text": "Communities in Action programme."
+    },
+    {
+      "startMs": 26000,
+      "endMs": 31000,
+      "text": "For those who'd like to be put in touch with people from different cultures and countries."
+    },
+    {
+      "startMs": 31000,
+      "endMs": 36000,
+      "text": "As the name Connections suggests, we're hoping that the scheme will introduce"
+    },
+    {
+      "startMs": 36000,
+      "endMs": 41000,
+      "text": "people who live in this country, who will act as hosts to people who've"
+    },
+    {
+      "startMs": 41000,
+      "endMs": 45000,
+      "text": "recently arrived here to study or to work for a limited period of time,"
+    },
+    {
+      "startMs": 45000,
+      "endMs": 47000,
+      "text": "who will be their guests."
+    },
+    {
+      "startMs": 47000,
+      "endMs": 51000,
+      "text": "Now, if you've got a spare room in your house or flat,"
+    },
+    {
+      "startMs": 51000,
+      "endMs": 56000,
+      "text": "you might like to be a host and have someone stay for a weekend."
+    },
+    {
+      "startMs": 56000,
+      "endMs": 62000,
+      "text": "I should point out that no money is involved as all our hosts are unpaid,"
+    },
+    {
+      "startMs": 62000,
+      "endMs": 67000,
+      "text": "but you should not have too much expense other than one more person joining you at"
+    },
+    {
+      "startMs": 67000,
+      "endMs": 69000,
+      "text": "mealtimes."
+    },
+    {
+      "startMs": 69000,
+      "endMs": 72000,
+      "text": "In the course of their studies or work in this country,"
+    },
+    {
+      "startMs": 72000,
+      "endMs": 76000,
+      "text": "some people rarely get the opportunity to socialise."
+    },
+    {
+      "startMs": 76000,
+      "endMs": 80000,
+      "text": "There may be language problems or feelings of shyness,"
+    },
+    {
+      "startMs": 80000,
+      "endMs": 85000,
+      "text": "which mean that whatever their age, people can become quite lonely or isolated."
+    },
+    {
+      "startMs": 85000,
+      "endMs": 89000,
+      "text": "If you are prepared to invite someone into your home,"
+    },
+    {
+      "startMs": 89000,
+      "endMs": 94000,
+      "text": "you can rely on Connections for a personal introduction,"
+    },
+    {
+      "startMs": 94000,
+      "endMs": 97000,
+      "text": "and the timing of the invitation will be to suit you."
+    },
+    {
+      "startMs": 97000,
+      "endMs": 103000,
+      "text": "As I said, the stay is always over a weekend for two or three nights,"
+    },
+    {
+      "startMs": 103000,
+      "endMs": 107000,
+      "text": "and as the host, the arrangements you make for your visitor"
+    },
+    {
+      "startMs": 107000,
+      "endMs": 110000,
+      "text": "will depend on your other commitments."
+    },
+    {
+      "startMs": 110000,
+      "endMs": 112000,
+      "text": "If you're listening to this programme,"
+    },
+    {
+      "startMs": 112000,
+      "endMs": 116000,
+      "text": "and you would like to take advantage of what Connections can offer a guest,"
+    },
+    {
+      "startMs": 116000,
+      "endMs": 120000,
+      "text": "then what I'm going on to say will apply to you."
+    },
+    {
+      "startMs": 120000,
+      "endMs": 125000,
+      "text": "So, what will you, the guest, get out of a visit?"
+    },
+    {
+      "startMs": 125000,
+      "endMs": 131000,
+      "text": "You'll gain an insight into the customs and way of life of the country you're staying in,"
+    },
+    {
+      "startMs": 131000,
+      "endMs": 134000,
+      "text": "and you'll enjoy home-cooked meals,"
+    },
+    {
+      "startMs": 134000,
+      "endMs": 138000,
+      "text": "and be able to ask questions about things which interest you,"
+    },
+    {
+      "startMs": 138000,
+      "endMs": 140000,
+      "text": "or perhaps even puzzle you."
+    },
+    {
+      "startMs": 140000,
+      "endMs": 144000,
+      "text": "It's early days, but if a weekend stay goes well,"
+    },
+    {
+      "startMs": 144000,
+      "endMs": 147000,
+      "text": "relationships might develop over time,"
+    },
+    {
+      "startMs": 147000,
+      "endMs": 151000,
+      "text": "and turn into lasting and genuine friendships."
+    },
+    {
+      "startMs": 151000,
+      "endMs": 155000,
+      "text": "This would undoubtedly be of advantage to the whole community,"
+    },
+    {
+      "startMs": 155000,
+      "endMs": 161000,
+      "text": "as we all become more aware of the ways in which people in different countries live their lives."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 165000,
+      "text": "It's also the possibility that when you return to your own country,"
+    },
+    {
+      "startMs": 165000,
+      "endMs": 170000,
+      "text": "you might one day want to invite your hosts to stay with you."
+    },
+    {
+      "startMs": 178000,
+      "endMs": 180000,
+      "text": "Before you hear the rest of the programme,"
+    },
+    {
+      "startMs": 180000,
+      "endMs": 186000,
+      "text": "you have some time to look at questions 15 to 20 on page 4."
+    },
+    {
+      "startMs": 191000,
+      "endMs": 198000,
+      "text": "Now, listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 229000,
+      "text": "Right, I hope I've given you enough information on the scheme and what we're setting out to do."
+    },
+    {
+      "startMs": 229000,
+      "endMs": 232000,
+      "text": "I'll now deal with the process for applying,"
+    },
+    {
+      "startMs": 232000,
+      "endMs": 235000,
+      "text": "if you'd like to be involved from the point of view of a guest,"
+    },
+    {
+      "startMs": 235000,
+      "endMs": 240000,
+      "text": "so have a pencil and some paper ready to jot down what you need to do."
+    },
+    {
+      "startMs": 240000,
+      "endMs": 245000,
+      "text": "Connections is broken up into various small sections,"
+    },
+    {
+      "startMs": 245000,
+      "endMs": 249000,
+      "text": "which will deal with your application through the different stages."
+    },
+    {
+      "startMs": 249000,
+      "endMs": 254000,
+      "text": "To begin with, we ask you to make a phone call to our vetting people."
+    },
+    {
+      "startMs": 254000,
+      "endMs": 257000,
+      "text": "We need to know some basic information about you,"
+    },
+    {
+      "startMs": 257000,
+      "endMs": 260000,
+      "text": "like how long you're intending to be in this country."
+    },
+    {
+      "startMs": 260000,
+      "endMs": 263000,
+      "text": "The minimum time limit is three months."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 266000,
+      "text": "Whether you're working or studying,"
+    },
+    {
+      "startMs": 266000,
+      "endMs": 268000,
+      "text": "we require a reference,"
+    },
+    {
+      "startMs": 268000,
+      "endMs": 273000,
+      "text": "which must be from the person in authority who you're working with or studying under."
+    },
+    {
+      "startMs": 273000,
+      "endMs": 277000,
+      "text": "This will be used for an identity check."
+    },
+    {
+      "startMs": 278000,
+      "endMs": 281000,
+      "text": "Once that's been sent to the authorities and approved,"
+    },
+    {
+      "startMs": 281000,
+      "endMs": 286000,
+      "text": "we'll email you an application form, which you can download."
+    },
+    {
+      "startMs": 286000,
+      "endMs": 293000,
+      "text": "You should complete this and return it with two recent passport-sized photographs of yourself."
+    },
+    {
+      "startMs": 293000,
+      "endMs": 296000,
+      "text": "One photo will be held in our records,"
+    },
+    {
+      "startMs": 296000,
+      "endMs": 302000,
+      "text": "and the other will be sent to your host family prior to your first weekend visit."
+    },
+    {
+      "startMs": 302000,
+      "endMs": 307000,
+      "text": "Our centre manager will get back to you within a week of receiving your form"
+    },
+    {
+      "startMs": 307000,
+      "endMs": 309000,
+      "text": "to let you know that we have it,"
+    },
+    {
+      "startMs": 309000,
+      "endMs": 312000,
+      "text": "and if we think there's a suitable match on our files,"
+    },
+    {
+      "startMs": 312000,
+      "endMs": 318000,
+      "text": "someone from our interview team will contact you for a face-to-face meeting with a member of staff."
+    },
+    {
+      "startMs": 318000,
+      "endMs": 323000,
+      "text": "At that point, you should have some idea of weekend dates when you're free,"
+    },
+    {
+      "startMs": 323000,
+      "endMs": 325000,
+      "text": "which we can put to the host family."
+    },
+    {
+      "startMs": 325000,
+      "endMs": 329000,
+      "text": "However, decisions are not made at the meeting,"
+    },
+    {
+      "startMs": 329000,
+      "endMs": 333000,
+      "text": "but you can expect to hear the result from us in a couple of days."
+    },
+    {
+      "startMs": 333000,
+      "endMs": 338000,
+      "text": "Now, the process for those of you interested in welcoming someone."
+    },
+    {
+      "startMs": 341000,
+      "endMs": 343000,
+      "text": "That is the end of section two."
+    },
+    {
+      "startMs": 343000,
+      "endMs": 347000,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 74,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

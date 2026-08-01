@@ -1,0 +1,524 @@
+{
+  "id": "p3-research-on-work-absence",
+  "title": "Research on Work Absence",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-432a4e0d6030",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 398.064,
+    "checksum": "sha256:b098e56662c3bd9583e4f3b2bc55754ffd734e9f5eb71aa5dd55b984097da6dc"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–24",
+      "instruction": "Choose the correct letter, A, B or C",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Laura chose Burdock Engineering for her research because",
+          "options": [
+            {
+              "id": "A",
+              "text": "she was contacted by the managing director."
+            },
+            {
+              "id": "B",
+              "text": "she knew several people who worked there."
+            },
+            {
+              "id": "C",
+              "text": "she had already done a work placement there."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "What does Laura agree to do regarding the central theme of her research?",
+          "options": [
+            {
+              "id": "A",
+              "text": "check it is relevant"
+            },
+            {
+              "id": "B",
+              "text": "broaden the focus"
+            },
+            {
+              "id": "C",
+              "text": "be more specific in her aims"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "What does Laura expect to find from her research?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Absence rates are related to the type of work done."
+            },
+            {
+              "id": "B",
+              "text": "A lot of worker absence is actually unnecessary."
+            },
+            {
+              "id": "C",
+              "text": "Employee absence rates are increasing."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "What employee information does the tutor think Laura will be able to obtain from company records?",
+          "options": [
+            {
+              "id": "A",
+              "text": "dates of birth"
+            },
+            {
+              "id": "B",
+              "text": "details of employment"
+            },
+            {
+              "id": "C",
+              "text": "individual records of absence"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "25-26",
+      "title": "Questions 25 and 26",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO recommendations does the tutor make about Laura’s questionnaire?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "Leave a space for contact details."
+        },
+        {
+          "id": "B",
+          "text": "Specify a completion date."
+        },
+        {
+          "id": "C",
+          "text": "Provide a mixture of question types."
+        },
+        {
+          "id": "D",
+          "text": "Keep the length to a minimum."
+        },
+        {
+          "id": "E",
+          "text": "Trial it on someone before finalising it."
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Which TWO recommendations does the tutor make about Laura’s questionnaire?",
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "Which TWO recommendations does the tutor make about Laura’s questionnaire?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "27-28",
+      "title": "Questions 27 and 28",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO things will Laura explain in her covering letter to participants?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "when the questionnaire should be completed"
+        },
+        {
+          "id": "B",
+          "text": "the fact that participation in the survey is voluntary"
+        },
+        {
+          "id": "C",
+          "text": "how long the questionnaire is likely to take"
+        },
+        {
+          "id": "D",
+          "text": "the purpose of the survey"
+        },
+        {
+          "id": "E",
+          "text": "the benefits of participation in the survey"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "Which TWO things will Laura explain in her covering letter to participants?",
+          "answer": "C"
+        },
+        {
+          "id": "28",
+          "text": "Which TWO things will Laura explain in her covering letter to participants?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "29-30",
+      "title": "Questions 29 and 30",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO activities does Laura already have definite dates for?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "completion of her finished assignment"
+        },
+        {
+          "id": "B",
+          "text": "questionnaire distribution"
+        },
+        {
+          "id": "C",
+          "text": "collection of completed questionnaires"
+        },
+        {
+          "id": "D",
+          "text": "the next meeting with her tutor"
+        },
+        {
+          "id": "E",
+          "text": "analysis of figures from the company’s database"
+        }
+      ],
+      "questions": [
+        {
+          "id": "29",
+          "text": "Which TWO activities does Laura already have definite dates for?",
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "Which TWO activities does Laura already have definite dates for?",
+          "answer": "D"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "B",
+        "23": "A",
+        "24": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "25_26": [
+          "C",
+          "E"
+        ],
+        "27_28": [
+          "C",
+          "D"
+        ],
+        "29_30": [
+          "A",
+          "D"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "25": "C",
+        "26": "E",
+        "27": "C",
+        "28": "D",
+        "29": "A",
+        "30": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 12480,
+      "text": "You will hear a business student called Laura talking to her tutor about some research"
+    },
+    {
+      "startMs": 12480,
+      "endMs": 17760,
+      "text": "she is planning to do on employee absence."
+    },
+    {
+      "startMs": 17760,
+      "endMs": 21280,
+      "text": "First you have some time to look at questions 21 to 24."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 56400,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 57120,
+      "endMs": 64960,
+      "text": "Tutor: Hello Laura, have a seat. So I understand you're planning to investigate absence from work"
+    },
+    {
+      "startMs": 64960,
+      "endMs": 70560,
+      "text": "for your research project. Laura: That's right. I'm going to base it on a local company called"
+    },
+    {
+      "startMs": 70560,
+      "endMs": 76000,
+      "text": "Burdock Engineering. Burdock Engineering。 Tutor: Is there any particular reason why you've chosen Burdock?"
+    },
+    {
+      "startMs": 76000,
+      "endMs": 82800,
+      "text": "Laura: Well, I'd originally thought of asking another company, FG Engineering, because I did my placement"
+    },
+    {
+      "startMs": 82800,
+      "endMs": 90080,
+      "text": "there and I knew the staff there, but the CEO wasn't very keen. But she knows the managing director"
+    },
+    {
+      "startMs": 90080,
+      "endMs": 96480,
+      "text": "at Burdock and she spoke to him and then he got in touch with me."
+    },
+    {
+      "startMs": 96480,
+      "endMs": 104880,
+      "text": "Apparently absence is a major problem there so he's quite interested in having it investigated."
+    },
+    {
+      "startMs": 104880,
+      "endMs": 111120,
+      "text": "So my central theme is absence but I'm thinking of concentrating on long term absence."
+    },
+    {
+      "startMs": 111120,
+      "endMs": 116560,
+      "text": "I thought that might allow me to give more helpful feedback to the company. Tutor: If I were you I wouldn't be that specific. I'd look at"
+    },
+    {
+      "startMs": 116560,
+      "endMs": 122960,
+      "text": "absence as a whole. You might get more interesting results. Laura: Oh okay."
+    },
+    {
+      "startMs": 122960,
+      "endMs": 130320,
+      "text": "Tutor: So what's the main thing you expect to find? Rises in absence rates over time? Laura: Not really. Initially I wondered if workers"
+    },
+    {
+      "startMs": 130320,
+      "endMs": 136160,
+      "text": "often take time off without real justification but I think that'll be hard to determine."
+    },
+    {
+      "startMs": 136880,
+      "endMs": 142720,
+      "text": "So well I think I may find that it's something to do with what sort of job the employee is"
+    },
+    {
+      "startMs": 142720,
+      "endMs": 150560,
+      "text": "doing. Tutor: Okay, now have you thought how you'll get your information?"
+    },
+    {
+      "startMs": 150560,
+      "endMs": 157040,
+      "text": "Laura: Well first of all I need access to the company records. Tutor: Yes, obviously you'll need overall absence figures though it's unlikely"
+    },
+    {
+      "startMs": 157040,
+      "endMs": 162800,
+      "text": "they'll let you have them for individual workers and you probably won't have access to personal"
+    },
+    {
+      "startMs": 162800,
+      "endMs": 168640,
+      "text": "information like when they were born, but you should be able to use anonymous details like the type"
+    },
+    {
+      "startMs": 168640,
+      "endMs": 178080,
+      "text": "of work they do or how long they've been with the company. Laura: Okay."
+    },
+    {
+      "startMs": 178080,
+      "endMs": 182400,
+      "text": "Before you hear the rest of the discussion you have some time to look at questions 25 to 30."
+    },
+    {
+      "startMs": 192800,
+      "endMs": 216400,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 216400,
+      "endMs": 226480,
+      "text": "Tutor: So let's think a bit more about your questionnaire. Laura: I know that it shouldn't be too long or people get"
+    },
+    {
+      "startMs": 226480,
+      "endMs": 232720,
+      "text": "bored. Tutor: No, but if it's too short you don't get enough information. The trick is to get the balance"
+    },
+    {
+      "startMs": 232720,
+      "endMs": 238800,
+      "text": "right. Laura: I think the questions should be closed questions too. I mean where people choose an answer"
+    },
+    {
+      "startMs": 238800,
+      "endMs": 245200,
+      "text": "from a list. Tutor: But then you miss the chance of getting unexpected information so I'd include one or"
+    },
+    {
+      "startMs": 245200,
+      "endMs": 251840,
+      "text": "two open-ended questions too. Laura: Okay, and I won't ask for names or addresses or anything."
+    },
+    {
+      "startMs": 252720,
+      "endMs": 257760,
+      "text": "Tutor: No, it needs to be anonymous and after you've drafted it you need to give it to at least one"
+    },
+    {
+      "startMs": 257760,
+      "endMs": 263200,
+      "text": "person to check there aren't any problems so you need to leave enough time for that and any"
+    },
+    {
+      "startMs": 263200,
+      "endMs": 268800,
+      "text": "revisions necessary."
+    },
+    {
+      "startMs": 268800,
+      "endMs": 274480,
+      "text": "Laura: What about the covering letter that I'll send out with the questionnaire?"
+    },
+    {
+      "startMs": 274480,
+      "endMs": 280720,
+      "text": "I'll need to introduce myself and explain what the questionnaire is for but what else should I"
+    },
+    {
+      "startMs": 280720,
+      "endMs": 287440,
+      "text": "include? Tutor: I'd reassure people that the survey isn't going to be used to assess them personally"
+    },
+    {
+      "startMs": 287440,
+      "endMs": 293360,
+      "text": "otherwise they might choose not to take part. Laura: Yes I'll make that clear."
+    },
+    {
+      "startMs": 293360,
+      "endMs": 300080,
+      "text": "And what about when they do it? Will they be allowed to use work time? Tutor: That's really up to their manager but you should say"
+    },
+    {
+      "startMs": 300080,
+      "endMs": 306160,
+      "text": "roughly how much time it'll take. Laura: Okay."
+    },
+    {
+      "startMs": 306160,
+      "endMs": 310800,
+      "text": "Tutor: So now you need to produce a schedule with dates. For example when you'll send out the"
+    },
+    {
+      "startMs": 310800,
+      "endMs": 317120,
+      "text": "questionnaire. Laura: Yes okay. Once I can arrange that date with the manager I'll be able to fix the deadline for getting the completed questionnaires back."
+    },
+    {
+      "startMs": 317120,
+      "endMs": 323200,
+      "text": "And I want to use the time in between to analyse the figures that HR is going to give me from their"
+    },
+    {
+      "startMs": 323200,
+      "endMs": 328480,
+      "text": "database though they haven't said exactly when I'll get them. Tutor: And you have to submit your assignment"
+    },
+    {
+      "startMs": 328480,
+      "endMs": 336240,
+      "text": "by the end of June. Laura: Actually I have to get it finished by the second because I've arranged a"
+    },
+    {
+      "startMs": 336240,
+      "endMs": 342800,
+      "text": "work placement after that. Tutor: Okay. Laura: So our next meeting is two weeks today. Is that still okay? Tutor：Yes and in the meantime I'll send you an email."
+    },
+    {
+      "startMs": 342800,
+      "endMs": 348880,
+      "text": "That is the end of part three. You now have 30 seconds to check your answers to part three."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 45,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

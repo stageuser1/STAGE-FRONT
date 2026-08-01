@@ -1,0 +1,505 @@
+{
+  "id": "p4-18-reintroducing-the-beaver-population-to-britain",
+  "title": "Reintroducing the Beaver Population to Britain",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-ee0ab0b01b76",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 363.024,
+    "checksum": "sha256:81c4d1c6dde27cc38b9a3f384ce8d0ff1655b398f76d4a6990524dc14f5aac52"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40.",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Reintroducing the Beaver Population to Britain Background Beavers were once native to Britain but were hunted extensively for their fur, meat, and a substance used in 31. __________. One of the key concerns about reintroducing beavers is ensuring their long-term 32. __________ from illegal hunting and predators. The beaver’s 33. __________ plays an important role in regulating its body temperature and helping it swim efficiently. Ecological Impact The movement of beavers across different water systems is often compared to seasonal 34. __________ seen in other animal species. Some people opposed beaver reintroduction, claiming that their dam-building activities might cause 36. __________for local communities. Environmental Benefits The presence of beavers in an area has been linked to an increase in 37. __________ as people visit to observe these animals. Beaver dams can help prevent 38. __________ by slowing down water flow and storing excess rainwater. The ponds created by beaver activity improve water quality by reducing 39. __________ levels, benefiting local ecosystems. Beavers contribute to biodiversity by creating habitats for fish, birds, and 40. __________, which thrive in their modified environments.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Beavers were once native to Britain but were hunted extensively for their fur, meat, and a substance used in 31. __________.",
+          "answer": "transport"
+        },
+        {
+          "id": "32",
+          "text": "One of the key concerns about reintroducing beavers is ensuring their long-term 32. __________ from illegal hunting and predators.",
+          "answer": "protection"
+        },
+        {
+          "id": "33",
+          "text": "The beaver’s 33. __________ plays an important role in regulating its body temperature and helping it swim efficiently.",
+          "answer": "tail"
+        },
+        {
+          "id": "34",
+          "text": "The movement of beavers across different water systems is often compared to seasonal 34. __________ seen in other animal species.",
+          "answer": "migration"
+        },
+        {
+          "id": "35",
+          "text": "A secretion from beavers was historically used in 35. __________ production due to its strong scent.",
+          "answer": "perfume"
+        },
+        {
+          "id": "36",
+          "text": "Some people opposed beaver reintroduction, claiming that their dam-building activities might cause 36. __________for local communities.",
+          "answer": "headaches"
+        },
+        {
+          "id": "37",
+          "text": "The presence of beavers in an area has been linked to an increase in 37. __________ as people visit to observe these animals.",
+          "answer": "tourism"
+        },
+        {
+          "id": "38",
+          "text": "Beaver dams can help prevent 38. __________ by slowing down water flow and storing excess rainwater.",
+          "answer": "flood"
+        },
+        {
+          "id": "39",
+          "text": "The ponds created by beaver activity improve water quality by reducing 39. __________ levels, benefiting local ecosystems.",
+          "answer": "nitrogen"
+        },
+        {
+          "id": "40",
+          "text": "Beavers contribute to biodiversity by creating habitats for fish, birds, and 40. __________, which thrive in their modified environments.",
+          "answer": "insects"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Reintroducing the Beaver Population to Britain",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Beavers were once native to Britain but were hunted extensively for their fur, meat, and a substance used in 31. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "One of the key concerns about reintroducing beavers is ensuring their long-term 32. __________ from illegal hunting and predators.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The beaver’s 33. __________ plays an important role in regulating its body temperature and helping it swim efficiently.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Ecological Impact",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The movement of beavers across different water systems is often compared to seasonal 34. __________ seen in other animal species.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A secretion from beavers was historically used in 35. __________ production due to its strong scent.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Some people opposed beaver reintroduction, claiming that their dam-building activities might cause 36. __________for local communities.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Environmental Benefits",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The presence of beavers in an area has been linked to an increase in 37. __________ as people visit to observe these animals.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Beaver dams can help prevent 38. __________ by slowing down water flow and storing excess rainwater.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The ponds created by beaver activity improve water quality by reducing 39. __________ levels, benefiting local ecosystems.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Beavers contribute to biodiversity by creating habitats for fish, birds, and 40. __________, which thrive in their modified environments.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "transport",
+        "32": "protection",
+        "33": "tail",
+        "34": "migration",
+        "35": "perfume",
+        "36": "headaches",
+        "37": "tourism",
+        "38": "flood",
+        "39": "nitrogen",
+        "40": "insects"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 5440,
+      "text": "For centuries, beavers were widespread across Britain's rivers and wetlands,"
+    },
+    {
+      "startMs": 5440,
+      "endMs": 9840,
+      "text": "however, due to extensive hunting, they gradually disappeared."
+    },
+    {
+      "startMs": 10480,
+      "endMs": 16080,
+      "text": "They were mainly trapped for their thick fur, which was highly valued in clothing production,"
+    },
+    {
+      "startMs": 16080,
+      "endMs": 19440,
+      "text": "as well as for their meat, which was considered a delicacy."
+    },
+    {
+      "startMs": 20480,
+      "endMs": 26000,
+      "text": "But another major reason for their decline was the demand for a certain glandular secretion"
+    },
+    {
+      "startMs": 26000,
+      "endMs": 32640,
+      "text": "they produced. This substance was not only used in medicines and perfumes, but also played a"
+    },
+    {
+      "startMs": 32640,
+      "endMs": 38960,
+      "text": "key role in transport industries, as it was an essential component in waterproofing leather goods"
+    },
+    {
+      "startMs": 38960,
+      "endMs": 45360,
+      "text": "and enhancing the quality of certain products. Today, conservationists are leading efforts"
+    },
+    {
+      "startMs": 45360,
+      "endMs": 53760,
+      "text": "to reintroduce beavers into carefully selected habitats. However, one of the major challenges"
+    },
+    {
+      "startMs": 53760,
+      "endMs": 59040,
+      "text": "is ensuring that these animals are not targeted by illegal hunting again."
+    },
+    {
+      "startMs": 59920,
+      "endMs": 66640,
+      "text": "Government policies and conservation groups are working together to implement legal frameworks"
+    },
+    {
+      "startMs": 66640,
+      "endMs": 72960,
+      "text": "that will offer beavers protection from threats in the long run, including both human activities"
+    },
+    {
+      "startMs": 72960,
+      "endMs": 80480,
+      "text": "and natural predators. Without such regulations, their population could face another dramatic decline."
+    },
+    {
+      "startMs": 81280,
+      "endMs": 87120,
+      "text": "Beavers are known for their unique physical features, which help them thrive in aquatic environments."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 94720,
+      "text": "One particularly distinctive part of their body serves multiple functions. It assists in swimming,"
+    },
+    {
+      "startMs": 94720,
+      "endMs": 101440,
+      "text": "provides balance, and even helps regulate body temperature. This feature, which is broad,"
+    },
+    {
+      "startMs": 101440,
+      "endMs": 108080,
+      "text": "flat, and covered in scales, allows them to navigate water efficiently while also acting as a"
+    },
+    {
+      "startMs": 108080,
+      "endMs": 116000,
+      "text": "heat regulator. This crucial adaptation is, of course, their tail. As these animals spread across"
+    },
+    {
+      "startMs": 116000,
+      "endMs": 122160,
+      "text": "different landscapes, they gradually establish new territories. Their movement patterns are often"
+    },
+    {
+      "startMs": 122160,
+      "endMs": 128880,
+      "text": "compared to those of other species that travel across vast distances to find food, shelter,"
+    },
+    {
+      "startMs": 128880,
+      "endMs": 135680,
+      "text": "or suitable breeding sites. Similar to birds that relocate seasonally, beavers display a type of"
+    },
+    {
+      "startMs": 135680,
+      "endMs": 141920,
+      "text": "migration, particularly when young individuals leave their original colonies to form new groups"
+    },
+    {
+      "startMs": 141920,
+      "endMs": 149520,
+      "text": "in distant areas. Apart from their role in shaping ecosystems, beavers have also been historically"
+    },
+    {
+      "startMs": 149520,
+      "endMs": 157840,
+      "text": "valued for a particular substance they secrete. This material, which carries a strong musky odor,"
+    },
+    {
+      "startMs": 157840,
+      "endMs": 164640,
+      "text": "was once a prized ingredient in fragrance making. Before synthetic alternatives were developed,"
+    },
+    {
+      "startMs": 164640,
+      "endMs": 170000,
+      "text": "this beaver-derived compound was commonly used in the manufacturing of perfume,"
+    },
+    {
+      "startMs": 170000,
+      "endMs": 174720,
+      "text": "as its scent had long-lasting properties that helped stabilize fragrances."
+    },
+    {
+      "startMs": 175680,
+      "endMs": 181920,
+      "text": "Despite the ecological advantages of beaver reintroduction, not everyone is convinced"
+    },
+    {
+      "startMs": 181920,
+      "endMs": 188880,
+      "text": "that their presence is entirely beneficial. Some landowners and farmers argue that the way beavers"
+    },
+    {
+      "startMs": 188880,
+      "endMs": 196240,
+      "text": "modify waterways can lead to certain disruptions. Their habit of constructing lodges and dams"
+    },
+    {
+      "startMs": 196240,
+      "endMs": 204000,
+      "text": "using tree branches and mud can sometimes obstruct water flow, causing issues for local residents."
+    },
+    {
+      "startMs": 204960,
+      "endMs": 210640,
+      "text": "Many fear that such changes in river systems could create unwanted complications,"
+    },
+    {
+      "startMs": 211280,
+      "endMs": 217360,
+      "text": "leading to headaches for communities that rely on stable water levels for irrigation or"
+    },
+    {
+      "startMs": 217360,
+      "endMs": 225040,
+      "text": "infrastructure. Despite these concerns, research has shown that beavers contribute significantly"
+    },
+    {
+      "startMs": 225040,
+      "endMs": 232240,
+      "text": "to improving natural habitats. One of the most noticeable effects of their return is the rise"
+    },
+    {
+      "startMs": 232240,
+      "endMs": 241280,
+      "text": "in public interest. Scientists, wildlife enthusiasts, and tourists have flocked to areas where beavers"
+    },
+    {
+      "startMs": 241360,
+      "endMs": 247440,
+      "text": "have been successfully reintroduced. This surge in visitors has provided an economic boost to"
+    },
+    {
+      "startMs": 247440,
+      "endMs": 256560,
+      "text": "local businesses, as wildlife observation has become a popular activity. This increase in nature-based"
+    },
+    {
+      "startMs": 256560,
+      "endMs": 264080,
+      "text": "travel has helped stimulate tourism, benefiting nearby communities financially. Beyond economic"
+    },
+    {
+      "startMs": 264080,
+      "endMs": 271280,
+      "text": "advantages, beavers play a crucial role in water management. By building structures that slow"
+    },
+    {
+      "startMs": 271280,
+      "endMs": 278320,
+      "text": "the movement of water, they help prevent sudden changes in river levels. This ability to control"
+    },
+    {
+      "startMs": 278320,
+      "endMs": 285680,
+      "text": "water flow is particularly important in regions that experience heavy rainfall. Their natural"
+    },
+    {
+      "startMs": 285680,
+      "endMs": 292400,
+      "text": "engineering skills assist in reducing the risk of flood, as their dams act as barriers that store"
+    },
+    {
+      "startMs": 292400,
+      "endMs": 299600,
+      "text": "excess rainwater and release it gradually over time. Another vital contribution of beavers"
+    },
+    {
+      "startMs": 299600,
+      "endMs": 307040,
+      "text": "is their ability to improve water quality. One of the most notable improvements is the reduction"
+    },
+    {
+      "startMs": 307040,
+      "endMs": 313600,
+      "text": "of a particular chemical element that when found in excessive amounts can negatively impact"
+    },
+    {
+      "startMs": 313600,
+      "endMs": 321520,
+      "text": "aquatic ecosystems. By lowering the concentration of nitrogen, beaver activity helps prevent water"
+    },
+    {
+      "startMs": 321520,
+      "endMs": 329040,
+      "text": "pollution and supports a more balanced environment for fish and plant life. Finally, the habitats"
+    },
+    {
+      "startMs": 329040,
+      "endMs": 336640,
+      "text": "created by beavers provide shelter and food sources for a wide variety of species. The wetlands"
+    },
+    {
+      "startMs": 336640,
+      "endMs": 343280,
+      "text": "they establish become home to many creatures, including amphibians, birds, and small mammals."
+    },
+    {
+      "startMs": 344240,
+      "endMs": 350320,
+      "text": "Additionally, their presence supports the survival of numerous tiny organisms that form the"
+    },
+    {
+      "startMs": 350320,
+      "endMs": 357760,
+      "text": "base of the food chain. Among the most abundant of these are insects, which thrive in the damp,"
+    },
+    {
+      "startMs": 357760,
+      "endMs": 366240,
+      "text": "nutrient-rich environments that beaver-modified landscapes offer."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 53,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

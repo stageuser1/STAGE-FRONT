@@ -1,0 +1,561 @@
+{
+  "id": "p2-37-becoming-a-millionaire",
+  "title": "Becoming a millionaire",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-2388967e1875",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 434.064,
+    "checksum": "sha256:97035d806001579be038c3575e4fe7e5bed54e6e8defaf630a6a019d9061c191"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-16.",
+      "instruction": "Choose the correct letter A, B, or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Arthur feels that when starting a business, mistakes should be",
+          "options": [
+            {
+              "id": "A",
+              "text": "seen as an opportunity to learn."
+            },
+            {
+              "id": "B",
+              "text": "predicted and minimised."
+            },
+            {
+              "id": "C",
+              "text": "avoided at all costs."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "Recent American studies found that confidence will",
+          "options": [
+            {
+              "id": "A",
+              "text": "sometimes reduce people's chances of success."
+            },
+            {
+              "id": "B",
+              "text": "be increased by reading self-help books."
+            },
+            {
+              "id": "C",
+              "text": "ensure good results on business courses."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "The American studies recommended that new entrepreneurs",
+          "options": [
+            {
+              "id": "A",
+              "text": "listen to their colleagues' advice."
+            },
+            {
+              "id": "B",
+              "text": "get professional help when things go wrong."
+            },
+            {
+              "id": "C",
+              "text": "remain concentrated on their aims."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "What does Arthur say about his own experience of marketing?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He relied on what he already knew."
+            },
+            {
+              "id": "B",
+              "text": "He hired an expert to take care of it."
+            },
+            {
+              "id": "C",
+              "text": "He realised its importance too late."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "What does Arthur think is an important quality shared by good leaders?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are ambitious for their company."
+            },
+            {
+              "id": "B",
+              "text": "They can deal with difficult people."
+            },
+            {
+              "id": "C",
+              "text": "They earn the respect of their workforce."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "16",
+          "text": "What does Arthur say about taking risks?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He advises being cautious."
+            },
+            {
+              "id": "B",
+              "text": "He favours a long-term view."
+            },
+            {
+              "id": "C",
+              "text": "He believes it is financially advantageous."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "17-18",
+      "title": "Questions 17 and 18",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO things does Arthur say people should focus on when developing their business idea?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "making sure the idea is original"
+        },
+        {
+          "id": "B",
+          "text": "offering a better deal than competitors"
+        },
+        {
+          "id": "C",
+          "text": "being committed to it"
+        },
+        {
+          "id": "D",
+          "text": "paying attention to detail"
+        },
+        {
+          "id": "E",
+          "text": "fixing realistic prices"
+        }
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "Which TWO things does Arthur say people should focus on when developing their business idea?",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "Which TWO things does Arthur say people should focus on when developing their business idea?",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "19-20",
+      "title": "Questions 19 and 20",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO things does Arthur say helped him get his business started?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "family support"
+        },
+        {
+          "id": "B",
+          "text": "getting a loan from a bank"
+        },
+        {
+          "id": "C",
+          "text": "good business advice"
+        },
+        {
+          "id": "D",
+          "text": "a favourable economic climate"
+        },
+        {
+          "id": "E",
+          "text": "an effective approach to business"
+        }
+      ],
+      "questions": [
+        {
+          "id": "19",
+          "text": "Which TWO things does Arthur say helped him get his business started?",
+          "answer": "A"
+        },
+        {
+          "id": "20",
+          "text": "Which TWO things does Arthur say helped him get his business started?",
+          "answer": "E"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "A",
+        "13": "C",
+        "14": "B",
+        "15": "C",
+        "16": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "17_18": [
+          "B",
+          "C"
+        ],
+        "19_20": [
+          "A",
+          "E"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "17": "B",
+        "18": "C",
+        "19": "A",
+        "20": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10340,
+      "text": "Part 2 You will hear part of a radio program"
+    },
+    {
+      "startMs": 10340,
+      "endMs": 18200,
+      "text": "in which a successful businessman is advising listeners on how to become a self-made millionaire."
+    },
+    {
+      "startMs": 18200,
+      "endMs": 21880,
+      "text": "First you have some time to look at questions 11 to 16."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 74960,
+      "text": "Now listen carefully and answer questions 11 to 16."
+    },
+    {
+      "startMs": 74960,
+      "endMs": 79360,
+      "text": "Everybody dreams of becoming a millionaire one day."
+    },
+    {
+      "startMs": 79360,
+      "endMs": 85060,
+      "text": "So we asked Arthur Knowles, who made his millions in the plumbing business, to give the budding"
+    },
+    {
+      "startMs": 85060,
+      "endMs": 90340,
+      "text": "entrepreneurs among you a few tips on how to make your first million."
+    },
+    {
+      "startMs": 90340,
+      "endMs": 92580,
+      "text": "Sue: Arthur, welcome to the program."
+    },
+    {
+      "startMs": 92580,
+      "endMs": 93700,
+      "text": "Arthur: Thanks, Sue."
+    },
+    {
+      "startMs": 93700,
+      "endMs": 97700,
+      "text": "Sue: So Arthur, what advice do you have for our listeners?"
+    },
+    {
+      "startMs": 97700,
+      "endMs": 104900,
+      "text": "Arthur: Well one thing I've heard people say is that when you're starting up a business, you can't afford to make mistakes."
+    },
+    {
+      "startMs": 104900,
+      "endMs": 111540,
+      "text": "Well I believe in the old saying a person who never made a mistake, never made anything."
+    },
+    {
+      "startMs": 111540,
+      "endMs": 117460,
+      "text": "You can't really predict when you'll make mistakes and you have to look at them as a positive experience"
+    },
+    {
+      "startMs": 117460,
+      "endMs": 121380,
+      "text": "and one that means you won't make the same mistake again."
+    },
+    {
+      "startMs": 121380,
+      "endMs": 128180,
+      "text": "You need to be able to cope with the world of business, but according to recent American business school studies,"
+    },
+    {
+      "startMs": 128180,
+      "endMs": 133140,
+      "text": "believing in yourself isn't enough by itself to guarantee success."
+    },
+    {
+      "startMs": 133140,
+      "endMs": 138900,
+      "text": "Confidence can be a good thing but a person can have too much confidence"
+    },
+    {
+      "startMs": 138980,
+      "endMs": 144580,
+      "text": "and people who try to learn to be confident by buying those how to succeed books"
+    },
+    {
+      "startMs": 144580,
+      "endMs": 146180,
+      "text": "are just wasting their time."
+    },
+    {
+      "startMs": 147060,
+      "endMs": 153540,
+      "text": "The advice given in these American studies was that being a successful entrepreneur comes down"
+    },
+    {
+      "startMs": 153540,
+      "endMs": 159940,
+      "text": "to having the right attitude. It's no good getting depressed every time something goes wrong."
+    },
+    {
+      "startMs": 160660,
+      "endMs": 167300,
+      "text": "Always keep your goals in mind and never give up and don't listen to all the people around you"
+    },
+    {
+      "startMs": 167300,
+      "endMs": 169780,
+      "text": "who say, oh this will never work."
+    },
+    {
+      "startMs": 171220,
+      "endMs": 176100,
+      "text": "One thing I've learned in business is that you don't have to be an expert in everything,"
+    },
+    {
+      "startMs": 176100,
+      "endMs": 182020,
+      "text": "like marketing for example. When I started my business I tried to do it all myself"
+    },
+    {
+      "startMs": 182020,
+      "endMs": 186740,
+      "text": "but I soon realized that although I knew everything there was to know about plumbing,"
+    },
+    {
+      "startMs": 186740,
+      "endMs": 190500,
+      "text": "I didn't have much idea about how to sell my ideas."
+    },
+    {
+      "startMs": 190500,
+      "endMs": 197060,
+      "text": "So I got someone who knew more about this to take care of the marketing side of things for me."
+    },
+    {
+      "startMs": 197060,
+      "endMs": 203140,
+      "text": "Then as for leadership, well you've got to be someone your workers look up to because you've"
+    },
+    {
+      "startMs": 203140,
+      "endMs": 209540,
+      "text": "been seen to make the right decisions. You have to be able to control people but listen to them"
+    },
+    {
+      "startMs": 209540,
+      "endMs": 216500,
+      "text": "at the same time. Some people are driven to make their companies successful but that too often"
+    },
+    {
+      "startMs": 216500,
+      "endMs": 223860,
+      "text": "leads to a ruthless approach. Then there's the question of taking risks, even calculated ones."
+    },
+    {
+      "startMs": 224660,
+      "endMs": 231780,
+      "text": "I personally feel it's actually better to tread carefully when it comes to taking short-term risks."
+    },
+    {
+      "startMs": 231780,
+      "endMs": 237860,
+      "text": "You need a degree of vision certainly but it's easy to get carried away by your desire to"
+    },
+    {
+      "startMs": 237860,
+      "endMs": 243700,
+      "text": "increase profits and if things go wrong you can end up losing more than you gain."
+    },
+    {
+      "startMs": 247460,
+      "endMs": 253700,
+      "text": "Before you hear the rest of the program you have some time to look at question 17 to 20."
+    },
+    {
+      "startMs": 253860,
+      "endMs": 277540,
+      "text": "Now listen and answer question 17 to 20."
+    },
+    {
+      "startMs": 278180,
+      "endMs": 285380,
+      "text": "Sue: So if you have a great idea for a business what should you do next?"
+    },
+    {
+      "startMs": 286020,
+      "endMs": 291620,
+      "text": "Arthur: Well the first thing to ask yourself is whether there's a need for your product or service."
+    },
+    {
+      "startMs": 292180,
+      "endMs": 296260,
+      "text": "Can you cater for people's needs better than existing companies?"
+    },
+    {
+      "startMs": 296980,
+      "endMs": 300980,
+      "text": "You don't need to worry about whether it's original or not because there isn't always"
+    },
+    {
+      "startMs": 300980,
+      "endMs": 306660,
+      "text": "enough of a demand for completely new ideas. And the second thing to ask yourself is"
+    },
+    {
+      "startMs": 307220,
+      "endMs": 314340,
+      "text": "not what color should the packet be or how much should it cost but do I care enough about this"
+    },
+    {
+      "startMs": 314340,
+      "endMs": 320500,
+      "text": "idea to dedicate the next 10 years of my life to it because realistically that's how long it will"
+    },
+    {
+      "startMs": 320500,
+      "endMs": 326420,
+      "text": "take. Sue: Tell us how you got started Arthur. How do you explain your early success?"
+    },
+    {
+      "startMs": 326980,
+      "endMs": 332900,
+      "text": "Arthur: Well I started my business just as the economy was going into a recession which wasn't the best"
+    },
+    {
+      "startMs": 332900,
+      "endMs": 338660,
+      "text": "time and I was lucky to survive especially as the banks weren't being particularly supportive to"
+    },
+    {
+      "startMs": 338660,
+      "endMs": 344420,
+      "text": "small businesses at that time. If I'd listened to the business advice I was given back then"
+    },
+    {
+      "startMs": 344420,
+      "endMs": 350500,
+      "text": "I'd never have got started. My strengths were that I knew I could provide a better service"
+    },
+    {
+      "startMs": 350500,
+      "endMs": 356580,
+      "text": "than my competitors who really hadn't spotted the opportunities that were out there and that my"
+    },
+    {
+      "startMs": 356580,
+      "endMs": 361620,
+      "text": "wife had a good job and was able to pay the household bills while I was getting the company on"
+    },
+    {
+      "startMs": 361620,
+      "endMs": 368580,
+      "text": "its feet. The first couple of years were very tough but I knew I would make it eventually."
+    },
+    {
+      "startMs": 368580,
+      "endMs": 371940,
+      "text": "Sue: Okay now we're going to take some calls from listeners."
+    },
+    {
+      "startMs": 375860,
+      "endMs": 382340,
+      "text": "That is the end of part two. You now have 30 seconds to check your answers to part two."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 54,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "id": "p2-57-cooking-school",
+  "title": "Cooking School",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-a13bf370e662",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 345.747,
+    "checksum": "sha256:9c5b621f58b942ffa7e9f77c366d81d63aa91f26bb54b6ab4f3538805663ddef"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Questions 11-16.",
+      "instruction": "Choose SIX correct answers, A-H, next to questions 11-16.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cook with one particular ingredient."
+        },
+        {
+          "id": "B",
+          "text": "Learn about food history"
+        },
+        {
+          "id": "C",
+          "text": "Have individual cooking lessons"
+        },
+        {
+          "id": "D",
+          "text": "Make meals for college students"
+        },
+        {
+          "id": "E",
+          "text": "Prepare healthy meals"
+        },
+        {
+          "id": "F",
+          "text": "Go on a guided walking tour"
+        },
+        {
+          "id": "G",
+          "text": "Making time-saving meals"
+        },
+        {
+          "id": "H",
+          "text": "Go on an afternoon bus tour"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Northern California",
+          "answer": "C"
+        },
+        {
+          "id": "12",
+          "text": "Italy",
+          "answer": "H"
+        },
+        {
+          "id": "13",
+          "text": "New Orleans",
+          "answer": "F"
+        },
+        {
+          "id": "14",
+          "text": "Budget Feasts",
+          "answer": "G"
+        },
+        {
+          "id": "15",
+          "text": "Cooking for Two",
+          "answer": "E"
+        },
+        {
+          "id": "16",
+          "text": "Variations on a Theme",
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 17-20.",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "Oven",
+          "answer": "H"
+        },
+        {
+          "id": "18",
+          "text": "Refrigerator",
+          "answer": "F"
+        },
+        {
+          "id": "19",
+          "text": "Demonstration kitchen",
+          "answer": "D"
+        },
+        {
+          "id": "20",
+          "text": "Utensil cabinet",
+          "answer": "B"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-57-cooking-school-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-57-cooking-school-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "C",
+        "12": "H",
+        "13": "F",
+        "14": "G",
+        "15": "E",
+        "16": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "17": "H",
+        "18": "F",
+        "19": "D",
+        "20": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7760,
+      "text": "2. You will hear the director of a cooking school talking to a group of people about the"
+    },
+    {
+      "startMs": 7760,
+      "endMs": 15240,
+      "text": "different programs. First you have some time to look at questions 11-16 on page 3."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 52120,
+      "text": "Now listen carefully and answer questions 11-16."
+    },
+    {
+      "startMs": 52120,
+      "endMs": 58540,
+      "text": "Welcome to the cooking school. I am Julie Brooks, head of programs. I'm here to give you"
+    },
+    {
+      "startMs": 58540,
+      "endMs": 63440,
+      "text": "information about the different tours and classes we offer as well as to show you our"
+    },
+    {
+      "startMs": 63440,
+      "endMs": 69920,
+      "text": "cooking facilities here. Our tours and classes are very popular. The most popular cooking"
+    },
+    {
+      "startMs": 69920,
+      "endMs": 76600,
+      "text": "tour is in the early summer in northern California, which is famous for its cheeses. This"
+    },
+    {
+      "startMs": 76600,
+      "endMs": 81520,
+      "text": "four-day tour is special because each student receives one-on-one classes with the master"
+    },
+    {
+      "startMs": 81520,
+      "endMs": 87560,
+      "text": "chef. Then you'll take part in visits to the great cheese producers of the region and"
+    },
+    {
+      "startMs": 87560,
+      "endMs": 94040,
+      "text": "you'll taste cheeses and see how they are made. If you're looking to take a really adventurous"
+    },
+    {
+      "startMs": 94040,
+      "endMs": 100120,
+      "text": "vacation, take one of our cooking vacations in Italy and learn the passion of the Italian"
+    },
+    {
+      "startMs": 100120,
+      "endMs": 107120,
+      "text": "kitchen and have fun doing it. This cooking vacation takes place in a historic villa. There"
+    },
+    {
+      "startMs": 107120,
+      "endMs": 113440,
+      "text": "will be time to relax and enjoy the surroundings or to do some sightseeing in the area. On"
+    },
+    {
+      "startMs": 113480,
+      "endMs": 118960,
+      "text": "the second day, a bus excursion is organized, leaving after lunch with visits to a salami"
+    },
+    {
+      "startMs": 118960,
+      "endMs": 125640,
+      "text": "factory and an olive oil mill returning to the villa in time for dinner. On the third"
+    },
+    {
+      "startMs": 125640,
+      "endMs": 132320,
+      "text": "day, you go to the market, then cook your own dinner with a range of local ingredients."
+    },
+    {
+      "startMs": 132320,
+      "endMs": 137720,
+      "text": "One of the school's most popular tours is to the famous US City of New Orleans. This"
+    },
+    {
+      "startMs": 137720,
+      "endMs": 143160,
+      "text": "is a three-day tour where you will be staying in a hotel near the city's famous French"
+    },
+    {
+      "startMs": 143160,
+      "endMs": 149800,
+      "text": "quarter. You'll have time to explore on your own before taking a unique city tour on foot"
+    },
+    {
+      "startMs": 149800,
+      "endMs": 155720,
+      "text": "led by a local chef. Every afternoon, there's a cooking class for the group at your hotel's"
+    },
+    {
+      "startMs": 155720,
+      "endMs": 161880,
+      "text": "professional kitchen. If you'd rather not spend the time to travel, we offer one-day cooking"
+    },
+    {
+      "startMs": 161880,
+      "endMs": 168600,
+      "text": "classes here at the school's state of the art kitchen taught by our very talented chefs."
+    },
+    {
+      "startMs": 168600,
+      "endMs": 173400,
+      "text": "In the budget feast class, you will learn how to make great tasting meals that don't"
+    },
+    {
+      "startMs": 173400,
+      "endMs": 178920,
+      "text": "have to break your budget or require a lot of preparation time. For big families, this"
+    },
+    {
+      "startMs": 178920,
+      "endMs": 184720,
+      "text": "helps a lot. Many couples take our cooking for two class when their children go off to"
+    },
+    {
+      "startMs": 184720,
+      "endMs": 190600,
+      "text": "college. We teach how to make meals that are nutritious and elegant. They're even a"
+    },
+    {
+      "startMs": 190600,
+      "endMs": 197960,
+      "text": "bit romantic. In the class called Variations on a Theme, you learn to cook a variety of"
+    },
+    {
+      "startMs": 197960,
+      "endMs": 204520,
+      "text": "dishes using a specific ingredient in each. For example, in the next class, you will prepare"
+    },
+    {
+      "startMs": 204520,
+      "endMs": 208840,
+      "text": "meals using lemon. The lemon chicken meal is divine."
+    },
+    {
+      "startMs": 208840,
+      "endMs": 226040,
+      "text": "Before you hear the rest of the talk, you have some time to look at question 17-20 on page 4."
+    },
+    {
+      "startMs": 238840,
+      "endMs": 256680,
+      "text": "Now listen and answer question 17-20. I'd like to give you a tour of our beautiful kitchen where"
+    },
+    {
+      "startMs": 256680,
+      "endMs": 264200,
+      "text": "the meals are made. Our one-day classes meet here. Just walk through the entrance? Right, now you"
+    },
+    {
+      "startMs": 264200,
+      "endMs": 270440,
+      "text": "can see the large preparation table in the middle of the main kitchen. This beautiful table is large"
+    },
+    {
+      "startMs": 270440,
+      "endMs": 277080,
+      "text": "enough for 12 students to work on. This room also has a state-of-the-art oven. It's large enough"
+    },
+    {
+      "startMs": 277080,
+      "endMs": 283880,
+      "text": "for up to 25 cakes. It's just past the preparation table on the left near the entrance to the hallway."
+    },
+    {
+      "startMs": 285480,
+      "endMs": 291160,
+      "text": "Perishable items are kept in this industrial-sized refrigerator next to the storage in the hallway."
+    },
+    {
+      "startMs": 291960,
+      "endMs": 299080,
+      "text": "We keep non-perishable items in the storage. As you exit from the hallway, you'll come into the"
+    },
+    {
+      "startMs": 299080,
+      "endMs": 305240,
+      "text": "large demonstration kitchen. Here we hold smaller classes, but mainly it's used for cooking"
+    },
+    {
+      "startMs": 305240,
+      "endMs": 312360,
+      "text": "demonstrations and tasting events. The last thing I want to point out is our utensil cabinet."
+    },
+    {
+      "startMs": 312360,
+      "endMs": 318680,
+      "text": "It sits right next to the exit. It contains a variety of cooking pots and pans and an amazing"
+    },
+    {
+      "startMs": 318680,
+      "endMs": 324120,
+      "text": "range of forks and spoons. Please feel free to stay around the school to check out our beer."
+    },
+    {
+      "startMs": 327480,
+      "endMs": 332680,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 42,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

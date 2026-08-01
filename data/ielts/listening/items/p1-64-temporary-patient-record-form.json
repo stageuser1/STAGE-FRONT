@@ -1,0 +1,685 @@
+{
+  "id": "p1-64-temporary-patient-record-form",
+  "title": "Temporary Patient Record Form",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-a599ba063ed9",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 355.08,
+    "checksum": "sha256:d490265bf2b5289aaf6cb3cf93099a8c93898f5cf5cb6bad64cabbfc577d248e"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 1–10",
+      "instruction": "Complete the form below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer. Temporary Patient Record Form Name: Peter Smith Street address: 1. ____________ Suburb: 2. ____________ Phone number: 3. ____________ Details of injury Sport: Tennis Type of injury: Sprained 4. ____________ Date of injury: 5. ____________ Previous treatment and current problems The patient’s own doctor advised treatment with 6. ____________ The patient is unable to 7. ____________ and he is experiencing pain in his 8. ____________ at night, which is affecting his sleep. Advice given Stop using the 9. ____________ Do regular 10. ____________ at home",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Street address: 1. ____________",
+          "answer": "95 Cross Street"
+        },
+        {
+          "id": "2",
+          "text": "Suburb: 2. ____________",
+          "answer": "Walkley"
+        },
+        {
+          "id": "3",
+          "text": "Phone number: 3. ____________",
+          "answer": "46895324"
+        },
+        {
+          "id": "4",
+          "text": "Type of injury: Sprained 4. ____________",
+          "answer": "knee"
+        },
+        {
+          "id": "5",
+          "text": "Date of injury: 5. ____________",
+          "answer": "June 18th/June 18/18th June/18 June"
+        },
+        {
+          "id": "6",
+          "text": "The patient’s own doctor advised treatment with 6. ____________",
+          "answer": "ice pack"
+        },
+        {
+          "id": "7",
+          "text": "The patient is unable to 7. ____________ and he is experiencing pain in his 8. ____________ at night, which is affecting his sleep.",
+          "answer": "go upstairs"
+        },
+        {
+          "id": "8",
+          "text": "The patient is unable to 7. ____________ and he is experiencing pain in his 8. ____________ at night, which is affecting his sleep.",
+          "answer": "back"
+        },
+        {
+          "id": "9",
+          "text": "Stop using the 9. ____________",
+          "answer": "stick"
+        },
+        {
+          "id": "10",
+          "text": "Do regular 10. ____________ at home",
+          "answer": "exercises"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the form below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Temporary Patient Record Form",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Name: Peter Smith",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Street address: 1. ____________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Suburb: 2. ____________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Phone number: 3. ____________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Details of injury",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Sport: Tennis",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Type of injury: Sprained 4. ____________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Date of injury: 5. ____________",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Previous treatment and current problems",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The patient’s own doctor advised treatment with 6. ____________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The patient is unable to 7. ____________ and he is experiencing pain in his 8. ____________ at night, which is affecting his sleep.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Advice given",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Stop using the 9. ____________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Do regular 10. ____________ at home",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "95 Cross Street",
+        "2": "Walkley",
+        "3": "46895324",
+        "4": "knee",
+        "5": "June 18th/June 18/18th June/18 June",
+        "6": "ice pack",
+        "7": "go upstairs",
+        "8": "back",
+        "9": "stick",
+        "10": "exercises"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10280,
+      "text": "Section 1."
+    },
+    {
+      "startMs": 10280,
+      "endMs": 18520,
+      "text": "You will hear a man talking first to a receptionist and then to a doctor at a health centre."
+    },
+    {
+      "startMs": 18520,
+      "endMs": 25360,
+      "text": "First, you have some time to look at questions 1 to 3 on page 2."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 44720,
+      "text": "You will see that there is an example that has been done for you."
+    },
+    {
+      "startMs": 44720,
+      "endMs": 50560,
+      "text": "On this occasion only, the conversation relating to this will be played first."
+    },
+    {
+      "startMs": 50560,
+      "endMs": 55560,
+      "text": "Receptionist: Good morning, how can I help you?"
+    },
+    {
+      "startMs": 55560,
+      "endMs": 58200,
+      "text": "Patient: Yes, I am a visitor to this area."
+    },
+    {
+      "startMs": 58200,
+      "endMs": 63240,
+      "text": "I had a sporting accident a little while ago and I am still in some pain and I wondered"
+    },
+    {
+      "startMs": 63240,
+      "endMs": 65040,
+      "text": "if I could see a doctor here."
+    },
+    {
+      "startMs": 65040,
+      "endMs": 68480,
+      "text": "Receptionist: Certainly sir, we can take you on as a temporary patient."
+    },
+    {
+      "startMs": 68480,
+      "endMs": 70760,
+      "text": "I will just take down some personal details."
+    },
+    {
+      "startMs": 70760,
+      "endMs": 72080,
+      "text": "Can I start with your name?"
+    },
+    {
+      "startMs": 72080,
+      "endMs": 73680,
+      "text": "Patient: Yes, it is Peter."
+    },
+    {
+      "startMs": 73680,
+      "endMs": 77960,
+      "text": "Peter Smith. Peter Smith。"
+    },
+    {
+      "startMs": 77960,
+      "endMs": 82320,
+      "text": "The patient's name is Peter Smith."
+    },
+    {
+      "startMs": 82320,
+      "endMs": 87800,
+      "text": "So Peter Smith has been written in the space."
+    },
+    {
+      "startMs": 87800,
+      "endMs": 89720,
+      "text": "Now we shall begin."
+    },
+    {
+      "startMs": 89720,
+      "endMs": 94520,
+      "text": "You should answer the questions as you listen because you will not hear the recording"
+    },
+    {
+      "startMs": 94520,
+      "endMs": 97040,
+      "text": "a second time."
+    },
+    {
+      "startMs": 97040,
+      "endMs": 104400,
+      "text": "Listen carefully and answer questions 1 to 3."
+    },
+    {
+      "startMs": 104400,
+      "endMs": 106400,
+      "text": "Receptionist: Good morning, how can I help you?"
+    },
+    {
+      "startMs": 106400,
+      "endMs": 109040,
+      "text": "Patient: Yes, I am a visitor to this area."
+    },
+    {
+      "startMs": 109040,
+      "endMs": 114000,
+      "text": "I had a sporting accident a little while ago and I am still in some pain and I wondered"
+    },
+    {
+      "startMs": 114000,
+      "endMs": 115880,
+      "text": "if I could see a doctor here."
+    },
+    {
+      "startMs": 115880,
+      "endMs": 119280,
+      "text": "Receptionist: Certainly sir, we can take you on as a temporary patient."
+    },
+    {
+      "startMs": 119280,
+      "endMs": 121560,
+      "text": "I will just take down some personal details."
+    },
+    {
+      "startMs": 121560,
+      "endMs": 122880,
+      "text": "Can I start with your name?"
+    },
+    {
+      "startMs": 122880,
+      "endMs": 124360,
+      "text": "Patient: Yes, it is Peter."
+    },
+    {
+      "startMs": 124360,
+      "endMs": 125360,
+      "text": "Peter Smith. Peter Smith。"
+    },
+    {
+      "startMs": 125360,
+      "endMs": 127840,
+      "text": "Receptionist: Right, Peter."
+    },
+    {
+      "startMs": 127840,
+      "endMs": 129520,
+      "text": "And where are you staying here?"
+    },
+    {
+      "startMs": 129520,
+      "endMs": 133280,
+      "text": "Patient: At 95 Cross Street."
+    },
+    {
+      "startMs": 133280,
+      "endMs": 134600,
+      "text": "Receptionist: And the suburb?"
+    },
+    {
+      "startMs": 134600,
+      "endMs": 140800,
+      "text": "Patient: Walkley, that is W-A-L-K-L-E-Y."
+    },
+    {
+      "startMs": 140800,
+      "endMs": 144000,
+      "text": "Receptionist: And can I have a contact phone number?"
+    },
+    {
+      "startMs": 144000,
+      "endMs": 148440,
+      "text": "Patient: It is 4689-5324."
+    },
+    {
+      "startMs": 148440,
+      "endMs": 149440,
+      "text": "Receptionist: Thanks."
+    },
+    {
+      "startMs": 149440,
+      "endMs": 150440,
+      "text": "Okay."
+    },
+    {
+      "startMs": 150440,
+      "endMs": 157720,
+      "text": "If you just wait down there, the doctor will see you in a minute."
+    },
+    {
+      "startMs": 157720,
+      "endMs": 163720,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions 4"
+    },
+    {
+      "startMs": 163720,
+      "endMs": 191360,
+      "text": "to 10 on page 2."
+    },
+    {
+      "startMs": 191360,
+      "endMs": 199600,
+      "text": "Now listen and answer questions 4 to 10."
+    },
+    {
+      "startMs": 199600,
+      "endMs": 202040,
+      "text": "Doctor: Now what can I do for you?"
+    },
+    {
+      "startMs": 202040,
+      "endMs": 203720,
+      "text": "It is Peter Smith, isn't it?"
+    },
+    {
+      "startMs": 203720,
+      "endMs": 210120,
+      "text": "Patient: Yes, I had a sporting accident and was treated by a doctor at home but I am still in pain."
+    },
+    {
+      "startMs": 210120,
+      "endMs": 214920,
+      "text": "Doctor: Right, I just need to ask you a few questions first of all."
+    },
+    {
+      "startMs": 214920,
+      "endMs": 215920,
+      "text": "Patient: Fine."
+    },
+    {
+      "startMs": 215920,
+      "endMs": 218560,
+      "text": "Doctor: Now, what sport were you doing?"
+    },
+    {
+      "startMs": 218560,
+      "endMs": 220040,
+      "text": "Patient: I was playing tennis."
+    },
+    {
+      "startMs": 220040,
+      "endMs": 221680,
+      "text": "Doctor: Oh, I see."
+    },
+    {
+      "startMs": 221680,
+      "endMs": 223480,
+      "text": "And what was the nature of your injury?"
+    },
+    {
+      "startMs": 223480,
+      "endMs": 226160,
+      "text": "Did you hurt your elbow or wrist?"
+    },
+    {
+      "startMs": 226160,
+      "endMs": 229080,
+      "text": "Patient: No, I had a sprained knee."
+    },
+    {
+      "startMs": 229080,
+      "endMs": 230600,
+      "text": "That was the original problem."
+    },
+    {
+      "startMs": 230600,
+      "endMs": 231600,
+      "text": "Doctor: Right."
+    },
+    {
+      "startMs": 231600,
+      "endMs": 234400,
+      "text": "And when did this happen?"
+    },
+    {
+      "startMs": 234400,
+      "endMs": 236120,
+      "text": "Patient: It was three weeks ago now."
+    },
+    {
+      "startMs": 236120,
+      "endMs": 237800,
+      "text": "So that was June 18th."
+    },
+    {
+      "startMs": 237800,
+      "endMs": 239800,
+      "text": "Doctor: Fine."
+    },
+    {
+      "startMs": 239800,
+      "endMs": 241880,
+      "text": "And you say you had medical treatment?"
+    },
+    {
+      "startMs": 241880,
+      "endMs": 242880,
+      "text": "Patient: Yes."
+    },
+    {
+      "startMs": 242880,
+      "endMs": 247760,
+      "text": "The doctor said I didn't need an x-ray or anything and he just told me to use an ice pack."
+    },
+    {
+      "startMs": 247760,
+      "endMs": 248760,
+      "text": "Doctor: Fine."
+    },
+    {
+      "startMs": 248760,
+      "endMs": 255760,
+      "text": "Patient: Yes, and I've been using a walking stick to help me get around."
+    },
+    {
+      "startMs": 255760,
+      "endMs": 256760,
+      "text": "Doctor: Right."
+    },
+    {
+      "startMs": 256760,
+      "endMs": 260080,
+      "text": "Now, what problems are you experiencing at the moment?"
+    },
+    {
+      "startMs": 260080,
+      "endMs": 262600,
+      "text": "Are you having any problems walking?"
+    },
+    {
+      "startMs": 262600,
+      "endMs": 268280,
+      "text": "Patient: Well, I can walk okay but I still can't go upstairs so I've been sleeping downstairs."
+    },
+    {
+      "startMs": 268280,
+      "endMs": 269280,
+      "text": "Doctor: Hmm."
+    },
+    {
+      "startMs": 269280,
+      "endMs": 272040,
+      "text": "Now, you say your knee still hurts?"
+    },
+    {
+      "startMs": 272040,
+      "endMs": 273040,
+      "text": "Patient: Well, no."
+    },
+    {
+      "startMs": 273040,
+      "endMs": 275880,
+      "text": "Actually, it's recovering nicely."
+    },
+    {
+      "startMs": 275880,
+      "endMs": 278440,
+      "text": "It's my back that's hurting me now."
+    },
+    {
+      "startMs": 278440,
+      "endMs": 281560,
+      "text": "It really aches at night and I can hardly sleep."
+    },
+    {
+      "startMs": 281560,
+      "endMs": 285360,
+      "text": "Doctor: Well, there's a few different things I can suggest for that."
+    },
+    {
+      "startMs": 285360,
+      "endMs": 286360,
+      "text": "Patient: Great."
+    },
+    {
+      "startMs": 286360,
+      "endMs": 291280,
+      "text": "Doctor: First, you should put your stick away as that's probably the source of the problem."
+    },
+    {
+      "startMs": 291280,
+      "endMs": 293120,
+      "text": "It'll be making you unbalanced."
+    },
+    {
+      "startMs": 293120,
+      "endMs": 294120,
+      "text": "Patient: Oh, really?"
+    },
+    {
+      "startMs": 294120,
+      "endMs": 296160,
+      "text": "I wish I'd known."
+    },
+    {
+      "startMs": 296160,
+      "endMs": 300360,
+      "text": "Doctor: After that, I can prescribe you something to relax the muscles in your back."
+    },
+    {
+      "startMs": 300360,
+      "endMs": 305120,
+      "text": "Patient: Oh, sorry to be difficult but I've had something like that in the past and there were"
+    },
+    {
+      "startMs": 305120,
+      "endMs": 308240,
+      "text": "lots of side effects and I had to stop taking it."
+    },
+    {
+      "startMs": 308240,
+      "endMs": 309880,
+      "text": "Can you recommend anything else?"
+    },
+    {
+      "startMs": 309880,
+      "endMs": 314200,
+      "text": "Doctor: Well, yes, we do have a leaflet showing some exercises you can do to help yourself at"
+    },
+    {
+      "startMs": 314200,
+      "endMs": 315200,
+      "text": "home."
+    },
+    {
+      "startMs": 315200,
+      "endMs": 318160,
+      "text": "If you do them every day, they'll soon be effective."
+    },
+    {
+      "startMs": 318160,
+      "endMs": 319160,
+      "text": "Patient: Great."
+    },
+    {
+      "startMs": 319160,
+      "endMs": 323520,
+      "text": "I'll do that."
+    },
+    {
+      "startMs": 323520,
+      "endMs": 326240,
+      "text": "That is the end of section one."
+    },
+    {
+      "startMs": 326240,
+      "endMs": 329200,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 335120,
+      "endMs": 336120,
+      "text": "All right."
+    },
+    {
+      "startMs": 336120,
+      "endMs": 337120,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 93,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

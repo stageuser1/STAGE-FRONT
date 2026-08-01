@@ -1,0 +1,500 @@
+{
+  "id": "p1-42-upper-provence-folk-festival",
+  "title": "Upper Provence folk festival",
+  "part": 1,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-d9a713b0502b",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 255.641,
+    "checksum": "sha256:045548103528e6fbc03661ddfafd1f27aac98b797c97c241feee1cbf21d5ca1c"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 1–10",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Upper Provence folk festival Basic information Date of the event: one weekend in 1. __________ Entrance fee: free for children under 2. __________ Location: 3. __________ farm Camping Come on 5. __________ to guarantee a spot Items to bring: Instruments for a 7. __________ with professional musicians if you like Medical services: Capable of treating injuries, mosquito bites as well as 9. __________ Contact a 10. __________ if children feel unwell",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Date of the event: one weekend in 1. __________",
+          "answer": "June"
+        },
+        {
+          "id": "2",
+          "text": "Entrance fee: free for children under 2. __________",
+          "answer": "12/twelve"
+        },
+        {
+          "id": "3",
+          "text": "Location: 3. __________ farm",
+          "answer": "DONALSON"
+        },
+        {
+          "id": "4",
+          "text": "A combined 4. __________ enables you to participate in all activities.",
+          "answer": "ticket"
+        },
+        {
+          "id": "5",
+          "text": "Come on 5. __________ to guarantee a spot",
+          "answer": "Thursday"
+        },
+        {
+          "id": "6",
+          "text": "A 6. __________ for nighttime",
+          "answer": "light"
+        },
+        {
+          "id": "7",
+          "text": "Instruments for a 7. __________ with professional musicians if you like",
+          "answer": "concert"
+        },
+        {
+          "id": "8",
+          "text": "8. __________ for outdoor activities",
+          "answer": "sunscreen"
+        },
+        {
+          "id": "9",
+          "text": "Capable of treating injuries, mosquito bites as well as 9. __________",
+          "answer": "headaches"
+        },
+        {
+          "id": "10",
+          "text": "Contact a 10. __________ if children feel unwell",
+          "answer": "nurse"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Upper Provence folk festival",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Basic information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Date of the event: one weekend in 1. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Entrance fee: free for children under 2. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Location: 3. __________ farm",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A combined 4. __________ enables you to participate in all activities.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Camping",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Come on 5. __________ to guarantee a spot",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Items to bring:",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "A 6. __________ for nighttime",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Instruments for a 7. __________ with professional musicians if you like",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "8. __________ for outdoor activities",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Medical services:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Capable of treating injuries, mosquito bites as well as 9. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Contact a 10. __________ if children feel unwell",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "1": "June",
+        "2": "12/twelve",
+        "3": "DONALSON",
+        "4": "ticket",
+        "5": "Thursday",
+        "6": "light",
+        "7": "concert",
+        "8": "sunscreen",
+        "9": "headaches",
+        "10": "nurse"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11800,
+      "text": "Visitor: Hi there, I heard about the Upper Provence Folk Festival and I'm interested in attending."
+    },
+    {
+      "startMs": 11800,
+      "endMs": 13880,
+      "text": "When is it happening this year?"
+    },
+    {
+      "startMs": 13880,
+      "endMs": 18840,
+      "text": "Staff: This year's Upper Provence Folk Festival will be held on a weekend in June."
+    },
+    {
+      "startMs": 18840,
+      "endMs": 22440,
+      "text": "Traditionally, it has always been held in May."
+    },
+    {
+      "startMs": 22440,
+      "endMs": 23440,
+      "text": "Visitor: That's great to know."
+    },
+    {
+      "startMs": 23440,
+      "endMs": 26400,
+      "text": "I'm planning to bring my kids along."
+    },
+    {
+      "startMs": 26400,
+      "endMs": 30080,
+      "text": "One is 14 years old and the other is 13 years old."
+    },
+    {
+      "startMs": 30080,
+      "endMs": 33880,
+      "text": "Staff: I'm sorry, but they need to purchase tickets."
+    },
+    {
+      "startMs": 33880,
+      "endMs": 39320,
+      "text": "Only children aged 12 or younger can participate in this event for free."
+    },
+    {
+      "startMs": 39320,
+      "endMs": 40320,
+      "text": "Visitor: Wonderful."
+    },
+    {
+      "startMs": 40320,
+      "endMs": 42640,
+      "text": "Where exactly is the festival taking place?"
+    },
+    {
+      "startMs": 42640,
+      "endMs": 46640,
+      "text": "Staff: The festival will be held at Donaldson Farm."
+    },
+    {
+      "startMs": 46640,
+      "endMs": 51200,
+      "text": "The owner, who is a music lover, has graciously sponsored this event."
+    },
+    {
+      "startMs": 51200,
+      "endMs": 55240,
+      "text": "I'll spell the name for you to help you locate it."
+    },
+    {
+      "startMs": 55240,
+      "endMs": 60800,
+      "text": "D-O-N-A-L-S-O-N. D-O-N-A-L-S-O-N。"
+    },
+    {
+      "startMs": 60800,
+      "endMs": 63360,
+      "text": "Visitor: That sounds like a perfect location."
+    },
+    {
+      "startMs": 63360,
+      "endMs": 66080,
+      "text": "How can I purchase tickets for the festival?"
+    },
+    {
+      "startMs": 66080,
+      "endMs": 71520,
+      "text": "Staff: To participate in the event, you will need to purchase a combined ticket that allows you"
+    },
+    {
+      "startMs": 71520,
+      "endMs": 74480,
+      "text": "access to all activities."
+    },
+    {
+      "startMs": 74480,
+      "endMs": 82320,
+      "text": "Buying single tickets for each activity separately can result in significant fees when accumulated."
+    },
+    {
+      "startMs": 82320,
+      "endMs": 85600,
+      "text": "Visitor: I see, what is the schedule for the festival?"
+    },
+    {
+      "startMs": 85600,
+      "endMs": 87720,
+      "text": "When should I arrive?"
+    },
+    {
+      "startMs": 87720,
+      "endMs": 94440,
+      "text": "Staff: The festival is scheduled to start on Saturday, but the camping service is provided on a first"
+    },
+    {
+      "startMs": 94440,
+      "endMs": 97480,
+      "text": "come, first served basis."
+    },
+    {
+      "startMs": 97480,
+      "endMs": 102320,
+      "text": "It is recommended to arrive on Thursday to secure your camping spot."
+    },
+    {
+      "startMs": 102320,
+      "endMs": 103960,
+      "text": "Visitor: Good to know."
+    },
+    {
+      "startMs": 103960,
+      "endMs": 107480,
+      "text": "Is there anything else I should be aware of while camping?"
+    },
+    {
+      "startMs": 107480,
+      "endMs": 112800,
+      "text": "Staff: It is strongly recommended to bring a light with you as it can get very dark at night"
+    },
+    {
+      "startMs": 112800,
+      "endMs": 117200,
+      "text": "and it's important to ensure the safety of your children."
+    },
+    {
+      "startMs": 117200,
+      "endMs": 119120,
+      "text": "Visitor: Thank you for the advice."
+    },
+    {
+      "startMs": 119120,
+      "endMs": 121680,
+      "text": "Are there any special activities for children?"
+    },
+    {
+      "startMs": 121680,
+      "endMs": 127880,
+      "text": "Staff: Yes, we have a wide range of options for children, including campfire singalongs and nature walks."
+    },
+    {
+      "startMs": 129400,
+      "endMs": 135520,
+      "text": "One of the highlights is the opportunity for children to attend a concert on the last night, where"
+    },
+    {
+      "startMs": 135520,
+      "endMs": 140000,
+      "text": "they can even perform music with professional musicians."
+    },
+    {
+      "startMs": 140000,
+      "endMs": 143360,
+      "text": "So you can bring your musical instruments if you want."
+    },
+    {
+      "startMs": 143360,
+      "endMs": 144560,
+      "text": "Visitor: That's good to know."
+    },
+    {
+      "startMs": 144560,
+      "endMs": 147040,
+      "text": "What are some essential items we should bring?"
+    },
+    {
+      "startMs": 147040,
+      "endMs": 150760,
+      "text": "Staff: Some essential items to bring include sunscreen."
+    },
+    {
+      "startMs": 150760,
+      "endMs": 156760,
+      "text": "Camping often involves spending a significant amount of time outdoors exposed to the sun's"
+    },
+    {
+      "startMs": 156760,
+      "endMs": 158080,
+      "text": "rays."
+    },
+    {
+      "startMs": 158080,
+      "endMs": 161280,
+      "text": "It is important to protect your skin."
+    },
+    {
+      "startMs": 161280,
+      "endMs": 163760,
+      "text": "Visitor: That sounds like a lot of fun."
+    },
+    {
+      "startMs": 163760,
+      "endMs": 168000,
+      "text": "If someone gets injured or feels unwell during the festival."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 174560,
+      "text": "Staff: The emergency station in the camp can handle minor injuries, mosquito bites and headaches."
+    },
+    {
+      "startMs": 174560,
+      "endMs": 180480,
+      "text": "However, participants should bring their own medicine if they have allergies or asthma."
+    },
+    {
+      "startMs": 180480,
+      "endMs": 183360,
+      "text": "Visitor: Is there a medical professional available on site?"
+    },
+    {
+      "startMs": 183360,
+      "endMs": 187480,
+      "text": "Staff: Yes, there will be a nurse available at all times."
+    },
+    {
+      "startMs": 187480,
+      "endMs": 192320,
+      "text": "You can consult her if your children feel uncomfortable or have ailments."
+    },
+    {
+      "startMs": 192320,
+      "endMs": 198680,
+      "text": "Additionally, the camping area has hired a doctor as a consultant who will be located"
+    },
+    {
+      "startMs": 198680,
+      "endMs": 201000,
+      "text": "in the nearby town."
+    },
+    {
+      "startMs": 201000,
+      "endMs": 206200,
+      "text": "The doctor will be present in the camp only when there is a need to address complicated"
+    },
+    {
+      "startMs": 206200,
+      "endMs": 209240,
+      "text": "medical conditions."
+    },
+    {
+      "startMs": 209240,
+      "endMs": 211680,
+      "text": "Visitor: Thank you so much for answering all my questions."
+    },
+    {
+      "startMs": 211680,
+      "endMs": 213000,
+      "text": "Staff: You're welcome."
+    },
+    {
+      "startMs": 213000,
+      "endMs": 218480,
+      "text": "If you have any more questions or need further assistance, feel free to reach out."
+    },
+    {
+      "startMs": 218480,
+      "endMs": 221000,
+      "text": "We're here to help. Enjoy the festival."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 56,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,626 @@
+{
+  "id": "p3-110-willows-studies",
+  "title": "Willows Studies",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-1f665ea454d3",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 474.072,
+    "checksum": "sha256:747e7186d9eb783f66622c0ba4dd322f6b58cbdc2c95db1784d6ce405d0cbf44"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21–26",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What field is Willows currently focused on?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Specialising in one product"
+            },
+            {
+              "id": "B",
+              "text": "making a variety of products"
+            },
+            {
+              "id": "C",
+              "text": "adding a lot of retail outlet"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "How did the students hear about the software?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The professor contacted the company."
+            },
+            {
+              "id": "B",
+              "text": "An article was read in a newspaper."
+            },
+            {
+              "id": "C",
+              "text": "A student worked there part-time during the vacations."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "How did the student feel about the software?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It's not easy to predict."
+            },
+            {
+              "id": "B",
+              "text": "It's slow for drawing designs."
+            },
+            {
+              "id": "C",
+              "text": "It had a good interface."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "24",
+          "text": "How did the students find out about the effects of the software on the company?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They went to the IT department."
+            },
+            {
+              "id": "B",
+              "text": "They talked with the manager."
+            },
+            {
+              "id": "C",
+              "text": "They inspected the accounts."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "25",
+          "text": "The reason why the students have a face-to-face interview alone is that",
+          "options": [
+            {
+              "id": "A",
+              "text": "they could prepare for exams."
+            },
+            {
+              "id": "B",
+              "text": "there will be less disturbance."
+            },
+            {
+              "id": "C",
+              "text": "it's less realistic."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "26",
+          "text": "How did the two students perform in the exam?",
+          "options": [
+            {
+              "id": "A",
+              "text": "very disappointing"
+            },
+            {
+              "id": "B",
+              "text": "significantly good"
+            },
+            {
+              "id": "C",
+              "text": "above the average"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "27-28",
+      "title": "Questions 27–28",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "In which TWO ways will the new system affect the company?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "gain more profit"
+        },
+        {
+          "id": "B",
+          "text": "employ more new staff"
+        },
+        {
+          "id": "C",
+          "text": "increase sales"
+        },
+        {
+          "id": "D",
+          "text": "reduce production time"
+        },
+        {
+          "id": "E",
+          "text": "cut labour costs"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "In which TWO ways will the new system affect the company?",
+          "answer": "B"
+        },
+        {
+          "id": "28",
+          "text": "In which TWO ways will the new system affect the company?",
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "29-30",
+      "title": "Questions 29 and 30",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO effects will the new system have on new clients?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "getting more involved in the design"
+        },
+        {
+          "id": "B",
+          "text": "obtaining more contacts"
+        },
+        {
+          "id": "C",
+          "text": "linking at home to do online work"
+        },
+        {
+          "id": "D",
+          "text": "wasting less time"
+        },
+        {
+          "id": "E",
+          "text": "decreasing labour costs"
+        }
+      ],
+      "questions": [
+        {
+          "id": "29",
+          "text": "Which TWO effects will the new system have on new clients?",
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "Which TWO effects will the new system have on new clients?",
+          "answer": "D"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "B",
+        "23": "A",
+        "24": "C",
+        "25": "B",
+        "26": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "27_28": [
+          "B",
+          "E"
+        ],
+        "29_30": [
+          "A",
+          "D"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "27": "B",
+        "28": "E",
+        "29": "A",
+        "30": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13000,
+      "text": "Section 3. You will hear two students called Tom and Bella attending the third meeting"
+    },
+    {
+      "startMs": 13000,
+      "endMs": 20000,
+      "text": "of the after school club. They are talking with their professor about the furniture company."
+    },
+    {
+      "startMs": 20000,
+      "endMs": 27000,
+      "text": "First, you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 50000,
+      "endMs": 63000,
+      "text": "Now, listen carefully and answer questions 21 to 26."
+    },
+    {
+      "startMs": 63000,
+      "endMs": 69000,
+      "text": "Professor: Before we start, Tom and Bella, thanks for coming in today to talk about the key case studies"
+    },
+    {
+      "startMs": 69000,
+      "endMs": 72000,
+      "text": "that will help you to understand your classwork better."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 77000,
+      "text": "Now, I hope you've read the notes I gave you last week on the furniture company Willows."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 81000,
+      "text": "As this will be the focus of our discussion today, let's begin."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 86000,
+      "text": "Who can tell me what the current focus of the company's business is?"
+    },
+    {
+      "startMs": 86000,
+      "endMs": 91000,
+      "text": "Tom: The company used to be very large with many retail outlets across the country."
+    },
+    {
+      "startMs": 91000,
+      "endMs": 96000,
+      "text": "However, since the recession, there have been fewer people spending money on furniture"
+    },
+    {
+      "startMs": 96000,
+      "endMs": 102000,
+      "text": "and so the company was forced to close all of its outlets and now only operates online."
+    },
+    {
+      "startMs": 102000,
+      "endMs": 106000,
+      "text": "Professor: Well done, Tom. Bella, can you add anything?"
+    },
+    {
+      "startMs": 106000,
+      "endMs": 113000,
+      "text": "Bella: Willows used to produce a very large number of products such as tables, chairs and light fittings."
+    },
+    {
+      "startMs": 113000,
+      "endMs": 120000,
+      "text": "However, through market research, they realized that most of their profit was made from the sale of bookcases"
+    },
+    {
+      "startMs": 120000,
+      "endMs": 124000,
+      "text": "so they now specialize in this one product."
+    },
+    {
+      "startMs": 124000,
+      "endMs": 129000,
+      "text": "Professor: Very good. Does anyone know how our department began its contact with Willows?"
+    },
+    {
+      "startMs": 129000,
+      "endMs": 132000,
+      "text": "Tom: Did you contact the company, Professor?"
+    },
+    {
+      "startMs": 132000,
+      "endMs": 135000,
+      "text": "Professor: No, Tom. It wasn't through me."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 140000,
+      "text": "Bella: Our headmaster saw an article that the manager had written in the newspaper"
+    },
+    {
+      "startMs": 140000,
+      "endMs": 143000,
+      "text": "and became very interested in the company."
+    },
+    {
+      "startMs": 143000,
+      "endMs": 149000,
+      "text": "He contacted Willows and arranged for a student to work there full time during the summer."
+    },
+    {
+      "startMs": 149000,
+      "endMs": 155000,
+      "text": "Professor: Yes, exactly. Does anyone know what the student thought of their time working at Willows?"
+    },
+    {
+      "startMs": 155000,
+      "endMs": 163000,
+      "text": "Tom: Yes, he is a friend of ours. He worked as a member of the design team, creating technical drawings of the furniture using a computer."
+    },
+    {
+      "startMs": 163000,
+      "endMs": 170000,
+      "text": "There was a special software that he used, which he said had a bad interface and was very difficult to predict."
+    },
+    {
+      "startMs": 170000,
+      "endMs": 176000,
+      "text": "However, it was very efficient and helpful for quickly drawing up furniture designs."
+    },
+    {
+      "startMs": 176000,
+      "endMs": 178000,
+      "text": "Professor: How interesting."
+    },
+    {
+      "startMs": 178000,
+      "endMs": 185000,
+      "text": "Bella: Yes, it was. We both visited him whilst he was working there and he showed us around."
+    },
+    {
+      "startMs": 185000,
+      "endMs": 193000,
+      "text": "Unfortunately, visitors were not allowed to access the IT department, but it was great to chat with his colleagues."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 195000,
+      "text": "Professor: Did you meet his manager?"
+    },
+    {
+      "startMs": 195000,
+      "endMs": 199000,
+      "text": "Tom: His manager is a very busy man, so he didn't have time to meet with us."
+    },
+    {
+      "startMs": 199000,
+      "endMs": 206000,
+      "text": "However, we were allowed to inspect the accounts, which really helped us to understand the effects of the software on the company."
+    },
+    {
+      "startMs": 206000,
+      "endMs": 209000,
+      "text": "Professor: Well, what an exciting experience."
+    },
+    {
+      "startMs": 209000,
+      "endMs": 217000,
+      "text": "Now, before I forget, next week I'll be conducting face-to-face interviews with each of you to prepare for job interviews."
+    },
+    {
+      "startMs": 217000,
+      "endMs": 219000,
+      "text": "Bella: Can we do it as a group?"
+    },
+    {
+      "startMs": 219000,
+      "endMs": 228000,
+      "text": "Professor: I'm afraid not, Bella. I want to give each of you my undivided attention, and there will be too much disturbance if I interview you altogether."
+    },
+    {
+      "startMs": 228000,
+      "endMs": 232000,
+      "text": "Plus, it will be more realistic if I interview you alone."
+    },
+    {
+      "startMs": 233000,
+      "endMs": 236000,
+      "text": "Tom: Have you finished writing the feedback on our exam results, Professor?"
+    },
+    {
+      "startMs": 236000,
+      "endMs": 241000,
+      "text": "Professor: Yes, I have, Tom. And I must say that I was not disappointed."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 250000,
+      "text": "I am glad to say that your performance has dramatically increased since you began attending this after school club, and you have both scored above the average."
+    },
+    {
+      "startMs": 250000,
+      "endMs": 258000,
+      "text": "If you continue to work hard, your results should soon improve significantly."
+    },
+    {
+      "startMs": 258000,
+      "endMs": 266000,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions 27-30."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 290000,
+      "text": "Now, listen and answer questions 27-30."
+    },
+    {
+      "startMs": 291000,
+      "endMs": 300000,
+      "text": "Professor: Now, back to our discussion about Willows. Can anyone tell me what business decisions might benefit the company?"
+    },
+    {
+      "startMs": 300000,
+      "endMs": 309000,
+      "text": "Bella: A new system would definitely benefit Willows. Their system is very outdated. I don't think it would help them to gain more profit."
+    },
+    {
+      "startMs": 309000,
+      "endMs": 318000,
+      "text": "However, the system is capable of doing the work of hundreds of people. This would, therefore, significantly lower labor costs."
+    },
+    {
+      "startMs": 318000,
+      "endMs": 326000,
+      "text": "Tom: I agree. Unfortunately, unless they also replace the machinery in their workshop, the new system won't reduce the production time."
+    },
+    {
+      "startMs": 326000,
+      "endMs": 332000,
+      "text": "Bella: That is a shame. If they can't reduce their production time, they won't be able to increase sales."
+    },
+    {
+      "startMs": 332000,
+      "endMs": 339000,
+      "text": "The answer is to hire more staff in order to increase the efficiency of the production line."
+    },
+    {
+      "startMs": 339000,
+      "endMs": 346000,
+      "text": "Professor: Yes, you have both made interesting points. Now for one final question before we finish this week's session."
+    },
+    {
+      "startMs": 347000,
+      "endMs": 351000,
+      "text": "How will new clients be affected by the new system?"
+    },
+    {
+      "startMs": 351000,
+      "endMs": 359000,
+      "text": "Tom: Unfortunately, the new system does not allow clients to connect to the Willows system from home, so they are unable to access their work online."
+    },
+    {
+      "startMs": 359000,
+      "endMs": 368000,
+      "text": "This also means that the system presents no opportunity to attract more contacts, since clients are unable to view it from their homes."
+    },
+    {
+      "startMs": 368000,
+      "endMs": 374000,
+      "text": "Bella: Yes, that's true. However, it could definitely benefit clients who visit the showroom."
+    },
+    {
+      "startMs": 374000,
+      "endMs": 383000,
+      "text": "The system is very interactive and allows clients to easily browse the furniture catalog, which will save them a lot of time."
+    },
+    {
+      "startMs": 383000,
+      "endMs": 391000,
+      "text": "It's a shame that staff are still needed to guide clients through the online system, as it means that no savings can be made in labor costs."
+    },
+    {
+      "startMs": 392000,
+      "endMs": 401000,
+      "text": "Tom: I think the major benefit of the new system is that it enables staff to design the furniture in front of the client, which allows them to get a lot more involved in the design."
+    },
+    {
+      "startMs": 401000,
+      "endMs": 411000,
+      "text": "Professor: Bravo, you've both contributed fantastic points to our conversation. That concludes our session for today. I'll see you next week."
+    },
+    {
+      "startMs": 413000,
+      "endMs": 420000,
+      "text": "That is the end of section 3. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 421000,
+      "endMs": 426000,
+      "text": "If you have any questions, please let us know in the comments below."
+    },
+    {
+      "startMs": 426000,
+      "endMs": 428000,
+      "text": "Thank you for your time."
+    },
+    {
+      "startMs": 428000,
+      "endMs": 431000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 431000,
+      "endMs": 434000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 434000,
+      "endMs": 436000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 436000,
+      "endMs": 439000,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 439000,
+      "endMs": 446000,
+      "text": "Now turn to section 4."
+    },
+    {
+      "startMs": 469000,
+      "endMs": 474000,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 67,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

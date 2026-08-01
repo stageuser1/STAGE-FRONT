@@ -1,0 +1,451 @@
+{
+  "id": "p2-92-pine-garden",
+  "title": "Pine Garden",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-425cfac998ac",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 346.875,
+    "checksum": "sha256:aa9311319e81ff0fd72def24127b5ce25f91ae569625750cc3fb9839a8177647"
+  },
+  "groups": [
+    {
+      "type": "multiple",
+      "id": "11-12",
+      "title": "Questions 11–12",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Pine Garden Which TWO things are included in the price of the tour?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "garden gloves"
+        },
+        {
+          "id": "B",
+          "text": "ladybugs"
+        },
+        {
+          "id": "C",
+          "text": "bush timbering lessons"
+        },
+        {
+          "id": "D",
+          "text": "food"
+        },
+        {
+          "id": "E",
+          "text": "hummina birds"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "Pine Garden Which TWO things are included in the price of the tour?",
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "Pine Garden Which TWO things are included in the price of the tour?",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "id": "13-14",
+      "title": "Questions 13 and 14",
+      "instruction": "Choose TWO letters, A–E.",
+      "questionText": "Which TWO facilities of Pine Garden are open today?",
+      "limit": 2,
+      "options": [
+        {
+          "id": "A",
+          "text": "plant care centre"
+        },
+        {
+          "id": "B",
+          "text": "cafe"
+        },
+        {
+          "id": "C",
+          "text": "gift shop"
+        },
+        {
+          "id": "D",
+          "text": "model town"
+        },
+        {
+          "id": "E",
+          "text": "tourist office"
+        }
+      ],
+      "questions": [
+        {
+          "id": "13",
+          "text": "Which TWO facilities of Pine Garden are open today?",
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "Which TWO facilities of Pine Garden are open today?",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 15–20",
+      "instruction": "Choose SIX answers from the box and write the correct letter, A–H, next to questions 15–20.",
+      "options": [
+        {
+          "id": "A",
+          "text": "varieties of desert"
+        },
+        {
+          "id": "B",
+          "text": "edible plants"
+        },
+        {
+          "id": "C",
+          "text": "lawns and lawn alternatives"
+        },
+        {
+          "id": "D",
+          "text": "native plants"
+        },
+        {
+          "id": "E",
+          "text": "storing water"
+        },
+        {
+          "id": "F",
+          "text": "plants attract wildlife"
+        },
+        {
+          "id": "G",
+          "text": "unified design"
+        },
+        {
+          "id": "H",
+          "text": "soil nutrients"
+        }
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "Mary",
+          "answer": "D"
+        },
+        {
+          "id": "16",
+          "text": "Berson",
+          "answer": "A"
+        },
+        {
+          "id": "17",
+          "text": "Smith",
+          "answer": "B"
+        },
+        {
+          "id": "18",
+          "text": "Nunee",
+          "answer": "C"
+        },
+        {
+          "id": "19",
+          "text": "Scanlan",
+          "answer": "H"
+        },
+        {
+          "id": "20",
+          "text": "Mandelson",
+          "answer": "G"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {
+        "11_12": [
+          "B",
+          "C"
+        ],
+        "13_14": [
+          "A",
+          "D"
+        ]
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "C",
+        "13": "A",
+        "14": "D"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "15": "D",
+        "16": "A",
+        "17": "B",
+        "18": "C",
+        "19": "H",
+        "20": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2320,
+      "text": "Section 2."
+    },
+    {
+      "startMs": 2320,
+      "endMs": 7320,
+      "text": "You will hear a guide talking to a group of visitors in a garden."
+    },
+    {
+      "startMs": 7320,
+      "endMs": 12040,
+      "text": "First, you'll have some time to look at questions 11-14."
+    },
+    {
+      "startMs": 31000,
+      "endMs": 37000,
+      "text": "Now, listen carefully and answer questions 11-14."
+    },
+    {
+      "startMs": 37000,
+      "endMs": 47000,
+      "text": "Hello, welcome to Pine Garden. My name is Manuel and I'd like to tell you a few things about our establishment"
+    },
+    {
+      "startMs": 47000,
+      "endMs": 51000,
+      "text": "before you all wander off and begin your exploration of the grounds."
+    },
+    {
+      "startMs": 51000,
+      "endMs": 55000,
+      "text": "I know you're keen to begin, so I'll try to keep this short."
+    },
+    {
+      "startMs": 55000,
+      "endMs": 59000,
+      "text": "First of all, I'd like to explain what you can do with your ticket."
+    },
+    {
+      "startMs": 59000,
+      "endMs": 63000,
+      "text": "If you want to be closer to nature, you could visit our planting area."
+    },
+    {
+      "startMs": 63000,
+      "endMs": 69000,
+      "text": "In that area, visitors can plant small flowers and bulbs that will grow and become part of the garden."
+    },
+    {
+      "startMs": 69000,
+      "endMs": 72000,
+      "text": "The planting activity is completely free."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 78000,
+      "text": "However, if you have sensitive hands, you'll need to purchase garden gloves to protect your skin."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 84000,
+      "text": "Here at Pine Garden, we sell a number of wooden goods, carved from trees that have been felled in our very own pine forest."
+    },
+    {
+      "startMs": 84000,
+      "endMs": 88000,
+      "text": "If you feel like getting involved and having a go yourself,"
+    },
+    {
+      "startMs": 88000,
+      "endMs": 97000,
+      "text": "you can join one of our bush timbering lessons, free of charge, where you'll be able to make your own keyring under the supervision of a skilled craftsman."
+    },
+    {
+      "startMs": 97000,
+      "endMs": 104000,
+      "text": "The most popular attraction in the garden is our aviary, where you can observe a whole range of bird species."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 110000,
+      "text": "Entry to this section is free, but you have to pay a small supplement in order to enter the hummingbird section."
+    },
+    {
+      "startMs": 110000,
+      "endMs": 120000,
+      "text": "Also, the insect hut not far from it may arouse your interest, there you can find some interesting insects such as butterflies, pocket ladybugs, dragonflies, and so on."
+    },
+    {
+      "startMs": 120000,
+      "endMs": 123000,
+      "text": "And there's no extra charge for that."
+    },
+    {
+      "startMs": 123000,
+      "endMs": 128000,
+      "text": "Unfortunately, there are some areas that are temporarily off limits to visitors today."
+    },
+    {
+      "startMs": 128000,
+      "endMs": 134000,
+      "text": "For example, the gift shop that closed earlier this year and won't be open for another month or so."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 147000,
+      "text": "As I mentioned before, however, you're free to visit our restaurant for food and snacks, and if you're looking to purchase a gift, why not buy that special someone a potted bush or orchid from our plant care centre."
+    },
+    {
+      "startMs": 147000,
+      "endMs": 153000,
+      "text": "And our new treetop cafe is under construction, which will be very impressive when it's finished."
+    },
+    {
+      "startMs": 153000,
+      "endMs": 158000,
+      "text": "In fact, the model town's already open ahead of schedule, and it's attracting a lot of people."
+    },
+    {
+      "startMs": 158000,
+      "endMs": 166000,
+      "text": "Now, our tourist office is normally available to provide tourists with a variety of help. However, the officer is sick at home today."
+    },
+    {
+      "startMs": 166000,
+      "endMs": 172000,
+      "text": "Please do not let this discourage you from visiting these as they provide quite an experience."
+    },
+    {
+      "startMs": 174000,
+      "endMs": 181000,
+      "text": "Before you hear the rest of the talk, you'll have some time to look at questions 15 to 20."
+    },
+    {
+      "startMs": 188000,
+      "endMs": 198000,
+      "text": "Now listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 226000,
+      "text": "I also would like to introduce you to our plant specialists who are responsible for the wonderful plant displays here at Pine Garden."
+    },
+    {
+      "startMs": 226000,
+      "endMs": 235000,
+      "text": "Mrs Mary is one of our experts, and she is personally responsible for our beautiful display of plants that are all found growing naturally in the local area."
+    },
+    {
+      "startMs": 235000,
+      "endMs": 246000,
+      "text": "Mr. Berson has the difficult task of growing varieties of plants that are suited to much drier and hotter climates than ours, which means we do not have to store water on site."
+    },
+    {
+      "startMs": 246000,
+      "endMs": 255000,
+      "text": "If you visit the glass house, you'll be able to see many plants that he has managed to cultivate without the need for rain or irrigation."
+    },
+    {
+      "startMs": 255000,
+      "endMs": 265000,
+      "text": "Mr. Smith is responsible for the produce that you can eat in our restaurant, which ranges from varieties that grow under the ground to those that grow on trees and bushes."
+    },
+    {
+      "startMs": 266000,
+      "endMs": 273000,
+      "text": "Now Mr. Noony here is our expert on the most commonly growing plant in the world, grass."
+    },
+    {
+      "startMs": 273000,
+      "endMs": 279000,
+      "text": "You may have noticed how beautifully green and lush our grounds are thanks to his specialist knowledge."
+    },
+    {
+      "startMs": 279000,
+      "endMs": 287000,
+      "text": "Mr. Scanlon ensures that our soil is full of nutrients so that the natural habitat is supported and encouraged."
+    },
+    {
+      "startMs": 287000,
+      "endMs": 293000,
+      "text": "He does this by fertilising the earth with a special formula of his own creation."
+    },
+    {
+      "startMs": 293000,
+      "endMs": 297000,
+      "text": "Finally, I would like to introduce you all to Dr. Mandelson."
+    },
+    {
+      "startMs": 297000,
+      "endMs": 309000,
+      "text": "He is the manager of our landscaping team and works closely with our other experts to ensure that everyone works together to create a landscape that is both beautiful and sustainable."
+    },
+    {
+      "startMs": 309000,
+      "endMs": 316000,
+      "text": "Well, that just about rounds it up. Now if anyone has any questions?"
+    },
+    {
+      "startMs": 316000,
+      "endMs": 323000,
+      "text": "That is the end of section 2. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 346000,
+      "endMs": 353000,
+      "text": "Thank you very much."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 42,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

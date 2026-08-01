@@ -1,0 +1,495 @@
+{
+  "id": "p4-74-the-mangrove",
+  "title": "The Mangrove",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-d47b0f44c70b",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 306.759,
+    "checksum": "sha256:9dec09e7b753ee3f83a3f922741a1f9dc1b52a28f44b18bf0d40067b2ab90e4f"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer. The Mangrove Regeneration Project Mangrove forests: protect coastal areas from 31. __________ by the sea are an important habitat for wildlife Problems: mangroves had been used by farmers as 32. __________ mangroves were poisoned by the use of 33. __________ local people used the mangroves as a place to put their 34. __________ Actions taken to protect the mangroves: a barrier which was made of 35. __________ was constructed – but it failed new mangroves had to be grown from seed the seeds of the 36. __________ mangrove were used First set of seedlings: kept in small pots in a 37. __________ watered with 38. __________ water planted out on south side of a small island at risk from the large 39. __________ population Second set of seedlings: planted in the seabed near established mangrove roots the young plants were destroyed in a 40. __________ Results: The first set of seedlings was successful",
+      "questions": [
+        {
+          "id": "31",
+          "text": "protect coastal areas from 31. __________ by the sea",
+          "answer": "Flooding"
+        },
+        {
+          "id": "32",
+          "text": "mangroves had been used by farmers as 32. __________",
+          "answer": "Firewood"
+        },
+        {
+          "id": "33",
+          "text": "mangroves were poisoned by the use of 33. __________",
+          "answer": "Fertilizer/Fertiliser"
+        },
+        {
+          "id": "34",
+          "text": "local people used the mangroves as a place to put their 34. __________",
+          "answer": "Trash"
+        },
+        {
+          "id": "35",
+          "text": "a barrier which was made of 35. __________ was constructed – but it failed",
+          "answer": "Sand"
+        },
+        {
+          "id": "36",
+          "text": "the seeds of the 36. __________ mangrove were used",
+          "answer": "Gray/Grey"
+        },
+        {
+          "id": "37",
+          "text": "kept in small pots in a 37. __________",
+          "answer": "Hothouse"
+        },
+        {
+          "id": "38",
+          "text": "watered with 38. __________ water",
+          "answer": "Rain"
+        },
+        {
+          "id": "39",
+          "text": "at risk from the large 39. __________ population",
+          "answer": "Rabbit"
+        },
+        {
+          "id": "40",
+          "text": "the young plants were destroyed in a 40. __________",
+          "answer": "Storm"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN TWO WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The Mangrove Regeneration Project",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Mangrove forests:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "protect coastal areas from 31. __________ by the sea",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "are an important habitat for wildlife",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Problems:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "mangroves had been used by farmers as 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "mangroves were poisoned by the use of 33. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "local people used the mangroves as a place to put their 34. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Actions taken to protect the mangroves:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "a barrier which was made of 35. __________ was constructed – but it failed",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "new mangroves had to be grown from seed",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "the seeds of the 36. __________ mangrove were used",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "First set of seedlings:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "kept in small pots in a 37. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "watered with 38. __________ water",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "planted out on south side of a small island",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "at risk from the large 39. __________ population",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Second set of seedlings:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "planted in the seabed near established mangrove roots",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "the young plants were destroyed in a 40. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Results:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The first set of seedlings was successful",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "Flooding",
+        "32": "Firewood",
+        "33": "Fertilizer/Fertiliser",
+        "34": "Trash",
+        "35": "Sand",
+        "36": "Gray/Grey",
+        "37": "Hothouse",
+        "38": "Rain",
+        "39": "Rabbit",
+        "40": "Storm"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2000,
+      "text": "Section 4"
+    },
+    {
+      "startMs": 2000,
+      "endMs": 8000,
+      "text": "You will hear part of a student presentation about a conservation project on the Florida"
+    },
+    {
+      "startMs": 8000,
+      "endMs": 11000,
+      "text": "Coast of the United States."
+    },
+    {
+      "startMs": 11000,
+      "endMs": 16000,
+      "text": "First you have some time to look at questions 31 to 40, on page 7."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 33000,
+      "text": "You"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 74000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 81000,
+      "text": "Today I'm going to be talking about the first year of a regeneration project in a mangrove forest."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 87000,
+      "text": "Mangrove forests are found along river estuaries and coastlines and are important because they"
+    },
+    {
+      "startMs": 87000,
+      "endMs": 91000,
+      "text": "prevent flooding by acting as a barrier between the land and sea."
+    },
+    {
+      "startMs": 91000,
+      "endMs": 97000,
+      "text": "The mangrove trees have special roots which can breathe and allow them to survive in thick,"
+    },
+    {
+      "startMs": 97000,
+      "endMs": 98000,
+      "text": "airless mud."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 104000,
+      "text": "They are also a very important habitat for waiting birds, fish and other animals."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 111000,
+      "text": "In the area where the project is taking place, there have been a number of problems since the area was first"
+    },
+    {
+      "startMs": 111000,
+      "endMs": 113000,
+      "text": "settled over 100 years ago."
+    },
+    {
+      "startMs": 113000,
+      "endMs": 118000,
+      "text": "Many of the mangrove trees were initially burnt as firewood by local farmers."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 124000,
+      "text": "The mangrove forests were also poisoned by settlers farming methods because the farmers used"
+    },
+    {
+      "startMs": 124000,
+      "endMs": 129000,
+      "text": "fertilizer to increase crop yields and this started to seep into the water,"
+    },
+    {
+      "startMs": 129000,
+      "endMs": 132000,
+      "text": "eventually killing part of the mangrove forest."
+    },
+    {
+      "startMs": 132000,
+      "endMs": 138000,
+      "text": "Farming in the area wasn't successful and what was left of the mangrove forest area"
+    },
+    {
+      "startMs": 138000,
+      "endMs": 142000,
+      "text": "wasn't valued by local people as crops couldn't be grown there."
+    },
+    {
+      "startMs": 142000,
+      "endMs": 147000,
+      "text": "And so what happened was that the area started to be used as somewhere to dump trash."
+    },
+    {
+      "startMs": 152000,
+      "endMs": 157000,
+      "text": "Action was urgently needed to protect the mangrove forest and prevent flooding."
+    },
+    {
+      "startMs": 157000,
+      "endMs": 161000,
+      "text": "And so the mangrove regeneration project was set up."
+    },
+    {
+      "startMs": 161000,
+      "endMs": 168000,
+      "text": "The conservationists involved decided to construct a sand barrier around the forests."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 171000,
+      "text": "But unfortunately this proved to be ineffective."
+    },
+    {
+      "startMs": 171000,
+      "endMs": 177000,
+      "text": "The only way forward appeared to be to grow new mangroves from seed."
+    },
+    {
+      "startMs": 177000,
+      "endMs": 182000,
+      "text": "Several species of mangrove inhabit the forests in this area of the United States,"
+    },
+    {
+      "startMs": 182000,
+      "endMs": 186000,
+      "text": "but it is the grey mangroves that we are concerned with here."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 194000,
+      "text": "The seed of this plant is about the size of an almond and most seeds fall only when they are fully ripe."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 199000,
+      "text": "The mangrove regeneration project first began three years ago."
+    },
+    {
+      "startMs": 199000,
+      "endMs": 205000,
+      "text": "The first set of seedlings was planted in small pots and left to germinate in a hothouse."
+    },
+    {
+      "startMs": 205000,
+      "endMs": 210000,
+      "text": "The plants thrived and large roots appeared at the bottom of the pots."
+    },
+    {
+      "startMs": 210000,
+      "endMs": 217000,
+      "text": "Ideally, these seedlings should have been conditioned with increasingly salty water before being planted in the sea."
+    },
+    {
+      "startMs": 217000,
+      "endMs": 221000,
+      "text": "They had, in fact, only been watered with rain water."
+    },
+    {
+      "startMs": 221000,
+      "endMs": 230000,
+      "text": "As the plants weren't used to a saline environment, it was decided to plant them out on the south side of a small island nearby."
+    },
+    {
+      "startMs": 230000,
+      "endMs": 234000,
+      "text": "It was hoped that this would allow them to get used to salt water gradually,"
+    },
+    {
+      "startMs": 234000,
+      "endMs": 238000,
+      "text": "since this part of the island was flooded every day at high tide."
+    },
+    {
+      "startMs": 238000,
+      "endMs": 242000,
+      "text": "There were over 100 plants planted in this particular spot,"
+    },
+    {
+      "startMs": 242000,
+      "endMs": 249000,
+      "text": "and it was necessary to protect them not from the large number of wading birds which visit the area looking for food,"
+    },
+    {
+      "startMs": 249000,
+      "endMs": 253000,
+      "text": "but from the large rabbit colony living in the area."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 258000,
+      "text": "The process for the second set of seedlings was completely different."
+    },
+    {
+      "startMs": 258000,
+      "endMs": 263000,
+      "text": "Young seedlings were collected from the forests and then taken to a new site."
+    },
+    {
+      "startMs": 263000,
+      "endMs": 269000,
+      "text": "The seedlings were then planted in the sea bed behind old mangrove roots for protection."
+    },
+    {
+      "startMs": 269000,
+      "endMs": 277000,
+      "text": "However, this method did not prove very successful, and the vast majority of these seedlings were washed away in a storm."
+    },
+    {
+      "startMs": 277000,
+      "endMs": 286000,
+      "text": "Luckily, the first set of seedlings survived, and this method is the one which the project will continue to use in the future."
+    },
+    {
+      "startMs": 286000,
+      "endMs": 292000,
+      "text": "Now, I'd like to describe in more detail the process."
+    },
+    {
+      "startMs": 293000,
+      "endMs": 295000,
+      "text": "That is the end of section 4."
+    },
+    {
+      "startMs": 295000,
+      "endMs": 299000,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 48,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

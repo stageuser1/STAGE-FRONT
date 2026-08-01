@@ -1,0 +1,719 @@
+{
+  "id": "p3-27-mosquito-net",
+  "title": "Mosquito Net",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-5ca7ca140787",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 463.056,
+    "checksum": "sha256:9a7c19449fcb8a14b94bcf8ed56cb177a19a7144badce87ded5d6759ab007659"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21-25.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Edward heard about a type of mosquito net from",
+          "options": [
+            {
+              "id": "A",
+              "text": "an administrator."
+            },
+            {
+              "id": "B",
+              "text": "a doctor."
+            },
+            {
+              "id": "C",
+              "text": "a friend."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "22",
+          "text": "Edward believes that mosquito nets were first used in",
+          "options": [
+            {
+              "id": "A",
+              "text": "China."
+            },
+            {
+              "id": "B",
+              "text": "Japan."
+            },
+            {
+              "id": "C",
+              "text": "Egypt."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "23",
+          "text": "Chemical treatment of mosquito nets in the mid-twentieth century",
+          "options": [
+            {
+              "id": "A",
+              "text": "was first developed by a soldier."
+            },
+            {
+              "id": "B",
+              "text": "made them potentially dangerous to users."
+            },
+            {
+              "id": "C",
+              "text": "was made possible by modern textiles."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "The owners of present-day nets",
+          "options": [
+            {
+              "id": "A",
+              "text": "are likely to find they have an unpleasant smell."
+            },
+            {
+              "id": "B",
+              "text": "should avoid using them every night."
+            },
+            {
+              "id": "C",
+              "text": "may have difficulty obtaining the necessary chemical."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "25",
+          "text": "According to Edward, Olyset nets are better than other nets because they",
+          "options": [
+            {
+              "id": "A",
+              "text": "remain effective for longer."
+            },
+            {
+              "id": "B",
+              "text": "use a greater number of chemicals."
+            },
+            {
+              "id": "C",
+              "text": "give protection against more types of insects."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 26-30.",
+      "instruction": "Complete the flow-chart below.",
+      "layout": "flow",
+      "options": [
+        {
+          "id": "A",
+          "text": "workforce"
+        },
+        {
+          "id": "B",
+          "text": "sources of funding"
+        },
+        {
+          "id": "C",
+          "text": "investment opportunities"
+        },
+        {
+          "id": "D",
+          "text": "unique features of the product"
+        },
+        {
+          "id": "E",
+          "text": "future developments"
+        },
+        {
+          "id": "F",
+          "text": "production figures"
+        },
+        {
+          "id": "G",
+          "text": "national economies"
+        }
+      ],
+      "questions": [
+        {
+          "id": "26",
+          "text": "impact on _____.",
+          "answer": "G"
+        },
+        {
+          "id": "27",
+          "text": "_____.",
+          "answer": "D"
+        },
+        {
+          "id": "28",
+          "text": "information about _____.",
+          "answer": "B"
+        },
+        {
+          "id": "29",
+          "text": "profile of manufacturer with description of _____.",
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "_____.  (according to website)",
+          "answer": "F"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Seminar presentation",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Context: need for anti-malarial products",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Figures relating to:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "global incidence of the disease",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "impact on 26. _______________________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "History",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "27. _______________________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Production",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "information about 28. _______________________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "profile of manufacturer with description of 29. _______________________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "30. _______________________ (according to website)",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "A",
+        "22": "C",
+        "23": "B",
+        "24": "C",
+        "25": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "26": "G",
+        "27": "D",
+        "28": "B",
+        "29": "A",
+        "30": "F"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 12680,
+      "endMs": 17200,
+      "text": "research he is doing on product development."
+    },
+    {
+      "startMs": 17200,
+      "endMs": 21320,
+      "text": "First you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 59800,
+      "text": "Now listen carefully and answer questions 21 to 25."
+    },
+    {
+      "startMs": 59800,
+      "endMs": 65800,
+      "text": "[Tutor]: Hello Edward, sit down."
+    },
+    {
+      "startMs": 65800,
+      "endMs": 70800,
+      "text": "[Edward]: Thanks. I need some advice on my presentation about product development."
+    },
+    {
+      "startMs": 70800,
+      "endMs": 73800,
+      "text": "[Tutor]: Right. Have you decided what to focus on?"
+    },
+    {
+      "startMs": 73800,
+      "endMs": 77800,
+      "text": "[Edward]: Yes. The product I've chosen is a particular type of mosquito net."
+    },
+    {
+      "startMs": 77800,
+      "endMs": 79800,
+      "text": "[Tutor]: Any reason for choosing that?"
+    },
+    {
+      "startMs": 79800,
+      "endMs": 83800,
+      "text": "[Edward]: I spent last summer traveling around Africa with a friend."
+    },
+    {
+      "startMs": 83800,
+      "endMs": 88800,
+      "text": "He's studying medicine. So when we're in a region where mosquitoes cause malaria,"
+    },
+    {
+      "startMs": 88800,
+      "endMs": 94800,
+      "text": "we visited a medical center. I chatted to an administrator while my friend talked to one of the doctors."
+    },
+    {
+      "startMs": 94800,
+      "endMs": 101800,
+      "text": "And I found out they've had far fewer cases of malaria since these mosquito nets became available locally."
+    },
+    {
+      "startMs": 101800,
+      "endMs": 103800,
+      "text": "That made me interested in them."
+    },
+    {
+      "startMs": 103800,
+      "endMs": 108800,
+      "text": "[Tutor]: Okay. Mosquito nets have quite a long history, don't they?"
+    },
+    {
+      "startMs": 108800,
+      "endMs": 111800,
+      "text": "I believe they've been used in Japan for centuries."
+    },
+    {
+      "startMs": 111800,
+      "endMs": 116800,
+      "text": "[Edward]: That's right. Though apparently, Queen Cleopatra slept under one in ancient Egypt. That was probably where they were invented."
+    },
+    {
+      "startMs": 116800,
+      "endMs": 119800,
+      "text": "That was probably where they were invented."
+    },
+    {
+      "startMs": 119800,
+      "endMs": 122800,
+      "text": "And much later, nets were used in China."
+    },
+    {
+      "startMs": 122800,
+      "endMs": 125800,
+      "text": "So perhaps they were invented there independently."
+    },
+    {
+      "startMs": 125800,
+      "endMs": 131800,
+      "text": "Originally, they were made of silk, but later cotton was used, and nowadays they're mainly synthetic."
+    },
+    {
+      "startMs": 131800,
+      "endMs": 140800,
+      "text": "It wasn't until the middle of the 20th century that they developed nets treated with insecticides for use by the military, and that was a major step forward."
+    },
+    {
+      "startMs": 140800,
+      "endMs": 148800,
+      "text": "They used an insecticide called DDT, but it was later found that this could be harmful to people as well as mosquitoes."
+    },
+    {
+      "startMs": 148800,
+      "endMs": 151800,
+      "text": "[Tutor]: Is that still a problem with modern nets?"
+    },
+    {
+      "startMs": 151800,
+      "endMs": 156800,
+      "text": "[Edward]: Oh no. The chemicals used nowadays are safe, even if people sleep under them every night."
+    },
+    {
+      "startMs": 156800,
+      "endMs": 159800,
+      "text": "And the nets work, and they're out of free."
+    },
+    {
+      "startMs": 159800,
+      "endMs": 165800,
+      "text": "But they have to be treated fairly often with the chemical, which the owners need to do themselves."
+    },
+    {
+      "startMs": 166800,
+      "endMs": 171800,
+      "text": "[Tutor]: Presumably, distribution of the chemical can be a problem in remote areas."
+    },
+    {
+      "startMs": 171800,
+      "endMs": 174800,
+      "text": "I mean, people may not be able to get hold of it easily."
+    },
+    {
+      "startMs": 174800,
+      "endMs": 176800,
+      "text": "[Edward]: That's right."
+    },
+    {
+      "startMs": 176800,
+      "endMs": 179800,
+      "text": "[Tutor]: Okay, tell me about this net you're going to talk about."
+    },
+    {
+      "startMs": 179800,
+      "endMs": 185800,
+      "text": "[Edward]: Well, the brand name is OliSet, and the product was invented by a Japanese company."
+    },
+    {
+      "startMs": 185800,
+      "endMs": 193800,
+      "text": "These nets are an improvement on the alternatives, because the insecticide is contained inside the fiber, and released gradually."
+    },
+    {
+      "startMs": 193800,
+      "endMs": 196800,
+      "text": "It's not coated on the outside as with ordinary nets."
+    },
+    {
+      "startMs": 196800,
+      "endMs": 198800,
+      "text": "[Tutor]: So the chemicals don't have to be replaced?"
+    },
+    {
+      "startMs": 198800,
+      "endMs": 203800,
+      "text": "[Edward]: Right. And OliSet nets are also tougher, and don't tear as easily."
+    },
+    {
+      "startMs": 203800,
+      "endMs": 209800,
+      "text": "They give protection for at least five years, compared with a year or two for other nets."
+    },
+    {
+      "startMs": 209800,
+      "endMs": 212800,
+      "text": "[Tutor]: Well, it sounds interesting."
+    },
+    {
+      "startMs": 212800,
+      "endMs": 216800,
+      "text": "But for your seminar presentation, will you provide the bigger picture as well?"
+    },
+    {
+      "startMs": 216800,
+      "endMs": 220800,
+      "text": "[Edward]: Yes, it'll be a case study of product development."
+    },
+    {
+      "startMs": 220800,
+      "endMs": 251800,
+      "text": "[Narrator]: Before you hear the rest of the discussion, you have some time to look at questions 26 to 30."
+    },
+    {
+      "startMs": 251800,
+      "endMs": 258800,
+      "text": "Now listen and answer questions 26 to 30."
+    },
+    {
+      "startMs": 261800,
+      "endMs": 268800,
+      "text": "[Edward]: I thought I'd introduce my presentation by describing the background to the new product, the general context."
+    },
+    {
+      "startMs": 268800,
+      "endMs": 273800,
+      "text": "[Tutor]: You mean the business context? Where the investments coming from and that sort of thing?"
+    },
+    {
+      "startMs": 273800,
+      "endMs": 279800,
+      "text": "[Edward]: Well, I was thinking I'd talk first about insect-borne diseases, particularly malaria,"
+    },
+    {
+      "startMs": 279800,
+      "endMs": 282800,
+      "text": "and why there's such an urgent need for new ways of fighting it."
+    },
+    {
+      "startMs": 282800,
+      "endMs": 285800,
+      "text": "Some people might not know much about it."
+    },
+    {
+      "startMs": 285800,
+      "endMs": 287800,
+      "text": "[Tutor]: Yes, that's a good idea."
+    },
+    {
+      "startMs": 287800,
+      "endMs": 292800,
+      "text": "[Edward]: I've got some statistics about the numbers of people worldwide who get the disease each year."
+    },
+    {
+      "startMs": 292800,
+      "endMs": 295800,
+      "text": "I thought I'd show those. They're quite staggering."
+    },
+    {
+      "startMs": 295800,
+      "endMs": 300800,
+      "text": "[Tutor]: I can imagine it's one of the world's biggest health problems after all."
+    },
+    {
+      "startMs": 300800,
+      "endMs": 308800,
+      "text": "It'd also be useful if you could find some statistical information on how malaria affects countries' economic output"
+    },
+    {
+      "startMs": 308800,
+      "endMs": 310800,
+      "text": "and present that too."
+    },
+    {
+      "startMs": 310800,
+      "endMs": 312800,
+      "text": "[Edward]: Okay, I'm sure I can find something."
+    },
+    {
+      "startMs": 312800,
+      "endMs": 315800,
+      "text": "After that, I'll talk about mosquito nets."
+    },
+    {
+      "startMs": 315800,
+      "endMs": 321800,
+      "text": "First, the historical development, just briefly, and then I'll introduce the Oleset mosquito net."
+    },
+    {
+      "startMs": 321800,
+      "endMs": 327800,
+      "text": "[Tutor]: Yes, keep it simple. You could just present a bulleted list of its characteristics,"
+    },
+    {
+      "startMs": 327800,
+      "endMs": 331800,
+      "text": "the things that make it different from other types of net and talk that through."
+    },
+    {
+      "startMs": 331800,
+      "endMs": 334800,
+      "text": "[Edward]: Right. Then I thought I'd outline the production process."
+    },
+    {
+      "startMs": 334800,
+      "endMs": 335800,
+      "text": "[Tutor]: Fine."
+    },
+    {
+      "startMs": 335800,
+      "endMs": 339800,
+      "text": "[Edward]: Should I give some information about where the money for the project has come from?"
+    },
+    {
+      "startMs": 339800,
+      "endMs": 342800,
+      "text": "There are lots of government and private sponsors."
+    },
+    {
+      "startMs": 342800,
+      "endMs": 347800,
+      "text": "[Tutor]: Definitely. That's a very important aspect of any product development."
+    },
+    {
+      "startMs": 347800,
+      "endMs": 350800,
+      "text": "Where are the nets being manufactured, by the way?"
+    },
+    {
+      "startMs": 350800,
+      "endMs": 354800,
+      "text": "[Edward]: Over half are made in Tanzania by a company called A to Z."
+    },
+    {
+      "startMs": 354800,
+      "endMs": 358800,
+      "text": "They got an interest-free loan to buy in the necessary machinery."
+    },
+    {
+      "startMs": 358800,
+      "endMs": 361800,
+      "text": "[Tutor]: Well, I'd say a bit about the company profile as well,"
+    },
+    {
+      "startMs": 361800,
+      "endMs": 364800,
+      "text": "and then present figures about numbers of staff"
+    },
+    {
+      "startMs": 364800,
+      "endMs": 367800,
+      "text": "and the kinds of people they're employing on the Oleset project"
+    },
+    {
+      "startMs": 367800,
+      "endMs": 369800,
+      "text": "if you can find the details."
+    },
+    {
+      "startMs": 369800,
+      "endMs": 373800,
+      "text": "[Edward]: Okay. I haven't included any information about marketing."
+    },
+    {
+      "startMs": 373800,
+      "endMs": 377800,
+      "text": "I've got a lot of notes about it, but I'm not sure how to present them."
+    },
+    {
+      "startMs": 377800,
+      "endMs": 380800,
+      "text": "[Tutor]: I wouldn't mention that if I were you."
+    },
+    {
+      "startMs": 380800,
+      "endMs": 383800,
+      "text": "You've only got a short time for your presentation,"
+    },
+    {
+      "startMs": 383800,
+      "endMs": 386800,
+      "text": "and you've got quite a lot of material here already."
+    },
+    {
+      "startMs": 386800,
+      "endMs": 389800,
+      "text": "But you should provide some figures about output."
+    },
+    {
+      "startMs": 389800,
+      "endMs": 393800,
+      "text": "Have you found out from the company's website how many nets they actually produce?"
+    },
+    {
+      "startMs": 393800,
+      "endMs": 396800,
+      "text": "[Edward]: Yes, it's over 30 million a year."
+    },
+    {
+      "startMs": 396800,
+      "endMs": 397800,
+      "text": "[Tutor]: Right."
+    },
+    {
+      "startMs": 397800,
+      "endMs": 400800,
+      "text": "[Edward]: Then I'm not sure how to finish off."
+    },
+    {
+      "startMs": 400800,
+      "endMs": 403800,
+      "text": "What do you think about including something on potential?"
+    },
+    {
+      "startMs": 406800,
+      "endMs": 408800,
+      "text": "[Narrator]: That is the end of part three."
+    },
+    {
+      "startMs": 408800,
+      "endMs": 413800,
+      "text": "You now have 30 seconds to check your answers to part three."
+    },
+    {
+      "startMs": 419800,
+      "endMs": 421800,
+      "text": "Thank you."
+    },
+    {
+      "startMs": 449800,
+      "endMs": 451800,
+      "text": "Thank you."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 84,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,571 @@
+{
+  "id": "p3-86-dolphin-presentation",
+  "title": "Dolphin Presentation",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-83e003e929c0",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 399.072,
+    "checksum": "sha256:e4cd35064aa59c43d2af1ffe3e1850bf7aa37d17479a568cfeec1d55ca3f96ad"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21-24.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What is the students' purpose in mentioning the way dolphins make sounds?",
+          "options": [
+            {
+              "id": "A",
+              "text": "to show comparison with human speech"
+            },
+            {
+              "id": "B",
+              "text": "to show the unusual anatomy of a dolphin's head"
+            },
+            {
+              "id": "C",
+              "text": "to show recent developments in understanding the meaning of the sounds"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "According to Fran, Hector's dolphins are unaffected by",
+          "options": [
+            {
+              "id": "A",
+              "text": "tourist numbers."
+            },
+            {
+              "id": "B",
+              "text": "the threat from fishing nets."
+            },
+            {
+              "id": "C",
+              "text": "their slow breeding rate."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "The New Zealand Government set up a marine sanctuary",
+          "options": [
+            {
+              "id": "A",
+              "text": "because of public pressure."
+            },
+            {
+              "id": "B",
+              "text": "as a result of scientific research."
+            },
+            {
+              "id": "C",
+              "text": "to protect a dolphin feeding ground."
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "Where is the largest population of Hector's dolphins in New Zealand?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the east coast"
+            },
+            {
+              "id": "B",
+              "text": "Southland"
+            },
+            {
+              "id": "C",
+              "text": "the west coast"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25-30.",
+      "instruction": "Write the correct letter, A–H, next to each question.",
+      "options": [
+        {
+          "id": "A",
+          "text": "swim along behind boats"
+        },
+        {
+          "id": "B",
+          "text": "swim in unusually large groups"
+        },
+        {
+          "id": "C",
+          "text": "live along New Zealand's entire coastline"
+        },
+        {
+          "id": "D",
+          "text": "swim beneath slow-moving boats"
+        },
+        {
+          "id": "E",
+          "text": "tend to be solitary"
+        },
+        {
+          "id": "F",
+          "text": "live only off New Zealand's northwest coast"
+        },
+        {
+          "id": "G",
+          "text": "are the second largest dolphin species in New Zealand"
+        },
+        {
+          "id": "H",
+          "text": "are seen mostly in Kaikoura"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Common dolphins",
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "Dusky dolphins",
+          "answer": "B"
+        },
+        {
+          "id": "27",
+          "text": "Hector's dolphins",
+          "answer": "A"
+        },
+        {
+          "id": "28",
+          "text": "Maui's dolphins",
+          "answer": "F"
+        },
+        {
+          "id": "29",
+          "text": "Orcas",
+          "answer": "H"
+        },
+        {
+          "id": "30",
+          "text": "Bottle-nose dolphins",
+          "answer": "G"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "A",
+        "23": "B",
+        "24": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "C",
+        "26": "B",
+        "27": "A",
+        "28": "F",
+        "29": "H",
+        "30": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7520,
+      "text": "[Narrator]: Section 3."
+    },
+    {
+      "startMs": 7520,
+      "endMs": 14120,
+      "text": "You will hear a discussion between two students called Mark and Fran about their presentation"
+    },
+    {
+      "startMs": 14120,
+      "endMs": 78120,
+      "text": "on some dolphins which are unique to New Zealand."
+    },
+    {
+      "startMs": 78120,
+      "endMs": 85120,
+      "text": "First, you have some time to look at questions 21 to 24 on page 5."
+    },
+    {
+      "startMs": 108120,
+      "endMs": 63120,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 63120,
+      "endMs": 65120,
+      "text": "[Fran]: Hi Mark, thanks for coming around."
+    },
+    {
+      "startMs": 65120,
+      "endMs": 67120,
+      "text": "[Mark]: Hi Fran, no problem."
+    },
+    {
+      "startMs": 67120,
+      "endMs": 70120,
+      "text": "We need to try and get this presentation finished."
+    },
+    {
+      "startMs": 70120,
+      "endMs": 73120,
+      "text": "[Fran]: Mark, let's start with the way dolphins make sounds."
+    },
+    {
+      "startMs": 73120,
+      "endMs": 77120,
+      "text": "[Mark]: Well we all know that dolphins make clicking noises to communicate."
+    },
+    {
+      "startMs": 77120,
+      "endMs": 84120,
+      "text": "[Fran]: Yes, they have tongues and larynxes as humans do, but what's really strange about the dolphin"
+    },
+    {
+      "startMs": 84120,
+      "endMs": 88120,
+      "text": "is that the sounds are focused through an extraordinary organ called the millen,"
+    },
+    {
+      "startMs": 88120,
+      "endMs": 91120,
+      "text": "which most other sea mammals don't have."
+    },
+    {
+      "startMs": 91120,
+      "endMs": 96120,
+      "text": "[Mark]: So shall I take over from there and speak about the different dolphin types?"
+    },
+    {
+      "startMs": 96120,
+      "endMs": 103120,
+      "text": "I want to share what we found out about those rare dolphins that are special just to New Zealand in particular."
+    },
+    {
+      "startMs": 103120,
+      "endMs": 106120,
+      "text": "[Fran]: Yeah, great, put the emphasis on them."
+    },
+    {
+      "startMs": 106120,
+      "endMs": 109120,
+      "text": "The rarest of all is the hectares dolphin, isn't it?"
+    },
+    {
+      "startMs": 109120,
+      "endMs": 111120,
+      "text": "They are in danger, aren't they?"
+    },
+    {
+      "startMs": 111120,
+      "endMs": 116120,
+      "text": "I think that's mainly because so many of them get tangled up in fishing gear,"
+    },
+    {
+      "startMs": 116120,
+      "endMs": 118120,
+      "text": "especially girl nets and die."
+    },
+    {
+      "startMs": 118120,
+      "endMs": 124120,
+      "text": "I know that some conservationists are worried about the impact of the tourism industry on dolphin numbers,"
+    },
+    {
+      "startMs": 124120,
+      "endMs": 127120,
+      "text": "but I don't think that's a problem yet here."
+    },
+    {
+      "startMs": 127120,
+      "endMs": 132120,
+      "text": "Also, remember that this species has a very long reproductive cycle,"
+    },
+    {
+      "startMs": 132120,
+      "endMs": 135120,
+      "text": "so their numbers don't get replenished quickly."
+    },
+    {
+      "startMs": 135120,
+      "endMs": 137120,
+      "text": "[Mark]:: Yeah, that's really sad."
+    },
+    {
+      "startMs": 137120,
+      "endMs": 141120,
+      "text": "But at least the New Zealand government established a sanctuary for them, didn't it?"
+    },
+    {
+      "startMs": 141120,
+      "endMs": 146120,
+      "text": "The fishing industry was against it, but I remember reading that the general public"
+    },
+    {
+      "startMs": 146120,
+      "endMs": 148120,
+      "text": "were very supportive of the decision."
+    },
+    {
+      "startMs": 148120,
+      "endMs": 153120,
+      "text": "It was a consequence of a study done by some marine biologists."
+    },
+    {
+      "startMs": 153120,
+      "endMs": 158120,
+      "text": "Having a protected breeding area has made a big difference to the dolphin population already."
+    },
+    {
+      "startMs": 158120,
+      "endMs": 162120,
+      "text": "[Fran]: Yeah, I think their numbers have swelled to over 7,000 in total,"
+    },
+    {
+      "startMs": 162120,
+      "endMs": 165120,
+      "text": "with a tiny group of just 89 living down off Southland,"
+    },
+    {
+      "startMs": 165120,
+      "endMs": 168120,
+      "text": "nearly 2,000 living near Christchurch on the East Coast"
+    },
+    {
+      "startMs": 168120,
+      "endMs": 171120,
+      "text": "and the biggest groups surviving off the West Coast."
+    },
+    {
+      "startMs": 171120,
+      "endMs": 178120,
+      "text": "It's pretty wild country over there, so I guess there aren't as many tourists and fishermen to disturb them."
+    },
+    {
+      "startMs": 180120,
+      "endMs": 183120,
+      "text": "[Narrator]: Before you hear the rest of the discussion,"
+    },
+    {
+      "startMs": 183120,
+      "endMs": 189120,
+      "text": "you have some time to look at questions 25 to 30 on page 6."
+    },
+    {
+      "startMs": 213120,
+      "endMs": 224120,
+      "text": "Now listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 227120,
+      "endMs": 231120,
+      "text": "[Mark]: Okay, so how do you suggest I structure my part of the talk?"
+    },
+    {
+      "startMs": 231120,
+      "endMs": 234120,
+      "text": "[Fran]: Well, you could start with the common dolphin,"
+    },
+    {
+      "startMs": 234120,
+      "endMs": 237120,
+      "text": "which inhabits the whole of the sea around New Zealand."
+    },
+    {
+      "startMs": 237120,
+      "endMs": 241120,
+      "text": "And once you've covered everything to do with them, feeding and so on,"
+    },
+    {
+      "startMs": 241120,
+      "endMs": 243120,
+      "text": "you go on to the more unusual types."
+    },
+    {
+      "startMs": 243120,
+      "endMs": 250120,
+      "text": "The dusky dolphin is especially interesting because you know how all the dolphins travel in small social groups called pods?"
+    },
+    {
+      "startMs": 250120,
+      "endMs": 255120,
+      "text": "Well, the dusky dolphins travel in pods as big as 800 members."
+    },
+    {
+      "startMs": 255120,
+      "endMs": 260120,
+      "text": "[Mark]: And I think the duskies like to travel along beside fishing and tourist boats, don't they?"
+    },
+    {
+      "startMs": 260120,
+      "endMs": 266120,
+      "text": "Whereas the hectares dolphins are different in that they prefer to go in the wake of boats,"
+    },
+    {
+      "startMs": 266120,
+      "endMs": 269120,
+      "text": "that is, coming along in the rear."
+    },
+    {
+      "startMs": 269120,
+      "endMs": 274120,
+      "text": "[Fran]: Yeah, they do. But they also dive down deep to avoid fast boats."
+    },
+    {
+      "startMs": 274120,
+      "endMs": 279120,
+      "text": "[Mark]: Oh, let's not forget the Maui because they are endangered too aren't they?"
+    },
+    {
+      "startMs": 279120,
+      "endMs": 287120,
+      "text": "There are only 150 of them left and they inhabit only the western coastal waters of the North Island of New Zealand."
+    },
+    {
+      "startMs": 287120,
+      "endMs": 292120,
+      "text": "[Fran]: Yeah, it's a pity. They also face problems because of their tiny size."
+    },
+    {
+      "startMs": 292120,
+      "endMs": 295120,
+      "text": "Now the Orca is actually a dolphin too, right?"
+    },
+    {
+      "startMs": 295120,
+      "endMs": 299120,
+      "text": "[Mark]: Yes, surprisingly. So I'll include that in my talk."
+    },
+    {
+      "startMs": 299120,
+      "endMs": 303120,
+      "text": "People call them killer whales, but in fact they're not whales."
+    },
+    {
+      "startMs": 303120,
+      "endMs": 306120,
+      "text": "They're a huge and very fierce type of dolphin."
+    },
+    {
+      "startMs": 306120,
+      "endMs": 312120,
+      "text": "In New Zealand, Kaikura in the South Island is the best place to spot Orca swimming by."
+    },
+    {
+      "startMs": 312120,
+      "endMs": 315120,
+      "text": "So people mistakenly think that's where they live."
+    },
+    {
+      "startMs": 315120,
+      "endMs": 318120,
+      "text": "But actually Orca's cover vast distances."
+    },
+    {
+      "startMs": 318120,
+      "endMs": 321120,
+      "text": "[Fran]: Let's not forget to mention the bottle nose."
+    },
+    {
+      "startMs": 321120,
+      "endMs": 325120,
+      "text": "It's bigger than nearly all the other dolphins, even the common dolphin."
+    },
+    {
+      "startMs": 325120,
+      "endMs": 328120,
+      "text": "[Mark]: Oh, but still not as big as the Orca, right?"
+    },
+    {
+      "startMs": 328120,
+      "endMs": 329120,
+      "text": "[Fran]: That's right."
+    },
+    {
+      "startMs": 329120,
+      "endMs": 332120,
+      "text": "Well, I think that's our presentation done now."
+    },
+    {
+      "startMs": 334120,
+      "endMs": 337120,
+      "text": "[Narrator]: That is the end of section three."
+    },
+    {
+      "startMs": 337120,
+      "endMs": 341120,
+      "text": "You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 351120,
+      "endMs": 358120,
+      "text": "Now turn to section four on page seven."
+    },
+    {
+      "startMs": 381120,
+      "endMs": 384120,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 68,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

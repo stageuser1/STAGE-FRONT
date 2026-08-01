@@ -1,0 +1,415 @@
+{
+  "id": "p4-108-history-of-extreme-sports",
+  "title": "History of Extreme Sports",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-67be27f666f5",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 315.9,
+    "checksum": "sha256:b0a8104c5746567f67baaf38530630900ee789bf756224c847b993cbfcb7bd72"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 31-40",
+      "instruction": "Complete the following sentences Write ONE WORD AND/OR A NUMBER in each sentence. History of Extreme Sports In ancient history Extreme sport is also known as 31. _______ sports Better 32. _______ makes it safer In the 19th century An extreme sport was created by company 33. _______ in 19th century to boost loyalty. At the end of the 19th century, other sports had been created like 34. _______ in higher social class. In the 20st century Why people don’t like 35. _______sports (like team sports. E.g. basketball) Reasons There are too many restricted 36. _______ lt needs regular 37. _______ Help them confront 38. _______ In the future Young people think that government should provide them with more 39. _______ sports instead of individual competition. Young people tend to think that extreme sports is their attitude to the new world and forming their 40. _______",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Extreme sport is also known as 31. _______ sports",
+          "answer": "lifestyle"
+        },
+        {
+          "id": "32",
+          "text": "Better 32. _______ makes it safer",
+          "answer": "equipment"
+        },
+        {
+          "id": "33",
+          "text": "An extreme sport was created by company 33. _______ in 19th century to boost loyalty.",
+          "answer": "workers"
+        },
+        {
+          "id": "34",
+          "text": "At the end of the 19th century, other sports had been created like 34. _______ in higher social class.",
+          "answer": "golf"
+        },
+        {
+          "id": "35",
+          "text": "Why people don’t like 35. _______sports (like team sports. E.g. basketball)",
+          "answer": "traditional"
+        },
+        {
+          "id": "36",
+          "text": "There are too many restricted 36. _______",
+          "answer": "regulations"
+        },
+        {
+          "id": "37",
+          "text": "lt needs regular 37. _______",
+          "answer": "training"
+        },
+        {
+          "id": "38",
+          "text": "Help them confront 38. _______",
+          "answer": "fear"
+        },
+        {
+          "id": "39",
+          "text": "Young people think that government should provide them with more 39. _______ sports instead of individual competition.",
+          "answer": "entertainment"
+        },
+        {
+          "id": "40",
+          "text": "Young people tend to think that extreme sports is their attitude to the new world and forming their 40. _______",
+          "answer": "community"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the following sentences",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER in each sentence.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "History of Extreme Sports",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "In ancient history",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Extreme sport is also known as 31. _______ sports",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Better 32. _______ makes it safer",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the 19th century",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "An extreme sport was created by company 33. _______ in 19th century to boost loyalty.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "At the end of the 19th century, other sports had been created like 34. _______ in higher social class.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the 20st century",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Why people don’t like 35. _______sports (like team sports. E.g. basketball)",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Reasons",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "There are too many restricted 36. _______",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "lt needs regular 37. _______",
+          "list": true,
+          "level": 1
+        },
+        {
+          "text": "Help them confront 38. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the future",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Young people think that government should provide them with more 39. _______ sports instead of individual competition.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Young people tend to think that extreme sports is their attitude to the new world and forming their 40. _______",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "lifestyle",
+        "32": "equipment",
+        "33": "workers",
+        "34": "golf",
+        "35": "traditional",
+        "36": "regulations",
+        "37": "training",
+        "38": "fear",
+        "39": "entertainment",
+        "40": "community"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "Section 4. You will hear a part of lecture about history of extreme sport."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 12000,
+      "text": "First, you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 36000,
+      "text": "Section 4. You have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 61000,
+      "endMs": 66000,
+      "text": "Section 4. You have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 73000,
+      "endMs": 81000,
+      "text": "Extreme sports are non-traditional sports and activities that require participants to combine athletic scale with pronounced risk."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 88000,
+      "text": "It is difficult to determine exactly when the term extreme sports came to refer to certain modern sports."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 99000,
+      "text": "While many extreme sports such as deep diving and surfing have usually been part of human history, so many extreme sports are often called lifestyle sports."
+    },
+    {
+      "startMs": 99000,
+      "endMs": 110000,
+      "text": "The often involved speed, height, physical commitment, the practice of extreme sports can involve some risks, injuries and even death if the athlete made a serious mistake."
+    },
+    {
+      "startMs": 110000,
+      "endMs": 118000,
+      "text": "Technology who advances have brought more reliable equipment which making various sports are safer activity."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 123000,
+      "text": "The worldwide spread of extreme sports is attributed to the media."
+    },
+    {
+      "startMs": 123000,
+      "endMs": 130000,
+      "text": "Television and the movies have been responsible for gaining a widespread participation in extreme sports."
+    },
+    {
+      "startMs": 131000,
+      "endMs": 135000,
+      "text": "In the 19th century, the acceptance by workforce extended."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 140000,
+      "text": "For those men with lower leisure preference, Sundays were generally free from labor."
+    },
+    {
+      "startMs": 140000,
+      "endMs": 145000,
+      "text": "One extreme sport was studied by workers from a company in its free time."
+    },
+    {
+      "startMs": 145000,
+      "endMs": 155000,
+      "text": "Employers commonly believe this leisure activity increased the productivity and most importantly increased workers' loyalty to the company."
+    },
+    {
+      "startMs": 156000,
+      "endMs": 162000,
+      "text": "The 19th century is considered by many to be the period when a truly modern game emerged."
+    },
+    {
+      "startMs": 162000,
+      "endMs": 168000,
+      "text": "The change that primarily spawned this modernization were to be the equipment of the game."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 175000,
+      "text": "Other sports such as golf was popularized and regularly attended by upper classes and nobility."
+    },
+    {
+      "startMs": 175000,
+      "endMs": 181000,
+      "text": "Early golf clubs were made of materials similar to today's club, wood and iron."
+    },
+    {
+      "startMs": 181000,
+      "endMs": 187000,
+      "text": "However, the biggest difference between the old golf clubs and modern ones was the use."
+    },
+    {
+      "startMs": 187000,
+      "endMs": 197000,
+      "text": "In the 20th century, you may be wondering, what is it that attracts people's extreme sports in comparison to many traditional sports like football or basketball?"
+    },
+    {
+      "startMs": 197000,
+      "endMs": 208000,
+      "text": "One of the few things that coaches, players and fans of nearly every competitive team sports seem to agree on these days is that there are too many regulations for these games."
+    },
+    {
+      "startMs": 209000,
+      "endMs": 218000,
+      "text": "Secondly, most of the people involved in extreme sports do not feel the need for constant training and physical conditioning of their body."
+    },
+    {
+      "startMs": 218000,
+      "endMs": 225000,
+      "text": "This leads to the stage where people love extreme sports, do not take part in those games as they grow old."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 234000,
+      "text": "Finally, participants described how extreme sports experiencing, controlling and overcome fear made them positively change everyday life."
+    },
+    {
+      "startMs": 234000,
+      "endMs": 242000,
+      "text": "A mountain climber described the dealing with fear as empowering and feeling the very at peace afterwards."
+    },
+    {
+      "startMs": 242000,
+      "endMs": 251000,
+      "text": "A base jumper described the pursuit as ultimate metaphor for jumping into the life rather than standing on the edge quivering."
+    },
+    {
+      "startMs": 251000,
+      "endMs": 262000,
+      "text": "In assessing the use of taxpayers of fans in, bidding for major event or building a new stadium or even trying to skewer a new license for sports team,"
+    },
+    {
+      "startMs": 262000,
+      "endMs": 269000,
+      "text": "young sports participants clearly want government to put their emphasis on entertainment sports."
+    },
+    {
+      "startMs": 269000,
+      "endMs": 275000,
+      "text": "Everyone can participate, everyone will have fun and everyone can be involved."
+    },
+    {
+      "startMs": 275000,
+      "endMs": 283000,
+      "text": "Individual competition, limitations, requirements and other concerns simply aren't part of the equation."
+    },
+    {
+      "startMs": 283000,
+      "endMs": 290000,
+      "text": "Young people dealt with self-existence to find authorities which are responsible for sport."
+    },
+    {
+      "startMs": 290000,
+      "endMs": 303000,
+      "text": "Combating racism in sport forced to everyone, including public authorities, young people's responses to the changing world and their unique way is building their own community."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 312000,
+      "text": "A extreme sports are huge craze today, the psychology behind this popularity seems to be human nature to take risk of thrill."
+    },
+    {
+      "startMs": 312000,
+      "endMs": 316000,
+      "text": "And the adventure continues to attract masses."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 35,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

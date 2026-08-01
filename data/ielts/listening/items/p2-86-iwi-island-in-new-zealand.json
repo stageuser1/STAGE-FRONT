@@ -1,0 +1,538 @@
+{
+  "id": "p2-86-iwi-island-in-new-zealand",
+  "title": "IWI Island in New Zealand",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-907bef0109f8",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 280.427,
+    "checksum": "sha256:5b91866a70b538591aed79bb71e998d47b1ea7390e65d46c4504db51c5704c03"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11-14",
+      "instruction": "Choose the correct letter, A, B, or C",
+      "questions": [
+        {
+          "id": "11",
+          "text": "When did the Maori People come to Iwi Island?",
+          "options": [
+            {
+              "id": "A",
+              "text": "about 200 years ago"
+            },
+            {
+              "id": "B",
+              "text": "about 1000 years ago"
+            },
+            {
+              "id": "C",
+              "text": "about 2000 years ago"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "Which resource did Maori on the island benefit from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "potatoes"
+            },
+            {
+              "id": "B",
+              "text": "forests"
+            },
+            {
+              "id": "C",
+              "text": "fish"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "13",
+          "text": "What visitors avoid doing at archaeological sites?",
+          "options": [
+            {
+              "id": "A",
+              "text": "speaking loudly"
+            },
+            {
+              "id": "B",
+              "text": "taking photographs"
+            },
+            {
+              "id": "C",
+              "text": "eating and drinking"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "The last boat to the mainland today leaves at?",
+          "options": [
+            {
+              "id": "A",
+              "text": "5.00 p.m."
+            },
+            {
+              "id": "B",
+              "text": "5.30 p.m."
+            },
+            {
+              "id": "C",
+              "text": "6.00 p.m."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Question 15-20",
+      "instruction": "Label the map below, from A-I.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "the fort",
+          "answer": "D"
+        },
+        {
+          "id": "16",
+          "text": "the Maori village",
+          "answer": "E"
+        },
+        {
+          "id": "17",
+          "text": "Food storage pits",
+          "answer": "A"
+        },
+        {
+          "id": "18",
+          "text": "Garden terraces",
+          "answer": "I"
+        },
+        {
+          "id": "19",
+          "text": "Gum diggers' pits",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "The meeting house",
+          "answer": "G"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-86-iwi-island-in-new-zealand-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-86-iwi-island-in-new-zealand-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "C",
+        "13": "C",
+        "14": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "15": "D",
+        "16": "E",
+        "17": "A",
+        "18": "I",
+        "19": "C",
+        "20": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 3320,
+      "text": "Now turn to Section 2."
+    },
+    {
+      "startMs": 3320,
+      "endMs": 4480,
+      "text": "Section 2."
+    },
+    {
+      "startMs": 4480,
+      "endMs": 9520,
+      "text": "You will hear a guide talking to a group of tourists on an island off the coast of New"
+    },
+    {
+      "startMs": 9520,
+      "endMs": 10520,
+      "text": "Zealand."
+    },
+    {
+      "startMs": 10520,
+      "endMs": 16160,
+      "text": "First, you have some time to look at questions 11 to 14."
+    },
+    {
+      "startMs": 16160,
+      "endMs": 21000,
+      "text": "Now listen carefully and answer questions 11 to 14."
+    },
+    {
+      "startMs": 21000,
+      "endMs": 26080,
+      "text": "Well, morning everyone and welcome to EWI Island."
+    },
+    {
+      "startMs": 26080,
+      "endMs": 32080,
+      "text": "The first thing I'll do is give you a bit more information about the island."
+    },
+    {
+      "startMs": 32080,
+      "endMs": 34960,
+      "text": "Then you can walk around by yourselves."
+    },
+    {
+      "startMs": 34960,
+      "endMs": 42180,
+      "text": "So in terms of history, the first people to settle in New Zealand, the Maori people,"
+    },
+    {
+      "startMs": 42180,
+      "endMs": 50120,
+      "text": "were already living on the island when Europeans first arrived approximately 200 years ago."
+    },
+    {
+      "startMs": 50120,
+      "endMs": 55840,
+      "text": "At that time, the Maori population was only 2000 or so."
+    },
+    {
+      "startMs": 55840,
+      "endMs": 61280,
+      "text": "It was thought that they got here around a thousand years ago, based on the archaeological"
+    },
+    {
+      "startMs": 61280,
+      "endMs": 64160,
+      "text": "remains they left behind."
+    },
+    {
+      "startMs": 64160,
+      "endMs": 69840,
+      "text": "The main resource the Maori came here for was the well-stocked waters around the island"
+    },
+    {
+      "startMs": 69840,
+      "endMs": 72680,
+      "text": "which provided most of their food."
+    },
+    {
+      "startMs": 72680,
+      "endMs": 78160,
+      "text": "They also tried to grow potatoes but the conditions weren't as good as on the mainland."
+    },
+    {
+      "startMs": 78160,
+      "endMs": 83280,
+      "text": "The disadvantage for Maori was the shortage of trees on the island for building houses"
+    },
+    {
+      "startMs": 83280,
+      "endMs": 85480,
+      "text": "and canoes."
+    },
+    {
+      "startMs": 85480,
+      "endMs": 90680,
+      "text": "It's also important to remember that the island is sacred to the Maori peoples so you"
+    },
+    {
+      "startMs": 90680,
+      "endMs": 95800,
+      "text": "need to behave respectfully near the archaeological sites."
+    },
+    {
+      "startMs": 95800,
+      "endMs": 101000,
+      "text": "It's absolutely fine to use a camera and it's funny because some people think they need"
+    },
+    {
+      "startMs": 101000,
+      "endMs": 104480,
+      "text": "to whisper or be very quiet."
+    },
+    {
+      "startMs": 104480,
+      "endMs": 108000,
+      "text": "But actually, that's not important either."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 113240,
+      "text": "But you really shouldn't consume food or even use your water bottle."
+    },
+    {
+      "startMs": 113240,
+      "endMs": 116000,
+      "text": "It's not appropriate at the site."
+    },
+    {
+      "startMs": 116000,
+      "endMs": 118800,
+      "text": "But it's fine elsewhere."
+    },
+    {
+      "startMs": 118800,
+      "endMs": 124600,
+      "text": "Also keep a close eye on the time because once the last boat returns to the mainland there's"
+    },
+    {
+      "startMs": 124600,
+      "endMs": 127560,
+      "text": "no way off the island."
+    },
+    {
+      "startMs": 127560,
+      "endMs": 133960,
+      "text": "Remember that the usual final sailing at 6pm won't be going today because it's a public"
+    },
+    {
+      "startMs": 133960,
+      "endMs": 135680,
+      "text": "holiday."
+    },
+    {
+      "startMs": 135680,
+      "endMs": 142160,
+      "text": "You need to be on the wharf at 10 to 5 ready to board the 5pm departure."
+    },
+    {
+      "startMs": 142160,
+      "endMs": 149200,
+      "text": "And the trip takes about half an hour so you'll be back in town at 5.30pm or so."
+    },
+    {
+      "startMs": 149200,
+      "endMs": 155680,
+      "text": "Before you hear the rest of the talk, you have some time to look at questions 15 to 20."
+    },
+    {
+      "startMs": 155680,
+      "endMs": 158680,
+      "text": "Now last question was 15 to 20."
+    },
+    {
+      "startMs": 158680,
+      "endMs": 162880,
+      "text": "Ok, well, what we have to do next is."
+    },
+    {
+      "startMs": 162880,
+      "endMs": 166760,
+      "text": "Tell you about some of the archaeological sites on the island."
+    },
+    {
+      "startMs": 166760,
+      "endMs": 171600,
+      "text": "So if you look at your Mac, we are now right at the bottom of the map of the wharf where"
+    },
+    {
+      "startMs": 171600,
+      "endMs": 173480,
+      "text": "a ferry comes in."
+    },
+    {
+      "startMs": 173480,
+      "endMs": 177240,
+      "text": "So the first place to mention is T, he fourth."
+    },
+    {
+      "startMs": 177240,
+      "endMs": 182720,
+      "text": "To get there from the walk, go up the path and take a first turning on the right."
+    },
+    {
+      "startMs": 182720,
+      "endMs": 187520,
+      "text": "Then you follow the path around behind Hooker Bay and you come to the fort at the end of"
+    },
+    {
+      "startMs": 187520,
+      "endMs": 188920,
+      "text": "the headline."
+    },
+    {
+      "startMs": 188920,
+      "endMs": 192720,
+      "text": "Now another interesting visit is to the Mary Village."
+    },
+    {
+      "startMs": 192720,
+      "endMs": 198000,
+      "text": "From the walk, go up and path to the shelter and keep going straight on."
+    },
+    {
+      "startMs": 198000,
+      "endMs": 203440,
+      "text": "You'll pass the lookout on your right and the village is just after that on the left."
+    },
+    {
+      "startMs": 203440,
+      "endMs": 209320,
+      "text": "If you only want a short walk, then a trip to the food storage pits is well worth it."
+    },
+    {
+      "startMs": 209320,
+      "endMs": 214240,
+      "text": "Take apart from the wharf, but then turn left down to Paradise Bay."
+    },
+    {
+      "startMs": 214240,
+      "endMs": 219880,
+      "text": "W-A-G, and you reach the beach, turn left again in the food storage pits at just a long"
+    },
+    {
+      "startMs": 219880,
+      "endMs": 221720,
+      "text": "nearby the sea."
+    },
+    {
+      "startMs": 221720,
+      "endMs": 226840,
+      "text": "A slightly longer walk has to the garden terraces, you need to go up to the shelter and then"
+    },
+    {
+      "startMs": 226840,
+      "endMs": 230360,
+      "text": "keep going straight, but not too far."
+    },
+    {
+      "startMs": 230360,
+      "endMs": 235040,
+      "text": "Take the first turning on your right and the garden terrace, S are on the coast overlooking"
+    },
+    {
+      "startMs": 235040,
+      "endMs": 237520,
+      "text": "the little island in Palm Bay."
+    },
+    {
+      "startMs": 237520,
+      "endMs": 243120,
+      "text": "Now children especially will enjoy the Gundiga's Pat so they are a reasonable walk."
+    },
+    {
+      "startMs": 243120,
+      "endMs": 248560,
+      "text": "You turn left just after the war, and when you reach the beach, turn right."
+    },
+    {
+      "startMs": 248560,
+      "endMs": 251000,
+      "text": "And you need to keep demonstrate."
+    },
+    {
+      "startMs": 251000,
+      "endMs": 256160,
+      "text": "Don't turn left down in Dijk, Obey, but keep going and you'll find them rights down"
+    },
+    {
+      "startMs": 256200,
+      "endMs": 260520,
+      "text": "the other end of the island, on the cliffs on the north coast."
+    },
+    {
+      "startMs": 260520,
+      "endMs": 265760,
+      "text": "Much closer is, one of the oldest meeting houses in this part of the country."
+    },
+    {
+      "startMs": 265760,
+      "endMs": 270680,
+      "text": "You go up to the shelter and turn left, and it's directly in front of you."
+    },
+    {
+      "startMs": 270680,
+      "endMs": 275640,
+      "text": "Well now, if any owe, there has any questions, he'll be happy."
+    },
+    {
+      "startMs": 275640,
+      "endMs": 278240,
+      "text": "That is the end of section 2."
+    },
+    {
+      "startMs": 278240,
+      "endMs": 280320,
+      "text": "We will now have to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 64,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

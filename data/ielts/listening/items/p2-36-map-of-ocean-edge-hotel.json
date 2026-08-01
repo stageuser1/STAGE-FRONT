@@ -1,0 +1,632 @@
+{
+  "id": "p2-36-map-of-ocean-edge-hotel",
+  "title": "Map of Ocean Edge Hotel",
+  "part": 2,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-4eb76a62d7f9",
+    "filename": "audio.mp3",
+    "container": "mp4/m4a",
+    "durationSeconds": 376.603,
+    "checksum": "sha256:6ce2e5645113e6487b4337cdf3c514ddf8dd4b9faeae5975236f2609e370a3bf"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Question 11-15.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Why has the manager arrived late at this meeting?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He had to complete a report."
+            },
+            {
+              "id": "B",
+              "text": "He had to speak to head office."
+            },
+            {
+              "id": "C",
+              "text": "He had to take a guest to hospital."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "What is the main thing the manager is looking for in his staff?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Experience"
+            },
+            {
+              "id": "B",
+              "text": "Enthusiasm"
+            },
+            {
+              "id": "C",
+              "text": "Good qualifications"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "13",
+          "text": "When did the Ocean Edge Hotel first open?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the 18th century"
+            },
+            {
+              "id": "B",
+              "text": "In the 19th century"
+            },
+            {
+              "id": "C",
+              "text": "In the 20th century"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "14",
+          "text": "How long do staff generally remain at the hotel?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Three years"
+            },
+            {
+              "id": "B",
+              "text": "Five years"
+            },
+            {
+              "id": "C",
+              "text": "Ten years"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "15",
+          "text": "Which group of guests is growing fastest?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tourists visiting local attractions"
+            },
+            {
+              "id": "B",
+              "text": "People staying for one or two nights on business"
+            },
+            {
+              "id": "C",
+              "text": "People working locally who go home at weekends"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 16-20.",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "questions": [
+        {
+          "id": "16",
+          "text": "Office",
+          "answer": "I"
+        },
+        {
+          "id": "17",
+          "text": "Function room",
+          "answer": "F"
+        },
+        {
+          "id": "18",
+          "text": "Main conference room",
+          "answer": "B"
+        },
+        {
+          "id": "19",
+          "text": "Meeting room",
+          "answer": "H"
+        },
+        {
+          "id": "20",
+          "text": "Restaurant",
+          "answer": "C"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-36-map-of-ocean-edge-hotel-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-36-map-of-ocean-edge-hotel-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "B",
+        "13": "C",
+        "14": "B",
+        "15": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "16": "I",
+        "17": "F",
+        "18": "B",
+        "19": "H",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2000,
+      "text": "Part 2"
+    },
+    {
+      "startMs": 2000,
+      "endMs": 7000,
+      "text": "You will hear a hotel manager talking to some new staff."
+    },
+    {
+      "startMs": 7000,
+      "endMs": 12000,
+      "text": "First you have some time to look at questions 11 to 15."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 54000,
+      "text": "Now listen carefully and answer questions 11 to 15."
+    },
+    {
+      "startMs": 54000,
+      "endMs": 56000,
+      "text": "Good morning all of you."
+    },
+    {
+      "startMs": 56000,
+      "endMs": 60000,
+      "text": "I do apologize for being a little late starting our meeting."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 62000,
+      "text": "One of our guests has been taken ill."
+    },
+    {
+      "startMs": 62000,
+      "endMs": 66000,
+      "text": "As Susie, who's our assistant manager has driven him to the hospital,"
+    },
+    {
+      "startMs": 66000,
+      "endMs": 70000,
+      "text": "but she was in the middle of compiling our weekly report for head office,"
+    },
+    {
+      "startMs": 70000,
+      "endMs": 74000,
+      "text": "which is urgent, and I had to finish writing it for her."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 80000,
+      "text": "Now this is the first day of work at the Ocean Edge Hotel for all of you."
+    },
+    {
+      "startMs": 80000,
+      "endMs": 82000,
+      "text": "Let me say something that might surprise you."
+    },
+    {
+      "startMs": 82000,
+      "endMs": 88000,
+      "text": "You've all got a qualification in hospitality and some of you have got very high grades."
+    },
+    {
+      "startMs": 88000,
+      "endMs": 94000,
+      "text": "But to me, what counts most is that you enjoy the contact with guests"
+    },
+    {
+      "startMs": 94000,
+      "endMs": 98000,
+      "text": "and really want to make a career in the hospitality industry."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 103000,
+      "text": "You'll be getting some very valuable experience here, so make the most of it."
+    },
+    {
+      "startMs": 103000,
+      "endMs": 107000,
+      "text": "Now a few words about the history of the Ocean Edge Hotel."
+    },
+    {
+      "startMs": 107000,
+      "endMs": 112000,
+      "text": "There have been buildings on this site for about 250 years."
+    },
+    {
+      "startMs": 112000,
+      "endMs": 118000,
+      "text": "We know that in the 18th century there was a bakery here, when the town was very new."
+    },
+    {
+      "startMs": 118000,
+      "endMs": 122000,
+      "text": "The building was destroyed by fire in the early 19th century,"
+    },
+    {
+      "startMs": 122000,
+      "endMs": 125000,
+      "text": "and houses were constructed on the site."
+    },
+    {
+      "startMs": 125000,
+      "endMs": 129000,
+      "text": "These in their turn were demolished in the middle of the 20th century,"
+    },
+    {
+      "startMs": 129000,
+      "endMs": 132000,
+      "text": "and replaced by the hotel."
+    },
+    {
+      "startMs": 133000,
+      "endMs": 137000,
+      "text": "I think it's fair to say that this is a popular place to work."
+    },
+    {
+      "startMs": 137000,
+      "endMs": 141000,
+      "text": "We're always getting job applications from local people,"
+    },
+    {
+      "startMs": 141000,
+      "endMs": 143000,
+      "text": "even when we haven't any vacancies,"
+    },
+    {
+      "startMs": 143000,
+      "endMs": 149000,
+      "text": "and whereas in many hotels staff tend to stay for a year or even less,"
+    },
+    {
+      "startMs": 149000,
+      "endMs": 152000,
+      "text": "here five is pretty standard,"
+    },
+    {
+      "startMs": 152000,
+      "endMs": 157000,
+      "text": "and in fact several of our staff have been here for ten years or more."
+    },
+    {
+      "startMs": 157000,
+      "endMs": 161000,
+      "text": "You're the first people we've appointed in the last three years,"
+    },
+    {
+      "startMs": 161000,
+      "endMs": 168000,
+      "text": "and we only needed to do that because we're currently constructing 25 new bedrooms."
+    },
+    {
+      "startMs": 168000,
+      "endMs": 175000,
+      "text": "Depending on their location, hotels usually have mostly business guests or mostly tourists."
+    },
+    {
+      "startMs": 175000,
+      "endMs": 181000,
+      "text": "We attract a large number of tourists who come to spend a few days beside the ocean."
+    },
+    {
+      "startMs": 181000,
+      "endMs": 185000,
+      "text": "We also have quite a lot of people who are here on business,"
+    },
+    {
+      "startMs": 185000,
+      "endMs": 188000,
+      "text": "and perhaps stay for one or two nights."
+    },
+    {
+      "startMs": 188000,
+      "endMs": 191000,
+      "text": "What we've noticed recently, though,"
+    },
+    {
+      "startMs": 191000,
+      "endMs": 194000,
+      "text": "is that we're getting more and more regulars,"
+    },
+    {
+      "startMs": 194000,
+      "endMs": 197000,
+      "text": "people staying here for four nights every week,"
+    },
+    {
+      "startMs": 197000,
+      "endMs": 200000,
+      "text": "because they have jobs in this locality,"
+    },
+    {
+      "startMs": 200000,
+      "endMs": 203000,
+      "text": "but live somewhere else in the country,"
+    },
+    {
+      "startMs": 203000,
+      "endMs": 206000,
+      "text": "so they go home for the weekend."
+    },
+    {
+      "startMs": 207000,
+      "endMs": 209000,
+      "text": "Before you hear the rest of the talk,"
+    },
+    {
+      "startMs": 209000,
+      "endMs": 213000,
+      "text": "you have some time to look at questions 16 to 20."
+    },
+    {
+      "startMs": 237000,
+      "endMs": 243000,
+      "text": "Now listen and answer a question 16 to 20."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 258000,
+      "text": "Now let me give you an idea of the layout of the hotel."
+    },
+    {
+      "startMs": 258000,
+      "endMs": 262000,
+      "text": "All the bedrooms are along walkways in the gardens,"
+    },
+    {
+      "startMs": 262000,
+      "endMs": 265000,
+      "text": "and the main building, which we're in now,"
+    },
+    {
+      "startMs": 265000,
+      "endMs": 268000,
+      "text": "has most of the other rooms that guests use."
+    },
+    {
+      "startMs": 268000,
+      "endMs": 270000,
+      "text": "Obviously, when they arrive,"
+    },
+    {
+      "startMs": 270000,
+      "endMs": 275000,
+      "text": "the first place they find themselves in is the reception area, where we're sitting."
+    },
+    {
+      "startMs": 275000,
+      "endMs": 278000,
+      "text": "The desk is over on the right of the entrance,"
+    },
+    {
+      "startMs": 278000,
+      "endMs": 281000,
+      "text": "and the office is immediately behind it."
+    },
+    {
+      "startMs": 281000,
+      "endMs": 284000,
+      "text": "There's a connecting door from the desk itself,"
+    },
+    {
+      "startMs": 284000,
+      "endMs": 287000,
+      "text": "and another entrance from the corridor."
+    },
+    {
+      "startMs": 287000,
+      "endMs": 292000,
+      "text": "We have local residents hire the function room for parties and other events."
+    },
+    {
+      "startMs": 292000,
+      "endMs": 295000,
+      "text": "This is right at the front of the hotel,"
+    },
+    {
+      "startMs": 295000,
+      "endMs": 298000,
+      "text": "on the left of the reception area opposite the desk."
+    },
+    {
+      "startMs": 298000,
+      "endMs": 301000,
+      "text": "This room is booked several evenings a week,"
+    },
+    {
+      "startMs": 301000,
+      "endMs": 306000,
+      "text": "and most weekends it's a major source of income."
+    },
+    {
+      "startMs": 306000,
+      "endMs": 310000,
+      "text": "Companies are very important customers for us,"
+    },
+    {
+      "startMs": 310000,
+      "endMs": 314000,
+      "text": "and a large number of local firms hold conferences here."
+    },
+    {
+      "startMs": 314000,
+      "endMs": 316000,
+      "text": "To reach the main conference room,"
+    },
+    {
+      "startMs": 316000,
+      "endMs": 319000,
+      "text": "you go past the fountain, as far as you can,"
+    },
+    {
+      "startMs": 319000,
+      "endMs": 323000,
+      "text": "and the doors directly in front of you."
+    },
+    {
+      "startMs": 323000,
+      "endMs": 325000,
+      "text": "The meeting room is often hired by companies"
+    },
+    {
+      "startMs": 325000,
+      "endMs": 329000,
+      "text": "and other local organizations for small gatherings."
+    },
+    {
+      "startMs": 329000,
+      "endMs": 332000,
+      "text": "For this room, you turn into the corridor"
+    },
+    {
+      "startMs": 332000,
+      "endMs": 334000,
+      "text": "at the side of the reception desk,"
+    },
+    {
+      "startMs": 334000,
+      "endMs": 339000,
+      "text": "and you'll see the room facing you at the end of the corridor."
+    },
+    {
+      "startMs": 339000,
+      "endMs": 341000,
+      "text": "Our restaurant is open to the public,"
+    },
+    {
+      "startMs": 342000,
+      "endMs": 344000,
+      "text": "as well as to hotel residents,"
+    },
+    {
+      "startMs": 344000,
+      "endMs": 349000,
+      "text": "and I'm pleased to say it has a very good reputation locally."
+    },
+    {
+      "startMs": 349000,
+      "endMs": 351000,
+      "text": "You turn left just before the fountain,"
+    },
+    {
+      "startMs": 351000,
+      "endMs": 354000,
+      "text": "as though you're heading for the guest's rooms,"
+    },
+    {
+      "startMs": 354000,
+      "endMs": 357000,
+      "text": "and it's the large room on your right."
+    },
+    {
+      "startMs": 357000,
+      "endMs": 360000,
+      "text": "Next, I should mention that there..."
+    },
+    {
+      "startMs": 363000,
+      "endMs": 365000,
+      "text": "That is the end of part two."
+    },
+    {
+      "startMs": 365000,
+      "endMs": 370000,
+      "text": "You now have 30 seconds to check your answers to part two. 79 00:06:13,000 If you have any questions,"
+    },
+    {
+      "startMs": 373000,
+      "endMs": 376000,
+      "text": "please let me know in the comments."
+    },
+    {
+      "startMs": 376000,
+      "endMs": 378000,
+      "text": "Thank you very much."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 80,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

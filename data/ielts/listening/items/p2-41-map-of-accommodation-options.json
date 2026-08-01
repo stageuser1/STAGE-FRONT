@@ -1,0 +1,502 @@
+{
+  "id": "p2-41-map-of-accommodation-options",
+  "title": "Map of Accommodation Options",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-a40813bd0e93",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 481.056,
+    "checksum": "sha256:b47e5d2123fab96abb24cc681d0de84b46dcc6895ed2fa98f9671764d020fe55"
+  },
+  "groups": [
+    {
+      "type": "matching",
+      "title": "Question 11–14",
+      "instruction": "Choose the correct letter, A, B or C, next to questions 11–14.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the flat"
+        },
+        {
+          "id": "B",
+          "text": "the house"
+        },
+        {
+          "id": "C",
+          "text": "the hostel"
+        }
+      ],
+      "questions": [
+        {
+          "id": "11",
+          "text": "a garden",
+          "answer": "A"
+        },
+        {
+          "id": "12",
+          "text": "a garage",
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "an alarm system",
+          "answer": "B"
+        },
+        {
+          "id": "14",
+          "text": "new furniture",
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 15–20",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "questions": [
+        {
+          "id": "15",
+          "text": "the bank",
+          "answer": "E"
+        },
+        {
+          "id": "16",
+          "text": "the house",
+          "answer": "I"
+        },
+        {
+          "id": "17",
+          "text": "the hostel",
+          "answer": "J"
+        },
+        {
+          "id": "18",
+          "text": "the flat",
+          "answer": "A"
+        },
+        {
+          "id": "19",
+          "text": "the post office",
+          "answer": "C"
+        },
+        {
+          "id": "20",
+          "text": "the bus stop",
+          "answer": "G"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-41-map-of-accommodation-options-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-41-map-of-accommodation-options-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "11": "A",
+        "12": "A",
+        "13": "B",
+        "14": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "15": "E",
+        "16": "I",
+        "17": "J",
+        "18": "A",
+        "19": "C",
+        "20": "G"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 15640,
+      "text": "Now turn to section 2 on page 3."
+    },
+    {
+      "startMs": 15640,
+      "endMs": 17840,
+      "text": "Section 2."
+    },
+    {
+      "startMs": 17840,
+      "endMs": 24200,
+      "text": "You will hear an accommodation agent telling a student about different accommodation options."
+    },
+    {
+      "startMs": 24200,
+      "endMs": 50920,
+      "text": "First, you have some time to look at questions 11 to 14 on page 3."
+    },
+    {
+      "startMs": 50920,
+      "endMs": 58520,
+      "text": "Now listen carefully and answer questions 11 to 14."
+    },
+    {
+      "startMs": 58520,
+      "endMs": 59520,
+      "text": "Agent: Hello."
+    },
+    {
+      "startMs": 59520,
+      "endMs": 60520,
+      "text": "Can I help?"
+    },
+    {
+      "startMs": 60520,
+      "endMs": 61520,
+      "text": "Student: Yes."
+    },
+    {
+      "startMs": 61520,
+      "endMs": 62520,
+      "text": "I'm looking for accommodation."
+    },
+    {
+      "startMs": 62520,
+      "endMs": 66760,
+      "text": "I'm a student in my second year at the college and I wanted to rent something from"
+    },
+    {
+      "startMs": 66760,
+      "endMs": 69120,
+      "text": "September for myself and a friend."
+    },
+    {
+      "startMs": 69120,
+      "endMs": 72760,
+      "text": "Agent: Well, we've got several choices at the moment."
+    },
+    {
+      "startMs": 72760,
+      "endMs": 78160,
+      "text": "Near the college we've got a flat, a house, or there's a student hostel, all at about"
+    },
+    {
+      "startMs": 78160,
+      "endMs": 79760,
+      "text": "the same rent."
+    },
+    {
+      "startMs": 79760,
+      "endMs": 84480,
+      "text": "But of course they all have different features and different things included in the rent."
+    },
+    {
+      "startMs": 84480,
+      "endMs": 88160,
+      "text": "The properties don't all have gardens I'm afraid."
+    },
+    {
+      "startMs": 88160,
+      "endMs": 92160,
+      "text": "The house is quite small, not much space around it."
+    },
+    {
+      "startMs": 92160,
+      "endMs": 96560,
+      "text": "It has got a bit of space at the back, but I wouldn't call it a garden."
+    },
+    {
+      "startMs": 96560,
+      "endMs": 101200,
+      "text": "The hostel is part of a city development, so there's no space for a garden."
+    },
+    {
+      "startMs": 101200,
+      "endMs": 105600,
+      "text": "But the flat has a communal garden that is shared by all the tenants."
+    },
+    {
+      "startMs": 105600,
+      "endMs": 110400,
+      "text": "I would say that that's very good value for the price."
+    },
+    {
+      "startMs": 110400,
+      "endMs": 111680,
+      "text": "Have you got a car?"
+    },
+    {
+      "startMs": 111680,
+      "endMs": 113680,
+      "text": "Student: Yes."
+    },
+    {
+      "startMs": 113680,
+      "endMs": 119200,
+      "text": "Agent: There are garages around the corner from the house, but you have to rent those separately"
+    },
+    {
+      "startMs": 119200,
+      "endMs": 122200,
+      "text": "and they might not be available."
+    },
+    {
+      "startMs": 122200,
+      "endMs": 127360,
+      "text": "But each flat is allotted a garage in the grounds as part of the deal."
+    },
+    {
+      "startMs": 127360,
+      "endMs": 131320,
+      "text": "The hostel doesn't have the space I'm afraid."
+    },
+    {
+      "startMs": 131320,
+      "endMs": 135120,
+      "text": "I guess you might also want to know about security as well."
+    },
+    {
+      "startMs": 135120,
+      "endMs": 138480,
+      "text": "The house is the only one which is alarmed."
+    },
+    {
+      "startMs": 138480,
+      "endMs": 144680,
+      "text": "The flats and the hostel are accessed through a main door which has an intercom for visitors."
+    },
+    {
+      "startMs": 144680,
+      "endMs": 147280,
+      "text": "So they're quite safe."
+    },
+    {
+      "startMs": 147280,
+      "endMs": 149800,
+      "text": "Now they are all furnished."
+    },
+    {
+      "startMs": 149800,
+      "endMs": 153800,
+      "text": "The stuff in the flats quite modern looking, which most people like."
+    },
+    {
+      "startMs": 153800,
+      "endMs": 157520,
+      "text": "And it's in quite good condition considering the use it's had."
+    },
+    {
+      "startMs": 157520,
+      "endMs": 161880,
+      "text": "All the furniture and fittings in the house have just been replaced after the last tenants"
+    },
+    {
+      "startMs": 161880,
+      "endMs": 162880,
+      "text": "left."
+    },
+    {
+      "startMs": 162880,
+      "endMs": 165160,
+      "text": "There'll be an excellent condition."
+    },
+    {
+      "startMs": 165160,
+      "endMs": 173800,
+      "text": "And the furniture in the hostel is okay, but it's about what you'd expect really."
+    },
+    {
+      "startMs": 173800,
+      "endMs": 179080,
+      "text": "Before you hear the rest of the conversation, you have some time to look at questions 15"
+    },
+    {
+      "startMs": 179080,
+      "endMs": 181480,
+      "text": "to 20 on page 4."
+    },
+    {
+      "startMs": 192880,
+      "endMs": 218960,
+      "text": "Now listen and answer questions 15 to 20."
+    },
+    {
+      "startMs": 218960,
+      "endMs": 222240,
+      "text": "Student: Well I think I'd better go and look at them all."
+    },
+    {
+      "startMs": 222240,
+      "endMs": 223240,
+      "text": "Where are they?"
+    },
+    {
+      "startMs": 223240,
+      "endMs": 224240,
+      "text": "Agent: Here."
+    },
+    {
+      "startMs": 224240,
+      "endMs": 226240,
+      "text": "Let me show you on the map."
+    },
+    {
+      "startMs": 226240,
+      "endMs": 227240,
+      "text": "Right."
+    },
+    {
+      "startMs": 227240,
+      "endMs": 234000,
+      "text": "We're here in the accommodation agency on the High Street facing North."
+    },
+    {
+      "startMs": 234000,
+      "endMs": 236880,
+      "text": "Directly opposite us is the bank, okay?"
+    },
+    {
+      "startMs": 236880,
+      "endMs": 242840,
+      "text": "If you stay on this side of the road and walk towards West Street, the house is not that"
+    },
+    {
+      "startMs": 242840,
+      "endMs": 244720,
+      "text": "far."
+    },
+    {
+      "startMs": 244720,
+      "endMs": 249400,
+      "text": "It's next but one to the swimming pool just before West Street."
+    },
+    {
+      "startMs": 249400,
+      "endMs": 253160,
+      "text": "It's very convenient because it's near the shops."
+    },
+    {
+      "startMs": 253160,
+      "endMs": 260400,
+      "text": "The hostel is on the corner of West Street and St Anne's Road near the roundabout."
+    },
+    {
+      "startMs": 260400,
+      "endMs": 265600,
+      "text": "It's not a very wonderful building but it's nice and close to the college."
+    },
+    {
+      "startMs": 265600,
+      "endMs": 271400,
+      "text": "The flat is a bit of a walk but it's in very nice surroundings."
+    },
+    {
+      "startMs": 271400,
+      "endMs": 277520,
+      "text": "To get to the flat, you go down West Street towards the centre of the city and the building"
+    },
+    {
+      "startMs": 277520,
+      "endMs": 282640,
+      "text": "is on the corner just before the first turning on the left."
+    },
+    {
+      "startMs": 282640,
+      "endMs": 287520,
+      "text": "Although we're a bit outside the city centre, the facilities aren't bad."
+    },
+    {
+      "startMs": 287520,
+      "endMs": 290720,
+      "text": "There's a post office just round the corner from here."
+    },
+    {
+      "startMs": 290720,
+      "endMs": 296560,
+      "text": "You go down the High Street and turn right into West Street and it's on your right."
+    },
+    {
+      "startMs": 296560,
+      "endMs": 301000,
+      "text": "Or if you want to go to the city centre, you could get the bus from here at just a few"
+    },
+    {
+      "startMs": 301000,
+      "endMs": 304840,
+      "text": "metres down the road from the agency going east."
+    },
+    {
+      "startMs": 304840,
+      "endMs": 309840,
+      "text": "You don't even need to cross the road."
+    },
+    {
+      "startMs": 309840,
+      "endMs": 312680,
+      "text": "That is the end of section 2."
+    },
+    {
+      "startMs": 312680,
+      "endMs": 315360,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 65,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

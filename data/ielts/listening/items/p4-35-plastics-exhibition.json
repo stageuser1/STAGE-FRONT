@@ -1,0 +1,385 @@
+{
+  "id": "p4-35-plastics-exhibition",
+  "title": "Plastics exhibition",
+  "part": 4,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-2c062bd3c647",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 362.088,
+    "checksum": "sha256:7c5abc6c84ed137017e3c19fe32ffb4345f16a33d036cd6861a878ca9b43f91a"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31-40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. Plastics exhibition History first plastic developed to replace ivory in sports equipment semi-synthetics, e.g. commercial celluloid used 31. ________ experiments making plastics from 32. ________ products were unsuccessful earliest fabric to be produced was artificial 33. ________ first plastic produced in a 34. ________ invented by a 35. ________ called Hendrik Baekeland unusual because it becomes 36. ________ when heated Exhibition Problems with display: older plastic objects may release acidic 37. ________ plastic objects degrade in 38. ________ Popular exhibits: chandelier made using recycled 39. ________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "semi-synthetics, e.g. commercial celluloid used 31. ________",
+          "answer": "cotton"
+        },
+        {
+          "id": "32",
+          "text": "experiments making plastics from 32. ________ products were unsuccessful",
+          "answer": "milk"
+        },
+        {
+          "id": "33",
+          "text": "earliest fabric to be produced was artificial 33. ________",
+          "answer": "silk"
+        },
+        {
+          "id": "34",
+          "text": "first plastic produced in a 34. ________",
+          "answer": "laboratory"
+        },
+        {
+          "id": "35",
+          "text": "invented by a 35. ________ called Hendrik Baekeland",
+          "answer": "chemist"
+        },
+        {
+          "id": "36",
+          "text": "unusual because it becomes 36. ________ when heated",
+          "answer": "hard"
+        },
+        {
+          "id": "37",
+          "text": "older plastic objects may release acidic 37. ________",
+          "answer": "gases"
+        },
+        {
+          "id": "38",
+          "text": "plastic objects degrade in 38. ________",
+          "answer": "light"
+        },
+        {
+          "id": "39",
+          "text": "chandelier made using recycled 39. ________",
+          "answer": "pens"
+        },
+        {
+          "id": "40",
+          "text": "a. ________ made in Japan from semi-synthetic materials based on substances found in plantations",
+          "answer": "car"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Plastics exhibition",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "History",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "first plastic developed to replace ivory in sports equipment",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "semi-synthetics, e.g. commercial celluloid used 31. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "experiments making plastics from 32. ________ products were unsuccessful",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "earliest fabric to be produced was artificial 33. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "first plastic produced in a 34. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "invented by a 35. ________ called Hendrik Baekeland",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "unusual because it becomes 36. ________ when heated",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Exhibition",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Problems with display:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "older plastic objects may release acidic 37. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "plastic objects degrade in 38. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Popular exhibits:",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "chandelier made using recycled 39. ________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "40 a. ________ made in Japan from semi-synthetic materials based on substances found in plantations",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "cotton",
+        "32": "milk",
+        "33": "silk",
+        "34": "laboratory",
+        "35": "chemist",
+        "36": "hard",
+        "37": "gases",
+        "38": "light",
+        "39": "pens",
+        "40": "car"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 2000,
+      "text": "You"
+    },
+    {
+      "startMs": 30000,
+      "endMs": 32000,
+      "text": "You"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 74000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 74000,
+      "endMs": 86000,
+      "text": "Good morning. My name is Susan Mossman and as well as being a part-time lecturer on the University's Museum Science degree, I'm also curator of a new"
+    },
+    {
+      "startMs": 86000,
+      "endMs": 98000,
+      "text": "exhibition opening at the Midmouth Museum called Plasticity. This traces the history of plastics and ways they are being developed and used today."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 106000,
+      "text": "The first type of plastic was originally developed in response to a call from the makers of sports equipment."
+    },
+    {
+      "startMs": 106000,
+      "endMs": 119000,
+      "text": "Animal-derived materials were becoming extremely expensive, so manufacturers launched a competition to find an alternative to ivory for making pool and billiard balls."
+    },
+    {
+      "startMs": 119000,
+      "endMs": 126000,
+      "text": "Although various forms of plastic were developed, none of them were good enough to win the competition."
+    },
+    {
+      "startMs": 126000,
+      "endMs": 139000,
+      "text": "But the inventors knew they were onto a good thing and started researching a variety of different substances, partly based on organic material, what we call semisynthetics."
+    },
+    {
+      "startMs": 79000,
+      "endMs": 154000,
+      "text": "One of the early semisynthetic materials produced was the first commercially produced celluloid or plastic film, which was made by dissolving cotton in a strong acid, such as nitric acid."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 162000,
+      "text": "Unfortunately, this had a tendency to explode, so technicians had to be very careful with it."
+    },
+    {
+      "startMs": 162000,
+      "endMs": 174000,
+      "text": "They also experimented with making plastics out of products derived from milk, but this didn't really work and efforts were therefore concentrated on other organic material."
+    },
+    {
+      "startMs": 175000,
+      "endMs": 185000,
+      "text": "One of the first uses of plastic was in the production of artificial fabric, and the earliest successful one was a substitute for silk."
+    },
+    {
+      "startMs": 185000,
+      "endMs": 193000,
+      "text": "This was obviously a very expensive fiber, so artificial alternatives were thought to be worth investing in."
+    },
+    {
+      "startMs": 193000,
+      "endMs": 200000,
+      "text": "The next significant breakthrough came in 1907 with the invention of bakelite."
+    },
+    {
+      "startMs": 201000,
+      "endMs": 206000,
+      "text": "This was the first entirely synthetic plastic made in a laboratory."
+    },
+    {
+      "startMs": 206000,
+      "endMs": 216000,
+      "text": "It was invented by Hendrick Bakelend, a chemist, who had made a fortune from producing paper used in photographic processes."
+    },
+    {
+      "startMs": 216000,
+      "endMs": 228000,
+      "text": "Bakelite is a pretty unusual type of plastic, because it actually gets hard when it's heated, whereas most other plastic becomes more malleable when hot."
+    },
+    {
+      "startMs": 228000,
+      "endMs": 235000,
+      "text": "That is, they become more plastic, which is of course where the name for the category of materials comes from."
+    },
+    {
+      "startMs": 235000,
+      "endMs": 241000,
+      "text": "So, strictly speaking, bakelite isn't a plastic at all."
+    },
+    {
+      "startMs": 244000,
+      "endMs": 248000,
+      "text": "But now let's look at the exhibition itself."
+    },
+    {
+      "startMs": 248000,
+      "endMs": 257000,
+      "text": "In it, we show a variety of semi-synthetic and totally synthetic plastics, some of them dating back a hundred years."
+    },
+    {
+      "startMs": 257000,
+      "endMs": 261000,
+      "text": "Some of the older plastics on display are unstable."
+    },
+    {
+      "startMs": 261000,
+      "endMs": 273000,
+      "text": "This means that when they are in the process of degrading, they may produce gases which are acidic, and which can cause neighboring objects in the display to disintegrate."
+    },
+    {
+      "startMs": 273000,
+      "endMs": 284000,
+      "text": "We had to be very careful with these displays, because there is one thing which causes plastic objects to degrade or break down, and that is light."
+    },
+    {
+      "startMs": 284000,
+      "endMs": 290000,
+      "text": "So, we've had to think of ways to get around this problem when setting up the objects on display."
+    },
+    {
+      "startMs": 290000,
+      "endMs": 295000,
+      "text": "We have about 850 objects in the exhibition."
+    },
+    {
+      "startMs": 295000,
+      "endMs": 304000,
+      "text": "One of our most interesting is a magnificent chandelier, a lamp designed to hang in the center of the ceiling of a big hall."
+    },
+    {
+      "startMs": 304000,
+      "endMs": 310000,
+      "text": "It's only when you look carefully that you can see this is a wonderful example of recycling."
+    },
+    {
+      "startMs": 310000,
+      "endMs": 317000,
+      "text": "It's made entirely of pens, once which we use and throw away every day."
+    },
+    {
+      "startMs": 317000,
+      "endMs": 329000,
+      "text": "A second exhibit, which is drawing a lot of attention, is a car made entirely from plastic, which is now in small scale production in Japan."
+    },
+    {
+      "startMs": 340000,
+      "endMs": 343000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 32,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

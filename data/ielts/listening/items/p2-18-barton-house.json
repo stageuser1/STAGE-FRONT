@@ -1,0 +1,431 @@
+{
+  "id": "p2-18-barton-house",
+  "title": "Barton House",
+  "part": 2,
+  "difficulty": "medium",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-767bc68f158e",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 336.048,
+    "checksum": "sha256:9c782254f76f856bdf1cce91c56564f7ee34f4e35bc211a63db1adf86ea22d06"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 11-17.",
+      "instruction": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer. Barton House Background Before Barton bought this house, it was a 11. __________ The Chinese wallpaper was painted in the 12. __________ century. Barton died in the 13. __________ room. The dining room has many antiques such as the 14. __________ sold by Japanese. Backyard Garden The most popular animal is the 17. __________",
+      "questions": [
+        {
+          "id": "11",
+          "text": "Before Barton bought this house, it was a 11. __________",
+          "answer": "farm"
+        },
+        {
+          "id": "12",
+          "text": "The Chinese wallpaper was painted in the 12. __________ century.",
+          "answer": "18th"
+        },
+        {
+          "id": "13",
+          "text": "Barton died in the 13. __________ room.",
+          "answer": "bird"
+        },
+        {
+          "id": "14",
+          "text": "The dining room has many antiques such as the 14. __________ sold by Japanese.",
+          "answer": "chairs"
+        },
+        {
+          "id": "15",
+          "text": "15. __________ plants that have been there for years.",
+          "answer": "rare"
+        },
+        {
+          "id": "16",
+          "text": "16. __________ were introduced by the government.",
+          "answer": "flamingos"
+        },
+        {
+          "id": "17",
+          "text": "The most popular animal is the 17. __________",
+          "answer": "swans"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD AND/OR A NUMBER for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Barton House",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Before Barton bought this house, it was a 11. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The Chinese wallpaper was painted in the 12. __________ century.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Barton died in the 13. __________ room.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The dining room has many antiques such as the 14. __________ sold by Japanese.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Backyard Garden",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "15. __________ plants that have been there for years.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "16. __________ were introduced by the government.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The most popular animal is the 17. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    },
+    {
+      "type": "map",
+      "title": "Questions 18–20.",
+      "instruction": "Label the map below.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "questions": [
+        {
+          "id": "18",
+          "text": ". gallery",
+          "answer": "C"
+        },
+        {
+          "id": "19",
+          "text": ". woodland",
+          "answer": "F"
+        },
+        {
+          "id": "20",
+          "text": ". gift shop",
+          "answer": "E"
+        }
+      ],
+      "image": {
+        "assetId": "image-p2-18-barton-house-map-png",
+        "filename": "map.png",
+        "src": "images/image-p2-18-barton-house-map-png-map.png"
+      }
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "11": "farm",
+        "12": "18th",
+        "13": "bird",
+        "14": "chairs",
+        "15": "rare",
+        "16": "flamingos",
+        "17": "swans"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {
+        "18": "C",
+        "19": "F",
+        "20": "E"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 13440,
+      "text": "You will hear a tour guide introducing a museum to a group of tourists."
+    },
+    {
+      "startMs": 13440,
+      "endMs": 17120,
+      "text": "First you have some time to look at questions 1 to 7."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 36960,
+      "text": "You will hear a tour guide introducing a museum to a group of tourists."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 71920,
+      "text": "Now listen carefully and answer questions 1 to 7."
+    },
+    {
+      "startMs": 71920,
+      "endMs": 78080,
+      "text": "Good afternoon, welcome to Barton Museum. I am Carly and I am your tour guide."
+    },
+    {
+      "startMs": 78080,
+      "endMs": 81920,
+      "text": "I would be taking you through all the places of interest in this museum before we"
+    },
+    {
+      "startMs": 81920,
+      "endMs": 87200,
+      "text": "actually set out to go. The first building we stop at is the Barton House,"
+    },
+    {
+      "startMs": 87200,
+      "endMs": 93200,
+      "text": "which was built by the man himself, Barton. When he first came to this area,"
+    },
+    {
+      "startMs": 93200,
+      "endMs": 97440,
+      "text": "it was largely uninhabited and as a matter of fact this place was a vast"
+    },
+    {
+      "startMs": 97440,
+      "endMs": 101200,
+      "text": "expanse of land where an abandoned farm was situated."
+    },
+    {
+      "startMs": 101200,
+      "endMs": 106720,
+      "text": "After he bought it he began building and in about three years the basic structure was complete,"
+    },
+    {
+      "startMs": 106720,
+      "endMs": 112480,
+      "text": "although he never really stopped building. As a man who loved the arts,"
+    },
+    {
+      "startMs": 112480,
+      "endMs": 118000,
+      "text": "Barton spent a good fortune on them. He had several paintings from all over the world"
+    },
+    {
+      "startMs": 118000,
+      "endMs": 121280,
+      "text": "and his gallery is still considered one of the best in town."
+    },
+    {
+      "startMs": 122160,
+      "endMs": 126320,
+      "text": "One of the most notable of his collection is the Chinese wallpaper,"
+    },
+    {
+      "startMs": 126320,
+      "endMs": 131440,
+      "text": "which was painted in the 18th century. Rumor has it that he paid hundreds of"
+    },
+    {
+      "startMs": 131440,
+      "endMs": 138400,
+      "text": "thousands of dollars for the piece of art. Barton kept adding some features to his house every year."
+    },
+    {
+      "startMs": 138480,
+      "endMs": 143600,
+      "text": "He did this until the night he died. He was building a new bird room in which he"
+    },
+    {
+      "startMs": 143600,
+      "endMs": 150880,
+      "text": "collapsed and never came to himself. His dining room is also beautifully adorned with antiquity"
+    },
+    {
+      "startMs": 150880,
+      "endMs": 156480,
+      "text": "from the tables to the stools to the mats. The chairs were bought from some Japanese"
+    },
+    {
+      "startMs": 156480,
+      "endMs": 162880,
+      "text": "merchants in the area then. Looking at the location of his house, which sits some feet higher than"
+    },
+    {
+      "startMs": 162880,
+      "endMs": 170640,
+      "text": "surrounding lands, it is possible to see areas of just green, lush vegetation that run for miles."
+    },
+    {
+      "startMs": 170640,
+      "endMs": 176080,
+      "text": "At the backyard there is a garden which he started himself. He used to care for the plants"
+    },
+    {
+      "startMs": 176080,
+      "endMs": 182160,
+      "text": "there personally and made sure they never lacked water. He did tested fertilizers as he believed"
+    },
+    {
+      "startMs": 182160,
+      "endMs": 188320,
+      "text": "that it would spoil the cycle of growth of the plants in the garden. He had some trees in the garden."
+    },
+    {
+      "startMs": 188400,
+      "endMs": 193760,
+      "text": "They are not ordinary trees but some rare ones and they have been alive for decades now."
+    },
+    {
+      "startMs": 194800,
+      "endMs": 200000,
+      "text": "Under one of those trees was his favourite spot and history tells us that he used to sing and pray"
+    },
+    {
+      "startMs": 200000,
+      "endMs": 206880,
+      "text": "under the tree. Recently the government brought in some flamingos here as the environment supports"
+    },
+    {
+      "startMs": 206880,
+      "endMs": 213520,
+      "text": "their growth and development well. They are believed to make the scenery livelier and more beautiful."
+    },
+    {
+      "startMs": 214400,
+      "endMs": 221120,
+      "text": "Although there are many exotic animals in the garden, swans are still the most popular animal here."
+    },
+    {
+      "startMs": 221120,
+      "endMs": 226640,
+      "text": "They seem to be everywhere and it was said that Barton thought that they were a gift from the heaven."
+    },
+    {
+      "startMs": 226640,
+      "endMs": 231440,
+      "text": "It was forbidden to kill or hurt any of these animals in his time."
+    },
+    {
+      "startMs": 243680,
+      "endMs": 257360,
+      "text": "Now listen and answer questions 8 to 10."
+    },
+    {
+      "startMs": 259600,
+      "endMs": 263520,
+      "text": "Now let's take a look at other interesting places this site has to offer."
+    },
+    {
+      "startMs": 264240,
+      "endMs": 269440,
+      "text": "Away from the backyard there is a gallery just at the right side of the road a few feet from"
+    },
+    {
+      "startMs": 269520,
+      "endMs": 275920,
+      "text": "the entrance and there is usually a history exhibition every week. Halfway down the path to the east"
+    },
+    {
+      "startMs": 275920,
+      "endMs": 282960,
+      "text": "of the toilet we have the woodland and the area is just beautiful. Barton decided to have it just"
+    },
+    {
+      "startMs": 282960,
+      "endMs": 288160,
+      "text": "because he loved the view. If you keep walking down the path in front of you to the west of the"
+    },
+    {
+      "startMs": 288160,
+      "endMs": 294960,
+      "text": "site you will see a large gift shop beside the toilet. It has a large collection of handicrafts."
+    },
+    {
+      "startMs": 295920,
+      "endMs": 302320,
+      "text": "These handicrafts are not actually made by Barton himself but are imitations of his artistic works."
+    },
+    {
+      "startMs": 303760,
+      "endMs": 309520,
+      "text": "As you have heard enough about this man we would now proceed to see these things for ourselves"
+    },
+    {
+      "startMs": 309520,
+      "endMs": 314240,
+      "text": "and I'm very sure that you that is the end of today's practice"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [
+      {
+        "reference": "map.png",
+        "matched": true
+      }
+    ],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 42,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

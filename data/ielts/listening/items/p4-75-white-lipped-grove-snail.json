@@ -1,0 +1,460 @@
+{
+  "id": "p4-75-white-lipped-grove-snail",
+  "title": "White-lipped Grove Snail",
+  "part": 4,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-3aa40b7e6fed",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 498.939,
+    "checksum": "sha256:ddf4753a4e4920fa723e7693c54c7ed91612482e8ffdacd6577286026c46f0ad"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the notes below. Write ONE WORD ONLY for each answer. The White-lipped Grove Snail Background information It has a distinctive shell pattern Its main diet is dead or decaying 31. __________ To obtain necessary minerals, it also eats 32. __________ It is found only in Ireland and Pyrenees mountains Research at the University of Nottingham Via the internet, volunteers were recruited for the 33. __________ of snails Theories Convergent evolution is not a likely explanation Natural migration is ruled out as these snails do not like 34. _________ In the Pyrenees, large piles of shells have been found in 35. __________ This indicates the snails were used as 36. __________ There is archaeological evidence of 37. __________ between the two areas The conclusion is that snails were most likely carried in 38. __________ Further work One other organism will be investigated: a particular type of 40. __________",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Its main diet is dead or decaying 31. __________",
+          "answer": "plants"
+        },
+        {
+          "id": "32",
+          "text": "To obtain necessary minerals, it also eats 32. __________",
+          "answer": "soil"
+        },
+        {
+          "id": "33",
+          "text": "Via the internet, volunteers were recruited for the 33. __________ of snails",
+          "answer": "collection"
+        },
+        {
+          "id": "34",
+          "text": "Natural migration is ruled out as these snails do not like 34. _________",
+          "answer": "salt"
+        },
+        {
+          "id": "35",
+          "text": "In the Pyrenees, large piles of shells have been found in 35. __________",
+          "answer": "caves"
+        },
+        {
+          "id": "36",
+          "text": "This indicates the snails were used as 36. __________",
+          "answer": "food"
+        },
+        {
+          "id": "37",
+          "text": "There is archaeological evidence of 37. __________ between the two areas",
+          "answer": "trade"
+        },
+        {
+          "id": "38",
+          "text": "The conclusion is that snails were most likely carried in 38. __________",
+          "answer": "boats"
+        },
+        {
+          "id": "39",
+          "text": "A wider 39. __________ of the snails is required for the study",
+          "answer": "sample"
+        },
+        {
+          "id": "40",
+          "text": "One other organism will be investigated: a particular type of 40. __________",
+          "answer": "tree"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the notes below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The White-lipped Grove Snail",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Background information",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "It has a distinctive shell pattern",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Its main diet is dead or decaying 31. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "To obtain necessary minerals, it also eats 32. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "It is found only in Ireland and Pyrenees mountains",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Research at the University of Nottingham",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Via the internet, volunteers were recruited for the 33. __________ of snails",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Theories",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Convergent evolution is not a likely explanation",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Natural migration is ruled out as these snails do not like 34. _________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In the Pyrenees, large piles of shells have been found in 35. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "This indicates the snails were used as 36. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "There is archaeological evidence of 37. __________ between the two areas",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "The conclusion is that snails were most likely carried in 38. __________",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Further work",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "A wider 39. __________ of the snails is required for the study",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "One other organism will be investigated: a particular type of 40. __________",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "plants",
+        "32": "soil",
+        "33": "collection",
+        "34": "salt",
+        "35": "caves",
+        "36": "food",
+        "37": "trade",
+        "38": "boats",
+        "39": "sample",
+        "40": "tree"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10000,
+      "text": "You will hear an ecologist giving a presentation on research on a type of snail."
+    },
+    {
+      "startMs": 10000,
+      "endMs": 14000,
+      "text": "First you have some time to look at questions 31 to 40."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 48000,
+      "text": "Now listen carefully and answer questions 31 to 40."
+    },
+    {
+      "startMs": 48000,
+      "endMs": 52000,
+      "text": "Good afternoon."
+    },
+    {
+      "startMs": 52000,
+      "endMs": 57000,
+      "text": "The topic I've chosen for my presentation is a snail."
+    },
+    {
+      "startMs": 57000,
+      "endMs": 66000,
+      "text": "Snails belong to a group of animals called mollusks, soft-bodied creatures normally protected by a hard shell."
+    },
+    {
+      "startMs": 66000,
+      "endMs": 75000,
+      "text": "Today I'm going to talk about a particular example, the white-lipped grove snail and the research which is being done into it."
+    },
+    {
+      "startMs": 75000,
+      "endMs": 80000,
+      "text": "I'll start by giving some background information about this variety."
+    },
+    {
+      "startMs": 80000,
+      "endMs": 85000,
+      "text": "The white-lipped snail lives on land and is air breathing."
+    },
+    {
+      "startMs": 85000,
+      "endMs": 94000,
+      "text": "Its shell is easy to recognise because of its clear stripe but it varies considerably in colour from pale pink to yellow."
+    },
+    {
+      "startMs": 94000,
+      "endMs": 102000,
+      "text": "The snail gets its rather strange name from the fact that it has a white edge or lip to its shell."
+    },
+    {
+      "startMs": 102000,
+      "endMs": 110000,
+      "text": "Its principal source of nutrition is plants which are either already dead or in the process of rotting."
+    },
+    {
+      "startMs": 110000,
+      "endMs": 115000,
+      "text": "A characteristic it shares with a number of other species of snail."
+    },
+    {
+      "startMs": 115000,
+      "endMs": 127000,
+      "text": "Because of this its normal habitat is similar to other land snails and it can be seen in urban settings such as gardens as well as uncultivated areas."
+    },
+    {
+      "startMs": 127000,
+      "endMs": 135000,
+      "text": "A final point about its ecology is that it also needs calcium and other minerals to keep it healthy."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 141000,
+      "text": "To get these it frequently consumes soil which contains these minerals."
+    },
+    {
+      "startMs": 141000,
+      "endMs": 149000,
+      "text": "So far nothing I've said would seem to set this variety apart from other land-dwelling air breathing snails."
+    },
+    {
+      "startMs": 149000,
+      "endMs": 164000,
+      "text": "However, as long ago as the early 19th century naturalists observed that these white-lipped snails appear to live in two strikingly separate areas, many hundreds of miles apart, namely Ireland,"
+    },
+    {
+      "startMs": 164000,
+      "endMs": 169000,
+      "text": "and the Pyrenees, the large mountain range on the border of France and Spain."
+    },
+    {
+      "startMs": 169000,
+      "endMs": 184000,
+      "text": "But what is most surprising is that there was no record of the variety being found anywhere in between these places so the distribution seemed very strange."
+    },
+    {
+      "startMs": 185000,
+      "endMs": 199000,
+      "text": "This age-old puzzle has intrigued a group of present-day researchers at the University of Nottingham and they've decided to undertake a detailed study to investigate the strange distribution pattern."
+    },
+    {
+      "startMs": 199000,
+      "endMs": 208000,
+      "text": "First of all they wanted to make sure that the distribution first noticed 200 years ago is in fact correct."
+    },
+    {
+      "startMs": 208000,
+      "endMs": 223000,
+      "text": "Via the internet they set up what is known as a megalab, recruiting numerous volunteers across Europe to be responsible for the collection of snail specimens which were then sent to the University lab."
+    },
+    {
+      "startMs": 223000,
+      "endMs": 231000,
+      "text": "Like many of these megalab initiatives it was generally very successful with high rates of participation."
+    },
+    {
+      "startMs": 231000,
+      "endMs": 237000,
+      "text": "The research team then did a genetic analysis of the material they received."
+    },
+    {
+      "startMs": 237000,
+      "endMs": 246000,
+      "text": "They confirmed that there were characteristics shared by the two sets of white-lipped snails from Ireland and from the Pyrenees."
+    },
+    {
+      "startMs": 246000,
+      "endMs": 252000,
+      "text": "Most importantly this variety does not seem to occur anywhere else."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 270000,
+      "text": "How could this split have happened and when? Well fossils indicate that the white-lipped snail has been living in the Pyrenees for tens of thousands of years but that in Ireland its arrival was relatively recent."
+    },
+    {
+      "startMs": 270000,
+      "endMs": 280000,
+      "text": "This fact was very telling for the researchers. It generated a number of different theories to explain the strange distribution phenomenon."
+    },
+    {
+      "startMs": 280000,
+      "endMs": 294000,
+      "text": "The first theory the researchers looked at is one called convergent evolution which basically means that the two sets of snails would have developed entirely separately by complete coincidence."
+    },
+    {
+      "startMs": 294000,
+      "endMs": 305000,
+      "text": "But the underlying similarities between the two sets are too close to be purely a matter of chance so this seems an unlikely explanation."
+    },
+    {
+      "startMs": 306000,
+      "endMs": 315000,
+      "text": "The second theory proposed is called natural migration which would necessitate the snail swimming the sea to Ireland."
+    },
+    {
+      "startMs": 315000,
+      "endMs": 325000,
+      "text": "This was ruled out because they hate salt and simply wouldn't have embarked on the journey across the sea or had they tried wouldn't have survived."
+    },
+    {
+      "startMs": 325000,
+      "endMs": 340000,
+      "text": "The team then started looking at different kinds of evidence reviewing findings from various locations in the Pyrenees which showed that mounds of white-lipped snail shells had been thrown away in caves."
+    },
+    {
+      "startMs": 340000,
+      "endMs": 345000,
+      "text": "Clearly these had been inhabited by stone age communities."
+    },
+    {
+      "startMs": 345000,
+      "endMs": 359000,
+      "text": "This led to the conclusion that the snails must have been used over a long period by these stone age humans as food and interestingly this was before the advent of agriculture."
+    },
+    {
+      "startMs": 359000,
+      "endMs": 374000,
+      "text": "The team then looked at other types of archaeological evidence from prehistoric times in Ireland and the Pyrenees and they found evidence that very early on there had been trade between the people living in these widely separated areas."
+    },
+    {
+      "startMs": 374000,
+      "endMs": 393000,
+      "text": "For all these reasons the research team have tentatively concluded that the most likely way in which the snails travelled from east to west was in boats and that they were transported live to keep them fresh for consumption on the journey."
+    },
+    {
+      "startMs": 394000,
+      "endMs": 406000,
+      "text": "The research team acknowledged that their study is in the early stages and needs further work. They recognise for example that they need to look at a broader sample of the snails."
+    },
+    {
+      "startMs": 406000,
+      "endMs": 412000,
+      "text": "They also feel that other animals and plants might shed light on their research."
+    },
+    {
+      "startMs": 412000,
+      "endMs": 423000,
+      "text": "They have found that there is probably at least one other type of organism which shows the same distribution pattern, the clear split between the Pyrenees and Ireland."
+    },
+    {
+      "startMs": 423000,
+      "endMs": 437000,
+      "text": "This is a species of tree which they want to look at in more detail. Perhaps its story will corroborate that of the humble migrating white-lipped snail."
+    },
+    {
+      "startMs": 437000,
+      "endMs": 442000,
+      "text": "That is the end of part 4."
+    },
+    {
+      "startMs": 467000,
+      "endMs": 470000,
+      "text": "You"
+    },
+    {
+      "startMs": 497000,
+      "endMs": 500000,
+      "text": "You"
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 45,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

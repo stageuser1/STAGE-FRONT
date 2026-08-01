@@ -1,0 +1,575 @@
+{
+  "id": "p2-40-international-week-celebration",
+  "title": "International Week Celebration",
+  "part": 2,
+  "difficulty": "low",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-d0d5a010942b",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 302.664,
+    "checksum": "sha256:0a17b02287e434eaa0d1c88027292c6223b13a63f1dd201570ce5294eebaff59"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 11–16",
+      "instruction": "Choose the correct letter, A, B or C",
+      "questions": [
+        {
+          "id": "11",
+          "text": "The businessmen think it is a good idea to hold the international week in",
+          "options": [
+            {
+              "id": "A",
+              "text": "February"
+            },
+            {
+              "id": "B",
+              "text": "August"
+            },
+            {
+              "id": "C",
+              "text": "September"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "12",
+          "text": "Why did they change the celebration from one day to a week?",
+          "options": [
+            {
+              "id": "A",
+              "text": "it was reported by the media."
+            },
+            {
+              "id": "B",
+              "text": "they want to raise additional money."
+            },
+            {
+              "id": "C",
+              "text": "people would like to show off their countries."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "13",
+          "text": "In bad weather, where did they hold the activity last time?",
+          "options": [
+            {
+              "id": "A",
+              "text": "school gym"
+            },
+            {
+              "id": "B",
+              "text": "radio station"
+            },
+            {
+              "id": "C",
+              "text": "town hall"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "14",
+          "text": "In order to apply for the celebration, people should",
+          "options": [
+            {
+              "id": "A",
+              "text": "provide a good proposal."
+            },
+            {
+              "id": "B",
+              "text": "be a member of a country association."
+            },
+            {
+              "id": "C",
+              "text": "pay a small application fee."
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "15",
+          "text": "Where do they hold big outdoor activities?",
+          "options": [
+            {
+              "id": "A",
+              "text": "community center"
+            },
+            {
+              "id": "B",
+              "text": "local stadium"
+            },
+            {
+              "id": "C",
+              "text": "parking lot"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "16",
+          "text": "What do the businessmen provide to the international week?",
+          "options": [
+            {
+              "id": "A",
+              "text": "pay for the cost of the administration"
+            },
+            {
+              "id": "B",
+              "text": "furniture and equipment"
+            },
+            {
+              "id": "C",
+              "text": "books of different countries"
+            }
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 17–20",
+      "instruction": "Choose the correct answers from the box, from A–G, next to questions",
+      "options": [
+        {
+          "id": "A",
+          "text": "music"
+        },
+        {
+          "id": "B",
+          "text": "dance"
+        },
+        {
+          "id": "C",
+          "text": "wood carving"
+        },
+        {
+          "id": "D",
+          "text": "sports"
+        },
+        {
+          "id": "E",
+          "text": "cookery"
+        },
+        {
+          "id": "F",
+          "text": "costumes"
+        },
+        {
+          "id": "G",
+          "text": "photos"
+        }
+      ],
+      "questions": [
+        {
+          "id": "17",
+          "text": "Mexico",
+          "answer": "A"
+        },
+        {
+          "id": "18",
+          "text": "South Africa",
+          "answer": "F"
+        },
+        {
+          "id": "19",
+          "text": "Indonesia",
+          "answer": "E"
+        },
+        {
+          "id": "20",
+          "text": "Canada",
+          "answer": "C"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "11": "B",
+        "12": "A",
+        "13": "A",
+        "14": "A",
+        "15": "C",
+        "16": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "17": "A",
+        "18": "F",
+        "19": "E",
+        "20": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11160,
+      "text": "Next week is our town's International Week, which has been going on annually for several"
+    },
+    {
+      "startMs": 11160,
+      "endMs": 12160,
+      "text": "years."
+    },
+    {
+      "startMs": 12160,
+      "endMs": 18560,
+      "text": "Today we have George Johnson, the organizer of International Week, to talk about it."
+    },
+    {
+      "startMs": 18560,
+      "endMs": 21000,
+      "text": "George, how did it all begin?"
+    },
+    {
+      "startMs": 21000,
+      "endMs": 28120,
+      "text": "Well, I was with a group of businessmen in town one February day, five years ago, and we"
+    },
+    {
+      "startMs": 28120,
+      "endMs": 33720,
+      "text": "were discussing what we could do for livening things up in August when the weather is good,"
+    },
+    {
+      "startMs": 33720,
+      "endMs": 36800,
+      "text": "and the kids are out of school till September."
+    },
+    {
+      "startMs": 36800,
+      "endMs": 42440,
+      "text": "And someone said, hey, we've got people from all over the world living here, let's have"
+    },
+    {
+      "startMs": 42440,
+      "endMs": 48840,
+      "text": "an international celebration and get people to show off things about their home country."
+    },
+    {
+      "startMs": 48840,
+      "endMs": 50680,
+      "text": "And we all agreed."
+    },
+    {
+      "startMs": 50680,
+      "endMs": 57320,
+      "text": "The first year, the celebration lasted just one day, and it featured three countries."
+    },
+    {
+      "startMs": 57320,
+      "endMs": 61960,
+      "text": "It was a great success and was written about in our local newspaper."
+    },
+    {
+      "startMs": 61960,
+      "endMs": 68640,
+      "text": "And so the next year, even though it costs more, the organizers expanded it to an international"
+    },
+    {
+      "startMs": 68640,
+      "endMs": 74160,
+      "text": "week, and so many people were eager to feature their countries."
+    },
+    {
+      "startMs": 74160,
+      "endMs": 80520,
+      "text": "On each of the first six days of the week, one country is designated to star."
+    },
+    {
+      "startMs": 80520,
+      "endMs": 85880,
+      "text": "And then on the seventh day, weather permitting, we have a street party near the town hall"
+    },
+    {
+      "startMs": 85880,
+      "endMs": 91080,
+      "text": "with music provided by the radio station and food and games."
+    },
+    {
+      "startMs": 91080,
+      "endMs": 93040,
+      "text": "Everyone has a ball."
+    },
+    {
+      "startMs": 93040,
+      "endMs": 100120,
+      "text": "Of course, we move it to the school gym if it rains like last year, but nobody minds."
+    },
+    {
+      "startMs": 100120,
+      "endMs": 104840,
+      "text": "Our year starts in January, when we ask for applications."
+    },
+    {
+      "startMs": 104840,
+      "endMs": 110120,
+      "text": "To apply to have a day for their country, people don't need to belong to a particular"
+    },
+    {
+      "startMs": 110120,
+      "endMs": 112280,
+      "text": "country association."
+    },
+    {
+      "startMs": 112280,
+      "endMs": 117480,
+      "text": "They can just be a group who identified themselves with a particular country."
+    },
+    {
+      "startMs": 117480,
+      "endMs": 120200,
+      "text": "They submit a formal plan to us."
+    },
+    {
+      "startMs": 120200,
+      "endMs": 125920,
+      "text": "They don't need to worry at this stage about funding, but some grants are available."
+    },
+    {
+      "startMs": 125920,
+      "endMs": 131040,
+      "text": "The organizing committee has to select the ones with the best ideas."
+    },
+    {
+      "startMs": 131040,
+      "endMs": 136840,
+      "text": "The organizing committee arranges for places for the country to do whatever they want."
+    },
+    {
+      "startMs": 136840,
+      "endMs": 142560,
+      "text": "Unfortunately, for large outdoor activities, we aren't allowed to use the local stadium"
+    },
+    {
+      "startMs": 142560,
+      "endMs": 145560,
+      "text": "because they've got other commitments."
+    },
+    {
+      "startMs": 145560,
+      "endMs": 149120,
+      "text": "But the community center lets us use its parking lot."
+    },
+    {
+      "startMs": 149120,
+      "endMs": 154680,
+      "text": "The hall is kind of small, but it has been kind enough to permit us to make use of its"
+    },
+    {
+      "startMs": 154680,
+      "endMs": 156920,
+      "text": "classrooms."
+    },
+    {
+      "startMs": 156920,
+      "endMs": 159560,
+      "text": "Local people have been very generous."
+    },
+    {
+      "startMs": 159560,
+      "endMs": 165440,
+      "text": "A lot of business people let us have things like tables and amplifiers for the week."
+    },
+    {
+      "startMs": 165440,
+      "endMs": 170880,
+      "text": "The organizing committee handles all the administration, and the town library has"
+    },
+    {
+      "startMs": 170880,
+      "endMs": 175160,
+      "text": "been great about featuring books about the countries."
+    },
+    {
+      "startMs": 175160,
+      "endMs": 182240,
+      "text": "Before you hear the rest of the program, you have some time to look at questions 17-20."
+    },
+    {
+      "startMs": 182240,
+      "endMs": 189480,
+      "text": "Now, for each country's day, we ask them to have one special event like a show or exhibition"
+    },
+    {
+      "startMs": 189480,
+      "endMs": 191560,
+      "text": "or demonstration."
+    },
+    {
+      "startMs": 191560,
+      "endMs": 196760,
+      "text": "For example, some people could show how they make traditional handicrafts."
+    },
+    {
+      "startMs": 196760,
+      "endMs": 201200,
+      "text": "Or it might just be an exhibition, say photographs of the country."
+    },
+    {
+      "startMs": 201200,
+      "endMs": 202200,
+      "text": "Interesting."
+    },
+    {
+      "startMs": 202200,
+      "endMs": 205880,
+      "text": "Now, what are the special events this year?"
+    },
+    {
+      "startMs": 205880,
+      "endMs": 207480,
+      "text": "Fantastic things."
+    },
+    {
+      "startMs": 207480,
+      "endMs": 212680,
+      "text": "Monday is Mexico Day, and these ladies and gentlemen are going to put on a show that's"
+    },
+    {
+      "startMs": 212680,
+      "endMs": 216440,
+      "text": "hotter than those chili peppers they're famous for eating."
+    },
+    {
+      "startMs": 216440,
+      "endMs": 221360,
+      "text": "They'll be singing and playing songs, and those drums will make you want to get up and"
+    },
+    {
+      "startMs": 221360,
+      "endMs": 223320,
+      "text": "move around."
+    },
+    {
+      "startMs": 223320,
+      "endMs": 229720,
+      "text": "Then Tuesday is South Africa Day, and they've got an exhibition of dresses and robes used"
+    },
+    {
+      "startMs": 229720,
+      "endMs": 234560,
+      "text": "in traditional ceremonies and dances, and they are magnificent."
+    },
+    {
+      "startMs": 234560,
+      "endMs": 238840,
+      "text": "Apparently, some of them are worth more than their weight in gold."
+    },
+    {
+      "startMs": 238840,
+      "endMs": 242520,
+      "text": "Next, Wednesday is Indonesia Day."
+    },
+    {
+      "startMs": 242520,
+      "endMs": 246600,
+      "text": "They have an exhibition where you'll definitely get your money's worth."
+    },
+    {
+      "startMs": 246600,
+      "endMs": 251640,
+      "text": "Two ladies will put on their chef's hat to demonstrate how they prepare those dishes"
+    },
+    {
+      "startMs": 251640,
+      "endMs": 254520,
+      "text": "and sauces they're famous for."
+    },
+    {
+      "startMs": 254520,
+      "endMs": 255760,
+      "text": "Let's see."
+    },
+    {
+      "startMs": 255760,
+      "endMs": 258960,
+      "text": "That brings us to Thursday, Canada Day."
+    },
+    {
+      "startMs": 258960,
+      "endMs": 264480,
+      "text": "We think of them as fit outdoorsmen and ice hockey players, but they've arranged to"
+    },
+    {
+      "startMs": 264480,
+      "endMs": 269840,
+      "text": "have some of their countrymen show us how they use just a knife and blocks of wood from"
+    },
+    {
+      "startMs": 269840,
+      "endMs": 275840,
+      "text": "native American trees to make absolutely lovely statues of birds and bears and other"
+    },
+    {
+      "startMs": 275840,
+      "endMs": 279280,
+      "text": "animals famous in local legends."
+    },
+    {
+      "startMs": 279280,
+      "endMs": 283520,
+      "text": "So next is Friday, Italy Day."
+    },
+    {
+      "startMs": 283520,
+      "endMs": 285920,
+      "text": "That is the end of section two."
+    },
+    {
+      "startMs": 285920,
+      "endMs": 289120,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 64,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -41,11 +41,19 @@ export const GROUP_TYPE_LABELS: Record<QuestionGroup["type"], string> = {
  * verdict strip *per card*, and it needs to know which numbers belong to the
  * card it is drawing without being told the card's position in the set.
  *
- * Form completion contributes one per blank segment; every other group type is
- * exactly one question.
+ * Form completion contributes one per blank segment; expanded instruction
+ * groups contribute one per numbered question, while legacy groups contribute
+ * their single `questionNo`.
  */
 export function groupQuestionNumbers(group: QuestionGroup): number[] {
-  if (group.type !== "form_completion") return [group.questionNo];
+  if (group.type !== "form_completion") {
+    if ("questions" in group && group.questions && group.questions.length > 0) {
+      return group.questions
+        .map((question) => question.questionNo)
+        .sort((a, b) => a - b);
+    }
+    return [group.questionNo];
+  }
   const numbers: number[] = [];
   for (const row of group.rows) {
     for (const segment of row.segments) {

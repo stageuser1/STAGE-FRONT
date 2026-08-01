@@ -1,0 +1,460 @@
+{
+  "id": "p4-97-adwaita-turtles",
+  "title": "Adwaita Turtles",
+  "part": 4,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-c204c1aeac0d",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 519.072,
+    "checksum": "sha256:9feeab301d816ee05acd1bbaf26ea958e60c2412bbb7edb1deefe08577ad883d"
+  },
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Questions 31–40",
+      "instruction": "Complete the note below. Write ONE WORD ONLY for each answer. Adwaita Turtles Habitat and Characteristics Adwaita turtles primarily live in freshwater 31. __________. Their shells are extremely 32. __________, making them vulnerable to predators. They use their 33. __________ to dig into soft riverbeds and search for food. One of the foods in their diet includes 34. __________ that grow near water. Threats and Conservation Status The survival of Adwaita turtles is under a 35. __________ threat due to environmental changes. One of the biggest threats to Adwaita turtles comes from 36. __________, which prey on them. Their habitat is becoming 37. __________ due to climate change, making it harder for them to nest. Conservation Efforts and Future Plans Conservationists are using species 38. __________ programs to move turtles to safer locations. In some cases, turtles are transported with the help of an 39. __________. Local communities are receiving 40. __________ to help protect the turtles and their habitat.",
+      "questions": [
+        {
+          "id": "31",
+          "text": "Adwaita turtles primarily live in freshwater 31. __________.",
+          "answer": "streams"
+        },
+        {
+          "id": "32",
+          "text": "Their shells are extremely 32. __________, making them vulnerable to predators.",
+          "answer": "fragile"
+        },
+        {
+          "id": "33",
+          "text": "They use their 33. __________ to dig into soft riverbeds and search for food.",
+          "answer": "claws"
+        },
+        {
+          "id": "34",
+          "text": "One of the foods in their diet includes 34. __________ that grow near water.",
+          "answer": "mushrooms"
+        },
+        {
+          "id": "35",
+          "text": "The survival of Adwaita turtles is under a 35. __________ threat due to environmental changes.",
+          "answer": "critical"
+        },
+        {
+          "id": "36",
+          "text": "One of the biggest threats to Adwaita turtles comes from 36. __________, which prey on them.",
+          "answer": "dogs"
+        },
+        {
+          "id": "37",
+          "text": "Their habitat is becoming 37. __________ due to climate change, making it harder for them to nest.",
+          "answer": "dry"
+        },
+        {
+          "id": "38",
+          "text": "Conservationists are using species 38. __________ programs to move turtles to safer locations.",
+          "answer": "relocation"
+        },
+        {
+          "id": "39",
+          "text": "In some cases, turtles are transported with the help of an 39. __________.",
+          "answer": "elephant"
+        },
+        {
+          "id": "40",
+          "text": "Local communities are receiving 40. __________ to help protect the turtles and their habitat.",
+          "answer": "training"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the note below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write ONE WORD ONLY for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Adwaita Turtles",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Habitat and Characteristics",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Adwaita turtles primarily live in freshwater 31. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Their shells are extremely 32. __________, making them vulnerable to predators.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "They use their 33. __________ to dig into soft riverbeds and search for food.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "One of the foods in their diet includes 34. __________ that grow near water.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Threats and Conservation Status",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "The survival of Adwaita turtles is under a 35. __________ threat due to environmental changes.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "One of the biggest threats to Adwaita turtles comes from 36. __________, which prey on them.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Their habitat is becoming 37. __________ due to climate change, making it harder for them to nest.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Conservation Efforts and Future Plans",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Conservationists are using species 38. __________ programs to move turtles to safer locations.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "In some cases, turtles are transported with the help of an 39. __________.",
+          "list": true,
+          "level": 0
+        },
+        {
+          "text": "Local communities are receiving 40. __________ to help protect the turtles and their habitat.",
+          "list": true,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "31": "streams",
+        "32": "fragile",
+        "33": "claws",
+        "34": "mushrooms",
+        "35": "critical",
+        "36": "dogs",
+        "37": "dry",
+        "38": "relocation",
+        "39": "elephant",
+        "40": "training"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 11160,
+      "text": "Today, we will discuss the Advaita Turtle, a species that has drawn significant attention"
+    },
+    {
+      "startMs": 11160,
+      "endMs": 16040,
+      "text": "due to its unique characteristics and conservation challenges."
+    },
+    {
+      "startMs": 16040,
+      "endMs": 21240,
+      "text": "These turtles are typically found in streams of freshwater where they thrive in slow-moving"
+    },
+    {
+      "startMs": 21240,
+      "endMs": 22560,
+      "text": "water."
+    },
+    {
+      "startMs": 22560,
+      "endMs": 27880,
+      "text": "Their preferred environment consists of shallow areas with abundant vegetation, offering"
+    },
+    {
+      "startMs": 27880,
+      "endMs": 30920,
+      "text": "both food and shelter."
+    },
+    {
+      "startMs": 30920,
+      "endMs": 37000,
+      "text": "Unlike some other turtles, they are not well adapted to deep or fast-moving rivers."
+    },
+    {
+      "startMs": 37000,
+      "endMs": 42680,
+      "text": "One of the most distinguishing features of the Advaita Turtle is its shell."
+    },
+    {
+      "startMs": 42680,
+      "endMs": 50440,
+      "text": "Unlike species with tough protective outer layers, this turtle's shell is unusually fragile."
+    },
+    {
+      "startMs": 50440,
+      "endMs": 55440,
+      "text": "This makes it highly vulnerable to predators and environmental damage."
+    },
+    {
+      "startMs": 55440,
+      "endMs": 61480,
+      "text": "As a result, they tend to stay hidden for long periods, avoiding direct threats whenever"
+    },
+    {
+      "startMs": 61480,
+      "endMs": 63520,
+      "text": "possible."
+    },
+    {
+      "startMs": 63520,
+      "endMs": 69080,
+      "text": "Another key characteristic is their strong claws, which serve multiple purposes."
+    },
+    {
+      "startMs": 69080,
+      "endMs": 73840,
+      "text": "These turtles use their claws for digging burrows in soft riverbeds, allowing them to"
+    },
+    {
+      "startMs": 73840,
+      "endMs": 76040,
+      "text": "rest safely out of sight."
+    },
+    {
+      "startMs": 76040,
+      "endMs": 81440,
+      "text": "Additionally, their claws help them in foraging as they scrape through mud and vegetation"
+    },
+    {
+      "startMs": 81440,
+      "endMs": 84240,
+      "text": "to uncover food sources."
+    },
+    {
+      "startMs": 84240,
+      "endMs": 90480,
+      "text": "Speaking of diet, Advaita turtles are omnivorous, meaning they consume both plant and animal"
+    },
+    {
+      "startMs": 90480,
+      "endMs": 92080,
+      "text": "matter."
+    },
+    {
+      "startMs": 92080,
+      "endMs": 96880,
+      "text": "While they often feed on insects and aquatic plants, they are also known to eat mushrooms"
+    },
+    {
+      "startMs": 96880,
+      "endMs": 99560,
+      "text": "that grow near the water's edge. that grow near the water's edge."
+    },
+    {
+      "startMs": 99560,
+      "endMs": 105800,
+      "text": "These fungi provide essential nutrients that contribute to their growth and overall health."
+    },
+    {
+      "startMs": 105800,
+      "endMs": 111320,
+      "text": "Despite their adaptability, Advaita turtles face significant risks."
+    },
+    {
+      "startMs": 111320,
+      "endMs": 117640,
+      "text": "Their population is currently under a critical threat due to several environmental challenges."
+    },
+    {
+      "startMs": 117640,
+      "endMs": 123680,
+      "text": "Deforestation and water pollution have destroyed many of their natural habitats, making it"
+    },
+    {
+      "startMs": 123680,
+      "endMs": 128680,
+      "text": "increasingly difficult for them to find safe nesting areas."
+    },
+    {
+      "startMs": 128680,
+      "endMs": 133160,
+      "text": "One of the greatest dangers they face comes from domestic dogs."
+    },
+    {
+      "startMs": 133160,
+      "endMs": 138360,
+      "text": "These animals often disturb nesting sites, praying on young turtles before they have a chance"
+    },
+    {
+      "startMs": 138360,
+      "endMs": 141120,
+      "text": "to develop properly."
+    },
+    {
+      "startMs": 141120,
+      "endMs": 146440,
+      "text": "Conservation efforts have attempted to reduce these attacks by setting up protective barriers"
+    },
+    {
+      "startMs": 146440,
+      "endMs": 149480,
+      "text": "around no nesting areas."
+    },
+    {
+      "startMs": 149480,
+      "endMs": 153720,
+      "text": "Another issue impacting their survival is climate change."
+    },
+    {
+      "startMs": 153720,
+      "endMs": 158360,
+      "text": "Rising temperatures and deforestation have led to a loss of moisture in many of their"
+    },
+    {
+      "startMs": 158360,
+      "endMs": 160480,
+      "text": "traditional habitats."
+    },
+    {
+      "startMs": 160480,
+      "endMs": 166480,
+      "text": "As a result, some areas that once supported these turtles have now become dry, forcing"
+    },
+    {
+      "startMs": 166480,
+      "endMs": 171000,
+      "text": "them to migrate in search of better conditions."
+    },
+    {
+      "startMs": 171000,
+      "endMs": 176040,
+      "text": "Unfortunately, many turtles do not survive these long journeys."
+    },
+    {
+      "startMs": 176040,
+      "endMs": 182840,
+      "text": "To combat these challenges, conservationists have implemented species relocation programs."
+    },
+    {
+      "startMs": 182840,
+      "endMs": 188480,
+      "text": "These initiatives involve moving turtles from high-risk zones to safer, protected areas"
+    },
+    {
+      "startMs": 188480,
+      "endMs": 192400,
+      "text": "where they can thrive without external threats."
+    },
+    {
+      "startMs": 192400,
+      "endMs": 198600,
+      "text": "In some cases, relocating turtles has required creative solutions."
+    },
+    {
+      "startMs": 198600,
+      "endMs": 203480,
+      "text": "Due to the difficult terrain in certain regions, researchers have used an elephant to help"
+    },
+    {
+      "startMs": 203480,
+      "endMs": 206920,
+      "text": "transport turtles across long distances."
+    },
+    {
+      "startMs": 206920,
+      "endMs": 211760,
+      "text": "This has proven to be an effective method for ensuring their safe relocation."
+    },
+    {
+      "startMs": 211760,
+      "endMs": 217920,
+      "text": "Finally, community involvement plays a crucial role in conservation efforts."
+    },
+    {
+      "startMs": 217920,
+      "endMs": 223440,
+      "text": "Local populations are now receiving specialized training on how to protect and await turtles"
+    },
+    {
+      "startMs": 223440,
+      "endMs": 225440,
+      "text": "and their habitats."
+    },
+    {
+      "startMs": 225440,
+      "endMs": 230880,
+      "text": "By educating people on the importance of these turtles, conservationists hope to create"
+    },
+    {
+      "startMs": 230880,
+      "endMs": 234000,
+      "text": "long-term solutions that will secure their future."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 49,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

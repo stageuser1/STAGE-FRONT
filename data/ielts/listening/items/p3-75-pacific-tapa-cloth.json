@@ -1,0 +1,625 @@
+{
+  "id": "p3-75-pacific-tapa-cloth",
+  "title": "Pacific Tapa Cloth",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-4b6b48459ddb",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 436.056,
+    "checksum": "sha256:b01ed23567b2bdb6350c12095920d7449afd3059dbb30d6b86ba375f8e1ca5f4"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21-24.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Pacific tapa cloth is different from other types of tapa cloth because it is",
+          "options": [
+            {
+              "id": "A",
+              "text": "the only tapa made today"
+            },
+            {
+              "id": "B",
+              "text": "better quality than others"
+            },
+            {
+              "id": "C",
+              "text": "put to a wider range of uses"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "What does Helen say about the paper mulberry tree?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It is also a source of food"
+            },
+            {
+              "id": "B",
+              "text": "It is not native to the Pacific"
+            },
+            {
+              "id": "C",
+              "text": "It can grow in any environment"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "Why did the Maori people of New Zealand stop making tapa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They could not find the right trees in New Zealand"
+            },
+            {
+              "id": "B",
+              "text": "They were introduced to other fabrics by the Europeans"
+            },
+            {
+              "id": "C",
+              "text": "They found a better material for making fabric"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "24",
+          "text": "Large pieces of tapa are made from smaller pieces which are",
+          "options": [
+            {
+              "id": "A",
+              "text": "stuck together"
+            },
+            {
+              "id": "B",
+              "text": "woven together"
+            },
+            {
+              "id": "C",
+              "text": "sewn together"
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 25-30",
+      "instruction": "According to the speakers, what function has tapa cloth played in the following countries? Write the correct letter, A, B, C or D, next to questions 25 - 30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recreational"
+        },
+        {
+          "id": "B",
+          "text": "Practical"
+        },
+        {
+          "id": "C",
+          "text": "Spiritual"
+        },
+        {
+          "id": "D",
+          "text": "Commercial"
+        }
+      ],
+      "questions": [
+        {
+          "id": "25",
+          "text": "Samoa",
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "Tonga",
+          "answer": "B"
+        },
+        {
+          "id": "27",
+          "text": "Cook Islands",
+          "answer": "C"
+        },
+        {
+          "id": "28",
+          "text": "Fiji",
+          "answer": "D"
+        },
+        {
+          "id": "29",
+          "text": "Tahiti",
+          "answer": "A"
+        },
+        {
+          "id": "30",
+          "text": "Tikopia",
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "B",
+        "23": "C",
+        "24": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "25": "C",
+        "26": "B",
+        "27": "C",
+        "28": "D",
+        "29": "A",
+        "30": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 17920,
+      "text": "[Narrator]: Now turn to section 3 on page 5."
+    },
+    {
+      "startMs": 17920,
+      "endMs": 19920,
+      "text": "Section 3"
+    },
+    {
+      "startMs": 19920,
+      "endMs": 25560,
+      "text": "You will hear a discussion between a student called Helen and her tutor about an assignment"
+    },
+    {
+      "startMs": 25560,
+      "endMs": 27520,
+      "text": "that Helen is working on."
+    },
+    {
+      "startMs": 27520,
+      "endMs": 33520,
+      "text": "First you have some time to look at questions 21 to 24 on page 5."
+    },
+    {
+      "startMs": 57520,
+      "endMs": 72000,
+      "text": "Now listen carefully and answer questions 21 to 24."
+    },
+    {
+      "startMs": 72000,
+      "endMs": 74440,
+      "text": "[Tutor]: Come in Helen, how can I help you?"
+    },
+    {
+      "startMs": 74440,
+      "endMs": 80000,
+      "text": "[Helen]: Well, I'm doing research for the anthropology assignment and I was hoping to check a few"
+    },
+    {
+      "startMs": 80000,
+      "endMs": 81000,
+      "text": "details."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 82000,
+      "text": "[Tutor]: Sure."
+    },
+    {
+      "startMs": 82000,
+      "endMs": 86000,
+      "text": "You chose the top of a good Pacific Island top of cloth, didn't you?"
+    },
+    {
+      "startMs": 86000,
+      "endMs": 88240,
+      "text": "What if you found out so far?"
+    },
+    {
+      "startMs": 88240,
+      "endMs": 93440,
+      "text": "[Helen]: Well, I was going to introduce my assignment by saying that the top of cloth is a fabric"
+    },
+    {
+      "startMs": 93440,
+      "endMs": 97960,
+      "text": "made from back, just the outer layer of the trees."
+    },
+    {
+      "startMs": 97960,
+      "endMs": 102800,
+      "text": "It's particularly common in the Pacific Islands, but not exclusive to them."
+    },
+    {
+      "startMs": 102800,
+      "endMs": 108600,
+      "text": "In fact, many other peoples around the world have made high quality cloth from back, but"
+    },
+    {
+      "startMs": 108600,
+      "endMs": 115400,
+      "text": "what sets Pacific Tapper apart is the incredible variety of roles it's played in this region."
+    },
+    {
+      "startMs": 115640,
+      "endMs": 121280,
+      "text": "[Tutor]: Yes, nice introduction, though I think you could be more specific regarding dates."
+    },
+    {
+      "startMs": 121280,
+      "endMs": 125520,
+      "text": "OK, so what about the raw materials used?"
+    },
+    {
+      "startMs": 125520,
+      "endMs": 132040,
+      "text": "[Helen]: Well, Tapper cloth is made from several species of tree, and the Pacific, the paper mulberry"
+    },
+    {
+      "startMs": 132040,
+      "endMs": 136560,
+      "text": "tree is most common, but it doesn't thrive in all conditions."
+    },
+    {
+      "startMs": 136560,
+      "endMs": 141600,
+      "text": "In fact, it wasn't originally found in the islands, but was carried in their canoes"
+    },
+    {
+      "startMs": 141600,
+      "endMs": 143840,
+      "text": "by the first migrants."
+    },
+    {
+      "startMs": 143840,
+      "endMs": 148800,
+      "text": "The Tapper is also made from the bread fruit tree, which is convenient because it's fruit"
+    },
+    {
+      "startMs": 148800,
+      "endMs": 150720,
+      "text": "as a staple food."
+    },
+    {
+      "startMs": 150720,
+      "endMs": 155520,
+      "text": "The paper mulberry tree is only grown for Tapper making, though."
+    },
+    {
+      "startMs": 155520,
+      "endMs": 157840,
+      "text": "[Tutor]: Yes, that's good."
+    },
+    {
+      "startMs": 157840,
+      "endMs": 162160,
+      "text": "Now what about the Maori people here in New Zealand?"
+    },
+    {
+      "startMs": 162160,
+      "endMs": 164520,
+      "text": "[Helen]: But the Maori don't make Tapper now."
+    },
+    {
+      "startMs": 164520,
+      "endMs": 167160,
+      "text": "[Tutor]: That's right, and you need to account for it."
+    },
+    {
+      "startMs": 167160,
+      "endMs": 172000,
+      "text": "We know that when Maori migrated here from the other Pacific Islands, they were prepared"
+    },
+    {
+      "startMs": 172000,
+      "endMs": 176600,
+      "text": "to make Tapper because they brought the paper mulberry tree with them."
+    },
+    {
+      "startMs": 176600,
+      "endMs": 181960,
+      "text": "The thing was, after they'd been in New Zealand a bit, they found the flax plant, which"
+    },
+    {
+      "startMs": 181960,
+      "endMs": 186120,
+      "text": "is superior to Tapper because it makes a stronger fabric."
+    },
+    {
+      "startMs": 186120,
+      "endMs": 191440,
+      "text": "By the time Europeans arrived in the 18th century, Maori were making all their fabric from"
+    },
+    {
+      "startMs": 191440,
+      "endMs": 194480,
+      "text": "flax and had been for some time."
+    },
+    {
+      "startMs": 194480,
+      "endMs": 201440,
+      "text": "[Helen]: OK, so with the production process itself, first at the inner bark is beaten with wooden"
+    },
+    {
+      "startMs": 201440,
+      "endMs": 203680,
+      "text": "hammers to soften the fibres."
+    },
+    {
+      "startMs": 203680,
+      "endMs": 209880,
+      "text": "Then the different pieces are glued together using an adhesive paste made from the arrowroot"
+    },
+    {
+      "startMs": 209880,
+      "endMs": 210880,
+      "text": "tuba."
+    },
+    {
+      "startMs": 210880,
+      "endMs": 216560,
+      "text": "This is the only way to fabricate large pieces of cloth because bark strands are too fine"
+    },
+    {
+      "startMs": 216560,
+      "endMs": 223360,
+      "text": "to be woven together and stitching isn't strong enough."
+    },
+    {
+      "startMs": 223360,
+      "endMs": 228280,
+      "text": "[Narrator]: Before you hear the rest of the discussion, you have some time to look at questions 25"
+    },
+    {
+      "startMs": 228280,
+      "endMs": 230480,
+      "text": "to 30 on page 6."
+    },
+    {
+      "startMs": 258280,
+      "endMs": 267800,
+      "text": "Now, listen and answer questions 25 to 30."
+    },
+    {
+      "startMs": 267800,
+      "endMs": 271200,
+      "text": "[Tutor]: So now you need details about different countries."
+    },
+    {
+      "startMs": 271200,
+      "endMs": 272680,
+      "text": "[Helen]: Where would you start?"
+    },
+    {
+      "startMs": 272680,
+      "endMs": 275560,
+      "text": "[Tutor]:I think Samoa is the obvious place."
+    },
+    {
+      "startMs": 275560,
+      "endMs": 281480,
+      "text": "It's famous for its very fine cloth called Seattle, which is hand-painted with representations"
+    },
+    {
+      "startMs": 281480,
+      "endMs": 283520,
+      "text": "of the ancestors."
+    },
+    {
+      "startMs": 283520,
+      "endMs": 289880,
+      "text": "Still today, at the most profound events in life such as births, funerals, weddings"
+    },
+    {
+      "startMs": 289880,
+      "endMs": 296360,
+      "text": "and the investiture of chiefs, Samoans were siapo robes to add significance and meaning"
+    },
+    {
+      "startMs": 296360,
+      "endMs": 298080,
+      "text": "to the ceremony."
+    },
+    {
+      "startMs": 298080,
+      "endMs": 301080,
+      "text": "[Helen]: OK, then I could talk about Tonga."
+    },
+    {
+      "startMs": 301080,
+      "endMs": 306800,
+      "text": "It seems to me that the great innovation in Tonga has been developing a simple, coarse"
+    },
+    {
+      "startMs": 306800,
+      "endMs": 310080,
+      "text": "cloth, which is quick and easy to make."
+    },
+    {
+      "startMs": 310080,
+      "endMs": 316120,
+      "text": "This is suitable for all sorts of everyday functions around the house like bedcudders,"
+    },
+    {
+      "startMs": 316120,
+      "endMs": 318680,
+      "text": "mosquito nets and curtains."
+    },
+    {
+      "startMs": 318680,
+      "endMs": 319680,
+      "text": "[Tutor]: Good point."
+    },
+    {
+      "startMs": 319680,
+      "endMs": 322880,
+      "text": "Now, what about Cook Island's Tupper?"
+    },
+    {
+      "startMs": 322880,
+      "endMs": 329080,
+      "text": "[Helen]: Well, the soil there is poor quality, so the breadfruit tree is often used."
+    },
+    {
+      "startMs": 329080,
+      "endMs": 334800,
+      "text": "One type of thick cloth, called Tikoru, was wrapped around the poles and used to mark the"
+    },
+    {
+      "startMs": 334800,
+      "endMs": 340440,
+      "text": "entrances to places of worship so it was highly regarded in local culture."
+    },
+    {
+      "startMs": 340440,
+      "endMs": 346600,
+      "text": "[Tutor]: You might mention Fiji as well, which is interesting because Tupper was actually used as a currency"
+    },
+    {
+      "startMs": 346600,
+      "endMs": 347600,
+      "text": "there."
+    },
+    {
+      "startMs": 347600,
+      "endMs": 352760,
+      "text": "Fijians used to sail between the islands and exchange Tupper for other commodities like"
+    },
+    {
+      "startMs": 352760,
+      "endMs": 354840,
+      "text": "canoes or pigs."
+    },
+    {
+      "startMs": 354840,
+      "endMs": 360120,
+      "text": "[Helen]: I know that in Tahiti, the Tupper cloth is different because the patterns are in colour,"
+    },
+    {
+      "startMs": 360120,
+      "endMs": 363840,
+      "text": "which is considered more valuable than the usual brown patterns."
+    },
+    {
+      "startMs": 363840,
+      "endMs": 369320,
+      "text": "[Tutor]: You are right about the Tahitians using coloured pigments, but they aren't more valuable."
+    },
+    {
+      "startMs": 369320,
+      "endMs": 372080,
+      "text": "The colours are only a decoration."
+    },
+    {
+      "startMs": 372080,
+      "endMs": 377480,
+      "text": "People enjoy wearing bright robes, especially for dancing and competitive games and do it"
+    },
+    {
+      "startMs": 377480,
+      "endMs": 378480,
+      "text": "just for fun."
+    },
+    {
+      "startMs": 378480,
+      "endMs": 381000,
+      "text": "[Helen]: Oh, I'll make a note of it."
+    },
+    {
+      "startMs": 381000,
+      "endMs": 385760,
+      "text": "Well, the last place I was going to mention was Tikorpia."
+    },
+    {
+      "startMs": 385760,
+      "endMs": 390760,
+      "text": "Even today it's common place to see people wearing clothes made of Tupper cloth."
+    },
+    {
+      "startMs": 390760,
+      "endMs": 396480,
+      "text": "In many of the other islands, the Tupper only comes out on special occasions, but here"
+    },
+    {
+      "startMs": 396480,
+      "endMs": 400040,
+      "text": "you see people working in the gardens wearing Tupper."
+    },
+    {
+      "startMs": 400040,
+      "endMs": 401040,
+      "text": "[Tutor]: Sounds promising, Helen."
+    },
+    {
+      "startMs": 401040,
+      "endMs": 406880,
+      "text": "I'll look forward to reading your assignment."
+    },
+    {
+      "startMs": 406880,
+      "endMs": 409480,
+      "text": "[Narrator]: That is the end of section 3."
+    },
+    {
+      "startMs": 409480,
+      "endMs": 412200,
+      "text": "You now have half a minute to check your answers."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 82,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

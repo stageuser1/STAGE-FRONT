@@ -1,0 +1,473 @@
+{
+  "id": "p3-107-major-problems-of-companies",
+  "title": "Major Problems of Companies",
+  "part": 3,
+  "difficulty": "medium",
+  "accessTier": "public",
+  "audio": {
+    "assetId": "audio-7fac857855ff",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 405.684,
+    "checksum": "sha256:eea1bc5ea8eaf81676a207df76dd7005112a6697f06f2eebdc6123e50bc572dc"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Question 21-25.",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "What was the most difficult problem when the company was founded?",
+          "options": [
+            {
+              "id": "A",
+              "text": "No clear objectives"
+            },
+            {
+              "id": "B",
+              "text": "No formal structures"
+            },
+            {
+              "id": "C",
+              "text": "No perfect premises"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "22",
+          "text": "What is the staff unsatisfied with?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The type of work"
+            },
+            {
+              "id": "B",
+              "text": "The work assignment"
+            },
+            {
+              "id": "C",
+              "text": "The feeling of appreciation"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "23",
+          "text": "What was the problem of the manager?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He had a lot of tasks to do."
+            },
+            {
+              "id": "B",
+              "text": "He employed too many people and let them go then."
+            },
+            {
+              "id": "C",
+              "text": "He always made decisions by himself."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "24",
+          "text": "What does the staff think of the new manager of the company?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are delighted to see that the meeting time is shorter."
+            },
+            {
+              "id": "B",
+              "text": "They feel annoyed toward him."
+            },
+            {
+              "id": "C",
+              "text": "They are amazed that he has done it well."
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "25",
+          "text": "What achievement has the organization made already?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Children were involved in painting the entrance area."
+            },
+            {
+              "id": "B",
+              "text": "There was no particular achievement."
+            },
+            {
+              "id": "C",
+              "text": "lt built a local primary school."
+            }
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "title": "Questions 26-30.",
+      "instruction": "Complete the summary below. Write NO MORE THAN THREE WORDS for each answer. Major Problems of a Company Since the company opened, there have been many problems with employment, but there is no 26. ________. He needs to find a venue for financial training. It is very hard to run an organization and the 27. ________ is of great importance to staying organized. To enhance the organization skills, there is a section on 28. ________ in the library where some valuable books can be found. In addition, the library contains some useful resources, such as a collection of documentaries on personal organization, the literature on 29. ________, and the articles on the 30. ________",
+      "questions": [
+        {
+          "id": "26",
+          "text": "Since the company opened, there have been many problems with employment, but there is no 26. ________. He needs to find a venue for financial training. It is very hard to run an organization and the 27. ________ is of great importance to staying organized. To enhance the organization skills, there is a section on 28. ________ in the library where some valuable books can be found. In addition, the library contains some useful resources, such as a collection of documentaries on personal organization, the literature on 29. ________, and the articles on the 30. ________",
+          "answer": "solution"
+        },
+        {
+          "id": "27",
+          "text": "Since the company opened, there have been many problems with employment, but there is no 26. ________. He needs to find a venue for financial training. It is very hard to run an organization and the 27. ________ is of great importance to staying organized. To enhance the organization skills, there is a section on 28. ________ in the library where some valuable books can be found. In addition, the library contains some useful resources, such as a collection of documentaries on personal organization, the literature on 29. ________, and the articles on the 30. ________",
+          "answer": "role of motivation/motivation"
+        },
+        {
+          "id": "28",
+          "text": "Since the company opened, there have been many problems with employment, but there is no 26. ________. He needs to find a venue for financial training. It is very hard to run an organization and the 27. ________ is of great importance to staying organized. To enhance the organization skills, there is a section on 28. ________ in the library where some valuable books can be found. In addition, the library contains some useful resources, such as a collection of documentaries on personal organization, the literature on 29. ________, and the articles on the 30. ________",
+          "answer": "culture"
+        },
+        {
+          "id": "29",
+          "text": "Since the company opened, there have been many problems with employment, but there is no 26. ________. He needs to find a venue for financial training. It is very hard to run an organization and the 27. ________ is of great importance to staying organized. To enhance the organization skills, there is a section on 28. ________ in the library where some valuable books can be found. In addition, the library contains some useful resources, such as a collection of documentaries on personal organization, the literature on 29. ________, and the articles on the 30. ________",
+          "answer": "management of change"
+        },
+        {
+          "id": "30",
+          "text": "Since the company opened, there have been many problems with employment, but there is no 26. ________. He needs to find a venue for financial training. It is very hard to run an organization and the 27. ________ is of great importance to staying organized. To enhance the organization skills, there is a section on 28. ________ in the library where some valuable books can be found. In addition, the library contains some useful resources, such as a collection of documentaries on personal organization, the literature on 29. ________, and the articles on the 30. ________",
+          "answer": "nature of volunteering"
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Complete the summary below.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Write NO MORE THAN THREE WORDS for each answer.",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Major Problems of a Company",
+          "list": false,
+          "level": 0
+        },
+        {
+          "text": "Since the company opened, there have been many problems with employment, but there is no 26. ________. He needs to find a venue for financial training. It is very hard to run an organization and the 27. ________ is of great importance to staying organized. To enhance the organization skills, there is a section on 28. ________ in the library where some valuable books can be found. In addition, the library contains some useful resources, such as a collection of documentaries on personal organization, the literature on 29. ________, and the articles on the 30. ________",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {
+        "26": "solution",
+        "27": "role of motivation/motivation",
+        "28": "culture",
+        "29": "management of change",
+        "30": "nature of volunteering"
+      },
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "B",
+        "22": "B",
+        "23": "C",
+        "24": "C",
+        "25": "A"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 9000,
+      "text": "[Narrator]: Section 3. You will hear a conversation between a student and her professor discussing an assignment."
+    },
+    {
+      "startMs": 9000,
+      "endMs": 15000,
+      "text": "First, you have some time to look at questions 21 to 25."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 53000,
+      "text": "Now listen carefully and answer questions 21 to 25."
+    },
+    {
+      "startMs": 53000,
+      "endMs": 58000,
+      "text": "[Alexandra]: Excuse me, Dr. Thompson, may I speak to you for a minute?"
+    },
+    {
+      "startMs": 58000,
+      "endMs": 60000,
+      "text": "[Dr. Thompson]: Of course, please come in."
+    },
+    {
+      "startMs": 60000,
+      "endMs": 65000,
+      "text": "[Alexandra]: I'm Alexandra Jones, I'm studying business here at the university."
+    },
+    {
+      "startMs": 65000,
+      "endMs": 71000,
+      "text": "And for my assignment I have to carry out a survey of people who own their own organizations."
+    },
+    {
+      "startMs": 71000,
+      "endMs": 77000,
+      "text": "I heard that you are the founder of your own company, and I was wondering if I could ask you some questions about it."
+    },
+    {
+      "startMs": 77000,
+      "endMs": 81000,
+      "text": "[Dr. Thompson]: Yes of course, please, fire away."
+    },
+    {
+      "startMs": 81000,
+      "endMs": 87000,
+      "text": "[Alexandra]: Okay great, we'll get started. Did you encounter any problems whilst you were starting your company?"
+    },
+    {
+      "startMs": 87000,
+      "endMs": 98000,
+      "text": "[Dr. Thompson]: Actually, it was not as hard as I anticipated. I started out with very clear objectives, so I knew exactly what I wanted my corporate identity to be."
+    },
+    {
+      "startMs": 98000,
+      "endMs": 108000,
+      "text": "It was very difficult to find the correct premises as the property market in London is so competitive, but eventually I found the perfect site."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 116000,
+      "text": "The hardest part was structuring the business, as I had no formal template, so I had to create it myself."
+    },
+    {
+      "startMs": 116000,
+      "endMs": 121000,
+      "text": "[Alexandra]: Yes, that is very impressive. Was it difficult dealing with staff?"
+    },
+    {
+      "startMs": 121000,
+      "endMs": 129000,
+      "text": "[Dr. Thompson]: It's always tricky trying to satisfy a group of people with varying interests. However, I didn't encounter many problems."
+    },
+    {
+      "startMs": 129000,
+      "endMs": 141000,
+      "text": "I found it very important to make the staff feel appreciated, so I hosted a staff day where we could all introduce ourselves and get to know each other as individuals."
+    },
+    {
+      "startMs": 141000,
+      "endMs": 152000,
+      "text": "I was also able to talk to them about the type of work that they would be doing and gave them the opportunity to share with me the issues they had with the allocation of the work."
+    },
+    {
+      "startMs": 152000,
+      "endMs": 157000,
+      "text": "[Alexandra]: Okay, did you hire a management team or did you take on the role of the manager?"
+    },
+    {
+      "startMs": 157000,
+      "endMs": 169000,
+      "text": "[Dr. Thompson]: Oh no, I already had enough tasks to take care of. I employed someone else to take on the role of the manager. However, he never consulted me before making decisions,"
+    },
+    {
+      "startMs": 169000,
+      "endMs": 173000,
+      "text": "so I was forced to let him go and hire someone else."
+    },
+    {
+      "startMs": 173000,
+      "endMs": 176000,
+      "text": "[Alexandra]: And what did the other staff think of the new manager?"
+    },
+    {
+      "startMs": 176000,
+      "endMs": 183000,
+      "text": "[Dr. Thompson]: They had a great deal of respect for him. It definitely helped that I consulted with them before hiring him."
+    },
+    {
+      "startMs": 183000,
+      "endMs": 190000,
+      "text": "They were surprised that he has been so successful in his role at the company, despite the longer meeting hours."
+    },
+    {
+      "startMs": 190000,
+      "endMs": 194000,
+      "text": "[Alexandra]: Since the company opened, has it had any great achievements?"
+    },
+    {
+      "startMs": 194000,
+      "endMs": 202000,
+      "text": "[Dr. Thompson]: There are many aspects of the company that I am pleased with. However, there is one achievement of which I am particularly proud."
+    },
+    {
+      "startMs": 202000,
+      "endMs": 212000,
+      "text": "I wanted a mural painted to brighten up our entrance area, so I decided it would be a great idea to invite the local primary school to create one for us."
+    },
+    {
+      "startMs": 212000,
+      "endMs": 217000,
+      "text": "The youngsters had a great time, and I know they were thrilled to be included."
+    },
+    {
+      "startMs": 217000,
+      "endMs": 221000,
+      "text": "[Alexandra]: Oh, that's lovely."
+    },
+    {
+      "startMs": 222000,
+      "endMs": 230000,
+      "text": "[Narrator]: Before you hear the rest of the conversation, you have some time to look at questions 26 to 30."
+    },
+    {
+      "startMs": 230000,
+      "endMs": 253000,
+      "text": "Now listen and answer questions 26 to 30."
+    },
+    {
+      "startMs": 254000,
+      "endMs": 260000,
+      "text": "[Alexandra]: Have you encountered any major problems since you opened the company?"
+    },
+    {
+      "startMs": 260000,
+      "endMs": 269000,
+      "text": "[Dr. Thompson]: Yes, we are always encountering issues with employment, because it is very hard to find people who are qualified for the roles that we are offering."
+    },
+    {
+      "startMs": 269000,
+      "endMs": 273000,
+      "text": "But unfortunately, there is no solution to this."
+    },
+    {
+      "startMs": 274000,
+      "endMs": 285000,
+      "text": "One of our administrators also recently left to go on maternity leave, which put us in a tricky situation. However, we have managed to find a temporary replacement for her."
+    },
+    {
+      "startMs": 285000,
+      "endMs": 294000,
+      "text": "It is also now approaching the period when we must carry out our financial training, so I need to find a venue with enough space to hold everyone."
+    },
+    {
+      "startMs": 294000,
+      "endMs": 298000,
+      "text": "It will be interesting trying to organise that event."
+    },
+    {
+      "startMs": 298000,
+      "endMs": 304000,
+      "text": "[Alexandra]: Oh, gosh, I can imagine. I find it hard enough to organise myself."
+    },
+    {
+      "startMs": 304000,
+      "endMs": 317000,
+      "text": "[Dr. Thompson]: Organisation is a difficult thing to master, but it is also essential for success. Whilst I was learning how to stay organised, I realised that the role of motivation is essential."
+    },
+    {
+      "startMs": 317000,
+      "endMs": 319000,
+      "text": "[Alexandra]: Okay, that's great."
+    },
+    {
+      "startMs": 319000,
+      "endMs": 328000,
+      "text": "[Dr. Thompson]: I also suggest that you visit the library, as there is a section on culture that will have some very valuable material on how to develop your organisation skills."
+    },
+    {
+      "startMs": 328000,
+      "endMs": 331000,
+      "text": "[Alexandra]: Okay, I'll head to the library when we're finished."
+    },
+    {
+      "startMs": 331000,
+      "endMs": 343000,
+      "text": "[Dr. Thompson]: I think you will find it very useful. They also have a collection of documentaries on the subject of personal organisation, and I suggest that you look up the literature on management of change."
+    },
+    {
+      "startMs": 343000,
+      "endMs": 353000,
+      "text": "I personally found these sources incredibly useful. Articles are also a valuable resource, and we have a whole collection of them in our university library."
+    },
+    {
+      "startMs": 353000,
+      "endMs": 360000,
+      "text": "I advise that you look at section 2, where you will find articles on the nature of volunteering."
+    },
+    {
+      "startMs": 360000,
+      "endMs": 363000,
+      "text": "[Alexandra]: That's great. Thank you so much for your help."
+    },
+    {
+      "startMs": 363000,
+      "endMs": 366000,
+      "text": "[Dr. Thompson]: No problem."
+    },
+    {
+      "startMs": 366000,
+      "endMs": 373000,
+      "text": "[Narrator]: That is the end of section 3. You now have half a minute to check your answers."
+    },
+    {
+      "startMs": 396000,
+      "endMs": 403000,
+      "text": "Now turn to section 4."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 48,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

@@ -1,0 +1,625 @@
+{
+  "id": "p3-65-fashion-project-on-jeans",
+  "title": "Fashion project on jeans",
+  "part": 3,
+  "difficulty": "high",
+  "accessTier": "vip",
+  "audio": {
+    "assetId": "audio-287b96cae8ba",
+    "filename": "audio.mp3",
+    "container": "mp3",
+    "durationSeconds": 390.78,
+    "checksum": "sha256:ce3ef2fc7fe1b88495e7be4a5a5bf141fb0f68f858b20df00f6fe35d3dba1bc0"
+  },
+  "groups": [
+    {
+      "type": "single",
+      "title": "Questions 21 – 26",
+      "instruction": "Choose the correct letter, A, B or C.",
+      "questions": [
+        {
+          "id": "21",
+          "text": "Before doing their project, the students thought the origin of the word 'jeans' was",
+          "options": [
+            {
+              "id": "A",
+              "text": "a material created in an Italian city"
+            },
+            {
+              "id": "B",
+              "text": "clothing worn in the American countryside"
+            },
+            {
+              "id": "C",
+              "text": "a fabric made in France"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "22",
+          "text": "Why did the students plan to use a cowboy film except in their display?",
+          "options": [
+            {
+              "id": "A",
+              "text": "to provide a historical context for jeans"
+            },
+            {
+              "id": "B",
+              "text": "to show how the design of jeans was adapted"
+            },
+            {
+              "id": "C",
+              "text": "to illustrate why jeans originally became popular"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "23",
+          "text": "Tom says that customers were originally attracted by the pockets of jeans because of",
+          "options": [
+            {
+              "id": "A",
+              "text": "the design of the stitching"
+            },
+            {
+              "id": "B",
+              "text": "the way they were attached"
+            },
+            {
+              "id": "C",
+              "text": "the use of a different colour"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "24",
+          "text": "What item from 1873 did the students find in a museum?",
+          "options": [
+            {
+              "id": "A",
+              "text": "an original pair of jeans"
+            },
+            {
+              "id": "B",
+              "text": "an early design for a pair of jeans"
+            },
+            {
+              "id": "C",
+              "text": "an old photograph of someone wearing jeans"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "25",
+          "text": "What do the students think is the main attraction of jeans for most people?",
+          "options": [
+            {
+              "id": "A",
+              "text": "they are long-lasting"
+            },
+            {
+              "id": "B",
+              "text": "they are reasonably priced"
+            },
+            {
+              "id": "C",
+              "text": "they are always in fashion"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "26",
+          "text": "What will the students use in the display to show the role of designer labels?",
+          "options": [
+            {
+              "id": "A",
+              "text": "recorded interviews with fellow students"
+            },
+            {
+              "id": "B",
+              "text": "quotations from celebrities"
+            },
+            {
+              "id": "C",
+              "text": "magazine advertisements for jeans"
+            }
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Questions 27-30",
+      "instruction": "Choose FOUR answers from the box and write the correct letter A-G, next to questions 27-30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Include more on practical uses of jeans"
+        },
+        {
+          "id": "B",
+          "text": "Add information about global aspects"
+        },
+        {
+          "id": "C",
+          "text": "Use visual illustrations"
+        },
+        {
+          "id": "D",
+          "text": "Include more personal examples"
+        },
+        {
+          "id": "E",
+          "text": "Make a prediction for the future"
+        },
+        {
+          "id": "F",
+          "text": "Check links with previous sections"
+        },
+        {
+          "id": "G",
+          "text": "Remove irrelevant information"
+        }
+      ],
+      "questions": [
+        {
+          "id": "27",
+          "text": "History",
+          "answer": "E"
+        },
+        {
+          "id": "28",
+          "text": "Variety",
+          "answer": "A"
+        },
+        {
+          "id": "29",
+          "text": "Manufacturing",
+          "answer": "C"
+        },
+        {
+          "id": "30",
+          "text": "Marketing",
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "answerRules": {
+    "text": {
+      "acceptedAnswers": {},
+      "caseInsensitive": true,
+      "trimWhitespace": true
+    },
+    "single": {
+      "acceptedAnswers": {
+        "21": "C",
+        "22": "A",
+        "23": "B",
+        "24": "A",
+        "25": "C",
+        "26": "C"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multiple": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "multipleMap": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "matching": {
+      "acceptedAnswers": {
+        "27": "E",
+        "28": "A",
+        "29": "C",
+        "30": "B"
+      },
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    },
+    "map": {
+      "acceptedAnswers": {},
+      "caseInsensitive": false,
+      "trimWhitespace": true
+    }
+  },
+  "transcript": [
+    {
+      "startMs": 0,
+      "endMs": 10000,
+      "text": "You will hear two fashion students called Tom and Sophie discussing their project on jeans with their lecturer."
+    },
+    {
+      "startMs": 10000,
+      "endMs": 16000,
+      "text": "First you have some time to look at questions 21 to 26."
+    },
+    {
+      "startMs": 30000,
+      "endMs": 33000,
+      "text": "You"
+    },
+    {
+      "startMs": 60000,
+      "endMs": 67000,
+      "text": "Now listen carefully and answer a questions 21 to 26."
+    },
+    {
+      "startMs": 68000,
+      "endMs": 70000,
+      "text": "Lecturer: Thanks for coming Tom and Sophie."
+    },
+    {
+      "startMs": 70000,
+      "endMs": 75000,
+      "text": "So you're doing a project on jeans with a multimedia display and a written report."
+    },
+    {
+      "startMs": 75000,
+      "endMs": 76000,
+      "text": "Tom: Yeah."
+    },
+    {
+      "startMs": 76000,
+      "endMs": 78000,
+      "text": "Lecturer: I've had a look at the plans for the display."
+    },
+    {
+      "startMs": 78000,
+      "endMs": 80000,
+      "text": "Let's start with that."
+    },
+    {
+      "startMs": 80000,
+      "endMs": 83000,
+      "text": "So you've got a map to show where the name jeans comes from."
+    },
+    {
+      "startMs": 83000,
+      "endMs": 84000,
+      "text": "Sophie: Yes."
+    },
+    {
+      "startMs": 85000,
+      "endMs": 94000,
+      "text": "In fact, before we started the project, we both assumed it was somewhere in France because that's where the jeans fabric, the denim was first made."
+    },
+    {
+      "startMs": 94000,
+      "endMs": 104000,
+      "text": "But it's actually from the Italian city of Genoa where they made a similar fabric in the 16th century that was used for trousers worn by sailors."
+    },
+    {
+      "startMs": 104000,
+      "endMs": 108000,
+      "text": "Tom: But nowadays most people associate jeans with rural America."
+    },
+    {
+      "startMs": 108000,
+      "endMs": 112000,
+      "text": "The sort of thing that farmers and workmen wore in the 19th century and afterwards."
+    },
+    {
+      "startMs": 112000,
+      "endMs": 113000,
+      "text": "Lecturer: OK."
+    },
+    {
+      "startMs": 113000,
+      "endMs": 121000,
+      "text": "Then you're going to show how jeans became increasingly popular in the 1840s and you're going to use a short clip from a cowboy movie for that."
+    },
+    {
+      "startMs": 121000,
+      "endMs": 123000,
+      "text": "So what made you decide to do that?"
+    },
+    {
+      "startMs": 123000,
+      "endMs": 129000,
+      "text": "Sophie: Well, the movie is very recent, but in fact the costume designs are accurate for the period."
+    },
+    {
+      "startMs": 129000,
+      "endMs": 135000,
+      "text": "And it'll give our audience a feel for the sort of setting where jeans were worn at that time in America."
+    },
+    {
+      "startMs": 135000,
+      "endMs": 138000,
+      "text": "Tom: And anyway, nearly everyone enjoys cowboy movies."
+    },
+    {
+      "startMs": 139000,
+      "endMs": 140000,
+      "text": "Lecturer: OK."
+    },
+    {
+      "startMs": 140000,
+      "endMs": 147000,
+      "text": "Now I'm glad you've included something about the pockets of the jeans because this was certainly something that attracted the original customers."
+    },
+    {
+      "startMs": 147000,
+      "endMs": 148000,
+      "text": "Tom: Yeah."
+    },
+    {
+      "startMs": 148000,
+      "endMs": 154000,
+      "text": "Nowadays, manufacturers use all sorts of fancy stitches and designs on jeans pockets."
+    },
+    {
+      "startMs": 154000,
+      "endMs": 165000,
+      "text": "But at first people were more interested in the utilitarian side of things and the way the manufacturer used copper rivets like little metal buttons to make sure the pockets didn't get torn off."
+    },
+    {
+      "startMs": 165000,
+      "endMs": 173000,
+      "text": "They used them on both the jeans made from blue denim and those made of something called cotton duck, which was actually brown."
+    },
+    {
+      "startMs": 173000,
+      "endMs": 174000,
+      "text": "Lecturer: Right."
+    },
+    {
+      "startMs": 174000,
+      "endMs": 184000,
+      "text": "Sophie: And we went to the museum because we wanted to see if they had something from 1873 because that was the year when Levi Strauss took out a patent on his design for jeans."
+    },
+    {
+      "startMs": 184000,
+      "endMs": 189000,
+      "text": "And we were really lucky because they had a pair from that exact same year."
+    },
+    {
+      "startMs": 189000,
+      "endMs": 194000,
+      "text": "They couldn't let us take them away, of course, but they did let us take a photo of them."
+    },
+    {
+      "startMs": 194000,
+      "endMs": 195000,
+      "text": "Lecturer: Brilliant."
+    },
+    {
+      "startMs": 195000,
+      "endMs": 200000,
+      "text": "Now in your display, you're planning to have a wall with 30 pairs of jeans hung on it."
+    },
+    {
+      "startMs": 200000,
+      "endMs": 203000,
+      "text": "The walls titled the attraction of jeans."
+    },
+    {
+      "startMs": 203000,
+      "endMs": 206000,
+      "text": "What exactly is their most significant attraction?"
+    },
+    {
+      "startMs": 206000,
+      "endMs": 211000,
+      "text": "Tom: Well, for the wall hangings, we'll use our own jeans and those of our friends and family."
+    },
+    {
+      "startMs": 211000,
+      "endMs": 214000,
+      "text": "We've got some going back to the 60s."
+    },
+    {
+      "startMs": 214000,
+      "endMs": 217000,
+      "text": "There's never been a time since then when they've been out of style."
+    },
+    {
+      "startMs": 217000,
+      "endMs": 220000,
+      "text": "Sophie: That's really the thing about jeans."
+    },
+    {
+      "startMs": 220000,
+      "endMs": 225000,
+      "text": "And although they're so durable, that's not what people think about these days."
+    },
+    {
+      "startMs": 225000,
+      "endMs": 230000,
+      "text": "Tom: And the main attraction is certainly not price because they can be extremely expensive."
+    },
+    {
+      "startMs": 230000,
+      "endMs": 234000,
+      "text": "Lecturer: And then you've got a section in your display about designer labels."
+    },
+    {
+      "startMs": 234000,
+      "endMs": 238000,
+      "text": "Tom: And for that, we thought of interviewing the other students about their opinions."
+    },
+    {
+      "startMs": 238000,
+      "endMs": 241000,
+      "text": "But that wouldn't be very visually interesting."
+    },
+    {
+      "startMs": 241000,
+      "endMs": 247000,
+      "text": "So then we considered cutting out ads for designer jeans from magazines and we found some really good ones."
+    },
+    {
+      "startMs": 247000,
+      "endMs": 253000,
+      "text": "Sophie: We thought of looking on the internet for quotes from celebrities about their favorite designer labels."
+    },
+    {
+      "startMs": 253000,
+      "endMs": 261000,
+      "text": "And we found some, but they didn't really say much so we abandoned that."
+    },
+    {
+      "startMs": 261000,
+      "endMs": 268000,
+      "text": "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30."
+    },
+    {
+      "startMs": 277000,
+      "endMs": 291000,
+      "text": "Now listen and answer a questions 27 to 30."
+    },
+    {
+      "startMs": 291000,
+      "endMs": 300000,
+      "text": "Lecturer: OK, now let's look at possible improvements to the draft of your written report."
+    },
+    {
+      "startMs": 300000,
+      "endMs": 303000,
+      "text": "Your section on history is very interesting."
+    },
+    {
+      "startMs": 303000,
+      "endMs": 307000,
+      "text": "And I think you've illustrated your points more than adequately with relevant examples."
+    },
+    {
+      "startMs": 307000,
+      "endMs": 313000,
+      "text": "But though your emphasis is on the past and rightly so, I'd like you to use your knowledge of the past"
+    },
+    {
+      "startMs": 313000,
+      "endMs": 316000,
+      "text": "to say where you think the whole thing might go."
+    },
+    {
+      "startMs": 316000,
+      "endMs": 319000,
+      "text": "Will jeans still be best sellers say in 10 years time?"
+    },
+    {
+      "startMs": 319000,
+      "endMs": 322000,
+      "text": "Tom: OK, we'll see what we can come up with."
+    },
+    {
+      "startMs": 322000,
+      "endMs": 325000,
+      "text": "Now the next section we called variety."
+    },
+    {
+      "startMs": 325000,
+      "endMs": 329000,
+      "text": "We've got a lot about different brands and styles of jeans."
+    },
+    {
+      "startMs": 329000,
+      "endMs": 335000,
+      "text": "Sophie: But I think we need to add something about using jeans for work because they're so comfortable and tough."
+    },
+    {
+      "startMs": 335000,
+      "endMs": 338000,
+      "text": "They're not just for style by a long shot."
+    },
+    {
+      "startMs": 338000,
+      "endMs": 342000,
+      "text": "For example, even my dad wears them around the house all the time."
+    },
+    {
+      "startMs": 342000,
+      "endMs": 345000,
+      "text": "Lecturer: I agree that would be a good aspect to add."
+    },
+    {
+      "startMs": 345000,
+      "endMs": 349000,
+      "text": "Now you've also got a section called manufacturing."
+    },
+    {
+      "startMs": 349000,
+      "endMs": 353000,
+      "text": "I thought that was quite good, but I must admit I thought some of the technical stuff"
+    },
+    {
+      "startMs": 353000,
+      "endMs": 356000,
+      "text": "about making the cloth could have been more clearly expressed."
+    },
+    {
+      "startMs": 356000,
+      "endMs": 362000,
+      "text": "Sophie: I think it would be much easier if we had some step-by-step drawings to go with the text."
+    },
+    {
+      "startMs": 362000,
+      "endMs": 364000,
+      "text": "Tom: I'm not bad at that, so I'll do that."
+    },
+    {
+      "startMs": 364000,
+      "endMs": 369000,
+      "text": "Lecturer: Your section on marketing seems good, especially the pictures you've included as examples."
+    },
+    {
+      "startMs": 369000,
+      "endMs": 374000,
+      "text": "But you've seemed to deal almost exclusively with advertising in America and Europe."
+    },
+    {
+      "startMs": 374000,
+      "endMs": 379000,
+      "text": "And in fact, marketing jeans is a huge phenomenon covering all corners of the earth."
+    },
+    {
+      "startMs": 379000,
+      "endMs": 381000,
+      "text": "And your report should reflect that, shouldn't it?"
+    },
+    {
+      "startMs": 381000,
+      "endMs": 382000,
+      "text": "Sophie: You're right."
+    },
+    {
+      "startMs": 382000,
+      "endMs": 387000,
+      "text": "Actually, I found a couple of useful internet articles that argue just that."
+    },
+    {
+      "startMs": 387000,
+      "endMs": 389000,
+      "text": "So we can use those."
+    }
+  ],
+  "validation": {
+    "schemaVersion": "1.0",
+    "supportedQuestionTypes": true,
+    "imageReferences": [],
+    "parsedSuccessfully": true,
+    "missingFields": [],
+    "questionCount": 10,
+    "answerCount": 10,
+    "transcriptCount": 74,
+    "audioMatched": true,
+    "imagesMatched": true,
+    "brandingRemoved": true,
+    "unsupportedQuestionTypes": [],
+    "schemaMismatches": []
+  }
+}

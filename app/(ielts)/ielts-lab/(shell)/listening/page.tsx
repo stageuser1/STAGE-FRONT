@@ -1,8 +1,9 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import path from "node:path";
 
 import { ListeningLibrary } from "@/components/ielts/listening/ListeningLibrary";
-import { FixtureSetSource } from "@/lib/ielts/listening-fixture";
+import { StaticListeningSource } from "@/lib/ielts/listening-static-source";
 import type { ListeningSetSource } from "@/lib/ielts/listening-source";
 import type { LibraryRow } from "@/lib/ielts/listening-library-utils";
 import type { ScoringRule } from "@/lib/ielts/listening-types";
@@ -23,7 +24,9 @@ export const metadata: Metadata = {
   description: "浏览、筛选并开始 STAGE IELTS Lab 的听力练习。",
 };
 
-const source: ListeningSetSource = new FixtureSetSource();
+const source: ListeningSetSource = new StaticListeningSource({
+  dataRoot: path.join(process.cwd(), "data", "ielts", "listening"),
+});
 
 /**
  * The list rows, and the answer keys the 我的 column needs.
