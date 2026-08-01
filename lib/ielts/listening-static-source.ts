@@ -136,6 +136,9 @@ type StaticMapLabellingQuestion = {
   imageUrl?: string;
 };
 
+type StaticFormCompletionGroup = FormCompletionGroup & {
+  layout?: "table" | "notes" | "sentence" | "form";
+};
 type StaticMcqSingleGroup = McqSingleGroup & {
   instruction?: string;
   questions: StaticMcqSingleQuestion[];
@@ -155,13 +158,20 @@ type StaticMatchingGroup = MatchingGroup & {
 };
 
 type GroupWithId = QuestionGroup & { groupId: string };
-type StaticListeningSet = Omit<ListeningSet, "titleZh"> & {
+interface StaticListeningSet {
+  id: string;
+  title: string;
   titleZh: string | null;
+  part: ListeningSet["part"];
+  frequency: ListeningSet["frequency"];
+  audioUrl: string;
+  durationSec: number;
+  questionGroups: GroupWithId[];
   accessTier?: RawListeningItem["accessTier"];
   difficulty?: RawListeningItem["difficulty"];
   audioMetadata?: { container?: string; checksum?: string };
   transcriptRef?: string | null;
-};
+}
 type StaticScoringRule = ScoringRule & {
   groupId?: string;
   answerKind?: "text" | "optionId";
@@ -375,8 +385,11 @@ function fillRows(group: RawGroup): FormRow[] {
 }
 
 function mapFillGroup(item: RawListeningItem, group: RawGroup, id: string): GroupWithId {
-  const mapped: FormCompletionGroup = {
+  const mapped: StaticFormCompletionGroup = {
     type: "form_completion",
+    layout: group.bodyLines?.some((line) => line.table !== undefined)
+      ? "table"
+      : undefined,
     instruction: group.instruction ?? "",
     formTitle: group.title ?? item.title,
     rows: fillRows(group),
@@ -527,6 +540,19 @@ function mapSet(
       difficulty: item.difficulty,
     },
   );
+}
+
+function toListeningSet(set: StaticListeningSet): ListeningSet {
+  return {
+    id: set.id,
+    title: set.title,
+    titleZh: set.titleZh ?? set.title,
+    part: set.part,
+    frequency: set.frequency,
+    audioUrl: set.audioUrl,
+    durationSec: set.durationSec,
+    questionGroups: set.questionGroups,
+  } satisfies ListeningSet;
 }
 
 function normalizeSteps(rule: RawAnswerRule): ScoringRule["normalize"] {
@@ -699,16 +725,18 @@ export class StaticListeningSource implements ListeningSetSource {
     const records = await this.records();
     const audioManifest = await this.audioManifest();
     return records.map(({ item }) => {
-      const set = mapSet(
-        item,
-        this.audioBaseUrl,
-        this.imageBaseUrl,
-        audioManifest.get(item.id),
+      const set = toListeningSet(
+        mapSet(
+          item,
+          this.audioBaseUrl,
+          this.imageBaseUrl,
+          audioManifest.get(item.id),
+        ),
       );
       return {
         id: set.id,
         title: set.title,
-        titleZh: set.titleZh ?? "",
+        titleZh: set.titleZh ?? set.title,
         part: set.part,
         frequency: set.frequency,
         questionCount: questionNumbers(set).length,
@@ -719,12 +747,14 @@ export class StaticListeningSource implements ListeningSetSource {
   async getSet(id: string): Promise<ListeningSet> {
     const { item } = await this.recordFor(id);
     const audioManifest = await this.audioManifest();
-    return mapSet(
-      item,
-      this.audioBaseUrl,
-      this.imageBaseUrl,
-      audioManifest.get(item.id),
-    ) as unknown as ListeningSet;
+    return toListeningSet(
+      mapSet(
+        item,
+        this.audioBaseUrl,
+        this.imageBaseUrl,
+        audioManifest.get(item.id),
+      ),
+    );
   }
 
   async getScoringRules(id: string): Promise<ScoringRule[]> {
