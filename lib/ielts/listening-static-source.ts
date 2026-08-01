@@ -20,11 +20,8 @@ import type {
   ListeningSetSummary,
   MapLabellingGroup,
   MatchingGroup,
-  MatchingOption,
   McqMultiGroup,
-  McqMultiQuestion,
   McqSingleGroup,
-  McqSingleQuestion,
   QuestionGroup,
   ScoringRule,
 } from "./listening-types.ts";
@@ -118,10 +115,57 @@ interface DatasetRecord {
   item: RawListeningItem;
 }
 
+type StaticMatchingOption = { id: string; text: string };
+type StaticMatchingQuestion = {
+  questionNo: number;
+  prompt: string;
+  options: StaticMatchingOption[];
+};
+type StaticMcqSingleQuestion = {
+  questionNo: number;
+  prompt: string;
+  options: ChoiceOption[];
+};
+type StaticMcqMultiQuestion = StaticMcqSingleQuestion & {
+  selectCount: number;
+};
+type StaticMapLabellingQuestion = {
+  questionNo: number;
+  prompt: string;
+  labels: string[];
+  imageUrl?: string;
+};
+
+type StaticMcqSingleGroup = McqSingleGroup & {
+  instruction?: string;
+  questions: StaticMcqSingleQuestion[];
+};
+type StaticMcqMultiGroup = McqMultiGroup & {
+  instruction?: string;
+  questions: StaticMcqMultiQuestion[];
+};
+type StaticMapLabellingGroup = MapLabellingGroup & {
+  instruction?: string;
+  questions: StaticMapLabellingQuestion[];
+};
+type StaticMatchingGroup = MatchingGroup & {
+  instruction?: string;
+  questions: StaticMatchingQuestion[];
+  optionItems: StaticMatchingOption[];
+};
+
 type GroupWithId = QuestionGroup & { groupId: string };
-type StaticListeningSet = ListeningSet & {
+type StaticListeningSet = Omit<ListeningSet, "titleZh"> & {
+  titleZh: string | null;
   accessTier?: RawListeningItem["accessTier"];
   difficulty?: RawListeningItem["difficulty"];
+  audioMetadata?: { container?: string; checksum?: string };
+  transcriptRef?: string | null;
+};
+type StaticScoringRule = ScoringRule & {
+  groupId?: string;
+  answerKind?: "text" | "optionId";
+  selectCount?: number;
 };
 
 export interface StaticListeningSourceOptions {
@@ -205,7 +249,7 @@ function imageUrl(
   return `${baseUrl}/${urlSegment(filename)}`;
 }
 
-function optionItems(raw: RawOption[] | undefined): MatchingOption[] {
+function optionItems(raw: RawOption[] | undefined): StaticMatchingOption[] {
   return (raw ?? []).map((option) => ({
     id: String(option.id),
     text: option.text,
@@ -219,7 +263,7 @@ function choiceOptions(raw: RawOption[] | undefined): ChoiceOption[] {
   }));
 }
 
-function matchingOptions(raw: RawGroup["options"]): MatchingOption[] {
+function matchingOptions(raw: RawGroup["options"]): StaticMatchingOption[] {
   if (!Array.isArray(raw)) return [];
   return raw.map((option) => {
     if (typeof option === "string") return { id: option, text: option };
@@ -344,13 +388,13 @@ function mapSingleGroup(group: RawGroup, id: string): GroupWithId {
   const sharedOptions = choiceOptions(
     group.questions[0]?.options,
   );
-  const questions: McqSingleQuestion[] = group.questions.map((question) => ({
+  const questions: StaticMcqSingleQuestion[] = group.questions.map((question) => ({
     questionNo: parseQuestionNo(question.id),
     prompt: question.text,
     options: question.options ? choiceOptions(question.options) : sharedOptions,
   }));
   const first = questions[0];
-  const mapped: McqSingleGroup = {
+  const mapped: StaticMcqSingleGroup = {
     type: "mcq_single",
     instruction: group.instruction,
     questions,
@@ -363,14 +407,14 @@ function mapSingleGroup(group: RawGroup, id: string): GroupWithId {
 
 function mapMultipleGroup(group: RawGroup, id: string): GroupWithId {
   const sharedOptions = choiceOptions(group.options as RawOption[] | undefined);
-  const questions: McqMultiQuestion[] = group.questions.map((question) => ({
+  const questions: StaticMcqMultiQuestion[] = group.questions.map((question) => ({
     questionNo: parseQuestionNo(question.id),
     prompt: question.text || group.questionText || "",
     options: sharedOptions,
     selectCount: 1,
   }));
   const first = questions[0];
-  const mapped: McqMultiGroup = {
+  const mapped: StaticMcqMultiGroup = {
     type: "mcq_multi",
     instruction: group.instruction,
     questions,
@@ -396,7 +440,7 @@ function mapMapGroup(
     imageUrl: resolvedImageUrl,
   }));
   const first = questions[0];
-  const mapped: MapLabellingGroup = {
+  const mapped: StaticMapLabellingGroup = {
     type: "map_labelling",
     instruction: group.instruction,
     questions,
@@ -410,13 +454,13 @@ function mapMapGroup(
 
 function mapMatchingGroup(group: RawGroup, id: string): GroupWithId {
   const items = matchingOptions(group.options);
-  const questions = group.questions.map((question) => ({
+  const questions: StaticMatchingQuestion[] = group.questions.map((question) => ({
     questionNo: parseQuestionNo(question.id),
     prompt: question.text,
     options: items,
   }));
   const first = questions[0];
-  const mapped: MatchingGroup = {
+  const mapped: StaticMatchingGroup = {
     type: "matching",
     instruction: group.instruction,
     questions,
@@ -512,8 +556,8 @@ function fallbackMultipleAnswer(
   return Array.isArray(accepted) ? accepted[questionIndex] : undefined;
 }
 
-function mapScoringRules(item: RawListeningItem): ScoringRule[] {
-  const rules: ScoringRule[] = [];
+function mapScoringRules(item: RawListeningItem): StaticScoringRule[] {
+  const rules: StaticScoringRule[] = [];
 
   for (const [index, group] of item.groups.entries()) {
     const id = groupId(item, group, index);
@@ -522,7 +566,7 @@ function mapScoringRules(item: RawListeningItem): ScoringRule[] {
     for (const [questionIndex, question] of questions.entries()) {
       const questionNo = parseQuestionNo(question.id);
       let mode: ScoringRule["mode"] = "text";
-      let answerKind: ScoringRule["answerKind"] = "text";
+      let answerKind: "text" | "optionId" = "text";
       let sourceRule = item.answerRules.text;
       let fallback = question.answer;
       let selectCount: number | undefined;
@@ -680,7 +724,7 @@ export class StaticListeningSource implements ListeningSetSource {
       this.audioBaseUrl,
       this.imageBaseUrl,
       audioManifest.get(item.id),
-    );
+    ) as unknown as ListeningSet;
   }
 
   async getScoringRules(id: string): Promise<ScoringRule[]> {
