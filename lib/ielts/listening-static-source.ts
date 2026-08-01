@@ -14,7 +14,6 @@ import { questionNumbers } from "./listening-runner.ts";
 import type {
   ChoiceOption,
   FormCompletionGroup,
-  FormLayout,
   FormRow,
   FormSegment,
   ListeningSet,
@@ -236,14 +235,6 @@ function withGroupId<T extends QuestionGroup>(group: T, id: string): T & { group
   return Object.assign(group, { groupId: id });
 }
 
-function inferFormLayout(instruction: string): FormLayout {
-  const text = instruction.toLowerCase();
-  if (text.includes("table")) return "table";
-  if (text.includes("form")) return "form";
-  if (text.includes("sentence")) return "sentence";
-  return "notes";
-}
-
 const FORM_BLANK = /(\d+)\s*[.)]?\s*(?:[£$€]\s*)?_{2,}/g;
 
 function segmentsFromText(
@@ -342,7 +333,6 @@ function fillRows(group: RawGroup): FormRow[] {
 function mapFillGroup(item: RawListeningItem, group: RawGroup, id: string): GroupWithId {
   const mapped: FormCompletionGroup = {
     type: "form_completion",
-    layout: inferFormLayout(group.instruction ?? ""),
     instruction: group.instruction ?? "",
     formTitle: group.title ?? item.title,
     rows: fillRows(group),
