@@ -13,8 +13,9 @@
  * bad record costs a candidate their draft and never the page.
  *
  * A submitted attempt is likewise "no restore" — but it is not corrupt, and
- * this module deliberately never says to delete it. Reopening a finished paper
- * is B5's concern and the record is the only copy of it.
+ * this module deliberately never says to delete it. B5's library reads exactly
+ * those records through `parseStoredAttempt` to say which sets have been
+ * practised, and the record is the only copy of that fact.
  */
 import { deserializeAttempt } from "./listening-runner.ts";
 import type { Answer, Attempt } from "./listening-types.ts";
@@ -78,19 +79,24 @@ export function hasRecordedWork(attempt: Attempt): boolean {
 }
 
 /**
- * The stored attempt to offer, or `null` when there is nothing to offer.
+ * A stored record read back as an attempt, or `null` when it is not one.
  *
- * `null` covers five different situations on purpose — no record, unparseable
- * JSON, a record of the wrong shape, a finished paper, and a paper nobody has
- * written on — because the caller does the same thing in all five: start fresh
- * without asking. Distinguishing them would only let the page render five
- * flavours of a dialog nobody wants.
+ * This is the shape check alone — is this a complete attempt of a status this
+ * build understands — with no judgement about what to *do* with it. Both
+ * statuses come back, because the two callers want different ones: the practice
+ * page asks whether there is a draft to offer, and the library asks whether a
+ * paper was ever handed in.
+ *
+ * `null` covers no record, unparseable JSON, a record of the wrong shape, and a
+ * status this build does not know, because in every one of those the honest
+ * answer is *nothing is stored here*. A record written by some future build is
+ * not an error to report; it is a record this build cannot read.
  *
  * Fields are copied out one by one rather than the parsed object being handed
- * back whole, so a record carrying extra keys from some future version cannot
+ * back whole, so a record carrying extra keys from another version cannot
  * smuggle them into the running attempt.
  */
-export function shouldOfferRestore(raw: string | null): Attempt | null {
+export function parseStoredAttempt(raw: string | null): Attempt | null {
   if (raw === null || raw === "") return null;
 
   let parsed: unknown;
@@ -118,16 +124,36 @@ export function shouldOfferRestore(raw: string | null): Attempt | null {
   ) {
     return null;
   }
-  // Submitted papers, and any status this build does not know, are not offered.
-  if (candidate.status !== "in_progress") return null;
+  if (candidate.status !== "in_progress" && candidate.status !== "submitted") {
+    return null;
+  }
   if (!isAnswerMap(candidate.answers)) return null;
 
-  const attempt: Attempt = {
+  return {
     setId: candidate.setId,
     answers: candidate.answers,
     startedAt: candidate.startedAt,
     elapsedSec: candidate.elapsedSec,
-    status: "in_progress",
+    status: candidate.status,
   };
+}
+
+/**
+ * The stored attempt to offer, or `null` when there is nothing to offer.
+ *
+ * `null` covers five different situations on purpose — no record, unparseable
+ * JSON, a record of the wrong shape, a finished paper, and a paper nobody has
+ * written on — because the caller does the same thing in all five: start fresh
+ * without asking. Distinguishing them would only let the page render five
+ * flavours of a dialog nobody wants.
+ *
+ * The two judgements this adds on top of the shape check are the whole content
+ * of the function: a submitted paper is not a draft, and a draft nobody has
+ * written on is not worth a dialog.
+ */
+export function shouldOfferRestore(raw: string | null): Attempt | null {
+  const attempt = parseStoredAttempt(raw);
+  if (attempt === null) return null;
+  if (attempt.status !== "in_progress") return null;
   return hasRecordedWork(attempt) ? attempt : null;
 }

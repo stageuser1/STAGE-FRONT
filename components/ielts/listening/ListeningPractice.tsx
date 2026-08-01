@@ -4,8 +4,9 @@
  * The Listening practice surface: everything B1–B3 built, assembled.
  *
  * This is the only module in the Listening module that owns anything global —
- * the clock interval, the localStorage draft, which question is current, and
- * whether a dialog is open. That is by design and it is why the pieces below it
+ * the clock interval, the localStorage draft, which question is current,
+ * whether a dialog is open, and whether the finished paper is being reviewed.
+ * That is by design and it is why the pieces below it
  * are as dumb as they are: the runner has no timer, the attempt context has no
  * storage, the question components have no idea what "current" means, and the
  * nav bar selects without scrolling. Each of those was pushed up to here so
@@ -41,10 +42,12 @@ import { shouldOfferRestore } from "@/lib/ielts/listening-persist";
 import { questionTarget, stepQuestionNo } from "@/lib/ielts/listening-practice-utils";
 import { questionNumbers } from "@/lib/ielts/listening-runner";
 import { scoreAttempt } from "@/lib/ielts/listening-scoring";
+import { answeredState } from "@/lib/ielts/listening-ui-utils";
 import type {
   Attempt,
   ListeningSet,
   QuestionGroup,
+  QuestionScore,
   ScoringRule,
 } from "@/lib/ielts/listening-types";
 
@@ -58,6 +61,7 @@ import { McqMultiGroup } from "./McqMultiGroup";
 import { McqSingleGroup } from "./McqSingleGroup";
 import { QuestionNav } from "./QuestionNav";
 import { RestorePrompt } from "./RestorePrompt";
+import { ReviewVerdicts } from "./ReviewVerdicts";
 import { SubmitBar } from "./SubmitBar";
 import { SubmitConfirm } from "./SubmitConfirm";
 import {
@@ -73,6 +77,15 @@ import {
  * line length nobody reads comfortably.
  */
 const COLUMN = "mx-auto w-full max-w-[880px] px-[clamp(20px,3.4vw,44px)]";
+
+/**
+ * Where 返回题库 goes.
+ *
+ * The Listening bank, not the lab overview. It pointed at `/ielts-lab` while
+ * there was no Listening list to point at — the B4 note said so — and B5 built
+ * it, so the button now returns to the place the candidate came from.
+ */
+const LIBRARY_HREF = "/ielts-lab/listening";
 
 /**
  * The restore decision, and the remount it drives.
@@ -161,6 +174,17 @@ function ListeningRun({
   const numbers = useMemo(() => questionNumbers(set), [set]);
   const [currentNo, setCurrentNo] = useState<number | null>(null);
   const [confirming, setConfirming] = useState(false);
+  /**
+   * 回顾模式.
+   *
+   * UI-only, and not persisted. It is a way of *looking* at a finished paper,
+   * not a property of the attempt — writing it into the record would put a
+   * viewing preference into the only copy of what a candidate answered, and
+   * `parseStoredAttempt` would have to start ignoring it again on the way back
+   * out. Reopening the set gets the plain report, which is the right default
+   * for someone who has just arrived.
+   */
+  const [reviewing, setReviewing] = useState(false);
   const groupRefs = useRef<(HTMLElement | null)[]>([]);
 
   const frozen = attempt.status === "submitted";
@@ -261,6 +285,20 @@ function ListeningRun({
     [frozen, attempt, rules],
   );
 
+  /**
+   * The same report, indexed for the per-card strips.
+   *
+   * A map rather than a second scoring pass per group: review mode draws one
+   * strip per card and each needs its own questions' verdicts, and marking the
+   * paper once per card would be four passes over the answer key to produce
+   * four slices of one answer.
+   */
+  const scores = useMemo(() => {
+    const byNo = new Map<number, QuestionScore>();
+    for (const question of report?.byQuestion ?? []) byNo.set(question.no, question);
+    return byNo;
+  }, [report]);
+
   const confirmSubmit = useCallback(() => {
     setConfirming(false);
     submit();
@@ -291,7 +329,7 @@ function ListeningRun({
             </div>
             <div className="flex shrink-0 items-center gap-2">
               <Tag>Part {set.part}</Tag>
-              <Link href="/ielts-lab" className={BUTTON_SECONDARY_SM}>
+              <Link href={LIBRARY_HREF} className={BUTTON_SECONDARY_SM}>
                 返回题库
               </Link>
             </div>
@@ -299,6 +337,17 @@ function ListeningRun({
         </header>
 
         <main className={`${COLUMN} flex-1 py-5`}>
+          {/*
+            No `anchors`. The player's marker seam takes question timestamps
+            and the set carries none — the fixture's audio is a generated
+            silence placeholder, so every timestamp that could be put here
+            would be one this batch made up, pointing at a moment in a file
+            where nothing is said. The prop is absent and the bar draws no
+            markers, which is the truth about this set.
+
+            `policy="free"` is unchanged in review mode on purpose: replaying
+            the recording is most of what reviewing a listening paper *is*.
+          */}
           <ListeningAudioPlayer
             src={set.audioUrl}
             durationSec={set.durationSec}
@@ -309,7 +358,7 @@ function ListeningRun({
             <div className="mt-5 flex flex-col gap-3">
               <ListeningResult report={report} elapsedSec={attempt.elapsedSec} />
               <div className="flex flex-wrap justify-end gap-2">
-                <Link href="/ielts-lab" className={BUTTON_SECONDARY_SM}>
+                <Link href={LIBRARY_HREF} className={BUTTON_SECONDARY_SM}>
                   返回题库
                 </Link>
                 <button
@@ -335,6 +384,15 @@ function ListeningRun({
                 className="scroll-mt-36"
               >
                 <QuestionGroupCard group={group} />
+                {/*
+                  Under the card rather than inside it: `QuestionCard` is the
+                  one shell all five group types share and is not this batch's
+                  to change, and a strip that butts up against the card's
+                  bottom edge reads as part of it either way.
+                */}
+                {reviewing ? (
+                  <ReviewVerdicts group={group} scores={scores} />
+                ) : null}
               </div>
             ))}
           </div>
@@ -353,24 +411,42 @@ function ListeningRun({
                 <SubmitBar
                   onPrevious={() => step(-1)}
                   onNext={() => step(1)}
-                  // Only the current question, per B4 scope — there is no
-                  // whole-paper clear. With nothing selected there is nothing
-                  // to clear and the button is inert; `SubmitBar` takes no
-                  // `disabled` prop and its props are not this batch's to
-                  // change.
+                  // Only the current question — there is no whole-paper clear.
                   onClear={() => {
                     if (currentNo !== null) clearAnswer(currentNo);
                   }}
+                  // Nothing selected, or a selected question that is already
+                  // blank, means there is nothing to clear. B4 left the button
+                  // live-but-inert because `SubmitBar`'s props were not its to
+                  // change; that prop now exists.
+                  clearDisabled={
+                    currentNo === null ||
+                    answeredState(attempt, currentNo) === "unanswered"
+                  }
                   onSubmit={() => setConfirming(true)}
                 />
               )}
 
-              {/* Ruling C6's treatment for an action with nothing behind it
-                  yet: inert and muted rather than a live control that does
-                  nothing. 回顾模式 arrives with B5. */}
-              <span aria-disabled className={BUTTON_DISABLED_SM}>
-                回顾模式
-              </span>
+              {/*
+                Live once the paper is in, and ruling C6's inert treatment
+                before that — there is nothing to review until there is a
+                result, and a live toggle over an unmarked paper would be a
+                control that does nothing.
+              */}
+              {frozen ? (
+                <button
+                  type="button"
+                  aria-pressed={reviewing}
+                  onClick={() => setReviewing((on) => !on)}
+                  className={reviewing ? BUTTON_PRIMARY_SM : BUTTON_SECONDARY_SM}
+                >
+                  回顾模式
+                </button>
+              ) : (
+                <span aria-disabled className={BUTTON_DISABLED_SM}>
+                  回顾模式
+                </span>
+              )}
             </div>
           </div>
         </div>

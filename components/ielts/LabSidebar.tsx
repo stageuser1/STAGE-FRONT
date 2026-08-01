@@ -38,10 +38,17 @@ const NAV_ITEMS: readonly NavItem[] = [
     href: "/ielts-lab/browse",
     activePrefixes: ["/ielts-lab/suite", "/ielts-lab/question-types"],
   },
-  // Listening has no module behind it yet. The spec's shell list is verbatim
-  // and includes it, but ruling C6 forbids a nav entry with nothing behind it
-  // — so the entry renders inert (no link, muted) until the module ships.
-  { id: "listening", label: "Listening", icon: "headphones", href: null },
+  // The entry rendered inert until the module shipped, per ruling C6. It has
+  // shipped: the bank is at /ielts-lab/listening and the runner sits outside
+  // this shell at /ielts-lab/practice/listening/[setId], which is why the
+  // practice route is an active prefix rather than a second entry.
+  {
+    id: "listening",
+    label: "Listening",
+    icon: "headphones",
+    href: "/ielts-lab/listening",
+    activePrefixes: ["/ielts-lab/practice/listening"],
+  },
   {
     id: "writing",
     label: "Writing",

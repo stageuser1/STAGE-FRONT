@@ -30,6 +30,32 @@ export const GROUP_TYPE_LABELS: Record<QuestionGroup["type"], string> = {
 };
 
 /* --------------------------------------------------------------------------
+ * Reading a group
+ * ----------------------------------------------------------------------- */
+
+/**
+ * The question numbers one group holds, ascending.
+ *
+ * `questionNumbers` in the runner answers the same question for a whole set,
+ * and this is deliberately not built by filtering that: review mode draws a
+ * verdict strip *per card*, and it needs to know which numbers belong to the
+ * card it is drawing without being told the card's position in the set.
+ *
+ * Form completion contributes one per blank segment; every other group type is
+ * exactly one question.
+ */
+export function groupQuestionNumbers(group: QuestionGroup): number[] {
+  if (group.type !== "form_completion") return [group.questionNo];
+  const numbers: number[] = [];
+  for (const row of group.rows) {
+    for (const segment of row.segments) {
+      if (segment.kind === "blank") numbers.push(segment.questionNo);
+    }
+  }
+  return numbers.sort((a, b) => a - b);
+}
+
+/* --------------------------------------------------------------------------
  * Reading an answer
  * ----------------------------------------------------------------------- */
 

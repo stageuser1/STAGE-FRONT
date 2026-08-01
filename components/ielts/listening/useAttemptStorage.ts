@@ -14,6 +14,23 @@
  * Single, because the write is on a 500ms debounce behind every keystroke: a
  * warning per failed write would put thousands of identical lines in the
  * console of a session that is otherwise fine.
+ *
+ * Cross-tab policy: `storage` events are ignored, and there is deliberately no
+ * listener for them. Two tabs open on the same set are two attempts, and the
+ * last write wins the one key they share.
+ *
+ * The alternative was considered and rejected. A tab that adopted another
+ * tab's writes would have to replace the attempt it is holding — which means
+ * replacing the answers a candidate is looking at, mid-keystroke, with answers
+ * they did not type in this window. There is no correct merge either: the two
+ * tabs are not two views of one paper, they are two papers, and nothing in the
+ * record says which is the one the candidate means to hand in. Losing a
+ * duplicate draft is a smaller harm than overwriting a live one, and the tab a
+ * candidate is actually working in is the tab that writes last.
+ *
+ * A real fix is a per-attempt id rather than a per-set key, so two tabs never
+ * share a record. That is a change to `storageKey` and to what the restore
+ * dialog offers, and it belongs with the phase that gives attempts a server.
  */
 import { useEffect, useRef } from "react";
 
