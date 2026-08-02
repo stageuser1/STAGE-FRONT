@@ -1,9 +1,18 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { loadDrafts, type DraftEntry } from "@/lib/ielts/draft";
+import {
+  countPractised,
+  libraryStatus,
+  listeningPracticeHref,
+  pickRandomListeningSet,
+  type LibraryStatus,
+} from "@/lib/ielts/listening-library-utils";
+import { parseStoredAttempt } from "@/lib/ielts/listening-persist";
+import { readStoredAttempt } from "@/components/ielts/listening/useAttemptStorage";
 import { buildProgressIndex, pickRandomExam } from "@/lib/ielts/progress";
 import { isDueForRetest } from "@/lib/ielts/retest";
 import {
@@ -54,10 +63,10 @@ const ONBOARDING_KEY = "stage.ielts.onboarding";
  *
  * Labels and descriptions are the approved export's own wording, verbatim.
  *
- * Two of them describe more than this build ships: step 1 names Listening,
- * which has no module, and step 3's 安排重测 names a scheduling step nothing in
- * STAGE performs. Both are flagged in the T-stage report rather than silently
- * reworded — the copy is 逐字 and not the implementer's to edit.
+ * One of them still describes more than this build ships: step 3's 安排重测
+ * names a scheduling step nothing in STAGE performs. It is flagged in the
+ * T-stage report rather than silently reworded — the copy is 逐字 and not the
+ * implementer's to edit. (Step 1's four skills are now all reachable.)
  */
 const ONBOARDING_STEPS = [
   { label: "选科目", detail: "从 Reading、Listening、Writing、Speaking 中选择" },
@@ -187,6 +196,16 @@ interface ModuleCardData {
 export function LabOverview({
   exams,
   /**
+   * Ids of every set in the Listening bank, from `listening-catalog`.
+   *
+   * Ids rather than a count for the same reason Writing passes ids: the card's
+   * "done" is how many of *these* sets carry a submitted attempt in this
+   * browser, and the 随机练习 draw has to know which ones are untouched. An
+   * empty array is the module being unavailable, and is the only thing that
+   * makes this card inert — nothing here hard-codes a total.
+   */
+  listeningSetIds = [],
+  /**
    * Practicable Task 2 question ids. Ids rather than a count, because the
    * Writing card's "done" is how many of *these* carry a submitted attempt, and
    * counting stored records instead could report more done than exist.
@@ -196,6 +215,7 @@ export function LabOverview({
   speakingQuestionCount = 0,
 }: {
   exams: ExamSummary[];
+  listeningSetIds?: string[];
   writingQuestionIds?: string[];
   speakingQuestionCount?: number;
 }) {
@@ -208,6 +228,17 @@ export function LabOverview({
   const [speakingStates, setSpeakingStates] = useState<SpeakingQuestionState[]>(
     [],
   );
+  /**
+   * Per-set Listening state, read from this browser.
+   *
+   * A map rather than a count because the 随机练习 draw needs the individual
+   * states, not just how many are done. Empty until the effect below runs —
+   * which reads as "nothing practised yet", the same thing an untouched browser
+   * would say, so there is no flash of a wrong figure.
+   */
+  const [listeningStatuses, setListeningStatuses] = useState<
+    Map<string, LibraryStatus>
+  >(() => new Map());
 
   useEffect(() => {
     setRecords(loadRecords());
@@ -215,8 +246,19 @@ export function LabOverview({
     setDrafts([...loadDrafts().values()]);
     setWritingDone(writingQuestionIds.filter(hasWritingT2Attempt).length);
     setSpeakingStates([...loadSpeakingStates().values()]);
-    // `writingQuestionIds` is a build-time constant from the static bank, so it
-    // is read once on mount like every other local-storage lookup here.
+    // One key per set, the same records the bank list reads — so the card and
+    // the list cannot disagree about which sets are done.
+    setListeningStatuses(
+      new Map(
+        listeningSetIds.map((setId) => [
+          setId,
+          libraryStatus(parseStoredAttempt(readStoredAttempt(setId))),
+        ]),
+      ),
+    );
+    // `writingQuestionIds` and `listeningSetIds` are build-time constants from
+    // the static banks, so they are read once on mount like every other
+    // local-storage lookup here.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -260,6 +302,16 @@ export function LabOverview({
     if (pick) router.push(practiceHref(pick.id));
   }
 
+  const listeningStatusOf = useCallback(
+    (setId: string): LibraryStatus => listeningStatuses.get(setId) ?? "fresh",
+    [listeningStatuses],
+  );
+
+  function startRandomListening() {
+    const pick = pickRandomListeningSet(listeningSetIds, listeningStatusOf);
+    if (pick) router.push(listeningPracticeHref(pick));
+  }
+
   const recent = (records ?? []).slice(0, 5);
   const resumableExam = resumable ? examsById.get(resumable.examId) : undefined;
 
@@ -276,14 +328,23 @@ export function LabOverview({
   );
 
   /**
+   * Whether the Listening module has a bank behind it.
+   *
+   * Derived from the ids the server read out of the source — the same call the
+   * bank route makes — so the card cannot claim a module the list cannot show,
+   * or sit inert while the list holds 203 sets. That disagreement is exactly
+   * what this replaced: the card's figures used to be literals.
+   */
+  const listeningAvailable = listeningSetIds.length > 0;
+
+  /**
    * The four skill cards.
    *
    * Structure and wording come from the approved export; every FIGURE comes from
    * this build. Where the two disagree the real number wins — the export's mock
-   * says Listening has 186 段 and Speaking 96 话题, but this build has no
-   * listening corpus at all, and the speaking total is whatever the corpus
-   * module currently holds (no number is written down here, so a corpus update
-   * cannot make this comment stale).
+   * says Listening has 186 段 and Speaking 96 话题, and both cards instead read
+   * whatever their corpus module currently holds (no number is written down
+   * here, so a corpus update cannot make this comment stale).
    */
   const moduleCards: readonly ModuleCardData[] = [
     {
@@ -305,21 +366,42 @@ export function LabOverview({
       ],
     },
     {
-      // No corpus, no route. The card renders so the row is the export's four,
-      // but every figure is zero and both actions are inert — the same treatment
-      // the sidebar gives this entry.
+      // Every figure here is derived from the bank the route handed down. When
+      // that bank is empty the card falls back to the inert form it used to be
+      // hard-coded as — which is the *only* thing that makes it inert now.
+      //
+      // 套题模式可选 was one of the original facts and is gone: the bank list
+      // renders its 套题匹配 column inert because no Listening suite exists, and
+      // a live card advertising one would promise what the click cannot deliver
+      // (ruling C6). Replaced with the filtering the list actually performs.
       skill: "Listening",
       icon: "headphones",
       sub: "P1–P4",
-      facts: ["题库总量 0 段", "原文证据复盘", "套题模式可选"],
-      done: 0,
-      total: 0,
-      unit: "段",
-      lastAccuracy: null,
-      actions: [
-        { kind: "disabled", label: "浏览题库" },
-        { kind: "disabled", label: "随机练习" },
+      facts: [
+        `题库总量 ${listeningSetIds.length} 段`,
+        "原文证据复盘",
+        "频次与题型筛选",
       ],
+      done: countPractised(listeningSetIds, listeningStatusOf),
+      total: listeningSetIds.length,
+      unit: "段",
+      // Listening attempts are scored in the browser from the answer key the
+      // bank list holds; this overview never loads one, so it has no accuracy
+      // to report and says so rather than printing a zero.
+      lastAccuracy: null,
+      actions: listeningAvailable
+        ? [
+            { kind: "link", label: "浏览题库", href: "/ielts-lab/listening" },
+            {
+              kind: "button",
+              label: "随机练习",
+              onClick: () => startRandomListening(),
+            },
+          ]
+        : [
+            { kind: "disabled", label: "浏览题库" },
+            { kind: "disabled", label: "随机练习" },
+          ],
     },
     {
       // Every fact here describes what this build actually does. The three it

@@ -3,6 +3,10 @@ import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import path from "node:path";
 
+import {
+  getListeningAvailability,
+  getListeningSource,
+} from "../lib/ielts/listening-catalog.ts";
 import { scoreAttempt } from "../lib/ielts/listening-scoring.ts";
 import { StaticListeningSource } from "../lib/ielts/listening-static-source.ts";
 
@@ -54,20 +58,55 @@ test("integrated scoring rules score the migrated multiple-choice answers", asyn
   );
 });
 
-test("route seams use StaticListeningSource and keep item JSON server-only", async () => {
-  const libraryRoute = await fs.readFile(
-    path.join(projectRoot, "app", "(ielts)", "ielts-lab", "(shell)", "listening", "page.tsx"),
-    "utf8",
-  );
-  const practiceRoute = await fs.readFile(
-    path.join(projectRoot, "app", "(ielts)", "ielts-lab", "practice", "listening", "[setId]", "page.tsx"),
-    "utf8",
+test("the shared catalog reports the bank the library actually lists", async () => {
+  const availability = await getListeningAvailability();
+
+  // The number the overview's Listening card prints. It is the same call the
+  // bank route makes, which is the point: the card cannot say 0 段 while the
+  // list shows 203 rows, because there is one source of the figure.
+  assert.equal(availability.available, true);
+  assert.equal(availability.setIds.length, 203);
+  assert.deepEqual(
+    availability.setIds,
+    (await source.listSets()).map((summary) => summary.id),
   );
 
-  for (const route of [libraryRoute, practiceRoute]) {
-    assert.match(route, /StaticListeningSource/);
+  // One instance, so the 203 files are read once per worker rather than once
+  // per route.
+  assert.equal(getListeningSource(), getListeningSource());
+});
+
+test("every Listening route reads one shared source, and item JSON stays server-only", async () => {
+  const read = (...segments) =>
+    fs.readFile(path.join(projectRoot, ...segments), "utf8");
+
+  const catalog = await read("lib", "ielts", "listening-catalog.ts");
+  const overviewRoute = await read("app", "(ielts)", "ielts-lab", "(shell)", "page.tsx");
+  const libraryRoute = await read(
+    "app", "(ielts)", "ielts-lab", "(shell)", "listening", "page.tsx",
+  );
+  const practiceRoute = await read(
+    "app", "(ielts)", "ielts-lab", "practice", "listening", "[setId]", "page.tsx",
+  );
+
+  // The catalog is the one module that builds a source. It used to be the two
+  // routes, separately, and the overview built none at all — which is how its
+  // Listening card came to read 0 while the bank held 203 sets.
+  assert.match(catalog, /new StaticListeningSource/);
+
+  for (const route of [overviewRoute, libraryRoute, practiceRoute]) {
+    assert.match(route, /from "@\/lib\/ielts\/listening-catalog"/);
+    assert.doesNotMatch(
+      route,
+      /new StaticListeningSource/,
+      "a route that builds its own source can disagree with the others",
+    );
     assert.doesNotMatch(route, /FixtureSetSource/);
   }
+
+  // The overview must derive availability rather than assert it: no literal
+  // total, and no card hard-coded inert.
+  assert.match(overviewRoute, /getListeningAvailability/);
 
   const publicItems = path.join(projectRoot, "public", "ielts", "listening", "items");
   await assert.rejects(() => fs.access(publicItems));

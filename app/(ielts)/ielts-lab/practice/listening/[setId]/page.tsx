@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import path from "node:path";
 
 import { ListeningPractice } from "@/components/ielts/listening/ListeningPractice";
-import { StaticListeningSource } from "@/lib/ielts/listening-static-source";
-import type { ListeningSetSource } from "@/lib/ielts/listening-source";
+import { getListeningSource } from "@/lib/ielts/listening-catalog";
 import type { ListeningSet, ScoringRule } from "@/lib/ielts/listening-types";
 
 /**
@@ -17,14 +15,11 @@ import type { ListeningSet, ScoringRule } from "@/lib/ielts/listening-types";
  * that this page's 返回题库 will eventually point at belongs inside the shell,
  * with the other browsable sections, and arrives with B5.
  *
- * This module is the one place a `ListeningSetSource` is constructed. Every
- * component below it receives data as props or through the attempt context, so
- * swapping the source implementation is an edit to the two lines below and
- * to nothing else.
+ * Every component below receives data as props or through the attempt context,
+ * so swapping the source implementation is an edit to `listening-catalog` — the
+ * one module that constructs a `ListeningSetSource` — and to nothing else.
  */
-const source: ListeningSetSource = new StaticListeningSource({
-  dataRoot: path.join(process.cwd(), "data", "ielts", "listening"),
-});
+const source = getListeningSource();
 
 interface PageProps {
   params: Promise<{ setId: string }>;

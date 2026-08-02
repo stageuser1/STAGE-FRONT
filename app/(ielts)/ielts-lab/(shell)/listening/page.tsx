@@ -1,10 +1,8 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import path from "node:path";
 
 import { ListeningLibrary } from "@/components/ielts/listening/ListeningLibrary";
-import { StaticListeningSource } from "@/lib/ielts/listening-static-source";
-import type { ListeningSetSource } from "@/lib/ielts/listening-source";
+import { getListeningSource } from "@/lib/ielts/listening-catalog";
 import type { LibraryRow } from "@/lib/ielts/listening-library-utils";
 import type { ScoringRule } from "@/lib/ielts/listening-types";
 
@@ -16,17 +14,16 @@ import type { ScoringRule } from "@/lib/ielts/listening-types";
  * the shell because a live attempt must not carry navigation a candidate could
  * click mid-paper, and a list is the opposite of that.
  *
- * This module and the practice route are the only two places a
- * `ListeningSetSource` is constructed. Everything below receives data as props.
+ * The source comes from `listening-catalog`, which is the only place one is
+ * constructed now that the Lab overview needs the same bank to say how large it
+ * is. Everything below receives data as props.
  */
 export const metadata: Metadata = {
   title: "Listening 题库 · IELTS Lab",
   description: "浏览、筛选并开始 STAGE IELTS Lab 的听力练习。",
 };
 
-const source: ListeningSetSource = new StaticListeningSource({
-  dataRoot: path.join(process.cwd(), "data", "ielts", "listening"),
-});
+const source = getListeningSource();
 
 /**
  * The list rows, and the answer keys the 我的 column needs.

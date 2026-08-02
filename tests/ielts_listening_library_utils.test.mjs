@@ -20,13 +20,16 @@ import {
   INITIAL_FILTERS,
   attemptAccuracy,
   availableTypes,
+  countPractised,
   filterRows,
   libraryAction,
   libraryStatus,
+  listeningPracticeHref,
   matchesFilters,
   matchesSearch,
   matchesStatus,
   parseLibraryParams,
+  pickRandomListeningSet,
   serializeLibraryParams,
 } from "../lib/ielts/listening-library-utils.ts";
 import {
@@ -353,4 +356,76 @@ test("a hand-edited URL degrades to the default rather than breaking", () => {
 
 test("a search of only whitespace is not a filter", () => {
   assert.equal(serializeLibraryParams(withFilters({ search: "   " })), "");
+});
+
+/* -------------------------------------------------------------------------
+ * What the Lab overview's Listening card asks of the same records
+ *
+ * The card used to hard-code 0 / 0 and two inert buttons while the bank held
+ * 203 sets. These three functions are what it derives instead, and they are
+ * asserted here — beside the list's own decisions — because both surfaces read
+ * the same stored attempts and must not answer differently.
+ * ---------------------------------------------------------------------- */
+
+/** A status lookup over a literal map, defaulting to untouched. */
+function statusesOf(map) {
+  return (setId) => map[setId] ?? "fresh";
+}
+
+test("the practice route is spelled one way, and escapes the id", () => {
+  assert.equal(
+    listeningPracticeHref("p1-1-asia-pacific"),
+    "/ielts-lab/practice/listening/p1-1-asia-pacific",
+  );
+  // An id is a path segment, not a path: anything that would open a new one is
+  // escaped rather than trusted.
+  assert.equal(
+    listeningPracticeHref("p2/../admin"),
+    "/ielts-lab/practice/listening/p2%2F..%2Fadmin",
+  );
+});
+
+test("已练习 counts handed-in papers, not opened ones", () => {
+  const setIds = ["a", "b", "c", "d"];
+  const statusOf = statusesOf({
+    a: "practised",
+    b: "in_progress",
+    c: "practised",
+    // d has no record at all
+  });
+
+  // Not 3: an open draft is work started, not a set practised, and counting it
+  // would report progress the candidate has not made.
+  assert.equal(countPractised(setIds, statusOf), 2);
+  assert.equal(countPractised([], statusOf), 0);
+});
+
+test("随机练习 prefers a set never opened", () => {
+  const setIds = ["done-1", "fresh-1", "done-2", "fresh-2"];
+  const statusOf = statusesOf({ "done-1": "practised", "done-2": "practised" });
+
+  // Every draw across the whole [0,1) range lands in the untouched pool.
+  for (const roll of [0, 0.25, 0.49, 0.5, 0.75, 0.999]) {
+    const pick = pickRandomListeningSet(setIds, statusOf, () => roll);
+    assert.ok(
+      pick === "fresh-1" || pick === "fresh-2",
+      `roll ${roll} drew ${pick}, which is not untouched`,
+    );
+  }
+});
+
+test("随机练习 falls back to the whole bank once nothing is untouched", () => {
+  const setIds = ["a", "b"];
+  const statusOf = statusesOf({ a: "practised", b: "practised" });
+
+  assert.equal(pickRandomListeningSet(setIds, statusOf, () => 0), "a");
+  assert.equal(pickRandomListeningSet(setIds, statusOf, () => 0.99), "b");
+  // A candidate who has finished the bank still gets a set, not a dead button.
+  assert.ok(pickRandomListeningSet(setIds, statusOf) !== null);
+});
+
+test("an empty bank draws nothing rather than throwing", () => {
+  // This is the unavailable module: the card is inert because there is nothing
+  // to draw, which is the only state that disables it.
+  assert.equal(pickRandomListeningSet([], statusesOf({})), null);
 });

@@ -125,6 +125,55 @@ export function libraryAction(status: LibraryStatus): LibraryAction {
   }
 }
 
+/* --------------------------------------------------------------------------
+ * Where a set is practised, and which one to draw
+ *
+ * Shared by the library list and the Lab overview's Listening card. Both ask
+ * the same two questions of the same stored records, and asking them in two
+ * places is how the two surfaces come to disagree.
+ * ----------------------------------------------------------------------- */
+
+/** The practice route for a set. The one place this URL is spelled out. */
+export function listeningPracticeHref(setId: string): string {
+  return `/ielts-lab/practice/listening/${encodeURIComponent(setId)}`;
+}
+
+/**
+ * How many of these sets have been handed in.
+ *
+ * Counts `practised` only: a set with an open draft has been started, not
+ * practised, and counting it would report progress the candidate has not made.
+ */
+export function countPractised(
+  setIds: readonly string[],
+  statusOf: (setId: string) => LibraryStatus,
+): number {
+  return setIds.reduce(
+    (total, setId) => (statusOf(setId) === "practised" ? total + 1 : total),
+    0,
+  );
+}
+
+/**
+ * One set at random, preferring ones never opened.
+ *
+ * The same rule `pickRandomExam` applies on the Reading side: draw from
+ * untouched candidates and fall back to the whole bank only once that pool is
+ * empty, so a candidate working through 203 sets stops drawing the same
+ * handful. `random` is injectable so the preference is assertable; callers pass
+ * nothing and get `Math.random`.
+ */
+export function pickRandomListeningSet(
+  setIds: readonly string[],
+  statusOf: (setId: string) => LibraryStatus,
+  random: () => number = Math.random,
+): string | null {
+  if (setIds.length === 0) return null;
+  const fresh = setIds.filter((setId) => statusOf(setId) === "fresh");
+  const pool = fresh.length > 0 ? fresh : setIds;
+  return pool[Math.floor(random() * pool.length)] ?? null;
+}
+
 /**
  * A submitted attempt's accuracy as a [0,1] ratio, or `null`.
  *

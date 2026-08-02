@@ -49,6 +49,7 @@ import {
   filterRows,
   libraryAction,
   libraryStatus,
+  listeningPracticeHref,
   parseLibraryParams,
   serializeLibraryParams,
   type LibraryFilters,
@@ -69,9 +70,12 @@ const STATUS_DOT: Record<LibraryStatus, string> = {
   practised: "bg-stage-green-500",
 };
 
-export function practiceHref(setId: string): string {
-  return `/ielts-lab/practice/listening/${encodeURIComponent(setId)}`;
-}
+/**
+ * Re-exported for this module's existing callers. The URL itself is built in
+ * `listening-library-utils` now that the Lab overview's 随机练习 routes to the
+ * same place — two spellings of one route is how the two drift apart.
+ */
+export const practiceHref = listeningPracticeHref;
 
 export function ListeningLibrary({
   rows,
