@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { TrackActiveDay } from "@/components/growth/Track";
 import { LabMobileNav, LabSidebar } from "@/components/ielts/LabSidebar";
 
 /**
@@ -20,6 +21,9 @@ export default function LabShellLayout({
 }: Readonly<{ children: ReactNode }>) {
   return (
     <div className="min-h-screen lg:grid lg:grid-cols-[236px_1fr]">
+      {/* Renders nothing. Here rather than on a page so every Lab surface — the
+          overview and the mistake book included — counts as an active day. */}
+      <TrackActiveDay />
       <LabSidebar />
       <LabMobileNav />
       <main className="min-w-0">

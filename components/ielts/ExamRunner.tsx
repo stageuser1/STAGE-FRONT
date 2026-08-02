@@ -24,6 +24,8 @@ import {
 } from "@/lib/ielts/session";
 import { getRecord, loadRecords, saveRecord, toPracticeRecord } from "@/lib/ielts/storage";
 import type { ExamSummary, PracticeRecord, SuiteRef } from "@/lib/ielts/types";
+import { contentPayload } from "@/lib/growth/emit";
+import { trackPracticeSubmit, useTrackOnMount } from "@/components/growth/Track";
 import { ResultPanel } from "./ResultPanel";
 
 type Status = "loading" | "ready" | "submitted" | "review";
@@ -61,6 +63,9 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
   // blank frame and no explanation. This surfaces the failure.
   const [handshakeFailed, setHandshakeFailed] = useState(false);
   const [draftSavedAt, setDraftSavedAt] = useState<Date | null>(null);
+  // True only on this visitor's first-ever submit — the moment the community
+  // card's result placement is defined at (Business Blueprint §2).
+  const [firstSubmit, setFirstSubmit] = useState(false);
 
   // The attempt being reviewed. Read once on mount: localStorage is only
   // available in the browser, and the value must be ready before SESSION_READY.
@@ -74,6 +79,14 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
     if (found) setRecord(found);
     else setReviewMissing(true);
   }, [reviewRecordId]);
+
+  // Entering the practice route *is* 开练 for Reading. Suppressed in review
+  // mode: reopening a finished attempt is not the start of a new one.
+  useTrackOnMount(
+    "lab_practice_start",
+    { section: "reading", ...contentPayload(exam.id) },
+    !reviewRecordId,
+  );
 
   useEffect(() => {
     if (flow !== "suite") return;
@@ -120,6 +133,20 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
       // catalog claiming this passage is still in progress.
       clearDraft(exam.id);
       setDraftSavedAt(null);
+
+      // 交卷 for Reading, emitted here in the host chrome — the vendored runner
+      // inside the iframe is untouched (§10). `accuracy` is a ratio in [0,1];
+      // the contract wants a raw percent, and it stays a percent (ruling C1).
+      const first = trackPracticeSubmit("reading", {
+        ...contentPayload(exam.id),
+        ...(saved.totalQuestions > 0
+          ? {
+              questionCount: saved.totalQuestions,
+              accuracyPct: Math.round(saved.accuracy * 100),
+            }
+          : {}),
+      });
+      setFirstSubmit(first);
 
       if (flow === "endless") {
         const endless = loadSessionOfKind("endless");
@@ -365,6 +392,7 @@ export function ExamRunner({ exam, flow, reviewRecordId }: ExamRunnerProps) {
       {record && (status === "submitted" || status === "review") ? (
         <ResultPanel
           record={record}
+          community={firstSubmit && status === "submitted"}
           title={status === "review" ? "回顾这次练习" : "本次成绩"}
           note={
             status === "review"

@@ -34,6 +34,9 @@ import {
 } from "react";
 
 import { BUTTON_DISABLED_SM, BUTTON_PRIMARY_SM, BUTTON_SECONDARY_SM, Tag } from "@/components/ielts/ui";
+import { CommunityCard } from "@/components/growth/CommunityCard";
+import { trackPracticeSubmit, useTrackOnMount } from "@/components/growth/Track";
+import { contentPayload } from "@/lib/growth/emit";
 import {
   ListeningAttemptProvider,
   useListeningAttempt,
@@ -117,6 +120,13 @@ export function ListeningPractice({
     else setDecided(true);
   }, [set.id]);
 
+  // Entering the practice route *is* 开练 for Listening. On the outer component
+  // so a 重新开始 — which remounts `ListeningRun` by key — is not a second start.
+  useTrackOnMount("lab_practice_start", {
+    section: "listening",
+    ...contentPayload(set.id),
+  });
+
   const continueStored = useCallback(() => {
     setSeed(offer);
     setRunKey((key) => key + 1);
@@ -174,6 +184,9 @@ function ListeningRun({
   const numbers = useMemo(() => questionNumbers(set), [set]);
   const [currentNo, setCurrentNo] = useState<number | null>(null);
   const [confirming, setConfirming] = useState(false);
+  // True only on this visitor's first-ever submit — the community card's result
+  // placement (Business Blueprint §2).
+  const [firstSubmit, setFirstSubmit] = useState(false);
   /**
    * 回顾模式.
    *
@@ -302,10 +315,26 @@ function ListeningRun({
   const confirmSubmit = useCallback(() => {
     setConfirming(false);
     submit();
+    // 交卷 for Listening, from the submit handler in the UI. The paper is marked
+    // here only to report a percent — `StaticListeningSource`, the contracts and
+    // the OSS path are all untouched (§10), and this reads the same pure scorer
+    // the result strip already uses.
+    const report = scoreAttempt(attempt, rules);
+    setFirstSubmit(
+      trackPracticeSubmit("listening", {
+        ...contentPayload(set.id),
+        ...(report.total > 0
+          ? {
+              questionCount: report.total,
+              accuracyPct: Math.round((report.correct / report.total) * 100),
+            }
+          : {}),
+      }),
+    );
     // The result lands at the top of the question column, which is where the
     // paper was — without this the candidate is left looking at question 8.
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [submit]);
+  }, [submit, attempt, rules, set.id]);
 
   return (
     <ListeningAttemptProvider value={value}>
@@ -357,6 +386,7 @@ function ListeningRun({
           {report ? (
             <div className="mt-5 flex flex-col gap-3">
               <ListeningResult report={report} elapsedSec={attempt.elapsedSec} />
+              {firstSubmit ? <CommunityCard placement="result" /> : null}
               <div className="flex flex-wrap justify-end gap-2">
                 <Link href={LIBRARY_HREF} className={BUTTON_SECONDARY_SM}>
                   返回题库

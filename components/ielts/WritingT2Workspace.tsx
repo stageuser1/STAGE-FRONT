@@ -19,6 +19,8 @@ import {
   type WritingT2Attempt,
 } from "@/lib/ielts/writing-t2-attempt";
 import { Icon } from "@/components/ui/Icon";
+import { trackPracticeSubmit, useTrackOnMount } from "@/components/growth/Track";
+import { contentPayload } from "@/lib/growth/emit";
 import { BUTTON_GHOST_SM, BUTTON_SECONDARY, ConfirmButton } from "./ui";
 
 /** Keystroke quiet period before a draft is written to storage. */
@@ -76,6 +78,12 @@ export function WritingT2Workspace({
   // localStorage is unreadable until after mount. Until it has been read the
   // editor is read-only, so a keystroke can never be overwritten by the load.
   const [ready, setReady] = useState(false);
+
+  // Opening a task *is* 开练 for Writing.
+  useTrackOnMount("lab_practice_start", {
+    section: "writing",
+    ...contentPayload(questionId),
+  });
 
   const pending = useRef<ReturnType<typeof setTimeout> | null>(null);
   const flush = useRef<(() => void) | null>(null);
@@ -181,6 +189,10 @@ export function WritingT2Workspace({
       setSubmitFailed(result.reason === "storage");
       return;
     }
+
+    // 完成本次练习 for Writing. No accuracy dimension: there is no machine score
+    // here and none is invented (§6 · ruling C1).
+    trackPracticeSubmit("writing", contentPayload(questionId));
 
     setSubmitFailed(false);
     setAttempt(result.attempt);

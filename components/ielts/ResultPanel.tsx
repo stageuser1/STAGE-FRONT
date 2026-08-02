@@ -5,6 +5,7 @@ import Link from "next/link";
 import { buildQuestionTypeStats } from "@/lib/ielts/analytics";
 import { questionTypeLabel, UNCLASSIFIED } from "@/lib/ielts/question-types";
 import type { AnswerComparison, PracticeRecord } from "@/lib/ielts/types";
+import { CommunityCard } from "@/components/growth/CommunityCard";
 import {
   BUTTON_PRIMARY,
   BUTTON_SECONDARY,
@@ -52,9 +53,15 @@ export function ResultPanel({
   title,
   actions,
   note,
+  community = false,
 }: {
   record: PracticeRecord;
   title: string;
+  /**
+   * Shows the community guidance card below the exits. Set only on a visitor's
+   * first-ever submit, which is the placement the Business Blueprint names.
+   */
+  community?: boolean;
   /**
    * Flow-specific follow-ups supplied by the runner (next passage, suite
    * overview, retry). Rendered after the two exits the spec names, whose
@@ -156,6 +163,10 @@ export function ResultPanel({
           </Link>
           {actions}
         </div>
+
+        {/* Below the exits, never in front of them: the learner came here for
+            their result, and the card is an offer, not a gate. */}
+        {community ? <CommunityCard placement="result" className="mt-5" /> : null}
       </div>
     </div>
   );

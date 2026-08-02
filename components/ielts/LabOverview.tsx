@@ -41,6 +41,7 @@ import {
   normaliseTarget,
   type EnglishSubject,
 } from "@/lib/profile/types";
+import { CommunityBanner } from "@/components/growth/CommunityCard";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import {
   BUTTON_DISABLED_SM,
@@ -457,6 +458,11 @@ export function LabOverview({
       </h1>
 
       <OnboardingStrip />
+
+      {/* Same thin-rule treatment as the strip above it, and dismissed the same
+          way: the Plan forbids marketing-weight promos inside the study
+          surface, and this is a study surface. */}
+      <CommunityBanner />
 
       {resumable ? (
         <ContinueBar

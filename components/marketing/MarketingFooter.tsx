@@ -74,6 +74,12 @@ export function MarketingFooter() {
               __html: `<!-- ${footer.disclaimerReviewMarker} -->`,
             }}
           />
+          {/* Anonymous-statistics disclosure. Its own paragraph rather than an
+              addition to the line above: that disclaimer is 逐字 and marked for
+              legal review, and is not the implementer's to edit. */}
+          <p className="mt-3 max-w-stage-measure text-stage-2xs leading-relaxed text-stage-fg-subtle">
+            {footer.analyticsNote}
+          </p>
         </div>
 
         <div className="flex flex-col gap-4 border-t border-stage-border py-6 sm:flex-row sm:items-center sm:justify-between">

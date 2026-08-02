@@ -22,6 +22,7 @@ import {
 import { loadRecords } from "@/lib/ielts/storage";
 import type { ExamSummary, PracticeRecord } from "@/lib/ielts/types";
 import { FREQUENCY_LABELS } from "@/lib/ielts/catalog";
+import { claimOnce, contentPayload, emit } from "@/lib/growth/emit";
 import {
   BUTTON_PRIMARY,
   BUTTON_QUIET,
@@ -281,6 +282,21 @@ function ActiveSuite({
   const correct = scored.reduce((sum, record) => sum + record.correctAnswers, 0);
   const total = scored.reduce((sum, record) => sum + record.totalQuestions, 0);
   const duration = scored.reduce((sum, record) => sum + record.duration, 0);
+
+  // One `suite_complete` per suite, ever. The once-key is the session id, so
+  // revisiting a finished suite — which this screen does on every mount until
+  // the learner starts a new one — cannot emit a second time.
+  useEffect(() => {
+    if (!finished || total <= 0) return;
+    if (!claimOnce(`suite:${session.id}`)) return;
+    const { contentId } = contentPayload(session.id);
+    emit("suite_complete", {
+      section: "reading",
+      ...(contentId ? { suiteId: contentId } : {}),
+      questionCount: total,
+      correctCount: correct,
+    });
+  }, [finished, total, correct, session.id]);
 
   return (
     <Card

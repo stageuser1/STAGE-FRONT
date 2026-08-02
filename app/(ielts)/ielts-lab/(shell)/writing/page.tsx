@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TrackModuleView } from "@/components/growth/Track";
 import { WritingT2Catalog } from "@/components/ielts/WritingT2Catalog";
 import {
   getPracticableT2Questions,
@@ -26,9 +27,13 @@ export const metadata: Metadata = {
  */
 export default function IeltsWritingPage() {
   return (
-    <WritingT2Catalog
-      questions={getPracticableT2Questions()}
-      sourceStatement={getWritingT2SourceStatement()}
-    />
+    <>
+      {/* Writing's module surface. Renders nothing; see components/growth. */}
+      <TrackModuleView section="writing" />
+      <WritingT2Catalog
+        questions={getPracticableT2Questions()}
+        sourceStatement={getWritingT2SourceStatement()}
+      />
+    </>
   );
 }

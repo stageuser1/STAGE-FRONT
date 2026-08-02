@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TrackModuleView } from "@/components/growth/Track";
 import { SpeakingCatalog } from "@/components/ielts/SpeakingCatalog";
 import { getSpeakingTopics } from "@/lib/ielts/speaking-corpus";
 
@@ -18,5 +19,11 @@ export const metadata: Metadata = {
  * (Plan §4.1.2).
  */
 export default function IeltsSpeakingPage() {
-  return <SpeakingCatalog topics={getSpeakingTopics()} />;
+  return (
+    <>
+      {/* Speaking's module surface. Renders nothing; see components/growth. */}
+      <TrackModuleView section="speaking" />
+      <SpeakingCatalog topics={getSpeakingTopics()} />
+    </>
+  );
 }

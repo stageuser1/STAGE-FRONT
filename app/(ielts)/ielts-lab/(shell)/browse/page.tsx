@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import { TrackModuleView } from "@/components/growth/Track";
 import { ExamCatalog } from "@/components/ielts/ExamCatalog";
 import { getAllExams } from "@/lib/ielts/catalog";
 import { questionTypeLabel } from "@/lib/ielts/question-types";
@@ -67,6 +68,8 @@ export default function IeltsBrowsePage() {
     <Suspense
       fallback={<p className="text-stage-xs text-stage-fg-muted">加载题库…</p>}
     >
+      {/* Reading's module surface. Renders nothing; see components/growth. */}
+      <TrackModuleView section="reading" />
       <ExamCatalog
         exams={getAllExams()}
         typeLabels={buildTypeLabels()}

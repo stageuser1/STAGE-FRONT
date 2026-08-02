@@ -37,6 +37,8 @@ import {
   type SpeakingFragment,
   type SpeakingQuestionState,
 } from "@/lib/ielts/speaking-session";
+import { trackPracticeSubmit, useTrackOnMount } from "@/components/growth/Track";
+import { contentPayload } from "@/lib/growth/emit";
 import {
   CONNECTIVES,
   RECALL_LEVELS,
@@ -86,6 +88,12 @@ export function SpeakingFlow({ question }: { question: SpeakingQuestion }) {
   const [state, setState] = useState<SpeakingQuestionState | null>(null);
   const [step, setStepValue] = useState(1);
   const [saved, setSaved] = useState(false);
+
+  // Choosing a question and entering the flow *is* 开练 for Speaking.
+  useTrackOnMount("lab_practice_start", {
+    section: "speaking",
+    ...contentPayload(question.id),
+  });
 
   useEffect(() => {
     const stored = loadSpeakingState(question.id) ?? emptySpeakingState(question.id);
@@ -961,6 +969,10 @@ function SoloStep({
           onClick={() => {
             apply((current) => logSoloEvent(current, question.textEn, visible));
             setJustLogged(true);
+            // 独立表达 completion is Speaking's 交卷. Section and content id only:
+            // Speaking carries no scoring anywhere in this system, and none is
+            // introduced here (§6 · Speaking 五禁).
+            trackPracticeSubmit("speaking", contentPayload(question.id));
           }}
           className={STEP_BUTTON}
         >

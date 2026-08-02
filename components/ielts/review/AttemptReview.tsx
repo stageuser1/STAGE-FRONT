@@ -21,6 +21,8 @@ import {
 import { practiceHref, reviewHref } from "@/lib/ielts/session";
 import { getRecord, loadRecords } from "@/lib/ielts/storage";
 import type { ExamFrequency, PracticeRecord } from "@/lib/ielts/types";
+import { CommunityCard } from "@/components/growth/CommunityCard";
+import { useTrackOnMount } from "@/components/growth/Track";
 import {
   BUTTON_PRIMARY,
   BUTTON_SECONDARY,
@@ -76,6 +78,10 @@ export function AttemptReview({ recordId }: { recordId: string }) {
   const [record, setRecord] = useState<PracticeRecord | null>(null);
   const [attempts, setAttempts] = useState<AttemptSummary[]>([]);
   const [loading, setLoading] = useState(true);
+
+  // 复盘 opened. Fires on mount for the route, not per record: the funnel counts
+  // visitors who reach review, and the dashboard de-duplicates them.
+  useTrackOnMount("review_opened", { section: "reading" });
 
   const [revealed, setRevealed] = useState<ReadonlySet<string>>(new Set());
   const [currentQuestion, setCurrentQuestion] = useState<string | undefined>();
@@ -405,6 +411,11 @@ export function AttemptReview({ recordId }: { recordId: string }) {
           返回记录
         </Link>
       </div>
+
+      {/* The review placement (Business Blueprint §2). Last on the page, after
+          every exit: someone who came to study their mistakes gets the whole
+          review first. */}
+      <CommunityCard placement="review" />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 
+import { TrackModuleView } from "@/components/growth/Track";
 import { ListeningLibrary } from "@/components/ielts/listening/ListeningLibrary";
 import { getListeningSource } from "@/lib/ielts/listening-catalog";
 import type { LibraryRow } from "@/lib/ielts/listening-library-utils";
@@ -74,6 +75,8 @@ export default async function ListeningLibraryPage() {
     <Suspense
       fallback={<p className="text-stage-xs text-stage-fg-muted">加载题库…</p>}
     >
+      {/* Listening's module surface. Renders nothing; see components/growth. */}
+      <TrackModuleView section="listening" />
       <ListeningLibrary rows={rows} rulesById={rulesById} />
     </Suspense>
   );

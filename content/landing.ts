@@ -361,6 +361,17 @@ export const footer = {
     "IELTS® 是英国文化教育协会（British Council）、IDP IELTS Australia 与剑桥大学英语考评部（Cambridge Assessment English）的注册商标。STAGE 与上述机构不存在任何关联、认可或合作关系。",
   disclaimerReviewMarker: "法务口径待核实",
 
+  /**
+   * The anonymous-statistics disclosure (Business Blueprint §5, B0').
+   *
+   * One line, on the site's only legal surface, saying exactly what is
+   * collected: a random local identifier and which pages/features were used.
+   * It is accurate by construction — the event contract has no field a name,
+   * an address or a piece of writing could travel in.
+   */
+  analyticsNote:
+    "本站以匿名方式统计页面与功能的使用情况，用于改进产品。统计仅包含一个随机生成的本机标识与访问的功能名称，不含姓名、联系方式或你写下的任何内容；练习记录与草稿始终只保存在本机浏览器。",
+
   filingTitle: "备案信息",
   // No ICP number has been issued yet; stating one would be a fabrication.
   filingNote: "ICP 备案完成后在此公示。",
