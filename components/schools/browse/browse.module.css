@@ -1,0 +1,541 @@
+/**
+ * T7 院校与专业浏览页 — the frozen design tokens, written once.
+ *
+ * Every value below is a literal handed down in the T7 spec. Nothing here is
+ * a judgement call about what looks better; a change to any number is a spec
+ * change, not a styling tweak.
+ *
+ * Two values were not in the original spec and were filled in during
+ * implementation; both were 追认 by the human on 2026-08-05 (T7 交付确认第 4
+ * 条) and are now part of the frozen token set, marked 实现期补齐 at their
+ * declaration. They are frozen on the same terms as the rest: changing them
+ * is a spec change.
+ *
+ * A CSS module rather than utility classes: the token set is exact hex/px
+ * that the utility palette does not carry, and the < 768px rules need real
+ * media queries. It also keeps the values greppable — the `t7:tokens` group in
+ * `tests/t7_schools_browse.test.mjs` asserts this file against the spec list.
+ */
+
+.shell {
+  /* 色值 */
+  --t7-brand: #2b44ff;
+  --t7-brand-light: #e8ebff;
+  --t7-brand-tint: #f5f6ff;
+  --t7-page: #f7f8fa;
+  --t7-card: #ffffff;
+  --t7-border: #e5e7eb;
+  --t7-border-soft: #e8ebff;
+  --t7-divider: #f0f2f5;
+  --t7-ink: #1b1f27;
+  --t7-ink-2: #6b7280;
+  --t7-ink-3: #9ca3af;
+
+  background: var(--t7-page);
+  color: var(--t7-ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------------------------- 顶部导航 */
+
+.nav {
+  height: 64px;
+  background: var(--t7-card);
+  border-bottom: 1px solid var(--t7-border-soft);
+}
+
+.navInner,
+.container,
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* 实现期补齐(追认 2026-08-05):the spec fixes the 1200px content width
+     and the mobile side padding (16px) but not the desktop one. 24px is the
+     smallest value that keeps the content off the viewport edge between 1200
+     and 1248px. */
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.navInner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: block;
+  text-decoration: none;
+}
+
+.brandMark {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--t7-brand);
+}
+
+.brandSub {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--t7-ink-3);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-shrink: 0;
+}
+
+.navLink,
+.navCurrent,
+.navInert {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.navLink,
+.navInert {
+  color: var(--t7-ink);
+}
+
+/* 当前页「院校与专业」主蓝字 + 下方 2px 主蓝下划线 */
+.navCurrent {
+  color: var(--t7-brand);
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--t7-brand);
+}
+
+/* ---------------------------------------------------------------- 内容区 */
+
+.main {
+  flex: 1;
+}
+
+.container {
+  padding-top: 40px;
+  padding-bottom: 72px;
+}
+
+/* 1. 顶部提示句 */
+.lede {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--t7-ink-2);
+  margin: 0;
+}
+
+/* 2. 学校 tab 行 */
+.tabRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tabRow::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  background: var(--t7-card);
+  color: var(--t7-ink);
+  border: 1px solid var(--t7-border-soft);
+}
+
+.tab[data-selected="true"] {
+  background: var(--t7-brand-light);
+  color: var(--t7-brand);
+  border-color: var(--t7-border-soft);
+}
+
+/* 3. 专业小卡条 */
+.chipRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chipRow::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  flex-shrink: 0;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--t7-card);
+  border: 1px solid var(--t7-border);
+  /* 实现期补齐(追认 2026-08-05):the selected state's border is 1.5px
+     against the default's 1px. Compensating here keeps the chip's box from
+     growing by 1px and nudging its neighbours when it is picked. */
+  box-sizing: border-box;
+}
+
+.chip[data-selected="true"] {
+  background: var(--t7-brand-tint);
+  border: 1.5px solid var(--t7-brand);
+}
+
+.chipTitle {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--t7-ink);
+  white-space: nowrap;
+}
+
+.chipDeadline {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--t7-ink-2);
+  white-space: nowrap;
+}
+
+/* 4. 大信息卡 */
+.cardStack {
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--t7-card);
+  border: 1px solid var(--t7-border);
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.lead {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--t7-ink-2);
+}
+
+.citation {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--t7-ink-3);
+}
+
+.titleRow {
+  margin-top: 26px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--t7-ink);
+}
+
+.subline {
+  margin: 10px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--t7-ink-2);
+}
+
+.editorial {
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--t7-ink);
+}
+
+.badgeRow {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--t7-brand-light);
+  color: var(--t7-brand);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.pillMuted {
+  background: var(--t7-brand-tint);
+  color: var(--t7-ink-2);
+}
+
+.keyNumbers {
+  margin: 44px 0 0;
+  display: grid;
+  grid-template-columns: repeat(var(--t7-key-columns, 3), minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 20px;
+}
+
+.keyLabel {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--t7-ink-2);
+}
+
+.keyValue {
+  margin: 6px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--t7-ink);
+}
+
+.keyNote {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--t7-ink-3);
+}
+
+.requirements {
+  margin: 44px 0 0;
+}
+
+.requirementRow {
+  display: flex;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--t7-divider);
+}
+
+.requirementRow:first-child {
+  border-top: 1px solid var(--t7-divider);
+}
+
+.requirementLabel {
+  flex: 0 0 160px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--t7-ink-2);
+}
+
+.requirementValue {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--t7-ink);
+  /* §3.3: 曲目/长文本 keeps the school's own line breaks. */
+  white-space: pre-wrap;
+}
+
+.conditionList {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.condition {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--t7-ink-2);
+}
+
+.link {
+  color: var(--t7-brand);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.statusRow {
+  margin-top: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--t7-ink-2);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--t7-border-soft);
+  background: var(--t7-card);
+  color: var(--t7-ink);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button[data-active="true"] {
+  background: var(--t7-brand-light);
+  color: var(--t7-brand);
+}
+
+/* ---------------------------------------------------------------- 页脚 */
+
+.footer {
+  border-top: 1px solid var(--t7-border-soft);
+  background: var(--t7-card);
+}
+
+.footerInner {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.footerTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footerMark {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--t7-brand);
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.footerLink {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--t7-ink-2);
+  text-decoration: none;
+}
+
+.footerNote {
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--t7-ink-3);
+}
+
+/* ---------------------------------------------------------------- 响应式 */
+
+@media (max-width: 767px) {
+  .navInner,
+  .container,
+  .footerInner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  /* 三数字块从三列改为纵向堆叠 */
+  .keyNumbers {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* 详细要求的 label-value 从左右两列改为上下两行 */
+  .requirementRow {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .requirementLabel {
+    flex: 0 0 auto;
+  }
+}

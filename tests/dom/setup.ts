@@ -15,6 +15,15 @@
 import { afterEach, beforeEach, vi } from "vitest";
 import { cleanup } from "@testing-library/react";
 
+/**
+ * 这个 setup 文件对**所有** vitest 文件生效,而 T5 的真实渲染测试
+ * (`share-card-render.dom.test.tsx`)用 `@vitest-environment node` 跑 —— 那里
+ * 没有 `Element` / `window`,下面的 stub 会直接抛错。所以先判断有没有 DOM:
+ * 没有 DOM 的文件不需要这些 stub,也不需要 Testing Library 的 cleanup。
+ */
+const hasDom = typeof window !== "undefined" && typeof document !== "undefined";
+
+if (hasDom) {
 if (!Element.prototype.scrollIntoView) {
   Element.prototype.scrollIntoView = function scrollIntoView(): void {};
 }
@@ -34,8 +43,10 @@ window.matchMedia =
       removeEventListener: () => {},
       dispatchEvent: () => false,
     }) as unknown as MediaQueryList);
+}
 
 beforeEach(() => {
+  if (!hasDom) return;
   // Attempt drafts are keyed per set in localStorage, and jsdom keeps one
   // store for the whole file. A test that leaves a draft behind would hand the
   // next one a restore dialog it never asked for.
@@ -43,6 +54,6 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  cleanup();
+  if (hasDom) cleanup();
   vi.useRealTimers();
 });
