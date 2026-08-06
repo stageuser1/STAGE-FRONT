@@ -25,6 +25,7 @@ import {
   browseLede,
   buildBrowseModel,
   resolveBrowseSelection,
+  scopeToSchool,
   type BrowseSchool,
 } from "@/lib/schools-browse/model";
 
@@ -150,11 +151,21 @@ describe("t7:dom — 反 cloaking(核心原则 4)", () => {
     expect(markup.match(/hidden=""/g)?.length).toBeGreaterThan(0);
   });
 
-  test("每所学校的小卡条都在 HTML 里(切换不改 innerHTML)", () => {
-    const two = staticMarkup(twoSchools());
-    expect(two).toContain("维也纳音乐与表演艺术大学");
+  /**
+   * 裁决 2026-08-06:一页只承载一所学校的内容,别校只出 tab 链接。
+   *
+   * 原来这条断言两所学校的 5 张大卡都在同一份 HTML 里。收窄之后,同一份
+   * HTML 里应当**只有本校的 4 张**,而另一所仍然以校名 + 可跟随的链接出现
+   * —— 这两件事必须同时成立:少了前者是页面过重,少了后者是爬虫爬不出去。
+   */
+  test("一页只含本校大卡,别校以可跟随的链接出现", () => {
+    const two = staticMarkup(scopeToSchool(twoSchools(), "juilliard"));
     expect(two).toContain("茱莉亚学院");
-    expect(two.match(/<article/g)).toHaveLength(5);
+    // 别校:校名在,链接在
+    expect(two).toContain("维也纳音乐与表演艺术大学");
+    expect(two).toContain('href="/schools/mdw-wien/voice-mm-wien"');
+    // 但它的大卡不在 —— 本校 4 个专业,就是 4 张
+    expect(two.match(/<article/g)).toHaveLength(4);
   });
 
   test("JSON-LD 每张卡一块,一页多块(T4 §2.4)", () => {
@@ -222,20 +233,40 @@ describe("t7:dom — 三层联动", () => {
     expect(visible[0].textContent).toContain("音乐艺术博士");
   });
 
-  test("点学校 tab:小卡条换成该校的,并自动选中该校第一个专业", () => {
-    const schools = twoSchools();
+  /**
+   * 裁决 2026-08-06:跨校不再是同页切换,而是一次真实导航。
+   *
+   * 原来这条断言「点另一所学校的 tab → 小卡条换成该校的」,前提是每一页都
+   * 持有全站数据。收窄成一页一所之后,这一页根本没有别校的专业可切 —— 它
+   * 只有一个链接。所以断言的对象从「切换后的状态」变成「链接本身是否正确、
+   * 是否可被爬虫跟随」。
+   *
+   * 用 `<a href>` 而不是 `onClick` + `router.push` 是硬要求:爬虫要能顺着
+   * tab 行爬到其余 19 所学校,这正是收窄之后反 cloaking 依然成立的前提。
+   */
+  test("跨校 tab 是真实 <a href>,指向该校第一个专业", () => {
+    const schools = scopeToSchool(twoSchools(), "juilliard");
     const { container } = mount(schools);
-    expect(screen.getByText("声乐 · BM").closest("div")?.hidden).toBe(false);
 
-    fireEvent.click(screen.getByRole("tab", { name: "维也纳音乐与表演艺术大学" }));
+    const otherTab = screen.getByRole("tab", {
+      name: "维也纳音乐与表演艺术大学",
+    });
+    // 必须是锚点,不是按钮 —— 按钮爬虫跟不了
+    expect(otherTab.tagName).toBe("A");
+    expect(otherTab.getAttribute("href")).toBe("/schools/mdw-wien/voice-mm-wien");
+    expect(otherTab.getAttribute("aria-selected")).toBe("false");
 
+    // 当前校的 tab 仍是按钮(它不需要导航,已经在这一页上)
+    const currentTab = screen.getByRole("tab", { name: "茱莉亚学院" });
+    expect(currentTab.tagName).toBe("BUTTON");
+    expect(currentTab.getAttribute("aria-selected")).toBe("true");
+
+    // 这一页只有本校的小卡条与大卡 —— 别校没有数据可渲染
     const rows = [...container.querySelectorAll('[aria-label$="的专业"]')];
-    const visibleRows = rows.filter((row) => !(row as HTMLElement).hidden);
-    expect(visibleRows).toHaveLength(1);
-    expect(visibleRows[0].getAttribute("aria-label")).toBe(
-      "维也纳音乐与表演艺术大学的专业",
-    );
-    expect(window.location.pathname).toBe("/schools/mdw-wien/voice-mm-wien");
+    expect(rows).toHaveLength(1);
+    expect(rows[0].getAttribute("aria-label")).toBe("茱莉亚学院的专业");
+    // 点击链接不该改写 URL(那是浏览器导航的事,不是 pushState)
+    expect(window.location.pathname).toBe("/schools");
   });
 
   test("选中态标记落在 tab 与小卡上(供 CSS 画选中样式)", () => {
@@ -384,48 +415,81 @@ describe("t7:dom — 大卡复用 T3 逻辑", () => {
 });
 
 /**
- * 反 cloaking 的红线,按**全量真实语料**守(裁决 2026-08-06)。
+ * 反 cloaking 的红线,按**全量真实语料**守 —— 口径已按裁决 2026-08-06 修正。
  *
- * 上面那些断言用小语料换取「不歧义 + 跑得快」,代价是它们不再证明「20 所全都
- * 进了 HTML」。这一组补上,而且只断言与规模无关的不变量:每个可路由的专业各
- * 有一个 `<article>` 和一块 JSON-LD、mock/预览面一个不进、没有保留字冲突。
- * 加学校时这些断言自动跟着涨,不需要有人回来改数字 —— 而「有 4 个 article」
- * 那种写法每加一次学校就要改一次,还会让人误以为是数据出了问题。
+ * 修正前这条断言的是「`<article>` 数 == 全站专业数」,即每一页都含全站内容。
+ * 那个口径把页面推到单页 8.49 MB / 全量 14.74 GB,构建两次 `ENOSPC`,而同样
+ * 这 8.49 MB 会原样发给每个手机用户。
  *
- * 显式放宽 timeout:在 jsdom 里把 1778 张卡渲成字符串本来就要十几秒。这是
- * **这一条测试有意为之的代价**,不是把一个偶发超时藏起来 —— 上面的交互测试
- * 已经不再背这个负担了。渲染量本身的隐患(全量静态 import、16.9MB bundle、
- * Vercel 构建可能 OOM)记在移交文档的待办里,不靠「留一条会超时的测试」提醒。
+ * 修正后的口径,两条同时成立才算过:
+ *
+ *   1. **本页完整** —— 该校每个专业各有一个 `<article>` 和一块 JSON-LD,
+ *      未选中的靠 `hidden` 而不是从 DOM 摘掉。这是原则 4 真正要求的东西:
+ *      本页的折叠内容必须在 SSR DOM 里,人和爬虫读到的完全相同。
+ *   2. **出得去** —— 全部 20 所学校都在 tab 行里,别校是可跟随的 `<a href>`。
+ *      爬虫顺着链接就能到达其余每一所,这是正常站点结构,不是隐藏。
+ *
+ * 少了第 1 条是 cloaking;少了第 2 条是把内容锁死在一页里爬不出去。逐校渲染
+ * 20 次,所以「某一所学校漏了内容」不会被平均掉。
  */
 describe("t7:dom — 全量语料 SSR 不变量(反 cloaking 红线)", () => {
   const routable = realProgramsV3.filter((p) => p.publishing.slug !== null);
+  const all = buildBrowseModel(realProgramsV3);
 
   test(
-    "每个可路由专业各有一个 <article> 与一块 JSON-LD,全部在服务端 HTML 里",
+    "逐校:本校专业数 == 该页 <article> 数 == JSON-LD 块数,且 20 所 tab 链接齐全",
     () => {
-      const all = buildBrowseModel(realProgramsV3);
-      const markup = renderToStaticMarkup(
-        <SchoolsBrowse
-          initialSelection={resolveBrowseSelection(all)}
-          lede={browseLede(all, new Date("2026-08-05T00:00:00Z"))}
-          schools={all}
-        />,
-      );
-      expect(markup.match(/<article/g)).toHaveLength(routable.length);
-      expect(markup.match(/application\/ld\+json/g)).toHaveLength(routable.length);
-      // 每所学校都在 tab 行里,一所不落
+      let seen = 0;
       for (const school of all) {
-        expect(markup).toContain(school.nameZh);
+        const scoped = scopeToSchool(all, school.slug);
+        const markup = renderToStaticMarkup(
+          <SchoolsBrowse
+            initialSelection={resolveBrowseSelection(scoped, school.slug)}
+            lede={browseLede(all, new Date("2026-08-05T00:00:00Z"))}
+            schools={scoped}
+          />,
+        );
+        const n = school.programs.length;
+        seen += n;
+
+        // 1. 本页完整:本校每个专业各一张大卡、各一块 JSON-LD
+        expect(markup.match(/<article/g), school.slug).toHaveLength(n);
+        expect(
+          markup.match(/application\/ld\+json/g),
+          school.slug,
+        ).toHaveLength(n);
+        // 未选中的卡是 hidden,不是被摘掉 —— 摘掉就是 cloaking
+        if (n > 1) {
+          expect(markup.match(/hidden=""/g)?.length, school.slug).toBeGreaterThan(0);
+        }
+
+        // 2. 出得去:20 所全在 tab 行,别校都是可跟随的链接
+        //    校名走 textContent —— 「Guildhall School of Music & Drama」里的
+        //    `&` 在原始标记里是 `&amp;`,对 HTML 串做 toContain 会假阴性。
+        const text = staticText(markup);
+        for (const other of all) {
+          expect(text, `${school.slug} 缺 ${other.slug}`).toContain(
+            other.nameZh,
+          );
+          if (other.slug !== school.slug) {
+            expect(markup, `${school.slug} → ${other.slug}`).toContain(
+              `href="${other.href}"`,
+            );
+          }
+        }
+
+        // 预览面数据没有生产路由,一个都不该混进来
+        expect(markup).not.toContain("v3-preview");
       }
-      // 未选中的卡是 hidden,不是被摘掉 —— 摘掉就是 cloaking
-      expect(markup.match(/hidden=""/g)?.length).toBeGreaterThan(0);
-      // 预览面数据没有生产路由,一个都不该混进来
-      expect(markup).not.toContain("v3-preview");
+
+      // 逐校加总必须等于全部可路由专业 —— 没有哪一所被整体漏掉
+      expect(seen).toBe(routable.length);
+
       // 保留字 slug 会被 Next 的静态段优先解析走(T3b-R1),一个都不许有
       for (const program of routable) {
         expect(RESERVED_PROGRAM_SLUGS).not.toContain(program.publishing.slug);
       }
     },
-    120_000,
+    300_000,
   );
 });

@@ -32,6 +32,17 @@ export interface BrowseSchool {
   slug: string;
   /** 中文校名为主,缺失回退英文(核心原则 6 / ruling T3-R3.2). */
   nameZh: string;
+  /**
+   * 这所学校的入口 URL(= 该校第一个专业的地址)。
+   *
+   * 跨校 tab 渲染成真实 `<a href>` 而不是按钮,爬虫才能顺着爬到别的学校
+   * (裁决 2026-08-06,见 `scopeToSchool`)。
+   */
+  href: string;
+  /**
+   * 该校的专业。**在按校收窄过的模型里,只有当前这一所是非空的**,
+   * 其余学校是空数组 —— 它们只出 tab 链接,不出小卡也不出大卡。
+   */
   programs: BrowseProgram[];
 }
 
@@ -57,6 +68,10 @@ export function buildBrowseModel(programs: ProgramV3[]): BrowseSchool[] {
       school = {
         slug: program.school.slug,
         nameZh: program.school.school_name_zh ?? program.school.school_name,
+        // 该校第一个专业的地址 —— 循环按数据顺序推入,所以第一个 push 进来的
+        // 就是这所学校的第一个专业,与 `resolveBrowseSelection` 的「点学校 =
+        // 该校第一个专业」是同一条规则。
+        href: browseHref({ schoolSlug: program.school.slug, programSlug: slug }),
         programs: [],
       };
       bySlug.set(school.slug, school);
@@ -92,11 +107,49 @@ export function resolveBrowseSelection(
   schoolSlug?: string | null,
   programSlug?: string | null,
 ): BrowseSelection | null {
-  if (schools.length === 0) return null;
-  const school = schools.find((s) => s.slug === schoolSlug) ?? schools[0];
+  // 按校收窄过的模型里,非当前校的 `programs` 是空数组 —— 它们没有可选中的
+  // 专业,落到它们身上会读出 `undefined`。只在带专业的学校里挑。
+  const selectable = schools.filter((s) => s.programs.length > 0);
+  if (selectable.length === 0) return null;
+  const school = selectable.find((s) => s.slug === schoolSlug) ?? selectable[0];
   const program =
     school.programs.find((p) => p.slug === programSlug) ?? school.programs[0];
   return { schoolSlug: school.slug, programSlug: program.slug };
+}
+
+/**
+ * 按校收窄:只有 `schoolSlug` 这一所保留完整专业数据,其余清空成纯 tab 链接。
+ *
+ * **裁决 2026-08-06 —— 页面规模从平方级降回线性。**
+ *
+ * T7 原本让每个 URL 都渲染全站内容(每所学校的小卡条、每个专业的大卡),
+ * 1 所 4 个专业时毫无问题。扩到 20 所 1778 个专业后,同一个设计变成
+ * 1778 × 1778:实测单页 HTML **8.49 MB**,1778 个页面共 14.74 GB,Vercel
+ * 构建两次在第 929 页 `ENOSPC` 崩溃(每页体积恒定,所以崩溃点确定)。
+ *
+ * 比构建更要紧的是:8.49 MB 会原样发给每个访问者,移动端 4G 下载再解析
+ * 1778 张卡的 DOM,页面在真实用户手里不可用。构建撞墙只是早期预警。
+ *
+ * 取舍依据是访问频率:**校内切专业**(比较同校不同学位)是高频动作,保持
+ * 零转场;**跨校切换**是低频的(读者已经决定看另一所了),付一次页面跳转。
+ * 不该为低频路径让每个页面重 19 倍。
+ *
+ * ## 反 cloaking 仍然成立 —— 这是口径修正,不是让步
+ *
+ * 蓝图 §0 原则 4 要求的是**本页的折叠内容必须在 SSR DOM 中**,防的是「给爬虫
+ * 看的和给人看的不一样」。收窄之后,每个 URL 下人和爬虫看到的仍然**完全相同**:
+ * 本校全部专业的完整卡片。别的学校靠真实 `<a href>` 链接过去,那是正常站点
+ * 结构,不是隐藏。原先「全站内容出现在每一页」是对这条原则过度的理解。
+ */
+export function scopeToSchool(
+  schools: BrowseSchool[],
+  schoolSlug?: string | null,
+): BrowseSchool[] {
+  const selected = schools.find((s) => s.slug === schoolSlug) ?? schools[0];
+  if (!selected) return schools;
+  return schools.map((school) =>
+    school.slug === selected.slug ? school : { ...school, programs: [] },
+  );
 }
 
 /** The one place the browse URL shape is written down. */

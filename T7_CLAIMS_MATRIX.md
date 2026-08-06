@@ -77,15 +77,43 @@
 | C5 | **裁决 T7-R4**:C4 的回退是**客户端**契约;服务端对没生成过的 slug 仍然 404,不把垃圾 URL 变成 200 | `app/(explore)/schools/[schoolId]/[programSlug]/page.tsx` 的 `notFound()` | 人工项 H3(curl 实测) |
 | C6 | 首屏不 push(否则后退键第一下原地打转) | `SchoolsBrowse`:`select()` 只在交互里调用,`useEffect` 里只 `setState` | `t7:dom —「首屏不 push …」` |
 
-## D. 反 cloaking(核心原则 4,硬红线)—— 6 条
+## D. 反 cloaking(核心原则 4,硬红线)—— 7 条
+
+> ### ⚠ 2026-08-06 口径修正:红线的范围是**本页**,不是全站
+>
+> **原口径(2026-08-05 结项时):** 每个 URL 都渲染全站内容 —— 所有学校的小卡条、
+> 所有专业的大卡。1 所 4 个专业时这没有代价。
+>
+> **实测代价(2026-08-06,20 所 1778 个专业):** 单页 HTML **8.49 MB**
+> (每个专业向每一页贡献约 4.9 KB),1778 个页面共 **14.74 GB**。Vercel 构建
+> 两次在**第 929 页**因 `ENOSPC` 崩溃(每页体积恒定,所以崩溃点确定,与崩在
+> peabody 的哪个专业无关)。比构建更要紧的是:这 8.49 MB 会原样发给每个访问者,
+> 移动端 4G 下载再解析 1778 张卡的 DOM,页面在真实用户手里不可用 —— 构建撞墙
+> 只是早期预警。
+>
+> **修正后:每个 URL 只承载一所学校。** 本校全部专业的完整卡片在 SSR DOM 里
+> (校内切专业仍是零转场);其余 19 所只出 tab 名与真实 `<a href>`,点击是一次
+> 页面跳转。实测单页平均 **0.43 MB**、最大 0.90 MB(peabody,167 个专业)、
+> 全量 **0.89 GB** —— 单页降 95%,总量降 94%。
+>
+> **为什么这不是让步。** 蓝图 §0 原则 4 说的是「**本页**的折叠内容必须在 SSR
+> DOM 中」,防的是「给爬虫看的和给人看的不一样」。收窄之后,每个 URL 下人和
+> 爬虫读到的仍然**完全相同**:本校全部专业。爬虫顺着 tab 行的 `<a href>` 到达
+> 其余每一所 —— 那是正常站点结构,不是隐藏。原先「全站内容出现在每一页」是对
+> 这条原则过度的理解。
+>
+> **取舍依据是访问频率:** 校内切专业(比较同校不同学位)是高频动作,保持零
+> 转场;跨校切换是低频的(读者已经决定看另一所了),付一次跳转。不该为低频
+> 路径让每个页面重 19 倍。
 
 | # | 声称 | 代码 | 测试 |
 |---|---|---|---|
-| D1 | **所有**学校、**所有**专业的完整卡片内容都在服务端渲染的 HTML 中 | `SchoolsBrowse` 无条件渲染全部小卡条与全部大卡 | `t7:dom —「四个专业的大卡全部在服务端 HTML 里,不是只有选中那个」`(`renderToStaticMarkup`,4 张 `<article>` + 四个学位中文名 + 四条各自的 JSON-LD 地址);`「每所学校的小卡条都在 HTML 里」` |
+| D1 | **本校**全部专业的完整卡片内容都在服务端渲染的 HTML 中(修正后口径,见上) | `SchoolsBrowse` 对本页承载的那一所无条件渲染小卡条与全部大卡;`scopeToSchool()` 决定承载哪一所 | `t7:dom —「四个专业的大卡全部在服务端 HTML 里,不是只有选中那个」`(`renderToStaticMarkup`,4 张 `<article>` + 四个学位中文名 + 四条各自的 JSON-LD 地址);`t7:dom —「逐校:本校专业数 == 该页 <article> 数 == JSON-LD 块数,且 20 所 tab 链接齐全」`(全量语料逐校渲染 20 次,逐校加总 == 1778) |
+| D1b | 其余 19 所以**真实 `<a href>`** 出现在 tab 行,爬虫可顺着到达每一所 —— 这是收窄之后红线仍然成立的前提 | `SchoolsBrowse` tab 行:当前校渲染 `<button>`,其余渲染 `<a href={school.href}>`;`href` 由 `buildBrowseModel()` 写入,指向该校第一个专业 | `t7:dom —「跨校 tab 是真实 <a href>,指向该校第一个专业」`(断言 `tagName === "A"` 与 href 值);`t7:dom —「一页只含本校大卡,别校以可跟随的链接出现」`;全量不变量测试逐校核对 20 个 tab 链接齐全 |
 | D2 | 每个专业的**曲目要求全文**在 HTML 里,不截断 | `BrowseProgramCard` 直接印 `audition.repertoire_summary`(见 D3) | `t7:dom —「每个专业的曲目要求印全文,不截断、不留待点击后取」`(逐条 `toContain` 全串,并断言全串 > 80 字、页面无 `…`) |
 | D3 | 曲目不做 §3.3 的 80 字截断,是因为详情页已被裁决降级为同页大卡、没有下一跳 —— 与裁决 **T3-R4.4**(无详情页的项目印全文)同一条规则,不是新开的例外 | `BrowseProgramCard` 文件头注释 | 同 D2 |
 | D4 | 每个专业的**材料清单**全条在 HTML 里 | `buildRequirementRows()` 的「申请材料清单」行 | `t7:dom —「每个专业的材料清单全条在 HTML 里」` |
-| D5 | 切换只是显隐(`hidden` 属性),**不替换 innerHTML、不点击后 fetch** | `SchoolsBrowse`:`hidden={...}`,没有条件渲染、没有 `fetch`/`innerHTML` | `t7:dom —「未选中的卡片是 hidden 属性,不是被从 DOM 里摘掉」`;`t7:dom —「四个专业的大卡全部在服务端 HTML 里」`(切换前后 `<article>` 恒为 4) |
+| D5 | **校内**切换只是显隐(`hidden` 属性),**不替换 innerHTML、不点击后 fetch**;跨校是一次真实导航(见 D1b),不是同页切换 | `SchoolsBrowse`:`hidden={...}`,没有条件渲染、没有 `fetch`/`innerHTML`;跨校 tab 是 `<a href>`,不带 `onClick` | `t7:dom —「未选中的卡片是 hidden 属性,不是被从 DOM 里摘掉」`;`t7:dom —「四个专业的大卡全部在服务端 HTML 里」`(切换前后 `<article>` 恒为 4);`t7:dom —「跨校 tab 是真实 <a href>…」`(断言点击不改写 URL —— 那是浏览器导航的事) |
 | D6 | 页面上没有任何 CSS 弱化/隐藏的**可见文本**:唯一的隐藏是「未选中的那几张卡/小卡条」,这是 T7 规格指定的实现方式;JSON-LD 是 machine-only 的合法例外(§0.4) | `browse.module.css` 无 `opacity`/`line-clamp`/`text-overflow`/`visibility:hidden`;`ProgramJsonLd` | 人工项 H4(逐条目检) |
 
 ## E. 大卡复用 T3 逻辑(裁决 T7-R3 / T7-R7)—— 9 条
@@ -129,7 +157,7 @@
 |---|---|---|---|
 | H1 | **token 真的落到了正确的元素上**(测试只证明值出现在样式表里) | `npm run build` + `npm start`,在 1280px 下用 `getComputedStyle` 读实际值 | ✅ 主标题 24px/500/`rgb(27,31,39)`;大卡 padding 32px、圆角 10px、边框 `rgb(229,231,235)`、底 白;导航高 64px、底线 `rgb(232,235,255)`;小卡选中 `rgb(43,68,255)` 边框 + `rgb(245,246,255)` 底;详细要求 label 13px / value 15px、分隔线 `rgb(240,242,245)`;三数字块 3 列 |
 | H2 | **浏览器真实前进/后退** | 同一会话内点小卡两次 → `history.back()` ×2 → `history.forward()` | ✅ URL 与大卡逐步同步:`voice-bm → voice-dma → voice-gd →(后退)voice-dma →(后退)voice-bm →(前进)voice-dma`,每步都恰好一张卡可见 |
-| H3 | **curl 验反 cloaking + 服务端 404** | `curl` 取 `/schools`、`/schools/juilliard/voice-dma`、`/schools/juilliard/voice-gd` 的原始 HTML | ✅ 三个入口的 HTML 完全等价:各 4 张 `<article>`、4 块 JSON-LD;BM/MM/GD/DMA 四条曲目全文与四条材料清单全在;无 `…` 截断符;`/schools/juilliard/nope` 与 `/schools/nope/nope` 均 **404** |
+| H3 | **curl 验反 cloaking + 服务端 404** | `curl` 取 `/schools`、`/schools/juilliard/voice-dma`、`/schools/juilliard/voice-gd` 的原始 HTML | ✅ 三个入口的 HTML 完全等价:各 4 张 `<article>`、4 块 JSON-LD;BM/MM/GD/DMA 四条曲目全文与四条材料清单全在;无 `…` 截断符;`/schools/juilliard/nope` 与 `/schools/nope/nope` 均 **404**<br>**⚠ 2026-08-06 起这条人工验证的口径变了,尚未重做:**收窄后「三个入口 HTML 完全等价」只在**同一所学校内部**成立(茱莉亚的三个入口仍各含它自己的 4 张卡);跨校入口应当各含**本校**的卡片数,并互相以 `<a href>` 链接。重做时要验的是:①`/schools/{A}/...` 的 `<article>` 数 == A 校专业数;②该页含全部 20 个 tab 链接;③顺着某个链接 curl 到 B 校,同样成立。自动化部分已由 `t7:dom —「逐校:…」`覆盖,人工项待新构建上线后补 |
 | H4 | **无 CSS 弱化文本**目检 | 通读 `browse.module.css` | ✅ 无 `opacity` 弱化、无 `line-clamp` / `text-overflow` / `visibility:hidden`;唯一隐藏是未选中卡片/小卡条的 `hidden` 属性 |
 | H5 | **移动端断点实测** | 视口 375×812 重载后读计算样式 | ✅ 内容区左右 16px;大卡 padding 20px;三数字块 `grid-template-columns: 302px`(单列);详细要求行 `flex-direction: column`;小卡条 `overflow-x: auto` 且 `offsetHeight-clientHeight = 0`(滚动条隐藏)、`scrollWidth > clientWidth`(可滑);`documentElement.scrollWidth = 375`,页面不横向溢出 |
 | H6 | **控制台无报错** | 生产构建下读 console | ✅ 无 error |
