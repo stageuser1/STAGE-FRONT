@@ -136,6 +136,42 @@
   margin: 0;
 }
 
+/**
+ * 横向滚动容器的外壳 —— 只为右缘渐隐遮罩存在(裁决 2026-08-06)。
+ *
+ * 规格要求「横向可滚动、滚动条隐藏但可滑动」。**滚动能力一直是好的**:实测
+ * 1200px 下 tab 行 `maxScrollLeft = 4275`、375px 下 5069,键盘聚焦最后一个
+ * tab 会自动滚入视野,`touch-action` 是 `auto`,祖先里没有任何 `overflow`
+ * 约束。缺的是线索 —— 滚动条一隐藏,「右边还有 14 所学校」就没有任何可见
+ * 提示,用户不知道可以滑。
+ *
+ * 40px 渐隐带补上这个线索,滚到底时消失(`data-overflow` 由组件实测得出)。
+ * 不做箭头按钮:那会增加一次点击。
+ *
+ * `pointer-events: none` 是关键 —— 遮罩压在内容上,不能吃掉最右侧那个 tab
+ * 的点击。
+ */
+.scrollerWrap {
+  position: relative;
+}
+
+.scrollerWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms linear;
+  background: linear-gradient(to right, transparent, var(--t7-page));
+}
+
+.scrollerWrap[data-overflow="true"]::after {
+  opacity: 1;
+}
+
 /* 2. 学校 tab 行 */
 .tabRow {
   display: flex;
@@ -144,6 +180,9 @@
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  /* 键盘 tab 到被裁切的项时浏览器会把它滚入视野 —— 留出 40px,免得它正好
+     停在渐隐带底下看不清。 */
+  scroll-padding-inline: 40px;
 }
 
 .tabRow::-webkit-scrollbar {
@@ -178,6 +217,7 @@
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-padding-inline: 40px;
 }
 
 .chipRow::-webkit-scrollbar {

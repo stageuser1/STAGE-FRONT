@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   browseChipDeadline,
   browseChipTitle,
@@ -41,6 +41,65 @@ import styles from "./browse.module.css";
  * 页面不空白 —— 这是**客户端**的契约;服务端对没生成过的 slug 仍然 404
  * (2026-08-05 裁决),所以这条回退不会把垃圾 URL 变成 200。
  */
+/**
+ * 横向滚动容器 + 右缘渐隐遮罩(裁决 2026-08-06)。
+ *
+ * 隐藏滚动条(T7 规格)让「右边还有内容」变得不可见:实测滚动能力本身一直
+ * 正常(1200px 下 tab 行 `maxScrollLeft = 4275`,375px 下 5069,键盘聚焦也会
+ * 自动滚入视野),缺的是**告诉用户可以滑**。40px 渐隐带就是那个提示,滚到底
+ * 时消失。不用箭头按钮 —— 那会增加一次点击。
+ *
+ * 遮罩由 `data-overflow` 驱动,初值 `false`:**服务端不渲染遮罩**。这样不会
+ * 出现「不该有遮罩的行(比如只有 4 个专业的小卡条)先闪一下再消失」。挂载后
+ * 量一次、滚动与窗口变化时各量一次。
+ *
+ * 遮罩是 `::after` 的纯装饰层,`pointer-events: none`,不进可访问性树,
+ * 也不影响反 cloaking —— 里面的内容一个都没少,只是边缘画了个渐变。
+ */
+function HScroller({
+  children,
+  className,
+  ...rest
+}: React.HTMLAttributes<HTMLDivElement> & { className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [overflow, setOverflow] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const measure = () => {
+      // 1px 容差:子像素宽度会让 scrollLeft + clientWidth 差一点点到不了
+      // scrollWidth,不留容差的话滚到底遮罩也不消失。
+      setOverflow(el.scrollWidth - el.clientWidth - el.scrollLeft > 1);
+    };
+    measure();
+    el.addEventListener("scroll", measure, { passive: true });
+
+    // `ResizeObserver` 更准(容器自身变宽也能量到),但不是哪里都有 ——
+    // jsdom 没有它,更老的浏览器也没有。缺了就退回 window resize:覆盖
+    // 「转屏 / 拉窗口」这个真正会改变溢出状态的场景。**不在测试里打补丁**
+    // 假装它存在:那样掩盖的是组件在真实环境里也会炸这件事。
+    const hasRO = typeof ResizeObserver !== "undefined";
+    const ro = hasRO ? new ResizeObserver(measure) : null;
+    ro?.observe(el);
+    if (!ro) window.addEventListener("resize", measure);
+
+    return () => {
+      el.removeEventListener("scroll", measure);
+      ro?.disconnect();
+      if (!ro) window.removeEventListener("resize", measure);
+    };
+  }, [children]);
+
+  return (
+    <div className={styles.scrollerWrap} data-overflow={overflow}>
+      <div className={className} ref={ref} {...rest}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
 export function SchoolsBrowse({
   schools,
   initialSelection,
@@ -87,7 +146,7 @@ export function SchoolsBrowse({
           <p className={styles.lede}>{lede}</p>
 
           {/* 2. 学校 tab 行 —— 当前校是按钮,其余是真实链接 */}
-          <div aria-label="学校" className={styles.tabRow} role="tablist">
+          <HScroller aria-label="学校" className={styles.tabRow} role="tablist">
             {schools.map((school) =>
               school.slug === selection?.schoolSlug ? (
                 <button
@@ -116,11 +175,11 @@ export function SchoolsBrowse({
                 </a>
               ),
             )}
-          </div>
+          </HScroller>
 
           {/* 3. 专业小卡条 —— 只有本校那一条(别校在这一页没有数据) */}
           {withPrograms.map((school) => (
-            <div
+            <HScroller
               aria-label={`${school.nameZh}的专业`}
               className={styles.chipRow}
               hidden={school.slug !== selection?.schoolSlug}
@@ -146,7 +205,7 @@ export function SchoolsBrowse({
                   </span>
                 </button>
               ))}
-            </div>
+            </HScroller>
           ))}
 
           {/* 4. 大信息卡 —— 本校全部专业无条件渲染,同一时刻只有一张可见 */}

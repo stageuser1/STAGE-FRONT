@@ -253,6 +253,47 @@ describe("t7:dom — 反 cloaking(核心原则 4)", () => {
   });
 });
 
+/**
+ * 裁决 2026-08-06:横向滚动条隐藏后加右缘渐隐提示。
+ *
+ * 排查记录留在这里,免得下一个人重走一遍:**滚动能力从来没坏过**。真实浏览器
+ * 实测(1200 / 768 / 375 三个宽度)`overflow-x: auto` 生效、祖先无 `overflow`
+ * 约束、`flex-shrink: 0` + `white-space: nowrap` 让子项溢出而不是被压缩、
+ * `touch-action` 是 `auto`、键盘聚焦最后一个 tab 会自动滚入视野。缺的只是
+ * **线索** —— 滚动条一隐藏,「右边还有 14 所」就没有任何可见提示。
+ *
+ * jsdom 不做布局(所有元素宽度为 0),所以「滚到底遮罩消失」这类行为只能在真
+ * 浏览器里验(已验,三个宽度都对)。这里能钉死的是**结构契约**:遮罩层存在、
+ * 不吃点击、不进可访问性树、不改变 SSR 里的内容。
+ */
+describe("t7:dom — 横向滚动的视觉提示", () => {
+  test("每个横向滚动行都有遮罩外壳,且遮罩不吃点击", () => {
+    const host = document.createElement("div");
+    host.innerHTML = staticMarkup(SCHOOLS);
+
+    const wraps = host.querySelectorAll("[data-overflow]");
+    // tab 行 + 本校小卡条,各一个
+    expect(wraps).toHaveLength(2);
+    for (const wrap of wraps) {
+      // 服务端不渲染遮罩:避免「不该有遮罩的行先闪一下再消失」
+      expect(wrap.getAttribute("data-overflow")).toBe("false");
+    }
+
+    // 滚动的仍然是原来那个元素,role/aria 没有被外壳接管
+    expect(host.querySelector('[role="tablist"]')?.parentElement).toBe(wraps[0]);
+    expect(
+      host.querySelector('[aria-label$="的专业"]')?.parentElement,
+    ).toBe(wraps[1]);
+  });
+
+  test("遮罩不改变 SSR 内容:20 个 tab 与本校 4 张卡一个不少", () => {
+    const markupWithMask = staticMarkup(scopeToSchool(twoSchools(), "juilliard"));
+    // 外壳只是包了一层 <div>,里面的东西一个都没变
+    expect(markupWithMask.match(/role="tab"/g)).toHaveLength(2);
+    expect(markupWithMask.match(/<article/g)).toHaveLength(4);
+  });
+});
+
 describe("t7:dom — 四层结构", () => {
   test("提示句 / tab 行 / 小卡条 / 大卡 四层齐备", () => {
     const { container } = mount(SCHOOLS);

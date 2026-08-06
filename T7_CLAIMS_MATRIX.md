@@ -140,11 +140,12 @@
 | F2 | 字重只有 500(大卡主标题、数字块数值、小卡第一行)与 700(STAGE 标识)两个非默认档 | 同上 | `t7:tokens —「字重只有 500 与 700 两个非默认档」`(取全表 `font-weight` 集合,断言恰为 400/500/700) |
 | F3 | 两个实现期补齐的值已由人类**追认**(裁决 T7-R8),纳入冻结 token 集,在声明处标注「实现期补齐(追认 2026-08-05)」:桌面端左右 padding 24px(规格只给了移动端 16px 与 1200px 宽),小卡 `box-sizing: border-box`(补偿选中态 1.5px 边框,免得选中时挤动邻居)。改动它们与改动其余 token 同性质,都是规格变更 | `browse.module.css` 文件头 + 两处标注 | `t7:tokens` 的 `「移动端左右 padding」`、`「小卡选中边框」`(24px 与 border-box 本身随 F1 的整表核对) |
 
-## G. 响应式(< 768px)—— 3 条
+## G. 响应式与横向滚动 —— 4 条
 
 | # | 声称 | 代码 | 测试 |
 |---|---|---|---|
-| G1 | tab 行与小卡条保持横向滚动,滚动条隐藏但可滑动 | `.tabRow` / `.chipRow` 的 `overflow-x: auto` + `scrollbar-width: none` + `::-webkit-scrollbar` | `t7:tokens —「tab 行与小卡条隐藏滚动条但仍可横向滚动」`;人工项 H5(375px 实测滚动条高度 0、可滚) |
+| G1 | tab 行与小卡条保持横向滚动,滚动条隐藏但可滑动 | `.tabRow` / `.chipRow` 的 `overflow-x: auto` + `scrollbar-width: none` + `::-webkit-scrollbar` | `t7:tokens —「tab 行与小卡条隐藏滚动条但仍可横向滚动」`;人工项 H5 |
+| G4 | **右缘 40px 渐隐提示**(裁决 2026-08-06):滚动条隐藏后没有任何线索说明右边还有内容(20 所里 14 所在屏外)。渐隐带在可滚动时出现、滚到底时消失;不用箭头按钮(会增加一次点击)。**滚动能力本身一直是好的** —— 真浏览器 1200/768/375 三个宽度实测:`overflow-x: auto` 生效、祖先无 `overflow` 约束、`touch-action: auto`、键盘聚焦最后一个 tab 自动滚入视野、`maxScrollLeft` 分别为 4275/…/5069,最后一项都能完整看到 | `SchoolsBrowse` 的 `HScroller`(量出 `data-overflow`,`ResizeObserver` 缺失时退回 window resize);`.scrollerWrap::after`(`pointer-events: none`,不吃点击);`.tabRow/.chipRow` 的 `scroll-padding-inline: 40px` | `t7:dom —「每个横向滚动行都有遮罩外壳,且遮罩不吃点击」`、`「遮罩不改变 SSR 内容」`。**「滚到底遮罩消失」jsdom 验不了**(不做布局,元素宽度恒为 0),已在真浏览器三个宽度实测通过,记为人工项 H6 |
 | G2 | 内容区左右 padding 16px;大卡内边距 32px → 20px | `@media (max-width: 767px)` | `t7:tokens —「移动端左右 padding」`、`「移动端大卡内边距」`、`「移动端断点是 767px」`;人工项 H5 |
 | G3 | 三数字块三列 → 纵向堆叠;详细要求 label-value 左右两列 → 上下两行 | 同上 | `t7:tokens` 相应条目;人工项 H5(实测 `grid-template-columns` 单列、`flex-direction: column`) |
 
