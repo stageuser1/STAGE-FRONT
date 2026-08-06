@@ -51,11 +51,33 @@ const SCHOOL_DIR = fileURLToPath(
   new URL("../app/(explore)/schools/[schoolId]/", import.meta.url),
 );
 
-/** The three production routes, by the URL each one serves. */
+/**
+ * The three production routes, by the URL each one serves.
+ *
+ * `prerendered` 记录的是构建期是否枚举 params(裁决 2026-08-06):
+ *
+ * - 详情页**必须**预渲染 —— 它是 SEO 与反 cloaking 的载体,专业内容必须出现在
+ *   服务端 HTML 里,按需渲染做不到「爬虫第一次来就拿到全文」。它同时是 T3b-R1
+ *   保留字守卫在构建期的执行点。
+ * - 两条图片路由改为**按需生成 + CDN 缓存**。1778 个专业 × 2 条路由的 satori
+ *   光栅化把首次 Vercel 构建顶到 45 分 25 秒超时(Hobby 上限 45 分)。它们现在
+ *   没有任何入口(存图按钮未开放,OG 图只在链接被抓取时请求),不值得占掉整个
+ *   构建预算。
+ *
+ * 守卫没有被削弱:它只需要在构建期跑一次,而详情页仍然在跑。
+ */
 const ROUTES = [
-  { url: "/schools/{school}/{slug}", file: "page.tsx" },
-  { url: "/schools/{school}/{slug}/opengraph-image", file: "opengraph-image.tsx" },
-  { url: "/schools/{school}/{slug}/share-card", file: "share-card/route.tsx" },
+  { url: "/schools/{school}/{slug}", file: "page.tsx", prerendered: true },
+  {
+    url: "/schools/{school}/{slug}/opengraph-image",
+    file: "opengraph-image.tsx",
+    prerendered: false,
+  },
+  {
+    url: "/schools/{school}/{slug}/share-card",
+    file: "share-card/route.tsx",
+    prerendered: false,
+  },
 ];
 
 const read = (file) => readFileSync(ROUTE_DIR + file, "utf8");
@@ -139,7 +161,32 @@ describe("T3b-R1 reserved program slugs", () => {
     });
   });
 
-  for (const { url, file } of ROUTES) {
+  for (const { url, file, prerendered } of ROUTES.filter((r) => !r.prerendered)) {
+    test(`${url} 按需生成:不在构建期枚举 params,但仍只认生产数据源`, () => {
+      const source = read(file);
+      // 不导出 generateStaticParams —— 导出了它就会把 1778 张 satori 图拉回
+      // 构建期,那正是 2026-08-06 那次 45 分 25 秒超时的成因。
+      //
+      // 只匹配真正的 export,不匹配散文:这两个文件的头注释要解释「为什么
+      // 这里不再有 generateStaticParams」,必然会提到这个名字。
+      assert.doesNotMatch(
+        source,
+        /export\s+(?:async\s+)?(?:function\s+generateStaticParams|const\s+generateStaticParams)/,
+        `${file} 不应再有 generateStaticParams:两条图片路由改为按需生成 + ` +
+          `CDN 缓存(裁决 2026-08-06)。加回去会让 next build 重新在构建期` +
+          `光栅化 1778 张 PNG。`,
+      );
+      // 数据源仍然只能是生产真实数据,绝不是 mock —— 这条与预渲染与否无关,
+      // 是「线上图片不能画预览数据」。
+      assert.match(source, /findProductionProgramV3/, file);
+      assert.doesNotMatch(source, /mockProgramsV3|previewProgramsV3/, file);
+      // 未知 slug 必须 404,而不是画一张空卡出来
+      assert.match(source, /status:\s*404/, file);
+      void prerendered;
+    });
+  }
+
+  for (const { url, file } of ROUTES.filter((r) => r.prerendered)) {
     test(`${url} derives its params from the shared, validated source`, () => {
       const source = read(file);
       // Must be a real zero-arg wrapper (`function generateStaticParams() {
