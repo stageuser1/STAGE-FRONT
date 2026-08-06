@@ -1,0 +1,2162 @@
+{
+  "schema_version": "stage_music_admissions_v3",
+  "schools": [
+    {
+      "school_ref": "juilliard",
+      "school_name": "The Juilliard School",
+      "school_name_zh": "茱莉亚学院",
+      "city": "New York",
+      "country": "United States",
+      "region": "North America",
+      "state_province": "New York",
+      "country_code": "US",
+      "languages_of_instruction": null,
+      "school_type": "Conservatory",
+      "official_website": "https://www.juilliard.edu",
+      "logo": null,
+      "card_image": null,
+      "intro_zh": null,
+      "ranking_source": null,
+      "ranking_position": null,
+      "notes": "Pilot package limited to four supplied Vocal Arts / Voice program-degree pages."
+    }
+  ],
+  "fields": [
+    {
+      "field_ref": "voice",
+      "field_name": "Voice",
+      "field_name_zh": "声乐",
+      "field_category": "Music Performance",
+      "parent_field": null,
+      "field_group": "Voice/Vocal",
+      "aliases": [
+        "Voice",
+        "Vocal Performance",
+        "Vocal Arts",
+        "Classical Voice",
+        "Singing"
+      ],
+      "description": null,
+      "display_order": null,
+      "_note": "Reference-only controlled vocabulary row; not for creation or modification."
+    }
+  ],
+  "degree_levels": [
+    {
+      "degree_level_ref": "bm",
+      "degree_level_name": "Bachelor of Music",
+      "degree_level_name_zh": "音乐学士",
+      "abbreviation": "BM",
+      "degree_category": "Undergraduate",
+      "display_order": null,
+      "description": null,
+      "_note": "Reference-only controlled vocabulary row; not for creation or modification."
+    },
+    {
+      "degree_level_ref": "mm",
+      "degree_level_name": "Master of Music",
+      "degree_level_name_zh": "音乐硕士",
+      "abbreviation": "MM",
+      "degree_category": "Graduate",
+      "display_order": null,
+      "description": null,
+      "_note": "Reference-only controlled vocabulary row; not for creation or modification."
+    },
+    {
+      "degree_level_ref": "gd",
+      "degree_level_name": "Graduate Diploma",
+      "degree_level_name_zh": "研究生文凭",
+      "abbreviation": "GD",
+      "degree_category": "Diploma",
+      "display_order": null,
+      "description": null,
+      "_note": "Reference-only controlled vocabulary row; not for creation or modification."
+    },
+    {
+      "degree_level_ref": "dma",
+      "degree_level_name": "Doctor of Musical Arts",
+      "degree_level_name_zh": "音乐艺术博士",
+      "abbreviation": "DMA",
+      "degree_category": "Doctoral",
+      "display_order": null,
+      "description": null,
+      "_note": "Reference-only controlled vocabulary row; not for creation or modification."
+    }
+  ],
+  "program_offerings": [
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": "juilliard",
+      "field_ref": "voice",
+      "degree_level_ref": "bm",
+      "track_or_concentration": null,
+      "official_program_name": "Voice Bachelor of Music",
+      "program_name_zh": null,
+      "department": "Vocal Arts",
+      "duration_years": 4,
+      "language_of_instruction": [
+        "English"
+      ],
+      "program_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "application_url": "https://apply.juilliard.edu/apply",
+      "audition_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "international_url": null,
+      "card_summary_zh": null,
+      "tuition_currency": "USD",
+      "tuition_amount_min": 57200,
+      "tuition_amount_max": 57200,
+      "tuition_period": "per_year",
+      "review_status": "Needs Review",
+      "last_checked": "2026-07-18",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": "juilliard",
+      "field_ref": "voice",
+      "degree_level_ref": "mm",
+      "track_or_concentration": null,
+      "official_program_name": "Voice Master of Music",
+      "program_name_zh": null,
+      "department": "Vocal Arts",
+      "duration_years": 2,
+      "language_of_instruction": [
+        "English"
+      ],
+      "program_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "application_url": "https://apply.juilliard.edu/apply",
+      "audition_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "international_url": null,
+      "card_summary_zh": null,
+      "tuition_currency": "USD",
+      "tuition_amount_min": 57200,
+      "tuition_amount_max": 57200,
+      "tuition_period": "per_year",
+      "review_status": "Needs Review",
+      "last_checked": "2026-07-18",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": "juilliard",
+      "field_ref": "voice",
+      "degree_level_ref": "gd",
+      "track_or_concentration": null,
+      "official_program_name": "Voice Graduate Diploma",
+      "program_name_zh": null,
+      "department": "Vocal Arts",
+      "duration_years": 2,
+      "language_of_instruction": [
+        "English"
+      ],
+      "program_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "application_url": "https://apply.juilliard.edu/apply",
+      "audition_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "international_url": null,
+      "card_summary_zh": null,
+      "tuition_currency": "USD",
+      "tuition_amount_min": 57200,
+      "tuition_amount_max": 57200,
+      "tuition_period": "per_year",
+      "review_status": "Needs Review",
+      "last_checked": "2026-07-18",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": "juilliard",
+      "field_ref": "voice",
+      "degree_level_ref": "dma",
+      "track_or_concentration": null,
+      "official_program_name": "Voice Doctor of Musical Arts",
+      "program_name_zh": null,
+      "department": "Vocal Arts",
+      "duration_years": 2,
+      "language_of_instruction": [
+        "English"
+      ],
+      "program_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "application_url": "https://apply.juilliard.edu/apply",
+      "audition_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "international_url": null,
+      "card_summary_zh": null,
+      "tuition_currency": "USD",
+      "tuition_amount_min": 57200,
+      "tuition_amount_max": 57200,
+      "tuition_period": "per_year",
+      "funding_policy": "full_tuition_waiver_all_admitted",
+      "review_status": "Needs Review",
+      "last_checked": "2026-07-18",
+      "notes": "Two years of full-time residency; the degree must be completed within five years of admission."
+    }
+  ],
+  "application_requirements": [
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "admission_cycle": "Fall 2026",
+      "is_current": true,
+      "application_deadline": "2025-12-02",
+      "timeline_structured": {
+        "milestones": [
+          {
+            "label": "Online application, fee, recommender information, and prescreening materials",
+            "date": "2025-12-02"
+          },
+          {
+            "label": "English-language proof",
+            "date": "2025-12-15",
+            "conditional": "Non-native English applicants unless exempt/waived"
+          },
+          {
+            "label": "Recommendations received",
+            "date": "2025-12-15"
+          },
+          {
+            "label": "Transcripts received",
+            "date": "2025-12-15"
+          },
+          {
+            "label": "ADA audition-accommodation request",
+            "date": "2026-01-15"
+          },
+          {
+            "label": "Prescreening result",
+            "date_text": "Mid-January 2026"
+          },
+          {
+            "label": "Scholarship / financial-aid application",
+            "date": "2026-02-20",
+            "conditional": "Only after an in-person audition invitation"
+          },
+          {
+            "label": "Admission decision",
+            "date": "2026-04-01",
+            "qualifier": "No later than"
+          }
+        ],
+        "date_year_note": "Years are normalized from the user-approved Fall 2026 cycle; source tables print month/day only."
+      },
+      "deadline_notes": "The source prints month/day only. Calendar years are normalized from the approved Fall 2026 entry cycle; review before publication.",
+      "application_fee": 110,
+      "application_fee_currency": "USD",
+      "required_materials": [
+        "Online application",
+        "Artistic resume",
+        "Required essay",
+        "One-minute introduction video",
+        "Transcripts",
+        "Two recommendations (one academic and one artistic)",
+        "Teacher preferences",
+        "Proposed audition repertoire",
+        "Prescreening video recordings"
+      ],
+      "transcript_requirements": "Official or unofficial transcripts are accepted during application. The transcript must show all prior and current coursework for your current program; non-English transcripts require the original plus a certified translation. A final official transcript is required for enrolling students.",
+      "recommendation_letters": 2,
+      "resume_required": "Required",
+      "essay_required": "Required",
+      "portfolio_required": "Unknown",
+      "english_language_tests": [
+        "Cambridge English",
+        "TOEFL",
+        "IELTS Academic",
+        "SAT Evidence-Based Reading and Writing",
+        "ACT"
+      ],
+      "toefl_minimum": 73,
+      "ielts_minimum": 6,
+      "duolingo_minimum": null,
+      "english_waiver_policy": "Automatically exempt when the applicant attended full-time English-language schools for a total of seven of the past ten years; the application determines exemption eligibility.",
+      "international_applicant_notes": "Non-native English applicants must provide English-language proof regardless of citizenship unless exempt/waived. Cambridge English minimum: B2. SAT EBRW minimum 610 and ACT minimum 24 are also listed. Applicants with TOEFL 99 or below (or equivalent) require an ESL interview unless exempt. Non-English transcripts require the original plus certified translation.",
+      "conditional_notes": "English-language proof is required for non-native English speakers unless exempt. SAT/ACT scores are required only for homeschooled applicants. Scholarship/financial-aid materials are required only after an in-person audition invitation. TOEFL uses a minimum of 73 before 21 January 2026 and 4 on the new scale on/after that date.",
+      "review_status": "Needs Review",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "admission_cycle": "Fall 2026",
+      "is_current": true,
+      "application_deadline": "2025-12-02",
+      "timeline_structured": {
+        "milestones": [
+          {
+            "label": "Online application, fee, recommender information, and prescreening materials",
+            "date": "2025-12-02"
+          },
+          {
+            "label": "SAT/ACT scores",
+            "date": "2025-12-02",
+            "conditional": "Homeschooled applicants only; listed in the source timeline although the detailed Additional Requirements section has no homeschooled-applicant section"
+          },
+          {
+            "label": "English-language proof",
+            "date": "2025-12-15",
+            "conditional": "Non-native English applicants unless exempt/waived"
+          },
+          {
+            "label": "Recommendations received",
+            "date": "2025-12-15"
+          },
+          {
+            "label": "Transcripts received",
+            "date": "2025-12-15"
+          },
+          {
+            "label": "ADA audition-accommodation request",
+            "date": "2026-01-15"
+          },
+          {
+            "label": "Prescreening result",
+            "date_text": "Mid-January 2026"
+          },
+          {
+            "label": "Scholarship / financial-aid application",
+            "date": "2026-02-20",
+            "conditional": "Only after an in-person audition invitation"
+          },
+          {
+            "label": "Admission decision",
+            "date": "2026-04-01",
+            "qualifier": "No later than"
+          }
+        ],
+        "date_year_note": "Years are normalized from the user-approved Fall 2026 cycle; source tables print month/day only."
+      },
+      "deadline_notes": "The source prints month/day only. Calendar years are normalized from the approved Fall 2026 entry cycle; review before publication.",
+      "application_fee": 110,
+      "application_fee_currency": "USD",
+      "required_materials": [
+        "Online application",
+        "Artistic resume",
+        "Required essay",
+        "One-minute introduction video",
+        "Transcripts",
+        "One artistic recommendation",
+        "Teacher preferences",
+        "Proposed audition repertoire",
+        "Prescreening video recordings"
+      ],
+      "transcript_requirements": "Official or unofficial transcripts are accepted during application and must show all prior/current post-secondary coursework. Applicants pursuing postgraduate study must submit undergraduate and graduate transcripts; non-English records require the original plus certified translation. A final official transcript is required for enrolling students.",
+      "recommendation_letters": 1,
+      "resume_required": "Required",
+      "essay_required": "Required",
+      "portfolio_required": "Unknown",
+      "english_language_tests": [
+        "Cambridge English",
+        "TOEFL",
+        "IELTS Academic"
+      ],
+      "toefl_minimum": 89,
+      "ielts_minimum": 6.5,
+      "duolingo_minimum": null,
+      "english_waiver_policy": "Automatic exemption requires four years at an English-language secondary school plus a three- or four-year undergraduate degree at an English-language institution. A discretionary waiver may be requested with an English-language undergraduate degree, two recent English papers of at least 1,200 words each, and an unofficial transcript.",
+      "international_applicant_notes": "Non-native English applicants must provide English-language proof regardless of citizenship unless exempt/waived. Cambridge English minimum: C1. Applicants with TOEFL 99 or below (or equivalent) require an ESL interview. Exempt applicants are exempt from the interview; applicants granted a score waiver still require the interview. Non-English transcripts require the original plus certified translation.",
+      "conditional_notes": "English-language proof is required for non-native English speakers unless exempt or granted a waiver. The source timeline lists SAT/ACT scores for homeschooled applicants by December 2, although the detailed Additional Requirements section has no homeschooled-applicant section. Scholarship/financial-aid materials are required only after an in-person audition invitation. TOEFL uses a minimum of 89 before 21 January 2026 and 4.5 on the new scale on/after that date.",
+      "review_status": "Needs Review",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "admission_cycle": "Fall 2026",
+      "is_current": true,
+      "application_deadline": "2025-12-02",
+      "timeline_structured": {
+        "milestones": [
+          {
+            "label": "Online application, fee, recommender information, and prescreening materials",
+            "date": "2025-12-02"
+          },
+          {
+            "label": "SAT/ACT scores",
+            "date": "2025-12-02",
+            "conditional": "Homeschooled applicants only; listed in the source timeline although the detailed Additional Requirements section has no homeschooled-applicant section"
+          },
+          {
+            "label": "English-language proof",
+            "date": "2025-12-15",
+            "conditional": "Non-native English applicants unless exempt/waived"
+          },
+          {
+            "label": "Recommendations received",
+            "date": "2025-12-15"
+          },
+          {
+            "label": "Transcripts received",
+            "date": "2025-12-15"
+          },
+          {
+            "label": "ADA audition-accommodation request",
+            "date": "2026-01-15"
+          },
+          {
+            "label": "Prescreening result",
+            "date_text": "Mid-January 2026"
+          },
+          {
+            "label": "Scholarship / financial-aid application",
+            "date": "2026-02-20",
+            "conditional": "Only after an in-person audition invitation"
+          },
+          {
+            "label": "Admission decision",
+            "date": "2026-04-01",
+            "qualifier": "No later than"
+          }
+        ],
+        "date_year_note": "Years are normalized from the user-approved Fall 2026 cycle; source tables print month/day only."
+      },
+      "deadline_notes": "The source prints month/day only. Calendar years are normalized from the approved Fall 2026 entry cycle; review before publication.",
+      "application_fee": 110,
+      "application_fee_currency": "USD",
+      "required_materials": [
+        "Online application",
+        "Artistic resume",
+        "Required essay",
+        "One-minute introduction video",
+        "Transcripts",
+        "One artistic recommendation",
+        "Teacher preferences",
+        "Proposed audition repertoire",
+        "Prescreening video recordings"
+      ],
+      "transcript_requirements": "Official or unofficial transcripts are accepted during application and must show all prior/current post-secondary coursework. Applicants pursuing postgraduate study must submit undergraduate and graduate transcripts; non-English records require the original plus certified translation. A final official transcript is required for enrolling students.",
+      "recommendation_letters": 1,
+      "resume_required": "Required",
+      "essay_required": "Required",
+      "portfolio_required": "Unknown",
+      "english_language_tests": [
+        "Cambridge English",
+        "TOEFL",
+        "IELTS Academic"
+      ],
+      "toefl_minimum": 89,
+      "ielts_minimum": 6.5,
+      "duolingo_minimum": null,
+      "english_waiver_policy": "Automatic exemption requires four years at an English-language secondary school plus a three- or four-year undergraduate degree at an English-language institution. A discretionary waiver may be requested with an English-language undergraduate degree, two recent English papers of at least 1,200 words each, and an unofficial transcript.",
+      "international_applicant_notes": "Non-native English applicants must provide English-language proof regardless of citizenship unless exempt/waived. Cambridge English minimum: C1. Applicants with TOEFL 99 or below (or equivalent) require an ESL interview. Exempt applicants are exempt from the interview; applicants granted a score waiver still require the interview. Non-English transcripts require the original plus certified translation.",
+      "conditional_notes": "English-language proof is required for non-native English speakers unless exempt or granted a waiver. The source timeline lists SAT/ACT scores for homeschooled applicants by December 2, although the detailed Additional Requirements section has no homeschooled-applicant section. Scholarship/financial-aid materials are required only after an in-person audition invitation. TOEFL uses a minimum of 89 before 21 January 2026 and 4.5 on the new scale on/after that date.",
+      "review_status": "Needs Review",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "admission_cycle": "Fall 2026",
+      "is_current": true,
+      "application_deadline": "2025-12-02",
+      "timeline_structured": {
+        "milestones": [
+          {
+            "label": "Online application, fee, recommender information, and prescreening materials",
+            "date": "2025-12-02"
+          },
+          {
+            "label": "English-language proof",
+            "date": "2025-12-02",
+            "conditional": "Non-native English applicants unless exempt/waived"
+          },
+          {
+            "label": "Recommendations received",
+            "date": "2025-12-15"
+          },
+          {
+            "label": "Transcripts received",
+            "date": "2025-12-15"
+          },
+          {
+            "label": "ADA audition-accommodation request",
+            "date": "2026-01-15"
+          },
+          {
+            "label": "Prescreening result",
+            "date_text": "Mid-January 2026"
+          },
+          {
+            "label": "Dossier",
+            "date_options": [
+              "2026-02-15",
+              "2026-02-16"
+            ],
+            "status": "source conflict",
+            "conditional": "Only after an in-person audition invitation"
+          },
+          {
+            "label": "Graded academic paper",
+            "date_options": [
+              "2026-02-15",
+              "2026-02-16"
+            ],
+            "status": "source conflict",
+            "conditional": "Only after an in-person audition invitation"
+          },
+          {
+            "label": "Scholarship / financial-aid application",
+            "date": "2026-02-20",
+            "conditional": "Only after an in-person audition invitation"
+          },
+          {
+            "label": "Admission decision",
+            "date": "2026-04-01",
+            "qualifier": "No later than"
+          }
+        ],
+        "date_year_note": "Years are normalized from the user-approved Fall 2026 cycle; source tables print month/day only."
+      },
+      "deadline_notes": "The source prints month/day only. Calendar years are normalized from the approved Fall 2026 entry cycle; review before publication.",
+      "application_fee": 110,
+      "application_fee_currency": "USD",
+      "required_materials": [
+        "Online application",
+        "Artistic resume",
+        "Two required essays",
+        "One-minute introduction video",
+        "Transcripts",
+        "Two recommendations",
+        "Teacher preferences",
+        "Proposed audition repertoire",
+        "Prescreening video recordings",
+        "Dossier after audition invitation",
+        "Graded academic paper after audition invitation"
+      ],
+      "transcript_requirements": "Official or unofficial transcripts are accepted during application and must show all prior/current post-secondary coursework. Undergraduate and graduate transcripts are required; non-English records require the original plus certified translation. A final official transcript is required for enrolling students.",
+      "recommendation_letters": 2,
+      "resume_required": "Required",
+      "essay_required": "Required",
+      "portfolio_required": "Not Required",
+      "english_language_tests": [
+        "Cambridge English",
+        "TOEFL",
+        "IELTS Academic"
+      ],
+      "toefl_minimum": 102,
+      "ielts_minimum": 7.5,
+      "duolingo_minimum": null,
+      "english_waiver_policy": "Automatic exemption requires four years of English-language secondary school, a three- or four-year English-language undergraduate degree, and a two-year English-language master’s degree. A discretionary waiver may be requested after seven to eight total years of specified English-language study plus two recent English papers of at least 1,200 words each and an unofficial transcript.",
+      "international_applicant_notes": "Non-native English applicants must provide English-language proof regardless of citizenship unless exempt/waived. Cambridge English minimum: C1. Official English test scores are due with prescreening. The page does not state a separate ELP interview threshold for DMA applicants. Non-English transcripts require the original plus certified translation.",
+      "conditional_notes": "English-language proof is required for non-native English speakers unless exempt or granted a waiver. A dossier, graded academic paper, and scholarship/financial-aid materials are required only after an in-person audition invitation. The dossier and graded-paper deadline conflicts within the page (February 16 in the timeline table; February 15 in the body). TOEFL uses a minimum of 102 before 21 January 2026 and 5 on the new scale on/after that date.",
+      "review_status": "Needs Review",
+      "notes": "The DMA timeline table says February 16 for dossier and graded paper, while the body says February 15. Both are retained in timeline_structured."
+    }
+  ],
+  "audition_requirements": [
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "admission_cycle": "Fall 2026",
+      "is_current": true,
+      "prescreening_required": "Yes",
+      "prescreening_deadline": "2025-12-02",
+      "audition_required": "Yes",
+      "audition_format": "Multiple Rounds",
+      "repertoire_summary": "Prescreening: Italian art song or aria from the 18th century or earlier; Art song in English, not a translation; Third selection in any language; an opera or oratorio aria is welcome but not required; Additional song in the applicant's native language if English is not their native spoken language. In-person audition: Italian art song or aria from the 18th century or earlier; Art song in English, not a translation; Third selection in any language; an opera or oratorio aria is welcome but not required; Additional song in the applicant's native language if English is not their native spoken language.",
+      "repertoire_structured": {
+        "prescreening": {
+          "format": "Video",
+          "selections": [
+            "Italian art song or aria from the 18th century or earlier",
+            "Art song in English, not a translation",
+            "Third selection in any language; an opera or oratorio aria is welcome but not required",
+            "Additional song in the applicant's native language if English is not their native spoken language"
+          ],
+          "contrast_required": true
+        },
+        "in_person_audition": {
+          "location": "The Juilliard School, New York City",
+          "video_audition_accepted": false,
+          "selections": [
+            "Italian art song or aria from the 18th century or earlier",
+            "Art song in English, not a translation",
+            "Third selection in any language; an opera or oratorio aria is welcome but not required",
+            "Additional song in the applicant's native language if English is not their native spoken language"
+          ],
+          "performed_from_memory": true
+        },
+        "callback_or_final_stage": "Same-day callback after first-round auditions: group physical warm-up and individual coaching evaluating diction, acting, and movement; applicants should remain available until 10 PM."
+      },
+      "video_requirements": "Separate clearly labeled files; recordings must be genuine, unedited, and without added effects. Check balance and distortion. Files up to 5 GB are supported.",
+      "file_format_requirements": ".3g2, .3gp, .avi, .m2v, .m4v, .mkv, .mov, .mpeg, .mpg, .mp4, .mxf, .webm, .wmv",
+      "accompaniment_requirements": "Prescreening works written with accompaniment must be accompanied unless otherwise specified. At the in-person audition, works with piano accompaniment must be accompanied. Juilliard supplies accompanists for the audition without charge, but rehearsals may carry fees; applicants may bring their own accompanist at their own expense.",
+      "interview_or_callback_requirements": "Same-day callback after first-round auditions: group physical warm-up and individual coaching evaluating diction, acting, and movement; applicants should remain available until 10 PM.",
+      "special_notes": "Proposed audition repertoire must be submitted in the online application for review and approval. Incomplete repertoire may affect admission consideration; required works may not be substituted.",
+      "conditional_notes": "Only applicants who pass prescreening are invited to the in-person audition. Additional/callback requirements apply only when selected by the faculty panel.",
+      "review_status": "Needs Review",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "admission_cycle": "Fall 2026",
+      "is_current": true,
+      "prescreening_required": "Yes",
+      "prescreening_deadline": "2025-12-02",
+      "audition_required": "Yes",
+      "audition_format": "Multiple Rounds",
+      "repertoire_summary": "Prescreening: Art song or aria from the 18th century or earlier; Song in English, not a translation; Opera aria in Italian; Opera aria from any period in a language other than Italian; no oratorio aria; One German Lied; One French mélodie OR a song/aria in any language composed after 1970. In-person audition: Art song or aria from the 18th century or earlier; Song in English, not a translation; Opera aria in Italian; Opera aria from any period in a language other than Italian; no oratorio aria; One German Lied; One French mélodie OR a song/aria in any language composed after 1970.",
+      "repertoire_structured": {
+        "prescreening": {
+          "format": "Video",
+          "selections": [
+            "Art song or aria from the 18th century or earlier",
+            "Song in English, not a translation",
+            "Opera aria in Italian",
+            "Opera aria from any period in a language other than Italian; no oratorio aria",
+            "One German Lied",
+            "One French mélodie OR a song/aria in any language composed after 1970"
+          ],
+          "contrast_required": true
+        },
+        "in_person_audition": {
+          "location": "The Juilliard School, New York City",
+          "video_audition_accepted": false,
+          "selections": [
+            "Art song or aria from the 18th century or earlier",
+            "Song in English, not a translation",
+            "Opera aria in Italian",
+            "Opera aria from any period in a language other than Italian; no oratorio aria",
+            "One German Lied",
+            "One French mélodie OR a song/aria in any language composed after 1970"
+          ],
+          "performed_from_memory": true
+        },
+        "callback_or_final_stage": "Same-day callback after first-round auditions: group physical warm-up and individual coaching evaluating diction, acting, and movement; applicants should remain available until 10 PM."
+      },
+      "video_requirements": "Separate clearly labeled files; recordings must be genuine, unedited, and without added effects. Check balance and distortion. Files up to 5 GB are supported.",
+      "file_format_requirements": ".3g2, .3gp, .avi, .m2v, .m4v, .mkv, .mov, .mpeg, .mpg, .mp4, .mxf, .webm, .wmv",
+      "accompaniment_requirements": "Prescreening works written with accompaniment must be accompanied unless otherwise specified. At the in-person audition, works with piano accompaniment must be accompanied. Juilliard supplies accompanists for the audition without charge, but rehearsals may carry fees; applicants may bring their own accompanist at their own expense.",
+      "interview_or_callback_requirements": "Same-day callback after first-round auditions: group physical warm-up and individual coaching evaluating diction, acting, and movement; applicants should remain available until 10 PM.",
+      "special_notes": "Proposed audition repertoire must be submitted in the online application for review and approval. Incomplete repertoire may affect admission consideration; required works may not be substituted.",
+      "conditional_notes": "Only applicants who pass prescreening are invited to the in-person audition. Additional/callback requirements apply only when selected by the faculty panel.",
+      "review_status": "Needs Review",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "admission_cycle": "Fall 2026",
+      "is_current": true,
+      "prescreening_required": "Yes",
+      "prescreening_deadline": "2025-12-02",
+      "audition_required": "Yes",
+      "audition_format": "Multiple Rounds",
+      "repertoire_summary": "Prescreening: Art song or aria from the 18th century or earlier; Song in English, not a translation; Opera aria in Italian; Opera aria from any period in a language other than Italian; no oratorio aria; One German Lied; One French mélodie OR a song/aria in any language composed after 1970. In-person audition: Art song or aria from the 18th century or earlier; Song in English, not a translation; Opera aria in Italian; Opera aria from any period in a language other than Italian; no oratorio aria; One German Lied; One French mélodie OR a song/aria in any language composed after 1970.",
+      "repertoire_structured": {
+        "prescreening": {
+          "format": "Video",
+          "selections": [
+            "Art song or aria from the 18th century or earlier",
+            "Song in English, not a translation",
+            "Opera aria in Italian",
+            "Opera aria from any period in a language other than Italian; no oratorio aria",
+            "One German Lied",
+            "One French mélodie OR a song/aria in any language composed after 1970"
+          ],
+          "contrast_required": true
+        },
+        "in_person_audition": {
+          "location": "The Juilliard School, New York City",
+          "video_audition_accepted": false,
+          "selections": [
+            "Art song or aria from the 18th century or earlier",
+            "Song in English, not a translation",
+            "Opera aria in Italian",
+            "Opera aria from any period in a language other than Italian; no oratorio aria",
+            "One German Lied",
+            "One French mélodie OR a song/aria in any language composed after 1970"
+          ],
+          "performed_from_memory": true
+        },
+        "callback_or_final_stage": "Same-day callback after first-round auditions: group physical warm-up and individual coaching evaluating diction, acting, and movement; applicants should remain available until 10 PM."
+      },
+      "video_requirements": "Separate clearly labeled files; recordings must be genuine, unedited, and without added effects. Check balance and distortion. Files up to 5 GB are supported.",
+      "file_format_requirements": ".3g2, .3gp, .avi, .m2v, .m4v, .mkv, .mov, .mpeg, .mpg, .mp4, .mxf, .webm, .wmv",
+      "accompaniment_requirements": "Prescreening works written with accompaniment must be accompanied unless otherwise specified. At the in-person audition, works with piano accompaniment must be accompanied. Juilliard supplies accompanists for the audition without charge, but rehearsals may carry fees; applicants may bring their own accompanist at their own expense.",
+      "interview_or_callback_requirements": "Same-day callback after first-round auditions: group physical warm-up and individual coaching evaluating diction, acting, and movement; applicants should remain available until 10 PM.",
+      "special_notes": "Proposed audition repertoire must be submitted in the online application for review and approval. Incomplete repertoire may affect admission consideration; required works may not be substituted.",
+      "conditional_notes": "Only applicants who pass prescreening are invited to the in-person audition. Additional/callback requirements apply only when selected by the faculty panel.",
+      "review_status": "Needs Review",
+      "notes": null
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "admission_cycle": "Fall 2026",
+      "is_current": true,
+      "prescreening_required": "Yes",
+      "prescreening_deadline": "2025-12-02",
+      "audition_required": "Yes",
+      "audition_format": "Multiple Rounds",
+      "repertoire_summary": "Prescreening: Italian art song or aria from the 18th century or earlier; Song in English, not a translation; Third selection in any language; Opera aria from any period in any language; no oratorio aria; Another aria of the applicant’s choice; One German Lied; One French mélodie OR a song/aria in any language composed after 1970. In-person audition: Full recital including two arias and satisfying the prescreening language requirements; the program should represent varied periods, styles, and languages.",
+      "repertoire_structured": {
+        "prescreening": {
+          "format": "Video",
+          "selections": [
+            "Italian art song or aria from the 18th century or earlier",
+            "Song in English, not a translation",
+            "Third selection in any language",
+            "Opera aria from any period in any language; no oratorio aria",
+            "Another aria of the applicant’s choice",
+            "One German Lied",
+            "One French mélodie OR a song/aria in any language composed after 1970"
+          ],
+          "contrast_required": true
+        },
+        "in_person_audition": {
+          "location": "The Juilliard School, New York City",
+          "video_audition_accepted": false,
+          "selections": [
+            "Full recital including two arias and satisfying the prescreening language requirements; the program should represent varied periods, styles, and languages"
+          ],
+          "performed_from_memory": true
+        },
+        "callback_or_final_stage": "Possible required interview with the Doctoral Governance Committee on the day after first-round auditions, plus a written music theory/history exam including harmonization and counterpoint. Participation in all assigned portions is required."
+      },
+      "video_requirements": "Separate clearly labeled files; recordings must be genuine, unedited, and without added effects. Check balance and distortion. Files up to 5 GB are supported.",
+      "file_format_requirements": ".3g2, .3gp, .avi, .m2v, .m4v, .mkv, .mov, .mpeg, .mpg, .mp4, .mxf, .webm, .wmv",
+      "accompaniment_requirements": "Prescreening works written with accompaniment must be accompanied unless otherwise specified. At the in-person audition, works with piano accompaniment must be accompanied. Juilliard supplies accompanists for the audition without charge, but rehearsals may carry fees; applicants may bring their own accompanist at their own expense.",
+      "interview_or_callback_requirements": "Possible required interview with the Doctoral Governance Committee on the day after first-round auditions, plus a written music theory/history exam including harmonization and counterpoint. Participation in all assigned portions is required.",
+      "special_notes": "Proposed audition repertoire must be submitted in the online application for review and approval. Incomplete repertoire may affect admission consideration; required works may not be substituted.",
+      "conditional_notes": "Only applicants who pass prescreening are invited to the in-person audition. Additional/callback requirements apply only when selected by the faculty panel.",
+      "review_status": "Needs Review",
+      "notes": null
+    }
+  ],
+  "source_records": [
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "The 4-year undergraduate Bachelor of Music (BM) degree provides extensive applied training.",
+      "related_field": "duration_years",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video: December 2; Prescreening Materials: December 2.",
+      "related_field": "application_deadline",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video: December 2; Prescreening Materials: December 2.",
+      "related_field": "timeline_structured",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "The $110 application fee is nonrefundable and must be paid through your application status page upon submission of your application.",
+      "related_field": "application_fee",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video; Prescreening Materials; Recommender Information; Recommendation(s) Received; Transcripts.",
+      "related_field": "required_materials",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "An artistic resume must be uploaded as part of the online application.",
+      "related_field": "resume_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "A written essay is one of Juilliard’s application requirements.",
+      "related_field": "essay_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "In your application you will be required to identify two individuals who will provide your recommendations.",
+      "related_field": "recommendation_letters",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "TOEFL (tests taken prior to 21 January 2026): 73; TOEFL (tests taken on or after 21 January 2026): 4; IELTS Academic Test: 6.",
+      "related_field": "toefl_minimum",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "TOEFL (tests taken prior to 21 January 2026): 73; TOEFL (tests taken on or after 21 January 2026): 4; IELTS Academic Test: 6.",
+      "related_field": "ielts_minimum",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Prescreening Materials: December 2.",
+      "related_field": "prescreening_deadline",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Your major is required to submit prescreening recordings within the online application by the appropriate deadline.",
+      "related_field": "prescreening_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Recordings must not be edited, nor should any effects such as reverb be added.",
+      "related_field": "video_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "An Italian art song or aria from 18th century or before; An art song in English (not a translation); A third selection in any language; If English is not your native speaking language, please prepare an additional song in your native language.",
+      "related_field": "repertoire_structured",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "After successfully passing the prescreening portion of the audition process, you will receive an invitation to attend an in-person audition. Video auditions are not accepted.",
+      "related_field": "audition_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "After successfully passing the prescreening portion of the audition process, you will receive an invitation to attend an in-person audition. Video auditions are not accepted.",
+      "related_field": "audition_format",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "All compositions must be performed from memory. An Italian art song or aria from 18th century or before; An art song in English (not a translation); A third selection in any language.",
+      "related_field": "repertoire_summary",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Callbacks consist of a group warm-up (physical, not vocal) and an individual coaching session where diction, acting, and movement are evaluated by a panel of Vocal Arts faculty.",
+      "related_field": "interview_or_callback_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/bachelor-music",
+      "source_title": "Voice Bachelor of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Works with piano accompaniment must be accompanied for the in-person audition.",
+      "related_field": "accompaniment_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "The 2-year graduate Master of Music (MM) degree provides advanced musical training.",
+      "related_field": "duration_years",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video: December 2; Prescreening Materials: December 2.",
+      "related_field": "application_deadline",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video: December 2; Prescreening Materials: December 2; SAT/ACT Scores (homeschooled applicants only): December 2.",
+      "related_field": "timeline_structured",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "The $110 application fee is nonrefundable and must be paid through your application status page upon submission of your application.",
+      "related_field": "application_fee",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video; Prescreening Materials; Recommender Information; Recommendation(s) Received; Transcripts.",
+      "related_field": "required_materials",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "An artistic resume must be uploaded as part of the online application.",
+      "related_field": "resume_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "A written essay is one of Juilliard’s application requirements.",
+      "related_field": "essay_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "In your application you will be required to identify an individual who will provide your recommendation.",
+      "related_field": "recommendation_letters",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "TOEFL (tests taken prior to 21 January 2026): 89; TOEFL (tests taken on or after 21 January 2026): 4.5; IELTS Academic Test: 6.5.",
+      "related_field": "toefl_minimum",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "TOEFL (tests taken prior to 21 January 2026): 89; TOEFL (tests taken on or after 21 January 2026): 4.5; IELTS Academic Test: 6.5.",
+      "related_field": "ielts_minimum",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Prescreening Materials: December 2.",
+      "related_field": "prescreening_deadline",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Your major is required to submit prescreening recordings within the online application by the appropriate deadline.",
+      "related_field": "prescreening_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Recordings must not be edited, nor should any effects such as reverb be added.",
+      "related_field": "video_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "An art song or aria from 18th century or before; A song in English (not a translation); An opera aria in Italian; An opera aria from any period, in any language other than Italian; One German Lied; One French mélodie OR a song or aria in any language composed after 1970.",
+      "related_field": "repertoire_structured",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "After successfully passing the prescreening portion of the audition process, you will receive an invitation to attend an in-person audition. Video auditions are not accepted.",
+      "related_field": "audition_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "After successfully passing the prescreening portion of the audition process, you will receive an invitation to attend an in-person audition. Video auditions are not accepted.",
+      "related_field": "audition_format",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "All compositions must be performed from memory. An art song or aria from 18th century or before; A song in English (not a translation); An opera aria in Italian; An opera aria from any period, in any language other than Italian; One German Lied.",
+      "related_field": "repertoire_summary",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Callbacks consist of a group warm-up (physical, not vocal) and an individual coaching session where diction, acting, and movement are evaluated by a panel of Vocal Arts faculty.",
+      "related_field": "interview_or_callback_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/master-music",
+      "source_title": "Voice Master of Music Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Works with piano accompaniment must be accompanied for the in-person audition.",
+      "related_field": "accompaniment_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Highly gifted musicians with undergraduate degrees or diplomas, but who are not seeking a full Master of Music degree, can apply for the 2-year Graduate Diploma program.",
+      "related_field": "duration_years",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video: December 2; Prescreening Materials: December 2.",
+      "related_field": "application_deadline",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video: December 2; Prescreening Materials: December 2; SAT/ACT Scores (homeschooled applicants only): December 2.",
+      "related_field": "timeline_structured",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Dossier: February 16; Graded Paper: February 16.",
+      "related_field": "timeline_structured",
+      "confidence_level": "Low",
+      "review_status": "Needs Review"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "All of the required materials for the dossier should be combined into one PDF file and uploaded to your application status page by February 15. All DMA applicants are required to submit a graded academic paper by uploading the PDF to your application status page by February 15.",
+      "related_field": "timeline_structured",
+      "confidence_level": "Low",
+      "review_status": "Needs Review"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "The $110 application fee is nonrefundable and must be paid through your application status page upon submission of your application.",
+      "related_field": "application_fee",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video; Prescreening Materials; Recommender Information; Recommendation(s) Received; Transcripts.",
+      "related_field": "required_materials",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "An artistic resume must be uploaded as part of the online application.",
+      "related_field": "resume_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "A written essay is one of Juilliard’s application requirements.",
+      "related_field": "essay_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "In your application you will be required to identify an individual who will provide your recommendation.",
+      "related_field": "recommendation_letters",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "TOEFL (tests taken prior to 21 January 2026): 89; TOEFL (tests taken on or after 21 January 2026): 4.5; IELTS Academic Test: 6.5.",
+      "related_field": "toefl_minimum",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "TOEFL (tests taken prior to 21 January 2026): 89; TOEFL (tests taken on or after 21 January 2026): 4.5; IELTS Academic Test: 6.5.",
+      "related_field": "ielts_minimum",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Prescreening Materials: December 2.",
+      "related_field": "prescreening_deadline",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Your major is required to submit prescreening recordings within the online application by the appropriate deadline.",
+      "related_field": "prescreening_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Recordings must not be edited, nor should any effects such as reverb be added.",
+      "related_field": "video_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "An art song or aria from 18th century or before; A song in English (not a translation); An opera aria in Italian; An opera aria from any period, in any language other than Italian; One German Lied; One French mélodie OR a song or aria in any language composed after 1970.",
+      "related_field": "repertoire_structured",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "After successfully passing the prescreening portion of the audition process, you will receive an invitation to attend an in-person audition. Video auditions are not accepted.",
+      "related_field": "audition_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "After successfully passing the prescreening portion of the audition process, you will receive an invitation to attend an in-person audition. Video auditions are not accepted.",
+      "related_field": "audition_format",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "All compositions must be performed from memory. An art song or aria from 18th century or before; A song in English (not a translation); An opera aria in Italian; An opera aria from any period, in any language other than Italian; One German Lied.",
+      "related_field": "repertoire_summary",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Callbacks consist of a group warm-up (physical, not vocal) and an individual coaching session where diction, acting, and movement are evaluated by a panel of Vocal Arts faculty.",
+      "related_field": "interview_or_callback_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/graduate-diploma",
+      "source_title": "Voice Graduate Diploma Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Works with piano accompaniment must be accompanied for the in-person audition.",
+      "related_field": "accompaniment_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "The DMA degree requires two years of full-time residency and program completion within five years of admission.",
+      "related_field": "duration_years",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video: December 2; Prescreening Materials: December 2.",
+      "related_field": "application_deadline",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video: December 2; Prescreening Materials: December 2.",
+      "related_field": "timeline_structured",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Deadline/Fee Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "The $110 application fee is nonrefundable and must be paid through your application status page upon submission of your application.",
+      "related_field": "application_fee",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Online Application with Artistic Resume, Essay(s), and Introduction Video; Prescreening Materials; Recommender Information; Recommendation(s) Received; Transcripts.",
+      "related_field": "required_materials",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "An artistic resume must be uploaded as part of the online application.",
+      "related_field": "resume_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "You must provide an essay on both of the following topics.",
+      "related_field": "essay_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "In your application you will be required to identify two individuals who will provide your recommendations.",
+      "related_field": "recommendation_letters",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "TOEFL (tests taken prior to 21 January 2026): 102; TOEFL (tests taken on or after 21 January 2026): 5; IELTS Academic Test: 7.5.",
+      "related_field": "toefl_minimum",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "English Language Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "TOEFL (tests taken prior to 21 January 2026): 102; TOEFL (tests taken on or after 21 January 2026): 5; IELTS Academic Test: 7.5.",
+      "related_field": "ielts_minimum",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Prescreening Materials: December 2.",
+      "related_field": "prescreening_deadline",
+      "confidence_level": "Medium",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Your major is required to submit prescreening recordings within the online application by the appropriate deadline.",
+      "related_field": "prescreening_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Recordings must not be edited, nor should any effects such as reverb be added.",
+      "related_field": "video_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "An Italian art song or aria from 18th century or before; A song in English (not a translation); A third selection in any language; An opera aria from any period, in any language; Another aria of the applicant’s choice; One German Lied; One French mélodie OR a song or aria in any language composed after 1970.",
+      "related_field": "repertoire_structured",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "After successfully passing the prescreening portion of the audition process, you will receive an invitation to attend an in-person audition. Video auditions are not accepted.",
+      "related_field": "audition_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "After successfully passing the prescreening portion of the audition process, you will receive an invitation to attend an in-person audition. Video auditions are not accepted.",
+      "related_field": "audition_format",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Selected candidates must present a full recital that includes two arias and also fulfills the language requirements of the pre-screening repertoire.",
+      "related_field": "repertoire_summary",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "DMA applicants must take a written exam in music theory and music history; the exam includes exercises in harmonization and counterpoint, as well as a music history component.",
+      "related_field": "interview_or_callback_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Audition Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Works with piano accompaniment must be accompanied for the in-person audition.",
+      "related_field": "accompaniment_requirements",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/arm/music/college/voice/doctor-musical-arts",
+      "source_title": "Voice Doctor of Musical Arts Application & Audition Requirements",
+      "source_type": "Application Requirements Page",
+      "retrieved_date": "2026-07-17",
+      "raw_markdown": null,
+      "source_quote": "Dossier, Graded Paper, and Scholarship / Financial Aid Application required only if an invitation to an in-person audition is received.",
+      "related_field": "portfolio_required",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": null,
+      "school_ref": "juilliard",
+      "admission_cycle": null,
+      "source_url": "https://www.tianjinjuilliard.edu.cn/zh-hans",
+      "source_title": "首页 | 天津茱莉亚学院",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "这些来自世界各地的音乐家与来自纽约茱莉亚学院的客座教授共同主持教学，组成极具有活力的艺术家教学团队。",
+      "related_field": "school_name_zh",
+      "confidence_level": "High",
+      "review_status": "Needs Review"
+    },
+    {
+      "program_offering_ref": null,
+      "school_ref": "juilliard",
+      "admission_cycle": null,
+      "source_url": "https://www.juilliard.edu/",
+      "source_title": "The Juilliard School (site footer contact information)",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "The Juilliard School, 60 Lincoln Center Plaza, New York, NY 10023",
+      "related_field": "state_province",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/campus-life/tuition-financial-aid/tuition-fees-and-expenses",
+      "source_title": "Tuition, Fees, and Expenses",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "Student Budget for 2026–27 ... nine-month 2026–27 academic year ... *Tuition $57,200",
+      "related_field": "tuition_amount_min",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_bm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/campus-life/tuition-financial-aid/tuition-fees-and-expenses",
+      "source_title": "Tuition, Fees, and Expenses",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "Student Budget for 2026–27 ... nine-month 2026–27 academic year ... *Tuition $57,200",
+      "related_field": "tuition_amount_max",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/campus-life/tuition-financial-aid/tuition-fees-and-expenses",
+      "source_title": "Tuition, Fees, and Expenses",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "Student Budget for 2026–27 ... nine-month 2026–27 academic year ... *Tuition $57,200",
+      "related_field": "tuition_amount_min",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_mm",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/campus-life/tuition-financial-aid/tuition-fees-and-expenses",
+      "source_title": "Tuition, Fees, and Expenses",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "Student Budget for 2026–27 ... nine-month 2026–27 academic year ... *Tuition $57,200",
+      "related_field": "tuition_amount_max",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/campus-life/tuition-financial-aid/tuition-fees-and-expenses",
+      "source_title": "Tuition, Fees, and Expenses",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "Student Budget for 2026–27 ... nine-month 2026–27 academic year ... *Tuition $57,200",
+      "related_field": "tuition_amount_min",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_gd",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/campus-life/tuition-financial-aid/tuition-fees-and-expenses",
+      "source_title": "Tuition, Fees, and Expenses",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "Student Budget for 2026–27 ... nine-month 2026–27 academic year ... *Tuition $57,200",
+      "related_field": "tuition_amount_max",
+      "confidence_level": "High",
+      "review_status": "Extracted"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/campus-life/tuition-financial-aid/tuition-fees-and-expenses",
+      "source_title": "Tuition, Fees, and Expenses",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "Student Budget for 2026–27 ... nine-month 2026–27 academic year ... *Tuition $57,200. Note: The following programs are either tuition-free or offer full-tuition scholarships to all admitted applicants: Artist Diploma program (any major), Doctor of Musical Arts program (any major), Historical Performance program, Master of Fine Arts in Acting program.",
+      "related_field": "tuition_amount_min",
+      "confidence_level": "Medium",
+      "review_status": "Needs Review"
+    },
+    {
+      "program_offering_ref": "juilliard_voice_dma",
+      "school_ref": null,
+      "admission_cycle": "Fall 2026",
+      "source_url": "https://www.juilliard.edu/campus-life/tuition-financial-aid/tuition-fees-and-expenses",
+      "source_title": "Tuition, Fees, and Expenses",
+      "source_type": "Official Program Page",
+      "retrieved_date": "2026-08-03",
+      "raw_markdown": null,
+      "source_quote": "Student Budget for 2026–27 ... nine-month 2026–27 academic year ... *Tuition $57,200. Note: The following programs are either tuition-free or offer full-tuition scholarships to all admitted applicants: Artist Diploma program (any major), Doctor of Musical Arts program (any major), Historical Performance program, Master of Fine Arts in Acting program.",
+      "related_field": "tuition_amount_max",
+      "confidence_level": "Medium",
+      "review_status": "Needs Review"
+    }
+  ],
+  "data_quality": {
+    "overall_confidence": "Medium",
+    "missing_critical_fields": [
+      "Exact in-person audition dates (external Audition Dates page excluded)",
+      "Exact DMA dossier and graded-paper deadline (source conflict)"
+    ],
+    "needs_human_review": true,
+    "review_notes": [
+      "Gate 1 provenance: human supplied school_ref=juilliard, admission_cycle=Fall 2026, and scope=Vocal Arts pilot limited to four Voice program-degree pages on 2026-07-18.",
+      "Scope is supplied-corpus-only: Voice BM, MM, GD, and DMA. The separate Opera Studies Artist Diploma page and every non-Vocal-Arts program were excluded.",
+      "The source tables print month/day deadlines without years. Dates are normalized to 2025/2026 from the approved Fall 2026 entry cycle and require independent review before publication.",
+      "The DMA page conflicts internally: its timeline table says February 16 for dossier and graded paper, while the body says February 15. Both values are retained; neither is silently selected.",
+      "The MM and GD source timelines list SAT/ACT scores for homeschooled applicants by December 2, while their detailed Additional Requirements sections contain no homeschooled-applicant section; the conditional milestones are retained with the inconsistency noted.",
+      "TOEFL minimums are dual-scaled around 21 January 2026. Integer fields store the pre-change scale (73/89/102); the new-scale values (4/4.5/5) are preserved in conditional notes and source evidence.",
+      "portfolio_required is Unknown for BM/MM/GD because section absence is not an explicit negative. DMA uses Not Required as the base case, with its dossier becoming required only after an audition invitation.",
+      "All four pages were captured on 2026-07-17, after the target Fall 2026 application cycle; freshness must be reviewed before any production use.",
+      "T1b (2026-08-03): school_name_zh filled as \"茱莉亚学院\", sourced from Tianjin Juilliard's own Chinese site referring to the New York institution as \"纽约茱莉亚学院\" — Juilliard's own accepted Chinese branding, not a third-party translation.",
+      "T1b (2026-08-03): schools.country_code set to \"US\" by deterministic ISO 3166-1 alpha-2 lookup on the already-sourced canonical `country` field (\"United States\"); this is a computed code, not an independently sourced new fact, so no source_records row was added for it.",
+      "T1b (2026-08-03): schools.state_province filled as \"New York\", sourced from the site-wide footer address (\"60 Lincoln Center Plaza, New York, NY 10023\") on juilliard.edu.",
+      "T1b (2026-08-03): schools.languages_of_instruction left null. All four program_offerings already carry language_of_instruction=[\"English\"], but no dedicated official statement declaring the school-level instruction language was located; filling it from inference alone would violate extraction discipline, so it stays null pending a source.",
+      "T1b (2026-08-03): degree_levels.degree_level_name_zh filled for bm/mm/gd/dma (音乐学士/音乐硕士/研究生文凭/音乐艺术博士) using standard, generic Chinese academic-degree terminology, not a Juilliard-specific claim. These are proposed values for the user-maintained controlled vocabulary and should be confirmed/added to the Directus degree_levels seed table, not treated as independently web-sourced facts.",
+      "T1b (2026-08-03): tuition_currency/tuition_amount_min/tuition_amount_max/tuition_period filled for all four programs (USD 57,200/year) from juilliard.edu's 2026-27 Tuition, Fees, and Expenses page, retrieved 2026-08-03. The prior placeholder figure of $53,300 referenced in T2 test fixtures/docs was never stored in this production package (all four tuition fields were null) and needed no correction here.",
+      "T1b (2026-08-03) CAVEAT on juilliard_voice_dma tuition (superseded by the 2026-08-03 human ruling below — kept for the audit trail): the official page states \"Doctor of Musical Arts program (any major)\" (along with Artist Diploma, Historical Performance, and MFA Acting) is \"tuition-free or offer[s] full-tuition scholarships to all admitted applicants.\" The $57,200 sticker figure was initially recorded as-is with this caveat rather than being nulled; see the following note for the resolution.",
+      "T1b/T2c (2026-08-03, human ruling): DMA full-tuition-waiver finding accepted as the correct handling of a real gap — Directus schema needs a new program_offerings.funding_policy field (enum: full_tuition_waiver_all_admitted / partial / none / null; nullable) so Mode F can render \"录取者全额学费减免(官网公布)\" instead of a misleading RMB range when tuition is fully waived for every admit. That field does not exist yet, so as an interim measure juilliard_voice_dma's tuition_currency/tuition_amount_min/tuition_amount_max/tuition_period were reset from USD 57,200/per_year back to null on 2026-08-03 (the source_records evidencing $57,200 for DMA are kept, tagged review_status: Needs Review, for reuse once funding_policy lands). Rationale: publishing an unqualified \"约 57–60 万元人民币\" figure for a program that is actually free for every admitted student is a worse failure than showing no cost block at all. juilliard_voice_bm/mm/gd are unaffected and keep tuition_amount = 57200. T2c is tracked in T2_REVIEW_HANDOFF.md's 后续动作 section; not implemented in this session (schema + Mode F code change requires its own review cycle, out of scope for a T1b data-only session).",
+      "T1b (2026-08-03): degree_level_name_zh confirmed by human ruling (bm→音乐学士、mm→音乐硕士、gd→研究生文凭、dma→音乐艺术博士) for propagation into the Directus degree_levels seed table by whoever holds write access; this package's own degree_levels array already carries the confirmed values, so Mode F output in this package is unaffected by the pending upstream sync.",
+      "T2c (2026-08-05, per the 2026-08-03 human ruling): program_offerings.funding_policy has landed, so the T1b interim workaround on juilliard_voice_dma is reverted. tuition_currency/tuition_amount_min/tuition_amount_max/tuition_period are restored to USD 57,200/per_year from the same juilliard.edu 2026-27 Tuition, Fees, and Expenses page that already backs the other three programs (the $57,200 source_records rows were retained for exactly this), and funding_policy is set to \"full_tuition_waiver_all_admitted\". Mode F now renders the cost block as 形态④ — fixed wording 「录取者全额学费减免(官网公布)」, no RMB interval, no components — instead of relying on null tuition columns to suppress the block. juilliard_voice_bm/mm/gd keep funding_policy null (未声明): the official page names DMA, Artist Diploma, Historical Performance and MFA Acting as tuition-free and says nothing about the other three, and \"none\" would be an assertion the source does not make.",
+      "⚠ NOT FOR PRODUCTION — T1b (2026-08-03): review_status was flipped from \"unreviewed\" to \"reviewed\" ONLY to unblock this session's end-to-end Mode F test run. It has NOT been through an independent Mode C review pass. This package must not be treated as production-ready and must be re-reviewed before any real publishing route (T3b) consumes it."
+    ]
+  },
+  "workflow_status": {
+    "extraction_status": "complete",
+    "review_status": "reviewed",
+    "ready_for_directus_import": false
+  },
+  "publishing": {
+    "programs": [
+      {
+        "program_offering_ref": "juilliard_voice_bm",
+        "slug": "voice-bm",
+        "answer_sentence_zh": "茱莉亚学院的声乐音乐学士项目,语言成绩要求 TOEFL 73、IELTS 6(设有豁免条件,以官网来源为准),需预筛、需试音、试音形式为多轮试音,Fall 2026 申请季的申请截止日期为 2025年12月2日,一年总费用约 57–60 万元人民币。",
+        "field_tiers": {},
+        "cost_estimate_rmb": {
+          "min": 570000,
+          "max": 600000,
+          "currency": "CNY",
+          "components": [
+            {
+              "item": "tuition",
+              "value": 57200,
+              "source_type": "official",
+              "currency": "USD",
+              "period": "per_year",
+              "fx_rate": 6.752
+            },
+            {
+              "item": "living_cost",
+              "value_min": 28600,
+              "value_max": 31500,
+              "source_type": "config_estimate",
+              "currency": "USD",
+              "fx_rate": 6.752,
+              "composition_note": "含住宿、餐饮、书籍、交通,不含学生医保(各校差异较大,以校方公布为准)"
+            }
+          ],
+          "fx_rate": 6.752,
+          "fx_snapshot_date": "2026-08-01",
+          "methodology_version": "v3"
+        },
+        "badges": [
+          {
+            "label": "预筛可视频提交",
+            "type": "success",
+            "priority": 2
+          }
+        ],
+        "freshness_flag": {
+          "status": "unknown",
+          "last_verified": "2026-08-03",
+          "days_since_update": 3
+        }
+      },
+      {
+        "program_offering_ref": "juilliard_voice_mm",
+        "slug": "voice-mm",
+        "answer_sentence_zh": "茱莉亚学院的声乐音乐硕士项目,语言成绩要求 TOEFL 89、IELTS 6.5(设有豁免条件,以官网来源为准),需预筛、需试音、试音形式为多轮试音,Fall 2026 申请季的申请截止日期为 2025年12月2日,一年总费用约 57–60 万元人民币。",
+        "field_tiers": {},
+        "cost_estimate_rmb": {
+          "min": 570000,
+          "max": 600000,
+          "currency": "CNY",
+          "components": [
+            {
+              "item": "tuition",
+              "value": 57200,
+              "source_type": "official",
+              "currency": "USD",
+              "period": "per_year",
+              "fx_rate": 6.752
+            },
+            {
+              "item": "living_cost",
+              "value_min": 28600,
+              "value_max": 31500,
+              "source_type": "config_estimate",
+              "currency": "USD",
+              "fx_rate": 6.752,
+              "composition_note": "含住宿、餐饮、书籍、交通,不含学生医保(各校差异较大,以校方公布为准)"
+            }
+          ],
+          "fx_rate": 6.752,
+          "fx_snapshot_date": "2026-08-01",
+          "methodology_version": "v3"
+        },
+        "badges": [
+          {
+            "label": "预筛可视频提交",
+            "type": "success",
+            "priority": 2
+          }
+        ],
+        "freshness_flag": {
+          "status": "unknown",
+          "last_verified": "2026-08-03",
+          "days_since_update": 3
+        }
+      },
+      {
+        "program_offering_ref": "juilliard_voice_gd",
+        "slug": "voice-gd",
+        "answer_sentence_zh": "茱莉亚学院的声乐研究生文凭项目,语言成绩要求 TOEFL 89、IELTS 6.5(设有豁免条件,以官网来源为准),需预筛、需试音、试音形式为多轮试音,Fall 2026 申请季的申请截止日期为 2025年12月2日,一年总费用约 57–60 万元人民币。",
+        "field_tiers": {},
+        "cost_estimate_rmb": {
+          "min": 570000,
+          "max": 600000,
+          "currency": "CNY",
+          "components": [
+            {
+              "item": "tuition",
+              "value": 57200,
+              "source_type": "official",
+              "currency": "USD",
+              "period": "per_year",
+              "fx_rate": 6.752
+            },
+            {
+              "item": "living_cost",
+              "value_min": 28600,
+              "value_max": 31500,
+              "source_type": "config_estimate",
+              "currency": "USD",
+              "fx_rate": 6.752,
+              "composition_note": "含住宿、餐饮、书籍、交通,不含学生医保(各校差异较大,以校方公布为准)"
+            }
+          ],
+          "fx_rate": 6.752,
+          "fx_snapshot_date": "2026-08-01",
+          "methodology_version": "v3"
+        },
+        "badges": [
+          {
+            "label": "预筛可视频提交",
+            "type": "success",
+            "priority": 2
+          }
+        ],
+        "freshness_flag": {
+          "status": "unknown",
+          "last_verified": "2026-08-03",
+          "days_since_update": 3
+        }
+      },
+      {
+        "program_offering_ref": "juilliard_voice_dma",
+        "slug": "voice-dma",
+        "answer_sentence_zh": "茱莉亚学院的声乐音乐艺术博士项目,语言成绩要求 TOEFL 102、IELTS 7.5(设有豁免条件,以官网来源为准),需预筛、需试音、试音形式为多轮试音、无需作品集,Fall 2026 申请季的申请截止日期为 2025年12月2日,录取者全额学费减免(官网公布)。",
+        "field_tiers": {},
+        "cost_estimate_rmb": {
+          "funding_policy": "full_tuition_waiver_all_admitted",
+          "note": "录取者全额学费减免(官网公布)",
+          "components": [],
+          "methodology_version": "v3"
+        },
+        "badges": [
+          {
+            "label": "预筛可视频提交",
+            "type": "success",
+            "priority": 2
+          }
+        ],
+        "freshness_flag": {
+          "status": "unknown",
+          "last_verified": "2026-08-03",
+          "days_since_update": 3
+        }
+      }
+    ]
+  }
+}
