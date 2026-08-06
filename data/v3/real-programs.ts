@@ -2,34 +2,14 @@
 // tests/program_v3_ai_ready.test.mjs imports directly under `node --test
 // --experimental-strip-types` — that loader does not resolve the `@/` alias
 // (see app/robots.ts for the fuller explanation).
+import { readFileSync } from "node:fs";
+import path from "node:path";
+
 import {
   adaptCanonicalPackage,
   type CanonicalPackage,
 } from "../../lib/program-v3/package-adapter.ts";
 import { programOfferingRef } from "../../lib/program-v3/format.ts";
-// Import attribute required for Node's native ESM loader (used by `node
-// --test` on the sitemap.ts chain, see above); Next's bundler ignores it and
-// loads the JSON the same way it always has.
-import juilliardPackage from "./real/juilliard-vocal-arts-pilot.json" with { type: "json" };
-import clevelandPackage from "./real/cleveland-institute-of-music.json" with { type: "json" };
-import colburnPackage from "./real/colburn.json" with { type: "json" };
-import curtisPackage from "./real/curtis.json" with { type: "json" };
-import eastmanPackage from "./real/eastman.json" with { type: "json" };
-import guildhallPackage from "./real/guildhall-school-of-music-and-drama.json" with { type: "json" };
-import jacobsPackage from "./real/jacobs-school-of-music.json" with { type: "json" };
-import manhattanPackage from "./real/manhattan-school-of-music.json" with { type: "json" };
-import necPackage from "./real/new-england-conservatory.json" with { type: "json" };
-import northwesternPackage from "./real/northwestern-bienen-school-of-music.json" with { type: "json" };
-import oberlinPackage from "./real/oberlin-conservatory-of-music.json" with { type: "json" };
-import peabodyPackage from "./real/peabody-institute.json" with { type: "json" };
-import ricePackage from "./real/rice-shepherd-school-of-music.json" with { type: "json" };
-import royalAcademyPackage from "./real/royal-academy-of-music.json" with { type: "json" };
-import royalCollegePackage from "./real/royal-college-of-music.json" with { type: "json" };
-import royalScotlandPackage from "./real/royal-conservatoire-of-scotland.json" with { type: "json" };
-import royalNorthernPackage from "./real/royal-northern-college-of-music.json" with { type: "json" };
-import michiganPackage from "./real/university-of-michigan-smtd.json" with { type: "json" };
-import uscPackage from "./real/usc-thornton-school-of-music.json" with { type: "json" };
-import yalePackage from "./real/yale-school-of-music.json" with { type: "json" };
 import type { ProgramV3 } from "./types";
 
 /**
@@ -60,32 +40,69 @@ import type { ProgramV3 } from "./types";
  * 顺序即页面顺序:`buildBrowseModel()` 保留数组顺序,所以 tab 行的第一所是
  * 茱莉亚(唯一人工复核过的),其余按 school_ref 字母序。
  */
-const REAL_PACKAGES = [
-  juilliardPackage,
-  clevelandPackage,
-  colburnPackage,
-  curtisPackage,
-  eastmanPackage,
-  guildhallPackage,
-  jacobsPackage,
-  manhattanPackage,
-  necPackage,
-  northwesternPackage,
-  oberlinPackage,
-  peabodyPackage,
-  ricePackage,
-  royalAcademyPackage,
-  royalCollegePackage,
-  royalScotlandPackage,
-  royalNorthernPackage,
-  michiganPackage,
-  uscPackage,
-  yalePackage,
+/**
+ * **包从文件系统读,不再 `import ... with { type: "json" }`(裁决 2026-08-06)。**
+ *
+ * 静态 import 让 webpack 把这 20 个 JSON 当模块处理。原始体积 16.9 MB,解析成
+ * AST 再序列化进持久化缓存后膨胀十几倍:第三次 Vercel 构建崩在
+ * `ENOSPC: no space left on device`(第 929 页,
+ * `/schools/peabody_institute/guitar-mm-historical-performance`),日志末尾的
+ * 体积报告点名 `.next/cache/webpack/server-production/1.pack` **257 MB**。
+ * 那一次的页数优化其实是生效的(6168 → 2612,前 900 页跑得很快),撞的是磁盘
+ * 不是时间。
+ *
+ * `readFileSync` 的路径是运行期拼出来的,webpack 静态分析看不见,于是这 20 个
+ * 文件**完全不进 bundle、不进 webpack 缓存**。
+ *
+ * 这样做的前提是**所有消费方都在服务端**,已逐个核实:`app/sitemap.ts`、
+ * 三条 `/schools/[schoolId]/[programSlug]` 路由、`SchoolsBrowsePage.tsx` 全是
+ * 服务端组件;唯一的客户端组件 `SchoolsBrowse.tsx` 通过 props 拿数据,自己不
+ * import 这个模块。测试跑在 Node 里(`node --test` 与 vitest),`node:fs` 同样
+ * 可用。**客户端组件永远不要 import 这个文件** —— 那会在打包时炸出同样的问题,
+ * 而且是以更难诊断的形式。
+ *
+ * 运行期(按需渲染未预生成的 params)也要读到这些文件,所以 `next.config.ts`
+ * 的 `outputFileTracingIncludes` 把 `data/v3/real/**` 显式带进那三条路由的
+ * 函数包 —— 与 Listening 数据集同样的手法、同样的理由:文件追踪看不见
+ * `readFileSync` 的动态路径。
+ */
+const REAL_PACKAGE_FILES = [
+  // 茱莉亚在最前:它是唯一人工复核过的包,tab 行的第一所就是它
+  // (`buildBrowseModel()` 保留数组顺序)。其余按 school_ref 字母序。
+  "juilliard-vocal-arts-pilot.json",
+  "cleveland-institute-of-music.json",
+  "colburn.json",
+  "curtis.json",
+  "eastman.json",
+  "guildhall-school-of-music-and-drama.json",
+  "jacobs-school-of-music.json",
+  "manhattan-school-of-music.json",
+  "new-england-conservatory.json",
+  "northwestern-bienen-school-of-music.json",
+  "oberlin-conservatory-of-music.json",
+  "peabody-institute.json",
+  "rice-shepherd-school-of-music.json",
+  "royal-academy-of-music.json",
+  "royal-college-of-music.json",
+  "royal-conservatoire-of-scotland.json",
+  "royal-northern-college-of-music.json",
+  "university-of-michigan-smtd.json",
+  "usc-thornton-school-of-music.json",
+  "yale-school-of-music.json",
 ];
 
-export const realProgramsV3: ProgramV3[] = REAL_PACKAGES.flatMap((pkg) =>
-  adaptCanonicalPackage(pkg as unknown as CanonicalPackage),
-);
+/**
+ * `process.cwd()`,不是 `import.meta.url`:webpack 对
+ * `new URL("./x", import.meta.url)` 有专门的 asset 处理,会把文件重新拉回
+ * bundle —— 那正是这次要摆脱的东西。`next build` 与 `npm test` 的 cwd 都是
+ * 仓库根,两边一致。
+ */
+const REAL_PACKAGE_DIR = path.join(process.cwd(), "data", "v3", "real");
+
+export const realProgramsV3: ProgramV3[] = REAL_PACKAGE_FILES.flatMap((file) => {
+  const raw = readFileSync(path.join(REAL_PACKAGE_DIR, file), "utf8");
+  return adaptCanonicalPackage(JSON.parse(raw) as CanonicalPackage);
+});
 
 /**
  * `publishing.slug` values that cannot be routed to under

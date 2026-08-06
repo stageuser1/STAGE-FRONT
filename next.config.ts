@@ -13,6 +13,23 @@ const nextConfig: NextConfig = {
     "/ielts-lab/practice/listening/[setId]": [
       "./data/ielts/listening/items/**",
     ],
+    /**
+     * Same reason as Listening above, same mechanism (2026-08-06):
+     * `data/v3/real-programs.ts` reads its 20 canonical packages with
+     * `readFileSync` off a path assembled at run time, so file tracing cannot
+     * see them. It reads them that way on purpose — as static
+     * `import … with { type: "json" }` they went through webpack, whose
+     * persistent cache grew to 257 MB and killed a Vercel build with `ENOSPC`.
+     *
+     * Only the three routes that can render **on demand** need the files at
+     * request time: the detail page keeps `dynamicParams = true`, and the two
+     * image routes no longer prerender at all. `/schools` and the sitemap are
+     * fully static, so their copy of the data never has to leave the build
+     * machine.
+     */
+    "/schools/[schoolId]/[programSlug]": ["./data/v3/real/**"],
+    "/schools/[schoolId]/[programSlug]/opengraph-image": ["./data/v3/real/**"],
+    "/schools/[schoolId]/[programSlug]/share-card": ["./data/v3/real/**"],
   },
   /**
    * Per-page budget for static generation.
