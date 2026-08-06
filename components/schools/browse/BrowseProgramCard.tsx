@@ -1,11 +1,11 @@
 import { Icon } from "@/components/ui/Icon";
 import { CompareToggleButton } from "@/components/program/v3/CompareToggleButton";
 import { ProgramJsonLd } from "@/components/program/v3/ProgramJsonLd";
-import { splitApplicationConditions } from "@/components/program/v3/RequirementsExpand";
 import type { ProgramV3 } from "@/data/v3/types";
 import {
   auditionFormatZh,
   costBlockLine,
+  fiveStateZh,
   formatDateZh,
   formatYearMonthZh,
   freshnessLabel,
@@ -16,7 +16,6 @@ import {
   sourceDomain,
   sourceUrlForField,
 } from "@/lib/program-v3/format";
-import { buildRequirementRows } from "@/lib/program-v3/requirement-rows";
 import { BrowseDeadlineChip } from "./BrowseDeadlineChip";
 import styles from "./browse.module.css";
 
@@ -33,19 +32,23 @@ const TONE_DOT: Record<"green" | "yellow" | "red", string> = {
  * 纯函数:`costBlockLine`(费用三形态 §3.6)、`auditionFormatZh` /
  * `fiveStateZh`(枚举中文化)、`freshnessLabel`(§3.4 状态机)、
  * `deadlineState`(角标三态,在 `BrowseDeadlineChip` 里)、
- * `splitApplicationConditions`(条件归属,裁决 T3-R4.1)、
- * `sourceUrlForField`(条件说明的来源链接)、`buildRequirementRows`
- * (完整要求表的行,与详情页同一份定义)。空值降级同样是 T3 的:
+ * `sourceUrlForField`(来源链接)。空值降级同样是 T3 的:
  * 每一块自己判断该不该出现,不留空壳(裁决 T3-R3.1)。
  *
- * 与 T3 卡片的两处结构差异,都是 2026-08-05 人类裁决的直接结果:
+ * 与 T3 卡片的结构差异,都是人类裁决的直接结果:
  *
- * 1. 「详细要求」是常展开的 label-value 表,不是 `<details>` 折叠区 ——
- *    T7 规格给的就是两列表格的形状(移动端上下两行、分隔线 #F0F2F5)。
- * 2. 曲目要求印全文,不做 §3.3 的 80 字截断 —— 截断的前提是有一个
- *    「完整要求」页可以送读者过去,而详情页已被裁决降级为这张同页大卡,
- *    没有下一跳了。这与裁决 T3-R4.4(无详情页的项目印全文)是同一条规则,
- *    不是新开的例外。
+ * 1. 「详细要求」是常展开的 label-value 表,不是 `<details>` 折叠区
+ *    (2026-08-05)—— T7 规格给的就是两列表格的形状。
+ * 2. **「详细要求」只有三行**(2026-08-06):申请材料清单、曲目要求、
+ *    英语要求。这是蓝图 §1.5 给 expand(30 秒层)划的范围。此前这里调用
+ *    `buildRequirementRows()` 展开 20 多行,那是 §1.5 **3 分钟层**(详情页
+ *    `RequirementsTable`)的字段全集,2026-08-05 折叠详情页时被一并带了
+ *    进来 —— 规格疏漏,不是取值错误。那份共享定义一行未动,其余字段仍在
+ *    canonical 里,以后恢复详情页时原样可用。
+ * 3. 曲目要求做 §3.3 的 80 字截断,「完整要求」链到**官网原页**
+ *    (2026-08-06)。站内没有下一跳(详情页已折进本卡),官网原页才是真正
+ *    有全文的地方;找不到来源 URL 时回退成印全文,而不是留一个点不开的
+ *    省略号 —— 与裁决 T3-R4.4 同一条规则。
  *
  * 反 cloaking:整张卡片全量服务端渲染,没有任何一段文字靠交互才进入 DOM。
  * 外层的显隐由 `SchoolsBrowse` 用 `hidden` 属性控制,只切换可见性,
@@ -74,43 +77,38 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
   const auditionFormat = auditionFormatZh(audition.audition_format);
   const keyCells = [deadlineText, cost, auditionFormat].filter(Boolean).length;
 
-  // 块 6:详细要求。共享定义 + 曲目全文(见文件头第 2 条),减去与三数字块
-  // 重复的那一行 —— 见下。
-  const rows = buildRequirementRows(program).filter(
-    // 「申请截止日期」在这张卡上已经由三数字块印过一次,同卡再印一遍没有
-    // 信息增量(人类裁决 2026-08-05, T7 交付确认第 3 条)。
-    //
-    // 过滤在这里、不在 `buildRequirementRows` 里:那份定义是详情页
-    // `RequirementsTable`(§2.2 模块 2)与本卡共用的,而详情页上没有三数字块,
-    // 删掉就等于让完整要求表少一行事实。这一行的取舍是**这个页面**的排版
-    // 问题,不是那份定义的问题。
-    //
-    // 两者永远同生同灭,所以过滤不会造成「表里没有、数字块也没有」:两处
-    // 都由 `formatDateZh(application.application_deadline)` 决定,截止日为
-    // null 时这一行本来就不存在,三数字块的格子也不会渲染。
-    (row) => row.term !== "申请截止日期",
-  );
-  if (audition.repertoire_summary) {
-    rows.push({ term: "曲目要求", value: audition.repertoire_summary });
-  }
-  const conditions = splitApplicationConditions(application);
-  const conditionLines = [
-    {
-      label: "语言条件说明",
-      note: conditions.language,
-      href: sourceUrlForField(program, "english", "language"),
-    },
-    {
-      label: "申请条件说明",
-      note: conditions.general,
-      href: sourceUrlForField(program, "application_requirements", "application"),
-    },
-    {
-      label: "试音条件说明",
-      note: audition.conditional_notes,
-      href: sourceUrlForField(program, "audition"),
-    },
-  ].filter((line) => Boolean(line.note));
+  // 块 6:详细要求 —— **只有三行**(裁决 2026-08-06,§1.5 tier 归位)。
+  //
+  // 这里原先直接用 `buildRequirementRows(program)`,展开 20 多行(申请季、
+  // 申请费、推荐信、简历、个人文书、作品集、成绩单要求、TOEFL、IELTS、豁免
+  // 政策、国际生说明、预筛是否要求/截止、是否试音、视频/文件格式/伴奏/面试
+  // 要求、曲目要求,外加两条条件说明),其中大量是英文原文整段照搬。
+  //
+  // 成因是规格疏漏而不是取值错误:`buildRequirementRows` 是给蓝图 §1.5 的
+  // **3 分钟层**(详情页 `RequirementsTable`,§2.2 模块 2)写的字段全集;
+  // 2026-08-05 把详情页折进这张卡时,那个全集被一并带了进来。而 §1.5 给
+  // expand(30 秒层)划的只有三项:材料清单、曲目要求、英语要求。
+  //
+  // 那份共享定义**一行未动** —— 它仍然是详情页的定义,以后恢复详情页时原样
+  // 可用;这里只是不再调用它。其余字段仍在 canonical 里,没有删数据、没有删
+  // 组件。
+  const englishLine = buildEnglishRequirementLine(application);
+  const materials =
+    application.required_materials.length > 0
+      ? application.required_materials.join("、")
+      : null;
+
+  // 曲目要求:§3.3 的 80 字截断 + 「完整要求」外链。
+  //
+  // 截断的前提是有一个下一跳可以送读者过去。详情页已被 2026-08-05 裁决折进
+  // 这张卡,站内没有下一跳了 —— 所以链接指向**官网原页**(该专业试音/曲目
+  // 要求的 source_url),那是真正有全文的地方,而不是一个站内死链。
+  // 找不到任何来源 URL 时**回退成印全文**,而不是留一个点不开的省略号:
+  // 与裁决 T3-R4.4(无下一跳的项目印全文)同一条规则。
+  const repertoireHref = sourceUrlForField(program, "repertoire", "audition");
+  const repertoire = audition.repertoire_summary;
+  const repertoireTruncated =
+    repertoire !== null && repertoireHref !== null && repertoire.length > 80;
 
   // 块 7:状态条 + 动作按钮
   const freshness = freshnessLabel(
@@ -207,41 +205,45 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
         </dl>
       ) : null}
 
-      {/* 6. 详细要求 */}
-      {rows.length > 0 || conditionLines.length > 0 ? (
+      {/* 6. 详细要求 —— 只有三行(§1.5 expand 层) */}
+      {materials || repertoire || englishLine ? (
         <div className={styles.requirements}>
-          {rows.length > 0 ? (
-            <dl>
-              {rows.map((row) => (
-                <div className={styles.requirementRow} key={row.term}>
-                  <dt className={styles.requirementLabel}>{row.term}</dt>
-                  <dd className={styles.requirementValue}>{row.value}</dd>
-                </div>
-              ))}
-            </dl>
-          ) : null}
-          {conditionLines.length > 0 ? (
-            <div className={styles.conditionList}>
-              {conditionLines.map((line) => (
-                <p className={styles.condition} key={line.label}>
-                  {line.label}:{line.note}
-                  {line.href ? (
+          <dl>
+            {materials ? (
+              <div className={styles.requirementRow}>
+                <dt className={styles.requirementLabel}>申请材料清单</dt>
+                <dd className={styles.requirementValue}>{materials}</dd>
+              </div>
+            ) : null}
+            {repertoire ? (
+              <div className={styles.requirementRow}>
+                <dt className={styles.requirementLabel}>曲目要求</dt>
+                <dd className={styles.requirementValue}>
+                  {repertoireTruncated ? (
                     <>
-                      ,详见{" "}
+                      {repertoire.slice(0, 80)}…{" "}
                       <a
                         className={styles.link}
-                        href={line.href}
+                        href={repertoireHref as string}
                         rel="noreferrer"
                         target="_blank"
                       >
-                        官网来源
+                        完整要求
                       </a>
                     </>
-                  ) : null}
-                </p>
-              ))}
-            </div>
-          ) : null}
+                  ) : (
+                    repertoire
+                  )}
+                </dd>
+              </div>
+            ) : null}
+            {englishLine ? (
+              <div className={styles.requirementRow}>
+                <dt className={styles.requirementLabel}>英语要求</dt>
+                <dd className={styles.requirementValue}>{englishLine}</dd>
+              </div>
+            ) : null}
+          </dl>
         </div>
       ) : null}
 
@@ -279,4 +281,43 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
       ) : null}
     </article>
   );
+}
+
+/**
+ * 英语要求合并成一行(裁决 2026-08-06):五态 + 各项最低分 + 豁免条件。
+ *
+ * 原先这是四到五行(「英语要求」「TOEFL 最低分」「IELTS 最低分」「多邻国最低
+ * 分」「语言豁免政策」)。合并不丢事实,只去掉重复的 label。
+ *
+ * 五态放在最前且**只在明确时才出现**:`english_requirement_status` 是唯一
+ * 能断言「不要求」的字段(§5,裁决 R8),而空的分数只意味着「没查到」。
+ * `fiveStateZh` 把 `Unknown` 渲染成「未知」—— 那是一个占位符而不是事实,
+ * 所以这里直接不渲染它(§3.1)。
+ */
+function buildEnglishRequirementLine(
+  application: ProgramV3["application"],
+): string | null {
+  const parts: string[] = [];
+
+  if (
+    application.english_requirement_status !== null &&
+    application.english_requirement_status !== "Unknown"
+  ) {
+    parts.push(fiveStateZh(application.english_requirement_status) as string);
+  }
+
+  const scores = [
+    application.toefl_minimum !== null ? `TOEFL ${application.toefl_minimum}` : null,
+    application.ielts_minimum !== null ? `IELTS ${application.ielts_minimum}` : null,
+    application.duolingo_minimum !== null
+      ? `多邻国 ${application.duolingo_minimum}`
+      : null,
+  ].filter(Boolean);
+  if (scores.length > 0) parts.push(scores.join(" / "));
+
+  if (application.english_waiver_policy) {
+    parts.push(`豁免条件:${application.english_waiver_policy}`);
+  }
+
+  return parts.length > 0 ? parts.join(" · ") : null;
 }

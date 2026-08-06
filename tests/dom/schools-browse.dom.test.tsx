@@ -21,6 +21,7 @@ import {
   realProgramsV3,
 } from "@/data/v3/real-programs";
 import type { ProgramV3 } from "@/data/v3/types";
+import { sourceUrlForField } from "@/lib/program-v3/format";
 import {
   browseLede,
   buildBrowseModel,
@@ -123,7 +124,19 @@ describe("t7:dom — 反 cloaking(核心原则 4)", () => {
     }
   });
 
-  test("每个专业的曲目要求印全文,不截断、不留待点击后取", () => {
+  /**
+   * 裁决 2026-08-06:曲目要求做 §3.3 的 80 字截断,「完整要求」链到官网原页。
+   *
+   * 这条此前断言的是「印全文、不截断」,依据是裁决 T3-R4.4(无下一跳的项目
+   * 印全文)—— 而当时确实没有下一跳:详情页已被折进这张卡。现在有了:官网
+   * 原页(该专业试音/曲目要求的 `source_url`)才是真正有全文的地方,链过去
+   * 比在卡上铺一整段英文原文更接近读者要的东西。
+   *
+   * 截断不是 cloaking:被截掉的部分不在本站任何地方、不靠交互才出现,链接
+   * 明写去向。找不到来源 URL 时**回退成印全文**,而不是留一个点不开的省略号
+   * —— 那才会既没有全文也没有去处。
+   */
+  test("曲目要求 80 字截断 + 「完整要求」外链,链到官网原页", () => {
     const withRepertoire = SCHOOLS[0].programs.filter(
       ({ program }) => program.audition.repertoire_summary,
     );
@@ -131,10 +144,43 @@ describe("t7:dom — 反 cloaking(核心原则 4)", () => {
     const text = staticText(markup);
     for (const { program } of withRepertoire) {
       const full = program.audition.repertoire_summary as string;
-      expect(full.length).toBeGreaterThan(80); // 否则这条断言证明不了「没截断」
-      expect(text).toContain(full);
-      expect(text).not.toContain("…");
+      expect(full.length).toBeGreaterThan(80); // 否则这条断言证明不了「截断了」
+      const href = sourceUrlForField(program, "repertoire", "audition");
+      expect(href, `${program.publishing.slug} 应有曲目来源 URL`).toBeTruthy();
+
+      // 前 80 字在,全文不在
+      expect(text).toContain(full.slice(0, 80));
+      expect(text).not.toContain(full);
+      // 去处写明了,而且是站外真实地址
+      expect(markup).toContain(`href="${href}"`);
     }
+    expect(text).toContain("完整要求");
+  });
+
+  /**
+   * 裁决 2026-08-06:「详细要求」只有三行(蓝图 §1.5 的 expand 层)。
+   *
+   * 此前这里调用 `buildRequirementRows()`,把 §1.5 **3 分钟层**(详情页
+   * `RequirementsTable`)的字段全集展开成 20 多行,其中大量是英文原文整段
+   * 照搬。这条钉住新范围,并且钉住**其余 label 一个都不出现** —— 否则下次
+   * 有人往卡上加一行,不会有任何测试拦住。
+   */
+  test("详细要求只有三行,3 分钟层的字段不在卡上", () => {
+    const host = document.createElement("div");
+    host.innerHTML = markup;
+
+    for (const card of host.querySelectorAll("article")) {
+      // 只看「详细要求」区自己的 `<dt>` —— 断言整页文本会误伤:「申请季」
+      // 出现在导语里,「推荐信」「作品集」出现在材料清单的值里,那些都是
+      // 事实而不是被删掉的行。
+      const labels = [
+        ...card.querySelectorAll<HTMLElement>('[class*="requirementLabel"]'),
+      ].map((dt) => dt.textContent);
+      expect(labels).toEqual(["申请材料清单", "曲目要求", "英语要求"]);
+    }
+
+    // 三分钟层的行连同两条条件说明,一条都不该出现在卡上
+    expect(host.querySelectorAll('[class*="conditionList"]')).toHaveLength(0);
   });
 
   test("每个专业的材料清单全条在 HTML 里", () => {
