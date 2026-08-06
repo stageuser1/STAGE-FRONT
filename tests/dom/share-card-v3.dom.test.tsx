@@ -70,27 +70,22 @@ function ogText(program: ProgramV3): string {
 
 describe("S. 分享卡模板(§2.3)", () => {
   /**
-   * 2026-08-06:真实语料从 4 条扩到 1778 条,`previewProgramsV3` 因此变成
-   * 9 mock + 1778 真实 = 1787。原来写死的 `toBe(13)` 于是变红,而这条要证明的
-   * 是「每个 fixture 竖版横版都能构树、都画出校名」—— 与语料规模无关。
+   * 2026-08-06,两次调整叠在一起,分开说:
    *
-   * 改法与本轮其他同类一致:**组成关系**断言不变量(预览注册表 = mock + 真实,
-   * 一个不多一个不少),**渲染循环**回到它原本的 13 个 fixture(9 个 mock 边界
-   * 用例 + 茱莉亚 4 条)。把 1787 个 fixture 各渲两遍在 jsdom 里要几分钟,而
-   * 多出来的 1774 条是同一批模板的重复,买不到新的覆盖。
+   * 1. 真实语料从 4 条扩到 1778 条,`previewProgramsV3` 一度变成 1787,写死的
+   *    `toBe(13)` 变红。
+   * 2. 随后为了构建预算,真实数据整体退出预览注册表(见
+   *    `data/v3/preview-registry.ts` 的说明),注册表回到 9 个 mock。
+   *
+   * 所以这里既不写 13 也不写 9:**注册表 = mock,一个不多一个不少**是不变量,
+   * 渲染循环跟着注册表走。真实数据的渲染覆盖没丢,它在 T3b 的生产路由上,由
+   * `tests/dom/schools-browse.dom.test.tsx` 与 `program_v3_share_card.test.mjs`
+   * 的 H 组负责。
    */
-  test("sc:S1 13 个 fixture(9 mock + 4 真实)竖版与横版都能构树,且都画出校名", () => {
-    expect(previewProgramsV3.length).toBe(
-      mockProgramsV3.length + realProgramsV3.length,
-    );
+  test("sc:S1 预览面每个 fixture 竖版与横版都能构树,且都画出校名", () => {
+    expect(previewProgramsV3).toEqual(mockProgramsV3);
     expect(mockProgramsV3.length).toBe(9);
-    // `-t1b` 是预览注册表给真实包加的碰撞规避后缀 —— 用它精确挑出真实数据,
-    // 前缀匹配会连带捞到 T3 mock 里同名的茱莉亚用例。
-    const juilliardPreview = previewProgramsV3.filter(
-      (p) => p.school.slug === "juilliard-t1b",
-    );
-    expect(juilliardPreview).toHaveLength(4);
-    for (const program of [...mockProgramsV3, ...juilliardPreview]) {
+    for (const program of previewProgramsV3) {
       const payload = buildShareCardPayload(program);
       for (const text of [portraitText(program), ogText(program)]) {
         expect(text).toContain(SHARE_CARD_BRAND_LINE);
