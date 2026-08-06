@@ -77,7 +77,7 @@
 | C5 | **裁决 T7-R4**:C4 的回退是**客户端**契约;服务端对没生成过的 slug 仍然 404,不把垃圾 URL 变成 200 | `app/(explore)/schools/[schoolId]/[programSlug]/page.tsx` 的 `notFound()` | 人工项 H3(curl 实测) |
 | C6 | 首屏不 push(否则后退键第一下原地打转) | `SchoolsBrowse`:`select()` 只在交互里调用,`useEffect` 里只 `setState` | `t7:dom —「首屏不 push …」` |
 
-## D. 反 cloaking(核心原则 4,硬红线)—— 8 条
+## D. 反 cloaking(核心原则 4,硬红线)—— 9 条
 
 > ### ⚠ 2026-08-06 口径修正:红线的范围是**本页**,不是全站
 >
@@ -112,7 +112,8 @@
 | D1b | 其余 19 所以**真实 `<a href>`** 出现在 tab 行,爬虫可顺着到达每一所 —— 这是收窄之后红线仍然成立的前提 | `SchoolsBrowse` tab 行:当前校渲染 `<button>`,其余渲染 `<a href={school.href}>`;`href` 由 `buildBrowseModel()` 写入,指向该校第一个专业 | `t7:dom —「跨校 tab 是真实 <a href>,指向该校第一个专业」`(断言 `tagName === "A"` 与 href 值);`t7:dom —「一页只含本校大卡,别校以可跟随的链接出现」`;全量不变量测试逐校核对 20 个 tab 链接齐全 |
 | D2 | 曲目要求做 §3.3 的 **80 字截断**,「完整要求」链到**官网原页**(裁决 2026-08-06,取代下方 D3 的旧规则) | `BrowseProgramCard`:`repertoireHref = sourceUrlForField(program, "repertoire", "audition")`,超过 80 字且有来源 URL 时截断 + 外链 | `t7:dom —「曲目要求 80 字截断 + 「完整要求」外链,链到官网原页」`(断言前 80 字在、全文不在、`href` 是真实站外地址) |
 | D3 | ~~曲目不做截断,因为没有下一跳~~ **已被 2026-08-06 裁决取代。** 站内确实没有下一跳(详情页已折进本卡),但**官网原页**是真正有全文的地方,链过去比在卡上铺一整段英文原文更接近读者要的东西。**找不到来源 URL 时仍回退成印全文** —— 那时才真的没有去处,与 T3-R4.4 同一条规则,所以那条裁决没有被推翻,只是不再适用于有来源 URL 的情形 | `BrowseProgramCard` 文件头第 3 条 | 同 D2(测试覆盖截断分支;回退分支由 `repertoireHref === null` 保证,当前语料无此例) |
-| D3b | **「详细要求」只有三行**:申请材料清单、曲目要求、英语要求(蓝图 §1.5 的 expand/30 秒层)。此前调用 `buildRequirementRows()` 展开 20 多行 —— 那是 §1.5 **3 分钟层**(详情页 `RequirementsTable`,§2.2 模块 2)的字段全集,2026-08-05 折叠详情页时被一并带进卡片。**规格疏漏,不是取值错误**;那份共享定义一行未动,其余字段仍在 canonical 里,恢复详情页时原样可用 | `BrowseProgramCard` 不再 import `buildRequirementRows`;`buildEnglishRequirementLine()` 把五态 + TOEFL/IELTS/多邻国 + 豁免条件合并成一行 | `t7:dom —「详细要求只有三行,3 分钟层的字段不在卡上」`(逐张卡断言 `<dt>` 恰为那三个,且条件说明区不存在);`lib/program-v3/requirement-rows.ts` 的 T3 既有测试全绿,证明共享定义未被改动 |
+| D3b | **「详细要求」只有三行**:申请材料清单、曲目要求、英语要求(蓝图 §1.5 的 expand/30 秒层)。此前调用 `buildRequirementRows()` 展开 20 多行 —— 那是 §1.5 **3 分钟层**(详情页 `RequirementsTable`,§2.2 模块 2)的字段全集,2026-08-05 折叠详情页时被一并带进卡片。**规格疏漏,不是取值错误**;那份共享定义一行未动,其余字段仍在 canonical 里,恢复详情页时原样可用 | `BrowseProgramCard` 不再 import `buildRequirementRows`;`buildEnglishRequirementLine()` 把五态 + TOEFL/IELTS/多邻国合并成一行,豁免信号与外链由调用处渲染(见 D3c) | `t7:dom —「详细要求只有三行,3 分钟层的字段不在卡上」`(逐张卡断言 `<dt>` 恰为那三个,且条件说明区不存在);`lib/program-v3/requirement-rows.ts` 的 T3 既有测试全绿,证明共享定义未被改动 |
+| D3c | **语言条件并回英语要求行**(裁决 2026-08-06,是三行里唯一带外链的):「TOEFL 102 · IELTS 7.5 · 设有豁免条件,详见 官网来源」。写「TOEFL 102」却不说有豁免条件,对中国学生是完全不同的两件事 —— 很多人正是靠豁免政策申请的。**展示信号 + 去处,不搬整段原文**(全文在官网)。措辞按事实分档:`english_waiver_policy` 字面就是豁免政策 → 「设有豁免条件」;只有 `conditions.language` 时 → 「设有语言条件说明」,因为语言条件不一定是豁免,对它说「豁免」就是一句 canonical 没做过的断言 | `BrowseProgramCard` 的 `englishConditionLabel` / `englishConditionHref`。hint 列表按**实际承载该事实的 `related_field`** 写(`toefl`/`ielts`/`duolingo` 等),不按字段中文名猜 —— 只写 `english`/`language` 时链接恒为 null,旧的「语言条件说明」行在真实数据上从未渲染出过链接 | `t7:dom —「英语要求行带豁免信号与官网外链」`(逐张卡断言分数与豁免信号同行、`<a>` 文案为「官网来源」、href 是 `https?://` 站外地址、整行 < 120 字 —— 最后一条防止整段英文豁免原文从这里回来) |
 | D4 | 每个专业的**材料清单**全条在 HTML 里 | `BrowseProgramCard` 直接 `required_materials.join("、")`(2026-08-06 起不再经 `buildRequirementRows()`) | `t7:dom —「每个专业的材料清单全条在 HTML 里」` |
 | D5 | **校内**切换只是显隐(`hidden` 属性),**不替换 innerHTML、不点击后 fetch**;跨校是一次真实导航(见 D1b),不是同页切换 | `SchoolsBrowse`:`hidden={...}`,没有条件渲染、没有 `fetch`/`innerHTML`;跨校 tab 是 `<a href>`,不带 `onClick` | `t7:dom —「未选中的卡片是 hidden 属性,不是被从 DOM 里摘掉」`;`t7:dom —「四个专业的大卡全部在服务端 HTML 里」`(切换前后 `<article>` 恒为 4);`t7:dom —「跨校 tab 是真实 <a href>…」`(断言点击不改写 URL —— 那是浏览器导航的事) |
 | D6 | 页面上没有任何 CSS 弱化/隐藏的**可见文本**:唯一的隐藏是「未选中的那几张卡/小卡条」,这是 T7 规格指定的实现方式;JSON-LD 是 machine-only 的合法例外(§0.4) | `browse.module.css` 无 `opacity`/`line-clamp`/`text-overflow`/`visibility:hidden`;`ProgramJsonLd` | 人工项 H4(逐条目检) |

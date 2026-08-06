@@ -183,6 +183,40 @@ describe("t7:dom — 反 cloaking(核心原则 4)", () => {
     expect(host.querySelectorAll('[class*="conditionList"]')).toHaveLength(0);
   });
 
+  /**
+   * 裁决 2026-08-06:语言条件并回英语要求行。
+   *
+   * 「TOEFL 102」而不说「设有豁免条件」,对中国学生是完全不同的两件事 ——
+   * 很多人正是靠豁免政策申请的。决策价值极高而只占一行,所以它是三行里唯一
+   * 带外链的:信号在卡上,全文在官网。
+   *
+   * 这条存在的意义是不让它在下一次压体积时被顺手拿掉 —— 它正是上一轮被
+   * 「详细要求只留三行」误伤、又被单独捞回来的那一条。
+   */
+  test("英语要求行带豁免信号与官网外链", () => {
+    const host = document.createElement("div");
+    host.innerHTML = markup;
+
+    for (const card of host.querySelectorAll("article")) {
+      const labels = [
+        ...card.querySelectorAll<HTMLElement>('[class*="requirementLabel"]'),
+      ];
+      const englishDd = labels.find((dt) => dt.textContent === "英语要求")
+        ?.nextElementSibling as HTMLElement | undefined;
+      expect(englishDd).toBeTruthy();
+      const text = englishDd?.textContent ?? "";
+      // 分数与豁免信号同在一行,不再拆成四五行
+      expect(text).toMatch(/TOEFL \d+/);
+      expect(text).toContain("设有");
+      // 去处是站外真实地址,不是站内死链
+      const link = englishDd?.querySelector("a");
+      expect(link?.textContent).toBe("官网来源");
+      expect(link?.getAttribute("href")).toMatch(/^https?:\/\//);
+      // 整段豁免原文不上卡 —— 上一轮压掉的英文长段落不许从这里回来
+      expect(text.length).toBeLessThan(120);
+    }
+  });
+
   test("每个专业的材料清单全条在 HTML 里", () => {
     const text = staticText(markup);
     for (const { program } of SCHOOLS[0].programs) {

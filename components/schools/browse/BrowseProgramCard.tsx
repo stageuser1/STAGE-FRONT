@@ -1,6 +1,7 @@
 import { Icon } from "@/components/ui/Icon";
 import { CompareToggleButton } from "@/components/program/v3/CompareToggleButton";
 import { ProgramJsonLd } from "@/components/program/v3/ProgramJsonLd";
+import { splitApplicationConditions } from "@/components/program/v3/RequirementsExpand";
 import type { ProgramV3 } from "@/data/v3/types";
 import {
   auditionFormatZh,
@@ -92,7 +93,40 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
   // 那份共享定义**一行未动** —— 它仍然是详情页的定义,以后恢复详情页时原样
   // 可用;这里只是不再调用它。其余字段仍在 canonical 里,没有删数据、没有删
   // 组件。
-  const englishLine = buildEnglishRequirementLine(application);
+  const englishScores = buildEnglishRequirementLine(application);
+  // 语言条件并回英语要求行(裁决 2026-08-06)。
+  //
+  // 「TOEFL 102」而不说「设有豁免条件」,对中国学生是完全不同的两件事 ——
+  // 很多人正是靠豁免政策申请的。这条信息的决策价值极高,而它只占一行。
+  //
+  // 展示的是**信号 + 去处**,不是整段原文:全文仍在官网,外链送过去。这既是
+  // §3.2 的合并形态,也避免把刚压掉的英文长段落又搬回卡上。
+  //
+  // 措辞按事实分档,不合并成一句:`english_waiver_policy` 字面就是豁免政策,
+  // 说「设有豁免条件」有依据;而 `conditions.language` 是语言条件说明,它**不
+  // 一定**是豁免(可能是「须在入学前提交」这类附加条件),对它说「豁免」就是
+  // 一句 canonical 没有做过的断言。
+  const conditions = splitApplicationConditions(application);
+  const englishConditionLabel = application.english_waiver_policy
+    ? "设有豁免条件"
+    : conditions.language
+      ? "设有语言条件说明"
+      : null;
+  // hint 列表按**实际承载这个事实的 `related_field`** 写,不是按字段的中文名
+  // 猜。canonical 里英语要求是挂在 `toefl_minimum` / `ielts_minimum` /
+  // `duolingo_minimum` 上的,没有哪条 source_record 的 `related_field` 叫
+  // `english` 或 `language` —— 只写那两个 hint 的话链接恒为 null,而 §3.1 会
+  // 让这一行悄悄退化成没有去处的一句话。(旧的「语言条件说明」行就是这样,
+  // 它在真实数据上从来没有渲染出过链接。)
+  const englishConditionHref = sourceUrlForField(
+    program,
+    "english",
+    "language",
+    "waiver",
+    "toefl",
+    "ielts",
+    "duolingo",
+  );
   const materials =
     application.required_materials.length > 0
       ? application.required_materials.join("、")
@@ -206,7 +240,7 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
       ) : null}
 
       {/* 6. 详细要求 —— 只有三行(§1.5 expand 层) */}
-      {materials || repertoire || englishLine ? (
+      {materials || repertoire || englishScores || englishConditionLabel ? (
         <div className={styles.requirements}>
           <dl>
             {materials ? (
@@ -237,10 +271,31 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
                 </dd>
               </div>
             ) : null}
-            {englishLine ? (
+            {englishScores || englishConditionLabel ? (
               <div className={styles.requirementRow}>
                 <dt className={styles.requirementLabel}>英语要求</dt>
-                <dd className={styles.requirementValue}>{englishLine}</dd>
+                <dd className={styles.requirementValue}>
+                  {englishScores}
+                  {englishScores && englishConditionLabel ? " · " : null}
+                  {englishConditionLabel ? (
+                    <>
+                      {englishConditionLabel}
+                      {englishConditionHref ? (
+                        <>
+                          ,详见{" "}
+                          <a
+                            className={styles.link}
+                            href={englishConditionHref}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            官网来源
+                          </a>
+                        </>
+                      ) : null}
+                    </>
+                  ) : null}
+                </dd>
               </div>
             ) : null}
           </dl>
@@ -289,6 +344,10 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
  * 原先这是四到五行(「英语要求」「TOEFL 最低分」「IELTS 最低分」「多邻国最低
  * 分」「语言豁免政策」)。合并不丢事实,只去掉重复的 label。
  *
+ * 豁免/条件说明**不在这里** —— 它由调用处渲染成「设有豁免条件,详见 官网来源」
+ * (信号 + 外链),因为它要带一个 `<a>`,而这个函数返回纯字符串。整段豁免原文
+ * 不上卡:全文在官网,链接送过去。
+ *
  * 五态放在最前且**只在明确时才出现**:`english_requirement_status` 是唯一
  * 能断言「不要求」的字段(§5,裁决 R8),而空的分数只意味着「没查到」。
  * `fiveStateZh` 把 `Unknown` 渲染成「未知」—— 那是一个占位符而不是事实,
@@ -314,10 +373,6 @@ function buildEnglishRequirementLine(
       : null,
   ].filter(Boolean);
   if (scores.length > 0) parts.push(scores.join(" / "));
-
-  if (application.english_waiver_policy) {
-    parts.push(`豁免条件:${application.english_waiver_policy}`);
-  }
 
   return parts.length > 0 ? parts.join(" · ") : null;
 }
