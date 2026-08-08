@@ -139,6 +139,15 @@
    - 同 slug 重复 POST = 整包覆盖(draft 迭代的正常路径);若线上已是 published,覆盖后自动降回 draft 并在响应中显式提示 `"previous_status": "published"`。
 2. `POST /api/schools/[slug]/publish` —— 翻转 `status` 为 `"published"`,同步索引;404 当 slug 不存在。同鉴权。发布是人工动作:只由运营者手工 curl 触发,任何脚本/agent 不得自动调用。
 3. `POST /api/schools/[slug]/unpublish` —— 对称回撤(错误数据被爬前的撤回通道)。
+
+   ⚠️ **阶段一验收实测发现(2026-08-08),这条是阻塞级要求**:只改 OSS 里的
+   `status` **不会**让已缓存的页面立即下线。三条路由是 ISR(revalidate=3600),
+   翻成 draft 后已渲染过的页面仍会公开返回 200 最长一小时;鉴权本身没问题
+   (缓存清空后立即 404,已实测),但"撤回通道"必须是即时的。所以
+   unpublish **必须**同步 `revalidatePath` 掉:`/schools`、
+   `/schools/[slug]`(type: "page")、该校每个 `/schools/[slug]/[programSlug]`、
+   以及 `/sitemap.xml`。复核时要实测"unpublish 后立刻 curl 即 404",
+   不接受"等一小时会好"。
 4. 所有端点 `export const dynamic = "force-dynamic"`;写成功后调用 `revalidatePath("/schools")`、`revalidatePath("/schools/[slug]", "page")` 等使 ISR 失效(publish/unpublish 也要),并 revalidate sitemap。
 
 ### 约束
@@ -168,6 +177,9 @@
 2. **整体拒绝**:构造一个 3 处不合规的包(缺 required、类型错、多余字段),POST 后断言 422 且**三处全部**出现在响应里;随后 GET OSS 确认对象未被写入、索引未变——半写入是最高级别 FAIL。
 3. **draft 强制**:POST 一个 `status: "published"` 的包,读回 OSS 对象断言 status 是 draft。
 4. **发布链路**:draft 期间 `/schools/<slug>` 404、`.json` 404、sitemap 不含;publish 后三者反转;unpublish 再反转回来。带 `?preview=` 的 draft 页含 noindex。
+   **unpublish 必须即时生效**:publish → curl 确认 200 → unpublish → **立刻**
+   再 curl,必须已是 404。若仍返回 200,说明 revalidatePath 没做或没覆盖全,
+   属阻塞性 FAIL(阶段一实测过 ISR 会让旧页面继续公开最长一小时)。
 5. **并发**:同 slug 两个并发 POST(可用 `curl &` 或脚本),确认索引最终一致、无丢失更新;做不到就确认代码里有 ETag/If-Match 防护并说明其行为。
 6. **凭据**:`grep -r "NEXT_PUBLIC_" app/api lib/oss` 为 0;写 token 不出现在任何客户端可达代码。
 7. 亲跑全部单测;`npx next build` 通过。

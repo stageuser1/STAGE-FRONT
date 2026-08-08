@@ -20,12 +20,30 @@ import {
 
 /** 全部 published 包,按索引顺序(索引顺序即页面 tab 顺序)。 */
 export async function loadPublishedPackages(): Promise<ContractPackage[]> {
-  // 构建期短路(架构决策 1:构建在 iad1,OSS 读取放运行时)。`next build`
-  // 渲染静态路由(/schools、/、/profile、sitemap)时不跨洋请求 OSS,也不
-  // 要求构建环境持有 OSS 凭据 —— 返回空目录,预渲染出空态壳。运行时第一次
-  // ISR 再渲染(revalidate=3600),阶段二的 publish 端点会 revalidatePath
-  // 立即刷新。这不是数据 fallback:构建产物里没有任何院校数据,只有空态。
-  if (process.env.NEXT_PHASE === "phase-production-build") return [];
+  /**
+   * 无凭据 = 空目录(2026-08-08 验收修正)。
+   *
+   * 原先这里按 `NEXT_PHASE === "phase-production-build"` 短路,理由是决策 1
+   * 的「构建在 iad1,OSS 读取尽量放运行时」。验收实测发现代价被低估:
+   * `/schools` 与 `sitemap.xml` 是**构建期静态生成**的,短路让它们烙进空态,
+   * `/schools` 要等 revalidate(1h)才有数据,sitemap 更是永远为空(它没有
+   * revalidate,只在下次构建重生成)。对一个要承接笔记流量的站,这是真损失。
+   *
+   * 现在的判据是**凭据是否存在**,不是构建阶段:
+   * - Vercel 构建持有 OSS_* 环境变量 → 构建期就读真实目录(院校量级两位数、
+   *   只读 index + 每所一个对象),页面与 sitemap 一上线即正确;
+   * - 本地/CI 无凭据 → 返回空目录并告警,构建照常通过。
+   *
+   * 这不违反硬约束 A:没有第二数据源,没有本地 JSON 兜底 —— 空就是空。
+   * 读到凭据后 OSS 若不可达,错误照常抛出,构建响亮失败而不是静默出空站。
+   */
+  if (!process.env.OSS_ACCESS_KEY_ID) {
+    console.warn(
+      "[oss] OSS_ACCESS_KEY_ID 未配置 —— 按空目录渲染(本地/CI 预期行为;" +
+        "若这是生产构建,说明环境变量缺失,页面会空)",
+    );
+    return [];
+  }
   const index = await readSchoolIndex();
   const slugs = index.schools
     .filter((entry) => entry.status === "published")

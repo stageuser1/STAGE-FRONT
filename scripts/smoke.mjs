@@ -60,17 +60,25 @@ async function waitForServer(seconds) {
 }
 
 /**
- * 专业详情路由从浏览页现抓,不写死(2026-08-08 OSS 迁移):数据在 OSS,
- * slug 随发布变化。空库(没有任何 published 学校)是合法状态 —— 此时跳过
- * 详情检查项,只冒烟静态面与 404/重定向语义。
+ * 专业详情路由从 **sitemap** 现抓,不写死(2026-08-08 OSS 迁移):数据在
+ * OSS,slug 随发布变化。用 sitemap 而不是刮浏览页的 href —— sitemap 恰好
+ * 就是「已发布的院校页与专业页」的权威清单,而浏览页在只收录一所学校时
+ * 根本不渲染任何跨校链接(每个 URL 只渲染本校内容,裁决 2026-08-06),
+ * 刮 href 会在单校库下静默漏测详情页。
+ *
+ * 空库(没有任何 published 学校)是合法状态 —— 此时跳过详情检查项,
+ * 只冒烟静态面与 404/重定向语义。
  */
 async function discoverDetailRoutes() {
-  const catalog = await request("/schools");
-  const programPath = catalog.body.match(
-    /href="(\/schools\/[^"/?#]+\/[^"/?#]+)"/,
-  )?.[1];
-  if (!programPath) return { schoolPath: null, programPath: null };
-  return { schoolPath: programPath.split("/").slice(0, 3).join("/"), programPath };
+  const sitemap = await request("/sitemap.xml");
+  const paths = [...sitemap.body.matchAll(/<loc>[^<]*?(\/schools\/[^<]*)<\/loc>/g)].map(
+    (m) => m[1],
+  );
+  const programPath = paths.find((p) => p.split("/").length === 4) ?? null;
+  const schoolPath = programPath
+    ? programPath.split("/").slice(0, 3).join("/")
+    : (paths.find((p) => p.split("/").length === 3) ?? null);
+  return { schoolPath, programPath };
 }
 
 async function main() {
@@ -83,7 +91,7 @@ async function main() {
    * route; body copy is used where the layout supplies the title.
    */
   const checks = [
-    { path: "/", marker: "发现、准备并申请全球顶尖音乐院校" },
+    { path: "/", marker: "找到适合你的学校" },
     { path: "/pricing", marker: "定价 · STAGE" },
     { path: "/contact", marker: "联系我们 · STAGE" },
     { path: "/schools", marker: "STAGE · 海外音乐院校招生数据库" },
@@ -91,14 +99,13 @@ async function main() {
     // 跟随重定向,所以断言落点是浏览页标题。
     { path: "/search", marker: "STAGE · 海外音乐院校招生数据库" },
     { path: "/dashboard", marker: "学习中心 · STAGE" },
-    { path: "/ielts-lab", marker: "雅思实验室 · STAGE" },
-    { path: "/ielts-lab/browse", marker: "题库浏览 · 雅思实验室" },
+    { path: "/ielts-lab", marker: "学习总览 · IELTS Lab" },
+    { path: "/ielts-lab/browse", marker: "Reading 题库 · IELTS Lab" },
     // Invalid detail URLs answer 404, not a successful page (audit P1-10).
     { path: "/schools/does-not-exist", status: 404, marker: "学校未找到" },
     ...(schoolPath
       ? [
           { path: schoolPath, marker: "项目" },
-          { path: programPath, marker: "申请" },
           {
             path: `${schoolPath}/does-not-exist-program`,
             status: 404,
@@ -106,6 +113,7 @@ async function main() {
           },
         ]
       : []),
+    ...(programPath ? [{ path: programPath, marker: "申请" }] : []),
   ];
 
   const results = [];

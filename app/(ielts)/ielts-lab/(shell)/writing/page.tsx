@@ -16,12 +16,12 @@ export const metadata: Metadata = {
  * Writing task list (writing-spec §二), on the Task 2 recall bank.
  *
  * The bank is a static file read at build time, so this route prerenders with no
- * network call — which is why `revalidate` is gone: it was there for the the legacy CMS
+ * network call — which is why `revalidate` is gone: it was there for the legacy CMS
  * set summaries this page used to load, and there is nothing left to revalidate.
  * Filtering and paging happen in the client, keeping the route static (Plan
  * §4.1.2).
  *
- * This is the only Writing catalog: the the legacy CMS-backed set module it replaced
+ * This is the only Writing catalog: the legacy CMS-backed set module it replaced
  * — its catalog, `[setSlug]` workspace, model-answer page and API route, and
  * `lib/writing-data.ts` — has been deleted.
  */

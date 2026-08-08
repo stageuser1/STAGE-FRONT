@@ -17,7 +17,7 @@ export const metadata: Metadata = {
  *
  * Nested under `t2/` rather than sitting beside the surviving `[setSlug]` route:
  * Next.js allows only one dynamic slug per segment level, and `[setSlug]` still
- * owns that level until the the legacy CMS set path is retired.
+ * owns that level until the legacy CMS set path is retired.
  */
 export function generateStaticParams() {
   return getPracticableT2QuestionIds().map((questionId) => ({ questionId }));
