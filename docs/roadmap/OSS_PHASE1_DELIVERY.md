@@ -28,7 +28,11 @@
 
 院校侧从 1778 页降到 1 页;剩余 567 页与本迁移无关。验收标准"院校构建页数 < 50"达成。
 
-**冷构建注意(既有环境问题,不是本次改动引入)**:删除 `.next` 后的冷构建两次都没跑通——第一次在静态生成阶段中途退出(exit 255),第二次卡在 `Creating an optimized production build ...` 超过 10 分钟无进展、被我终止;两次之后紧接着的热构建都立即成功(32s)。症状与 memory 记录的 Google 字体下载抖动一致(`stage-build-font-nondeterminism`:字体下载被 reset 时构建会异常结束)。**未取到指向字体的直接日志证据**——两次失败的输出都停在字体阶段之前/之中,没有打出具体错误行。结论按"高度疑似、未确证"记;Vercel 侧保留 `.next/cache` 可回避。复核者若要核这一条请自行冷构建观察,不要把它当作已确证的结论。
+**冷构建正常,期间的三次失败是我自己造成的(过程如实记录)**:为取冷构建时长,我删掉整个 `.next` 后连续三次没跑通(一次 exit 255 停在 `Generating static pages (396/792)`,两次卡在编译阶段十分钟以上)。我一度归因于 memory 里的 `stage-build-font-nondeterminism`,**但实测推翻了**:`fonts.googleapis.com` 返回 200(1.5s),真实字体文件 10.5 MB 从 `fonts.gstatic.com` 下载耗时 3.6s,网络通畅。
+
+真正的原因是**我在验收过程中多次 `taskkill /F /IM node.exe` 打断了正在跑的构建**,留下不一致的中间状态。全部 node 进程清干净、`rm -rf .next` 后重跑,冷构建一次成功:编译 20.5s,`Generating static pages (792/792)`,产物 `artifact: startable`,568 预渲染页、院校路由 1 页——与热构建结果一致。
+
+结论:**构建没有问题,memory 里的字体抖动在本次未复现**;第 2 节的时长数字取自热构建(31–35s),冷构建成功但未精确计时。这段折腾是我的操作失误,写在这里以免复核者按错误线索排查。
 
 ## 3. 三条 curl 验收(本地 `next start`,真实 OSS)
 
@@ -75,9 +79,20 @@ GET /sitemap.xml → 4 条:/、/schools、/schools/{slug}、/schools/{slug}/voic
 | 院校页 对 token | 200,`<meta name="robots" content="noindex, nofollow">`,校名在 SSR | 200 ✓ |
 | 专业页 对 token | 200 | 200 ✓ |
 
-## 4. smoke
+## 4. smoke 与最终空库状态
 
-`npm run smoke` **9/9 PASS**(含 `/search` 308 → `/schools`、`/schools/does-not-exist` 404)。
+`npm run smoke` **9/9 PASS**(含 `/search` 308 → `/schools`、`/schools/does-not-exist` 404),published 态与最终空库态各跑一次,均 9/9。
+
+清理后的最终状态实测(`index/schools.json` 已清空、冒烟包留在 draft):
+
+```
+/schools                            200,冒烟校名残留 0 处
+/sitemap.xml                        仅 2 条:/ 与 /schools
+/schools/smoke_test_conservatory      404
+/schools/smoke_test_conservatory.json 404
+```
+
+即站点处于"空库从零开始"的正确状态(决策 4),等待阶段三 Berklee 入库。
 
 ## 5. 验收中发现并已修复的缺陷(2 个)
 
