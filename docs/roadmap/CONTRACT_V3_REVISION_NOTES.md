@@ -20,6 +20,8 @@
 | english_language_tests | 6 值枚举 | 自由字符串数组 | 实测含 "Cambridge English"/"SAT…"/"ACT" 等枚举外值 |
 | 行级 review_status / notes / _note 等约 30 列 | 旧契约未描述 | 全部纳入(additionalProperties:false 下必须穷举) | 实测存在 |
 | publishing.programs[] | 未描述 | slug(pattern `^[a-z0-9][a-z0-9_-]*$`,实测含下划线如 `bass_trombone-ad`)、answer_sentence_zh、field_tiers(自由对象,实测 1778 条全为空对象、代码零消费)、cost_estimate_rmb、badges、freshness_flag | 实测 + types.ts |
+
+> **field_tiers 使用约束(运营者裁决 2026-08-08)**:目前无任何消费方。阶段四如需使用,须先补数据、再把契约里的自由对象收紧为明确类型;不要仅因契约允许就随意写入。
 | cost_estimate_rmb | 未描述 | 三态:null / 完整估价(min,max,currency,components,methodology_version)/ **免学费变体**(funding_policy,components,methodology_version,无 min/max/currency) | 免学费变体是实测发现:juilliard `voice-dma` 一条 |
 | timeline_structured / repertoire_structured / conditional_notes_structured | 未描述 | timeline 有稳定结构(milestones[].label 必填,date/date_text/date_options/conditional/qualifier/status 可选);repertoire/conditional 结构多形,如实收为自由对象 | 实测 |
 
