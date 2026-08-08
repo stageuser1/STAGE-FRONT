@@ -30,5 +30,11 @@ export default async function SchoolPreviewPage({
     preview ?? null,
   );
   if (!previewPkg) notFound();
-  return <SchoolsBrowsePage programs={programs} schoolSlug={slug} />;
+  return (
+    <SchoolsBrowsePage
+      lastChecked={previewPkg.last_checked}
+      programs={programs}
+      schoolSlug={slug}
+    />
+  );
 }

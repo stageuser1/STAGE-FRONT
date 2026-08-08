@@ -15,11 +15,23 @@ import { NextResponse, type NextRequest } from "next/server";
  * (edge 层不做鉴权判断),只做路径分流。
  */
 export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // 机读端点(决策 10):`/schools/{slug}.json` → route handler。目录段名
+  // 不能是 `[slug].json`(Next 动态段必须占满整段),所以公开 URL 在这里
+  // 分流到 `/schools-json/{slug}`。只认单层 slug,`.json` 后缀精确匹配。
+  const machineReadable = pathname.match(/^\/schools\/([^/]+)\.json$/);
+  if (machineReadable) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/schools-json/${machineReadable[1]}`;
+    return NextResponse.rewrite(url);
+  }
+
   if (!request.nextUrl.searchParams.has("preview")) {
     return NextResponse.next();
   }
   const url = request.nextUrl.clone();
-  url.pathname = url.pathname.replace(/^\/schools/, "/schools-preview");
+  url.pathname = pathname.replace(/^\/schools/, "/schools-preview");
   return NextResponse.rewrite(url);
 }
 

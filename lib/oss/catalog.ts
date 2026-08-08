@@ -42,6 +42,31 @@ export async function loadPublishedProgramsV3(): Promise<ProgramV3[]> {
 }
 
 /**
+ * 页面用的合并装配:一次取数,既给组件 `ProgramV3[]`,又保留包级元数据
+ * (`status`/`last_checked` —— 决策 10 的「每页显示 last_checked」从这里取,
+ * 不再为它单独跑第二轮 OSS 读)。
+ */
+export async function loadPublishedCatalog(): Promise<{
+  packages: ContractPackage[];
+  programs: ProgramV3[];
+  lastCheckedBySlug: Map<string, string>;
+}> {
+  const packages = await loadPublishedPackages();
+  return {
+    packages,
+    programs: packages.flatMap((pkg) => adaptCanonicalPackage(pkg)),
+    lastCheckedBySlug: new Map(
+      packages
+        .map((pkg): [string, string] | null => {
+          const slug = pkg.schools[0]?.school_ref;
+          return slug ? [slug, pkg.last_checked] : null;
+        })
+        .filter((e): e is [string, string] => e !== null),
+    ),
+  };
+}
+
+/**
  * 预览装配:published 全集 + 目标学校(draft 需有效 previewToken,由
  * `readPublishedSchoolPackage` 把关)。目标学校若已在 published 集合中,
  * 以单读结果为准去重 —— 同一 slug 不出现两份。

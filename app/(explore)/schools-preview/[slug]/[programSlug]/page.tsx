@@ -36,6 +36,7 @@ export default async function ProgramPreviewPage({
   if (!program) notFound();
   return (
     <SchoolsBrowsePage
+      lastChecked={previewPkg.last_checked}
       programs={programs}
       programSlug={programSlug}
       schoolSlug={slug}

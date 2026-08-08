@@ -29,19 +29,29 @@ export function SchoolsBrowsePage({
   programs,
   schoolSlug,
   programSlug,
+  lastChecked,
 }: {
   programs: ProgramV3[];
   schoolSlug?: string;
   programSlug?: string;
+  /** 包级 `last_checked`(决策 10:每页显示);undefined/null 时整行不渲染。 */
+  lastChecked?: string | null;
 }) {
   const allSchools = buildBrowseModel(programs);
   const selection = resolveBrowseSelection(allSchools, schoolSlug, programSlug);
 
   return (
-    <SchoolsBrowse
-      initialSelection={selection}
-      lede={browseLede(allSchools, new Date())}
-      schools={scopeToSchool(allSchools, selection?.schoolSlug)}
-    />
+    <>
+      <SchoolsBrowse
+        initialSelection={selection}
+        lede={browseLede(allSchools, new Date())}
+        schools={scopeToSchool(allSchools, selection?.schoolSlug)}
+      />
+      {lastChecked ? (
+        <p className="mx-auto w-full max-w-[402px] px-4 pb-6 text-xs leading-5 text-ink-500 md:max-w-3xl md:px-6 lg:max-w-5xl">
+          本页数据核对至 {lastChecked}
+        </p>
+      ) : null}
+    </>
   );
 }

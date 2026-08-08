@@ -1,6 +1,6 @@
 /**
  * T4 (AI-ready 层) pure-rule tests: JSON-LD mapping, the sitemap entry
- * generator, robots.ts, sitemap.ts, and llms.txt content.
+ * generator, robots.ts and sitemap.ts.
  *
  * Companion to `tests/program_v3_rendering.test.mjs` — same split rationale
  * (see that file's header): everything decidable without a rendered
@@ -533,12 +533,17 @@ describe("sitemap 条目生成器:lastmod 接 max(retrieved_date),不接构建�
  * array to make the test pass.
  */
 const SCHEMA_ORG_ALLOWED_PROPERTIES = {
-  EducationalOccupationalProgram: [
+  // 双类型 Course + EducationalOccupationalProgram(2026-08-08,OSS 迁移
+  // Step 3):属性并集 —— EOP 侧的 applicationDeadline/timeToComplete +
+  // Course(CreativeWork)侧的 inLanguage。按本注释块的规则,扩列后已于
+  // 2026-08-08 重跑 validator.schema.org 核对(见 Step 3 交付说明)。
+  "Course,EducationalOccupationalProgram": [
     "name",
     "provider",
     "educationalCredentialAwarded",
     "timeToComplete",
     "applicationDeadline",
+    "inLanguage",
     "offers",
     "url",
   ],
@@ -562,7 +567,8 @@ function assertKnownSchemaOrgProperties(node, path = "$") {
   }
   if (node === null || typeof node !== "object") return;
 
-  const type = node["@type"];
+  const rawType = node["@type"];
+  const type = Array.isArray(rawType) ? rawType.join(",") : rawType;
   const allowedForType = type && SCHEMA_ORG_ALLOWED_PROPERTIES[type];
   for (const [key, value] of Object.entries(node)) {
     if (!JSON_LD_KEYWORDS.has(key) && allowedForType) {
@@ -618,15 +624,22 @@ describe("app/robots.ts", () => {
   test("F1 通配规则放行常规抓取,disallow 只列 /api/ 与预览路由", () => {
     const wildcard = result.rules.find((r) => r.userAgent === "*");
     assert.equal(wildcard.allow, "/");
-    assert.deepEqual(wildcard.disallow, ["/api/", "/schools-preview/"]);
+    assert.deepEqual(wildcard.disallow, ["/api/", "/schools-preview/", "/schools-json/"]);
   });
 
-  test("F2 每个具名 AI 爬虫都显式放行,且与通配规则的 disallow 一致", () => {
-    for (const ua of ["GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended"]) {
+  test("F2 每个具名 AI 爬虫都显式 disallow 全站(运营者裁决 2026-08-08:数据未复核前不放行)", () => {
+    for (const ua of [
+      "GPTBot",
+      "ClaudeBot",
+      "PerplexityBot",
+      "Google-Extended",
+      "anthropic-ai",
+      "cohere-ai",
+    ]) {
       const rule = result.rules.find((r) => r.userAgent === ua);
       assert.ok(rule, `missing rule for ${ua}`);
-      assert.equal(rule.allow, "/");
-      assert.deepEqual(rule.disallow, ["/api/", "/schools-preview/"]);
+      assert.equal(rule.allow, undefined);
+      assert.equal(rule.disallow, "/");
     }
   });
 
@@ -641,12 +654,14 @@ describe("app/robots.ts", () => {
    * (`resolveRobots`, imported above) and asserts on the real bytes a
    * crawler receives — offline, no server, no curl.
    */
-  test("F4 resolveRobots 产出的真实 robots.txt 文本含预期的 Disallow / Sitemap 行", () => {
+  test("F4 resolveRobots 产出的真实 robots.txt 文本:AI 爬虫整站 Disallow,常规抓取照旧", () => {
     const text = resolveRobots(result);
     assert.ok(text.includes("Disallow: /schools-preview/"));
     assert.ok(text.includes("Disallow: /api/"));
-    assert.ok(text.includes("User-Agent: GPTBot"));
-    assert.ok(text.includes("User-Agent: ClaudeBot"));
+    // 每个具名 AI 爬虫的 UA 行后面必须紧跟整站 Disallow
+    for (const ua of ["GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended"]) {
+      assert.match(text, new RegExp(`User-Agent: ${ua}\nDisallow: /\n`));
+    }
     assert.ok(text.includes(`Sitemap: ${SITE_URL}/sitemap.xml`));
   });
 });
@@ -711,25 +726,5 @@ describe("app/sitemap.ts", () => {
   });
 });
 
-describe("public/llms.txt", () => {
-  const content = readFileSync(
-    fileURLToPath(new URL("../public/llms.txt", import.meta.url)),
-    "utf-8",
-  );
-
-  test("H1 非空,且点名站点定位(先留学 / studyabroadfirst.cn)", () => {
-    assert.ok(content.length > 0);
-    assert.ok(content.includes("先留学"));
-    assert.ok(content.includes("studyabroadfirst.cn"));
-  });
-
-  test("H2 说明数据可溯源到官网来源与核实日期", () => {
-    assert.ok(content.includes("retrieved_date") || content.includes("核实日期") || content.includes("核实"));
-    assert.ok(content.includes("来源"));
-  });
-
-  test("H3 声明编辑观点与事实的隔离(不进入 JSON-LD / 导语)", () => {
-    assert.ok(content.includes("编辑观点"));
-    assert.ok(content.includes("JSON-LD"));
-  });
-});
+// public/llms.txt 已移除(运营者裁决 2026-08-08:数据未复核前不放行 AI 爬虫;
+// 重建随复核完成后的放行裁决一并做)。原 H 组测试随文件删除。

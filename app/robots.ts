@@ -5,30 +5,32 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "../lib/site-config.ts";
 
 /**
- * T4 §2.4 robots.txt。2026-08-08(OSS 迁移):disallow 收敛为 `/api/` 与
- * `/schools-preview/`(draft 预览面,middleware 从 `?preview=` rewrite 而来;
- * 页面自身另有 noindex meta,这里是双保险)。旧的 `/v3-preview/` 条目随
- * 路由物理删除一并移除。
+ * robots.txt(2026-08-08 OSS 迁移 Step 3,运营者裁决):
  *
- * 注意:具名 AI 爬虫目前是 **allow**(T4 时代的决定)。OSS 迁移的定论是
- * 「数据未复核前暂不放行 AI 爬虫」—— 翻转成 disallow 是阶段一 Step 3
- * (输出侧)的事,与 llms.txt 的处置一并做,这里先不动。
+ * - 常规搜索引擎(`*`)放行,disallow 只有 `/api/` 与 `/schools-preview/`
+ *   (draft 预览面,middleware 从 `?preview=` rewrite 而来;页面自身另有
+ *   noindex meta,这里是双保险)。
+ * - **具名 AI 爬虫全部 disallow `/`** —— 数据未经人工复核,错误信息一旦被
+ *   模型缓存无法撤回。放行(连同 llms.txt 的重建)留待数据复核完成后由
+ *   运营者单独裁决,不随任何代码改动顺带翻回。
  */
 export default function robots(): MetadataRoute.Robots {
-  const disallow = ["/api/", "/schools-preview/"];
+  // `/schools-json/` 是机读端点的内部落点(公开 URL 是 `/schools/{slug}.json`,
+  // middleware rewrite),disallow 内部路径避免同内容双 URL 进索引。
+  const disallow = ["/api/", "/schools-preview/", "/schools-json/"];
+  const AI_CRAWLERS = [
+    "GPTBot",
+    "ClaudeBot",
+    "PerplexityBot",
+    "Google-Extended",
+    "anthropic-ai",
+    "cohere-ai",
+  ];
 
   return {
     rules: [
       { userAgent: "*", allow: "/", disallow },
-      // Named explicitly per the brief, even though the wildcard rule above
-      // already covers them — being explicit here survives a future
-      // tightening of the `*` rule that isn't meant to catch AI crawlers.
-      { userAgent: "GPTBot", allow: "/", disallow },
-      { userAgent: "ClaudeBot", allow: "/", disallow },
-      { userAgent: "PerplexityBot", allow: "/", disallow },
-      { userAgent: "Google-Extended", allow: "/", disallow },
-      { userAgent: "anthropic-ai", allow: "/", disallow },
-      { userAgent: "cohere-ai", allow: "/", disallow },
+      ...AI_CRAWLERS.map((userAgent) => ({ userAgent, disallow: "/" })),
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

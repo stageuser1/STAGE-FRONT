@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SchoolsBrowsePage } from "@/components/schools/browse/SchoolsBrowsePage";
 import { WechatShareSetup } from "@/components/program/v3/WechatShareSetup";
 import { PRERENDER_PROGRAM_PARAMS } from "@/data/prerender-whitelist";
-import { loadPublishedProgramsV3 } from "@/lib/oss/catalog";
+import { loadPublishedCatalog } from "@/lib/oss/catalog";
 import {
   RESERVED_PROGRAM_SLUGS,
   assertNoReservedSlugCollisions,
@@ -43,6 +44,30 @@ export function generateStaticParams(): {
   return PRERENDER_PROGRAM_PARAMS;
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string; programSlug: string }>;
+}): Promise<Metadata> {
+  const { slug, programSlug } = await params;
+  const { programs } = await loadPublishedCatalog();
+  const program = programs.find(
+    (p) => p.school.slug === slug && p.publishing.slug === programSlug,
+  );
+  if (!program) return {};
+  const schoolName =
+    program.school.school_name_zh ?? program.school.school_name;
+  const programName =
+    program.offering.program_name_zh ?? program.offering.official_program_name;
+  const degree = program.offering.degree_abbreviation;
+  return {
+    title: `${schoolName} ${programName}${degree ? ` (${degree})` : ""} 申请要求 · STAGE`,
+    description:
+      program.publishing.answer_sentence_zh ??
+      `${schoolName} ${programName} 项目的申请截止日期、语言要求与试音要求,来自官网并标注核验状态。`,
+  };
+}
+
 export default async function ProductionProgramPage({
   params,
 }: {
@@ -51,7 +76,7 @@ export default async function ProductionProgramPage({
   const { slug, programSlug } = await params;
   if (RESERVED_PROGRAM_SLUGS.includes(programSlug)) notFound();
 
-  const programs = await loadPublishedProgramsV3();
+  const { programs, lastCheckedBySlug } = await loadPublishedCatalog();
   assertNoReservedSlugCollisions(programs);
   // 2026-08-05 裁决:服务端对不存在的 slug 仍然 404,不把垃圾 URL 变成 200。
   // 「回退到第一所第一个」是客户端(popstate)的契约,见 lib/schools-browse/model.ts。
@@ -66,6 +91,7 @@ export default async function ProductionProgramPage({
     <>
       {wechatShare ? <WechatShareSetup config={wechatShare} /> : null}
       <SchoolsBrowsePage
+        lastChecked={lastCheckedBySlug.get(slug) ?? null}
         programs={programs}
         programSlug={programSlug}
         schoolSlug={slug}

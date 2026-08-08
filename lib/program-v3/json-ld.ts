@@ -150,7 +150,13 @@ export function buildProgramJsonLd(program: ProgramV3, pageUrl: string | null) {
 
   return pruneObject({
     "@context": "https://schema.org",
-    "@type": "EducationalOccupationalProgram" as const,
+    // 双类型(2026-08-08 OSS 迁移 Step 3):架构定论要求专业页出 `Course`;
+    // 而 T4 已验证的 `applicationDeadline`/`timeToComplete` 是
+    // `EducationalOccupationalProgram` 的专有属性,单换 Course 会把它们变成
+    // 非法键。schema.org 的多类型实体正是为此设计 —— 两个类型同时声明,
+    // 属性集取并集,还顺带解锁 Course(CreativeWork)一侧的 `inLanguage`
+    // (T4 当年因 EOP 不认它而删掉的字段,现在合法回归)。
+    "@type": ["Course", "EducationalOccupationalProgram"] as const,
     "@id": url ? `${url}#program` : undefined,
     url,
     name: offering.program_name_zh ?? offering.official_program_name,
@@ -158,12 +164,10 @@ export function buildProgramJsonLd(program: ProgramV3, pageUrl: string | null) {
     educationalCredentialAwarded:
       degreeParts.length > 0 ? degreeParts.join(" ") : undefined,
     timeToComplete: iso8601Years(offering.duration_years),
-    // No `inLanguage` here: validated against validator.schema.org, it is
-    // not a recognized property of `EducationalOccupationalProgram` (it
-    // belongs to `CreativeWork`/`Course`, which this type doesn't inherit
-    // from). Forcing `language_of_instruction` into an unrecognized field
-    // would be exactly the kind of unmapped, made-up-looking key §0 asks
-    // this projection to avoid — better to drop it than assert it wrong.
+    inLanguage:
+      offering.language_of_instruction.length > 0
+        ? offering.language_of_instruction
+        : undefined,
     applicationDeadline: application.application_deadline ?? undefined,
     offers,
   });

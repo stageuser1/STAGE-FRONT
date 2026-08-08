@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
     "/schools/[slug]/[programSlug]/share-card": ["./data/contract/*.json"],
     "/schools-preview/[slug]": ["./data/contract/*.json"],
     "/schools-preview/[slug]/[programSlug]": ["./data/contract/*.json"],
+    "/schools-json/[slug]": ["./data/contract/*.json"],
     "/sitemap.xml": ["./data/contract/*.json"],
     "/profile": ["./data/contract/*.json"],
     "/": ["./data/contract/*.json"],
