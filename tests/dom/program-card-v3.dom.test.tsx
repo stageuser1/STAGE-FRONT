@@ -26,7 +26,7 @@ import { describe, expect, test } from "vitest";
 import { ProgramCardV3 } from "@/components/program/v3/ProgramCardV3";
 import { ProgramDetailV3 } from "@/components/program/v3/ProgramDetailV3";
 import { mockProgramsV3 } from "@/data/v3/mock-programs";
-import { realProgramsV3 } from "@/data/v3/real-programs";
+import { fixtureProgramsV3 as realProgramsV3 } from "../fixtures/real-programs";
 import type { ProgramV3 } from "@/data/v3/types";
 import { buildProgramJsonLd } from "@/lib/program-v3/json-ld";
 

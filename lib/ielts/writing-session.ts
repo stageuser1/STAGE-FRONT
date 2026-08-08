@@ -2,7 +2,7 @@
  * Local writing drafts for the IELTS Lab Writing module.
  *
  * The learner's own prose never leaves the browser: there is no learner account
- * (lib/directus-auth.tsx is reviewer-only CMS auth) and nothing about draft
+ * (已删除的 reviewer CMS auth is reviewer-only CMS auth) and nothing about draft
  * management needs a server. This module owns the whole contract — components
  * never touch `localStorage` directly.
  *

@@ -5,22 +5,17 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "../lib/site-config.ts";
 
 /**
- * T4 §2.4 robots.txt: let AI-answer crawlers and ordinary search engines in;
- * disallow only paths that genuinely should not be indexed.
+ * T4 §2.4 robots.txt。2026-08-08(OSS 迁移):disallow 收敛为 `/api/` 与
+ * `/schools-preview/`(draft 预览面,middleware 从 `?preview=` rewrite 而来;
+ * 页面自身另有 noindex meta,这里是双保险)。旧的 `/v3-preview/` 条目随
+ * 路由物理删除一并移除。
  *
- * `/v3-preview/` is disallowed on purpose — it is the T3/T4 *preview*
- * surface serving mock canonical data (fixtures in `data/v3/mock-programs.ts`,
- * not real Directus content), exactly the "预览路由" example the blueprint
- * names as something to keep out of the index.
- *
- * T3b (2026-08-05 ruling): partial migration, not a replacement. Real
- * (Mode-F-backed) programs now serve at `/schools/{school-slug}/
- * {program-slug}`, which was never disallowed here and needs no new entry.
- * `/v3-preview/` stays disallowed and stays mounted — it remains the dev
- * preview surface for mock fixtures, not something T3b retires.
+ * 注意:具名 AI 爬虫目前是 **allow**(T4 时代的决定)。OSS 迁移的定论是
+ * 「数据未复核前暂不放行 AI 爬虫」—— 翻转成 disallow 是阶段一 Step 3
+ * (输出侧)的事,与 llms.txt 的处置一并做,这里先不动。
  */
 export default function robots(): MetadataRoute.Robots {
-  const disallow = ["/api/", "/v3-preview/"];
+  const disallow = ["/api/", "/schools-preview/"];
 
   return {
     rules: [

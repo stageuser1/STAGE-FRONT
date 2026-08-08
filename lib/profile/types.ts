@@ -113,14 +113,14 @@ export interface ProfileV2 {
   updatedAt: string;
 
   discipline: {
-    /** Directus `field_name` values — the vocabulary /search already filters on. */
+    /** the legacy CMS `field_name` values — the vocabulary /search already filters on. */
     fieldSlugs: string[];
     /** The only free-text input in the whole flow. */
     instrument: string | null;
   };
 
   target: {
-    /** Directus degree slugs: bm | mm | dma | gd | ad. */
+    /** the legacy CMS degree slugs: bm | mm | dma | gd | ad. */
     degreeSlugs: string[];
     /** "2027-fall" | "2028-fall" | null (未定). */
     entryTerm: string | null;

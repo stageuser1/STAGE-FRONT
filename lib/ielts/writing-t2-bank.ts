@@ -2,7 +2,7 @@
  * Reader for the Writing Task 2 recall bank.
  *
  * Mirrors `speaking-corpus.ts`: a static versioned file shipped with the
- * frontend rather than a Directus collection, so `scripts/guard.mjs` can see the
+ * frontend rather than a the legacy CMS collection, so `scripts/guard.mjs` can see the
  * content, the shape is asserted by a test, and the route needs no network.
  *
  * The assertion on the import is load-bearing. `resolveJsonModule` widens every

@@ -16,7 +16,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { describe, test } from "node:test";
 
-import { realProgramsV3 } from "../data/v3/real-programs.ts";
+import { fixtureProgramsV3 as realProgramsV3 } from "./fixtures/real-programs.ts";
 import {
   browseChipDeadline,
   browseChipTitle,

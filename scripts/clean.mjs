@@ -26,7 +26,7 @@
  * resets, it exits with status 0, prints nothing, and leaves no
  * prerender-manifest.json. With the cache preserved, 6 of 6 builds completed in
  * 16.5–17.8 s. The build's only remaining network dependency at that point is
- * Directus, which is the dependency it is supposed to have.
+ * the legacy CMS, which is the dependency it is supposed to have.
  *
  * So: `npm run clean` gives a clean *build*, `npm run clean:all` (`--all`)
  * additionally drops the cache and re-downloads the fonts. Use `--all` when

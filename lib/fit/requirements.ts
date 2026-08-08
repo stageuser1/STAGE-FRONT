@@ -59,7 +59,7 @@ export interface RequirementItem {
   missingProfileStep?: string;
 }
 
-/** Normalises Directus' free-text yes/no columns. */
+/** Normalises the legacy CMS' free-text yes/no columns. */
 function requiredFlag(text: string | null | undefined): boolean | null {
   if (!text) return null;
   const value = String(text).trim().toLowerCase().replace(/[\s-]+/g, "_");

@@ -1,10 +1,10 @@
 import { MobileBottomNav } from "@/components/MobileBottomNav";
-import { ReviewerSessionBar } from "@/components/reviewer/ReviewerSessionBar";
 
 /**
- * Explore surface layout: owns the reviewer session chrome and the mobile
- * bottom navigation that used to live in the root layout. Route groups make
- * this URL-transparent — every Explore URL is byte-identical to before.
+ * Explore surface layout: owns the mobile bottom navigation that used to
+ * live in the root layout. Route groups make this URL-transparent — every
+ * Explore URL is byte-identical to before.(2026-08-08 OSS 迁移:reviewer
+ * 会话条随 CMS 编辑面一并物理删除。)
  */
 export default function ExploreLayout({
   children,
@@ -13,7 +13,6 @@ export default function ExploreLayout({
 }>) {
   return (
     <>
-      <ReviewerSessionBar />
       {children}
       <MobileBottomNav />
     </>

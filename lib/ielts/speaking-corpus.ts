@@ -4,7 +4,7 @@
  * A static versioned corpus shipped with the frontend, per the approved T7 data
  * contract (`docs/roadmap/T7_SPEAKING_DATA_PROPOSAL.md`, option B). It mirrors
  * the Reading catalog exactly — `exam-index.json` read by `catalog.ts` — rather
- * than introducing a Directus collection for a few hundred short strings:
+ * than introducing a the legacy CMS collection for a few hundred short strings:
  *
  *   - `scripts/guard.mjs` scans every text file in the repository, so the
  *     compliance blocklist actually covers this content. CMS rows are invisible

@@ -13,30 +13,32 @@ const nextConfig: NextConfig = {
     "/ielts-lab/practice/listening/[setId]": [
       "./data/ielts/listening/items/**",
     ],
-    /**
-     * Same reason as Listening above, same mechanism (2026-08-06):
-     * `data/v3/real-programs.ts` reads its 20 canonical packages with
-     * `readFileSync` off a path assembled at run time, so file tracing cannot
-     * see them. It reads them that way on purpose — as static
-     * `import … with { type: "json" }` they went through webpack, whose
-     * persistent cache grew to 257 MB and killed a Vercel build with `ENOSPC`.
-     *
-     * Only the three routes that can render **on demand** need the files at
-     * request time: the detail page keeps `dynamicParams = true`, and the two
-     * image routes no longer prerender at all. `/schools` and the sitemap are
-     * fully static, so their copy of the data never has to leave the build
-     * machine.
-     */
-    "/schools/[schoolId]/[programSlug]": ["./data/v3/real/**"],
-    "/schools/[schoolId]/[programSlug]/opengraph-image": ["./data/v3/real/**"],
-    "/schools/[schoolId]/[programSlug]/share-card": ["./data/v3/real/**"],
+    // 2026-08-08(OSS 迁移):院校数据不再从仓库文件读(数据在 OSS,契约
+    // schema 由 lib/contract/validate.ts 运行时 readFileSync),原三条
+    // `./data/v3/real/**` include 随 data/v3/real-programs.ts 一并删除。
+    // 契约文件本身要进函数包 —— 校验器在所有院校路由与 sitemap 里运行:
+    "/schools": ["./data/contract/*.json"],
+    "/schools/[slug]": ["./data/contract/*.json"],
+    "/schools/[slug]/[programSlug]": ["./data/contract/*.json"],
+    "/schools/[slug]/[programSlug]/opengraph-image": ["./data/contract/*.json"],
+    "/schools/[slug]/[programSlug]/share-card": ["./data/contract/*.json"],
+    "/schools-preview/[slug]": ["./data/contract/*.json"],
+    "/schools-preview/[slug]/[programSlug]": ["./data/contract/*.json"],
+    "/sitemap.xml": ["./data/contract/*.json"],
+    "/profile": ["./data/contract/*.json"],
+    "/": ["./data/contract/*.json"],
+  },
+
+  /** /search 已下线(裁决 2026-08-08):永久重定向到 /schools,重建另立项。 */
+  async redirects() {
+    return [{ source: "/search", destination: "/schools", permanent: true }];
   },
   /**
    * Per-page budget for static generation.
    *
    * This was 300s — five times Next's default — because the pre-R1 school
-   * route pulled whole Directus collections (a ~20MB source_records read) into
-   * every prerender and pages genuinely took minutes. R1 replaced that with
+   * route pulled whole legacy-CMS collections (a ~20MB source_records read)
+   * into every prerender and pages genuinely took minutes. R1 replaced that with
    * bounded route-specific loaders, so the number is now measured rather than
    * guessed.
    *

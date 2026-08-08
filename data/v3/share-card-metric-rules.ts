@@ -3,7 +3,7 @@ import type { ShareCardMetricRuleV3 } from "./types";
 /**
  * 配置层 `share_card_metric_rules`(蓝图 §1.2)在仓库里的镜像。
  *
- * **这不是重新设计的规则表**——四行内容是 2026-08-03 从生产 Directus
+ * **这不是重新设计的规则表**——四行内容是 2026-08-03 从生产 旧 CMS
  * (`GET /items/share_card_metric_rules`)原样读回来的,包括 `priority`、
  * `label_zh`、`enabled` 与 `fallback_when_missing` 四列的实际取值:
  *
@@ -14,8 +14,8 @@ import type { ShareCardMetricRuleV3 } from "./types";
  * | 3 | deadline | 3 | 截止日期 | true | true |
  * | 4 | total_cost | 4 | 总费用 | true | true |
  *
- * 之所以镜像而不是运行时查询:核心原则 5「静态优先,用户访问不查 Directus」。
- * 图片服务在构建期跑,Directus 在运行时零依赖。真正的构建期回填(从 Directus
+ * 之所以镜像而不是运行时查询:核心原则 5「静态优先,用户访问不查 旧 CMS」。
+ * 图片服务在构建期跑,旧 CMS 在运行时零依赖。真正的构建期回填(从 旧 CMS
  * 读这张表、生成这个模块)属于 T3b 的真实数据接入,不在 T5 范围;届时只需
  * 替换这个数组的来源,消费它的 `shareCardMetrics()` 不变——它已经完全
  * 数据驱动(读 priority 排序、读 enabled 过滤、读 label_zh 显示),

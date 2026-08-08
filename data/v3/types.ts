@@ -1,9 +1,9 @@
 /**
  * STAGE V3 — Web Card / 详情页 data shapes.
  *
- * Mirrors the data dictionary (`directus_collections_reference.md` §5–7, §13)
+ * Mirrors the data dictionary (`collections_reference.md(旧 CMS 数据字典)` §5–7, §13)
  * and the blueprint (`STAGE_V3_交接蓝图.md` §1.4, §13). This is the shape T3
- * components consume; it is NOT a Directus client — wiring to real Directus
+ * components consume; it is NOT a the legacy CMS client — wiring to real the legacy CMS
  * queries is a later ticket. Every field that can be null in canonical is
  * typed nullable here on purpose, so `null` has to be handled at every call
  * site instead of being coerced away.
@@ -14,7 +14,7 @@ export type Tier = "Extracted" | "Needs Review" | "Verified" | "Outdated";
 /**
  * §1.1 五态: null / Not Required / Optional / Required / conditional.
  * `null` is expressed by the field being nullable; `Unknown` is the deployed
- * Directus dropdown's "we did not determine this" value and renders as
+ * the legacy CMS dropdown's "we did not determine this" value and renders as
  * nothing, exactly like null (§3.1).
  *
  * `Conditional` is the blueprint's fifth state. The deployed dropdown does
@@ -218,7 +218,7 @@ export interface ShareCardMetricV3 {
  *
  * 这段注释**就是本仓库内的正式契约记录**(另一份同文在
  * `T5_REVIEW_HANDOFF.md` §9)。跨仓库的数据字典
- * `D:\STAGE_NIGHT_PROCESSOR\stage-music-admissions-extractor\references\directus_collections_reference.md`
+ * `D:\STAGE_NIGHT_PROCESSOR\stage-music-admissions-extractor\references\collections_reference.md(旧 CMS 数据字典)`
  * 的 "`share_card_payload` — implemented as 8 fields" 小节有同一条记录 ——
  * 那个文件不在本仓库内,所以这里写绝对路径。`sc:A4` 把两个集合分开断言。
  *

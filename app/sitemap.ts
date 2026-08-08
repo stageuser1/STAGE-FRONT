@@ -1,24 +1,16 @@
 import type { MetadataRoute } from "next";
-// Relative, not `@/...`: see app/robots.ts for why — this file is imported
-// directly by tests/program_v3_ai_ready.test.mjs under `node --test
-// --experimental-strip-types`, which does not resolve the `@/` alias.
-import { realProgramsV3 } from "../data/v3/real-programs.ts";
-import { buildProgramSitemapEntries } from "../lib/program-v3/sitemap-entries.ts";
-import { SITE_URL } from "../lib/site-config.ts";
+import { loadPublishedProgramsV3 } from "@/lib/oss/catalog";
+import { buildSiteSitemap } from "@/lib/program-v3/sitemap-entries";
 
 /**
- * T4 §2.4/§2.5 sitemap, wired per the T3b (2026-08-05) partial-migration
- * ruling: only programs with a real production page go in. That is
- * currently `data/v3/real-programs.ts` (the 4 Mode-F-backed Juilliard
- * programs at `/schools/juilliard/...`) — never `data/v3/mock-programs.ts`,
- * which only ever served the disallowed `/v3-preview/` surface and has no
- * production route.
+ * T4 §2.4/§2.5 sitemap。2026-08-08(OSS 迁移):只收 OSS **published** 的
+ * 页面 —— 三条收敛路由(/schools、/schools/{slug}、/schools/{slug}/{program}),
+ * draft 与预览面永不入内。空库时只有首页与 /schools 两条。
  *
- * `buildProgramSitemapEntries` already drops any program without a slug or
- * without a `retrieved_date` (§2.5 "不收空壳页"), so this list grows
- * automatically as more real packages are added to `real-programs.ts` —
- * nothing here needs to change when that happens.
+ * 组装逻辑在 `lib/program-v3/sitemap-entries.ts` 的 `buildSiteSitemap`
+ * (纯函数,由 program_v3_ai_ready 离线测试);本文件只负责取数,
+ * 不再被 node --test 直接 import(它经 lib/oss 依赖 server-only)。
  */
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [{ url: SITE_URL }, ...buildProgramSitemapEntries(realProgramsV3)];
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  return buildSiteSitemap(await loadPublishedProgramsV3());
 }

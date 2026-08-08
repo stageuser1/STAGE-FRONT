@@ -189,7 +189,7 @@ export function latestCheckedDate(program: Program): string | null {
 }
 
 /**
- * Trims a Directus decimal to what a score actually is.
+ * Trims a the legacy CMS decimal to what a score actually is.
  *
  * The column is numeric, so it arrives as "6.00000" / "86.00000". Rendering
  * that verbatim on a requirement surface reads as spurious precision on a

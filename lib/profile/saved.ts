@@ -4,7 +4,7 @@
  * Saved programs, with a display snapshot.
  *
  * The snapshot exists so the dashboard can render a learner's shortlist with
- * ZERO Directus round-trips. It is a cache, never a source of truth: it is
+ * ZERO the legacy CMS round-trips. It is a cache, never a source of truth: it is
  * refreshed every time the program page is visited, and its age is shown to
  * the user once it is old enough to be doubted.
  */

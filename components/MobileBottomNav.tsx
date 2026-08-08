@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icon, type IconName } from "./ui/Icon";
-import { useReviewerAuth } from "@/lib/directus-auth";
 
 interface NavItem {
   label: string;
@@ -15,12 +14,6 @@ interface NavItem {
 
 const items: NavItem[] = [
   { label: "探索", icon: "home", href: "/schools", isActive: (p) => p === "/schools" },
-  {
-    label: "搜索",
-    icon: "search",
-    href: "/search",
-    isActive: (p) => p.startsWith("/search"),
-  },
   {
     label: "实验室",
     icon: "target",
@@ -52,7 +45,6 @@ const items: NavItem[] = [
  */
 export function MobileBottomNav() {
   const pathname = usePathname() ?? "/";
-  const { isReviewer } = useReviewerAuth();
 
   return (
     <nav
@@ -70,9 +62,6 @@ export function MobileBottomNav() {
                   size={22}
                   strokeWidth={active ? 2.4 : 2}
                 />
-                {item.href === "/login" && isReviewer ? (
-                  <span className="absolute -right-1 -top-0.5 h-2 w-2 rounded-full bg-emerald-500" />
-                ) : null}
               </span>
               {item.label}
             </>

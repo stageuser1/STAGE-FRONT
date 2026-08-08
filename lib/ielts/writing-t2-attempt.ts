@@ -22,7 +22,7 @@
  * record — the record is the learner's history, and starting again must not
  * erase it.
  *
- * Separate from `writing-session.ts`, which models a Directus *set* of one or
+ * Separate from `writing-session.ts`, which models a the legacy CMS *set* of one or
  * two tasks keyed by slug. That path is being retired and its stored sessions
  * stay readable under their own key; nothing here touches them.
  */

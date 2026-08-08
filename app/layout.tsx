@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Noto_Sans_SC } from "next/font/google";
-import { AuthProvider } from "@/lib/directus-auth";
 import { SITE_URL } from "@/lib/site-config";
 import "./globals.css";
 
@@ -42,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className={`${notoSansSC.variable} ${geistMono.variable}`}>
       <body>
-        <AuthProvider>{children}</AuthProvider>
+        {children}
       </body>
     </html>
   );

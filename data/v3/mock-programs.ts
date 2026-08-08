@@ -3,7 +3,7 @@ import type { ProgramV3 } from "./types";
 
 /**
  * Mock canonical + publishing data for T3 (Web Card / detail page), built
- * against the STAGE V3 data dictionary §5–7 §13 shapes. Real Directus
+ * against the STAGE V3 data dictionary §5–7 §13 shapes. Real the legacy CMS
  * wiring is a separate ticket — the data pipeline lives in another repo and
  * is untouched here (per the T3 brief).
  *

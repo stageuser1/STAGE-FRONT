@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ProfileFlow, type ProfileOptions } from "@/components/profile/ProfileFlow";
-import { getFilterOptionPrograms } from "@/lib/data";
+import { loadPublishedPackages, packageFilterSources } from "@/lib/oss/catalog";
 import { buildFilterOptions } from "@/lib/search-options";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "用 5 个问题建立你的申请档案，STAGE 会据此比对每个项目的要求与差距。档案保存在本机浏览器。",
 };
 
-export const revalidate = 900;
+export const revalidate = 3600;
 
 /**
  * Profile builder (P-04).
@@ -25,7 +25,7 @@ export const revalidate = 900;
  */
 export default async function ProfilePage() {
   const { countryOptions, majorOptions, degreeOptions } = buildFilterOptions(
-    await getFilterOptionPrograms(),
+    packageFilterSources(await loadPublishedPackages()),
   );
 
   const options: ProfileOptions = {

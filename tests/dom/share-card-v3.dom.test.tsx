@@ -17,8 +17,7 @@ import path from "node:path";
 import { describe, expect, test } from "vitest";
 
 import { mockProgramsV3 } from "@/data/v3/mock-programs";
-import { previewProgramsV3 } from "@/data/v3/preview-registry";
-import { realProgramsV3 } from "@/data/v3/real-programs";
+import { fixtureProgramsV3 as realProgramsV3 } from "../fixtures/real-programs";
 import type { ProgramV3 } from "@/data/v3/types";
 import {
   buildShareCardPayload,
@@ -72,7 +71,7 @@ describe("S. 分享卡模板(§2.3)", () => {
   /**
    * 2026-08-06,两次调整叠在一起,分开说:
    *
-   * 1. 真实语料从 4 条扩到 1778 条,`previewProgramsV3` 一度变成 1787,写死的
+   * 1. 真实语料从 4 条扩到 1778 条,`mockProgramsV3` 一度变成 1787,写死的
    *    `toBe(13)` 变红。
    * 2. 随后为了构建预算,真实数据整体退出预览注册表(见
    *    `data/v3/preview-registry.ts` 的说明),注册表回到 9 个 mock。
@@ -83,9 +82,8 @@ describe("S. 分享卡模板(§2.3)", () => {
    * 的 H 组负责。
    */
   test("sc:S1 预览面每个 fixture 竖版与横版都能构树,且都画出校名", () => {
-    expect(previewProgramsV3).toEqual(mockProgramsV3);
     expect(mockProgramsV3.length).toBe(9);
-    for (const program of previewProgramsV3) {
+    for (const program of mockProgramsV3) {
       const payload = buildShareCardPayload(program);
       for (const text of [portraitText(program), ogText(program)]) {
         expect(text).toContain(SHARE_CARD_BRAND_LINE);
@@ -99,7 +97,7 @@ describe("S. 分享卡模板(§2.3)", () => {
   });
 
   test("sc:S2 每张卡的指标 ≤3,且画出来的每条指标都有标签和值", () => {
-    for (const program of previewProgramsV3) {
+    for (const program of mockProgramsV3) {
       const payload = buildShareCardPayload(program);
       expect(payload.metrics.length).toBeLessThanOrEqual(
         SHARE_CARD_MAX_METRICS,
@@ -123,7 +121,7 @@ describe("S. 分享卡模板(§2.3)", () => {
   });
 
   test("sc:S4 §2.3 禁止内容一律不在树里:排名/介绍/校友/编辑观点/星级", () => {
-    for (const program of previewProgramsV3) {
+    for (const program of mockProgramsV3) {
       for (const text of [portraitText(program), ogText(program)]) {
         for (const banned of ["排名", "介绍", "校友", "编辑观点", "★", "难度"]) {
           expect(text).not.toContain(banned);

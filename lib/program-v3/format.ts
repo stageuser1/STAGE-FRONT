@@ -67,7 +67,7 @@ export function programOfferingRef(program: ProgramV3): string {
  * `/schools/{school-slug}/{program-slug}` per blueprint §2.2 (T3b, human
  * ruling 2026-08-05: partial migration — only programs that carry a real
  * `publishing.slug` route here; everything else stays on the legacy
- * Directus-backed `/schools/{schoolId}/programs/{programId}` route, which
+ * the legacy CMS-backed `/schools/{schoolId}/programs/{programId}` route, which
  * this function never touches). Every consumer of this path (cards,
  * related-program links, JSON-LD `url`, sitemap `loc`, share-card QR) goes
  * through this one function, so a future full migration only changes it

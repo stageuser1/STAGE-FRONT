@@ -909,7 +909,7 @@ ${config.description}
 - ${pkg.application_requirements.length} current application records and ${pkg.audition_requirements.length} current audition records.
 - ${pkg.source_records.length} official source-evidence records.
 - ${pkg.data_quality.missing_critical_fields.length} decision-critical nulls, all explicitly named in data_quality.review_notes.
-- No Directus or backend import was performed.
+- No CMS or backend import was performed.
 
 ## Programs by degree
 

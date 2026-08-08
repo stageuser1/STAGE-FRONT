@@ -406,7 +406,7 @@ export function LabOverview({
     },
     {
       // Every fact here describes what this build actually does. The three it
-      // replaces described the retired Directus module: 小作文按图型分类 and
+      // replaces described the retired 旧 CMS module: 小作文按图型分类 and
       // 范文按完成解锁 named a Task 1 figure classification and a model-answer
       // unlock that no longer exist anywhere, and a card advertising them would
       // be promising the learner a feature the click cannot deliver.

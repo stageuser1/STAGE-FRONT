@@ -944,7 +944,7 @@ describe("H. 真实数据(T1b 茱莉亚包)", () => {
    * 没有 `min`/`max`、`components` 存在且为空数组,改为携带
    * `PHRASING_V1["funding_full_waiver"]` 的 `note`。判形态④要看
    * `funding_policy` 在不在,**不是**看 `currency`(它没有 currency)。
-   * 见 `stage-music-admissions-extractor/references/directus_collections_reference.md`
+   * 见 `stage-music-admissions-extractor/references/collections_reference.md(旧 CMS 数据字典)`
    * §4 与 §13,以及 `T2BC_REVIEW_HANDOFF.md` 里逐字给出的目标句子。
    *
    * 这两条(sc:H3b / sc:H5)此前钉的是 T2c **之前**的 `null`。T2bc 在提取器

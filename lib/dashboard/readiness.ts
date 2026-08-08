@@ -2,7 +2,7 @@
  * Per-program readiness for the dashboard.
  *
  * Computed from the SAVED SNAPSHOT rather than a live fetch: the dashboard
- * must render with zero Directus round-trips, and a shortlist of twenty
+ * must render with zero the legacy CMS round-trips, and a shortlist of twenty
  * programs cannot each pull a DTO. The snapshot's age is carried through so
  * the UI can admit when it might be out of date instead of quietly asserting
  * stale numbers.
@@ -181,7 +181,7 @@ export function deadlineLabel(kind: DeadlineNode["kind"]): string {
  * Upcoming deadlines across saved programs, nearest first.
  *
  * NOTE: the `audition` node type can never populate today — `lib/data.ts`
- * hard-codes `Deadline.audition_date` to null because no Directus column
+ * hard-codes `Deadline.audition_date` to null because no the legacy CMS column
  * supplies it. The timeline legend says so rather than implying that no
  * program has an audition date.
  */

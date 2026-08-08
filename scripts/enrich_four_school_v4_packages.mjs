@@ -530,7 +530,7 @@ Admission cycle represented: ${config.cycle}
 ${retired ? `- Incorrectly merged offerings retired: **${retired}**\n` : ""}- Current application records: **${pkg.application_requirements.length}**
 - Current audition records: **${pkg.audition_requirements.length}**
 - Official evidence records: **${pkg.source_records.length}**
-- Directus/backend import performed: **No**
+- CMS/backend import performed: **No**
 
 ## Degree distribution
 

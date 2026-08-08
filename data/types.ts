@@ -13,7 +13,7 @@ export type ReviewStatus =
   | "needs_update"
   | string;
 
-export interface DirectusReviewRecord {
+export interface CmsReviewRecord {
   id: string;
   review_status: ReviewStatus | null;
   values: Record<string, string | number | boolean | null>;
@@ -57,7 +57,7 @@ export interface School {
   detail_sections?: Partial<Record<SchoolDetailSectionKey, SchoolDetailSection>>;
   status: WorkflowStatus;
   data_quality: DataQuality;
-  review_record?: DirectusReviewRecord;
+  review_record?: CmsReviewRecord;
   /** School-level source records (admissions policies, deadlines, fees…). */
   sources?: SourceRecord[];
   /** Set instead of `sources` on surfaces that never render a citation. */
@@ -103,7 +103,7 @@ export interface LanguageRequirements {
 }
 
 export interface SourceRecord {
-  /** Directus row id — used to attach evidence quotes on detail pages. */
+  /** the legacy CMS row id — used to attach evidence quotes on detail pages. */
   record_id?: string | null;
   title: string;
   url: string;
@@ -127,7 +127,7 @@ export interface DataQuality {
  * Catalog and school-index surfaces show how recently a record was verified
  * and how many citations back it, but never render a citation body. Fetching
  * 17,663 source rows to derive two numbers cost 15MB and 90s on the shared
- * loader, so those surfaces read Directus aggregates instead and carry the
+ * loader, so those surfaces read the legacy CMS aggregates instead and carry the
  * result here. Detail routes fetch the real records and leave this undefined —
  * `sources` is authoritative wherever it is populated.
  *
@@ -233,9 +233,9 @@ export interface Program {
   source_summary?: SourceSummary;
   data_quality: DataQuality;
   review_records?: {
-    offering: DirectusReviewRecord;
-    application: DirectusReviewRecord | null;
-    audition: DirectusReviewRecord | null;
+    offering: CmsReviewRecord;
+    application: CmsReviewRecord | null;
+    audition: CmsReviewRecord | null;
     degree_level_options: Array<{ label: string; value: string }>;
   };
 }
@@ -370,7 +370,7 @@ export interface ProgramSearchQuery {
   keyword?: string | null;
   country?: string | null;
   degree_level?: DegreeLevel | null;
-  /** Directus degree slug (bm/mm/dma/gd/ad) — keeps GD and AD separate. */
+  /** the legacy CMS degree slug (bm/mm/dma/gd/ad) — keeps GD and AD separate. */
   degree_slug?: string | null;
   major_area?: string | null;
 }

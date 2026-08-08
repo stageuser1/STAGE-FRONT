@@ -2,7 +2,7 @@
  * Local practice history for IELTS Lab.
  *
  * Browser-local and single-user, matching the source project's model. STAGE has
- * no learner accounts yet (lib/directus-auth.tsx is reviewer/administrator-only
+ * no learner accounts yet (已删除的 reviewer CMS auth is reviewer/administrator-only
  * CMS auth), so there is nothing to key server-side records against.
  *
  * The original shipped a four-tier IndexedDB → localStorage → sessionStorage →

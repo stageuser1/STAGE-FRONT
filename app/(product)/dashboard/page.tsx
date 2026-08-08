@@ -11,7 +11,7 @@ export const metadata: Metadata = {
  * Product home (P-06).
  *
  * A thin server shell — every value comes from localStorage in the client, so
- * this route makes no Directus request at all.
+ * this route makes no the legacy CMS request at all.
  */
 export default function DashboardPage() {
   return (

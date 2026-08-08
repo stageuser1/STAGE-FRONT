@@ -60,26 +60,17 @@ async function waitForServer(seconds) {
 }
 
 /**
- * The two detail routes are discovered from the catalog rather than hardcoded.
- * School and program ids come from Directus and change with every import, so a
- * pinned id would turn a data edit into a red build.
+ * 专业详情路由从浏览页现抓,不写死(2026-08-08 OSS 迁移):数据在 OSS,
+ * slug 随发布变化。空库(没有任何 published 学校)是合法状态 —— 此时跳过
+ * 详情检查项,只冒烟静态面与 404/重定向语义。
  */
 async function discoverDetailRoutes() {
   const catalog = await request("/schools");
-  const schoolId = catalog.body.match(/href="\/schools\/([^"/?#]+)"/)?.[1];
-  if (!schoolId) {
-    throw new Error("could not discover a school id from /schools");
-  }
-
-  const school = await request(`/schools/${schoolId}`);
-  const programPath = school.body.match(
-    new RegExp(`href="(/schools/${schoolId}/programs/[^"?#]+)"`),
+  const programPath = catalog.body.match(
+    /href="(\/schools\/[^"/?#]+\/[^"/?#]+)"/,
   )?.[1];
-  if (!programPath) {
-    throw new Error(`could not discover a program link on /schools/${schoolId}`);
-  }
-
-  return { schoolPath: `/schools/${schoolId}`, programPath };
+  if (!programPath) return { schoolPath: null, programPath: null };
+  return { schoolPath: programPath.split("/").slice(0, 3).join("/"), programPath };
 }
 
 async function main() {
@@ -96,24 +87,25 @@ async function main() {
     { path: "/pricing", marker: "定价 · STAGE" },
     { path: "/contact", marker: "联系我们 · STAGE" },
     { path: "/schools", marker: "STAGE · 海外音乐院校招生数据库" },
-    { path: schoolPath, marker: "项目" },
-    { path: programPath, marker: "申请" },
-    // The prompt's canonical smoke URL. Note the page reads `keyword`, not `q`,
-    // so this exercises the no-keyword branch of /search; the `keyword` check
-    // below covers the ranked-result path.
-    { path: "/search?q=piano", marker: "开始搜索" },
-    { path: "/search?keyword=piano", marker: "搜索结果" },
+    // /search 已下线(裁决 2026-08-08):永久重定向到 /schools。fetch 会
+    // 跟随重定向,所以断言落点是浏览页标题。
+    { path: "/search", marker: "STAGE · 海外音乐院校招生数据库" },
     { path: "/dashboard", marker: "学习中心 · STAGE" },
     { path: "/ielts-lab", marker: "雅思实验室 · STAGE" },
     { path: "/ielts-lab/browse", marker: "题库浏览 · 雅思实验室" },
-    // Invalid detail URLs answer 404, not a successful page (audit P1-10,
-    // landed by R4). Enforced now that the detail pages call notFound().
+    // Invalid detail URLs answer 404, not a successful page (audit P1-10).
     { path: "/schools/does-not-exist", status: 404, marker: "学校未找到" },
-    {
-      path: `${schoolPath}/programs/does-not-exist`,
-      status: 404,
-      marker: "项目未找到",
-    },
+    ...(schoolPath
+      ? [
+          { path: schoolPath, marker: "项目" },
+          { path: programPath, marker: "申请" },
+          {
+            path: `${schoolPath}/does-not-exist-program`,
+            status: 404,
+            marker: "项目未找到",
+          },
+        ]
+      : []),
   ];
 
   const results = [];

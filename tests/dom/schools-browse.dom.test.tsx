@@ -16,10 +16,8 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { beforeEach, describe, expect, test } from "vitest";
 
 import { SchoolsBrowse } from "@/components/schools/browse/SchoolsBrowse";
-import {
-  RESERVED_PROGRAM_SLUGS,
-  realProgramsV3,
-} from "@/data/v3/real-programs";
+import { RESERVED_PROGRAM_SLUGS } from "@/lib/program-v3/reserved-slugs";
+import { fixtureProgramsV3 as realProgramsV3 } from "../fixtures/real-programs";
 import type { ProgramV3 } from "@/data/v3/types";
 import { sourceUrlForField } from "@/lib/program-v3/format";
 import {

@@ -34,3 +34,18 @@ export function buildProgramSitemapEntries(
     ];
   });
 }
+
+/**
+ * 全站 sitemap 的完整组装(2026-08-08 OSS 迁移):首页、/schools、每所收录
+ * 学校的院校页,加上全部专业页。纯函数 —— `app/sitemap.ts` 只负责取
+ * published 语料;测试(program_v3_ai_ready)离线测这里,不经过数据通道。
+ */
+export function buildSiteSitemap(programs: ProgramV3[]): MetadataRoute.Sitemap {
+  const schoolSlugs = [...new Set(programs.map((p) => p.school.slug))];
+  return [
+    { url: SITE_URL },
+    { url: `${SITE_URL}/schools` },
+    ...schoolSlugs.map((slug) => ({ url: `${SITE_URL}/schools/${slug}` })),
+    ...buildProgramSitemapEntries(programs),
+  ];
+}

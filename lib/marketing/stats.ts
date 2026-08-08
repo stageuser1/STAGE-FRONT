@@ -1,15 +1,13 @@
-import type { Program, School } from "@/data/types";
-import { getAllPrograms, getAllSchools } from "@/lib/data";
+import { loadPublishedPackages, packageStats } from "@/lib/oss/catalog";
 
 /**
- * Homepage credibility figures (spec §二.4), computed from the live catalog at
- * build time. No editorial numbers: Plan §2.1 says that where reality differs
- * from the spec's illustrative figures ("120+ / 900+ / 100% / 15"), reality
- * wins. Plan §7 增量 4 records this as needing no schema change — it reuses
- * `getAllSchools` / `getAllPrograms`, the same loaders the catalog page uses.
+ * Homepage credibility figures (spec §二.4), computed from the live catalog.
+ * No editorial numbers: Plan §2.1 says that where reality differs from the
+ * spec's illustrative figures ("120+ / 900+ / 100% / 15"), reality wins.
  *
- * `null ≠ 0` (Plan §6.8): a figure that cannot be computed renders as an em
- * dash, never as a zero.
+ * 2026-08-08(OSS 迁移):数据源从旧 CMS 换成 OSS published 包(唯一真相源,
+ * 空库时各项如实为 null)。`null ≠ 0`(Plan §6.8): a figure that cannot be
+ * computed renders as an em dash, never as a zero.
  */
 export interface HomepageStat {
   key: "schools" | "programs" | "traceable" | "countries";
@@ -18,65 +16,30 @@ export interface HomepageStat {
   label: string;
 }
 
-/** Placeholder country strings the catalog uses when the field is unfilled. */
-const UNRESOLVED_COUNTRY = new Set(["待核实", "待确认", "未知", "-", "—"]);
-
-function countCountries(schools: School[]): number {
-  const seen = new Set<string>();
-  for (const school of schools) {
-    const country = school.country?.trim();
-    if (!country || UNRESOLVED_COUNTRY.has(country)) continue;
-    seen.add(country);
-  }
-  return seen.size;
-}
-
-/**
- * A program counts as traceable when at least one source record is attached to
- * it or to its school. The catalog loader ships `source_summary` instead of the
- * full `sources` array, so both are checked.
- */
-function countTraceable(programs: Program[]): number {
-  let traceable = 0;
-  for (const program of programs) {
-    const count = program.source_summary?.count ?? program.sources.length;
-    if (count > 0) traceable += 1;
-  }
-  return traceable;
-}
-
 export async function getHomepageStats(
   labels: Record<HomepageStat["key"], string>,
 ): Promise<HomepageStat[]> {
-  const [schools, programs] = await Promise.all([
-    getAllSchools(),
-    getAllPrograms(),
-  ]);
-
-  const countries = countCountries(schools);
-  const traceable = programs.length
-    ? Math.round((countTraceable(programs) / programs.length) * 100)
-    : null;
+  const stats = packageStats(await loadPublishedPackages());
 
   return [
     {
       key: "schools",
-      value: schools.length ? String(schools.length) : null,
+      value: stats.schoolCount ? String(stats.schoolCount) : null,
       label: labels.schools,
     },
     {
       key: "programs",
-      value: programs.length ? String(programs.length) : null,
+      value: stats.programCount ? String(stats.programCount) : null,
       label: labels.programs,
     },
     {
       key: "traceable",
-      value: traceable === null ? null : `${traceable}%`,
+      value: stats.traceablePercent === null ? null : `${stats.traceablePercent}%`,
       label: labels.traceable,
     },
     {
       key: "countries",
-      value: countries ? String(countries) : null,
+      value: stats.countryCount ? String(stats.countryCount) : null,
       label: labels.countries,
     },
   ];

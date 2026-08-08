@@ -23,7 +23,7 @@ export interface FilterOptionSource {
 /**
  * Filter options derived from real records only. Majors come from the
  * `fields` relation (never from program-name fallbacks) and degrees are
- * keyed by Directus slug so GD and AD stay distinct.
+ * keyed by the legacy CMS slug so GD and AD stay distinct.
  */
 export function buildFilterOptions(programs: FilterOptionSource[]): {
   countryOptions: SearchFilterOption[];

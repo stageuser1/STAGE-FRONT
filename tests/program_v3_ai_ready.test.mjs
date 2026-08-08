@@ -23,11 +23,16 @@ import {
   buildSchoolJsonLd,
   pruneObject,
 } from "../lib/program-v3/json-ld.ts";
-import { buildProgramSitemapEntries } from "../lib/program-v3/sitemap-entries.ts";
-import { realProgramsV3 } from "../data/v3/real-programs.ts";
+import {
+  buildProgramSitemapEntries,
+  buildSiteSitemap,
+} from "../lib/program-v3/sitemap-entries.ts";
+import { fixtureProgramsV3 as realProgramsV3 } from "./fixtures/real-programs.ts";
 import { SITE_URL } from "../lib/site-config.ts";
 import robots from "../app/robots.ts";
-import sitemap from "../app/sitemap.ts";
+// app/sitemap.ts 依赖 server-only(OSS 通道),node --test 不能 import;
+// 它的组装逻辑就是 buildSiteSitemap,离线测纯函数即测到了全部结构。
+const sitemap = () => buildSiteSitemap(realProgramsV3);
 /**
  * Next's *actual* serializer for `MetadataRoute.Robots`/`MetadataRoute.Sitemap`
  * — the same function the framework calls at request time to turn our
@@ -613,7 +618,7 @@ describe("app/robots.ts", () => {
   test("F1 通配规则放行常规抓取,disallow 只列 /api/ 与预览路由", () => {
     const wildcard = result.rules.find((r) => r.userAgent === "*");
     assert.equal(wildcard.allow, "/");
-    assert.deepEqual(wildcard.disallow, ["/api/", "/v3-preview/"]);
+    assert.deepEqual(wildcard.disallow, ["/api/", "/schools-preview/"]);
   });
 
   test("F2 每个具名 AI 爬虫都显式放行,且与通配规则的 disallow 一致", () => {
@@ -621,7 +626,7 @@ describe("app/robots.ts", () => {
       const rule = result.rules.find((r) => r.userAgent === ua);
       assert.ok(rule, `missing rule for ${ua}`);
       assert.equal(rule.allow, "/");
-      assert.deepEqual(rule.disallow, ["/api/", "/v3-preview/"]);
+      assert.deepEqual(rule.disallow, ["/api/", "/schools-preview/"]);
     }
   });
 
@@ -638,7 +643,7 @@ describe("app/robots.ts", () => {
    */
   test("F4 resolveRobots 产出的真实 robots.txt 文本含预期的 Disallow / Sitemap 行", () => {
     const text = resolveRobots(result);
-    assert.ok(text.includes("Disallow: /v3-preview/"));
+    assert.ok(text.includes("Disallow: /schools-preview/"));
     assert.ok(text.includes("Disallow: /api/"));
     assert.ok(text.includes("User-Agent: GPTBot"));
     assert.ok(text.includes("User-Agent: ClaudeBot"));
@@ -663,6 +668,10 @@ describe("app/sitemap.ts", () => {
    */
   const EXPECTED_SITEMAP_URLS = [
     SITE_URL,
+    `${SITE_URL}/schools`,
+    ...[...new Set(realProgramsV3.map((p) => p.school.slug))].map(
+      (slug) => `${SITE_URL}/schools/${slug}`,
+    ),
     ...realProgramsV3
       .filter((program) => program.publishing.slug !== null)
       .map(

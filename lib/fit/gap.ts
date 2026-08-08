@@ -83,7 +83,7 @@ export function toBandGap(
 /**
  * Extracts the overall band from a requirement string.
  *
- * Directus stores these as free text ("6.5", "6.5 (no band below 6.0)",
+ * the legacy CMS stores these as free text ("6.5", "6.5 (no band below 6.0)",
  * "IELTS 7.0 overall"). The leading number is the overall requirement; the
  * caller keeps the original string so any section requirement stays visible
  * rather than being silently dropped.

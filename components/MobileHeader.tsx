@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Icon } from "./ui/Icon";
-import { ReviewerHeaderLink } from "./ReviewerHeaderLink";
 
 interface MobileHeaderProps {
   subtitle?: string;
@@ -9,14 +8,12 @@ interface MobileHeaderProps {
   showNotifications?: boolean;
 }
 
-const navLinks = [
-  { href: "/schools", label: "首页" },
-  { href: "/search", label: "搜索" },
-];
+const navLinks = [{ href: "/schools", label: "首页" }];
 
 /**
  * App top bar. Mobile: wordmark (or back chevron + wordmark).
- * ≥768px it gains inline navigation links and the reviewer entry.
+ * ≥768px it gains inline navigation links.(2026-08-08 OSS 迁移:/search
+ * 下线、reviewer 入口随 CMS 编辑面删除。)
  */
 export function MobileHeader({
   subtitle,
@@ -62,9 +59,6 @@ export function MobileHeader({
         </nav>
 
         <div className="ml-auto flex shrink-0 items-center gap-1">
-          <div className="hidden md:block">
-            <ReviewerHeaderLink />
-          </div>
           {showNotifications ? (
             <button
               aria-label="通知"
