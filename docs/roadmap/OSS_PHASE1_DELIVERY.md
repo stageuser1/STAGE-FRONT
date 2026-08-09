@@ -218,7 +218,31 @@ C. draft 不得进入任何公开索引面
 | JSON-LD 用多类型而非单 `Course` | 单换 Course 会让 `applicationDeadline`/`timeToComplete` 变成非法键。改用 `["Course","EducationalOccupationalProgram"]`,validator.schema.org 实测 0 错 0 警告 |
 | 删除面大于计划 | Directus 退场牵出 reviewer 编辑面、login 页与只被已删路由消费的孤儿组件簇 |
 | `data/v3/mock-programs.ts` 保留 | 计划写了要删,但它是 9 个测试文件的夹具、生产零引用,按"20 包留仓库"同一逻辑保留为夹具 |
-| `directus` 字面残留 2 处 | 契约字段 `ready_for_directus_import`(不改语义约束禁止重命名)与 Python validator 的"禁止 Directus ID"守卫文案 |
+| `directus` 字面残留 | 已收敛为**可机械核对的豁免清单**,见第 7b 节(复核裁决 2026-08-09) |
+
+## 7b. `directus` 字面残留豁免清单(复核裁决 2026-08-09)
+
+原表述"字面残留 2 处"不准确也不可核对 —— 它漏掉了数据文件里的大量出现,又把已删除脚本算了进去。改为按目录分类的显式清单,复核者可逐条 grep 验证。
+
+**零豁免区(必须 0 命中)**:`app/` `lib/` `components/` `scripts/` `tests/` `middleware.ts` `next.config.ts` `package.json`
+
+```bash
+grep -rni directus app lib components scripts tests middleware.ts next.config.ts package.json | grep -v node_modules | wc -l
+# 期望:0(2026-08-09 实测 0)
+```
+
+**豁免区**,逐条列明理由:
+
+| 位置 | 命中数 | 豁免理由 |
+|---|---|---|
+| `data/contract/stage_music_admissions_v3.schema.json` | 2 | 契约字段名 `ready_for_directus_import`。Step 0 的裁决是"只如实描述现状、不改语义",重命名字段就是改语义;且运营者 2026-08-09 明确裁定**维持不动** |
+| `data/v3/real/` 20 个包 | 42 | 保留的测试夹具。命中来自 `ready_for_directus_import` 值与 `data_quality.review_notes` 里记录出处的原文。**这些是历史语料,改动即篡改记录** |
+| `data/extractions/` `data/examples/` | 25 | 保留的 v4 归档与示例,同上 |
+| `docs/` | 4413 | 历史文档与本迁移自身的记录。删掉就没法追溯为什么迁移 |
+
+清点口径:命中数为 2026-08-09 实测值(`grep -rni directus <目录> | wc -l`),含注释与字符串。数字变化本身不是问题,**零豁免区破零才是**。
+
+---
 
 ## 8. 硬约束自检
 

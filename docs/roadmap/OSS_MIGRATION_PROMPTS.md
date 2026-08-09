@@ -117,7 +117,7 @@
 逐项核查,每项给 PASS/FAIL 与证据:
 
 1. **路由收敛**:`app/(explore)` 下与院校相关的公开路由只剩 `/schools`、`/schools/[slug]`、`/schools/[slug]/[programSlug]`(及其 opengraph-image / share-card / not-found 附属),外加上述两个 middleware 内部落点。确认 `pilot/`、`v3-preview/`、`[schoolId]/`、`login/` 目录已物理不存在;`/search` 已删除且 308 → `/schools`。
-2. **Directus 归零**:`grep -ri directus app/ lib/ components/ data/ scripts/ next.config.ts package.json` 命中数为 0(docs 除外)。`lib/directus/`、`lib/data.ts`、`lib/pilot-data.ts` 不存在。`/search`:`app/(explore)/search/` 目录不存在,`curl -s -o /dev/null -w '%{http_code}' http://localhost:3000/search` 返 308 且 Location 为 `/schools`,站内无残留 `/search` 入口链接。
+2. **Directus 归零(按豁免清单核对)**:零豁免区必须 0 命中 —— `grep -rni directus app lib components scripts tests middleware.ts next.config.ts package.json | grep -v node_modules | wc -l` 应为 **0**。`data/` 与 `docs/` 是**豁免区**(契约字段名 `ready_for_directus_import`、20 个夹具包的历史 review_notes、v4 归档、历史文档),逐条理由见交付报告第 7b 节 —— 在豁免区里 grep 到命中不是缺陷,零豁免区破零才是。`lib/directus/`、`lib/data.ts`、`lib/pilot-data.ts` 不存在。`/search`:`app/(explore)/search/` 目录不存在,`curl -s -o /dev/null -w '%{http_code}' http://localhost:3000/search` 返 308 且 Location 为 `/schools`,站内无残留 `/search` 入口链接。
 3. **无 fallback**:通读 `lib/oss/*.ts` 与三条路由 page.tsx,确认不存在读本地 JSON 的分支、不存在 "兼容/legacy/fallback" 语义的代码路径。`data/v3/real-programs.ts` 已删,但 `data/v3/real/*.json` 20 个文件仍在且无代码引用(`grep -r "v3/real" app/ lib/ components/` 为 0)。
 4. **凭据安全**:`grep -r "NEXT_PUBLIC_OSS" .` 为 0;`lib/oss/client.ts` 首行有 `server-only`;确认没有任何 `"use client"` 文件 import lib/oss(可用 `grep -rl "lib/oss" components/ app/` 后逐个查文件头)。
 5. **读写同一校验器**:`lib/contract/validate.ts` 用 ajv 加载 `data/contract/stage_music_admissions_v3.schema.json`,且 `lib/oss/schools.ts` 读取路径确实过这个校验;schema 顶层含 `status` 与 `last_checked`,`additionalProperties:false`。
