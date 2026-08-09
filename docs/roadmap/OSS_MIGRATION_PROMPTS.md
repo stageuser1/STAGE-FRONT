@@ -245,7 +245,7 @@
 |---|---|---|
 > ⚠️ **2026-08-09 事故与迁移**:首次实建时 bucket 建在了 `oss-cn-shenzhen`。上线后生产环境全部院校页 500,Vercel 运行时日志为 `Error [RequestError]: connect ETIMEDOUT 112.74.1.117:443` —— **hkg1 到深圳跨境连不通**(构建期 iad1 走国际线路反而通,所以构建成功、运行时全挂)。这不是延迟问题,是不可达。已裁决迁回本节原本要求的 `oss-cn-hongkong`。**地域这一栏不是偏好,是可用性前提。**
 
-| Bucket 名称 | 建议 `stage-schools-data`(全局唯一,记下实际名) | |
+| Bucket 名称 | 实际使用 `stage-front-schools-hk`(全局唯一) | |
 | 地域 | **华南香港 `oss-cn-hongkong`** | 与 Vercel hkg1 同区;换成任何内地地域都会重演上述事故 |
 | 存储类型 | 标准存储 | |
 | 读写权限 | **私有** | 一切读写走服务端签名,不开公共读 |
@@ -259,7 +259,7 @@
 
 1. 创建用户,建议登录名 `stage-schools-rw`;勾选 **仅"OpenAPI 调用访问"**(创建 AccessKey),不开控制台登录。
 2. 创建后立刻保存 AccessKey ID / Secret(Secret 只显示一次)。
-3. 不挂系统策略(如 AliyunOSSFullAccess),改为创建**自定义权限策略**(策略名建议 `stage-schools-bucket-rw`),JSON 如下(把 `stage-schools-data` 换成实际 bucket 名),然后授权给该用户。**换 bucket 时这里的资源名必须同步改** —— 2026-08-09 迁香港时若漏改,迁移脚本会在目标端拿到 `AccessDenied`,那是策略没跟上的信号,不要绕过:
+3. 不挂系统策略(如 AliyunOSSFullAccess),改为创建**自定义权限策略**(策略名建议 `stage-schools-bucket-rw`),JSON 如下,然后授权给该用户。**换 bucket 时这里的资源名必须同步改**,且迁移期间要同时列出新旧两个桶(见 7.4)—— 2026-08-09 只改成新桶,子账号立刻失去旧桶权限,线上构建随即 403 失败:
 
 ```json
 {
@@ -272,7 +272,7 @@
         "oss:PutObject",
         "oss:HeadObject"
       ],
-      "Resource": "acs:oss:*:*:stage-schools-data/*"
+      "Resource": "acs:oss:*:*:stage-front-schools-hk/*"
     },
     {
       "Effect": "Allow",
@@ -280,7 +280,7 @@
         "oss:ListObjects",
         "oss:GetBucketInfo"
       ],
-      "Resource": "acs:oss:*:*:stage-schools-data"
+      "Resource": "acs:oss:*:*:stage-front-schools-hk"
     }
   ]
 }
@@ -296,8 +296,8 @@
 |---|---|---|
 | `OSS_ACCESS_KEY_ID` | RAM 子账号 AccessKey ID | 阶段一 |
 | `OSS_ACCESS_KEY_SECRET` | RAM 子账号 AccessKey Secret(标记 Sensitive) | 阶段一 |
-| `OSS_BUCKET` | 实际 bucket 名,如 `stage-schools-data` | 阶段一 |
-| `OSS_REGION` | `oss-cn-hongkong` | 阶段一 |
+| `OSS_BUCKET` | `stage-front-schools-hk` | 阶段一 |
+| `OSS_REGION` | `oss-cn-hongkong`(**必须与 Function Region hkg1 同区**,见 7.1 事故说明) | 阶段一 |
 | `PREVIEW_TOKEN` | 自生成随机串(如 `openssl rand -hex 24`),draft 预览用 | 阶段一 |
 | `SCHOOLS_WRITE_TOKEN` | 另一个独立随机串,写入 API 鉴权用,**与 PREVIEW_TOKEN 不同值**(标记 Sensitive) | 阶段二 |
 
