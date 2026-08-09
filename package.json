@@ -11,7 +11,7 @@
     "start": "next start",
     "typecheck": "npm run clean && tsc --noEmit",
     "typecheck:incremental": "tsc --noEmit",
-    "test:lib": "node --test --experimental-strip-types tests/ielts_*.test.mjs tests/fit_*.test.mjs tests/profile_*.test.mjs tests/dashboard_*.test.mjs tests/program_v3_*.test.mjs tests/t7_*.test.mjs tests/contract_*.test.mjs tests/oss_*.test.mjs tests/page_metadata.test.mjs",
+    "test:lib": "node --test --experimental-strip-types tests/ielts_*.test.mjs tests/fit_*.test.mjs tests/profile_*.test.mjs tests/dashboard_*.test.mjs tests/program_v3_*.test.mjs tests/t7_*.test.mjs tests/contract_*.test.mjs tests/oss_*.test.mjs tests/page_metadata.test.mjs tests/api_*.test.mjs",
     "test:dom": "vitest run",
     "test": "npm run test:lib && npm run test:dom",
     "smoke": "node scripts/smoke.mjs",

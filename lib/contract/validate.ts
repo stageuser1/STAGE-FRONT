@@ -1,8 +1,8 @@
-import Ajv2020, { type ValidateFunction, type ErrorObject } from "ajv/dist/2020";
+import Ajv2020, { type ValidateFunction, type ErrorObject } from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import type { CanonicalPackage } from "@/lib/program-v3/package-adapter";
+import type { CanonicalPackage } from "../program-v3/package-adapter.ts";
 
 /**
  * 读写共用的唯一校验器(契约:data/contract/stage_music_admissions_v3.schema.json)。
@@ -22,10 +22,29 @@ const SCHEMA_PATH = path.join(
   "stage_music_admissions_v3.schema.json",
 );
 
+/**
+ * `publishing.programs[]` 里被写入闸门与索引重建**当作值用**的字段。
+ *
+ * `CanonicalPackage` 把它建模为 `Record<string, unknown>` —— 那对只做形状
+ * 搬运的适配器够用,但对"取 slug 去查保留字""取 slug 写进索引"不够:
+ * 校验器已经保证了这些字段的存在与类型,类型就该说出来,而不是让调用方
+ * 各自 `as string`(那正是断言掩盖真实类型错误的老路,见 T3b 的教训)。
+ *
+ * 用 type 而非 interface:interface 没有索引签名,无法赋给
+ * `Record<string, unknown>`,会把 `ContractPackage` 与 `CanonicalPackage`
+ * 的兼容性割断。
+ */
+export type ContractPublishingProgram = {
+  program_offering_ref: string;
+  slug: string;
+  [key: string]: unknown;
+};
+
 /** 契约包 = 渲染层消费的集合形状 + OSS 迁移新增的发布控制字段。 */
-export interface ContractPackage extends CanonicalPackage {
+export interface ContractPackage extends Omit<CanonicalPackage, "publishing"> {
   status: "draft" | "published";
   last_checked: string;
+  publishing: { programs: ContractPublishingProgram[] };
 }
 
 let compiled: ValidateFunction | null = null;

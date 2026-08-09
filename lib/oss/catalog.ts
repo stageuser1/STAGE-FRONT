@@ -7,6 +7,8 @@ import {
   readSchoolIndex,
   readSchoolPackage,
   readPublishedSchoolPackage,
+  readSchoolPackageForPreview,
+  type PreviewRead,
 } from "@/lib/oss/schools";
 
 /**
@@ -102,6 +104,25 @@ export async function loadProgramsWithPreview(
   return {
     programs: ordered.flatMap((pkg) => adaptCanonicalPackage(pkg)),
     previewPkg,
+  };
+}
+
+/**
+ * 预览面装配(阶段二):在可判别读取之上补齐浏览模型需要的其余 published
+ * 语料。`read.kind !== "ok"` 时不做任何额外读取 —— 诊断页不需要语料。
+ */
+export async function loadPreviewCatalog(
+  slug: string,
+  previewToken: string | null,
+): Promise<{ read: PreviewRead; programs: ProgramV3[] }> {
+  const read = await readSchoolPackageForPreview(slug, previewToken);
+  if (read.kind !== "ok") return { read, programs: [] };
+
+  const published = await loadPublishedPackages();
+  const rest = published.filter((pkg) => pkg.schools[0]?.school_ref !== slug);
+  return {
+    read,
+    programs: [read.pkg, ...rest].flatMap((pkg) => adaptCanonicalPackage(pkg)),
   };
 }
 

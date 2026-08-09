@@ -51,6 +51,41 @@ export function ossClient(): OSS {
  * 限流当成 404 会让**已发布的院校在网络抖动时静默消失**,页面显示"学校未找到"
  * —— 对用户来说那是数据丢失,比一个诚实的 500 危险得多。宁可报错。
  */
+/** 写 JSON 对象。失败一律抛出 —— 写入端没有"当作没写成"的降级路径。 */
+export async function putObjectJson(key: string, value: unknown): Promise<void> {
+  const body = Buffer.from(JSON.stringify(value, null, 2), "utf8");
+  try {
+    await ossClient().put(key, body, {
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+    });
+  } catch (error) {
+    throw new Error(`[oss] 写入 ${key} 失败:${describeOssError(error)}`, {
+      cause: error,
+    });
+  }
+}
+
+/** 列举某前缀下的全部对象键(自动翻页)。 */
+export async function listObjectKeys(prefix: string): Promise<string[]> {
+  const keys: string[] = [];
+  let marker: string | undefined;
+  try {
+    do {
+      const listed = await ossClient().list(
+        { prefix, "max-keys": 1000, marker },
+        {},
+      );
+      for (const obj of listed.objects ?? []) keys.push(obj.name);
+      marker = listed.nextMarker ?? undefined;
+    } while (marker);
+  } catch (error) {
+    throw new Error(`[oss] 列举 ${prefix} 失败:${describeOssError(error)}`, {
+      cause: error,
+    });
+  }
+  return keys;
+}
+
 export async function getObjectJson(key: string): Promise<unknown | null> {
   try {
     const result = await ossClient().get(key);

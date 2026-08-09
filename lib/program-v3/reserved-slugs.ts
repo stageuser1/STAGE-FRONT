@@ -22,6 +22,18 @@ export const RESERVED_PROGRAM_SLUGS = ["programs", "share-card", "opengraph-imag
  * 前端只能检测不能改;源头拒绝生成保留字 slug 是写入 API(阶段二)的责任,
  * 写入 API 与本检查用同一份清单。
  */
+/**
+ * 写入闸门用的原始形态检查(阶段二):对**未经适配的包**里
+ * `publishing.programs[].slug` 直接查表,返回命中的保留字。
+ *
+ * 阶段一的注释里写过"源头拒绝生成保留字 slug 是写入 API 的责任" —— 这就是
+ * 那个源头。与下面的渲染期守卫共用同一份 `RESERVED_PROGRAM_SLUGS`,
+ * 不允许两处清单漂移。
+ */
+export function findReservedSlugs(slugs: readonly string[]): string[] {
+  return [...new Set(slugs.filter((slug) => RESERVED_PROGRAM_SLUGS.includes(slug)))];
+}
+
 export function assertNoReservedSlugCollisions(programs: ProgramV3[]): void {
   const offenders = programs.filter(
     (program) =>

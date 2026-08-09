@@ -2,6 +2,20 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /**
+   * ali-oss 不进 webpack(2026-08-09,阶段二实测)。
+   *
+   * 打包后的 `client.list()` 在运行时抛 `ReferenceError: name is not defined`
+   * —— ali-oss 内部依赖了一个在浏览器里恰好是全局量的标识符,压缩/严格模式化
+   * 之后就没了。同一份代码在未打包的 Node 里 `list()` 完全正常(已实测),
+   * 所以这是打包破坏,不是 ali-oss 或我们的用法有问题。
+   *
+   * 标记为 server external 让它原样从 node_modules 以 CJS 加载,顺带消掉
+   * `graceful-fs` 那条 `Module not found` 警告(mz/fs.js 的 try/catch 兜底
+   * 在未打包环境本来就成立)。
+   */
+  serverExternalPackages: ["ali-oss"],
+
+  /**
    * The Listening dataset is read from disk with `fs` at request time, which
    * output file tracing cannot see. Without this, a serverless render of the
    * listening routes (e.g. an unknown setId falling through to on-demand
