@@ -109,7 +109,7 @@
 ### 开工前必读:实现后的环境事实(不是结论,是让你别按过时线索排查)
 
 - **公开 URL 之外多了两个内部落点**,都由 `middleware.ts` rewrite 而来,是经运营者确认的偏离:`?preview=<token>` → `/schools-preview/[slug]`(force-dynamic + noindex);`/schools/{slug}.json` → `/schools-json/[slug]`(route handler)。理由分别是 Next 15 读 `searchParams` 会废掉 ISR、以及动态段不能命名为 `[slug].json`。**你要核的是这两条落点没有绕过 draft 门禁、没有第二套数据通道**,而不是"多了目录=违反收敛"。
-- **OSS 实际参数**:bucket `stage-front-schools`,region `oss-cn-shenzhen`(不是计划里的 hongkong,运营者已确认暂不处理),凭据在 `.env.local`。**RAM 策略无 `DeleteObject`** —— 你上传的测试对象自己删不掉,请用一个可识别的 slug(如 `review_probe`)并在报告里注明留下了哪些对象。
+- **OSS 实际参数**:region `oss-cn-hongkong`(2026-08-09 从深圳迁来,原因见第 7.1 节的事故说明),bucket 名以 `.env.local` 里的 `OSS_BUCKET` 为准,凭据同处。**RAM 策略无 `DeleteObject`** —— 你上传的测试对象自己删不掉,请用一个可识别的 slug(如 `review_probe`)并在报告里注明留下了哪些对象。
 - **构建期读 OSS 的判据是"凭据是否存在"**,不是构建阶段。有凭据 → 构建期就读真实目录;无凭据 → 空目录 + 告警。这是验收中修正过的设计,不是遗留短路。
 - **本机构建注意**:`next build` 跑起来后不要 kill node 进程,中途打断会留下不一致的 `.next`,后续构建会卡在编译阶段(实现者踩过,误判成字体问题)。真卡住就清干净 `.next` 重来。
 - **20 个旧包已降级为纯测试夹具**(`tests/fixtures/real-programs.ts`),`data/v3/mock-programs.ts` 同理保留。生产代码引用它们即为 FAIL。
@@ -243,8 +243,10 @@
 
 | 选项 | 取值 | 说明 |
 |---|---|---|
+> ⚠️ **2026-08-09 事故与迁移**:首次实建时 bucket 建在了 `oss-cn-shenzhen`。上线后生产环境全部院校页 500,Vercel 运行时日志为 `Error [RequestError]: connect ETIMEDOUT 112.74.1.117:443` —— **hkg1 到深圳跨境连不通**(构建期 iad1 走国际线路反而通,所以构建成功、运行时全挂)。这不是延迟问题,是不可达。已裁决迁回本节原本要求的 `oss-cn-hongkong`。**地域这一栏不是偏好,是可用性前提。**
+
 | Bucket 名称 | 建议 `stage-schools-data`(全局唯一,记下实际名) | |
-| 地域 | **华南香港 `oss-cn-hongkong`** | 与 Vercel hkg1 同区 |
+| 地域 | **华南香港 `oss-cn-hongkong`** | 与 Vercel hkg1 同区;换成任何内地地域都会重演上述事故 |
 | 存储类型 | 标准存储 | |
 | 读写权限 | **私有** | 一切读写走服务端签名,不开公共读 |
 | 版本控制 | **开启** | 误覆盖可回滚,是 draft 迭代的安全网 |
@@ -257,7 +259,7 @@
 
 1. 创建用户,建议登录名 `stage-schools-rw`;勾选 **仅"OpenAPI 调用访问"**(创建 AccessKey),不开控制台登录。
 2. 创建后立刻保存 AccessKey ID / Secret(Secret 只显示一次)。
-3. 不挂系统策略(如 AliyunOSSFullAccess),改为创建**自定义权限策略**(策略名建议 `stage-schools-bucket-rw`),JSON 如下(把 `stage-schools-data` 换成实际 bucket 名),然后授权给该用户:
+3. 不挂系统策略(如 AliyunOSSFullAccess),改为创建**自定义权限策略**(策略名建议 `stage-schools-bucket-rw`),JSON 如下(把 `stage-schools-data` 换成实际 bucket 名),然后授权给该用户。**换 bucket 时这里的资源名必须同步改** —— 2026-08-09 迁香港时若漏改,迁移脚本会在目标端拿到 `AccessDenied`,那是策略没跟上的信号,不要绕过:
 
 ```json
 {
@@ -300,3 +302,14 @@
 | `SCHOOLS_WRITE_TOKEN` | 另一个独立随机串,写入 API 鉴权用,**与 PREVIEW_TOKEN 不同值**(标记 Sensitive) | 阶段二 |
 
 本地开发:同一组变量写进 `.env.local`(已在 .gitignore);`.env.example` 由阶段一实现者补占位名。旧的 `DIRECTUS_URL` / `DIRECTUS_TOKEN` 在阶段一验收通过后从 Vercel 删除。
+
+### 7.4 换 bucket 的操作顺序(2026-08-09 深圳 → 香港,后续换区同样适用)
+
+顺序不能乱:先建桶授权,再迁对象,最后切环境变量。任何一步失败都停下,不要"先切变量再补数据"——那会让线上直接指向一个空桶。
+
+1. 控制台新建 bucket,地域选 **华南香港 `oss-cn-hongkong`**,其余选项照 7.1 的表(私有、开版本控制)。
+2. 改 RAM 自定义策略里的两处资源名为新 bucket(7.2 的 JSON),保存后生效。
+3. 演练迁移:`node scripts/oss/migrate-bucket.mjs --to-bucket <新桶名>` —— 只列对象、验证源端可读,不写任何东西。
+4. 实际迁移:同命令加 `--apply`,脚本写完会逐个回读比对字节数,输出 `N/N 已迁移并回读一致` 才算成功。
+5. 改 `OSS_BUCKET` 与 `OSS_REGION`:Vercel(Production + Preview)与本地 `.env.local` 都要改,然后 Redeploy。
+6. 验收:三条 curl 全绿后,旧 bucket 留几天再删(留个回退余地)。
