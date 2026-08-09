@@ -165,6 +165,26 @@
    不接受"等一小时会好"。
 4. 所有端点 `export const dynamic = "force-dynamic"`;写成功后调用 `revalidatePath("/schools")`、`revalidatePath("/schools/[slug]", "page")` 等使 ISR 失效(publish/unpublish 也要),并 revalidate sitemap。
 
+### 5. 预览面 404 可区分(运营者裁决 2026-08-09,与写入 API 同批做)
+
+**问题**:预览面现在把四种完全不同的原因塌缩成同一个 404 —— ①OSS 里没有这个包、②包在但契约校验不过、③包是 draft 而 token 不对、④包是 draft 且 token 对(正常渲染,唯一的非 404)。从外部完全无法区分前三者。阶段一复核时,**连独立复核者都因此把"我的测试包没传上去"误判成了 middleware matcher 缺陷**;阶段三运营者要拿 `?preview=` 逐页人工复核,更需要知道"看不到"到底是哪一种。
+
+**安全边界(先定死,再谈体验)**:诊断信息**只在 preview token 有效时**才输出。token 无效或缺失一律返回与"该学校不存在"逐字相同的 404 —— 否则"这所学校存在但是 draft"本身就成了信息泄露,draft 的意义就没了。判据是 token 与 `PREVIEW_TOKEN` 的比较,**与包是否存在无关**,所以不存在旁路推断。
+
+**实现要求**:
+
+- `lib/oss/schools.ts` 增加一个供预览面用的读函数,返回可判别的结果而不是 `null`,形如
+  `{ kind: "ok", pkg } | { kind: "missing" } | { kind: "invalid", violations } | { kind: "forbidden" }`。
+  公开面(`/schools/[slug]`、机读端点)**继续用现有的 `null` 语义,不改**——它们不该知道这些区别。
+- 预览页在 token 有效时:
+  - `missing` → 渲染一个明确的诊断页:「OSS 里没有 `schools/{slug}.json`」,并列出当前 bucket 与 region(便于发现"传错桶"这类错);
+  - `invalid` → 渲染契约校验失败的**具体字段路径**(复用 `ContractViolation[]`)。这条对阶段三尤其有价值:入库前的包不合规,现在只能在 `POST` 的 422 里看到,复核阶段看不到;
+  - `ok` → 照常渲染。
+- token 无效/缺失 → `notFound()`,不区分任何情况。
+- 诊断页一律带 `noindex`(它只可能出现在预览面,但仍显式声明)。
+
+**验收**:同一个 slug,token 有效时三种状态给出三种可区分的响应;token 无效时四种状态给出**逐字相同**的 404(比对响应体字节数与状态码)。
+
 ### 约束
 
 - OSS 凭据仍只经 `lib/oss/client.ts`;新增写函数放 `lib/oss/write.ts`(`server-only`)。
@@ -197,7 +217,8 @@
    属阻塞性 FAIL(阶段一实测过 ISR 会让旧页面继续公开最长一小时)。
 5. **并发**:同 slug 两个并发 POST(可用 `curl &` 或脚本),确认索引最终一致、无丢失更新;做不到就确认代码里有 ETag/If-Match 防护并说明其行为。
 6. **凭据**:`grep -r "NEXT_PUBLIC_" app/api lib/oss` 为 0;写 token 不出现在任何客户端可达代码。
-7. 亲跑全部单测;`npx next build` 通过。
+7. **预览面 404 可区分**(阶段二新增第 5 条):token 有效时,"包不存在""契约不合规""正常 draft"三种状态给出可区分的响应,且 `invalid` 那种确实列出了字段路径;token 无效或缺失时,这三种加上"根本没这所学校"共四种状态返回**逐字相同**的 404 —— 逐字,不是"都是 404 就行"(比对状态码与响应体字节数)。任何一种能从 404 的差异里推断出"这个 slug 存在"即为 FAIL,那是 draft 的信息泄露。
+8. 亲跑全部单测;`npx next build` 通过。
 
 产出 PASS/FAIL 表,任何半写入、鉴权绕过、draft 泄漏为阻塞性 FAIL。
 
