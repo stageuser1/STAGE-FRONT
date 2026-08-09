@@ -1,6 +1,6 @@
 # OSS 迁移阶段二 · 交付报告(写入 API + 预览面 404 可区分)
 
-> 2026-08-09 · `bd18dcb` → `89d63cc` · 生产实测完成
+> 2026-08-09 · `bd18dcb` → `89d63cc` · 生产实测完成 · **即时撤回五面闭环已由运营者人工验证(第 3.3b 节)**
 > 实现者自检**不作为验收依据**;本报告供独立复核 session 作线索,一切以复核者亲手执行的结果为准。
 > 复核提示词见 [OSS_MIGRATION_PROMPTS.md](OSS_MIGRATION_PROMPTS.md) 第 4 节。
 >
@@ -72,6 +72,53 @@ unpublish        {"slug":"…","status":"draft","changed":true}
 ```
 
 **五个面同时即时下线**,无需等待任何 revalidate 周期。
+
+### 3.3b 人工验证:即时撤回五面闭环(复核要求项,2026-08-09)
+
+复核结论中唯一的缺口是"即时撤回五面闭环需人工验证"。由**运营者本人**在浏览器中逐面确认,实现者只负责调 API 与采集响应头。
+
+**公开窗口:07:34:21Z → 07:38:06Z,共 3 分 45 秒。**
+
+| 面 | published(人工确认) | unpublish 后(人工确认) |
+|---|---|---|
+| ① 院校页 `/schools/smoke_test_conservatory` | 200 | 404 |
+| ② 专业页 `/schools/smoke_test_conservatory/voice-bm` | 200 | 404 |
+| ③ 机读端点 `/schools/smoke_test_conservatory.json` | 200,载荷含 `"status":"published"`(截图存档) | 404 |
+| ④ `/sitemap.xml` | 含 smoke_test 两条(截图存档) | 0 条 |
+| ⑤ 浏览页 `/schools` | 列表出现「冒烟测试音乐学院」 | 0 处 |
+
+实现者侧的服务端复查与人工结果一致。
+
+**机读端点响应头两次采集对照**(本项核心证据):
+
+```
+$ curl -sSI https://www.studyabroadfirst.cn/schools/smoke_test_conservatory.json
+--- published,07:34:45Z ---
+HTTP/1.1 200 OK
+Age: 0
+Cache-Control: no-store
+Content-Type: application/json
+Date: Sun, 09 Aug 2026 07:34:45 GMT
+Server: Vercel
+X-Matched-Path: /schools-json/[slug]
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::hkg1::xn5nn-1786260885669-2791f89113b3
+
+--- unpublish 后 31 秒,07:38:37Z ---
+HTTP/1.1 404 Not Found
+Age: 0
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Sun, 09 Aug 2026 07:38:37 GMT
+Server: Vercel
+X-Matched-Path: /schools-json/[slug]
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::hkg1::pg8mz-1786261117877-9db70c504958
+```
+
+二次请求同样 `404` / `MISS`,排除瞬时结果。**两次采集都是 `X-Vercel-Cache: MISS`、`Age: 0`,没有任何 CDN 缓存介入** —— 正是 `no-store` 修复要达成的效果。对照修复前的实测,同一位置曾是 `X-Vercel-Cache: HIT` / `Age: 63`,撤回后仍供着 published 副本(见第 4 节 ③)。
+
+`X-Matched-Path: /schools-json/[slug]` 顺带确认了 middleware 把公开 URL `/schools/{slug}.json` 正确分流到了内部落点。
 
 ### 3.4 预览四态
 
