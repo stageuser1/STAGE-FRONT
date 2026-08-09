@@ -4,6 +4,7 @@ import { SchoolsBrowsePage } from "@/components/schools/browse/SchoolsBrowsePage
 import { WechatShareSetup } from "@/components/program/v3/WechatShareSetup";
 import { PRERENDER_PROGRAM_PARAMS } from "@/data/prerender-whitelist";
 import { loadPublishedCatalog } from "@/lib/oss/catalog";
+import { programMetadata } from "@/lib/program-v3/page-metadata";
 import {
   RESERVED_PROGRAM_SLUGS,
   assertNoReservedSlugCollisions,
@@ -51,21 +52,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug, programSlug } = await params;
   const { programs } = await loadPublishedCatalog();
-  const program = programs.find(
-    (p) => p.school.slug === slug && p.publishing.slug === programSlug,
+  return programMetadata(
+    programs.find((p) => p.school.slug === slug && p.publishing.slug === programSlug),
   );
-  if (!program) return {};
-  const schoolName =
-    program.school.school_name_zh ?? program.school.school_name;
-  const programName =
-    program.offering.program_name_zh ?? program.offering.official_program_name;
-  const degree = program.offering.degree_abbreviation;
-  return {
-    title: `${schoolName} ${programName}${degree ? ` (${degree})` : ""} 申请要求 · STAGE`,
-    description:
-      program.publishing.answer_sentence_zh ??
-      `${schoolName} ${programName} 项目的申请截止日期、语言要求与试音要求,来自官网并标注核验状态。`,
-  };
 }
 
 export default async function ProductionProgramPage({
