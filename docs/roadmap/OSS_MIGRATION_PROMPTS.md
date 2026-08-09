@@ -106,19 +106,34 @@
 
 你是独立复核者,在 D:\STAGE FRONT 验收"OSS 迁移阶段一"。实现者的报告仅作线索,一切以你亲手执行的结果为准。基线是 git tag `pre-oss-migration`,先 `git diff pre-oss-migration --stat` 总览改动。
 
+### 开工前必读:实现后的环境事实(不是结论,是让你别按过时线索排查)
+
+- **公开 URL 之外多了两个内部落点**,都由 `middleware.ts` rewrite 而来,是经运营者确认的偏离:`?preview=<token>` → `/schools-preview/[slug]`(force-dynamic + noindex);`/schools/{slug}.json` → `/schools-json/[slug]`(route handler)。理由分别是 Next 15 读 `searchParams` 会废掉 ISR、以及动态段不能命名为 `[slug].json`。**你要核的是这两条落点没有绕过 draft 门禁、没有第二套数据通道**,而不是"多了目录=违反收敛"。
+- **OSS 实际参数**:bucket `stage-front-schools`,region `oss-cn-shenzhen`(不是计划里的 hongkong,运营者已确认暂不处理),凭据在 `.env.local`。**RAM 策略无 `DeleteObject`** —— 你上传的测试对象自己删不掉,请用一个可识别的 slug(如 `review_probe`)并在报告里注明留下了哪些对象。
+- **构建期读 OSS 的判据是"凭据是否存在"**,不是构建阶段。有凭据 → 构建期就读真实目录;无凭据 → 空目录 + 告警。这是验收中修正过的设计,不是遗留短路。
+- **本机构建注意**:`next build` 跑起来后不要 kill node 进程,中途打断会留下不一致的 `.next`,后续构建会卡在编译阶段(实现者踩过,误判成字体问题)。真卡住就清干净 `.next` 重来。
+- **20 个旧包已降级为纯测试夹具**(`tests/fixtures/real-programs.ts`),`data/v3/mock-programs.ts` 同理保留。生产代码引用它们即为 FAIL。
+
 逐项核查,每项给 PASS/FAIL 与证据:
 
-1. **路由收敛**:`app/(explore)` 下与院校相关的路由只剩 `/schools`、`/schools/[slug]`、`/schools/[slug]/[programSlug]`(及其 opengraph-image / share-card / not-found 附属)。确认 `pilot/`、`v3-preview/`、`[schoolId]/` 目录已物理不存在;`/search` 要么走 OSS 数据要么已删除,不许残留 Directus 调用。
+1. **路由收敛**:`app/(explore)` 下与院校相关的公开路由只剩 `/schools`、`/schools/[slug]`、`/schools/[slug]/[programSlug]`(及其 opengraph-image / share-card / not-found 附属),外加上述两个 middleware 内部落点。确认 `pilot/`、`v3-preview/`、`[schoolId]/`、`login/` 目录已物理不存在;`/search` 已删除且 308 → `/schools`。
 2. **Directus 归零**:`grep -ri directus app/ lib/ components/ data/ scripts/ next.config.ts package.json` 命中数为 0(docs 除外)。`lib/directus/`、`lib/data.ts`、`lib/pilot-data.ts` 不存在。`/search`:`app/(explore)/search/` 目录不存在,`curl -s -o /dev/null -w '%{http_code}' http://localhost:3000/search` 返 308 且 Location 为 `/schools`,站内无残留 `/search` 入口链接。
 3. **无 fallback**:通读 `lib/oss/*.ts` 与三条路由 page.tsx,确认不存在读本地 JSON 的分支、不存在 "兼容/legacy/fallback" 语义的代码路径。`data/v3/real-programs.ts` 已删,但 `data/v3/real/*.json` 20 个文件仍在且无代码引用(`grep -r "v3/real" app/ lib/ components/` 为 0)。
 4. **凭据安全**:`grep -r "NEXT_PUBLIC_OSS" .` 为 0;`lib/oss/client.ts` 首行有 `server-only`;确认没有任何 `"use client"` 文件 import lib/oss(可用 `grep -rl "lib/oss" components/ app/` 后逐个查文件头)。
 5. **读写同一校验器**:`lib/contract/validate.ts` 用 ajv 加载 `data/contract/stage_music_admissions_v3.schema.json`,且 `lib/oss/schools.ts` 读取路径确实过这个校验;schema 顶层含 `status` 与 `last_checked`,`additionalProperties:false`。
-6. **构建**:亲自跑 `npx next build`,记录页面数与耗时,确认 < 50 页且无 ENOSPC/字体类失败;对比 `next.config.ts` 的 `outputFileTracingIncludes` 已不含 `data/v3/real`。
-7. **三条 curl**:按阶段一验收第 4 条亲自执行(自己构造/上传 smoke 包,不用实现者留下的),原文粘贴输出。重点对抗性检查:draft 包不带 token 时,页面 404 且 `.json` 端点 404;带 token 时 HTML `<meta name="robots"` 含 noindex;JSON-LD 的值确实来自包数据(改包里学费数字→重新验证页面变化)而非硬编码。
-8. **sitemap/robots**:`curl /sitemap.xml` 不含 draft 与已删路由;robots 仍禁 AI 爬虫。
-9. **视觉未回归**:抽查专业详情页与浏览页,与 `pre-oss-migration` 基线截图/DOM 结构对比,组件层未被重写(git diff components/ 应接近于零或仅 props 适配)。
+6. **构建**:亲自跑 `npx next build`,记录**院校路由**预渲染页数与耗时(实现者报的是 1 页 / 32s,基线是约 1778 页 / 4m28s;全站 568 页里 557 页是 IELTS 题库,别把这个数当院校数);确认无 ENOSPC;对比 `next.config.ts` 的 `outputFileTracingIncludes` 已不含 `data/v3/real`、且含 `data/contract/*.json`(校验器运行时要读它,漏了会在函数里 ENOENT)。
+7. **三条 curl**:按阶段一验收第 4 条亲自执行(**自己构造并上传 smoke 包,不要用实现者留下的**;实现者的冒烟包已置 draft、索引已清空)。原文粘贴输出。重点对抗性检查:
+   - draft 包不带 token → 页面 404 且 `.json` 端点 404;带**错** token 同样 404;带对 token → 200 且 HTML `<meta name="robots">` 含 noindex;
+   - `.json` 端点**带 preview token 也必须 404**(机读面无预览语义,这是设计要求,不是遗漏);
+   - JSON-LD 的值确实来自包数据(改包里的学费数字 → 重新请求 → 页面与 JSON-LD 跟着变),不是硬编码;
+   - 核心事实(截止日期、费用、语言要求、试音)出现在 **SSR HTML** 里,禁用 JS 也能看到。
+8. **sitemap/robots**:`curl /sitemap.xml` 只含 published,不含 draft 与已删路由,且**发布一所学校后它确实会出现在 sitemap 里**(实现者验收时发现过 sitemap 因缺 `revalidate` 永远为空的缺陷,已修 —— 请独立确认修好了);`curl /robots.txt` 确认 GPTBot / ClaudeBot / PerplexityBot / Google-Extended / anthropic-ai / cohere-ai **六个全部整站 `Disallow: /`**,`public/llms.txt` 已不存在(404)。
+9. **ISR 与撤回时效(重点)**:实现者报告称"把包翻成 draft 不会让已缓存页面立即下线,最长一小时仍公开 200;清空缓存后立即 404,鉴权无洞"。**请独立复现这个行为并判断它的严重性**:先请求页面使其进入 ISR 缓存 → 把包翻 draft → 立刻再请求。若你复现出的是"仍返回 200",确认这是缓存陈旧而非鉴权绕过(清 `.next/server/app/schools/` 下对应产物后重试应为 404)。这条**在阶段一不算 FAIL**(阶段一没有 publish/unpublish 端点可调 revalidate),但你的结论会决定阶段二 unpublish 的验收强度 —— 若你认为阶段一就该有兜底,请明确写出来。
+10. **视觉未回归**:抽查专业详情页与浏览页,与 `pre-oss-migration` 基线 DOM 结构对比,组件层未被重写(`git diff pre-oss-migration --stat -- components/` 应只见 props 适配与被删组件,不见渲染逻辑重写)。
 
-产出:逐项 PASS/FAIL 表 + 阻塞性问题清单。任何一条 FAIL 即打回,不给"有条件通过"。
+产出:逐项 PASS/FAIL 表 + 阻塞性问题清单 + 你留在 OSS 上的测试对象清单。任何一条 FAIL 即打回,不给"有条件通过"。
+
+**参考材料(读之前先自己跑一遍,别被它带节奏)**:实现者的交付报告在 `docs/roadmap/OSS_PHASE1_DELIVERY.md`,含它自认的偏离与遗留。它是线索,不是证据。
 
 ---
 
