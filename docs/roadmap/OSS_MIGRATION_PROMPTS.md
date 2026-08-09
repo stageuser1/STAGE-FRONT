@@ -262,6 +262,11 @@
 2. **/search:阶段一下线**,物理删除 + 移除入口 + 308 永久重定向 `/schools`,不迁 OSS;重建另立项(已并入阶段一 Step 2)。
 3. **OSS bucket 与 RAM 子账号由运营者手工创建**,凭据只进 Vercel 环境变量;操作清单见第 7 节。
 4. **Berklee 三校(含主校)不复用 output/ 现有 v4 抽取件**,阶段三全部重新抽取、走新写入 API 入库;旧抽取件保留原处,不纳入本轮迁移(已并入阶段三)。
+5. **(2026-08-09,阶段二开工前)硬约束 D「不新增计划外抽象」的一次有记录的正当豁免**:写入路由允许引入依赖注入缝 —— 路由逻辑抽为 `handleSchoolWrite(request, deps)`,`deps = { readPackage, writePackage, rebuildIndex, revalidate }`,route.ts 只做接线。
+   - **理由**:`server-only` 使任何 OSS 相关模块无法被 `node --test` import(已实测抛错),而规格自身的验收标准要求单测覆盖 401/422/draft 强制/保留字等**写入闸门八条分支**——这是那些分支能被回归钉住的唯一实现路径,且它们正是最需要被钉住的行为。
+   - **边界(运营者附加)**:deps 模式**仅限写入路由**,不得扩散到读取侧或其他模块。读取通道保持现在的直接调用形态。后续任何"顺手也注入一下"的改动都属违反本豁免,应被复核打回。
+6. **(2026-08-09)索引维护采用「重建」而非「读-改-写 + ETag」**:写包后从 `schools/` 前缀列举重建整份 `index/schools.json`。幂等,并发写入者必然收敛,丢失更新在结构上不可能发生;代价是每次写入多 N 次读(N 为两位数、写入为人工低频操作)。
+7. **(2026-08-09)`revalidatePath` 采用整体失效**:每次 publish/unpublish/覆盖写失效 `/schools`、`/schools/[slug]`(page)、`/schools/[slug]/[programSlug]`(page)、`/sitemap.xml`,不逐 slug 失效 —— 逐 slug 会漏掉"专业列表变了"这类跨页影响。
 
 ---
 
