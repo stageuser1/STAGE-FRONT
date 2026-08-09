@@ -213,7 +213,15 @@
 
 ---
 
-你是独立复核者,验收 D:\STAGE FRONT 的"OSS 迁移阶段二:写入 API"。以 `git diff <阶段一验收 commit>` 为范围,亲手执行为准。
+你是独立复核者,验收 D:\STAGE FRONT 的"OSS 迁移阶段二:写入 API"。范围 `git diff bd18dcb..HEAD`,亲手执行为准。
+
+### 开工前必读(实现后的事实与踩过的坑)
+
+- **一切以生产实测为准**(总则)。本阶段有一条缺陷**本地根本测不出来**:机读端点的 CDN 缓存在 unpublish 后继续供 published 副本,`next start` 没有 CDN,只有线上能复现。
+- **验证"状态翻转"必须先确认起点**:测"撤回后 404"之前,先确认它**真的 200 过**。实现者第一次就栽在这里 —— 页面本来就是缓存的 404,测出来的"通过"是假的。
+- **生产环境变量**:`SCHOOLS_WRITE_TOKEN` 与 `PREVIEW_TOKEN` 在 Vercel 与本地 `.env.local` 同值(本轮曾因误删/不一致排查过两轮)。鉴权是**失败关闭**的,所以"401"既可能是 token 错也可能是变量没配 —— 从外部无法区分,别把它当代码缺陷。
+- **OSS 里有三个测试对象**:`smoke_test_conservatory`(draft)、`review_codex_20260809`(draft,阶段一复核者留的)、`preview_probe_invalid`(**故意契约不合规**,用来验预览面 `invalid` 诊断,别当成缺陷)。RAM 策略无 `DeleteObject`,你传的对象同样删不掉,请用可识别 slug 并在报告里注明。
+- **硬约束 D 的豁免边界**:写入路由允许 deps 注入缝(裁决 5),**仅限写入路由**。若发现读取侧或其他模块也开始注入 deps,那是违反豁免,应当打回。
 
 1. **鉴权**:读 `app/api/schools/route.ts`,确认 Bearer 比较是常量时间(非 `===` 直接比较可接受性自行判断并说明);无 token、错 token 均 401,响应不泄漏 token 存在性。
 2. **整体拒绝**:构造一个 3 处不合规的包(缺 required、类型错、多余字段),POST 后断言 422 且**三处全部**出现在响应里;随后 GET OSS 确认对象未被写入、索引未变——半写入是最高级别 FAIL。
@@ -225,7 +233,8 @@
 5. **并发**:同 slug 两个并发 POST(可用 `curl &` 或脚本),确认索引最终一致、无丢失更新;做不到就确认代码里有 ETag/If-Match 防护并说明其行为。
 6. **凭据**:`grep -r "NEXT_PUBLIC_" app/api lib/oss` 为 0;写 token 不出现在任何客户端可达代码。
 7. **预览面 404 可区分**(阶段二新增第 5 条):token 有效时,"包不存在""契约不合规""正常 draft"三种状态给出可区分的响应,且 `invalid` 那种确实列出了字段路径;token 无效或缺失时,这三种加上"根本没这所学校"共四种状态返回**逐字相同**的 404 —— 逐字,不是"都是 404 就行"(比对状态码与响应体字节数)。任何一种能从 404 的差异里推断出"这个 slug 存在"即为 FAIL,那是 draft 的信息泄露。
-8. 亲跑全部单测;`npx next build` 通过。
+8. **CDN 与即时撤回**(本阶段实测踩到):任何"必须能即时撤回"的响应都不得带 `s-maxage`。核对机读端点 `/schools/{slug}.json` 的 published 响应头是 `Cache-Control: no-store`;并在生产实测 publish→200→unpublish→**立刻** 404,同时检查响应头没有 `X-Vercel-Cache: HIT`。`revalidatePath` 失效得了 Next 的 ISR 条目,**管不到显式 `Cache-Control` 造成的 CDN 缓存** —— 这是本阶段最容易漏的一条。
+9. 亲跑全部单测;`npx next build` 通过。
 
 产出 PASS/FAIL 表,任何半写入、鉴权绕过、draft 泄漏为阻塞性 FAIL。
 
