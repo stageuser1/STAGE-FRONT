@@ -24,14 +24,33 @@ const REAL = JSON.parse(
   ),
 );
 
-/** 现行契约要求的两个顶层字段,旧包没有,补上即成合法包(见 Step 0 留档)。 */
+/**
+ * 现行契约要求的两个顶层字段,旧包没有,补上即成合法包(见 Step 0 留档)。
+ *
+ * `field_ref` 由 `voice` 重映射为 `performance`:跨校词表
+ * (data/contract/field-vocabulary.json)目前只收录了实际要入库的学校的
+ * field,`voice` 尚未在册。夹具跟着词表走,而不是把测试需要的值塞进词表 ——
+ * 词表要如实反映"线上库允许什么",不是"测试想要什么"。
+ * 词表拒绝的行为由下面两条专门的测试覆盖。
+ */
 function validPackage(overrides = {}) {
-  return structuredClone({
+  const pkg = structuredClone({
     ...REAL,
     status: "draft",
     last_checked: "2026-08-09",
     ...overrides,
   });
+  if (!overrides.fields) {
+    pkg.fields.forEach((f) => {
+      if (f.field_ref === "voice") f.field_ref = "performance";
+    });
+  }
+  if (!overrides.program_offerings) {
+    pkg.program_offerings.forEach((o) => {
+      if (o.field_ref === "voice") o.field_ref = "performance";
+    });
+  }
+  return pkg;
 }
 
 function fakeDeps(overrides = {}) {
@@ -149,6 +168,36 @@ test("⑦ publishing.programs[].slug 命中保留字 → 422 且不写入", asyn
   const { violations } = await res.json();
   assert.ok(violations.some((v) => /share-card/.test(v.message)));
   assert.ok(violations.some((v) => /T3b-R1/.test(v.message)));
+  assert.equal(state.stored.size, 0);
+});
+
+test("⑨ field_ref 不在跨校词表里 → 422 且不写入", async () => {
+  // 词表是 Directus 退场后唯一防止「各校各写各的」的机制:一所写
+  // music_business、另一所写 music_management,浏览页会分裂成两个类目,
+  // 而且没有任何别的机制会发现。
+  const { deps, state } = fakeDeps();
+  const pkg = validPackage();
+  pkg.fields[0].field_ref = "totally_made_up_field";
+  pkg.program_offerings.forEach((o) => {
+    o.field_ref = "totally_made_up_field";
+  });
+  const res = await handleSchoolWrite(post(pkg), deps);
+  assert.equal(res.status, 422);
+  const { violations } = await res.json();
+  assert.ok(violations.some((v) => /totally_made_up_field/.test(v.message)));
+  assert.ok(violations.some((v) => /field-vocabulary\.json/.test(v.message)));
+  assert.equal(state.stored.size, 0);
+});
+
+test("声明了在册 field 却引用了不在册的 —— 两处都查,不只查 fields[]", async () => {
+  const { deps, state } = fakeDeps();
+  const pkg = validPackage();
+  // fields[] 保持合法,只把 offering 的引用换成不在册的值
+  pkg.program_offerings[0].field_ref = "sneaky_unlisted_field";
+  const res = await handleSchoolWrite(post(pkg), deps);
+  assert.equal(res.status, 422);
+  const { violations } = await res.json();
+  assert.ok(violations.some((v) => /sneaky_unlisted_field/.test(v.message)));
   assert.equal(state.stored.size, 0);
 });
 

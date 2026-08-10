@@ -39,6 +39,10 @@ const nextConfig: NextConfig = {
     "/schools-preview/[slug]": ["./data/contract/*.json"],
     "/schools-preview/[slug]/[programSlug]": ["./data/contract/*.json"],
     "/schools-json/[slug]": ["./data/contract/*.json"],
+    // 写入路由要读契约 schema 与跨校词表,两者都在 data/contract/ 下。
+    "/api/schools": ["./data/contract/*.json"],
+    "/api/schools/[slug]/publish": ["./data/contract/*.json"],
+    "/api/schools/[slug]/unpublish": ["./data/contract/*.json"],
     "/sitemap.xml": ["./data/contract/*.json"],
     "/profile": ["./data/contract/*.json"],
     "/": ["./data/contract/*.json"],

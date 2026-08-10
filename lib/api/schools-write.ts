@@ -8,6 +8,7 @@ import {
   type ContractViolation,
 } from "../contract/validate.ts";
 import { findReservedSlugs } from "../program-v3/reserved-slugs.ts";
+import { unknownFieldRefs } from "../contract/field-vocabulary.ts";
 
 /**
  * 写入 API 的逻辑核心。**没有 `server-only`**,所有 I/O 经 `deps` 注入 ——
@@ -63,6 +64,24 @@ function reservedSlugViolations(pkg: ContractPackage): ContractViolation[] {
 }
 
 /**
+ * 不在册的 `field_ref` 包装成与契约违规同构的形状。
+ *
+ * 查两处:`fields[]` 的声明,与 `program_offerings[]` 的引用 —— 后者才是
+ * 真正决定页面归类的地方,只查前者会漏掉"声明了 A 却引用了 B"。
+ */
+function unknownFieldViolations(pkg: ContractPackage): ContractViolation[] {
+  const declared = pkg.fields.map((f) => f.field_ref);
+  const used = pkg.program_offerings.map((o) => o.field_ref);
+  return unknownFieldRefs([...declared, ...used]).map((ref) => ({
+    instancePath: "/fields",
+    message:
+      `field_ref "${ref}" 不在跨校词表 data/contract/field-vocabulary.json 里。` +
+      `新增 field 要在同一个 commit 里加进词表 —— 那次显式改动是把关点,` +
+      `否则各校各写各的(music_business vs music_management),浏览页会分裂成互不相干的类目`,
+  }));
+}
+
+/**
  * `POST /api/schools` —— 整包写入。
  *
  * 语义要点:
@@ -89,8 +108,11 @@ export async function handleSchoolWrite(
   const result = validateContractPackage(body);
   if (!result.ok) return unprocessable(result.violations);
 
-  const reserved = reservedSlugViolations(result.pkg);
-  if (reserved.length > 0) return unprocessable(reserved);
+  const gateViolations = [
+    ...reservedSlugViolations(result.pkg),
+    ...unknownFieldViolations(result.pkg),
+  ];
+  if (gateViolations.length > 0) return unprocessable(gateViolations);
 
   const slug = result.pkg.schools[0].school_ref;
   const previous = await deps.readPackage(slug);
