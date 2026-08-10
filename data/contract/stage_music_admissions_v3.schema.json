@@ -128,7 +128,23 @@
         "field_name": { "type": "string", "minLength": 1 },
         "field_name_zh": { "$ref": "#/$defs/nullableString" },
         "field_category": {
-          "enum": ["Music Performance", "Composition/Theory", "Conducting", "Chamber Music", "Music Education", "Jazz Studies", "Musicology", "Musical Theatre"]
+          "$comment": "2026-08-10 扩充:原 8 值全是古典/爵士演奏体系,装不下 Berklee 一类的现代音乐院校(音乐商业、制作工程、音乐治疗、影视配乐、词曲创作、交叉专业),硬套即造假。新增 6 值,分类跟着实际专业走。归类先例见 docs/contracts/field-classification-precedents.md。",
+          "enum": [
+            "Music Performance",
+            "Composition/Theory",
+            "Conducting",
+            "Chamber Music",
+            "Music Education",
+            "Jazz Studies",
+            "Musicology",
+            "Musical Theatre",
+            "Music Production/Technology",
+            "Screen Scoring",
+            "Music Business",
+            "Music Therapy",
+            "Songwriting",
+            "Interdisciplinary"
+          ]
         },
         "parent_field": { "$ref": "#/$defs/nullableRef" },
         "field_group": { "$ref": "#/$defs/nullableString" },
