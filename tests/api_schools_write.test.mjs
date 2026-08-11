@@ -50,6 +50,14 @@ function validPackage(overrides = {}) {
       if (o.field_ref === "voice") o.field_ref = "performance";
     });
   }
+  // 语料冻结(2026-08-06)之后新增的 required 字段,与
+  // tests/contract_schema.test.mjs 头部那张注入项账本同源、同规则:
+  // 缺失=没想过,null=查过而官网未说明。夹具用 null。
+  pkg.program_offerings.forEach((o) => {
+    if (!("major_declaration_requirements" in o)) {
+      o.major_declaration_requirements = null;
+    }
+  });
   return pkg;
 }
 

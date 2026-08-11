@@ -101,6 +101,7 @@ const juilliardVoiceBm: ProgramV3 = {
     duration_years: 4,
     language_of_instruction: ["English"],
     program_url: "https://www.juilliard.edu/music/programs/voice",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2026",
@@ -230,6 +231,7 @@ const juilliardPianoBm: ProgramV3 = {
     duration_years: 4,
     language_of_instruction: ["English"],
     program_url: "https://www.juilliard.edu/music/programs/piano",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2025",
@@ -330,6 +332,7 @@ const juilliardOperaMm: ProgramV3 = {
     duration_years: 2,
     language_of_instruction: ["English"],
     program_url: "https://www.juilliard.edu/music/programs/opera-studies",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2026",
@@ -424,6 +427,7 @@ const manhattanCompositionMm: ProgramV3 = {
     duration_years: 2,
     language_of_instruction: ["English"],
     program_url: "https://www.msmnyc.edu/programs/composition",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2025",
@@ -497,6 +501,7 @@ const rcmPianoBm: ProgramV3 = {
     duration_years: 4,
     language_of_instruction: ["English"],
     program_url: "https://www.rcm.ac.uk/study/undergraduate/piano/",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2026",
@@ -594,6 +599,7 @@ const mdwWienVoiceMa: ProgramV3 = {
     duration_years: 2,
     language_of_instruction: ["German"],
     program_url: "https://www.mdw.ac.at/gesang/",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2026",
@@ -678,6 +684,7 @@ const manhattanVoiceMm: ProgramV3 = {
     duration_years: 2,
     language_of_instruction: ["English"],
     program_url: "https://www.msmnyc.edu/programs/voice",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2026",
@@ -788,6 +795,7 @@ const rcmCompositionMm: ProgramV3 = {
     duration_years: 2,
     language_of_instruction: ["English"],
     program_url: "https://www.rcm.ac.uk/study/postgraduate/composition/",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2026",
@@ -890,6 +898,7 @@ const mdwWienCompositionMa: ProgramV3 = {
     duration_years: 2,
     language_of_instruction: ["German"],
     program_url: "https://www.mdw.ac.at/komposition/",
+    major_declaration_requirements: null,
   },
   application: {
     admission_cycle: "Fall 2026",

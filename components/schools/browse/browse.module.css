@@ -386,6 +386,45 @@
   margin: 44px 0 0;
 }
 
+/*
+ * 专业申报门槛(2026-08-10)。
+ *
+ * **刻意与 `.requirements` 分开成块**,不是复用那三行的表格 —— 裁决要求
+ * 视觉上明确区隔「入学申请要求」与「入学后申报专业的门槛」。混排会加深
+ * 正是这个字段要消除的误解。
+ *
+ * 用左侧竖线 + 浅底把它标成一段独立说明,而不是又一行 label-value。
+ */
+.declaration {
+  margin: 28px 0 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--t7-brand);
+  background: var(--t7-brand-tint);
+}
+
+.declarationLabel {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--t7-ink);
+}
+
+.declarationHint {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--t7-ink-2);
+}
+
+.declarationValue {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--t7-ink);
+  white-space: pre-line;
+}
+
 .requirementRow {
   display: flex;
   gap: 24px;

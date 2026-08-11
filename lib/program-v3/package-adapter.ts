@@ -52,6 +52,7 @@ interface RawOffering {
   duration_years: number | null;
   language_of_instruction: string[] | null;
   program_url: string | null;
+  major_declaration_requirements?: string | null;
 }
 
 type RawRecord = Record<string, unknown>;
@@ -170,6 +171,9 @@ export function adaptCanonicalPackage(pkg: CanonicalPackage): ProgramV3[] {
           duration_years: num(offering.duration_years),
           language_of_instruction: offering.language_of_instruction ?? [],
           program_url: str(offering.program_url),
+          major_declaration_requirements: str(
+            offering.major_declaration_requirements ?? null,
+          ),
         },
         application: {
           admission_cycle: str(application.admission_cycle) ?? "",

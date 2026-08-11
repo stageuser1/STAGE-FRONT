@@ -172,7 +172,7 @@
     "programOffering": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["program_offering_ref", "school_ref", "field_ref", "degree_level_ref", "track_or_concentration", "official_program_name", "program_name_zh", "duration_years", "language_of_instruction", "program_url", "application_url", "audition_url", "review_status", "last_checked"],
+      "required": ["program_offering_ref", "school_ref", "field_ref", "degree_level_ref", "track_or_concentration", "official_program_name", "program_name_zh", "duration_years", "language_of_instruction", "program_url", "application_url", "audition_url", "major_declaration_requirements", "review_status", "last_checked"],
       "properties": {
         "program_offering_ref": { "$ref": "#/$defs/ref" },
         "school_ref": { "$ref": "#/$defs/ref" },
@@ -195,6 +195,10 @@
         "tuition_amount_max": { "$ref": "#/$defs/nullableNumber" },
         "tuition_period": { "enum": [null, "per_year", "per_semester", "total_program"] },
         "funding_policy": { "$ref": "#/$defs/nullableString" },
+        "major_declaration_requirements": {
+          "$comment": "2026-08-10 新增。**入学后**申报本专业的门槛,与入学申请要求是两件事 —— 美国音乐院校普遍是「先录取进学校、再申报专业」,Berklee 15 个专业里 11 个有实质门槛(先修课、最低 GPA、限额竞争性申请、试音),而入学申请要求对全部专业统一。混进 conditional_notes 会加深误解,故单开字段。required 但可为 null:字段缺失=抽取者没想过这件事,null=查过而官网未说明 —— 后者必须能被表达,且必须与「官网明确说无门槛」区分开(前者 null + notes,后者写入原文)。",
+          "$ref": "#/$defs/nullableString"
+        },
         "review_status": { "$ref": "#/$defs/rowReviewStatus" },
         "last_checked": { "$ref": "#/$defs/nullableDate" },
         "notes": { "$ref": "#/$defs/nullableString" }

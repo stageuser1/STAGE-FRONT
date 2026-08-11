@@ -132,6 +132,15 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
       ? application.required_materials.join("、")
       : null;
 
+  // 专业申报门槛(2026-08-10):**入学后**申报本专业的要求,与上面的入学申请
+  // 要求是两件事。刻意不并进「详细要求」那三行 —— 裁决 2026-08-06 定了那里
+  // 只有三行,更重要的是混排会加深这个字段本来要消除的误解。
+  //
+  // `null` = 官网未说明(不是「没有门槛」),此时整块不渲染:与 §3.1「宁缺
+  // 毋假」一致,绝不显示「暂无要求」那样的空态断言 —— 那会让读者以为可以
+  // 直接申报,而事实是我们不知道。
+  const declaration = program.offering.major_declaration_requirements;
+
   // 曲目要求:§3.3 的 80 字截断 + 「完整要求」外链。
   //
   // 截断的前提是有一个下一跳可以送读者过去。详情页已被 2026-08-05 裁决折进
@@ -300,6 +309,17 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
             ) : null}
           </dl>
         </div>
+      ) : null}
+
+      {/* 6b. 专业申报门槛 —— 独立成块,与「申请要求」视觉区隔(裁决 2026-08-10) */}
+      {declaration ? (
+        <section className={styles.declaration}>
+          <p className={styles.declarationLabel}>专业申报门槛(入学后)</p>
+          <p className={styles.declarationHint}>
+            在这所学校，先被学校录取，入学后才选定并申报具体专业。下面这些条件是入学之后申报本专业才需要满足的，和上面的入学申请要求不是同一回事。
+          </p>
+          <p className={styles.declarationValue}>{declaration}</p>
+        </section>
       ) : null}
 
       {/* 7. 状态条 + 动作按钮 */}

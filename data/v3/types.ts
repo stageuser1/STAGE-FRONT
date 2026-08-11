@@ -70,6 +70,17 @@ export interface ProgramOfferingV3 {
   duration_years: number | null;
   language_of_instruction: string[];
   program_url: string | null;
+  /**
+   * **入学后**申报本专业的门槛,与入学申请要求是两件事(2026-08-10)。
+   *
+   * 美国音乐院校普遍是「先录取进学校、再申报专业」:Berklee 15 个专业里
+   * 11 个有实质门槛(先修课、最低 GPA、限额竞争性申请、试音),而入学申请
+   * 要求对全部专业统一。
+   *
+   * `null` 的含义是**官网未说明**,不是「没有门槛」—— 后者官网有明确原句时
+   * 写入文本。渲染层因此对 null 整块不渲染,绝不显示「无门槛」。
+   */
+  major_declaration_requirements: string | null;
 }
 
 export interface ApplicationRequirementsV3 {
