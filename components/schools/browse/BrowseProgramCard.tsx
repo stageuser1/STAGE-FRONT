@@ -315,8 +315,14 @@ export function BrowseProgramCard({ program }: { program: ProgramV3 }) {
       {declaration ? (
         <section className={styles.declaration}>
           <p className={styles.declarationLabel}>专业申报门槛(入学后)</p>
+          {/*
+            措辞由运营者定稿(2026-08-10)。两条约束刻在这里,改动前先想清楚:
+            1. **不写死校名** —— 这段文案要复用到其余所有学校;
+            2. **不带判断色彩** —— 它对「官网明确说无门槛」的专业同样会显示,
+               所以不能写成「还要过的一关」那样让人觉得吓人的话。
+          */}
           <p className={styles.declarationHint}>
-            在这所学校，先被学校录取，入学后才选定并申报具体专业。下面这些条件是入学之后申报本专业才需要满足的，和上面的入学申请要求不是同一回事。
+            这所学校是“先考进学校、再选专业”:上面是考进学校要满足的;下面是入学以后想读这个专业还要满足的。
           </p>
           <p className={styles.declarationValue}>{declaration}</p>
         </section>
