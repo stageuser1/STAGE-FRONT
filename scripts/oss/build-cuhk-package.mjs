@@ -225,7 +225,7 @@ const application = {
         gcse_igcse_gce_ol: "C / Grade 4",
         gce_al_as: "E",
         ib: 4,
-        hkdsе: 3,
+        hkdse: 3,
         australian_year_12_english: "80%",
       },
       chinese_language_waiver: "May be granted at Faculty Dean discretion for eligible recognised non-local curricula.",
