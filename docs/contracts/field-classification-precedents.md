@@ -58,13 +58,24 @@ Performance 同组,对使用者更有用。**判断题**,反向也说得通;后�
 后续遇到名字里同时出现 writing/composition 与 production 的专业,以**谁是核心手艺**
 为准:写作为核心归 Composition/Theory,录音棚工艺为核心归 Music Production/Technology。
 
-### P5 · 自主设计/交叉专业单开类目,不并入演奏
+### P5 · `professional_music`：音乐+创意产业/媒介的融合型学位
 
-**判法**:Professional Music(可自主设计课程的交叉专业)归 `Interdisciplinary`。
+**判法**:`professional_music` / `Interdisciplinary` 用于官方谱系明确属于音乐与创意产业/媒介融合的本科专业；不用于标准音乐系谱系的 BA in Music。
 
-**理由**:它没有固定的手艺核心,并入 `Music Performance` 会对使用者撒谎 —— 这个专业
-不必然与演奏有关。宁可单开一个成员很少的类目,也不要归错。后续遇到 "Individualized
-Major"、"Self-Designed" 之类照此。
+**理由**:这类学位的官方谱系不是纯音乐系,核心是把音乐与创意产业、影视/游戏、流行音乐
+或其他媒介实践结合；并入 `Music Performance` 或 `Musicology` 都会误导使用者。当前三条
+成员为 Berklee Professional Music、HKBU BMus Creative Industries、EdUHK JS8685。
+判断看官方学位谱系,不看课程内容占比或名称表面相似。此前 Berklee Professional Music
+的自主设计特征仍是其自身成员理由,不是该值的唯一适用条件。
+
+### P5a · 综合大学音乐教育学位归 Music Education
+
+**判法**:官方学位谱系含 Bachelor of Education (Music) / 音乐教育学位的本科项目使用
+跨校 `field_ref` `music_education`,归 `Music Education`。
+
+**理由**:EdUHK JS8001 是 BA(CDA) 与 BEd(Music) 的官方五年双学位,且音乐教育是学位
+结构的一部分；它不是普通 BA in Music,也不是以创意产业/媒介为核心的融合型 BMus。
+后续按官方学位谱系判断,不因课程同时含表演、数字音乐或艺术管理内容改类。
 
 ### P6 · 音乐剧写作与制作归 Musical Theatre
 
