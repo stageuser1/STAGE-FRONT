@@ -26,27 +26,27 @@ const lines = (...parts) => parts.join("\n");
 
 const timeline = {
   milestones: [
-    { label: "Online application", date_text: "2026-07-06 10:00 to 2026-07-09 17:00 KST" },
-    { label: "Online recommendation-letter submission", date_text: "2026-07-06 10:00 to 2026-07-10 17:00 KST" },
-    { label: "College of Music records / portfolio submission", date_text: "2026-07-06 10:00 to 2026-07-10 17:00 KST; postmark accepted through July 10" },
-    { label: "Preliminary / reserve-admitted result", date: "2026-10-16", qualifier: "17:00 KST or later" },
-    { label: "Original documents after preliminary admission", date_text: "2026-10-16 17:00 to 2026-11-03 17:00 KST" },
-    { label: "Final admission result", date: "2026-11-20", qualifier: "17:00 KST or later" },
-    { label: "Registration", date_text: "December 2026 to February 2027" },
-    { label: "Korean-language assessment for selected students where applicable", date_text: "February 2027", conditional: "Selected students" },
+    { label: "在线申请", date_text: "2026-07-06 10:00 至 2026-07-09 17:00 KST" },
+    { label: "在线推荐信提交", date_text: "2026-07-06 10:00 至 2026-07-10 17:00 KST" },
+    { label: "音乐大学成果物/作品集提交", date_text: "2026-07-06 10:00 至 2026-07-10 17:00 KST；邮寄材料 7 月 10 日前以邮戳为准" },
+    { label: "预录取/候补录取结果", date: "2026-10-16", qualifier: "17:00 KST 或之后" },
+    { label: "预录取后的原件提交", date_text: "2026-10-16 17:00 至 2026-11-03 17:00 KST" },
+    { label: "最终录取结果", date: "2026-11-20", qualifier: "17:00 KST 或之后" },
+    { label: "注册", date_text: "2026 年 12 月至 2027 年 2 月" },
+    { label: "适用学生的韩语评估", date_text: "2027 年 2 月", conditional: "适用时" },
   ],
-  date_year_note: "The current guide is the Spring 2027 / 2027학년도 전기 foreign undergraduate cycle. SNU does not publish a second March/September application season in this guide; this is the March-entry cycle.",
+  date_year_note: "当前指南对应 Spring 2027 / 2027 学年度前期外国本科招生周期。指南未公布第二个三月/九月申请季；本周期为三月入学季。",
 };
 
 const commonMaterials = [
-  "Online SNU international undergraduate application",
-  "Personal statement and study plan, up to 4,000 bytes including spaces",
-  "Online teacher recommendation letter, up to 3,000 bytes including spaces",
-  "Proof of Korean or English language ability",
-  "Full high-school transcript and graduation / expected-graduation certificate",
-  "Applicant nationality, both parents' nationality and family-relationship documents",
-  "Standardised academic-test results where available; optional supporting materials and school profile where applicable",
-  "College of Music records / portfolio and signed affidavit submitted directly to the College of Music by post",
+  "首尔大学国际本科在线申请",
+  "个人陈述与学习计划",
+  "教师在线推荐信",
+  "韩语或英语能力证明",
+  "高中完整成绩单及毕业/预毕业证明",
+  "申请人及父母国籍、亲属关系证明",
+  "学业标准化考试成绩（如适用）",
+  "音乐大学成果物/作品集及签署声明",
 ];
 
 const repertoire = {
@@ -174,9 +174,9 @@ const school = {
 };
 
 const languageNotes = lines(
-  "SNU requires proof of Korean or English ability. The current guide lists TOPIK/TOPIK IBT 3 or higher, or a Korea-based university language institute level 4 or higher; English alternatives include TOEFL iBT 80 (4.0 for tests taken on or after 2026-01-21), IELTS Academic 6.0 or TEPS 269.",
-  "Per the Korea-line precedent, TOPIK is kept in conditional_notes_structured rather than promoted to the primary English fields. This is an entry-language requirement; a separate graduation-language threshold was not stated.",
-  "Students selected for the Korean-language assessment in February 2027 may face course restrictions based on the result. That post-admission assessment is not a graduation-language rule.",
+  "首尔大学要求提交韩语或英语能力证明。当前指南列出 TOPIK/TOPIK IBT 3 级以上或韩国大学语学院 4 级以上；英语路径为 TOEFL iBT 80（2026-01-21 起新计分制为 4.0）、IELTS Academic 6.0 或 TEPS 269。",
+  "按韩国线先例，TOPIK 保留在 conditional_notes_structured，不提升到英语主字段。这是入学语言要求；当前未说明单独的毕业语言门槛。",
+  "部分被选中的学生可能在 2027 年 2 月参加韩语评估，结果可能影响课程修读；该入学后评估不是毕业语言要求。",
 );
 
 const makeProgram = (o) => ({
@@ -205,9 +205,9 @@ const makeProgram = (o) => ({
   review_status: "Needs Review",
   last_checked: CHECKED,
   notes: lines(
-    `The foreign guide lists ${o.department} as one of the six College of Music admission units.`,
-    o.key === "composition" ? "The foreign form recruits the Composition department as one unit; the College of Music records guidance separately distinguishes Composition and Conducting majors. Conducting is retained as a track/repertoire key and is not made into a seventh offering because the current foreign recruitment unit is the Composition department and major selection is governed after admission by College regulations." : "Internal instrument/major directions are retained only under track_or_concentration and repertoire_structured, following the official foreign recruitment-unit grain.",
-    o.key === "korean_music" ? "Korean Music is the only unit with an additional official notice for an approximately 10-minute Korean Zoom interview; this is not converted into audition_required=Yes." : "The current foreign route states that the College of Music does not hold a practical exam and substitutes records/portfolio submission.",
+    `外国人指南将 ${o.department} 列为音乐大学六个官方招生单位之一。`,
+    o.key === "composition" ? "外国人申请表将 Composition 作为一个招生单位；音乐大学成果物指南另行区分 Composition 与 Conducting 方向。Conducting 保留为 track/曲目键，不新增第七条 offering，因为官方外国人招生单位仍是 Composition，入学后方向选择受音乐大学规定约束。" : "器乐/专修方向仅保留在 track_or_concentration 与曲目/作品集结构中，遵循外国人官方招生单位粒度。",
+    o.key === "korean_music" ? "国乐是唯一有额外官方通知的招生单位：约 10 分钟韩语 Zoom 面试；不将其改写为 audition_required=Yes。" : "当前外国人通道不举行音乐大学实技考试，由成果物/作品集替代。",
     languageNotes,
     "Tuition is the official 2026 academic-year semester figure in the 2027 guide; it is not multiplied into an annual estimate and cost_estimate_rmb remains null.",
   ),
@@ -219,11 +219,11 @@ const makeApplication = (o) => ({
   is_current: true,
   application_deadline: "2026-07-09",
   timeline_structured: timeline,
-  deadline_notes: "For the Mainland applicant using the foreign special-admissions route, the primary deadline is the common Spring 2027 online application deadline 2026-07-09 at 17:00 KST. The College of Music records/portfolio deadline is 2026-07-10 at 17:00 KST and is retained separately in the timeline.",
+  deadline_notes: "内地申请人使用外国人特别招生通道时，主截止时间为 2026-07-09 17:00 KST；音乐大学成果物/作品集截止时间为 2026-07-10 17:00 KST，另保留在时间线中。",
   application_fee: 70000,
   application_fee_currency: "KRW",
-  required_materials: [...commonMaterials, o.key === "composition" ? "Composition portfolio: at least three works of different instrumentation, all in score; Conducting-major applicants submit the two required conducting videos on USB." : o.key === "korean_music" ? "Korean Music direction-specific records/portfolio and Korean self-introduction materials; approximately 10-minute Korean Zoom interview when notified." : "Department/direction-specific records of achievement and USB/video or portfolio materials specified in the College of Music guidance."],
-  transcript_requirements: "Full high-school academic record and graduation/expected-graduation certificate; Chinese Mainland applicants also submit the required CHSI verification report for a local high-school qualification as stated in the current guide.",
+  required_materials: [...commonMaterials, o.key === "composition" ? "作曲作品集；指挥方向两段指定视频" : o.key === "korean_music" ? "国乐方向成果物/作品集；韩语自我介绍材料；韩语线上面试（如收到通知）" : "招生单位/方向要求的成果物、录像或作品集"],
+  transcript_requirements: "高中完整学业记录及毕业/预毕业证明；中国内地申请人还须按当前指南提交相应高中学历的 CHSI 学历验证报告。",
   recommendation_letters: 1,
   resume_required: "Unknown",
   essay_required: "Required",
@@ -232,24 +232,24 @@ const makeApplication = (o) => ({
   toefl_minimum: 80,
   ielts_minimum: 6,
   duolingo_minimum: null,
-  english_waiver_policy: "Language proof may be Korean or English; the current guide also accepts standardised-exam results or official proof that the full high-school curriculum was taught in Korean or English.",
+  english_waiver_policy: "语言证明可提交韩语或英语；当前指南还接受标准化考试成绩，或完整高中阶段以韩语/英语授课的官方证明。",
   english_requirement_status: "Conditional",
-  international_applicant_notes: "This record is for SNU's 글로벌인재특별전형 / Global Talent Special Admission route. Type I covers applicants whose parents are both foreign nationals; Type II covers applicants who completed the entire equivalent primary-to-secondary curriculum abroad. The current guide lists the College of Music's six units in the foreign route.",
+  international_applicant_notes: "本记录对应首尔大学 글로벌인재특별전형（全球人才特别招生）外国人通道。Type I 为申请人与父母均为外国国籍；Type II 为申请人完成全部小学至高中同等教育于海外。当前指南将音乐大学六个招生单位列入该通道。",
   conditional_notes: lines(
-    "Mainland applicants use the foreign special-admissions route; the current guide does not publish a separate Gaokao score threshold for the College of Music. The primary academic gate is high-school graduation/equivalent plus route-specific nationality or overseas-schooling evidence.",
+    "内地申请人使用外国人特别招生通道；当前指南未为音乐大学公布单独的高考分数线。主要学业门槛是高中毕业/同等学历，以及该通道要求的国籍或海外就学证明。",
     languageNotes,
     "The College of Music's foreign route does not use the domestic live practical-exam format: the guide says the practical exam is not held and is replaced by records/portfolio submission. Do not merge the current domestic 수시/정시 repertoire pages into this application record.",
   ),
   conditional_notes_structured: {
     foreign_route: { type_I: "Applicant and both parents are foreign nationals", type_II: "Entire equivalent primary/middle/high-school curriculum completed abroad" },
-    language_entry: { topik: "TOPIK or TOPIK IBT 3+", korean_language_institute: "Korea-based university language institute level 4+", toefl_ibt: "80+; 4.0+ for tests taken on/after 2026-01-21", ielts_academic: 6, teps: 269, alternatives: "Official proof of full Korean- or English-medium schooling or standardised academic-test language score" },
-    language_after_admission: { assessment: "Korean-language assessment in February 2027 for selected students where applicable", consequence: "Course restrictions may apply", graduation_requirement: "Not stated in current guide" },
-    records_route: { practical_exam: false, replacement: "Records of achievement / portfolio submitted directly to the College of Music", korean_music_interview: "Approximately 10 minutes in Korean, individually notified" },
+    language_entry: { topik: "TOPIK 或 TOPIK IBT 3 级以上", korean_language_institute: "韩国大学语学院 4 级以上", toefl_ibt: "80 以上；2026-01-21 起新计分制为 4.0 以上", ielts_academic: 6, teps: 269, alternatives: "完整韩语/英语授课经历官方证明或标准化考试语言成绩" },
+    language_after_admission: { assessment: "2027 年 2 月对适用学生进行韩语评估", consequence: "可能影响课程修读", graduation_requirement: "当前指南未说明" },
+    records_route: { practical_exam: false, replacement: "直接向音乐大学提交成果物/作品集", korean_music_interview: "约 10 分钟韩语面试，单独通知" },
   },
   estimated_living_cost: null,
   estimated_living_cost_currency: null,
   review_status: "Needs Review",
-  notes: "The application fee is KRW 70,000; no separate foreign/non-local fee is shown. The College of Music records deadline is one day after the online application deadline and is not substituted into application_deadline.",
+  notes: "申请费为 KRW 70,000；当前未显示外国人/非本地生单独费用。音乐大学成果物截止时间比在线申请截止时间晚一天，不替代 application_deadline。",
 });
 
 const makeAudition = (o) => ({
@@ -260,19 +260,19 @@ const makeAudition = (o) => ({
   prescreening_deadline: "2026-07-10",
   audition_required: "No",
   audition_format: "Recorded Only",
-  repertoire_summary: "No live audition in the foreign route; submitted records of achievement / portfolio replace the practical exam. Direction-specific records are retained in repertoire_structured.",
+  repertoire_summary: "外国人通道不举行现场实技考试，由提交成果物/作品集替代；声乐、作曲/指挥、音乐学、钢琴、管弦乐及国乐的方向要求分别保留在曲目/作品集结构中。",
   repertoire_structured: { [o.repertoire_key]: repertoire[o.repertoire_key], ...(o.extra || {}) },
-  video_requirements: "Music College records are submitted on USB; the College notice says all videos must be submitted in USB format. Conducting and Korean Music directions have the specific video requirements recorded under their keys.",
-  file_format_requirements: "The current central guide accepts uploaded scans as JPG, PNG or PDF within its stated size limits; the College of Music records notice requires the submitted video records on USB.",
+  video_requirements: "音乐大学成果物通过 USB 提交；学院通知要求所有视频以 USB 形式提交。指挥与国乐方向的具体视频要求按方向键记录。",
+  file_format_requirements: "当前中央指南接受规定大小范围内的 JPG、PNG 或 PDF 扫描件；音乐大学成果物通知要求视频记录通过 USB 提交。",
   accompaniment_requirements: null,
-  interview_or_callback_requirements: o.key === "korean_music" ? "Approximately 10-minute Korean Zoom interview for Korean Music applicants, to check language proficiency and major aptitude; schedule is individually notified." : null,
+  interview_or_callback_requirements: o.key === "korean_music" ? "国乐申请人须参加约 10 分钟韩语 Zoom 面试，用于核查语言能力与专业适应度；时间另行通知。" : null,
   special_notes: lines(
-    "This is a foreign-route records/portfolio evaluation, not the Korean domestic practical-exam format. audition_required is therefore No even though music performance videos or portfolios are required.",
-    o.key === "composition" ? "Composition and Conducting are separate direction keys under the single Composition foreign recruitment unit; the Conducting key contains the two required conducting videos." : "Direction-specific records were taken from the 2027 College of Music foreign guidance and were not copied from domestic admissions repertoire.",
-    o.key === "korean_music" ? "Korean self-introduction is part of the Korean Music records requirement; the Korean Zoom interview is a language/aptitude check, not a live audition." : "No callback or live audition is stated for this foreign route.",
+    "这是外国人通道的成果物/作品集评估，不是韩国国内招生的现场实技考试；即使要求音乐录像或作品集，audition_required 仍为 No。",
+    o.key === "composition" ? "Composition 与 Conducting 是单一 Composition 外国人招生单位下的两个方向键；Conducting 键保留两段指定指挥视频。" : "方向要求取自 2027 音乐大学外国人材料，不混入韩国国内招生曲目。",
+    o.key === "korean_music" ? "韩语自我介绍属于国乐成果物要求；韩语 Zoom 面试用于语言/专业适应度核查，不是现场试音。" : "当前外国人通道未说明额外回访或现场试音。",
   ),
-  conditional_notes: "The records/portfolio requirement is mandatory for the College of Music foreign route, but the current guide explicitly says no practical exam is held. Keep this separate from domestic audition terminology.",
-  conditional_notes_structured: { foreign_route: "Records of achievement / portfolio", live_audition: false, korean_music_interview: o.key === "korean_music" ? "Yes, approximately 10 minutes in Korean" : "No separate notice found" },
+  conditional_notes: "成果物/作品集是音乐大学外国人通道的必交材料，但当前指南明确不举行实技考试；不得与韩国国内招生的试音术语混写。",
+  conditional_notes_structured: { foreign_route: "成果物/作品集", live_audition: false, korean_music_interview: o.key === "korean_music" ? "是，约 10 分钟韩语面试" : "未找到单独说明" },
   review_status: "Needs Review",
   notes: "One audition/records record per official foreign recruitment unit; the direction keys preserve the College of Music attachment structure without creating extra offerings.",
 });

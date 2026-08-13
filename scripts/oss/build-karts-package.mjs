@@ -27,27 +27,27 @@ const lines = (...parts) => parts.join("\n");
 
 const timeline = {
   milestones: [
-    { label: "2027 foreign undergraduate online application (School of Music)", date_text: "2026-07-13 to 2026-07-15; closes 18:00 KST on July 15" },
-    { label: "Required-document submission (School of Music)", date_text: "2026-07-13 to 2026-07-16; closes 18:00 KST on July 16" },
-    { label: "Eligibility assessment result / examinee number", date: "2026-08-07", qualifier: "17:00 KST" },
-    { label: "First-round examination schedule announcement", date: "2026-07-31", qualifier: "17:00 KST" },
-    { label: "First-round selection", date_text: "2026-08-11 to 2026-08-28" },
-    { label: "First-round qualifiers announced", date: "2026-10-13", qualifier: "17:00 KST" },
-    { label: "Second-round examination schedule announcement", date: "2026-10-14", qualifier: "15:00 KST" },
-    { label: "Second-round selection", date_text: "2026-10-21 to 2026-10-29" },
-    { label: "Final selection results", date: "2026-11-06", qualifier: "17:00 KST" },
-    { label: "Registration for successful applicants", date_text: "2027-01-25 to 2027-01-28 (tentative)" },
-    { label: "Matriculation", date_text: "Early March 2027" },
+    { label: "外国人本科在线申请（音乐院）", date_text: "2026-07-13 至 2026-07-15；7 月 15 日 18:00 KST 截止" },
+    { label: "申请材料提交（音乐院）", date_text: "2026-07-13 至 2026-07-16；7 月 16 日 18:00 KST 截止" },
+    { label: "资格审核结果/准考证号", date: "2026-08-07", qualifier: "17:00 KST" },
+    { label: "第一轮考试日程公布", date: "2026-07-31", qualifier: "17:00 KST" },
+    { label: "第一轮选拔", date_text: "2026-08-11 至 2026-08-28" },
+    { label: "第一轮合格者公布", date: "2026-10-13", qualifier: "17:00 KST" },
+    { label: "第二轮考试日程公布", date: "2026-10-14", qualifier: "15:00 KST" },
+    { label: "第二轮选拔", date_text: "2026-10-21 至 2026-10-29" },
+    { label: "最终选拔结果", date: "2026-11-06", qualifier: "17:00 KST" },
+    { label: "录取者注册", date_text: "2027-01-25 至 2027-01-28（暂定）" },
+    { label: "入学", date_text: "2027 年 3 月上旬" },
   ],
-  date_year_note: "The 2027 foreign-admissions guide places the School of Music in the October entrance-examination group. Dates above are the current guide dates verified 2026-08-13; registration is expressly tentative.",
+  date_year_note: "2027 外国人招生指南将音乐院列入 10 月考试组；以上日期为 2026-08-13 核实的当前指南日期，其中注册日期明确标注为暂定。",
 };
 
 const COMMON_MATERIALS = [
-  "K-Arts required-document checklist and educational-background/language-proficiency form",
-  "Signed consent to academic-background verification",
-  "Notarised / apostilled or consular-legalised transcripts and graduation or expected-graduation certificates for elementary, middle and high school, as applicable",
-  "Passport, nationality and family-relationship documents required for the foreign-national eligibility route",
-  "Copy of passbook for application-fee refund where required",
+  "申请材料清单及教育背景/语言能力表",
+  "学业背景核查同意书",
+  "小学、初中、高中成绩单及毕业/预毕业证明",
+  "护照、国籍及亲属关系证明",
+  "申请费退款用存折复印件（如适用）",
 ];
 
 const VOCAL = {
@@ -231,21 +231,21 @@ const makeProgram = (o) => {
 const makeApplication = (o) => {
   const ref = refFor(o);
   const extra = o.field_ref === "composition"
-    ? ["Portfolio of two or more original compositions; five copies of personal statement and statement of purpose; recommendations from two or more persons; second-round portfolio resubmission as specified in the guide."]
+    ? ["两份以上原创作品集；个人陈述与学习计划；推荐信"]
     : o.field_ref === "conducting"
-      ? ["Department-specific conducting materials and documents required by the 2027 guide; see the audition record for the exact two-round test content."]
-      : ["One audiovisual recording on CD, DVD or USB stick for the first screening, plus the department/major-specific documents and repertoire information required by the guide."];
+      ? ["指挥方向专属材料"]
+      : ["第一轮演奏/演唱录像；招生单位要求的方向材料与曲目清单"];
   return {
     program_offering_ref: ref,
     admission_cycle: CYCLE,
     is_current: true,
     application_deadline: "2026-07-15",
     timeline_structured: timeline,
-    deadline_notes: "For the Mainland/foreign applicant route, the primary deadline is 2026-07-15 at 18:00 KST. Required documents are due 2026-07-16 at 18:00 KST. The current guide has one School of Music foreign intake in this cycle; no second March/September intake is published.",
+    deadline_notes: "内地申请人适用的外国人通道主截止时间为 2026-07-15 18:00 KST；申请材料截止时间为 2026-07-16 18:00 KST。本周期当前指南只公布音乐院一次外国人招生，未公布第二个三月/九月入学季。",
     application_fee: 88000,
     application_fee_currency: "KRW",
     required_materials: [...COMMON_MATERIALS, ...extra],
-    transcript_requirements: "Transcripts and certificates of graduation or expected graduation for the required schooling stages; documents not in Korean or English require notarised Korean or English translations, with apostille or consular legalisation as applicable.",
+    transcript_requirements: "提交规定教育阶段的成绩单及毕业/预毕业证明；非韩文或英文材料须附经公证的韩文或英文译本，并按适用情形办理 Apostille 或领事认证。",
     recommendation_letters: o.field_ref === "composition" ? 2 : null,
     resume_required: "Unknown",
     essay_required: o.field_ref === "composition" ? "Required" : "Unknown",
@@ -256,23 +256,23 @@ const makeApplication = (o) => {
     duolingo_minimum: null,
     english_waiver_policy: null,
     english_requirement_status: "Unknown",
-    international_applicant_notes: "This record is for the official non-quota foreign/overseas-Korean admissions route, not the Korean domestic admissions route. Applicants and parents who are all foreign nationals, or applicants who completed all schooling abroad, must meet the route-specific eligibility documents in the 2027 guide.",
+    international_applicant_notes: "本记录对应外国人/海外韩侨非配额特别招生通道，不对应韩国国内招生通道。申请人及父母均为外国国籍，或申请人完成全部教育阶段于海外者，须满足 2027 指南规定的通道资格材料要求。",
     conditional_notes: lines(
-      "For Mainland applicants, the applicable primary gate is the foreign-admissions eligibility route and an accepted high-school-equivalent qualification; the current Music pages do not publish a separate Gaokao score threshold.",
-      "TOPIK is retained as conditional because the current 2027 School of Music foreign guide does not state a unit-specific TOPIK minimum. Do not treat the TOPIK levels stated for other schools, AMA+ or other routes as applicable here.",
-      "Entry-language and graduation-language requirements are kept separate: course catalog says instruction is Korean; no separate graduation TOPIK threshold was found in the current undergraduate foreign guide.",
-      "The official guide's current fee is KRW 88,000 plus a separate KRW 6,000 online submission fee; only the application fee is in the numeric fee field.",
+      "内地申请人的主门槛是外国人招生通道资格及受认可的高中同等学历；当前音乐院页面未公布单独的高考分数线。",
+      "当前 2027 音乐院外国人指南未规定招生单位专属 TOPIK 最低等级，因此 TOPIK 仅作条件说明；其他学院、AMA+ 或其他通道的 TOPIK 等级不适用于本记录。",
+      "入学语言与毕业语言要求分开记录：课程目录显示授课语言为韩语；当前外国本科指南未找到单独的毕业 TOPIK 门槛。",
+      "当前指南列明申请费为 KRW 88,000，另有 KRW 6,000 在线提交费；数值费用主字段只记录申请费。",
     ),
     conditional_notes_structured: {
-      foreign_route: { status: "Eligible foreign/non-quota route", education: "High-school equivalent required", quota: "Unrestricted non-quota" },
-      korean_language_entry: { status: "Conditional / no Music-specific TOPIK minimum stated in current 2027 guide", instruction_language: "Korean", evidence: "General educational-background/language-proficiency form is required" },
-      graduation_language: { status: "Not stated separately in current 2027 undergraduate foreign guide", note: "Do not merge with entry-language evidence" },
+      foreign_route: { status: "符合外国人/非配额通道资格", education: "须具备高中同等学历", quota: "非配额招生" },
+      korean_language_entry: { status: "条件说明/当前 2027 指南未规定音乐院专属 TOPIK 最低等级", instruction_language: "韩语", evidence: "须提交教育背景/语言能力表" },
+      graduation_language: { status: "当前外国本科指南未单独说明", note: "不得与入学语言证据合并" },
       application_fee: { application_fee_krw: 88000, online_submission_fee_krw: 6000 },
     },
     estimated_living_cost: null,
     estimated_living_cost_currency: null,
     review_status: "Needs Review",
-    notes: "The July 15 primary deadline is the single current School of Music foreign deadline; the timeline retains the document, examination, result, registration and matriculation milestones. The guide does not publish a March/September dual intake for this route.",
+    notes: "7 月 15 日是当前音乐院外国人通道唯一主截止时间；时间线保留材料、考试、结果、注册与入学节点。当前指南未公布该通道的三月/九月双入学季。",
   };
 };
 
@@ -290,26 +290,26 @@ const makeAudition = (o) => {
     audition_required: "Yes",
     audition_format: "Multiple Rounds",
     repertoire_summary: isVocal
-      ? "Two-stage vocal major-repertoire screening, including Italian art song, opera/oratorio aria, Concone, German art song and a different second-stage aria; gender/voice-specific lists are recorded under the direction key."
+      ? "声乐分两轮核验：意大利艺术歌曲、歌剧/清唱剧咏叹调、Concone、德语艺术歌曲，以及第二轮与第一轮不同的咏叹调；男女声部/具体声种的曲目清单按方向键记录。"
       : isComposition
-        ? "Two-stage composition screening: portfolio/document screening, analysis and composition examinations, oral examination, and portfolio resubmission."
+        ? "作曲分两轮核验：作品集/材料审查、音乐分析与作曲考试、口试，以及第二轮作品集重新提交。"
         : isConducting
-          ? "Two-stage conducting screening: piano performance, score-reading, conducting, harmony theory and sight-singing, with the exact Mozart Symphony No.38 requirements recorded under the unit key."
-          : "Two-stage instrument-specific major-repertoire screening plus basic music theory; exact works and instrument variants are recorded under the official major key.",
+          ? "指挥分两轮核验：钢琴演奏、读谱、指挥、和声理论与视唱；Mozart《第 38 交响曲》具体要求按招生单位键记录。"
+          : "器乐分两轮核验：方向专属主修曲目与基础乐理；具体作品及乐器变体按官方方向键记录。",
     repertoire_structured: o.repertoire,
-    video_requirements: isComposition || isConducting ? null : "For the first screening, submit one audiovisual recording on CD, DVD or USB stick by the required-document deadline; the guide states the medium, not a web-upload substitute.",
-    file_format_requirements: isComposition ? "Portfolio and document-copy requirements follow the 2027 guide; no separate audiovisual file format is stated for Composition." : null,
-    accompaniment_requirements: isVocal ? "Applicants bring an accompanist where required for a composition; the guide says the applicant is responsible for an accompanist." : null,
-    interview_or_callback_requirements: isComposition ? "Second-round oral examination on analysis, submitted compositions, musicianship and overall music knowledge." : isConducting ? "Second-round live score-reading, conducting and sight-singing are required." : null,
+    video_requirements: isComposition || isConducting ? null : "第一轮须在材料截止前提交一份 CD、DVD 或 USB 演奏/演唱录像；指南只规定提交介质，未将网络上传作为替代方式。",
+    file_format_requirements: isComposition ? "作品集及材料副本按 2027 指南执行；作曲未另行公布音视频文件格式。" : null,
+    accompaniment_requirements: isVocal ? "如曲目需要伴奏，申请人须自行携带伴奏人员；指南明确伴奏由申请人负责。" : null,
+    interview_or_callback_requirements: isComposition ? "第二轮口试涉及音乐分析、提交作品、音乐能力与整体音乐知识。" : isConducting ? "第二轮包括现场读谱、指挥与视唱。" : null,
     special_notes: lines(
-      "The guide requires applicants to avoid repetition and perform works from memory where the unit-specific rule says so; cadenza and score-listing rules are retained in the direction data.",
-      "The application form must identify the admission unit (department and major) and, where requested, audition repertoire; changes are not permitted after the relevant submission period.",
-      isVocal ? "The common School of Music note says the online repertoire list requirement does not apply to Vocal Music; vocal lists are nevertheless recorded here from the test-content pages." : "Direction-specific requirements were checked from the School of Music pages in the 2027 guide; no requirements were extrapolated between majors.",
+      "指南要求按各方向规定避免重复，并在规定情形下背谱演奏；华彩、曲目填报等规则保留在方向数据中。",
+      "申请表须填写招生单位（学院/系/方向），并在要求时填写试音曲目；相关提交期结束后不得修改。",
+      isVocal ? "音乐院通用说明称声乐系不适用在线曲目清单要求；本记录仍根据考试内容页保留声乐方向曲目。" : "已逐方向核对 2027 指南中的要求，未在不同主修之间外推条件。",
     ),
-    conditional_notes: "The current guide's Music audition is a foreign-route multi-stage selection. TOPIK is not promoted to an audition gate; language evidence remains in conditional_notes_structured on the application record.",
-    conditional_notes_structured: { korean_language: "No Music-specific TOPIK minimum stated in the current guide", round_structure: "First screening plus second screening", source_basis: "2027 foreign-admissions guide, School of Music test-content pages" },
+    conditional_notes: "当前指南中的音乐考试是外国人通道的多轮选拔。TOPIK 不提升为试音门槛；语言证据保留在申请记录的条件说明中。",
+    conditional_notes_structured: { korean_language: "当前指南未规定音乐院专属 TOPIK 最低等级", round_structure: "第一轮加第二轮", source_basis: "2027 外国人招生指南及音乐院考试内容页" },
     review_status: "Needs Review",
-    notes: o.major === "Trombone" ? INSTRUMENTAL.Trombone.note : "One audition record per official offering; the repertoire object is direction-keyed and does not create additional offerings.",
+    notes: o.major === "Trombone" ? "外国人招生表将 Trombone（含 Bass Trombone）视为一个招生单位；详细考试页另列高音长号与低音长号变体，因此保留在同一 offering 下，不拆成两条。" : "每个官方招生单位保留一条试音记录；曲目对象按方向分键，不新增 offering。",
   };
 };
 
