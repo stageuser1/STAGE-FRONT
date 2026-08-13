@@ -77,6 +77,18 @@ writing、musical narrative、作曲技巧、demo recording 与舞台制作;它�
 创作媒介与职业语境,避免误导性地并入 `Songwriting` 或 `Music Production/Technology`。
 这是 Berklee NYC 本轮的归类裁决,后续同类"音乐剧写作/作曲/制作"专业照此判断。
 
+### P7 · 音乐剧表演与音乐剧写作/制作分开
+
+**判法**:面向表演训练的 `Theater: Musical Theater` 本科项目使用新增跨校
+`field_ref` `musical_theater`,归 `Musical Theatre`;面向音乐剧协作创作与制作的
+`Writing and Production for Musical Theater` 继续使用 `musical_theater_writing_production`。
+
+**理由**:两者都以音乐剧为媒介,但使用者进入专业的核心手艺不同:前者是表演训练
+(acting、singing、movement/dance),后者是 bookwriting、lyric writing、作曲与制作。
+若复用同一个 `field_ref`,浏览页会把"成为音乐剧表演者"与"创作/制作音乐剧"混成一个
+领域,误导专业选择。此裁决由 Boston Conservatory at Berklee 本科抽取确认,
+后续同类表演向音乐剧项目照此使用 `musical_theater`。
+
 ## 待处理的产品问题(不在归类范畴,记此备忘)
 
 **专业制 vs 乐器制的粒度不均**:Berklee 按专业组织(`performance` 是一个 field),
