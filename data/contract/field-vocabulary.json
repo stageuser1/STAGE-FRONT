@@ -2,6 +2,7 @@
   "$comment": "跨校 field_ref 合法值清单。写入 API 拒绝任何不在册的 field_ref —— Directus 退场后词表没有中央归属,若各校各写各的(music_business vs music_management),浏览页会分裂成互不相干的类目。边界(运营者裁决 2026-08-10):只做合法值清单,不做层级、别名、翻译。新增学校时,其 field_ref 必须在同一个 commit 里加进本文件,这次显式改动就是把关点。归类先例见 docs/contracts/field-classification-precedents.md。",
   "field_refs": [
     "composition",
+    "conducting",
     "contemporary_writing_production",
     "electronic_production_design",
     "film_scoring",

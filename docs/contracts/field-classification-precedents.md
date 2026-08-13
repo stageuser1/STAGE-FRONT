@@ -63,8 +63,9 @@ Performance 同组,对使用者更有用。**判断题**,反向也说得通;后�
 **判法**:`professional_music` / `Interdisciplinary` 用于官方谱系明确属于音乐与创意产业/媒介融合的本科专业；不用于标准音乐系谱系的 BA in Music。
 
 **理由**:这类学位的官方谱系不是纯音乐系,核心是把音乐与创意产业、影视/游戏、流行音乐
-或其他媒介实践结合；并入 `Music Performance` 或 `Musicology` 都会误导使用者。当前三条
-成员为 Berklee Professional Music、HKBU BMus Creative Industries、EdUHK JS8685。
+或其他媒介实践结合；并入 `Music Performance` 或 `Musicology` 都会误导使用者。当前成员
+为 Berklee Professional Music、HKBU BMus Creative Industries、EdUHK JS8685，以及 HKMU
+BA(Hons) in New Music and Interactive Entertainment。
 判断看官方学位谱系,不看课程内容占比或名称表面相似。此前 Berklee Professional Music
 的自主设计特征仍是其自身成员理由,不是该值的唯一适用条件。
 
@@ -112,6 +113,17 @@ writing、musical narrative、作曲技巧、demo recording 与舞台制作;它�
 及英国线同形态项目照此判法,以避免 `Interdisciplinary` 类目被级联污染。
 
 **词表变更**:2026-08-13 新增 `music`。
+
+### P9 · 指挥独立归类
+
+**判法**:以指挥为官方招生单位/专业的本科项目使用跨校 `field_ref` `conducting`,归
+`Conducting`；不因同时要求钢琴、读谱或音乐理论而改归 `Music Performance` 或
+`Composition/Theory`。
+
+**理由**:指挥是官网明确的核心招生手艺，考试中的钢琴、总谱阅读与合唱/管弦乐指挥是
+同一指挥训练链条内的组成部分。K-Arts Orchestral Conducting 为首个成员。
+
+**词表变更**:2026-08-13 新增 `conducting`。
 
 ## 待处理的产品问题(不在归类范畴,记此备忘)
 
