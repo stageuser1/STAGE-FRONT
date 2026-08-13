@@ -89,6 +89,19 @@ writing、musical narrative、作曲技巧、demo recording 与舞台制作;它�
 领域,误导专业选择。此裁决由 Boston Conservatory at Berklee 本科抽取确认,
 后续同类表演向音乐剧项目照此使用 `musical_theater`。
 
+### P8 · 综合大学 BA in Music 统一归 Musicology
+
+**判法**:综合大学的标准 `BA in Music` / `Bachelor of Arts (Major in Music)` 统一使用
+跨校 `field_ref` `music`,归 `Musicology`。不因课程同时含表演、作曲或音乐科技内容而改归
+`Music Performance` 或 `Composition/Theory`。
+
+**理由**:这类项目的核心是综合大学音乐系的学术型/综合型音乐学位,而不是独立音乐学院的
+术科演奏项目,也不是学生自行设计的跨学科专业。`professional_music` 专用于 Berklee
+式的 Professional Music 自主设计专业,不得复用于综合大学 BA in Music。后续 CUHK、HKBU
+及英国线同形态项目照此判法,以避免 `Interdisciplinary` 类目被级联污染。
+
+**词表变更**:2026-08-13 新增 `music`。
+
 ## 待处理的产品问题(不在归类范畴,记此备忘)
 
 **专业制 vs 乐器制的粒度不均**:Berklee 按专业组织(`performance` 是一个 field),
