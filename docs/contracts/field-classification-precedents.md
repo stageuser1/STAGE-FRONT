@@ -66,6 +66,17 @@ Performance 同组,对使用者更有用。**判断题**,反向也说得通;后�
 不必然与演奏有关。宁可单开一个成员很少的类目,也不要归错。后续遇到 "Individualized
 Major"、"Self-Designed" 之类照此。
 
+### P6 · 音乐剧写作与制作归 Musical Theatre
+
+**判法**:`Writing and Production for Musical Theater` 归 `Musical Theatre`,使用
+跨校 `field_ref` `musical_theater_writing_production`。
+
+**理由**:该专业的核心对象是音乐剧的协作创作与制作,官网明确覆盖 bookwriting、lyric
+writing、musical narrative、作曲技巧、demo recording 与舞台制作;它不是一般词曲创作,
+也不是以录音棚/音频工程为核心的制作专业。归入 `Musical Theatre` 能保留其真实的
+创作媒介与职业语境,避免误导性地并入 `Songwriting` 或 `Music Production/Technology`。
+这是 Berklee NYC 本轮的归类裁决,后续同类"音乐剧写作/作曲/制作"专业照此判断。
+
 ## 待处理的产品问题(不在归类范畴,记此备忘)
 
 **专业制 vs 乐器制的粒度不均**:Berklee 按专业组织(`performance` 是一个 field),

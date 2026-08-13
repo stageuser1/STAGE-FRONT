@@ -57,3 +57,23 @@
 
 **修法方向**(未定):需要产品层决定浏览页如何同时呈现两种粒度。归类层面无解,
 见 `docs/contracts/field-classification-precedents.md` 末节。
+
+---
+
+## B4 · 研究生项目的 interview 被契约字段强制命名为 audition
+
+**现象**: Berklee NYC 研究生项目官网要求 self-recorded interview,部分申请人再参加
+招生团队的 live interview;官网没有将该流程称为 audition。v3 契约却强制每条
+`program_offering` 提供 `audition_url`,且 `audition_requirements` 只有试音语义。
+
+**当前如何绕开**:按运营者裁决,暂以官方面试页填入 `audition_url`,
+`audition_required` 填 `Unknown`,并在记录 notes 中明确“本项目为面试制(interview)
+非试音制,字段名为契约限制”。
+
+**代价**:消费端可能把面试要求误显示为试音要求,也无法用现有字段准确表达
+面试轮次、录制方式与入选后 live interview 的关系。
+
+**修法方向**:契约增加独立的 interview requirement 结构与来源类型,并让适配器分别渲染
+audition 与 interview;修复前不得把面试语义静默改写成试音语义。
+
+**发现于** 2026-08-13(Berklee NYC 研究生抽取)。
