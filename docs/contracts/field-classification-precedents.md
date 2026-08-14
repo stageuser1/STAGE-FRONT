@@ -49,6 +49,10 @@ Recording and Production、Music Production and Engineering),本质都是制作/
 Performance 同组,对使用者更有用。**判断题**,反向也说得通;后续所有 "Jazz X" 专业
 一律照此归 `Jazz Studies`,以保持一致。
 
+`jazz_performance` 与 `jazz_composition` 是两个不同的 `field_ref`，但共享
+`Jazz Studies` 类目；`jazz_performance` 用于官方项目名称为 Jazz Performance
+（而非 Berklee 特有的 Global Jazz Performance）的项目。
+
 ### P4 · 写作+制作的混合专业归 Composition/Theory
 
 **判法**:Contemporary Writing and Production 归 `Composition/Theory`,不归
@@ -124,6 +128,17 @@ writing、musical narrative、作曲技巧、demo recording 与舞台制作;它�
 同一指挥训练链条内的组成部分。K-Arts Orchestral Conducting 为首个成员。
 
 **词表变更**:2026-08-13 新增 `conducting`。
+
+### P10 · 通用音乐科技项目归 Music Production/Technology
+
+**判法**:官方项目名称为 Music Technology、且核心是音乐技术/电子音乐制作的本科项目
+使用 `music_technology`，归 `Music Production/Technology`。
+
+**理由**:`electronic_production_design`、`music_production_engineering` 等现有值对应
+特定学校的具体项目，不应冒充跨校通用值；Dankook 的 Music Technology 需要独立保留
+官方项目身份，同时沿用制作/技术类的共同类目。
+
+**词表变更**:2026-08-14 新增 `jazz_performance`、`music_technology`。
 
 ## 待处理的产品问题(不在归类范畴,记此备忘)
 
