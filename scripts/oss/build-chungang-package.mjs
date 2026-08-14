@@ -96,7 +96,7 @@ const school = {
   intro_zh: "中央大学艺术相关本科外国人通道中的音乐学部、传统艺术学部音乐单位与全球艺术学部 Applied Music。",
   ranking_source: null,
   ranking_position: null,
-  notes: "本包只收 2027 春外国人本科通道中的音乐类招生单位；研究生、非音乐艺术单位及其他专业排除。音乐学部与传统艺术学部项目主要位于大田/安城方向的 Da Vinci Campus；全球艺术学部 Applied Music 同属音乐类本科招生单位。",
+  notes: "本包只收 2027 春外国人本科通道中的音乐类招生单位；研究生、非音乐艺术单位及其他专业排除。音乐学部与传统艺术学部项目位于安城 Da Vinci Campus；全球艺术学部 Applied Music 同属音乐类本科招生单位。",
 };
 
 const degreeLevels = [
@@ -128,7 +128,7 @@ const offerings = [
   { key: "piano", degree: "bm", official: "Piano", nameZh: "钢琴", field: "performance", track: "Piano", department: "College of Arts; School of Music", programUrl: URL_MUSIC, tuition: 7259000, mode: "portfolio", portfolio: true },
   { key: "orchestral", degree: "bm", official: "Orchestral Instruments", nameZh: "管弦乐器", field: "performance", track: "Orchestral Instruments; instrument directions retained in repertoire_structured", department: "College of Arts; School of Music", programUrl: URL_MUSIC, tuition: 7259000, mode: "live", portfolio: false },
   { key: "music_arts", degree: "bkm", official: "Music Arts", nameZh: "音乐艺术", field: "performance", track: "Korean traditional instrumental accompaniment / voice / composition & applied music / conducting / musicology & arts management / percussion accompaniment", department: "College of Arts; School of Korean Traditional Arts", programUrl: URL_KOREAN_MUSIC, tuition: 7259000, mode: "portfolio", portfolio: true },
-  { key: "performing_arts", degree: "bkm", official: "Performing Arts", nameZh: "演戏艺术", field: "performance", track: "Music Theatre / Percussion Performing", department: "College of Arts; School of Korean Traditional Arts", programUrl: URL_KOREAN_MUSIC, tuition: 7259000, mode: "live", portfolio: false },
+  { key: "performing_arts", degree: "bkm", official: "Performing Arts", nameZh: "演艺艺术", field: "performance", track: "Music Theatre / Percussion Performing", department: "College of Arts; School of Korean Traditional Arts", programUrl: URL_KOREAN_MUSIC, tuition: 7259000, mode: "live", portfolio: false },
   { key: "applied_music", degree: "bm", official: "Applied Music", nameZh: "实用音乐", field: "professional_music", track: "Applied Music", department: "College of Arts; School of Global Arts", programUrl: URL_GLOBAL_ARTS, tuition: 7039000, mode: "portfolio", portfolio: true },
 ];
 
