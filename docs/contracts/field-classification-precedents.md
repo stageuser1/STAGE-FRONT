@@ -140,6 +140,14 @@ writing、musical narrative、作曲技巧、demo recording 与舞台制作;它�
 
 **词表变更**:2026-08-14 新增 `jazz_performance`、`music_technology`。
 
+### P11 · `applied_music`：韩国实用音乐项目的证据分流
+
+**判法**:韩国实用音乐系逐校按官网学位谱系与培养目标核实：有媒体、文化产品或明确融合培养证据的，使用 `professional_music` / `Interdisciplinary`；纯实技形态或融合证据不足的，使用跨校 `field_ref` `applied_music`，暂归 `Interdisciplinary`。不因项目都叫“实用音乐”而整体划一。
+
+**理由**:Hongik 的 `Applied Music (Vocal/Composition)` 当前官网招生材料确认了项目与方向，但尚未给出足以证明创意产业/媒介融合谱系的正面证据；因此新增 `applied_music` 承载该形态。Dongduk 的实用音乐官方介绍明确涉及媒体、文化产品与融合培养，继续使用 `professional_music`。
+
+**后续裁决**:当 `applied_music` 成员增多后，再单独提交是否将 `field_category` 拆为独立类目的裁决；当前不新增类目。
+
 ## 待处理的产品问题(不在归类范畴,记此备忘)
 
 **专业制 vs 乐器制的粒度不均**:Berklee 按专业组织(`performance` 是一个 field),
